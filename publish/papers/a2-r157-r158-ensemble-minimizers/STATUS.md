@@ -98,7 +98,11 @@ its clean v0.1.11 replay are recorded in `EXP-001387`.  The convention-narrowing
 - [x] The A2 proof explicitly displays the coefficient/product H2-to-L2 local-Lipschitz estimate, the modewise Fourier-multiplier fractional-semigroup bound, the projected chain-rule limit, the endpoint-integrability estimate, and the periodic Moser tame bound (`EXP-001416`; external proof audit remains required).
 - [x] The positive-time smoothing proof explicitly derives an H2 Hölder modulus by interpolation from the fractional-domain bound and the L2-time derivative estimate (`EXP-001426`; external proof audit remains required).
 - [x] The positive-time smoothing proof explicitly states the shifted-base Sobolev bootstrap, endpoint cancellation in `X_m`, Hölder propagation, nested induction, the strict Hölder range, the split-kernel integral, and the endpoint semigroup factor plus the explicit interval/integral constants and temporal Banach-scale induction (`EXP-001430`, `EXP-001432`, `EXP-001435`, `EXP-001436`; external proof audit remains required).
-- [x] A hash-pinned reproduction manifest records the package file hashes, audit artifact counts, manuscript-hash consistency, and expected replay commands (`verification/runs/reproduction-manifest.json`, `EXP-001419`; auxiliary integrity evidence only).
+- [x] The schema-1.1 hash-pinned reproduction manifest records package hashes,
+  audit counts, manuscript-hash consistency, all fourteen replay commands and
+  replay-input hashes, and exact agreement with the verification README command
+  surface (`verification/runs/reproduction-manifest.json`; auxiliary integrity
+  evidence only).
 - [x] The four paper-local audits reproduce under the bundled base-Python runtime with unchanged artifact hashes (`EXP-001420`; portability evidence only).
 - [x] Classify the unresolved canonical A2 v2.0 Class-II sign as a TECT/P1
   transfer-only gate; the standalone paper fixes the raw-Laplacian convention
@@ -110,10 +114,14 @@ its clean v0.1.11 replay are recorded in `EXP-001387`.  The convention-narrowing
 - [ ] Dedicated capstone PUBLISHED reproduction bundle for R-157/R-158.
 - [x] The v0.1.39 package passes A2 `61/61`, R-157 `144/144`, R-158
   `155/155`, the non-bearing R-472 Lean replay `22/22`, paper-local
-  `13/13`, `8/8`, `24/24`, `50/50`, and review-packet `20/20`, plus the
+  `13/13`, `8/8`, `24/24`, `50/50`, and review-packet `22/22`, plus the
   reproduction manifest and 16-page rendered-PDF review (`EXP-001452`).
 - [x] Post-EXP-001452 exploration/time verification, governed regeneration,
   and the complete repository release check pass at `EXP-001453`.
+- [x] The external handoff contains exactly one blank-contract section and all
+  fourteen documented replay scripts; the schema-1.1 manifest hash-pins all
+  fourteen replay inputs and rejects README command-surface drift
+  (`EXP-001454`).
 - [ ] Submission freeze/tag (requires separate explicit authorization).
 
 ## Non-claims
@@ -129,7 +137,7 @@ remain authoritative.
   convention as a TECT/P1 transfer-only gate rather than an analytic premise or
   independent-paper submission gate.  The standalone functional, theorem
   statements, coefficients, and proofs are unchanged.  `EXP-001452` records
-  the complete finite replay, `20/20` review-packet audit, passing manifest,
+  the complete finite replay, `22/22` review-packet audit, passing manifest,
   and 16-page PDF review.  `EXP-001453` records the governed regeneration and
   complete repository release PASS.
 

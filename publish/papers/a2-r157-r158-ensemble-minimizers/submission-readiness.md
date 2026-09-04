@@ -23,9 +23,9 @@ physical vacuum, or any TECT cosmological conclusion.
 | Scope and closest prior work | Self-contained functional and spectral data in `manuscript.tex`; bounded primary-source crosswalk including the 2026 Belin--Schneider quasilinear amplitude results (`EXP-001442`); explicit non-subsumption and no-general-method language | `PARTIAL` | Specialist literature/novelty review and any required crosswalk repair |
 | Self-contained proof | A2/R-157/R-158 proof text with stable theorem labels; indexed Class-II variation; direct-method and chain-rule dependencies; direct fixed-point, Fourier compactness, and singular-Grönwall reductions; hypothesis map in `theorem-applicability-audit.md`; paper-local structural audit `50/50` | `INTERNAL-READY` | Independent mathematician must complete and sign `independent-proof-review-form.md` |
 | Independent/adversarial audit | Exact audits `13/13`, `8/8`, `24/24`, `50/50`; integrated replays A2 `61/61`, R-157 `144/144`, R-158 `155/155`; blank proof and novelty contracts fix itemized hostile tests and signed response fields; the canonical source-sign issue is classified as transfer-only | `FINITE-AUDIT-PASS` | Signed mathematician proof audit, signed specialist novelty disposition, and operator adversarial response |
-| Reproducible package | Hash-pinned `verification/runs/reproduction-manifest.json`; bundled commands and source hashes; strict note-PDF check | `PACKAGE-PASS` | Operator-confirmed integrated referee/capstone bundle after external review |
+| Reproducible package | Schema-1.1 hash-pinned `verification/runs/reproduction-manifest.json`; fourteen primary/independent/integrated/assurance/paper-local commands; fourteen replay-input hashes; exact README command-surface match; single-section handoff guard and complete replay routing at `EXP-001454`; bundled-runtime smoke check; strict note-PDF check | `PACKAGE-PASS` | Operator-confirmed integrated referee/capstone bundle after external review |
 | Manuscript and registration | 16-page v0.1.39 Tectonic PDF with fifteen references, stable main-theorem labels, `README.md`, `STATUS.md`, `claims-cited.md`, transfer-only source-sign aid, and two blank signed-review contracts under `publish/papers/`; complete replay and PDF review at `EXP-001452` | `DRAFT-REGISTERED` | Actual signed proof and novelty responses, repaired version if needed, and explicit submission authorization |
-| Final quality gate | v0.1.39 passes review-packet audit `20/20`, complete finite replay, hash-pinned manifest, and 16-page rendered-PDF review at `EXP-001452`; governed regeneration and the complete release check pass at `EXP-001453` | `REPOSITORY-PASS` | Operator-side commit/backup confirmation and the dedicated `PUBLISHED` capstone; no public submission is implied |
+| Final quality gate | v0.1.39 passes review-packet audit `22/22`, complete finite replay, hash-pinned manifest, and 16-page rendered-PDF review at `EXP-001452`; governed regeneration and the complete release check pass at `EXP-001453` | `REPOSITORY-PASS` | Operator-side commit/backup confirmation and the dedicated `PUBLISHED` capstone; no public submission is implied |
 
 ## Required signed dispositions for the independent paper
 
@@ -58,9 +58,10 @@ The current package records the following finite-scope evidence only:
 - R-157 integrated replay: `144/144` PASS, including the A2 `61/61` regression.
 - R-158 integrated replay: `155/155` PASS, including the R-157/A2 regression.
 - Paper-local audits: exact coercivity `13/13`, Class-II sign `8/8`, ensemble
-  identity `24/24`, analytic dependencies `50/50`, review packet `20/20`.
-- Manifest: `PAPER-REPRODUCTION-MANIFEST-PASS` with package hashes and matching
-  manuscript hashes.
+  identity `24/24`, analytic dependencies `50/50`, review packet `22/22`.
+- Manifest: `PAPER-REPRODUCTION-MANIFEST-PASS` with package hashes, matching
+  manuscript hashes, fourteen command/input hashes, and README command-surface
+  equality.
 - PDF: v0.1.39, 16 A4 pages, bundled Tectonic exit 0, all-page and full-resolution visual review at `EXP-001452`; preceding changed-page review
   (`EXP-001447`; direct-analytic/applicability repair EXP-001446; preceding v0.1.36 governed checkpoint EXP-001445 and proof-text repair EXP-001444 and provenance-only TC-0015; preceding v0.1.35 governed checkpoint EXP-001443 and closest-source boundary EXP-001442; preceding v0.1.34 final checkpoint EXP-001441 and bibliography-layout repair EXP-001440, plus v0.1.33 repository-status synchronization EXP-001439, finite-interval endpoint checkpoint EXP-001437 and temporal-bootstrap checkpoint EXP-001436 and endpoint-constant checkpoint EXP-001435 and endpoint-estimate checkpoint EXP-001432), and strict note-PDF validation PASS.
 - Repository: `release_check.py` PASS with only pre-existing large-file

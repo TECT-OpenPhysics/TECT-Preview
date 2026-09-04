@@ -54,6 +54,22 @@ NOVELTY_SIGNATURE_FIELDS = (
     "signature_or_verifiable_review_record:",
     "date:",
 )
+REPLAY_SCRIPTS = (
+    "a2_full_production_verify.py",
+    "a2_pinned_functional_unique_zero_global_minimizer.py",
+    "a2_pinned_functional_unique_zero_global_minimizer_independent.py",
+    "a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+    "a2_charge_ensemble_first_order_shell_transition.py",
+    "a2_charge_ensemble_first_order_shell_transition_independent.py",
+    "a2_charge_ensemble_first_order_shell_transition_verify.py",
+    "a2_r472_lean_crosscheck_verify.py",
+    "exact_coercivity_audit.py",
+    "classii_sign_audit.py",
+    "ensemble_identity_audit.py",
+    "analytic_dependency_audit.py",
+    "review_packet_audit.py",
+    "reproduction_manifest.py",
+)
 
 
 def sha256(path: Path) -> str:
@@ -130,6 +146,12 @@ def build_assertions(
             "independent-proof-review-form.md" in handoff
             and "specialist-novelty-review-form.md" in handoff
         ),
+        "handoff_has_exactly_one_blank_contract_section": (
+            handoff.count("## Frozen blank response contracts") == 1
+        ),
+        "handoff_lists_complete_replay_surface": all(
+            script in handoff for script in REPLAY_SCRIPTS
+        ),
         "forms_are_routed_by_readiness_matrix": (
             "independent-proof-review-form.md" in readiness
             and "specialist-novelty-review-form.md" in readiness
@@ -197,7 +219,7 @@ def main() -> int:
         else "PAPER-REVIEW-PACKET-AUDIT-FAIL"
     )
     result = {
-        "schema": "tect/paper-review-packet-audit/1.0",
+        "schema": "tect/paper-review-packet-audit/1.1",
         "paper_id": "a2-r157-r158-ensemble-minimizers",
         "scope": "structural completeness and hash consistency of blank external-review contracts",
         "manuscript_sha256": manuscript_hash,

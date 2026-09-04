@@ -30,7 +30,7 @@ The source claims are `A2-FULL-PRODUCTION-WELLPOSED`, `R-157`, and `R-158`.
 Version 0.1.39 changes only the gate classification: the canonical A2 source
 sign remains open for TECT/P1 transfer but is not a premise of the explicitly
 defined standalone theorem.  `EXP-001452` records the unchanged finite results,
-the `20/20` packet audit, passing manifest, and 16-page PDF review;
+the `22/22` packet audit, passing manifest, and 16-page PDF review;
 `EXP-001453` records the governed regeneration and repository release PASS.
 
 ## Theorem-by-theorem checklist

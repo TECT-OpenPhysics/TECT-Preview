@@ -58,19 +58,35 @@
     },
     "review-packet": {
       "expected": {
-        "passed": 20,
-        "total": 20,
+        "passed": 22,
+        "total": 22,
         "verdict": "PAPER-REVIEW-PACKET-AUDIT-PASS"
       },
       "manifest_sha256": null,
       "manuscript_sha256": "6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155",
-      "passed": 20,
+      "passed": 22,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/review-packet.json",
-      "sha256": "b300207a2e9094b216f4db39de58be6e380cf1fbfc1b04d8af2502896db865d4",
-      "total": 20,
+      "sha256": "352df45940affb932f1ff7027735da40e204e3191ce50d78210270ee6c285c99",
+      "total": 22,
       "verdict": "PAPER-REVIEW-PACKET-AUDIT-PASS"
     }
   },
+  "documented_replay_inputs": [
+    "codes/foundations/a2_full_production_verify.py",
+    "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer.py",
+    "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_independent.py",
+    "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+    "codes/foundations/a2_charge_ensemble_first_order_shell_transition.py",
+    "codes/foundations/a2_charge_ensemble_first_order_shell_transition_independent.py",
+    "codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
+    "verification/scripts/a2_r472_lean_crosscheck_verify.py",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/verification/exact_coercivity_audit.py",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/verification/classii_sign_audit.py",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/verification/ensemble_identity_audit.py",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/verification/analytic_dependency_audit.py",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py"
+  ],
   "expected_commands": [
     {
       "command": "python -X utf8 codes/foundations/a2_full_production_verify.py",
@@ -78,14 +94,39 @@
       "scope": "finite A2 full-production wrapper"
     },
     {
+      "command": "python -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer.py",
+      "expected": "26/26 PASS",
+      "scope": "finite R-157 primary exact replay"
+    },
+    {
+      "command": "python -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_independent.py",
+      "expected": "24/24 PASS",
+      "scope": "finite R-157 independent non-importing replay"
+    },
+    {
       "command": "python -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
       "expected": "integrated 144/144 PASS; legacy A2 61/61 PASS",
       "scope": "finite R-157/A2 integrated replay"
     },
     {
+      "command": "python -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition.py",
+      "expected": "35/35 PASS",
+      "scope": "finite R-158 primary exact replay"
+    },
+    {
+      "command": "python -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_independent.py",
+      "expected": "24/24 PASS",
+      "scope": "finite R-158 independent standard-library replay"
+    },
+    {
       "command": "python -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
       "expected": "integrated 155/155 PASS; R-157/A2 regression PASS",
       "scope": "finite R-158 integrated replay"
+    },
+    {
+      "command": "python -X utf8 verification/scripts/a2_r472_lean_crosscheck_verify.py --output tmp/r472-integrated.json",
+      "expected": "R-472 INTEGRATED PASS 22/22; Lean=PASS",
+      "scope": "non-bearing exact/Lean assurance replay"
     },
     {
       "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/exact_coercivity_audit.py",
@@ -109,20 +150,25 @@
     },
     {
       "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py --self-test",
-      "expected": "PAPER-REVIEW-PACKET-AUDIT-PASS: 20/20",
+      "expected": "PAPER-REVIEW-PACKET-AUDIT-PASS: 22/22",
       "scope": "blank external-review packet structure and hash consistency"
+    },
+    {
+      "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py --self-test",
+      "expected": "PAPER-REPRODUCTION-MANIFEST-PASS",
+      "scope": "hash-pinned package and replay-input integrity"
     }
   ],
   "files": [
     {
-      "bytes": 20214,
+      "bytes": 20551,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/README.md",
-      "sha256": "6dfd38ea5f59c773e83fc44951a574ca33114c0d71827e0b2730dd37d0c06cd7"
+      "sha256": "18d6a006034dde49b8fe985c069be7445f76be0172e578c52e5c0c9208c49190"
     },
     {
-      "bytes": 27286,
+      "bytes": 27604,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/STATUS.md",
-      "sha256": "f1d623c2db23d81bfe37c3d3236698b0950ed4c6fec08f24ea0ecac7db4eadb2"
+      "sha256": "af5bab68522293d87c94a9941b998c4eb51f25952a1afec97f84a321992f4313"
     },
     {
       "bytes": 1555,
@@ -130,9 +176,9 @@
       "sha256": "9121c9e6dfcaa4888fb77fbe7f651affcf4ab935c7e7ef6d983bacb7d1615688"
     },
     {
-      "bytes": 11341,
+      "bytes": 10424,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/external-review-handoff.md",
-      "sha256": "48dd42a714bb2c1018ba4a3d8310152b6c17cd0ca8297d6a8538b1e550c9150d"
+      "sha256": "33711c048d50819eec1956d764cc621bcfd56afb67f73565a0a7624503778041"
     },
     {
       "bytes": 9044,
@@ -150,9 +196,9 @@
       "sha256": "31c54785f7bbd5164c6c7755581fc7e2fb6c728b1cfec13a8bac98dbaf0d9036"
     },
     {
-      "bytes": 7197,
+      "bytes": 7480,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/submission-readiness.md",
-      "sha256": "32ea3c2ac367079383a6423c12490140bd24568e85080219f0ed03ae54a3d149"
+      "sha256": "cc1908db186861d783a638fa7e45b22c2bbf3b8056e027358c43ae8b507c9782"
     },
     {
       "bytes": 8251,
@@ -177,12 +223,12 @@
     {
       "bytes": 18708,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/proof-audit.md",
-      "sha256": "8e3f57f7e76b2ba62a80e1e5abc246078fad3e18189be5813d5e9d2c873d1368"
+      "sha256": "73f3ff1483697ec618ba32de550785e07a47f6cfd7cdf511dd65dcfa1e52c65c"
     },
     {
-      "bytes": 14198,
+      "bytes": 14685,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/README.md",
-      "sha256": "23a4f1231509e82f01b16eb137fbc154f29cd5f1c8d227ac6c8e860fd4a4c144"
+      "sha256": "ecae0c795921462b156893c1316147fb2356ef8bd976799dbf60036a881945a2"
     },
     {
       "bytes": 6752,
@@ -205,14 +251,14 @@
       "sha256": "204a81bb27f30222120129fbaf3389bdef804c7b39df21b5b772a431d33ab68d"
     },
     {
-      "bytes": 8228,
+      "bytes": 9176,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py",
-      "sha256": "9b83b1ea535a7fd1528b7d3e207e8ffb20987d054d21509844019f7bd1279f02"
+      "sha256": "1cdeda7599c434a81856782bece62ba99af1c5872ba733ff27b6318642503c0b"
     },
     {
-      "bytes": 8734,
+      "bytes": 12904,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py",
-      "sha256": "9b1da8c50b1b4299e37b8a592c8f7b6e0fe9a41f1eb441ec2f4819166a4f3f6e"
+      "sha256": "a0b8169e2d7f599fbc2d6423a86366ec568882f5bb747fb4804ac64ab37e98d6"
     },
     {
       "bytes": 3443,
@@ -235,19 +281,24 @@
       "sha256": "469b0045379e8ebb4e6bf2b36741d11360a55f25f003655e1c3ad814ab2b993d"
     },
     {
-      "bytes": 1799,
+      "bytes": 1914,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/review-packet.json",
-      "sha256": "b300207a2e9094b216f4db39de58be6e380cf1fbfc1b04d8af2502896db865d4"
+      "sha256": "352df45940affb932f1ff7027735da40e204e3191ce50d78210270ee6c285c99"
     }
   ],
-  "generated_at": "2026-09-04T03:49:13Z",
+  "generated_at": "2026-09-04T03:59:37Z",
   "generator": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py",
   "integrity": {
     "all_package_files_present": true,
+    "all_replay_inputs_present": true,
     "artifact_manuscript_hashes_match": true,
-    "audit_verdicts_and_counts_match": true
+    "audit_verdicts_and_counts_match": true,
+    "replay_command_count": 14,
+    "replay_input_count": 14,
+    "verification_readme_command_paths_match": true
   },
   "manuscript_sha256": "6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155",
+  "missing_replay_inputs": [],
   "non_claims": [
     "This manifest proves package integrity only; it is not an analytic proof or external review.",
     "Expected command strings are finite-scope replay oracles and do not promote claim tiers.",
@@ -257,6 +308,78 @@
   "paper_id": "a2-r157-r158-ensemble-minimizers",
   "platform": "Windows-11-10.0.26200-SP0",
   "python": "3.12.9",
-  "schema": "tect/paper-reproduction-manifest/1.0",
+  "replay_inputs": [
+    {
+      "bytes": 2471,
+      "path": "codes/foundations/a2_full_production_verify.py",
+      "sha256": "4bc68f4411a9babee02abdadde36dbff798e60cf75c709d28d53cf96f05551a9"
+    },
+    {
+      "bytes": 15484,
+      "path": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer.py",
+      "sha256": "2394353f3b6bdcb35d20cd706d10bf272045c4e12d3abfdcc17e46a5c6fb294f"
+    },
+    {
+      "bytes": 10764,
+      "path": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_independent.py",
+      "sha256": "cc4010827ef901fb06771882c941eabdc4804d3f080f0e5b908d55a992d9c265"
+    },
+    {
+      "bytes": 20419,
+      "path": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+      "sha256": "2bb8e257ad19f2ca1d4185cf3c8035fa7d443080e6ed83a478ed0d96b965f957"
+    },
+    {
+      "bytes": 18647,
+      "path": "codes/foundations/a2_charge_ensemble_first_order_shell_transition.py",
+      "sha256": "a1a25274c2d953768c241bfaba7afcfb1763a6767c206733d0e55c0ec73fd853"
+    },
+    {
+      "bytes": 13928,
+      "path": "codes/foundations/a2_charge_ensemble_first_order_shell_transition_independent.py",
+      "sha256": "35147aee46e338120f90c7083ae38103bf887a0f449e780513e807762ac30d87"
+    },
+    {
+      "bytes": 19890,
+      "path": "codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
+      "sha256": "07cb6d7d7e03c6018defde903ddb62db0d1f1483000246475952bcb2f27742c5"
+    },
+    {
+      "bytes": 8714,
+      "path": "verification/scripts/a2_r472_lean_crosscheck_verify.py",
+      "sha256": "cc3c5b889f1ebbaf402b1c60b1f3b9dfae47a496de62a6efaf6a4374765bea89"
+    },
+    {
+      "bytes": 6752,
+      "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/exact_coercivity_audit.py",
+      "sha256": "2c189c88b16ea9eab9b2a3ce3930caf7eebe230032c506a99e1d8dfd307c39f3"
+    },
+    {
+      "bytes": 5346,
+      "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/classii_sign_audit.py",
+      "sha256": "0aeb6810e2aa0ffc95fd75ef6689779e5ecca8dc12d157498cc3dc0473d6d9bf"
+    },
+    {
+      "bytes": 9604,
+      "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/ensemble_identity_audit.py",
+      "sha256": "0f83894edfb482f720381c315fd7ae09ec5e5c9ce5e1558bf6720575c59ee07c"
+    },
+    {
+      "bytes": 19763,
+      "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/analytic_dependency_audit.py",
+      "sha256": "204a81bb27f30222120129fbaf3389bdef804c7b39df21b5b772a431d33ab68d"
+    },
+    {
+      "bytes": 9176,
+      "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py",
+      "sha256": "1cdeda7599c434a81856782bece62ba99af1c5872ba733ff27b6318642503c0b"
+    },
+    {
+      "bytes": 12904,
+      "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py",
+      "sha256": "a0b8169e2d7f599fbc2d6423a86366ec568882f5bb747fb4804ac64ab37e98d6"
+    }
+  ],
+  "schema": "tect/paper-reproduction-manifest/1.1",
   "verdict": "PAPER-REPRODUCTION-MANIFEST-PASS"
 }

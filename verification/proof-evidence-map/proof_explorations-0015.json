@@ -5060,6 +5060,90 @@
       "task_id": "T-054",
       "title": "A2/R-157/R-158 v0.1.39 governed release checkpoint",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Could fourteen listed commands imply fourteen independent proofs?",
+          "disposition": "DISMISSED: every command retains its finite, independent-replay, integrated-regression, non-bearing sidecar, structural-audit, or manifest scope."
+        },
+        {
+          "check": "Could hash-pinning executable files establish mathematical correctness?",
+          "disposition": "UPHELD AS LIMITATION: hashes establish identity and completeness, not truth; signed independent proof review remains open."
+        },
+        {
+          "check": "Could removing duplicate contract text alter the reviewer obligations?",
+          "disposition": "DISMISSED: one byte-current canonical copy remains and the strengthened audit checks its routing and completeness."
+        }
+      ],
+      "assumptions": [
+        "The fourteen documented commands are the complete trusted executable surface for this fixed package version.",
+        "The paper-local verification scripts and upstream repository scripts remain within their explicitly stated finite and non-bearing scopes."
+      ],
+      "boundary": "External handoff structure and reproducibility metadata for the fixed side-16 classical v0.1.39 package only. No theorem change, claim-tier promotion, signed review, novelty decision, canonical TECT/P1 transfer, physical or limit conclusion, operator capstone, submission, upload, tag, release, push, or publication claim.",
+      "claim_ids": [
+        "A2-FULL-PRODUCTION-WELLPOSED"
+      ],
+      "decision_reason": "A third party cannot reproduce a package reliably if executable lanes are omitted from the manifest or the handoff contains duplicated contract text. Hash-pinning the whole documented replay surface and automatically rejecting structural duplication closes this packaging defect without changing any theorem or claim tier.",
+      "evidence_refs": [
+        "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py#EXPECTED_COMMANDS",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py#build_manifest",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py#build_assertions",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/reproduction-manifest.json#integrity",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/review-packet.json#assertions",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/external-review-handoff.md#frozen-blank-response-contracts"
+      ],
+      "finding": "The previous manifest covered only eight replay commands and did not hash-pin six trusted executable inputs; the external handoff also repeated the same blank-contract section three times. The repaired schema-1.1 manifest records fourteen replay commands and fourteen present replay-input hashes, requires exact agreement with the verification README, and passes. The strengthened review-packet audit passes 22/22 and requires exactly one blank-contract section plus all fourteen replay scripts in the handoff. The bundled workspace Python smoke test also passes with schema 1.1 and fourteen commands/inputs.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-157",
+          "R-158"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001454",
+      "method": [
+        "Compare the reproduction manifest command list against the paper verification README and all executable theorem, independent, integrated, sidecar, paper-local, packet, and manifest scripts.",
+        "Remove two duplicate copies of the frozen blank-response-contract section from the external handoff and retain one canonical copy.",
+        "Extend the manifest to schema 1.1 with fourteen replay-command and replay-input hashes, exact README command-path equality, and self-tests; extend the review-packet audit to schema 1.1 with duplicate-section and complete-handoff-surface assertions.",
+        "Run the review-packet and reproduction-manifest self-tests under the repository virtual environment and smoke-test the manifest with the bundled workspace Python runtime."
+      ],
+      "missing_assumptions": [
+        "Completed and signed independent-proof-review-form.md from a qualified independent mathematician.",
+        "Completed and signed specialist-novelty-review-form.md from a qualified specialist.",
+        "Operator adversarial confirmation, remote-backup confirmation, and the dedicated PUBLISHED capstone.",
+        "A signed canonical source-owner disposition only if TECT/P1 transfer is later claimed."
+      ],
+      "next_action": "Regenerate all governed reader surfaces, run the complete release check, commit the reproduction hardening locally, and then obtain genuine signed mathematical and specialist reviews. Request explicit operator authorization before any remote push.",
+      "non_claims": [
+        "The strengthened audits do not replace independent mathematical or novelty review.",
+        "No theorem scope, result status, or claim tier is changed.",
+        "No submission, upload, tag, release, remote push, publication, canonical transfer, or physical interpretation is authorized."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the v0.1.39 external handoff expose and hash-pin the complete trusted replay surface without duplicated review-contract sections?",
+      "recorded_at": "2026-09-04T03:58:33Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001453",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001452",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen after any replay command, executable input, handoff contract, manuscript/PDF byte, reviewer response, lifecycle, or submission change.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "A2/R-157/R-158 external reproduction-surface hardening",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

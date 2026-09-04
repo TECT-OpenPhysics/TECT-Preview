@@ -15,9 +15,10 @@ and capstone gates remain open; no theorem statement, coefficient, or proof
 conclusion changed in this classification repair.  `EXP-001452` records the
 fresh A2 `61/61`, R-157 `144/144`, R-158 `155/155`, non-bearing R-472 Lean
 `22/22`, paper-local `13/13`, `8/8`, `24/24`, `50/50`, review-packet
-`20/20`, passing manifest, and 16-page rendered-PDF review.  `EXP-001453`
+`22/22`, passing manifest, and 16-page rendered-PDF review.  `EXP-001453`
 records the subsequent governed regeneration and complete repository release
-PASS.
+PASS.  `EXP-001454` records the complete fourteen-command/input manifest and
+handoff-duplication guard without changing the manuscript or theorem scope.
 
 ## Contents
 
@@ -35,7 +36,9 @@ PASS.
   source-owner disposition template for canonical TECT/P1 transfer only.
 * `submission-readiness.md` — requirement matrix, signed-disposition checklist, and promotion/re-review rules.
 * `theorem-applicability-audit.md` — hypothesis-by-hypothesis map for every general analytic result used by the proof.
-* `verification/runs/reproduction-manifest.json` — hash-pinned package manifest and expected replay outputs.
+* `verification/runs/reproduction-manifest.json` — schema-1.1 hash-pinned
+  package manifest, fourteen-command replay surface, and fourteen replay-input
+  hashes.
 
 Version 0.1.38 retains the two closest 2026 Belin--Schneider quasilinear amplitude-theory comparisons and explicitly removes any residual novelty claim for quasilinear Swift--Hohenberg analysis or maximal-regularity handling.  The combined all-data finite-torus flow, neutral rejection, and imposed-ensemble identities remain the bounded non-subsumed contribution, pending specialist review (`EXP-001442`).  It retains the Class-II first variation fully auditable by displaying its indexed Euler--Lagrange formula and the coefficient tensor `C(u)`, retaining the corrected integration-by-parts sign and explicit nonlinear energy `\Phi`.  It makes the Galerkin-limit `\partial_tu\in L^2_tL^2_x` upgrade explicit before invoking the nonlinear chain rule, and now supplies direct proofs of the local mild contraction, Fourier low/high-mode compactness, and weakly singular Gronwall reduction. The accompanying theorem-applicability audit fixes every analytic theorem hypothesis and marks Pazy, Amann, and Simon as background where the needed special case is proved directly.  It states the mathematical theorems for the explicitly printed functional, gives the Fourier-multiplier realization of the linear operator, and keeps the named H3 identification only as a provenance/transfer boundary.  It also includes a paper-local analytic-dependency audit that structurally rechecks the displayed Sobolev, compactness, kernel, and direct-method prerequisites without presenting them as an external proof.  It adds a paper-local hash-pinned source/sign audit with an exact periodic one-mode check, while retaining canonical source reconciliation as an open gate.  It also narrows the ensemble statement to the proven coexistence and saturated charge `Q_*` at `\mu_t`, without claiming the charge of every global minimizer for `\mu>\mu_t`.  The v0.1.25 revision additionally displays the coefficient/product H2-to-L2 local-Lipschitz estimate, the modewise Fourier-multiplier fractional-semigroup bound, the projected chain-rule limit, the explicit endpoint-integrability bound, and the periodic Moser tame estimate.  These load-bearing dependencies are now visible in the proof text while their external verification remains open.  It retains the self-contained functional and spectral specification and the bounded primary-source literature expansion (Asai; Brazovskii; Swift--Leitner; Martine-La Boissoniere--Choksi--Lessard).  The direct-method, full-map, Gelfand-triple, normalization, and spectral-notation statements remain subject to external proof audit.  The v0.1.27 proof-text repair makes the positive-time $H^2$ Hölder interpolation from the fractional domain bound and the $L^2_tL^2_x$ time-derivative estimate explicit before the endpoint cancellation.  The v0.1.28 repair makes the shifted-base Sobolev bootstrap explicit, including its domain, endpoint cancellation, Hölder estimate, and nested induction. The v0.1.29 repair expands the endpoint estimate with the full $C^\theta$ norm, the $0<\theta<1$ restriction, the split-kernel integral bound, and the positive-distance endpoint factor.  The v0.1.30 repair records the explicit interval factor $h\le (b-a)^{1-\theta}h^\theta$ and the split-integral constant $1/\theta+1/(1-\theta)$.  The v0.1.31 repair makes the temporal Banach-scale bootstrap explicit via $\mathcal F= L+N$, the $D^jN$ tame bound, and the four-spatial-derivative-per-time-derivative bookkeeping; these are still structural proof-text evidence pending signed external audit.  The v0.1.32 repair strengthens the theorem solution class to require `\partial_t\Psi\in L^2(0,T;L^2)` on every finite interval and explicitly ties this endpoint control to the `s=0` energy identity.  The v0.1.33 repair synchronizes the manuscript status wording with the already-passing repository release check while retaining the external-review gates.  The v0.1.34 repair compacts the bibliography so all fourteen references remain on one readable final page without changing the mathematical body.  The exact H2 coercivity certificate uses the graph-equivalent norm and the weaker rational bound 1/5, proved by a negative discriminant; the finite-shell paragraph gives the explicit nearest-integer argument for |n|^2=3.  The v0.1.18 source/sign audit and full finite-scope replay are recorded in `EXP-001399`--`EXP-001400`; the H3 provenance separation in v0.1.19 is recorded in `EXP-001401`; the Fourier-multiplier realization and v0.1.20 replay are recorded in `EXP-001403`; the bundled-base-Python smoke replay is recorded in `EXP-001405`; the v0.1.21 coexistence-wording clarification and replay are recorded in `EXP-001406`; the paper-local ensemble identity audit and 24/24 artifact are recorded in `EXP-001407`; the post-PAH temporal correction and clean repository release check are recorded in `EXP-001408` and `TC-0013`.  The focused primary-source additions and their non-subsumption dispositions are recorded in EXP-001421; the bounded search is not a priority claim.
 
@@ -72,7 +75,7 @@ $py = "E:\Dev\TECT.venv\Scripts\python.exe"
 ```
 
 The verification commands and their registered expected results are in
-`verification/README.md`.  The paper-local exact-coercivity, source/sign, ensemble-identity, analytic-dependency, and review-packet audits write their self-test artifacts under `verification/runs/`; the first four pass 13/13, 8/8, 24/24, and 50/50; `reproduction_manifest.py` records the package file hashes and expected replay outputs in `verification/runs/reproduction-manifest.json`.  Executable checks cover exact arithmetic,
+`verification/README.md`.  The paper-local exact-coercivity, source/sign, ensemble-identity, analytic-dependency, and review-packet audits write their self-test artifacts under `verification/runs/`; the first four pass 13/13, 8/8, 24/24, and 50/50; `reproduction_manifest.py` records the package file hashes, all fourteen replay commands and input hashes, and the exact README command-surface match in `verification/runs/reproduction-manifest.json`.  Executable checks cover exact arithmetic,
 normalizations, spectral intervals, and provenance; they do not replace an
 independent proof audit.  The internal checklist in `proof-audit.md` makes the
 remaining analytic and external-review obligations explicit.
@@ -85,6 +88,7 @@ the signed mathematical audit, specialist novelty review, operator review,
 commit/remote-backup confirmation, and capstone package are not yet complete.
 The fresh replay, manifest, PDF review, governed regeneration, and repository
 release check pass at `EXP-001452`--`EXP-001453`.
+The external reproduction-surface hardening is recorded at `EXP-001454`.
 
 The next paragraph is retained as historical checkpoint context; its older
 source-sign-as-paper-gate wording is superseded by the v0.1.39 boundary above.

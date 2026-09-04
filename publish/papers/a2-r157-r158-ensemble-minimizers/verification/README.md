@@ -22,7 +22,7 @@ $py = "E:\Dev\TECT.venv\Scripts\python.exe"
 & $py publish/papers/a2-r157-r158-ensemble-minimizers/verification/ensemble_identity_audit.py
 & $py publish/papers/a2-r157-r158-ensemble-minimizers/verification/analytic_dependency_audit.py
 & $py publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py --self-test
-& $py publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py
+& $py publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py --self-test
 ```
 
 Expected registered results are:
@@ -36,8 +36,13 @@ Expected registered results are:
 * paper-local Class-II source/sign audit: `8/8` PASS, with both source hashes recorded and the undefined v2.0 Laplacian convention retained as an open gate;
 * paper-local ensemble identity/Bregman/coexistence/witness audit: `24/24` PASS, reconstructed from the pinned A1 manifest with hostile mutations rejected;
 * paper-local analytic-dependency audit: `50/50` PASS, with exact Sobolev, compactness, kernel, direct-method, floor, and sign-prerequisite checks and hostile mutations rejected;
-* review-packet structural/hash audit: `20/20` PASS, checking the three stable theorem labels, `P-01`--`P-15`, nine hostile tests, `N-01`--`N-07`, `D-01`--`D-07`, blank status, signature fields, current manuscript/PDF hashes, and the transfer-only source-sign classification without filling either form;
-* hash-pinned reproduction manifest: `PAPER-REPRODUCTION-MANIFEST-PASS`, with package file SHA-256 values, audit artifact counts, manuscript-hash consistency, and expected replay commands recorded;
+* review-packet structural/hash audit: `22/22` PASS, checking the three stable theorem labels, `P-01`--`P-15`, nine hostile tests, `N-01`--`N-07`, `D-01`--`D-07`, blank status, signature fields, current manuscript/PDF hashes, exactly one blank-contract handoff section, the complete fourteen-command replay surface, and the transfer-only source-sign classification without filling either form;
+* hash-pinned reproduction manifest schema `1.1`: `PAPER-REPRODUCTION-MANIFEST-PASS`, with package file SHA-256 values, audit artifact counts, manuscript-hash consistency, all fourteen primary/independent/integrated/assurance/paper-local replay commands, all fourteen replay-input hashes, and an exact match to this README command surface;
+
+The schema-1.1 complete replay surface, bundled-runtime smoke test, and
+duplicate-section regression guard are recorded in `EXP-001454`.  They harden
+package identity and routing only; they do not constitute external proof or
+novelty review.
 * R-472 exact-core sidecar: primary `30/30`, independent `22/22`, hostile
   `12/12`, integrated `22/22`, with Lean compilation PASS.
 
