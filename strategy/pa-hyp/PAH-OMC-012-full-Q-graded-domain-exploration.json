@@ -1,0 +1,83 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001461",
+  "recorded_at": "2026-09-04T07:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-04",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "title": "PAH-OMC-012 full-Q charge-graded domain and neutral refinement map",
+  "question": "Does a source-owned disjoint-union over all finite PAH-001 charge sectors make the unchanged neutral coordinate restriction total and unique for every n>=2 and R_max>=1, with nonzero R-488 cylinder lifts and exact fixed-Q component recovery?",
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-004, PAH-OMC-008, PAH-OMC-010, the OMC-010 manifest, PAH-OMC-011 and the R-490 primary run before computation.",
+    "Define Omega_n^gr(R) as the disjoint union of the already declared fixed-Q finite PAH-001 components, with Q_n={0,...,M_psi|V_n|}; do not add a cross-Q probability mixture.",
+    "Define the unchanged neutral projection by retaining every old coordinate, dropping only the new column and d_n link, and recomputing the coarse grade from retained ell coordinates.",
+    "Derive Q_f-Q_c as the nonnegative sum of dropped ell coordinates, prove the coarse bound and deterministic uniqueness, and replay binary and singleton patterns for n=2..7 and representative R_max values.",
+    "Use explicit ell_a, ell_d, H_0 and H_1 witnesses with positive finite Gibbs weights, verify componentwise PAH-001 generator/Gibbs recovery, run independent and hostile lanes, and compile Lean R492."
+  ],
+  "finding": "The full-Q graded union makes the neutral coordinate restriction a total deterministic map into exactly one coarse graded component. Retained charges are unchanged and the omitted charge is recorded by the grade balance Q_f-Q_c=sum_dropped ell>=0. The four R-488 cylinder generators have nonzero lifted witnesses with positive finite component Gibbs weight. Each fixed-Q block remains exactly the PAH-001 functional, move set, generator and pi_(rho,Q).",
+  "verdict": "advanced",
+  "classification": "MAINLINE_ADVANCE_FULL_Q_GRADED_DOMAIN_ONLY",
+  "decision_reason": "R-492 closes only the finite full-Q bookkeeping/domain gate that blocked R-491. It does not alter PAH-001, does not preserve a fixed Q across levels, and does not prove any generator intertwining. A separate PAH-OMC-011 re-test is now eligible because the lift is a total function on the graded domain.",
+  "boundary": "T0 claim-nonbearing finite domain/map result for the unchanged PAH-OMC-004 strip and PAH-OMC-010 parameter path. The direct-sum Gibbs reference is componentwise; no cross-Q mixing probability is asserted.",
+  "evidence_level": "T0 exact finite charge-balance and map-totality argument with primary 17/17, independent 15/15, hostile 10/10, integrated 16/16 and Lean R492 PASS",
+  "source_authorities": [
+    {"source_id":"PAH-001","path":"strategy/pa-hyp/PAH-001-v1.json","sha256":"03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37","role":"immutable functional, move, rate and fixed-Q Gibbs source"},
+    {"source_id":"PAH-OMC-004","path":"strategy/pa-hyp/PAH-OMC-004-v1.json","sha256":"38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c","role":"unchanged strip carrier and neutral restriction source"},
+    {"source_id":"PAH-OMC-008","path":"strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json","sha256":"b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a","role":"R-488 four-coordinate cylinder source"},
+    {"source_id":"PAH-OMC-010","path":"strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json","sha256":"8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69","role":"unchanged Gibbs weighted norm and C_sw role"},
+    {"source_id":"PAH-OMC-010-MANIFEST","path":"strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-manifest.json","sha256":"97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3","role":"OMC-010 provenance manifest"},
+    {"source_id":"PAH-OMC-011","path":"strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json","sha256":"244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020","role":"prior full fixed-Q domain obstruction and next-question source"},
+    {"source_id":"R-490-PRIMARY-RUN","path":"claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/primary.json","sha256":"4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3","role":"C_sw=540 domination-only input"}
+  ],
+  "formal_refs": {"results":["R-492"],"negatives":[],"events":[]},
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json#exact_scope",
+    "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-manifest.json#parents",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain/hostile.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain/integrated.json#assertions",
+    "verification/lean/Tect/R492.lean#graded_projection_total"
+  ],
+  "assumptions": [
+    "All parent files remain byte-identical at the listed hashes.",
+    "The PAH-001 radial levels are nonnegative and bounded by M_psi, so the retained charge sum is in the coarse admissible range.",
+    "The neutral refinement is geometric coordinate restriction exactly as declared by PAH-OMC-004; no hidden charge operation is inserted.",
+    "PAH-001 moves preserve Q, so its generator is block diagonal on the graded union.",
+    "A finite component Gibbs state is used for each Q exactly as PAH-001 declares; no cross-Q mixture is needed for this domain-map gate."
+  ],
+  "missing_assumptions": [
+    "A source-authorized cross-Q mixing law would still be needed if a later theorem requires one normalized probability over the whole disjoint union.",
+    "The rootwise generator-intertwining identity and any weak Gibbs-L2 convergence must be tested separately on the now-total graded domain."
+  ],
+  "non_claims": [
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "No PAH-OMC-011 generator intertwining theorem is claimed by R-492.",
+    "No charge is redistributed, no conditional Gibbs average is taken, and no PAH-001 functional, rate, carrier or counterterm is changed.",
+    "The componentwise Gibbs family is not a newly asserted global probability measure over Q.",
+    "Markov time remains external stochastic time."
+  ],
+  "next_action": "Run one dedicated PAH-OMC-011 re-test using this total graded domain, with unchanged root correspondence and C_sw=540 as domination-only input; stop at the first exact rootwise mismatch.",
+  "revisit_condition": "Reopen this domain result only if a parent hash changes, a totality/uniqueness counterexample is found, a source-authorized global Gibbs mixing law is supplied, or the PAH-OMC-011 re-test identifies a domain-independent rootwise obstruction.",
+  "stop_or_redesign": [
+    "Do not convert the grade-changing map into a fixed-Q map by deleting or redistributing charge.",
+    "Do not add a cross-Q fitted weight or conditional averaging to manufacture a global Gibbs probability.",
+    "Do not treat this domain advance as an intertwining, infinite-volume, continuum or physical-sector result."
+  ],
+  "reproduction": [
+    "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py",
+    "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+    "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+    "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+    "Set-Location verification/lean; lake env lean Tect/R492.lean"
+  ],
+  "adversarial_review": [
+    {"check":"Could the graded union silently add a new dynamics?", "disposition":"DISMISSED: the generator is defined componentwise and every move/rate string is inherited from PAH-001; no cross-Q transition is added."},
+    {"check":"Could omitted new-column charge be hidden by resetting the grade to fixed Q?", "disposition":"DISMISSED: Q_f-Q_c is recorded exactly as the nonnegative dropped-coordinate sum and the grade is explicitly allowed to change."},
+    {"check":"Could a direct-sum Gibbs family be misreported as one normalized global state?", "disposition":"UPHELD AS LIMITATION: the contract and non-claim leave cross-Q mixing undefined and prohibit fitted weights."},
+    {"check":"Could nonzero R-488 lifts be vacuous?", "disposition":"DISMISSED: ell_a, ell_d, H_0 and H_1 each have explicit nonzero witnesses at positive finite component Gibbs weight."}
+  ]
+}

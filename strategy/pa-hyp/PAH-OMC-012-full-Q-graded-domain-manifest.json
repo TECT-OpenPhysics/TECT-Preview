@@ -1,0 +1,77 @@
+{
+  "active_gate_change": false,
+  "claim_bearing": false,
+  "contract": {
+    "id": "PAH-OMC-012",
+    "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+    "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+  },
+  "lean": {
+    "declarations": [
+      "graded_projection_total",
+      "graded_projection_unique",
+      "dropped_charge_balance",
+      "fixed_component_recovered",
+      "r488_lift_nonzero",
+      "r488_lift_preserves_value",
+      "csw_domination_only",
+      "non_promotion_firewall"
+    ],
+    "path": "verification/lean/Tect/R492.lean",
+    "sha256": "16920d9382e231f491f0992ea0bcca519286d5005c73239bcc6664f9cbb46521"
+  },
+  "manifest_id": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-MANIFEST-001",
+  "no_parent_mutation": true,
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-004": {
+      "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+    },
+    "PAH-OMC-008": {
+      "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+    },
+    "PAH-OMC-010": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+    },
+    "PAH-OMC-010-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-manifest.json",
+      "sha256": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3"
+    },
+    "PAH-OMC-011": {
+      "path": "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "sha256": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020"
+    },
+    "R-490-CERTIFICATE": {
+      "path": "strategy/pa-hyp/R490-certificate.md",
+      "sha256": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+    },
+    "R-490-PRIMARY-RUN": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/primary.json",
+      "sha256": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+    }
+  },
+  "physical_promotion": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+    "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean",
+    "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py"
+  },
+  "runs": {
+    "directory": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain",
+    "hostile": "hostile.json",
+    "independent": "independent.json",
+    "integrated": "integrated.json",
+    "primary": "primary.json"
+  },
+  "schema": "tect/pah-omc012-full-q-graded-domain-manifest/1.0",
+  "scope": "Full-Q charge-graded finite domain and total unique neutral refinement map for the unchanged PAH-001 functional; eligible for a separate PAH-OMC-011 re-test only.",
+  "status": "MAINLINE_ADVANCE"
+}

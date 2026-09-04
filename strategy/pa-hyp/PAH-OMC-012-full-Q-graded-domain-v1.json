@@ -1,0 +1,145 @@
+{
+  "schema": "tect/pah-omc012-full-q-graded-domain/1.0",
+  "contract_id": "PAH-OMC-012",
+  "version": "0.1.0",
+  "title": "Full-Q charge-graded common domain and neutral refinement map",
+  "proposed_at": "2026-09-04",
+  "proposed_by": "TECT_RESEARCH_PROGRAM",
+  "provenance": {
+    "class": "RESEARCHER_HYPOTHESIS",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "synthetic_fixture": false,
+    "physical_authority": false,
+    "new_unverified_hypothesis": true,
+    "epistemic_layer": "L2_MODEL_SPECIFICATION_ONLY",
+    "physical_identity": "UNESTABLISHED",
+    "empirical_validation": "NONE"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-004": {
+      "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+    },
+    "PAH-OMC-008": {
+      "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+    },
+    "PAH-OMC-010": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+    },
+    "PAH-OMC-010-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-manifest.json",
+      "sha256": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3"
+    },
+    "PAH-OMC-011": {
+      "path": "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "sha256": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020"
+    },
+    "R-490-CERTIFICATE": {
+      "path": "strategy/pa-hyp/R490-certificate.md",
+      "sha256": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+    },
+    "R-490-PRIMARY-RUN": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/primary.json",
+      "sha256": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+    }
+  },
+  "preservation_firewall": {
+    "functional_unchanged": true,
+    "rates_unchanged": true,
+    "mobility_unchanged": true,
+    "no_new_carrier": true,
+    "no_charge_deletion": true,
+    "no_charge_redistribution": true,
+    "no_conditional_gibbs_average": true,
+    "no_counterterm": true,
+    "no_rate_fitting": true,
+    "no_fixed_rmax_bypass": true,
+    "no_generator_intertwining_claim": true,
+    "no_physical_promotion": true
+  },
+  "exact_scope": {
+    "carrier_family": "Use exactly the PAH-OMC-004 two-row strip G_n for n>=2, with the unchanged neutral coordinate restriction from G_(n+1) to G_n. No carrier, face subdivision or root family is added.",
+    "regulator": "Use the PAH-OMC-010 path K=2, M_s=M_psi=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; R_max=R ranges over every positive integer. The map itself is independent of R.",
+    "state_definition": {
+      "vertices": "V_n={(i,j):0<=i<=n+1, j in {0,1}} and V_(n+1)=V_n union {(n+2,0),(n+2,1)}.",
+      "component": "Omega_(rho_(n,R,Q),Q) is exactly the finite PAH-001 configuration set with 0<=ell_v<=M_psi and sum_v ell_v=Q, together with the unchanged aperture, phase and link constraints.",
+      "admissible_charge_set": "Q_n={0,1,...,M_psi|V_n|}; on the fixed PAH-OMC-010 path M_psi=1, Q_n={0,...,2(n+2)}.",
+      "charge_function": "q_n(omega)=sum_(v in V_n) ell_v(omega), so Omega_(rho_(n,R,Q),Q) is the q_n=Q component."
+    },
+    "graded_state_space": "Omega_n^gr(R)=disjoint_union_(Q in Q_n) {Q}xOmega_(rho_(n,R,Q),Q). The grade is part of the disjoint-union tag and is not an extra interaction variable.",
+    "neutral_refinement": "For x=(Q_f,omega_f) in Omega_(n+1)^gr(R), retain every G_n vertex aperture, phase and radial coordinate and every old edge link, drop only the new column and d_n link, recompute Q_c=sum_(v in V_n)ell_v(omega_f), and set p_(n+1,n)(x)=(Q_c,omega_f restricted to G_n).",
+    "charge_balance": "Q_f-Q_c=sum_(v in V_(n+1)\\V_n)ell_v(omega_f)>=0. No retained ell coordinate is altered and no charge is redistributed; the grade is allowed to change from Q_f to Q_c.",
+    "totality_and_uniqueness": "Nonnegative bounded ell coordinates imply 0<=Q_c<=M_psi|V_n|, so the projected tuple is in exactly one coarse graded component. Coordinate restriction and the recomputed grade are deterministic, hence p is total and unique for every n>=2 and every R>=1.",
+    "generator_domain": "The graded domain is the finite direct sum of the unchanged PAH-001 component domains: D_n^gr(R)=direct_sum_(Q in Q_n) bounded_functions(Omega_(rho_(n,R,Q),Q)). The block generator acts componentwise with the exact PAH-001 L_rho and every declared move preserves Q.",
+    "common_cylinder_algebra": "A_cyl^gr is the algebraic union of bounded functions of finitely many ell_v and closed-face holonomy characters, invariant under the declared gauge action and anchor-preserving automorphisms, interpreted componentwise on the graded union. The R-488 coordinates (ell_a,ell_d,H_0,H_1) are included and are grade-independent.",
+    "R488_observables": "ell_a with a=(0,0), ell_d with d=(1,1), H_0 and H_1 are the two closed split-triangle Z_2 characters from PAH-OMC-008. Their pointwise lifts are f composed with p and are nonzero on the graded fine domain.",
+    "gibbs_reference": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+    "graded_norm": "Use the direct-sum family norm sum_(Q in Q_n)||f_Q||_(2,pi_(rho,Q))^2, with each component norm exactly the PAH-OMC-010 Gibbs weighted norm. A single probability measure over Q is not required for this domain-map gate and remains an explicit open modeling input if later needed.",
+    "csw_role": "R-490 C_sw=540 is retained only as the previously verified state-weighted domination input. It is not used to define p, the graded domain, or any generator intertwining theorem."
+  },
+  "proof_obligations": {
+    "graded_totality": "For every finite fine state and every n>=2,R>=1, p_(n+1,n) has a valid unique coarse grade and state.",
+    "no_charge_mutation": "The retained ell coordinates are identical and the dropped charge is accounted for by Q_f-Q_c, with no deletion or redistribution operation.",
+    "lift_well_defined": "For every R-488 cylinder f, I_(n,n+1)f=f composed with p is a total bounded observable on Omega_(n+1)^gr(R).",
+    "lift_nonzero": "Each of ell_a, ell_d, H_0 and H_1 has an explicit fine graded witness with nonzero lifted value and positive finite component Gibbs weight.",
+    "component_recovery": "Restriction of the graded direct sum to any fixed Q is definitionally the existing PAH-001 state, generator, move set, and Gibbs state.",
+    "rmax_uniformity": "The algebraic map proof is independent of R, and finite checks cover representative R>=1 without replacing the all-R statement by a fixed-R claim."
+  },
+  "acceptance": {
+    "primary": "Hash-pin all parents, derive the graded charge bounds and balance identity, test the map on every binary ell pattern at small n and on all witness families, and verify the unchanged component functional/rates/Gibbs declarations.",
+    "independent": "Rebuild vertices, charge grading, projection, uniqueness, R-488 witnesses and component recovery without importing the primary implementation.",
+    "hostile": "Reject fixed-Q-only projection, charge deletion or redistribution, conditional Gibbs averaging, cross-Q fitted weights, rate/function changes, fixed-R_max bypass and physical promotion.",
+    "lean": "Formalize total graded charge balance, deterministic uniqueness, component recovery, nonzero lifted witness values, C_sw role and the no-promotion firewall. This is a finite algebraic cross-check, not a generator-intertwining or infinite-volume theorem."
+  },
+  "status": {
+    "verdict": "MAINLINE_ADVANCE",
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "stage2_status": "HOLD_FOR_EVIDENCE",
+    "scope": "The full-Q graded finite domain and neutral refinement map are admitted as a source-owned researcher contract; PAH-OMC-011 generator intertwining is only eligible for a separate re-test.",
+    "global_normalized_gibbs_measure": "NOT_DEFINED_BY_PARENT; not required for this domain-map gate"
+  },
+  "known_boundaries": [
+    "The grade-changing projection does not preserve a fixed Q across levels; it preserves all retained coordinates and records the omitted charge in Q_f-Q_c.",
+    "The componentwise Gibbs family has no cross-Q mixing law. Adding one would be a new model and is outside this packet.",
+    "This packet does not prove PAH-OMC-011 generator intertwining, a common infinite-volume automorphism, a uniform continuum estimate, or an ordered limit.",
+    "R-490 C_sw=540 remains domination-only and supplies no generator equality.",
+    "The R-488 witnesses are finite cylinder witnesses; they do not select a physical sector or a unique microscopic model."
+  ],
+  "falsifiers": [
+    "A valid fine state whose retained coordinates or recomputed grade fail to define a member of the coarse graded union.",
+    "Two distinct coarse graded outputs for the same fine state under the declared restriction map.",
+    "A positive-measure R-488 cylinder generator whose lift is identically zero on the graded fine domain.",
+    "A fixed-Q component whose functional, move set, generator or Gibbs weight differs from the hash-pinned PAH-001 definition.",
+    "Any need for charge redistribution, conditional averaging, a new rate, a counterterm or cross-Q fitted weight to make the map total."
+  ],
+  "missing_assumptions": [
+    "If a later L2 theorem requires one normalized probability on the full disjoint union, a source-authorized cross-Q mixing law and its normalization must be supplied separately.",
+    "A separate PAH-OMC-011 re-test must still prove rootwise generator equality on this graded domain; domain totality alone is not that theorem."
+  ],
+  "non_claims": [
+    "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+    "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+    "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+    "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+    "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+  ],
+  "single_next_question": "With the full-Q graded map total and unique, do the unchanged PAH-001 root tuples intertwine on the graded common cylinder without a cross-Q Gibbs mixture or any rate modification?",
+  "revisit_condition": "Reopen only if the independent/hostile/Lean checks fail, a parent hash changes, a source-authorized cross-Q measure is supplied for an L2 theorem, or the dedicated PAH-OMC-011 re-test produces a rootwise counterexample.",
+  "reproduction": {
+    "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py",
+    "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+    "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean"
+  }
+}

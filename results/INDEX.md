@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**324 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**325 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-492`](../RESULTS-LEDGER.md#r-492) | PAH-OMC-012 full-Q charge-graded common domain and neutral refinement map | T0 |
 | [`R-491`](../RESULTS-LEDGER.md#r-491) | PAH-OMC-011 Gibbs-state-weighted common-core eventual intertwining | T0 |
 | [`R-490`](../RESULTS-LEDGER.md#r-490) | PAH-OMC-010 Gibbs-state-weighted local interaction envelope | T0 |
 | [`R-489`](../RESULTS-LEDGER.md#r-489) | PAH-OMC-009 uniform interaction-envelope obstruction | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-469`](../RESULTS-LEDGER.md#r-469) | HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk | T0 |
 | [`R-468`](../RESULTS-LEDGER.md#r-468) | HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope | T0 |
 | [`R-467`](../RESULTS-LEDGER.md#r-467) | Finite branch-relative Jacobian/entropy compensator interface | T0 |
-| [`R-466`](../RESULTS-LEDGER.md#r-466) | Finite positive-mass tube lower-bound interface and coarse scaling boundary | T0 |
 
 Search without loading the full ledger:
 

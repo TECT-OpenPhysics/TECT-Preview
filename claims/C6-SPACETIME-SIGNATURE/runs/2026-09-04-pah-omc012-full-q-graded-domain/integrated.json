@@ -1,0 +1,1981 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 16,
+  "assertions": [
+    {
+      "actual": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+      "expected": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+      "name": "contract hash pinned",
+      "pass": true
+    },
+    {
+      "actual": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+        "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+        "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+        "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+      },
+      "expected": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+        "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+        "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+        "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+      },
+      "name": "all parent hashes pinned",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "contract": {
+          "id": "PAH-OMC-012",
+          "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+          "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+        },
+        "lean": {
+          "declarations": [
+            "graded_projection_total",
+            "graded_projection_unique",
+            "dropped_charge_balance",
+            "fixed_component_recovered",
+            "r488_lift_nonzero",
+            "r488_lift_preserves_value",
+            "csw_domination_only",
+            "non_promotion_firewall"
+          ],
+          "path": "verification/lean/Tect/R492.lean",
+          "sha256": "16920d9382e231f491f0992ea0bcca519286d5005c73239bcc6664f9cbb46521"
+        },
+        "manifest_id": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-MANIFEST-001",
+        "no_parent_mutation": true,
+        "parents": {
+          "PAH-001": {
+            "path": "strategy/pa-hyp/PAH-001-v1.json",
+            "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+          },
+          "PAH-OMC-004": {
+            "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+            "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+          },
+          "PAH-OMC-008": {
+            "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+            "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+          },
+          "PAH-OMC-010": {
+            "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+            "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+          },
+          "PAH-OMC-010-MANIFEST": {
+            "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-manifest.json",
+            "sha256": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3"
+          },
+          "PAH-OMC-011": {
+            "path": "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+            "sha256": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020"
+          },
+          "R-490-CERTIFICATE": {
+            "path": "strategy/pa-hyp/R490-certificate.md",
+            "sha256": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+          },
+          "R-490-PRIMARY-RUN": {
+            "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/primary.json",
+            "sha256": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+          }
+        },
+        "physical_promotion": false,
+        "reproduction": {
+          "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+          "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+          "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+          "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean",
+          "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py"
+        },
+        "runs": {
+          "directory": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain",
+          "hostile": "hostile.json",
+          "independent": "independent.json",
+          "integrated": "integrated.json",
+          "primary": "primary.json"
+        },
+        "schema": "tect/pah-omc012-full-q-graded-domain-manifest/1.0",
+        "scope": "Full-Q charge-graded finite domain and total unique neutral refinement map for the unchanged PAH-001 functional; eligible for a separate PAH-OMC-011 re-test only.",
+        "status": "MAINLINE_ADVANCE"
+      },
+      "expected": "MAINLINE_ADVANCE/non-bearing/no gate change",
+      "name": "manifest status",
+      "pass": true
+    },
+    {
+      "actual": {
+        "functional_unchanged": true,
+        "mobility_unchanged": true,
+        "no_charge_deletion": true,
+        "no_charge_redistribution": true,
+        "no_conditional_gibbs_average": true,
+        "no_counterterm": true,
+        "no_fixed_rmax_bypass": true,
+        "no_generator_intertwining_claim": true,
+        "no_new_carrier": true,
+        "no_physical_promotion": true,
+        "no_rate_fitting": true,
+        "rates_unchanged": true
+      },
+      "expected": "all true",
+      "name": "firewall",
+      "pass": true
+    },
+    {
+      "actual": "PAH-OMC-012",
+      "expected": "PAH-OMC-012",
+      "name": "source identity",
+      "pass": true
+    },
+    {
+      "actual": {
+        "assertion_count": 17,
+        "passed": 17,
+        "payload": {
+          "active_gate_change": false,
+          "assertion_count": 17,
+          "assertions": [
+            {
+              "detail": {
+                "actual": {
+                  "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                  "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                  "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                  "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                  "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                  "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+                  "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+                },
+                "expected": {
+                  "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                  "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                  "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                  "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                  "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                  "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+                  "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+                }
+              },
+              "name": "parent-hashes",
+              "passed": true
+            },
+            {
+              "detail": {
+                "PAH-001": "PAH-001",
+                "PAH-OMC-004": "PAH-OMC-004",
+                "PAH-OMC-008": "PAH-OMC-008",
+                "PAH-OMC-010": "PAH-OMC-010",
+                "PAH-OMC-011": "PAH-OMC-011"
+              },
+              "name": "source-identities",
+              "passed": true
+            },
+            {
+              "detail": {
+                "actual": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+                "manifest_contract": {
+                  "id": "PAH-OMC-012",
+                  "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+                  "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+                }
+              },
+              "name": "contract-manifest-pinned",
+              "passed": true
+            },
+            {
+              "detail": {
+                "functional_unchanged": true,
+                "mobility_unchanged": true,
+                "no_charge_deletion": true,
+                "no_charge_redistribution": true,
+                "no_conditional_gibbs_average": true,
+                "no_counterterm": true,
+                "no_fixed_rmax_bypass": true,
+                "no_generator_intertwining_claim": true,
+                "no_new_carrier": true,
+                "no_physical_promotion": true,
+                "no_rate_fitting": true,
+                "rates_unchanged": true
+              },
+              "name": "preservation-firewall",
+              "passed": true
+            },
+            {
+              "detail": {
+                "functional": "F_rho=sum_v[lambda_s(s_v-1)^2/2+m2|psi_v|^2/2+lambda_4|psi_v|^4/4+eta_6|psi_v|^6/6+g s_v^2|psi_v|^2/2]+kappa_s sum_(e=(v,w))(s_v-s_w)^2/2+kappa_D sum_(e=(v,w))J_e(s)|psi_w-U_e psi_v|^2/2+kappa_g sum_p J_p(s)(1-Re U_p)",
+                "generator": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]"
+              },
+              "name": "unchanged-functional-and-rates",
+              "passed": true
+            },
+            {
+              "detail": {
+                "admissible_charge_set": "Q_n={0,1,...,M_psi|V_n|}; on the fixed PAH-OMC-010 path M_psi=1, Q_n={0,...,2(n+2)}.",
+                "charge_function": "q_n(omega)=sum_(v in V_n) ell_v(omega), so Omega_(rho_(n,R,Q),Q) is the q_n=Q component.",
+                "component": "Omega_(rho_(n,R,Q),Q) is exactly the finite PAH-001 configuration set with 0<=ell_v<=M_psi and sum_v ell_v=Q, together with the unchanged aperture, phase and link constraints.",
+                "vertices": "V_n={(i,j):0<=i<=n+1, j in {0,1}} and V_(n+1)=V_n union {(n+2,0),(n+2,1)}."
+              },
+              "name": "graded-definition-and-charge-range",
+              "passed": true
+            },
+            {
+              "detail": "For x=(Q_f,omega_f) in Omega_(n+1)^gr(R), retain every G_n vertex aperture, phase and radial coordinate and every old edge link, drop only the new column and d_n link, recompute Q_c=sum_(v in V_n)ell_v(omega_f), and set p_(n+1,n)(x)=(Q_c,omega_f restricted to G_n).",
+              "name": "neutral-map-declaration",
+              "passed": true
+            },
+            {
+              "detail": {
+                "generator_domain": "The graded domain is the finite direct sum of the unchanged PAH-001 component domains: D_n^gr(R)=direct_sum_(Q in Q_n) bounded_functions(Omega_(rho_(n,R,Q),Q)). The block generator acts componentwise with the exact PAH-001 L_rho and every declared move preserves Q.",
+                "gibbs_reference": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced."
+              },
+              "name": "componentwise-generator-and-gibbs",
+              "passed": true
+            },
+            {
+              "detail": {
+                "R_max_values": [
+                  1,
+                  2,
+                  5
+                ],
+                "n_range": [
+                  2,
+                  6
+                ],
+                "rows": 240
+              },
+              "name": "finite-pattern-totality",
+              "passed": true
+            },
+            {
+              "detail": {
+                "rows": 240
+              },
+              "name": "charge-balance-all-samples",
+              "passed": true
+            },
+            {
+              "detail": "coordinate restriction plus recomputed grade is deterministic",
+              "name": "projection-uniqueness",
+              "passed": true
+            },
+            {
+              "detail": [
+                {
+                  "coarse_Q": 1,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 2,
+                  "observable": "ell_a",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 1,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 2,
+                  "observable": "ell_d",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 0,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 2,
+                  "observable": "H_0",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 0,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 2,
+                  "observable": "H_1",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 1,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 3,
+                  "observable": "ell_a",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 1,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 3,
+                  "observable": "ell_d",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 0,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 3,
+                  "observable": "H_0",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 0,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 3,
+                  "observable": "H_1",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 1,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 5,
+                  "observable": "ell_a",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 1,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 5,
+                  "observable": "ell_d",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 0,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 5,
+                  "observable": "H_0",
+                  "value": 1
+                },
+                {
+                  "coarse_Q": 0,
+                  "finite_gibbs_positive": true,
+                  "lift_value": 1,
+                  "n": 5,
+                  "observable": "H_1",
+                  "value": 1
+                }
+              ],
+              "name": "r488-lift-nonzero",
+              "passed": true
+            },
+            {
+              "detail": "ell_a with a=(0,0), ell_d with d=(1,1), H_0 and H_1 are the two closed split-triangle Z_2 characters from PAH-OMC-008. Their pointwise lifts are f composed with p and are nonzero on the graded fine domain.",
+              "name": "r488-observable-definition",
+              "passed": true
+            },
+            {
+              "detail": "Use the PAH-OMC-010 path K=2, M_s=M_psi=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; R_max=R ranges over every positive integer. The map itself is independent of R.",
+              "name": "rmax-all-positive-integer-scope",
+              "passed": true
+            },
+            {
+              "detail": {
+                "C_sw": 540,
+                "role": "R-490 C_sw=540 is retained only as the previously verified state-weighted domination input. It is not used to define p, the graded domain, or any generator intertwining theorem."
+              },
+              "name": "csw-540-domination-only",
+              "passed": true
+            },
+            {
+              "detail": {
+                "gibbs_reference": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+                "non_claim": "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed."
+              },
+              "name": "no-global-mixture-invented",
+              "passed": true
+            },
+            {
+              "detail": {
+                "non_claims": [
+                  "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+                  "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+                  "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+                  "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+                  "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+                  "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+                ],
+                "status": {
+                  "active_gate_change": false,
+                  "claim_bearing": false,
+                  "global_normalized_gibbs_measure": "NOT_DEFINED_BY_PARENT; not required for this domain-map gate",
+                  "scope": "The full-Q graded finite domain and neutral refinement map are admitted as a source-owned researcher contract; PAH-OMC-011 generator intertwining is only eligible for a separate re-test.",
+                  "stage2_status": "HOLD_FOR_EVIDENCE",
+                  "verdict": "MAINLINE_ADVANCE"
+                }
+              },
+              "name": "no-physics-promotion",
+              "passed": true
+            }
+          ],
+          "audit_id": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-PRIMARY-001",
+          "claim_bearing": false,
+          "component_recovery": {
+            "functional": "PAH-001 functional unchanged",
+            "generator": "PAH-001 L_rho on each Q block",
+            "gibbs": "PAH-001 pi_(rho,Q) on each Q block",
+            "moves_preserve_Q": true
+          },
+          "derived": {
+            "Q_max_formula": "M_psi*|V_n|",
+            "Q_max_on_path": "2*(n+2)",
+            "R_max_samples": [
+              1,
+              2,
+              5
+            ],
+            "graded_reference": "componentwise Gibbs family; no cross-Q probability mixture",
+            "n_range": [
+              2,
+              6
+            ],
+            "r488_witness_rows": [
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 2,
+                "observable": "ell_a",
+                "value": 1
+              },
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 2,
+                "observable": "ell_d",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 2,
+                "observable": "H_0",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 2,
+                "observable": "H_1",
+                "value": 1
+              },
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 3,
+                "observable": "ell_a",
+                "value": 1
+              },
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 3,
+                "observable": "ell_d",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 3,
+                "observable": "H_0",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 3,
+                "observable": "H_1",
+                "value": 1
+              },
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 5,
+                "observable": "ell_a",
+                "value": 1
+              },
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 5,
+                "observable": "ell_d",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 5,
+                "observable": "H_0",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 5,
+                "observable": "H_1",
+                "value": 1
+              }
+            ],
+            "sample_rows": 240
+          },
+          "eligible_for_omc011_retest": true,
+          "exploration_id": "EXP-001461",
+          "failed": 0,
+          "global_normalized_gibbs_measure": "NOT_DEFINED_BY_PARENT; not needed for this finite domain-map gate",
+          "next_question": "With the full-Q graded map total and unique, do the unchanged PAH-001 root tuples intertwine on the graded common cylinder without a cross-Q Gibbs mixture or any rate modification?",
+          "non_claims": [
+            "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+            "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+            "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+            "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+            "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+            "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+          ],
+          "passed": 17,
+          "reproduction": {
+            "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+            "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+            "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+            "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean",
+            "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py"
+          },
+          "result_id": "R-492",
+          "run_kind": "primary",
+          "schema": "tect/pah-omc012-full-q-graded-domain-primary/1.0",
+          "scope": {
+            "R488_observables": "ell_a with a=(0,0), ell_d with d=(1,1), H_0 and H_1 are the two closed split-triangle Z_2 characters from PAH-OMC-008. Their pointwise lifts are f composed with p and are nonzero on the graded fine domain.",
+            "carrier_family": "Use exactly the PAH-OMC-004 two-row strip G_n for n>=2, with the unchanged neutral coordinate restriction from G_(n+1) to G_n. No carrier, face subdivision or root family is added.",
+            "charge_balance": "Q_f-Q_c=sum_(v in V_(n+1)\\V_n)ell_v(omega_f)>=0. No retained ell coordinate is altered and no charge is redistributed; the grade is allowed to change from Q_f to Q_c.",
+            "common_cylinder_algebra": "A_cyl^gr is the algebraic union of bounded functions of finitely many ell_v and closed-face holonomy characters, invariant under the declared gauge action and anchor-preserving automorphisms, interpreted componentwise on the graded union. The R-488 coordinates (ell_a,ell_d,H_0,H_1) are included and are grade-independent.",
+            "csw_role": "R-490 C_sw=540 is retained only as the previously verified state-weighted domination input. It is not used to define p, the graded domain, or any generator intertwining theorem.",
+            "generator_domain": "The graded domain is the finite direct sum of the unchanged PAH-001 component domains: D_n^gr(R)=direct_sum_(Q in Q_n) bounded_functions(Omega_(rho_(n,R,Q),Q)). The block generator acts componentwise with the exact PAH-001 L_rho and every declared move preserves Q.",
+            "gibbs_reference": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+            "graded_norm": "Use the direct-sum family norm sum_(Q in Q_n)||f_Q||_(2,pi_(rho,Q))^2, with each component norm exactly the PAH-OMC-010 Gibbs weighted norm. A single probability measure over Q is not required for this domain-map gate and remains an explicit open modeling input if later needed.",
+            "graded_state_space": "Omega_n^gr(R)=disjoint_union_(Q in Q_n) {Q}xOmega_(rho_(n,R,Q),Q). The grade is part of the disjoint-union tag and is not an extra interaction variable.",
+            "neutral_refinement": "For x=(Q_f,omega_f) in Omega_(n+1)^gr(R), retain every G_n vertex aperture, phase and radial coordinate and every old edge link, drop only the new column and d_n link, recompute Q_c=sum_(v in V_n)ell_v(omega_f), and set p_(n+1,n)(x)=(Q_c,omega_f restricted to G_n).",
+            "regulator": "Use the PAH-OMC-010 path K=2, M_s=M_psi=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; R_max=R ranges over every positive integer. The map itself is independent of R.",
+            "state_definition": {
+              "admissible_charge_set": "Q_n={0,1,...,M_psi|V_n|}; on the fixed PAH-OMC-010 path M_psi=1, Q_n={0,...,2(n+2)}.",
+              "charge_function": "q_n(omega)=sum_(v in V_n) ell_v(omega), so Omega_(rho_(n,R,Q),Q) is the q_n=Q component.",
+              "component": "Omega_(rho_(n,R,Q),Q) is exactly the finite PAH-001 configuration set with 0<=ell_v<=M_psi and sum_v ell_v=Q, together with the unchanged aperture, phase and link constraints.",
+              "vertices": "V_n={(i,j):0<=i<=n+1, j in {0,1}} and V_(n+1)=V_n union {(n+2,0),(n+2,1)}."
+            },
+            "totality_and_uniqueness": "Nonnegative bounded ell coordinates imply 0<=Q_c<=M_psi|V_n|, so the projected tuple is in exactly one coarse graded component. Coordinate restriction and the recomputed grade are deterministic, hence p is total and unique for every n>=2 and every R>=1."
+          },
+          "source_hashes": {
+            "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+            "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+            "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+            "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+            "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+            "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+            "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+          },
+          "stage2_status": "HOLD_FOR_EVIDENCE",
+          "state_weighted_input": {
+            "C_sw": 540,
+            "intertwining_proved": false,
+            "role": "domination_only"
+          },
+          "task_id": "T-054",
+          "verdict": "MAINLINE_ADVANCE",
+          "verification": "PASS"
+        },
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-PRIMARY-001 PASS 17/17; verdict=MAINLINE_ADVANCE; eligible_for_omc011_retest=True\n",
+        "verdict": "MAINLINE_ADVANCE",
+        "verification": "PASS"
+      },
+      "expected": "PASS",
+      "name": "primary subprocess",
+      "pass": true
+    },
+    {
+      "actual": {
+        "assertion_count": 15,
+        "passed": 15,
+        "payload": {
+          "active_gate_change": false,
+          "assertion_count": 15,
+          "assertions": [
+            {
+              "detail": {
+                "actual": {
+                  "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                  "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                  "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                  "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                  "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                  "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+                  "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+                },
+                "expected": {
+                  "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                  "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                  "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                  "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                  "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                  "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+                  "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+                }
+              },
+              "name": "independent-parent-hashes",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "independent-contract-pin",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "independent-source-firewall",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "independent-graded-range",
+              "passed": true
+            },
+            {
+              "detail": {
+                "R_max_values": [
+                  1,
+                  2,
+                  5
+                ],
+                "n_range": [
+                  2,
+                  7
+                ],
+                "rows": 306
+              },
+              "name": "independent-totality-and-balance",
+              "passed": true
+            },
+            {
+              "detail": {
+                "R_max_values": [
+                  1,
+                  2,
+                  5
+                ]
+              },
+              "name": "independent-Rmax-independence",
+              "passed": true
+            },
+            {
+              "detail": "repeated direct restriction gives the same grade and coordinates",
+              "name": "independent-unique-restriction",
+              "passed": true
+            },
+            {
+              "detail": "Q_f-Q_c=sum_(v in V_(n+1)\\V_n)ell_v(omega_f)>=0. No retained ell coordinate is altered and no charge is redistributed; the grade is allowed to change from Q_f to Q_c.",
+              "name": "independent-no-charge-mutation",
+              "passed": true
+            },
+            {
+              "detail": {
+                "dropped": 0,
+                "q_coarse": 1
+              },
+              "name": "independent-ell_a-lift",
+              "passed": true
+            },
+            {
+              "detail": {
+                "dropped": 0,
+                "q_coarse": 1
+              },
+              "name": "independent-ell_d-lift",
+              "passed": true
+            },
+            {
+              "detail": {
+                "dropped": 0,
+                "q_coarse": 0
+              },
+              "name": "independent-H_0-lift",
+              "passed": true
+            },
+            {
+              "detail": {
+                "dropped": 0,
+                "q_coarse": 0
+              },
+              "name": "independent-H_1-lift",
+              "passed": true
+            },
+            {
+              "detail": {
+                "witness": {
+                  "H_0": 1,
+                  "H_1": 1,
+                  "ell_a": 1,
+                  "ell_d": 1
+                }
+              },
+              "name": "independent-component-recovery",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "independent-csw-role",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "independent-no-physics",
+              "passed": true
+            }
+          ],
+          "audit_id": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-INDEPENDENT-001",
+          "claim_bearing": false,
+          "derived": {
+            "R_max_scope": "all positive integers",
+            "n_range": [
+              2,
+              7
+            ],
+            "rows": 306
+          },
+          "eligible_for_omc011_retest": true,
+          "exploration_id": "EXP-001461",
+          "failed": 0,
+          "next_question": "With the full-Q graded map total and unique, do the unchanged PAH-001 root tuples intertwine on the graded common cylinder without a cross-Q Gibbs mixture or any rate modification?",
+          "non_claims": [
+            "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+            "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+            "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+            "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+            "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+            "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+          ],
+          "passed": 15,
+          "reproduction": {
+            "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+            "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+            "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+            "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean",
+            "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py"
+          },
+          "result_id": "R-492",
+          "run_kind": "independent",
+          "schema": "tect/pah-omc012-full-q-graded-domain-independent/1.0",
+          "source_hashes": {
+            "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+            "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+            "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+            "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+            "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+            "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+            "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+          },
+          "stage2_status": "HOLD_FOR_EVIDENCE",
+          "task_id": "T-054",
+          "verdict": "MAINLINE_ADVANCE",
+          "verification": "PASS"
+        },
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-INDEPENDENT-001 PASS 15/15; verdict=MAINLINE_ADVANCE\n",
+        "verdict": "MAINLINE_ADVANCE",
+        "verification": "PASS"
+      },
+      "expected": "PASS",
+      "name": "independent subprocess",
+      "pass": true
+    },
+    {
+      "actual": {
+        "assertion_count": 10,
+        "passed": 10,
+        "payload": {
+          "active_gate_change": false,
+          "assertion_count": 10,
+          "assertions": [
+            {
+              "detail": {
+                "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+              },
+              "mutation": "parent-drift",
+              "rejected": true
+            },
+            {
+              "detail": "Omega_n^gr(R)=disjoint_union_(Q in Q_n) {Q}xOmega_(rho_(n,R,Q),Q). The grade is part of the disjoint-union tag and is not an extra interaction variable.",
+              "mutation": "fixed-Q-only-projection",
+              "rejected": true
+            },
+            {
+              "detail": "Q_f-Q_c=sum_(v in V_(n+1)\\V_n)ell_v(omega_f)>=0. No retained ell coordinate is altered and no charge is redistributed; the grade is allowed to change from Q_f to Q_c.",
+              "mutation": "charge-deletion",
+              "rejected": true
+            },
+            {
+              "detail": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+              "mutation": "conditional-gibbs-average",
+              "rejected": true
+            },
+            {
+              "detail": "Only parent component rates and Gibbs states are used.",
+              "mutation": "cross-Q-rate-fitting",
+              "rejected": true
+            },
+            {
+              "detail": "none at finite rho",
+              "mutation": "functional-or-counterterm-change",
+              "rejected": true
+            },
+            {
+              "detail": "Use exactly the PAH-OMC-004 two-row strip G_n for n>=2, with the unchanged neutral coordinate restriction from G_(n+1) to G_n. No carrier, face subdivision or root family is added.",
+              "mutation": "new-carrier-or-root",
+              "rejected": true
+            },
+            {
+              "detail": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+              "mutation": "global-gibbs-overclaim",
+              "rejected": true
+            },
+            {
+              "detail": "Full-Q charge-graded finite domain and total unique neutral refinement map for the unchanged PAH-001 functional; eligible for a separate PAH-OMC-011 re-test only.",
+              "mutation": "intertwining-overclaim",
+              "rejected": true
+            },
+            {
+              "detail": [
+                "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+                "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+                "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+                "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+                "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+                "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+              ],
+              "mutation": "physical-promotion",
+              "rejected": true
+            }
+          ],
+          "audit_id": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-HOSTILE-001",
+          "claim_bearing": false,
+          "classification": "HOSTILE_FIREWALL_REJECTS_DOMAIN_OVERCLAIMS",
+          "eligible_for_omc011_retest": true,
+          "exploration_id": "EXP-001461",
+          "failed": 0,
+          "next_question": "With the full-Q graded map total and unique, do the unchanged PAH-001 root tuples intertwine on the graded common cylinder without a cross-Q Gibbs mixture or any rate modification?",
+          "non_claims": [
+            "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+            "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+            "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+            "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+            "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+            "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+          ],
+          "passed": 10,
+          "reproduction": {
+            "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+            "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+            "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+            "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean",
+            "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py"
+          },
+          "result_id": "R-492",
+          "run_kind": "hostile",
+          "schema": "tect/pah-omc012-full-q-graded-domain-hostile/1.0",
+          "source_hashes": {
+            "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+            "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+            "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+          },
+          "stage2_status": "HOLD_FOR_EVIDENCE",
+          "task_id": "T-054",
+          "verdict": "MAINLINE_ADVANCE",
+          "verification": "PASS"
+        },
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-HOSTILE-001 PASS 10/10; verdict=MAINLINE_ADVANCE\n",
+        "verdict": "MAINLINE_ADVANCE",
+        "verification": "PASS"
+      },
+      "expected": "PASS",
+      "name": "hostile subprocess",
+      "pass": true
+    },
+    {
+      "actual": [
+        "MAINLINE_ADVANCE",
+        "MAINLINE_ADVANCE",
+        "MAINLINE_ADVANCE"
+      ],
+      "expected": "all MAINLINE_ADVANCE",
+      "name": "cross-lane verdict",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": true,
+      "name": "cross-lane eligibility",
+      "pass": true
+    },
+    {
+      "actual": {
+        "Q_max_formula": "M_psi*|V_n|",
+        "Q_max_on_path": "2*(n+2)",
+        "R_max_samples": [
+          1,
+          2,
+          5
+        ],
+        "graded_reference": "componentwise Gibbs family; no cross-Q probability mixture",
+        "n_range": [
+          2,
+          6
+        ],
+        "r488_witness_rows": [
+          {
+            "coarse_Q": 1,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 2,
+            "observable": "ell_a",
+            "value": 1
+          },
+          {
+            "coarse_Q": 1,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 2,
+            "observable": "ell_d",
+            "value": 1
+          },
+          {
+            "coarse_Q": 0,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 2,
+            "observable": "H_0",
+            "value": 1
+          },
+          {
+            "coarse_Q": 0,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 2,
+            "observable": "H_1",
+            "value": 1
+          },
+          {
+            "coarse_Q": 1,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 3,
+            "observable": "ell_a",
+            "value": 1
+          },
+          {
+            "coarse_Q": 1,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 3,
+            "observable": "ell_d",
+            "value": 1
+          },
+          {
+            "coarse_Q": 0,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 3,
+            "observable": "H_0",
+            "value": 1
+          },
+          {
+            "coarse_Q": 0,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 3,
+            "observable": "H_1",
+            "value": 1
+          },
+          {
+            "coarse_Q": 1,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 5,
+            "observable": "ell_a",
+            "value": 1
+          },
+          {
+            "coarse_Q": 1,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 5,
+            "observable": "ell_d",
+            "value": 1
+          },
+          {
+            "coarse_Q": 0,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 5,
+            "observable": "H_0",
+            "value": 1
+          },
+          {
+            "coarse_Q": 0,
+            "finite_gibbs_positive": true,
+            "lift_value": 1,
+            "n": 5,
+            "observable": "H_1",
+            "value": 1
+          }
+        ],
+        "sample_rows": 240
+      },
+      "expected": "total/unique/nonzero",
+      "name": "graded totality and nonzero lift",
+      "pass": true
+    },
+    {
+      "actual": {
+        "C_sw": 540,
+        "intertwining_proved": false,
+        "role": "domination_only"
+      },
+      "expected": "domination only",
+      "name": "C_sw role",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declarations": [
+          "graded_projection_total",
+          "graded_projection_unique",
+          "dropped_charge_balance",
+          "fixed_component_recovered",
+          "r488_lift_nonzero",
+          "r488_lift_preserves_value",
+          "csw_domination_only",
+          "non_promotion_firewall"
+        ],
+        "path": "verification/lean/Tect/R492.lean",
+        "sha256": "16920d9382e231f491f0992ea0bcca519286d5005c73239bcc6664f9cbb46521"
+      },
+      "expected": "16920d9382e231f491f0992ea0bcca519286d5005c73239bcc6664f9cbb46521",
+      "name": "Lean registry entry",
+      "pass": true
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": true,
+      "name": "Lean source firewall",
+      "pass": true
+    },
+    {
+      "actual": [
+        "graded_projection_total",
+        "graded_projection_unique",
+        "dropped_charge_balance",
+        "fixed_component_recovered",
+        "r488_lift_nonzero",
+        "r488_lift_preserves_value",
+        "csw_domination_only",
+        "non_promotion_firewall"
+      ],
+      "expected": "all registered",
+      "name": "Lean declaration markers",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R492.lean",
+        "lake": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+        "output": "\n",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-INTEGRATED-001",
+  "claim_bearing": false,
+  "component_recovery": "Restriction of the graded direct sum to any fixed Q is definitionally the existing PAH-001 state, generator, move set, and Gibbs state.",
+  "contract": {
+    "R488_observables": "ell_a with a=(0,0), ell_d with d=(1,1), H_0 and H_1 are the two closed split-triangle Z_2 characters from PAH-OMC-008. Their pointwise lifts are f composed with p and are nonzero on the graded fine domain.",
+    "carrier_family": "Use exactly the PAH-OMC-004 two-row strip G_n for n>=2, with the unchanged neutral coordinate restriction from G_(n+1) to G_n. No carrier, face subdivision or root family is added.",
+    "charge_balance": "Q_f-Q_c=sum_(v in V_(n+1)\\V_n)ell_v(omega_f)>=0. No retained ell coordinate is altered and no charge is redistributed; the grade is allowed to change from Q_f to Q_c.",
+    "common_cylinder_algebra": "A_cyl^gr is the algebraic union of bounded functions of finitely many ell_v and closed-face holonomy characters, invariant under the declared gauge action and anchor-preserving automorphisms, interpreted componentwise on the graded union. The R-488 coordinates (ell_a,ell_d,H_0,H_1) are included and are grade-independent.",
+    "csw_role": "R-490 C_sw=540 is retained only as the previously verified state-weighted domination input. It is not used to define p, the graded domain, or any generator intertwining theorem.",
+    "generator_domain": "The graded domain is the finite direct sum of the unchanged PAH-001 component domains: D_n^gr(R)=direct_sum_(Q in Q_n) bounded_functions(Omega_(rho_(n,R,Q),Q)). The block generator acts componentwise with the exact PAH-001 L_rho and every declared move preserves Q.",
+    "gibbs_reference": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+    "graded_norm": "Use the direct-sum family norm sum_(Q in Q_n)||f_Q||_(2,pi_(rho,Q))^2, with each component norm exactly the PAH-OMC-010 Gibbs weighted norm. A single probability measure over Q is not required for this domain-map gate and remains an explicit open modeling input if later needed.",
+    "graded_state_space": "Omega_n^gr(R)=disjoint_union_(Q in Q_n) {Q}xOmega_(rho_(n,R,Q),Q). The grade is part of the disjoint-union tag and is not an extra interaction variable.",
+    "neutral_refinement": "For x=(Q_f,omega_f) in Omega_(n+1)^gr(R), retain every G_n vertex aperture, phase and radial coordinate and every old edge link, drop only the new column and d_n link, recompute Q_c=sum_(v in V_n)ell_v(omega_f), and set p_(n+1,n)(x)=(Q_c,omega_f restricted to G_n).",
+    "regulator": "Use the PAH-OMC-010 path K=2, M_s=M_psi=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; R_max=R ranges over every positive integer. The map itself is independent of R.",
+    "state_definition": {
+      "admissible_charge_set": "Q_n={0,1,...,M_psi|V_n|}; on the fixed PAH-OMC-010 path M_psi=1, Q_n={0,...,2(n+2)}.",
+      "charge_function": "q_n(omega)=sum_(v in V_n) ell_v(omega), so Omega_(rho_(n,R,Q),Q) is the q_n=Q component.",
+      "component": "Omega_(rho_(n,R,Q),Q) is exactly the finite PAH-001 configuration set with 0<=ell_v<=M_psi and sum_v ell_v=Q, together with the unchanged aperture, phase and link constraints.",
+      "vertices": "V_n={(i,j):0<=i<=n+1, j in {0,1}} and V_(n+1)=V_n union {(n+2,0),(n+2,1)}."
+    },
+    "totality_and_uniqueness": "Nonnegative bounded ell coordinates imply 0<=Q_c<=M_psi|V_n|, so the projected tuple is in exactly one coarse graded component. Coordinate restriction and the recomputed grade are deterministic, hence p is total and unique for every n>=2 and every R>=1."
+  },
+  "eligible_for_omc011_retest": true,
+  "exploration_id": "EXP-001461",
+  "failed": 0,
+  "global_normalized_gibbs_measure": "NOT_DEFINED_BY_PARENT; not needed for this finite domain-map gate",
+  "next_question": "With the full-Q graded map total and unique, do the unchanged PAH-001 root tuples intertwine on the graded common cylinder without a cross-Q Gibbs mixture or any rate modification?",
+  "non_claims": [
+    "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+    "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+    "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+    "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+    "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+  ],
+  "passed": 16,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+    "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean",
+    "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py"
+  },
+  "result_id": "R-492",
+  "run_kind": "integrated",
+  "runs": {
+    "hostile": {
+      "assertion_count": 10,
+      "passed": 10,
+      "payload": {
+        "active_gate_change": false,
+        "assertion_count": 10,
+        "assertions": [
+          {
+            "detail": {
+              "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+              "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+              "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+            },
+            "mutation": "parent-drift",
+            "rejected": true
+          },
+          {
+            "detail": "Omega_n^gr(R)=disjoint_union_(Q in Q_n) {Q}xOmega_(rho_(n,R,Q),Q). The grade is part of the disjoint-union tag and is not an extra interaction variable.",
+            "mutation": "fixed-Q-only-projection",
+            "rejected": true
+          },
+          {
+            "detail": "Q_f-Q_c=sum_(v in V_(n+1)\\V_n)ell_v(omega_f)>=0. No retained ell coordinate is altered and no charge is redistributed; the grade is allowed to change from Q_f to Q_c.",
+            "mutation": "charge-deletion",
+            "rejected": true
+          },
+          {
+            "detail": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+            "mutation": "conditional-gibbs-average",
+            "rejected": true
+          },
+          {
+            "detail": "Only parent component rates and Gibbs states are used.",
+            "mutation": "cross-Q-rate-fitting",
+            "rejected": true
+          },
+          {
+            "detail": "none at finite rho",
+            "mutation": "functional-or-counterterm-change",
+            "rejected": true
+          },
+          {
+            "detail": "Use exactly the PAH-OMC-004 two-row strip G_n for n>=2, with the unchanged neutral coordinate restriction from G_(n+1) to G_n. No carrier, face subdivision or root family is added.",
+            "mutation": "new-carrier-or-root",
+            "rejected": true
+          },
+          {
+            "detail": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+            "mutation": "global-gibbs-overclaim",
+            "rejected": true
+          },
+          {
+            "detail": "Full-Q charge-graded finite domain and total unique neutral refinement map for the unchanged PAH-001 functional; eligible for a separate PAH-OMC-011 re-test only.",
+            "mutation": "intertwining-overclaim",
+            "rejected": true
+          },
+          {
+            "detail": [
+              "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+              "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+              "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+              "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+              "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+              "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+            ],
+            "mutation": "physical-promotion",
+            "rejected": true
+          }
+        ],
+        "audit_id": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-HOSTILE-001",
+        "claim_bearing": false,
+        "classification": "HOSTILE_FIREWALL_REJECTS_DOMAIN_OVERCLAIMS",
+        "eligible_for_omc011_retest": true,
+        "exploration_id": "EXP-001461",
+        "failed": 0,
+        "next_question": "With the full-Q graded map total and unique, do the unchanged PAH-001 root tuples intertwine on the graded common cylinder without a cross-Q Gibbs mixture or any rate modification?",
+        "non_claims": [
+          "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+          "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+          "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+          "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+          "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+          "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+        ],
+        "passed": 10,
+        "reproduction": {
+          "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+          "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+          "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+          "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean",
+          "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py"
+        },
+        "result_id": "R-492",
+        "run_kind": "hostile",
+        "schema": "tect/pah-omc012-full-q-graded-domain-hostile/1.0",
+        "source_hashes": {
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+          "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+        },
+        "stage2_status": "HOLD_FOR_EVIDENCE",
+        "task_id": "T-054",
+        "verdict": "MAINLINE_ADVANCE",
+        "verification": "PASS"
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-HOSTILE-001 PASS 10/10; verdict=MAINLINE_ADVANCE\n",
+      "verdict": "MAINLINE_ADVANCE",
+      "verification": "PASS"
+    },
+    "independent": {
+      "assertion_count": 15,
+      "passed": 15,
+      "payload": {
+        "active_gate_change": false,
+        "assertion_count": 15,
+        "assertions": [
+          {
+            "detail": {
+              "actual": {
+                "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+                "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+              },
+              "expected": {
+                "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+                "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+              }
+            },
+            "name": "independent-parent-hashes",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "independent-contract-pin",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "independent-source-firewall",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "independent-graded-range",
+            "passed": true
+          },
+          {
+            "detail": {
+              "R_max_values": [
+                1,
+                2,
+                5
+              ],
+              "n_range": [
+                2,
+                7
+              ],
+              "rows": 306
+            },
+            "name": "independent-totality-and-balance",
+            "passed": true
+          },
+          {
+            "detail": {
+              "R_max_values": [
+                1,
+                2,
+                5
+              ]
+            },
+            "name": "independent-Rmax-independence",
+            "passed": true
+          },
+          {
+            "detail": "repeated direct restriction gives the same grade and coordinates",
+            "name": "independent-unique-restriction",
+            "passed": true
+          },
+          {
+            "detail": "Q_f-Q_c=sum_(v in V_(n+1)\\V_n)ell_v(omega_f)>=0. No retained ell coordinate is altered and no charge is redistributed; the grade is allowed to change from Q_f to Q_c.",
+            "name": "independent-no-charge-mutation",
+            "passed": true
+          },
+          {
+            "detail": {
+              "dropped": 0,
+              "q_coarse": 1
+            },
+            "name": "independent-ell_a-lift",
+            "passed": true
+          },
+          {
+            "detail": {
+              "dropped": 0,
+              "q_coarse": 1
+            },
+            "name": "independent-ell_d-lift",
+            "passed": true
+          },
+          {
+            "detail": {
+              "dropped": 0,
+              "q_coarse": 0
+            },
+            "name": "independent-H_0-lift",
+            "passed": true
+          },
+          {
+            "detail": {
+              "dropped": 0,
+              "q_coarse": 0
+            },
+            "name": "independent-H_1-lift",
+            "passed": true
+          },
+          {
+            "detail": {
+              "witness": {
+                "H_0": 1,
+                "H_1": 1,
+                "ell_a": 1,
+                "ell_d": 1
+              }
+            },
+            "name": "independent-component-recovery",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "independent-csw-role",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "independent-no-physics",
+            "passed": true
+          }
+        ],
+        "audit_id": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-INDEPENDENT-001",
+        "claim_bearing": false,
+        "derived": {
+          "R_max_scope": "all positive integers",
+          "n_range": [
+            2,
+            7
+          ],
+          "rows": 306
+        },
+        "eligible_for_omc011_retest": true,
+        "exploration_id": "EXP-001461",
+        "failed": 0,
+        "next_question": "With the full-Q graded map total and unique, do the unchanged PAH-001 root tuples intertwine on the graded common cylinder without a cross-Q Gibbs mixture or any rate modification?",
+        "non_claims": [
+          "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+          "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+          "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+          "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+          "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+          "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+        ],
+        "passed": 15,
+        "reproduction": {
+          "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+          "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+          "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+          "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean",
+          "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py"
+        },
+        "result_id": "R-492",
+        "run_kind": "independent",
+        "schema": "tect/pah-omc012-full-q-graded-domain-independent/1.0",
+        "source_hashes": {
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+          "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+          "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+          "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+          "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+          "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+        },
+        "stage2_status": "HOLD_FOR_EVIDENCE",
+        "task_id": "T-054",
+        "verdict": "MAINLINE_ADVANCE",
+        "verification": "PASS"
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-INDEPENDENT-001 PASS 15/15; verdict=MAINLINE_ADVANCE\n",
+      "verdict": "MAINLINE_ADVANCE",
+      "verification": "PASS"
+    },
+    "lean": {
+      "command": "lake env lean Tect/R492.lean",
+      "lake": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+      "output": "\n",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    "primary": {
+      "assertion_count": 17,
+      "passed": 17,
+      "payload": {
+        "active_gate_change": false,
+        "assertion_count": 17,
+        "assertions": [
+          {
+            "detail": {
+              "actual": {
+                "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+                "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+              },
+              "expected": {
+                "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+                "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+              }
+            },
+            "name": "parent-hashes",
+            "passed": true
+          },
+          {
+            "detail": {
+              "PAH-001": "PAH-001",
+              "PAH-OMC-004": "PAH-OMC-004",
+              "PAH-OMC-008": "PAH-OMC-008",
+              "PAH-OMC-010": "PAH-OMC-010",
+              "PAH-OMC-011": "PAH-OMC-011"
+            },
+            "name": "source-identities",
+            "passed": true
+          },
+          {
+            "detail": {
+              "actual": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+              "manifest_contract": {
+                "id": "PAH-OMC-012",
+                "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+                "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+              }
+            },
+            "name": "contract-manifest-pinned",
+            "passed": true
+          },
+          {
+            "detail": {
+              "functional_unchanged": true,
+              "mobility_unchanged": true,
+              "no_charge_deletion": true,
+              "no_charge_redistribution": true,
+              "no_conditional_gibbs_average": true,
+              "no_counterterm": true,
+              "no_fixed_rmax_bypass": true,
+              "no_generator_intertwining_claim": true,
+              "no_new_carrier": true,
+              "no_physical_promotion": true,
+              "no_rate_fitting": true,
+              "rates_unchanged": true
+            },
+            "name": "preservation-firewall",
+            "passed": true
+          },
+          {
+            "detail": {
+              "functional": "F_rho=sum_v[lambda_s(s_v-1)^2/2+m2|psi_v|^2/2+lambda_4|psi_v|^4/4+eta_6|psi_v|^6/6+g s_v^2|psi_v|^2/2]+kappa_s sum_(e=(v,w))(s_v-s_w)^2/2+kappa_D sum_(e=(v,w))J_e(s)|psi_w-U_e psi_v|^2/2+kappa_g sum_p J_p(s)(1-Re U_p)",
+              "generator": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]"
+            },
+            "name": "unchanged-functional-and-rates",
+            "passed": true
+          },
+          {
+            "detail": {
+              "admissible_charge_set": "Q_n={0,1,...,M_psi|V_n|}; on the fixed PAH-OMC-010 path M_psi=1, Q_n={0,...,2(n+2)}.",
+              "charge_function": "q_n(omega)=sum_(v in V_n) ell_v(omega), so Omega_(rho_(n,R,Q),Q) is the q_n=Q component.",
+              "component": "Omega_(rho_(n,R,Q),Q) is exactly the finite PAH-001 configuration set with 0<=ell_v<=M_psi and sum_v ell_v=Q, together with the unchanged aperture, phase and link constraints.",
+              "vertices": "V_n={(i,j):0<=i<=n+1, j in {0,1}} and V_(n+1)=V_n union {(n+2,0),(n+2,1)}."
+            },
+            "name": "graded-definition-and-charge-range",
+            "passed": true
+          },
+          {
+            "detail": "For x=(Q_f,omega_f) in Omega_(n+1)^gr(R), retain every G_n vertex aperture, phase and radial coordinate and every old edge link, drop only the new column and d_n link, recompute Q_c=sum_(v in V_n)ell_v(omega_f), and set p_(n+1,n)(x)=(Q_c,omega_f restricted to G_n).",
+            "name": "neutral-map-declaration",
+            "passed": true
+          },
+          {
+            "detail": {
+              "generator_domain": "The graded domain is the finite direct sum of the unchanged PAH-001 component domains: D_n^gr(R)=direct_sum_(Q in Q_n) bounded_functions(Omega_(rho_(n,R,Q),Q)). The block generator acts componentwise with the exact PAH-001 L_rho and every declared move preserves Q.",
+              "gibbs_reference": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced."
+            },
+            "name": "componentwise-generator-and-gibbs",
+            "passed": true
+          },
+          {
+            "detail": {
+              "R_max_values": [
+                1,
+                2,
+                5
+              ],
+              "n_range": [
+                2,
+                6
+              ],
+              "rows": 240
+            },
+            "name": "finite-pattern-totality",
+            "passed": true
+          },
+          {
+            "detail": {
+              "rows": 240
+            },
+            "name": "charge-balance-all-samples",
+            "passed": true
+          },
+          {
+            "detail": "coordinate restriction plus recomputed grade is deterministic",
+            "name": "projection-uniqueness",
+            "passed": true
+          },
+          {
+            "detail": [
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 2,
+                "observable": "ell_a",
+                "value": 1
+              },
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 2,
+                "observable": "ell_d",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 2,
+                "observable": "H_0",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 2,
+                "observable": "H_1",
+                "value": 1
+              },
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 3,
+                "observable": "ell_a",
+                "value": 1
+              },
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 3,
+                "observable": "ell_d",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 3,
+                "observable": "H_0",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 3,
+                "observable": "H_1",
+                "value": 1
+              },
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 5,
+                "observable": "ell_a",
+                "value": 1
+              },
+              {
+                "coarse_Q": 1,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 5,
+                "observable": "ell_d",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 5,
+                "observable": "H_0",
+                "value": 1
+              },
+              {
+                "coarse_Q": 0,
+                "finite_gibbs_positive": true,
+                "lift_value": 1,
+                "n": 5,
+                "observable": "H_1",
+                "value": 1
+              }
+            ],
+            "name": "r488-lift-nonzero",
+            "passed": true
+          },
+          {
+            "detail": "ell_a with a=(0,0), ell_d with d=(1,1), H_0 and H_1 are the two closed split-triangle Z_2 characters from PAH-OMC-008. Their pointwise lifts are f composed with p and are nonzero on the graded fine domain.",
+            "name": "r488-observable-definition",
+            "passed": true
+          },
+          {
+            "detail": "Use the PAH-OMC-010 path K=2, M_s=M_psi=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; R_max=R ranges over every positive integer. The map itself is independent of R.",
+            "name": "rmax-all-positive-integer-scope",
+            "passed": true
+          },
+          {
+            "detail": {
+              "C_sw": 540,
+              "role": "R-490 C_sw=540 is retained only as the previously verified state-weighted domination input. It is not used to define p, the graded domain, or any generator intertwining theorem."
+            },
+            "name": "csw-540-domination-only",
+            "passed": true
+          },
+          {
+            "detail": {
+              "gibbs_reference": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+              "non_claim": "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed."
+            },
+            "name": "no-global-mixture-invented",
+            "passed": true
+          },
+          {
+            "detail": {
+              "non_claims": [
+                "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+                "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+                "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+                "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+                "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+                "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+              ],
+              "status": {
+                "active_gate_change": false,
+                "claim_bearing": false,
+                "global_normalized_gibbs_measure": "NOT_DEFINED_BY_PARENT; not required for this domain-map gate",
+                "scope": "The full-Q graded finite domain and neutral refinement map are admitted as a source-owned researcher contract; PAH-OMC-011 generator intertwining is only eligible for a separate re-test.",
+                "stage2_status": "HOLD_FOR_EVIDENCE",
+                "verdict": "MAINLINE_ADVANCE"
+              }
+            },
+            "name": "no-physics-promotion",
+            "passed": true
+          }
+        ],
+        "audit_id": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-PRIMARY-001",
+        "claim_bearing": false,
+        "component_recovery": {
+          "functional": "PAH-001 functional unchanged",
+          "generator": "PAH-001 L_rho on each Q block",
+          "gibbs": "PAH-001 pi_(rho,Q) on each Q block",
+          "moves_preserve_Q": true
+        },
+        "derived": {
+          "Q_max_formula": "M_psi*|V_n|",
+          "Q_max_on_path": "2*(n+2)",
+          "R_max_samples": [
+            1,
+            2,
+            5
+          ],
+          "graded_reference": "componentwise Gibbs family; no cross-Q probability mixture",
+          "n_range": [
+            2,
+            6
+          ],
+          "r488_witness_rows": [
+            {
+              "coarse_Q": 1,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 2,
+              "observable": "ell_a",
+              "value": 1
+            },
+            {
+              "coarse_Q": 1,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 2,
+              "observable": "ell_d",
+              "value": 1
+            },
+            {
+              "coarse_Q": 0,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 2,
+              "observable": "H_0",
+              "value": 1
+            },
+            {
+              "coarse_Q": 0,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 2,
+              "observable": "H_1",
+              "value": 1
+            },
+            {
+              "coarse_Q": 1,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 3,
+              "observable": "ell_a",
+              "value": 1
+            },
+            {
+              "coarse_Q": 1,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 3,
+              "observable": "ell_d",
+              "value": 1
+            },
+            {
+              "coarse_Q": 0,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 3,
+              "observable": "H_0",
+              "value": 1
+            },
+            {
+              "coarse_Q": 0,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 3,
+              "observable": "H_1",
+              "value": 1
+            },
+            {
+              "coarse_Q": 1,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 5,
+              "observable": "ell_a",
+              "value": 1
+            },
+            {
+              "coarse_Q": 1,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 5,
+              "observable": "ell_d",
+              "value": 1
+            },
+            {
+              "coarse_Q": 0,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 5,
+              "observable": "H_0",
+              "value": 1
+            },
+            {
+              "coarse_Q": 0,
+              "finite_gibbs_positive": true,
+              "lift_value": 1,
+              "n": 5,
+              "observable": "H_1",
+              "value": 1
+            }
+          ],
+          "sample_rows": 240
+        },
+        "eligible_for_omc011_retest": true,
+        "exploration_id": "EXP-001461",
+        "failed": 0,
+        "global_normalized_gibbs_measure": "NOT_DEFINED_BY_PARENT; not needed for this finite domain-map gate",
+        "next_question": "With the full-Q graded map total and unique, do the unchanged PAH-001 root tuples intertwine on the graded common cylinder without a cross-Q Gibbs mixture or any rate modification?",
+        "non_claims": [
+          "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+          "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+          "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+          "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+          "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+          "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+        ],
+        "passed": 17,
+        "reproduction": {
+          "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+          "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+          "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+          "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean",
+          "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py"
+        },
+        "result_id": "R-492",
+        "run_kind": "primary",
+        "schema": "tect/pah-omc012-full-q-graded-domain-primary/1.0",
+        "scope": {
+          "R488_observables": "ell_a with a=(0,0), ell_d with d=(1,1), H_0 and H_1 are the two closed split-triangle Z_2 characters from PAH-OMC-008. Their pointwise lifts are f composed with p and are nonzero on the graded fine domain.",
+          "carrier_family": "Use exactly the PAH-OMC-004 two-row strip G_n for n>=2, with the unchanged neutral coordinate restriction from G_(n+1) to G_n. No carrier, face subdivision or root family is added.",
+          "charge_balance": "Q_f-Q_c=sum_(v in V_(n+1)\\V_n)ell_v(omega_f)>=0. No retained ell coordinate is altered and no charge is redistributed; the grade is allowed to change from Q_f to Q_c.",
+          "common_cylinder_algebra": "A_cyl^gr is the algebraic union of bounded functions of finitely many ell_v and closed-face holonomy characters, invariant under the declared gauge action and anchor-preserving automorphisms, interpreted componentwise on the graded union. The R-488 coordinates (ell_a,ell_d,H_0,H_1) are included and are grade-independent.",
+          "csw_role": "R-490 C_sw=540 is retained only as the previously verified state-weighted domination input. It is not used to define p, the graded domain, or any generator intertwining theorem.",
+          "generator_domain": "The graded domain is the finite direct sum of the unchanged PAH-001 component domains: D_n^gr(R)=direct_sum_(Q in Q_n) bounded_functions(Omega_(rho_(n,R,Q),Q)). The block generator acts componentwise with the exact PAH-001 L_rho and every declared move preserves Q.",
+          "gibbs_reference": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+          "graded_norm": "Use the direct-sum family norm sum_(Q in Q_n)||f_Q||_(2,pi_(rho,Q))^2, with each component norm exactly the PAH-OMC-010 Gibbs weighted norm. A single probability measure over Q is not required for this domain-map gate and remains an explicit open modeling input if later needed.",
+          "graded_state_space": "Omega_n^gr(R)=disjoint_union_(Q in Q_n) {Q}xOmega_(rho_(n,R,Q),Q). The grade is part of the disjoint-union tag and is not an extra interaction variable.",
+          "neutral_refinement": "For x=(Q_f,omega_f) in Omega_(n+1)^gr(R), retain every G_n vertex aperture, phase and radial coordinate and every old edge link, drop only the new column and d_n link, recompute Q_c=sum_(v in V_n)ell_v(omega_f), and set p_(n+1,n)(x)=(Q_c,omega_f restricted to G_n).",
+          "regulator": "Use the PAH-OMC-010 path K=2, M_s=M_psi=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; R_max=R ranges over every positive integer. The map itself is independent of R.",
+          "state_definition": {
+            "admissible_charge_set": "Q_n={0,1,...,M_psi|V_n|}; on the fixed PAH-OMC-010 path M_psi=1, Q_n={0,...,2(n+2)}.",
+            "charge_function": "q_n(omega)=sum_(v in V_n) ell_v(omega), so Omega_(rho_(n,R,Q),Q) is the q_n=Q component.",
+            "component": "Omega_(rho_(n,R,Q),Q) is exactly the finite PAH-001 configuration set with 0<=ell_v<=M_psi and sum_v ell_v=Q, together with the unchanged aperture, phase and link constraints.",
+            "vertices": "V_n={(i,j):0<=i<=n+1, j in {0,1}} and V_(n+1)=V_n union {(n+2,0),(n+2,1)}."
+          },
+          "totality_and_uniqueness": "Nonnegative bounded ell coordinates imply 0<=Q_c<=M_psi|V_n|, so the projected tuple is in exactly one coarse graded component. Coordinate restriction and the recomputed grade are deterministic, hence p is total and unique for every n>=2 and every R>=1."
+        },
+        "source_hashes": {
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+          "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+          "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+          "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+          "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+          "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+        },
+        "stage2_status": "HOLD_FOR_EVIDENCE",
+        "state_weighted_input": {
+          "C_sw": 540,
+          "intertwining_proved": false,
+          "role": "domination_only"
+        },
+        "task_id": "T-054",
+        "verdict": "MAINLINE_ADVANCE",
+        "verification": "PASS"
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-PRIMARY-001 PASS 17/17; verdict=MAINLINE_ADVANCE; eligible_for_omc011_retest=True\n",
+      "verdict": "MAINLINE_ADVANCE",
+      "verification": "PASS"
+    }
+  },
+  "schema": "tect/pah-omc012-full-q-graded-domain-integrated/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+    "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+    "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+    "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "PAH-OMC-012-MANIFEST": "fc2c52b0f786b371c56d2700e571d23558bad191942bc4f5182bc6260ae33937",
+    "R-490-PRIMARY-RUN": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3",
+    "R492-Lean": "16920d9382e231f491f0992ea0bcca519286d5005c73239bcc6664f9cbb46521"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "state_weighted_input": {
+    "C_sw": 540,
+    "intertwining_proved": false,
+    "role": "domination_only"
+  },
+  "task_id": "T-054",
+  "verdict": "MAINLINE_ADVANCE",
+  "verification": "PASS"
+}

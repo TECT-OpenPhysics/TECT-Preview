@@ -1,0 +1,102 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "detail": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+      },
+      "mutation": "parent-drift",
+      "rejected": true
+    },
+    {
+      "detail": "Omega_n^gr(R)=disjoint_union_(Q in Q_n) {Q}xOmega_(rho_(n,R,Q),Q). The grade is part of the disjoint-union tag and is not an extra interaction variable.",
+      "mutation": "fixed-Q-only-projection",
+      "rejected": true
+    },
+    {
+      "detail": "Q_f-Q_c=sum_(v in V_(n+1)\\V_n)ell_v(omega_f)>=0. No retained ell coordinate is altered and no charge is redistributed; the grade is allowed to change from Q_f to Q_c.",
+      "mutation": "charge-deletion",
+      "rejected": true
+    },
+    {
+      "detail": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+      "mutation": "conditional-gibbs-average",
+      "rejected": true
+    },
+    {
+      "detail": "Only parent component rates and Gibbs states are used.",
+      "mutation": "cross-Q-rate-fitting",
+      "rejected": true
+    },
+    {
+      "detail": "none at finite rho",
+      "mutation": "functional-or-counterterm-change",
+      "rejected": true
+    },
+    {
+      "detail": "Use exactly the PAH-OMC-004 two-row strip G_n for n>=2, with the unchanged neutral coordinate restriction from G_(n+1) to G_n. No carrier, face subdivision or root family is added.",
+      "mutation": "new-carrier-or-root",
+      "rejected": true
+    },
+    {
+      "detail": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+      "mutation": "global-gibbs-overclaim",
+      "rejected": true
+    },
+    {
+      "detail": "Full-Q charge-graded finite domain and total unique neutral refinement map for the unchanged PAH-001 functional; eligible for a separate PAH-OMC-011 re-test only.",
+      "mutation": "intertwining-overclaim",
+      "rejected": true
+    },
+    {
+      "detail": [
+        "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+        "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+        "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+        "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+        "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+        "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+      ],
+      "mutation": "physical-promotion",
+      "rejected": true
+    }
+  ],
+  "audit_id": "PAH-OMC-012-FULL-Q-GRADED-DOMAIN-HOSTILE-001",
+  "claim_bearing": false,
+  "classification": "HOSTILE_FIREWALL_REJECTS_DOMAIN_OVERCLAIMS",
+  "eligible_for_omc011_retest": true,
+  "exploration_id": "EXP-001461",
+  "failed": 0,
+  "next_question": "With the full-Q graded map total and unique, do the unchanged PAH-001 root tuples intertwine on the graded common cylinder without a cross-Q Gibbs mixture or any rate modification?",
+  "non_claims": [
+    "This is a researcher-owned finite domain contract, not an external source or physical authority.",
+    "MAINLINE_ADVANCE is limited to the full-Q graded finite-domain/map gate and does not close the PAH-OMC-011 intertwining gate.",
+    "No infinite-volume dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+    "The component Gibbs family is not a newly asserted global probability measure over Q, and no cross-Q mixture is fitted or assumed.",
+    "Agreement of the graded map with R-488 witnesses does not retroactively modify PAH-001 or prove a physical sector."
+  ],
+  "passed": 10,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_hostile.py",
+    "independent": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc012_full_q_graded_domain_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R492.lean",
+    "primary": "python -X utf8 codes/foundations/pah_omc012_full_q_graded_domain.py"
+  },
+  "result_id": "R-492",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc012-full-q-graded-domain-hostile/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "verdict": "MAINLINE_ADVANCE",
+  "verification": "PASS"
+}

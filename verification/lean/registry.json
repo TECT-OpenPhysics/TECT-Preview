@@ -1,96 +1,63 @@
 {
-  "schema": "tect/lean-cross-verification-registry/1.0",
-  "version": "1.0.0",
-  "purpose": "Canonical registry for every repository Lean entrypoint and its pinned source hash.",
-  "toolchain": {
-    "toolchain_file": "verification/lean/lean-toolchain",
-    "toolchain": "leanprover/lean4:v4.32.1",
-    "toolchain_sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
-    "lakefile": "verification/lean/lakefile.toml",
-    "lakefile_sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
-    "lockfile": "verification/lean/lake-manifest.json",
-    "lockfile_sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
-    "mathlib_input_revision": "v4.32.1",
-    "mathlib_revision": "520045ab14e26149ee970e2e617ca04b09bde5d6"
-  },
-  "source_policy": {
-    "line_endings": "LF",
-    "final_newline": true,
-    "encoding": "UTF-8",
-    "required_declaration_kinds": [
-      "theorem",
-      "lemma",
-      "example"
-    ],
-    "forbidden_tokens": [
-      "sorry",
-      "admit",
-      "axiom",
-      "unsafe"
-    ],
-    "manifest_bridge_glob": "strategy/**/*.json"
-  },
   "entrypoints": [
     {
-      "path": "verification/lean/Tect/A1ClassIIOwnerMismatch.lean",
-      "sha256": "70826a11c336710f469518794e890ccce4a5c273b870f12a7cf1cc292db49f76",
       "declarations": [
         "numerator_fixture",
         "mass_denom_positive",
         "coefficient_difference",
         "coefficients_are_not_equal"
-      ]
+      ],
+      "path": "verification/lean/Tect/A1ClassIIOwnerMismatch.lean",
+      "sha256": "70826a11c336710f469518794e890ccce4a5c273b870f12a7cf1cc292db49f76"
     },
     {
-      "path": "verification/lean/Tect/A1NonlinearMismatch.lean",
-      "sha256": "e3c1356a5bcc7d69f16311224e644164b433bf47047cabe5dee0c184d18aea24",
       "declarations": [
         "declared_is_twice_residual",
         "manifest_fixture",
         "equality_zeroes"
-      ]
+      ],
+      "path": "verification/lean/Tect/A1NonlinearMismatch.lean",
+      "sha256": "e3c1356a5bcc7d69f16311224e644164b433bf47047cabe5dee0c184d18aea24"
     },
     {
-      "path": "verification/lean/Tect/HYB0001.lean",
-      "sha256": "27fc7f3b9d557040d7333c64067f17484f2090d6cdc2a1cb51e81447730f7d58",
       "declarations": [
         "potential_lower",
         "classii_form_nonnegative",
         "gibbs_residual_zero"
-      ]
+      ],
+      "path": "verification/lean/Tect/HYB0001.lean",
+      "sha256": "27fc7f3b9d557040d7333c64067f17484f2090d6cdc2a1cb51e81447730f7d58"
     },
     {
-      "path": "verification/lean/Tect/HYB0002.lean",
-      "sha256": "0900571151f16fa82d2369a5c0e557405d09609a8170c7b3010426b9d2545794",
       "declarations": [
         "quadratic_core_lower_bound",
         "quadratic_core_lower_bound_positive",
         "potential_lower_bound_fixture",
         "classii_determinant_positive",
         "gibbs_residual_zero_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/HYB0002.lean",
+      "sha256": "0900571151f16fa82d2369a5c0e557405d09609a8170c7b3010426b9d2545794"
     },
     {
-      "path": "verification/lean/Tect/R057.lean",
-      "sha256": "f84b62a71c932662a950871ea8aa0e156b683d8a28df11e3fc6732c23d28ace7",
       "declarations": [
         "boundary_product",
         "sharp_boundary_arithmetic",
         "production_target_gap"
-      ]
+      ],
+      "path": "verification/lean/Tect/R057.lean",
+      "sha256": "f84b62a71c932662a950871ea8aa0e156b683d8a28df11e3fc6732c23d28ace7"
     },
     {
-      "path": "verification/lean/Tect/R058.lean",
-      "sha256": "3c76bb524870f5a40db971040188004dc67ec50838d9846200621172d5e3ea68",
       "declarations": [
         "allowance_le_gamma_third",
         "budget_gap",
         "gamma_third_exact"
-      ]
+      ],
+      "path": "verification/lean/Tect/R058.lean",
+      "sha256": "3c76bb524870f5a40db971040188004dc67ec50838d9846200621172d5e3ea68"
     },
     {
-      "path": "verification/lean/Tect/R163.lean",
-      "sha256": "e012f95185ae6777fe4398265a3a21c53c470ebcfdbbd6b2acab623b8de6c1db",
       "declarations": [
         "retained_coefficient_gap",
         "t050_threshold_arithmetic",
@@ -98,11 +65,11 @@
         "recursive_tangent_guard",
         "source_third_derivative_fixture",
         "audit_margin_bundle"
-      ]
+      ],
+      "path": "verification/lean/Tect/R163.lean",
+      "sha256": "e012f95185ae6777fe4398265a3a21c53c470ebcfdbbd6b2acab623b8de6c1db"
     },
     {
-      "path": "verification/lean/Tect/R166.lean",
-      "sha256": "aa48af9b9fbdf66554ac0c4703dbda5761b2cfd40d2b4f6b1c2f830376730884",
       "declarations": [
         "global_lower_decomposition",
         "stronger_minus_four_fifths_margin",
@@ -111,21 +78,21 @@
         "two_harmonic_counterdirection",
         "rho_choice_and_downstream_constants",
         "rho_margin_target"
-      ]
+      ],
+      "path": "verification/lean/Tect/R166.lean",
+      "sha256": "aa48af9b9fbdf66554ac0c4703dbda5761b2cfd40d2b4f6b1c2f830376730884"
     },
     {
-      "path": "verification/lean/Tect/R171.lean",
-      "sha256": "26128b83862abd3ed33388e710d32ddce39fc22b1c6fec2cff78eb9ad1c75bff",
       "declarations": [
         "bracket_numerator_identity",
         "bracket_positive",
         "bracket_numerator_coefficients_positive",
         "endpoint_secant_sign"
-      ]
+      ],
+      "path": "verification/lean/Tect/R171.lean",
+      "sha256": "26128b83862abd3ed33388e710d32ddce39fc22b1c6fec2cff78eb9ad1c75bff"
     },
     {
-      "path": "verification/lean/Tect/R174.lean",
-      "sha256": "d905dd8fca1a812cae9b2b8e143e9089a9cc35b679d904890605872dedbf612f",
       "declarations": [
         "same_root_cross_zero",
         "cross_block_formula",
@@ -135,29 +102,29 @@
         "equal_frequency_cross_zero",
         "nonzero_cross_fixture",
         "cross_block_bundle"
-      ]
+      ],
+      "path": "verification/lean/Tect/R174.lean",
+      "sha256": "d905dd8fca1a812cae9b2b8e143e9089a9cc35b679d904890605872dedbf612f"
     },
     {
-      "path": "verification/lean/Tect/R175.lean",
-      "sha256": "967cf2bad70e86854c952b97accebff7673636920ec639552b5a9655553e3e2f",
       "declarations": [
         "duplicate_transpose_mul",
         "duplicate_commutes_with_complexStructure",
         "duplicated_square_root",
         "duplicated_basis_preserves_complex_structure"
-      ]
+      ],
+      "path": "verification/lean/Tect/R175.lean",
+      "sha256": "967cf2bad70e86854c952b97accebff7673636920ec639552b5a9655553e3e2f"
     },
     {
-      "path": "verification/lean/Tect/R176.lean",
-      "sha256": "84e9c0c31c5c96d394b1e1b9e50687320f80386af2415e47d17b967e2d5d4c61",
       "declarations": [
         "lower3_gram",
         "lower3_gram_entrywise"
-      ]
+      ],
+      "path": "verification/lean/Tect/R176.lean",
+      "sha256": "84e9c0c31c5c96d394b1e1b9e50687320f80386af2415e47d17b967e2d5d4c61"
     },
     {
-      "path": "verification/lean/Tect/R177.lean",
-      "sha256": "ce590d92c4d20a57c70efbc50569da17a59c977c9d99bbb2d8fbecfe664a2233",
       "declarations": [
         "two_replica_variance",
         "common_heat_cancels",
@@ -167,33 +134,33 @@
         "incidence_is_two_root",
         "root_two_after_root_one",
         "future_after_root_two"
-      ]
+      ],
+      "path": "verification/lean/Tect/R177.lean",
+      "sha256": "ce590d92c4d20a57c70efbc50569da17a59c977c9d99bbb2d8fbecfe664a2233"
     },
     {
-      "path": "verification/lean/Tect/R178.lean",
-      "sha256": "41ae3a43c1fbef21f6a0702cd8602be055dbe35f82c1ea8e318ff12bdfec7c7e",
       "declarations": [
         "complete_cross_d1",
         "complete_cross_d2",
         "phase_derivative_sum_zero",
         "ordered_block_is_retained",
         "ordered_block_nonzero_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R178.lean",
+      "sha256": "41ae3a43c1fbef21f6a0702cd8602be055dbe35f82c1ea8e318ff12bdfec7c7e"
     },
     {
-      "path": "verification/lean/Tect/R179.lean",
-      "sha256": "2dd817cc78591e466e48b3c5cb84696143500004355f3837f7b6a7480d8265c3",
       "declarations": [
         "replica_owner_half",
         "omission_cost",
         "constant_translation",
         "positive_variance_rebate",
         "zero_variance_rebate"
-      ]
+      ],
+      "path": "verification/lean/Tect/R179.lean",
+      "sha256": "2dd817cc78591e466e48b3c5cb84696143500004355f3837f7b6a7480d8265c3"
     },
     {
-      "path": "verification/lean/Tect/R180.lean",
-      "sha256": "b3a7832e47645ddada8c283caa5e14ce8a62645812fb8f313866da199e0f4c14",
       "declarations": [
         "geom_closed",
         "geom_nonneg",
@@ -204,11 +171,11 @@
         "hFive_fixture",
         "geom_fixture",
         "production_exponent_margins"
-      ]
+      ],
+      "path": "verification/lean/Tect/R180.lean",
+      "sha256": "b3a7832e47645ddada8c283caa5e14ce8a62645812fb8f313866da199e0f4c14"
     },
     {
-      "path": "verification/lean/Tect/R181.lean",
-      "sha256": "5cf86f54e02bdc45f1f74f96ba3d7d2c79266eb2867e0e05d4892a9e8c19d2c4",
       "declarations": [
         "feedback_formula",
         "gram_matrix_is_feedback_transpose_feedback",
@@ -217,21 +184,21 @@
         "feedback_mixed_gram_bound",
         "feedback_bound_strict_off_zero",
         "feedback_zero_defect"
-      ]
+      ],
+      "path": "verification/lean/Tect/R181.lean",
+      "sha256": "5cf86f54e02bdc45f1f74f96ba3d7d2c79266eb2867e0e05d4892a9e8c19d2c4"
     },
     {
-      "path": "verification/lean/Tect/R182.lean",
-      "sha256": "6ad5c96b4035d7bf511458c6e3a2e12408afce1d8c7c9660247a67115cf11611",
       "declarations": [
         "feedback_pulled_hessian",
         "cross_hessian_quadratic",
         "pulled_hessian_quadratic",
         "pulled_negative_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R182.lean",
+      "sha256": "6ad5c96b4035d7bf511458c6e3a2e12408afce1d8c7c9660247a67115cf11611"
     },
     {
-      "path": "verification/lean/Tect/R183.lean",
-      "sha256": "f06edbdab5f8a51baf3a57a202e2b9aaa5936fbffc391cc9a296f36522de2b8e",
       "declarations": [
         "pulled_reserve_matrix",
         "pulled_reserve_qform",
@@ -242,94 +209,94 @@
         "isotropic_completion",
         "isotropic_nonneg",
         "isotropic_failure_below"
-      ]
+      ],
+      "path": "verification/lean/Tect/R183.lean",
+      "sha256": "f06edbdab5f8a51baf3a57a202e2b9aaa5936fbffc391cc9a296f36522de2b8e"
     },
     {
-      "path": "verification/lean/Tect/R184.lean",
-      "sha256": "3cf283bc0ffaad0f78166884f10c7211d27cb3a5b74c55364fbff575ffd8b788",
       "declarations": [
         "two_block_douglas_identity",
         "two_block_douglas_bound",
         "fixture_identity",
         "fixture_gap"
-      ]
+      ],
+      "path": "verification/lean/Tect/R184.lean",
+      "sha256": "3cf283bc0ffaad0f78166884f10c7211d27cb3a5b74c55364fbff575ffd8b788"
     },
     {
-      "path": "verification/lean/Tect/R185.lean",
-      "sha256": "ee045805613333437b6b46aaaf1384bb05d0b46af95b14d784716805eeaa09d7",
       "declarations": [
         "finite_packet_cauchy_bound",
         "three_packet_fixture",
         "three_packet_gap"
-      ]
+      ],
+      "path": "verification/lean/Tect/R185.lean",
+      "sha256": "ee045805613333437b6b46aaaf1384bb05d0b46af95b14d784716805eeaa09d7"
     },
     {
-      "path": "verification/lean/Tect/R186.lean",
-      "sha256": "343725ec0a84dd2448a8dbdff803b8b408bd69213edff255f0b4925757b9ff48",
       "declarations": [
         "temporal_weighted_cauchy_fixture",
         "temporal_douglas_energy_fixture",
         "complete_packet_identity",
         "complete_packet_fixture",
         "retained_cross_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R186.lean",
+      "sha256": "343725ec0a84dd2448a8dbdff803b8b408bd69213edff255f0b4925757b9ff48"
     },
     {
-      "path": "verification/lean/Tect/R187.lean",
-      "sha256": "277931ee2c18abaf769bf958257a8eae9e975ad2de7f82dcae3ba6e49053d472",
       "declarations": [
         "nonlinear_mean_fixture",
         "nonlinear_square_deviation_fixture",
         "adapted_ledger_fixture",
         "control_control_pair_slack_fixture",
         "finite_doob_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R187.lean",
+      "sha256": "277931ee2c18abaf769bf958257a8eae9e975ad2de7f82dcae3ba6e49053d472"
     },
     {
-      "path": "verification/lean/Tect/R188.lean",
-      "sha256": "167c1b63c1eb5b251ae31976c528fe8b6f455fe9c805ef2323547d1297d5a96a",
       "declarations": [
         "jensen_defect_telescope",
         "jensen_defect_fixture",
         "signed_endpoint_mean_zero",
         "absolute_jensen_defect_positive",
         "secant_defect_recombination_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R188.lean",
+      "sha256": "167c1b63c1eb5b251ae31976c528fe8b6f455fe9c805ef2323547d1297d5a96a"
     },
     {
-      "path": "verification/lean/Tect/R189.lean",
-      "sha256": "8c3ba286d758804ab027f215c4ef5d3436cc716708745721ae478eaf17b25f34",
       "declarations": [
         "lowerPoly_factor",
         "lowerPoly_positive",
         "two_mode_energy_lower_bound",
         "cylinderPoly_nonnegative"
-      ]
+      ],
+      "path": "verification/lean/Tect/R189.lean",
+      "sha256": "8c3ba286d758804ab027f215c4ef5d3436cc716708745721ae478eaf17b25f34"
     },
     {
-      "path": "verification/lean/Tect/R190.lean",
-      "sha256": "ff727c64bceb67d99062c0a740fb507548e213012044fc6d2dea67e85f88d66f",
       "declarations": [
         "lowerPoly_factor",
         "lowerPoly_positive",
         "arbitrary_two_mode_nonnegative",
         "arbitrary_two_mode_strict"
-      ]
+      ],
+      "path": "verification/lean/Tect/R190.lean",
+      "sha256": "ff727c64bceb67d99062c0a740fb507548e213012044fc6d2dea67e85f88d66f"
     },
     {
-      "path": "verification/lean/Tect/R191.lean",
-      "sha256": "fef5de1142e5b31b118e4323d954d2d42782612da54314c539f463f9a27119ed",
       "declarations": [
         "moment_fixture",
         "incidence_telescope",
         "feedback_chain_rule",
         "registered_fixture",
         "registered_endpoint_positive"
-      ]
+      ],
+      "path": "verification/lean/Tect/R191.lean",
+      "sha256": "fef5de1142e5b31b118e4323d954d2d42782612da54314c539f463f9a27119ed"
     },
     {
-      "path": "verification/lean/Tect/R192.lean",
-      "sha256": "ff563e852a08597f51d1eefe36ee2ba496d10f001766cd8b4b5b611e02f8bc9a",
       "declarations": [
         "first_missing_is_heat_root",
         "production_ledger_incomplete",
@@ -338,11 +305,11 @@
         "temporal_douglas_fixture",
         "temporal_douglas_gap_fixture",
         "endpoint_telescope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R192.lean",
+      "sha256": "ff563e852a08597f51d1eefe36ee2ba496d10f001766cd8b4b5b611e02f8bc9a"
     },
     {
-      "path": "verification/lean/Tect/R193.lean",
-      "sha256": "d230777152a63cd2e7e20ec76d8be032e477b83c75900708263c99757bd2ab2b",
       "declarations": [
         "pinned_static_inverse",
         "map_a_admissible",
@@ -354,77 +321,77 @@
         "relative_order_b",
         "two_static_compatible_heat_maps",
         "nonidentifiability_for_any_static_data"
-      ]
+      ],
+      "path": "verification/lean/Tect/R193.lean",
+      "sha256": "d230777152a63cd2e7e20ec76d8be032e477b83c75900708263c99757bd2ab2b"
     },
     {
-      "path": "verification/lean/Tect/R194.lean",
-      "sha256": "90912e1e785348997b67af27878068114a1b7ec8a6ad5b16118df6f25155408a",
       "declarations": [
         "endpoint_identity",
         "endpoint_nonnegative",
         "pinned_subsharp_witness"
-      ]
+      ],
+      "path": "verification/lean/Tect/R194.lean",
+      "sha256": "90912e1e785348997b67af27878068114a1b7ec8a6ad5b16118df6f25155408a"
     },
     {
-      "path": "verification/lean/Tect/R195.lean",
-      "sha256": "fe6680c28d2d9e1c8c3530e118757bab9d932172259207bd2e7a42270f19385f",
       "declarations": [
         "integrated_identity",
         "scaled_ratio_identity",
         "ratio_bound"
-      ]
+      ],
+      "path": "verification/lean/Tect/R195.lean",
+      "sha256": "fe6680c28d2d9e1c8c3530e118757bab9d932172259207bd2e7a42270f19385f"
     },
     {
-      "path": "verification/lean/Tect/R196.lean",
-      "sha256": "dbc6af451fde06e81e80b3d6a31a7f42f603ff50d6f529c7704c2811b2a425b2",
       "declarations": [
         "generator_factor_six",
         "output_charge_nonneg",
         "heat_integral_identity",
         "tail_exponent_six"
-      ]
+      ],
+      "path": "verification/lean/Tect/R196.lean",
+      "sha256": "dbc6af451fde06e81e80b3d6a31a7f42f603ff50d6f529c7704c2811b2a425b2"
     },
     {
-      "path": "verification/lean/Tect/R197.lean",
-      "sha256": "b304e5bee312d574b6dc89287995b25e8710af75a39e1f32659319c77776c627",
       "declarations": [
         "gibbs_residual_zero",
         "quadratic_positive_of_negative_discriminant",
         "classii_square_completion",
         "classii_form_nonnegative"
-      ]
+      ],
+      "path": "verification/lean/Tect/R197.lean",
+      "sha256": "b304e5bee312d574b6dc89287995b25e8710af75a39e1f32659319c77776c627"
     },
     {
-      "path": "verification/lean/Tect/R198.lean",
-      "sha256": "de51119d8af7eab4872ccb8a5b43d1bc1b41d8d09b8d637b7344d86e0ac197df",
       "declarations": [
         "nonlinear_mode_mix_identity",
         "nonlinear_mode_mix_coefficients"
-      ]
+      ],
+      "path": "verification/lean/Tect/R198.lean",
+      "sha256": "de51119d8af7eab4872ccb8a5b43d1bc1b41d8d09b8d637b7344d86e0ac197df"
     },
     {
-      "path": "verification/lean/Tect/R199.lean",
-      "sha256": "870895b5ebc12d2846b64f1178cea68e84563d3fd1148a1f64aff1c76f324279",
       "declarations": [
         "second_nonlinear_support_identity",
         "second_nonlinear_support_closure",
         "all_side16_residues"
-      ]
+      ],
+      "path": "verification/lean/Tect/R199.lean",
+      "sha256": "870895b5ebc12d2846b64f1178cea68e84563d3fd1148a1f64aff1c76f324279"
     },
     {
-      "path": "verification/lean/Tect/R200.lean",
-      "sha256": "0b98a5c39a3e704693b86f4d8786b1f101f0e65a342458680985f536eb155355",
       "declarations": [
         "stationary_current_zero",
         "mobility_a_rates",
         "mobility_b_rates",
         "distinct_first_rate",
         "distinct_second_rate"
-      ]
+      ],
+      "path": "verification/lean/Tect/R200.lean",
+      "sha256": "0b98a5c39a3e704693b86f4d8786b1f101f0e65a342458680985f536eb155355"
     },
     {
-      "path": "verification/lean/Tect/R201.lean",
-      "sha256": "16006c7f23a0119de13438f1b6a68981d81598ed3cc6e60ae825a4f0f77ea9ee",
       "declarations": [
         "pauli_fierz_fixture",
         "pauli_fierz_equal_fixture",
@@ -433,33 +400,33 @@
         "charge_fixture",
         "charge_equal_fixture",
         "charge_orthogonal_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R201.lean",
+      "sha256": "16006c7f23a0119de13438f1b6a68981d81598ed3cc6e60ae825a4f0f77ea9ee"
     },
     {
-      "path": "verification/lean/Tect/R202.lean",
-      "sha256": "80acf41e24a1e7bca1c36fd9b1caf2b2796dba6530fdd68a7e79b06d641a0a6e",
       "declarations": [
         "side16_card",
         "root_pair_card",
         "root_pair_is_proper",
         "saturated_interval_has_at_least_side16_residues",
         "finite_residue_index_bound"
-      ]
+      ],
+      "path": "verification/lean/Tect/R202.lean",
+      "sha256": "80acf41e24a1e7bca1c36fd9b1caf2b2796dba6530fdd68a7e79b06d641a0a6e"
     },
     {
-      "path": "verification/lean/Tect/R203.lean",
-      "sha256": "45054ccf7b9dbcadf67f7aa90aa4d4573675473b7708dcc8dbb394535ee15911",
       "declarations": [
         "scaled_square",
         "scaled_fourth",
         "formula_scale_difference",
         "root_norm_square",
         "completed_square_identity"
-      ]
+      ],
+      "path": "verification/lean/Tect/R203.lean",
+      "sha256": "45054ccf7b9dbcadf67f7aa90aa4d4573675473b7708dcc8dbb394535ee15911"
     },
     {
-      "path": "verification/lean/Tect/R204.lean",
-      "sha256": "f43d74ad94894090dab686b5e6c321c9dee54801f2875af0e83f8feaedab63b0",
       "declarations": [
         "max_shell_card",
         "shell_weight_bound",
@@ -468,11 +435,11 @@
         "shell_sum_bound",
         "uniform_charge_bound",
         "heat_ratio_le_one"
-      ]
+      ],
+      "path": "verification/lean/Tect/R204.lean",
+      "sha256": "f43d74ad94894090dab686b5e6c321c9dee54801f2875af0e83f8feaedab63b0"
     },
     {
-      "path": "verification/lean/Tect/R205.lean",
-      "sha256": "a28f493a87ec80c46287ed750f36c1702bcbc8b927e4a1795b2c932d1a631df6",
       "declarations": [
         "diagonal_preserves_support",
         "support_levels_nested",
@@ -480,11 +447,11 @@
         "level_two_is_full",
         "quadratic_core_lower_bound",
         "quadratic_core_lower_bound_positive"
-      ]
+      ],
+      "path": "verification/lean/Tect/R205.lean",
+      "sha256": "a28f493a87ec80c46287ed750f36c1702bcbc8b927e4a1795b2c932d1a631df6"
     },
     {
-      "path": "verification/lean/Tect/R206.lean",
-      "sha256": "05323f632da50b20d072d41eb3eeb1888e5e9bc74ed187267a16b8ec3d59c595",
       "declarations": [
         "diagonal_preserves_support",
         "two_coordinate_card",
@@ -495,70 +462,70 @@
         "endpoint_card_factor",
         "quadratic_core_lower_bound",
         "quadratic_core_lower_bound_positive"
-      ]
+      ],
+      "path": "verification/lean/Tect/R206.lean",
+      "sha256": "05323f632da50b20d072d41eb3eeb1888e5e9bc74ed187267a16b8ec3d59c595"
     },
     {
-      "path": "verification/lean/Tect/R207.lean",
-      "sha256": "b359c9d88251345fc70734694e8f248836b1f00c145857f2296768b959c4470c",
       "declarations": [
         "conjugate_mul",
         "conjugate_one",
         "conjugate_inverse",
         "rational_fixture_inverse"
-      ]
+      ],
+      "path": "verification/lean/Tect/R207.lean",
+      "sha256": "b359c9d88251345fc70734694e8f248836b1f00c145857f2296768b959c4470c"
     },
     {
-      "path": "verification/lean/Tect/R208.lean",
-      "sha256": "71842962ed8621a4792906fa32727f802f29f1ac0871d1391b9d35697f8f4c9b",
       "declarations": [
         "shift_square",
         "quartic_absorb",
         "matching_weight_transfer"
-      ]
+      ],
+      "path": "verification/lean/Tect/R208.lean",
+      "sha256": "71842962ed8621a4792906fa32727f802f29f1ac0871d1391b9d35697f8f4c9b"
     },
     {
-      "path": "verification/lean/Tect/R209.lean",
-      "sha256": "5518914d52e4c3cb8ffdffd19a2685ef3e0821ba01778817738485838687d63f",
       "declarations": [
         "context_insert",
         "abs_product_context",
         "conjugation_factor",
         "half_power_factor"
-      ]
+      ],
+      "path": "verification/lean/Tect/R209.lean",
+      "sha256": "5518914d52e4c3cb8ffdffd19a2685ef3e0821ba01778817738485838687d63f"
     },
     {
-      "path": "verification/lean/Tect/R210.lean",
-      "sha256": "20cf568bb7a334c73e3d5075e99784a78f9deac7ad9e0b581704e3594df33153",
       "declarations": [
         "weighted_split_factor",
         "pointwise_weight",
         "recurrence_identity"
-      ]
+      ],
+      "path": "verification/lean/Tect/R210.lean",
+      "sha256": "20cf568bb7a334c73e3d5075e99784a78f9deac7ad9e0b581704e3594df33153"
     },
     {
-      "path": "verification/lean/Tect/R211.lean",
-      "sha256": "8fb2aabf3b0539601b9f2e36b987b6332d23885fde5bd584ed73962b54f501dd",
       "declarations": [
         "q3_force_fixture",
         "slope_gap",
         "fixture_difference",
         "commutator_initial_bound"
-      ]
+      ],
+      "path": "verification/lean/Tect/R211.lean",
+      "sha256": "8fb2aabf3b0539601b9f2e36b987b6332d23885fde5bd584ed73962b54f501dd"
     },
     {
-      "path": "verification/lean/Tect/R212.lean",
-      "sha256": "40ba4a2d6d1efdf8aac7de50ddd6ee71354c8fb452f833a645fe49259a3630e2",
       "declarations": [
         "poisson_rate_fixture",
         "weighted_rate_fixture",
         "distance_weight_fixture",
         "finite_distance_fixture",
         "factorial_path_term_nonnegative"
-      ]
+      ],
+      "path": "verification/lean/Tect/R212.lean",
+      "sha256": "40ba4a2d6d1efdf8aac7de50ddd6ee71354c8fb452f833a645fe49259a3630e2"
     },
     {
-      "path": "verification/lean/Tect/R213.lean",
-      "sha256": "1366d91baf918887469f04e13c4e3d8e65251e9a0eafd7daea13549405436891",
       "declarations": [
         "shifted_response_identity",
         "q3_coefficient_fixture",
@@ -566,11 +533,11 @@
         "source_degree_gap",
         "fixture_response_at_zero",
         "fixture_ratio_is_positive"
-      ]
+      ],
+      "path": "verification/lean/Tect/R213.lean",
+      "sha256": "1366d91baf918887469f04e13c4e3d8e65251e9a0eafd7daea13549405436891"
     },
     {
-      "path": "verification/lean/Tect/R214.lean",
-      "sha256": "1c76a94637489a91e9cf0386975ef9bdf35acbc0f2e6f888bd326e0b2cd760c2",
       "declarations": [
         "q3_coefficient_fixture",
         "leading_coefficient_fixture",
@@ -578,76 +545,76 @@
         "source_weight_ratio_fixture",
         "two_orientation_step",
         "two_orientation_iterated"
-      ]
+      ],
+      "path": "verification/lean/Tect/R214.lean",
+      "sha256": "1c76a94637489a91e9cf0386975ef9bdf35acbc0f2e6f888bd326e0b2cd760c2"
     },
     {
-      "path": "verification/lean/Tect/R215.lean",
-      "sha256": "55fd0d8055cd6e7ae051c27725b359672f00782a42198120d13064d72e09d388",
       "declarations": [
         "q3_coefficient_fixture",
         "repeated_word_degree_m2",
         "repeated_word_degree_m3",
         "repeated_word_coefficient_m3",
         "fixed_weight_gap_m3"
-      ]
+      ],
+      "path": "verification/lean/Tect/R215.lean",
+      "sha256": "55fd0d8055cd6e7ae051c27725b359672f00782a42198120d13064d72e09d388"
     },
     {
-      "path": "verification/lean/Tect/R216.lean",
-      "sha256": "a8d8e01c8ab6845f1926e82fdee31bc7fb485732af72e585393b4bbeb9b68371",
       "declarations": [
         "q3_rate_fixture",
         "sigma_margin_fixture",
         "sigma_margin_positive",
         "source_prefactor_fixture",
         "m3_summand_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R216.lean",
+      "sha256": "a8d8e01c8ab6845f1926e82fdee31bc7fb485732af72e585393b4bbeb9b68371"
     },
     {
-      "path": "verification/lean/Tect/R217.lean",
-      "sha256": "72f86dba69ac30c26622e52da30f45fd5b3284693de1ad51ccfdc31724b3445b",
       "declarations": [
         "six_neighbour_count",
         "one_step_type_factor",
         "six_step_type_formula",
         "six_step_type_bound",
         "scalar_entire_weight_transport"
-      ]
+      ],
+      "path": "verification/lean/Tect/R217.lean",
+      "sha256": "72f86dba69ac30c26622e52da30f45fd5b3284693de1ad51ccfdc31724b3445b"
     },
     {
-      "path": "verification/lean/Tect/R218.lean",
-      "sha256": "be5b3a260ce766d07385eab8aeb910a421c0c7393a687179d406f30bbe93eb3d",
       "declarations": [
         "three_dimensional_degree_bound",
         "two_orientation_branch_factor",
         "iterated_branch_factor",
         "five_step_walk_oracle"
-      ]
+      ],
+      "path": "verification/lean/Tect/R218.lean",
+      "sha256": "be5b3a260ce766d07385eab8aeb910a421c0c7393a687179d406f30bbe93eb3d"
     },
     {
-      "path": "verification/lean/Tect/R219.lean",
-      "sha256": "051f83f99bbde36bf936ead93479f9c740093bd87da51288d07a268fe5085547",
       "declarations": [
         "edge_shift_source_degree_one",
         "edge_shift_source_degree_two",
         "edge_shift_source_degree_three",
         "q3_degree_fixture",
         "top_shift_coefficient"
-      ]
+      ],
+      "path": "verification/lean/Tect/R219.lean",
+      "sha256": "051f83f99bbde36bf936ead93479f9c740093bd87da51288d07a268fe5085547"
     },
     {
-      "path": "verification/lean/Tect/R220.lean",
-      "sha256": "dfd9181136974daa662a5c6d1d18ac0f6f8eb2685af25d49ae90d47a2e09162a",
       "declarations": [
         "selected_q3_degree",
         "restricted_G",
         "actual_word_degree_m3",
         "actual_word_leading_coefficient_m3",
         "actual_word_nonzero_m3"
-      ]
+      ],
+      "path": "verification/lean/Tect/R220.lean",
+      "sha256": "dfd9181136974daa662a5c6d1d18ac0f6f8eb2685af25d49ae90d47a2e09162a"
     },
     {
-      "path": "verification/lean/Tect/R221.lean",
-      "sha256": "383985b23afae2ec8f8c90eb6cb320ac8e4d2197e13af2455529a2ae6a05e041",
       "declarations": [
         "source_only_onsite",
         "source_only_edge",
@@ -655,11 +622,11 @@
         "local_rate_fixture",
         "weighted_rate_fixture",
         "local_choice_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R221.lean",
+      "sha256": "383985b23afae2ec8f8c90eb6cb320ac8e4d2197e13af2455529a2ae6a05e041"
     },
     {
-      "path": "verification/lean/Tect/R222.lean",
-      "sha256": "647dc68bfb6860dcc665f0ce9d1d4c50255855ba3934d95e6345f072497dcc13",
       "declarations": [
         "onsite_bound_fixture",
         "edge_bound_fixture",
@@ -667,11 +634,11 @@
         "field_window_rate_fixture",
         "weighted_rate_fixture",
         "local_choice_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R222.lean",
+      "sha256": "647dc68bfb6860dcc665f0ce9d1d4c50255855ba3934d95e6345f072497dcc13"
     },
     {
-      "path": "verification/lean/Tect/R223.lean",
-      "sha256": "0b40ba0d2d09b31b11c4a280126c4f6d96818bf3faaca97a0bba62faf0bbe928",
       "declarations": [
         "onsite_norm_fixture",
         "edge_norm_fixture",
@@ -679,11 +646,11 @@
         "bientire_rate_fixture",
         "weighted_rate_fixture",
         "local_choice_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R223.lean",
+      "sha256": "0b40ba0d2d09b31b11c4a280126c4f6d96818bf3faaca97a0bba62faf0bbe928"
     },
     {
-      "path": "verification/lean/Tect/R224.lean",
-      "sha256": "5cf174d65726842266f6d70b45b0f417f5f1db35dc64b9d1044f62da551f48b8",
       "declarations": [
         "cauchy_product_fixture",
         "field_radius_loss_constant",
@@ -694,11 +661,11 @@
         "geometric_tail_degree_three_fixture",
         "geometric_tail_target_fixture",
         "formal_scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R224.lean",
+      "sha256": "5cf174d65726842266f6d70b45b0f417f5f1db35dc64b9d1044f62da551f48b8"
     },
     {
-      "path": "verification/lean/Tect/R225.lean",
-      "sha256": "7b0b2d5f478304adc60d33ace8f7dfcc33fbdfc5e41e075133c2c7e9a47270d2",
       "declarations": [
         "energy_ratio_fixture",
         "root_scale_fixture",
@@ -707,11 +674,11 @@
         "reverse_source_rate_fixture",
         "weighted_rate_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R225.lean",
+      "sha256": "7b0b2d5f478304adc60d33ace8f7dfcc33fbdfc5e41e075133c2c7e9a47270d2"
     },
     {
-      "path": "verification/lean/Tect/R226.lean",
-      "sha256": "b40a173b3a1291edb8c133b2bf2a1f4bdab983c687e041fd80c765423c950823",
       "declarations": [
         "edge_source_rate_fixture",
         "edge_reverse_rate_fixture",
@@ -721,11 +688,11 @@
         "weighted_local_rate_fixture",
         "mixed_transport_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R226.lean",
+      "sha256": "b40a173b3a1291edb8c133b2bf2a1f4bdab983c687e041fd80c765423c950823"
     },
     {
-      "path": "verification/lean/Tect/R227.lean",
-      "sha256": "62cf997269c07aa47be0fef1bc4e8e24cea18154f6252b65ce43a6513b385181",
       "declarations": [
         "energy_ratio_fixture",
         "root_scale_fixture",
@@ -738,11 +705,11 @@
         "local_rate_fixture",
         "weighted_local_rate_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R227.lean",
+      "sha256": "62cf997269c07aa47be0fef1bc4e8e24cea18154f6252b65ce43a6513b385181"
     },
     {
-      "path": "verification/lean/Tect/R228.lean",
-      "sha256": "661e03e70ca33b5c81b8738d0f1b22f45e67b0f021a8850b762336f9767ec2b7",
       "declarations": [
         "edge_rate_fixture",
         "bond_rate_fixture",
@@ -751,110 +718,110 @@
         "distance_factor_fixture",
         "finite_partial_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R228.lean",
+      "sha256": "661e03e70ca33b5c81b8738d0f1b22f45e67b0f021a8850b762336f9767ec2b7"
     },
     {
-      "path": "verification/lean/Tect/R229.lean",
-      "sha256": "d77e26b82489d7961c98b24636eb9978d0c4fb1fffd55c54af2b52501cdfdd2c",
       "declarations": [
         "scale_fixture",
         "one_factor_fixture",
         "repeated_product_fixture",
         "family_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R229.lean",
+      "sha256": "d77e26b82489d7961c98b24636eb9978d0c4fb1fffd55c54af2b52501cdfdd2c"
     },
     {
-      "path": "verification/lean/Tect/R230.lean",
-      "sha256": "e922214c0f8b6d334e7130c12f4f10a0acde2d5b421e2ec9dbcad572f3730e5b",
       "declarations": [
         "context_insert",
         "central_word_rate_fixture",
         "first_passage_exponent_fixture",
         "distance_factor_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R230.lean",
+      "sha256": "e922214c0f8b6d334e7130c12f4f10a0acde2d5b421e2ec9dbcad572f3730e5b"
     },
     {
-      "path": "verification/lean/Tect/R231.lean",
-      "sha256": "d83172db9b2dacf63afad88401098df5463fd3fa284f5b687f90ebf646c1562a",
       "declarations": [
         "scale_fixture",
         "one_sided_fixture",
         "central_context_fixture",
         "ordinary_context_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R231.lean",
+      "sha256": "d83172db9b2dacf63afad88401098df5463fd3fa284f5b687f90ebf646c1562a"
     },
     {
-      "path": "verification/lean/Tect/R232.lean",
-      "sha256": "9c04f54eb0cd504c06ea7128ab145aad279efeda4e5b5412387b619334ec12ca",
       "declarations": [
         "source_rate_fixture",
         "reverse_rate_fixture",
         "product_power_fixture",
         "exponent_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R232.lean",
+      "sha256": "9c04f54eb0cd504c06ea7128ab145aad279efeda4e5b5412387b619334ec12ca"
     },
     {
-      "path": "verification/lean/Tect/R233.lean",
-      "sha256": "8f6de15f036616649ee9100b62940bc20c2205ecb863e8fb675943d2f4fd5bbd",
       "declarations": [
         "bounded_evaluation_fixture",
         "product_bound_fixture",
         "obstruction_fixture",
         "generator_radius_failure",
         "qft_scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R233.lean",
+      "sha256": "8f6de15f036616649ee9100b62940bc20c2205ecb863e8fb675943d2f4fd5bbd"
     },
     {
-      "path": "verification/lean/Tect/R234.lean",
-      "sha256": "23b39534782160a8c25c1d5662ad5b7505ca68e578d88c3aedd328778b4db627",
       "declarations": [
         "leading_coefficient_fixture",
         "slice_value_32",
         "slice_value_64",
         "coefficient_rate_boundary",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R234.lean",
+      "sha256": "23b39534782160a8c25c1d5662ad5b7505ca68e578d88c3aedd328778b4db627"
     },
     {
-      "path": "verification/lean/Tect/R235.lean",
-      "sha256": "86067526c59575a3c4f6547caa0d0be9afb8237164e535c45b839a1a45057165",
       "declarations": [
         "coefficient_majorant_fixture",
         "majorant_positive_fixture",
         "energy_exponent_fixture",
         "coefficient_degree_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R235.lean",
+      "sha256": "86067526c59575a3c4f6547caa0d0be9afb8237164e535c45b839a1a45057165"
     },
     {
-      "path": "verification/lean/Tect/R236.lean",
-      "sha256": "c4f0f68aa09f724a251441de2473a15b933a445069e099fea321f1ba955464d0",
       "declarations": [
         "coefficient_majorant_fixture",
         "orientation_fixture",
         "degree_fixture",
         "majorant_positive_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R236.lean",
+      "sha256": "c4f0f68aa09f724a251441de2473a15b933a445069e099fea321f1ba955464d0"
     },
     {
-      "path": "verification/lean/Tect/R237.lean",
-      "sha256": "805b5fe1f8255fa7dec5b5aec103afdfb07312a17a6be78bf8389f6146c483ea",
       "declarations": [
         "graph_constant_fixture",
         "product_fixture",
         "volume_monotone_fixture",
         "source_radius_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R237.lean",
+      "sha256": "805b5fe1f8255fa7dec5b5aec103afdfb07312a17a6be78bf8389f6146c483ea"
     },
     {
-      "path": "verification/lean/Tect/R238.lean",
-      "sha256": "d0668f78fbfb2684ea63c6b95cdb592482a49169f94d8d6197435bc124c3a5aa",
       "declarations": [
         "quartic_weyl_kappa_positive",
         "quartic_weyl_cubic_coefficient",
@@ -862,11 +829,11 @@
         "strip_sign_choice_positive",
         "quartic_difference_degree_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R238.lean",
+      "sha256": "d0668f78fbfb2684ea63c6b95cdb592482a49169f94d8d6197435bc124c3a5aa"
     },
     {
-      "path": "verification/lean/Tect/R239.lean",
-      "sha256": "f472281751eb4169a610d37e31432290ba071e5df60563c16677eaf731f14b5f",
       "declarations": [
         "quartic_square_identity",
         "quartic_remainder_square",
@@ -874,11 +841,11 @@
         "shift_fixture",
         "minimum_square_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R239.lean",
+      "sha256": "f472281751eb4169a610d37e31432290ba071e5df60563c16677eaf731f14b5f"
     },
     {
-      "path": "verification/lean/Tect/R240.lean",
-      "sha256": "1da7202ebb98e08eae683e24e1a9cd6045b6ac1da76adcf03bc48a645a247b87",
       "declarations": [
         "force_derivative_fixture",
         "force_degree_fixture",
@@ -886,11 +853,11 @@
         "hbar_chi_fixture",
         "first_difference_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R240.lean",
+      "sha256": "1da7202ebb98e08eae683e24e1a9cd6045b6ac1da76adcf03bc48a645a247b87"
     },
     {
-      "path": "verification/lean/Tect/R241.lean",
-      "sha256": "79055edf1d83057eb403865e9603917eb1cd08763bc6270bffbda427fbf99b30",
       "declarations": [
         "local_energy_shift_fixture",
         "weight_ratio_fixture",
@@ -898,22 +865,22 @@
         "conditional_power_fixture",
         "endpoint_weight_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R241.lean",
+      "sha256": "79055edf1d83057eb403865e9603917eb1cd08763bc6270bffbda427fbf99b30"
     },
     {
-      "path": "verification/lean/Tect/R242.lean",
-      "sha256": "2b3ee4f042ecb35852b08ad1a3c3a8713cf35f70cdbcbefd4842dd8a709ee27c",
       "declarations": [
         "cube_constant_fixture",
         "endpoint_cube_fixture",
         "fifth_dominates_third_fixture",
         "bridge_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R242.lean",
+      "sha256": "2b3ee4f042ecb35852b08ad1a3c3a8713cf35f70cdbcbefd4842dd8a709ee27c"
     },
     {
-      "path": "verification/lean/Tect/R243.lean",
-      "sha256": "cd3fdae128cf8a33c71473b0248aa813e2e3804d612876a848487a0fd3da07de",
       "declarations": [
         "coefficient_fixture",
         "shift_fixture",
@@ -922,11 +889,11 @@
         "bridge_fixture",
         "fifth_dominates_third_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R243.lean",
+      "sha256": "cd3fdae128cf8a33c71473b0248aa813e2e3804d612876a848487a0fd3da07de"
     },
     {
-      "path": "verification/lean/Tect/R244.lean",
-      "sha256": "df07e835d15eb5eb66969492f3757c3797fdb3875ec118335e7d0aff6ae5c0a5",
       "declarations": [
         "initial_fourth_power_fixture",
         "initial_safe_ceiling_fixture",
@@ -935,11 +902,11 @@
         "modular_orientation_fixture",
         "scalar_remainder_identity",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R244.lean",
+      "sha256": "df07e835d15eb5eb66969492f3757c3797fdb3875ec118335e7d0aff6ae5c0a5"
     },
     {
-      "path": "verification/lean/Tect/R245.lean",
-      "sha256": "35bf7f73ebf2d9f6460e3fcdb401b4ad00cbb4cc28e5ff5f8a3d3098602c8100",
       "declarations": [
         "rate_fixture",
         "eta_fixture",
@@ -950,11 +917,11 @@
         "orientation_fixture",
         "modular_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R245.lean",
+      "sha256": "35bf7f73ebf2d9f6460e3fcdb401b4ad00cbb4cc28e5ff5f8a3d3098602c8100"
     },
     {
-      "path": "verification/lean/Tect/R246.lean",
-      "sha256": "141bffb635e9c8c2f08c0841dd996040aacfe35b2a18324f6c5a3a2b98751a12",
       "declarations": [
         "polarization_fixture",
         "rotation_squares_fixture",
@@ -963,11 +930,11 @@
         "evolved_norm_fixture",
         "growth_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R246.lean",
+      "sha256": "141bffb635e9c8c2f08c0841dd996040aacfe35b2a18324f6c5a3a2b98751a12"
     },
     {
-      "path": "verification/lean/Tect/R247.lean",
-      "sha256": "2cd2be45cf293f49e9c8a4c3bb0a93adc1ce97e537e6c4720761c841612bb3aa",
       "declarations": [
         "boltzmann_normalization",
         "diagonal_gibbs_commutation",
@@ -976,11 +943,11 @@
         "weighted_two_sided_norm_sign_invariant",
         "orbit_gap_fixture",
         "conditional_transfer_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R247.lean",
+      "sha256": "2cd2be45cf293f49e9c8a4c3bb0a93adc1ce97e537e6c4720761c841612bb3aa"
     },
     {
-      "path": "verification/lean/Tect/R248.lean",
-      "sha256": "60802439cb5553b624adfbf30381e7ce255dbce78a745f3d892aec871dfac54a",
       "declarations": [
         "gibbs_weight_normalization",
         "first_commutator_fixture",
@@ -989,22 +956,22 @@
         "double_seminorm_fixture",
         "finite_remainder_bound_fixture",
         "finite_scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R248.lean",
+      "sha256": "60802439cb5553b624adfbf30381e7ce255dbce78a745f3d892aec871dfac54a"
     },
     {
-      "path": "verification/lean/Tect/R249.lean",
-      "sha256": "b1f731c215e11df866972a997c231f04d83133c07ec619be7a59c67178da37d4",
       "declarations": [
         "second_commutator_scaling",
         "n_four_fixture",
         "force_zero_fixture",
         "growth_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R249.lean",
+      "sha256": "b1f731c215e11df866972a997c231f04d83133c07ec619be7a59c67178da37d4"
     },
     {
-      "path": "verification/lean/Tect/R250.lean",
-      "sha256": "0797fae04c15adceaf85a7ed328ef6f5533ceec2ceeca6c95699edfba41d3f40",
       "declarations": [
         "fourth_moment_fixture",
         "shifted_norm_fixture",
@@ -1012,11 +979,11 @@
         "shifted_fourth_plus_fixture",
         "shifted_fourth_minus_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R250.lean",
+      "sha256": "0797fae04c15adceaf85a7ed328ef6f5533ceec2ceeca6c95699edfba41d3f40"
     },
     {
-      "path": "verification/lean/Tect/R251.lean",
-      "sha256": "4b0d32a35f2f5d0fbf62b1952922a39146806aa55e67e559b48b5532aa12fed2",
       "declarations": [
         "bridge_fixture",
         "force_fourth_fixture",
@@ -1025,22 +992,22 @@
         "kinetic_upper_fixture",
         "full_triangle_upper_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R251.lean",
+      "sha256": "4b0d32a35f2f5d0fbf62b1952922a39146806aa55e67e559b48b5532aa12fed2"
     },
     {
-      "path": "verification/lean/Tect/R252.lean",
-      "sha256": "ed69f1b4d58921ae2c193c9eb01cca9da24f334eac18e1397b3916d963ab2b18",
       "declarations": [
         "remainder_factor_fixture",
         "remainder_upper_fixture",
         "remainder_upper_small",
         "time_positive_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R252.lean",
+      "sha256": "ed69f1b4d58921ae2c193c9eb01cca9da24f334eac18e1397b3916d963ab2b18"
     },
     {
-      "path": "verification/lean/Tect/R253.lean",
-      "sha256": "8d99f2b7475f79e07aa11a748fe09f29bfed14fd85240cf09394d10e2dcf7ee0",
       "declarations": [
         "shifted_fourth_first_fixture",
         "shifted_fourth_second_fixture",
@@ -1051,11 +1018,11 @@
         "force_ceiling_fixture",
         "full_triangle_upper_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R253.lean",
+      "sha256": "8d99f2b7475f79e07aa11a748fe09f29bfed14fd85240cf09394d10e2dcf7ee0"
     },
     {
-      "path": "verification/lean/Tect/R254.lean",
-      "sha256": "e1cedf6e8a1f184f621efa4a1d28394d19e532d56059caec81672bf6ac64bbd4",
       "declarations": [
         "remainder_factor_fixture",
         "remainder_upper_fixture",
@@ -1063,11 +1030,11 @@
         "remainder_upper_small",
         "time_positive_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R254.lean",
+      "sha256": "e1cedf6e8a1f184f621efa4a1d28394d19e532d56059caec81672bf6ac64bbd4"
     },
     {
-      "path": "verification/lean/Tect/R255.lean",
-      "sha256": "7bf20e849bd3e0e6267d9c30558724fe147449a55fef88ce20b9886f6cd56db7",
       "declarations": [
         "force_fixture",
         "force_first_derivative_fixture",
@@ -1078,11 +1045,11 @@
         "third_a0_imaginary_fixture",
         "degree_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R255.lean",
+      "sha256": "7bf20e849bd3e0e6267d9c30558724fe147449a55fef88ce20b9886f6cd56db7"
     },
     {
-      "path": "verification/lean/Tect/R256.lean",
-      "sha256": "fedee9fd6c9d70bed2029986c2c805a2917a3b0d3259c0e2dffc780ff2463d5b",
       "declarations": [
         "a1_real_majorant",
         "a1_imaginary_majorant",
@@ -1097,11 +1064,11 @@
         "selected_a0_imaginary_fixture",
         "derivative_weighted_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R256.lean",
+      "sha256": "fedee9fd6c9d70bed2029986c2c805a2917a3b0d3259c0e2dffc780ff2463d5b"
     },
     {
-      "path": "verification/lean/Tect/R257.lean",
-      "sha256": "dcabc16c1c43a33db3d3df1775ce1cb6f77a63f93f19bbdebd87264461b67b08",
       "declarations": [
         "a1_sum_fixture",
         "a0_sum_fixture",
@@ -1115,11 +1082,11 @@
         "third_bound_fixture",
         "third_modular_bound_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R257.lean",
+      "sha256": "dcabc16c1c43a33db3d3df1775ce1cb6f77a63f93f19bbdebd87264461b67b08"
     },
     {
-      "path": "verification/lean/Tect/R258.lean",
-      "sha256": "f288a67895d0cefa45650e4a884cd24fb05965ba9b12844bd0f5b6f4e77f9f52",
       "declarations": [
         "root_m5_quarter_fixture",
         "root_m5_quarter_minimal",
@@ -1133,11 +1100,11 @@
         "two_orientation_fixture",
         "sqrt_two_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R258.lean",
+      "sha256": "f288a67895d0cefa45650e4a884cd24fb05965ba9b12844bd0f5b6f4e77f9f52"
     },
     {
-      "path": "verification/lean/Tect/R259.lean",
-      "sha256": "7177bc51c0bf7763be63e359cfca51f61b2781da669d4b0fcd30a5e3d97db8ef",
       "declarations": [
         "pell_first",
         "pell_second",
@@ -1155,11 +1122,11 @@
         "ratio_third",
         "state_moment_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R259.lean",
+      "sha256": "7177bc51c0bf7763be63e359cfca51f61b2781da669d4b0fcd30a5e3d97db8ef"
     },
     {
-      "path": "verification/lean/Tect/R260.lean",
-      "sha256": "bf1fb0f4a76f7eda97e993ae7aa15ba1fc8bb145fa3de4b735612e297bb612e7",
       "declarations": [
         "pell_first",
         "pell_second",
@@ -1178,11 +1145,11 @@
         "powered_candidate_violation_third",
         "beta_positive_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R260.lean",
+      "sha256": "bf1fb0f4a76f7eda97e993ae7aa15ba1fc8bb145fa3de4b735612e297bb612e7"
     },
     {
-      "path": "verification/lean/Tect/R261.lean",
-      "sha256": "19e864a2635fb0c5b3e5c97f2b76234348a6532b89f3e6d600c87d4b3f551cd2",
       "declarations": [
         "gibbs_ratio_first",
         "gibbs_ratio_second",
@@ -1204,11 +1171,11 @@
         "tail_floor_third",
         "relative_bound_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R261.lean",
+      "sha256": "19e864a2635fb0c5b3e5c97f2b76234348a6532b89f3e6d600c87d4b3f551cd2"
     },
     {
-      "path": "verification/lean/Tect/R262.lean",
-      "sha256": "76cf2752fc218becf5c94a8233b07aa80f25b1b825f2d0b7815acbdbfc0cf4fe",
       "declarations": [
         "two_sided_identity",
         "finite_fixture_positive",
@@ -1217,11 +1184,11 @@
         "q3_bond_fixture",
         "modular_floor_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R262.lean",
+      "sha256": "76cf2752fc218becf5c94a8233b07aa80f25b1b825f2d0b7815acbdbfc0cf4fe"
     },
     {
-      "path": "verification/lean/Tect/R263.lean",
-      "sha256": "c3aa1d7286c5e74a3ef5476c01abae206e67b96d063009f1e320ce9f9d70778b",
       "declarations": [
         "mixed_bound_fixture",
         "force_fixture",
@@ -1229,11 +1196,11 @@
         "product_rule_fixture",
         "finite_scaling_diagnostic_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R263.lean",
+      "sha256": "c3aa1d7286c5e74a3ef5476c01abae206e67b96d063009f1e320ce9f9d70778b"
     },
     {
-      "path": "verification/lean/Tect/R264.lean",
-      "sha256": "5f797733497db8499d95e60ce600c8ce0d3d7e83e01ed6bc71ce761b3b2f1de7",
       "declarations": [
         "weighted_right_fixture",
         "weighted_corrected_fixture",
@@ -1241,44 +1208,44 @@
         "residual_fixture",
         "commutator_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R264.lean",
+      "sha256": "5f797733497db8499d95e60ce600c8ce0d3d7e83e01ed6bc71ce761b3b2f1de7"
     },
     {
-      "path": "verification/lean/Tect/R265.lean",
-      "sha256": "f4206b666a25b25862273d68f2cef3ad426c4176688791e0b7abaec41bd73e38",
       "declarations": [
         "local_weight_fixture",
         "full_weight_fixture",
         "volume_fixture",
         "local_support_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R265.lean",
+      "sha256": "f4206b666a25b25862273d68f2cef3ad426c4176688791e0b7abaec41bd73e38"
     },
     {
-      "path": "verification/lean/Tect/R266.lean",
-      "sha256": "5562e6487c60932342ba9f5ad46cd0b3a4c5dd08c02bb75297710e6de8f7e03b",
       "declarations": [
         "cube_edge_fixture",
         "support_layers_fixture",
         "form_ratio_fixture",
         "finite_residual_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R266.lean",
+      "sha256": "5562e6487c60932342ba9f5ad46cd0b3a4c5dd08c02bb75297710e6de8f7e03b"
     },
     {
-      "path": "verification/lean/Tect/R267.lean",
-      "sha256": "814515a49327d270c393bc70252ddb921aa2b00facf084c473a8a1b18b482343",
       "declarations": [
         "direct_fixture",
         "modular_fixture",
         "zero_tail_fixture",
         "orientation_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R267.lean",
+      "sha256": "814515a49327d270c393bc70252ddb921aa2b00facf084c473a8a1b18b482343"
     },
     {
-      "path": "verification/lean/Tect/R268.lean",
-      "sha256": "ea4c23896f011a6ff58c0c590cf5167d96aeb8fc796d18481cb457679d2433d1",
       "declarations": [
         "direct_fixture",
         "modular_fixture",
@@ -1286,11 +1253,11 @@
         "orientation_sum_fixture",
         "zero_tail_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R268.lean",
+      "sha256": "ea4c23896f011a6ff58c0c590cf5167d96aeb8fc796d18481cb457679d2433d1"
     },
     {
-      "path": "verification/lean/Tect/R269.lean",
-      "sha256": "ad18e5c5cf0bed05cc8968c96be9f28392d85c9b0f043ac83487e2d23c343f0a",
       "declarations": [
         "coefficient_fixture",
         "reverse_coefficient_fixture",
@@ -1298,11 +1265,11 @@
         "source_commutation_fixture",
         "disjoint_support_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R269.lean",
+      "sha256": "ad18e5c5cf0bed05cc8968c96be9f28392d85c9b0f043ac83487e2d23c343f0a"
     },
     {
-      "path": "verification/lean/Tect/R270.lean",
-      "sha256": "f3176f62e6eb4527009a263cd117f81fb0a2849e0198984572421b063c1960fd",
       "declarations": [
         "modular_coefficient_fixture",
         "signed_orientation_fixture",
@@ -1310,11 +1277,11 @@
         "support_local_growth_threshold_fixture",
         "full_volume_growth_threshold_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R270.lean",
+      "sha256": "f3176f62e6eb4527009a263cd117f81fb0a2849e0198984572421b063c1960fd"
     },
     {
-      "path": "verification/lean/Tect/R271.lean",
-      "sha256": "05a4309a488af580cdb0ff03d6732f565828e9ba05a5172965b6b87e183fb420",
       "declarations": [
         "diagonal_log_mean_fixture",
         "arithmetic_mean_symmetry_fixture",
@@ -1323,11 +1290,11 @@
         "modular_sign_fixture",
         "graph_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R271.lean",
+      "sha256": "05a4309a488af580cdb0ff03d6732f565828e9ba05a5172965b6b87e183fb420"
     },
     {
-      "path": "verification/lean/Tect/R272.lean",
-      "sha256": "99bccb08f97dca6ab9911bf3309ab73dbf67fe05dc5292954212120d94a9b30e",
       "declarations": [
         "modular_coefficient_fixture",
         "orientation_sum_fixture",
@@ -1335,11 +1302,11 @@
         "radius_fixture",
         "graph_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R272.lean",
+      "sha256": "99bccb08f97dca6ab9911bf3309ab73dbf67fe05dc5292954212120d94a9b30e"
     },
     {
-      "path": "verification/lean/Tect/R273.lean",
-      "sha256": "4c7dbe4999d57ad8ba65e4845eec7cde5c61e9d9c07f558c3e8978ca02c7afce",
       "declarations": [
         "dyson_coefficient_fixture",
         "modular_coefficient_fixture",
@@ -1350,11 +1317,11 @@
         "orientation_fixture",
         "scale_radius_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R273.lean",
+      "sha256": "4c7dbe4999d57ad8ba65e4845eec7cde5c61e9d9c07f558c3e8978ca02c7afce"
     },
     {
-      "path": "verification/lean/Tect/R274.lean",
-      "sha256": "95aab8614047d854d2a361d3b92068b4058130aa000aec62f86e6d33cfeb1422",
       "declarations": [
         "duhamel_fixture",
         "observable_fixture",
@@ -1362,11 +1329,11 @@
         "two_orientation_fixture",
         "fixed_regulator_zero_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R274.lean",
+      "sha256": "95aab8614047d854d2a361d3b92068b4058130aa000aec62f86e6d33cfeb1422"
     },
     {
-      "path": "verification/lean/Tect/R275.lean",
-      "sha256": "2afe3b9c28660c8e2914912e9135878633f0d7c59a83c3f237556572157535be",
       "declarations": [
         "defect_n_two",
         "defect_n_four",
@@ -1375,22 +1342,22 @@
         "inverse_tail_scaled_defect",
         "stronger_inverse_tail_scaled_defect",
         "boundary_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R275.lean",
+      "sha256": "2afe3b9c28660c8e2914912e9135878633f0d7c59a83c3f237556572157535be"
     },
     {
-      "path": "verification/lean/Tect/R276.lean",
-      "sha256": "5b4aec3099494db9dd5b882d10639d5f667c962bd5d0fb0ac3d9bc26a9409bdd",
       "declarations": [
         "top_overlap_zero_of_core",
         "defect_zero_of_core",
         "boundary_level_fixture",
         "core_level_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R276.lean",
+      "sha256": "5b4aec3099494db9dd5b882d10639d5f667c962bd5d0fb0ac3d9bc26a9409bdd"
     },
     {
-      "path": "verification/lean/Tect/R277.lean",
-      "sha256": "528af33f4d76487f1c6eb6c71433112424147ae307409ebcafce4347e68523f5",
       "declarations": [
         "weighted_defect_zero_of_core",
         "boundary_weighted_fixture",
@@ -1398,84 +1365,84 @@
         "orientation_count_fixture",
         "history_zero_anchor_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R277.lean",
+      "sha256": "528af33f4d76487f1c6eb6c71433112424147ae307409ebcafce4347e68523f5"
     },
     {
-      "path": "verification/lean/Tect/R278.lean",
-      "sha256": "05cd0a1b05d1046df5e80786e4a8cabbc7c70d60732c1181333de16e28d92079",
       "declarations": [
         "top_tail_to_ccr_defect",
         "top_tail_squared_fixture",
         "top_tail_defect_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R278.lean",
+      "sha256": "05cd0a1b05d1046df5e80786e4a8cabbc7c70d60732c1181333de16e28d92079"
     },
     {
-      "path": "verification/lean/Tect/R279.lean",
-      "sha256": "5fe37f20ddd08bfd031731ddf6e609488ce15c5cb8c70a5ed59184859417b4c5",
       "declarations": [
         "fifth_moment_to_weighted_top_tail",
         "fifth_moment_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R279.lean",
+      "sha256": "5fe37f20ddd08bfd031731ddf6e609488ce15c5cb8c70a5ed59184859417b4c5"
     },
     {
-      "path": "verification/lean/Tect/R280.lean",
-      "sha256": "228116f0e57588862ed03763f7958e0a39c4ffaa4514815738a9e3474f83829c",
       "declarations": [
         "anisotropic_order_bound",
         "degree_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R280.lean",
+      "sha256": "228116f0e57588862ed03763f7958e0a39c4ffaa4514815738a9e3474f83829c"
     },
     {
-      "path": "verification/lean/Tect/R281.lean",
-      "sha256": "558c53fcd8a7f0ce8bfb240a8fea3444f999cf9e6317e4be262ff3719d5fc4af",
       "declarations": [
         "finite_form_ratio_implies_domination",
         "degree_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R281.lean",
+      "sha256": "558c53fcd8a7f0ce8bfb240a8fea3444f999cf9e6317e4be262ff3719d5fc4af"
     },
     {
-      "path": "verification/lean/Tect/R282.lean",
-      "sha256": "d8b121505fc3cd746a4f7d4d3ae37d8b56d0578bc9a6f1f7fcab69668a67df2f",
       "declarations": [
         "young_with_equal_scales",
         "energy_to_number_form_constant",
         "top_tail_decay",
         "history_top_tail_decay",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R282.lean",
+      "sha256": "d8b121505fc3cd746a4f7d4d3ae37d8b56d0578bc9a6f1f7fcab69668a67df2f"
     },
     {
-      "path": "verification/lean/Tect/R283.lean",
-      "sha256": "41e9d19e80dfd10fe8bd247d2c7534e7a1dc07e34f1c04f1f9eebff3e41c712e",
       "declarations": [
         "safe_multiplicity_fixture",
         "hard_cutoff_power_fixture",
         "factorial_shell_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R283.lean",
+      "sha256": "41e9d19e80dfd10fe8bd247d2c7534e7a1dc07e34f1c04f1f9eebff3e41c712e"
     },
     {
-      "path": "verification/lean/Tect/R284.lean",
-      "sha256": "02621845589d21e5f17638deaf02dfe68f3f26b929e429aba2ced16bbeb153da",
       "declarations": [
         "m20_constant_fixture",
         "uniform_tail_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R284.lean",
+      "sha256": "02621845589d21e5f17638deaf02dfe68f3f26b929e429aba2ced16bbeb153da"
     },
     {
-      "path": "verification/lean/Tect/R285.lean",
-      "sha256": "93397b3202187aabced00313218e2ee83a6cd899c04d9cfc5110a0ffcbaa84ef",
       "declarations": [
         "inverse_square_tail_limit",
         "combined_squared_tail_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R285.lean",
+      "sha256": "93397b3202187aabced00313218e2ee83a6cd899c04d9cfc5110a0ffcbaa84ef"
     },
     {
-      "path": "verification/lean/Tect/R286.lean",
-      "sha256": "7b93edc3ee04fd70af317724b0d63c63a5ae4cc7e634f91c0c95b99f6f6e228f",
       "declarations": [
         "coefficient_m1",
         "coefficient_m2",
@@ -1485,11 +1452,11 @@
         "coefficient_m6",
         "kinetic_degree_gap",
         "target_degree_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R286.lean",
+      "sha256": "7b93edc3ee04fd70af317724b0d63c63a5ae4cc7e634f91c0c95b99f6f6e228f"
     },
     {
-      "path": "verification/lean/Tect/R287.lean",
-      "sha256": "5a59edf9f29d0d6dab2ea9e704a325111d0221a5a3d0b99443444f70e33ed5e8",
       "declarations": [
         "rate_fixture",
         "good_margin_fixture",
@@ -1497,22 +1464,22 @@
         "prefactor_fixture",
         "threshold_order_fixture",
         "top_coefficient_m2"
-      ]
+      ],
+      "path": "verification/lean/Tect/R287.lean",
+      "sha256": "5a59edf9f29d0d6dab2ea9e704a325111d0221a5a3d0b99443444f70e33ed5e8"
     },
     {
-      "path": "verification/lean/Tect/R288.lean",
-      "sha256": "c02f09e106030e4ae6372659c6ff8f098a0f748f00246d1574fe8c21e442f481",
       "declarations": [
         "delta_fixture",
         "n1_scale_fixture",
         "branch_count_fixture",
         "rational_exponent_fixture",
         "same_radius_witness"
-      ]
+      ],
+      "path": "verification/lean/Tect/R288.lean",
+      "sha256": "c02f09e106030e4ae6372659c6ff8f098a0f748f00246d1574fe8c21e442f481"
     },
     {
-      "path": "verification/lean/Tect/R289.lean",
-      "sha256": "626b87582c3e0c6f57d2cb610f857fa818073b7a1e142917cb58ff5ce9e1fb5e",
       "declarations": [
         "source_radius_fixture",
         "reduced_radius_fixture",
@@ -1525,11 +1492,11 @@
         "order_thirty_two_lower_bound_integer",
         "order_thirty_two_lower_bound",
         "radius_loss_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R289.lean",
+      "sha256": "626b87582c3e0c6f57d2cb610f857fa818073b7a1e142917cb58ff5ce9e1fb5e"
     },
     {
-      "path": "verification/lean/Tect/R290.lean",
-      "sha256": "0eca94ffdbe47f0139307c4ebea83ee95a3d325106ffcfc4c822fa8cea09b972",
       "declarations": [
         "source_radius_fixture",
         "reduced_radius_fixture",
@@ -1540,11 +1507,11 @@
         "order_sixteen_branch_power",
         "factorial_lower_bound_m16",
         "radius_loss_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R290.lean",
+      "sha256": "0eca94ffdbe47f0139307c4ebea83ee95a3d325106ffcfc4c822fa8cea09b972"
     },
     {
-      "path": "verification/lean/Tect/R291.lean",
-      "sha256": "279cc8fb4eb8bb1433a2cc37904aee7d5e4c26c4f3da717a46f67f39744eb492",
       "declarations": [
         "slice_fixture",
         "orientation_fixture",
@@ -1553,33 +1520,33 @@
         "order_sixteen_signed_slice_ratio",
         "signed_slice_branch_power",
         "signed_slice_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R291.lean",
+      "sha256": "279cc8fb4eb8bb1433a2cc37904aee7d5e4c26c4f3da717a46f67f39744eb492"
     },
     {
-      "path": "verification/lean/Tect/R292.lean",
-      "sha256": "f9bf8be942918aa405b1acfa96981d65f03f4bba185df05799490a687744b681",
       "declarations": [
         "fourth_word_fixture",
         "modular_fourth_word_fixture",
         "graph_fixture",
         "growth_threshold_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R292.lean",
+      "sha256": "f9bf8be942918aa405b1acfa96981d65f03f4bba185df05799490a687744b681"
     },
     {
-      "path": "verification/lean/Tect/R293.lean",
-      "sha256": "42007e3cc516498aa004ada649fd2905250385bdedd3bdbf163d3514b70b0c9a",
       "declarations": [
         "kinetic_shift_identity",
         "tail_markov_fixture",
         "tail_order_fixture",
         "tail_ratio_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R293.lean",
+      "sha256": "42007e3cc516498aa004ada649fd2905250385bdedd3bdbf163d3514b70b0c9a"
     },
     {
-      "path": "verification/lean/Tect/R294.lean",
-      "sha256": "b562443fc6656fe8884aefe83fdde8979c6854dbb3e622ad5dfc5a40e4d09526",
       "declarations": [
         "two_sided_fixture",
         "dual_trace_fixture",
@@ -1587,41 +1554,41 @@
         "volume_edge_count",
         "ratio_tail_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R294.lean",
+      "sha256": "b562443fc6656fe8884aefe83fdde8979c6854dbb3e622ad5dfc5a40e4d09526"
     },
     {
-      "path": "verification/lean/Tect/R295.lean",
-      "sha256": "ee082dd037040d8aa6e725d6fd917996bbeb7a6bbb71a7653d38fca2c9acae02",
       "declarations": [
         "rotation_norm_fixture",
         "tail_square_fixture",
         "dual_tail_static_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R295.lean",
+      "sha256": "ee082dd037040d8aa6e725d6fd917996bbeb7a6bbb71a7653d38fca2c9acae02"
     },
     {
-      "path": "verification/lean/Tect/R296.lean",
-      "sha256": "b75a1613ed902c21ff918b67031a36c463b23903e08f09627c2920c201d332d2",
       "declarations": [
         "commutator_cross_term_fixture",
         "second_order_operator_bound_fixture",
         "initial_cancellation_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R296.lean",
+      "sha256": "b75a1613ed902c21ff918b67031a36c463b23903e08f09627c2920c201d332d2"
     },
     {
-      "path": "verification/lean/Tect/R297.lean",
-      "sha256": "1e609f407ababe766c09d9386a2bc1d5783db02dbed34e0850b3358d9d7fd774",
       "declarations": [
         "condition_number_fixture",
         "two_sided_condition_bound_fixture",
         "dual_spectrum_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R297.lean",
+      "sha256": "1e609f407ababe766c09d9386a2bc1d5783db02dbed34e0850b3358d9d7fd774"
     },
     {
-      "path": "verification/lean/Tect/R298.lean",
-      "sha256": "e4b3b5b4b8fd983a2344e5f86f037d040f3ce76ebe9b8df3a4eef9cd81bf8178",
       "declarations": [
         "tail_bond_fixture",
         "tail_force_fixture",
@@ -1630,21 +1597,21 @@
         "quadratic_boundary_deficit",
         "leading_coefficient_positive",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R298.lean",
+      "sha256": "e4b3b5b4b8fd983a2344e5f86f037d040f3ce76ebe9b8df3a4eef9cd81bf8178"
     },
     {
-      "path": "verification/lean/Tect/R299.lean",
-      "sha256": "c807b7cc7c32575a17cf7e830b1f3c3b1a5fa27f214814bcac3c0899120e9078",
       "declarations": [
         "commuting_weight_isometry",
         "two_orientation_multiplier",
         "recurrence_reduction_fixture",
         "two_orientation_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R299.lean",
+      "sha256": "c807b7cc7c32575a17cf7e830b1f3c3b1a5fa27f214814bcac3c0899120e9078"
     },
     {
-      "path": "verification/lean/Tect/R300.lean",
-      "sha256": "cec2e3536aca249467c5d27480ea229cc5c483a4eabce1825b2fac31ace13ff6",
       "declarations": [
         "bond_quartic_domination",
         "single_quartic_domination",
@@ -1653,11 +1620,11 @@
         "full_bond_form_envelope",
         "envelope_constants",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R300.lean",
+      "sha256": "cec2e3536aca249467c5d27480ea229cc5c483a4eabce1825b2fac31ace13ff6"
     },
     {
-      "path": "verification/lean/Tect/R301.lean",
-      "sha256": "22fd29620721d1bc56cee68bff6db325e0a169401fcde3648f223ef297185b2e",
       "declarations": [
         "onsite_lower_fixture",
         "bond_nonnegative_fixture",
@@ -1666,11 +1633,11 @@
         "two_orientation_constant_fixture",
         "canonical_shift_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R301.lean",
+      "sha256": "22fd29620721d1bc56cee68bff6db325e0a169401fcde3648f223ef297185b2e"
     },
     {
-      "path": "verification/lean/Tect/R302.lean",
-      "sha256": "d502eb1d831f6b8d9ec27b9542ab07da3f41362859080960689af8a39934f26d",
       "declarations": [
         "onsite_lower_fixture",
         "bond_nonnegative_fixture",
@@ -1680,11 +1647,11 @@
         "bounded_degree_multiplier_fixture",
         "shifted_pair_order_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R302.lean",
+      "sha256": "d502eb1d831f6b8d9ec27b9542ab07da3f41362859080960689af8a39934f26d"
     },
     {
-      "path": "verification/lean/Tect/R303.lean",
-      "sha256": "a43a5ae7398007744bddfda54fac9672654bc5bc933a6dab8d92c78464d2db46",
       "declarations": [
         "weyl_base_bound_fixture",
         "support_norm_fixture",
@@ -1692,33 +1659,33 @@
         "two_support_norm_fixture",
         "degree_multiplier_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R303.lean",
+      "sha256": "a43a5ae7398007744bddfda54fac9672654bc5bc933a6dab8d92c78464d2db46"
     },
     {
-      "path": "verification/lean/Tect/R304.lean",
-      "sha256": "96071bc8d056e0a09cc42dd2b69483a8fdb26dbb5e5050c5234d0c6ff2dd29fd",
       "declarations": [
         "regularized_coordinate_square_fixture",
         "support_bound_fixture",
         "cross_orientation_multiplier_fixture",
         "degree_multiplier_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R304.lean",
+      "sha256": "96071bc8d056e0a09cc42dd2b69483a8fdb26dbb5e5050c5234d0c6ff2dd29fd"
     },
     {
-      "path": "verification/lean/Tect/R305.lean",
-      "sha256": "0d42aa8d5be534bd7e88a2f1ce7046b4f3b1f21fd721fa56ca2b4ab3373410f3",
       "declarations": [
         "onsite_leading_coefficient_fixture",
         "weighted_leading_coefficient_fixture",
         "obstruction_ratio_fixture",
         "degree_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R305.lean",
+      "sha256": "0d42aa8d5be534bd7e88a2f1ce7046b4f3b1f21fd721fa56ca2b4ab3373410f3"
     },
     {
-      "path": "verification/lean/Tect/R306.lean",
-      "sha256": "698240357f1ff1fa8efc42f5cb59a9c4c76511c230f9429980012a55a3f3837b",
       "declarations": [
         "resolvent_sum_fixture",
         "modulus_gap_identity",
@@ -1730,11 +1697,11 @@
         "approximation_coefficient_fixture",
         "support_bound_fixture",
         "cross_orientation_multiplier_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R306.lean",
+      "sha256": "698240357f1ff1fa8efc42f5cb59a9c4c76511c230f9429980012a55a3f3837b"
     },
     {
-      "path": "verification/lean/Tect/R307.lean",
-      "sha256": "a53794a6891bc783eb07370204a0e9e607be199170453e2a831d835eea7b4213",
       "declarations": [
         "epsilon_parameter_fixture",
         "witness_value_fixture",
@@ -1742,22 +1709,22 @@
         "same_form_growth_fixture",
         "lower_bound_growth_samples",
         "approximation_decay_samples"
-      ]
+      ],
+      "path": "verification/lean/Tect/R307.lean",
+      "sha256": "a53794a6891bc783eb07370204a0e9e607be199170453e2a831d835eea7b4213"
     },
     {
-      "path": "verification/lean/Tect/R308.lean",
-      "sha256": "7a8f04ff34aeda222780deaa5e1ab83d458b3f2e2a1bcf7e965ebe2a79972fc1",
       "declarations": [
         "force_lower_fixture",
         "resolvent_derivative_lower_fixture",
         "combined_force_derivative_lower_fixture",
         "potential_lower_fixture",
         "leading_coefficient_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R308.lean",
+      "sha256": "7a8f04ff34aeda222780deaa5e1ab83d458b3f2e2a1bcf7e965ebe2a79972fc1"
     },
     {
-      "path": "verification/lean/Tect/R309.lean",
-      "sha256": "2c8d920287b1cb577fbeade5de17d9e0c47faace4d9eabe598c3696b8dc50f69",
       "declarations": [
         "potential_completion_square",
         "potential_quartic_lower_fixture",
@@ -1765,134 +1732,134 @@
         "resolvent_second_derivative_formula",
         "beta_envelope_fixture",
         "product_rule_algebra_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R309.lean",
+      "sha256": "2c8d920287b1cb577fbeade5de17d9e0c47faace4d9eabe598c3696b8dc50f69"
     },
     {
-      "path": "verification/lean/Tect/R310.lean",
-      "sha256": "3d71e34de00eb2e8d6472d50cc81daac9a7a1079ed1c7eee048adbdc820bf912",
       "declarations": [
         "generator_pairing_scalar_fixture",
         "skew_adjoint_scalar_fixture",
         "modular_coefficient_fixture",
         "orientation_sum_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R310.lean",
+      "sha256": "3d71e34de00eb2e8d6472d50cc81daac9a7a1079ed1c7eee048adbdc820bf912"
     },
     {
-      "path": "verification/lean/Tect/R311.lean",
-      "sha256": "0ecf29b4f9a7783f9a049b07b93b7c8f2ffdce34c8707f3f26d115cf0c5e205b",
       "declarations": [
         "six_site_graph_fixture",
         "cutoff_order_fixture",
         "generator_pairing_scalar_fixture",
         "volume_ratio_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R311.lean",
+      "sha256": "0ecf29b4f9a7783f9a049b07b93b7c8f2ffdce34c8707f3f26d115cf0c5e205b"
     },
     {
-      "path": "verification/lean/Tect/R312.lean",
-      "sha256": "eea6e8ffd19c6998d1af91d2279a19055734879f7043af29f08dc601a407cac8",
       "declarations": [
         "finite_mode_pairing",
         "finite_mode_nonnegative",
         "gap_square_fixture",
         "two_sided_factor_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R312.lean",
+      "sha256": "eea6e8ffd19c6998d1af91d2279a19055734879f7043af29f08dc601a407cac8"
     },
     {
-      "path": "verification/lean/Tect/R313.lean",
-      "sha256": "a83059c306c3e475d6bf6a3f54640283ec0984067f1c939c4996b6d56b41e444",
       "declarations": [
         "gap_square_bound",
         "spectral_term_bound",
         "aggregate_constant_fixture",
         "moment_shift_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R313.lean",
+      "sha256": "a83059c306c3e475d6bf6a3f54640283ec0984067f1c939c4996b6d56b41e444"
     },
     {
-      "path": "verification/lean/Tect/R314.lean",
-      "sha256": "a1f0bade5f7684d3e9e5ae889664771262636c0303cf10f8f25cb8faee891873",
       "declarations": [
         "counterexample_moment",
         "counterexample_threshold",
         "rank_one_norm_fixture",
         "weighted_interface_constant"
-      ]
+      ],
+      "path": "verification/lean/Tect/R314.lean",
+      "sha256": "a1f0bade5f7684d3e9e5ae889664771262636c0303cf10f8f25cb8faee891873"
     },
     {
-      "path": "verification/lean/Tect/R315.lean",
-      "sha256": "04941f7fe5ffa6236440ad72536dee177de94b2862e49dd0941b082e777d476a",
       "declarations": [
         "weighted_gap_term",
         "four_context_constant",
         "coarse_trace_fixture",
         "shifted_gap_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R315.lean",
+      "sha256": "04941f7fe5ffa6236440ad72536dee177de94b2862e49dd0941b082e777d476a"
     },
     {
-      "path": "verification/lean/Tect/R316.lean",
-      "sha256": "9d2afc54e1c3b35d59f8d9dcdcf7120e18748ef49ed3af0176e158e2be262382",
       "declarations": [
         "global_context_formula_fixture",
         "global_context_quadratic_lower",
         "threshold_witness",
         "global_context_origin_fixture",
         "global_context_sample_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R316.lean",
+      "sha256": "9d2afc54e1c3b35d59f8d9dcdcf7120e18748ef49ed3af0176e158e2be262382"
     },
     {
-      "path": "verification/lean/Tect/R317.lean",
-      "sha256": "47c98beaf274cc5022049672d0796a3ecb141efeb57cc0d9f8b6ad30c65dafd9",
       "declarations": [
         "four_leg_scalar_identity",
         "local_weight_fixture",
         "global_weight_scope_fixture",
         "local_four_leg_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R317.lean",
+      "sha256": "47c98beaf274cc5022049672d0796a3ecb141efeb57cc0d9f8b6ad30c65dafd9"
     },
     {
-      "path": "verification/lean/Tect/R318.lean",
-      "sha256": "6dde0cee78fc852d2fbc1e14136c5f1ba821f7897d97d26234058a41f4be335e",
       "declarations": [
         "q3_source_rate_fixture",
         "q3_source_sigma_margin",
         "q3_source_prefactor",
         "source_weight_norm_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R318.lean",
+      "sha256": "6dde0cee78fc852d2fbc1e14136c5f1ba821f7897d97d26234058a41f4be335e"
     },
     {
-      "path": "verification/lean/Tect/R319.lean",
-      "sha256": "a402f62844087e5fe9622745891fe65ea151cff2f9fd59ae4bef615f9225f15b",
       "declarations": [
         "source_rate_fixture",
         "source_margin_fixture",
         "delta_generator_fixture",
         "source_norm_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R319.lean",
+      "sha256": "a402f62844087e5fe9622745891fe65ea151cff2f9fd59ae4bef615f9225f15b"
     },
     {
-      "path": "verification/lean/Tect/R320.lean",
-      "sha256": "6c16caa273a678133d5fee6d5431fe00226ed539e0330f47848e0f8746a06681",
       "declarations": [
         "degree_order_fixture",
         "product_gradient_fixture",
         "product_form_fixture",
         "embedding_constant_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R320.lean",
+      "sha256": "6c16caa273a678133d5fee6d5431fe00226ed539e0330f47848e0f8746a06681"
     },
     {
-      "path": "verification/lean/Tect/R321.lean",
-      "sha256": "6515aefbc764e345e874ab4df669a17f87ebbb2c72f48ce1e42f478348e49b52",
       "declarations": [
         "weighted_step_fixture",
         "spatial_penalty_fixture",
         "six_step_response_fixture",
         "cauchy_coefficient_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R321.lean",
+      "sha256": "6515aefbc764e345e874ab4df669a17f87ebbb2c72f48ce1e42f478348e49b52"
     },
     {
-      "path": "verification/lean/Tect/R322.lean",
-      "sha256": "a02de5402caa1d0dd6b09f517d9377d72756fc04a504d4dfefa4172e8b5acdc6",
       "declarations": [
         "onsite_force_coefficient_fixture",
         "edge_force_polynomial_fixture",
@@ -1901,11 +1868,11 @@
         "kinetic_fixture",
         "full_safe_bound_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R322.lean",
+      "sha256": "a02de5402caa1d0dd6b09f517d9377d72756fc04a504d4dfefa4172e8b5acdc6"
     },
     {
-      "path": "verification/lean/Tect/R323.lean",
-      "sha256": "e32f669e01f9cdff4c6920f570466e101d1c8812aafb7d82042306aed06857b9",
       "declarations": [
         "multi_support_kinetic_fixture",
         "force_safe_fixture",
@@ -1915,11 +1882,11 @@
         "product_cost_fixture",
         "kernel_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R323.lean",
+      "sha256": "e32f669e01f9cdff4c6920f570466e101d1c8812aafb7d82042306aed06857b9"
     },
     {
-      "path": "verification/lean/Tect/R324.lean",
-      "sha256": "46c99f95ef8050ff5d6e192e07a0a631f01b3518876f9aa70d998fb3c897d3f8",
       "declarations": [
         "adjoint_invariance_fixture",
         "four_context_sum_fixture",
@@ -1928,11 +1895,11 @@
         "four_context_cauchy_fixture",
         "product_cost_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R324.lean",
+      "sha256": "46c99f95ef8050ff5d6e192e07a0a631f01b3518876f9aa70d998fb3c897d3f8"
     },
     {
-      "path": "verification/lean/Tect/R325.lean",
-      "sha256": "87c754b754f6caa93a74721665752846ba7914d21dab86441ec6e9019ed92b8e",
       "declarations": [
         "weighted_step_fixture",
         "time_horizon_fixture",
@@ -1940,11 +1907,11 @@
         "context_count_fixture",
         "recurrence_shape_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R325.lean",
+      "sha256": "87c754b754f6caa93a74721665752846ba7914d21dab86441ec6e9019ed92b8e"
     },
     {
-      "path": "verification/lean/Tect/R326.lean",
-      "sha256": "3f17af9e4c3434053ccb9780f4b95389347280929c996d2ed5fc328c7c465e02",
       "declarations": [
         "weighted_step_fixture",
         "time_horizon_fixture",
@@ -1953,11 +1920,11 @@
         "context_count_fixture",
         "split_term_count_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R326.lean",
+      "sha256": "3f17af9e4c3434053ccb9780f4b95389347280929c996d2ed5fc328c7c465e02"
     },
     {
-      "path": "verification/lean/Tect/R327.lean",
-      "sha256": "7cd5bf2722cee6b487e14011810e7d756d7d5ab77dcb98422b157e6d1f478e54",
       "declarations": [
         "weighted_step_fixture",
         "time_horizon_fixture",
@@ -1966,90 +1933,90 @@
         "source_count_fixture",
         "beta_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R327.lean",
+      "sha256": "7cd5bf2722cee6b487e14011810e7d756d7d5ab77dcb98422b157e6d1f478e54"
     },
     {
-      "path": "verification/lean/Tect/R328.lean",
-      "sha256": "6b1cf6a5a79d85001d015bebce86fdb5666b4d21bbc9fb60f19566991cb78888",
       "declarations": [
         "three_quarter_weight_fixture",
         "weight_decay_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R328.lean",
+      "sha256": "6b1cf6a5a79d85001d015bebce86fdb5666b4d21bbc9fb60f19566991cb78888"
     },
     {
-      "path": "verification/lean/Tect/R329.lean",
-      "sha256": "4cd3a198be3a95316e3551d8d55b873e6477003bbb4b343f26d7324dfaa21963",
       "declarations": [
         "matrix_order_fixture",
         "matrix_commutator_nonzero",
         "triangle_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R329.lean",
+      "sha256": "4cd3a198be3a95316e3551d8d55b873e6477003bbb4b343f26d7324dfaa21963"
     },
     {
-      "path": "verification/lean/Tect/R330.lean",
-      "sha256": "b6af04f8cb244eda2ca2b265c0f8d67c6fdf5192c4cf92c9ece7d678992b1c0e",
       "declarations": [
         "time_horizon_fixture",
         "volterra_difference_fixture",
         "triangle_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R330.lean",
+      "sha256": "b6af04f8cb244eda2ca2b265c0f8d67c6fdf5192c4cf92c9ece7d678992b1c0e"
     },
     {
-      "path": "verification/lean/Tect/R331.lean",
-      "sha256": "c53cdb288bfaca0faa470eff57562fc9f8f40264ca6707b918de5051082622b1",
       "declarations": [
         "horizon_fixture",
         "step_refinement_fixture",
         "history_difference_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R331.lean",
+      "sha256": "c53cdb288bfaca0faa470eff57562fc9f8f40264ca6707b918de5051082622b1"
     },
     {
-      "path": "verification/lean/Tect/R332.lean",
-      "sha256": "8b36b1e7915b14dd8c99d304e1ab263be9e15b99d0729af63736db86dd6ad568",
       "declarations": [
         "local_defect_fixture",
         "history_sum_fixture",
         "history_bound_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R332.lean",
+      "sha256": "8b36b1e7915b14dd8c99d304e1ab263be9e15b99d0729af63736db86dd6ad568"
     },
     {
-      "path": "verification/lean/Tect/R333.lean",
-      "sha256": "2755eeacd1929a3b65700cb9bc58f2ae73360355f3587472d92f1e6ce4ce8e65",
       "declarations": [
         "raw_bound_fixture",
         "cutoff_ratio_fixture",
         "history_coefficient_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R333.lean",
+      "sha256": "2755eeacd1929a3b65700cb9bc58f2ae73360355f3587472d92f1e6ce4ce8e65"
     },
     {
-      "path": "verification/lean/Tect/R334.lean",
-      "sha256": "3c0dbad05b72a8ad34cb902ac471a67c60417d445f8c5268d31b21f4e5ed43a1",
       "declarations": [
         "two_sided_square_fixture",
         "weighted_proxy_fixture",
         "source_pair_count_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R334.lean",
+      "sha256": "3c0dbad05b72a8ad34cb902ac471a67c60417d445f8c5268d31b21f4e5ed43a1"
     },
     {
-      "path": "verification/lean/Tect/R335.lean",
-      "sha256": "165ea6093803867e3cb90751a57165e920ed2c50de9172a3c726b7485cdf34d1",
       "declarations": [
         "signed_pair_fixture",
         "reverse_antisymmetry_fixture",
         "weighted_proxy_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R335.lean",
+      "sha256": "165ea6093803867e3cb90751a57165e920ed2c50de9172a3c726b7485cdf34d1"
     },
     {
-      "path": "verification/lean/Tect/R336.lean",
-      "sha256": "9b7108357d6e6b9783c2dbc5adbd1e9a409c24e591d4b97e12ad3f8aa96c50ba",
       "declarations": [
         "centered_D_row_formula",
         "centered_D_column_formula",
@@ -2060,11 +2027,11 @@
         "uncentered_quadratic_formula",
         "centered_threshold",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R336.lean",
+      "sha256": "9b7108357d6e6b9783c2dbc5adbd1e9a409c24e591d4b97e12ad3f8aa96c50ba"
     },
     {
-      "path": "verification/lean/Tect/R337.lean",
-      "sha256": "4c78b8278eca22fae2e8ea96545ea5d196f22fd3b0baed37558282b1f928425d",
       "declarations": [
         "kick_q_fixed",
         "kick_p_edge",
@@ -2077,144 +2044,144 @@
         "cube_ball_three_fixture",
         "path_shape_ball_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R337.lean",
+      "sha256": "4c78b8278eca22fae2e8ea96545ea5d196f22fd3b0baed37558282b1f928425d"
     },
     {
-      "path": "verification/lean/Tect/R338.lean",
-      "sha256": "95b013150f62469b143aee4e99e8ac2284fa3a714e1bf9be09a6fdff561ba181",
       "declarations": [
         "finite_trace_cyclicity",
         "finite_thermal_four_cycle",
         "finite_os_gram_real_possemidef",
         "finite_transfer_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R338.lean",
+      "sha256": "95b013150f62469b143aee4e99e8ac2284fa3a714e1bf9be09a6fdff561ba181"
     },
     {
-      "path": "verification/lean/Tect/R339.lean",
-      "sha256": "018e07208c8e3f3535a98f0037f98e3507af32f9e233fe06aa054fcdbdaed481",
       "declarations": [
         "finite_gram_entry_perturbation"
-      ]
+      ],
+      "path": "verification/lean/Tect/R339.lean",
+      "sha256": "018e07208c8e3f3535a98f0037f98e3507af32f9e233fe06aa054fcdbdaed481"
     },
     {
-      "path": "verification/lean/Tect/R340.lean",
-      "sha256": "08bc5502a0fb3bceb53837209c43f34137d310d8022f12877cf674815ad55e1a",
       "declarations": [
         "finite_complex_gram_entry_perturbation"
-      ]
+      ],
+      "path": "verification/lean/Tect/R340.lean",
+      "sha256": "08bc5502a0fb3bceb53837209c43f34137d310d8022f12877cf674815ad55e1a"
     },
     {
-      "path": "verification/lean/Tect/R341.lean",
-      "sha256": "56e1cf05c6103543255dabbbda9eb02fdb205d8931f904832e05623de1bb5377",
       "declarations": [
         "normalized_product_sum_lift"
-      ]
+      ],
+      "path": "verification/lean/Tect/R341.lean",
+      "sha256": "56e1cf05c6103543255dabbbda9eb02fdb205d8931f904832e05623de1bb5377"
     },
     {
-      "path": "verification/lean/Tect/R342.lean",
-      "sha256": "eb3b66f5518cd38690625bc35f9527b143061e84eb59b05a347b9ac2ce8ed0ef",
       "declarations": [
         "gram_transport_congruence"
-      ]
+      ],
+      "path": "verification/lean/Tect/R342.lean",
+      "sha256": "eb3b66f5518cd38690625bc35f9527b143061e84eb59b05a347b9ac2ce8ed0ef"
     },
     {
-      "path": "verification/lean/Tect/R343.lean",
-      "sha256": "2ea8cee675b9aef9f9c172dc2031029f5527ef63218ca09929011b7a3aeeb5d7",
       "declarations": [
         "commutator_difference",
         "commutator_difference_zero"
-      ]
+      ],
+      "path": "verification/lean/Tect/R343.lean",
+      "sha256": "2ea8cee675b9aef9f9c172dc2031029f5527ef63218ca09929011b7a3aeeb5d7"
     },
     {
-      "path": "verification/lean/Tect/R344.lean",
-      "sha256": "8e593a6de36cbd18be6f8a80954ed52bd268da6c0620747ac3907b5b646d276a",
       "declarations": [
         "four_component_envelope",
         "max_pair_sum_bound"
-      ]
+      ],
+      "path": "verification/lean/Tect/R344.lean",
+      "sha256": "8e593a6de36cbd18be6f8a80954ed52bd268da6c0620747ac3907b5b646d276a"
     },
     {
-      "path": "verification/lean/Tect/R345.lean",
-      "sha256": "3c68aa5a3853ead165b24d31634d41b0bd960863e5e15a85792566f26ce7163f",
       "declarations": [
         "exponential_band_bound",
         "similarity_band_scalar"
-      ]
+      ],
+      "path": "verification/lean/Tect/R345.lean",
+      "sha256": "3c68aa5a3853ead165b24d31634d41b0bd960863e5e15a85792566f26ce7163f"
     },
     {
-      "path": "verification/lean/Tect/R346.lean",
-      "sha256": "7634a746bd34d51994de733378e8a67661394012a83248e67324ca3272472b06",
       "declarations": [
         "two_term_holder_assembly",
         "holder_envelope_fixture",
         "holder_envelope_nonnegative"
-      ]
+      ],
+      "path": "verification/lean/Tect/R346.lean",
+      "sha256": "7634a746bd34d51994de733378e8a67661394012a83248e67324ca3272472b06"
     },
     {
-      "path": "verification/lean/Tect/R347.lean",
-      "sha256": "34e8870b1b470baa0dff714b9ce35faa2ef75e23b6ce74af693acb732694750d",
       "declarations": [
         "unitary_holder_corollary",
         "selfadjoint_tail_leg_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R347.lean",
+      "sha256": "34e8870b1b470baa0dff714b9ce35faa2ef75e23b6ce74af693acb732694750d"
     },
     {
-      "path": "verification/lean/Tect/R348.lean",
-      "sha256": "ef6363ed695cff3e1059375e1261187652bb068877f43ef0efb98dd3e922d3db",
       "declarations": [
         "two_slice_arithmetic_mean",
         "euclidean_tail_scalar_envelope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R348.lean",
+      "sha256": "ef6363ed695cff3e1059375e1261187652bb068877f43ef0efb98dd3e922d3db"
     },
     {
-      "path": "verification/lean/Tect/R349.lean",
-      "sha256": "e1a1d699d6fb3c551f83e3fd2c5ed7ee5705c37581f7ede3c32b5178e2ccb79f",
       "declarations": [
         "moment_energy_assembly",
         "positive_quotient_envelope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R349.lean",
+      "sha256": "e1a1d699d6fb3c551f83e3fd2c5ed7ee5705c37581f7ede3c32b5178e2ccb79f"
     },
     {
-      "path": "verification/lean/Tect/R350.lean",
-      "sha256": "5b5ae5f02f66d2ad950c2852f70797eeb398bd69b6520c81cf58a04e8f8fffcc",
       "declarations": [
         "contraction_bond_envelope",
         "onsite_shift_tail_envelope",
         "local_tail_fourth_envelope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R350.lean",
+      "sha256": "5b5ae5f02f66d2ad950c2852f70797eeb398bd69b6520c81cf58a04e8f8fffcc"
     },
     {
-      "path": "verification/lean/Tect/R351.lean",
-      "sha256": "dc0f44bc119ccc3514845f4e099476f686be46d82f53eb42dbc0d5f559a2ff7a",
       "declarations": [
         "pointwise_to_configuration_order",
         "source_tail_constant_fixture",
         "source_tail_fourth_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R351.lean",
+      "sha256": "dc0f44bc119ccc3514845f4e099476f686be46d82f53eb42dbc0d5f559a2ff7a"
     },
     {
-      "path": "verification/lean/Tect/R352.lean",
-      "sha256": "0fb59c6cc37f08f37e1171f30dff065fa5094f4e08932ae6fa2e9442e2326b89",
       "declarations": [
         "rank_one_b_fixture",
         "generic_form_order_shortcut_counterexample",
         "fourth_difference_determinant_negative"
-      ]
+      ],
+      "path": "verification/lean/Tect/R352.lean",
+      "sha256": "0fb59c6cc37f08f37e1171f30dff065fa5094f4e08932ae6fa2e9442e2326b89"
     },
     {
-      "path": "verification/lean/Tect/R353.lean",
-      "sha256": "fe2dfcdea33c9aedb75673ae1ac850fabbc611c9a9afe4f4f8d0b05fe5af8dbb",
       "declarations": [
         "gram_limit_quadratic_fixture",
         "gram_limit_nonnegative_fixture",
         "gram_sequence_nonnegative_fixture",
         "kms_complement_fixture",
         "kms_limit_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R353.lean",
+      "sha256": "fe2dfcdea33c9aedb75673ae1ac850fabbc611c9a9afe4f4f8d0b05fe5af8dbb"
     },
     {
-      "path": "verification/lean/Tect/R354.lean",
-      "sha256": "260b9f88eb5feb86f2c09af3d1af4eb683b8b453903a3fefd51e74aebd210194",
       "declarations": [
         "parameter_grid_fixture",
         "beta_count_fixture",
@@ -2223,11 +2190,11 @@
         "weighted_step_fixture",
         "order_context_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R354.lean",
+      "sha256": "260b9f88eb5feb86f2c09af3d1af4eb683b8b453903a3fefd51e74aebd210194"
     },
     {
-      "path": "verification/lean/Tect/R355.lean",
-      "sha256": "3ee3685216e634842e65302d9c626779eb97fc5dbb9bf8d2e2de89d681f5b899",
       "declarations": [
         "amplitude_grid_fixture",
         "amplitude_count_fixture",
@@ -2235,11 +2202,11 @@
         "weighted_step_fixture",
         "order_context_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R355.lean",
+      "sha256": "3ee3685216e634842e65302d9c626779eb97fc5dbb9bf8d2e2de89d681f5b899"
     },
     {
-      "path": "verification/lean/Tect/R356.lean",
-      "sha256": "8760285fe3c3b41f8808d1d98571c2906275b216c9d6185b363e2264e10a93eb",
       "declarations": [
         "volume_fixture",
         "source_support_fixture",
@@ -2248,11 +2215,11 @@
         "graph_transfer_identity_fixture",
         "source_edge_count_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R356.lean",
+      "sha256": "8760285fe3c3b41f8808d1d98571c2906275b216c9d6185b363e2264e10a93eb"
     },
     {
-      "path": "verification/lean/Tect/R357.lean",
-      "sha256": "0dce0f63a41f090ec5286f32c95514a26ef90461eae7631ce682b182f5b8014b",
       "declarations": [
         "dimension_count_fixture",
         "slope_first_fixture",
@@ -2260,11 +2227,11 @@
         "high_core_vector_count_fixture",
         "source_edge_count_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R357.lean",
+      "sha256": "0dce0f63a41f090ec5286f32c95514a26ef90461eae7631ce682b182f5b8014b"
     },
     {
-      "path": "verification/lean/Tect/R358.lean",
-      "sha256": "0482a8d0b750010919e51ae86ef3123c83256238a496b07e127af54b7f8f1181",
       "declarations": [
         "dimension_count_fixture",
         "cutoff_count_fixture",
@@ -2274,11 +2241,11 @@
         "slope_last_fixture",
         "growth_threshold_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R358.lean",
+      "sha256": "0482a8d0b750010919e51ae86ef3123c83256238a496b07e127af54b7f8f1181"
     },
     {
-      "path": "verification/lean/Tect/R359.lean",
-      "sha256": "c558470e42e6772a807e567e973469192ad3d574d7e1615e9e7f21bd811f6ccf",
       "declarations": [
         "dimension_count_fixture",
         "cutoff_count_fixture",
@@ -2287,11 +2254,11 @@
         "tail_cutoff_fixture",
         "source_edge_count_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R359.lean",
+      "sha256": "c558470e42e6772a807e567e973469192ad3d574d7e1615e9e7f21bd811f6ccf"
     },
     {
-      "path": "verification/lean/Tect/R360.lean",
-      "sha256": "3f7ac78072e357a0102d334f43e1354a40ef312ff812f93aee26930cf8d6e3bb",
       "declarations": [
         "volume_count_fixture",
         "cutoff_count_fixture",
@@ -2301,11 +2268,11 @@
         "max_union_size_fixture",
         "tail_cutoff_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R360.lean",
+      "sha256": "3f7ac78072e357a0102d334f43e1354a40ef312ff812f93aee26930cf8d6e3bb"
     },
     {
-      "path": "verification/lean/Tect/R361.lean",
-      "sha256": "ac5d14ef07042dfcba42987b27dc986388a1ddebb51e69110ca08bee433c8026",
       "declarations": [
         "size_volume_row_fixture",
         "beta_fixture",
@@ -2318,11 +2285,11 @@
         "alpha_fixture",
         "tail_count_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R361.lean",
+      "sha256": "ac5d14ef07042dfcba42987b27dc986388a1ddebb51e69110ca08bee433c8026"
     },
     {
-      "path": "verification/lean/Tect/R362.lean",
-      "sha256": "d8ceae736117536b5cbc7fcf2afe0875c5a3386ef87e9512702f4da128bac45f",
       "declarations": [
         "collision_replica_identity",
         "reference_collision_is_one",
@@ -2330,60 +2297,60 @@
         "two_phase_mixture_convexity",
         "equality_constant_one_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R362.lean",
+      "sha256": "d8ceae736117536b5cbc7fcf2afe0875c5a3386ef87e9512702f4da128bac45f"
     },
     {
-      "path": "verification/lean/Tect/R363.lean",
-      "sha256": "7f5fa37c975ddb3952cde5f87d237e5cac9dc8704abb25eda4af7288dec6f583",
       "declarations": [
         "diagonal_offdiagonal_split",
         "diagonal_multiplier_commutator_reduction",
         "scalar_centering_commutator_invariant",
         "centered_offdiagonal_reduction",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R363.lean",
+      "sha256": "7f5fa37c975ddb3952cde5f87d237e5cac9dc8704abb25eda4af7288dec6f583"
     },
     {
-      "path": "verification/lean/Tect/R364.lean",
-      "sha256": "24bf7e658712f307e5cd34833ef2f8badf01c95ee91eacd554a140ed4cbded4b",
       "declarations": [
         "spectral_block_offdiagonal_split",
         "spectral_offdiagonal_reduction",
         "spectral_scalar_centering",
         "spectral_block_disjoint",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R364.lean",
+      "sha256": "24bf7e658712f307e5cd34833ef2f8badf01c95ee91eacd554a140ed4cbded4b"
     },
     {
-      "path": "verification/lean/Tect/R365.lean",
-      "sha256": "b13077ba60ba3b8c5afa13420a58ca45b25934cfe38073a16ed6458a32325e59",
       "declarations": [
         "spectral_commutator_coefficient",
         "spectral_gap_square_fixture",
         "spectral_block_commutator_reduction",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R365.lean",
+      "sha256": "b13077ba60ba3b8c5afa13420a58ca45b25934cfe38073a16ed6458a32325e59"
     },
     {
-      "path": "verification/lean/Tect/R366.lean",
-      "sha256": "32dbfccf77dc0731d75200715b165d22795a28cc65de0df6dd79b82b376dad03",
       "declarations": [
         "fractional_half_envelope",
         "fractional_theta_one_envelope",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R366.lean",
+      "sha256": "32dbfccf77dc0731d75200715b165d22795a28cc65de0df6dd79b82b376dad03"
     },
     {
-      "path": "verification/lean/Tect/R367.lean",
-      "sha256": "b42be56e62b824d818acaa159a945b2ad3f71317f95b540a358d2499290bb827",
       "declarations": [
         "fractional_half_envelope_stress",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R367.lean",
+      "sha256": "b42be56e62b824d818acaa159a945b2ad3f71317f95b540a358d2499290bb827"
     },
     {
-      "path": "verification/lean/Tect/R368.lean",
-      "sha256": "11f4e773895c2786c547b95b4ceedebdb6c96cbcb0bb9614103e9d42e96b81ff",
       "declarations": [
         "kubo_mori_diagonal",
         "arithmetic_mean_symmetry",
@@ -2391,11 +2358,11 @@
         "weighted_half_envelope",
         "prefix_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R368.lean",
+      "sha256": "11f4e773895c2786c547b95b4ceedebdb6c96cbcb0bb9614103e9d42e96b81ff"
     },
     {
-      "path": "verification/lean/Tect/R369.lean",
-      "sha256": "c077ce818fb7b73c54ad031a0234ad671c8ee894af3412616d35a6a0586fc8f2",
       "declarations": [
         "kubo_mori_diagonal",
         "arithmetic_mean_symmetry",
@@ -2405,11 +2372,11 @@
         "square_shape_fixture",
         "prefix_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R369.lean",
+      "sha256": "c077ce818fb7b73c54ad031a0234ad671c8ee894af3412616d35a6a0586fc8f2"
     },
     {
-      "path": "verification/lean/Tect/R370.lean",
-      "sha256": "c6a21a73c030961798c02c921462e34e0bb5e2f637b491dec3d3032e132d41f4",
       "declarations": [
         "kubo_mori_diagonal",
         "arithmetic_mean_symmetry",
@@ -2421,11 +2388,11 @@
         "energy_gap_split_fixture",
         "energy_gap_decomposition_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R370.lean",
+      "sha256": "c6a21a73c030961798c02c921462e34e0bb5e2f637b491dec3d3032e132d41f4"
     },
     {
-      "path": "verification/lean/Tect/R371.lean",
-      "sha256": "6e87ee962637dc96ff7d8b82195dde77e98e42a31b49db2d063d8c778847776e",
       "declarations": [
         "kubo_mori_diagonal",
         "arithmetic_mean_symmetry",
@@ -2438,11 +2405,11 @@
         "square_shape_fixture",
         "prefix_fixture",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R371.lean",
+      "sha256": "6e87ee962637dc96ff7d8b82195dde77e98e42a31b49db2d063d8c778847776e"
     },
     {
-      "path": "verification/lean/Tect/R372.lean",
-      "sha256": "9f200a4f3688a4f2796a612b4dbce0df6a0b0a48882236cfd9b4f5847ef0be50",
       "declarations": [
         "weighted_mean_real",
         "weighted_variance_decomposition",
@@ -2453,11 +2420,11 @@
         "fixture_edge",
         "fixture_square",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R372.lean",
+      "sha256": "9f200a4f3688a4f2796a612b4dbce0df6a0b0a48882236cfd9b4f5847ef0be50"
     },
     {
-      "path": "verification/lean/Tect/R373.lean",
-      "sha256": "9addf7465ac1e08bacbb46622fb7a327d583d2b962446792c5103281940ada6f",
       "declarations": [
         "capped_kernel_nonnegative",
         "capped_kernel_le_delta",
@@ -2469,11 +2436,11 @@
         "fixture_edge",
         "fixture_square",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R373.lean",
+      "sha256": "9addf7465ac1e08bacbb46622fb7a327d583d2b962446792c5103281940ada6f"
     },
     {
-      "path": "verification/lean/Tect/R374.lean",
-      "sha256": "0efb12f22d1bd35b9fe752a2d36c8903161081509e5fbf1d3c895634f7ce6ff6",
       "declarations": [
         "odd_frequency_positive",
         "odd_layer_nonnegative",
@@ -2483,31 +2450,31 @@
         "fixture_edge",
         "fixture_square",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R374.lean",
+      "sha256": "0efb12f22d1bd35b9fe752a2d36c8903161081509e5fbf1d3c895634f7ce6ff6"
     },
     {
-      "path": "verification/lean/Tect/R375.lean",
-      "sha256": "f8672bf1cd17bc9992865bd9a32c48abcbc58e46ab5738af6a0228a851e378e8",
       "declarations": [
         "layer_nonnegative",
         "derivative_envelope",
         "layer_zero",
         "frequency_budget_term",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R375.lean",
+      "sha256": "f8672bf1cd17bc9992865bd9a32c48abcbc58e46ab5738af6a0228a851e378e8"
     },
     {
-      "path": "verification/lean/Tect/R376.lean",
-      "sha256": "016e23eb579de9c72cb1a7497a266c929ffc58948a3d41620c9c018cc7556972",
       "declarations": [
         "abs_value_lipschitz",
         "abs_value_zero",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R376.lean",
+      "sha256": "016e23eb579de9c72cb1a7497a266c929ffc58948a3d41620c9c018cc7556972"
     },
     {
-      "path": "verification/lean/Tect/R377.lean",
-      "sha256": "e404f675a440bad54dbb723bc9fd39bb4154ef081d7c156349243c8840e21a9e",
       "declarations": [
         "denominator_positive",
         "denominator_dominates",
@@ -2515,22 +2482,22 @@
         "resolvent_difference_identity",
         "odd_frequency_positive",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R377.lean",
+      "sha256": "e404f675a440bad54dbb723bc9fd39bb4154ef081d7c156349243c8840e21a9e"
     },
     {
-      "path": "verification/lean/Tect/R378.lean",
-      "sha256": "c118c4b65d07379180ee70a455f3e7d3043bb5d4c1d40e812fa61b4a4ce17176",
       "declarations": [
         "half_density_pair_factor",
         "pair_am_gm",
         "pair_arithmetic_bound",
         "pair_shell_nonnegative",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R378.lean",
+      "sha256": "c118c4b65d07379180ee70a455f3e7d3043bb5d4c1d40e812fa61b4a4ce17176"
     },
     {
-      "path": "verification/lean/Tect/R379.lean",
-      "sha256": "b9d9f374691c70704ce4fc19c732774b51f7047c12ebe69395e91fd7460d46e8",
       "declarations": [
         "anticommutator_three_channel",
         "commutator_three_channel",
@@ -2538,41 +2505,41 @@
         "two_slice_am_gm",
         "two_slice_nonnegative",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R379.lean",
+      "sha256": "b9d9f374691c70704ce4fc19c732774b51f7047c12ebe69395e91fd7460d46e8"
     },
     {
-      "path": "verification/lean/Tect/R380.lean",
-      "sha256": "08e47473f5727913795b8e1323ee5eee714d536cfb549b7f09fd6c5f39429249",
       "declarations": [
         "midpoint_arithmetic_envelope",
         "symmetric_chord_midpoint",
         "symmetric_sample_chord",
         "interpolation_nonnegative",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R380.lean",
+      "sha256": "08e47473f5727913795b8e1323ee5eee714d536cfb549b7f09fd6c5f39429249"
     },
     {
-      "path": "verification/lean/Tect/R381.lean",
-      "sha256": "e3b4f6dffe219eba07532446e90b7bacf887608da59d8cc8bca4d5c0b14a674b",
       "declarations": [
         "scalar_cauchy_envelope",
         "beta_scaled_cauchy",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R381.lean",
+      "sha256": "e3b4f6dffe219eba07532446e90b7bacf887608da59d8cc8bca4d5c0b14a674b"
     },
     {
-      "path": "verification/lean/Tect/R382.lean",
-      "sha256": "9a6d577066a716a78711633154f6a3190f0e7e7971fa3f072bf4947c0191f0f3",
       "declarations": [
         "profile_ratio_nonnegative",
         "profile_ratio_zero_denominator",
         "growth_warning_is_diagnostic",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R382.lean",
+      "sha256": "9a6d577066a716a78711633154f6a3190f0e7e7971fa3f072bf4947c0191f0f3"
     },
     {
-      "path": "verification/lean/Tect/R383.lean",
-      "sha256": "13c8bdf135f6f47214de3fa8aa2fac4a4726382d931aa131582e5d05950444a8",
       "declarations": [
         "filtered_weight_nonnegative",
         "filtered_weight_le_one",
@@ -2580,11 +2547,11 @@
         "filtered_endpoint_unit_factor",
         "filtered_m2_unit_factor",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R383.lean",
+      "sha256": "13c8bdf135f6f47214de3fa8aa2fac4a4726382d931aa131582e5d05950444a8"
     },
     {
-      "path": "verification/lean/Tect/R384.lean",
-      "sha256": "cb96081af96e9152f56b24cb6d98a36634e9666dca501c4a9118d01c7a98b7e8",
       "declarations": [
         "removal_weight_nonnegative",
         "low_frequency_factor_bound",
@@ -2593,564 +2560,564 @@
         "endpoint_low_frequency_factor",
         "endpoint_high_frequency_factor",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R384.lean",
+      "sha256": "cb96081af96e9152f56b24cb6d98a36634e9666dca501c4a9118d01c7a98b7e8"
     },
     {
-      "path": "verification/lean/Tect/R385.lean",
-      "sha256": "2e41ce0bdc65a7cf57f8d632a3a178621c72ff17394b8f842c2c47432cc04814",
       "declarations": [
         "relative_cocycle_composition",
         "resolvent_difference_identity",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R385.lean",
+      "sha256": "2e41ce0bdc65a7cf57f8d632a3a178621c72ff17394b8f842c2c47432cc04814"
     },
     {
-      "path": "verification/lean/Tect/R386.lean",
-      "sha256": "f947725694682212b99d415d6f786cbbaf4a2a2c2db7bbbccc16263d3f2b086e",
       "declarations": [
         "commute_inverse_of_commute",
         "commutator_difference",
         "anchored_first_variation",
         "anchored_second_variation",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R386.lean",
+      "sha256": "f947725694682212b99d415d6f786cbbaf4a2a2c2db7bbbccc16263d3f2b086e"
     },
     {
-      "path": "verification/lean/Tect/R387.lean",
-      "sha256": "d125a466d77db82706154a58fc780cd9713b35c5301392070a84acf63c097ded",
       "declarations": [
         "commutator_addition",
         "kinetic_isolation",
         "potential_scale_invariance",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R387.lean",
+      "sha256": "d125a466d77db82706154a58fc780cd9713b35c5301392070a84acf63c097ded"
     },
     {
-      "path": "verification/lean/Tect/R388.lean",
-      "sha256": "5e674c43aebbbc84ebd2de028b5c974d739c121b8749e8fc49c27f5775bdbc54",
       "declarations": [
         "jacobi_reduction",
         "kinetic_coordinate_isolation",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R388.lean",
+      "sha256": "5e674c43aebbbc84ebd2de028b5c974d739c121b8749e8fc49c27f5775bdbc54"
     },
     {
-      "path": "verification/lean/Tect/R389.lean",
-      "sha256": "39d9b54950cb54e95a03852d19bbbda12ad7a8904add1274212a90e8d246818d",
       "declarations": [
         "projected_seminorm_nonnegative",
         "window_mass_split",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R389.lean",
+      "sha256": "39d9b54950cb54e95a03852d19bbbda12ad7a8904add1274212a90e8d246818d"
     },
     {
-      "path": "verification/lean/Tect/R390.lean",
-      "sha256": "1648ae41c5c07958c1f3c492439772d0972ecb1e29e9f3471b4e19b4e0f72f79",
       "declarations": [
         "gibbs_tail_term_bound",
         "window_mass_split",
         "local_duality_scope",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R390.lean",
+      "sha256": "1648ae41c5c07958c1f3c492439772d0972ecb1e29e9f3471b4e19b4e0f72f79"
     },
     {
-      "path": "verification/lean/Tect/R391.lean",
-      "sha256": "208b03ff9312e7855aa71cd1a6630029601498d9681c4ceec921daae12600b30",
       "declarations": [
         "conditional_mutual_information_split",
         "recoverability_scale_nonnegative",
         "trace_distance_range",
         "qcmI_clamp_nonnegative",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R391.lean",
+      "sha256": "208b03ff9312e7855aa71cd1a6630029601498d9681c4ceec921daae12600b30"
     },
     {
-      "path": "verification/lean/Tect/R392.lean",
-      "sha256": "2bc5baa662e1ef0e15e4d550f4e943e0f5a732ba5a2d1a35f396ca04bb451676",
       "declarations": [
         "qcmI_chain_rule",
         "shell_budget_nonnegative",
         "cumulative_budget_dominates",
         "shell_sum_nonnegative",
         "scope_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R392.lean",
+      "sha256": "2bc5baa662e1ef0e15e4d550f4e943e0f5a732ba5a2d1a35f396ca04bb451676"
     },
     {
-      "path": "verification/lean/Tect/R393.lean",
-      "sha256": "0fa20faf08a93f62fbf56699c624575175bc2db4a4f0a7bd33fcaea3e22d72fb",
       "declarations": [
         "cutoff_profile_nonnegative",
         "cutoff_profile_ratio_nonnegative",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R393.lean",
+      "sha256": "0fa20faf08a93f62fbf56699c624575175bc2db4a4f0a7bd33fcaea3e22d72fb"
     },
     {
-      "path": "verification/lean/Tect/R394.lean",
-      "sha256": "5e2eeeecc38680a94ebbd287d791d6469988dd1d21458da22ac4a6706e95bcbd",
       "declarations": [
         "energy_tail_markov",
         "weighted_energy_tail_markov",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R394.lean",
+      "sha256": "5e2eeeecc38680a94ebbd287d791d6469988dd1d21458da22ac4a6706e95bcbd"
     },
     {
-      "path": "verification/lean/Tect/R395.lean",
-      "sha256": "e0485dbdf1a6bb0da57abafe69dccb63b6c642e95a2e3743b6033611fe8cbf06",
       "declarations": [
         "gentle_sqrt_bound",
         "sqrt_monotone",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R395.lean",
+      "sha256": "e0485dbdf1a6bb0da57abafe69dccb63b6c642e95a2e3743b6033611fe8cbf06"
     },
     {
-      "path": "verification/lean/Tect/R396.lean",
-      "sha256": "60cce3d16e836274a5d9a0e602dbd333e332a2a1a834d0b4cd84c98c8579ffa4",
       "declarations": [
         "triangle_budget",
         "contractivity_split",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R396.lean",
+      "sha256": "60cce3d16e836274a5d9a0e602dbd333e332a2a1a834d0b4cd84c98c8579ffa4"
     },
     {
-      "path": "verification/lean/Tect/R397.lean",
-      "sha256": "058c308911a140248945c26bd2af106b72c67b93026ee5f6175d4fb453ae3d50",
       "declarations": [
         "one_minus_exp_le_linear",
         "semigroup_filter_composition",
         "normalized_triangle_envelope",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R397.lean",
+      "sha256": "058c308911a140248945c26bd2af106b72c67b93026ee5f6175d4fb453ae3d50"
     },
     {
-      "path": "verification/lean/Tect/R398.lean",
-      "sha256": "6b9ae0a000608bf060c01452590edb58541374a86807b4e4a14fca818b2a4335",
       "declarations": [
         "weighted_square_nonnegative",
         "local_q2_identity",
         "doob_shell_nonnegative",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R398.lean",
+      "sha256": "6b9ae0a000608bf060c01452590edb58541374a86807b4e4a14fca818b2a4335"
     },
     {
-      "path": "verification/lean/Tect/R399.lean",
-      "sha256": "a696afbdc9f9482144290c3260cc3f3e8f275163fc26966b68e371bb06483052",
       "declarations": [
         "conditional_variance_identity",
         "birth_death_poincare",
         "weighted_shell_transfer",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R399.lean",
+      "sha256": "a696afbdc9f9482144290c3260cc3f3e8f275163fc26966b68e371bb06483052"
     },
     {
-      "path": "verification/lean/Tect/R400.lean",
-      "sha256": "29fa83fb2a65110d6f4dc4e525d68fb4c48d0b75178f6987081a1e1e1833fd0f",
       "declarations": [
         "positive_gap_ratio",
         "profile_min_positive",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R400.lean",
+      "sha256": "29fa83fb2a65110d6f4dc4e525d68fb4c48d0b75178f6987081a1e1e1833fd0f"
     },
     {
-      "path": "verification/lean/Tect/R401.lean",
-      "sha256": "f382a260e9d1702ae50b52d5660c80c590005c310e53255dca5f9b5e87581060",
       "declarations": [
         "positive_spacing_factor",
         "positive_metric_ratio",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R401.lean",
+      "sha256": "f382a260e9d1702ae50b52d5660c80c590005c310e53255dca5f9b5e87581060"
     },
     {
-      "path": "verification/lean/Tect/R402.lean",
-      "sha256": "5ef0e855db933e0acadf586ece681203bb3310b43c942bc93dae90eec5d1b1e5",
       "declarations": [
         "kinetic_prefactor_positive",
         "commutator_square_nonnegative",
         "potential_scalar_commutes",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R402.lean",
+      "sha256": "5ef0e855db933e0acadf586ece681203bb3310b43c942bc93dae90eec5d1b1e5"
     },
     {
-      "path": "verification/lean/Tect/R403.lean",
-      "sha256": "63d42f78fdd8d3734eae5d25fcb2c3b964f2e9f9fe5771b6c71d7c6f4e80047f",
       "declarations": [
         "positive_ratio",
         "finite_cutoff_growth",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R403.lean",
+      "sha256": "63d42f78fdd8d3734eae5d25fcb2c3b964f2e9f9fe5771b6c71d7c6f4e80047f"
     },
     {
-      "path": "verification/lean/Tect/R404.lean",
-      "sha256": "3c88cf4eee236ba6e719863b0f6fd44177c2f03ffb6bcaca4d7124ff4d01b763",
       "declarations": [
         "graph_gap_nonnegative",
         "variance_nonnegative",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R404.lean",
+      "sha256": "3c88cf4eee236ba6e719863b0f6fd44177c2f03ffb6bcaca4d7124ff4d01b763"
     },
     {
-      "path": "verification/lean/Tect/R405.lean",
-      "sha256": "fd703889d1ea1bccfb4b5bfb2b6bfd56e857b515711b8a0581a14d2f2a36d537",
       "declarations": [
         "sector_mass_nonnegative",
         "cross_capacity_nonnegative",
         "finite_phase_split_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R405.lean",
+      "sha256": "fd703889d1ea1bccfb4b5bfb2b6bfd56e857b515711b8a0581a14d2f2a36d537"
     },
     {
-      "path": "verification/lean/Tect/R406.lean",
-      "sha256": "7515df3689ad4a485dd900dc28f20e06144e732cfcbc0f27b569cad8819d197c",
       "declarations": [
         "harmonic_residual_square_nonnegative",
         "schur_variance_split",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R406.lean",
+      "sha256": "7515df3689ad4a485dd900dc28f20e06144e732cfcbc0f27b569cad8819d197c"
     },
     {
-      "path": "verification/lean/Tect/R407.lean",
-      "sha256": "f408c6164acbb81fde4b6b8e572fbba1f3b7eb25fd768a0e050077b67de955b0",
       "declarations": [
         "canonical_path_load_nonnegative",
         "tree_bound_nonnegative",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R407.lean",
+      "sha256": "f408c6164acbb81fde4b6b8e572fbba1f3b7eb25fd768a0e050077b67de955b0"
     },
     {
-      "path": "verification/lean/Tect/R408.lean",
-      "sha256": "379e9ba198b1675fb7fb11eab3548514aae75a33345f9d66a1a260f96fa25428",
       "declarations": [
         "resistance_pair_nonnegative",
         "resistance_bound_nonnegative",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R408.lean",
+      "sha256": "379e9ba198b1675fb7fb11eab3548514aae75a33345f9d66a1a260f96fa25428"
     },
     {
-      "path": "verification/lean/Tect/R409.lean",
-      "sha256": "320d3895a391b8ca0e55257b6d5962ebf97a8d83698d13562bc39d980d760903",
       "declarations": [
         "trace_projector_nonnegative",
         "heat_trace_inverse_nonnegative",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R409.lean",
+      "sha256": "320d3895a391b8ca0e55257b6d5962ebf97a8d83698d13562bc39d980d760903"
     },
     {
-      "path": "verification/lean/Tect/R410.lean",
-      "sha256": "bb5b7c673cb81f54346d3964a8625aaba9bc958f9c072e5ef5e4718b0b12db3f",
       "declarations": [
         "mode_envelope_nonnegative",
         "zeta_bound_nonnegative",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R410.lean",
+      "sha256": "bb5b7c673cb81f54346d3964a8625aaba9bc958f9c072e5ef5e4718b0b12db3f"
     },
     {
-      "path": "verification/lean/Tect/R411.lean",
-      "sha256": "88faceef517da76dd4e20c3d280c472e3c9ea4c5ba8b91da98b3a86b16fba3be",
       "declarations": [
         "alpha_positive",
         "sublinear_zeta_tail_nonnegative",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R411.lean",
+      "sha256": "88faceef517da76dd4e20c3d280c472e3c9ea4c5ba8b91da98b3a86b16fba3be"
     },
     {
-      "path": "verification/lean/Tect/R412.lean",
-      "sha256": "5506c98af6c793896453df482b45c21c645f7c52539764df0a9091ac95dcf11d",
       "declarations": [
         "split_exponents_positive",
         "mixed_tail_nonnegative",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R412.lean",
+      "sha256": "5506c98af6c793896453df482b45c21c645f7c52539764df0a9091ac95dcf11d"
     },
     {
-      "path": "verification/lean/Tect/R413.lean",
-      "sha256": "32c50cb13143589a70ac89918ed872cd3e1c2d675b5b0c5b8e24a406ab2991bb",
       "declarations": [
         "mellin_remainder_nonnegative",
         "heat_monotone",
         "uv_integral_positive",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R413.lean",
+      "sha256": "32c50cb13143589a70ac89918ed872cd3e1c2d675b5b0c5b8e24a406ab2991bb"
     },
     {
-      "path": "verification/lean/Tect/R414.lean",
-      "sha256": "96d785ef4325fe8033a32784bb2b26981599ac4edf5ad0420481f2b3907d7f6a",
       "declarations": [
         "late_exponential_factor_nonnegative",
         "semigroup_bound_nonnegative",
         "uv_power_integral_positive",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R414.lean",
+      "sha256": "96d785ef4325fe8033a32784bb2b26981599ac4edf5ad0420481f2b3907d7f6a"
     },
     {
-      "path": "verification/lean/Tect/R415.lean",
-      "sha256": "bf033a8e97e3c993fb03096a70f3a01c49913fe8b5a308ed7b99b4d35ee60cd0",
       "declarations": [
         "schur_gap_positive",
         "late_exponential_factor_nonnegative",
         "green_bound_nonnegative",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R415.lean",
+      "sha256": "bf033a8e97e3c993fb03096a70f3a01c49913fe8b5a308ed7b99b4d35ee60cd0"
     },
     {
-      "path": "verification/lean/Tect/R416.lean",
-      "sha256": "b1baab8130a19a39a53e9d9086c94304bc7794333fa6a5ce0931eb8274f6d44b",
       "declarations": [
         "scaled_weight_positive",
         "constant_mode_projection_nonnegative",
         "schur_gap_positive",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R416.lean",
+      "sha256": "b1baab8130a19a39a53e9d9086c94304bc7794333fa6a5ce0931eb8274f6d44b"
     },
     {
-      "path": "verification/lean/Tect/R417.lean",
-      "sha256": "afeb0ee77f2b3724ebb3707b0ea5f6b72c2119e1d089b31105fe5358cd1bc5b4",
       "declarations": [
         "lyapunov_rate_positive",
         "tail_mass_nonnegative",
         "core_gap_positive",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R417.lean",
+      "sha256": "afeb0ee77f2b3724ebb3707b0ea5f6b72c2119e1d089b31105fe5358cd1bc5b4"
     },
     {
-      "path": "verification/lean/Tect/R419.lean",
-      "sha256": "905d14a21246a6d0f943368dc46b130ff565850e989a57179a56dd2ae93709c0",
       "declarations": [
         "positive_tail_rate",
         "core_tail_envelope",
         "volume_grid",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R419.lean",
+      "sha256": "905d14a21246a6d0f943368dc46b130ff565850e989a57179a56dd2ae93709c0"
     },
     {
-      "path": "verification/lean/Tect/R420.lean",
-      "sha256": "bf601cdfaf8d04f6b2fe5e9b62317e18633354221ac28c580e63212b0fb688bf",
       "declarations": [
         "evaluation_requires_owner_and_empty",
         "three_blocked",
         "preregistration_slot_is_not_admission"
-      ]
+      ],
+      "path": "verification/lean/Tect/R420.lean",
+      "sha256": "bf601cdfaf8d04f6b2fe5e9b62317e18633354221ac28c580e63212b0fb688bf"
     },
     {
-      "path": "verification/lean/Tect/R421.lean",
-      "sha256": "af24bbdd2b3a4872dba42bdc8299a5287c5b7803a6cb03e7fd6b5bc67ac895c9",
       "declarations": [
         "two_state_ground_state_transform",
         "two_state_remainder_nonnegative",
         "two_state_tail_hardy",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R421.lean",
+      "sha256": "af24bbdd2b3a4872dba42bdc8299a5287c5b7803a6cb03e7fd6b5bc67ac895c9"
     },
     {
-      "path": "verification/lean/Tect/R422.lean",
-      "sha256": "790c3ec3f80db2230ba30c37414869b22e14ac1418c3625cb022a1c2e90cbb15",
       "declarations": [
         "abs_product_budget",
         "two_by_two_reserve_bound",
         "reserve_eigenvalue_nonnegative_condition",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R422.lean",
+      "sha256": "790c3ec3f80db2230ba30c37414869b22e14ac1418c3625cb022a1c2e90cbb15"
     },
     {
-      "path": "verification/lean/Tect/R423.lean",
-      "sha256": "a341046b3c73e4aa20d76c4a6082143f2a56c4fd2397c41fcbc317fd1aab648e",
       "declarations": [
         "scalar_cauchy_capacity",
         "capacity_reserve_bound",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R423.lean",
+      "sha256": "a341046b3c73e4aa20d76c4a6082143f2a56c4fd2397c41fcbc317fd1aab648e"
     },
     {
-      "path": "verification/lean/Tect/R424.lean",
-      "sha256": "e08588db5ed35e1230af6f96bc26063308f0817e6462d6e956794788d5401eb3",
       "declarations": [
         "harmonic_energy_split",
         "coarse_residual_lower_envelope",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R424.lean",
+      "sha256": "e08588db5ed35e1230af6f96bc26063308f0817e6462d6e956794788d5401eb3"
     },
     {
-      "path": "verification/lean/Tect/R425.lean",
-      "sha256": "4e08451646de74da192011d82b2e6e0ec8a95340a1fc65d63236b924f8d304d8",
       "declarations": [
         "harmonic_residual_bookkeeping",
         "expanded_grid_lower_envelope",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R425.lean",
+      "sha256": "4e08451646de74da192011d82b2e6e0ec8a95340a1fc65d63236b924f8d304d8"
     },
     {
-      "path": "verification/lean/Tect/R426.lean",
-      "sha256": "6dfa4757593896babfb1d883200909b9e62e72b220511a287acdab45361778b3",
       "declarations": [
         "high_cutoff_grid",
         "positive_envelope",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R426.lean",
+      "sha256": "6dfa4757593896babfb1d883200909b9e62e72b220511a287acdab45361778b3"
     },
     {
-      "path": "verification/lean/Tect/R427.lean",
-      "sha256": "f69b090be157b1932621404901088986bbc3fee77cbc33cf0cd807acc78fd51d",
       "declarations": [
         "evaluation_requires_owner_and_empty",
         "three_blocked",
         "preregistered_slot_is_not_admission"
-      ]
+      ],
+      "path": "verification/lean/Tect/R427.lean",
+      "sha256": "f69b090be157b1932621404901088986bbc3fee77cbc33cf0cd807acc78fd51d"
     },
     {
-      "path": "verification/lean/Tect/R428.lean",
-      "sha256": "62909ceadf7e99c5d3370a600ba821610bac48db67104ea1804c3f7eab6cd8cf",
       "declarations": [
         "projector_distance_bound",
         "conditioning_budget_dominates_tolerance",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R428.lean",
+      "sha256": "62909ceadf7e99c5d3370a600ba821610bac48db67104ea1804c3f7eab6cd8cf"
     },
     {
-      "path": "verification/lean/Tect/R429.lean",
-      "sha256": "a23f5a810cb51bda0bfc9a5417ec58c5eeefd8fb9ddf8adf0d82e25ed5c5d04c",
       "declarations": [
         "decimal_gap_exceeds_tolerance",
         "basis_agreement_budget",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R429.lean",
+      "sha256": "a23f5a810cb51bda0bfc9a5417ec58c5eeefd8fb9ddf8adf0d82e25ed5c5d04c"
     },
     {
-      "path": "verification/lean/Tect/R430.lean",
-      "sha256": "c056b681f0591066210282ad4f5d7a6deb908c6a72905d448a0c827f8947281e",
       "declarations": [
         "source_gap_reference_separation",
         "source_gap_direct_separation",
         "source_point_not_interval",
         "finite_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R430.lean",
+      "sha256": "c056b681f0591066210282ad4f5d7a6deb908c6a72905d448a0c827f8947281e"
     },
     {
-      "path": "verification/lean/Tect/R431.lean",
-      "sha256": "d3a60406ff73ee565fe8927185b2bcbb9f3887754896658f8b9c0c6aa4690886",
       "declarations": [
         "rounded_snapshot_r422_separation",
         "rounded_snapshot_direct_separation",
         "rounded_snapshot_bracket_width",
         "finite_snapshot_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R431.lean",
+      "sha256": "d3a60406ff73ee565fe8927185b2bcbb9f3887754896658f8b9c0c6aa4690886"
     },
     {
-      "path": "verification/lean/Tect/R432.lean",
-      "sha256": "588925f19dc8718187f8d5469da7fa3363a92efabc2b25055cfc6ef20085f543",
       "declarations": [
         "emission_ordinal_target",
         "parent_coordinate_target",
         "r426_failure_margin",
         "row_correction_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R432.lean",
+      "sha256": "588925f19dc8718187f8d5469da7fa3363a92efabc2b25055cfc6ef20085f543"
     },
     {
-      "path": "verification/lean/Tect/R433.lean",
-      "sha256": "6700ab61f5460c053a58ec2a01d406372f0d50f333c314a6bde87371d018aec5",
       "declarations": [
         "source_block_dimensions",
         "polar_residual_bound",
         "corrected_row_interval_separation",
         "finite_source_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R433.lean",
+      "sha256": "6700ab61f5460c053a58ec2a01d406372f0d50f333c314a6bde87371d018aec5"
     },
     {
-      "path": "verification/lean/Tect/R434.lean",
-      "sha256": "73789bdb36e7e03056b42ef51c812777215cded6b167a0b4c07fc2be47f3fc43",
       "declarations": [
         "fixed_field_count",
         "empty_branch_slot",
         "blocked_status_scope",
         "finite_owner_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R434.lean",
+      "sha256": "73789bdb36e7e03056b42ef51c812777215cded6b167a0b4c07fc2be47f3fc43"
     },
     {
-      "path": "verification/lean/Tect/R435.lean",
-      "sha256": "f1769ce2669be134c8439ddf0d28f478dbf19ca0de67e0af03280fb403b0b858",
       "declarations": [
         "d17_block_dimensions",
         "finite_gap_probe_order",
         "unconditional_row_split",
         "finite_source_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R435.lean",
+      "sha256": "f1769ce2669be134c8439ddf0d28f478dbf19ca0de67e0af03280fb403b0b858"
     },
     {
-      "path": "verification/lean/Tect/R436.lean",
-      "sha256": "1df791e3d3bea88a6e19d274c0df8daeffd679d50be2b6695cdd4491d35b7247",
       "declarations": [
         "d18_block_dimensions",
         "finite_gap_probe_order",
         "unconditional_row_split",
         "finite_source_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R436.lean",
+      "sha256": "1df791e3d3bea88a6e19d274c0df8daeffd679d50be2b6695cdd4491d35b7247"
     },
     {
-      "path": "verification/lean/Tect/R437.lean",
-      "sha256": "3f3326561c3bcd7fb88fa9d1c5b2fed98395b29ca35f2cdd2763a43166c58a51",
       "declarations": [
         "threshold_four_crossing",
         "same_row_rule",
         "finite_support_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R437.lean",
+      "sha256": "3f3326561c3bcd7fb88fa9d1c5b2fed98395b29ca35f2cdd2763a43166c58a51"
     },
     {
-      "path": "verification/lean/Tect/R438.lean",
-      "sha256": "bc7cef4540925b9cca5968078454971c79554b613aef47260939eadeff8882fe",
       "declarations": [
         "d19_block_dimensions",
         "finite_gap_probe_order",
         "unconditional_row_split",
         "finite_source_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R438.lean",
+      "sha256": "bc7cef4540925b9cca5968078454971c79554b613aef47260939eadeff8882fe"
     },
     {
-      "path": "verification/lean/Tect/R439.lean",
-      "sha256": "26a52bab65eafd5f01afb7f81f52136f0fa06485d2dd4502c3e3e0a246583db5",
       "declarations": [
         "d17_partition_cardinality",
         "d18_partition_cardinality",
         "d19_partition_cardinality",
         "finite_threshold_rule_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R439.lean",
+      "sha256": "26a52bab65eafd5f01afb7f81f52136f0fa06485d2dd4502c3e3e0a246583db5"
     },
     {
-      "path": "verification/lean/Tect/R440.lean",
-      "sha256": "fbd44d604d6405f5e20f70cb97160ea1eeeffef909221c41e006b9f9f64f20ce",
       "declarations": [
         "box_222_edge_count",
         "box_333_edge_count",
         "box_543_edge_count",
         "matching_layer_count",
         "derived_matching_coefficient"
-      ]
+      ],
+      "path": "verification/lean/Tect/R440.lean",
+      "sha256": "fbd44d604d6405f5e20f70cb97160ea1eeeffef909221c41e006b9f9f64f20ce"
     },
     {
-      "path": "verification/lean/Tect/R441.lean",
-      "sha256": "630530a4a301a3e69d82b2d7f7b39029130058637e703f4be810eed55a98c0e6",
       "declarations": [
         "fixed_field_count",
         "empty_branch_slot",
         "blocked_status_scope",
         "finite_owner_scope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R441.lean",
+      "sha256": "630530a4a301a3e69d82b2d7f7b39029130058637e703f4be810eed55a98c0e6"
     },
     {
-      "path": "verification/lean/Tect/R442.lean",
-      "sha256": "60a5c0ea44ad307e94758eb42626e1f2b48e683072938ddec0b1646a0914598b",
       "declarations": [
         "same_colour_incident_unique",
         "six_colour_layers"
-      ]
+      ],
+      "path": "verification/lean/Tect/R442.lean",
+      "sha256": "60a5c0ea44ad307e94758eb42626e1f2b48e683072938ddec0b1646a0914598b"
     },
     {
-      "path": "verification/lean/Tect/R443.lean",
-      "sha256": "87319c1ff9cf6062c661825f976602fdaff46127d834b924f3961c3113d7ccab",
       "declarations": [
         "same_colour_incident_unique",
         "arbitrary_box_layer_matching",
         "six_colour_layers"
-      ]
+      ],
+      "path": "verification/lean/Tect/R443.lean",
+      "sha256": "87319c1ff9cf6062c661825f976602fdaff46127d834b924f3961c3113d7ccab"
     },
     {
-      "path": "verification/lean/Tect/R444.lean",
-      "sha256": "a438cdd23e4282e807c7cca07ae1c62790f1f161495e01d99d94ad70ab60064a",
       "declarations": [
         "shell_count_n1",
         "shell_count_n2",
@@ -3158,19 +3125,19 @@
         "tail_formula_r1",
         "tail_formula_r2",
         "tail_formula_r4"
-      ]
+      ],
+      "path": "verification/lean/Tect/R444.lean",
+      "sha256": "a438cdd23e4282e807c7cca07ae1c62790f1f161495e01d99d94ad70ab60064a"
     },
     {
-      "path": "verification/lean/Tect/R445.lean",
-      "sha256": "eccc63539d016fd8e7aaa1dca73a3cb226ec75178fba50e3af3ac2ee8303e26b",
       "declarations": [
         "weighted_tail_transfer",
         "scaled_tail_r1_bound"
-      ]
+      ],
+      "path": "verification/lean/Tect/R445.lean",
+      "sha256": "eccc63539d016fd8e7aaa1dca73a3cb226ec75178fba50e3af3ac2ee8303e26b"
     },
     {
-      "path": "verification/lean/Tect/R447.lean",
-      "sha256": "98b3427e1b8a14c3b209e3a0dabe413824cf96959575f48b7c5323ebd4c48827",
       "declarations": [
         "interval_subtraction_lower",
         "display_interval",
@@ -3180,11 +3147,11 @@
         "broad_contains_simultaneous",
         "broad_contains_ten_second",
         "union_envelope"
-      ]
+      ],
+      "path": "verification/lean/Tect/R447.lean",
+      "sha256": "98b3427e1b8a14c3b209e3a0dabe413824cf96959575f48b7c5323ebd4c48827"
     },
     {
-      "path": "verification/lean/Tect/R448.lean",
-      "sha256": "35b89da0db4f992c5cd0a5108f3f7079c4e54d9bf9b8c5047c96b87cbe2e25f8",
       "declarations": [
         "static_equiv_refl",
         "static_equiv_symm",
@@ -3194,42 +3161,42 @@
         "maps_distinct",
         "probe_separates",
         "static_class_non_singleton"
-      ]
+      ],
+      "path": "verification/lean/Tect/R448.lean",
+      "sha256": "35b89da0db4f992c5cd0a5108f3f7079c4e54d9bf9b8c5047c96b87cbe2e25f8"
     },
     {
-      "path": "verification/lean/Tect/R449.lean",
-      "sha256": "a498546d5d412b55db4d48b5c502c4a090a29c2a2e49d2405bdf97bc4da6e366",
       "declarations": [
         "complete_requires_heat_root",
         "a2_owner_incomplete",
         "a2_heat_root_missing",
         "inverse_not_complete",
         "parked_owner_and_inverse"
-      ]
+      ],
+      "path": "verification/lean/Tect/R449.lean",
+      "sha256": "a498546d5d412b55db4d48b5c502c4a090a29c2a2e49d2405bdf97bc4da6e366"
     },
     {
-      "path": "verification/lean/Tect/R450.lean",
-      "sha256": "760864b834fa02f7c6d164dc8a7e5a0a35426d9c206f052789e749476d3b1b08",
       "declarations": [
         "two_orientation_fourth_split",
         "shell_tail_r1",
         "shell_tail_r2",
         "coefficient_weight_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R450.lean",
+      "sha256": "760864b834fa02f7c6d164dc8a7e5a0a35426d9c206f052789e749476d3b1b08"
     },
     {
-      "path": "verification/lean/Tect/R451.lean",
-      "sha256": "b86ab6e638dcb3f9955f8f24f5319b2e0d87e05a2b061e0b8aa11dc888fe70e2",
       "declarations": [
         "two_orientation_fourth_power",
         "shell_tail_base",
         "shell_tail_ratio",
         "shell_tail_geometric_bound"
-      ]
+      ],
+      "path": "verification/lean/Tect/R451.lean",
+      "sha256": "b86ab6e638dcb3f9955f8f24f5319b2e0d87e05a2b061e0b8aa11dc888fe70e2"
     },
     {
-      "path": "verification/lean/Tect/R452.lean",
-      "sha256": "541a8644c29b1e84406d8c3bef76596491775053c284c14b084909145158bffb",
       "declarations": [
         "resolvent_step",
         "resolvent_nonresonant_step",
@@ -3237,11 +3204,11 @@
         "parent_decay_ratio",
         "parent_decay_lt_one",
         "contraction_decay_bound"
-      ]
+      ],
+      "path": "verification/lean/Tect/R452.lean",
+      "sha256": "541a8644c29b1e84406d8c3bef76596491775053c284c14b084909145158bffb"
     },
     {
-      "path": "verification/lean/Tect/R453.lean",
-      "sha256": "d2ba2286743918d53a7791bce184706a91fe9e46bae87f6fae08280a86143173",
       "declarations": [
         "kernel_step",
         "kernel_nonresonant_step",
@@ -3250,11 +3217,11 @@
         "parent_decay_ratio",
         "parent_decay_lt_one",
         "two_base_contraction_bound"
-      ]
+      ],
+      "path": "verification/lean/Tect/R453.lean",
+      "sha256": "d2ba2286743918d53a7791bce184706a91fe9e46bae87f6fae08280a86143173"
     },
     {
-      "path": "verification/lean/Tect/R454.lean",
-      "sha256": "a6aa79f7a6dd8a03c91f8a2fc95431ced2bd2e4affadcc81c4ba96d5d295eea9",
       "declarations": [
         "kernel_step",
         "kernel_nonresonant_step",
@@ -3264,11 +3231,11 @@
         "parent_decay_ratio",
         "parent_decay_lt_one",
         "two_base_contraction_bound"
-      ]
+      ],
+      "path": "verification/lean/Tect/R454.lean",
+      "sha256": "a6aa79f7a6dd8a03c91f8a2fc95431ced2bd2e4affadcc81c4ba96d5d295eea9"
     },
     {
-      "path": "verification/lean/Tect/R455.lean",
-      "sha256": "be9f727c356af1945a37de890a4e664815c6f5a11c64f90779bd384d442ff3e0",
       "declarations": [
         "row_sum_step",
         "matrix_inf_step",
@@ -3277,22 +3244,22 @@
         "matrix_defect_envelope_step",
         "parent_decay_ratio",
         "two_base_contraction_bound"
-      ]
+      ],
+      "path": "verification/lean/Tect/R455.lean",
+      "sha256": "be9f727c356af1945a37de890a4e664815c6f5a11c64f90779bd384d442ff3e0"
     },
     {
-      "path": "verification/lean/Tect/R456.lean",
-      "sha256": "004140e55f4b771d50441208333beb1bcefae0bf5e8689affc84667e40de8358",
       "declarations": [
         "weighted_row_identity",
         "weighted_diagonal_entry",
         "weighted_path_kernel",
         "weighted_resonance",
         "weighted_two_base_threshold"
-      ]
+      ],
+      "path": "verification/lean/Tect/R456.lean",
+      "sha256": "004140e55f4b771d50441208333beb1bcefae0bf5e8689affc84667e40de8358"
     },
     {
-      "path": "verification/lean/Tect/R457.lean",
-      "sha256": "644df69001c3a7d021d054e4f3fe21afcbb2944d1f6517605895ed2a71569f02",
       "declarations": [
         "plaquette_charge_zero",
         "covariant_density_charge_zero",
@@ -3302,11 +3269,11 @@
         "coercivity_completion",
         "poisson_self_bracket_zero",
         "source_owner_not_admitted"
-      ]
+      ],
+      "path": "verification/lean/Tect/R457.lean",
+      "sha256": "644df69001c3a7d021d054e4f3fe21afcbb2944d1f6517605895ed2a71569f02"
     },
     {
-      "path": "verification/lean/Tect/R458.lean",
-      "sha256": "53b2d222b214a04dad31ca5e469436e065e8d306f488d24b69bb09631da5dc97",
       "declarations": [
         "sum_squares_zero",
         "wilson_origin_zero",
@@ -3314,11 +3281,11 @@
         "chiral_even_square",
         "coercive_sextic",
         "source_owner_not_admitted"
-      ]
+      ],
+      "path": "verification/lean/Tect/R458.lean",
+      "sha256": "53b2d222b214a04dad31ca5e469436e065e8d306f488d24b69bb09631da5dc97"
     },
     {
-      "path": "verification/lean/Tect/R461.lean",
-      "sha256": "2df677fee9abac97abca2c6836b974e2aba99e1d15aa4462662b907c0b8e478c",
       "declarations": [
         "bloch_identity",
         "bloch_zero_implies_doublet_zero",
@@ -3326,83 +3293,83 @@
         "positive_form_zero",
         "fixed_floor_denominator_positive",
         "nonzero_bloch_coordinate_has_nonzero_q"
-      ]
+      ],
+      "path": "verification/lean/Tect/R461.lean",
+      "sha256": "2df677fee9abac97abca2c6836b974e2aba99e1d15aa4462662b907c0b8e478c"
     },
     {
-      "path": "verification/lean/Tect/R462.lean",
-      "sha256": "4eb05c5c1b65de1558ebf4a5fac529e8843928af66f7a38a81647f43db030f1a",
       "declarations": [
         "normal_form_decomposition",
         "angular_coefficient_positive",
         "radial_form_zero",
         "active_denominator_positive"
-      ]
+      ],
+      "path": "verification/lean/Tect/R462.lean",
+      "sha256": "4eb05c5c1b65de1558ebf4a5fac529e8843928af66f7a38a81647f43db030f1a"
     },
     {
-      "path": "verification/lean/Tect/R463.lean",
-      "sha256": "ff0d5f3295d39eb9c8de4eec90ed0f664282b6df6c13e22280bb2ae8e1267c69",
       "declarations": [
         "radial_gap_identity",
         "radial_lower_bound",
         "active_tube_domination",
         "flat_zero_energy"
-      ]
+      ],
+      "path": "verification/lean/Tect/R463.lean",
+      "sha256": "ff0d5f3295d39eb9c8de4eec90ed0f664282b6df6c13e22280bb2ae8e1267c69"
     },
     {
-      "path": "verification/lean/Tect/R464.lean",
-      "sha256": "edcc65b5a29d0bdd867f5c6ad2b3066c02ea69116f2cd452500bc4ef1c1297a5",
       "declarations": [
         "large_branch_nonnegative",
         "small_branch_nonnegative",
         "cubic_lower_bound",
         "pure_singlet_codimension_positive",
         "positive_mass_conditional_normalization"
-      ]
+      ],
+      "path": "verification/lean/Tect/R464.lean",
+      "sha256": "edcc65b5a29d0bdd867f5c6ad2b3066c02ea69116f2cd452500bc4ef1c1297a5"
     },
     {
-      "path": "verification/lean/Tect/R465.lean",
-      "sha256": "35c23bdd32c13e7f84f662a0729f2f03f5b02dfb88b95ee44d8291e508ccc5cd",
       "declarations": [
         "sextic_coefficient_positive",
         "coefficient_scale_identity",
         "coefficient_ratio_lt_one",
         "beta_coefficient_positive"
-      ]
+      ],
+      "path": "verification/lean/Tect/R465.lean",
+      "sha256": "35c23bdd32c13e7f84f662a0729f2f03f5b02dfb88b95ee44d8291e508ccc5cd"
     },
     {
-      "path": "verification/lean/Tect/R466.lean",
-      "sha256": "72c1a3231fedd91735e28d9583fcea949c3dcf3b259891c7f260811ec2ecdb43",
       "declarations": [
         "box_volume_positive",
         "box_volume_identity",
         "tube_mass_lower_ratio",
         "lower_ratio_nonnegative"
-      ]
+      ],
+      "path": "verification/lean/Tect/R466.lean",
+      "sha256": "72c1a3231fedd91735e28d9583fcea949c3dcf3b259891c7f260811ec2ecdb43"
     },
     {
-      "path": "verification/lean/Tect/R467.lean",
-      "sha256": "757d81666617f6ff419ca6ecd056fdf5b1a650101add10f2e9515ceeeaf5095e",
       "declarations": [
         "dimension_split_identity",
         "chart_volume_positive",
         "jacobian_chart_volume_positive",
         "compensated_mass_ratio_positive",
         "log_budget_decomposition"
-      ]
+      ],
+      "path": "verification/lean/Tect/R467.lean",
+      "sha256": "757d81666617f6ff419ca6ecd056fdf5b1a650101add10f2e9515ceeeaf5095e"
     },
     {
-      "path": "verification/lean/Tect/R468.lean",
-      "sha256": "1a8eb3819995f7659228017b6af51f348c2dfd84c5f37f30359191d81840b01e",
       "declarations": [
         "interpolation_weight_bounds",
         "interpolation_weight_sum",
         "covering_closed_interval",
         "nearest_tie_break_is_ordered"
-      ]
+      ],
+      "path": "verification/lean/Tect/R468.lean",
+      "sha256": "1a8eb3819995f7659228017b6af51f348c2dfd84c5f37f30359191d81840b01e"
     },
     {
-      "path": "verification/lean/Tect/R469.lean",
-      "sha256": "a464d4cb711230c5e9c48e3531c5dd76abed0864ebf074bc089345aaa57b85ed",
       "declarations": [
         "left_endpoint_not_strict_overlap",
         "right_endpoint_not_strict_overlap",
@@ -3410,22 +3377,22 @@
         "fallback_before_first",
         "fallback_after_or_inside",
         "first_index_delegation"
-      ]
+      ],
+      "path": "verification/lean/Tect/R469.lean",
+      "sha256": "a464d4cb711230c5e9c48e3531c5dd76abed0864ebf074bc089345aaa57b85ed"
     },
     {
-      "path": "verification/lean/Tect/R470.lean",
-      "sha256": "9d621248961af11d4f5c9e120202b9c31441c8e58428d4bd218a616a27f00174",
       "declarations": [
         "segment_count",
         "header_slot_at_least_two",
         "header_slot_injective",
         "empty_drm_has_no_segments",
         "eight_segment_fixture"
-      ]
+      ],
+      "path": "verification/lean/Tect/R470.lean",
+      "sha256": "9d621248961af11d4f5c9e120202b9c31441c8e58428d4bd218a616a27f00174"
     },
     {
-      "path": "verification/lean/Tect/R471.lean",
-      "sha256": "602a1d21e27c8ff5841b388ca001f9681331a4a3dabffb16e25113103dc8f46c",
       "declarations": [
         "current_not_admitted",
         "synthetic_never_admitted",
@@ -3435,11 +3402,11 @@
         "methods_required",
         "synthetic_fixture_is_not_production",
         "parked_owner_and_inverse"
-      ]
+      ],
+      "path": "verification/lean/Tect/R471.lean",
+      "sha256": "602a1d21e27c8ff5841b388ca001f9681331a4a3dabffb16e25113103dc8f46c"
     },
     {
-      "path": "verification/lean/Tect/R472.lean",
-      "sha256": "56d3665931c8caa183af9ae2dc54e0fa79cabc1f063ae4db72e5edbdff00fb45",
       "declarations": [
         "r157_total_mass_exact",
         "r157_gap_exact",
@@ -3456,11 +3423,11 @@
         "r158_transition_order",
         "r157_radial_numerator_positive",
         "methods_are_not_changed"
-      ]
+      ],
+      "path": "verification/lean/Tect/R472.lean",
+      "sha256": "56d3665931c8caa183af9ae2dc54e0fa79cabc1f063ae4db72e5edbdff00fb45"
     },
     {
-      "path": "verification/lean/Tect/R473.lean",
-      "sha256": "ed5c3a72a96edfd0a6387fc58eb052a7847ebb955683224b944fcb5d183826d5",
       "declarations": [
         "one_second_bin_width_positive",
         "adjacent_half_open_bins_disjoint",
@@ -3468,21 +3435,21 @@
         "pinned_row_total",
         "histogram_conservation_fixture",
         "methods_are_not_changed"
-      ]
+      ],
+      "path": "verification/lean/Tect/R473.lean",
+      "sha256": "ed5c3a72a96edfd0a6387fc58eb052a7847ebb955683224b944fcb5d183826d5"
     },
     {
-      "path": "verification/lean/Tect/R474.lean",
-      "sha256": "34951e0757c278eea409b149517642ba081d79a77fe029c65a361ffcf62c20e7",
       "declarations": [
         "cutoff_then_volume_rectangle",
         "volume_then_cutoff_rectangle",
         "epsilon_split_positive",
         "methods_are_not_changed"
-      ]
+      ],
+      "path": "verification/lean/Tect/R474.lean",
+      "sha256": "34951e0757c278eea409b149517642ba081d79a77fe029c65a361ffcf62c20e7"
     },
     {
-      "path": "verification/lean/Tect/R475.lean",
-      "sha256": "913edcae243a56d8d2c41c99d7f8dfd6b06d48e6deb49669c8a71c730cc5ffa7",
       "declarations": [
         "seven_named_hypotheses_conjunction",
         "branch_conclusions_are_separate",
@@ -3490,11 +3457,11 @@
         "shell_mass_fork_not_equal",
         "shared_periods_do_not_identify_shell_mass",
         "methods_are_not_changed"
-      ]
+      ],
+      "path": "verification/lean/Tect/R475.lean",
+      "sha256": "913edcae243a56d8d2c41c99d7f8dfd6b06d48e6deb49669c8a71c730cc5ffa7"
     },
     {
-      "path": "verification/lean/Tect/R476.lean",
-      "sha256": "01980598539faeccbabfd6bba6b05eaf68a45de683f1fea6250f41d7f4626fbc",
       "declarations": [
         "candidate_is_structurally_registered",
         "candidate_is_not_production_admitted",
@@ -3505,11 +3472,11 @@
         "horizon_name_does_not_identify_preA",
         "physical_empty_requires_separate_branch",
         "candidate_methods_remain_unchanged"
-      ]
+      ],
+      "path": "verification/lean/Tect/R476.lean",
+      "sha256": "01980598539faeccbabfd6bba6b05eaf68a45de683f1fea6250f41d7f4626fbc"
     },
     {
-      "path": "verification/lean/Tect/R478.lean",
-      "sha256": "610a3c7b498fbd4a8015325a075454192393294b216181ce9171b8fa81f61c16",
       "declarations": [
         "gauge_covariant_edge",
         "forward_gibbs_midpoint",
@@ -3518,11 +3485,11 @@
         "commuting_idempotent_product",
         "directed_root_half_factor",
         "condition_vector_not_all_pass"
-      ]
+      ],
+      "path": "verification/lean/Tect/R478.lean",
+      "sha256": "610a3c7b498fbd4a8015325a075454192393294b216181ce9171b8fa81f61c16"
     },
     {
-      "path": "verification/lean/Tect/R479.lean",
-      "sha256": "f12a2fac6c6d9ed53f4be88c9c86485acaceea635e09a6db762114b070865f2b",
       "declarations": [
         "inverse_closed_partial_move",
         "equivariant_generator_summand",
@@ -3531,11 +3498,11 @@
         "free_vertex_fibre_difference",
         "free_vertex_fibre_difference_nonzero",
         "finite_pass_does_not_close_refinement"
-      ]
+      ],
+      "path": "verification/lean/Tect/R479.lean",
+      "sha256": "f12a2fac6c6d9ed53f4be88c9c86485acaceea635e09a6db762114b070865f2b"
     },
     {
-      "path": "verification/lean/Tect/R480.lean",
-      "sha256": "91454ec24fbd365e5ce44cf8399254148b7c6659d18da78017042af1bc06175f",
       "declarations": [
         "aperture_grid_values",
         "hidden_edge_increment_low",
@@ -3547,20 +3514,20 @@
         "witness_normalized_defect_positive",
         "witness_mobility_square",
         "conditional_defect_keeps_stage2_closed"
-      ]
+      ],
+      "path": "verification/lean/Tect/R480.lean",
+      "sha256": "91454ec24fbd365e5ce44cf8399254148b7c6659d18da78017042af1bc06175f"
     },
     {
-      "path": "verification/lean/Tect/R481.lean",
-      "sha256": "17c653385a93b6c9b818a88d845cc9d37a116f6fc20226bba57b1122ad56b82e",
       "declarations": [
         "edge_fibre_difference",
         "transported_log_rate_factor",
         "positive_scalar_transport_log_defect_nonzero"
-      ]
+      ],
+      "path": "verification/lean/Tect/R481.lean",
+      "sha256": "17c653385a93b6c9b818a88d845cc9d37a116f6fc20226bba57b1122ad56b82e"
     },
     {
-      "path": "verification/lean/Tect/R482.lean",
-      "sha256": "4bb0eab3c0014ecde1ce0bdbdb73509780cd8c4126eb4234ecfd8156bdfd9484",
       "declarations": [
         "normalized_local_replication",
         "generator_intertwining",
@@ -3568,11 +3535,11 @@
         "cumulative_zero",
         "q_family_is_strictly_refining",
         "structural_firewall"
-      ]
+      ],
+      "path": "verification/lean/Tect/R482.lean",
+      "sha256": "4bb0eab3c0014ecde1ce0bdbdb73509780cd8c4126eb4234ecfd8156bdfd9484"
     },
     {
-      "path": "verification/lean/Tect/R483.lean",
-      "sha256": "99cee85114f7a302000e9a05808dffdd2b5fb23e7cafb93bc23384694f0c7f70",
       "declarations": [
         "coarse_delta_exact",
         "fine_even_delta_exact",
@@ -3587,11 +3554,11 @@
         "eventual_zero_local_defect",
         "tail_cumulative_zero",
         "structural_firewall"
-      ]
+      ],
+      "path": "verification/lean/Tect/R483.lean",
+      "sha256": "99cee85114f7a302000e9a05808dffdd2b5fb23e7cafb93bc23384694f0c7f70"
     },
     {
-      "path": "verification/lean/Tect/R484.lean",
-      "sha256": "f115320b9421dbd016c61f20d24759347ddfe7d3675b01f02a3ea5595b3a1ac8",
       "declarations": [
         "generator_row_level_identity",
         "aperture_mobility_square",
@@ -3606,11 +3573,11 @@
         "incidence_edge_change",
         "incidence_face_change",
         "structural_firewall"
-      ]
+      ],
+      "path": "verification/lean/Tect/R484.lean",
+      "sha256": "f115320b9421dbd016c61f20d24759347ddfe7d3675b01f02a3ea5595b3a1ac8"
     },
     {
-      "path": "verification/lean/Tect/R485.lean",
-      "sha256": "68b1d2add20b4a1c711d5497600a490f68a49d71a4792e31202d99476834f9fa",
       "declarations": [
         "nonzero_charge_exact",
         "neutral_inclusion_preserves_charge",
@@ -3622,11 +3589,11 @@
         "incidence_face_change",
         "stable_anchor_closure",
         "non_promotion_firewall"
-      ]
+      ],
+      "path": "verification/lean/Tect/R485.lean",
+      "sha256": "68b1d2add20b4a1c711d5497600a490f68a49d71a4792e31202d99476834f9fa"
     },
     {
-      "path": "verification/lean/Tect/R486.lean",
-      "sha256": "c6bcb96fc2d3ddc758c85d0448c016ed198d9d3997d3c92b19dba448ce6b9856",
       "declarations": [
         "nonzero_charge_exact",
         "neutral_inclusion_preserves_charge",
@@ -3636,11 +3603,11 @@
         "generator_root_identity",
         "boundary_defect_exact",
         "non_promotion_firewall"
-      ]
+      ],
+      "path": "verification/lean/Tect/R486.lean",
+      "sha256": "c6bcb96fc2d3ddc758c85d0448c016ed198d9d3997d3c92b19dba448ce6b9856"
     },
     {
-      "path": "verification/lean/Tect/R487.lean",
-      "sha256": "66083f6a707f84fa7067898afbf18acebad2595480a36ac3e6045256a2f34402",
       "declarations": [
         "nonzero_charge_exact",
         "neutral_inclusion_preserves_charge",
@@ -3651,11 +3618,11 @@
         "joint_root_identity",
         "boundary_defect_exact",
         "non_promotion_firewall"
-      ]
+      ],
+      "path": "verification/lean/Tect/R487.lean",
+      "sha256": "66083f6a707f84fa7067898afbf18acebad2595480a36ac3e6045256a2f34402"
     },
     {
-      "path": "verification/lean/Tect/R488.lean",
-      "sha256": "dbee3260ae77e9c094ad811b1fa1b27e48b2505e9527919c0160562f287c6d1b",
       "declarations": [
         "nonzero_charge_exact",
         "neutral_inclusion_preserves_charge",
@@ -3669,11 +3636,11 @@
         "two_matter_coordinates",
         "boundary_defect_exact",
         "non_promotion_firewall"
-      ]
+      ],
+      "path": "verification/lean/Tect/R488.lean",
+      "sha256": "dbee3260ae77e9c094ad811b1fa1b27e48b2505e9527919c0160562f287c6d1b"
     },
     {
-      "path": "verification/lean/Tect/R489.lean",
-      "sha256": "c3dd7dfe1c8995df6e3b28ebf04aedb73611014078d665805310b3035479c18f",
       "declarations": [
         "delta_formula",
         "exponent_formula",
@@ -3682,11 +3649,11 @@
         "mobility_square_exact",
         "root_weight_positive",
         "non_promotion_firewall"
-      ]
+      ],
+      "path": "verification/lean/Tect/R489.lean",
+      "sha256": "c3dd7dfe1c8995df6e3b28ebf04aedb73611014078d665805310b3035479c18f"
     },
     {
-      "path": "verification/lean/Tect/R490.lean",
-      "sha256": "2f67655840eba25982976be1505320fbaa51dc89826bc33d447b6e2a46944b23",
       "declarations": [
         "amgm_gap_identity",
         "amgm_gap_nonnegative",
@@ -3698,11 +3665,11 @@
         "nonzero_weighted_norm_witness",
         "r488_witness_values_nonzero",
         "non_promotion_firewall"
-      ]
+      ],
+      "path": "verification/lean/Tect/R490.lean",
+      "sha256": "2f67655840eba25982976be1505320fbaa51dc89826bc33d447b6e2a46944b23"
     },
     {
-      "path": "verification/lean/Tect/R491.lean",
-      "sha256": "a89600b59d6b5af2cb3b8cafb033ac8869075e34f71c855cc73c3045dc169141",
       "declarations": [
         "neutral_projection_loses_new_charge",
         "neutral_projection_not_total_q_one",
@@ -3711,8 +3678,55 @@
         "r484_boundary_defect_exact",
         "csw_is_domination_only",
         "non_promotion_firewall"
-      ]
+      ],
+      "path": "verification/lean/Tect/R491.lean",
+      "sha256": "a89600b59d6b5af2cb3b8cafb033ac8869075e34f71c855cc73c3045dc169141"
+    },
+    {
+      "declarations": [
+        "graded_projection_total",
+        "graded_projection_unique",
+        "dropped_charge_balance",
+        "fixed_component_recovered",
+        "r488_lift_nonzero",
+        "r488_lift_preserves_value",
+        "csw_domination_only",
+        "non_promotion_firewall"
+      ],
+      "path": "verification/lean/Tect/R492.lean",
+      "sha256": "16920d9382e231f491f0992ea0bcca519286d5005c73239bcc6664f9cbb46521"
     }
   ],
-  "files": []
+  "files": [],
+  "purpose": "Canonical registry for every repository Lean entrypoint and its pinned source hash.",
+  "schema": "tect/lean-cross-verification-registry/1.0",
+  "source_policy": {
+    "encoding": "UTF-8",
+    "final_newline": true,
+    "forbidden_tokens": [
+      "sorry",
+      "admit",
+      "axiom",
+      "unsafe"
+    ],
+    "line_endings": "LF",
+    "manifest_bridge_glob": "strategy/**/*.json",
+    "required_declaration_kinds": [
+      "theorem",
+      "lemma",
+      "example"
+    ]
+  },
+  "toolchain": {
+    "lakefile": "verification/lean/lakefile.toml",
+    "lakefile_sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+    "lockfile": "verification/lean/lake-manifest.json",
+    "lockfile_sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+    "mathlib_input_revision": "v4.32.1",
+    "mathlib_revision": "520045ab14e26149ee970e2e617ca04b09bde5d6",
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "toolchain_file": "verification/lean/lean-toolchain",
+    "toolchain_sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+  },
+  "version": "1.0.0"
 }

@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-492](#r-492) | PAH-OMC-012 full-Q charge-graded common domain and neutral refinement map | R-492 / EXP-001461 proves a total, unique neutral coordinate restriction on the source-owned disjoint union of all finite PAH-001 charge components, with Q_f-Q_c equal to the nonnegative dropped-charge sum and nonzero lifts for ell_a, ell_d, H_0 and H_1. Primary 17/17, independent 15/15, hostile 10/10, integrated 16/16 and Lean R492 pass. This is T0 claim-nonbearing finite domain/map progress only; it does not close PAH-OMC-011 intertwining, add a global Gibbs mixture, or establish infinite-volume, continuum, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusions. |
 | [R-491](#r-491) | PAH-OMC-011 Gibbs-state-weighted common-core eventual generator intertwining | R-491 / EXP-001457 gives exact image-local N(f)=max(2,m_f+1) separation and retains the R-484 hidden-diagonal defect 16/9, but the unchanged neutral projection is not total on the full fixed-Q=1 fine state space: a sole new-column charge projects to Q=0. Primary 19/19, independent 16/16, hostile 10/10, integrated 17/17 and Lean R491 pass. This is a T0 claim-nonbearing HOLD_FOR_EVIDENCE domain obstruction; no exact all-state intertwining, weak Gibbs-L2 convergence, or physical/continuum conclusion is claimed. |
 | [R-490](#r-490) | PAH-OMC-010 Gibbs-state-weighted local interaction envelope | R-490 / EXP-001438 proves a finite state-weighted local-form envelope for the unchanged PAH-001 rates on the cofinal PAH-OMC-004 strip: per-root Gibbs conductance <=1, S_geom=8, N_geom=60, C_sw=540, and all four R-488 observables retain nonzero weighted witnesses. Primary 18/18, independent 13/13, hostile 9/9 invalid mutations rejected, integrated 16/16 and Lean R490 pass. This is T0 claim-nonbearing local-form input only; generator intertwining, infinite-volume closure and physical/continuum conclusions remain open. |
 | [R-489](#r-489) | PAH-OMC-009 uniform interaction-envelope obstruction | R-489 / EXP-001434 proves an exact R_max->infinity rate divergence on the cofinal PAH-OMC-004 strip for the unchanged PAH-001 aperture root: Delta F=-(7/24)R^2-5/8, midpoint exponent 7R^2/48+5/16, positive support weight. Primary 16/16, independent 13/13, hostile 6/6 rejected, integrated 21/21 and Lean R489 pass. This is a T0 negative result for the declared uniform envelope only; generator intertwining and all physical/continuum conclusions remain open. |
@@ -856,6 +857,82 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-492"></a>
+### R-492 -- PAH-OMC-012 full-Q charge-graded common domain and neutral refinement map
+
+**Statement.** R-492 / EXP-001461 defines and verifies a separately
+researcher-owned finite bookkeeping domain for the unchanged PAH-001 model.
+For the unchanged PAH-OMC-004 strip G_n, n>=2, and the PAH-OMC-010 path
+K=2, M_s=M_psi=1, epsilon=1/2, beta=nu=1, unit displayed couplings
+and every integer R_max=R>=1, it forms
+
+Omega_n^gr(R) = disjoint_union_(Q in {0,...,M_psi|V_n|}) {Q} x
+Omega_(rho_(n,R,Q),Q).
+
+The neutral map retains every old aperture, phase, radial and link coordinate,
+drops only the new column and d_n, and recomputes the coarse grade
+Q_c=sum_(v in V_n) ell_v. For every fine state,
+Q_f-Q_c=sum_(v in V_(n+1)\V_n) ell_v>=0, so the output is a member of
+exactly one coarse graded component and is deterministic. No retained charge
+is changed and no charge redistribution, conditional averaging or new
+transition is introduced.
+
+The pointwise lift I f=f composed with p is therefore total on the graded
+domain. Explicit ell_a, ell_d, H_0 and H_1 R-488 witnesses have nonzero
+lifts at positive finite component Gibbs weight. Restricting the graded
+direct sum to any fixed Q recovers the existing PAH-001 functional,
+Q-preserving move set, generator and pi_(rho,Q) exactly. The graded Gibbs
+reference is the family of those component measures; no cross-Q mixture is
+invented.
+
+**Evidence.** The primary verifier passes 17/17 assertions, the independent
+non-importing verifier passes 15/15, hostile review rejects 10/10 mutation
+shortcuts, the integrated verifier passes 16/16, and Lean R492 compiles under
+the pinned Lean 4.32.1 toolchain. The primary lane checks binary and singleton
+charge patterns for n=2..6 at representative R_max=1,2,5; the independent
+lane covers n=2..7 at the same R_max values. These samples supplement the
+exact nonnegative-sum and finite-bound argument; they do not replace the
+all-n, all-R statement by a finite sample.
+
+**Source pins.**
+
+| source | SHA-256 |
+|---|---|
+| PAH-001 | 03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37 |
+| PAH-OMC-004 | 38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c |
+| PAH-OMC-008 | b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a |
+| PAH-OMC-010 | 8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69 |
+| PAH-OMC-010 manifest | 97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3 |
+| PAH-OMC-011 | 244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020 |
+| R-490 primary run | 4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3 |
+| PAH-OMC-012 contract | 180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72 |
+| PAH-OMC-012 manifest | cf53cdc78d40a793cf218491a4794055e847fefc4628c0d188a47990fe70713b |
+| Lean R492 normalized | 16920d9382e231f491f0992ea0bcca519286d5005c73239bcc6664f9cbb46521 |
+
+**Classification and boundary.** This is a T0 claim-nonbearing
+MAINLINE_ADVANCE for the finite full-Q domain/map gate only. It repairs the
+domain-definition obstruction identified by R-491 by allowing the grade to
+change; it does not prove a fixed-Q intertwining. R-490 C_sw=540 remains a
+domination-only input. No active gate, claim tier or physical status changes.
+
+No generator intertwining, weak Gibbs-L2 convergence, infinite-volume
+dynamics, continuum limit, physical Pre-A, spacetime, gravity, QFT,
+Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows. Markov time
+remains external stochastic time.
+
+**Where proven.** strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json,
+strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-manifest.json,
+strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-exploration.json,
+the three foundation scripts, the integrated verifier,
+verification/lean/Tect/R492.lean, the Lean registry entry, and the four run
+artefacts under
+claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain/.
+
+**Next.** Run one dedicated PAH-OMC-011 re-test on this total graded domain.
+Keep PAH-001 rates and functional fixed, do not add a cross-Q Gibbs mixture,
+and stop at the first exact rootwise mismatch. Until that separate test passes,
+retain the Stage 2 gate as HOLD_FOR_EVIDENCE.
 
 <a id="r-491"></a>
 ### R-491 -- PAH-OMC-011 Gibbs-state-weighted common-core eventual intertwining
