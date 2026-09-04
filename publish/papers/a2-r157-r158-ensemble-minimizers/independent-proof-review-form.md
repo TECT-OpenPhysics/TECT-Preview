@@ -1,6 +1,6 @@
 # Independent proof-review form — A2/R-157/R-158
 
-Status: `BLANK / NO REVIEW DISPOSITION RECORDED` (manuscript v0.1.39,
+Status: `BLANK / NO REVIEW DISPOSITION RECORDED` (manuscript v0.1.40,
 2026-09-04).
 
 This form is the frozen contract for an independent mathematical audit.  It
@@ -11,10 +11,10 @@ assistant, or an author self-check may not fill the independent-review fields.
 
 - Manuscript: `manuscript.tex`
 - Manuscript SHA-256:
-  `6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155`
-- Rendered PDF: `manuscript.pdf`, 16 pages
+  `2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768`
+- Rendered PDF: `manuscript.pdf`, 17 pages
 - PDF SHA-256:
-  `28bbb7d231dfcd0abc75b657e4a2d8556fc491d284bfecf7fb8757ce6dfacb07`
+  `2edfb63ea7f884ff0faaaed9d3057e4baa2c4cff62ba038ffed146f4673f9b64`
 - Scope: one explicitly printed three-component complex field, realified as
   six components, on the fixed periodic torus `T^3_16`, with the positive
   density floor and coefficients printed in the manuscript.
@@ -107,8 +107,8 @@ reviewer_name: <name>
 affiliation: <affiliation>
 expertise: <relevant expertise>
 independence_statement: <relationship to author and project>
-manuscript_sha256_checked: 6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155
-pdf_sha256_checked: 28bbb7d231dfcd0abc75b657e4a2d8556fc491d284bfecf7fb8757ce6dfacb07
+manuscript_sha256_checked: 2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768
+pdf_sha256_checked: 2edfb63ea7f884ff0faaaed9d3057e4baa2c4cff62ba038ffed146f4673f9b64
 reproduction_toolchain_and_commit: <exact environment and commit>
 items_completed: P-01,...,P-15
 unlisted_objections: <details, or NONE>

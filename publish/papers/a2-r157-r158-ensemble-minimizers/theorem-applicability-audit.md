@@ -1,7 +1,7 @@
 # Theorem-applicability audit — A2/R-157/R-158
 
 Status: `INTERNAL-APPLICABILITY-AUDIT / NOT EXTERNAL-REVIEWED` (manuscript
-v0.1.39, 2026-09-04).
+v0.1.40, 2026-09-04).
 
 This record identifies every general analytic result used in the paper, fixes
 its spaces and hypotheses, and distinguishes a direct paper proof from a
@@ -55,7 +55,7 @@ promotion.
    compact spatial embedding and time regularity in Bochner spaces.  The
    paper's exact triplet is `H^4 compactly embedded in H^2 continuously
    embedded in L^2`, with both time exponents equal to two.  Manuscript
-   v0.1.39 also proves this special case directly by Fourier truncation.
+   v0.1.40 also proves this special case directly by Fourier truncation.
 
 All remaining bibliography entries are prior-work comparisons or physical
 context.  They are not premises of A2, R-157, or R-158.

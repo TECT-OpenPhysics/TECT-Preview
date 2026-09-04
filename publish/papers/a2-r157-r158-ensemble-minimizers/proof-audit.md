@@ -8,7 +8,10 @@ an external referee report, an operator sign-off, or a claim-tier promotion.
 
 The audit covers the explicitly declared side-16 periodic three-torus,
 six-real-component field, positive density floor, pinned coefficients, and
-`eta_shell=0` functional in `manuscript.tex`.  Version 0.1.38 retains the closest 2026 Belin--Schneider quasilinear amplitude-theory comparison, narrows the residual novelty boundary, and retains the three embedded Hermitian generators, internal matrix
+`eta_shell=0` functional in `manuscript.tex`.  Version 0.1.40 adds the
+Hilder--Kuehn and Becker et al. coupled-system comparisons and retains the
+closest 2026 Belin--Schneider quasilinear amplitude-theory comparison, narrowing
+the residual novelty boundary while retaining the three embedded Hermitian generators, internal matrix
 data, density floor, and Class-II coefficient formulas; it also displays the
 indexed Class-II Euler--Lagrange formula and coefficient tensor so the order-two
 map, variation sign, and normalization can be checked without a private backend.

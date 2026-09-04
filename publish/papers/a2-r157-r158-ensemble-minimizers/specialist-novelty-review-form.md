@@ -1,6 +1,6 @@
 # Specialist novelty-review form — A2/R-157/R-158
 
-Status: `BLANK / NO NOVELTY DISPOSITION RECORDED` (manuscript v0.1.39,
+Status: `BLANK / NO NOVELTY DISPOSITION RECORDED` (manuscript v0.1.40,
 2026-09-04).
 
 This form requests a specialist literature and publishability opinion.  It is
@@ -10,9 +10,9 @@ reviewed the paper.
 ## Frozen review object and residual proposition
 
 - Manuscript SHA-256:
-  `6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155`
+  `2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768`
 - PDF SHA-256:
-  `28bbb7d231dfcd0abc75b657e4a2d8556fc491d284bfecf7fb8757ce6dfacb07`
+  `2edfb63ea7f884ff0faaaed9d3057e4baa2c4cff62ba038ffed146f4673f9b64`
 - Detailed bounded crosswalk: `literature-crosswalk.md`
 
 The only proposed residual contribution is the model-specific conjunction,
@@ -50,7 +50,8 @@ screening criteria:
 At minimum, verify the sources already listed in `literature-crosswalk.md`,
 including Brazovskii; Swift--Leitner; Giorgini; Asai; Ruan; Bao--Chen--Jiang;
 Mi--Cui--You; Martine-La Boissoniere--Choksi--Lessard;
-Duchesne--Lessard--Takayasu; and both Belin--Schneider comparisons.  A title
+Duchesne--Lessard--Takayasu; both Belin--Schneider comparisons;
+Hilder--Kuehn; and Becker--Frenzel--Niedermayer--Reichelt--Mielke--B\"ar.  A title
 match or abstract-only screen is insufficient for a `SUBSUMED` disposition.
 
 ## Source-by-source response block
@@ -99,7 +100,7 @@ independence_statement: <relationship to author and project>
 search_dates: <YYYY-MM-DD through YYYY-MM-DD>
 databases_and_indexes: <complete list>
 queries_and_citation_chains: <reproducible list or attached record>
-manuscript_sha256_checked: 6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155
+manuscript_sha256_checked: 2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768
 decisions_completed: D-01,...,D-07
 global_disposition: PUBLISHABLY-DISTINCT | REPAIR-AND-REREVIEW | SUBSUMED | INCONCLUSIVE
 required_repairs: <exact list, or NONE>

@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-491](#r-491) | PAH-OMC-011 Gibbs-state-weighted common-core eventual generator intertwining | R-491 / EXP-001457 gives exact image-local N(f)=max(2,m_f+1) separation and retains the R-484 hidden-diagonal defect 16/9, but the unchanged neutral projection is not total on the full fixed-Q=1 fine state space: a sole new-column charge projects to Q=0. Primary 19/19, independent 16/16, hostile 10/10, integrated 17/17 and Lean R491 pass. This is a T0 claim-nonbearing HOLD_FOR_EVIDENCE domain obstruction; no exact all-state intertwining, weak Gibbs-L2 convergence, or physical/continuum conclusion is claimed. |
 | [R-490](#r-490) | PAH-OMC-010 Gibbs-state-weighted local interaction envelope | R-490 / EXP-001438 proves a finite state-weighted local-form envelope for the unchanged PAH-001 rates on the cofinal PAH-OMC-004 strip: per-root Gibbs conductance <=1, S_geom=8, N_geom=60, C_sw=540, and all four R-488 observables retain nonzero weighted witnesses. Primary 18/18, independent 13/13, hostile 9/9 invalid mutations rejected, integrated 16/16 and Lean R490 pass. This is T0 claim-nonbearing local-form input only; generator intertwining, infinite-volume closure and physical/continuum conclusions remain open. |
 | [R-489](#r-489) | PAH-OMC-009 uniform interaction-envelope obstruction | R-489 / EXP-001434 proves an exact R_max->infinity rate divergence on the cofinal PAH-OMC-004 strip for the unchanged PAH-001 aperture root: Delta F=-(7/24)R^2-5/8, midpoint exponent 7R^2/48+5/16, positive support weight. Primary 16/16, independent 13/13, hostile 6/6 rejected, integrated 21/21 and Lean R489 pass. This is a T0 negative result for the declared uniform envelope only; generator intertwining and all physical/continuum conclusions remain open. |
 | [R-488](#r-488) | PAH-OMC-008 two-matter/two-holonomy joint-cylinder compatibility | R-488 / EXP-001393 defines a separately hashed researcher-owned extension of the unchanged PAH-001 functional on the genuine PAH-OMC-004 strip. With Q=1, K=2, M_s=M_psi=1, all 32768 states and 417792 retained roots (90112 radial and 327680 link channels) have identical exact four-coordinate tuples between G_2 and G_3; primary 25/25, independent 16/16, hostile 12/12 mutations rejected, integrated 17/17 and Lean R488 pass. This is T0 finite/local evidence only; global common-core, uniform-limit and physical conclusions remain open. |
@@ -855,6 +856,76 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-491"></a>
+### R-491 -- PAH-OMC-011 Gibbs-state-weighted common-core eventual intertwining
+
+**Statement.** R-491 / EXP-001457 audits the unchanged PAH-001 functional and
+midpoint rates on the declared PAH-OMC-004 two-row strip, using PAH-OMC-008's
+R-488 cylinder and PAH-OMC-010's Gibbs-weighted input.  The common algebra is
+the algebraic union of bounded gauge- and anchor-automorphism-invariant
+cylinders in finitely many `ell_v` and closed-face holonomies, including
+`(ell_a,ell_d,H_0,H_1)`.  The neutral lift retains old coordinates and drops
+the new column and newly split diagonal.
+
+For a cylinder with interaction-closure maximum column `m_f`, the exact
+image-locality buffer is `N(f)=max(2,m_f+1)`.  For every `n>=N(f)`, the
+frontier footprint `{n,n+1,n+2}` is disjoint from the closure, so the R-484
+boundary defect is separated from the support on the neutral-inclusion image.
+The R-484 defect is retained exactly: coarse `1/8`, fine-even `1/4`, fine-odd
+`-55/36`, and hidden diagonal defect `16/9`.
+
+The full fixed-`Q=1` common-domain premise is not available.  At every `n>=2`,
+the valid fine state with its sole charge at the newly added vertex `(n+2,0)`
+projects to retained charge `0`, not `Q=1`.  Thus the declared projection is
+not a map `Omega_(n+1,1) -> Omega_(n,1)`, and `I_(n,n+1)` and
+`I_(n,n+1)L_n` are undefined on the full fine Gibbs domain.  This is a
+domain-definition obstruction, not a numerical rate counterexample and not a
+refutation of PAH-001.
+
+**Evidence.** The primary audit passes 19/19 assertions, the non-importing
+independent audit passes 16/16, hostile review rejects 10/10 overclaim
+mutations, the integrated verifier passes 17/17, and Lean R491 compiles.  The
+run artefacts and exact source hash map are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/`.
+
+**Source pins.**
+
+| source | SHA-256 |
+|---|---|
+| PAH-001 | `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37` |
+| PAH-OMC-004 | `38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c` |
+| PAH-OMC-008 | `b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a` |
+| PAH-OMC-010 | `8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69` |
+| PAH-OMC-010 manifest | `97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3` |
+| R-484 sidecar | `87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e` |
+| R-484 manifest | `88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57` |
+| R-491 contract | `244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020` |
+| Lean R491 normalized | `a89600b59d6b5af2cb3b8cafb033ac8869075e34f71c855cc73c3045dc169141` |
+
+**Classification and boundary.** This is a T0 claim-nonbearing
+`HOLD_FOR_EVIDENCE` result.  The conditional `N(f)` image-locality statement
+does not close the all-state fixed-Q common-core identity.  The weak Gibbs-L2
+defect is undefined on the full domain because the lift is not a function
+there; no universal weak-L2 no-go is claimed.  R-490's `C_sw=540` is used only
+as a state-weighted domination input and is not an intertwining proof.
+
+No active gate or claim tier changes.  No infinite-volume dynamics, ordered
+limit, continuum, physical Pre-A, spacetime, event horizon, gravity, QFT,
+Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.  Markov time
+remains external stochastic time.
+
+**Where proven.** `strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json`,
+`strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-manifest.json`,
+`strategy/pa-hyp/R491-certificate.md`, the three foundation scripts, the
+integrated verifier, `verification/lean/Tect/R491.lean`, and the four run
+artefacts listed above.
+
+**Next.** Supply one source-authorized full-Q common domain or full-Q
+refinement map that makes the projection total while preserving every
+unchanged PAH-001 root rate for finite-support cylinders.  Then rerun the
+rootwise equality and weighted Gibbs-L2 test separately.  Until that contract
+is hash-pinned, retain the Stage 2 gate as `HOLD_FOR_EVIDENCE`.
 
 <a id="r-490"></a>
 ### R-490 -- PAH-OMC-010 Gibbs-state-weighted local interaction envelope

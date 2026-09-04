@@ -1,0 +1,118 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "detail": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+      },
+      "mutation": "parent-drift",
+      "rejected": true
+    },
+    {
+      "detail": "The Q=0 R-484 slice is not silently substituted for the Q=1 full-domain question.",
+      "mutation": "q0-substitution",
+      "rejected": true
+    },
+    {
+      "detail": "p_(n+1,n) is not a map Omega_(n+1,1)->Omega_(n,1). Therefore I_(n,n+1) and I_(n,n+1)L_n are not defined on the full fine Gibbs domain, and an all-state exact intertwining theorem cannot be claimed without a source-authorized domain repair.",
+      "mutation": "image-only-as-all-state",
+      "rejected": true
+    },
+    {
+      "detail": "Conditional averaging is outside the declared map and is explicitly prohibited.",
+      "mutation": "conditional-gibbs-average",
+      "rejected": true
+    },
+    {
+      "detail": "The displayed functional and midpoint rates remain unchanged.",
+      "mutation": "rate-fitting-or-counterterm",
+      "rejected": true
+    },
+    {
+      "detail": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+      "mutation": "csw-as-intertwining-proof",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "attempted_N": 1,
+        "declared": "N(f)=max(2,m_f+1). For every n>=N(f), q_n, the new column n+2 and d_n are disjoint from cl(f), so the R-484 split boundary is separated from the support on the image-restricted domain.",
+        "frontier": [
+          1,
+          2,
+          3
+        ],
+        "m_f": 1
+      },
+      "mutation": "off-by-one-Nf",
+      "rejected": true
+    },
+    {
+      "detail": "The R-484 square-to-split boundary has exact hidden-diagonal defect 16/9 and is retained. It is outside cl(f) once n>=N(f); this is a locality statement, not deletion of the defect.",
+      "mutation": "boundary-defect-erasure",
+      "rejected": true
+    },
+    {
+      "detail": [
+        "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+        "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+        "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+        "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+        "Markov time is external stochastic time only.",
+        "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+      ],
+      "mutation": "physical-promotion",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "contract": "PAH-OMC-010",
+        "declared": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof."
+      },
+      "mutation": "csw-number-drift",
+      "rejected": true
+    }
+  ],
+  "audit_id": "PAH-OMC-011-EVENTUAL-INTERTWINING-HOSTILE-001",
+  "claim_bearing": false,
+  "classification": "HOSTILE_FIREWALL_REJECTS_ALL_STATE_OVERCLAIMS",
+  "exploration_id": "EXP-001457",
+  "failed": 0,
+  "next_question": "Can a source-authorized fixed-Q common domain (or an explicitly admitted full-Q refinement map) make p_(n+1,n) total while preserving the unchanged PAH-001 root rates for every finite-support cylinder, without conditional averaging or changing the model?",
+  "non_claims": [
+    "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+    "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+    "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+    "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+    "Markov time is external stochastic time only.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "passed": 10,
+  "physical_progress": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/hostile.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/independent.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc011_eventual_intertwining_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R491.lean",
+    "primary": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/primary.json"
+  },
+  "result_id": "R-491",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc011-eventual-intertwining-hostile/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_gibbs_l2": {
+    "status": "BLOCKED_UNDEFINED_LIFT_ON_FULL_DOMAIN",
+    "universal_failure_claimed": false
+  }
+}

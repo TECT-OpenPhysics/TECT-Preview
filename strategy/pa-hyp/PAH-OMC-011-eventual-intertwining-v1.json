@@ -1,0 +1,141 @@
+{
+  "schema": "tect/pre-a-owner-morphism-eventual-intertwining-contract/1.0",
+  "contract_id": "PAH-OMC-011",
+  "version": "0.1.0",
+  "title": "Gibbs-state-weighted common-core eventual generator intertwining",
+  "proposed_at": "2026-09-04",
+  "proposed_by": "TECT research programme",
+  "provenance": {
+    "class": "RESEARCHER_HYPOTHESIS_COMMON_CORE_REFINEMENT_AUDIT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "physical_authority": false,
+    "epistemic_layer": "L2_FINITE_DOMAIN_AND_LOCALITY_AUDIT"
+  },
+  "parents": {
+    "functional_source": {
+      "id": "PAH-001",
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "geometric_source": {
+      "id": "PAH-OMC-004",
+      "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+    },
+    "starting_cylinder": {
+      "id": "PAH-OMC-008",
+      "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+    },
+    "state_weighted_input": {
+      "id": "PAH-OMC-010",
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+      "manifest_path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-manifest.json",
+      "manifest_sha256": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3"
+    },
+    "boundary_replay": {
+      "id": "R-484",
+      "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+      "sha256": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+      "certificate_path": "strategy/pa-hyp/R484-certificate.md",
+      "certificate_sha256": "a2e132bcf1c44f339cd8faf7b675796e3a680629c03bdb7adc1bd2bd9ed4bf29"
+    },
+    "boundary_manifest": {
+      "id": "PAH-OMC-004-GEN-MANIFEST-001",
+      "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-manifest.json",
+      "sha256": "88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57"
+    },
+    "state_weighted_certificate": {
+      "id": "R-490",
+      "path": "strategy/pa-hyp/R490-certificate.md",
+      "sha256": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+    }
+  },
+  "preservation_firewall": {
+    "parent_functional_unchanged": true,
+    "parent_move_families_unchanged": true,
+    "parent_mobility_unchanged": true,
+    "parent_regulator_path_unchanged": true,
+    "parent_limit_order_unchanged": true,
+    "no_new_hamiltonian": true,
+    "no_counterterm": true,
+    "no_rate_fitting": true,
+    "no_conditional_gibbs_average": true,
+    "no_fixed_rmax_bypass": true,
+    "no_new_carrier": true,
+    "no_q3lock_import": true,
+    "no_physical_identification": true
+  },
+  "exact_scope": {
+    "carrier_family": "The unchanged PAH-OMC-004 two-row strip G_n for every integer n>=2: V_n={(i,j):0<=i<=n+1,j in {0,1}}, h_i^j for 0<=i<=n, v_i for 0<=i<=n+1, d_i for 0<=i<n, split triangles for i<n and the unsplit frontier square q_n.",
+    "anchors": "O={(0,0)} and C={(0,1)}; the declared anchor-preserving automorphism is the identity.",
+    "regulator": "Use the unchanged PAH-001 finite regulator and, for the R-488/R-490 path, K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; n>=2 and R_max=R>=1 are the only OMC-010 uniform labels.",
+    "functional": "Use exactly PAH-001 F_rho, including onsite, aperture stiffness, covariant matter edge and plaquette Wilson terms, with no added term or changed coefficient.",
+    "generator_domain": "D_(n,Q) is the finite-dimensional space of all bounded functions on the full displayed fixed-Q state space Omega_(n,Q), with L_n given by the unchanged PAH-001 directed-root midpoint rates.",
+    "common_cylinder_algebra": "A_cyl^R488 is the algebraic union of bounded gauge- and anchor-automorphism-invariant functions of finitely many integer coordinates ell_v and finitely many closed-face holonomy characters. The R-488 four-coordinate generators (ell_a,ell_d,H_0,H_1) are included.",
+    "neutral_refinement": "I_(n,n+1) is the pointwise lift f composed with p_(n+1,n), where p retains every old geometric coordinate and drops the new column n+2 and newly split diagonal d_n; the dropped aperture, radial, phase and link coordinates are assigned neutral values only for the forward inclusion.",
+    "root_correspondence": "On the image of the neutral inclusion, each retained old PAH root keeps its exact geometric label, admissibility, delta-F, endpoint mobility, midpoint rate and cylinder increment. Roots whose support is outside the interaction closure of f have zero f-increment. No source/rate is altered.",
+    "gibbs_norm": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+    "limit": "No infinite-volume, continuum, physical-sector or observation limit is taken in this packet. n is a finite refinement label and R is held fixed for the domain audit."
+  },
+  "pre_registered_stabilization": {
+    "interaction_closure": "For f, cl(f) is the union of the geometric supports of every PAH-001 energy term that can change f under a directed root; let m_f=max{i:(i,j) in cl(f)} and m_f=-1 for the constant function.",
+    "N_of_f": "N(f)=max(2,m_f+1). For every n>=N(f), q_n, the new column n+2 and d_n are disjoint from cl(f), so the R-484 split boundary is separated from the support on the image-restricted domain.",
+    "boundary_defect": "The R-484 square-to-split boundary has exact hidden-diagonal defect 16/9 and is retained. It is outside cl(f) once n>=N(f); this is a locality statement, not deletion of the defect.",
+    "conditional_locality_statement": "If p_(n+1,n) is total on the chosen state domain, the rootwise local tuples agree for n>=N(f) and the pointwise generator defect is zero. The full Omega_(n+1,Q) domain is not yet shown to satisfy that premise for Q>0."
+  },
+  "domain_obstruction": {
+    "witness": "For any n>=2, take a valid fine state in Omega_(n+1,Q=1) with ell_(n+2,0)=1 and every old ell_v=0; assign any admitted apertures, phases and links.",
+    "projection_image": "The declared neutral projection drops the new column, so the retained charge sum is 0, not Q=1.",
+    "consequence": "p_(n+1,n) is not a map Omega_(n+1,1)->Omega_(n,1). Therefore I_(n,n+1) and I_(n,n+1)L_n are not defined on the full fine Gibbs domain, and an all-state exact intertwining theorem cannot be claimed without a source-authorized domain repair.",
+    "weak_l2_scope": "The witness has strictly positive finite PAH-OMC-010 Gibbs weight, so the full-domain lifted observable and its weighted L2 defect are undefined rather than proved zero. This packet does not assert that every image-restricted weak L2 limit fails."
+  },
+  "status": {
+    "verdict": "HOLD_FOR_EVIDENCE",
+    "classification": "IMAGE_LOCALITY_PROVED_GLOBAL_FIXED_Q_COMMON_DOMAIN_MISSING",
+    "claim_bearing": false,
+    "stage2_status": "HOLD_FOR_EVIDENCE",
+    "active_gate_change": false
+  },
+  "acceptance": {
+    "primary": "Hash-pin all parent bytes, verify the strip/root formulas, prove the explicit N(f) locality rule and exact Q=1 projection obstruction.",
+    "independent": "Rebuild the charge and support arguments directly without importing the primary implementation.",
+    "hostile": "Reject any attempted Q=0 substitution, image-only result reported as all-state, conditional averaging, rate fitting, C_sw-as-proof, off-by-one N(f), or physical promotion.",
+    "lean": "Formalize the exact charge-loss witness, N(f) separation arithmetic, retained R-484 defect, C_sw role and non-promotion firewall.",
+    "release": "All generated ledgers and release checks must pass; no gate or claim tier changes."
+  },
+  "known_boundaries": [
+    "R-484 proves only the Q=0 anchor-aperture patch, and R-488 proves only the Q=1 G_2->G_3 four-coordinate patch fixture; neither is an all-cylinder theorem.",
+    "The neutral inclusion is total on the Q=0 slice and on the R-488 patch image, but totality on the full Q=1 state spaces is missing.",
+    "C_sw=540 is a domination constant from R-490 and cannot define a common core or establish exact intertwining.",
+    "No weak Gibbs-L2 convergence statement is available until the lift is a function on the full weighted domain.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "falsifiers": [
+    "Any parent hash differs or any parent functional/rate is changed.",
+    "The charge-loss witness is not a valid state of the displayed PAH-001 Q=1 domain.",
+    "A source-authorized full-Q domain map is supplied and independently proves projection totality and rootwise equality for every finite-support cylinder.",
+    "The exact R-484 defect is erased, averaged away or numerically replaced.",
+    "C_sw is used as a substitute for a rootwise intertwining proof or a Q=0 calculation is promoted to Q=1 all-state evidence."
+  ],
+  "non_claims": [
+    "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+    "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+    "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+    "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+    "Markov time is external stochastic time only.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "single_next_question": "Can a source-authorized fixed-Q common domain (or an explicitly admitted full-Q refinement map) make p_(n+1,n) total while preserving the unchanged PAH-001 root rates for every finite-support cylinder, without conditional averaging or changing the model?",
+  "revisit_condition": "Reopen only after that one domain/map contract is hash-pinned and an independent rootwise proof covers all full-Q states; then test weighted L2 convergence separately.",
+  "reproduction": {
+    "primary": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/primary.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/independent.json",
+    "hostile": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/hostile.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc011_eventual_intertwining_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R491.lean"
+  }
+}

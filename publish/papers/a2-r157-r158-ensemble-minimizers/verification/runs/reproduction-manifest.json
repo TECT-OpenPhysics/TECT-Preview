@@ -7,10 +7,10 @@
         "verdict": "PAPER-ANALYTIC-DEPENDENCY-AUDIT-PASS"
       },
       "manifest_sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
-      "manuscript_sha256": "6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155",
+      "manuscript_sha256": "2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768",
       "passed": 50,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/analytic-dependency.json",
-      "sha256": "469b0045379e8ebb4e6bf2b36741d11360a55f25f003655e1c3ad814ab2b993d",
+      "sha256": "700aca0fbbbbe89e82634f520e7df3ff80ddfec359e596966f5502382ff32039",
       "total": 50,
       "verdict": "PAPER-ANALYTIC-DEPENDENCY-AUDIT-PASS"
     },
@@ -28,6 +28,20 @@
       "total": 8,
       "verdict": "PAPER-CLASSII-SIGN-AUDIT-PASS"
     },
+    "clean-snapshot-replay": {
+      "expected": {
+        "passed": 14,
+        "total": 14,
+        "verdict": "PAPER-CLEAN-SNAPSHOT-REPLAY-PASS"
+      },
+      "manifest_sha256": null,
+      "manuscript_sha256": null,
+      "passed": 14,
+      "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/clean-snapshot-replay.json",
+      "sha256": "d74824bcef083e71e327300a4fb7802f47f380f95cf7522b50b329d6cead78b2",
+      "total": 14,
+      "verdict": "PAPER-CLEAN-SNAPSHOT-REPLAY-PASS"
+    },
     "ensemble-identity": {
       "expected": {
         "passed": 24,
@@ -35,10 +49,10 @@
         "verdict": "PAPER-ENSEMBLE-IDENTITY-AUDIT-PASS"
       },
       "manifest_sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
-      "manuscript_sha256": "6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155",
+      "manuscript_sha256": "2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768",
       "passed": 24,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/ensemble-identity.json",
-      "sha256": "402d136edefa39fd5a4ef0d2eefd85143202348e93fb972c89c24b4fd72859fd",
+      "sha256": "55751c7578a06eec954045d2c903c0d1a248ad824b6724b7a0e9f8145d0adb6d",
       "total": 24,
       "verdict": "PAPER-ENSEMBLE-IDENTITY-AUDIT-PASS"
     },
@@ -49,10 +63,10 @@
         "verdict": "PAPER-EXACT-COERCIVITY-AUDIT-PASS"
       },
       "manifest_sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
-      "manuscript_sha256": "6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155",
+      "manuscript_sha256": "2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768",
       "passed": 13,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/exact-coercivity.json",
-      "sha256": "7fe26690308fb4a4328087314d8d2ddc2de281b3245394b135904c8b0b8d8bc0",
+      "sha256": "ec0f6406ff200804d9e555a610915e8931a895b88583448d7fbfb15df7cf3a8e",
       "total": 13,
       "verdict": "PAPER-EXACT-COERCIVITY-AUDIT-PASS"
     },
@@ -63,10 +77,10 @@
         "verdict": "PAPER-REVIEW-PACKET-AUDIT-PASS"
       },
       "manifest_sha256": null,
-      "manuscript_sha256": "6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155",
+      "manuscript_sha256": "2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768",
       "passed": 22,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/review-packet.json",
-      "sha256": "352df45940affb932f1ff7027735da40e204e3191ce50d78210270ee6c285c99",
+      "sha256": "b26ffbef6832e93d53ccb0ecc5e8e707c012505314df4e01d9a537f87583c029",
       "total": 22,
       "verdict": "PAPER-REVIEW-PACKET-AUDIT-PASS"
     }
@@ -85,6 +99,7 @@
     "publish/papers/a2-r157-r158-ensemble-minimizers/verification/ensemble_identity_audit.py",
     "publish/papers/a2-r157-r158-ensemble-minimizers/verification/analytic_dependency_audit.py",
     "publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/verification/clean_snapshot_replay.py",
     "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py"
   ],
   "expected_commands": [
@@ -154,6 +169,11 @@
       "scope": "blank external-review packet structure and hash consistency"
     },
     {
+      "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/clean_snapshot_replay.py --self-test",
+      "expected": "PAPER-CLEAN-SNAPSHOT-REPLAY-PASS: 14/14",
+      "scope": "clean committed-source orchestration of the fourteen nested replay commands"
+    },
+    {
       "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py --self-test",
       "expected": "PAPER-REPRODUCTION-MANIFEST-PASS",
       "scope": "hash-pinned package and replay-input integrity"
@@ -161,14 +181,14 @@
   ],
   "files": [
     {
-      "bytes": 20551,
+      "bytes": 22514,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/README.md",
-      "sha256": "18d6a006034dde49b8fe985c069be7445f76be0172e578c52e5c0c9208c49190"
+      "sha256": "58c9afb81dc879f61350a163f6b4b521e8ae47e66484004750c482ccd9ad69ad"
     },
     {
-      "bytes": 27604,
+      "bytes": 29247,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/STATUS.md",
-      "sha256": "af5bab68522293d87c94a9941b998c4eb51f25952a1afec97f84a321992f4313"
+      "sha256": "662be03f0c56067f4fd66a1a4ee0f55d68db82b69c1244c8405062fd7c9df7bc"
     },
     {
       "bytes": 1555,
@@ -176,19 +196,19 @@
       "sha256": "9121c9e6dfcaa4888fb77fbe7f651affcf4ab935c7e7ef6d983bacb7d1615688"
     },
     {
-      "bytes": 10424,
+      "bytes": 11258,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/external-review-handoff.md",
-      "sha256": "33711c048d50819eec1956d764cc621bcfd56afb67f73565a0a7624503778041"
+      "sha256": "8f8d34cb1a4ed6c50a2d8e98646c1c23bd97966daab90a688d2757e9529f481a"
     },
     {
       "bytes": 9044,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/independent-proof-review-form.md",
-      "sha256": "abdd1870d2d29c02d2fa5043a05e4c6e7a7250be8693cd1f8a9cdf11d97d9319"
+      "sha256": "795a0fd41603852a7bf92a0892a1bc121be4d4d903c8983b76bf66d7e08d3844"
     },
     {
-      "bytes": 6373,
+      "bytes": 6443,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/specialist-novelty-review-form.md",
-      "sha256": "be4e7e903e630942ccd41f12309c44d35755f63fe5404d7387076c72a08f3dca"
+      "sha256": "0096437588d1549bd84653f7d91f42b88e8e3d9c934c55a2805c4f0edda8f4f5"
     },
     {
       "bytes": 4452,
@@ -196,39 +216,39 @@
       "sha256": "31c54785f7bbd5164c6c7755581fc7e2fb6c728b1cfec13a8bac98dbaf0d9036"
     },
     {
-      "bytes": 7480,
+      "bytes": 7772,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/submission-readiness.md",
-      "sha256": "cc1908db186861d783a638fa7e45b22c2bbf3b8056e027358c43ae8b507c9782"
+      "sha256": "fabc4e07d5e6ea0de88a672be767724f2b649b64d822c87f7bbef12402971928"
     },
     {
       "bytes": 8251,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/theorem-applicability-audit.md",
-      "sha256": "aa1df5bef67765415990f61572002aa367d19963c91ee51d9b152b651f34f397"
+      "sha256": "75ee3d0f69ae63e6124d29bf236aeea4b34eb6e06b78100da4e18e614ac40f32"
     },
     {
-      "bytes": 10791,
+      "bytes": 12563,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/literature-crosswalk.md",
-      "sha256": "bd2827ba8ce8f434d16d35689b1b5bd8310ac53c84106bacc932b83e6946ada8"
+      "sha256": "06f62c6fc9e0cf8d3c80cf6d5d5f9a96f437427062bcb8897475b8b93fb00e3e"
     },
     {
-      "bytes": 60894,
+      "bytes": 62362,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.tex",
-      "sha256": "6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155"
+      "sha256": "2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768"
     },
     {
-      "bytes": 176368,
+      "bytes": 177947,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.pdf",
-      "sha256": "28bbb7d231dfcd0abc75b657e4a2d8556fc491d284bfecf7fb8757ce6dfacb07"
+      "sha256": "2edfb63ea7f884ff0faaaed9d3057e4baa2c4cff62ba038ffed146f4673f9b64"
     },
     {
-      "bytes": 18708,
+      "bytes": 18785,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/proof-audit.md",
-      "sha256": "73f3ff1483697ec618ba32de550785e07a47f6cfd7cdf511dd65dcfa1e52c65c"
+      "sha256": "8117b09ec0ba1fd548a222f2b305d0bba1269a119cb42e6dc64cb5ee6bb2d4c3"
     },
     {
-      "bytes": 14685,
+      "bytes": 16196,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/README.md",
-      "sha256": "ecae0c795921462b156893c1316147fb2356ef8bd976799dbf60036a881945a2"
+      "sha256": "1385b1ea145ec88ca3704c8bccb909c79931bb2ac4c17b2abcb11d643840a284"
     },
     {
       "bytes": 6752,
@@ -251,19 +271,24 @@
       "sha256": "204a81bb27f30222120129fbaf3389bdef804c7b39df21b5b772a431d33ab68d"
     },
     {
-      "bytes": 9176,
+      "bytes": 9209,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py",
-      "sha256": "1cdeda7599c434a81856782bece62ba99af1c5872ba733ff27b6318642503c0b"
+      "sha256": "64890396dddce0051d19f24352bed05d86d7488f03d8b3d10825c7fad833d0a8"
     },
     {
-      "bytes": 12904,
+      "bytes": 15396,
+      "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/clean_snapshot_replay.py",
+      "sha256": "1919e73ca859b5ae63095d554d707efd8af6d31b86c8eac9045a7fac4baa4950"
+    },
+    {
+      "bytes": 13413,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py",
-      "sha256": "a0b8169e2d7f599fbc2d6423a86366ec568882f5bb747fb4804ac64ab37e98d6"
+      "sha256": "39544e36ae28f27b8726af47309830ac9bf72a2bea88ecdaf1917935f60b19fb"
     },
     {
       "bytes": 3443,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/exact-coercivity.json",
-      "sha256": "7fe26690308fb4a4328087314d8d2ddc2de281b3245394b135904c8b0b8d8bc0"
+      "sha256": "ec0f6406ff200804d9e555a610915e8931a895b88583448d7fbfb15df7cf3a8e"
     },
     {
       "bytes": 1493,
@@ -273,31 +298,36 @@
     {
       "bytes": 5154,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/ensemble-identity.json",
-      "sha256": "402d136edefa39fd5a4ef0d2eefd85143202348e93fb972c89c24b4fd72859fd"
+      "sha256": "55751c7578a06eec954045d2c903c0d1a248ad824b6724b7a0e9f8145d0adb6d"
     },
     {
       "bytes": 10122,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/analytic-dependency.json",
-      "sha256": "469b0045379e8ebb4e6bf2b36741d11360a55f25f003655e1c3ad814ab2b993d"
+      "sha256": "700aca0fbbbbe89e82634f520e7df3ff80ddfec359e596966f5502382ff32039"
     },
     {
-      "bytes": 1914,
+      "bytes": 1915,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/review-packet.json",
-      "sha256": "352df45940affb932f1ff7027735da40e204e3191ce50d78210270ee6c285c99"
+      "sha256": "b26ffbef6832e93d53ccb0ecc5e8e707c012505314df4e01d9a537f87583c029"
+    },
+    {
+      "bytes": 12756,
+      "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/runs/clean-snapshot-replay.json",
+      "sha256": "d74824bcef083e71e327300a4fb7802f47f380f95cf7522b50b329d6cead78b2"
     }
   ],
-  "generated_at": "2026-09-04T03:59:37Z",
+  "generated_at": "2026-09-04T04:56:18Z",
   "generator": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py",
   "integrity": {
     "all_package_files_present": true,
     "all_replay_inputs_present": true,
     "artifact_manuscript_hashes_match": true,
     "audit_verdicts_and_counts_match": true,
-    "replay_command_count": 14,
-    "replay_input_count": 14,
+    "replay_command_count": 15,
+    "replay_input_count": 15,
     "verification_readme_command_paths_match": true
   },
-  "manuscript_sha256": "6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155",
+  "manuscript_sha256": "2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768",
   "missing_replay_inputs": [],
   "non_claims": [
     "This manifest proves package integrity only; it is not an analytic proof or external review.",
@@ -370,14 +400,19 @@
       "sha256": "204a81bb27f30222120129fbaf3389bdef804c7b39df21b5b772a431d33ab68d"
     },
     {
-      "bytes": 9176,
+      "bytes": 9209,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py",
-      "sha256": "1cdeda7599c434a81856782bece62ba99af1c5872ba733ff27b6318642503c0b"
+      "sha256": "64890396dddce0051d19f24352bed05d86d7488f03d8b3d10825c7fad833d0a8"
     },
     {
-      "bytes": 12904,
+      "bytes": 15396,
+      "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/clean_snapshot_replay.py",
+      "sha256": "1919e73ca859b5ae63095d554d707efd8af6d31b86c8eac9045a7fac4baa4950"
+    },
+    {
+      "bytes": 13413,
       "path": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py",
-      "sha256": "a0b8169e2d7f599fbc2d6423a86366ec568882f5bb747fb4804ac64ab37e98d6"
+      "sha256": "39544e36ae28f27b8726af47309830ac9bf72a2bea88ecdaf1917935f60b19fb"
     }
   ],
   "schema": "tect/paper-reproduction-manifest/1.1",

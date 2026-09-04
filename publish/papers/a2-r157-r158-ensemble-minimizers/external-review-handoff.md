@@ -1,6 +1,6 @@
 # External-review handoff — A2/R-157/R-158 draft
 
-Status: draft v0.1.39, finite classical side-16 torus only.  This handoff is
+Status: draft v0.1.40, finite classical side-16 torus only.  This handoff is
 an invitation and a review protocol; it is not evidence that an external
 mathematician, source owner, operator, or specialist has already reviewed the
 paper.
@@ -74,7 +74,13 @@ assurance-only sidecar and is not load-bearing theorem evidence.
 
 ## Reproduction package
 
-Run from `E:\Dev\TECT` with the repository environment:
+Run from `E:\Dev\TECT` with the repository environment.  Install the Python
+dependencies from `requirements.txt` first; the primary R-157/R-158 lanes
+require the pinned `sympy==1.14.0`.  The clean-snapshot orchestrator archives
+the committed tree rather than copying the working directory.  Its non-bearing
+R-472 step additionally requires the pinned Lean toolchain and a resolved
+Mathlib `.lake` cache; pass a different cache explicitly with `--lean-cache`
+when it is not located at `verification/lean/.lake`.
 
 ```powershell
 $py = "E:\Dev\TECT.venv\Scripts\python.exe"
@@ -91,14 +97,20 @@ $py = "E:\Dev\TECT.venv\Scripts\python.exe"
 & $py -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/ensemble_identity_audit.py
 & $py -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/analytic_dependency_audit.py
 & $py -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py --self-test
+& $py -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/clean_snapshot_replay.py --self-test
 & $py -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py --self-test
 ```
 
 The current finite replay is A2 `61/61`, R-157 `144/144`, R-158 `155/155`,
-paper-local `13/13`, `8/8`, `24/24`, `50/50`, and review-packet `22/22`.  The 16-page v0.1.39 PDF with fifteen references was built
+paper-local `13/13`, `8/8`, `24/24`, `50/50`, and review-packet `22/22`.  The 17-page v0.1.40 PDF with seventeen references was built
 with bundled Tectonic and visually inspected.  The JSON artifacts under
 `verification/runs/` contain source hashes and per-assertion outcomes.  The
 analytic-dependency artifact checks structural prerequisites only, including the explicit coefficient/product H2-to-L2 local-Lipschitz and modewise fractional-semigroup bounds, the projected chain-rule limit, the endpoint-integrability estimate, the periodic Moser tame bound, the shifted-base endpoint bootstrap, the strict Hölder range, the split-kernel integral, the full Hölder norm, and the endpoint semigroup factor, the explicit temporal Banach-scale map, the $D^jN$ bound, and the four-spatial-derivative temporal induction, and the finite-interval `L^2(0,T;L^2)` endpoint control for the `s=0` energy identity, the projected initial-data/initial-energy convergence, the direct mild contraction, Fourier compactness proof, singular-Grönwall reduction, and the Hilbert-scale `C([0,T];H^2)` quadratic identity through `s=0`; it is not a replacement for this review.  The hypothesis-by-hypothesis external-theorem map is `theorem-applicability-audit.md`. The hash-pinned `source-sign-reconciliation.md` fixes the two convention branches and the source-owner response schema.  The requirement matrix and promotion rules are summarized in `submission-readiness.md`.  `verification/runs/reproduction-manifest.json` records the package file hashes and expected replay outputs for independent reproduction (`EXP-001419`; focused literature crosswalk and v0.1.26 update `EXP-001421`--`EXP-001422`; source-sign aid `EXP-001425`; v0.1.27 Hölder proof repair `EXP-001426`; v0.1.28 shifted-base proof repair `EXP-001430`; v0.1.29 endpoint-estimate repair and governed release recheck `EXP-001432`; v0.1.30 explicit endpoint-constant repair and governed release recheck `EXP-001435`; v0.1.31 temporal-bootstrap repair and governed release recheck `EXP-001436`; v0.1.32 finite-interval time-derivative endpoint repair and governed release recheck `EXP-001437`; v0.1.33 repository-status wording synchronization and governed release recheck `EXP-001439`; v0.1.34 bibliography-layout compaction `EXP-001440` and final manifest/governed release recheck `EXP-001441`; v0.1.35 closest-quasilinear-source boundary `EXP-001442` and synchronized manifest/governed release recheck `EXP-001443`; v0.1.36 Galerkin/Hilbert-scale proof repair `EXP-001444`, provenance-only correction `TC-0015`, and finite replay/manifest/governed release recheck `EXP-001445`; v0.1.37 direct-analytic proof and applicability repair `EXP-001446` and synchronized finite replay/manifest/rendered-PDF/governed release PASS `EXP-001447`; v0.1.38 stable theorem labels, blank signed-review contracts, packet audit and full replay `EXP-001449`, followed by governed regeneration and release PASS `EXP-001450`; historical temporal correction `TC-0014`).
+
+The v0.1.40 coupled-system literature repair, 17-page visual review, and
+isolated `14/14` replay are recorded in `EXP-001458`; the subsequent combined
+shared-tree repository release PASS is recorded in `EXP-001459`.  Neither is a
+signed proof or novelty response.
 
 ## Frozen blank response contracts
 

@@ -1,0 +1,3253 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 17,
+  "assertions": [
+    {
+      "actual": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+      "expected": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+      "name": "contract hash pinned",
+      "pass": true
+    },
+    {
+      "actual": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+        "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+      },
+      "expected": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+        "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+        "PAH-OMC-011-MANIFEST": "81909dff9b3703042a44da59966fab83270abcd59f185f1a7b0834b360eaf7af",
+        "R491-Lean": "a89600b59d6b5af2cb3b8cafb033ac8869075e34f71c855cc73c3045dc169141"
+      },
+      "name": "parent hashes pinned",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "contract": {
+          "id": "PAH-OMC-011",
+          "path": "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+          "sha256": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020"
+        },
+        "lean": {
+          "declarations": [
+            "neutral_projection_loses_new_charge",
+            "neutral_projection_not_total_q_one",
+            "stabilization_stage_exact",
+            "boundary_support_separated",
+            "r484_boundary_defect_exact",
+            "csw_is_domination_only",
+            "non_promotion_firewall"
+          ],
+          "path": "verification/lean/Tect/R491.lean",
+          "sha256": "a89600b59d6b5af2cb3b8cafb033ac8869075e34f71c855cc73c3045dc169141"
+        },
+        "manifest_id": "PAH-OMC-011-EVENTUAL-INTERTWINING-MANIFEST-001",
+        "no_parent_mutation": true,
+        "parents": {
+          "PAH-001": {
+            "path": "strategy/pa-hyp/PAH-001-v1.json",
+            "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+          },
+          "PAH-OMC-004": {
+            "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+            "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+          },
+          "PAH-OMC-008": {
+            "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+            "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+          },
+          "PAH-OMC-010": {
+            "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+            "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+          },
+          "PAH-OMC-010-MANIFEST": {
+            "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-manifest.json",
+            "sha256": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3"
+          },
+          "R-484": {
+            "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+            "sha256": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e"
+          },
+          "R-484-CERTIFICATE": {
+            "path": "strategy/pa-hyp/R484-certificate.md",
+            "sha256": "a2e132bcf1c44f339cd8faf7b675796e3a680629c03bdb7adc1bd2bd9ed4bf29"
+          },
+          "R-484-MANIFEST": {
+            "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-manifest.json",
+            "sha256": "88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57"
+          },
+          "R-490-CERTIFICATE": {
+            "path": "strategy/pa-hyp/R490-certificate.md",
+            "sha256": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+          }
+        },
+        "physical_promotion": false,
+        "runs": {
+          "directory": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining",
+          "hostile": "hostile.json",
+          "independent": "independent.json",
+          "integrated": "integrated.json",
+          "primary": "primary.json"
+        },
+        "schema": "tect/pre-a-owner-morphism-eventual-intertwining-manifest/1.0",
+        "scope": "Image-restricted locality and exact fixed-Q projection-domain obstruction for PAH-OMC-011; no all-state generator intertwining or weak Gibbs-L2 convergence claim.",
+        "status": "HOLD_FOR_EVIDENCE"
+      },
+      "expected": "HOLD_FOR_EVIDENCE/non-bearing/no gate change",
+      "name": "manifest status",
+      "pass": true
+    },
+    {
+      "actual": {
+        "no_conditional_gibbs_average": true,
+        "no_counterterm": true,
+        "no_fixed_rmax_bypass": true,
+        "no_new_carrier": true,
+        "no_new_hamiltonian": true,
+        "no_physical_identification": true,
+        "no_q3lock_import": true,
+        "no_rate_fitting": true,
+        "parent_functional_unchanged": true,
+        "parent_limit_order_unchanged": true,
+        "parent_mobility_unchanged": true,
+        "parent_move_families_unchanged": true,
+        "parent_regulator_path_unchanged": true
+      },
+      "expected": "all true",
+      "name": "firewall",
+      "pass": true
+    },
+    {
+      "actual": "PAH-OMC-011",
+      "expected": "PAH-OMC-011",
+      "name": "source identity",
+      "pass": true
+    },
+    {
+      "actual": {
+        "assertion_count": 19,
+        "passed": 19,
+        "payload": {
+          "active_gate_change": false,
+          "assertion_count": 19,
+          "assertions": [
+            {
+              "detail": {
+                "actual": {
+                  "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                  "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                  "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                  "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                  "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                  "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+                  "R-484-MANIFEST": "88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57"
+                },
+                "expected": {
+                  "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                  "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                  "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                  "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                  "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                  "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+                  "R-484-MANIFEST": "88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57"
+                }
+              },
+              "name": "parent-hashes",
+              "passed": true
+            },
+            {
+              "detail": {
+                "PAH-001": "PAH-001",
+                "boundary": "PAH-OMC-004-GEN-001",
+                "geometry": "PAH-OMC-004",
+                "start": "PAH-OMC-008",
+                "weight": "PAH-OMC-010"
+              },
+              "name": "source-identities",
+              "passed": true
+            },
+            {
+              "detail": {
+                "no_conditional_gibbs_average": true,
+                "no_counterterm": true,
+                "no_fixed_rmax_bypass": true,
+                "no_new_carrier": true,
+                "no_new_hamiltonian": true,
+                "no_physical_identification": true,
+                "no_q3lock_import": true,
+                "no_rate_fitting": true,
+                "parent_functional_unchanged": true,
+                "parent_limit_order_unchanged": true,
+                "parent_mobility_unchanged": true,
+                "parent_move_families_unchanged": true,
+                "parent_regulator_path_unchanged": true
+              },
+              "name": "preservation-firewall",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "displayed-functional-and-generator-unchanged",
+              "passed": true
+            },
+            {
+              "detail": {
+                "anchors": "O={(0,0)} and C={(0,1)}; the declared anchor-preserving automorphism is the identity.",
+                "carrier_family": "The unchanged PAH-OMC-004 two-row strip G_n for every integer n>=2: V_n={(i,j):0<=i<=n+1,j in {0,1}}, h_i^j for 0<=i<=n, v_i for 0<=i<=n+1, d_i for 0<=i<n, split triangles for i<n and the unsplit frontier square q_n.",
+                "common_cylinder_algebra": "A_cyl^R488 is the algebraic union of bounded gauge- and anchor-automorphism-invariant functions of finitely many integer coordinates ell_v and finitely many closed-face holonomy characters. The R-488 four-coordinate generators (ell_a,ell_d,H_0,H_1) are included.",
+                "functional": "Use exactly PAH-001 F_rho, including onsite, aperture stiffness, covariant matter edge and plaquette Wilson terms, with no added term or changed coefficient.",
+                "generator_domain": "D_(n,Q) is the finite-dimensional space of all bounded functions on the full displayed fixed-Q state space Omega_(n,Q), with L_n given by the unchanged PAH-001 directed-root midpoint rates.",
+                "gibbs_norm": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+                "limit": "No infinite-volume, continuum, physical-sector or observation limit is taken in this packet. n is a finite refinement label and R is held fixed for the domain audit.",
+                "neutral_refinement": "I_(n,n+1) is the pointwise lift f composed with p_(n+1,n), where p retains every old geometric coordinate and drops the new column n+2 and newly split diagonal d_n; the dropped aperture, radial, phase and link coordinates are assigned neutral values only for the forward inclusion.",
+                "regulator": "Use the unchanged PAH-001 finite regulator and, for the R-488/R-490 path, K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; n>=2 and R_max=R>=1 are the only OMC-010 uniform labels.",
+                "root_correspondence": "On the image of the neutral inclusion, each retained old PAH root keeps its exact geometric label, admissibility, delta-F, endpoint mobility, midpoint rate and cylinder increment. Roots whose support is outside the interaction closure of f have zero f-increment. No source/rate is altered."
+              },
+              "name": "declared-domain-and-algebra",
+              "passed": true
+            },
+            {
+              "detail": "I_(n,n+1) is the pointwise lift f composed with p_(n+1,n), where p retains every old geometric coordinate and drops the new column n+2 and newly split diagonal d_n; the dropped aperture, radial, phase and link coordinates are assigned neutral values only for the forward inclusion.",
+              "name": "neutral-map-frozen",
+              "passed": true
+            },
+            {
+              "detail": "The cylinder basis is every bounded function of (ell_a,ell_d,H_0,H_1). H_0 is the Z_2 character of the first split triangle h00 v1 d0^{-1}; H_1 is the Z_2 character of the second split triangle d0 h01^{-1} v0^{-1}. Both matter coordinates are gauge neutral.",
+              "name": "r488-generator-included",
+              "passed": true
+            },
+            {
+              "detail": {
+                "M_psi": 1,
+                "Q": 1,
+                "ell": {
+                  "0,0": 0,
+                  "0,1": 0,
+                  "1,0": 0,
+                  "1,1": 0,
+                  "2,0": 0,
+                  "2,1": 0,
+                  "3,0": 0,
+                  "3,1": 0,
+                  "4,0": 1,
+                  "4,1": 0
+                },
+                "sum_ell": 1
+              },
+              "name": "fine-witness-valid-Q-one",
+              "passed": true
+            },
+            {
+              "detail": {
+                "fine_Q": 1,
+                "new_vertex": [
+                  4,
+                  0
+                ],
+                "projected_Q": 0
+              },
+              "name": "neutral-projection-charge-loss",
+              "passed": true
+            },
+            {
+              "detail": {
+                "consequence": "p_(n+1,n) is not a map Omega_(n+1,1)->Omega_(n,1). Therefore I_(n,n+1) and I_(n,n+1)L_n are not defined on the full fine Gibbs domain, and an all-state exact intertwining theorem cannot be claimed without a source-authorized domain repair.",
+                "projection_image": "The declared neutral projection drops the new column, so the retained charge sum is 0, not Q=1.",
+                "weak_l2_scope": "The witness has strictly positive finite PAH-OMC-010 Gibbs weight, so the full-domain lifted observable and its weighted L2 defect are undefined rather than proved zero. This packet does not assert that every image-restricted weak L2 limit fails.",
+                "witness": "For any n>=2, take a valid fine state in Omega_(n+1,Q=1) with ell_(n+2,0)=1 and every old ell_v=0; assign any admitted apertures, phases and links."
+              },
+              "name": "projection-not-total-on-full-Q-one",
+              "passed": true
+            },
+            {
+              "detail": [
+                {
+                  "N_f": 2,
+                  "frontier_columns": [
+                    [
+                      2,
+                      3,
+                      4
+                    ],
+                    [
+                      3,
+                      4,
+                      5
+                    ]
+                  ],
+                  "m_f": -1,
+                  "separated": true,
+                  "tested_n": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "N_f": 2,
+                  "frontier_columns": [
+                    [
+                      2,
+                      3,
+                      4
+                    ],
+                    [
+                      3,
+                      4,
+                      5
+                    ]
+                  ],
+                  "m_f": 0,
+                  "separated": true,
+                  "tested_n": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "N_f": 2,
+                  "frontier_columns": [
+                    [
+                      2,
+                      3,
+                      4
+                    ],
+                    [
+                      3,
+                      4,
+                      5
+                    ]
+                  ],
+                  "m_f": 1,
+                  "separated": true,
+                  "tested_n": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "N_f": 5,
+                  "frontier_columns": [
+                    [
+                      5,
+                      6,
+                      7
+                    ],
+                    [
+                      6,
+                      7,
+                      8
+                    ]
+                  ],
+                  "m_f": 4,
+                  "separated": true,
+                  "tested_n": [
+                    5,
+                    6
+                  ]
+                },
+                {
+                  "N_f": 10,
+                  "frontier_columns": [
+                    [
+                      10,
+                      11,
+                      12
+                    ],
+                    [
+                      11,
+                      12,
+                      13
+                    ]
+                  ],
+                  "m_f": 9,
+                  "separated": true,
+                  "tested_n": [
+                    10,
+                    11
+                  ]
+                }
+              ],
+              "name": "explicit-Nf-rule",
+              "passed": true
+            },
+            {
+              "detail": [
+                {
+                  "N_f": 2,
+                  "frontier_columns": [
+                    [
+                      2,
+                      3,
+                      4
+                    ],
+                    [
+                      3,
+                      4,
+                      5
+                    ]
+                  ],
+                  "m_f": -1,
+                  "separated": true,
+                  "tested_n": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "N_f": 2,
+                  "frontier_columns": [
+                    [
+                      2,
+                      3,
+                      4
+                    ],
+                    [
+                      3,
+                      4,
+                      5
+                    ]
+                  ],
+                  "m_f": 0,
+                  "separated": true,
+                  "tested_n": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "N_f": 2,
+                  "frontier_columns": [
+                    [
+                      2,
+                      3,
+                      4
+                    ],
+                    [
+                      3,
+                      4,
+                      5
+                    ]
+                  ],
+                  "m_f": 1,
+                  "separated": true,
+                  "tested_n": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "N_f": 5,
+                  "frontier_columns": [
+                    [
+                      5,
+                      6,
+                      7
+                    ],
+                    [
+                      6,
+                      7,
+                      8
+                    ]
+                  ],
+                  "m_f": 4,
+                  "separated": true,
+                  "tested_n": [
+                    5,
+                    6
+                  ]
+                },
+                {
+                  "N_f": 10,
+                  "frontier_columns": [
+                    [
+                      10,
+                      11,
+                      12
+                    ],
+                    [
+                      11,
+                      12,
+                      13
+                    ]
+                  ],
+                  "m_f": 9,
+                  "separated": true,
+                  "tested_n": [
+                    10,
+                    11
+                  ]
+                }
+              ],
+              "name": "frontier-separated-after-Nf",
+              "passed": true
+            },
+            {
+              "detail": {
+                "N_f": 2,
+                "frontier_columns": [
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    4,
+                    5
+                  ]
+                ],
+                "m_f": 1,
+                "separated": true,
+                "tested_n": [
+                  2,
+                  3
+                ]
+              },
+              "name": "r488-closure-stage",
+              "passed": true
+            },
+            {
+              "detail": {
+                "coarse_delta_F": "1/8",
+                "fine_even_delta_F": "1/4",
+                "fine_odd_delta_F": "-55/36",
+                "hidden_diagonal_defect": "16/9"
+              },
+              "name": "r484-boundary-defect-retained",
+              "passed": true
+            },
+            {
+              "detail": "The R-484 square-to-split boundary has exact hidden-diagonal defect 16/9 and is retained. It is outside cl(f) once n>=N(f); this is a locality statement, not deletion of the defect.",
+              "name": "boundary-separation-is-not-erasure",
+              "passed": true
+            },
+            {
+              "detail": {
+                "C_sw": 540,
+                "role": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof."
+              },
+              "name": "csw-540-source-input",
+              "passed": true
+            },
+            {
+              "detail": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+              "name": "csw-not-intertwining-proof",
+              "passed": true
+            },
+            {
+              "detail": {
+                "R490": "PASS",
+                "weak_l2": "The witness has strictly positive finite PAH-OMC-010 Gibbs weight, so the full-domain lifted observable and its weighted L2 defect are undefined rather than proved zero. This packet does not assert that every image-restricted weak L2 limit fails."
+              },
+              "name": "weak-l2-domain-scope",
+              "passed": true
+            },
+            {
+              "detail": [
+                "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+                "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+                "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+                "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+                "Markov time is external stochastic time only.",
+                "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+              ],
+              "name": "no-physical-promotion",
+              "passed": true
+            }
+          ],
+          "audit_id": "PAH-OMC-011-EVENTUAL-INTERTWINING-PRIMARY-001",
+          "boundary_defect": {
+            "coarse_delta_F": "1/8",
+            "fine_even_delta_F": "1/4",
+            "fine_odd_delta_F": "-55/36",
+            "hidden_diagonal_defect": "16/9"
+          },
+          "claim_bearing": false,
+          "classification": "IMAGE_LOCALITY_PROVED_GLOBAL_FIXED_Q_COMMON_DOMAIN_MISSING",
+          "domain_obstruction": {
+            "exact_scope": {
+              "consequence": "p_(n+1,n) is not a map Omega_(n+1,1)->Omega_(n,1). Therefore I_(n,n+1) and I_(n,n+1)L_n are not defined on the full fine Gibbs domain, and an all-state exact intertwining theorem cannot be claimed without a source-authorized domain repair.",
+              "projection_image": "The declared neutral projection drops the new column, so the retained charge sum is 0, not Q=1.",
+              "weak_l2_scope": "The witness has strictly positive finite PAH-OMC-010 Gibbs weight, so the full-domain lifted observable and its weighted L2 defect are undefined rather than proved zero. This packet does not assert that every image-restricted weak L2 limit fails.",
+              "witness": "For any n>=2, take a valid fine state in Omega_(n+1,Q=1) with ell_(n+2,0)=1 and every old ell_v=0; assign any admitted apertures, phases and links."
+            },
+            "fine_charge": 1,
+            "fine_level": 3,
+            "new_vertex": [
+              4,
+              0
+            ],
+            "old_level": 2,
+            "projected_charge": 0,
+            "projection_total": false
+          },
+          "exploration_id": "EXP-001457",
+          "failed": 0,
+          "next_question": "Can a source-authorized fixed-Q common domain (or an explicitly admitted full-Q refinement map) make p_(n+1,n) total while preserving the unchanged PAH-001 root rates for every finite-support cylinder, without conditional averaging or changing the model?",
+          "non_claims": [
+            "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+            "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+            "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+            "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+            "Markov time is external stochastic time only.",
+            "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+          ],
+          "passed": 19,
+          "physical_progress": false,
+          "reproduction": {
+            "hostile": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/hostile.json",
+            "independent": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/independent.json",
+            "integrated": "python -X utf8 verification/scripts/pah_omc011_eventual_intertwining_verify.py",
+            "lean": "Set-Location verification/lean; lake env lean Tect/R491.lean",
+            "primary": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/primary.json"
+          },
+          "result_id": "R-491",
+          "run_kind": "primary",
+          "schema": "tect/pah-omc011-eventual-intertwining-primary/1.0",
+          "scientific_transition": false,
+          "scope": {
+            "anchors": "O={(0,0)} and C={(0,1)}; the declared anchor-preserving automorphism is the identity.",
+            "carrier_family": "The unchanged PAH-OMC-004 two-row strip G_n for every integer n>=2: V_n={(i,j):0<=i<=n+1,j in {0,1}}, h_i^j for 0<=i<=n, v_i for 0<=i<=n+1, d_i for 0<=i<n, split triangles for i<n and the unsplit frontier square q_n.",
+            "common_cylinder_algebra": "A_cyl^R488 is the algebraic union of bounded gauge- and anchor-automorphism-invariant functions of finitely many integer coordinates ell_v and finitely many closed-face holonomy characters. The R-488 four-coordinate generators (ell_a,ell_d,H_0,H_1) are included.",
+            "functional": "Use exactly PAH-001 F_rho, including onsite, aperture stiffness, covariant matter edge and plaquette Wilson terms, with no added term or changed coefficient.",
+            "generator_domain": "D_(n,Q) is the finite-dimensional space of all bounded functions on the full displayed fixed-Q state space Omega_(n,Q), with L_n given by the unchanged PAH-001 directed-root midpoint rates.",
+            "gibbs_norm": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+            "limit": "No infinite-volume, continuum, physical-sector or observation limit is taken in this packet. n is a finite refinement label and R is held fixed for the domain audit.",
+            "neutral_refinement": "I_(n,n+1) is the pointwise lift f composed with p_(n+1,n), where p retains every old geometric coordinate and drops the new column n+2 and newly split diagonal d_n; the dropped aperture, radial, phase and link coordinates are assigned neutral values only for the forward inclusion.",
+            "regulator": "Use the unchanged PAH-001 finite regulator and, for the R-488/R-490 path, K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; n>=2 and R_max=R>=1 are the only OMC-010 uniform labels.",
+            "root_correspondence": "On the image of the neutral inclusion, each retained old PAH root keeps its exact geometric label, admissibility, delta-F, endpoint mobility, midpoint rate and cylinder increment. Roots whose support is outside the interaction closure of f have zero f-increment. No source/rate is altered."
+          },
+          "source_hashes": {
+            "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+            "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+            "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+            "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+            "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+            "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+            "R-484-MANIFEST": "88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57"
+          },
+          "stabilization": {
+            "image_restricted_statement": "If p_(n+1,n) is total on the chosen state domain, the rootwise local tuples agree for n>=N(f) and the pointwise generator defect is zero. The full Omega_(n+1,Q) domain is not yet shown to satisfy that premise for Q>0.",
+            "rows": [
+              {
+                "N_f": 2,
+                "frontier_columns": [
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    4,
+                    5
+                  ]
+                ],
+                "m_f": -1,
+                "separated": true,
+                "tested_n": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "N_f": 2,
+                "frontier_columns": [
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    4,
+                    5
+                  ]
+                ],
+                "m_f": 0,
+                "separated": true,
+                "tested_n": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "N_f": 2,
+                "frontier_columns": [
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    4,
+                    5
+                  ]
+                ],
+                "m_f": 1,
+                "separated": true,
+                "tested_n": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "N_f": 5,
+                "frontier_columns": [
+                  [
+                    5,
+                    6,
+                    7
+                  ],
+                  [
+                    6,
+                    7,
+                    8
+                  ]
+                ],
+                "m_f": 4,
+                "separated": true,
+                "tested_n": [
+                  5,
+                  6
+                ]
+              },
+              {
+                "N_f": 10,
+                "frontier_columns": [
+                  [
+                    10,
+                    11,
+                    12
+                  ],
+                  [
+                    11,
+                    12,
+                    13
+                  ]
+                ],
+                "m_f": 9,
+                "separated": true,
+                "tested_n": [
+                  10,
+                  11
+                ]
+              }
+            ],
+            "rule": "N(f)=max(2,m_f+1). For every n>=N(f), q_n, the new column n+2 and d_n are disjoint from cl(f), so the R-484 split boundary is separated from the support on the image-restricted domain."
+          },
+          "stage2_status": "HOLD_FOR_EVIDENCE",
+          "state_weighted_input": {
+            "C_sw": 540,
+            "intertwining_proved": false,
+            "role": "domination_only"
+          },
+          "task_id": "T-054",
+          "verdict": "HOLD_FOR_EVIDENCE",
+          "verification": "PASS",
+          "weak_gibbs_l2": {
+            "status": "BLOCKED_UNDEFINED_LIFT_ON_FULL_DOMAIN",
+            "universal_failure_claimed": false
+          }
+        },
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH-OMC-011-EVENTUAL-INTERTWINING-PRIMARY-001 PASS 19/19; verdict=HOLD_FOR_EVIDENCE; projection_total=False; C_sw=540\n",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "verification": "PASS"
+      },
+      "expected": "PASS",
+      "name": "primary subprocess",
+      "pass": true
+    },
+    {
+      "actual": {
+        "assertion_count": 16,
+        "passed": 16,
+        "payload": {
+          "active_gate_change": false,
+          "assertion_count": 16,
+          "assertions": [
+            {
+              "detail": {
+                "actual": {
+                  "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                  "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                  "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                  "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                  "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                  "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e"
+                },
+                "expected": {
+                  "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                  "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                  "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                  "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                  "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                  "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e"
+                }
+              },
+              "name": "independent-parent-hashes",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "independent-source-identities",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "unchanged-rate-text",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "neutral-map-text",
+              "passed": true
+            },
+            {
+              "detail": {
+                "fine_Q": 1,
+                "vertex": [
+                  4,
+                  0
+                ]
+              },
+              "name": "independent-fine-state-q-one",
+              "passed": true
+            },
+            {
+              "detail": {
+                "fine_Q": 1,
+                "retained_Q": 0
+              },
+              "name": "independent-retained-charge-zero",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "independent-projection-domain-obstruction",
+              "passed": true
+            },
+            {
+              "detail": [
+                {
+                  "N_f": 2,
+                  "m_f": -1,
+                  "rows": [
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        2,
+                        3,
+                        4
+                      ],
+                      "n": 2
+                    },
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        3,
+                        4,
+                        5
+                      ],
+                      "n": 3
+                    }
+                  ],
+                  "separated": true
+                },
+                {
+                  "N_f": 2,
+                  "m_f": 0,
+                  "rows": [
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        2,
+                        3,
+                        4
+                      ],
+                      "n": 2
+                    },
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        3,
+                        4,
+                        5
+                      ],
+                      "n": 3
+                    }
+                  ],
+                  "separated": true
+                },
+                {
+                  "N_f": 2,
+                  "m_f": 1,
+                  "rows": [
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        2,
+                        3,
+                        4
+                      ],
+                      "n": 2
+                    },
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        3,
+                        4,
+                        5
+                      ],
+                      "n": 3
+                    }
+                  ],
+                  "separated": true
+                },
+                {
+                  "N_f": 4,
+                  "m_f": 3,
+                  "rows": [
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        4,
+                        5,
+                        6
+                      ],
+                      "n": 4
+                    },
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        5,
+                        6,
+                        7
+                      ],
+                      "n": 5
+                    }
+                  ],
+                  "separated": true
+                },
+                {
+                  "N_f": 9,
+                  "m_f": 8,
+                  "rows": [
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        9,
+                        10,
+                        11
+                      ],
+                      "n": 9
+                    },
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        10,
+                        11,
+                        12
+                      ],
+                      "n": 10
+                    }
+                  ],
+                  "separated": true
+                }
+              ],
+              "name": "independent-Nf-formula",
+              "passed": true
+            },
+            {
+              "detail": [
+                {
+                  "N_f": 2,
+                  "m_f": -1,
+                  "rows": [
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        2,
+                        3,
+                        4
+                      ],
+                      "n": 2
+                    },
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        3,
+                        4,
+                        5
+                      ],
+                      "n": 3
+                    }
+                  ],
+                  "separated": true
+                },
+                {
+                  "N_f": 2,
+                  "m_f": 0,
+                  "rows": [
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        2,
+                        3,
+                        4
+                      ],
+                      "n": 2
+                    },
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        3,
+                        4,
+                        5
+                      ],
+                      "n": 3
+                    }
+                  ],
+                  "separated": true
+                },
+                {
+                  "N_f": 2,
+                  "m_f": 1,
+                  "rows": [
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        2,
+                        3,
+                        4
+                      ],
+                      "n": 2
+                    },
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        3,
+                        4,
+                        5
+                      ],
+                      "n": 3
+                    }
+                  ],
+                  "separated": true
+                },
+                {
+                  "N_f": 4,
+                  "m_f": 3,
+                  "rows": [
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        4,
+                        5,
+                        6
+                      ],
+                      "n": 4
+                    },
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        5,
+                        6,
+                        7
+                      ],
+                      "n": 5
+                    }
+                  ],
+                  "separated": true
+                },
+                {
+                  "N_f": 9,
+                  "m_f": 8,
+                  "rows": [
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        9,
+                        10,
+                        11
+                      ],
+                      "n": 9
+                    },
+                    {
+                      "all_outside": true,
+                      "frontier_columns": [
+                        10,
+                        11,
+                        12
+                      ],
+                      "n": 10
+                    }
+                  ],
+                  "separated": true
+                }
+              ],
+              "name": "independent-boundary-separation",
+              "passed": true
+            },
+            {
+              "detail": {
+                "N_f": 2,
+                "m_f": 1,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      2,
+                      3,
+                      4
+                    ],
+                    "n": 2
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "n": 3
+                  }
+                ],
+                "separated": true
+              },
+              "name": "independent-r488-Nf",
+              "passed": true
+            },
+            {
+              "detail": {
+                "coarse_delta_F": "1/8",
+                "fine_even_delta_F": "1/4",
+                "fine_odd_delta_F": "-55/36",
+                "hidden_diagonal_defect": "16/9"
+              },
+              "name": "independent-r484-defect",
+              "passed": true
+            },
+            {
+              "detail": "The R-484 square-to-split boundary has exact hidden-diagonal defect 16/9 and is retained. It is outside cl(f) once n>=N(f); this is a locality statement, not deletion of the defect.",
+              "name": "independent-defect-retained",
+              "passed": true
+            },
+            {
+              "detail": {
+                "C_sw": 540,
+                "N_geom": 60,
+                "S_geom": 8,
+                "cofinal_definition": "The cofinal PAH-OMC-004 two-row strip G_n for every integer n>=2, with the same neutral inclusions J_(n,n+1) and the same geometric root-support rule as PAH-OMC-009.",
+                "levels_checked": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20
+                ],
+                "root_count_formula": "4|V_n|+4|E_n|",
+                "template_levels": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "template_pattern_count": 25
+              },
+              "name": "independent-csw-input",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "independent-csw-role",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "independent-weak-l2-scope",
+              "passed": true
+            },
+            {
+              "detail": null,
+              "name": "independent-no-physical",
+              "passed": true
+            }
+          ],
+          "audit_id": "PAH-OMC-011-EVENTUAL-INTERTWINING-INDEPENDENT-001",
+          "boundary_defect": {
+            "coarse_delta_F": "1/8",
+            "fine_even_delta_F": "1/4",
+            "fine_odd_delta_F": "-55/36",
+            "hidden_diagonal_defect": "16/9"
+          },
+          "claim_bearing": false,
+          "classification": "IMAGE_LOCALITY_PROVED_GLOBAL_FIXED_Q_COMMON_DOMAIN_MISSING",
+          "derived": {
+            "locality": [
+              {
+                "N_f": 2,
+                "m_f": -1,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      2,
+                      3,
+                      4
+                    ],
+                    "n": 2
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "n": 3
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 2,
+                "m_f": 0,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      2,
+                      3,
+                      4
+                    ],
+                    "n": 2
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "n": 3
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 2,
+                "m_f": 1,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      2,
+                      3,
+                      4
+                    ],
+                    "n": 2
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "n": 3
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 4,
+                "m_f": 3,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      4,
+                      5,
+                      6
+                    ],
+                    "n": 4
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      5,
+                      6,
+                      7
+                    ],
+                    "n": 5
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 9,
+                "m_f": 8,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      9,
+                      10,
+                      11
+                    ],
+                    "n": 9
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      10,
+                      11,
+                      12
+                    ],
+                    "n": 10
+                  }
+                ],
+                "separated": true
+              }
+            ],
+            "strip_G2_edges": 12,
+            "strip_G2_vertices": 8,
+            "strip_G3_edges": 16,
+            "strip_G3_vertices": 10
+          },
+          "domain_obstruction": {
+            "fine_Q": 1,
+            "fine_level": 3,
+            "new_vertex": [
+              4,
+              0
+            ],
+            "old_level": 2,
+            "projection_total": false,
+            "retained_Q": 0
+          },
+          "exploration_id": "EXP-001457",
+          "failed": 0,
+          "next_question": "Can a source-authorized fixed-Q common domain (or an explicitly admitted full-Q refinement map) make p_(n+1,n) total while preserving the unchanged PAH-001 root rates for every finite-support cylinder, without conditional averaging or changing the model?",
+          "non_claims": [
+            "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+            "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+            "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+            "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+            "Markov time is external stochastic time only.",
+            "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+          ],
+          "passed": 16,
+          "reproduction": {
+            "hostile": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/hostile.json",
+            "independent": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/independent.json",
+            "integrated": "python -X utf8 verification/scripts/pah_omc011_eventual_intertwining_verify.py",
+            "lean": "Set-Location verification/lean; lake env lean Tect/R491.lean",
+            "primary": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/primary.json"
+          },
+          "result_id": "R-491",
+          "run_kind": "independent",
+          "schema": "tect/pah-omc011-eventual-intertwining-independent/1.0",
+          "source_hashes": {
+            "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+            "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+            "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+            "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+            "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+            "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e"
+          },
+          "stage2_status": "HOLD_FOR_EVIDENCE",
+          "state_weighted_input": {
+            "C_sw": 540,
+            "role": "domination_only"
+          },
+          "task_id": "T-054",
+          "verdict": "HOLD_FOR_EVIDENCE",
+          "verification": "PASS",
+          "weak_gibbs_l2": {
+            "status": "BLOCKED_UNDEFINED_LIFT_ON_FULL_DOMAIN",
+            "universal_failure_claimed": false
+          }
+        },
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH-OMC-011-EVENTUAL-INTERTWINING-INDEPENDENT-001 PASS 16/16; verdict=HOLD_FOR_EVIDENCE; projection_total=False\n",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "verification": "PASS"
+      },
+      "expected": "PASS",
+      "name": "independent subprocess",
+      "pass": true
+    },
+    {
+      "actual": {
+        "assertion_count": 10,
+        "passed": 10,
+        "payload": {
+          "active_gate_change": false,
+          "assertion_count": 10,
+          "assertions": [
+            {
+              "detail": {
+                "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+              },
+              "mutation": "parent-drift",
+              "rejected": true
+            },
+            {
+              "detail": "The Q=0 R-484 slice is not silently substituted for the Q=1 full-domain question.",
+              "mutation": "q0-substitution",
+              "rejected": true
+            },
+            {
+              "detail": "p_(n+1,n) is not a map Omega_(n+1,1)->Omega_(n,1). Therefore I_(n,n+1) and I_(n,n+1)L_n are not defined on the full fine Gibbs domain, and an all-state exact intertwining theorem cannot be claimed without a source-authorized domain repair.",
+              "mutation": "image-only-as-all-state",
+              "rejected": true
+            },
+            {
+              "detail": "Conditional averaging is outside the declared map and is explicitly prohibited.",
+              "mutation": "conditional-gibbs-average",
+              "rejected": true
+            },
+            {
+              "detail": "The displayed functional and midpoint rates remain unchanged.",
+              "mutation": "rate-fitting-or-counterterm",
+              "rejected": true
+            },
+            {
+              "detail": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+              "mutation": "csw-as-intertwining-proof",
+              "rejected": true
+            },
+            {
+              "detail": {
+                "attempted_N": 1,
+                "declared": "N(f)=max(2,m_f+1). For every n>=N(f), q_n, the new column n+2 and d_n are disjoint from cl(f), so the R-484 split boundary is separated from the support on the image-restricted domain.",
+                "frontier": [
+                  1,
+                  2,
+                  3
+                ],
+                "m_f": 1
+              },
+              "mutation": "off-by-one-Nf",
+              "rejected": true
+            },
+            {
+              "detail": "The R-484 square-to-split boundary has exact hidden-diagonal defect 16/9 and is retained. It is outside cl(f) once n>=N(f); this is a locality statement, not deletion of the defect.",
+              "mutation": "boundary-defect-erasure",
+              "rejected": true
+            },
+            {
+              "detail": [
+                "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+                "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+                "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+                "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+                "Markov time is external stochastic time only.",
+                "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+              ],
+              "mutation": "physical-promotion",
+              "rejected": true
+            },
+            {
+              "detail": {
+                "contract": "PAH-OMC-010",
+                "declared": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof."
+              },
+              "mutation": "csw-number-drift",
+              "rejected": true
+            }
+          ],
+          "audit_id": "PAH-OMC-011-EVENTUAL-INTERTWINING-HOSTILE-001",
+          "claim_bearing": false,
+          "classification": "HOSTILE_FIREWALL_REJECTS_ALL_STATE_OVERCLAIMS",
+          "exploration_id": "EXP-001457",
+          "failed": 0,
+          "next_question": "Can a source-authorized fixed-Q common domain (or an explicitly admitted full-Q refinement map) make p_(n+1,n) total while preserving the unchanged PAH-001 root rates for every finite-support cylinder, without conditional averaging or changing the model?",
+          "non_claims": [
+            "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+            "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+            "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+            "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+            "Markov time is external stochastic time only.",
+            "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+          ],
+          "passed": 10,
+          "physical_progress": false,
+          "reproduction": {
+            "hostile": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/hostile.json",
+            "independent": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/independent.json",
+            "integrated": "python -X utf8 verification/scripts/pah_omc011_eventual_intertwining_verify.py",
+            "lean": "Set-Location verification/lean; lake env lean Tect/R491.lean",
+            "primary": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/primary.json"
+          },
+          "result_id": "R-491",
+          "run_kind": "hostile",
+          "schema": "tect/pah-omc011-eventual-intertwining-hostile/1.0",
+          "source_hashes": {
+            "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+            "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+            "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+          },
+          "stage2_status": "HOLD_FOR_EVIDENCE",
+          "task_id": "T-054",
+          "verdict": "HOLD_FOR_EVIDENCE",
+          "verification": "PASS",
+          "weak_gibbs_l2": {
+            "status": "BLOCKED_UNDEFINED_LIFT_ON_FULL_DOMAIN",
+            "universal_failure_claimed": false
+          }
+        },
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH-OMC-011-EVENTUAL-INTERTWINING-HOSTILE-001 PASS 10/10; verdict=HOLD_FOR_EVIDENCE\n",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "verification": "PASS"
+      },
+      "expected": "PASS",
+      "name": "hostile subprocess",
+      "pass": true
+    },
+    {
+      "actual": [
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE"
+      ],
+      "expected": "all HOLD_FOR_EVIDENCE",
+      "name": "cross-lane HOLD verdict",
+      "pass": true
+    },
+    {
+      "actual": {
+        "independent": {
+          "fine_Q": 1,
+          "fine_level": 3,
+          "new_vertex": [
+            4,
+            0
+          ],
+          "old_level": 2,
+          "projection_total": false,
+          "retained_Q": 0
+        },
+        "primary": {
+          "exact_scope": {
+            "consequence": "p_(n+1,n) is not a map Omega_(n+1,1)->Omega_(n,1). Therefore I_(n,n+1) and I_(n,n+1)L_n are not defined on the full fine Gibbs domain, and an all-state exact intertwining theorem cannot be claimed without a source-authorized domain repair.",
+            "projection_image": "The declared neutral projection drops the new column, so the retained charge sum is 0, not Q=1.",
+            "weak_l2_scope": "The witness has strictly positive finite PAH-OMC-010 Gibbs weight, so the full-domain lifted observable and its weighted L2 defect are undefined rather than proved zero. This packet does not assert that every image-restricted weak L2 limit fails.",
+            "witness": "For any n>=2, take a valid fine state in Omega_(n+1,Q=1) with ell_(n+2,0)=1 and every old ell_v=0; assign any admitted apertures, phases and links."
+          },
+          "fine_charge": 1,
+          "fine_level": 3,
+          "new_vertex": [
+            4,
+            0
+          ],
+          "old_level": 2,
+          "projected_charge": 0,
+          "projection_total": false
+        }
+      },
+      "expected": "projection_total=false",
+      "name": "cross-lane projection obstruction",
+      "pass": true
+    },
+    {
+      "actual": {
+        "boundary": {
+          "coarse_delta_F": "1/8",
+          "fine_even_delta_F": "1/4",
+          "fine_odd_delta_F": "-55/36",
+          "hidden_diagonal_defect": "16/9"
+        },
+        "stabilization": {
+          "image_restricted_statement": "If p_(n+1,n) is total on the chosen state domain, the rootwise local tuples agree for n>=N(f) and the pointwise generator defect is zero. The full Omega_(n+1,Q) domain is not yet shown to satisfy that premise for Q>0.",
+          "rows": [
+            {
+              "N_f": 2,
+              "frontier_columns": [
+                [
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  4,
+                  5
+                ]
+              ],
+              "m_f": -1,
+              "separated": true,
+              "tested_n": [
+                2,
+                3
+              ]
+            },
+            {
+              "N_f": 2,
+              "frontier_columns": [
+                [
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  4,
+                  5
+                ]
+              ],
+              "m_f": 0,
+              "separated": true,
+              "tested_n": [
+                2,
+                3
+              ]
+            },
+            {
+              "N_f": 2,
+              "frontier_columns": [
+                [
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  4,
+                  5
+                ]
+              ],
+              "m_f": 1,
+              "separated": true,
+              "tested_n": [
+                2,
+                3
+              ]
+            },
+            {
+              "N_f": 5,
+              "frontier_columns": [
+                [
+                  5,
+                  6,
+                  7
+                ],
+                [
+                  6,
+                  7,
+                  8
+                ]
+              ],
+              "m_f": 4,
+              "separated": true,
+              "tested_n": [
+                5,
+                6
+              ]
+            },
+            {
+              "N_f": 10,
+              "frontier_columns": [
+                [
+                  10,
+                  11,
+                  12
+                ],
+                [
+                  11,
+                  12,
+                  13
+                ]
+              ],
+              "m_f": 9,
+              "separated": true,
+              "tested_n": [
+                10,
+                11
+              ]
+            }
+          ],
+          "rule": "N(f)=max(2,m_f+1). For every n>=N(f), q_n, the new column n+2 and d_n are disjoint from cl(f), so the R-484 split boundary is separated from the support on the image-restricted domain."
+        }
+      },
+      "expected": "N(f) rows and 16/9",
+      "name": "N(f) and boundary evidence",
+      "pass": true
+    },
+    {
+      "actual": {
+        "C_sw": 540,
+        "intertwining_proved": false,
+        "role": "domination_only"
+      },
+      "expected": "domination only",
+      "name": "C_sw role",
+      "pass": true
+    },
+    {
+      "actual": {
+        "status": "BLOCKED_UNDEFINED_LIFT_ON_FULL_DOMAIN",
+        "universal_failure_claimed": false
+      },
+      "expected": "blocked/undefined, no universal failure",
+      "name": "weak L2 scope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declarations": [
+          "neutral_projection_loses_new_charge",
+          "neutral_projection_not_total_q_one",
+          "stabilization_stage_exact",
+          "boundary_support_separated",
+          "r484_boundary_defect_exact",
+          "csw_is_domination_only",
+          "non_promotion_firewall"
+        ],
+        "path": "verification/lean/Tect/R491.lean",
+        "sha256": "a89600b59d6b5af2cb3b8cafb033ac8869075e34f71c855cc73c3045dc169141"
+      },
+      "expected": "a89600b59d6b5af2cb3b8cafb033ac8869075e34f71c855cc73c3045dc169141",
+      "name": "Lean registry entry",
+      "pass": true
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": true,
+      "name": "Lean source firewall",
+      "pass": true
+    },
+    {
+      "actual": [
+        "neutral_projection_loses_new_charge",
+        "neutral_projection_not_total_q_one",
+        "stabilization_stage_exact",
+        "boundary_support_separated",
+        "r484_boundary_defect_exact",
+        "csw_is_domination_only",
+        "non_promotion_firewall"
+      ],
+      "expected": "all registered",
+      "name": "Lean declaration markers",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R491.lean",
+        "lake": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+        "output": "\n",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-011-EVENTUAL-INTERTWINING-INTEGRATED-001",
+  "claim_bearing": false,
+  "contract": {
+    "anchors": "O={(0,0)} and C={(0,1)}; the declared anchor-preserving automorphism is the identity.",
+    "carrier_family": "The unchanged PAH-OMC-004 two-row strip G_n for every integer n>=2: V_n={(i,j):0<=i<=n+1,j in {0,1}}, h_i^j for 0<=i<=n, v_i for 0<=i<=n+1, d_i for 0<=i<n, split triangles for i<n and the unsplit frontier square q_n.",
+    "common_cylinder_algebra": "A_cyl^R488 is the algebraic union of bounded gauge- and anchor-automorphism-invariant functions of finitely many integer coordinates ell_v and finitely many closed-face holonomy characters. The R-488 four-coordinate generators (ell_a,ell_d,H_0,H_1) are included.",
+    "functional": "Use exactly PAH-001 F_rho, including onsite, aperture stiffness, covariant matter edge and plaquette Wilson terms, with no added term or changed coefficient.",
+    "generator_domain": "D_(n,Q) is the finite-dimensional space of all bounded functions on the full displayed fixed-Q state space Omega_(n,Q), with L_n given by the unchanged PAH-001 directed-root midpoint rates.",
+    "gibbs_norm": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+    "limit": "No infinite-volume, continuum, physical-sector or observation limit is taken in this packet. n is a finite refinement label and R is held fixed for the domain audit.",
+    "neutral_refinement": "I_(n,n+1) is the pointwise lift f composed with p_(n+1,n), where p retains every old geometric coordinate and drops the new column n+2 and newly split diagonal d_n; the dropped aperture, radial, phase and link coordinates are assigned neutral values only for the forward inclusion.",
+    "regulator": "Use the unchanged PAH-001 finite regulator and, for the R-488/R-490 path, K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; n>=2 and R_max=R>=1 are the only OMC-010 uniform labels.",
+    "root_correspondence": "On the image of the neutral inclusion, each retained old PAH root keeps its exact geometric label, admissibility, delta-F, endpoint mobility, midpoint rate and cylinder increment. Roots whose support is outside the interaction closure of f have zero f-increment. No source/rate is altered."
+  },
+  "domain_obstruction": {
+    "consequence": "p_(n+1,n) is not a map Omega_(n+1,1)->Omega_(n,1). Therefore I_(n,n+1) and I_(n,n+1)L_n are not defined on the full fine Gibbs domain, and an all-state exact intertwining theorem cannot be claimed without a source-authorized domain repair.",
+    "projection_image": "The declared neutral projection drops the new column, so the retained charge sum is 0, not Q=1.",
+    "weak_l2_scope": "The witness has strictly positive finite PAH-OMC-010 Gibbs weight, so the full-domain lifted observable and its weighted L2 defect are undefined rather than proved zero. This packet does not assert that every image-restricted weak L2 limit fails.",
+    "witness": "For any n>=2, take a valid fine state in Omega_(n+1,Q=1) with ell_(n+2,0)=1 and every old ell_v=0; assign any admitted apertures, phases and links."
+  },
+  "exploration_id": "EXP-001457",
+  "failed": 0,
+  "next_question": "Can a source-authorized fixed-Q common domain (or an explicitly admitted full-Q refinement map) make p_(n+1,n) total while preserving the unchanged PAH-001 root rates for every finite-support cylinder, without conditional averaging or changing the model?",
+  "non_claims": [
+    "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+    "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+    "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+    "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+    "Markov time is external stochastic time only.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "passed": 17,
+  "physical_progress": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/hostile.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/independent.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc011_eventual_intertwining_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R491.lean",
+    "primary": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/primary.json"
+  },
+  "result_id": "R-491",
+  "run_kind": "integrated",
+  "runs": {
+    "hostile": {
+      "assertion_count": 10,
+      "passed": 10,
+      "payload": {
+        "active_gate_change": false,
+        "assertion_count": 10,
+        "assertions": [
+          {
+            "detail": {
+              "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+              "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+              "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+            },
+            "mutation": "parent-drift",
+            "rejected": true
+          },
+          {
+            "detail": "The Q=0 R-484 slice is not silently substituted for the Q=1 full-domain question.",
+            "mutation": "q0-substitution",
+            "rejected": true
+          },
+          {
+            "detail": "p_(n+1,n) is not a map Omega_(n+1,1)->Omega_(n,1). Therefore I_(n,n+1) and I_(n,n+1)L_n are not defined on the full fine Gibbs domain, and an all-state exact intertwining theorem cannot be claimed without a source-authorized domain repair.",
+            "mutation": "image-only-as-all-state",
+            "rejected": true
+          },
+          {
+            "detail": "Conditional averaging is outside the declared map and is explicitly prohibited.",
+            "mutation": "conditional-gibbs-average",
+            "rejected": true
+          },
+          {
+            "detail": "The displayed functional and midpoint rates remain unchanged.",
+            "mutation": "rate-fitting-or-counterterm",
+            "rejected": true
+          },
+          {
+            "detail": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+            "mutation": "csw-as-intertwining-proof",
+            "rejected": true
+          },
+          {
+            "detail": {
+              "attempted_N": 1,
+              "declared": "N(f)=max(2,m_f+1). For every n>=N(f), q_n, the new column n+2 and d_n are disjoint from cl(f), so the R-484 split boundary is separated from the support on the image-restricted domain.",
+              "frontier": [
+                1,
+                2,
+                3
+              ],
+              "m_f": 1
+            },
+            "mutation": "off-by-one-Nf",
+            "rejected": true
+          },
+          {
+            "detail": "The R-484 square-to-split boundary has exact hidden-diagonal defect 16/9 and is retained. It is outside cl(f) once n>=N(f); this is a locality statement, not deletion of the defect.",
+            "mutation": "boundary-defect-erasure",
+            "rejected": true
+          },
+          {
+            "detail": [
+              "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+              "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+              "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+              "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+              "Markov time is external stochastic time only.",
+              "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+            ],
+            "mutation": "physical-promotion",
+            "rejected": true
+          },
+          {
+            "detail": {
+              "contract": "PAH-OMC-010",
+              "declared": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof."
+            },
+            "mutation": "csw-number-drift",
+            "rejected": true
+          }
+        ],
+        "audit_id": "PAH-OMC-011-EVENTUAL-INTERTWINING-HOSTILE-001",
+        "claim_bearing": false,
+        "classification": "HOSTILE_FIREWALL_REJECTS_ALL_STATE_OVERCLAIMS",
+        "exploration_id": "EXP-001457",
+        "failed": 0,
+        "next_question": "Can a source-authorized fixed-Q common domain (or an explicitly admitted full-Q refinement map) make p_(n+1,n) total while preserving the unchanged PAH-001 root rates for every finite-support cylinder, without conditional averaging or changing the model?",
+        "non_claims": [
+          "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+          "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+          "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+          "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+          "Markov time is external stochastic time only.",
+          "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+        ],
+        "passed": 10,
+        "physical_progress": false,
+        "reproduction": {
+          "hostile": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/hostile.json",
+          "independent": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/independent.json",
+          "integrated": "python -X utf8 verification/scripts/pah_omc011_eventual_intertwining_verify.py",
+          "lean": "Set-Location verification/lean; lake env lean Tect/R491.lean",
+          "primary": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/primary.json"
+        },
+        "result_id": "R-491",
+        "run_kind": "hostile",
+        "schema": "tect/pah-omc011-eventual-intertwining-hostile/1.0",
+        "source_hashes": {
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+          "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+        },
+        "stage2_status": "HOLD_FOR_EVIDENCE",
+        "task_id": "T-054",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "verification": "PASS",
+        "weak_gibbs_l2": {
+          "status": "BLOCKED_UNDEFINED_LIFT_ON_FULL_DOMAIN",
+          "universal_failure_claimed": false
+        }
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-011-EVENTUAL-INTERTWINING-HOSTILE-001 PASS 10/10; verdict=HOLD_FOR_EVIDENCE\n",
+      "verdict": "HOLD_FOR_EVIDENCE",
+      "verification": "PASS"
+    },
+    "independent": {
+      "assertion_count": 16,
+      "passed": 16,
+      "payload": {
+        "active_gate_change": false,
+        "assertion_count": 16,
+        "assertions": [
+          {
+            "detail": {
+              "actual": {
+                "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e"
+              },
+              "expected": {
+                "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e"
+              }
+            },
+            "name": "independent-parent-hashes",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "independent-source-identities",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "unchanged-rate-text",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "neutral-map-text",
+            "passed": true
+          },
+          {
+            "detail": {
+              "fine_Q": 1,
+              "vertex": [
+                4,
+                0
+              ]
+            },
+            "name": "independent-fine-state-q-one",
+            "passed": true
+          },
+          {
+            "detail": {
+              "fine_Q": 1,
+              "retained_Q": 0
+            },
+            "name": "independent-retained-charge-zero",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "independent-projection-domain-obstruction",
+            "passed": true
+          },
+          {
+            "detail": [
+              {
+                "N_f": 2,
+                "m_f": -1,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      2,
+                      3,
+                      4
+                    ],
+                    "n": 2
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "n": 3
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 2,
+                "m_f": 0,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      2,
+                      3,
+                      4
+                    ],
+                    "n": 2
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "n": 3
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 2,
+                "m_f": 1,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      2,
+                      3,
+                      4
+                    ],
+                    "n": 2
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "n": 3
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 4,
+                "m_f": 3,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      4,
+                      5,
+                      6
+                    ],
+                    "n": 4
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      5,
+                      6,
+                      7
+                    ],
+                    "n": 5
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 9,
+                "m_f": 8,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      9,
+                      10,
+                      11
+                    ],
+                    "n": 9
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      10,
+                      11,
+                      12
+                    ],
+                    "n": 10
+                  }
+                ],
+                "separated": true
+              }
+            ],
+            "name": "independent-Nf-formula",
+            "passed": true
+          },
+          {
+            "detail": [
+              {
+                "N_f": 2,
+                "m_f": -1,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      2,
+                      3,
+                      4
+                    ],
+                    "n": 2
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "n": 3
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 2,
+                "m_f": 0,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      2,
+                      3,
+                      4
+                    ],
+                    "n": 2
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "n": 3
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 2,
+                "m_f": 1,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      2,
+                      3,
+                      4
+                    ],
+                    "n": 2
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "n": 3
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 4,
+                "m_f": 3,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      4,
+                      5,
+                      6
+                    ],
+                    "n": 4
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      5,
+                      6,
+                      7
+                    ],
+                    "n": 5
+                  }
+                ],
+                "separated": true
+              },
+              {
+                "N_f": 9,
+                "m_f": 8,
+                "rows": [
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      9,
+                      10,
+                      11
+                    ],
+                    "n": 9
+                  },
+                  {
+                    "all_outside": true,
+                    "frontier_columns": [
+                      10,
+                      11,
+                      12
+                    ],
+                    "n": 10
+                  }
+                ],
+                "separated": true
+              }
+            ],
+            "name": "independent-boundary-separation",
+            "passed": true
+          },
+          {
+            "detail": {
+              "N_f": 2,
+              "m_f": 1,
+              "rows": [
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    2,
+                    3,
+                    4
+                  ],
+                  "n": 2
+                },
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "n": 3
+                }
+              ],
+              "separated": true
+            },
+            "name": "independent-r488-Nf",
+            "passed": true
+          },
+          {
+            "detail": {
+              "coarse_delta_F": "1/8",
+              "fine_even_delta_F": "1/4",
+              "fine_odd_delta_F": "-55/36",
+              "hidden_diagonal_defect": "16/9"
+            },
+            "name": "independent-r484-defect",
+            "passed": true
+          },
+          {
+            "detail": "The R-484 square-to-split boundary has exact hidden-diagonal defect 16/9 and is retained. It is outside cl(f) once n>=N(f); this is a locality statement, not deletion of the defect.",
+            "name": "independent-defect-retained",
+            "passed": true
+          },
+          {
+            "detail": {
+              "C_sw": 540,
+              "N_geom": 60,
+              "S_geom": 8,
+              "cofinal_definition": "The cofinal PAH-OMC-004 two-row strip G_n for every integer n>=2, with the same neutral inclusions J_(n,n+1) and the same geometric root-support rule as PAH-OMC-009.",
+              "levels_checked": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ],
+              "root_count_formula": "4|V_n|+4|E_n|",
+              "template_levels": [
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "template_pattern_count": 25
+            },
+            "name": "independent-csw-input",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "independent-csw-role",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "independent-weak-l2-scope",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "independent-no-physical",
+            "passed": true
+          }
+        ],
+        "audit_id": "PAH-OMC-011-EVENTUAL-INTERTWINING-INDEPENDENT-001",
+        "boundary_defect": {
+          "coarse_delta_F": "1/8",
+          "fine_even_delta_F": "1/4",
+          "fine_odd_delta_F": "-55/36",
+          "hidden_diagonal_defect": "16/9"
+        },
+        "claim_bearing": false,
+        "classification": "IMAGE_LOCALITY_PROVED_GLOBAL_FIXED_Q_COMMON_DOMAIN_MISSING",
+        "derived": {
+          "locality": [
+            {
+              "N_f": 2,
+              "m_f": -1,
+              "rows": [
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    2,
+                    3,
+                    4
+                  ],
+                  "n": 2
+                },
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "n": 3
+                }
+              ],
+              "separated": true
+            },
+            {
+              "N_f": 2,
+              "m_f": 0,
+              "rows": [
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    2,
+                    3,
+                    4
+                  ],
+                  "n": 2
+                },
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "n": 3
+                }
+              ],
+              "separated": true
+            },
+            {
+              "N_f": 2,
+              "m_f": 1,
+              "rows": [
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    2,
+                    3,
+                    4
+                  ],
+                  "n": 2
+                },
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "n": 3
+                }
+              ],
+              "separated": true
+            },
+            {
+              "N_f": 4,
+              "m_f": 3,
+              "rows": [
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    4,
+                    5,
+                    6
+                  ],
+                  "n": 4
+                },
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    5,
+                    6,
+                    7
+                  ],
+                  "n": 5
+                }
+              ],
+              "separated": true
+            },
+            {
+              "N_f": 9,
+              "m_f": 8,
+              "rows": [
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    9,
+                    10,
+                    11
+                  ],
+                  "n": 9
+                },
+                {
+                  "all_outside": true,
+                  "frontier_columns": [
+                    10,
+                    11,
+                    12
+                  ],
+                  "n": 10
+                }
+              ],
+              "separated": true
+            }
+          ],
+          "strip_G2_edges": 12,
+          "strip_G2_vertices": 8,
+          "strip_G3_edges": 16,
+          "strip_G3_vertices": 10
+        },
+        "domain_obstruction": {
+          "fine_Q": 1,
+          "fine_level": 3,
+          "new_vertex": [
+            4,
+            0
+          ],
+          "old_level": 2,
+          "projection_total": false,
+          "retained_Q": 0
+        },
+        "exploration_id": "EXP-001457",
+        "failed": 0,
+        "next_question": "Can a source-authorized fixed-Q common domain (or an explicitly admitted full-Q refinement map) make p_(n+1,n) total while preserving the unchanged PAH-001 root rates for every finite-support cylinder, without conditional averaging or changing the model?",
+        "non_claims": [
+          "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+          "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+          "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+          "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+          "Markov time is external stochastic time only.",
+          "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+        ],
+        "passed": 16,
+        "reproduction": {
+          "hostile": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/hostile.json",
+          "independent": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/independent.json",
+          "integrated": "python -X utf8 verification/scripts/pah_omc011_eventual_intertwining_verify.py",
+          "lean": "Set-Location verification/lean; lake env lean Tect/R491.lean",
+          "primary": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/primary.json"
+        },
+        "result_id": "R-491",
+        "run_kind": "independent",
+        "schema": "tect/pah-omc011-eventual-intertwining-independent/1.0",
+        "source_hashes": {
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+          "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+          "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+          "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+          "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e"
+        },
+        "stage2_status": "HOLD_FOR_EVIDENCE",
+        "state_weighted_input": {
+          "C_sw": 540,
+          "role": "domination_only"
+        },
+        "task_id": "T-054",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "verification": "PASS",
+        "weak_gibbs_l2": {
+          "status": "BLOCKED_UNDEFINED_LIFT_ON_FULL_DOMAIN",
+          "universal_failure_claimed": false
+        }
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-011-EVENTUAL-INTERTWINING-INDEPENDENT-001 PASS 16/16; verdict=HOLD_FOR_EVIDENCE; projection_total=False\n",
+      "verdict": "HOLD_FOR_EVIDENCE",
+      "verification": "PASS"
+    },
+    "lean": {
+      "command": "lake env lean Tect/R491.lean",
+      "lake": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+      "output": "\n",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    "primary": {
+      "assertion_count": 19,
+      "passed": 19,
+      "payload": {
+        "active_gate_change": false,
+        "assertion_count": 19,
+        "assertions": [
+          {
+            "detail": {
+              "actual": {
+                "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+                "R-484-MANIFEST": "88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57"
+              },
+              "expected": {
+                "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+                "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+                "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+                "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+                "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+                "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+                "R-484-MANIFEST": "88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57"
+              }
+            },
+            "name": "parent-hashes",
+            "passed": true
+          },
+          {
+            "detail": {
+              "PAH-001": "PAH-001",
+              "boundary": "PAH-OMC-004-GEN-001",
+              "geometry": "PAH-OMC-004",
+              "start": "PAH-OMC-008",
+              "weight": "PAH-OMC-010"
+            },
+            "name": "source-identities",
+            "passed": true
+          },
+          {
+            "detail": {
+              "no_conditional_gibbs_average": true,
+              "no_counterterm": true,
+              "no_fixed_rmax_bypass": true,
+              "no_new_carrier": true,
+              "no_new_hamiltonian": true,
+              "no_physical_identification": true,
+              "no_q3lock_import": true,
+              "no_rate_fitting": true,
+              "parent_functional_unchanged": true,
+              "parent_limit_order_unchanged": true,
+              "parent_mobility_unchanged": true,
+              "parent_move_families_unchanged": true,
+              "parent_regulator_path_unchanged": true
+            },
+            "name": "preservation-firewall",
+            "passed": true
+          },
+          {
+            "detail": null,
+            "name": "displayed-functional-and-generator-unchanged",
+            "passed": true
+          },
+          {
+            "detail": {
+              "anchors": "O={(0,0)} and C={(0,1)}; the declared anchor-preserving automorphism is the identity.",
+              "carrier_family": "The unchanged PAH-OMC-004 two-row strip G_n for every integer n>=2: V_n={(i,j):0<=i<=n+1,j in {0,1}}, h_i^j for 0<=i<=n, v_i for 0<=i<=n+1, d_i for 0<=i<n, split triangles for i<n and the unsplit frontier square q_n.",
+              "common_cylinder_algebra": "A_cyl^R488 is the algebraic union of bounded gauge- and anchor-automorphism-invariant functions of finitely many integer coordinates ell_v and finitely many closed-face holonomy characters. The R-488 four-coordinate generators (ell_a,ell_d,H_0,H_1) are included.",
+              "functional": "Use exactly PAH-001 F_rho, including onsite, aperture stiffness, covariant matter edge and plaquette Wilson terms, with no added term or changed coefficient.",
+              "generator_domain": "D_(n,Q) is the finite-dimensional space of all bounded functions on the full displayed fixed-Q state space Omega_(n,Q), with L_n given by the unchanged PAH-001 directed-root midpoint rates.",
+              "gibbs_norm": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+              "limit": "No infinite-volume, continuum, physical-sector or observation limit is taken in this packet. n is a finite refinement label and R is held fixed for the domain audit.",
+              "neutral_refinement": "I_(n,n+1) is the pointwise lift f composed with p_(n+1,n), where p retains every old geometric coordinate and drops the new column n+2 and newly split diagonal d_n; the dropped aperture, radial, phase and link coordinates are assigned neutral values only for the forward inclusion.",
+              "regulator": "Use the unchanged PAH-001 finite regulator and, for the R-488/R-490 path, K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; n>=2 and R_max=R>=1 are the only OMC-010 uniform labels.",
+              "root_correspondence": "On the image of the neutral inclusion, each retained old PAH root keeps its exact geometric label, admissibility, delta-F, endpoint mobility, midpoint rate and cylinder increment. Roots whose support is outside the interaction closure of f have zero f-increment. No source/rate is altered."
+            },
+            "name": "declared-domain-and-algebra",
+            "passed": true
+          },
+          {
+            "detail": "I_(n,n+1) is the pointwise lift f composed with p_(n+1,n), where p retains every old geometric coordinate and drops the new column n+2 and newly split diagonal d_n; the dropped aperture, radial, phase and link coordinates are assigned neutral values only for the forward inclusion.",
+            "name": "neutral-map-frozen",
+            "passed": true
+          },
+          {
+            "detail": "The cylinder basis is every bounded function of (ell_a,ell_d,H_0,H_1). H_0 is the Z_2 character of the first split triangle h00 v1 d0^{-1}; H_1 is the Z_2 character of the second split triangle d0 h01^{-1} v0^{-1}. Both matter coordinates are gauge neutral.",
+            "name": "r488-generator-included",
+            "passed": true
+          },
+          {
+            "detail": {
+              "M_psi": 1,
+              "Q": 1,
+              "ell": {
+                "0,0": 0,
+                "0,1": 0,
+                "1,0": 0,
+                "1,1": 0,
+                "2,0": 0,
+                "2,1": 0,
+                "3,0": 0,
+                "3,1": 0,
+                "4,0": 1,
+                "4,1": 0
+              },
+              "sum_ell": 1
+            },
+            "name": "fine-witness-valid-Q-one",
+            "passed": true
+          },
+          {
+            "detail": {
+              "fine_Q": 1,
+              "new_vertex": [
+                4,
+                0
+              ],
+              "projected_Q": 0
+            },
+            "name": "neutral-projection-charge-loss",
+            "passed": true
+          },
+          {
+            "detail": {
+              "consequence": "p_(n+1,n) is not a map Omega_(n+1,1)->Omega_(n,1). Therefore I_(n,n+1) and I_(n,n+1)L_n are not defined on the full fine Gibbs domain, and an all-state exact intertwining theorem cannot be claimed without a source-authorized domain repair.",
+              "projection_image": "The declared neutral projection drops the new column, so the retained charge sum is 0, not Q=1.",
+              "weak_l2_scope": "The witness has strictly positive finite PAH-OMC-010 Gibbs weight, so the full-domain lifted observable and its weighted L2 defect are undefined rather than proved zero. This packet does not assert that every image-restricted weak L2 limit fails.",
+              "witness": "For any n>=2, take a valid fine state in Omega_(n+1,Q=1) with ell_(n+2,0)=1 and every old ell_v=0; assign any admitted apertures, phases and links."
+            },
+            "name": "projection-not-total-on-full-Q-one",
+            "passed": true
+          },
+          {
+            "detail": [
+              {
+                "N_f": 2,
+                "frontier_columns": [
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    4,
+                    5
+                  ]
+                ],
+                "m_f": -1,
+                "separated": true,
+                "tested_n": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "N_f": 2,
+                "frontier_columns": [
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    4,
+                    5
+                  ]
+                ],
+                "m_f": 0,
+                "separated": true,
+                "tested_n": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "N_f": 2,
+                "frontier_columns": [
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    4,
+                    5
+                  ]
+                ],
+                "m_f": 1,
+                "separated": true,
+                "tested_n": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "N_f": 5,
+                "frontier_columns": [
+                  [
+                    5,
+                    6,
+                    7
+                  ],
+                  [
+                    6,
+                    7,
+                    8
+                  ]
+                ],
+                "m_f": 4,
+                "separated": true,
+                "tested_n": [
+                  5,
+                  6
+                ]
+              },
+              {
+                "N_f": 10,
+                "frontier_columns": [
+                  [
+                    10,
+                    11,
+                    12
+                  ],
+                  [
+                    11,
+                    12,
+                    13
+                  ]
+                ],
+                "m_f": 9,
+                "separated": true,
+                "tested_n": [
+                  10,
+                  11
+                ]
+              }
+            ],
+            "name": "explicit-Nf-rule",
+            "passed": true
+          },
+          {
+            "detail": [
+              {
+                "N_f": 2,
+                "frontier_columns": [
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    4,
+                    5
+                  ]
+                ],
+                "m_f": -1,
+                "separated": true,
+                "tested_n": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "N_f": 2,
+                "frontier_columns": [
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    4,
+                    5
+                  ]
+                ],
+                "m_f": 0,
+                "separated": true,
+                "tested_n": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "N_f": 2,
+                "frontier_columns": [
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    4,
+                    5
+                  ]
+                ],
+                "m_f": 1,
+                "separated": true,
+                "tested_n": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "N_f": 5,
+                "frontier_columns": [
+                  [
+                    5,
+                    6,
+                    7
+                  ],
+                  [
+                    6,
+                    7,
+                    8
+                  ]
+                ],
+                "m_f": 4,
+                "separated": true,
+                "tested_n": [
+                  5,
+                  6
+                ]
+              },
+              {
+                "N_f": 10,
+                "frontier_columns": [
+                  [
+                    10,
+                    11,
+                    12
+                  ],
+                  [
+                    11,
+                    12,
+                    13
+                  ]
+                ],
+                "m_f": 9,
+                "separated": true,
+                "tested_n": [
+                  10,
+                  11
+                ]
+              }
+            ],
+            "name": "frontier-separated-after-Nf",
+            "passed": true
+          },
+          {
+            "detail": {
+              "N_f": 2,
+              "frontier_columns": [
+                [
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  4,
+                  5
+                ]
+              ],
+              "m_f": 1,
+              "separated": true,
+              "tested_n": [
+                2,
+                3
+              ]
+            },
+            "name": "r488-closure-stage",
+            "passed": true
+          },
+          {
+            "detail": {
+              "coarse_delta_F": "1/8",
+              "fine_even_delta_F": "1/4",
+              "fine_odd_delta_F": "-55/36",
+              "hidden_diagonal_defect": "16/9"
+            },
+            "name": "r484-boundary-defect-retained",
+            "passed": true
+          },
+          {
+            "detail": "The R-484 square-to-split boundary has exact hidden-diagonal defect 16/9 and is retained. It is outside cl(f) once n>=N(f); this is a locality statement, not deletion of the defect.",
+            "name": "boundary-separation-is-not-erasure",
+            "passed": true
+          },
+          {
+            "detail": {
+              "C_sw": 540,
+              "role": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof."
+            },
+            "name": "csw-540-source-input",
+            "passed": true
+          },
+          {
+            "detail": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+            "name": "csw-not-intertwining-proof",
+            "passed": true
+          },
+          {
+            "detail": {
+              "R490": "PASS",
+              "weak_l2": "The witness has strictly positive finite PAH-OMC-010 Gibbs weight, so the full-domain lifted observable and its weighted L2 defect are undefined rather than proved zero. This packet does not assert that every image-restricted weak L2 limit fails."
+            },
+            "name": "weak-l2-domain-scope",
+            "passed": true
+          },
+          {
+            "detail": [
+              "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+              "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+              "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+              "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+              "Markov time is external stochastic time only.",
+              "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+            ],
+            "name": "no-physical-promotion",
+            "passed": true
+          }
+        ],
+        "audit_id": "PAH-OMC-011-EVENTUAL-INTERTWINING-PRIMARY-001",
+        "boundary_defect": {
+          "coarse_delta_F": "1/8",
+          "fine_even_delta_F": "1/4",
+          "fine_odd_delta_F": "-55/36",
+          "hidden_diagonal_defect": "16/9"
+        },
+        "claim_bearing": false,
+        "classification": "IMAGE_LOCALITY_PROVED_GLOBAL_FIXED_Q_COMMON_DOMAIN_MISSING",
+        "domain_obstruction": {
+          "exact_scope": {
+            "consequence": "p_(n+1,n) is not a map Omega_(n+1,1)->Omega_(n,1). Therefore I_(n,n+1) and I_(n,n+1)L_n are not defined on the full fine Gibbs domain, and an all-state exact intertwining theorem cannot be claimed without a source-authorized domain repair.",
+            "projection_image": "The declared neutral projection drops the new column, so the retained charge sum is 0, not Q=1.",
+            "weak_l2_scope": "The witness has strictly positive finite PAH-OMC-010 Gibbs weight, so the full-domain lifted observable and its weighted L2 defect are undefined rather than proved zero. This packet does not assert that every image-restricted weak L2 limit fails.",
+            "witness": "For any n>=2, take a valid fine state in Omega_(n+1,Q=1) with ell_(n+2,0)=1 and every old ell_v=0; assign any admitted apertures, phases and links."
+          },
+          "fine_charge": 1,
+          "fine_level": 3,
+          "new_vertex": [
+            4,
+            0
+          ],
+          "old_level": 2,
+          "projected_charge": 0,
+          "projection_total": false
+        },
+        "exploration_id": "EXP-001457",
+        "failed": 0,
+        "next_question": "Can a source-authorized fixed-Q common domain (or an explicitly admitted full-Q refinement map) make p_(n+1,n) total while preserving the unchanged PAH-001 root rates for every finite-support cylinder, without conditional averaging or changing the model?",
+        "non_claims": [
+          "This is a T0 claim-nonbearing domain/locality audit, not a new PAH model.",
+          "The image-restricted N(f)=max(2,m_f+1) locality statement does not close the full fixed-Q common-core theorem.",
+          "The full-domain exact intertwining is not refuted by a numerical rate counterexample; it is held because the declared lift is not total for Q>0.",
+          "Weak Gibbs-L2 convergence is likewise undefined on the full domain and is not classified as a universal no-go.",
+          "Markov time is external stochastic time only.",
+          "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+        ],
+        "passed": 19,
+        "physical_progress": false,
+        "reproduction": {
+          "hostile": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/hostile.json",
+          "independent": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/independent.json",
+          "integrated": "python -X utf8 verification/scripts/pah_omc011_eventual_intertwining_verify.py",
+          "lean": "Set-Location verification/lean; lake env lean Tect/R491.lean",
+          "primary": "python -X utf8 codes/foundations/pah_omc011_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc011-eventual-intertwining/primary.json"
+        },
+        "result_id": "R-491",
+        "run_kind": "primary",
+        "schema": "tect/pah-omc011-eventual-intertwining-primary/1.0",
+        "scientific_transition": false,
+        "scope": {
+          "anchors": "O={(0,0)} and C={(0,1)}; the declared anchor-preserving automorphism is the identity.",
+          "carrier_family": "The unchanged PAH-OMC-004 two-row strip G_n for every integer n>=2: V_n={(i,j):0<=i<=n+1,j in {0,1}}, h_i^j for 0<=i<=n, v_i for 0<=i<=n+1, d_i for 0<=i<n, split triangles for i<n and the unsplit frontier square q_n.",
+          "common_cylinder_algebra": "A_cyl^R488 is the algebraic union of bounded gauge- and anchor-automorphism-invariant functions of finitely many integer coordinates ell_v and finitely many closed-face holonomy characters. The R-488 four-coordinate generators (ell_a,ell_d,H_0,H_1) are included.",
+          "functional": "Use exactly PAH-001 F_rho, including onsite, aperture stiffness, covariant matter edge and plaquette Wilson terms, with no added term or changed coefficient.",
+          "generator_domain": "D_(n,Q) is the finite-dimensional space of all bounded functions on the full displayed fixed-Q state space Omega_(n,Q), with L_n given by the unchanged PAH-001 directed-root midpoint rates.",
+          "gibbs_norm": "Use the unchanged PAH-OMC-010 normalized Gibbs weight and C_sw=540 only as a state-weighted domination input; C_sw is not an intertwining proof.",
+          "limit": "No infinite-volume, continuum, physical-sector or observation limit is taken in this packet. n is a finite refinement label and R is held fixed for the domain audit.",
+          "neutral_refinement": "I_(n,n+1) is the pointwise lift f composed with p_(n+1,n), where p retains every old geometric coordinate and drops the new column n+2 and newly split diagonal d_n; the dropped aperture, radial, phase and link coordinates are assigned neutral values only for the forward inclusion.",
+          "regulator": "Use the unchanged PAH-001 finite regulator and, for the R-488/R-490 path, K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, m2=0 and all displayed couplings one; n>=2 and R_max=R>=1 are the only OMC-010 uniform labels.",
+          "root_correspondence": "On the image of the neutral inclusion, each retained old PAH root keeps its exact geometric label, admissibility, delta-F, endpoint mobility, midpoint rate and cylinder increment. Roots whose support is outside the interaction closure of f have zero f-increment. No source/rate is altered."
+        },
+        "source_hashes": {
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+          "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+          "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+          "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3",
+          "R-484": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+          "R-484-MANIFEST": "88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57"
+        },
+        "stabilization": {
+          "image_restricted_statement": "If p_(n+1,n) is total on the chosen state domain, the rootwise local tuples agree for n>=N(f) and the pointwise generator defect is zero. The full Omega_(n+1,Q) domain is not yet shown to satisfy that premise for Q>0.",
+          "rows": [
+            {
+              "N_f": 2,
+              "frontier_columns": [
+                [
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  4,
+                  5
+                ]
+              ],
+              "m_f": -1,
+              "separated": true,
+              "tested_n": [
+                2,
+                3
+              ]
+            },
+            {
+              "N_f": 2,
+              "frontier_columns": [
+                [
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  4,
+                  5
+                ]
+              ],
+              "m_f": 0,
+              "separated": true,
+              "tested_n": [
+                2,
+                3
+              ]
+            },
+            {
+              "N_f": 2,
+              "frontier_columns": [
+                [
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  3,
+                  4,
+                  5
+                ]
+              ],
+              "m_f": 1,
+              "separated": true,
+              "tested_n": [
+                2,
+                3
+              ]
+            },
+            {
+              "N_f": 5,
+              "frontier_columns": [
+                [
+                  5,
+                  6,
+                  7
+                ],
+                [
+                  6,
+                  7,
+                  8
+                ]
+              ],
+              "m_f": 4,
+              "separated": true,
+              "tested_n": [
+                5,
+                6
+              ]
+            },
+            {
+              "N_f": 10,
+              "frontier_columns": [
+                [
+                  10,
+                  11,
+                  12
+                ],
+                [
+                  11,
+                  12,
+                  13
+                ]
+              ],
+              "m_f": 9,
+              "separated": true,
+              "tested_n": [
+                10,
+                11
+              ]
+            }
+          ],
+          "rule": "N(f)=max(2,m_f+1). For every n>=N(f), q_n, the new column n+2 and d_n are disjoint from cl(f), so the R-484 split boundary is separated from the support on the image-restricted domain."
+        },
+        "stage2_status": "HOLD_FOR_EVIDENCE",
+        "state_weighted_input": {
+          "C_sw": 540,
+          "intertwining_proved": false,
+          "role": "domination_only"
+        },
+        "task_id": "T-054",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "verification": "PASS",
+        "weak_gibbs_l2": {
+          "status": "BLOCKED_UNDEFINED_LIFT_ON_FULL_DOMAIN",
+          "universal_failure_claimed": false
+        }
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-011-EVENTUAL-INTERTWINING-PRIMARY-001 PASS 19/19; verdict=HOLD_FOR_EVIDENCE; projection_total=False; C_sw=540\n",
+      "verdict": "HOLD_FOR_EVIDENCE",
+      "verification": "PASS"
+    }
+  },
+  "schema": "tect/pah-omc011-eventual-intertwining-integrated/1.0",
+  "scientific_transition": false,
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+    "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+    "PAH-OMC-011-MANIFEST": "81909dff9b3703042a44da59966fab83270abcd59f185f1a7b0834b360eaf7af",
+    "R491-Lean": "a89600b59d6b5af2cb3b8cafb033ac8869075e34f71c855cc73c3045dc169141"
+  },
+  "stabilization": {
+    "N_of_f": "N(f)=max(2,m_f+1). For every n>=N(f), q_n, the new column n+2 and d_n are disjoint from cl(f), so the R-484 split boundary is separated from the support on the image-restricted domain.",
+    "boundary_defect": "The R-484 square-to-split boundary has exact hidden-diagonal defect 16/9 and is retained. It is outside cl(f) once n>=N(f); this is a locality statement, not deletion of the defect.",
+    "conditional_locality_statement": "If p_(n+1,n) is total on the chosen state domain, the rootwise local tuples agree for n>=N(f) and the pointwise generator defect is zero. The full Omega_(n+1,Q) domain is not yet shown to satisfy that premise for Q>0.",
+    "interaction_closure": "For f, cl(f) is the union of the geometric supports of every PAH-001 energy term that can change f under a directed root; let m_f=max{i:(i,j) in cl(f)} and m_f=-1 for the constant function."
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "state_weighted_input": {
+    "C_sw": 540,
+    "intertwining_proved": false,
+    "role": "domination_only"
+  },
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_gibbs_l2": {
+    "status": "BLOCKED_UNDEFINED_LIFT_ON_FULL_DOMAIN",
+    "universal_failure_claimed": false
+  }
+}

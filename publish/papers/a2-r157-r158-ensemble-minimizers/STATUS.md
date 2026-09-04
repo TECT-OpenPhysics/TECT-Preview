@@ -1,7 +1,7 @@
 # STATUS — A2/R-157/R-158 ensemble-minimizers
 
 Lifecycle: `draft`
-Version: `0.1.39`
+Version: `0.1.40`
 Date: `2026-09-04`
 Owner: TECT publication lane
 
@@ -11,7 +11,11 @@ The folder contains a manual integrated manuscript draft, its cited-claim
 list, a literature-first crosswalk, a reproduction protocol, and an explicit
 external-review handoff.  The draft
 uses only the registered A2 claim, R-157, R-158, and the non-bearing R-472
-assurance sidecar.  Version 0.1.39 retains the closest 2026 Belin--Schneider quasilinear amplitude-theory comparison, narrows the residual contribution accordingly, and retains the self-contained generators, internal matrices,
+assurance sidecar.  Version 0.1.40 adds the Hilder--Kuehn rigorous coupled
+amplitude/selected-solution comparison and the Becker et al. coupled-pattern
+coexistence comparison.  They narrow broad coupled Swift--Hohenberg novelty
+language without subsuming the combined theorem.  It retains the closest 2026
+Belin--Schneider quasilinear amplitude-theory comparison and the self-contained generators, internal matrices,
 density floor, and Class-II coefficient formulas, displays the indexed
 Class-II Euler--Lagrange formula and coefficient tensor `\mathit{C}(u)`, and
 retains the corrected integration-by-parts sign and explicit nonlinear energy
@@ -65,8 +69,9 @@ its clean v0.1.11 replay are recorded in `EXP-001387`.  The convention-narrowing
 - [x] Functional data are self-contained in the manuscript: generators, internal matrices, density floor, and Class-II coefficient formulas are displayed explicitly.
 - [x] The A2 energy identity now states the Gelfand-triple and Hilbert-space chain-rule hypotheses (external audit still required).
 - [x] LaTeX compile and zero-overfull visual review (Tectonic exit 0; the
-  16-page v0.1.39 A4 PDF was rendered in full and pages 1, 5, and 16 were
-  inspected at full resolution on 2026-09-04).
+  17-page v0.1.40 A4 PDF was rendered in full, both contact sheets were
+  inspected, and pages 14--17 were inspected at full resolution on 2026-09-04;
+  `EXP-001458`).
 - [x] Paper-local exact coercivity certificate and 13/13 self-test artifact recorded in `verification/runs/exact-coercivity.json`.
 - [x] Paper-local Class-II source/sign audit and 8/8 exact one-mode artifact recorded in `verification/runs/classii-sign.json` (canonical source reconciliation remains open).
 - [x] Standalone theorem statements are explicitly decoupled from H3; H3 is retained only as a provenance/transfer boundary (`EXP-001401`).
@@ -99,9 +104,10 @@ its clean v0.1.11 replay are recorded in `EXP-001387`.  The convention-narrowing
 - [x] The positive-time smoothing proof explicitly derives an H2 Hölder modulus by interpolation from the fractional-domain bound and the L2-time derivative estimate (`EXP-001426`; external proof audit remains required).
 - [x] The positive-time smoothing proof explicitly states the shifted-base Sobolev bootstrap, endpoint cancellation in `X_m`, Hölder propagation, nested induction, the strict Hölder range, the split-kernel integral, and the endpoint semigroup factor plus the explicit interval/integral constants and temporal Banach-scale induction (`EXP-001430`, `EXP-001432`, `EXP-001435`, `EXP-001436`; external proof audit remains required).
 - [x] The schema-1.1 hash-pinned reproduction manifest records package hashes,
-  audit counts, manuscript-hash consistency, all fourteen replay commands and
-  replay-input hashes, and exact agreement with the verification README command
-  surface (`verification/runs/reproduction-manifest.json`; auxiliary integrity
+  audit counts, manuscript-hash consistency, all fifteen documented replay
+  commands and input hashes, and exact agreement with the verification README
+  command surface; the clean-snapshot orchestrator runs the fourteen nested
+  checks (`verification/runs/reproduction-manifest.json`; auxiliary integrity
   evidence only).
 - [x] The four paper-local audits reproduce under the bundled base-Python runtime with unchanged artifact hashes (`EXP-001420`; portability evidence only).
 - [x] Classify the unresolved canonical A2 v2.0 Class-II sign as a TECT/P1
@@ -119,9 +125,22 @@ its clean v0.1.11 replay are recorded in `EXP-001387`.  The convention-narrowing
 - [x] Post-EXP-001452 exploration/time verification, governed regeneration,
   and the complete repository release check pass at `EXP-001453`.
 - [x] The external handoff contains exactly one blank-contract section and all
-  fourteen documented replay scripts; the schema-1.1 manifest hash-pins all
-  fourteen replay inputs and rejects README command-surface drift
-  (`EXP-001454`).
+  fifteen documented replay scripts; the schema-1.1 manifest hash-pins all
+  fifteen replay inputs and rejects README command-surface drift
+  (`EXP-001454`--`EXP-001455`).
+- [x] The clean committed-source orchestrator rejects a Python environment
+  missing `sympy`, records the Python/Lean environment boundary, and passes all
+  fourteen nested commands in `verification/runs/clean-snapshot-replay.json`
+  (`EXP-001455`).
+- [x] The isolated paper-only worktree passes governed regeneration and the
+  complete release check (`EXP-001456`).
+- [x] The v0.1.40 literature repair passes paper-local `13/13`, `8/8`, `24/24`,
+  `50/50`, review-packet `22/22`, the schema-1.1 manifest, and all fourteen
+  nested commands from isolated Git tree
+  `33aa52f70c0e4b9edf143e72faeb3250e5521d81` (`EXP-001458`).
+- [x] The combined shared tree, including the separately scoped registered
+  R-491 packet, passes governed regeneration and every repository release gate
+  (`EXP-001459`); commit and remote-backup confirmation remain open.
 - [ ] Submission freeze/tag (requires separate explicit authorization).
 
 ## Non-claims
@@ -133,6 +152,7 @@ remain authoritative.
 
 ## Version history
 
+- `0.1.40` (2026-09-04): added two primary coupled Swift--Hohenberg comparisons, distinguishing rigorous near-instability amplitude/selected-solution theory and weakly nonlinear dynamical pattern coexistence from the manuscript's all-data flow and exact variational coexistence; rebuilt and visually reviewed the 17-page PDF, refreshed the packet/manifest hashes, and passed the isolated `14/14` replay at `EXP-001458`; no novelty disposition or theorem expansion is claimed.
 - `0.1.39` (2026-09-04): classified the unresolved canonical A2 Laplacian
   convention as a TECT/P1 transfer-only gate rather than an analytic premise or
   independent-paper submission gate.  The standalone functional, theorem

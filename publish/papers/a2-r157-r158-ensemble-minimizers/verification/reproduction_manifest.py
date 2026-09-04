@@ -45,12 +45,14 @@ PACKAGE_FILES = (
     "verification/ensemble_identity_audit.py",
     "verification/analytic_dependency_audit.py",
     "verification/review_packet_audit.py",
+    "verification/clean_snapshot_replay.py",
     "verification/reproduction_manifest.py",
     "verification/runs/exact-coercivity.json",
     "verification/runs/classii-sign.json",
     "verification/runs/ensemble-identity.json",
     "verification/runs/analytic-dependency.json",
     "verification/runs/review-packet.json",
+    "verification/runs/clean-snapshot-replay.json",
 )
 
 EXPECTED_AUDITS = {
@@ -59,6 +61,7 @@ EXPECTED_AUDITS = {
     "ensemble-identity": {"verdict": "PAPER-ENSEMBLE-IDENTITY-AUDIT-PASS", "passed": 24, "total": 24},
     "analytic-dependency": {"verdict": "PAPER-ANALYTIC-DEPENDENCY-AUDIT-PASS", "passed": 50, "total": 50},
     "review-packet": {"verdict": "PAPER-REVIEW-PACKET-AUDIT-PASS", "passed": 22, "total": 22},
+    "clean-snapshot-replay": {"verdict": "PAPER-CLEAN-SNAPSHOT-REPLAY-PASS", "passed": 14, "total": 14},
 }
 
 EXPECTED_COMMANDS = (
@@ -126,6 +129,11 @@ EXPECTED_COMMANDS = (
         "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py --self-test",
         "expected": "PAPER-REVIEW-PACKET-AUDIT-PASS: 22/22",
         "scope": "blank external-review packet structure and hash consistency",
+    },
+    {
+        "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/clean_snapshot_replay.py --self-test",
+        "expected": "PAPER-CLEAN-SNAPSHOT-REPLAY-PASS: 14/14",
+        "scope": "clean committed-source orchestration of the fourteen nested replay commands",
     },
     {
         "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py --self-test",

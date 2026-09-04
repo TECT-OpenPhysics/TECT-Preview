@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**850 accepted events** · latest 25 shown below · machine locator: `index.json`
+**852 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-04 | `20260904-r-491-correction-exploration-ordinal-exp-001457` — [R-491 correction exploration ordinal EXP-001457] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-491-correction-exploration-ordinal-exp-001457) |
+| 2026-09-04 | `20260904-r-491-pah-omc-011-eventual-generator-intertwini` — [R-491 PAH-OMC-011 eventual generator intertwining domain obstruction] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-491-pah-omc-011-eventual-generator-intertwini) |
 | 2026-09-04 | `20260904-r-490-exploration-reference-correction-2026-09` — [R-490 exploration reference correction] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-490-exploration-reference-correction-2026-09) |
 | 2026-09-04 | `20260904-r-490-pah-omc-010-gibbs-state-weighted-interact` — [R-490 PAH-OMC-010 Gibbs-state-weighted interaction envelope] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-490-pah-omc-010-gibbs-state-weighted-interact) |
 | 2026-09-04 | `20260904-r-489-pah-omc-009-uniform-interaction-envelope` — [R-489 PAH-OMC-009 uniform interaction-envelope obstruction] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-489-pah-omc-009-uniform-interaction-envelope) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-02 | `20260902-r-478-pah-001-finite-common-core-gate-held-for` — [R-478 PAH-001 finite common-core gate held for owner morphism contract] - 2026-09-02 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260902-r-478-pah-001-finite-common-core-gate-held-for) |
 | 2026-09-02 | `20260902-r-477-exact-q3lock-common-alpha-gate-held-for-u` — [R-477 exact Q3LOCK common-alpha gate held for uniform evidence] - 2026-09-02 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260902-r-477-exact-q3lock-common-alpha-gate-held-for-u) |
 | 2026-09-02 | `20260902-r-476-researcher-proposed-pre-a-minimum-microsc` — [R-476 researcher-proposed Pre-A minimum microscopic axiom packet structural admission] - 2026-09-02 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260902-r-476-researcher-proposed-pre-a-minimum-microsc) |
-| 2026-09-01 | `20260901-r-475-lean-cross-check-of-a5-branch-aware-condi` — [R-475 Lean cross-check of A5 branch-aware conditional-composition contract] - 2026-09-01 | A5-SECTOR-A-SYNTHESIS | [bounded page](pages/000819-000868.md#20260901-r-475-lean-cross-check-of-a5-branch-aware-condi) |
-| 2026-08-31 | `20260831-r-474-conditional-ordered-limit-rectangle-bridg` — [R-474 conditional ordered-limit rectangle bridge] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-r-474-conditional-ordered-limit-rectangle-bridg) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 819–850 | 32 | [000819-000868.md](pages/000819-000868.md) |
+| 819–852 | 34 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |

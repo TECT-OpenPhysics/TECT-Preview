@@ -5,7 +5,13 @@ source files and does not replace the claim-level reproduction bundles.  A
 standalone capstone bundle must be built only after operator confirmation of
 the integrated referee note, as required by the repository bundle policy.
 
-Run from `E:\Dev\TECT` with the repository environment:
+Run from `E:\Dev\TECT` with the repository environment after installing
+`requirements.txt`.  The primary symbolic lanes require the pinned
+`sympy==1.14.0`; a bare standard-library Python is intentionally rejected by
+the clean-snapshot runner.  The non-bearing R-472 step also needs the pinned
+Lean toolchain and a resolved Mathlib `.lake` cache.  Use
+`clean_snapshot_replay.py --lean-cache <path>` when that cache is outside the
+default `verification/lean/.lake` location.
 
 ```powershell
 $py = "E:\Dev\TECT.venv\Scripts\python.exe"
@@ -22,6 +28,7 @@ $py = "E:\Dev\TECT.venv\Scripts\python.exe"
 & $py publish/papers/a2-r157-r158-ensemble-minimizers/verification/ensemble_identity_audit.py
 & $py publish/papers/a2-r157-r158-ensemble-minimizers/verification/analytic_dependency_audit.py
 & $py publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py --self-test
+& $py publish/papers/a2-r157-r158-ensemble-minimizers/verification/clean_snapshot_replay.py --self-test
 & $py publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py --self-test
 ```
 
@@ -36,19 +43,30 @@ Expected registered results are:
 * paper-local Class-II source/sign audit: `8/8` PASS, with both source hashes recorded and the undefined v2.0 Laplacian convention retained as an open gate;
 * paper-local ensemble identity/Bregman/coexistence/witness audit: `24/24` PASS, reconstructed from the pinned A1 manifest with hostile mutations rejected;
 * paper-local analytic-dependency audit: `50/50` PASS, with exact Sobolev, compactness, kernel, direct-method, floor, and sign-prerequisite checks and hostile mutations rejected;
-* review-packet structural/hash audit: `22/22` PASS, checking the three stable theorem labels, `P-01`--`P-15`, nine hostile tests, `N-01`--`N-07`, `D-01`--`D-07`, blank status, signature fields, current manuscript/PDF hashes, exactly one blank-contract handoff section, the complete fourteen-command replay surface, and the transfer-only source-sign classification without filling either form;
-* hash-pinned reproduction manifest schema `1.1`: `PAPER-REPRODUCTION-MANIFEST-PASS`, with package file SHA-256 values, audit artifact counts, manuscript-hash consistency, all fourteen primary/independent/integrated/assurance/paper-local replay commands, all fourteen replay-input hashes, and an exact match to this README command surface;
+* review-packet structural/hash audit: `22/22` PASS, checking the three stable theorem labels, `P-01`--`P-15`, nine hostile tests, `N-01`--`N-07`, `D-01`--`D-07`, blank status, signature fields, current manuscript/PDF hashes, exactly one blank-contract handoff section, all fifteen documented replay scripts, and the transfer-only source-sign classification without filling either form;
+* clean committed-source replay: `PAPER-CLEAN-SNAPSHOT-REPLAY-PASS: 14/14`, executing the fourteen nested mathematical/audit commands from a fresh `git archive` snapshot and writing `verification/runs/clean-snapshot-replay.json`;
+* hash-pinned reproduction manifest schema `1.1`: `PAPER-REPRODUCTION-MANIFEST-PASS`, with package file SHA-256 values, audit artifact counts, manuscript-hash consistency, fifteen documented commands and replay-input hashes (the fourteen nested commands plus the clean-snapshot orchestrator), and an exact match to this README command surface;
 
 The schema-1.1 complete replay surface, bundled-runtime smoke test, and
-duplicate-section regression guard are recorded in `EXP-001454`.  They harden
-package identity and routing only; they do not constitute external proof or
-novelty review.
+duplicate-section regression guard are recorded in `EXP-001454`.  A clean
+snapshot run requires the dependencies declared in `requirements.txt`; the
+non-bearing R-472 check additionally uses the Lean toolchain and resolved
+Mathlib cache pinned by `verification/lean/lake-manifest.json`.  These checks
+harden package identity and routing only; they do not constitute external proof
+or novelty review.  The fail-closed environment test and final `14/14` clean
+tracked-source replay are recorded in `EXP-001455`.
+The v0.1.40 literature repair, 17-page rendered-PDF review, refreshed packet
+and manifest, and isolated tree `33aa52f70c0e4b9edf143e72faeb3250e5521d81`
+replay are recorded in `EXP-001458`; all fourteen nested commands pass.
+The subsequent combined shared-tree regeneration and complete repository
+release PASS are recorded in `EXP-001459`; this remains a consistency result,
+not an external proof or novelty disposition.
 * R-472 exact-core sidecar: primary `30/30`, independent `22/22`, hostile
   `12/12`, integrated `22/22`, with Lean compilation PASS.
 
 The last command is assurance-only: R-472 is explicitly non-bearing and must
 not be used to promote the A2/R-157/R-158 theorem claims.  The manuscript
-version 0.1.39 records the self-contained functional and spectral specification, the closest 2026 Belin--Schneider quasilinear amplitude-theory comparison, the transfer-only canonical source-sign classification, and narrowed residual-contribution language,
+version 0.1.40 records the self-contained functional and spectral specification, the Belin--Schneider, Hilder--Kuehn, and Becker et al. adjacent comparisons, the transfer-only canonical source-sign classification, and narrowed residual-contribution language,
 the indexed Class-II Euler--Lagrange formula and coefficient tensor, the paper-local
 Fourier-multiplier realization with `H^4`/`H^2` domains, and a bounded primary-source
 literature crosswalk; the displayed data and those sources are
@@ -70,7 +88,7 @@ recorded as `EXP-001372`, correcting the earlier replay boundary `EXP-001370`.
 
 A fresh replay now passes R-157 integrated verification `144/144` (including
 legacy A2 `61/61`) and R-158 integrated verification `155/155` (including the
-R-157/A2 regression).  Manuscript v0.1.39 additionally displays the generators,
+R-157/A2 regression).  Manuscript v0.1.40 additionally displays the generators,
 internal matrices, density floor, Class-II coefficient formulas, explicit
 shell-bottom scalar symbol, the indexed Euler--Lagrange formula and coefficient
 tensor, the integration-by-parts sign in `N_II`, and the nonlinear energy `Phi`,

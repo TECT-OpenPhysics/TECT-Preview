@@ -68,6 +68,7 @@ REPLAY_SCRIPTS = (
     "ensemble_identity_audit.py",
     "analytic_dependency_audit.py",
     "review_packet_audit.py",
+    "clean_snapshot_replay.py",
     "reproduction_manifest.py",
 )
 
@@ -114,7 +115,7 @@ def build_assertions(
         )
     )
     return {
-        "manuscript_version_is_v019": "Draft v0.1.39" in manuscript,
+        "manuscript_version_is_v0140": "Draft v0.1.40" in manuscript,
         "all_theorem_labels_are_unique": all(
             manuscript.count(rf"\label{{{label}}}") == 1 for label in THEOREM_LABELS
         ),
