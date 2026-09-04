@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-principal-floquet-gibbs-reference",
+      "branch": "obtain a preferred thermal state and absolute energy reference from the principal logarithm of the split-circuit unitary",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-split-the-common-cl8-regulator-into-a-causal-ca"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "boundary": "This rejects only the bounded principal-log Gibbs prescription and selection by bare Floquet data. It does not exclude an independently selected invariant density, a separately proved unbounded logarithm with locality and trace-class heat kernel, a finite-dimensional onsite truncation with a separately audited CCR limit, or an external preparation principle.",
+        "consequence": "No ground rule, temperature, absolute physical reference, physical empty-space state, or below-empty-space sign follows from the current Floquet unitary.",
+        "evidence": "A principal Floquet Hamiltonian has spectrum in a bounded quasienergy interval of width `2*pi*hbar/|delta|`. For every positive beta, its Gibbs exponential is consequently bounded below by a positive multiple of the identity. The Schrodinger Hilbert space `L2(R^(8M))` is infinite-dimensional, so the exponential has infinite trace and cannot be normalized to a density. Other logarithm branches may add different integer multiples of `2*pi*hbar/delta` on spectral sectors and are not selected by the unitary itself.",
+        "evidence_files": "`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split.py`; `codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split_independent.py`.",
+        "failure_mode": "Define a preferred normal thermal state and absolute energy reference from the principal logarithm of the split-circuit unitary alone."
+      },
+      "detail_title": "the principal Floquet logarithm supplies no normal Gibbs reference",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "the principal Floquet Hamiltonian is bounded, so its Gibbs exponential is bounded below by a positive multiple of the identity and has infinite trace on `L2(R^(8M))`; other logarithm branches are nonunique. Retain independently selected invariant states or a separately proved unbounded/local trace-class generator",
+      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-PRINCIPAL-FLOQUET-GIBBS-REFERENCE"
+    },
+    {
       "anchor": "ng-2026-08-04-pre-a-cp1-cl8-pressure-value-only-phase-classification",
       "branch": "infer phase uniqueness, coexistence, spontaneous order, or selected states from the scalar pressure value or boundary-independent pressure alone",
       "claim_ref_basis": {
@@ -2209,29 +2231,6 @@
       "kind": "no_go",
       "summary": "an exact two-dimensional orthogonal-shell fixture has `T_21=0` but `T_12!=0`, so `T_21^*=0!=T_12`. Shell coanalysis supplies the adjoint of the same aggregate region, not reflection into an unproved lower band",
       "tag": "NG-2026-07-30-A13-SWAPPED-GEOMETRIC-REVERSE-BAND-ADJOINT"
-    },
-    {
-      "anchor": "ng-2026-07-30-a13-stationary-six-row-to-adapted-low-chaos-transfer",
-      "branch": "infer adapted `D0=D1=0` from R-120 stationary value-derivative independence, six-row parity, row diagonalisation, or lower endpoint kernels",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Infer the adapted identities `D0=D1=0` from the R-120 stationary six-row value--derivative independence and parity theorem, from fixed-row diagonalisation, or from source cost and lower endpoint kernels.",
-        "consequence": "Stationary value--derivative independence, fixed-row parity, and lower marginal data do not prove adapted cancellation. This does not show that the owner-complete heat-lifted production aggregate has nonzero `D0` or `D1`. The direct R-093 expected action needs only the aggregate `D0-||b||^2` trace excess after complete ownership.",
-        "evidence": "R-123 proof note, Sections 3--6; exact symbolic primary audit; non-importing Gaussian-quadrature audit; paired PDF and integrated verifier.",
-        "failure_mode": "In the fixed six-row frame, take independent standard Gaussians `xi,zeta`, `A(xi)=a+beta sin(t xi)`, `w=(A+tau zeta)e1`, and `y=xi e2`. Only one Pauli pair survives. With `s=c0+c1`, `D0=4 s beta^2 t^2 (exp(-t^2)-2 exp(-2t^2))` and `D1=8 s a beta t(t^2-1) exp(-t^2/2)`. At `t=2` both are generically nonzero, while `E P_comp=16 s beta^2 exp(-8)>0`. Independently, R-122's bounded legal `h_+/-` pair has identical source cost and lower kernels but opposite nonzero `D1`."
-      },
-      "detail_title": "stationary six-row parity does not transfer to arbitrary adapted controls",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "a bounded full-six-row finite-root fixture has explicit nonzero `D0,D1`, while its direct packet stays positive; R-122's legal `h_+/-` pair also flips `D1` with identical lower data. This retires the stationary-to-adapted inference, not the complete adapted production cancellation",
-      "tag": "NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER"
     }
   ],
   "kind": "negative_records",

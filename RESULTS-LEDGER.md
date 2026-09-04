@@ -17195,7 +17195,7 @@ mathematical theorem.
 
 | source | SHA-256 |
 |---|---|
-| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `5bea9308cdce398b7d19968adeae6af642f181dcba4ca9391b155b618afd90f7` |
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `8ed0b3e7d8c3370aa0dea19f02b9eca9e2501e22f10439b7f2892128e20c3903` |
 | upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
 | upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
 | P-06/P-09 audit round 2 | `c5e62f8b7d4c0b3351063c0f9d5707e387be858f301e01d05a1b79ec0686b960` |
@@ -17207,6 +17207,9 @@ mathematical theorem.
 | Operator/form-domain and unbounded-commutator audit | `87bdbcb594dabb380395811ea7facaa6c7a54c68760c94ebf3bcfde5ff82718f` |
 | Fixed-volume Gaussian tightness, Jensen normalizer and source-UI audit | `5c8f01ad2bde0b438fd840083a478b69b08b16924fa11c1ca04ef0ac0da43b4c` |
 | Fixed-volume massive Gaussian reference convergence audit | `8fe1644e9b478fe22ee3ecd7835391597ddaea6dea7962cc9be9125cd2399538` |
+| P-09 FSS Poisson-shift and infrared-constant audit | `c965c62fe506a1d442976a7fc694579d0aff3fddefb96c2698ef4cf1a2c62d9c` |
+| Pressure zero-mode, Griffiths and tangent-state audit | `2a94560bfcd53f8a2dc2da6098e64cdbcea9fefb9a1c8dc19800549b38e73c40` |
+| Finite-volume translation trace-differentiation audit | `1ecf9661b86b01a35300288768069f994abf66bd5415f04a3e60a7b233842e05` |
 | FSS theorem and hypothesis crosswalk | `f0508567fe898785677726b366c078e72141c5fa66b4605b3e68abe1ae409be0` |
 | primary verifier source | `d707e17db34fa2f17b09483a55d172edbcd3ff44ecb65e6a40165c01a7286fd3` |
 | independent verifier source | `11ee55c1d225645d8621ae34f2223f4c99e90024cc3c46b6cefc325f4b457e71` |
@@ -17219,7 +17222,7 @@ mathematical theorem.
 in `strategy/q3lock-exp782-independent-result-manifest-260905.json`. The
 upstream authority records are EXP-000780, EXP-000781, and EXP-000782 in
 `explorations/log.jsonl`; the current seam decisions are EXP-001516, EXP-001522, EXP-001526,
-EXP-001528, EXP-001530, and EXP-001531. The proof
+EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, and EXP-001534. The proof
 text and its boundaries are audited in
 `strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`, with the
 finite-grid FKG, source-uniform loop limit, topology, edge-incidence,
@@ -17255,7 +17258,19 @@ review gates open. The fixed-volume massive Gaussian Fourier covariance and
 residual-weighted loop-limit audit is recorded in
 `strategy/q3lock-p06-gaussian-reference-convergence-260905.md`; it supplies
 the missing reference-convergence insertion while retaining all spatial,
-operator, source-tangent and external-review gates. The primary, independent, and integrated verifiers and their
+operator, source-tangent and external-review gates. The exact finite-grid FSS
+Poisson-shift and infrared-constant audit is recorded in
+`strategy/q3lock-p09-fss-poisson-shift-constant-audit-260905.md`; it fixes the
+`beta/(2c)` and `2*E(p)` normalization while leaving loop, spatial and
+independent-applicability review open. The pressure zero-mode, KKK Griffiths
+and tangent-state factor audit is recorded in
+`strategy/q3lock-pressure-zero-mode-griffiths-tangent-audit-260905.md`; it
+fixes the volume-squared witness and the `1/8` pressure-slope conversion while
+remaining conditional on all upstream inputs. The finite-volume translation
+trace-differentiation audit is recorded in
+`strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md`; it
+supplies a form/Feynman--Kac route for the unbounded global shift identity while
+leaving volume-uniform common-core and thermodynamic gates open. The primary, independent, and integrated verifiers and their
 result JSON paths are listed in the companion manifest.
 
 **Reuse scope.** This result is reusable for mathematical-physics analysis of
@@ -17278,12 +17293,14 @@ No P2 manuscript, submission package, or PDF is created at this stage; PDF
 compilation, rendering, visual QA, and hash capture are explicitly deferred to
 the final content-frozen stage.
 
-**Next.** Obtain an external-level mathematical audit of P-06 and P-09,
-including the Gaussian tightness, Fourier covariance, interpolation,
-Jensen-normalizer and source-uniform-integrability insertions, and the
-unbounded-operator passages; repair any objection, then decide whether a
-bounded claim card and manuscript content freeze are warranted. Re-run all
-verification lanes from a clean snapshot before any final LaTeX or PDF work.
+**Next.** Obtain an external-level mathematical audit of P-06 and P-09 and
+the pressure bridge, including the Gaussian tightness, Fourier covariance,
+interpolation, Jensen-normalizer, source-uniform-integrability, FSS
+Poisson-shift, zero-mode, KKK Griffiths and tangent-state insertions, and the
+translated-form Feynman--Kac/Duhamel operator passages; repair any objection,
+then decide whether a bounded claim card and manuscript content freeze are
+warranted. Re-run all verification lanes from a clean snapshot before any
+final LaTeX or PDF work.
 
 <a id="r-494"></a>
 ### R-494 -- PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit

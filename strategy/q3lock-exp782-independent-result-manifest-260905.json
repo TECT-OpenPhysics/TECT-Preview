@@ -81,6 +81,27 @@
       "record_line": 1531,
       "role": "fixed-volume massive Gaussian reference convergence and residual-weighted loop-limit audit",
       "scope": "Fourier covariance, interpolation tightness and compact residual passage at fixed spatial volume only; no spatial or thermodynamic closure"
+    },
+    {
+      "exploration_id": "EXP-001532",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1532,
+      "role": "finite-grid FSS Poisson-shift and infrared-constant audit",
+      "scope": "pinned FSS source convention, source scaling, zero-sum Poisson norm and graph factor at finite mesh and volume only; no loop or thermodynamic closure"
+    },
+    {
+      "exploration_id": "EXP-001533",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1533,
+      "role": "pressure zero-mode, Griffiths slope and tangent-state normalization audit",
+      "scope": "volume-squared zero-mode identity, explicit threshold algebra and pressure-to-DLR tangent conversion; conditional on upstream inputs"
+    },
+    {
+      "exploration_id": "EXP-001534",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1534,
+      "role": "finite-volume translation trace differentiation and form/Feynman-Kac audit",
+      "scope": "unbounded polynomial derivative integrability, bounded Duhamel cutoff and global shift identity at fixed spatial volume only; no uniform operator limit"
     }
   ],
   "model_scope": {
@@ -264,6 +285,21 @@
       "path": "strategy/q3lock-p06-gaussian-reference-convergence-260905.md",
       "role": "fixed-volume massive Gaussian reference convergence and residual-weighted loop-limit audit",
       "sha256": "8fe1644e9b478fe22ee3ecd7835391597ddaea6dea7962cc9be9125cd2399538"
+    },
+    {
+      "path": "strategy/q3lock-p09-fss-poisson-shift-constant-audit-260905.md",
+      "role": "finite-grid FSS Poisson-shift and infrared-constant audit",
+      "sha256": "c965c62fe506a1d442976a7fc694579d0aff3fddefb96c2698ef4cf1a2c62d9c"
+    },
+    {
+      "path": "strategy/q3lock-pressure-zero-mode-griffiths-tangent-audit-260905.md",
+      "role": "pressure zero-mode, Griffiths slope and tangent-state normalization audit",
+      "sha256": "2a94560bfcd53f8a2dc2da6098e64cdbcea9fefb9a1c8dc19800549b38e73c40"
+    },
+    {
+      "path": "strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md",
+      "role": "finite-volume translation trace differentiation and form/Feynman-Kac audit",
+      "sha256": "1ecf9661b86b01a35300288768069f994abf66bd5415f04a3e60a7b233842e05"
     }
   ],
   "open_gates": [
@@ -271,7 +307,10 @@
     "independent mathematical audit of P-09 finite FSS-to-loop Duhamel passage",
     "independent review of the P-06/P-09 Gaussian tightness, normalizer and source-uniform-integrability insertion",
     "independent review of the P-06 Gaussian Fourier covariance, interpolation and residual-weighted loop-limit insertion",
+    "independent review of the P-09 FSS theorem transcription, Poisson-shift adjoint convention and infrared constant",
+    "independent review of the pressure zero-mode, KKK Griffiths factor and EXP-000781 tangent-state composition",
     "independent review of the KP/FSS theorem-domain and hypothesis crosswalk",
+    "independent review of the finite-volume translation trace differentiation, polynomial majorant and Duhamel cutoff removal",
     "independent review of the operator/form-domain and unbounded-commutator audit",
     "bounded independent claim-card and result-lineage decision",
     "manuscript convention, bibliography, nonclaim and content freeze after source-hash capture",
@@ -288,7 +327,7 @@
     "No C0, N1-N5, C6, CP1, Sector A or Pre-A closure.",
     "No claim-tier promotion, P2 manuscript, submission, upload, tag, release or PDF is created by this registration."
   ],
-  "next_action": "Obtain independent line-by-line review of P-06/P-09, including the Gaussian tightness, Fourier covariance, interpolation, Jensen normalizer and source-uniform-integrability insertions, the finite-volume operator/form-domain derivation, and the unbounded cutoff removal using the hash-frozen source scope; repair any objection, then decide whether a bounded claim card and manuscript content freeze are warranted. Only after that decision may final LaTeX compilation, PDF rendering and page-by-page visual review begin.",
+  "next_action": "Obtain independent line-by-line review of P-06/P-09, the pressure bridge and the finite-volume operator passages, including Gaussian tightness, Fourier covariance, interpolation, Jensen normalizer, source-uniform-integrability, FSS Poisson shift, zero mode, KKK Griffiths, tangent states, translated-form Feynman-Kac domination and Duhamel cutoffs using the hash-frozen source scope; repair any objection, then decide whether a bounded claim card and manuscript content freeze are warranted. Only after that decision may final LaTeX compilation, PDF rendering and page-by-page visual review begin.",
   "source_freeze": {
     "status": "HASHED_TEMPORARY_CAPTURE",
     "captured_utc": "2026-09-04",

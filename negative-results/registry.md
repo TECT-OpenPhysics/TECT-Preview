@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [AUDIT-2026-09-05-PAH-OMC-014-Q0-COMPONENT-PUSHFORWARD](#audit-2026-09-05-pah-omc-014-q0-component-pushforward) | treat deterministic Q=0 component restriction as a projective Gibbs push-forward on PAH-OMC-004 | exact finite Z_2 enumeration gives a coarse/fine expectation mismatch with 2,784 rational-exponent terms; this retires only the deterministic Q=0 factorization and leaves cross-Q mixtures open |
 | [NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING](#ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining) | use positive scalar beta or kappa_s transport to repair the natural free-vertex forgetful pullback | the exact rate defect is beta*kappa_s*delta*(z_1-z_2)/2, nonzero for every positive transported beta, kappa_s, step and distinct hidden values; only block, weighted, conditional or separately versioned successors remain open |
 | [NG-2026-09-02-PAH-OMC-002-CONDITIONAL-GIBBS-PROJECTED-INTERTWINING](#ng-2026-09-02-pah-omc-002-conditional-gibbs-projected-intertwining) | use the exact PAH-OMC-002 Gibbs fibre average as a projected generator intertwiner on the fine-only-vertex map | the invariant cylinder witness `f=j_v` has coarse increment 0 but fine hidden increments `+1/8` and `-1/8`; the conditional factor `(exp(-1/16)+exp(1/16))/2>1`, so the projected identity fails; this is route-local and does not reject other owner-authorized block kernels |
 | [NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING](#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining) | use the natural forgetful pullback after adding a freely varying adjacent fine vertex as an exact PAH generator refinement morphism | the added positive-kappa_s aperture edge makes the fine rate vary across a coarse fibre by `-kappa_s delta(z_1-z_2)`, so exact intertwining fails; retain block, lumped, weighted, approximate-defect, or separately versioned successor routes |
@@ -10583,3 +10584,35 @@ it is not a no-go for PAH-001, the strong target, or a different
 owner-authorized block/lumping kernel. Stage 2 remains `HOLD_FOR_EVIDENCE`.
 No refinement family, uniform estimate, continuum, physical Pre-A, spacetime,
 gravity, QFT, Yang--Mills, mass-gap or TOE conclusion follows.
+
+<a id="audit-2026-09-05-pah-omc-014-q0-component-pushforward"></a>
+### AUDIT-2026-09-05-PAH-OMC-014-Q0-COMPONENT-PUSHFORWARD -- deterministic Q=0 component push-forward fails
+
+**Failure mode.** Treat the PAH-OMC-012 neutral restriction as a
+componentwise projective Gibbs kernel on the exact PAH-OMC-004 strip, using
+`Q_f=0` and therefore the forced grade `Q_c=0`.
+
+**Evidence.** The immutable PAH-001, PAH-OMC-004 and PAH-OMC-012 sources are
+pinned at SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`,
+`38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c` and
+`180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72`.
+On `G_3 -> G_2` with `K=2`, `M_s=M_psi=1`, `epsilon=1/2`, `beta=1`,
+`nu=1`, `R_max=1`, `Q_f=0`, all displayed couplings one and the old aperture
+cylinder `indicator(s_(0,0)=1)`, exact enumeration of the Z_2 face-flux image
+gives coarse/fine ranks 5/7 and fibre multiplicities 128/512.  Cross-multiplying
+the fine push-forward and coarse Q=0 expectations gives a nonempty integer
+coefficient map over distinct rational exponents with 2,784 terms and map hash
+`b66044e590399d959ab2947edf22f3aa2aeea4405473b88c4327da24058ebb93`.
+The Lindemann--Weierstrass linear-independence criterion makes the mismatch
+exact.  Primary PASS 9/9, independent PASS 7/7, hostile PASS 16/16 and
+integrated PASS 11/11; run artefact hashes are recorded in
+`strategy/pa-hyp/PAH-OMC-014-q0-projective-obstruction-260905.md`.
+
+**Consequence.** Retire only the deterministic-grade component push-forward
+factorization on `Q_f=0`.  This is not a full-Q global-mixture no-go: a future
+source-owned cross-Q law could in principle supply cancellations, but no such
+law is present in PAH-OMC-012.  The active PAH-OMC-014 verdict remains
+`HOLD_FOR_EVIDENCE`; no global Gibbs state, weak cylinder limit, infinite-volume
+dynamics, continuum, physical Pre-A, spacetime, gravity, QFT, Yang--Mills,
+mass-gap or TOE conclusion follows.  Markov time remains external stochastic
+time.

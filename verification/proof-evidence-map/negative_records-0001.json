@@ -1,6 +1,22 @@
 {
   "data": [
     {
+      "anchor": "audit-2026-09-05-pah-omc-014-q0-component-pushforward",
+      "branch": "treat deterministic Q=0 component restriction as a projective Gibbs push-forward on PAH-OMC-004",
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "detail": {
+        "consequence": "Retire only the deterministic-grade component push-forward factorization on `Q_f=0`. This is not a full-Q global-mixture no-go: a future source-owned cross-Q law could in principle supply cancellations, but no such law is present in PAH-OMC-012. The active PAH-OMC-014 verdict remains `HOLD_FOR_EVIDENCE`; no global Gibbs state, weak cylinder limit, infinite-volume dynamics, continuum, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or TOE conclusion follows. Markov time remains external stochastic time.",
+        "evidence": "The immutable PAH-001, PAH-OMC-004 and PAH-OMC-012 sources are pinned at SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`, `38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c` and `180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72`. On `G_3 -> G_2` with `K=2`, `M_s=M_psi=1`, `epsilon=1/2`, `beta=1`, `nu=1`, `R_max=1`, `Q_f=0`, all displayed couplings one and the old aperture cylinder `indicator(s_(0,0)=1)`, exact enumeration of the Z_2 face-flux image gives coarse/fine ranks 5/7 and fibre multiplicities 128/512. Cross-multiplying the fine push-forward and coarse Q=0 expectations gives a nonempty integer coefficient map over distinct rational exponents with 2,784 terms and map hash `b66044e590399d959ab2947edf22f3aa2aeea4405473b88c4327da24058ebb93`. The Lindemann--Weierstrass linear-independence criterion makes the mismatch exact. Primary PASS 9/9, independent PASS 7/7, hostile PASS 16/16 and integrated PASS 11/11; run artefact hashes are recorded in `strategy/pa-hyp/PAH-OMC-014-q0-projective-obstruction-260905.md`.",
+        "failure_mode": "Treat the PAH-OMC-012 neutral restriction as a componentwise projective Gibbs kernel on the exact PAH-OMC-004 strip, using `Q_f=0` and therefore the forced grade `Q_c=0`."
+      },
+      "detail_title": "deterministic Q=0 component push-forward fails",
+      "family_refs": [],
+      "kind": "audit",
+      "summary": "exact finite Z_2 enumeration gives a coarse/fine expectation mismatch with 2,784 rational-exponent terms; this retires only the deterministic Q=0 factorization and leaves cross-Q mixtures open",
+      "tag": "AUDIT-2026-09-05-PAH-OMC-014-Q0-COMPONENT-PUSHFORWARD"
+    },
+    {
       "anchor": "ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence",
       "branch": "require a cutoff-independent PAH-001 root-rate interaction envelope along R_max->infinity",
       "claim_ref_basis": {
@@ -2023,28 +2039,6 @@
       "kind": "no_go",
       "summary": "the exact quadratic contraction is `-3C[(g+lambda)I+lambda L_Q3]`; for `lambda>0` its Q3-Laplacian direction is independent of `I`, and its Walsh-level separations grow as `C_N=Theta(log N)`. Retain a Q3-matrix counterterm basis, another declared scheme, `lambda=0`, or a separately proved constructive limit",
       "tag": "NG-2026-08-04-PRE-A-CP1-CL8-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION"
-    },
-    {
-      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-principal-floquet-gibbs-reference",
-      "branch": "obtain a preferred thermal state and absolute energy reference from the principal logarithm of the split-circuit unitary",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-split-the-common-cl8-regulator-into-a-causal-ca"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "boundary": "This rejects only the bounded principal-log Gibbs prescription and selection by bare Floquet data. It does not exclude an independently selected invariant density, a separately proved unbounded logarithm with locality and trace-class heat kernel, a finite-dimensional onsite truncation with a separately audited CCR limit, or an external preparation principle.",
-        "consequence": "No ground rule, temperature, absolute physical reference, physical empty-space state, or below-empty-space sign follows from the current Floquet unitary.",
-        "evidence": "A principal Floquet Hamiltonian has spectrum in a bounded quasienergy interval of width `2*pi*hbar/|delta|`. For every positive beta, its Gibbs exponential is consequently bounded below by a positive multiple of the identity. The Schrodinger Hilbert space `L2(R^(8M))` is infinite-dimensional, so the exponential has infinite trace and cannot be normalized to a density. Other logarithm branches may add different integer multiples of `2*pi*hbar/delta` on spectral sectors and are not selected by the unitary itself.",
-        "evidence_files": "`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split.py`; `codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split_independent.py`.",
-        "failure_mode": "Define a preferred normal thermal state and absolute energy reference from the principal logarithm of the split-circuit unitary alone."
-      },
-      "detail_title": "the principal Floquet logarithm supplies no normal Gibbs reference",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "the principal Floquet Hamiltonian is bounded, so its Gibbs exponential is bounded below by a positive multiple of the identity and has infinite trace on `L2(R^(8M))`; other logarithm branches are nonunique. Retain independently selected invariant states or a separately proved unbounded/local trace-class generator",
-      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-PRINCIPAL-FLOQUET-GIBBS-REFERENCE"
     }
   ],
   "kind": "negative_records",

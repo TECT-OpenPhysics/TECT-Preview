@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-30-a13-stationary-six-row-to-adapted-low-chaos-transfer",
+      "branch": "infer adapted `D0=D1=0` from R-120 stationary value-derivative independence, six-row parity, row diagonalisation, or lower endpoint kernels",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Infer the adapted identities `D0=D1=0` from the R-120 stationary six-row value--derivative independence and parity theorem, from fixed-row diagonalisation, or from source cost and lower endpoint kernels.",
+        "consequence": "Stationary value--derivative independence, fixed-row parity, and lower marginal data do not prove adapted cancellation. This does not show that the owner-complete heat-lifted production aggregate has nonzero `D0` or `D1`. The direct R-093 expected action needs only the aggregate `D0-||b||^2` trace excess after complete ownership.",
+        "evidence": "R-123 proof note, Sections 3--6; exact symbolic primary audit; non-importing Gaussian-quadrature audit; paired PDF and integrated verifier.",
+        "failure_mode": "In the fixed six-row frame, take independent standard Gaussians `xi,zeta`, `A(xi)=a+beta sin(t xi)`, `w=(A+tau zeta)e1`, and `y=xi e2`. Only one Pauli pair survives. With `s=c0+c1`, `D0=4 s beta^2 t^2 (exp(-t^2)-2 exp(-2t^2))` and `D1=8 s a beta t(t^2-1) exp(-t^2/2)`. At `t=2` both are generically nonzero, while `E P_comp=16 s beta^2 exp(-8)>0`. Independently, R-122's bounded legal `h_+/-` pair has identical source cost and lower kernels but opposite nonzero `D1`."
+      },
+      "detail_title": "stationary six-row parity does not transfer to arbitrary adapted controls",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "a bounded full-six-row finite-root fixture has explicit nonzero `D0,D1`, while its direct packet stays positive; R-122's legal `h_+/-` pair also flips `D1` with identical lower data. This retires the stationary-to-adapted inference, not the complete adapted production cancellation",
+      "tag": "NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER"
+    },
+    {
       "anchor": "ng-2026-07-30-a13-separate-variance-trace-hessian-norm-necessity",
       "branch": "require separate uniform norm bounds for `H_V` and `H_T` before any direct signed covariance-normal Hessian estimate can close",
       "claim_ref_basis": {
@@ -2208,28 +2231,6 @@
       "kind": "no_go",
       "summary": "bounded width corresponds to zero gain and zero Young slack; an exact production square--trace--forest fixture is strictly negative, although a coupled frequency-local budgeted estimate is not refuted",
       "tag": "NG-2026-07-25-A13-NEAR-WIDTH-AND-ROOTWISE-POSITIVITY"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-linear-pf-adapted-positivity",
-      "branch": "A13 standalone positivity or deletion of the three linear Pauli--Fierz rows in adapted NEAR",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "Polynomial heat algebra and the exact nine-block forest are finite bookkeeping, not a standalone sign theorem. The linear and rational rows, conditional covariance defects, paid subtraction, and spatial budget must remain recombined. This fixture has no spatial Cameron--Martin payment and therefore does not falsify a lower bound for the complete paid production packet, controlled-shell one-use, or Nelson synthesis.",
-        "evidence": "Let `xi` be standard Gaussian, `A=lambda(xi^2-4)`, `z=Ae_1`, and `y=xi e_2`, with an optional independent target-heat dummy `R=tau zeta e_1`. The rational row, radial linear row, and imaginary horizontal row vanish identically. The surviving real horizontal packet is `W=2(c0+c1)(A^2+tau^2)(xi^2-1)`. Exact Hermite algebra gives `A^2 H_2=lambda^2(H_6+6H_4+15H_2-4)`, hence `E W=-8(c0+c1)lambda^2<0`; target heat changes only the centered `H_2` term. A separate three-point law gives the same negative sign without Gaussian Hermite conversion. Both executable audits evaluate the matrices and rational row directly rather than self-attesting their zeros.",
-        "failure_mode": "Delete the three linear Pauli--Fierz rows from NEAR because their Gram coefficient is quadratic, or prove them separately by a universal conditional positivity claim and assign all signed difficulty to the rational row."
-      },
-      "detail_title": "the linear Pauli--Fierz subpacket is not universally positive under adapted feedback",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "a heat-lifted adapted fixture makes the rational row and two linear rows vanish while the remaining horizontal linear row has exact mean `-8(c0+c1)lambda^2<0`; the complete paid linear-plus-rational packet may still admit a lower bound",
-      "tag": "NG-2026-07-25-A13-LINEAR-PF-ADAPTED-POSITIVITY"
     }
   ],
   "kind": "negative_records",

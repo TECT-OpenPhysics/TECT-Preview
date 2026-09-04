@@ -1,0 +1,195 @@
+{
+  "assertion_count": 16,
+  "assertions": [
+    {
+      "actual": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+      },
+      "expected": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+      },
+      "name": "source hashes are pinned",
+      "passed": true
+    },
+    {
+      "actual": {
+        "independent": {
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+          "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+        },
+        "primary": {
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+          "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+        }
+      },
+      "expected": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+      },
+      "name": "primary and independent source hashes agree",
+      "passed": true
+    },
+    {
+      "actual": {
+        "independent": [
+          "PASS",
+          "NEGATIVE_RESULT"
+        ],
+        "primary": [
+          "PASS",
+          "NEGATIVE_RESULT"
+        ]
+      },
+      "expected": "PASS/NEGATIVE_RESULT",
+      "name": "both base runs pass the declared negative test",
+      "passed": true
+    },
+    {
+      "actual": {
+        "independent_terms": 2784,
+        "primary_terms": 2784
+      },
+      "expected": "identical coefficient lists",
+      "name": "independent exact maps agree",
+      "passed": true
+    },
+    {
+      "actual": {
+        "sha256": "b66044e590399d959ab2947edf22f3aa2aeea4405473b88c4327da24058ebb93",
+        "terms": 2784
+      },
+      "expected": {
+        "sha256": "b66044e590399d959ab2947edf22f3aa2aeea4405473b88c4327da24058ebb93",
+        "terms": 2784
+      },
+      "name": "exact map oracle is nonempty",
+      "passed": true
+    },
+    {
+      "actual": "G_3 -> G_2, K=2, M_s=M_psi=1, epsilon=1/2, beta=1, R_max=1, Q=0; observable indicator(aperture_(0,0)=1)",
+      "expected": "G_3 -> G_2; K=2; Q=0; beta=1; R_max=1",
+      "name": "finite scope is unchanged",
+      "passed": true
+    },
+    {
+      "actual": {
+        "formula": "F_rho=sum_v[lambda_s(s_v-1)^2/2+m2|psi_v|^2/2+lambda_4|psi_v|^4/4+eta_6|psi_v|^6/6+g s_v^2|psi_v|^2/2]+kappa_s sum_(e=(v,w))(s_v-s_w)^2/2+kappa_D sum_(e=(v,w))J_e(s)|psi_w-U_e psi_v|^2/2+kappa_g sum_p J_p(s)(1-Re U_p)",
+        "wilson_factor": true
+      },
+      "expected": "Wilson term and Z2 odd-flux factor retained",
+      "name": "mutation removing Wilson term rejected",
+      "passed": true
+    },
+    {
+      "actual": {
+        "faces": "For i<n, q_i is replaced by triangles [h_i^0,v_(i+1),d_i^(-1)] and [d_i,(h_i^1)^(-1),v_i^(-1)]; q_n remains the unsplit square with its oriented boundary.",
+        "projection": "For x=(Q_f,omega_f) in Omega_(n+1)^gr(R), retain every G_n vertex aperture, phase and radial coordinate and every old edge link, drop only the new column and d_n link, recompute Q_c=sum_(v in V_n)ell_v(omega_f), and set p_(n+1,n)(x)=(Q_c,omega_f restricted to G_n)."
+      },
+      "expected": "declared neutral restriction and frontier square",
+      "name": "mutation changing the strip projection rejected",
+      "passed": true
+    },
+    {
+      "actual": {
+        "balance": "Q_f-Q_c=sum_(v in V_(n+1)\\V_n)ell_v(omega_f)>=0. No retained ell coordinate is altered and no charge is redistributed; the grade is allowed to change from Q_f to Q_c.",
+        "scope": "Use the unchanged PAH-001 integer aperture, phase, radial and Z_K link variables on the displayed carrier. The finite audit fixes K=2, M_s=M_psi=1, Q=0, epsilon=1/2, beta=1, nu=1, R_max=1, m2=0, lambda_4=1, eta_6=1, g=1, lambda_s=1, kappa_s=1, kappa_D=1, kappa_g=1, theta=0. Q=0 is a finite scope restriction, so all nonnegative radial levels vanish; it is not a physical-sector assertion."
+      },
+      "expected": "deterministic Q_f=0 => Q_c=0",
+      "name": "mutation replacing Q=0 by a fixed-Q shortcut rejected",
+      "passed": true
+    },
+    {
+      "actual": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+      "expected": "component family only; no fitted mixture",
+      "name": "mutation fitting cross-Q weights rejected",
+      "passed": true
+    },
+    {
+      "actual": {
+        "counterterms": "none at finite rho"
+      },
+      "expected": "none at finite rho",
+      "name": "mutation adding a counterterm rejected",
+      "passed": true
+    },
+    {
+      "actual": "A nonempty integer coefficient map over distinct rational exponents is nonzero by Lindemann--Weierstrass linear independence; the decimal is diagnostic only.",
+      "expected": "exact rational-exponent criterion",
+      "name": "mutation using a decimal-only witness rejected",
+      "passed": true
+    },
+    {
+      "actual": {
+        "normalization": "counting measure on the fixed-Q finite configuration space and Z_(rho,Q)=sum_x exp(-beta F_rho(x))",
+        "phase_note": true
+      },
+      "expected": "per-level constants cancel under normalized expectations",
+      "name": "mutation discarding phase multiplicities rejected",
+      "passed": true
+    },
+    {
+      "actual": {
+        "boundary": "This refutes only the componentwise Q_f=0 push-forward-to-coarse-Q=0 Gibbs equality and the corresponding deterministic-grade kernel factorization. It does not refute a global full-Q mixture with possible cross-sector cancellation.",
+        "non_claims": [
+          "No global w_(n,R,Q), mu_(n,R) or omega is defined.",
+          "No weak cylinder limit, Cauchy estimate, R-488 nonzero bound or stationarity is proved.",
+          "No infinite-volume, continuum, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+        ]
+      },
+      "expected": "component boundary retained",
+      "name": "mutation promoting to a global full-Q no-go rejected",
+      "passed": true
+    },
+    {
+      "actual": [
+        "No global w_(n,R,Q), mu_(n,R) or omega is defined.",
+        "No weak cylinder limit, Cauchy estimate, R-488 nonzero bound or stationarity is proved.",
+        "No infinite-volume, continuum, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+      ],
+      "expected": "physical non-claims retained",
+      "name": "mutation promoting to physics rejected",
+      "passed": true
+    },
+    {
+      "actual": "#!/usr/bin/env python3\n\"\"\"Independent direct-enumeration check for the PAH-OMC-014 Q=0 probe.\n\nUnlike the primary lane, this implementation obtains the face-flux\nmultiplicities by enumerating every Z_2 link assignment.  It then compares the\nsame cross-multiplied aperture-cylinder expectations using ",
+      "expected": "no primary import",
+      "name": "independent lane does not import primary",
+      "passed": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-Q0-PROJECTIVE-OBSTRUCTION-HOSTILE-001",
+  "base_run_hashes": {
+    "independent": "26db0d08095724ce0de9856dd6822ed5768a14157267609c387c12e13cdeb506",
+    "primary": "7a2cae9367f917d6f2a96779d794bd9276bd33a4187faa377bf948a70a8df83b"
+  },
+  "boundary": "Hostile firewall for the componentwise Q_f=0 obstruction; no full-Q global-mixture no-go or physical promotion.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "failed": 0,
+  "lean": {
+    "reason": "The exact exponential-polynomial nonvanishing step is outside the current Lean bridge; all algebraic finite inputs are independently replayed.",
+    "status": "NOT_APPLICABLE"
+  },
+  "negative_tag": "AUDIT-2026-09-05-PAH-OMC-014-Q0-COMPONENT-PUSHFORWARD",
+  "non_claims": [
+    "No global cross-Q probability or cancellation analysis is supplied.",
+    "No weak cylinder limit, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+  ],
+  "passed": 16,
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc014-q0-projective-obstruction-hostile/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+  },
+  "task_id": "T-054",
+  "verdict": "HOSTILE_MUTATIONS_REJECTED",
+  "verification": "PASS"
+}
