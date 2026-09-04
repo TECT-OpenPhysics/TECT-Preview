@@ -121,12 +121,16 @@ The positive-difference spatial term has zero second derivative under the
 common shift.  Direct differentiation of the onsite scalar and Q3 terms gives
 
 ```text
-B_L = hbar^2*[ r
+B_L = r
        + (3*g/(8*V))*sum_y S_y
-       + (lambda/(8*V))*sum_y D_y ],
+       + (lambda/(8*V))*sum_y D_y,
 S_y=sum_e q_(y,e)^2,
 D_y=sum_{{e,f} in E(Q3)}(q_(y,e)-q_(y,f))^2.
 ```
+
+Equivalently, the commutator is
+`[Pi_0,[H_L(0),Pi_0]]=hbar^2*B_L`; the displacement derivative itself has no
+additional `hbar^2`.
 
 Since the Duhamel variance is nonnegative, `rho_L(B_L)>=0`, and spatial
 translation invariance yields

@@ -82,14 +82,17 @@ Pi_0 = V^(-1/2)*sum_y u dot p_y,
 with `[q_(y,e),p_(z,f)]=i*hbar*delta_(y,z)*delta_(e,f)`.  Let
 `U_t=exp(-i*t*Pi_0/hbar)` and `H_L(t)=U_t^*H_L(0)U_t`.  The spatial difference
 energy is invariant under this simultaneous cell translation.  On the form
-core, differentiating the onsite polynomial in the translation direction
-gives
+core, differentiating the onsite polynomial in the physical displacement parameter gives
 
 ```text
-H_L''(0) = hbar^2*[ r
+B_L := H_L''(0) = r
           + (3g/(8V))*sum_y S_y
-          + (lambda/(8V))*sum_y D_y ],
+          + (lambda/(8V))*sum_y D_y,
 ```
+
+The corresponding commutator identity is
+`[Pi_0,[H_L(0),Pi_0]]=hbar^2*B_L`; the factor `hbar^2` belongs to the
+commutator, not to the displacement derivative.
 
 where
 
@@ -109,11 +112,11 @@ second derivative of the trace can first be computed on the core and then
 passed through the form closure.  Since `Tr exp(-beta H_L(t))` is constant,
 
 ```text
-0 = -beta*rho_L(H_L''(0))
+0 = -beta*rho_L(B_L)
     + beta^2*Var_(D,L)(H_L'(0)),
 ```
 
-and therefore `rho_L(H_L''(0))>=0`.  Translation invariance of the periodic
+and therefore `rho_L(B_L)>=0`.  Translation invariance of the periodic
 state and the displayed formula imply
 
 ```text

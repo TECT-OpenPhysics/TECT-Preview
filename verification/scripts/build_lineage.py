@@ -174,7 +174,7 @@ def main():
             else:
                 import tempfile, os
                 fd, tmp = tempfile.mkstemp(dir=str(out.parent))
-                with os.fdopen(fd, "w", encoding="utf-8") as f: f.write(content)
+                with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as f: f.write(content)
                 os.replace(tmp, str(out))
     if check:
         if stale:

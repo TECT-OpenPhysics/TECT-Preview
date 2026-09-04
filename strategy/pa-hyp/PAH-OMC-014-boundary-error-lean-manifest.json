@@ -1,0 +1,96 @@
+{
+  "schema": "tect/pah-omc014-boundary-error-lean-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-BOUNDARY-ERROR-LEAN",
+  "version": "0.1.0",
+  "title": "Conditional additive boundary-error Cauchy criterion",
+  "purpose": "Record a Lean-checked bridge that keeps the R-484 boundary defect as an explicit additive error budget. If a source-owned bulk bound and a source-owned boundary bound both tend to zero in the already-declared order, every real cylinder sequence satisfying the pairwise bound is Cauchy and convergent. The packet does not supply either bound or define a full-Q Gibbs state.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "source_law_present": false,
+    "claim_bearing": false,
+    "physical_authority": false,
+    "model_change": false,
+    "parent_mutation": false
+  },
+  "parents": {
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PAH-OMC-014-WEIGHT-INTAKE": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+      "sha256": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502"
+    },
+    "R-484-CERTIFICATE": {
+      "path": "strategy/pa-hyp/R484-certificate.md",
+      "sha256": "a2e132bcf1c44f339cd8faf7b675796e3a680629c03bdb7adc1bd2bd9ed4bf29"
+    },
+    "R-484-PRIMARY-RUN": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/primary.json",
+      "sha256": "6fb8a733f6014fcaa0fd8b84cdffd4b43d5f6214f4b9a59e6a9f9a1d2218c17d"
+    },
+    "R-490-CERTIFICATE": {
+      "path": "strategy/pa-hyp/R490-certificate.md",
+      "sha256": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+    }
+  },
+  "lean": {
+    "path": "verification/lean/Tect/R498.lean",
+    "sha256": "fa7cb4d28de1ffd19eb9bc2ddc8a89e24b0f93f6f070204d5872063770773ac5",
+    "declarations": [
+      "tendsto_add_error",
+      "tendsto_zero_of_eventually_zero",
+      "add_error_nonnegative",
+      "cauchy_of_bulk_boundary",
+      "limit_exists_of_bulk_boundary",
+      "cauchy_of_eventual_boundary_zero",
+      "no_tendsto_zero_of_eventual_floor"
+    ],
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "scope": "Real-valued cylinder sequences with explicit additive bulk and boundary error budgets in a fixed ordered limit. The boundary is retained as a separate term; a persistent positive floor is formally excluded from convergence to zero."
+  },
+  "boundary_contract": {
+    "r484_defect": "At the all-zero square-to-split boundary, the exact hidden defect is 16/9.",
+    "treatment": "The defect is not averaged, cancelled, or replaced by a counterterm. A future source-owned estimate must provide a nonnegative boundary_error(n) and prove its convergence to zero in the declared order.",
+    "failure_if_persistent": "R498 proves that an eventually persistent positive boundary budget cannot tend to zero. If the source-owned boundary budget has such a floor, the zero-error Cauchy route is blocked and the full-Q question remains HOLD_FOR_EVIDENCE.",
+    "csw": "R-490 C_sw=540 remains domination-only and is not a probability weight or an intertwining identity."
+  },
+  "theorem_contract": {
+    "assumptions": [
+      "s, bulk, and boundary are real-valued sequences indexed by the already-fixed ordered limit.",
+      "For n <= m, |s(n)-s(m)| <= bulk(n)+boundary(n).",
+      "bulk tends to zero and boundary tends to zero along the same ordered limit.",
+      "The error budgets are kept additive; when nonnegativity is needed it is supplied explicitly for each sequence.",
+      "For eventual separation, a finite N is supplied after which the boundary budget is exactly zero."
+    ],
+    "conclusion": "The explicit additive bound yields a Cauchy sequence and therefore a unique real limit; an eventually zero boundary is accepted only through the same bound.",
+    "not_supplied": [
+      "No source-owned w_(n,R,Q) law or projective cross-Q kernel.",
+      "No definition of mu_(n,R), omega, common cylinder probability space, or PAH-specific bulk_error/boundary_error formulas.",
+      "No proof that the R-484 16/9 defect decays in the declared n and R_max order.",
+      "No R-488 nonzero estimate or stationarity passage."
+    ]
+  },
+  "status": {
+    "classification": "CONDITIONAL_SUPPORT_ONLY",
+    "source_law_present": false,
+    "active_gate_change": false,
+    "claim_bearing": false,
+    "physical_promotion": false,
+    "verdict": "HOLD_FOR_EVIDENCE"
+  },
+  "non_claims": [
+    "This packet does not instantiate PAH sector weights, a full-Q Gibbs measure, a common positive normalized cylinder state, or a PAH-specific Cauchy estimate.",
+    "It does not prove projective consistency, R-488 nonzero, stationarity, Gibbs-L2 convergence, closability, an infinite-volume semigroup, or an ordered thermodynamic limit.",
+    "It does not prove that the R-484 boundary defect vanishes; persistent boundary error remains an explicit obstruction to this bridge.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap, cosmological, or TOE conclusion follows."
+  ],
+  "reproduction": {
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_boundary_error_lean_verify.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_boundary_error_lean_verify_independent.py",
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_boundary_error_lean_verify_hostile.py",
+    "lean": "Set-Location verification/lean; & \"$env:USERPROFILE/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lake.exe\" env lean Tect/R498.lean"
+  }
+}

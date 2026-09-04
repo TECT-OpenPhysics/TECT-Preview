@@ -1,0 +1,139 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": true,
+      "expected": true,
+      "name": "unchanged packet accepted",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects inject source law",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects promote claim bearing",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects declare model change",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects mutate parent",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects promote verdict",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects mark physical promotion",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects tamper Lean hash",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects drop kernel hypothesis",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects erase missing source law",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects rewrite conclusion as full-Q proof",
+      "pass": true
+    },
+    {
+      "actual": "ca51e30e8bb9f1f6f04d553e57b79cceaec39f8427a9d80d29517f936116c50a",
+      "expected": "ca51e30e8bb9f1f6f04d553e57b79cceaec39f8427a9d80d29517f936116c50a",
+      "name": "manifest unchanged after attacks",
+      "pass": true
+    },
+    {
+      "actual": "2afe710dee80fe6a11ed5a0e97199f396d76fd301618697d6629eb40c740a2c1",
+      "expected": "2afe710dee80fe6a11ed5a0e97199f396d76fd301618697d6629eb40c740a2c1",
+      "name": "Lean source unchanged",
+      "pass": true
+    },
+    {
+      "actual": [
+        "coarse_weight_nonnegative",
+        "coarse_weight_normalized",
+        "projective_mixture_identity",
+        "projective_mixture_preserves_probability"
+      ],
+      "expected": [
+        "coarse_weight_nonnegative",
+        "coarse_weight_normalized",
+        "projective_mixture_identity",
+        "projective_mixture_preserves_probability"
+      ],
+      "name": "source declarations remain exact",
+      "pass": true
+    }
+  ],
+  "assumptions": [
+    "All mutations are in-memory copies.",
+    "Original source and manifest bytes remain hash-pinned."
+  ],
+  "audit_id": "PAH-OMC-014-PROJECTIVE-MIXTURE-LEAN-HOSTILE-001",
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "classification": "CONDITIONAL_SUPPORT_ONLY",
+  "exploration_id": null,
+  "failed": 0,
+  "missing_assumptions": [
+    "Source-owned cross-Q kernel, component Gibbs push-forward, weight recursion, topology, Cauchy estimate, and stationarity domain."
+  ],
+  "mutation_acceptance": {
+    "declare model change": false,
+    "drop kernel hypothesis": false,
+    "erase missing source law": false,
+    "inject source law": false,
+    "mark physical promotion": false,
+    "mutate parent": false,
+    "promote claim bearing": false,
+    "promote verdict": false,
+    "rewrite conclusion as full-Q proof": false,
+    "tamper Lean hash": false
+  },
+  "next_question": "Can a source owner provide the exact kernel and component push-forward premises without any rejected mutation?",
+  "non_claims": [
+    "No PAH full-Q state, omega, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap, cosmology, or TOE conclusion follows."
+  ],
+  "passed": 14,
+  "result_id": null,
+  "run_kind": "hostile_mutation_firewall",
+  "schema": "tect/pah-omc014-projective-mixture-lean-hostile/1.0",
+  "source_hashes": {
+    "R500": "2afe710dee80fe6a11ed5a0e97199f396d76fd301618697d6629eb40c740a2c1",
+    "manifest": "ca51e30e8bb9f1f6f04d553e57b79cceaec39f8427a9d80d29517f936116c50a"
+  },
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

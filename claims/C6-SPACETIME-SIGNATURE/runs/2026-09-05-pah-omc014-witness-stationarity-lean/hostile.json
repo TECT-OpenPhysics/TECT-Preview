@@ -1,0 +1,130 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": true,
+      "expected": true,
+      "name": "unchanged packet accepted",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects inject source law",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects promote claim bearing",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects declare model change",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects mutate parent",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects promote verdict",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects mark physical promotion",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects tamper Lean hash",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects drop witness hypothesis",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rejects erase cross-Q missing input",
+      "pass": true
+    },
+    {
+      "actual": "40e37cd890015a9b6a8c000a405489da9170469943bf528a6ba2c67f122fd530",
+      "expected": "40e37cd890015a9b6a8c000a405489da9170469943bf528a6ba2c67f122fd530",
+      "name": "manifest bytes unchanged after in-memory attacks",
+      "pass": true
+    },
+    {
+      "actual": "5be7c07c6ff6ac32c2bdbd91ebfc4f4c71e859aefc558a9db41c65f6525819e0",
+      "expected": "5be7c07c6ff6ac32c2bdbd91ebfc4f4c71e859aefc558a9db41c65f6525819e0",
+      "name": "Lean source bytes unchanged",
+      "pass": true
+    },
+    {
+      "actual": [
+        "mix_strictly_positive_of_witness",
+        "stationarity_limit_of_abs_error",
+        "stationarity_limit_of_eventual_zero"
+      ],
+      "expected": [
+        "mix_strictly_positive_of_witness",
+        "stationarity_limit_of_abs_error",
+        "stationarity_limit_of_eventual_zero"
+      ],
+      "name": "source declarations remain exact",
+      "pass": true
+    }
+  ],
+  "assumptions": [
+    "All mutations are in-memory copies.",
+    "The original packet must remain support-only and hash-pinned."
+  ],
+  "audit_id": "PAH-OMC-014-WITNESS-STATIONARITY-LEAN-HOSTILE-001",
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "classification": "CONDITIONAL_SUPPORT_ONLY",
+  "exploration_id": null,
+  "failed": 0,
+  "missing_assumptions": [
+    "A source-owned full-Q weight law and PAH-specific vanishing generator-error estimate remain absent."
+  ],
+  "mutation_acceptance": {
+    "declare model change": false,
+    "drop witness hypothesis": false,
+    "erase cross-Q missing input": false,
+    "inject source law": false,
+    "mark physical promotion": false,
+    "mutate parent": false,
+    "promote claim bearing": false,
+    "promote verdict": false,
+    "tamper Lean hash": false
+  },
+  "next_question": "Can the source owner supply the missing full-Q law and vanishing generator-error estimate without triggering this firewall?",
+  "non_claims": [
+    "The firewall does not prove a PAH full-Q state, omega, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass gap or TOE."
+  ],
+  "passed": 13,
+  "result_id": null,
+  "run_kind": "hostile_mutation_firewall",
+  "schema": "tect/pah-omc014-witness-stationarity-lean-hostile/1.0",
+  "source_hashes": {
+    "R499": "5be7c07c6ff6ac32c2bdbd91ebfc4f4c71e859aefc558a9db41c65f6525819e0",
+    "manifest": "40e37cd890015a9b6a8c000a405489da9170469943bf528a6ba2c67f122fd530"
+  },
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

@@ -17195,34 +17195,47 @@ mathematical theorem.
 
 | source | SHA-256 |
 |---|---|
-| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `8ed0b3e7d8c3370aa0dea19f02b9eca9e2501e22f10439b7f2892128e20c3903` |
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `2e6d7953e311c7c437eeda3677e7b0cbf032e7637119878ca04c72669a9c6e96` |
 | upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
 | upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
-| P-06/P-09 audit round 2 | `c5e62f8b7d4c0b3351063c0f9d5707e387be858f301e01d05a1b79ec0686b960` |
+| EXP-000782 upstream scope-firewall audit | `cce56eed01dfe6239d8ddbcc43e823df4e2c68ebeebe51dfc71823b545b165e9` |
+| KP v1 theorem-locator correction audit | `b077d49dc26976212175ed11b7d212e0210d3af9d29fc7fc8bce6519988ec0e5` |
+| Temporal-correction sidecar (TC-0030) | `0216f0d1c9776013ccae9552dff1390e6b8395e8e53fb104554f566dd33bab3c` |
+| P-06/P-09 audit round 2 | `ab0af1d2f4942d6c646bdb44c2dc9f53fad00be3a944a0dddd35cb0790ea4f03` |
 | Jensen normalizer sub-obligation audit | `abc9535a004a548e3a348211320e9bc859f6be73bc181b878ee6c92ed4e635b1` |
 | Quartic coercivity and form-domain audit | `afcb0d694c950e0c63a3c46f0e8e78ccdef81c9fea726116905b49da00bcfe9e` |
 | Integrated proof-text insertion map | `e398f852ed56a40f7b2cd45108aa6d6272996c2c752ec2fda4b0070edc922ec2` |
 | KP/FSS external source-scope audit | `c4c3d227fc118ea76f0cff09e608d05814dba5b6baa52b73deee58c248a2a6e8` |
 | Literature source freeze (KP/FSS/KKK bytes and bibliography) | `0add649eb71dcc377572a65806f37a6034042e4271d54a3bad99ea1acf9beb28` |
-| Operator/form-domain and unbounded-commutator audit | `87bdbcb594dabb380395811ea7facaa6c7a54c68760c94ebf3bcfde5ff82718f` |
+| Operator/form-domain and unbounded-commutator audit | `7b2cc3408eeefd8626471c49b1d62af0d27f55963b10f0ddc1cc4f378401d48d` |
 | Fixed-volume Gaussian tightness, Jensen normalizer and source-UI audit | `5c8f01ad2bde0b438fd840083a478b69b08b16924fa11c1ca04ef0ac0da43b4c` |
 | Fixed-volume massive Gaussian reference convergence audit | `8fe1644e9b478fe22ee3ecd7835391597ddaea6dea7962cc9be9125cd2399538` |
-| P-09 FSS Poisson-shift and infrared-constant audit | `c965c62fe506a1d442976a7fc694579d0aff3fddefb96c2698ef4cf1a2c62d9c` |
+| P-09 FSS Poisson-shift and infrared-constant audit | `00346f69df3c26be0af419ae2b4323880f2fd147322cfe4e6eb1f8c35b192381` |
+| P-09 constant-source loop-limit audit | `eb50fe2d55727b09d0e466a3208e28e74a7d28a7f31fb7904e814f7499cd0c4e` |
+| FSS divergence-incidence convention audit | `8f9bda6a88afb3e9b71a6c2075bf54a7d027f78994bad1b10db248b08cf6509e` |
+| FSS incidence convention repair audit | `67dc69cfdce97ac9c904f999aff914fca0ce80f335025a50c9c0126976625972` |
+| FSS gradient-adjoint notation correction audit | `441e01bdfd8b07ce48d2712bedf52e77fc312cdb0e13b09889d5e6bbda49b2ee` |
 | Pressure zero-mode, Griffiths and tangent-state audit | `2a94560bfcd53f8a2dc2da6098e64cdbcea9fefb9a1c8dc19800549b38e73c40` |
-| Finite-volume translation trace-differentiation audit | `1ecf9661b86b01a35300288768069f994abf66bd5415f04a3e60a7b233842e05` |
-| FSS theorem and hypothesis crosswalk | `f0508567fe898785677726b366c078e72141c5fa66b4605b3e68abe1ae409be0` |
+| Finite-volume translation trace-differentiation audit | `a2659b62fbf5e344d683a2a9638c425fdcf6ba3062e8e45224e4e69a46deff9b` |
+| KKK endpoint-interval and non-differentiable cusp correction | `e5bdd2ed72f19dddd1e3c6325a131d12c04b4a59124745b09dfe665fb8a2c1fb` |
+| P-06 weak-limit versus total-variation correction | `71ead8d0f88e98f7f535104587e24193e52fcb5fee652353b37a0c9020575d79` |
+| R-497 source-hash integrity correction audit | `8dc21caa243e48f7796b76108d7e583fb0f511bd70039d278ca5a12f1d46b043` |
+| Source-tangent and zero-source DLR composition audit | `7047c3a7860afd3cb44d500b8d4aed55dde07bafeb5dd563ca09f102df79d966` |
+| Verification-lane result hash integrity audit | `f9e896ee3b1c0de2999d59778f024e2b53a8ed67feb7eac852501ca4c39c2bfb` |
+| Momentum-translation hbar normalization audit | `634c266b985c3a65e1ec64a91e8ba942a2cbe7f7e46a24d09dc26773491d2237` |
+| FSS theorem and hypothesis crosswalk | `55d9f02281bb1462a438123e9f6294b3e7d6b15cae399b3aa2a6bb6d0c614fcd` |
 | primary verifier source | `d707e17db34fa2f17b09483a55d172edbcd3ff44ecb65e6a40165c01a7286fd3` |
 | independent verifier source | `11ee55c1d225645d8621ae34f2223f4c99e90024cc3c46b6cefc325f4b457e71` |
 | integrated verifier source | `c452e620933005ff12c84194b8f57f3aedb296bbc2d63358c57d9e505777b834` |
 | primary result JSON | `a42c5f5684002b2b71908a739c91867411c9d269ca3f4b0343c49d986cfc9882` |
-| independent result JSON | `566942655d7ffce9f83e3b415cdb2d3339ec32a7b3b49b2828390e17993e0af9` |
+| independent result JSON | `566942655d7ffce9f3e83b415cdb2d3339ec32a7b3b49b2828390e17993e0af9` |
 | integrated result JSON | `2aaafe56bd215735bae89b54d87852dd804d7014c6f6fc66ff275903ba6d661e` |
 
 **Where proven.** The exact model and candidate component ledger are recorded
 in `strategy/q3lock-exp782-independent-result-manifest-260905.json`. The
 upstream authority records are EXP-000780, EXP-000781, and EXP-000782 in
 `explorations/log.jsonl`; the current seam decisions are EXP-001516, EXP-001522, EXP-001526,
-EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, and EXP-001534. The proof
+EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, EXP-001534, EXP-001536, EXP-001537, EXP-001538, EXP-001540, EXP-001541, EXP-001543, EXP-001545, EXP-001546, EXP-001548, EXP-001549, EXP-001550, EXP-001551, EXP-001552, EXP-001554, and EXP-001555. The proof
 text and its boundaries are audited in
 `strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`, with the
 finite-grid FKG, source-uniform loop limit, topology, edge-incidence,
@@ -17270,8 +17283,70 @@ remaining conditional on all upstream inputs. The finite-volume translation
 trace-differentiation audit is recorded in
 `strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md`; it
 supplies a form/Feynman--Kac route for the unbounded global shift identity while
-leaving volume-uniform common-core and thermodynamic gates open. The primary, independent, and integrated verifiers and their
-result JSON paths are listed in the companion manifest.
+leaving volume-uniform common-core and thermodynamic gates open. The KKK endpoint-interval correction is recorded in
+`strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md`; it removes the
+differentiability/cusp circularity by applying the general KKK Proposition 3.9
+endpoint-interval bound (3.23) to `g(z)=z^2` and using evenness of the limiting
+pressure, while retaining the independent zero-mode and source-tangent gates. The P-06
+convergence-mode audit is recorded in
+`strategy/q3lock-continuous-loop-weak-not-tv-audit-260905.md`; it retires the
+impossible total-variation assertion for polygonal interpolants and specifies
+weak convergence in periodic sup norm with compact residual convergence and
+quartic source uniform integrability. The R-497 source-hash integrity audit is
+recorded in `strategy/q3lock-manifest-source-hash-integrity-audit-260905.md`;
+it repairs a truncated 63-character pin without changing any source bytes or
+scientific scope. The source-tangent and zero-source DLR composition audit is
+recorded in `strategy/q3lock-source-tangent-dlr-composition-audit-260905.md`;
+it separates the periodic pressure-derivative bridge from the source-to-zero
+specification limit and keeps common source-window uniform integrability
+explicit. The verification-lane result hash audit is recorded in
+`strategy/q3lock-result-hash-integrity-audit-260905.md`; it corrects a
+three-nibble transposition in the independent result pin without changing
+result bytes or scientific scope. The momentum-translation normalization audit is recorded in
+`strategy/q3lock-operator-translation-hbar-normalization-audit-260905.md`; it
+separates the physical displacement Hessian from the hbar-squared nested
+commutator without changing the moment bound or scientific scope. The primary,
+independent, and integrated verifiers and their
+result JSON paths are listed in the companion manifest. The FSS divergence-incidence
+convention audit is recorded in
+`strategy/q3lock-fss-divergence-incidence-convention-audit-260905.md`; it fixes
+the edge-to-vertex operator order while preserving the source normalization,
+Fourier factor, and finite-grid bound.
+The historical result-first wording conflict in the upstream EXP-000782
+certificate is scope-firewalled in
+`strategy/q3lock-exp782-upstream-scope-firewall-audit-260905.md`; the source
+bytes remain hash-pinned, while current manuscript wording stays conditional
+until the independent proof and external-review gates close.
+The KP v1 theorem-number correction is recorded in
+`strategy/q3lock-kp-locator-correction-audit-260905.md`; it changes only the
+local preregistration locators from Lemmas 2.10/2.13 to Lemmas 2.8/2.11 and
+leaves the historical PDF and imported theorem scope unchanged.
+The subsequent EXP-001549 hash-correction audit recomputes the scope-firewall
+source digest directly from the tracked file and repairs only its manifest pin;
+it changes no source bytes, theorem locator, proof scope, or scientific result.
+The EXP-001550 temporal-sidecar audit records the append-only TC-0030
+provenance correction and the directly recomputed sidecar digest; it changes no
+prior JSONL line, theorem statement, result scope, or publication status.
+The EXP-001551 manifest-syntax audit restores the delimiter between the
+EXP-001549 and EXP-001550 authority objects and records the resulting valid
+JSON digest; no authority value, source byte, theorem scope, or publication
+status changes.
+The EXP-001552 public-projection audit applies the existing ignored-path
+redaction helper to generated changelog event records. The canonical append-only
+log retains its local audit metadata, while public accepted-event shards no
+longer expose internal file pointers; no Q3LOCK mathematical or publication
+scope changes. The EXP-001554 FSS incidence-convention repair is recorded in
+`strategy/q3lock-fss-incidence-convention-repair-audit-260905.md`; it fixes the
+finite-grid domains by declaring the signed gradient `G`, the FSS divergence
+`B_FSS=G^*`, and the vertex Laplacian `L_sp=G^*G=B_FSS B_FSS^*`, while leaving
+the source pairing, Poisson norm, Fourier denominator, and infrared constants
+unchanged. This is a notation/domain repair only and does not close any
+mathematical or publication gate. The EXP-001555 correction is recorded in
+`strategy/q3lock-fss-gradient-adjoint-notation-correction-audit-260905.md`; it
+replaces the edge-valued typo `h=G*L_sp^(-1)j` by the domain-correct
+`h=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j`. The Poisson identity, source pairing,
+Fourier denominator, and infrared constants remain unchanged. This is a
+notation correction only; all analytic and publication gates remain open.
 
 **Reuse scope.** This result is reusable for mathematical-physics analysis of
 the declared fixed-lattice Q3LOCK quantum anharmonic model and for a possible
@@ -17293,13 +17368,14 @@ No P2 manuscript, submission package, or PDF is created at this stage; PDF
 compilation, rendering, visual QA, and hash capture are explicitly deferred to
 the final content-frozen stage.
 
-**Next.** Obtain an external-level mathematical audit of P-06 and P-09 and
-the pressure bridge, including the Gaussian tightness, Fourier covariance,
-interpolation, Jensen-normalizer, source-uniform-integrability, FSS
-Poisson-shift, zero-mode, KKK Griffiths and tangent-state insertions, and the
-translated-form Feynman--Kac/Duhamel operator passages; repair any objection,
-then decide whether a bounded claim card and manuscript content freeze are
-warranted. Re-run all verification lanes from a clean snapshot before any
+**Next.** Keep the scope-firewall wording and corrected KP v1 locators in all pre-freeze manuscript work. Obtain an external-level mathematical audit of P-06 and P-09 and
+the pressure bridge, including the Gaussian tightness, Fourier covariance, interpolation, residual
+convergence, Jensen-normalizer, source-uniform-integrability, the corrected
+weak-limit (not total-variation) passage, FSS Poisson-shift, zero-mode, KKK
+Griffiths, the endpoint-interval cusp correction, source-tangent DLR specification
+continuity, tangent-state insertions, the source-file and verification-lane hash recomputation, and the translated-form Feynman--Kac/Duhamel
+operator passages; repair any objection, then decide whether a bounded claim
+card and manuscript content freeze are warranted. Re-run all verification lanes from a clean snapshot before any
 final LaTeX or PDF work.
 
 <a id="r-494"></a>

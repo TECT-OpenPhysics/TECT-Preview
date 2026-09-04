@@ -619,6 +619,9 @@ def load_events() -> list[dict[str, object]]:
                 "raw": event.get("raw", ""),
             }
         )
+    # Public event projections must use the same P0 redaction policy as exploration records.
+    # The canonical changelog/log.jsonl remains byte-preserved and is not rewritten.
+    events = [redact_internal_file_references(event) for event in events]
     identifiers = [str(event["id"]) for event in events]
     if len(identifiers) != len(set(identifiers)):
         raise ValueError("duplicate changelog event identifiers")

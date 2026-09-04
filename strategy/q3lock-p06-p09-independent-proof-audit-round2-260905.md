@@ -207,18 +207,26 @@ Its pairing with the encoded spins is exactly `t*X_(N,L)(a)`, where
 X_(N,L)(a)=epsilon*sum_(y,k) a_y*(u,x_(y,k)).
 ```
 
-Let `D` be an oriented spatial incidence map and `L_sp=D^*D`.  The zero-sum
-Poisson field
+Let `G:V_0 -> E` be the signed spatial gradient and let
+`B_FSS=G^*` be the FSS edge-to-vertex divergence.  The positive vertex
+Laplacian is
 
 ```text
-b=(1/c)*D*L_sp^(-1)j
+L_sp=G^*G=B_FSS B_FSS^* on V_0.
 ```
 
-has
+Because `sum_y a_y=0`, the zero-sum Poisson solution is well-defined.  The
+minimum-norm time-constant edge field is
 
 ```text
-c*(D omega,b)_N = (j,omega)_N,
-(c/2)*|b|_N^2 = (1/(2c))*(j,L_sp^(-1)j)_N.
+h=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j.
+```
+
+It satisfies
+
+```text
+c*(G omega,h)_N=(j,omega)_N,
+(c/2)*|h|_N^2=(1/(2c))*(j,L_sp^(-1)j)_N.
 ```
 
 The finite FSS domination inequality consequently reads

@@ -77,16 +77,23 @@ The time-constant source vector is `j_y(k)=a_y*u`, so
 `sqrt(epsilon)*a_y*u` at every slice.  The latter factor is required by the
 isometry and is not optional.
 
-Let `D` be an oriented spatial incidence operator and let `L_sp=D^*D` on
-the periodic spatial box.  Because `sum_y a_y=0`, the zero-sum Poisson
-solution is well-defined.  The time-constant edge field
+Let `G:V_0 -> E` be the signed spatial gradient and let
+`B_FSS=G^*` be the FSS edge-to-vertex divergence.  The positive vertex
+Laplacian is
 
 ```text
-b = (1/c)*D*L_sp^(-1)*j
+L_sp=G^*G=B_FSS B_FSS^* on V_0.
 ```
 
-obeys `c< D x,b>_N=<j,x>_N` and
-`(c/2)||b||_N^2=(1/(2c))<j,L_sp^(-1)j>_N`.  The positive-definite crossing
+Because `sum_y a_y=0`, the zero-sum Poisson solution is well-defined.  The
+time-constant minimum-norm edge field is
+
+```text
+h=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j.
+```
+
+It obeys `c*(G x,h)_N=<j,x>_N` and
+`(c/2)||h||_N^2=(1/(2c))<j,L_sp^(-1)j>_N`.  The positive-definite crossing
 kernel in the finite-dimensional FSS transfer theorem therefore gives
 
 ```text

@@ -89,25 +89,30 @@ sum_y j_y dot s_y
 
 ## 4. Minimum-norm Poisson shift
 
-Let `D_FSS` denote the FSS discrete-divergence map
-`h -> sum_i partial_i h_i`, with its adjoint chosen so that
+Let `B_FSS` denote the FSS discrete-divergence map
+`h -> sum_i partial_i h_i` from oriented edge fields to vertex fields, and
+let `G=B_FSS^*` be its signed incidence gradient.  On the spatial zero-sum
+subspace set
 
 ```text
-L_sp = D_FSS*D_FSS^*
+L_sp = B_FSS B_FSS^* = G^*G.
 ```
 
-on the spatial zero-sum subspace.  This is the positive graph Laplacian with
-eigenvalue `2*E(p)`, where `E(p)=sum_i(1-cos(p_i))`.  For zero-sum `j`, choose
+This is the positive graph Laplacian with eigenvalue `2*E(p)`, where
+`E(p)=sum_i(1-cos(p_i))`.  For zero-sum `j`, choose
 
 ```text
-h = D_FSS^* L_sp^(-1) j.
+h = B_FSS^* L_sp^(-1) j.
 ```
 
-Then `D_FSS h=j` and the minimum-norm identity is
+Then `B_FSS h=j` and the minimum-norm identity is
 
 ```text
 sum_(y,i) |h_i(y)|^2 = <j,L_sp^(-1)j>.
 ```
+
+The operator order is important: the divergence is edge-to-vertex, so the
+vertex Laplacian is `B_FSS B_FSS^*`, equivalently `G^*G`.
 
 Because `j` is constant in the time-slice coordinate and `|u|=1`,
 

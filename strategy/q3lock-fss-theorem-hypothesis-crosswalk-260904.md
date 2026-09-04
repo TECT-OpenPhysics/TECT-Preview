@@ -131,10 +131,19 @@ In either convention the source pairing is exactly `t*X_(N_t,L)(a)`, and
 recorded in the companion audit
 `q3lock-fss-source-scaling-normalization-correction-260904.md`.
 
-Orient the spatial edges once, write `D` for incidence and
-`L_sp=D^*D`, and use `L_sp^(-1)` only on the zero-sum subspace.  The FSS
-gradient/Laplacian inequality with the Poisson shift then gives, at fixed
-`N_t` and `Lambda_L`,
+Fix one orientation of the spatial edges.  Let `G:V_0 -> E` be the
+signed vertex-to-edge gradient and let `B_FSS=G^*:E -> V_0` be the FSS
+edge-to-vertex divergence.  The positive vertex Laplacian is
+
+```text
+L_sp=G^*G=B_FSS B_FSS^* on V_0.
+```
+
+Use `L_sp^(-1)` only on the zero-sum subspace.  For a zero-sum source `j`,
+the minimum-norm Poisson edge field is
+`h=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j`, so `B_FSS h=j` and
+`||h||^2=<j,L_sp^(-1)j>`.  The FSS gradient/Laplacian inequality with this
+shift then gives, at fixed `N_t` and `Lambda_L`,
 
 ```text
 log E_(N_t,L,0) exp[t*X_(N_t,L)(a)]

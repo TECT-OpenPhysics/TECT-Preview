@@ -97,7 +97,7 @@ DLR set, uniform exponential one-site moment bounds, and tempered support.
 | unweighted interaction norm (2.5) | in the source convention `J_(yz)=c` for nearest neighbours and zero otherwise, hence `Jhat_0=6c<infinity` | SATISFIED |
 | tempered weights and weighted interaction norm, Assumption 2.5 | take `w_alpha(y,z)=exp(-alpha|y-z|)`: (2.36)--(2.38) hold on `Z^3`, `Jhat_alpha=6c exp(alpha)<infinity`, and `Jhat_alpha-Jhat_0` can be made arbitrarily small | SATISFIED |
 | fixed `beta>0` and fixed source | the construction is performed at each fixed `beta` and source before source removal | SATISFIED |
-| fixed-source DLR closure | Lemma 2.10 gives the Feller property on every `Omega_alpha`; Lemma 2.13 sends any `W_alpha` accumulation point that remains in `P(Omega^t)` to `G^t`; Theorems 3.1--3.2 give nonemptiness, `W^t` compactness and uniform one-site exponential moments | APPLIES |
+| fixed-source DLR closure | Lemma 2.8 gives the Feller property on every `Omega_alpha`; Lemma 2.11 sends any `W_alpha` accumulation point that remains in `P(Omega^t)` to `G^t`; Theorems 3.1--3.2 give nonemptiness, `W^t` compactness and uniform one-site exponential moments | APPLIES |
 | continuity and compactness while the source varies to zero | the source proof of Lemma 4.1 uses only the common lower/upper potential controls, `m`, `a`, `beta` and the interaction norms; the Q3LOCK compact-source family has common such data.  The varying-kernel argument is given below | PAPER-LOCAL EXTENSION PROVED |
 
 **Current disposition:** `APPLIES` for each fixed source.  The additional
@@ -108,6 +108,10 @@ The exact lattice, potential, interaction and tempered-weight hypotheses have
 now been matched.  Fixed-source DLR existence is therefore a valid import.
 The source-removal step is not inferred from the fixed-model theorem alone;
 it uses the following uniform-family lemma.
+
+The KP v1 locator correction is recorded in
+`strategy/q3lock-kp-locator-correction-audit-260905.md`; the historical PDF is
+unchanged and only this local crosswalk is corrected.
 
 #### Compact-source tangent lemma
 

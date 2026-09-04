@@ -1,0 +1,205 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "expected": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "name": "PAH-OMC-014 digest",
+      "pass": true
+    },
+    {
+      "actual": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+      "expected": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+      "name": "PAH-OMC-014-WEIGHT-INTAKE digest",
+      "pass": true
+    },
+    {
+      "actual": "a2e132bcf1c44f339cd8faf7b675796e3a680629c03bdb7adc1bd2bd9ed4bf29",
+      "expected": "a2e132bcf1c44f339cd8faf7b675796e3a680629c03bdb7adc1bd2bd9ed4bf29",
+      "name": "R-484-CERTIFICATE digest",
+      "pass": true
+    },
+    {
+      "actual": "6fb8a733f6014fcaa0fd8b84cdffd4b43d5f6214f4b9a59e6a9f9a1d2218c17d",
+      "expected": "6fb8a733f6014fcaa0fd8b84cdffd4b43d5f6214f4b9a59e6a9f9a1d2218c17d",
+      "name": "R-484-PRIMARY-RUN digest",
+      "pass": true
+    },
+    {
+      "actual": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+      "expected": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+      "name": "R-490-CERTIFICATE digest",
+      "pass": true
+    },
+    {
+      "actual": {
+        "final_lf": true,
+        "lf": true,
+        "sha": "fa7cb4d28de1ffd19eb9bc2ddc8a89e24b0f93f6f070204d5872063770773ac5"
+      },
+      "expected": "fa7cb4d28de1ffd19eb9bc2ddc8a89e24b0f93f6f070204d5872063770773ac5",
+      "name": "R498 LF and digest",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declarations": [
+          "tendsto_add_error",
+          "tendsto_zero_of_eventually_zero",
+          "add_error_nonnegative",
+          "cauchy_of_bulk_boundary",
+          "limit_exists_of_bulk_boundary",
+          "cauchy_of_eventual_boundary_zero",
+          "no_tendsto_zero_of_eventual_floor"
+        ],
+        "path": "verification/lean/Tect/R498.lean",
+        "sha256": "fa7cb4d28de1ffd19eb9bc2ddc8a89e24b0f93f6f070204d5872063770773ac5"
+      },
+      "expected": {
+        "declarations": [
+          "tendsto_add_error",
+          "tendsto_zero_of_eventually_zero",
+          "add_error_nonnegative",
+          "cauchy_of_bulk_boundary",
+          "limit_exists_of_bulk_boundary",
+          "cauchy_of_eventual_boundary_zero",
+          "no_tendsto_zero_of_eventual_floor"
+        ],
+        "sha256": "fa7cb4d28de1ffd19eb9bc2ddc8a89e24b0f93f6f070204d5872063770773ac5"
+      },
+      "name": "registry declaration list",
+      "pass": true
+    },
+    {
+      "actual": [
+        "tendsto_add_error",
+        "tendsto_zero_of_eventually_zero",
+        "add_error_nonnegative",
+        "cauchy_of_bulk_boundary",
+        "limit_exists_of_bulk_boundary",
+        "cauchy_of_eventual_boundary_zero",
+        "no_tendsto_zero_of_eventual_floor"
+      ],
+      "expected": [
+        "tendsto_add_error",
+        "tendsto_zero_of_eventually_zero",
+        "add_error_nonnegative",
+        "cauchy_of_bulk_boundary",
+        "limit_exists_of_bulk_boundary",
+        "cauchy_of_eventual_boundary_zero",
+        "no_tendsto_zero_of_eventual_floor"
+      ],
+      "name": "source declares every theorem",
+      "pass": true
+    },
+    {
+      "actual": {
+        "law": "ABSENT_IN_PARENT",
+        "omega": "NOT_DEFINED"
+      },
+      "expected": "NOT_DEFINED/ABSENT_IN_PARENT",
+      "name": "parents retain HOLD/no law",
+      "pass": true
+    },
+    {
+      "actual": {
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "external_source": false,
+          "model_change": false,
+          "parent_mutation": false,
+          "physical_authority": false,
+          "source_law_present": false
+        },
+        "status": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "CONDITIONAL_SUPPORT_ONLY",
+          "physical_promotion": false,
+          "source_law_present": false,
+          "verdict": "HOLD_FOR_EVIDENCE"
+        }
+      },
+      "expected": "HOLD/non-bearing/no-law/no-mutation",
+      "name": "support-only status",
+      "pass": true
+    },
+    {
+      "actual": {
+        "csw": "R-490 C_sw=540 remains domination-only and is not a probability weight or an intertwining identity.",
+        "failure_if_persistent": "R498 proves that an eventually persistent positive boundary budget cannot tend to zero. If the source-owned boundary budget has such a floor, the zero-error Cauchy route is blocked and the full-Q question remains HOLD_FOR_EVIDENCE.",
+        "r484_defect": "At the all-zero square-to-split boundary, the exact hidden defect is 16/9.",
+        "treatment": "The defect is not averaged, cancelled, or replaced by a counterterm. A future source-owned estimate must provide a nonnegative boundary_error(n) and prove its convergence to zero in the declared order."
+      },
+      "expected": "16/9 retained",
+      "name": "R-484 defect retained",
+      "pass": true
+    },
+    {
+      "actual": "c_sw = n_geom (1+s_geom) = 540. ``` consequently `i_(n,r)(x) <= 540` for every `n >= 2`, every positive integer `r`, and",
+      "expected": "C_sw=540 domination",
+      "name": "R-490 domination-only",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "R-484 source semantics",
+      "name": "source wording retained",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "forbidden mutations absent",
+      "name": "no fitted or physical promotion",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R498.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "independent Lean compilation",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-BOUNDARY-ERROR-LEAN-INDEPENDENT-001",
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "classification": "CONDITIONAL_SUPPORT_ONLY",
+  "exploration_id": null,
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R498.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "next_question": "Can a source owner provide boundary_error(n,R,f) with a proof of convergence to zero in the declared order, without cancelling the R-484 defect?",
+  "non_claims": [
+    "This packet does not instantiate PAH sector weights, a full-Q Gibbs measure, a common positive normalized cylinder state, or a PAH-specific Cauchy estimate.",
+    "It does not prove projective consistency, R-488 nonzero, stationarity, Gibbs-L2 convergence, closability, an infinite-volume semigroup, or an ordered thermodynamic limit.",
+    "It does not prove that the R-484 boundary defect vanishes; persistent boundary error remains an explicit obstruction to this bridge.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap, cosmological, or TOE conclusion follows."
+  ],
+  "passed": 15,
+  "result_id": null,
+  "run_kind": "independent_support_audit",
+  "schema": "tect/pah-omc014-boundary-error-lean-independent/1.0",
+  "source_hashes": {
+    "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "R-484-certificate": "a2e132bcf1c44f339cd8faf7b675796e3a680629c03bdb7adc1bd2bd9ed4bf29",
+    "R-484-primary-run": "6fb8a733f6014fcaa0fd8b84cdffd4b43d5f6214f4b9a59e6a9f9a1d2218c17d",
+    "R-490-certificate": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+    "R498": "fa7cb4d28de1ffd19eb9bc2ddc8a89e24b0f93f6f070204d5872063770773ac5",
+    "manifest": "efbdd3e2f430f074fef33677f7481d1096c0dd1b4ed4fdd3f3c7732d5e244458",
+    "weight_intake": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502"
+  },
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

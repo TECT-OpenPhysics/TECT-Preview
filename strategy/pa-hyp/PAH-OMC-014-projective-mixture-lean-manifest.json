@@ -1,0 +1,92 @@
+{
+  "schema": "tect/pah-omc014-projective-mixture-lean-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-PROJECTIVE-MIXTURE-LEAN",
+  "version": "0.1.0",
+  "title": "Conditional cross-Q kernel and weight-recursion projective bridge",
+  "purpose": "Formalize the exact finite algebra showing that a stochastic cross-Q component kernel plus its induced weight recursion preserves cylinder-mixture expectations and probability normalization. The kernel and weights remain future source-owned hypotheses.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "source_law_present": false,
+    "claim_bearing": false,
+    "physical_authority": false,
+    "model_change": false,
+    "parent_mutation": false
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-010": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+    },
+    "PAH-OMC-012": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+    },
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PROJECTIVE-KERNEL-OBLIGATION": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-projective-kernel-obligation-260905.md",
+      "sha256": "ea8495c9e12e464506ece41f4e75fe3044c922c1da71ea56dea0e387d8ac5d1e"
+    }
+  },
+  "lean": {
+    "path": "verification/lean/Tect/R500.lean",
+    "sha256": "2afe710dee80fe6a11ed5a0e97199f396d76fd301618697d6629eb40c740a2c1",
+    "declarations": [
+      "coarse_weight_nonnegative",
+      "coarse_weight_normalized",
+      "projective_mixture_identity",
+      "projective_mixture_preserves_probability"
+    ],
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "scope": "Abstract finite fine/coarse index types, real component expectations, nonnegative stochastic kernel, and induced coarse weights. No PAH sector values or state are instantiated."
+  },
+  "theorem_contract": {
+    "definitions": [
+      "weightedSum(w,v)=sum_i w(i)*v(i)",
+      "A fine component expectation is the kernel mixture of coarse component expectations.",
+      "Coarse weights are induced by the fine weights and row-stochastic kernel."
+    ],
+    "assumptions": [
+      "Fine and coarse sector index types are finite.",
+      "The cross-Q kernel K(q_f,q_c) is nonnegative.",
+      "Every fine-kernel row sums to one.",
+      "Fine weights are nonnegative and sum to one.",
+      "Fine component push-forward expectations equal the K-weighted coarse component expectations."
+    ],
+    "conclusion": "The induced coarse weights are nonnegative and normalized, and the fine weighted mixture equals the coarse weighted mixture for every supplied component expectation vector.",
+    "not_supplied": [
+      "No source-owned K_n(q_c | q_f) is supplied or shown to exist.",
+      "No PAH finite Gibbs component push-forward identity is supplied.",
+      "No cross-Q sector weight law, common cylinder topology, Cauchy error, or omega is constructed.",
+      "No R-484 boundary-error estimate, R-488 asymptotic witness, or stationarity domain is supplied."
+    ]
+  },
+  "status": {
+    "classification": "CONDITIONAL_SUPPORT_ONLY",
+    "source_law_present": false,
+    "active_gate_change": false,
+    "claim_bearing": false,
+    "physical_promotion": false,
+    "verdict": "HOLD_FOR_EVIDENCE"
+  },
+  "non_claims": [
+    "This packet proves an abstract finite algebraic implication only; it does not define PAH sector weights or a projective kernel.",
+    "It does not prove exact projectivity for PAH-OMC-014 because the component push-forward and kernel hypotheses are not supplied.",
+    "It does not prove weak cylinder convergence, positivity of an omega, R-488 nonvanishing, or omega(L f)=0.",
+    "No infinite-volume semigroup, quantum real-time, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap, cosmological, or TOE conclusion follows."
+  ],
+  "reproduction": {
+    "lean": "Set-Location verification/lean; lake env lean Tect/R500.lean",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_projective_mixture_lean_verify.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_projective_mixture_lean_verify_independent.py",
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_projective_mixture_lean_verify_hostile.py"
+  }
+}
