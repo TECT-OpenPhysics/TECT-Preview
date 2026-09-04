@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**905 accepted events** · latest 25 shown below · machine locator: `index.json`
+**909 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,10 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-q3lock-fss-bibliography-page-range-correction-2` — [Q3LOCK FSS bibliography page-range correction] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-fss-bibliography-page-range-correction-2) |
+| 2026-09-05 | `20260905-q3lock-external-kp-fss-source-scope-audit-and-s` — [Q3LOCK external KP/FSS source-scope audit and scalar-vector firewall] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-external-kp-fss-source-scope-audit-and-s) |
+| 2026-09-05 | `20260905-q3lock-proof-text-integration-map-for-jensen-no` — [Q3LOCK proof-text integration map for Jensen normalizer and coercivity inputs] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-proof-text-integration-map-for-jensen-no) |
+| 2026-09-05 | `20260905-q3lock-quartic-coercivity-and-form-domain-audit` — [Q3LOCK quartic coercivity and form-domain audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-quartic-coercivity-and-form-domain-audit) |
 | 2026-09-05 | `20260905-q3lock-jensen-normalizer-sub-obligation-audit-2` — [Q3LOCK Jensen normalizer sub-obligation audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-jensen-normalizer-sub-obligation-audit-2) |
 | 2026-09-05 | `20260905-q3lock-r-497-standalone-result-registration-wit` — [Q3LOCK R-497 standalone result registration with PDF deferral] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-r-497-standalone-result-registration-wit) |
 | 2026-09-05 | `20260905-q3lock-p-06-p-09-independent-proof-text-audit-r` — [Q3LOCK P-06/P-09 independent proof-text audit round 2] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-p-06-p-09-independent-proof-text-audit-r) |
@@ -38,10 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-04 | `20260904-q3lock-proof-synthesis-pins-finite-volume-feynm` — [Q3LOCK proof synthesis pins finite-volume Feynman-Kac boundary] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-proof-synthesis-pins-finite-volume-feynm) |
 | 2026-09-04 | `20260904-q3lock-finite-volume-feynman-kac-crosswalk-2026` — [Q3LOCK finite-volume Feynman-Kac crosswalk] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-finite-volume-feynman-kac-crosswalk-2026) |
 | 2026-09-04 | `20260904-q3lock-weighted-weak-limit-test-functional-audi` — [Q3LOCK weighted weak-limit test-functional audit] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-weighted-weak-limit-test-functional-audi) |
-| 2026-09-04 | `20260904-q3lock-verifier-byte-stability-repaired-2026-09` — [Q3LOCK verifier byte stability repaired] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-verifier-byte-stability-repaired-2026-09) |
-| 2026-09-04 | `20260904-q3lock-p-06-p-09-proof-text-synthesis-recorded` — [Q3LOCK P-06/P-09 proof-text synthesis recorded] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-p-06-p-09-proof-text-synthesis-recorded) |
-| 2026-09-04 | `20260904-q3lock-primary-source-crosswalk-audited-2026-09` — [Q3LOCK primary-source crosswalk audited] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-primary-source-crosswalk-audited-2026-09) |
-| 2026-09-04 | `20260904-q3lock-weighted-limit-compactness-correction-re` — [Q3LOCK weighted-limit compactness correction recorded] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-weighted-limit-compactness-correction-re) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 869–905 | 37 | [000869-000918.md](pages/000869-000918.md) |
+| 869–909 | 41 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |

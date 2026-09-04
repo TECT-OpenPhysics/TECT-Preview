@@ -17195,11 +17195,16 @@ mathematical theorem.
 
 | source | SHA-256 |
 |---|---|
-| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `c034542967cf3b877714ed44afac8cf8df95f1df3ca1a19baea955c0c6119435` |
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `3d6d0421bceaa274683d2960d4dc45b7045cc4e79fdb0242985d5a3237317de1` |
 | upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
 | upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
 | P-06/P-09 audit round 2 | `c5e62f8b7d4c0b3351063c0f9d5707e387be858f301e01d05a1b79ec0686b960` |
 | Jensen normalizer sub-obligation audit | `abc9535a004a548e3a348211320e9bc859f6be73bc181b878ee6c92ed4e635b1` |
+| Quartic coercivity and form-domain audit | `afcb0d694c950e0c63a3c46f0e8e78ccdef81c9fea726116905b49da00bcfe9e` |
+| Integrated proof-text insertion map | `e398f852ed56a40f7b2cd45108aa6d6272996c2c752ec2fda4b0070edc922ec2` |
+| KP/FSS external source-scope audit | `c4c3d227fc118ea76f0cff09e608d05814dba5b6baa52b73deee58c248a2a6e8` |
+| KP/FSS external source-scope audit | `c4c3d227fc118ea76f0cff09e608d05814dba5b6baa52b73deee58c248a2a6e8` |
+| FSS theorem and hypothesis crosswalk | `f0508567fe898785677726b366c078e72141c5fa66b4605b3e68abe1ae409be0` |
 | primary verifier source | `d707e17db34fa2f17b09483a55d172edbcd3ff44ecb65e6a40165c01a7286fd3` |
 | independent verifier source | `11ee55c1d225645d8621ae34f2223f4c99e90024cc3c46b6cefc325f4b457e71` |
 | integrated verifier source | `c452e620933005ff12c84194b8f57f3aedb296bbc2d63358c57d9e505777b834` |
@@ -17210,7 +17215,7 @@ mathematical theorem.
 **Where proven.** The exact model and candidate component ledger are recorded
 in `strategy/q3lock-exp782-independent-result-manifest-260905.json`. The
 upstream authority records are EXP-000780, EXP-000781, and EXP-000782 in
-`explorations/log.jsonl`; the current seam decision is EXP-001516. The proof
+`explorations/log.jsonl`; the current seam decisions are EXP-001516 and EXP-001522. The proof
 text and its boundaries are audited in
 `strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`, with the
 finite-grid FKG, source-uniform loop limit, topology, edge-incidence,
@@ -17218,9 +17223,19 @@ Duhamel/Fourier, and Griffiths normalization crosswalks linked there.  The
 mesh-uniform normalizer sub-obligation is strengthened by the centered
 Gaussian Jensen estimate in
 `strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md`; it remains a
-T0 proof input pending independent review. The
-primary, independent, and integrated verifiers and their result JSON paths are
-listed in the companion manifest.
+T0 proof input pending independent review.  The explicit quartic coercivity and
+finite-volume form-domain audit is recorded in
+`strategy/q3lock-quartic-coercivity-form-domain-audit-260905.md`; it fixes the
+source-uniform lower/upper constants but does not close the operator audit. The integrated Jensen/coercivity insertion
+map is recorded in
+`strategy/q3lock-proof-text-integration-addendum-260905.md`; it fixes the
+ordered manuscript dependencies while retaining the external theorem and
+common-core gates. The external KP/FSS source-scope and theorem firewall audit
+is recorded in
+`strategy/q3lock-kp-fss-external-source-audit-260905.md`; it confirms the
+general-vector and finite-grid source scopes while excluding KP scalar order
+propositions. The primary, independent, and integrated verifiers and their
+result JSON paths are listed in the companion manifest.
 
 **Reuse scope.** This result is reusable for mathematical-physics analysis of
 the declared fixed-lattice Q3LOCK quantum anharmonic model and for a possible

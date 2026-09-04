@@ -24,7 +24,7 @@ strict source cusp, infrared zero-mode lower bound, or DLR multiplicity.
 ## 2. FSS source hypotheses and theorem locations
 
 The audited source is the 18-page paper identified on its first page as
-Commun. Math. Phys. 50, 79--85 (1976).  The finite-volume setup is in Section
+Commun. Math. Phys. 50, 79--95 (1976).  The finite-volume setup is in Section
 2, pages 81--82 of the printed pagination.
 
 ### 2.1 Finite-volume model
