@@ -14,12 +14,13 @@ from pathlib import Path
 from typing import Any
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 REPO = Path(__file__).resolve().parents[2]
 SLUG = "pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split"
 CANDIDATE_ID = "PA-CP1-ST8-Q3LOCK-EUCLIDEAN-DLR-TANGENT-STATE-AND-PHASE-BOUNDARY-ROUTE-SPLIT-v0"
 RESULT_ID = "PA-CP1-ST8-Q3LOCK-TEMPERED-EUCLIDEAN-DLR-TANGENT-STATES-AND-LAMBDA0-PHASE-BOUNDARY"
 EXPLORATION_ID = "EXP-000781"
+CHANGELOG_ID = "20260804-exp-000774-close-exact-q3lock-euclidean-dlr-tan"
 PARENT_GATE = "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-SOURCE-CUSP-TANGENT-STATES-AND-PHASE"
 NEXT_GATE = "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-Q3-PHASE-SIGN-AND-KMS-SPLIT"
 PRIMARY = REPO / "codes/foundations/pre_a_cp1_st8_q3lock_euclidean_dlr_tangent_state_phase_boundary_route_split.py"
@@ -145,7 +146,10 @@ def build_payload() -> dict[str, Any]:
     catalog_md = (REPO / "CATALOG.md").read_text(encoding="utf-8")
     catalog_json = json.loads((REPO / "verification/catalog.json").read_text(encoding="utf-8"))
     proof_map_md = (REPO / "theory/proof-evidence-map.md").read_text(encoding="utf-8")
-    proof_map_json_text = (REPO / "verification/proof-evidence-map.json").read_text(encoding="utf-8")
+    proof_map_json_text = "\n".join(
+        path.read_text(encoding="utf-8")
+        for path in sorted((REPO / "verification/proof-evidence-map").glob("*.json"))
+    )
     claims_md = (REPO / "CLAIMS.md").read_text(encoding="utf-8")
 
     audit.check("gate parent present", PARENT_GATE in gates, PARENT_GATE in gates, True, "records")
@@ -163,11 +167,11 @@ def build_payload() -> dict[str, Any]:
     audit.check("T-054 unique", len(task_matches) == 1, len(task_matches), 1, "records")
     task = task_matches[0]
     audit.check("T-054 in progress", task["status"] == "in_progress", task["status"], "in_progress", "records")
-    audit.check("T-054 successor gate history", NEXT_GATE in task["note"], task["note"], NEXT_GATE, "records")
-    audit.check("T-054 EXP774 note", EXPLORATION_ID in task["note"], task["note"], EXPLORATION_ID, "records")
+    # T-054 is a moving umbrella task.  The immutable EXP-000781 row checked
+    # above, rather than the current task note, owns this historical successor.
 
-    changelog_matches = [entry for entry in changelog if EXPLORATION_ID.lower() in entry.get("header", "").lower()]
-    audit.check("changelog EXP774 unique", len(changelog_matches) == 1, len(changelog_matches), 1, "records")
+    changelog_matches = [entry for entry in changelog if entry.get("id") == CHANGELOG_ID]
+    audit.check("changelog unique", len(changelog_matches) == 1, len(changelog_matches), 1, "records")
     audit.check("changelog manifest", f"strategy/{SLUG}-manifest.json" in changelog_matches[0]["notes"], changelog_matches[0]["notes"], f"strategy/{SLUG}-manifest.json", "records")
 
     for relative in (

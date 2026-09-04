@@ -1,0 +1,96 @@
+{
+  "active_gate_change": false,
+  "claim_bearing": false,
+  "contract": {
+    "id": "PAH-OMC-013",
+    "path": "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+    "sha256": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc"
+  },
+  "lean": {
+    "declarations": [
+      "charge_balance",
+      "coarse_grade_bound",
+      "support_separated",
+      "frontier_separated",
+      "phase_increment_zero",
+      "aperture_increment_zero",
+      "matched_generator_summand",
+      "active_root_sum_intertwines",
+      "old_move_preserves_projected_grade",
+      "boundary_defect_exact",
+      "boundary_defect_nonzero",
+      "csw_domination_only",
+      "non_promotion_firewall"
+    ],
+    "path": "verification/lean/Tect/R493.lean",
+    "sha256": "c350035719b939c429a9e09d163015d34a471c3e6ea7c4678d4a88049060bc88"
+  },
+  "manifest_id": "PAH-OMC-013-FULL-Q-EVENTUAL-INTERTWINING-MANIFEST-001",
+  "exploration_id": "EXP-001474",
+  "no_parent_mutation": true,
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-004": {
+      "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+    },
+    "PAH-OMC-008": {
+      "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+    },
+    "PAH-OMC-010": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+    },
+    "PAH-OMC-010-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-manifest.json",
+      "sha256": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3"
+    },
+    "PAH-OMC-011": {
+      "path": "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "sha256": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020"
+    },
+    "PAH-OMC-012": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+    },
+    "PAH-OMC-012-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-manifest.json",
+      "sha256": "fc2c52b0f786b371c56d2700e571d23558bad191942bc4f5182bc6260ae33937"
+    },
+    "R-484": {
+      "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+      "sha256": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+      "run_path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/primary.json",
+      "run_sha256": "6fb8a733f6014fcaa0fd8b84cdffd4b43d5f6214f4b9a59e6a9f9a1d2218c17d"
+    },
+    "R-490": {
+      "certificate_path": "strategy/pa-hyp/R490-certificate.md",
+      "certificate_sha256": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+      "run_path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/primary.json",
+      "run_sha256": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+    }
+  },
+  "physical_promotion": false,
+  "reproduction": {
+    "primary": "python -X utf8 codes/foundations/pah_omc013_full_q_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc013-full-q-eventual-intertwining/primary.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc013_full_q_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc013-full-q-eventual-intertwining/independent.json",
+    "hostile": "python -X utf8 codes/foundations/pah_omc013_full_q_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc013-full-q-eventual-intertwining/hostile.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc013_full_q_eventual_intertwining_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R493.lean"
+  },
+  "runs": {
+    "directory": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc013-full-q-eventual-intertwining",
+    "hostile": "hostile.json",
+    "independent": "independent.json",
+    "integrated": "integrated.json",
+    "primary": "primary.json"
+  },
+  "schema": "tect/pah-omc013-full-q-eventual-intertwining-manifest/1.0",
+  "scope": "Eventual pointwise generator intertwining on the grade-blind full-Q finite cylinder algebra for the unchanged PAH-001 model, after the OMC-012 domain repair.",
+  "status": "MAINLINE_ADVANCE",
+  "stage2_status": "HOLD_FOR_EVIDENCE_CLOSABILITY_AND_SEMIGROUP"
+}

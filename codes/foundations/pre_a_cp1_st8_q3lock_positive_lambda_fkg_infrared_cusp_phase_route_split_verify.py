@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 REPO = Path(__file__).resolve().parents[2]
 SLUG = "pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split"
 CANDIDATE_ID = "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-FKG-INFRARED-CUSP-PHASE-ROUTE-SPLIT-v0"
@@ -208,9 +208,11 @@ def build_payload() -> dict[str, Any]:
     audit.check("EXP-000782 ledger record", len(exploration_matches) == 1, len(exploration_matches), 1, "records")
     audit.check("EXP-000782 successor ledger", NEXT_GATE in exploration_matches[0].get("next_action", ""), exploration_matches[0].get("next_action", ""), NEXT_GATE, "records")
 
-    # Later correction events may cite this EXP ordinal in their body; bind the
-    # package to its own manifest note rather than treating that history as a duplicate.
-    changelog_matches = [entry for entry in changelog if f"strategy/{SLUG}-manifest.json" in entry.get("notes", [])]
+    # Later paper-audit events may deliberately cite this frozen manifest.
+    # Bind the historical package to its immutable original changelog event,
+    # rather than treating every later reuse of the note as a duplicate.
+    changelog_event_id = "20260804-exp-000775-close-an-explicit-positive-lambda-q3"
+    changelog_matches = [entry for entry in changelog if entry.get("id") == changelog_event_id]
     audit.check("changelog unique", len(changelog_matches) == 1, len(changelog_matches), 1, "records")
     audit.check("changelog manifest", f"strategy/{SLUG}-manifest.json" in changelog_matches[0]["notes"], changelog_matches[0]["notes"], f"strategy/{SLUG}-manifest.json", "records")
 

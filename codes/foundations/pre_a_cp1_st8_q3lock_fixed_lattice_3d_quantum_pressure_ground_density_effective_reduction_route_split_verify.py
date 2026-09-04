@@ -16,12 +16,13 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 REPO = Path(__file__).resolve().parents[2]
 SLUG = "pre-a-cp1-st8-q3lock-fixed-lattice-3d-quantum-pressure-ground-density-effective-reduction-route-split"
 CANDIDATE_ID = "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-3D-QUANTUM-THERMODYNAMIC-PRESSURE-GROUND-DENSITY-AND-EFFECTIVE-REDUCTION-SPLIT-v0"
 RESULT_ID = "PA-CP1-ST8-Q3LOCK-FIXED-LATTICE-FREE-PERIODIC-SOURCE-PRESSURE-AND-CENTERED-GROUND-ENERGY-DENSITY"
 EXPLORATION_ID = "EXP-000780"
+CHANGELOG_ID = "20260804-exp-000773-close-fixed-lattice-st8-q3lock-scala"
 PARENT_EXPLORATIONS = {("EXP-000719", "continues"), ("EXP-000779", "continues")}
 PARENT_IDS = [
     "PA-CP1-ST8-Q3LOCK-v0",
@@ -301,12 +302,16 @@ def build_payload() -> dict[str, Any]:
     audit.check("exploration next gate", NEXT_GATE in exploration.get("next_action", ""), exploration.get("next_action"), NEXT_GATE, "records")
 
     todo = json.loads((REPO / "todo/todo.json").read_text(encoding="utf-8"))
-    task = next(item for item in todo["tasks"] if item["id"] == "T-054")
-    audit.check("TODO structured", task["status"] == "in_progress" and EXPLORATION_ID in task["note"] and NEXT_GATE in task["note"], task, "active route history", "records")
-    todo_view = (REPO / "TODO.md").read_text(encoding="utf-8")
-    audit.check("TODO rendered", EXPLORATION_ID in todo_view and NEXT_GATE in todo_view, EXPLORATION_ID, "rendered", "records")
+    task_matches = [item for item in todo["tasks"] if item["id"] == "T-054"]
+    audit.check("T-054 unique", len(task_matches) == 1, len(task_matches), 1, "records")
+    audit.check("T-054 in progress", task_matches[0]["status"] == "in_progress", task_matches[0]["status"], "in_progress", "records")
+    # The live umbrella task note advances as T-054 moves to later candidate
+    # audits.  Historical route ownership and the successor gate are frozen in
+    # the append-only exploration record checked above, not in that mutable note.
     changelog_records = [json.loads(line) for line in (REPO / "changelog/log.jsonl").read_text(encoding="utf-8").splitlines()]
-    changelog = next(item for item in changelog_records if EXPLORATION_ID in item.get("header", ""))
+    changelog_matches = [item for item in changelog_records if item.get("id") == CHANGELOG_ID]
+    audit.check("changelog unique", len(changelog_matches) == 1, len(changelog_matches), 1, "records")
+    changelog = changelog_matches[0]
     audit.check("changelog claim context", set(changelog.get("claim_ids", [])) == {"C6-SPACETIME-SIGNATURE", "C6-BCC-PREMISE-BLOCKED"}, changelog.get("claim_ids"), ["C6-SPACETIME-SIGNATURE", "C6-BCC-PREMISE-BLOCKED"], "records")
     audit.check("changelog notes", {MANIFEST.relative_to(REPO).as_posix(), CERTIFICATE.relative_to(REPO).as_posix()} <= set(changelog.get("notes", [])), changelog.get("notes"), "certificate and manifest", "records")
     audit.check("changelog scripts", {PRIMARY.relative_to(REPO).as_posix(), INDEPENDENT.relative_to(REPO).as_posix(), SCRIPT.relative_to(REPO).as_posix()} <= set(changelog.get("scripts", [])), changelog.get("scripts"), "three scripts", "records")
@@ -331,7 +336,10 @@ def build_payload() -> dict[str, Any]:
     ]
     proof_map_texts = [
         (REPO / "theory/proof-evidence-map.md").read_text(encoding="utf-8"),
-        (REPO / "verification/proof-evidence-map.json").read_text(encoding="utf-8"),
+        "\n".join(
+            path.read_text(encoding="utf-8")
+            for path in sorted((REPO / "verification/proof-evidence-map").glob("*.json"))
+        ),
     ]
     generated_paths = [MANIFEST, CERTIFICATE, PRIMARY, INDEPENDENT, SCRIPT, PRIMARY_STORED, INDEPENDENT_STORED]
     if DEFAULT_OUTPUT.is_file():

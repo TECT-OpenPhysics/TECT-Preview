@@ -1,0 +1,200 @@
+{
+  "schema": "tect/pah-omc013-full-q-eventual-intertwining/1.0",
+  "contract_id": "PAH-OMC-013",
+  "version": "0.1.0",
+  "title": "Full-Q charge-graded eventual generator intertwining on the common cylinder",
+  "exploration_id": "EXP-001474",
+  "proposed_at": "2026-09-04",
+  "proposed_by": "TECT_RESEARCH_PROGRAM",
+  "provenance": {
+    "class": "RESEARCHER_HYPOTHESIS_FINITE_COMMON_CORE_AUDIT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "synthetic_fixture": false,
+    "physical_authority": false,
+    "new_unverified_hypothesis": true,
+    "epistemic_layer": "L2_FINITE_ALGEBRAIC_COMMON_CORE",
+    "physical_identity": "UNESTABLISHED",
+    "empirical_validation": "NONE"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-004": {
+      "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+    },
+    "PAH-OMC-008": {
+      "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+    },
+    "PAH-OMC-010": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+    },
+    "PAH-OMC-010-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-manifest.json",
+      "sha256": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3"
+    },
+    "PAH-OMC-011": {
+      "path": "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "sha256": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020"
+    },
+    "PAH-OMC-012": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+    },
+    "PAH-OMC-012-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-manifest.json",
+      "sha256": "fc2c52b0f786b371c56d2700e571d23558bad191942bc4f5182bc6260ae33937"
+    },
+    "R-484": {
+      "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+      "sha256": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+      "run_path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/primary.json",
+      "run_sha256": "6fb8a733f6014fcaa0fd8b84cdffd4b43d5f6214f4b9a59e6a9f9a1d2218c17d"
+    },
+    "R-490": {
+      "certificate_path": "strategy/pa-hyp/R490-certificate.md",
+      "certificate_sha256": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+      "run_path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/primary.json",
+      "run_sha256": "4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3"
+    }
+  },
+  "preservation_firewall": {
+    "functional_unchanged": true,
+    "rates_unchanged": true,
+    "mobility_unchanged": true,
+    "carrier_unchanged": true,
+    "projection_unchanged": true,
+    "state_space_from_omc012": true,
+    "no_new_root": true,
+    "no_charge_deletion": true,
+    "no_charge_redistribution": true,
+    "no_cross_q_mixture": true,
+    "no_conditional_averaging": true,
+    "no_counterterm": true,
+    "no_rate_fitting": true,
+    "no_fixed_rmax_bypass": true,
+    "no_physical_promotion": true
+  },
+  "exact_scope": {
+    "carrier_family": "Use exactly the PAH-OMC-004 two-row strip G_n for every integer n>=2. G_(n+1) is the same strip successor; no carrier, face subdivision, root family or boundary repair is added.",
+    "finite_parameter_scope": "Use the PAH-OMC-010 path K=2, M_s=M_psi=1, epsilon=1/2, beta=nu=1, m2=0 and every displayed coupling equal to one. R_max=R ranges over every positive integer. The algebraic equality is proved for arbitrary R in this declared path; finite R samples are regression checks only.",
+    "graded_state_space": "Use exactly Omega_n^gr(R) from PAH-OMC-012: the disjoint union over Q in {0,...,M_psi|V_n|} of the unchanged PAH-001 fixed-Q components. The grade is a component tag and is not an observable coordinate.",
+    "projection": "For x=(Q_f,omega_f), use p_(n+1,n)(x)=(Q_c,omega_f restricted to G_n), where Q_c is the sum of retained ell coordinates. The balance Q_f-Q_c is the nonnegative sum of the two dropped-column occupations. No coordinate is reassigned.",
+    "lift": "For a grade-blind f in the R-488 common cylinder, I_(n,n+1)f=f composed with p_(n+1,n). The lift is total because the OMC-012 graded union contains every valid coarse grade.",
+    "common_cylinder_algebra": "A_cyl^gr is the algebraic union of bounded functions of finitely many retained integer occupations ell_v and finitely many closed-face holonomy characters, invariant under the declared gauge action and anchor-preserving automorphisms. It cannot inspect the disjoint-union grade, aperture, open links or phases. R-488 ell_a, ell_d, H_0 and H_1 are included.",
+    "generator": "On each grade block use the unchanged PAH-001 L_rho with all declared directed roots and rates. The graded generator is the componentwise direct sum; no root changes Q_f.",
+    "gibbs_norm": "Use the unchanged PAH-OMC-010 component Gibbs weighted norm. R-490 C_sw=540 is a domination-only coefficient and is not used in the equality proof or to create a cross-Q probability.",
+    "limit": "No infinite-volume, continuum, beta, cutoff, physical-sector or observation limit is taken. n is a finite refinement index and R remains an arbitrary positive integer in the algebraic statement."
+  },
+  "root_support_contract": {
+    "root_families": [
+      {
+        "family": "phase",
+        "changed_coordinates": "one phase n_v by +/-1",
+        "affected_energy_terms": "onsite(v) and covariant edges incident to v",
+        "observable_increment": "zero for every A_cyl^gr observable"
+      },
+      {
+        "family": "aperture",
+        "changed_coordinates": "one aperture grid level at v",
+        "affected_energy_terms": "onsite(v), stiffness and covariant edges incident to v, and faces incident to those edges",
+        "observable_increment": "zero for every A_cyl^gr observable"
+      },
+      {
+        "family": "radial-transfer",
+        "changed_coordinates": "one occupation quantum from one endpoint to the other endpoint of an edge",
+        "affected_energy_terms": "onsite terms at both endpoints and covariant edge terms incident to either endpoint",
+        "observable_increment": "may be nonzero exactly when an endpoint occupation lies in the finite ell support"
+      },
+      {
+        "family": "link",
+        "changed_coordinates": "one Z_2 link by +/-1",
+        "affected_energy_terms": "the covariant term on that edge and every incident plaquette term",
+        "observable_increment": "may be nonzero exactly when the link occurs in a selected closed-face holonomy"
+      }
+    ],
+    "support_definition": "For a cylinder f, cl(f) is the union of the root supports of every radial or link root that can change one of f's finitely many generating coordinates. Phase and aperture roots are included in the audit but have zero cylinder increment.",
+    "registered_max_radius": "The maximum column distance from a changed root coordinate to any vertex in its affected local energy support is derived from the strip incidence by the primary and independent lanes; the recorded radius is not a model parameter.",
+    "m_f": "Let m_f be the largest column index in cl(f), with m_f=-1 for the constant cylinder.",
+    "N_of_f": "N(f)=max(2,m_f+1). This is the least cofinal level at which the new d_n, the new column n+2 and the square-to-split frontier columns n,n+1 are outside cl(f)."
+  },
+  "eventual_intertwining_proof": {
+    "grade_step": "For every fine state x, p(x) has grade Q_c in the coarse graded union and Q_f-Q_c is the dropped nonnegative charge. For every old-old radial root, the retained charge sum is unchanged; phase, aperture and link roots also preserve Q_c.",
+    "active_root_partition": "Fix f and n>=N(f). A fine root is active only if it changes a retained ell coordinate in f or a selected closed-face holonomy. Every active root has support in cl(f); all fine roots outside cl(f), including all new-column, d_n and frontier roots, have zero lifted observable increment.",
+    "root_correspondence": "For every active fine root r, there is one and only one old root r_bar with the same family, geometric label, direction or Z_2 channel, admissibility, changed retained coordinates, endpoint mobility and affected PAH energy-term list. The map is bijective on active roots.",
+    "local_rate_identity": "Because the displayed PAH functional is a sum of onsite, edge and face terms and the affected term list is identical, DeltaF_fine(r,x)=DeltaF_coarse(r_bar,p(x)). The mobility rule reads the same retained endpoint/aperture coordinates, hence c_fine(r,x)=c_coarse(r_bar,p(x)) for every R>=1.",
+    "lift_action_identity": "For every active root, p(r x)=r_bar(p x), so (I f)(r x)-(I f)(x)=f(r_bar p(x))-f(p(x)).",
+    "generator_sum_identity": "Split both finite root sums into active matched roots and zero-increment roots. The matched summands are equal by the preceding two identities and the zero class contributes zero. Therefore (L_(n+1) I_(n,n+1) f)(x)=(I_(n,n+1) L_n f)(x) for every x, every R>=1 and every n>=N(f).",
+    "boundary_control": "The R-484 hidden-diagonal defect remains exactly 16/9. It is not erased or averaged. For n>=N(f), its successor boundary support lies outside cl(f), so it cannot enter an active summand; this is separation, not defect cancellation."
+  },
+  "full_q_charge_cases": {
+    "new_column_only": "If all retained occupations vanish and the fine charge sits in the new column, p changes the grade from Q_f>0 to Q_c=0. The lift remains defined in the graded union. New-column and crossing roots have zero cylinder increment after stabilization.",
+    "mixed_old_new": "If charge is split between retained and dropped columns, p records the retained Q_c without modifying any ell coordinate. Active old-old transfers preserve Q_c and retain the same admissibility tests as the coarse block.",
+    "maximal_charge": "If Q_f=M_psi|V_(n+1)|, the retained sum is at most M_psi|V_n|, so p remains total even at the top grade.",
+    "forbidden_repair": "No fixed-Q substitution, charge redistribution, conditional average, fitted cross-Q weight or deleted root is allowed."
+  },
+  "boundary_and_uniformity": {
+    "R484_defect": "Read the exact R-484 boundary witness (coarse 1/8, fine-even 1/4, fine-odd -55/36, hidden diagonal 16/9) and retain it as a nonzero boundary datum.",
+    "R490_role": "Read C_sw=540 only as a previously verified Gibbs state-weighted domination input. It is not an equality, root correspondence or common-core proof.",
+    "R_max": "The proof uses identical symbolic local term lists, so it does not replace the all-positive-integer R scope by a fixed R_max sample.",
+    "weak_l2": "The finite pointwise identity is compatible with the componentwise Gibbs norm. A single normalized cross-Q Gibbs measure and weak Gibbs-L2 convergence remain unproved and are not inferred."
+  },
+  "acceptance": {
+    "primary": "Hash-pin every parent, derive the strip root catalog and maximum support radius, derive N(f) for a basis of arbitrary finite cylinder supports, verify the four root-family action/rate identities symbolically, and run exact Fraction regression states including grade-changing fine states.",
+    "independent": "Rebuild the strip incidence, projection, active-root partition, support separation and local-term equality without importing the primary implementation; test different support sets and R_max samples.",
+    "hostile": "Reject fixed-Q-only reasoning, grade inspection by f, charge deletion or redistribution, omitted phase/aperture/radial/link families, boundary-defect erasure, C_sw-as-proof, fixed-R_max substitution, conditional averaging, rate fitting and any physical promotion. Also require a nonzero pre-stabilization boundary witness.",
+    "lean": "Formalize the grade balance, N(f) separation arithmetic, active-root finite-sum identity, retained-move projection identity, exact R-484 defect and the C_sw/no-promotion firewall. Lean is an algebraic finite cross-check, not a closability or infinite-volume theorem."
+  },
+  "status": {
+    "verdict": "MAINLINE_ADVANCE",
+    "classification": "MAINLINE_ADVANCE_FULL_Q_EVENTUAL_INTERTWINING_ALGEBRAIC",
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "stage2_status": "HOLD_FOR_EVIDENCE_CLOSABILITY_AND_SEMIGROUP",
+    "exact_scope_closed": true,
+    "weak_gibbs_l2": "NOT_PROVED",
+    "infinite_volume": "NOT_PROVED"
+  },
+  "known_boundaries": [
+    "The common cylinder is grade-blind; a function that reads the disjoint-union tag is outside this theorem.",
+    "The result is eventual and observable-dependent through N(f); it is not a single finite-volume operator-norm bound over all cylinders.",
+    "R-490 C_sw=540 remains domination-only and supplies no generator equality.",
+    "The exact identity does not prove closability, a common infinite-volume semigroup, uniform cutoff or volume estimates, or an ordered limit.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "falsifiers": [
+    "A valid full-Q fine state whose projected retained tuple is not in exactly one OMC-012 coarse grade.",
+    "An active root at n>=N(f) with no unique old-root correspondence or with a different affected PAH term list, mobility or midpoint rate.",
+    "A phase or aperture root that changes a declared grade-blind cylinder coordinate, or an extra frontier root with a nonzero increment after stabilization.",
+    "A failure of the exact local-term identity for any positive R, including the mixed old/new charge cases.",
+    "The R-484 hidden-diagonal defect is set to zero, averaged away or silently removed from the boundary record.",
+    "C_sw=540, fixed-R testing, a conditional Gibbs operation or any rate/model modification is needed to obtain the equality."
+  ],
+  "missing_assumptions": [
+    "A later weak Gibbs-L2 theorem would need a source-authorized normalized cross-Q mixing law, its normalization and a common completed Hilbert space.",
+    "Closability of the compatible generators and existence of an infinite-volume semigroup remain separate questions.",
+    "Uniform cutoff, lattice and volume estimates in the declared limit order remain unproved."
+  ],
+  "non_claims": [
+    "This is a researcher-owned finite algebraic common-core result for the unchanged PAH-001 model and OMC-012 graded domain, not an external or physical authority.",
+    "MAINLINE_ADVANCE is limited to eventual pointwise generator intertwining on the grade-blind finite cylinder algebra; it is not a fixed-Q theorem and not a global operator-norm statement.",
+    "Weak Gibbs-L2 convergence, closability, infinite-volume dynamics, continuum limits and ordered limits are not proved.",
+    "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "single_next_question": "Do the finite compatible generators from PAH-OMC-013 admit closable realizations and a common infinite-volume semigroup under a source-authorized uniform estimate, without changing PAH-001 or adding a cross-Q Gibbs mixture?",
+  "revisit_condition": "Reopen if any parent hash changes, an active-root term-list/rate counterexample appears, a grade-sensitive observable is proposed, the R-484 defect is revised, or a source-authorized cross-Q measure is supplied for a separate L2 theorem.",
+  "reproduction": {
+    "primary": "python -X utf8 codes/foundations/pah_omc013_full_q_eventual_intertwining.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc013-full-q-eventual-intertwining/primary.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc013_full_q_eventual_intertwining_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc013-full-q-eventual-intertwining/independent.json",
+    "hostile": "python -X utf8 codes/foundations/pah_omc013_full_q_eventual_intertwining_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc013-full-q-eventual-intertwining/hostile.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc013_full_q_eventual_intertwining_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R493.lean"
+  }
+}
