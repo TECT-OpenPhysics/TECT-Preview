@@ -7460,6 +7460,1622 @@
       "task_id": "T-054",
       "title": "Q3LOCK collective double commutator and FKG projection fix the theta_Q bound",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Could a changed result hash reflect a changed mathematical assertion rather than a scratch path?",
+          "disposition": "DISMISSED FOR THE OBSERVED RERUNS: assertion counts, script version and numerical values remain equal; the differing field is the TemporaryDirectory suffix in captured stdout."
+        },
+        {
+          "check": "Would redacting the temporary path hide a reproducibility-relevant input?",
+          "disposition": "REQUIRES RELEASE AUDIT: only environment-specific path text may be removed; command, script version, assertion values and hashes of canonical inputs must remain recorded."
+        },
+        {
+          "check": "Can the current artifact be hash-pinned before the serializer is normalized?",
+          "disposition": "UPHELD AS NO: the same verifier rerun can produce different bytes, so a current hash is not a stable release identifier."
+        },
+        {
+          "check": "Does this defect justify changing the mathematical tier of C6?",
+          "disposition": "DISMISSED: it blocks release reproducibility only and does not alter the proof assumptions or asserted values."
+        }
+      ],
+      "assumptions": [
+        "The comparison is made with the same source tree, Python environment and verifier version apart from the temporary-directory suffix.",
+        "The assertion values and counts are the load-bearing mathematical outputs of the integrated verifier.",
+        "The final release procedure may change the serializer or stdout capture without changing the underlying proof checks."
+      ],
+      "boundary": "T0 claim-nonbearing Q3LOCK paper-audit record. It records an open deterministic-artifact gate discovered in the integrated verifier and keeps mathematical proof status separate from release serialization status.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A byte-stable release is required for provenance and independent reproduction. The current result payload cannot be hash-pinned until environment-specific temporary paths are canonicalized or omitted. Treating this as a closed proof gate would conflate deterministic mathematics with nondeterministic serialization.",
+      "evidence_refs": [
+        "strategy/q3lock-low-temperature-dlr-paper-preregistration-audit-260904.md#reproducibility-artifact-stability-gate",
+        "codes/foundations/pre_a_cp1_st8_q3lock_positive_lambda_fkg_infrared_cusp_phase_route_split_verify.py#L67-L114",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-integrated-pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split/result.json#assertions"
+      ],
+      "finding": "The integrated verifier records fresh subprocess stdout verbatim. The wrapper uses a random TemporaryDirectory prefix for scratch JSON files, and that path appears in the captured stdout and therefore in result.json. Identical reruns preserve the script version, assertion counts and numerical values but change the result bytes and hash when the temporary suffix changes. This is a tooling reproducibility defect in the release artifact, not a mathematical discrepancy in EXP-000782.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001482",
+      "method": [
+        "Inspect the integrated verifier's fresh-subprocess wrapper and identify every field copied into the result payload.",
+        "Run the same integrated verifier twice and compare result JSON bytes, hashes, assertion counts and numerical values.",
+        "Separate environment-specific scratch-path differences from mathematical assertion differences."
+      ],
+      "missing_assumptions": [
+        "A canonical serializer or redaction rule that removes environment-specific paths while retaining all reproducibility-relevant fields.",
+        "Two clean reruns after the normalization patch with identical result bytes and hashes.",
+        "A release-check run on a clean snapshot with no concurrent staged changes."
+      ],
+      "next_action": "At the final clean checkpoint, patch the integrated verifier to canonicalize or omit scratch paths, rerun all three EXP-000780/781/782 integrated verifiers, compare bytes and hashes, then run the independent audit and release checks. Do not create a PDF before that gate closes.",
+      "non_claims": [
+        "No Q3LOCK theorem, strict cusp or DLR-state result is falsified by this serialization defect.",
+        "No claim is promoted and no P2 manuscript, PDF or release artifact is created by this record.",
+        "No conclusion about continuum limits, KMS dynamics, ground states, physical vacuum or cosmology is drawn."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Are the integrated Q3LOCK verifier result artifacts deterministic under identical reruns, as required for a reproducible release package?",
+      "recorded_at": "2026-09-04T16:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001481",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001480",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen after the serializer/redaction patch, if a clean rerun still changes canonical result bytes or if an audit finds that a removed field carries mathematical or environment provenance.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK integrated verifier artifacts are not byte-stable because scratch paths are embedded",
+      "verdict": "inconclusive"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Can executable PASS counts substitute for the two missing analytic limit passages?",
+          "disposition": "UPHELD AS FALSE: the scripts test algebra, scope and provenance but do not prove tightness, Feynman--Kac identification or the infinite-volume transfer limit."
+        },
+        {
+          "check": "Can the published KKK rotation-invariant infrared corollary be cited for Q3LOCK?",
+          "disposition": "UPHELD AS BLOCKED: Q3LOCK is nonradial, so the paper must prove the finite-grid anisotropic transfer route directly."
+        },
+        {
+          "check": "Does a positive collective second moment alone close the phase theorem?",
+          "disposition": "UPHELD AS FALSE: the Bruch--Falk, nonzero-mode infrared sum, Griffiths and source-tangent links are still required."
+        },
+        {
+          "check": "Does the nondeterministic integrated result hash alter the mathematical tier?",
+          "disposition": "DISMISSED: it is a release-serialization defect recorded in EXP-001482; it does not change the asserted mathematical values."
+        }
+      ],
+      "assumptions": [
+        "EXP-000780, EXP-000781 and EXP-000782 remain the sole load-bearing authorities under the current scope contract.",
+        "The positive-lambda Q3LOCK Hamiltonian, source direction u and fine-energy pressure normalization are unchanged.",
+        "A future external audit may accept standard operator, Feynman--Kac, convexity and FSS lemmas only after their exact hypotheses are written in the manuscript."
+      ],
+      "boundary": "T0 claim-nonbearing Q3LOCK paper-audit record. It records an independent review disposition and the precise mathematical and reproducibility gates that remain before claim registration.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The audit separates a coherent conditional proof design from a submission-ready theorem. Calling the entire chain complete would silently replace two model-specific limit proofs by executable assertions and would import symmetry that Q3LOCK does not have. Keeping P-06/P-09 and artifact stability open is the honest gate for an independent claim.",
+      "evidence_refs": [
+        "strategy/q3lock-independent-proof-audit-round1-260904.md#obligation-matrix",
+        "strategy/q3lock-independent-proof-audit-round1-260904.md#decision",
+        "strategy/q3lock-low-temperature-dlr-paper-preregistration-audit-260904.md#reproducibility-artifact-stability-gate",
+        "strategy/pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split-certificate-260804.md#section-3-continuous-loop-fkg"
+      ],
+      "finding": "The bounded theorem statement and the P-01--P-05, P-07--P-08 and P-10--P-12 algebraic spines are internally consistent at pre-registration level, with the explicit nonclaims preserved. The two load-bearing bridges are not yet independently closed: P-06 needs a complete finite-time-grid-to-continuous-loop FKG proof with tightness, normalizer control, uniform integrability and Feynman--Kac identification; P-09 needs the finite 8N-dimensional FSS transfer, edge/Poisson normalization and constant-source loop-limit differentiation. The source crosswalk does not permit importing the rotation-invariant KKK corollary. A separate deterministic-artifact gate (EXP-001482) also blocks release packaging.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001483",
+      "method": [
+        "Reconcile the exact Hamiltonian, source normalization and pressure convention across EXP-000780, EXP-000781 and EXP-000782.",
+        "Audit the finite-volume, DLR tangent, FKG, collective commutator, Bruch--Falk, infrared, threshold and Griffiths links for hidden symmetry, domain, limit-order or factor-of-eight assumptions.",
+        "Compare the proof obligations with the primary-source hypotheses of Kozitsky--Pasurek, Kargol--Kondratiev--Kozitsky and Froehlich--Simon--Spencer, then record unresolved release and external-review gates."
+      ],
+      "missing_assumptions": [
+        "Independent verification of the cyclic M-matrix interpolation and weak-limit association for unbounded coordinate products.",
+        "Independent verification of the nonradial finite-grid FSS transfer and the shifted constant-source loop limit.",
+        "A clean-snapshot release run after canonicalizing environment-specific verifier output."
+      ],
+      "next_action": "Transcribe the P-06 and P-09 lemmas into a draft source only after their external mathematical audit; then register a bounded independent claim, perform novelty review and deterministic reproduction. Keep the PDF deferred until content review and release checks are complete.",
+      "non_claims": [
+        "No independent claim or T6 promotion is made.",
+        "No phase theorem is asserted beyond the conditional EXP-000782 authority boundary.",
+        "No path-space MTP2, total-variation limit, KMS dynamics, ground state, spectral gap, continuum limit or physical interpretation is claimed.",
+        "No P2 manuscript, PDF, submission or publication is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "After a line-by-line round-1 audit, which parts of the bounded Q3LOCK paper are mathematically ready for transcription and which limit passages still block claim registration?",
+      "recorded_at": "2026-09-04T17:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001482",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001481",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001479",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen after an external mathematician audits the P-06/P-09 proofs, after any change to the Hamiltonian or source normalization, or after the deterministic artifact gate is rerun on a clean snapshot.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK round-1 independent audit keeps P-06 and P-09 open",
+      "verdict": "inconclusive"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Can the spatial factor be ignored in the normalizer lower bound because it is at most one?",
+          "disposition": "UPHELD AS A GAP: an upper bound is insufficient for a lower normalizer; the explicit sup-ball lower bound is required."
+        },
+        {
+          "check": "Does the lower bound depend on N through the number of time slices?",
+          "disposition": "DISMISSED: epsilon*N=beta, so the local and spatial exponents on B_R are bounded by beta times finite-volume constants."
+        },
+        {
+          "check": "Does the explicit normalizer close the whole FKG limit?",
+          "disposition": "UPHELD AS FALSE: Gaussian modulus tightness and Feynman--Kac/Trotter identification remain separate obligations."
+        },
+        {
+          "check": "Can componentwise clipping be removed without a uniform moment estimate?",
+          "disposition": "UPHELD AS FALSE: the quartic lower control plus the normalizer ratio is needed for uniform integrability."
+        }
+      ],
+      "assumptions": [
+        "The positive-harmonic periodic Gaussian interpolation has a mesh-uniform sup-norm tightness estimate.",
+        "The source compact has common quartic lower and continuous upper controls.",
+        "The spatial interaction is the finite nearest-neighbour difference-square with c>0, so its factor is at most one and is bounded below on B_R."
+      ],
+      "boundary": "T0 claim-nonbearing Q3LOCK paper-audit record. It closes only the previously implicit spatial-factor part of the finite-volume time-grid normalizer estimate.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The earlier FKG audit stated a normalizer lower bound using only the local potential. Including the finite spatial factor removes that hidden omission and identifies an explicit constant. The result narrows P-06 but does not supply the Gaussian modulus estimate or Feynman--Kac/Trotter identification.",
+      "evidence_refs": [
+        "strategy/q3lock-fkg-normalizer-tightness-check-260904.md#mesh-uniform-lower-bound",
+        "strategy/q3lock-fkg-normalizer-tightness-check-260904.md#tightness-and-moments",
+        "strategy/q3lock-independent-proof-audit-round1-260904.md#continuous-loop-fkg-p-06"
+      ],
+      "finding": "For fixed finite Lambda with V sites and E spatial bonds, the grid weight is R_N=exp[-epsilon sum V_h] exp[-epsilon*c/2 sum spatial differences squared]. On a product sup-norm ball B_R, the common upper potential bound gives V_h<=M_R and every spatial difference is bounded by K_R, so Z_N(h)>=1/2*exp[-beta*V*M_R-beta*c*E*K_R^2/2], uniformly in N. The spatial factor is at most one and the quartic lower control gives R_N<=exp(beta*V*C), so the weighted interpolation inherits the Gaussian tightness and polynomial moment bounds needed for bounded-continuous association and clipped second moments.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001484",
+      "method": [
+        "Fix a finite spatial volume and compact source interval, write the weighted time-grid density relative to the positive-harmonic Gaussian reference, and isolate local and spatial factors.",
+        "Choose a Gaussian sup-norm ball with reference probability at least one half and bound the local potential and every spatial difference uniformly on that ball.",
+        "Derive a lower bound for the full normalizer independent of the time-grid size, then combine the upper weight bound with Gaussian moments for tightness and clipping."
+      ],
+      "missing_assumptions": [
+        "A cited or proved mesh-uniform Gaussian modulus estimate for the chosen interpolation.",
+        "A complete Feynman--Kac/Trotter identification of every weighted weak limit with the exact continuous-loop law.",
+        "Independent verification that the norm convention used for K_R matches the manuscript's eight-component coordinates."
+      ],
+      "next_action": "Use the explicit finite-volume bound in the P-06 manuscript lemma, then obtain an independent audit of the Gaussian modulus estimate, Feynman--Kac identification and uniform-integrability passage. Keep the PDF deferred.",
+      "non_claims": [
+        "No path-space MTP2 or total-variation convergence is claimed.",
+        "No positive infrared bound, pressure cusp or DLR multiplicity is established by this normalizer calculation alone.",
+        "No independent claim, P2 manuscript, release or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the finite time-grid FKG-to-loop passage have a mesh-uniform normalizer lower bound after the spatial interaction factors are included?",
+      "recorded_at": "2026-09-04T17:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001483",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001479",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001468",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the spatial interaction, norm convention, source compact, harmonic split or interpolation topology changes, or if an independent audit finds that the Gaussian ball or moment constants are not mesh-uniform.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK FKG normalizer includes the finite-volume spatial-factor lower bound",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the crossing-kernel factorization require a radial onsite density?",
+          "disposition": "DISMISSED: the positive-definite exp[c<a,b>_N] kernel and finite-dimensional FSS transfer use no internal symmetry."
+        },
+        {
+          "check": "Can the zero-sum Poisson inverse be applied to a source with a constant spatial mode?",
+          "disposition": "DISMISSED FOR THE LOAD-BEARING SOURCE: sum_y a_y=0 is imposed, so the inverse is taken on the nonzero-mode subspace."
+        },
+        {
+          "check": "Is the factor beta absent from the variance bound?",
+          "disposition": "UPHELD AS A HOSTILE MUTATION: the time-constant double integral gives beta^2 on the left and the weighted source norm gives beta on the right, yielding 1/(2 beta c E(p))."
+        },
+        {
+          "check": "Does the finite-grid transfer itself prove the exact loop inequality?",
+          "disposition": "UPHELD AS FALSE: the Feynman--Kac/Trotter, majorant and differentiation passages remain open."
+        }
+      ],
+      "assumptions": [
+        "The finite-dimensional FSS theorem applies to arbitrary single-site measures with all quadratic exponential moments.",
+        "The spatial cube is even and periodic, and the source is zero-sum so L_sp^(-1) is defined on the orthogonal complement of constants.",
+        "The time-constant source and edge shift are represented exactly by the chosen time discretization."
+      ],
+      "boundary": "T0 claim-nonbearing Q3LOCK paper-audit record. It advances only the finite-grid reflection-positive transfer and normalization portion of P-09.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite-grid reduction removes the unjustified infinite-dimensional transfer and makes the nonradial source direction and factor-two normalization explicit. The loop-limit identification, shifted integrability and source differentiation remain separate audit obligations.",
+      "evidence_refs": [
+        "strategy/q3lock-fss-finite-grid-transfer-check-260904.md#crossing-kernel-and-transfer-inequality",
+        "strategy/q3lock-fss-finite-grid-transfer-check-260904.md#zero-sum-source-and-exact-factors",
+        "strategy/q3lock-independent-proof-audit-round1-260904.md#hilbert-valued-reflection-positivity-p-09"
+      ],
+      "finding": "At fixed time mesh, each spatial site is a spin in R^(8N) with all quadratic exponential moments from quartic confinement. The crossing kernel exp[-c||a-b||_N^2/2] factors through exp[c<a,b>_N], whose symmetric-tensor series is positive definite. The finite-dimensional FSS transfer therefore gives Y_N(b)<=Y_N(0) without radial or O(8) symmetry. For j_y(tau)=s*a_y*u with sum a_y=0, b=(1/c)D L_sp^(-1)j is time-constant and exact on every mesh. Differentiation gives beta^2 a^T D_(N,L)a <= (beta/c)a^T L_sp^(-1)a, hence Dhat_(N,L)(p)<=1/(2 beta c E(p)) because the spatial Laplacian eigenvalue is 2E(p).",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001485",
+      "method": [
+        "Collect eight components and N time slices into one weighted finite-dimensional site spin and rescale by sqrt(epsilon).",
+        "Factor the spatial crossing kernel into onsite terms and the positive-definite exponential inner-product kernel, then apply the finite-dimensional FSS transfer theorem to the arbitrary anisotropic onsite measure.",
+        "Choose the zero-sum Poisson edge shift for the time-constant collective source, differentiate the shifted-square inequality, and track beta and the spatial eigenvalue 2E(p)."
+      ],
+      "missing_assumptions": [
+        "A paper-level statement of the precise finite-dimensional FSS theorem and its normalization after the sqrt(epsilon) rescaling.",
+        "A complete Feynman--Kac/Trotter and uniform-integrability passage from D_(N,L) to the exact loop Duhamel covariance.",
+        "Independent audit of edge orientation, the Poisson identity and differentiation under the shifted integral."
+      ],
+      "next_action": "Transcribe the finite-grid transfer lemma and exact factor calculation into the P-09 manuscript section, then obtain an independent audit of the loop-limit and source-differentiation steps. Keep claim registration and PDF creation deferred.",
+      "non_claims": [
+        "No rotation-invariant KKK corollary is imported.",
+        "No arbitrary-L2 infinite-dimensional transfer theorem is claimed.",
+        "No infrared phase, strict cusp, DLR multiplicity, independent claim, manuscript, release or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the Q3LOCK reflection-positivity step be reduced to a finite 8N-dimensional FSS transfer with the exact zero-sum Poisson and factor-two Laplacian normalization, without importing O(8) symmetry?",
+      "recorded_at": "2026-09-04T18:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001484",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001480",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001469",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the time-grid action, weighted inner product, source class, spatial Laplacian convention, FSS hypotheses or edge orientation changes, or if independent audit finds a transfer or beta-factor defect.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK finite-grid FSS transfer fixes the nonradial infrared normalization",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does Var(X_L) scale as beta or beta^2 under the chosen Duhamel convention?",
+          "disposition": "DISMISSED AFTER DIRECT CALCULATION: the double time integral equals beta^2 times D=(1/beta) integral."
+        },
+        {
+          "check": "Can the source be treated as beta*h*sum Q inside a commuting equal-time quantum expectation?",
+          "disposition": "UPHELD AS FALSE: the exact source is the Euclidean time-integrated X_L; equal-time positions need not commute with H."
+        },
+        {
+          "check": "Does the FSS bound lose a beta after differentiating the time-constant source?",
+          "disposition": "UPHELD AS A HOSTILE MUTATION: the left side has beta^2 and the weighted source norm has beta, leaving 1/(2 beta c E(p))."
+        },
+        {
+          "check": "Does the harmonic oscillator check support the same Bruch--Falk normalization?",
+          "disposition": "DISMISSED: the exact equality with 1/(beta chi omega^2) and beta*hbar^2/chi confirms the convention."
+        }
+      ],
+      "assumptions": [
+        "The zero-source loop law is time-translation invariant and has the required second moments.",
+        "The fine pressure is normalized by 1/(8 beta V) and the source is an energy source h.",
+        "The spatial Poisson inverse is applied only to zero-sum sources and L_sp has eigenvalue 2E(p)."
+      ],
+      "boundary": "T0 claim-nonbearing Q3LOCK paper-audit record. It fixes notation and normalization only.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The beta factors in the infrared and Griffiths steps are consistent only after distinguishing the normalized Duhamel integral from the raw Euclidean time integral. Recording this convention prevents an otherwise plausible factor-beta or factor-eight error in the manuscript.",
+      "evidence_refs": [
+        "strategy/q3lock-duhamel-normalization-audit-260904.md#constant-source-moment-identity",
+        "strategy/q3lock-duhamel-normalization-audit-260904.md#reflection-positivity-factor",
+        "strategy/q3lock-duhamel-normalization-audit-260904.md#bruch-falk-cross-check",
+        "strategy/pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split-certificate-260804.md#section-5-falk-bruch"
+      ],
+      "finding": "With the paper's Duhamel convention D=(1/beta) integral, time translation gives Var(X_L)=beta^2 V^2 Pi_L. The source pressure identity is f_L=8 beta(P_(beta,L)(h)-P_(beta,L)(0)), so Griffiths yields beta^2 limsup Pi_L <= [8 beta D_+P_beta(0)]^2. The weighted FSS inequality has a left second derivative beta^2 a^T D a and right second derivative (beta/c)a^T L_sp^(-1)a; eigenvalue 2E(p) therefore gives Dhat(p)<=1/(2 beta c E(p)). The harmonic oscillator test gives (Q,Q)_D=1/(beta chi omega^2) and double commutator beta*hbar^2/chi, matching the Bruch--Falk equality.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001486",
+      "method": [
+        "Fix D_(L)(y,z)=(1/beta) integral_0^beta Cov(Q_y(tau),Q_z(0)) d tau and express the zero-mode density in this convention.",
+        "Compute Var(X_L) for X_L=sum_y integral Q_y and compare it with beta^2 V^2 Pi_L.",
+        "Differentiate the weighted Gaussian-domination inequality for a time-constant zero-sum source and cross-check the Bruch--Falk harmonic oscillator equality."
+      ],
+      "missing_assumptions": [
+        "Independent manuscript audit of the source derivative and Duhamel definitions against the cited Griffiths and Bruch--Falk statements.",
+        "Completion of the continuous-loop FKG and finite-grid FSS limit passages.",
+        "A clean deterministic rerun of the integrated artifacts after serializer normalization."
+      ],
+      "next_action": "Use this convention ledger in the P-08/P-09/P-12 manuscript transcription and ask an independent reviewer to recompute every beta and factor-eight conversion. Keep claim registration and PDF creation deferred.",
+      "non_claims": [
+        "No analytic phase theorem is closed by this normalization audit alone.",
+        "No covariance convention from a source paper is imported without conversion.",
+        "No independent claim, P2 manuscript, release or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Are the Duhamel covariance, Euclidean source moment, FSS infrared constant and fine-pressure slope using one consistent beta normalization?",
+      "recorded_at": "2026-09-04T18:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001485",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001478",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the manuscript changes the Duhamel definition, source units, pressure normalization, Euclidean time source, or spatial Fourier/Laplacian convention.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK Duhamel convention fixes the beta and factor-eight conversions",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does covariance convergence alone imply weak convergence in the continuous sup-norm topology?",
+          "disposition": "UPHELD AS FALSE: the mesh-uniform Gaussian increment estimate and Kolmogorov tightness are required."
+        },
+        {
+          "check": "Can the spatial interaction be omitted from the weighted-law convergence?",
+          "disposition": "UPHELD AS FALSE: it is included in the Riemann-sum weight and in the explicit normalizer lower bound."
+        },
+        {
+          "check": "Does weak convergence preserve FKG for unbounded coordinate products automatically?",
+          "disposition": "UPHELD AS FALSE: bounded continuous association is passed first; coordinate products require clipping and uniform integrability."
+        },
+        {
+          "check": "Does the shifted-square majorant establish arbitrary L2 edge-field convergence?",
+          "disposition": "DISMISSED AS OUT OF SCOPE: only the time-constant zero-sum source is load-bearing; the majorant supports that fixed source."
+        }
+      ],
+      "assumptions": [
+        "The discrete periodic Gaussian interpolation uses the stated cyclic precision and the positive harmonic split.",
+        "The source compact has a common quartic lower bound and continuous upper control.",
+        "The finite-grid FSS theorem and finite-grid FKG theorem are applied before the time-grid limit at fixed finite spatial volume."
+      ],
+      "boundary": "T0 claim-nonbearing Q3LOCK paper-audit record. It advances the analytic limit framework while retaining explicit independent-review gates.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This replaces the prior schematic appeal to a Trotter limit by explicit covariance, tightness, weight and normalizer obligations. It narrows rather than overstates the result: the argument still requires independent verification of the Gaussian increment estimate and the precise Feynman--Kac identification.",
+      "evidence_refs": [
+        "strategy/q3lock-grid-to-loop-limit-lemma-260904.md#gaussian-interpolation-convergence",
+        "strategy/q3lock-grid-to-loop-limit-lemma-260904.md#weighted-law-convergence-and-normalizer",
+        "strategy/q3lock-grid-to-loop-limit-lemma-260904.md#association-passage",
+        "strategy/q3lock-grid-to-loop-limit-lemma-260904.md#shifted-spatial-bonds-and-gaussian-domination"
+      ],
+      "finding": "The grid-to-loop passage can be organized as a paper-local lemma. The cyclic precision with positive harmonic split has finite-mode covariance convergence to the periodic Ornstein-Uhlenbeck law, and a Gaussian increment moment bound with p>2 yields periodic sup-norm tightness. On bounded sets, local and spatial Riemann sums converge uniformly; the quartic lower bound gives a global weight upper bound and the explicit sup-ball estimate gives an N-uniform positive normalizer. Hence weighted grid laws converge weakly with uniform polynomial moments. Finite-grid association passes for bounded continuous increasing functionals, while clipped coordinate products pass by uniform integrability. The same argument, with the shifted-square quartic majorant, carries the constant-source FSS inequality to the exact loop law.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001487",
+      "method": [
+        "Write the positive-harmonic cyclic grid precision and its Fourier eigenvalues, then use covariance convergence and a mesh-uniform Gaussian increment estimate for periodic piecewise-linear interpolation.",
+        "Use uniform-on-compacts Riemann-sum convergence of the quartically bounded weight together with the explicit spatial-factor normalizer lower bound to pass weighted grid laws to the exact loop law.",
+        "Pass bounded continuous association and the shifted FSS inequality through weak convergence, and use clips and quartic moments for unbounded coordinate products."
+      ],
+      "missing_assumptions": [
+        "A complete proof or authoritative citation for the mesh-uniform Gaussian increment estimate and covariance convergence.",
+        "Independent audit of uniform-on-compacts Riemann-sum convergence and the weighted weak-limit identification.",
+        "Independent audit of differentiation under the limiting constant-source moment and the exact source units."
+      ],
+      "next_action": "Insert this lemma into the draft proof sections for P-06 and P-09, then request a signed external mathematical audit of each remaining estimate. Keep claim registration, P2 publication and PDF creation deferred.",
+      "non_claims": [
+        "No path-space MTP2 or total-variation convergence is claimed.",
+        "No infinite-dimensional transfer matrix is assumed.",
+        "No strict cusp, DLR multiplicity, independent claim, manuscript, release or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the continuous-loop FKG and constant-source Gaussian-domination limits be stated without an unproved formal infinite-dimensional transfer or an unsupported total-variation shortcut?",
+      "recorded_at": "2026-09-04T19:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001486",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001485",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001484",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001479",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the grid action, interpolation, harmonic split, source class, path topology, or Feynman--Kac representation changes, or if an external audit finds a failure of tightness, Riemann convergence or uniform integrability.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK grid-to-loop limit is reduced to Gaussian covariance convergence and bounded weights",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the proof invert the massless cyclic Laplacian at the zero mode?",
+          "disposition": "DISMISSED: only nonzero modes are compared to the kinetic denominator, and the zero-mode increment numerator is identically zero."
+        },
+        {
+          "check": "Does a mesh-point estimate control increments below one mesh spacing?",
+          "disposition": "DISMISSED: the separate sub-mesh interpolation decomposition gives the required delta/epsilon coefficient bound."
+        },
+        {
+          "check": "Does tightness alone identify the interacting loop law?",
+          "disposition": "UPHELD AS FALSE: finite-dimensional covariance convergence and the weighted Feynman--Kac identification remain separate gates."
+        },
+        {
+          "check": "Does the fixed-volume cycle identity provide a spatial-volume uniform estimate?",
+          "disposition": "UPHELD AS FALSE: the record is explicitly restricted to fixed finite Lambda."
+        }
+      ],
+      "assumptions": [
+        "m>0, a>0, beta is fixed, and the time mesh is periodic with epsilon=beta/N.",
+        "The finite spatial volume and eight-component field are fixed while N tends to infinity.",
+        "The interpolation is periodic piecewise linear and the Gaussian field is centered."
+      ],
+      "boundary": "T0 claim-nonbearing Q3LOCK proof-audit record. It advances only the time-grid Gaussian compactness sub-obligation.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This closes the previously schematic increment/tightness sub-obligation at the level of an explicit paper-local derivation. It does not import a path-space MTP2 theorem and does not use a singular massless inverse. The discrete Fourier tail bound, interpolation shape factors, and covariance-to-Feynman--Kac identification still require independent signed audit.",
+      "evidence_refs": [
+        "strategy/q3lock-gaussian-increment-estimate-audit-260904.md#exact-grid-increment-bound",
+        "strategy/q3lock-gaussian-increment-estimate-audit-260904.md#piecewise-linear-interpolation",
+        "strategy/q3lock-gaussian-increment-estimate-audit-260904.md#gaussian-higher-moments-and-tightness",
+        "strategy/q3lock-grid-to-loop-limit-lemma-260904.md#gaussian-interpolation-convergence"
+      ],
+      "finding": "The grid covariance obeys v_(N,r) <= (epsilon/m) r(N-r)/N by the exact cycle identity sum_l (1-cos(r theta_l))/(1-cos(theta_l)) = r(N-r). For sub-mesh points, the linear interpolant is a nonnegative combination of at most two adjacent increments with coefficient sum delta/epsilon, yielding E|I_Nx(t)-I_Nx(s)|^2 <= delta/m. For distances at least one mesh, endpoint decomposition and the same grid bound give a mesh-independent C_m d_circle(s,t) estimate. Centered Gaussian moment comparison then gives C_p d_circle^(p/2), so p>2 yields tightness in the periodic sup-norm topology at fixed finite spatial volume.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001488",
+      "method": [
+        "Diagonalize the cyclic positive-harmonic precision and compare every nonzero Fourier denominator to the kinetic denominator.",
+        "Apply the exact cycle effective-resistance identity for the Fourier ratio sum to obtain a linear-in-mesh-distance grid increment variance bound.",
+        "Represent piecewise-linear interpolation differences by endpoint and fractional mesh increments, separate sub-mesh and super-mesh distances, and lift the second-moment bound to Gaussian p-moments.",
+        "Use p>2 in the one-dimensional periodic Kolmogorov criterion, while retaining finite-mode covariance convergence and interacting-weight identification as separate obligations."
+      ],
+      "missing_assumptions": [
+        "Independent check of the finite-mode covariance convergence including the piecewise-linear shape factor.",
+        "Independent check of the discrete Fourier tail domination uniformly over all N.",
+        "Independent audit that the chosen Gaussian normalization matches the Feynman--Kac Hamiltonian and source units."
+      ],
+      "next_action": "Insert the explicit increment lemma into the P-06/P-09 analytic chain, then obtain an independent mathematical audit of the Fourier tail, interpolation bookkeeping, and weighted interacting-law limit. Keep claim registration, P2 publication, release, and PDF creation deferred.",
+      "non_claims": [
+        "No uniform spatial-volume or spatial-continuum tightness is claimed.",
+        "No interacting Feynman--Kac limit is claimed solely from the Gaussian estimate.",
+        "No strict cusp, DLR multiplicity, independent manuscript, release, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the mesh-uniform Gaussian increment estimate needed for the Q3LOCK grid-to-loop limit be derived without a massless zero-mode inverse or an informal Brownian-motion comparison?",
+      "recorded_at": "2026-09-04T19:20:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001487",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001485",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001479",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the time action, harmonic split, interpolation, spatial-volume order, or source normalization changes, or if an independent audit finds a failure in the cycle identity, Fourier tail, or Kolmogorov step.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK Gaussian interpolation tightness obtains an explicit cycle-resistance bound",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Is the interpolation shape factor silently set to one at finite N?",
+          "disposition": "DISMISSED: the exact hat factor is retained and bounded by one before taking the limit."
+        },
+        {
+          "check": "Does the tail bound accidentally include the singular zero mode?",
+          "disposition": "DISMISSED: the zero mode is separated and equals 1/(a beta) because a>0."
+        },
+        {
+          "check": "Does dominated convergence establish a spatially uniform covariance bound?",
+          "disposition": "UPHELD AS FALSE: the record fixes finite Lambda and explicitly excludes spatial limits."
+        },
+        {
+          "check": "Does covariance convergence alone identify the interacting weighted law?",
+          "disposition": "UPHELD AS FALSE: the weighted-law/Feynman-Kac passage is a separate open audit."
+        }
+      ],
+      "assumptions": [
+        "a>0 and m>0 are fixed while N tends to infinity.",
+        "The temporal interpolation is periodic piecewise linear and the continuum action uses the stated beta normalization.",
+        "The spatial volume and component number are fixed."
+      ],
+      "boundary": "T0 claim-nonbearing Q3LOCK proof-audit record for finite-dimensional Gaussian convergence only.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This closes the Fourier-tail and shape-factor sub-obligation in the fixed finite-volume Gaussian limit. It remains a paper-local derivation requiring an independent normalization and seam-convention check; it does not address the interacting Feynman-Kac weight or any spatial limit.",
+      "evidence_refs": [
+        "strategy/q3lock-covariance-tail-dominated-convergence-260904.md#fourier-representation",
+        "strategy/q3lock-covariance-tail-dominated-convergence-260904.md#a-summable-tail-majorant",
+        "strategy/q3lock-covariance-tail-dominated-convergence-260904.md#fixed-mode-limit",
+        "strategy/q3lock-gaussian-increment-estimate-audit-260904.md#exact-grid-increment-bound"
+      ],
+      "finding": "The interpolated covariance has summands h_(N,l)(t) conjugate(h_(N,l)(s))/(N kappa_(N,l)). The hat factor is contractive. For nonzero cyclic mode distance rho<=N/2, 1-cos(2 pi rho/N)>=8 rho^2/N^2, hence the summand is bounded by beta/(16 m rho^2), uniformly in N. Fixed modes converge to exp(i 2 pi l(t-s)/beta)/(beta[a+m(2 pi l/beta)^2]); the zero mode is exactly 1/(a beta). Dominated convergence therefore yields the periodic Green covariance at every finite set of times, to be combined with the independent increment/tightness estimate.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001489",
+      "method": [
+        "Write the interpolation as a cyclic Fourier sum with the exact hat-function factor (1-u)+u exp(i theta).",
+        "Use modulus at most one for the shape factor and the elementary sine lower bound to dominate every nonzero mode by beta/(16 m rho^2), where rho is the cyclic mode distance from zero.",
+        "Take the fixed-mode limit of kappa_(N,l)/epsilon and apply dominated convergence to the full covariance sum, treating the positive-harmonic zero mode separately."
+      ],
+      "missing_assumptions": [
+        "Independent check of the Fourier representative and periodic seam convention for arbitrary fixed times.",
+        "Independent check that the chosen Feynman-Kac Gaussian covariance uses the same factor 1/beta.",
+        "Independent audit of how the finite spatial product is assembled after the one-component calculation."
+      ],
+      "next_action": "Merge the covariance-tail lemma with the explicit increment estimate in the P-06/P-09 proof draft and request a signed external check of Fourier normalization and seam bookkeeping. Keep claim registration, P2 publication, release, and PDF creation deferred.",
+      "non_claims": [
+        "No a->0, spatial-volume, or spatial-continuum uniformity is claimed.",
+        "No interacting loop-law identification follows without the separate weighted-law argument.",
+        "No strict cusp, DLR multiplicity, independent manuscript, release, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can finite-dimensional covariance convergence for the periodic piecewise-linear Gaussian interpolation be justified with its shape factor and a summable tail, rather than by a formal mode truncation?",
+      "recorded_at": "2026-09-04T19:40:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001488",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001487",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001485",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the interpolation, Fourier normalization, harmonic split, time boundary condition, or order of limits changes, or if an independent audit finds a tail or seam failure.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK interpolated covariance has an N-uniform summable Fourier tail",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does a sup-norm bound imply equicontinuity of all loops?",
+          "disposition": "UPHELD AS FALSE: compactness, not boundedness, supplies equicontinuity."
+        },
+        {
+          "check": "Does correcting the Riemann-sum set invalidate the normalizer lower bound?",
+          "disposition": "DISMISSED: the lower bound uses only a sup-norm event and a bounded potential/spatial difference estimate."
+        },
+        {
+          "check": "Does tightness plus compact-set convergence automatically prove the Feynman-Kac identity?",
+          "disposition": "UPHELD AS FALSE: the operator/path-measure identification remains a separate gate."
+        },
+        {
+          "check": "Does the correction require a spatial-volume limit?",
+          "disposition": "DISMISSED: the argument remains at fixed finite Lambda, with spatial edge count finite."
+        }
+      ],
+      "assumptions": [
+        "The interpolated Gaussian laws are tight in the periodic sup-norm topology at fixed finite spatial volume.",
+        "The local and spatial potentials are continuous and have the stated quartic lower control.",
+        "The grid weight is evaluated on interpolation samples at the mesh nodes."
+      ],
+      "boundary": "T0 claim-nonbearing correction to the Q3LOCK grid-to-loop proof audit.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This removes a genuine overstatement in the earlier weighted-limit wording without changing the normalizer estimate or the fixed-volume conclusion. The compact-set/tightness transfer and the exact Feynman-Kac identification still require independent audit.",
+      "evidence_refs": [
+        "strategy/q3lock-grid-to-loop-limit-lemma-260904.md#weighted-law-convergence-and-normalizer",
+        "strategy/q3lock-fkg-normalizer-tightness-check-260904.md#mesh-uniform-lower-bound",
+        "strategy/q3lock-gaussian-increment-estimate-audit-260904.md#gaussian-higher-moments-and-tightness"
+      ],
+      "finding": "A bounded sup-norm ball is not equicontinuous, so uniform Riemann-sum convergence cannot be asserted there. The correct proof uses a compact K supplied by mesh-uniform tightness; Arzela-Ascoli gives common equicontinuity, which makes both local and spatial Riemann sums uniform on K. The sup-norm ball remains valid only for the separate N-uniform positive normalizer lower bound, where boundedness of the potential and spatial differences is sufficient. The strategy lemma was repaired accordingly.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001490",
+      "method": [
+        "Check the topology of the periodic continuous-loop space and the hypotheses of uniform Riemann-sum convergence for continuous integrands.",
+        "Separate the sup-norm ball used only for the explicit normalizer lower bound from the compact sets supplied by Gaussian tightness.",
+        "Repair the grid-to-loop lemma so uniform convergence is asserted on compact equicontinuous subsets via Arzela-Ascoli, while retaining the global quartic weight bound outside the compact set."
+      ],
+      "missing_assumptions": [
+        "Independent verification of the compact-set Riemann-sum modulus for the exact chosen interpolation and spatial edge sum.",
+        "Independent proof that the weighted normalizers converge rather than only stay bounded away from zero.",
+        "Independent Feynman-Kac/Trotter identification after the corrected weak-limit argument."
+      ],
+      "next_action": "Use the repaired compact-set formulation in the P-06/P-09 proof text and have an external reviewer audit the tightness-to-weighted-limit transfer. Keep claim registration, P2 publication, release, and PDF creation deferred.",
+      "non_claims": [
+        "No uniform Riemann-sum convergence on arbitrary bounded balls is claimed.",
+        "No total-variation convergence or path-space MTP2 theorem is claimed.",
+        "No strict cusp, DLR multiplicity, independent manuscript, release, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Is the weighted grid-law limit justified by uniform Riemann-sum convergence on a bounded sup-norm ball, or must the compactness argument retain equicontinuity?",
+      "recorded_at": "2026-09-04T20:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001487",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001488",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001489",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the path topology, interpolation sampling, local continuity, or the order of time-grid and spatial limits changes, or if the external audit finds that tightness does not yield the required common compact sets.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK weighted Riemann sums require compact equicontinuous sets",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does KP's DLR compactness theorem itself prove a Q3LOCK phase transition?",
+          "disposition": "UPHELD AS FALSE: KP supplies existence/compactness/moments only; the phase sign is a separate composition."
+        },
+        {
+          "check": "Can KKK Corollary 3.14 be applied after choosing a collective direction u?",
+          "disposition": "UPHELD AS FALSE: its stated hypothesis is full translation and rotation invariance; Q3LOCK is nonradial."
+        },
+        {
+          "check": "Does FSS's component-independent constant remove the time-grid limit obligation?",
+          "disposition": "UPHELD AS FALSE: FSS is finite-dimensional at each grid; covariance/tightness and weighted-loop passage remain local lemmas."
+        },
+        {
+          "check": "Does the crosswalk establish global novelty?",
+          "disposition": "UPHELD AS FALSE: a separate systematic priority search and referee comparison are required."
+        }
+      ],
+      "assumptions": [
+        "The final manuscript uses the Hamiltonian and source normalization frozen in the preregistration.",
+        "The time-grid spin is finite-dimensional for every fixed N and has the required quadratic exponential moments.",
+        "The spatial lattice is nearest-neighbour cubic and the Q3 interaction remains onsite."
+      ],
+      "boundary": "T0 claim-nonbearing primary-source applicability and novelty-boundary audit.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The crosswalk separates imported theorem hypotheses from Q3LOCK-specific work and prevents the prior rotation-invariance leak. It also sets a precise novelty boundary: constituent methods are established, while the model-specific composition is not called globally novel before a systematic priority audit.",
+      "evidence_refs": [
+        "strategy/q3lock-literature-crosswalk-audit-260904.md#kozitsky--pasurek-kp-dlr-theorem",
+        "strategy/q3lock-literature-crosswalk-audit-260904.md#kargol--kondratiev--kozitsky-kkk-pressure-and-bruch--falk-tools",
+        "strategy/q3lock-literature-crosswalk-audit-260904.md#froehlich--simon--spencer-fss-gaussian-domination",
+        "strategy/q3lock-low-temperature-dlr-paper-preregistration-audit-260904.md#primary-source-applicability-matrix"
+      ],
+      "finding": "KP Theorems 3.1-3.3 support fixed-source tempered Euclidean DLR existence, compactness, support and uniform moments after the explicit Q3LOCK hypothesis crosswalk. KKK Proposition 3.9 supports the scaled moment-to-pressure subgradient bound and Proposition 3.18 supports the Bruch-Falk inequality after the Q3LOCK smooth-cutoff passage. KKK Corollary 3.14 explicitly assumes translation and rotation invariance, so it cannot be imported for nonradial Q3LOCK; the fixed-direction infrared estimate must be rebuilt. FSS supplies finite periodic-lattice Gaussian domination for arbitrary single-spin measures with the constant independent of component number and internal symmetry, but not the infinite-dimensional path-space or time-grid limit. Those limits remain paper-local and are covered by the Q3LOCK covariance, tightness, compact-Riemann-sum, normalizer and shifted-source lemmas.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001491",
+      "method": [
+        "Read the primary KP, KKK and FSS papers and record their stated model hypotheses and exact theorem/proposition scopes.",
+        "Expand the Q3LOCK spatial bond into the ferromagnetic KP interaction form and match mass, quartic growth, finite-range norm and compact-source controls.",
+        "Compare the KKK Griffiths and Bruch-Falk tools with the KKK vector infrared corollary, and separately map the FSS finite-dimensional Gaussian-domination theorem to an 8N-component time grid."
+      ],
+      "missing_assumptions": [
+        "Final bibliography-version check of theorem/proposition numbering and source conventions.",
+        "Independent audit of the KP weighted norm convention after the spatial-bond expansion.",
+        "Systematic priority and novelty search beyond the three constituent references."
+      ],
+      "next_action": "Insert the crosswalk and non-importing boundary into the proof plan, then obtain signed independent mathematical and literature audits before registering a claim. Keep P2 publication, release and PDF creation deferred.",
+      "non_claims": [
+        "No KKK rotation-invariant vector corollary is imported for Q3LOCK.",
+        "No FSS infinite-dimensional transfer theorem or automatic time-grid limit is claimed.",
+        "No global novelty, all-parameter phase, common dynamics, continuum result, independent manuscript, release, or PDF is claimed."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Which parts of KP, KKK and FSS can be cited directly for the Q3LOCK paper, and which parts require Q3LOCK-specific proof text?",
+      "recorded_at": "2026-09-04T20:25:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001490",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001487",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001485",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the Hamiltonian/source normalization, cited source version, spatial graph, internal symmetry, time-grid representation, or novelty search scope changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK primary-source crosswalk preserves the rotation-invariance boundary",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the synthesis treat the normalizer sup-norm event as a uniform Riemann-sum set?",
+          "disposition": "DISMISSED: Riemann convergence is restricted to compact equicontinuous sets; the ball is used only for a lower bound."
+        },
+        {
+          "check": "Does the finite-grid FSS theorem automatically prove an infinite-dimensional path result?",
+          "disposition": "UPHELD AS FALSE: the covariance/tightness and weighted loop-limit lemmas are retained as separate obligations."
+        },
+        {
+          "check": "Does the fixed finite-volume proof imply spatial thermodynamic uniformity?",
+          "disposition": "UPHELD AS FALSE: every time-grid argument fixes Lambda and explicitly excludes spatial limits."
+        },
+        {
+          "check": "Does a proof-text synthesis itself justify claim registration?",
+          "disposition": "UPHELD AS FALSE: external audit, exact Feynman-Kac identification, and deterministic verification remain required."
+        }
+      ],
+      "assumptions": [
+        "The fixed Hamiltonian and source normalization remain those of the preregistered Q3LOCK model.",
+        "The Gaussian and weighted-law lemmas are used only at fixed finite spatial volume.",
+        "The external references are cited only within the scopes recorded in the literature crosswalk."
+      ],
+      "boundary": "T0 claim-nonbearing proof-text synthesis for the time-grid/infrared subchain.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The synthesis makes the dependency graph auditable and prevents an open standard theorem from being hidden behind the phrase 'Trotter limit'. It narrows the paper to fixed finite spatial volume during the time-grid passage and preserves all physical/KMS/continuum nonclaims.",
+      "evidence_refs": [
+        "strategy/q3lock-p06-p09-proof-text-synthesis-260904.md#lemma-a-periodic-gaussian-grid-limit",
+        "strategy/q3lock-p06-p09-proof-text-synthesis-260904.md#lemma-b-weighted-grid-laws-and-the-feynman--kac-identification",
+        "strategy/q3lock-p06-p09-proof-text-synthesis-260904.md#lemma-c-association-in-the-continuous-loop-law-p-06",
+        "strategy/q3lock-p06-p09-proof-text-synthesis-260904.md#lemma-d-hilbert-valued-fss-transfer-p-09",
+        "strategy/q3lock-literature-crosswalk-audit-260904.md#audit-status"
+      ],
+      "finding": "A single T0 synthesis now records the finite-volume topology, Gaussian covariance/tightness, corrected compact-set weighted-law convergence, weak-limit association with clipping, Hilbert-valued finite-grid FSS, the constant-source Poisson shift, and the beta-normalized infrared inequality. The synthesis explicitly leaves the exact Feynman-Kac form-domain identification, Fourier/seam normalization review, finite-grid source-moment check, and independent mathematical audit open. It therefore provides a controlled manuscript-transcription plan without creating a claim or P2 paper.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001492",
+      "method": [
+        "Combine the explicit cyclic increment and covariance-tail estimates with the compact-set Riemann-sum and normalizer arguments.",
+        "State the finite-grid association and Hilbert-valued FSS transfer separately, then pass only bounded continuous observables and the declared constant-source shift through the weak loop limit.",
+        "Attach a gate ledger that distinguishes explicit T0 derivations from the exact Feynman-Kac/Trotter theorem and all independent audits still required."
+      ],
+      "missing_assumptions": [
+        "An exact standard Feynman-Kac/Trotter theorem statement with the Q3LOCK polynomial form-domain hypotheses.",
+        "Independent signed audit of P-06/P-09 equations, constants, source units and limit order.",
+        "Deterministic integrated-verifier serialization before any reproducibility or claim gate."
+      ],
+      "next_action": "Use the synthesis to prepare the independent proof-audit checklist, then close or explicitly fail each remaining P-06/P-09 audit item before registering any independent claim. Keep the P2 manuscript, release and PDF deferred.",
+      "non_claims": [
+        "No claim card or T6/T4 promotion is made.",
+        "No strict cusp, DLR multiplicity, common dynamics, ground/gap, continuum or physical interpretation is inferred from the synthesis.",
+        "No PDF is generated or visually reviewed at this stage."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the corrected Gaussian, weighted-law, FKG and FSS arguments be assembled into a manuscript-transcription-ready dependency chain without silently promoting an open Feynman-Kac or external-audit obligation?",
+      "recorded_at": "2026-09-04T20:50:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001491",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001490",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001488",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001489",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the Hamiltonian, source class, interpolation, path topology, order of limits, or authority contract changes, or if the independent audit rejects any synthesis lemma.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK P-06/P-09 proof-text dependencies are isolated in a T0 synthesis",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does stable_child_stdout hide a failed child process?",
+          "disposition": "DISMISSED: subprocess return codes still fail closed before stdout normalization."
+        },
+        {
+          "check": "Does the projection discard a load-bearing deterministic assertion?",
+          "disposition": "DISMISSED: only the child output-path line is removed; the EXP-* PASS sentinel remains and all JSON assertions are unchanged."
+        },
+        {
+          "check": "Does byte equality of integrated JSON prove the mathematical theorem?",
+          "disposition": "UPHELD AS FALSE: it proves serializer determinism only; analytic proof and external audit remain separate."
+        },
+        {
+          "check": "Does the repair alter the C6 claim scope?",
+          "disposition": "DISMISSED: C6 remains T1 ACTIVE with CONDITIONAL evidence and C6-BCC-PREMISE-BLOCKED."
+        }
+      ],
+      "assumptions": [
+        "The child primary and independent scripts continue to emit one deterministic EXP-* PASS sentinel line.",
+        "The integrated payload schema retains the assertion-row actual field and no other environment-specific data is introduced.",
+        "The repository uses the existing atomic JSON writer and newline convention."
+      ],
+      "boundary": "T0 tooling/reproducibility audit for the Q3LOCK EXP-000781/782 evidence package.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The serializer defect was a real reproducibility blocker for the final release package, but not a proof failure. It is repaired and verified independently of the mathematical P-06/P-09 gates.",
+      "evidence_refs": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_euclidean_dlr_tangent_state_phase_boundary_route_split_verify.py#stable_child_stdout",
+        "codes/foundations/pre_a_cp1_st8_q3lock_positive_lambda_fkg_infrared_cusp_phase_route_split_verify.py#stable_child_stdout",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-integrated-pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split/result.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-integrated-pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split/result.json#assertions"
+      ],
+      "finding": "The EXP-000781 and EXP-000782 integrated verifiers previously embedded randomized TemporaryDirectory paths in the actual field of their stdout assertion rows. The new stable_child_stdout projection keeps only deterministic EXP-* sentinel lines. Two independent runs of EXP-000781 both pass 93/93 with identical SHA-256 output, and two runs of EXP-000782 both pass 120/120 with identical SHA-256 output. No mathematical assertion or claim scope changed.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001493",
+      "method": [
+        "Inspect the integrated verifier payload rows and locate captured child stdout containing TemporaryDirectory paths.",
+        "Add a stable sentinel-line projection that retains the child PASS line and omits environment-specific output paths, using atomic full-file rewrites that preserve the existing newline convention.",
+        "Run each integrated verifier twice to separate output files and compare the resulting SHA-256 bytes while checking the assertion counts and PASS sentinels."
+      ],
+      "missing_assumptions": [
+        "A final clean-tree release run after all claim and manuscript files are frozen.",
+        "Equivalent byte-stability checks for any future integrated verifiers added to the Q3LOCK release package.",
+        "Independent release auditor confirmation that hashes are computed from the intended canonical artifacts."
+      ],
+      "next_action": "Repeat the byte-stability check at the final Q3LOCK release checkpoint, then attach the deterministic primary/independent/integrated artifacts to the future claim card. Keep PDF creation deferred until mathematical and manuscript review is complete.",
+      "non_claims": [
+        "No mathematical theorem is promoted by the serializer repair.",
+        "No strict cusp, DLR multiplicity, common dynamics, continuum result, independent manuscript, release or PDF is claimed."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the EXP-000781 and EXP-000782 integrated verifier artifacts be made deterministic when their child processes write to randomized temporary paths?",
+      "recorded_at": "2026-09-04T21:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001492",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001482",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001481",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if child stdout format, integrated payload schema, temporary-output handling, newline policy, or release artifact set changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK integrated verifier stdout is now byte-stable",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the normalizer sup-norm event also prove uniform Riemann-sum convergence?",
+          "disposition": "UPHELD AS FALSE: Riemann convergence is restricted to compact equicontinuous sets."
+        },
+        {
+          "check": "Does weak convergence alone pass unbounded coordinate products?",
+          "disposition": "UPHELD AS FALSE: bounded clips and a quartic uniform-integrability estimate are required."
+        },
+        {
+          "check": "Does numerator/denominator convergence imply the unresolved Feynman-Kac operator identity?",
+          "disposition": "UPHELD AS FALSE: the operator theorem and form-domain check remain open."
+        },
+        {
+          "check": "Does fixed finite-volume weighted convergence establish the spatial thermodynamic phase result?",
+          "disposition": "UPHELD AS FALSE: spatial volume and strict-cusp gates remain separate."
+        }
+      ],
+      "assumptions": [
+        "The fixed Hamiltonian, source interval and positive harmonic split are those frozen in the Q3LOCK preregistration.",
+        "The interpolated Gaussian laws are tight in the periodic sup-norm topology and converge weakly to the stated Gaussian loop law.",
+        "The residual weights have a source-uniform finite upper bound from the quartic lower potential estimate.",
+        "The finite-volume Feynman-Kac/Trotter identification remains a separate theorem gate."
+      ],
+      "boundary": "T0 finite-volume weighted weak-limit audit for P-06/P-09; no spatial thermodynamic limit.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The test-functional decomposition isolates every use of compactness, weak convergence, bounded weights and normalization, and therefore provides a manuscript-ready T0 lemma without silently claiming an infinite-dimensional FKG or Feynman-Kac theorem.",
+      "evidence_refs": [
+        "strategy/q3lock-weighted-weak-limit-test-functional-audit-260904.md#compact-set-decomposition",
+        "strategy/q3lock-p06-p09-proof-text-synthesis-260904.md#lemma-b-weighted-grid-laws-and-the-feynman--kac-identification",
+        "strategy/q3lock-gaussian-increment-estimate-audit-260904.md#2-exact-grid-increment-bound",
+        "strategy/q3lock-fkg-normalizer-tightness-check-260904.md#2-mesh-uniform-lower-bound"
+      ],
+      "finding": "For every bounded continuous loop functional F, the numerator integral of F times the finite-grid weight converges to the corresponding loop integral by a compact/tail decomposition. Tightness supplies a compact K with small tails, Arzela-Ascoli makes both Riemann sums uniform on K, and the Gaussian weak limit handles the continuous cutoff-weighted test. The same argument proves normalizer convergence, so the normalized weighted laws converge weakly. This fixes the earlier ambiguity: a bounded sup-norm ball is valid for the normalizer lower bound but not for uniform Riemann sums. Association passes only for bounded continuous increasing functionals; unbounded coordinate products still require an explicit quartic uniform-integrability estimate.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001494",
+      "method": [
+        "Define the interpolated Gaussian laws, bounded residual weights and their normalizers at fixed finite spatial volume.",
+        "Decompose the tested numerator on a compact equicontinuous set plus a bounded tail, using a continuous cutoff for the weak-convergence term.",
+        "Use Arzela-Ascoli for uniform local and spatial Riemann-sum convergence on the compact set, Gaussian weak convergence for the fixed continuous test function, and the common weight bound for the tail.",
+        "Apply the same argument with the test functional equal to one, then divide by a common positive normalizer bound; record the clipping and quartic uniform-integrability step separately for unbounded coordinate products."
+      ],
+      "missing_assumptions": [
+        "Independent verification of the precise Gaussian compact-set/tightness statement and cutoff construction.",
+        "A written source-uniform quartic moment estimate for clip removal of unbounded observables.",
+        "An exact cited Feynman-Kac/Trotter theorem with checked form-domain hypotheses."
+      ],
+      "next_action": "Insert the epsilon decomposition into the proof text, obtain an independent sign/factor/topology audit, and keep P-06/P-09 at PROOF TEXT AND EXTERNAL AUDIT REQUIRED until those checks pass.",
+      "non_claims": [
+        "No strict source cusp, DLR multiplicity, extremality, dynamics, ground-state gap, continuum limit or physical interpretation is claimed.",
+        "No infinite-dimensional FKG theorem, total-variation convergence or all-source uniform weak convergence is claimed.",
+        "No independent claim card, P2 manuscript, release commit or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the finite-grid weighted laws be passed to the continuous-loop law for bounded continuous test functionals without using an invalid uniform Riemann-sum claim on a sup-norm ball?",
+      "recorded_at": "2026-09-04T21:45:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001492",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001490",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001484",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the interpolation topology, source class, residual-weight bound, order of limits, or Feynman-Kac representation changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK weighted weak convergence is reduced to compact uniformity and bounded tails",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the KP pair convention accidentally count each undirected edge twice?",
+          "disposition": "DISMISSED: symmetric J_yz=c with -1/2 sum_(y,z) gives exactly one -c term per undirected edge, and the 3c/2 onsite part reconstructs c/2 times the bond square."
+        },
+        {
+          "check": "Does the KP source representation itself prove the Q3LOCK grid-to-loop convergence?",
+          "disposition": "UPHELD AS FALSE: covariance, interpolation tightness, compact Riemann sums and normalizer division remain paper-local."
+        },
+        {
+          "check": "Does KP's scalar or one-dimensional phase theorem apply to the nonradial eight-component Q3LOCK model?",
+          "disposition": "UPHELD AS FALSE: only the general finite-volume Euclidean representation and hypothesis-level consequences are imported."
+        },
+        {
+          "check": "Does the finite-volume crosswalk close P-06 or P-09?",
+          "disposition": "UPHELD AS FALSE: continuous-loop association and Hilbert-valued FSS still require their own proof text and independent audit."
+        }
+      ],
+      "assumptions": [
+        "The Q3LOCK Hamiltonian and source convention are those frozen in the preregistration.",
+        "The finite spatial box is fixed during the time-grid limit.",
+        "The KP arXiv version is the bibliographic source used for theorem and equation numbering.",
+        "The positive harmonic split is held fixed while the mesh is refined."
+      ],
+      "boundary": "T0 finite-volume Feynman-Kac source crosswalk for P-01/P-06/P-09; no spatial thermodynamic limit.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The crosswalk removes an imprecise theorem label, fixes the pair-count and source signs, and makes clear which convergence statements are imported and which must appear in the Q3LOCK manuscript and independent audit.",
+      "evidence_refs": [
+        "strategy/q3lock-feynman-kac-finite-volume-crosswalk-260904.md#2-kp-finite-volume-statement-and-exact-q3lock-mapping",
+        "strategy/q3lock-feynman-kac-finite-volume-crosswalk-260904.md#3-verification-of-kp-potential-hypotheses",
+        "strategy/q3lock-feynman-kac-finite-volume-crosswalk-260904.md#4-heat-kernelgrid-convention-audit",
+        "strategy/q3lock-weighted-weak-limit-test-functional-audit-260904.md#3-compact-set-decomposition"
+      ],
+      "finding": "The primary KP construction directly supplies the finite-volume periodic OU reference, self-adjoint lower-bounded Hamiltonian/heat-trace consequence under its continuous superquadratic potential assumptions, and the Feynman-Kac Gibbs modification with bounded multiplication correlators. The Q3LOCK bond maps exactly by -1/2 sum_(y,z) J_yz(omega_y,omega_z)=-c sum_<yz>(omega_y,omega_z), while the cubic degree gives the required 3c/2 onsite contribution. The eight-component nonradial Q3 potential satisfies the source-uniform quartic lower and continuous quartic upper controls after harmonic splitting. The discrete grid-to-loop convergence remains a local covariance/tightness/weighted weak-limit lemma; KP does not supply the Q3LOCK FKG or FSS transfer.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001495",
+      "method": [
+        "Read the primary Kozitsky--Pasurek finite-volume Euclidean representation and record its harmonic reference, potential hypotheses, and Feynman--Kac density formula.",
+        "Rewrite the Q3LOCK nearest-neighbour bond with symmetric J_yz=c and verify that the KP -1/2 sum convention gives one -c inner-product term per undirected edge plus a 3c/2 onsite term on the cubic lattice.",
+        "Match nu=8, m=chi/hbar^2, positive harmonic split a, quartic coercivity, source-uniform upper/lower controls, and finite-range interaction to the source assumptions.",
+        "Separate the imported continuous-loop representation from the paper-local covariance, tightness, compact Riemann-sum and normalizer argument for the chosen time grid."
+      ],
+      "missing_assumptions": [
+        "Final bibliography-version and equation-number audit by an independent reviewer.",
+        "Independent edge-count check for every open and periodic box convention used in the pressure proof.",
+        "Independent verification that all chosen test functionals are continuous in the loop topology and that clip removal has the required quartic uniform integrability.",
+        "A final exact source-level check that no one-dimensional, ferromagnetic-scalar, or rotational-invariance result is imported."
+      ],
+      "next_action": "Insert the finite-volume crosswalk into the proof text, preserve the local weighted-limit lemma as a separate obligation, and obtain signed independent sign/factor and source-scope audits before any claim registration or PDF creation.",
+      "non_claims": [
+        "No strict cusp, DLR multiplicity, real-time dynamics, KMS state, ground/gap, continuum, physical vacuum or cosmological conclusion is claimed.",
+        "No infinite-dimensional FKG theorem, FSS time-grid transfer theorem, or total-variation convergence is imported.",
+        "No independent claim card, P2 manuscript, release, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the phrase standard Feynman-Kac/Trotter identification be replaced by an exact finite-volume source crosswalk and a separate local proof obligation for the time-grid limit?",
+      "recorded_at": "2026-09-04T22:05:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001494",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001492",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001491",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the finite-volume Hamiltonian, harmonic split, source sign, spatial graph, cited KP version, or grid interpolation changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK finite-volume Feynman-Kac citation and spatial-bond factors are separated from the grid limit",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does source-mapping KP close the Q3LOCK discrete grid limit automatically?",
+          "disposition": "UPHELD AS FALSE: covariance, tightness, compact Riemann sums and normalizer division remain local."
+        },
+        {
+          "check": "Does this wording import KP's scalar/one-dimensional phase theorem?",
+          "disposition": "DISMISSED: only the general finite-volume Euclidean representation and matched hypotheses are cited."
+        },
+        {
+          "check": "Does the wording repair alter C6 or P-12 status?",
+          "disposition": "DISMISSED: claim tier and all phase gates remain unchanged."
+        }
+      ],
+      "assumptions": [
+        "The finite-volume Q3LOCK model and harmonic split remain unchanged.",
+        "The KP arXiv source and the crosswalk document remain the intended references."
+      ],
+      "boundary": "T0 proof-text wording repair for P-06/P-09; no claim or publication tier change.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The wording prevents a standard-theorem label from hiding either an unverified source hypothesis or the separate discrete-to-continuous probability limit.",
+      "evidence_refs": [
+        "strategy/q3lock-p06-p09-proof-text-synthesis-260904.md#3-lemma-b-weighted-grid-laws-and-the-feynman--kac-identification",
+        "strategy/q3lock-feynman-kac-finite-volume-crosswalk-260904.md#5-what-is-imported-and-what-is-proved-locally"
+      ],
+      "finding": "The synthesis now identifies the finite-volume periodic OU/Feynman-Kac representation as a source-mapped import with Q3LOCK sign, edge-count and potential checks, while retaining the time-grid convergence and independent review as local obligations. No load-bearing phase conclusion is promoted.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001496",
+      "method": [
+        "Replace the unqualified standard Feynman-Kac/Trotter phrase in the synthesis with a link to the explicit finite-volume KP crosswalk.",
+        "Retain the separate requirements for the exact theorem statement, form-domain hypotheses, bibliography audit, Gaussian grid convergence and weighted weak-limit proof."
+      ],
+      "missing_assumptions": [
+        "Independent final source-version and form-domain audit.",
+        "Independent audit of the Gaussian and weighted-law limit in the exact manuscript topology."
+      ],
+      "next_action": "Continue the mathematical content review and signed independent audit; keep P-06/P-09 open and PDF creation deferred.",
+      "non_claims": [
+        "No strict cusp, DLR multiplicity, real-time dynamics, KMS, ground/gap, continuum, physical vacuum or cosmological result is claimed.",
+        "No P2 manuscript, release, claim registration, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the P-06/P-09 proof synthesis now distinguish the source-mapped finite-volume Feynman-Kac representation from the still-open grid and independent-audit obligations?",
+      "recorded_at": "2026-09-04T22:20:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001495",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001492",
+          "relation": "corrects"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the cited finite-volume source, Hamiltonian normalization, or order of grid and spatial limits changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK proof synthesis now pins the finite-volume Feynman-Kac source boundary",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does shifting F and G change the association covariance?",
+          "disposition": "DISMISSED: covariance is invariant under additive constants."
+        },
+        {
+          "check": "Does the shift remove the need for quartic control of unbounded coordinates?",
+          "disposition": "UPHELD AS FALSE: clipping and uniform integrability remain required."
+        },
+        {
+          "check": "Does the correction prove infinite-dimensional path-space MTP2?",
+          "disposition": "UPHELD AS FALSE: only bounded-continuous association is passed through weak convergence."
+        }
+      ],
+      "assumptions": [
+        "The finite-grid laws satisfy the usual association covariance inequality for bounded increasing functions.",
+        "The loop topology makes bounded coordinate evaluations and their clips continuous."
+      ],
+      "boundary": "T0 proof-text correction for the P-06 bounded-continuous association passage; no claim or tier change.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "Without the nonnegative shifts, the claim that FG is increasing is not valid for arbitrary bounded increasing observables. The repair is elementary but necessary for a complete manuscript proof.",
+      "evidence_refs": [
+        "strategy/q3lock-weighted-weak-limit-test-functional-audit-260904.md#5-increasing-functionals-and-association-passage",
+        "strategy/q3lock-p06-p09-proof-text-synthesis-260904.md#lemma-c-association-in-the-continuous-loop-law-p-06"
+      ],
+      "finding": "The association proof now explicitly shifts bounded increasing F and G by constants to make them nonnegative; the covariance inequality is invariant under those shifts, so FG is bounded continuous increasing and the weak-limit passage applies. The unbounded-coordinate step remains a separate clipped uniform-integrability obligation.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001497",
+      "method": [
+        "Inspect the product-functional step in the weighted weak-limit audit.",
+        "Insert the standard constant-shift argument before applying weak convergence to FG, and retain clipping plus quartic uniform integrability for unbounded coordinates."
+      ],
+      "missing_assumptions": [
+        "Independent verification of the clip-removal quartic moment bound.",
+        "Independent review of the cutoff/cutoff-weight continuity argument."
+      ],
+      "next_action": "Carry the shifted-observable wording into the eventual manuscript and obtain independent FKG and uniform-integrability audits. Keep PDF generation deferred.",
+      "non_claims": [
+        "No strict cusp, DLR multiplicity, real-time dynamics, KMS, ground/gap, continuum or physical-vacuum result is claimed.",
+        "No path-space MTP2, total-variation convergence, claim registration, P2 manuscript or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the weak-limit association step handle arbitrary bounded increasing test functionals rather than only nonnegative ones?",
+      "recorded_at": "2026-09-04T22:35:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001494",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001492",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the observable class, topology, or finite-grid association statement changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK association passage records the necessary nonnegative shifts",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does sorting the diagnostic relation pairs alter the set-inclusion condition?",
+          "disposition": "DISMISSED: the condition remains the same set inclusion and only the recorded lists are ordered."
+        },
+        {
+          "check": "Does byte-identical JSON prove the Q3LOCK mathematics?",
+          "disposition": "UPHELD AS FALSE: it proves deterministic serialization only."
+        },
+        {
+          "check": "Does the repair remove the need for a final clean-snapshot replay?",
+          "disposition": "UPHELD AS FALSE: all three integrated verifiers must be rerun after the final artifact set is frozen."
+        }
+      ],
+      "assumptions": [
+        "The parent exploration relation check is logically set inclusion and does not depend on order.",
+        "The verifier's JSON writer preserves the sorted diagnostic list order.",
+        "No scientific payload field is derived from the diagnostic string representation."
+      ],
+      "boundary": "T0 deterministic serialization repair for the EXP-000780 reproducibility package; no mathematical tier change.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is a release-serialization defect, not a mathematical discrepancy. The repair preserves the assertion semantics and is required before the final clean-snapshot manifest can be hash-pinned.",
+      "evidence_refs": [
+        "strategy/q3lock-exp780-integrated-byte-stability-repair-260904.md#2-repair",
+        "strategy/q3lock-exp780-integrated-byte-stability-repair-260904.md#3-reproduction",
+        "codes/foundations/pre_a_cp1_st8_q3lock_fixed_lattice_3d_quantum_pressure_ground_density_effective_reduction_route_split_verify.py#exploration-related-parents"
+      ],
+      "finding": "The original two runs both passed 187/187 and differed only because Python emitted the expected parent-relation set in different orders. Sorting the diagnostic relation pairs leaves the Boolean set-inclusion condition unchanged and makes the payload deterministic. Two post-repair runs both pass 187/187 and have identical SHA-256 6E21186241C6486136B2E2752602C4C8E9F957281F3B43E8E298916B4FFE8B93.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001498",
+      "method": [
+        "Run the EXP-000780 integrated verifier twice into isolated output files and compare the parsed JSON payloads recursively.",
+        "Isolate the only difference to the string representation of a Python set in the expected field of the parent exploration-relation assertion.",
+        "Rewrite that verifier assertion to compare the same set condition while serializing sorted actual and expected lists, then run py_compile and repeat both executions.",
+        "Compare SHA-256 bytes and assertion counts after the repair."
+      ],
+      "missing_assumptions": [
+        "Final clean-snapshot replay after the manuscript and claim set are frozen.",
+        "Independent release audit of all integrated verifier diagnostic fields."
+      ],
+      "next_action": "Include EXP-000780 in the final three-verifier byte-stability replay and hash-pinned manifest. Keep P-06/P-09 and external proof audits open; defer PDF until final content closure.",
+      "non_claims": [
+        "No mathematical theorem, claim tier or EXP-000780 scope is promoted.",
+        "No strict cusp, DLR multiplicity, dynamics, KMS, ground/gap, continuum, physical-vacuum, P2 manuscript, release or PDF is claimed."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Why did two passing EXP-000780 integrated runs have different hashes, and can the diagnostic serialization be made deterministic without changing a scientific assertion?",
+      "recorded_at": "2026-09-04T23:05:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001493",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001482",
+          "relation": "corrects"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the EXP-000780 assertion schema, diagnostic values, JSON serializer, or integrated artifact set changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK EXP-000780 integrated verifier is byte-stable after sorting diagnostic pairs",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does changing the time-grid dimension invalidate the FSS constant?",
+          "disposition": "DISMISSED under the cited theorem's independence from prior measure and component count; finite-N application still must precede the limit."
+        },
+        {
+          "check": "Can nonradial Q3LOCK onsite terms spoil spatial reflection positivity?",
+          "disposition": "DISMISSED for this spatial decomposition: all Q3 terms remain in the one-site prior and the crossing kernel is positive definite."
+        },
+        {
+          "check": "Does weak convergence alone justify the unbounded source exponential and its second derivative?",
+          "disposition": "UPHELD AS FALSE; quartic Young absorption and a normalizer lower bound are explicitly required."
+        },
+        {
+          "check": "Is the zero spatial mode inverted in the source Poisson equation?",
+          "disposition": "DISMISSED: the source is zero-sum and the inverse is restricted to the zero-sum subspace."
+        },
+        {
+          "check": "Does the source shift replace the FSS theorem?",
+          "disposition": "UPHELD AS FALSE; the theorem supplies the finite-grid inequality, while the shift is only an integrability aid."
+        }
+      ],
+      "assumptions": [
+        "The finite-volume Q3LOCK Hamiltonian, positive harmonic split, and KP Feynman-Kac representation remain unchanged.",
+        "The FSS theorem is used only on even periodic cubic boxes and only for zero-sum sources.",
+        "The fixed-volume quartic lower bound and normalizer lower bound are uniform in the time-grid size."
+      ],
+      "boundary": "T0 proof-text normalization and source-limit audit only; P-09 and P-12 remain open and no claim or publication tier changes.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The note closes the bookkeeping and limit structure needed for a paper-level P-09 proof text, while preserving the honest boundary that the theorem application and external audit are not yet complete.",
+      "evidence_refs": [
+        "strategy/q3lock-fss-source-differentiation-audit-260904.md#3-reflection-positivity-and-the-fss-hypotheses",
+        "strategy/q3lock-fss-source-differentiation-audit-260904.md#4-source-scaling-and-the-finite-grid-inequality",
+        "strategy/q3lock-fss-source-differentiation-audit-260904.md#5-passing-the-source-inequality-to-the-loop-law"
+      ],
+      "finding": "The source-differentiation passage can be stated with the exact scaling X_(N,L)=epsilon*sum_(y,k)a_y Q_(y,k), yielding Var(X_(N,L))<=beta/c times the spatial inverse form and hence Dhat_(N,L)(p)<=1/(2 beta c E(p)). At fixed spatial volume the quartic Young estimate supplies the missing uniform-integrability step for the unbounded exponential, so weak convergence is not used by itself. The finite-grid theorem, the KP Feynman-Kac covariance identification, and the independent source-version audit remain separate obligations.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001499",
+      "method": [
+        "Encode each complete time history as s_y=sqrt(epsilon)(x_(y,k)) in R^(8N), allocate all spatially onsite factors to a single-site prior, and verify the crossing kernel exp[c a dot b] is positive definite.",
+        "Insert a zero-sum time-constant source, compute its scaled pairing and the FSS Gaussian-domination right side, then differentiate the finite-grid inequality at zero and compare variance with the normalized Duhamel matrix.",
+        "Use a quartic Young bound plus the fixed-volume normalizer lower bound to establish uniform integrability for source exponentials and second-derivative witnesses before passing the inequality through the grid-to-loop limit."
+      ],
+      "missing_assumptions": [
+        "Exact bibliography-version theorem statement and prior-measure hypothesis match.",
+        "Independent constants for the quartic uniform-integrability and variance convergence estimates.",
+        "Independent check that the finite-grid variance converges to the declared KP Duhamel covariance without an extra beta or factor of two."
+      ],
+      "next_action": "Obtain an independent theorem-level audit of the FSS prior-measure hypotheses, the quartic uniform-integrability constants, and the finite-grid-to-KP Duhamel covariance passage; then integrate the audited text into the claim package without generating a PDF before content freeze.",
+      "non_claims": [
+        "No strict source cusp, positive zero mode, DLR multiplicity, real-time dynamics, KMS, ground/gap, continuum, physical-vacuum, Sector A or Pre-A result is asserted.",
+        "No path-space MTP2, total-variation convergence, claim registration, manuscript release or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the finite-grid reflection-positivity/FSS estimate be written with an explicit 8N-spin scaling and passed to the continuous-loop Duhamel bound without losing the beta or factor-two normalization?",
+      "recorded_at": "2026-09-04T23:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001485",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001496",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the spatial coupling convention, source observable, time-grid scaling, FSS source theorem, or loop topology changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK finite-grid FSS source differentiation is normalized and isolated",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the exceptional N=2 periodic edge convention invalidate the MTP2 sign?",
+          "disposition": "DISMISSED: the combined off-diagonal remains nonpositive, and the limiting proof uses N>=3."
+        },
+        {
+          "check": "Can piecewise-linear interpolation reverse coordinatewise order?",
+          "disposition": "DISMISSED: both interpolation weights are nonnegative on every interval."
+        },
+        {
+          "check": "Does weak convergence alone justify unbounded coordinate products?",
+          "disposition": "UPHELD AS FALSE; clipped observables and quartic uniform integrability remain explicit."
+        },
+        {
+          "check": "Is the product of arbitrary increasing observables increasing?",
+          "disposition": "UPHELD AS FALSE; nonnegative constant shifts are required before applying association to the product."
+        },
+        {
+          "check": "Does finite-grid MTP2 automatically prove path-space MTP2?",
+          "disposition": "UPHELD AS FALSE; only bounded-continuous loop association is claimed."
+        }
+      ],
+      "assumptions": [
+        "The finite-volume Q3LOCK Hamiltonian and positive harmonic split are unchanged.",
+        "The weighted grid laws converge in the declared periodic sup-norm topology and retain a source-uniform quartic lower bound at fixed spatial volume.",
+        "The finite-dimensional MTP2/association theorem is applied only to strictly positive integrable grid densities."
+      ],
+      "boundary": "T0 proof-text audit only; P-06 and P-12 remain open, with no claim or publication-tier change.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The complete limit structure and the two common sign pitfalls (periodic edge multiplicity and sign-changing products) are now recorded for manuscript transcription without overstating a path-space MTP2 theorem or a phase result.",
+      "evidence_refs": [
+        "strategy/q3lock-fkg-continuous-loop-limit-audit-260904.md#3-log-supermodularity-calculation",
+        "strategy/q3lock-fkg-continuous-loop-limit-audit-260904.md#4-order-preserving-interpolation",
+        "strategy/q3lock-fkg-continuous-loop-limit-audit-260904.md#5-association-in-the-loop-limit",
+        "strategy/q3lock-fkg-continuous-loop-limit-audit-260904.md#6-zero-source-q3-consequences"
+      ],
+      "finding": "The P-06 proof text now separates finite-grid MTP2 from the loop result: temporal and spatial precision signs plus the Q3 edge identity give finite-grid association; interpolation preserves order; weak convergence handles bounded continuous functionals; and clipped uniform-integrability handles unbounded coordinate products. The note keeps source monotonicity restricted to nonnegative source directions and leaves the exact theorem-version and independent source audit open.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001500",
+      "method": [
+        "Write the cyclic Gaussian and spatial mixed derivatives, including the N=2 edge multiplicity, and verify the Q3 sum-of-squares mixed derivative gives log-supermodularity for every field value.",
+        "Use periodic piecewise-linear interpolation with nonnegative barycentric coefficients to transfer coordinatewise order, then combine the tight weighted weak-limit result with bounded-continuous association.",
+        "Apply nonnegative constant shifts to bounded increasing observables and clipped coordinates with quartic uniform integrability to recover the same-site Q3 covariance inequalities needed by the collective moment bound."
+      ],
+      "missing_assumptions": [
+        "Exact source-version citation and theorem hypotheses for MTP2 marginalization and association.",
+        "Independent check of the KP interpolation topology and finite-volume Feynman-Kac identification.",
+        "Independent constants for the clipped coordinate uniform-integrability limit."
+      ],
+      "next_action": "Obtain an independent theorem-level review of the MTP2 marginal/association theorem, the KP loop topology, and the quartic clip-removal constants; then merge the audited P-06/P-09 text before any claim registration or PDF generation.",
+      "non_claims": [
+        "No strict cusp, infrared zero-mode lower bound, DLR multiplicity, dynamics, KMS, ground/gap, continuum, physical-vacuum, Sector A or Pre-A result is asserted.",
+        "No path-space MTP2, total-variation convergence, claim registration, manuscript release or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the finite-grid Q3LOCK MTP2 calculation pass to continuous-loop association with the temporal edge convention, interpolation order, and unbounded coordinate products handled explicitly?",
+      "recorded_at": "2026-09-04T14:21:44Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001487",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001497",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001499",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen if the time-grid convention, interpolation, source direction, Q3 edge potential, observable topology, or finite-volume loop representation changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK continuous-loop FKG limit records the full order-preserving passage",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

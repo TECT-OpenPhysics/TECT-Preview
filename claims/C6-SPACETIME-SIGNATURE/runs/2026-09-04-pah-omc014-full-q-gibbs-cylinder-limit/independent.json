@@ -1,0 +1,174 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+        "PAH-OMC-011-EXPLORATION": "1ab7f5b39ce57db8f41b628d467a3af68c19961d77b46b624591c322186e7687",
+        "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+        "PAH-OMC-012-EXPLORATION": "237e54978c13ffde806b842252100d23927d3eca81c0663f763d740d54fdab77",
+        "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+        "R-493-INTEGRATED": "8d005bea7ee33111712f58a32046cdb254f77bc8c17d8eb1a470abcc2adbbbc7"
+      },
+      "expected": "all manifest parent hashes",
+      "name": "independent parent hash reconstruction",
+      "pass": true
+    },
+    {
+      "actual": "counting measure on the fixed-Q finite configuration space and Z_(rho,Q)=sum_x exp(-beta F_rho(x))",
+      "expected": "fixed-Q Z formula",
+      "name": "finite component state is normalized by source",
+      "pass": true
+    },
+    {
+      "actual": "pi_(rho,Q)(x)=Z_(rho,Q)^(-1) exp[-beta F_rho(x)]",
+      "expected": "positive normalized component state",
+      "name": "finite component Gibbs state is positive form",
+      "pass": true
+    },
+    {
+      "actual": {
+        "functional": "Exactly PAH-001 F_rho, with no added term, counterterm, parameter transport, averaging or rate modification.",
+        "state_space": "The displayed PAH-001 finite configuration space Omega_(rho,Q) with Q=1, K=2, M_s=M_psi=1, epsilon=1/2, and all five displayed couplings and beta=nu=1 fixed to one; R_max=R ranges over positive integers and tends to infinity."
+      },
+      "expected": "unchanged PAH path",
+      "name": "OMC-010 path is unchanged",
+      "pass": true
+    },
+    {
+      "actual": "Omega_n^gr(R)=disjoint_union_(Q in Q_n) {Q}xOmega_(rho_(n,R,Q),Q). The grade is part of the disjoint-union tag and is not an extra interaction variable.",
+      "expected": "disjoint union over Q",
+      "name": "full-Q domain is a disjoint union",
+      "pass": true
+    },
+    {
+      "actual": {
+        "reference": "For each grade Q retain exactly pi_(rho_(n,R,Q))=Z_(rho_(n,R,Q))^(-1)exp(-beta F_rho) from PAH-001. The graded reference is the family of these component Gibbs states; PAH-001 supplies no cross-Q mixing probabilities, so no new normalized global mixture is introduced.",
+        "status": "NOT_DEFINED_BY_PARENT; not required for this domain-map gate"
+      },
+      "expected": "explicit source omission",
+      "name": "source expressly omits the mixing law",
+      "pass": true
+    },
+    {
+      "actual": "Use the direct-sum family norm sum_(Q in Q_n)||f_Q||_(2,pi_(rho,Q))^2, with each component norm exactly the PAH-OMC-010 Gibbs weighted norm. A single probability measure over Q is not required for this domain-map gate and remains an explicit open modeling input if later needed.",
+      "expected": "norm is not a measure",
+      "name": "direct-sum norm does not supply sector probabilities",
+      "pass": true
+    },
+    {
+      "actual": "Use the unchanged PAH-OMC-010 component Gibbs weighted norm. R-490 C_sw=540 is a domination-only coefficient and is not used in the equality proof or to create a cross-Q probability.",
+      "expected": "no global Gibbs law",
+      "name": "OMC-013 remains componentwise",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "no positive law declaration",
+      "name": "no actual sector-law equation in parent corpus",
+      "pass": true
+    },
+    {
+      "actual": {
+        "omega_status": "NOT_DEFINED",
+        "source_weight_law": "ABSENT_IN_SOURCE: PAH-001 declares fixed-Q normalization and forbids cross-Q comparisons; PAH-OMC-012 explicitly records that no cross-Q mixing probabilities or global normalized Gibbs measure are supplied."
+      },
+      "expected": "absence retained",
+      "name": "contract refuses to instantiate weights",
+      "pass": true
+    },
+    {
+      "actual": [
+        "A source-authorized, hash-pinned nonnegative sector law w_(n,R,Q)>=0 for every finite n,R, normalized by sum_Q w_(n,R,Q)=1, or an equivalent projective full-Q probability law.",
+        "A declaration of whether the sector law is independent of beta, phase selector and external sources, as required by the fixed-source scope.",
+        "A common full-Q probability space or completed cylinder functional on which the component Gibbs states can be mixed without changing PAH-001.",
+        "A topology and explicit Cauchy error epsilon_(n,R)(f)->0 for every finite-support cylinder f in the declared PAH-001 order.",
+        "Uniform control of the retained R-484 boundary defect and the R-490 domination input in the chosen full-Q norm; neither 16/9 nor C_sw=540 supplies this by itself.",
+        "A common domain on which the stabilized PAH-OMC-013 generator can be tested against the eventual functional."
+      ],
+      "expected": "no unsupported limit",
+      "name": "required Cauchy estimate is withheld",
+      "pass": true
+    },
+    {
+      "actual": "Retain the R-484 hidden-diagonal boundary defect exactly as 16/9; no averaging, cancellation or counterterm is permitted.",
+      "expected": "16/9 retained",
+      "name": "boundary datum is not cancelled",
+      "pass": true
+    },
+    {
+      "actual": "Retain R-490 C_sw=540 only as a state-weighted domination input. It cannot define cross-Q sector weights or prove a cylinder-state limit.",
+      "expected": "domination only",
+      "name": "C_sw is not promoted to a weight",
+      "pass": true
+    },
+    {
+      "actual": [
+        "This is a researcher-owned finite source-scope audit, not an external source or physical authority.",
+        "HOLD_FOR_EVIDENCE is not a universal no-go: it states only that the hash-pinned parent scope does not define the requested full-Q functional.",
+        "No infinite-volume Gibbs state, weak cylinder limit, closability, Markov semigroup, quantum real-time dynamics or ordered-limit theorem is claimed.",
+        "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+        "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+        "R-488 component witnesses, R-484 defect 16/9 and R-490 C_sw=540 are not promoted to a global state or physical observable."
+      ],
+      "expected": true,
+      "name": "no physical promotion",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-FULL-Q-GIBBS-CYLINDER-LIMIT-INDEPENDENT-001",
+  "candidate_sector_law": "ABSENT_IN_SOURCE",
+  "claim_bearing": false,
+  "classification": "INDEPENDENT_SOURCE_SCOPE_RECONSTRUCTION",
+  "exploration_id": "EXP-001504",
+  "failed": 0,
+  "missing_assumptions": [
+    "A source-authorized, hash-pinned nonnegative sector law w_(n,R,Q)>=0 for every finite n,R, normalized by sum_Q w_(n,R,Q)=1, or an equivalent projective full-Q probability law.",
+    "A declaration of whether the sector law is independent of beta, phase selector and external sources, as required by the fixed-source scope.",
+    "A common full-Q probability space or completed cylinder functional on which the component Gibbs states can be mixed without changing PAH-001.",
+    "A topology and explicit Cauchy error epsilon_(n,R)(f)->0 for every finite-support cylinder f in the declared PAH-001 order.",
+    "Uniform control of the retained R-484 boundary defect and the R-490 domination input in the chosen full-Q norm; neither 16/9 nor C_sw=540 supplies this by itself.",
+    "A common domain on which the stabilized PAH-OMC-013 generator can be tested against the eventual functional."
+  ],
+  "next_question": "Can a source-authorized, hash-pinned nonnegative normalized family w_(n,R,Q) (or equivalent projective cross-Q law) be supplied with its topology and fixed PAH-001 limit order, without modifying PAH-001 or fitting weights?",
+  "non_claims": [
+    "This is a researcher-owned finite source-scope audit, not an external source or physical authority.",
+    "HOLD_FOR_EVIDENCE is not a universal no-go: it states only that the hash-pinned parent scope does not define the requested full-Q functional.",
+    "No infinite-volume Gibbs state, weak cylinder limit, closability, Markov semigroup, quantum real-time dynamics or ordered-limit theorem is claimed.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time and is not quantum real time, proper time or Lorentzian time.",
+    "R-488 component witnesses, R-484 defect 16/9 and R-490 C_sw=540 are not promoted to a global state or physical observable."
+  ],
+  "omega_status": "NOT_DEFINED",
+  "passed": 14,
+  "projective_consistency": "NOT_TESTABLE",
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc014_full_q_gibbs_cylinder_limit_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc014-full-q-gibbs-cylinder-limit/hostile.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc014_full_q_gibbs_cylinder_limit_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc014-full-q-gibbs-cylinder-limit/independent.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_full_q_gibbs_cylinder_limit_verify.py",
+    "lean": "NOT_APPLICABLE: this packet audits absence of a source declaration; no algebraic theorem is asserted.",
+    "primary": "python -X utf8 codes/foundations/pah_omc014_full_q_gibbs_cylinder_limit.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc014-full-q-gibbs-cylinder-limit/primary.json"
+  },
+  "result_id": "R-494",
+  "run_kind": "independent",
+  "schema": "tect/pah-omc014-full-q-gibbs-cylinder-limit-independent/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "PAH-OMC-011": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+    "PAH-OMC-011-EXPLORATION": "1ab7f5b39ce57db8f41b628d467a3af68c19961d77b46b624591c322186e7687",
+    "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "PAH-OMC-012-EXPLORATION": "237e54978c13ffde806b842252100d23927d3eca81c0663f763d740d54fdab77",
+    "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "R-493-INTEGRATED": "8d005bea7ee33111712f58a32046cdb254f77bc8c17d8eb1a470abcc2adbbbc7"
+  },
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_cylinder_limit": "NOT_TESTABLE"
+}

@@ -1,0 +1,325 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 23,
+  "assertions": [
+    {
+      "actual": {
+        "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+        "sha256": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502"
+      },
+      "expected": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+      "name": "intake contract hash pin",
+      "pass": true
+    },
+    {
+      "actual": {
+        "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+        "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+      },
+      "expected": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "name": "PAH-OMC-014 parent hash pin",
+      "pass": true
+    },
+    {
+      "actual": {
+        "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+        "sha256": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812"
+      },
+      "expected": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+      "name": "PAH-OMC-014 manifest parent hash pin",
+      "pass": true
+    },
+    {
+      "actual": {
+        "contract": "PAH-OMC-014-WEIGHT-INTAKE",
+        "manifest": "PAH-OMC-014-WEIGHT-INTAKE-MANIFEST"
+      },
+      "expected": "intake contract/manifest",
+      "name": "intake identity",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "intake_ready": true,
+        "omega_status": "NOT_DEFINED",
+        "source_law": "ABSENT_IN_PARENT",
+        "verdict": "HOLD_FOR_EVIDENCE"
+      },
+      "expected": "ready/HOLD/absent",
+      "name": "intake is non-bearing HOLD",
+      "pass": true
+    },
+    {
+      "actual": {
+        "manifest": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "contract": {
+            "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+            "sha256": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502"
+          },
+          "intake_ready": true,
+          "lean": {
+            "reason": "No theorem or numerical identity is claimed; this is a source-owner input schema and conditional test specification.",
+            "status": "NOT_APPLICABLE"
+          },
+          "manifest_id": "PAH-OMC-014-WEIGHT-INTAKE-MANIFEST",
+          "next_question": "Can the source owner provide the exact hashed sector law and projective/Cauchy/topology payload without changing PAH-001 or fitting weights?",
+          "no_parent_mutation": true,
+          "non_claims": [
+            "No w_(n,R,Q), mu_(n,R) or omega is instantiated.",
+            "No infinite-volume, physical or continuum result follows."
+          ],
+          "parents": {
+            "PAH-OMC-014": {
+              "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+              "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+            },
+            "PAH-OMC-014-MANIFEST": {
+              "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+              "sha256": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812"
+            }
+          },
+          "physical_promotion": false,
+          "runs": {
+            "integrated": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-weight-law-intake/integrated.json"
+          },
+          "schema": "tect/pah-omc014-full-q-gibbs-limit-next-evidence-manifest/1.0",
+          "scope": "Conditional acceptance specification only: no sector weight values or global Gibbs state are defined.",
+          "source_law_present": false,
+          "status": "HOLD_FOR_EVIDENCE"
+        },
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_NEXT_EVIDENCE_CONTRACT",
+          "constructed_hypothesis": false,
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "epistemic_layer": "L2_CONDITIONAL_MEASURE_ASSEMBLY_SPECIFICATION",
+          "external_source": false,
+          "physical_authority": false,
+          "source_law_present": false,
+          "synthetic_fixture": false
+        }
+      },
+      "expected": "no source law/no mutation/no gate change",
+      "name": "no parent mutation",
+      "pass": true
+    },
+    {
+      "actual": "Use exactly the PAH-001 functional and transition rates through PAH-OMC-014; no counterterm, refit, averaging or new carrier.",
+      "expected": "unchanged model",
+      "name": "functional and rate firewall",
+      "pass": true
+    },
+    {
+      "actual": "Use exactly the PAH-OMC-012 full-Q disjoint union Omega_n^gr(R) and its neutral projection p_(n+1,n).",
+      "expected": "unchanged graded domain",
+      "name": "full-Q domain firewall",
+      "pass": true
+    },
+    {
+      "actual": "Use only the normalized fixed-Q states pi_(rho_(n,R,Q)) already declared by PAH-001.",
+      "expected": "source component states",
+      "name": "component states remain fixed-Q",
+      "pass": true
+    },
+    {
+      "actual": "Use the grade-blind finite-support gauge- and anchor-automorphism-invariant cylinder algebra containing the R-488 observables.",
+      "expected": "common cylinder",
+      "name": "cylinder is unchanged",
+      "pass": true
+    },
+    {
+      "actual": "Use the PAH-001 declared order LOCAL_STATE_CUTOFF, LATTICE_REFINEMENT, VOLUME_EXHAUSTION, PHASE_SELECTOR, APERTURE_COLLAPSE, optional GROUND_STATE, OBSERVATION_TIME; all topology declarations must be supplied by the future source owner.",
+      "expected": "declared order with aperture before observation",
+      "name": "PAH-001 order is retained",
+      "pass": true
+    },
+    {
+      "actual": [
+        "boundary_accounting",
+        "cauchy_error",
+        "finite_functional",
+        "positivity_and_normalization",
+        "projective_consistency",
+        "r488_nonzero",
+        "sector_law",
+        "stationarity",
+        "uniformity_role"
+      ],
+      "expected": [
+        "boundary_accounting",
+        "cauchy_error",
+        "finite_functional",
+        "positivity_and_normalization",
+        "projective_consistency",
+        "r488_nonzero",
+        "sector_law",
+        "stationarity",
+        "uniformity_role"
+      ],
+      "name": "all conditional tests are specified",
+      "pass": true
+    },
+    {
+      "actual": "Supply a source-owned family w_(n,R,Q) with w_(n,R,Q)>=0 and sum_(Q in Q_n) w_(n,R,Q)=1 for every finite n,R. No values are instantiated here.",
+      "expected": "symbolic law only",
+      "name": "no weight value is instantiated",
+      "pass": true
+    },
+    {
+      "actual": [
+        "A versioned law file and SHA-256 hash for w_(n,R,Q) or an equivalent projective full-Q probability kernel.",
+        "A proof or exact finite verifier of nonnegativity and normalization for every declared n,R.",
+        "A declaration that the law is not selected after seeing the target cylinder values, beta, phase, external source or holdout data.",
+        "A topology and explicit epsilon_(i,j)(f) bound with its constants and limit order.",
+        "A projective consistency identity tied to the fixed PAH-OMC-012 projection.",
+        "A prospective holdout list, including at least one nonzero R-488 observable not used to define the law.",
+        "A domain and uniform-integrability condition for the stationary identity omega(Lf)=0."
+      ],
+      "expected": "hash/normalization/topology/holdout/domain requirements",
+      "name": "source-owner payload is explicit",
+      "pass": true
+    },
+    {
+      "actual": [
+        "Uniform weights, partition-function weights, observation-fitted weights or any other law chosen only for this test.",
+        "Conditional Gibbs averaging, fixed-Q substitution, charge deletion or redistribution.",
+        "Use of C_sw=540 as a sector probability or use of the R-484 16/9 defect cancellation as an error estimate.",
+        "Changing PAH-001 functional, rates, regulator path, limit order, cylinder, projection or physical interpretation."
+      ],
+      "expected": "no fitting/averaging/counterterm",
+      "name": "forbidden repairs are explicit",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "HOLD_FOR_EVIDENCE_SOURCE_OWNER_FULL_Q_WEIGHT_LAW_ABSENT",
+        "csw_role": "DOMINATION_ONLY",
+        "omega_status": "NOT_DEFINED",
+        "physical_promotion": false,
+        "positivity_normalization": "NOT_TESTABLE",
+        "projective_consistency": "NOT_TESTABLE",
+        "r484_boundary_defect": "RETAINED_16_OVER_9",
+        "stationarity": "NOT_TESTABLE",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "weak_cylinder_limit": "NOT_TESTABLE"
+      },
+      "expected": "R-494 absent source law",
+      "name": "R-494 source audit remains absent",
+      "pass": true
+    },
+    {
+      "actual": {
+        "boundary": "Retain the R-484 hidden-diagonal defect 16/9 as a boundary-error datum. It may be shown to separate from a fixed cylinder after its N(f), but it may not be averaged, cancelled or set to zero.",
+        "uniformity": "Use R-490 C_sw=540 only as domination input; it is not a sector law, a probability mass, or a Cauchy proof."
+      },
+      "expected": "defect retained/domination-only",
+      "name": "R-484 and C_sw constraints are retained",
+      "pass": true
+    },
+    {
+      "actual": [
+        "This file does not define w_(n,R,Q), mu_(n,R) or omega.",
+        "It does not prove projective consistency, a Cauchy limit, stationarity, an infinite-volume state or a semigroup.",
+        "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or TOE conclusion follows.",
+        "Markov time remains external stochastic time."
+      ],
+      "expected": "no model/physical promotion",
+      "name": "non-claims include physical firewall",
+      "pass": true
+    },
+    {
+      "actual": {
+        "reason": "No theorem or numerical identity is claimed; this is a source-owner input schema and conditional test specification.",
+        "status": "NOT_APPLICABLE"
+      },
+      "expected": "no false Lean theorem",
+      "name": "manifest keeps Lean non-applicable honest",
+      "pass": true
+    },
+    {
+      "actual": [
+        "Uniform weights, partition-function weights, observation-fitted weights or any other law chosen only for this test.",
+        "Conditional Gibbs averaging, fixed-Q substitution, charge deletion or redistribution.",
+        "Use of C_sw=540 as a sector probability or use of the R-484 16/9 defect cancellation as an error estimate.",
+        "Changing PAH-001 functional, rates, regulator path, limit order, cylinder, projection or physical interpretation."
+      ],
+      "expected": "rejected",
+      "name": "hostile uniform-weight repair rejected",
+      "pass": true
+    },
+    {
+      "actual": [
+        "Uniform weights, partition-function weights, observation-fitted weights or any other law chosen only for this test.",
+        "Conditional Gibbs averaging, fixed-Q substitution, charge deletion or redistribution.",
+        "Use of C_sw=540 as a sector probability or use of the R-484 16/9 defect cancellation as an error estimate.",
+        "Changing PAH-001 functional, rates, regulator path, limit order, cylinder, projection or physical interpretation."
+      ],
+      "expected": "rejected",
+      "name": "hostile fitted-weight repair rejected",
+      "pass": true
+    },
+    {
+      "actual": [
+        "Uniform weights, partition-function weights, observation-fitted weights or any other law chosen only for this test.",
+        "Conditional Gibbs averaging, fixed-Q substitution, charge deletion or redistribution.",
+        "Use of C_sw=540 as a sector probability or use of the R-484 16/9 defect cancellation as an error estimate.",
+        "Changing PAH-001 functional, rates, regulator path, limit order, cylinder, projection or physical interpretation."
+      ],
+      "expected": "rejected",
+      "name": "hostile boundary repair rejected",
+      "pass": true
+    },
+    {
+      "actual": {
+        "manifest": false,
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_NEXT_EVIDENCE_CONTRACT",
+          "constructed_hypothesis": false,
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "epistemic_layer": "L2_CONDITIONAL_MEASURE_ASSEMBLY_SPECIFICATION",
+          "external_source": false,
+          "physical_authority": false,
+          "source_law_present": false,
+          "synthetic_fixture": false
+        }
+      },
+      "expected": "rejected",
+      "name": "hostile physical promotion rejected",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-WEIGHT-LAW-INTAKE-INTEGRATED-001",
+  "claim_bearing": false,
+  "classification": "NEXT_EVIDENCE_CONTRACT_READY",
+  "failed": 0,
+  "intake_ready": true,
+  "next_question": "Can the source owner provide the exact hashed sector law and the projective/Cauchy/topology payload listed here without changing PAH-001 or fitting weights?",
+  "non_claims": [
+    "This file does not define w_(n,R,Q), mu_(n,R) or omega.",
+    "It does not prove projective consistency, a Cauchy limit, stationarity, an infinite-volume state or a semigroup.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "omega_status": "NOT_DEFINED",
+  "passed": 23,
+  "result_id": "R-494",
+  "run_kind": "integrated",
+  "schema": "tect/pah-omc014-weight-law-intake-integrated/1.0",
+  "source_hashes": {
+    "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "PAH-OMC-014-MANIFEST": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+    "PAH-OMC-014-WEIGHT-INTAKE": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+    "PAH-OMC-014-WEIGHT-INTAKE-MANIFEST": "2f1763405630accd42612d4148b9b53ad5290193c4985b42d7765b3175d228e2"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

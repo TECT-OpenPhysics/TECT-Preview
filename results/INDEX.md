@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**326 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**327 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-494`](../RESULTS-LEDGER.md#r-494) | PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit | T0 |
 | [`R-493`](../RESULTS-LEDGER.md#r-493) | PAH-OMC-013 full-Q eventual generator intertwining on the grade-blind cylinder | T0 |
 | [`R-492`](../RESULTS-LEDGER.md#r-492) | PAH-OMC-012 full-Q charge-graded common domain and neutral refinement map | T0 |
 | [`R-491`](../RESULTS-LEDGER.md#r-491) | PAH-OMC-011 Gibbs-state-weighted common-core eventual intertwining | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-471`](../RESULTS-LEDGER.md#r-471) | Fail-closed P1 owner and observation-map admission contract | T0 |
 | [`R-470`](../RESULTS-LEDGER.md#r-470) | HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary | T0 |
 | [`R-469`](../RESULTS-LEDGER.md#r-469) | HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk | T0 |
-| [`R-468`](../RESULTS-LEDGER.md#r-468) | HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope | T0 |
 
 Search without loading the full ledger:
 

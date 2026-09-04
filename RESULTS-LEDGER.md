@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-494](#r-494) | PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit | R-494 / EXP-001504 finds no source-owned cross-Q sector weight law in the hash-pinned PAH-001/OMC-010/OMC-011/OMC-012/OMC-013 scope. Primary 20/20, independent 14/14, hostile 12/12, integrated 31/31 pass; verdict HOLD_FOR_EVIDENCE. Fixed-Q component Gibbs states remain valid, but a global mu_(n,R), omega, Cauchy error and stationarity test are not defined. This is T0 claim-nonbearing source-input evidence only; no physical or continuum conclusion follows. |
 | [R-493](#r-493) | PAH-OMC-013 full-Q eventual generator intertwining on the grade-blind cylinder | R-493 / EXP-001474 proves pointwise intertwining after N(f)=max(2,m_f+1) on the full-Q grade-blind finite cylinder algebra for unchanged PAH-001 rates; primary 22/22, independent 16/16, hostile 13/13, integrated 21/21 and Lean R493 pass. This is T0 claim-nonbearing finite algebraic progress only; weak Gibbs-L2, closability, infinite volume, continuum and physical conclusions remain open. |
 
 | [R-492](#r-492) | PAH-OMC-012 full-Q charge-graded common domain and neutral refinement map | R-492 / EXP-001461 proves a total, unique neutral coordinate restriction on the source-owned disjoint union of all finite PAH-001 charge components, with Q_f-Q_c equal to the nonnegative dropped-charge sum and nonzero lifts for ell_a, ell_d, H_0 and H_1. Primary 17/17, independent 15/15, hostile 10/10, integrated 16/16 and Lean R492 pass. This is T0 claim-nonbearing finite domain/map progress only; it does not close PAH-OMC-011 intertwining, add a global Gibbs mixture, or establish infinite-volume, continuum, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusions. |
@@ -906,7 +907,6 @@ all-n, all-R statement by a finite sample.
 | PAH-OMC-008 | b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a |
 | PAH-OMC-010 | 8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69 |
 | PAH-OMC-010 manifest | 97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3 |
-| PAH-OMC-011 | 244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020 |
 | R-490 primary run | 4bcefef42ee2692d19344376fa2161743f0edb2043ada6d4867d1618b883dac3 |
 | PAH-OMC-012 contract | 180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72 |
 | PAH-OMC-012 manifest | cf53cdc78d40a793cf218491a4794055e847fefc4628c0d188a47990fe70713b |
@@ -17159,6 +17159,83 @@ scheme class and asymmetric anomaly boundary.
 
 **Publication target:** methods note (with a paired honest-negative: individually-positive channels can jointly fail an additive budget)
 
+
+<a id="r-494"></a>
+### R-494 -- PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit
+
+**Statement.** R-494 / EXP-001504 is a T0 claim-nonbearing
+source-scope audit of the unchanged PAH-001 finite Gibbs states on the
+PAH-OMC-012 full-Q disjoint union. The finite path is the PAH-OMC-010 path
+(K=2, M_s=M_psi=1, epsilon=1/2, beta=nu=1, m2=0, unit displayed couplings,
+and every positive integer R_max=R) on the PAH-OMC-004 two-row strip. Each
+grade Q has the source formula
+
+pi_(rho_(n,R,Q))(omega)=Z_(rho_(n,R,Q))^(-1) exp(-beta F_(rho_R)(omega)).
+
+The parent packets do not supply a normalized cross-Q family w_(n,R,Q).
+PAH-OMC-012 explicitly records global_normalized_gibbs_measure=NOT_DEFINED_BY_PARENT
+and says that PAH-001 supplies no cross-Q mixing probabilities; its direct-sum
+Gibbs norm is not a probability measure. Therefore the candidate full-Q
+expression
+
+mu_(n,R)(f)=sum_Q w_(n,R,Q) sum_(omega in Omega_Q) pi_Q(omega) f(Q,omega)
+
+cannot be instantiated in the declared source scope. Positivity, normalization,
+projective consistency, a Cauchy error for every finite-support cylinder, and
+omega(L f)=0 are consequently NOT_TESTABLE, not refuted. The R-484
+hidden-diagonal defect remains exactly 16/9; it is neither averaged nor
+cancelled. R-490 C_sw=540 remains domination-only and does not supply sector
+masses.
+
+**Evidence.** The primary source audit passes 20/20 assertions, the
+non-importing independent reconstruction passes 14/14, the hostile firewall
+rejects 12/12 unauthorized repairs, and the integrated verifier passes 31/31.
+The lanes agree on ABSENT_IN_SOURCE and HOLD_FOR_EVIDENCE.
+
+**Source pins.**
+
+| source | SHA-256 |
+|---|---|
+| PAH-001 | 03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37 |
+| PAH-OMC-004 | 38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c |
+| PAH-OMC-010 | 8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69 |
+| PAH-OMC-010 manifest | 97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3 |
+| PAH-OMC-011 | 244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020 |
+| PAH-OMC-011 exploration | 1ab7f5b39ce57db8f41b628d467a3af68c19961d77b46b624591c322186e7687 |
+| PAH-OMC-012 exploration | 237e54978c13ffde806b842252100d23927d3eca81c0663f763d740d54fdab77 |
+| PAH-OMC-012 | 180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72 |
+| PAH-OMC-012 manifest | fc2c52b0f786b371c56d2700e571d23558bad191942bc4f5182bc6260ae33937 |
+| PAH-OMC-013 | e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc |
+| PAH-OMC-013 manifest | e3594b8100bd0a34d426e3e1a4dadfe8d7b0c21fccb5d5f5bc7b7d28aae591a1 |
+| R-493 integrated run | 8d005bea7ee33111712f58a32046cdb254f77bc8c17d8eb1a470abcc2adbbbc7 |
+| PAH-OMC-014 contract | 1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0 |
+| PAH-OMC-014 manifest | 072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812 |
+| primary run | 3b9ae089cbc83adfe7239af899b7ed98c6373d8843c3f319684968a64adc26ad |
+| independent run | b5f6bb52dff718eda74d3036d769f21de5333de18483eba9baec30ca1cfc078a |
+| hostile run | 00016334eb382008a3e748b0b0623c19359f613be753f1c22e5a31cc77d7350a |
+| integrated run | 7f9a506710e06ddbf0b57e9931f9d93f87c4893bf666d0e4464349df6660b9d1 |
+
+**Classification and boundary.** This is HOLD_FOR_EVIDENCE with no active
+gate, claim-tier, or physical-status change. It is a missing-input result,
+not a universal no-go: an independently source-authorized law could reopen
+the question. No infinite-volume Gibbs state, weak cylinder limit,
+closability, Markov semigroup, quantum real-time dynamics, ordered-limit
+theorem, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap,
+cosmic-origin or TOE conclusion follows. Markov time remains external
+stochastic time.
+
+**Where proven.**
+strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json,
+strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json, the
+primary, independent and hostile foundation scripts, the integrated verifier,
+and the four run artefacts under
+claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc014-full-q-gibbs-cylinder-limit/.
+
+**Next.** Supply exactly one source-authorized, hash-pinned nonnegative
+normalized family w_(n,R,Q) (or an equivalent projective cross-Q law), with
+its topology and the unchanged PAH-001 limit order. Then test cylinder
+Cauchy convergence and stationarity without fitting weights or altering the
+functional.
 
 <a id="r-493"></a>
 ### R-493 -- PAH-OMC-013 full-Q eventual generator intertwining on the grade-blind cylinder

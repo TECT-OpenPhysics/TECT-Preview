@@ -1,0 +1,94 @@
+{
+  "schema": "tect/pah-omc014-full-q-gibbs-cylinder-limit-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-MANIFEST",
+  "contract": {
+    "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+    "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+  },
+  "result_id": "R-494",
+  "exploration_id": "EXP-001504",
+  "task_id": "T-054",
+  "status": "HOLD_FOR_EVIDENCE",
+  "classification": "HOLD_FOR_EVIDENCE_SOURCE_OWNER_FULL_Q_WEIGHT_LAW_ABSENT",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "no_parent_mutation": true,
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-004": {
+      "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+    },
+    "PAH-OMC-010": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+    },
+    "PAH-OMC-010-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-manifest.json",
+      "sha256": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3"
+    },
+    "PAH-OMC-011": {
+      "path": "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "sha256": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020"
+    },
+    "PAH-OMC-011-EXPLORATION": {
+      "path": "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-exploration.json",
+      "sha256": "1ab7f5b39ce57db8f41b628d467a3af68c19961d77b46b624591c322186e7687"
+    },
+    "PAH-OMC-012-EXPLORATION": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-exploration.json",
+      "sha256": "237e54978c13ffde806b842252100d23927d3eca81c0663f763d740d54fdab77"
+    },
+    "PAH-OMC-012": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+    },
+    "PAH-OMC-012-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-manifest.json",
+      "sha256": "fc2c52b0f786b371c56d2700e571d23558bad191942bc4f5182bc6260ae33937"
+    },
+    "PAH-OMC-013": {
+      "path": "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "sha256": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc"
+    },
+    "PAH-OMC-013-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-manifest.json",
+      "sha256": "e3594b8100bd0a34d426e3e1a4dadfe8d7b0c21fccb5d5f5bc7b7d28aae591a1"
+    },
+    "R-493-INTEGRATED": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc013-full-q-eventual-intertwining/integrated.json",
+      "sha256": "8d005bea7ee33111712f58a32046cdb254f77bc8c17d8eb1a470abcc2adbbbc7"
+    }
+  },
+  "scope": {
+    "source_law": "ABSENT_IN_SOURCE",
+    "finite_components": "fixed-Q pi_(rho_(n,R,Q)) only",
+    "common_cylinder": "grade-blind finite-support invariant cylinders from PAH-OMC-012/R-488",
+    "order": "PAH-001 declared order, with all topology statuses still DECLARED_NOT_PROVED",
+    "boundary": "R-484 hidden-diagonal defect 16/9 retained",
+    "uniformity": "R-490 C_sw=540 domination-only"
+  },
+  "runs": {
+    "primary": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc014-full-q-gibbs-cylinder-limit/primary.json",
+    "independent": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc014-full-q-gibbs-cylinder-limit/independent.json",
+    "hostile": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc014-full-q-gibbs-cylinder-limit/hostile.json",
+    "integrated": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc014-full-q-gibbs-cylinder-limit/integrated.json"
+  },
+  "lean": {
+    "status": "NOT_APPLICABLE",
+    "reason": "The packet asserts no algebraic theorem; it audits absence of a source declaration and therefore uses independent source-scope scripts instead of a Lean theorem."
+  },
+  "next_question": "Can a source-authorized, hash-pinned nonnegative normalized family w_(n,R,Q), or equivalent projective cross-Q law, be supplied with its topology and fixed PAH-001 limit order without fitting weights?",
+  "non_claims": [
+    "No global Gibbs functional or weak cylinder limit is defined by the parent scope.",
+    "No infinite-volume, continuum, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "The result does not refute each fixed-Q finite Gibbs state or the finite PAH-OMC-013 intertwining identity."
+  ],
+  "reproduction": {
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_full_q_gibbs_cylinder_limit_verify.py"
+  }
+}

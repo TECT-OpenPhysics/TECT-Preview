@@ -1,0 +1,38 @@
+{
+  "schema": "tect/pah-omc014-full-q-gibbs-limit-next-evidence-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-WEIGHT-INTAKE-MANIFEST",
+  "contract": {
+    "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+    "sha256": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502"
+  },
+  "parents": {
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PAH-OMC-014-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "sha256": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812"
+    }
+  },
+  "status": "HOLD_FOR_EVIDENCE",
+  "intake_ready": true,
+  "source_law_present": false,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "no_parent_mutation": true,
+  "scope": "Conditional acceptance specification only: no sector weight values or global Gibbs state are defined.",
+  "runs": {
+    "integrated": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-weight-law-intake/integrated.json"
+  },
+  "lean": {
+    "status": "NOT_APPLICABLE",
+    "reason": "No theorem or numerical identity is claimed; this is a source-owner input schema and conditional test specification."
+  },
+  "next_question": "Can the source owner provide the exact hashed sector law and projective/Cauchy/topology payload without changing PAH-001 or fitting weights?",
+  "non_claims": [
+    "No w_(n,R,Q), mu_(n,R) or omega is instantiated.",
+    "No infinite-volume, physical or continuum result follows."
+  ]
+}

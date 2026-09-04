@@ -1,0 +1,82 @@
+{
+  "schema": "tect/pah-omc014-full-q-gibbs-limit-next-evidence-contract/1.0",
+  "contract_id": "PAH-OMC-014-WEIGHT-INTAKE",
+  "version": "0.1.0",
+  "title": "Source-authorized full-Q sector-law intake and conditional cylinder-limit test",
+  "purpose": "Specify the exact evidence a future source owner must supply before PAH-OMC-014 can test a full-Q Gibbs cylinder state. This file is an intake contract, not a sector-weight law and not a model repair.",
+  "proposed_at": "2026-09-05",
+  "proposed_by": "TECT_RESEARCH_PROGRAM",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_NEXT_EVIDENCE_CONTRACT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": false,
+    "synthetic_fixture": false,
+    "physical_authority": false,
+    "source_law_present": false,
+    "claim_bearing": false,
+    "epistemic_layer": "L2_CONDITIONAL_MEASURE_ASSEMBLY_SPECIFICATION"
+  },
+  "parents": {
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PAH-OMC-014-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "sha256": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812"
+    }
+  },
+  "fixed_scope": {
+    "functional_and_rates": "Use exactly the PAH-001 functional and transition rates through PAH-OMC-014; no counterterm, refit, averaging or new carrier.",
+    "finite_domain": "Use exactly the PAH-OMC-012 full-Q disjoint union Omega_n^gr(R) and its neutral projection p_(n+1,n).",
+    "component_states": "Use only the normalized fixed-Q states pi_(rho_(n,R,Q)) already declared by PAH-001.",
+    "cylinder": "Use the grade-blind finite-support gauge- and anchor-automorphism-invariant cylinder algebra containing the R-488 observables.",
+    "limit_order": "Use the PAH-001 declared order LOCAL_STATE_CUTOFF, LATTICE_REFINEMENT, VOLUME_EXHAUSTION, PHASE_SELECTOR, APERTURE_COLLAPSE, optional GROUND_STATE, OBSERVATION_TIME; all topology declarations must be supplied by the future source owner."
+  },
+  "symbolic_acceptance_conditions": {
+    "sector_law": "Supply a source-owned family w_(n,R,Q) with w_(n,R,Q)>=0 and sum_(Q in Q_n) w_(n,R,Q)=1 for every finite n,R. No values are instantiated here.",
+    "finite_functional": "Define mu_(n,R)(f)=sum_Q w_(n,R,Q) sum_(omega in Omega_(rho_(n,R,Q),Q)) pi_(rho_(n,R,Q))(omega) f(Q,omega).",
+    "projective_consistency": "For every coarse cylinder f, prove sum_(Q_f) w_(n+1,R,Q_f) int f(p_(n+1,n)(x)) d pi_(n+1,R,Q_f)(x) = sum_(Q_c) w_(n,R,Q_c) int f(y) d pi_(n,R,Q_c)(y).",
+    "cauchy_error": "For every finite-support f define epsilon_(i,j)(f)=abs(mu_i(f)-mu_j(f)); provide a source-owned bound tending to zero for the fixed PAH-001 index order, including any boundary term.",
+    "positivity_and_normalization": "The supplied nonnegative normalized weights and component probabilities must imply mu_(n,R)(f)>=0 for f>=0 and mu_(n,R)(1)=1 before any limit claim.",
+    "r488_nonzero": "For each R-488 observable h require an explicit prospective lower bound or witness for liminf mu_(n,R)(h^2)>0; component nonzero witnesses alone do not suffice.",
+    "stationarity": "After the common functional exists, prove mu_(n,R)(L_(n,R)f)=0 on the declared domain and pass this identity to omega only with a uniform integrability or form bound.",
+    "boundary_accounting": "Retain the R-484 hidden-diagonal defect 16/9 as a boundary-error datum. It may be shown to separate from a fixed cylinder after its N(f), but it may not be averaged, cancelled or set to zero.",
+    "uniformity_role": "Use R-490 C_sw=540 only as domination input; it is not a sector law, a probability mass, or a Cauchy proof."
+  },
+  "required_source_owner_payload": [
+    "A versioned law file and SHA-256 hash for w_(n,R,Q) or an equivalent projective full-Q probability kernel.",
+    "A proof or exact finite verifier of nonnegativity and normalization for every declared n,R.",
+    "A declaration that the law is not selected after seeing the target cylinder values, beta, phase, external source or holdout data.",
+    "A topology and explicit epsilon_(i,j)(f) bound with its constants and limit order.",
+    "A projective consistency identity tied to the fixed PAH-OMC-012 projection.",
+    "A prospective holdout list, including at least one nonzero R-488 observable not used to define the law.",
+    "A domain and uniform-integrability condition for the stationary identity omega(Lf)=0."
+  ],
+  "forbidden_repairs": [
+    "Uniform weights, partition-function weights, observation-fitted weights or any other law chosen only for this test.",
+    "Conditional Gibbs averaging, fixed-Q substitution, charge deletion or redistribution.",
+    "Use of C_sw=540 as a sector probability or use of the R-484 16/9 defect cancellation as an error estimate.",
+    "Changing PAH-001 functional, rates, regulator path, limit order, cylinder, projection or physical interpretation."
+  ],
+  "status": {
+    "source_law": "ABSENT_IN_PARENT",
+    "intake_ready": true,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "omega_status": "NOT_DEFINED",
+    "verdict": "HOLD_FOR_EVIDENCE"
+  },
+  "non_claims": [
+    "This file does not define w_(n,R,Q), mu_(n,R) or omega.",
+    "It does not prove projective consistency, a Cauchy limit, stationarity, an infinite-volume state or a semigroup.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "single_next_question": "Can the source owner provide the exact hashed sector law and the projective/Cauchy/topology payload listed here without changing PAH-001 or fitting weights?",
+  "revisit_condition": "Activate the conditional tests only after every required source-owner payload item is present and hash-pinned.",
+  "reproduction": {
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_weight_law_intake_verify.py"
+  }
+}

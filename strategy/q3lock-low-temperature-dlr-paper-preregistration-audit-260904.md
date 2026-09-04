@@ -386,10 +386,13 @@ finite-dimensional-to-loop extension.
 #### Hilbert-valued reflection-positivity/Gaussian-domination lemma
 
 For a time grid of size `N`, regard each site as one spin in
-`R^(8N)` with inner product `epsilon sum_k x_k dot y_k`.  The single-site
-measure contains the kinetic, scalar, Q3 and (at zero source) harmonic-split
-factors.  It has all quadratic exponential moments at fixed `N`, by the
-quartic lower bound.  Across any spatial reflection plane the only
+`R^(8N)` with weighted inner product
+`<x,y>_N=epsilon sum_k x_k dot y_k`.  Equivalently use ordinary coordinates
+`s=sqrt(epsilon)*x`; under this isometry the source vector acquires the
+corresponding `sqrt(epsilon)` factor.  The single-site measure contains the
+kinetic, scalar, Q3 and (at zero source) harmonic-split factors.  It has all
+quadratic exponential moments at fixed `N`, by the quartic lower bound.  Across
+any spatial reflection plane the only
 cross-plane factor is
 
 ```text
@@ -405,7 +408,9 @@ therefore gives, for every edge shift `b`,
 `Y_N(b) <= Y_N(0)`.
 
 For the load-bearing infrared estimate it is enough to take the zero-sum
-time-constant source `j_y(tau)=t a_y u`.  Its edge field
+time-constant source `j_y(tau)=t a_y u`.  In weighted coordinates this means
+`<j,x>_N=t*epsilon*sum_(y,k) a_y*(u dot x_(y,k))`; in ordinary coordinates the
+same source has entries `t*sqrt(epsilon)*a_y*u` at every time slice.  Its edge field
 `b=(1/c)D L_sp^{-1}j` is time-constant as well, and is represented exactly
 on every time grid; no arbitrary-`L2` density theorem is needed.  More
 generally, bounded step functions `b_N` can be passed through the

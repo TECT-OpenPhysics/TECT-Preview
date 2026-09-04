@@ -77,6 +77,11 @@ def run_fresh(script: Path, output: Path) -> tuple[dict[str, Any], str]:
     return json.loads(output.read_text(encoding="utf-8")), completed.stdout.strip()
 
 
+def stable_child_stdout(stdout: str) -> str:
+    """Keep deterministic sentinel lines and omit temporary output paths."""
+    return "\n".join(line.strip() for line in stdout.splitlines() if line.strip().startswith("EXP-"))
+
+
 def jsonl_records(path: Path) -> list[dict[str, Any]]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
@@ -109,8 +114,8 @@ def build_payload() -> dict[str, Any]:
         audit.check(f"{label} next gate", payload["next_gate"] == NEXT_GATE, payload["next_gate"], NEXT_GATE, "implementations")
         audit.check(f"{label} claim nonbearing", payload["claim_bearing"] is False, payload["claim_bearing"], False, "implementations")
 
-    audit.check("fresh primary stdout", "PRIMARY PASS" in primary_stdout, primary_stdout, "PRIMARY PASS", "implementations")
-    audit.check("fresh independent stdout", "INDEPENDENT PASS" in independent_stdout, independent_stdout, "INDEPENDENT PASS", "implementations")
+    audit.check("fresh primary stdout", "PRIMARY PASS" in stable_child_stdout(primary_stdout), stable_child_stdout(primary_stdout), "PRIMARY PASS", "implementations")
+    audit.check("fresh independent stdout", "INDEPENDENT PASS" in stable_child_stdout(independent_stdout), stable_child_stdout(independent_stdout), "INDEPENDENT PASS", "implementations")
     audit.check("stored/fresh primary total", primary_stored["assertions"]["total"] == primary_fresh["assertions"]["total"], primary_stored["assertions"]["total"], primary_fresh["assertions"]["total"], "implementations")
     audit.check("stored/fresh independent total", independent_stored["assertions"]["total"] == independent_fresh["assertions"]["total"], independent_stored["assertions"]["total"], independent_fresh["assertions"]["total"], "implementations")
     audit.check("cross scope", primary_fresh["scope"] == independent_fresh["scope"] == manifest["scope"], [primary_fresh["scope"], independent_fresh["scope"]], manifest["scope"], "implementations")
