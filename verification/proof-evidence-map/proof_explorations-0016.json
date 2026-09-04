@@ -2773,6 +2773,87 @@
       "task_id": "T-054",
       "title": "PAH-OMC-014 Q=0 component push-forward is exactly obstructed",
       "verdict": "failed"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Cite KKK equation (3.24), which assumes differentiability at zero, as the direct cusp inequality.",
+          "disposition": "UPHELD AS FALSE: the cusp route uses the general endpoint-interval estimate (3.23), while (3.24) is reserved for the differentiable special case."
+        },
+        {
+          "check": "The even pressure makes the endpoint interval unusable.",
+          "disposition": "UPHELD AS FALSE: evenness gives f'_-(0)=-f'_+(0), so the interval is exactly [-a,a]."
+        },
+        {
+          "check": "The quadratic test g(z)=z^2 violates the growth hypothesis in KKK Proposition 3.9.",
+          "disposition": "UPHELD AS FALSE: a quadratic is bounded by a linear exponential and is admissible in (3.23)."
+        },
+        {
+          "check": "Apply KKK to finite-volume derivatives before taking the thermodynamic log-MGF limit.",
+          "disposition": "UPHELD AS FALSE: the proposition is applied to the limiting f and its one-sided endpoint slopes."
+        },
+        {
+          "check": "The endpoint inequality alone proves the Q3LOCK phase theorem.",
+          "disposition": "UPHELD AS FALSE: it only converts a separately proved positive volume-squared zero-mode bound into a slope bound; FKG, FSS, operator, pressure and DLR gates remain."
+        }
+      ],
+      "boundary": "T0 convex-analysis correction for the KKK pressure-to-cusp bridge; no claim-card, theorem-tier, phase, DLR, publication or PDF status change.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The source inspection shows that KKK Proposition 3.9 equation (3.23), not the differentiable special case (3.24), is the correct input for a strict cusp. The even limiting pressure supplies the symmetric endpoint interval, and the exact volume and beta normalization then yields the desired one-sided slope inequality conditionally.",
+      "evidence_refs": [
+        "strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md#2-exact-kkk-statement-being-used",
+        "strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md#3-q3lock-pressure-map",
+        "strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md#4-limit-order-and-source-checks",
+        "strategy/q3lock-literature-source-freeze-260905.md#3-3-kargol-kondratiev-kozitsky-kkk",
+        "strategy/q3lock-pressure-zero-mode-griffiths-tangent-audit-260905.md#6-kkk-griffiths-conversion-and-pressure-cusp",
+        "strategy/pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split-certificate-260804.md#section-8-zero-mode-to-cusp"
+      ],
+      "finding": "For mu_L equal to the law of X_L, M_L=V_L and f(h)=p_beta(h)-p_beta(0), KKK (3.23) with g(z)=z^2 gives limsup beta^2 Pi_L <= (8 beta D_+P_beta(0))^2 because f is even. Therefore D_+P_beta(0) >= (1/8) sqrt(limsup Pi_L), with no differentiability assumption at zero. A positive lower bound on Pi_L still has to come from the independent Q3LOCK zero-mode argument.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001536",
+      "method": [
+        "Read KKK Proposition 3.9 and separate its general endpoint-interval equation (3.23) from the differentiable special consequence (3.24).",
+        "Define the projected zero-source measures from the Q3LOCK integrated collective observable with M_L equal to the spatial volume.",
+        "Use EXP-000780 local-uniform pressure convergence and parity to identify the finite endpoint interval [-8 beta D_+P_beta(0), 8 beta D_+P_beta(0)].",
+        "Apply (3.23) to g(z)=z^2 and substitute the exact Pi_L volume-squared identity, retaining every beta and factor-eight normalization.",
+        "Record the corrected manuscript paragraph and preserve the upstream zero-mode, operator, FKG, FSS and DLR conditions as open gates."
+      ],
+      "next_action": "Obtain independent line-by-line review of the KKK endpoint-interval application, the EXP-000780 pressure limit and the Pi_L identity, then integrate the corrected paragraph into the frozen manuscript only after the upstream audits pass.",
+      "non_claims": [
+        "No positive Pi_L, strict cusp, positive-lambda phase coexistence or DLR multiplicity is certified by this correction alone.",
+        "No differentiability of the limiting pressure at zero is assumed or inferred.",
+        "No all-parameter conclusion follows when the upstream sufficient regime is not established.",
+        "No extremality, purity, clustering, real-time dynamics, KMS state, ground-state, spectral-gap, continuum, physical-vacuum or cosmological theorem is asserted.",
+        "No claim card, P2 manuscript, submission, upload, tag, release or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does KKK Proposition 3.9 support the Q3LOCK strict cusp through its general endpoint interval without incorrectly assuming differentiability at zero?",
+      "recorded_at": "2026-09-04T19:33:49Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001533",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK KKK endpoint interval supplies the non-differentiable cusp bound",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

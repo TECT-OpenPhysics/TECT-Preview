@@ -60,8 +60,8 @@ flowchart LR
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
 | Reusable result records | 328 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 380 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1535 | Route decisions: advanced 1110, failed 253, inconclusive 118, parked 54; non-tier-bearing |
-| Accepted chronological events | 916 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1536 | Route decisions: advanced 1111, failed 253, inconclusive 118, parked 54; non-tier-bearing |
+| Accepted chronological events | 917 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 62 | 12 live; 50 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
 | Proof evidence inventory | 414 lineage notes / 395 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 1974 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
@@ -23395,6 +23395,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** -
 - **Located evidence:** [`strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md`](../strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md) (2-form-setup-and-uniform-translated-coercivity); [`strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md`](../strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md) (3-polynomial-derivative-bounds); [`strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md`](../strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md) (4-differentiating-the-heat-trace-without-a-bounded-operator-shortcut); [`strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md`](../strategy/q3lock-operator-trace-translation-differentiation-audit-260905.md) (5-translation-identity-and-the-q3lock-moment-bound); [`strategy/q3lock-operator-form-domain-unbounded-commutator-audit-260905.md`](../strategy/q3lock-operator-form-domain-unbounded-commutator-audit-260905.md) (3-global-normalized-momentum-translation)
 
+<a id="exp-001536"></a>
+#### EXP-001536 — Q3LOCK KKK endpoint interval supplies the non-differentiable cusp bound
+
+- **Review metadata:** reviewed 2026-09-05; recorded 2026-09-04T19:33:49Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Does KKK Proposition 3.9 support the Q3LOCK strict cusp through its general endpoint interval without incorrectly assuming differentiability at zero?
+- **Finite checks:** (1) Read KKK Proposition 3.9 and separate its general endpoint-interval equation (3.23) from the differentiable special consequence (3.24). (2) Define the projected zero-source measures from the Q3LOCK integrated collective observable with M_L equal to the spatial volume. (3) Use EXP-000780 local-uniform pressure convergence and parity to identify the finite endpoint interval [-8 beta D_+P_beta(0), 8 beta D_+P_beta(0)]. (4) Apply (3.23) to g(z)=z^2 and substitute the exact Pi_L volume-squared identity, retaining every beta and factor-eight normalization. (5) Record the corrected manuscript paragraph and preserve the upstream zero-mode, operator, FKG, FSS and DLR conditions as open gates.
+- **Finding:** For mu_L equal to the law of X_L, M_L=V_L and f(h)=p_beta(h)-p_beta(0), KKK (3.23) with g(z)=z^2 gives limsup beta^2 Pi_L <= (8 beta D_+P_beta(0))^2 because f is even. Therefore D_+P_beta(0) >= (1/8) sqrt(limsup Pi_L), with no differentiability assumption at zero. A positive lower bound on Pi_L still has to come from the independent Q3LOCK zero-mode argument.
+- **Decision reason:** The source inspection shows that KKK Proposition 3.9 equation (3.23), not the differentiable special case (3.24), is the correct input for a strict cusp. The even limiting pressure supplies the symmetric endpoint interval, and the exact volume and beta normalization then yields the desired one-sided slope inequality conditionally.
+- **Boundary:** T0 convex-analysis correction for the KKK pressure-to-cusp bridge; no claim-card, theorem-tier, phase, DLR, publication or PDF status change.
+- **Next / revisit condition:** Obtain independent line-by-line review of the KKK endpoint-interval application, the EXP-000780 pressure limit and the Pi_L identity, then integrate the corrected paragraph into the frozen manuscript only after the upstream audits pass.
+- **Related explorations:** continues [EXP-001533](#exp-001533), continues [EXP-000782](#exp-000782)
+- **Formal authorities:** -
+- **Located evidence:** [`strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md`](../strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md) (2-exact-kkk-statement-being-used); [`strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md`](../strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md) (3-q3lock-pressure-map); [`strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md`](../strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md) (4-limit-order-and-source-checks); [`strategy/q3lock-literature-source-freeze-260905.md`](../strategy/q3lock-literature-source-freeze-260905.md) (3-3-kargol-kondratiev-kozitsky-kkk); [`strategy/q3lock-pressure-zero-mode-griffiths-tangent-audit-260905.md`](../strategy/q3lock-pressure-zero-mode-griffiths-tangent-audit-260905.md) (6-kkk-griffiths-conversion-and-pressure-cusp); [`strategy/pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split-certificate-260804.md`](../strategy/pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split-certificate-260804.md) (section-8-zero-mode-to-cusp)
+
 
 ## Claim evidence matrix
 
@@ -23449,7 +23464,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (18 notes; 1233 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE](../negative-results/registry.md#ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence), [NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING](../negative-results/registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining), +124 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +589 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [Q3LOCK finite-volume translation trace-differentiation audit] - 2026-09-05 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (18 notes; 1233 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE](../negative-results/registry.md#ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence), [NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING](../negative-results/registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining), +124 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +590 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [Q3LOCK KKK endpoint-interval correction for the cusp bridge] - 2026-09-05 | - |
 
 ### Sector D
 
@@ -24217,6 +24232,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-05 | [Q3LOCK KKK endpoint-interval correction for the cusp bridge] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK finite-volume translation trace-differentiation audit] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK pressure zero-mode Griffiths and tangent-state audit] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK P-09 FSS Poisson-shift and infrared-constant audit] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -24236,7 +24252,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-05 | [Q3LOCK spatial edge-count and onsite-factor correction recorded] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK KKK loop topology and interpolation crosswalk recorded] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK P-12 Griffiths pressure-slope and factor-eight audit recorded] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-05 | [Q3LOCK P-09 constant-source loop-limit and Duhamel audit recorded] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 
