@@ -17195,10 +17195,11 @@ mathematical theorem.
 
 | source | SHA-256 |
 |---|---|
-| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `df1e7f089268e36c8fc07dd1826b4086443dbe0d0df942e1dda88320837e944d` |
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `c034542967cf3b877714ed44afac8cf8df95f1df3ca1a19baea955c0c6119435` |
 | upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
 | upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
 | P-06/P-09 audit round 2 | `c5e62f8b7d4c0b3351063c0f9d5707e387be858f301e01d05a1b79ec0686b960` |
+| Jensen normalizer sub-obligation audit | `abc9535a004a548e3a348211320e9bc859f6be73bc181b878ee6c92ed4e635b1` |
 | primary verifier source | `d707e17db34fa2f17b09483a55d172edbcd3ff44ecb65e6a40165c01a7286fd3` |
 | independent verifier source | `11ee55c1d225645d8621ae34f2223f4c99e90024cc3c46b6cefc325f4b457e71` |
 | integrated verifier source | `c452e620933005ff12c84194b8f57f3aedb296bbc2d63358c57d9e505777b834` |
@@ -17213,7 +17214,11 @@ upstream authority records are EXP-000780, EXP-000781, and EXP-000782 in
 text and its boundaries are audited in
 `strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`, with the
 finite-grid FKG, source-uniform loop limit, topology, edge-incidence,
-Duhamel/Fourier, and Griffiths normalization crosswalks linked there. The
+Duhamel/Fourier, and Griffiths normalization crosswalks linked there.  The
+mesh-uniform normalizer sub-obligation is strengthened by the centered
+Gaussian Jensen estimate in
+`strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md`; it remains a
+T0 proof input pending independent review. The
 primary, independent, and integrated verifiers and their result JSON paths are
 listed in the companion manifest.
 

@@ -1469,6 +1469,151 @@
       "task_id": "T-054",
       "title": "R496 extends the PAH cylinder limit bridge to positivity, normalization, and zero stationarity",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "Read-only legacy-source semantic firewall for PAH-OMC-014; no mutation or import of Contents material.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The legacy references are an exact semantic mismatch and are observation-fitted, so importing them as w_(n,R,Q) would violate the PAH no-fitting and source-ownership constraints. This is an explicit exclusion of a tempting candidate, not a refutation of a future correctly typed source law.",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-014-legacy-weight-semantic-firewall-260905.md#audited-legacy-references",
+        "strategy/pa-hyp/PAH-OMC-014-legacy-weight-semantic-firewall-260905.md#exact-search-and-classification",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json#required_source_owner_payload",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json#missing_assumptions"
+      ],
+      "finding": "The maintained Contents search found only Math298 three-sector matching coefficients c_1,c_2,c_3 for U(1)_Y, SU(2)_L and SU(3)_c one-loop coupling residuals. The pinned note states that these coefficients are extracted by least-squares from an empirical mu-trajectory. The status index and changelog merely repeat that record. None defines PAH charge grades Q, fixed-Q Gibbs states pi_(rho,Q), the PAH cylinder projection, a normalized cross-Q probability kernel, or the declared n/R order.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001519",
+      "method": [
+        "Search the maintained E:/Dev/Contents tree for PAH-OMC-014, full-Q, sector-weight, w_(n,R,Q), and projective cross-Q terms.",
+        "Read the exact Math298 definition and theorem passages and hash the source note, status index and changelog.",
+        "Compare the legacy coefficient index and fitting rule against the PAH-OMC-014 typed sector-law contract.",
+        "Record the mismatch and retain the existing source-law-absent HOLD_FOR_EVIDENCE verdict."
+      ],
+      "missing_assumptions": [
+        "A source-authorized mapping from any legacy coefficients to PAH charge grades Q, with a versioned owner and hash.",
+        "A normalized nonnegative cross-Q probability law compatible with fixed-Q pi_(rho,Q) and the PAH limit order.",
+        "A projective identity and cylinder error estimate independent of empirical fitting."
+      ],
+      "next_action": "Do not import the Math298 coefficients; await or request the one correctly typed source-owner PAH law and then run the existing intake and R496 conditional checks.",
+      "non_claims": [
+        "This exclusion does not prove that no future PAH sector law exists.",
+        "No mu_(n,R), omega, projective consistency, Cauchy estimate, R-488 lower bound or stationarity result is established.",
+        "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does any legacy reference containing the phrase sector weights supply the typed PAH family w_(n,R,Q) needed by PAH-OMC-014?",
+      "recorded_at": "2026-09-04T17:08:55Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001518",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Legacy Math298 sector weights are semantically ineligible for PAH cross-Q use",
+      "verdict": "failed"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the temporal zero mode make the Gaussian diagonal covariance diverge with the mesh size?",
+          "disposition": "UPHELD AS FALSE: the positive harmonic split contributes exactly 1/(beta*a) after the spectral average; the nonzero modes are bounded by the csc-squared sum."
+        },
+        {
+          "check": "Does Jensen require the residual action to be nonnegative?",
+          "disposition": "UPHELD AS FALSE: Jensen applies to exp(-S) once the centered Gaussian polynomial expectation is finite, even when the residual quadratic coefficient is negative."
+        },
+        {
+          "check": "Does a centered reference fail in the presence of the linear source?",
+          "disposition": "UPHELD AS FALSE for the declared convention: the source remains in the residual action and has zero expectation under the centered reference; a shifted reference would require a new audit."
+        },
+        {
+          "check": "Does this bound become uniform in spatial volume?",
+          "disposition": "UPHELD AS FALSE: the constant is allowed to depend on fixed finite volume; the spatial thermodynamic limit is outside this lemma."
+        },
+        {
+          "check": "Does the Jensen bound by itself close P-06 or P-09?",
+          "disposition": "UPHELD AS FALSE: interpolation tightness, Feynman-Kac identification, transfer positivity and independent source/form-domain review remain open."
+        }
+      ],
+      "assumptions": [
+        "The finite-grid action uses a positive temporal harmonic split with m=chi/hbar^2>0 and a>0, and the source is kept in the residual polynomial action.",
+        "The residual Q3LOCK polynomial has a source-uniform quartic lower bound and finite degree-four Gaussian expectation on every fixed finite spatial volume.",
+        "The periodic temporal precision has eigenvalues 4m/epsilon sin^2(pi j/N)+a epsilon with epsilon=beta/N.",
+        "The time-grid limit is taken at fixed finite spatial volume before the spatial DLR accumulation and source-tangent limit."
+      ],
+      "boundary": "T0 Q3LOCK finite-volume normalizer sub-obligation only; no claim, result tier, phase conclusion, manuscript release or PDF status change.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A centered positive-harmonic Gaussian has a mesh-uniform diagonal covariance bound. Gaussian second and fourth moments therefore uniformly bound the residual Q3LOCK polynomial and spatial bond action. Jensen gives a normalizer lower bound exp(-beta*V*C) uniformly in the time-grid size and source on a compact interval, while the quartic lower bound gives the matching upper weight control. This removes the need to hide the denominator behind a Brownian-bridge small-ball event, but it does not discharge the separate weak-limit or theorem-hypothesis obligations.",
+      "evidence_refs": [
+        "strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md#3-uniform-diagonal-covariance-bound",
+        "strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md#4-jensen-lower-bound-for-the-normalizer",
+        "strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md#5-consequence-for-the-source-uniform-integrability-step",
+        "strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md#3-p-06-finite-grid-association-and-the-loop-limit",
+        "strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md#4-p-09-finite-fss-domination-and-duhamel-normalization"
+      ],
+      "finding": "For the declared finite-grid convention, the scalar periodic Gaussian diagonal covariance obeys g_N(0)<=1/(beta*a)+beta/(12m), using the exact csc-squared sum. Centered Gaussian moments then give a finite fixed-volume upper bound on the expected residual action, uniformly in N and |h|<=h_0. Jensen yields Z_(N,L)(h)>=exp(-beta*V*C_(L,h_0)); the quartic lower bound yields exp(-S)/Z<=exp(beta*V*(B+C)). The bound is suitable for the P-06/P-09 source-uniform integrability passage after the separate interpolation and Feynman-Kac lemmas are audited.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001520",
+      "method": [
+        "Diagonalize the periodic temporal precision and separate the zero mode from nonzero modes.",
+        "Apply the finite identity sum_(j=1)^(N-1)csc^2(pi*j/N)=(N^2-1)/3 to obtain a mesh-uniform covariance bound.",
+        "Use centered Gaussian second and fourth moments to bound the Q3 quartic, quadratic, linear and spatial bond terms in the residual action.",
+        "Apply Jensen to the exponential of the negative residual action and combine it with the source-uniform quartic lower bound.",
+        "Propagate the denominator bound through the Holder-Young source-exponential estimate while retaining P-06/P-09 and PDF deferral boundaries."
+      ],
+      "missing_assumptions": [
+        "An independent reviewer must verify that the final manuscript's harmonic split and finite-grid action exactly match the convention audited here.",
+        "The covariance normalization must be reconciled with the chosen Feynman-Kac/Trotter theorem and the source-tangent source interval.",
+        "Interpolation modulus, weighted weak convergence, finite-grid Feynman-Kac identification, FSS transfer and operator/form-domain audits remain open."
+      ],
+      "next_action": "Insert the Jensen normalizer lemma into the P-06/P-09 proof text, then obtain an independent audit of the exact split, covariance normalization and source interval before any claim-card or manuscript promotion. Keep final LaTeX/PDF work deferred until content freeze.",
+      "non_claims": [
+        "No strict infrared lower bound, pressure cusp, DLR multiplicity, extremality, purity, clustering, dynamics, KMS, ground-state, gap or continuum theorem is asserted.",
+        "No all-parameter phase result, physical vacuum, cosmological interpretation, C6, CP1, Sector A or Pre-A closure follows.",
+        "No claim card, P2 manuscript, release, submission, upload, tag or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the mesh-uniform normalizer denominator required by the Q3LOCK finite-grid FKG and FSS passages be established directly from a centered positive-harmonic Gaussian and Jensen, without an unproved small-ball lower bound?",
+      "recorded_at": "2026-09-04T17:11:57Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001516",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001515",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "revisit_condition": "Reopen if the finite-grid action moves the source into the Gaussian reference, changes the harmonic split, uses a non-centered reference, or changes the order of time-grid and spatial limits.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK Jensen normalizer bound is uniform in time-grid size at fixed finite volume",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

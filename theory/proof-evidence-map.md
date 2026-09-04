@@ -60,8 +60,8 @@ flowchart LR
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
 | Reusable result records | 328 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 379 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1518 | Route decisions: advanced 1098, failed 249, inconclusive 117, parked 54; non-tier-bearing |
-| Accepted chronological events | 904 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1520 | Route decisions: advanced 1099, failed 250, inconclusive 117, parked 54; non-tier-bearing |
+| Accepted chronological events | 905 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 62 | 12 live; 50 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
 | Proof evidence inventory | 414 lineage notes / 395 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 1970 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
@@ -23049,6 +23049,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** -
 - **Located evidence:** [`verification/lean/Tect/R496.lean`](../verification/lean/Tect/R496.lean) (limit_nonnegative); [`verification/lean/Tect/R496.lean`](../verification/lean/Tect/R496.lean) (limit_one); [`verification/lean/Tect/R496.lean`](../verification/lean/Tect/R496.lean) (limit_zero); [`strategy/pa-hyp/PAH-OMC-014-conditional-cauchy-lean-manifest.json`](../strategy/pa-hyp/PAH-OMC-014-conditional-cauchy-lean-manifest.json) (theorem_contract); [`verification/scripts/pah_omc014_conditional_cauchy_lean_verify.py`](../verification/scripts/pah_omc014_conditional_cauchy_lean_verify.py) (run); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-conditional-cauchy-lean/integrated.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-conditional-cauchy-lean/integrated.json) (verification)
 
+<a id="exp-001519"></a>
+#### EXP-001519 — Legacy Math298 sector weights are semantically ineligible for PAH cross-Q use
+
+- **Review metadata:** reviewed 2026-09-04; recorded 2026-09-04T17:08:55Z; `contemporaneous`; verdict **failed**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Does any legacy reference containing the phrase sector weights supply the typed PAH family w_(n,R,Q) needed by PAH-OMC-014?
+- **Finite checks:** (1) Search the maintained E:/Dev/Contents tree for PAH-OMC-014, full-Q, sector-weight, w_(n,R,Q), and projective cross-Q terms. (2) Read the exact Math298 definition and theorem passages and hash the source note, status index and changelog. (3) Compare the legacy coefficient index and fitting rule against the PAH-OMC-014 typed sector-law contract. (4) Record the mismatch and retain the existing source-law-absent HOLD_FOR_EVIDENCE verdict.
+- **Finding:** The maintained Contents search found only Math298 three-sector matching coefficients c_1,c_2,c_3 for U(1)_Y, SU(2)_L and SU(3)_c one-loop coupling residuals. The pinned note states that these coefficients are extracted by least-squares from an empirical mu-trajectory. The status index and changelog merely repeat that record. None defines PAH charge grades Q, fixed-Q Gibbs states pi_(rho,Q), the PAH cylinder projection, a normalized cross-Q probability kernel, or the declared n/R order.
+- **Decision reason:** The legacy references are an exact semantic mismatch and are observation-fitted, so importing them as w_(n,R,Q) would violate the PAH no-fitting and source-ownership constraints. This is an explicit exclusion of a tempting candidate, not a refutation of a future correctly typed source law.
+- **Boundary:** Read-only legacy-source semantic firewall for PAH-OMC-014; no mutation or import of Contents material.
+- **Next / revisit condition:** Do not import the Math298 coefficients; await or request the one correctly typed source-owner PAH law and then run the existing intake and R496 conditional checks.
+- **Related explorations:** continues [EXP-001518](#exp-001518)
+- **Formal authorities:** -
+- **Located evidence:** [`strategy/pa-hyp/PAH-OMC-014-legacy-weight-semantic-firewall-260905.md`](../strategy/pa-hyp/PAH-OMC-014-legacy-weight-semantic-firewall-260905.md) (audited-legacy-references); [`strategy/pa-hyp/PAH-OMC-014-legacy-weight-semantic-firewall-260905.md`](../strategy/pa-hyp/PAH-OMC-014-legacy-weight-semantic-firewall-260905.md) (exact-search-and-classification); [`strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json`](../strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json) (required_source_owner_payload); [`strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json`](../strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json) (missing_assumptions)
+
 <a id="exp-001507"></a>
 #### EXP-001507 — Q3LOCK FKG association is citation-exact via finite-grid discretization
 
@@ -23139,6 +23154,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** -
 - **Located evidence:** [`strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`](../strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md) (3-p-06-finite-grid-association-and-the-loop-limit); [`strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`](../strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md) (4-p-09-finite-fss-domination-and-duhamel-normalization); [`strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`](../strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md) (5-adversarial-decision-table); [`strategy/q3lock-p09-constant-source-loop-limit-audit-260905.md`](../strategy/q3lock-p09-constant-source-loop-limit-audit-260905.md) (4-source-uniform-integrability-the-missing-limit-hypothesis); [`strategy/q3lock-kp-theorem-number-and-form-domain-independent-audit-260904.md`](../strategy/q3lock-kp-theorem-number-and-form-domain-independent-audit-260904.md) (4-finite-volume-operator-and-loop-consequences); [`strategy/q3lock-fss-theorem-hypothesis-crosswalk-260904.md`](../strategy/q3lock-fss-theorem-hypothesis-crosswalk-260904.md) (5-hypothesis-by-hypothesis-disposition)
 
+<a id="exp-001520"></a>
+#### EXP-001520 — Q3LOCK Jensen normalizer bound is uniform in time-grid size at fixed finite volume
+
+- **Review metadata:** reviewed 2026-09-05; recorded 2026-09-04T17:11:57Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Can the mesh-uniform normalizer denominator required by the Q3LOCK finite-grid FKG and FSS passages be established directly from a centered positive-harmonic Gaussian and Jensen, without an unproved small-ball lower bound?
+- **Finite checks:** (1) Diagonalize the periodic temporal precision and separate the zero mode from nonzero modes. (2) Apply the finite identity sum_(j=1)^(N-1)csc^2(pi*j/N)=(N^2-1)/3 to obtain a mesh-uniform covariance bound. (3) Use centered Gaussian second and fourth moments to bound the Q3 quartic, quadratic, linear and spatial bond terms in the residual action. (4) Apply Jensen to the exponential of the negative residual action and combine it with the source-uniform quartic lower bound. (5) Propagate the denominator bound through the Holder-Young source-exponential estimate while retaining P-06/P-09 and PDF deferral boundaries.
+- **Finding:** For the declared finite-grid convention, the scalar periodic Gaussian diagonal covariance obeys g_N(0)<=1/(beta*a)+beta/(12m), using the exact csc-squared sum. Centered Gaussian moments then give a finite fixed-volume upper bound on the expected residual action, uniformly in N and |h|<=h_0. Jensen yields Z_(N,L)(h)>=exp(-beta*V*C_(L,h_0)); the quartic lower bound yields exp(-S)/Z<=exp(beta*V*(B+C)). The bound is suitable for the P-06/P-09 source-uniform integrability passage after the separate interpolation and Feynman-Kac lemmas are audited.
+- **Decision reason:** A centered positive-harmonic Gaussian has a mesh-uniform diagonal covariance bound. Gaussian second and fourth moments therefore uniformly bound the residual Q3LOCK polynomial and spatial bond action. Jensen gives a normalizer lower bound exp(-beta*V*C) uniformly in the time-grid size and source on a compact interval, while the quartic lower bound gives the matching upper weight control. This removes the need to hide the denominator behind a Brownian-bridge small-ball event, but it does not discharge the separate weak-limit or theorem-hypothesis obligations.
+- **Boundary:** T0 Q3LOCK finite-volume normalizer sub-obligation only; no claim, result tier, phase conclusion, manuscript release or PDF status change.
+- **Next / revisit condition:** Insert the Jensen normalizer lemma into the P-06/P-09 proof text, then obtain an independent audit of the exact split, covariance normalization and source interval before any claim-card or manuscript promotion. Keep final LaTeX/PDF work deferred until content freeze.
+- **Related explorations:** continues [EXP-001516](#exp-001516), continues [EXP-001515](#exp-001515)
+- **Formal authorities:** -
+- **Located evidence:** [`strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md`](../strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md) (3-uniform-diagonal-covariance-bound); [`strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md`](../strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md) (4-jensen-lower-bound-for-the-normalizer); [`strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md`](../strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md) (5-consequence-for-the-source-uniform-integrability-step); [`strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`](../strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md) (3-p-06-finite-grid-association-and-the-loop-limit); [`strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`](../strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md) (4-p-09-finite-fss-domination-and-duhamel-normalization)
+
 
 ## Claim evidence matrix
 
@@ -23193,7 +23223,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (18 notes; 1229 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE](../negative-results/registry.md#ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence), [NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING](../negative-results/registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining), +124 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +572 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [Q3LOCK R-497 standalone result registration with PDF deferral] - 2026-09-05 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (18 notes; 1229 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE](../negative-results/registry.md#ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence), [NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING](../negative-results/registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining), +124 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +574 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [Q3LOCK Jensen normalizer sub-obligation audit] - 2026-09-05 | - |
 
 ### Sector D
 
@@ -23960,6 +23990,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-05 | [Q3LOCK Jensen normalizer sub-obligation audit] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK R-497 standalone result registration with PDF deferral] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK P-06/P-09 independent proof-text audit round 2] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK EXP-000782 clean deterministic reproduction recorded] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -23979,7 +24010,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-04 | [Q3LOCK association passage records necessary nonnegative shifts] - 2026-09-04 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-04 | [Q3LOCK proof synthesis pins finite-volume Feynman-Kac boundary] - 2026-09-04 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-04 | [Q3LOCK finite-volume Feynman-Kac crosswalk] - 2026-09-04 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-04 | [Q3LOCK weighted weak-limit test-functional audit] - 2026-09-04 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 
