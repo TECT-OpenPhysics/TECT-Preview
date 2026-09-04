@@ -53,6 +53,13 @@
       "record_line": 1524,
       "role": "KP/FSS external source-scope and theorem firewall audit",
       "scope": "source compatibility and scalar/vector separation only; Q3LOCK local limits and external sign-off remain required"
+    },
+    {
+      "exploration_id": "EXP-001526",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1526,
+      "role": "hash-frozen KP/FSS/KKK source and bibliography audit",
+      "scope": "external source provenance and citation scope only; applicability and independent proof review remain open"
     }
   ],
   "model_scope": {
@@ -188,6 +195,11 @@
       "sha256": "f0508567fe898785677726b366c078e72141c5fa66b4605b3e68abe1ae409be0"
     },
     {
+      "path": "strategy/q3lock-literature-source-freeze-260905.md",
+      "role": "hash-frozen external KP/FSS/KKK source and bibliography audit",
+      "sha256": "0add649eb71dcc377572a65806f37a6034042e4271d54a3bad99ea1acf9beb28"
+    },
+    {
       "path": "strategy/q3lock-fkg-continuous-association-discretization-audit-260905.md",
       "role": "continuous-loop FKG discretization audit",
       "sha256": "e9557361e9b24da10acfe49d5fc57e05798029fde07641a8930bb05910265bb"
@@ -221,10 +233,10 @@
   "open_gates": [
     "independent mathematical audit of P-06 finite-grid-to-continuous-loop FKG",
     "independent mathematical audit of P-09 finite FSS-to-loop Duhamel passage",
-    "exact KP/FSS bibliography version, theorem-domain and hypothesis crosswalk",
+    "independent review of the KP/FSS theorem-domain and hypothesis crosswalk",
     "operator/form-domain and unbounded-commutator audit",
     "bounded independent claim-card and result-lineage decision",
-    "manuscript convention, bibliography, nonclaim and source-hash content freeze",
+    "manuscript convention, bibliography, nonclaim and content freeze after source-hash capture",
     "clean-snapshot primary, independent and integrated replay with byte-stable outputs",
     "release check on the frozen tree",
     "external mathematical referee review before submission"
@@ -238,5 +250,33 @@
     "No C0, N1-N5, C6, CP1, Sector A or Pre-A closure.",
     "No claim-tier promotion, P2 manuscript, submission, upload, tag, release or PDF is created by this registration."
   ],
-  "next_action": "Obtain the independent KP/FSS and operator/form-domain audit, repair any objection, then decide whether a bounded claim card and paper content freeze are warranted. Only after that decision may final LaTeX compilation, PDF rendering and page-by-page visual review begin."
+  "next_action": "Obtain the independent line-by-line P-06/P-09 and operator/form-domain audits using the hash-frozen source scope, repair any objection, then decide whether a bounded claim card and manuscript content freeze are warranted. Only after that decision may final LaTeX compilation, PDF rendering and page-by-page visual review begin.",
+  "source_freeze": {
+    "status": "HASHED_TEMPORARY_CAPTURE",
+    "captured_utc": "2026-09-04",
+    "note_path": "strategy/q3lock-literature-source-freeze-260905.md",
+    "note_sha256": "0add649eb71dcc377572a65806f37a6034042e4271d54a3bad99ea1acf9beb28",
+    "sources": [
+      {
+        "key": "KP-v1",
+        "url": "https://arxiv.org/pdf/math-ph/0609045v1",
+        "bytes": 697493,
+        "sha256": "607c534774f04481b0af8ddbb891e4caac2c0ca0fd28116c081fabe7c78bc532"
+      },
+      {
+        "key": "FSS-Caltech",
+        "url": "https://math.caltech.edu/SimonPapers/65.pdf",
+        "bytes": 1404869,
+        "sha256": "108b70f69d707c77c46bb4d4870c9df43be635394d3013be043f8f1a566178e1"
+      },
+      {
+        "key": "KKK-v1",
+        "url": "https://arxiv.org/pdf/0710.2303v1",
+        "bytes": 712731,
+        "sha256": "90f0f42b017c71d194159cdfe59f180aed06f8c928847816e7bfced57b490e1d"
+      }
+    ],
+    "fss_page_range": "79--95",
+    "fss_masthead_note": "The scanned first-page masthead displays 79--85; the body reaches printed page 95 and the DOI record gives 79--95. The discrepancy is retained in the source-freeze note."
+  }
 }
