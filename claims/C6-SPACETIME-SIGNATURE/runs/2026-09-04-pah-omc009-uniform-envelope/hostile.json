@@ -1,0 +1,153 @@
+{
+  "all_mutations_rejected": true,
+  "assertion_count": 8,
+  "assertions": [
+    {
+      "detail": "",
+      "name": "baseline-runs-pass",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline-hashes",
+      "passed": true
+    },
+    {
+      "detail": [
+        {
+          "name": "fixed_R_max",
+          "reason": "A bounded R_max list cannot discharge the contract's R_max->infinity quantifier.",
+          "rejected": true,
+          "would_pass": false
+        },
+        {
+          "name": "omit_two_incident_edges",
+          "reason": "Using degree two changes the derived coefficient and destroys the exact negative quadratic witness required by the declared G_n incidence at b.",
+          "rejected": true,
+          "would_pass": false
+        },
+        {
+          "name": "drop_covariant_terms",
+          "reason": "Dropping the unchanged PAH covariant edge energy changes the functional and removes the negative coefficient.",
+          "rejected": true,
+          "would_pass": false
+        },
+        {
+          "name": "reverse_midpoint_sign",
+          "reason": "Using +beta*DeltaF/2 is not the PAH-001 Gibbs midpoint rate and reverses the exponent growth.",
+          "rejected": true,
+          "would_pass": false
+        },
+        {
+          "name": "zero_root_weight",
+          "reason": "w(r)=0 is not the declared positive geometric weight and cannot lower-bound the interaction sum.",
+          "rejected": true,
+          "would_pass": false
+        },
+        {
+          "name": "counterterm_or_rate_rescale",
+          "reason": "Any counterterm or rate rescaling violates the preservation firewall and is not a PAH-001 test.",
+          "rejected": true,
+          "would_pass": false
+        }
+      ],
+      "name": "all-invalid-mutations-rejected",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "degree-mutation-changes-sign",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "covariant-mutation-changes-sign",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "midpoint-mutation-changes-sign",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "firewall-declared",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "no-physical-promotion",
+      "passed": true
+    }
+  ],
+  "audit_id": "PAH-OMC-009-UNIFORM-ENVELOPE-HOSTILE-001",
+  "claim_bearing": false,
+  "exploration_id": "EXP-001434",
+  "failed": 0,
+  "mutations": [
+    {
+      "name": "fixed_R_max",
+      "reason": "A bounded R_max list cannot discharge the contract's R_max->infinity quantifier.",
+      "rejected": true,
+      "would_pass": false
+    },
+    {
+      "name": "omit_two_incident_edges",
+      "reason": "Using degree two changes the derived coefficient and destroys the exact negative quadratic witness required by the declared G_n incidence at b.",
+      "rejected": true,
+      "would_pass": false
+    },
+    {
+      "name": "drop_covariant_terms",
+      "reason": "Dropping the unchanged PAH covariant edge energy changes the functional and removes the negative coefficient.",
+      "rejected": true,
+      "would_pass": false
+    },
+    {
+      "name": "reverse_midpoint_sign",
+      "reason": "Using +beta*DeltaF/2 is not the PAH-001 Gibbs midpoint rate and reverses the exponent growth.",
+      "rejected": true,
+      "would_pass": false
+    },
+    {
+      "name": "zero_root_weight",
+      "reason": "w(r)=0 is not the declared positive geometric weight and cannot lower-bound the interaction sum.",
+      "rejected": true,
+      "would_pass": false
+    },
+    {
+      "name": "counterterm_or_rate_rescale",
+      "reason": "Any counterterm or rate rescaling violates the preservation firewall and is not a PAH-001 test.",
+      "rejected": true,
+      "would_pass": false
+    }
+  ],
+  "mutations_attempted": 6,
+  "mutations_rejected": 6,
+  "non_claims": [
+    "PAH-OMC-009 is a researcher-owned contract, not an external source or physical authority.",
+    "The negative result retires only the declared cutoff-independent root-rate envelope target on the stated PAH-001 path; it does not falsify PAH-001, R-488, all possible restricted norms, or every future owner contract.",
+    "No eventual common-core generator theorem, infinite-volume automorphism, ordered limit or continuum result is claimed.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "passed": 8,
+  "physical_progress": false,
+  "reproduction": {
+    "command": "python codes/foundations/pah_omc009_uniform_envelope_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc009-uniform-envelope/hostile.json"
+  },
+  "result_id": "R-489",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc009-uniform-envelope-hostile/1.0",
+  "scientific_transition": false,
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+    "PAH-OMC-009": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de",
+    "PAH-OMC-009-MANIFEST": "3992d7228cfeec5f229d701657673548b18576c31572546050ad06405838d555"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "verdict": "NEGATIVE_RESULT_RMAX_UNIFORM_ENVELOPE",
+  "verification": "PASS"
+}

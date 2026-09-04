@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-25-a13-k-smoothing-output-orthogonality",
+      "branch": "A13 derivation of global nonlinear output-increment orthogonality from the canonical `K_k` input smoothing",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "consequence": "The `K_k` coordinate ledger genuinely spends the input square function once, but R-082 Lemma 6.1 cannot be invoked by declaring its nonlinear outputs orthogonal. The fixture has no martingale projection and does not place the second input in the relative-FAR range, so it does not exclude a far-only, correlated, or signed martingale/paracomposition estimate and is not a counterexample to controlled CFAR.",
+        "evidence": "On a scalar doublet ray write `F_1(x)=x^3/(1+x^2)`, `a_1=cos(x)/4`, and `a_2=cos(3x)/5`. For `Delta_1=F_1(a_1)` and `Delta_2=F_1(a_1+a_2)-F_1(a_1)`, two independent periodic quadratures give the harmonic-3 cosine coefficients `0.003619922102104775...` and `0.020785528647497703...`. Their exact-harmonic mean cross product is `0.00003762099727750446...>0`. This is the projection onto `p=+-3`, not the relative-FAR cutoff `Pi_3`. The exact identity `F_epsilon(sqrt(epsilon)y)=sqrt(epsilon)F_1(y)` moves the fixture to the pinned `epsilon_rho=10^(-12)` production floor, where the cross remains positive and equals `3.762099727750446...e-17`. The leading cubic coefficients independently give `c_3(Delta_1)=A^3/4` and `c_3(Delta_2)=(3/2)A^2B+(3/4)B^3`.",
+        "failure_mode": "Infer the pairwise orthogonality of nonlinear production output increments required by the sufficient R-082 causal Carleson lemma from the spatial shell orthogonality and `2^(-2k)` smoothing of the control map `a_k=K_kh_k`."
+      },
+      "detail_title": "input smoothing does not manufacture global nonlinear output orthogonality",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "two successive production scalar-ray increments have a strictly positive exact-harmonic cross product, including after exact rescaling to the pinned density floor; this refutes only the raw-output pairwise-orthogonality premise, not far-only or correlated martingale estimates",
+      "tag": "NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY"
+    },
+    {
       "anchor": "ng-2026-07-25-a13-global-unprojected-cartan-coefficient-ledger",
       "branch": "R-089 (3.12), the cutoff-uniform global unprojected Sobolev coefficient ledger",
       "claim_ref_basis": {

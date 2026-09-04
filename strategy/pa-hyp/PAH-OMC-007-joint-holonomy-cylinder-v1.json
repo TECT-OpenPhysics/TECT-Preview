@@ -1,0 +1,147 @@
+{
+  "schema": "tect/pre-a-owner-morphism-joint-holonomy-cylinder-contract/1.0",
+  "contract_id": "PAH-OMC-007",
+  "version": "0.1.0",
+  "title": "Nonzero-charge matter and closed-face holonomy joint-cylinder compatibility on the stable strip",
+  "proposed_at": "2026-09-04",
+  "proposed_by": "TECT research programme",
+  "provenance": {
+    "class": "RESEARCHER_HYPOTHESIS_GEOMETRIC_SUCCESSOR_CONTRACT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "physical_authority": false,
+    "epistemic_layer": "L2_MODEL_SPECIFICATION_AND_FINITE_VERIFICATION"
+  },
+  "parents": {
+    "functional_source": {
+      "packet_id": "PAH-001",
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "geometric_source": {
+      "contract_id": "PAH-OMC-004",
+      "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+    },
+    "predecessors": [
+      {
+        "contract_id": "PAH-OMC-005",
+        "path": "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+        "sha256": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5"
+      },
+      {
+        "contract_id": "PAH-OMC-006",
+        "path": "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json",
+        "sha256": "cb1c84e320d2bd24b430ec2b8f19ef9467e3564e1f2a3cd820487730946ddad5"
+      }
+    ],
+    "composition_rule": "This is a separately versioned researcher-owned extension. It does not edit, supersede or retroactively complete PAH-001 or any predecessor contract."
+  },
+  "status": {
+    "contract": "CANDIDATE_FINITE_NONZERO_Q_JOINT_CYLINDER",
+    "geometric_refinement": "GENUINE_FACE_EDGE_INCIDENCE_STRIP",
+    "local_generator_compatibility": "EXACT_ON_MATTER_HOLONOMY_JOINT_CYLINDER_G2_TO_G3",
+    "uniform_limit": "NOT_ADMITTED",
+    "observable_chain": "NOT_ADMITTED"
+  },
+  "preservation_firewall": {
+    "parent_functional_unchanged": true,
+    "parent_move_families_unchanged": true,
+    "parent_mobility_unchanged": true,
+    "parent_projection_unchanged": true,
+    "parent_regulator_rule_unchanged": true,
+    "parent_limit_order_unchanged": true,
+    "no_new_term": true,
+    "no_counterterm": true,
+    "no_rate_fitting": true,
+    "no_conditional_gibbs_average": true,
+    "no_q3lock_import": true,
+    "no_physical_identification": true,
+    "no_pure_link_cylinder_promotion": true
+  },
+  "exact_scope": {
+    "carrier_family": "The PAH-OMC-004 two-row strip G_n. The first two squares are split in G_2; G_3 splits the next frontier square, so the retained anchor closure and the first split triangular face are unchanged for this comparison.",
+    "anchors": "a=(0,0) is the retained matter anchor and O,C are the strip anchors. The audited anchor-preserving automorphism group is the identity.",
+    "comparison": "The exact finite comparison is the neutral coordinate inclusion J_(2,3): G_2 -> G_3. Level 1 is retained only as the G_1 -> G_2 matter-transfer boundary control from PAH-OMC-006.",
+    "fixture": {
+      "K": 2,
+      "M_s": 1,
+      "M_psi": 1,
+      "Q": 1,
+      "R_max": "1",
+      "epsilon": "1/2",
+      "beta": "1",
+      "nu": "1",
+      "m2": "0",
+      "lambda_4": "1",
+      "eta_6": "1",
+      "g": "1",
+      "lambda_s": "1",
+      "kappa_s": "1",
+      "kappa_D": "1",
+      "kappa_g": "1",
+      "theta": "0"
+    },
+    "state_domain": "The audited finite states have one radial occupation quantum at exactly one of the four anchor-patch vertices a,b,c,d, zero radial occupation on remote vertices, all four patch phases in Z_2, all five patch links in Z_2, and all patch aperture bits. Thus Q=1 is nonzero and the state count is explicit.",
+    "functional": "Evaluate exactly the displayed PAH-001 F_rho: aperture onsite and matter polynomial, aperture edge stiffness, covariant matter edge term, and plaquette Wilson term. No term or coupling is added.",
+    "joint_observable": "H_0 is the Z_2 holonomy of the first split triangle with oriented boundary h00, v1, and d0^{-1}; in Z_2 its character is sign(u_h00) sign(u_v1) sign(u_d0). The cylinder basis is every bounded function of (ell_a,H_0), with ell_a the anchor matter density.",
+    "moves": "Use the unchanged PAH directed roots. Radial-transfer roots on h00,v0,d0 can change ell_a; link roots LK(h00,sigma), LK(v1,sigma), LK(d0,sigma) can change H_0; all phase, aperture, remote radial and non-triangle link roots have zero increment on the joint cylinder.",
+    "normalization": "Finite counting-measure Gibbs midpoint rates exactly as in PAH-001; no averaging over dropped variables is used. Radial and link roots carry the unchanged endpoint mobility and exact midpoint exponent.",
+    "limit": "No cutoff, volume, lattice, continuum, phase, beta or observation limit is taken. n is only a finite geometric refinement label."
+  },
+  "maps": {
+    "geometric_inclusion": "J_(2,3) retains every G_2 vertex, edge, aperture, phase, radial occupation and link coordinate by geometric ID; new G_3 coordinates are appended with neutral aperture, zero radial occupation and neutral Z_2 labels. Since the old state has Q=1, J preserves Q.",
+    "local_restriction": "The joint interaction closure is the union of the matter closure for h00,v0,d0 and the closed-face link closure for h00,v1,d0. It contains the four patch vertices, the five patch edges and the two split faces, and is identical in G_2 and G_3.",
+    "observable_lift": "I_(2,3)f is the same pointwise coordinate cylinder f(ell_a,H_0) on both finite state spaces; it is not a conditional expectation and is defined on every fine state.",
+    "root_correspondence": "Each retained radial or triangular link root has the same admissibility, exact energy increment, endpoint mobility, midpoint exponent and joint-observable increment in G_2 and G_3. The K=2 sigma=+1 and sigma=-1 link channels remain distinct counted roots even when their state maps coincide."
+  },
+  "gauge_and_anchor_invariance": {
+    "gauge_action": "g in Z_2^V shifts phase n_v by g_v and carried link exponent u_(v,w) by g_w-g_v; ell and aperture are fixed.",
+    "closed_face_cancellation": "The oriented triangle incidence is (g_b-g_a)+(g_d-g_b)-(g_d-g_a)=0, so H_0 is gauge invariant. The matter coordinate ell_a is gauge neutral. A pure link coordinate such as u_d0 is not admitted as a cylinder.",
+    "anchor_action": "Only the identity automorphism is used, so the displayed cylinder is anchor preserving. No nontrivial symmetry average is inserted."
+  },
+  "compatibility_proposition": {
+    "statement": "For every audited Q=1 patch state, the complete retained root list for the joint cylinder coordinates (ell_a,H_0) is identical under the neutral inclusion J_(2,3): radial roots incident to a and both sigma channels for each of h00,v1,d0 link roots have identical exact tuples (state, family, cell, direction, DeltaF, mobility^2, Delta ell_a, Delta H_0, midpoint exponent). All other PAH roots have zero increment on every bounded function of (ell_a,H_0).",
+    "proof_obligations": [
+      "The radial energy difference is the exact sum of changed endpoint onsite and incident covariant terms; its support is unchanged between G_2 and G_3.",
+      "A triangular link root changes only its covariant edge term and Wilson face terms containing that edge; the first split triangle incidence is unchanged between G_2 and G_3.",
+      "The closed-face incidence cancellation proves H_0 gauge invariance, while ell_a is neutral and the anchor automorphism group is the identity.",
+      "The neutral inclusion preserves Q=1, every retained patch coordinate and every retained directed root channel, including the two K=2 link labels.",
+      "The G_1 -> G_2 matter-transfer control retains the known nonzero boundary defect and is not included in the stable proposition."
+    ],
+    "cumulative_consequence": "The finite joint cylinder has zero geometric generator defect for the G_2 -> G_3 comparison. No supremum over all cylinders, volumes, regulators, phases or limit parameters is asserted."
+  },
+  "finite_acceptance": {
+    "primary": "Enumerate every fixture state and every retained radial/link root, evaluate exact local differences of the full displayed PAH energy, cross-check the local formula against full energy on bounded samples, and compare rootwise digests between G_2 and G_3.",
+    "independent": "Rebuild the carrier, gauge-invariant holonomy, matter values, all PAH energy terms, local root differences and midpoint rows from direct formulas without importing the primary implementation.",
+    "hostile": "Reject a pure non-gauge-invariant link cylinder, an open-face holonomy, omitted Wilson/covariant terms, collapsed K=2 channels, premature G_1 -> G_2 extension, fitted rates, conditional averaging and physical promotion.",
+    "lean": "Cross-check charge, state count, closed-face gauge cancellation, K=2 channel multiplicity, root identity, boundary defect and the non-promotion firewall. Lean is a finite algebraic cross-check, not a global theorem formalization."
+  },
+  "known_boundaries": {
+    "boundary_control": "The G_1 -> G_2 h00 matter-transfer control remains Delta F 0 versus -1; the first split boundary is not promoted.",
+    "local_only": "The proposition covers the joint cylinder (ell_a,H_0) on one Q=1 finite strip fixture. It does not cover arbitrary matter, link, plaquette or radial cylinders, or a global common algebra.",
+    "fixture_only": "Q=1, K=2, M_s=M_psi=1 and the displayed unit couplings are a finite researcher fixture. No parameter-uniform theorem is claimed.",
+    "no_global_uniformity": "Exact rootwise equality at G_2 -> G_3 does not establish a regulator-, volume- or source-uniform interaction estimate, an infinite-volume generator, or an ordered limit.",
+    "no_physics": "The Markov time and Q=1 sector are not quantum time, a physical sector, a vacuum, Pre-A, spacetime, gravity, QFT, Yang--Mills, a continuum or a mass gap."
+  },
+  "falsifiers": [
+    "Any parent hash or parent byte changes.",
+    "A G_2 -> G_3 retained root tuple differs for an audited patch state or the local/full energy cross-check fails.",
+    "The triangle incidence does not cancel under the declared gauge action, or an open/pure link coordinate is silently used as gauge invariant.",
+    "The exact PAH energy formula, orientations, mobility or rate convention is changed, weighted, counterterm-repaired or post-hoc fitted.",
+    "The neutral inclusion changes Q or a retained patch coordinate, or either K=2 link channel is silently removed.",
+    "The independent lane fails to reproduce the rootwise digest or the G_1 boundary control is falsely reported as stable.",
+    "The result is promoted to a global uniform limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE theorem."
+  ],
+  "non_claims": [
+    "This contract is a researcher proposal, not an external source or physical authority.",
+    "The finite Q=1 joint-cylinder result is not retroactive evidence that PAH-001 already contained this refinement map.",
+    "A closed-face holonomy cylinder is admitted only in its gauge-invariant combination; no pure link cylinder is promoted.",
+    "The G_2 -> G_3 equality is a finite local statement, not a global common-core or uniform theorem.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "No static fit selects the dynamics, and Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "single_next_question": "Can a source-authorized finite common-core packet containing several independent face holonomies and multiple nonzero-Q matter anchors be transported with one uniform interaction envelope beyond this one closed face?",
+  "revisit_condition": "Reopen the broader uniform lane only after a separately hashed owner contract supplies multi-cylinder root transport, nonzero-Q state transport beyond this fixture, a common invariant core and a regulator/volume-uniform estimate in the declared limit order."
+}

@@ -1,6 +1,26 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence",
+      "branch": "require a cutoff-independent PAH-001 root-rate interaction envelope along R_max->infinity",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260904-r-489-pah-omc-009-uniform-interaction-envelope"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "consequence": "Retire only the PAH-OMC-009 unweighted/cutoff-independent root-rate envelope target on this declared path. The result is not a PAH-001 no-go, does not decide eventual generator intertwining, and does not reject every owner-authorized state-weighted or energy-domain norm. Stage 2 remains `HOLD_FOR_EVIDENCE`; the active T-054 gate is unchanged. No source-owned production dynamics, common-core limit, ordered limit, physical Pre-A, spacetime, event-horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows. Markov time remains external stochastic time.",
+        "evidence": "PAH-001 SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`, PAH-OMC-004 SHA-256 `38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c`, PAH-OMC-008 SHA-256 `b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a`, and PAH-OMC-009 SHA-256 `1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de` are pinned. For every `n>=2`, the vertex `b=(1,0)` has degree four. The admissible `Q=1` state with one radial quantum at `b`, `s_b=1/2`, all other apertures one, and neutral phases/links is acted on by `AP(b,+1)`. Direct term-by-term arithmetic gives ```text Delta F=-(7/24)R^2-5/8, m^2=1/2, c=2^(-1/2) exp(7R^2/48+5/16). ``` The root support contains `b` and has declared positive weight six on the witness strip, so the requested interaction sum is bounded below by a quantity diverging with `R`. Primary 16/16, non-importing independent 13/13, hostile review 6/6 mutations rejected, integrated 21/21, and Lean R489 all pass. Evidence: EXP-001434 and R-489.",
+        "failure_mode": "Require one finite root-weighted interaction envelope for the unchanged PAH-001 midpoint rates uniformly over the cofinal PAH-OMC-004 strip family and the declared `LOCAL_STATE_CUTOFF` path `R_max=R -> infinity`."
+      },
+      "detail_title": "the declared cutoff-independent root-rate envelope diverges",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "the exact cofinal-strip aperture root at b=(1,0) has Delta F=-(7/24)R^2-5/8 and midpoint exponent 7R^2/48+5/16, so any positive support weight diverges; this retires only the declared envelope target and leaves generator intertwining and all physical/continuum claims open",
+      "tag": "NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE"
+    },
+    {
       "anchor": "ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining",
       "branch": "use the natural forgetful pullback after adding a freely varying adjacent fine vertex as an exact PAH generator refinement morphism",
       "claim_ref_basis": {
@@ -2025,27 +2045,6 @@
       "kind": "no_go",
       "summary": "the principal Floquet Hamiltonian is bounded, so its Gibbs exponential is bounded below by a positive multiple of the identity and has infinite trace on `L2(R^(8M))`; other logarithm branches are nonunique. Retain independently selected invariant states or a separately proved unbounded/local trace-class generator",
       "tag": "NG-2026-08-04-PRE-A-CP1-CL8-PRINCIPAL-FLOQUET-GIBBS-REFERENCE"
-    },
-    {
-      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-pressure-value-only-phase-classification",
-      "branch": "infer phase uniqueness, coexistence, spontaneous order, or selected states from the scalar pressure value or boundary-independent pressure alone",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-exp-000772-closes-constant-source-q3-pressure-a"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "artifacts": "`strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split.py`; `codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split_independent.py`.",
-        "consequence": "EXP-000779 may define the directional diagnostic `m_v=partial_+ p(hv)|_(h=0)`, but proves no sign for it and no Q3 phase or state theorem. A positive result needs an explicit parameter regime and order parameter, ultraviolet-uniform contour or correlation estimates, source-state compactness, and proof that the `h->0+` and `h->0-` tangent states are distinct. This no-go does not refute a Q3 phase transition and has no physical-empty-space, C6, CP1, Sector-A or Pre-A consequence.",
-        "evidence": "For every `alpha` and `m>0`, `alpha+m log cosh(h)` and `alpha+m|h|` are finite, convex and even and have the same value at zero, but only the latter has a cusp there. More strongly, each ```text f_n(h)=log cosh(nh)/n ``` is analytic, convex and even with `f_n'(0)=0`, while `0<=|h|-f_n(h)<=log(2)/n`; thus the sequence converges locally uniformly to the cusped function `|h|`. Finite-volume zero response and common pressure therefore do not determine the infinite-volume source tangent. Established scalar `phi4_2` models also combine thermodynamic pressure with nontrivial phase structure, so pressure boundary independence is not a uniqueness theorem.",
-        "failure_mode": "Infer phase uniqueness, phase coexistence, spontaneous order, or a selected plus/minus state solely from existence and boundary independence of the constant-source pressure, or from its single value `p(0)=alpha_infinity`."
-      },
-      "detail_title": "a pressure value or common pressure does not classify the phase",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "the smooth pressure control `alpha+m log cosh(h)` and the cusped control `alpha+m|h|` have the same value at zero, while analytic even finite-volume controls `log cosh(nh)/n` converge locally uniformly to `|h|` with zero derivative at the origin. Retain source tangents, state compactness and correlation/order estimates",
-      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION"
     }
   ],
   "kind": "negative_records",

@@ -5,12 +5,13 @@
 
 Authorities: `negative-results/registry.md`.
 
-**378 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 307 · retraction: 5
+**379 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 308 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE`](registry.md#ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence) | no_go | require a cutoff-independent PAH-001 root-rate interaction envelope along R_max->infinity |
 | [`NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining) | no_go | use the natural forgetful pullback after adding a freely varying adjacent fine vertex as an exact PAH generator refinement morphism |
 | [`NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining) | no_go | use positive scalar beta or kappa_s transport to repair the natural free-vertex forgetful pullback |
 | [`NG-2026-09-02-PAH-OMC-002-CONDITIONAL-GIBBS-PROJECTED-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-002-conditional-gibbs-projected-intertwining) | no_go | use the exact PAH-OMC-002 Gibbs fibre average as a projected generator intertwiner on the fine-only-vertex map |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonconstant-cb-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonconstant bounded continuous configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence) | no_go | infer convergent all-order SW from a Gevrey-two majorant and optimally scaled asymptotic remainder |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-WITNESS-SEPARATED-RITZ-PULLBACKS-AUTOMATIC-LOCALLY-NORMAL-LIMITS`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-fixed-witness-separated-ritz-pullbacks-automatic-locally-normal-limits) | no_go | infer locally normal full-oscillator limits from fixed-witness separated Ritz-corner pullback states alone |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-fixed-positive-time-energy-dressed-trace-control-automatic-dffr-contour-entry) | no_go | infer DFFR contour entry from trace-class control at each fixed positive imaginary time |
 
 Search without loading the full registry:
 

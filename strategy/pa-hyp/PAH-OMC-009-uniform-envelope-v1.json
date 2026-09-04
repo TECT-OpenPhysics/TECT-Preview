@@ -1,0 +1,124 @@
+{
+  "schema": "tect/pre-a-owner-morphism-uniform-envelope-contract/1.0",
+  "contract_id": "PAH-OMC-009",
+  "version": "0.1.0",
+  "title": "Cofinal strip common-cylinder interaction-envelope test",
+  "proposed_at": "2026-09-04",
+  "proposed_by": "TECT research programme",
+  "provenance": {
+    "class": "RESEARCHER_HYPOTHESIS_UNIFORM_ENVELOPE_TEST",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "physical_authority": false,
+    "epistemic_layer": "L2_MODEL_SPECIFICATION_AND_EXACT_NEGATIVE_TEST"
+  },
+  "parents": {
+    "functional_source": {
+      "packet_id": "PAH-001",
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "geometric_source": {
+      "contract_id": "PAH-OMC-004",
+      "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+    },
+    "starting_result": {
+      "result_id": "R-488",
+      "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+    },
+    "composition_rule": "This is a separately versioned researcher-owned envelope test. It does not edit, supersede or retroactively complete PAH-001 or PAH-OMC-008."
+  },
+  "preservation_firewall": {
+    "parent_functional_unchanged": true,
+    "parent_move_families_unchanged": true,
+    "parent_mobility_unchanged": true,
+    "parent_projection_unchanged": true,
+    "parent_regulator_rule_unchanged": true,
+    "parent_limit_order_unchanged": true,
+    "no_new_hamiltonian": true,
+    "no_counterterm": true,
+    "no_averaging": true,
+    "no_rate_fitting": true,
+    "no_q3lock_import": true,
+    "no_physical_identification": true
+  },
+  "status": {
+    "family_definition": "EXPLICIT_COFINAL_STRIP",
+    "common_cylinder": "EXPLICIT_CANDIDATE",
+    "uniform_interaction_envelope": "NEGATIVE_RESULT_RMAX_DIVERGENCE",
+    "eventual_generator_intertwining": "NOT_DECIDED_AFTER_ENVELOPE_FAILURE",
+    "overall": "REJECTED_FOR_DECLARED_UNIFORM_TARGET"
+  },
+  "exact_scope": {
+    "carrier_family": "For every integer n>=2, G_n has V_n={(i,j):0<=i<=n+1, j in {0,1}}, horizontal edges h_i^j=((i,j),(i+1,j)) for 0<=i<=n, vertical edges v_i=((i,0),(i,1)) for 0<=i<=n+1, diagonals d_i=((i,0),(i+1,1)) for 0<=i<n, and the PAH-OMC-004 split-triangle faces for i<n followed by the unsplit frontier square q_n.",
+    "anchors": "O={(0,0)} and C={(0,1)} as in PAH-OMC-004. The anchored oriented strip has the identity anchor-preserving automorphism for the declared family.",
+    "inclusions": "J_(n,n+1) retains every old vertex, oriented edge, aperture, phase, radial occupation and link by geometric ID. New column coordinates and the newly split frontier diagonal receive the neutral extension values prescribed by PAH-OMC-004. Fixed-Q is preserved.",
+    "regulator_path": {
+      "K": 2,
+      "M_s": 1,
+      "M_psi": 1,
+      "Q": 1,
+      "epsilon": "1/2",
+      "beta": "1",
+      "nu": "1",
+      "m2": "0",
+      "lambda_4": "1",
+      "eta_6": "1",
+      "g": "1",
+      "lambda_s": "1",
+      "kappa_s": "1",
+      "kappa_D": "1",
+      "kappa_g": "1",
+      "theta": "0",
+      "R_max": "R in positive integers, with R tending to infinity; this is the R_max component of PAH-001 LOCAL_STATE_CUTOFF"
+    },
+    "functional": "Use exactly PAH-001 F_rho=sum_v[lambda_s(s_v-1)^2/2+m2|psi_v|^2/2+lambda_4|psi_v|^4/4+eta_6|psi_v|^6/6+g s_v^2|psi_v|^2/2]+kappa_s sum_e(s_v-s_w)^2/2+kappa_D sum_e J_e(s)|psi_w-U_e psi_v|^2/2+kappa_g sum_p J_p(s)(1-Re U_p), with J_e(s)=2/(s_v+s_w) and no added term.",
+    "common_cylinder_algebra": "A_cyl is the algebraic union over n of bounded functions of finitely many integer charge coordinates ell_v and finitely many closed-face holonomy characters H_p=Re(U_p), lifted by the inclusions J_(n,n+1), and invariant under the declared gauge action and anchor-preserving automorphisms. The R-488 generators (ell_a,ell_d,H_0,H_1) are retained as the initial subalgebra; nonzero-charge ell_b at b=(1,0) is included in the common family.",
+    "common_norm": "For a lifted cylinder f, ||f||_infinity is the supremum over all sufficiently large G_n and all declared finite configurations. The root-weighted interaction seminorm is ||f||_(cyl,w)=sup_(n,omega) sum_{r:Delta_r f_n(omega)!=0} w(r)|f_n(r omega)-f_n(omega)|.",
+    "root_support_rule": "For each PAH root r, supp(r) is the maximal vertex closure of every PAH energy term that can change under r: phase roots use the incident vertex star, aperture roots use the closed two-cell star of the vertex, radial-transfer roots use the closed two-cell star of both endpoints, and link roots use the closed two-cell star of the link and its incident faces. This support is geometric and state-independent.",
+    "root_weight": "w(r)=1+|supp(r)|, a positive integer derived only from the geometric support cardinality; it changes no PAH rate.",
+    "rate_coefficients": "For fixed rho_R and G_n, c_r^(n)(omega)=m_r(omega) exp[-beta(F_rho(r omega)-F_rho(omega))/2]. The envelope target is sup_(R>=1) sup_(n>=2) sup_(x in V_n) sum_(r:x in supp(r)) sup_(omega admissible)c_r^(n)(omega) w(r) < infinity.",
+    "eventual_intertwining_target": "For every f in A_cyl, with I_(n,n+1) the pointwise coordinate lift, eventually L_(n+1) I_(n,n+1)f=I_(n,n+1)L_n f. This target is evaluated only after the envelope question and is not repaired by averaging or rate changes."
+  },
+  "exact_divergent_sequence": {
+    "vertex": "b=(1,0), which has degree 4 in every G_n for n>=2.",
+    "state": "omega_R^(n) has ell_b=1, ell_v=0 for v!=b, aperture level j_b=0 (s_b=1/2), aperture level j_v=1 (s_v=1) for v!=b, all phases zero and all oriented link exponents zero. It is a Q=1 state for every positive integer R.",
+    "root": "r_b=AP(b,+1), changing j_b from 0 to 1 and leaving all other coordinates fixed.",
+    "affected_terms": "The changed terms are the b onsite aperture/matter coupling, the four incident covariant edge terms, the b onsite aperture stiffness, and the four incident aperture edge-stiffness terms. All quartic/sextic matter terms cancel because |psi_b| is unchanged, and all Wilson face terms vanish because every link holonomy is neutral.",
+    "derived_increment": "Delta F_n(omega_R^(n),r_b)=-(7/24)R^2-5/8 for every n>=2.",
+    "mobility": "m_r(omega_R^(n))^2=s_b(before)s_b(after)=1/2, from the unchanged nu=1 endpoint-product rule.",
+    "midpoint_rate": "c_r(omega_R^(n))=2^(-1/2) exp(7R^2/48+5/16).",
+    "weighted_lower_bound": "The root contains b and w(r_b)>=1, so the requested interaction sum is at least 2^(-1/2) exp(7R^2/48+5/16), which diverges as R tends to infinity.",
+    "meaning": "This is an exact R_max regulator divergence on one fixed local root repeated inside the cofinal family; it is not a new finite fixture and does not depend on a volume count."
+  },
+  "acceptance": {
+    "primary": "Derive the strip incidence and the full PAH energy increment for omega_R^(n) symbolically from exact rational arithmetic, then verify the quadratic rate-exponent coefficient is positive and the weighted lower bound grows along R=1,2,4,8.",
+    "independent": "Rebuild the degree and increment from the onsite, covariant-edge and aperture-stiffness contributions without importing the primary implementation; verify the same exact coefficient and monotone exponent.",
+    "hostile": "Reject fixed-R_max truncation, degree omission, dropped covariant energy, reversed midpoint sign, zero root weight, and any counterterm/rate-rescaling rescue as invalid variants of the target.",
+    "formal": "Lean checks the exact Delta F polynomial, midpoint exponent, positive quadratic coefficient and strict one-step growth for nonnegative R. It is a finite algebraic cross-check of the divergence certificate, not a continuum theorem."
+  },
+  "known_boundaries": {
+    "negative_scope": "The exact PAH-001 midpoint-rate envelope requested uniformly over its declared R_max cutoff cannot be finite on this family. The result does not state that every possible restricted state-weighted norm fails.",
+    "intertwining_scope": "Because the envelope conjunct fails, eventual generator intertwining is not promoted or claimed. No new boundary calculation is used to rescue it.",
+    "parameter_scope": "The divergence is proved on the admissible unit-coupling path with K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1 and R_max unbounded. It is therefore a counterexample to a bound independent of all PAH-001 local-state cutoffs, not a claim about other parameter restrictions.",
+    "no_physics": "Markov time remains external stochastic time. No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE conclusion follows."
+  },
+  "falsifiers": [
+    "PAH-001 or PAH-OMC-004 parent bytes differ from the pinned hashes.",
+    "The selected state is not admissible at Q=1 or b does not have degree 4 for every n>=2.",
+    "A full exact PAH energy recomputation disagrees with Delta F=-(7/24)R^2-5/8.",
+    "The unchanged PAH mobility or midpoint exponent does not give the displayed rate.",
+    "An alleged finite envelope uses a bounded R_max path, a zero root weight, a counterterm, a rate rescaling or an averaging map; such a construction is outside this contract."
+  ],
+  "non_claims": [
+    "PAH-OMC-009 is a researcher-owned contract, not an external source or physical authority.",
+    "The negative result retires only the declared cutoff-independent root-rate envelope target on the stated PAH-001 path; it does not falsify PAH-001, R-488, all possible restricted norms, or every future owner contract.",
+    "No eventual common-core generator theorem, infinite-volume automorphism, ordered limit or continuum result is claimed.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "single_next_question": "Can an owner-authorized state-weighted or energy-domain interaction norm, with its own nonzero weight and regulator scope, be proved without changing PAH-001 rates after the unweighted R_max envelope is rejected?",
+  "revisit_condition": "Reopen only after a separately hashed norm contract states which PAH-001 cutoff parameters are held fixed, supplies a positive state/root weight, and proves a common-core estimate without counterterms, averaging or fitted rates."
+}

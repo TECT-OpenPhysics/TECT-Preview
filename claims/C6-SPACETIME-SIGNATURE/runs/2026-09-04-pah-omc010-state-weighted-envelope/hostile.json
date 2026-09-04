@@ -1,0 +1,195 @@
+{
+  "all_mutations_rejected": true,
+  "assertion_count": 4,
+  "assertions": [
+    {
+      "detail": "",
+      "name": "baseline-runs-pass",
+      "passed": true
+    },
+    {
+      "detail": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+        "PAH-OMC-009": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de",
+        "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3"
+      },
+      "name": "baseline-hashes",
+      "passed": true
+    },
+    {
+      "detail": [
+        {
+          "name": "unnormalized_weight",
+          "reason": "The contract requires W=Z^-1 exp(-F); an unnormalized density is not the declared L2(W) state weight.",
+          "rejected": true,
+          "rejection_test": true,
+          "would_be_accepted": false
+        },
+        {
+          "name": "sign_reversed_gibbs_weight",
+          "reason": "exp(+F) is not PAH-001's lower-F-has-larger-weight convention and is outside the hash-pinned contract.",
+          "rejected": true,
+          "rejection_test": true,
+          "would_be_accepted": false
+        },
+        {
+          "name": "zero_observable_weight",
+          "reason": "A weight that annihilates any of ell_a, ell_d, H_0 or H_1 violates the nonzero-norm rule.",
+          "rejected": true,
+          "rejection_test": true,
+          "would_be_accepted": false
+        },
+        {
+          "name": "fixed_R_max_only",
+          "reason": "The target quantifies R_max=R over all positive integers; a finite list cannot establish the stated uniform supremum.",
+          "rejected": true,
+          "rejection_test": true,
+          "would_be_accepted": false
+        },
+        {
+          "name": "omit_inverse_root",
+          "reason": "The AM-GM step needs the source-declared inverse-pair bijection; dropping an inverse changes the root domain and is not PAH-001.",
+          "rejected": true,
+          "rejection_test": true,
+          "would_be_accepted": false
+        },
+        {
+          "name": "mobility_or_rate_change",
+          "reason": "Changing mobility, midpoint sign or rates violates the parent dynamics and the preservation firewall.",
+          "rejected": true,
+          "rejection_test": true,
+          "would_be_accepted": false
+        },
+        {
+          "name": "counterterm_or_averaging_rescue",
+          "reason": "A counterterm, averaging map or fixed-cutoff bypass is explicitly forbidden.",
+          "rejected": true,
+          "rejection_test": true,
+          "would_be_accepted": false
+        },
+        {
+          "name": "envelope_implies_intertwining",
+          "reason": "The finite envelope is only a local-form coefficient input; rootwise/eventual generator intertwining remains separate.",
+          "rejected": true,
+          "rejection_test": true,
+          "would_be_accepted": false
+        },
+        {
+          "name": "physical_promotion",
+          "reason": "The contract and both runs retain the no-physics firewall.",
+          "rejected": true,
+          "rejection_test": true,
+          "would_be_accepted": false
+        }
+      ],
+      "name": "all-invalid-mutations-rejected",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "no-parent-drift",
+      "passed": true
+    }
+  ],
+  "audit_id": "PAH-OMC-010-STATE-WEIGHTED-ENVELOPE-HOSTILE-001",
+  "claim_bearing": false,
+  "exploration_id": "EXP-001438",
+  "failed": 0,
+  "mutations": [
+    {
+      "name": "unnormalized_weight",
+      "reason": "The contract requires W=Z^-1 exp(-F); an unnormalized density is not the declared L2(W) state weight.",
+      "rejected": true,
+      "rejection_test": true,
+      "would_be_accepted": false
+    },
+    {
+      "name": "sign_reversed_gibbs_weight",
+      "reason": "exp(+F) is not PAH-001's lower-F-has-larger-weight convention and is outside the hash-pinned contract.",
+      "rejected": true,
+      "rejection_test": true,
+      "would_be_accepted": false
+    },
+    {
+      "name": "zero_observable_weight",
+      "reason": "A weight that annihilates any of ell_a, ell_d, H_0 or H_1 violates the nonzero-norm rule.",
+      "rejected": true,
+      "rejection_test": true,
+      "would_be_accepted": false
+    },
+    {
+      "name": "fixed_R_max_only",
+      "reason": "The target quantifies R_max=R over all positive integers; a finite list cannot establish the stated uniform supremum.",
+      "rejected": true,
+      "rejection_test": true,
+      "would_be_accepted": false
+    },
+    {
+      "name": "omit_inverse_root",
+      "reason": "The AM-GM step needs the source-declared inverse-pair bijection; dropping an inverse changes the root domain and is not PAH-001.",
+      "rejected": true,
+      "rejection_test": true,
+      "would_be_accepted": false
+    },
+    {
+      "name": "mobility_or_rate_change",
+      "reason": "Changing mobility, midpoint sign or rates violates the parent dynamics and the preservation firewall.",
+      "rejected": true,
+      "rejection_test": true,
+      "would_be_accepted": false
+    },
+    {
+      "name": "counterterm_or_averaging_rescue",
+      "reason": "A counterterm, averaging map or fixed-cutoff bypass is explicitly forbidden.",
+      "rejected": true,
+      "rejection_test": true,
+      "would_be_accepted": false
+    },
+    {
+      "name": "envelope_implies_intertwining",
+      "reason": "The finite envelope is only a local-form coefficient input; rootwise/eventual generator intertwining remains separate.",
+      "rejected": true,
+      "rejection_test": true,
+      "would_be_accepted": false
+    },
+    {
+      "name": "physical_promotion",
+      "reason": "The contract and both runs retain the no-physics firewall.",
+      "rejected": true,
+      "rejection_test": true,
+      "would_be_accepted": false
+    }
+  ],
+  "mutations_attempted": 9,
+  "mutations_rejected": 9,
+  "non_claims": [
+    "PAH-OMC-010 is a researcher-owned norm contract, not an external source or physical authority.",
+    "A positive state-weighted envelope does not retroactively repair the R-489 unweighted sup-state no-go.",
+    "A finite C_sw is only a uniform local-form input; it does not prove eventual generator intertwining, an infinite-volume automorphism or an ordered limit.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "passed": 4,
+  "physical_progress": false,
+  "reproduction": {
+    "command": "python codes/foundations/pah_omc010_state_weighted_envelope_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/hostile.json"
+  },
+  "result_id": "R-490",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc010-state-weighted-envelope-hostile/1.0",
+  "scientific_transition": false,
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+    "PAH-OMC-009": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de",
+    "PAH-OMC-010": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "PAH-OMC-010-MANIFEST": "97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "verdict": "MAINLINE_ADVANCE_STATE_WEIGHTED_ENVELOPE",
+  "verification": "PASS"
+}

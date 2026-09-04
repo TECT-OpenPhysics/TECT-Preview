@@ -14,8 +14,10 @@ the arbiter at any eventual submission commit.
 | `R-472` | non-bearing exact rational/Lean cross-check used only as assurance evidence | T0 claim-nonbearing audit |
 
 The manuscript does not cite B1/Reading-H, Q3LOCK, A4, A7, T-050/A13,
-Sector-A synthesis, or any physical-vacuum claim.  It does not promote the
-registered A2 claim or alter its tier.
+Sector-A synthesis, or any physical-vacuum claim.  Its displayed mathematical
+theorems are for the explicit functional; the registered conditional tiers
+record provenance and govern only transfer to the canonical P1 interpretation.
+The paper does not promote the registered A2 claim or alter its tier.
 
 At submission, this file must be updated with the exact commit hash and the
 paper tag required by `governance/publication-tiers.md`.  Until then, the

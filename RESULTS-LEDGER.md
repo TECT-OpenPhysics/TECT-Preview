@@ -22,6 +22,10 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-490](#r-490) | PAH-OMC-010 Gibbs-state-weighted local interaction envelope | R-490 / EXP-001438 proves a finite state-weighted local-form envelope for the unchanged PAH-001 rates on the cofinal PAH-OMC-004 strip: per-root Gibbs conductance <=1, S_geom=8, N_geom=60, C_sw=540, and all four R-488 observables retain nonzero weighted witnesses. Primary 18/18, independent 13/13, hostile 9/9 invalid mutations rejected, integrated 16/16 and Lean R490 pass. This is T0 claim-nonbearing local-form input only; generator intertwining, infinite-volume closure and physical/continuum conclusions remain open. |
+| [R-489](#r-489) | PAH-OMC-009 uniform interaction-envelope obstruction | R-489 / EXP-001434 proves an exact R_max->infinity rate divergence on the cofinal PAH-OMC-004 strip for the unchanged PAH-001 aperture root: Delta F=-(7/24)R^2-5/8, midpoint exponent 7R^2/48+5/16, positive support weight. Primary 16/16, independent 13/13, hostile 6/6 rejected, integrated 21/21 and Lean R489 pass. This is a T0 negative result for the declared uniform envelope only; generator intertwining and all physical/continuum conclusions remain open. |
+| [R-488](#r-488) | PAH-OMC-008 two-matter/two-holonomy joint-cylinder compatibility | R-488 / EXP-001393 defines a separately hashed researcher-owned extension of the unchanged PAH-001 functional on the genuine PAH-OMC-004 strip. With Q=1, K=2, M_s=M_psi=1, all 32768 states and 417792 retained roots (90112 radial and 327680 link channels) have identical exact four-coordinate tuples between G_2 and G_3; primary 25/25, independent 16/16, hostile 12/12 mutations rejected, integrated 17/17 and Lean R488 pass. This is T0 finite/local evidence only; global common-core, uniform-limit and physical conclusions remain open. |
+| [R-487](#r-487) | PAH-OMC-007 nonzero-Q matter and closed-face holonomy joint-cylinder compatibility | R-487 / EXP-001381 defines a separately hashed researcher-owned extension of the unchanged PAH-001 functional on the genuine PAH-OMC-004 diagonal strip. With Q=1, K=2, M_s=M_psi=1, all 32768 finite states and 245760 retained radial/link roots have identical exact joint-cylinder tuples between G_2 and G_3; primary 25/25, independent 16/16, hostile 11/11 mutations rejected, integrated 17/17 and Lean R487 pass. The closed-face gauge audit covers 512 transformations; the G_1 to G_2 matter boundary remains Delta F 0 versus -1. This is T0 finite/local evidence only; global common-core, uniform-limit and physical conclusions remain open. |
 | [R-486](#r-486) | PAH-OMC-006 nonzero-Q matter-density cylinder compatibility | R-486 / EXP-001378 defines a separately hashed researcher-owned extension of the unchanged PAH-001 functional on the genuine PAH-OMC-004 diagonal strip. With Q=1, K=2, M_s=M_psi=1, all 32768 finite states and 49152 directed anchor-incident radial roots have identical exact tuples between G_2 and G_3; primary 20/20, independent 12/12, hostile 9/9 mutations rejected, integrated 18/18 and Lean R486 pass. The deliberate G_1 to G_2 control has Delta F 0 versus -1. This is T0 finite/local evidence only; global common-core, uniform-limit and physical conclusions remain open. |
 | [R-485](#r-485) | PAH-OMC-005 nonzero-Q anchor generator compatibility | R-485 / EXP-001374 defines a separately hashed researcher-owned extension of the genuine PAH-OMC-004 diagonal strip without changing PAH-001. With Q=1, K=2, M_s=M_psi=1, the full displayed PAH functional and unchanged midpoint rate give identical exact anchor-aperture generator rows on all 32768 finite patch states between G_1 and its neutral inclusion in G_2; primary 21/21, independent 16/16, hostile 9/9 mutations rejected, integrated 17/17, and Lean R485 pass. The result is T0 finite/local evidence only; Stage 2 and the active gate remain open, with no global uniform, ordered-limit, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusion. |
 | [R-484](#r-484) | PAH-OMC-004 explicit anchor generator-row replay | R-484 / EXP-001371 explicitly replays the unchanged PAH midpoint generator on the genuine diagonal-incidence anchor patch. All 512 Q=0 aperture/link states have identical exact rows between G_1 and G_2 for the anchor cylinder; primary 30/30, independent 14/14, hostile 16/16 mutations rejected, integrated 28/28, and Lean R484 pass. The retained n=0 boundary defect is 16/9. This is finite/local T0 evidence only; no global uniform, ordered-limit, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusion follows. |
@@ -851,6 +855,192 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-490"></a>
+### R-490 -- PAH-OMC-010 Gibbs-state-weighted local interaction envelope
+
+**Statement.** R-490 / EXP-001438 audits the separately hashed
+researcher-owned PAH-OMC-010 contract without editing PAH-001, PAH-OMC-004,
+R-488 or the preceding R-489 negative contract.  The exact scope fixes
+`K=2`, `M_s=M_psi=1`, `Q=1`, `epsilon=1/2`, `beta=nu=1`, `m2=0`, and all
+other displayed couplings to one; only the cofinal strip level `n>=2` and
+`R_max=R` in positive integers are uniformized.  The norm weight is exactly
+the normalized PAH-001 finite Gibbs state
+`W_(n,R)=Z_(n,R)^(-1) exp(-F_(rho_R))`.
+
+For every directed PAH root, the inverse-pair bijection and the unchanged
+midpoint rate give
+`W(omega)c_r(omega)=Z^(-1)m_r exp(-(F(omega)+F(r omega))/2)`.  The AM-GM
+identity bounds the sum over a root domain by one.  Direct reconstruction of
+the declared two-row strip support rules gives a maximum support size
+`S_geom=8` and a maximum of `N_geom=60` directed roots whose support contains
+a fixed vertex.  Hence the local interaction sum has the uniform bound
+`I_(n,R)(x) <= C_sw = 60*(1+8) = 540` for every `n>=2`, `R>=1` and vertex
+`x`, with no counterterm, rate fit, averaging, or fixed-cutoff bypass.
+
+The four R-488 coordinates have explicit finite witnesses with values
+`(ell_a,ell_d,H_0,H_1)=(1,1,-1,-1)` and finite PAH energies at `G_2,R=1`
+`(29/12,35/12,77/12,77/12)`.  Since the finite partition function is
+strictly positive, the normalized Gibbs weight is positive on each witness,
+so none of the four weighted cylinder norms is annihilated.
+
+**Evidence.** The primary lane passes 18/18 assertions, the non-importing
+independent lane passes 13/13, hostile review rejects 9/9 invalid mutations,
+the integrated verifier passes 16/16, and Lean R490 compiles.  The Lean
+cross-check proves the AM-GM conductance inequality, the constants
+`S_geom=8`, `N_geom=60`, `C_sw=540`, positive normalized weights and explicit
+nonzero witness values.
+
+**Source pins.**
+
+| source | SHA-256 |
+|---|---|
+| PAH-001 | `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37` |
+| PAH-OMC-004 | `38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c` |
+| PAH-OMC-008 | `b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a` |
+| PAH-OMC-009 | `1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de` |
+| PAH-OMC-010 contract | `8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69` |
+| PAH-OMC-010 manifest | `97c9ebb3a28f83f93a3b79de527ce0e57b0be346ef6f77d99e59e7b3fa9ea4e3` |
+| Lean R490 (normalized) | `2f67655840eba25982976be1505320fbaa51dc89826bc33d447b6e2a46944b23` |
+
+**Classification and boundary.** This is a T0 claim-nonbearing
+`MAINLINE_ADVANCE_STATE_WEIGHTED_ENVELOPE` local-form result.  It is a valid
+uniform state-weighted coefficient input for a future common-core refinement
+only conditionally on a separately proved root correspondence and eventual
+generator intertwining.  The certificate does not prove that intertwining,
+an infinite-volume automorphism, an ordered limit, or any production dynamics
+beyond the finite PAH-001 model.
+
+The result does not repair the R-489 unweighted sup-state divergence and does
+not make a fixed finite calculation uniform in any omitted cutoff parameter.
+No physical Pre-A, Sector-A, physical vacuum, spacetime, event horizon,
+gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE
+conclusion follows.  Markov time remains external stochastic time.
+
+**Where proven.** `strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json`,
+`strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-manifest.json`,
+`strategy/pa-hyp/R490-certificate.md`,
+`codes/foundations/pah_omc010_state_weighted_envelope.py`,
+`codes/foundations/pah_omc010_state_weighted_envelope_independent.py`,
+`codes/foundations/pah_omc010_state_weighted_envelope_hostile.py`,
+`verification/scripts/pah_omc010_state_weighted_envelope_verify.py`,
+`verification/lean/Tect/R490.lean`, and the four run artefacts under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/`.
+
+**Next.** Supply a separately hashed rootwise/eventual cylinder
+intertwining proof that uses the same PAH-001 functional, root labels,
+neutral inclusions and Gibbs-weighted common norm.  Until that packet exists,
+retain the Stage 2 gate as `HOLD_FOR_EVIDENCE`.
+
+<a id="r-489"></a>
+### R-489 -- PAH-OMC-009 uniform interaction-envelope obstruction
+
+**Statement.** R-489 / EXP-001434 audits the separately hashed
+researcher-owned PAH-OMC-009 successor of the unchanged PAH-001 functional on
+the cofinal PAH-OMC-004 two-row strip family `G_n`, `n>=2`.  The declared
+root-weighted interaction envelope is required to be uniform in strip level
+and in the PAH-001 `LOCAL_STATE_CUTOFF` path `R_max=R -> infinity`.
+
+At `b=(1,0)`, degree four in every `G_n`, take the admissible `Q=1` state
+with one radial quantum at `b`, `s_b=1/2`, all other apertures one, and
+neutral phase/link coordinates.  The unchanged PAH-001 aperture root
+`AP(b,+1)` has exact energy increment
+`Delta F=-(7/24)R^2-5/8`.  Its endpoint-product mobility square is `1/2`,
+so the unchanged midpoint rate is
+`2^(-1/2) exp(7R^2/48+5/16)`.  The declared positive geometric weight
+therefore gives a one-root lower bound that diverges with `R`, independently
+of `n`.
+
+**Evidence.** Primary 16/16, non-importing independent 13/13, hostile review
+rejects 6/6 invalid mutations, integrated verifier 21/21, and Lean R489 pass.
+The source, geometry, starting contract, successor contract, and manifest are
+hash-pinned in [R-489 certificate](strategy/pa-hyp/R489-certificate.md).
+
+**Classification.** This is a T0 claim-nonbearing negative result for the one
+declared cutoff-independent interaction-envelope target.  The eventual
+generator-intertwining conjunct is `NOT_DECIDED_AFTER_ENVELOPE_FAILURE`; no
+new boundary calculation, counterterm, averaging map or rate fitting is used.
+It does not falsify PAH-001, R-488, every restricted state-weighted norm, or
+every future owner contract, and it does not change the active T-054 gate or
+Stage 2 status.  No source-owned production dynamics, global common core,
+infinite-volume generator, ordered limit, continuum, physical sector,
+Pre-A, spacetime, event-horizon, gravity, QFT, Yang--Mills, mass-gap,
+cosmic-origin or TOE conclusion follows.  Markov time remains external
+stochastic time.
+
+**Where proven.** `strategy/pa-hyp/PAH-OMC-009-uniform-envelope-v1.json`,
+`strategy/pa-hyp/PAH-OMC-009-uniform-envelope-manifest.json`,
+`strategy/pa-hyp/R489-certificate.md`,
+`codes/foundations/pah_omc009_uniform_envelope.py`,
+`codes/foundations/pah_omc009_uniform_envelope_independent.py`,
+`codes/foundations/pah_omc009_uniform_envelope_hostile.py`,
+`verification/scripts/pah_omc009_uniform_envelope_verify.py`,
+`verification/lean/Tect/R489.lean`, and the four run artefacts under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc009-uniform-envelope/`.
+
+**Next.** Reopen only with a separately hashed owner-authorized interaction
+norm that fixes the retained PAH-001 cutoff parameters, gives a positive
+state/root weight and common domain, and proves its own uniform scope without
+counterterms, averaging or fitted rates.
+
+<a id="r-488"></a>
+### R-488 -- PAH-OMC-008 two-matter/two-holonomy joint-cylinder compatibility
+
+**Statement.** R-488 / EXP-001393 audits the separately hashed researcher-owned
+PAH-OMC-008 successor of the unchanged PAH-001 functional on the genuine
+PAH-OMC-004 diagonal strip. For the finite fixture K=2, M_s=M_psi=1, Q=1,
+epsilon=1/2, beta=nu=1, R_max=1, m2=0 and unit displayed couplings, the joint
+cylinder is the four-coordinate tuple (ell_a,ell_d,H_0,H_1). Here H_0 is the
+Z_2 character of the first split triangle (h00,v1,d0), while H_1 is the
+character of the second split triangle (d0,h01,v0). All 32768 patch states and
+all 417792 retained directed roots (90112 radial roots incident to a=(0,0) or
+d=(1,1), plus 327680 link roots on five patch links with both K=2 channels)
+have identical exact tuples between G_2 and its neutral inclusion in G_3. The
+streamed row digest is
+d46a6997029e19e24fb39d492d3f66c312fe048066fffcb712de46cbfb852a80. Primary
+25/25, non-importing independent 16/16, hostile 12/12 mutations rejected,
+integrated 17/17, and Lean R488 pass.
+
+**Boundary.** The two closed-face gauge cancellations are checked over all 32
+link configurations and 16 patch gauge assignments. Pure-link, open-face,
+single-face/single-matter, omitted-term, collapsed-channel, fitted-rate,
+conditional-average and physical-promotion mutations are explicitly rejected.
+The inherited G_1 -> G_2 h00 matter-transfer control remains Delta F=0 versus
+-1, so no all-level extension is claimed.
+
+**Where proven.** strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json,
+strategy/pa-hyp/PAH-OMC-008-multi-cylinder-manifest.json,
+strategy/pa-hyp/R488-certificate.md,
+codes/foundations/pah_omc008_multi_cylinder.py,
+codes/foundations/pah_omc008_multi_cylinder_independent.py,
+codes/foundations/pah_omc008_multi_cylinder_hostile.py,
+verification/scripts/pah_omc008_multi_cylinder_verify.py,
+verification/lean/Tect/R488.lean, and the four run artefacts under
+claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc008-multi-cylinder/.
+
+**Scope and tier.** T0 claim-nonbearing finite/local structural evidence. It
+does not change the active T-054 gate or Stage 2 status and is not a global
+common-core, regulator/volume-uniform, ordered-limit, infinite-volume,
+physical-sector, Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum,
+mass-gap or TOE result. Markov time remains external stochastic time.
+
+**Next.** Supply a source-authorized finite common-core packet whose multi-face
+and multi-anchor closure admits one uniform interaction envelope; only then
+reopen the uniform/ordered-limit lane.
+
+<a id="r-487"></a>
+
+### R-487 -- PAH-OMC-007 nonzero-Q matter and closed-face holonomy joint-cylinder compatibility
+
+**Statement.** R-487 / EXP-001381 audits a separately hashed researcher-owned PAH-OMC-007 successor of the unchanged PAH-001 functional on the genuine PAH-OMC-004 diagonal strip. For the finite fixture K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, R_max=1, m2=0 and unit displayed couplings, the common cylinder is the gauge-invariant pair (ell_a,H_0), with H_0 the Z_2 character of the first split triangle (h00,v1,d0). All 32768 patch states and all 245760 retained directed roots (49152 radial plus 196608 link channels, including both K=2 sigma labels) have identical exact tuples between G_2 and its neutral inclusion in G_3. The streamed row digest is 941059ded832a7804228c739707418bc2998f44c819e1ddbbea970e35b697c32. Primary 25/25, non-importing independent 16/16, hostile 11/11 mutations rejected, integrated 17/17, and Lean R487 pass.
+
+**Boundary.** The closed-face gauge cancellation is checked over all 32 link configurations and 16 patch gauge assignments. A pure link coordinate and an open face are explicitly rejected. The preceding G_1 -> G_2 matter-transfer control remains Delta F=0 versus -1, so no all-level extension is claimed.
+
+**Where proven.** `strategy/pa-hyp/PAH-OMC-007-joint-holonomy-cylinder-v1.json`, `strategy/pa-hyp/PAH-OMC-007-joint-holonomy-cylinder-manifest.json`, `strategy/pa-hyp/R487-certificate.md`, `codes/foundations/pah_omc007_joint_holonomy_cylinder.py`, `codes/foundations/pah_omc007_joint_holonomy_cylinder_independent.py`, `codes/foundations/pah_omc007_joint_holonomy_cylinder_hostile.py`, `verification/scripts/pah_omc007_joint_holonomy_cylinder_verify.py`, `verification/lean/Tect/R487.lean`, and the four run artefacts under `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc007-joint-holonomy-cylinder/`.
+
+**Scope and tier.** T0 claim-nonbearing finite/local structural evidence. It does not change the active T-054 gate or Stage 2 status and is not a global common-core, regulator/volume-uniform, ordered-limit, infinite-volume, physical-sector, Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE result. Markov time remains external stochastic time.
+
+**Next.** Supply a separately hashed multi-cylinder packet with several face holonomies and multiple nonzero-Q matter anchors, then seek one source-authorized support envelope before any uniform or limit claim.
 
 <a id="r-486"></a>
 

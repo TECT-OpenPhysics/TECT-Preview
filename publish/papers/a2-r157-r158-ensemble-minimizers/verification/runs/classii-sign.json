@@ -1,0 +1,33 @@
+{
+  "assertions": {
+    "passed": 8,
+    "total": 8
+  },
+  "compatibility": "conditional: v2.0 is compatible only if its nabla^2 denotes the positive operator -Delta; source intent remains undefined",
+  "exact_sign_test": {
+    "correct_pairing": "1",
+    "k_squared": "1",
+    "raw_delta_eigenvalue": "-1",
+    "raw_delta_euler_coefficient": "-1",
+    "reversed_pairing": "-1"
+  },
+  "finding": "For the raw componentwise Delta fixed by the displayed Dirichlet density and real pairing, the Euler term is -B(u) Delta u.  The v1.1 display agrees; the v2.0 positive shorthand is compatible only under an undefined positive-Laplacian convention.",
+  "schema": "tect/paper-local-sign-audit/1.0",
+  "scope": "paper-local source/sign audit only; no canonical source edit, claim-tier promotion, or external/operator reconciliation",
+  "source_observations": {
+    "v1_1_negative_raw_delta_display": true,
+    "v2_0_defines_nabla_squared": false,
+    "v2_0_positive_shorthand_display": true
+  },
+  "sources": {
+    "v1.1": {
+      "path": "claims\\A2-FULL-PRODUCTION-WELLPOSED\\notes\\a2-full-production-wellposedness-260717-v1.1.tex.txt",
+      "sha256": "6c0cd7de1142c742f2f77a1b2cdec179a5b67a8eaaa866bf47ab758373676452"
+    },
+    "v2.0": {
+      "path": "claims\\A2-FULL-PRODUCTION-WELLPOSED\\notes\\a2-full-production-wellposedness-260717-v2.0.tex.txt",
+      "sha256": "e60b1b7640329bae4b5e2a9ac753705e8714921acff22f483d7cc59d0eeb8c34"
+    }
+  },
+  "verdict": "PAPER-CLASSII-SIGN-AUDIT-PASS"
+}

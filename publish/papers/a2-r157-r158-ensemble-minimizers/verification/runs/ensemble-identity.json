@@ -1,0 +1,208 @@
+{
+  "assertion_count": 24,
+  "assertions": [
+    {
+      "actual": "claims\\A1-PRODUCTION-FUNCTIONAL-REALISATION\\production_functional_manifest.json",
+      "expected": "file",
+      "name": "manifest_exists",
+      "status": "PASS"
+    },
+    {
+      "actual": "publish\\papers\\a2-r157-r158-ensemble-minimizers\\manuscript.tex",
+      "expected": "file",
+      "name": "manuscript_exists",
+      "status": "PASS"
+    },
+    {
+      "actual": "43/216",
+      "expected": ">0",
+      "name": "rho_star_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "name": "completion_linear_cancels",
+      "status": "PASS"
+    },
+    {
+      "actual": "-43/400",
+      "expected": "-43/400",
+      "name": "completion_quadratic_matches_lambda",
+      "status": "PASS"
+    },
+    {
+      "actual": "27/100",
+      "expected": "27/100",
+      "name": "completion_cubic_matches_gamma",
+      "status": "PASS"
+    },
+    {
+      "actual": "11008/27",
+      "expected": "11008/27",
+      "name": "charge_is_volume_density_over_two",
+      "status": "PASS"
+    },
+    {
+      "actual": "11008/27",
+      "expected": ">0",
+      "name": "charge_is_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1849/64800",
+        "1849/86400"
+      ],
+      "expected": "saddle>coexistence>0",
+      "name": "saddle_drop_exceeds_coexistence_drop",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "bregman_identity_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/111132",
+      "expected": "-1/111132",
+      "name": "bregman_identity_2",
+      "status": "PASS"
+    },
+    {
+      "actual": "13/8000",
+      "expected": "13/8000",
+      "name": "bregman_identity_3",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "name": "bregman_bracket_at_rho_star",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": ">=0",
+      "name": "bregman_bracket_nonnegative_for_rho_ge_rhostar",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0",
+        "0",
+        "0"
+      ],
+      "expected": [
+        "0",
+        "0",
+        "0"
+      ],
+      "name": "constant_plane_wave_J_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0",
+        "0",
+        "0"
+      ],
+      "expected": [
+        "0",
+        "0",
+        "0"
+      ],
+      "name": "constant_plane_wave_K_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "name": "constant_plane_wave_classii_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2752/675",
+      "expected": "<0",
+      "name": "positive_delta_has_negative_witness_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-11008/189",
+      "expected": "<0",
+      "name": "positive_delta_has_negative_witness_2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-22016/81",
+      "expected": "<0",
+      "name": "positive_delta_has_negative_witness_3",
+      "status": "PASS"
+    },
+    {
+      "actual": "2752/675",
+      "expected": ">0 for reversed sign",
+      "name": "hostile_delta_sign_reversal_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "-81/1250",
+      "expected": "<0",
+      "name": "hostile_subthreshold_density_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/200",
+      "expected": "!=0",
+      "name": "hostile_cstar_mutation_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "-43/216",
+      "expected": "<0",
+      "name": "hostile_lambda_sign_rejected",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "bregman_bracket_at_rho_star": "0",
+    "c_star": "1849/86400",
+    "charge_star": "11008/27",
+    "classii_density_on_witness": "0",
+    "completion_cubic": "27/100",
+    "completion_linear_residual": "0",
+    "completion_quadratic": "-43/400",
+    "constant_plane_wave_J": [
+      "0",
+      "0",
+      "0"
+    ],
+    "constant_plane_wave_K": [
+      "0",
+      "0",
+      "0"
+    ],
+    "hostile_cstar_linear_residual": "-1/200",
+    "hostile_density": "1021/5400",
+    "hostile_density_bracket": "-81/1250",
+    "hostile_lambda_sign_rho": "-43/216",
+    "rho_star": "43/216",
+    "saddle_drop": "1849/64800"
+  },
+  "inputs": {
+    "Lx": "16",
+    "gamma": "81/50",
+    "lambda": "-43/100"
+  },
+  "manifest": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+  "manifest_sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+  "manuscript": "publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.tex",
+  "manuscript_sha256": "c6b2b5be29ca5bf567fd68ce2647bba24e3b242a433ddb44b5295bbfc545da24",
+  "paper_id": "a2-r157-r158-ensemble-minimizers",
+  "passed_count": 24,
+  "schema": "tect/paper-ensemble-identity-audit/1.0",
+  "scope": "Paper-local exact ensemble algebra and constant-observable saturation only; no canonical correction, claim-tier promotion, or physical charge interpretation.",
+  "script": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/ensemble_identity_audit.py",
+  "verdict": "PAPER-ENSEMBLE-IDENTITY-AUDIT-PASS"
+}

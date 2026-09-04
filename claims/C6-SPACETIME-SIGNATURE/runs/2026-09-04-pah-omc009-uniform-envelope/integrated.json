@@ -1,0 +1,617 @@
+{
+  "assertion_count": 21,
+  "assertions": [
+    {
+      "detail": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+        "PAH-OMC-009": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de",
+        "PAH-OMC-009-MANIFEST": "3992d7228cfeec5f229d701657673548b18576c31572546050ad06405838d555"
+      },
+      "name": "source-hashes",
+      "passed": true
+    },
+    {
+      "detail": {
+        "contract": {
+          "id": "PAH-OMC-009",
+          "path": "strategy/pa-hyp/PAH-OMC-009-uniform-envelope-v1.json",
+          "sha256": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de"
+        },
+        "expected_verdict": "NEGATIVE_RESULT_RMAX_UNIFORM_ENVELOPE",
+        "functional_source": {
+          "id": "PAH-001",
+          "path": "strategy/pa-hyp/PAH-001-v1.json",
+          "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+        },
+        "geometric_source": {
+          "id": "PAH-OMC-004",
+          "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+          "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+        },
+        "manifest_id": "PAH-OMC-009-UNIFORM-ENVELOPE-MANIFEST-001",
+        "no_new_finite_fixture": true,
+        "no_parent_mutation": true,
+        "physical_promotion": false,
+        "reproduction": {
+          "hostile": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc009_uniform_envelope_hostile.py",
+          "independent": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc009_uniform_envelope_independent.py",
+          "integrated": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/pah_omc009_uniform_envelope_verify.py",
+          "lean": "Set-Location E:/Dev/TECT/verification/lean; lake env lean Tect/R489.lean",
+          "primary": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc009_uniform_envelope.py"
+        },
+        "schema": "tect/pre-a-owner-morphism-uniform-envelope-manifest/1.0",
+        "scope": "Cofinal PAH-OMC-004 strip family n>=2 with the PAH-001 LOCAL_STATE_CUTOFF path R_max=R tending to infinity, common bounded charge/closed-face cylinders, geometric root supports and unit support weights. The exact aperture-root sequence rejects the requested regulator-independent interaction envelope.",
+        "starting_contract": {
+          "id": "PAH-OMC-008",
+          "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+          "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+        }
+      },
+      "name": "manifest-pins",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "identity",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lane-pass",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lane-assertions",
+      "passed": true
+    },
+    {
+      "detail": [
+        {
+          "name": "fixed_R_max",
+          "reason": "A bounded R_max list cannot discharge the contract's R_max->infinity quantifier.",
+          "rejected": true,
+          "would_pass": false
+        },
+        {
+          "name": "omit_two_incident_edges",
+          "reason": "Using degree two changes the derived coefficient and destroys the exact negative quadratic witness required by the declared G_n incidence at b.",
+          "rejected": true,
+          "would_pass": false
+        },
+        {
+          "name": "drop_covariant_terms",
+          "reason": "Dropping the unchanged PAH covariant edge energy changes the functional and removes the negative coefficient.",
+          "rejected": true,
+          "would_pass": false
+        },
+        {
+          "name": "reverse_midpoint_sign",
+          "reason": "Using +beta*DeltaF/2 is not the PAH-001 Gibbs midpoint rate and reverses the exponent growth.",
+          "rejected": true,
+          "would_pass": false
+        },
+        {
+          "name": "zero_root_weight",
+          "reason": "w(r)=0 is not the declared positive geometric weight and cannot lower-bound the interaction sum.",
+          "rejected": true,
+          "would_pass": false
+        },
+        {
+          "name": "counterterm_or_rate_rescale",
+          "reason": "Any counterterm or rate rescaling violates the preservation firewall and is not a PAH-001 test.",
+          "rejected": true,
+          "would_pass": false
+        }
+      ],
+      "name": "hostile-rejections",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "preservation-firewall",
+      "passed": true
+    },
+    {
+      "detail": "For every integer n>=2, G_n has V_n={(i,j):0<=i<=n+1, j in {0,1}}, horizontal edges h_i^j=((i,j),(i+1,j)) for 0<=i<=n, vertical edges v_i=((i,0),(i,1)) for 0<=i<=n+1, diagonals d_i=((i,0),(i+1,1)) for 0<=i<n, and the PAH-OMC-004 split-triangle faces for i<n followed by the unsplit frontier square q_n.",
+      "name": "cofinal-scope",
+      "passed": true
+    },
+    {
+      "detail": "Use exactly PAH-001 F_rho=sum_v[lambda_s(s_v-1)^2/2+m2|psi_v|^2/2+lambda_4|psi_v|^4/4+eta_6|psi_v|^6/6+g s_v^2|psi_v|^2/2]+kappa_s sum_e(s_v-s_w)^2/2+kappa_D sum_e J_e(s)|psi_w-U_e psi_v|^2/2+kappa_g sum_p J_p(s)(1-Re U_p), with J_e(s)=2/(s_v+s_w) and no added term.",
+      "name": "displayed-functional",
+      "passed": true
+    },
+    {
+      "detail": "For fixed rho_R and G_n, c_r^(n)(omega)=m_r(omega) exp[-beta(F_rho(r omega)-F_rho(omega))/2]. The envelope target is sup_(R>=1) sup_(n>=2) sup_(x in V_n) sum_(r:x in supp(r)) sup_(omega admissible)c_r^(n)(omega) w(r) < infinity.",
+      "name": "displayed-rate",
+      "passed": true
+    },
+    {
+      "detail": {
+        "constant": "-5/8",
+        "degree": 4,
+        "delta_F": {
+          "0": "-5/8",
+          "1": "-11/12",
+          "2": "-43/24",
+          "4": "-127/24",
+          "8": "-463/24"
+        },
+        "divergence_certificate": "positive quadratic coefficient in -beta*DeltaF/2, hence the exact midpoint rate and any positive support weight diverge as R_max tends to infinity",
+        "mobility_square": "1/2",
+        "quadratic_coefficient": "-7/24",
+        "rate_exponent": {
+          "1": "11/24",
+          "2": "43/48",
+          "4": "127/48",
+          "8": "463/48"
+        },
+        "root": "AP((1,0),+1)",
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "vertex": [
+          1,
+          0
+        ],
+        "weight": 6,
+        "weighted_rate_log": {
+          "1": 1.9035192122814155,
+          "2": 2.3410192122814157,
+          "4": 4.091019212281416,
+          "8": 11.091019212281417
+        }
+      },
+      "name": "witness-incidence",
+      "passed": true
+    },
+    {
+      "detail": {
+        "independent": {
+          "constant": "-5/8",
+          "degree_b": 4,
+          "quadratic_coefficient": "-7/24",
+          "rate_exponent": {
+            "1": "11/24",
+            "2": "43/48",
+            "4": "127/48",
+            "8": "463/48"
+          },
+          "support": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "weight": 6,
+          "weighted_rate_log": {
+            "1": 1.9035192122814155,
+            "2": 2.3410192122814157,
+            "4": 4.091019212281416,
+            "8": 11.091019212281417
+          }
+        },
+        "primary": {
+          "constant": "-5/8",
+          "degree": 4,
+          "delta_F": {
+            "0": "-5/8",
+            "1": "-11/12",
+            "2": "-43/24",
+            "4": "-127/24",
+            "8": "-463/24"
+          },
+          "divergence_certificate": "positive quadratic coefficient in -beta*DeltaF/2, hence the exact midpoint rate and any positive support weight diverge as R_max tends to infinity",
+          "mobility_square": "1/2",
+          "quadratic_coefficient": "-7/24",
+          "rate_exponent": {
+            "1": "11/24",
+            "2": "43/48",
+            "4": "127/48",
+            "8": "463/48"
+          },
+          "root": "AP((1,0),+1)",
+          "support": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "vertex": [
+            1,
+            0
+          ],
+          "weight": 6,
+          "weighted_rate_log": {
+            "1": 1.9035192122814155,
+            "2": 2.3410192122814157,
+            "4": 4.091019212281416,
+            "8": 11.091019212281417
+          }
+        }
+      },
+      "name": "support-and-weight",
+      "passed": true
+    },
+    {
+      "detail": {
+        "independent": {
+          "constant": "-5/8",
+          "degree_b": 4,
+          "quadratic_coefficient": "-7/24",
+          "rate_exponent": {
+            "1": "11/24",
+            "2": "43/48",
+            "4": "127/48",
+            "8": "463/48"
+          },
+          "support": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "weight": 6,
+          "weighted_rate_log": {
+            "1": 1.9035192122814155,
+            "2": 2.3410192122814157,
+            "4": 4.091019212281416,
+            "8": 11.091019212281417
+          }
+        },
+        "primary": {
+          "constant": "-5/8",
+          "degree": 4,
+          "delta_F": {
+            "0": "-5/8",
+            "1": "-11/12",
+            "2": "-43/24",
+            "4": "-127/24",
+            "8": "-463/24"
+          },
+          "divergence_certificate": "positive quadratic coefficient in -beta*DeltaF/2, hence the exact midpoint rate and any positive support weight diverge as R_max tends to infinity",
+          "mobility_square": "1/2",
+          "quadratic_coefficient": "-7/24",
+          "rate_exponent": {
+            "1": "11/24",
+            "2": "43/48",
+            "4": "127/48",
+            "8": "463/48"
+          },
+          "root": "AP((1,0),+1)",
+          "support": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "vertex": [
+            1,
+            0
+          ],
+          "weight": 6,
+          "weighted_rate_log": {
+            "1": 1.9035192122814155,
+            "2": 2.3410192122814157,
+            "4": 4.091019212281416,
+            "8": 11.091019212281417
+          }
+        }
+      },
+      "name": "exact-polynomial",
+      "passed": true
+    },
+    {
+      "detail": {
+        "0": "-5/8",
+        "1": "-11/12",
+        "2": "-43/24",
+        "4": "-127/24",
+        "8": "-463/24"
+      },
+      "name": "sequence-polynomial",
+      "passed": true
+    },
+    {
+      "detail": {
+        "1": "11/24",
+        "2": "43/48",
+        "4": "127/48",
+        "8": "463/48"
+      },
+      "name": "rate-growth-coefficient",
+      "passed": true
+    },
+    {
+      "detail": {
+        "independent": {
+          "detail": {
+            "mobility_square": "1/2",
+            "weight": 6
+          },
+          "name": "mobility-and-weight",
+          "passed": true
+        },
+        "primary": {
+          "constant": "-5/8",
+          "degree": 4,
+          "delta_F": {
+            "0": "-5/8",
+            "1": "-11/12",
+            "2": "-43/24",
+            "4": "-127/24",
+            "8": "-463/24"
+          },
+          "divergence_certificate": "positive quadratic coefficient in -beta*DeltaF/2, hence the exact midpoint rate and any positive support weight diverge as R_max tends to infinity",
+          "mobility_square": "1/2",
+          "quadratic_coefficient": "-7/24",
+          "rate_exponent": {
+            "1": "11/24",
+            "2": "43/48",
+            "4": "127/48",
+            "8": "463/48"
+          },
+          "root": "AP((1,0),+1)",
+          "support": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "vertex": [
+            1,
+            0
+          ],
+          "weight": 6,
+          "weighted_rate_log": {
+            "1": 1.9035192122814155,
+            "2": 2.3410192122814157,
+            "4": 4.091019212281416,
+            "8": 11.091019212281417
+          }
+        }
+      },
+      "name": "mobility-and-positive-weight",
+      "passed": true
+    },
+    {
+      "detail": {
+        "1": 1.9035192122814155,
+        "2": 2.3410192122814157,
+        "4": 4.091019212281416,
+        "8": 11.091019212281417
+      },
+      "name": "weighted-growth",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "negative-verdict-firewall",
+      "passed": true
+    },
+    {
+      "detail": {
+        "declarations": [
+          "delta_formula",
+          "exponent_formula",
+          "rate_quadratic_coefficient_positive",
+          "exponent_step_growth",
+          "mobility_square_exact",
+          "root_weight_positive",
+          "non_promotion_firewall"
+        ],
+        "path": "verification/lean/Tect/R489.lean",
+        "sha256": "c3dd7dfe1c8995df6e3b28ebf04aedb73611014078d665805310b3035479c18f"
+      },
+      "name": "lean-registry",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lean-source-firewall",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lean-compile",
+      "passed": true
+    }
+  ],
+  "audit_id": "PAH-OMC-009-UNIFORM-ENVELOPE-INTEGRATED-001",
+  "claim_bearing": false,
+  "exploration_id": "EXP-001434",
+  "failed": 0,
+  "next_question": "Can an owner-authorized state-weighted or energy-domain interaction norm, with its own nonzero weight and regulator scope, be proved without changing PAH-001 rates after the unweighted R_max envelope is rejected?",
+  "non_claims": [
+    "PAH-OMC-009 is a researcher-owned contract, not an external source or physical authority.",
+    "The negative result retires only the declared cutoff-independent root-rate envelope target on the stated PAH-001 path; it does not falsify PAH-001, R-488, all possible restricted norms, or every future owner contract.",
+    "No eventual common-core generator theorem, infinite-volume automorphism, ordered limit or continuum result is claimed.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "passed": 21,
+  "physical_progress": false,
+  "reproduction": {
+    "hostile": "python codes/foundations/pah_omc009_uniform_envelope_hostile.py",
+    "independent": "python codes/foundations/pah_omc009_uniform_envelope_independent.py",
+    "integrated": "python verification/scripts/pah_omc009_uniform_envelope_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R489.lean",
+    "primary": "python codes/foundations/pah_omc009_uniform_envelope.py"
+  },
+  "result_id": "R-489",
+  "run_kind": "integrated",
+  "schema": "tect/pah-omc009-uniform-envelope-integrated/1.0",
+  "scientific_transition": false,
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+    "PAH-OMC-009": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de",
+    "PAH-OMC-009-MANIFEST": "3992d7228cfeec5f229d701657673548b18576c31572546050ad06405838d555"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "verdict": "NEGATIVE_RESULT_RMAX_UNIFORM_ENVELOPE",
+  "verification": "PASS",
+  "verification_summary": {
+    "hostile": "6/6 mutations rejected",
+    "independent": "13/13",
+    "lean": "PASS",
+    "primary": "16/16"
+  },
+  "witness": {
+    "constant": "-5/8",
+    "degree": 4,
+    "delta_F": {
+      "0": "-5/8",
+      "1": "-11/12",
+      "2": "-43/24",
+      "4": "-127/24",
+      "8": "-463/24"
+    },
+    "divergence_certificate": "positive quadratic coefficient in -beta*DeltaF/2, hence the exact midpoint rate and any positive support weight diverge as R_max tends to infinity",
+    "mobility_square": "1/2",
+    "quadratic_coefficient": "-7/24",
+    "rate_exponent": {
+      "1": "11/24",
+      "2": "43/48",
+      "4": "127/48",
+      "8": "463/48"
+    },
+    "root": "AP((1,0),+1)",
+    "support": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "vertex": [
+      1,
+      0
+    ],
+    "weight": 6,
+    "weighted_rate_log": {
+      "1": 1.9035192122814155,
+      "2": 2.3410192122814157,
+      "4": 4.091019212281416,
+      "8": 11.091019212281417
+    }
+  }
+}

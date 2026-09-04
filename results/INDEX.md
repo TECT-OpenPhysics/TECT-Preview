@@ -5,10 +5,14 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**319 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**323 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-490`](../RESULTS-LEDGER.md#r-490) | PAH-OMC-010 Gibbs-state-weighted local interaction envelope | T0 |
+| [`R-489`](../RESULTS-LEDGER.md#r-489) | PAH-OMC-009 uniform interaction-envelope obstruction | T0 |
+| [`R-488`](../RESULTS-LEDGER.md#r-488) | PAH-OMC-008 two-matter/two-holonomy joint-cylinder compatibility | T0 |
+| [`R-487`](../RESULTS-LEDGER.md#r-487) | PAH-OMC-007 nonzero-Q matter and closed-face holonomy joint-cylinder compatibility | T0 |
 | [`R-486`](../RESULTS-LEDGER.md#r-486) | PAH-OMC-006 nonzero-Q matter-density cylinder compatibility | T0 |
 | [`R-485`](../RESULTS-LEDGER.md#r-485) | PAH-OMC-005 nonzero-Q anchor generator compatibility | T0 |
 | [`R-484`](../RESULTS-LEDGER.md#r-484) | PAH-OMC-004 explicit anchor generator-row replay | T0 |
@@ -30,10 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-467`](../RESULTS-LEDGER.md#r-467) | Finite branch-relative Jacobian/entropy compensator interface | T0 |
 | [`R-466`](../RESULTS-LEDGER.md#r-466) | Finite positive-mass tube lower-bound interface and coarse scaling boundary | T0 |
 | [`R-465`](../RESULTS-LEDGER.md#r-465) | Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic | T0 |
-| [`R-464`](../RESULTS-LEDGER.md#r-464) | Finite-cutoff Gibbs integrability and positive-mass branch conditioning | T0 |
-| [`R-463`](../RESULTS-LEDGER.md#r-463) | Fixed-floor active-branch tube metric and finite entropy stress test | T0 |
-| [`R-462`](../RESULTS-LEDGER.md#r-462) | Fixed-floor active-branch normal-form coercivity | T0 |
-| [`R-461`](../RESULTS-LEDGER.md#r-461) | Fixed-floor smooth Class-II null-branch dichotomy | T0 |
 
 Search without loading the full ledger:
 

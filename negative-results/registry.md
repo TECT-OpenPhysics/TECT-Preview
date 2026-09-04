@@ -14,6 +14,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION](#ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction) | use centered global total-energy contexts as a volume-uniform local transfer | in an exact tensor-product Gibbs family, subtracting the full Gibbs mean removes the quadratic remote mean but leaves a positive linear remote variance for every local transition leg; retain local or modular Q3 weights |
 | [NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION](#ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization) | use a local quartic A^(-3/4) operator factorization for the cutoff bond-tail times force | on the exact q>=2L cutoff sector, W_L F=c^2 q^3/2+3c lambda q^5/4+lambda^2 q^7/4; translated packets leave a ratio growing as q^4 for lambda>0; retain state-weighted, product-level or direct D,delta-D routes |
 |---|---|---|
+| [NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE](#ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence) | require a cutoff-independent PAH-001 root-rate interaction envelope along R_max->infinity | the exact cofinal-strip aperture root at b=(1,0) has Delta F=-(7/24)R^2-5/8 and midpoint exponent 7R^2/48+5/16, so any positive support weight diverges; this retires only the declared envelope target and leaves generator intertwining and all physical/continuum claims open |
 | [NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE](#ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance) | require a positive-strip L1 Weyl-Fourier coefficient carrier to remain invariant under the exact quartic onsite subflow | the quartic translation phase has a nonzero cubic coefficient and grows like exp((51/70)x^2) on a sign-chosen strip, contradicting bounded strip extension; this retires only the named carrier |
 | [NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION](#ng-2026-08-14-pre-a-t055-isotropic-gaussian-covariance-automatic-nonzero-bcc-mean-field-extraction) | deterministically and translation-equivariantly extract a nonzero BCC mean field from the stationary isotropic Gaussian-Hartree covariance alone | a translation-fixed covariance input must map under any deterministic equivariant section to a translation-fixed, hence constant, output; preserving centering or nonzero-shell support forces that output to zero |
 | [NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING](#ng-2026-08-14-pre-a-t055-reading-h-bcc-110-on-shell-automatic-side16-torus-embedding) | treat the registered Reading-H BCC `{110}` shell as an automatic exact on-shell support-preserving embedding in the side-16 pinned P1 torus | exact rational Machin bounds place the literal registered `q_0` strictly between the side-16 index-square 3 and 4 shells; even the commensurate reinterpretation has only eight `{+/-1}^3` modes for twelve BCC directions |
@@ -10477,6 +10478,48 @@ theorem, or separately versioned weighted functional remains open. This does
 not refute PAH-001, its finite common dynamics after PAH-OMC-001 completion,
 or every possible refinement. It proves no uniform limit, continuum,
 physical Pre-A, spacetime, gravity, QFT, Yang--Mills, or TOE conclusion.
+
+<a id="ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence"></a>
+### NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE -- the declared cutoff-independent root-rate envelope diverges
+
+**Failure mode.** Require one finite root-weighted interaction envelope for the
+unchanged PAH-001 midpoint rates uniformly over the cofinal PAH-OMC-004 strip
+family and the declared `LOCAL_STATE_CUTOFF` path `R_max=R -> infinity`.
+
+**Evidence.** PAH-001 SHA-256
+`03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`,
+PAH-OMC-004 SHA-256
+`38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c`,
+PAH-OMC-008 SHA-256
+`b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a`, and
+PAH-OMC-009 SHA-256
+`1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de` are
+pinned.  For every `n>=2`, the vertex `b=(1,0)` has degree four.  The
+admissible `Q=1` state with one radial quantum at `b`, `s_b=1/2`, all other
+apertures one, and neutral phases/links is acted on by `AP(b,+1)`.  Direct
+term-by-term arithmetic gives
+
+```text
+Delta F=-(7/24)R^2-5/8,
+m^2=1/2,
+c=2^(-1/2) exp(7R^2/48+5/16).
+```
+
+The root support contains `b` and has declared positive weight six on the
+witness strip, so the requested interaction sum is bounded below by a
+quantity diverging with `R`.  Primary 16/16, non-importing independent
+13/13, hostile review 6/6 mutations rejected, integrated 21/21, and Lean
+R489 all pass.  Evidence: EXP-001434 and R-489.
+
+**Consequence.** Retire only the PAH-OMC-009 unweighted/cutoff-independent
+root-rate envelope target on this declared path. The result is not a
+PAH-001 no-go, does not decide eventual generator intertwining, and does not
+reject every owner-authorized state-weighted or energy-domain norm. Stage 2
+remains `HOLD_FOR_EVIDENCE`; the active T-054 gate is unchanged. No
+source-owned production dynamics, common-core limit, ordered limit, physical
+Pre-A, spacetime, event-horizon, gravity, QFT, Yang--Mills, continuum,
+mass-gap, cosmic-origin or TOE conclusion follows. Markov time remains
+external stochastic time.
 
 <a id="ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining"></a>
 ### NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING -- positive scalar transport cannot repair the named pullback

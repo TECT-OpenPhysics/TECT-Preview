@@ -1,0 +1,36 @@
+{
+  "schema": "tect/pre-a-owner-morphism-uniform-envelope-manifest/1.0",
+  "manifest_id": "PAH-OMC-009-UNIFORM-ENVELOPE-MANIFEST-001",
+  "contract": {
+    "id": "PAH-OMC-009",
+    "path": "strategy/pa-hyp/PAH-OMC-009-uniform-envelope-v1.json",
+    "sha256": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de"
+  },
+  "functional_source": {
+    "id": "PAH-001",
+    "path": "strategy/pa-hyp/PAH-001-v1.json",
+    "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+  },
+  "geometric_source": {
+    "id": "PAH-OMC-004",
+    "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+    "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+  },
+  "starting_contract": {
+    "id": "PAH-OMC-008",
+    "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+    "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+  },
+  "no_parent_mutation": true,
+  "no_new_finite_fixture": true,
+  "scope": "Cofinal PAH-OMC-004 strip family n>=2 with the PAH-001 LOCAL_STATE_CUTOFF path R_max=R tending to infinity, common bounded charge/closed-face cylinders, geometric root supports and unit support weights. The exact aperture-root sequence rejects the requested regulator-independent interaction envelope.",
+  "reproduction": {
+    "primary": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc009_uniform_envelope.py",
+    "independent": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc009_uniform_envelope_independent.py",
+    "hostile": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc009_uniform_envelope_hostile.py",
+    "integrated": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/pah_omc009_uniform_envelope_verify.py",
+    "lean": "Set-Location E:/Dev/TECT/verification/lean; lake env lean Tect/R489.lean"
+  },
+  "expected_verdict": "NEGATIVE_RESULT_RMAX_UNIFORM_ENVELOPE",
+  "physical_promotion": false
+}

@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**845 accepted events** · latest 25 shown below · machine locator: `index.json`
+**850 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,11 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-04 | `20260904-r-490-exploration-reference-correction-2026-09` — [R-490 exploration reference correction] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-490-exploration-reference-correction-2026-09) |
+| 2026-09-04 | `20260904-r-490-pah-omc-010-gibbs-state-weighted-interact` — [R-490 PAH-OMC-010 Gibbs-state-weighted interaction envelope] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-490-pah-omc-010-gibbs-state-weighted-interact) |
+| 2026-09-04 | `20260904-r-489-pah-omc-009-uniform-interaction-envelope` — [R-489 PAH-OMC-009 uniform interaction-envelope obstruction] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-489-pah-omc-009-uniform-interaction-envelope) |
+| 2026-09-04 | `20260904-r-488-pah-omc-008-two-matter-two-holonomy-joint` — [[R-488 PAH-OMC-008 two-matter/two-holonomy joint-cylinder compatibility]] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-488-pah-omc-008-two-matter-two-holonomy-joint) |
+| 2026-09-04 | `20260904-r-487-pah-omc-007-matter-and-closed-face-holono` — [R-487 PAH-OMC-007 matter and closed-face holonomy joint-cylinder compatibility] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-487-pah-omc-007-matter-and-closed-face-holono) |
 | 2026-09-04 | `20260904-r-486-pah-omc-006-matter-density-cylinder-compa` — [R-486 PAH-OMC-006 matter-density cylinder compatibility and boundary control] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-486-pah-omc-006-matter-density-cylinder-compa) |
 | 2026-09-04 | `20260904-r-485-pah-omc-005-nonzero-q-anchor-generator-co` — [R-485 PAH-OMC-005 nonzero-Q anchor generator compatibility] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-485-pah-omc-005-nonzero-q-anchor-generator-co) |
 | 2026-09-03 | `20260903-r-484-pah-omc-004-explicit-generator-row-replay` — [R-484 PAH-OMC-004 explicit generator-row replay] - 2026-09-03 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260903-r-484-pah-omc-004-explicit-generator-row-replay) |
@@ -37,11 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-02 | `20260902-r-476-researcher-proposed-pre-a-minimum-microsc` — [R-476 researcher-proposed Pre-A minimum microscopic axiom packet structural admission] - 2026-09-02 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260902-r-476-researcher-proposed-pre-a-minimum-microsc) |
 | 2026-09-01 | `20260901-r-475-lean-cross-check-of-a5-branch-aware-condi` — [R-475 Lean cross-check of A5 branch-aware conditional-composition contract] - 2026-09-01 | A5-SECTOR-A-SYNTHESIS | [bounded page](pages/000819-000868.md#20260901-r-475-lean-cross-check-of-a5-branch-aware-condi) |
 | 2026-08-31 | `20260831-r-474-conditional-ordered-limit-rectangle-bridg` — [R-474 conditional ordered-limit rectangle bridge] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-r-474-conditional-ordered-limit-rectangle-bridg) |
-| 2026-08-31 | `20260831-additive-sector-a-frontier-audit-preserves-forw` — [Additive Sector-A frontier audit preserves forward and inverse methods] - 2026-08-31 | A5-SECTOR-A-SYNTHESIS, A6-A13 | [bounded page](pages/000819-000868.md#20260831-additive-sector-a-frontier-audit-preserves-forw) |
-| 2026-08-31 | `20260831-t-057-compact-source-extraction-ledger-preserve` — [T-057 compact source extraction ledger preserves locators while keeping closure open] - 2026-08-31 | B3-BCC-STRUCT, C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-t-057-compact-source-extraction-ledger-preserve) |
-| 2026-08-31 | `20260831-t-057-batch-closure-audit-separates-preserved-b` — [T-057 batch closure audit separates preserved bytes from missing dependency and run links] - 2026-08-31 | B3-BCC-STRUCT, C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-t-057-batch-closure-audit-separates-preserved-b) |
-| 2026-08-31 | `20260831-r-473-hold-lc-001-tte-event-row-feature-index-2` — [R-473 HOLD-LC-001 TTE event-row feature index] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-r-473-hold-lc-001-tte-event-row-feature-index-2) |
-| 2026-08-31 | `20260831-r-472-a2-lean-exact-core-cross-check-2026-08-31` — [R-472 A2 Lean exact-core cross-check] - 2026-08-31 | A2-FULL-PRODUCTION-WELLPOSED | [bounded page](pages/000819-000868.md#20260831-r-472-a2-lean-exact-core-cross-check-2026-08-31) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 819–845 | 27 | [000819-000868.md](pages/000819-000868.md) |
+| 819–850 | 32 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |

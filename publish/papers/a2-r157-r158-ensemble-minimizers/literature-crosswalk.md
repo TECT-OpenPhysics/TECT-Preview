@@ -72,3 +72,38 @@ radial rejection, and (d) the imposed-charge/chemical-potential completion.
 This is a bounded non-subsumption result, not a priority or world-first claim.
 A specialist literature search and novelty opinion remain required before any
 submission-readiness statement.
+
+## Current quasilinear amplitude-theory check (2026-09-04)
+
+Two 2026 primary sources were added because they are closer to the evolution
+part of the paper than the earlier scalar Swift--Hohenberg references.  Their
+presence narrows the residual contribution: quasilinear or fully nonlinear
+Swift--Hohenberg analysis, maximal regularity, and small-amplitude modulation
+are not claimed as new here.
+
+| source | exact feature inspected | disposition for this paper |
+|---|---|---|
+| T. Belin and G. Schneider, ``On the Ginzburg--Landau approximation for quasilinear pattern forming reaction--diffusion--advection systems,'' *Chaos* 36 (2026), 053129, [DOI](https://doi.org/10.1063/5.0324316), [arXiv record](https://arxiv.org/abs/2601.16145) | maximal-regularity justification of a Ginzburg--Landau approximation for quasilinear reaction--diffusion--advection systems near first instability, with a Gray--Scott--Klausmeier application | `DOES-NOT-SUBSUME`: it is a small-amplitude modulation result near instability for a different second-order system, not the present all-data fourth-order torus flow or either exact variational theorem |
+| T. Belin and G. Schneider, ``A Ginzburg--Landau approximation theorem for quasilinear pattern-forming systems in uniformly local Sobolev spaces,'' arXiv:2608.19035 (v1, 2026), [arXiv record](https://arxiv.org/abs/2608.19035) | one-dimensional fully nonlinear Swift--Hohenberg example $u_t=-(1+\partial_x^2)^2u+\varepsilon^2u-\partial_x^4(u^3)$ and an $O(\varepsilon^{3/2})$ modulation estimate on $0\le t\le T_0/\varepsilon^2$ in uniformly local Sobolev spaces | `DOES-NOT-SUBSUME`: the theorem is a finite-long-time small-amplitude approximation on $\mathbb R$, not all-data global well-posedness for the present three-component $\mathbb T^3_{16}$ gradient flow, and it contains no neutral radial or ensemble minimization conclusion |
+
+This check establishes only a documented non-subsumption comparison.  It does
+not replace a specialist search, citation-chain review, or independent novelty
+opinion.
+
+## Focused primary-source additions (2026-09-03)
+
+The following primary records were inspected after the first bounded crosswalk
+to test the two closest possible subsumption routes: rigorous Swift--Hohenberg
+evolution and multicomponent/constrained Brazovskii minimization.
+
+| source | exact feature inspected | disposition for this paper |
+|---|---|---|
+| G. W. Duchesne, J.-P. Lessard, and A. Takayasu, ``A rigorous integrator and global existence for higher-dimensional semilinear parabolic PDEs via semigroup theory,'' arXiv:2402.00406 (v2, 2025), [arXiv record](https://arxiv.org/abs/2402.00406), related DOI `10.1007/s10915-024-02785-x` | computer-assisted global existence and convergence for scalar 2D/3D Swift--Hohenberg and a derivative-bearing Ohta--Kawasaki application | `DOES-NOT-SUBSUME`: the validated semilinear/scalar framework does not prove the present three-component regularized Class-II analytic flow, exact radial neutral rejection, or imposed-shell ensemble identities |
+| Y. Ruan, ``Nontrivial Periodic Minimizer for Landau-Brazovskii Model with Constraint,'' arXiv:1603.06181 (v2, 2016), [arXiv record](https://arxiv.org/abs/1603.06181) | self-contained constrained Landau--Brazovskii variational construction of a nontrivial periodic minimizer | `DOES-NOT-SUBSUME`: the model and reduction target differ from the six-real-component fourth-order flow, the neutral radial sign theorem, and the grand-potential coexistence statement |
+| C. Bao, C. Chen, and K. Jiang, ``An adaptive block Bregman proximal gradient method for multicomponent coupled-mode Swift--Hohenberg models,'' *CSIAM Trans. Appl. Math.* 3 (2022), 133--171, [full text](https://global-sci.com/index.php/csiam-am/article/download/7797/15528) | constrained multicomponent coupled-mode PFC discretization, algorithmic convergence, and binary/ternary/quinary numerical experiments | `DOES-NOT-SUBSUME`: the result is a finite-dimensional numerical optimization analysis, not the present continuum well-posedness proof or exact finite-shell/Bregman completion |
+| L. Mi, W. Cui, and H. You, ``Periodic and Quasi-Periodic Solutions for the Complex Swift--Hohenberg Equation,'' *J. Appl. Anal. Comput.* 10 (2020), 297--313, [journal record](https://www.jaac-online.com/article/doi/10.11948/20190152) | one-dimensional complex Swift--Hohenberg periodic and quasi-periodic solutions obtained with an infinite-dimensional KAM theorem | `DOES-NOT-SUBSUME`: the equation is not the declared real gradient flow and has no matching Class-II coefficient, neutral rejection, or imposed-charge ensemble |
+
+These additions sharpen the residual proposition but do not certify novelty or
+priority.  A specialist must still review the broader literature, verify every
+scope comparison, and decide whether the combined theorem package is
+publishably distinct.

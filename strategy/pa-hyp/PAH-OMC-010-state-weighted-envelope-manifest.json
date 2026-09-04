@@ -1,0 +1,50 @@
+{
+  "schema": "tect/pre-a-owner-morphism-state-weighted-envelope-manifest/1.0",
+  "manifest_id": "PAH-OMC-010-STATE-WEIGHTED-ENVELOPE-MANIFEST-001",
+  "contract": {
+    "id": "PAH-OMC-010",
+    "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+    "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+  },
+  "functional_source": {
+    "id": "PAH-001",
+    "path": "strategy/pa-hyp/PAH-001-v1.json",
+    "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+  },
+  "geometric_source": {
+    "id": "PAH-OMC-004",
+    "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+    "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+  },
+  "starting_result": {
+    "id": "R-488",
+    "path": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+    "sha256": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a"
+  },
+  "preceding_negative": {
+    "id": "R-489",
+    "path": "strategy/pa-hyp/PAH-OMC-009-uniform-envelope-v1.json",
+    "sha256": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de"
+  },
+  "no_parent_mutation": true,
+  "no_new_finite_fixture": true,
+  "scope": {
+    "carrier": "The cofinal PAH-OMC-004 two-row strip G_n for every integer n>=2, with the declared neutral coordinate inclusion and the R-489 root-support convention.",
+    "regulator": "K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, m2=0, lambda_4=eta_6=g=lambda_s=kappa_s=kappa_D=kappa_g=1, theta=0; only n>=2 and R_max=R in positive integers are uniformized.",
+    "weight": "W_(n,R)=Z_(n,R)^(-1) exp(-F_(rho_R)), the normalized PAH-001 Gibbs state at beta=1.",
+    "norm": "L2(W) for bounded invariant cylinders and I_(n,R)(x)=sum_(r:x in supp(r)) w(r) sum_omega W(omega)c_r(omega), w(r)=1+|supp(r)|.",
+    "target": "C_sw=sup_(R>=1,n>=2,x in V_n) I_(n,R)(x)<infinity.",
+    "observable": "The four R-488 coordinates (ell_a, ell_d, H_0, H_1) remain in the bounded invariant cylinder algebra and each must have strictly positive weighted norm.",
+    "time": "The PAH-001 Markov time remains external stochastic time; no quantum, proper-time or Lorentzian interpretation is used."
+  },
+  "reproduction": {
+    "primary": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc010_state_weighted_envelope.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/primary.json",
+    "independent": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc010_state_weighted_envelope_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/independent.json",
+    "hostile": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc010_state_weighted_envelope_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc010-state-weighted-envelope/hostile.json",
+    "integrated": "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/pah_omc010_state_weighted_envelope_verify.py",
+    "lean": "Set-Location E:/Dev/TECT/verification/lean; lake env lean Tect/R490.lean"
+  },
+  "expected_verdict": "MAINLINE_ADVANCE_STATE_WEIGHTED_ENVELOPE",
+  "status": "PENDING_VERIFICATION",
+  "physical_promotion": false
+}

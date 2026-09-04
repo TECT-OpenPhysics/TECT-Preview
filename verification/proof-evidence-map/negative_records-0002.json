@@ -1,6 +1,27 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-pressure-value-only-phase-classification",
+      "branch": "infer phase uniqueness, coexistence, spontaneous order, or selected states from the scalar pressure value or boundary-independent pressure alone",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-exp-000772-closes-constant-source-q3-pressure-a"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "artifacts": "`strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split.py`; `codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split_independent.py`.",
+        "consequence": "EXP-000779 may define the directional diagnostic `m_v=partial_+ p(hv)|_(h=0)`, but proves no sign for it and no Q3 phase or state theorem. A positive result needs an explicit parameter regime and order parameter, ultraviolet-uniform contour or correlation estimates, source-state compactness, and proof that the `h->0+` and `h->0-` tangent states are distinct. This no-go does not refute a Q3 phase transition and has no physical-empty-space, C6, CP1, Sector-A or Pre-A consequence.",
+        "evidence": "For every `alpha` and `m>0`, `alpha+m log cosh(h)` and `alpha+m|h|` are finite, convex and even and have the same value at zero, but only the latter has a cusp there. More strongly, each ```text f_n(h)=log cosh(nh)/n ``` is analytic, convex and even with `f_n'(0)=0`, while `0<=|h|-f_n(h)<=log(2)/n`; thus the sequence converges locally uniformly to the cusped function `|h|`. Finite-volume zero response and common pressure therefore do not determine the infinite-volume source tangent. Established scalar `phi4_2` models also combine thermodynamic pressure with nontrivial phase structure, so pressure boundary independence is not a uniqueness theorem.",
+        "failure_mode": "Infer phase uniqueness, phase coexistence, spontaneous order, or a selected plus/minus state solely from existence and boundary independence of the constant-source pressure, or from its single value `p(0)=alpha_infinity`."
+      },
+      "detail_title": "a pressure value or common pressure does not classify the phase",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "the smooth pressure control `alpha+m log cosh(h)` and the cusped control `alpha+m|h|` have the same value at zero, while analytic even finite-volume controls `log cosh(nh)/n` converge locally uniformly to `|h|` with zero derivative at the origin. Retain source tangents, state compactness and correlation/order estimates",
+      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION"
+    },
+    {
       "anchor": "ng-2026-08-04-pre-a-cp1-cl8-pointwise-stability-gaussian-trial-uniform-energy",
       "branch": "for fixed `g,lambda,m_R,eta_R`, use one scalar normalization both for a uniform pointwise lower bound and a uniform variational upper bound from the same Wick-reference Gaussian",
       "claim_ref_basis": {
@@ -2211,29 +2232,6 @@
       "kind": "no_go",
       "summary": "a bounded full-six-row finite-root fixture has explicit nonzero `D0,D1`, while its direct packet stays positive; R-122's legal `h_+/-` pair also flips `D1` with identical lower data. This retires the stationary-to-adapted inference, not the complete adapted production cancellation",
       "tag": "NG-2026-07-30-A13-STATIONARY-SIX-ROW-TO-ADAPTED-LOW-CHAOS-TRANSFER"
-    },
-    {
-      "anchor": "ng-2026-07-30-a13-separate-variance-trace-hessian-norm-necessity",
-      "branch": "require separate uniform norm bounds for `H_V` and `H_T` before any direct signed covariance-normal Hessian estimate can close",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Require uniform bounds for `H_V` and `H_T` separately as a necessary prerequisite for every covariance-normal Hessian argument.",
-        "consequence": "Separate estimates remain a sufficient route, not a necessary one. A direct owner-complete signed curvature estimate may exploit the cancellation, but no production-uniform such estimate is yet proved.",
-        "evidence": "R-129 proof note, Eqs. (3.4)--(3.6); primary symbolic family; independent exact multi-`n` audit.",
-        "failure_mode": "For independent standard Gaussians and the exact family `J_(n,z)=(sqrt(n) z eta_0,z eta_1)`, with replica trace `Theta=nz^2`, one has `V_n=(n+1)z^2`, `T_n=nz^2`, and `E_CN=z^2/2`. The separate Hessians are `2n+2` and `2n`, while the signed Hessian is identically one."
-      },
-      "detail_title": "separate Hessian norms are not logically necessary for a signed difference",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "the Gaussian family `V_n=(n+1)z^2`, `T_n=nz^2` has Hessians `2n+2` and `2n`, while `E_CN=(V_n-T_n)/2=z^2/2` has Hessian one. Separate bounds are sufficient but not logically necessary; the direct production signed bound remains open",
-      "tag": "NG-2026-07-30-A13-SEPARATE-VARIANCE-TRACE-HESSIAN-NORM-NECESSITY"
     }
   ],
   "kind": "negative_records",

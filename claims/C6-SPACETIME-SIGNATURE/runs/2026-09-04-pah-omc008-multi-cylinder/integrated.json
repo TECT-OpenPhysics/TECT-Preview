@@ -1,0 +1,5934 @@
+{
+  "assertion_count": 17,
+  "assertions": [
+    {
+      "detail": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-005": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5",
+        "PAH-OMC-006": "cb1c84e320d2bd24b430ec2b8f19ef9467e3564e1f2a3cd820487730946ddad5",
+        "PAH-OMC-007": "7e4621abecb577855f740b52c14c83bbfd43eb6b0b30b0b9197e7baa9503280a",
+        "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+        "PAH-OMC-008-MANIFEST": "83df59e369f2d10dc9c98b05210bff3fc39eb0055936a799953bda4696b02be2"
+      },
+      "name": "source-hashes",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "manifest-pins",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "identity",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "primary-independent-pass",
+      "passed": true
+    },
+    {
+      "detail": [
+        {
+          "name": "promote-pure-link-u_d0",
+          "reason": "the carried link shifts by g_d-g_a, while both closed-face products cancel their endpoint incidences",
+          "rejected": true
+        },
+        {
+          "name": "use-open-face-h00-v1",
+          "reason": "without d0 the endpoint gauge increment at the diagonal vertex survives",
+          "rejected": true
+        },
+        {
+          "name": "omit-second-face-or-matter-coordinate",
+          "reason": "the accepted cylinder is the four-coordinate tuple and cannot be reduced to only ell_a,H_0",
+          "rejected": true
+        },
+        {
+          "name": "omit-wilson-face-term",
+          "reason": "the retained links change the existing split-triangle Wilson faces and both are included in the exact local delta",
+          "rejected": true
+        },
+        {
+          "name": "omit-covariant-link-term",
+          "reason": "the covariant matter term is part of the unchanged PAH-001 functional even when its Q=1 one-hot increment is zero for this link fixture",
+          "rejected": true
+        },
+        {
+          "name": "collapse-k2-link-channels",
+          "reason": "all five patch links retain both sigma=+1 and sigma=-1 as distinct PAH channels",
+          "rejected": true
+        },
+        {
+          "name": "extend-across-g1-g2-boundary",
+          "reason": "the known first-split matter-transfer defect is kept as a control",
+          "rejected": true
+        },
+        {
+          "name": "fit-midpoint-rate-after-delta",
+          "reason": "the midpoint exponent is fixed by -beta DeltaF/2 in the declared fixture",
+          "rejected": true
+        },
+        {
+          "name": "replace-pointwise-lift-with-conditional-average",
+          "reason": "the lift is pointwise on every fine state and uses no fibre averaging",
+          "rejected": true
+        },
+        {
+          "name": "promote-to-physical-or-continuum",
+          "reason": "the finite joint cylinder explicitly withholds physical and continuum conclusions",
+          "rejected": true
+        },
+        {
+          "name": "promote-one-cylinder-to-global-uniformity",
+          "reason": "the contract explicitly records local-only and no-global-uniformity boundaries",
+          "rejected": true
+        },
+        {
+          "name": "replace-holonomy-by-quantum-time",
+          "reason": "Markov time remains external stochastic time",
+          "rejected": true
+        }
+      ],
+      "name": "hostile-pass",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "finite-firewall",
+      "passed": true
+    },
+    {
+      "detail": {
+        "independent": {
+          "all_equal": true,
+          "bounded_samples_G2": [
+            {
+              "patch_state": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "-1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 1,
+                  "edge": "d0",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "-1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "1/2",
+                  "source": [
+                    1,
+                    0
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "0",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 1,
+                  "edge": "v1",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "0",
+                  "source": [
+                    1,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "7/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 1,
+                  "edge": "h01",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-7/12",
+                  "source": [
+                    0,
+                    1
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "1/2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-1/4",
+                  "source": [
+                    0,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-7/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "h01",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "7/12",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "19/24",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "h11",
+                  "family": "TR",
+                  "mobility_square": "1/2",
+                  "rate_exponent": "-19/48",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    2,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "1/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "v1",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-1/12",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2/3",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": -1,
+                  "edge": "d0",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "1/3",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": -1
+                }
+              ]
+            }
+          ],
+          "bounded_samples_G3": [
+            {
+              "patch_state": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "-1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 1,
+                  "edge": "d0",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "-1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "1/2",
+                  "source": [
+                    1,
+                    0
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "0",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 1,
+                  "edge": "v1",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "0",
+                  "source": [
+                    1,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "7/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 1,
+                  "edge": "h01",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-7/12",
+                  "source": [
+                    0,
+                    1
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "1/2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-1/4",
+                  "source": [
+                    0,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-7/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "h01",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "7/12",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "19/24",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "h11",
+                  "family": "TR",
+                  "mobility_square": "1/2",
+                  "rate_exponent": "-19/48",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    2,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "1/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "v1",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-1/12",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2/3",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": -1,
+                  "edge": "d0",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "1/3",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": -1
+                }
+              ]
+            }
+          ],
+          "canonical_digest_G2": "d46a6997029e19e24fb39d492d3f66c312fe048066fffcb712de46cbfb852a80",
+          "canonical_digest_G3": "d46a6997029e19e24fb39d492d3f66c312fe048066fffcb712de46cbfb852a80",
+          "levels": [
+            2,
+            3
+          ],
+          "root_rows": 417792,
+          "state_rows": 32768
+        },
+        "primary": {
+          "all_equal": true,
+          "bounded_samples_G2": [
+            {
+              "patch_state": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "-1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 1,
+                  "edge": "d0",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "-1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "1/2",
+                  "source": [
+                    1,
+                    0
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "0",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 1,
+                  "edge": "v1",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "0",
+                  "source": [
+                    1,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "7/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 1,
+                  "edge": "h01",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-7/12",
+                  "source": [
+                    0,
+                    1
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "1/2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-1/4",
+                  "source": [
+                    0,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-7/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "h01",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "7/12",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "19/24",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "h11",
+                  "family": "TR",
+                  "mobility_square": "1/2",
+                  "rate_exponent": "-19/48",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    2,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "1/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "v1",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-1/12",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2/3",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": -1,
+                  "edge": "d0",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "1/3",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": -1
+                }
+              ]
+            }
+          ],
+          "bounded_samples_G3": [
+            {
+              "patch_state": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "-1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": -1,
+                  "delta_ell_d": 1,
+                  "edge": "d0",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-1/2",
+                  "source": [
+                    0,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "-1",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "1/2",
+                  "source": [
+                    1,
+                    0
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "0",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 1,
+                  "edge": "v1",
+                  "family": "TR",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "0",
+                  "source": [
+                    1,
+                    0
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "4",
+                  "delta_H_0": 0,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-2",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "delta_F": "8",
+                  "delta_H_0": -2,
+                  "delta_H_1": -2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1/4",
+                  "rate_exponent": "-4",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "7/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 1,
+                  "edge": "h01",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-7/12",
+                  "source": [
+                    0,
+                    1
+                  ],
+                  "target": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "1/2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-1/4",
+                  "source": [
+                    0,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": -1
+                }
+              ]
+            },
+            {
+              "patch_state": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "roots": [
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-7/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "h01",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "7/12",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "19/24",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "h11",
+                  "family": "TR",
+                  "mobility_square": "1/2",
+                  "rate_exponent": "-19/48",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    2,
+                    1
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "1/6",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": -1,
+                  "edge": "v1",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "-1/12",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    1,
+                    0,
+                    -1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2/3",
+                  "delta_H_0": 0,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 1,
+                  "delta_ell_d": -1,
+                  "edge": "d0",
+                  "family": "TR",
+                  "mobility_square": "1",
+                  "rate_exponent": "1/3",
+                  "source": [
+                    1,
+                    1
+                  ],
+                  "target": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h00",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "h01",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    -1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-2",
+                  "delta_H_0": 0,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "1",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    -1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-40/9",
+                  "delta_H_0": 2,
+                  "delta_H_1": 0,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "v1",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "20/9",
+                  "sigma": -1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": 1
+                },
+                {
+                  "after_observable": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "before_observable": [
+                    0,
+                    1,
+                    -1,
+                    -1
+                  ],
+                  "delta_F": "-4",
+                  "delta_H_0": 2,
+                  "delta_H_1": 2,
+                  "delta_ell_a": 0,
+                  "delta_ell_d": 0,
+                  "edge": "d0",
+                  "family": "LK",
+                  "mobility_square": "1",
+                  "rate_exponent": "2",
+                  "sigma": -1
+                }
+              ]
+            }
+          ],
+          "canonical_digest_G2": "d46a6997029e19e24fb39d492d3f66c312fe048066fffcb712de46cbfb852a80",
+          "canonical_digest_G3": "d46a6997029e19e24fb39d492d3f66c312fe048066fffcb712de46cbfb852a80",
+          "exact_tuple": [
+            "patch_state",
+            "family",
+            "edge",
+            "sigma/source/target",
+            "delta_F",
+            "mobility_square",
+            "delta_ell_a",
+            "delta_ell_d",
+            "delta_H_0",
+            "delta_H_1",
+            "before_observable",
+            "after_observable",
+            "rate_exponent"
+          ],
+          "levels": [
+            2,
+            3
+          ],
+          "observable_basis": [
+            "ell_a",
+            "ell_d",
+            "H_0",
+            "H_1",
+            "bounded functions of (ell_a,ell_d,H_0,H_1)"
+          ],
+          "root_rows": 417792,
+          "state_rows": 32768
+        }
+      },
+      "name": "digest-agreement",
+      "passed": true
+    },
+    {
+      "detail": {
+        "actual_roots": 417792,
+        "actual_states": 32768,
+        "derived_roots": 417792,
+        "derived_states": 32768
+      },
+      "name": "finite-domain-count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "joint-scope",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "gauge-audit",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "support-stable",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "local-full-crosscheck",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boundary-control-exact",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "contract-firewall",
+      "passed": true
+    },
+    {
+      "detail": {
+        "declarations": [
+          "nonzero_charge_exact",
+          "neutral_inclusion_preserves_charge",
+          "triangle_gauge_shift_cancels",
+          "triangle1_gauge_shift_cancels",
+          "holonomy_gauge_invariant",
+          "holonomy1_gauge_invariant",
+          "state_count_exact",
+          "link_channel_multiplicity",
+          "joint_root_identity",
+          "two_matter_coordinates",
+          "boundary_defect_exact",
+          "non_promotion_firewall"
+        ],
+        "path": "verification/lean/Tect/R488.lean",
+        "sha256": "dbee3260ae77e9c094ad811b1fa1b27e48b2505e9527919c0160562f287c6d1b"
+      },
+      "name": "lean-registry",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lean-source-firewall",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lean-compile",
+      "passed": true
+    }
+  ],
+  "audit_id": "PAH-MULTI-CYLINDER-GENERATOR-001",
+  "boundary_control": {
+    "delta_F_G1": "0",
+    "delta_F_G2": "-1",
+    "difference_G2_minus_G1": "-1",
+    "nonzero_difference": true,
+    "root": {
+      "edge": "h00",
+      "source": [
+        1,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ]
+    }
+  },
+  "claim_bearing": false,
+  "exploration_id": "EXP-001393",
+  "failed": 0,
+  "fixture_dimensions": {
+    "aperture_bits": 4,
+    "link_bits": 5,
+    "link_root_count": 327680,
+    "patch_link_edges": 5,
+    "phase_bits": 4,
+    "radial_degree_sum": 11,
+    "radial_placements": 4,
+    "radial_root_count": 90112,
+    "root_count": 417792,
+    "state_count": 32768,
+    "state_count_formula": "(M_s+1)^4*K^5*K^4*4"
+  },
+  "gauge_audit": {
+    "checked": 512,
+    "passed": true
+  },
+  "next_question": "Can a source-authorized finite common-core packet containing several independent face holonomies and multiple nonzero-Q matter anchors be transported with one uniform interaction envelope beyond this two-face fixture?",
+  "non_claims": [
+    "This contract is a researcher proposal, not an external source or physical authority.",
+    "The finite Q=1 four-coordinate result is not retroactive evidence that PAH-001 already contained this refinement map.",
+    "A closed-face holonomy cylinder is admitted only in its gauge-invariant combinations; no pure link cylinder is promoted.",
+    "The G_2 -> G_3 equality is a finite local statement, not a global common-core or uniform theorem.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "No static fit selects the dynamics, and Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "passed": 17,
+  "physical_progress": false,
+  "result_id": "R-488",
+  "row_identity": {
+    "all_equal": true,
+    "canonical_digest_G2": "d46a6997029e19e24fb39d492d3f66c312fe048066fffcb712de46cbfb852a80",
+    "canonical_digest_G3": "d46a6997029e19e24fb39d492d3f66c312fe048066fffcb712de46cbfb852a80",
+    "levels": [
+      2,
+      3
+    ],
+    "root_rows": 417792,
+    "state_rows": 32768
+  },
+  "run_kind": "integrated",
+  "schema": "tect/pah-omc008-multi-cylinder-integrated/1.0",
+  "scientific_transition": false,
+  "scope": {
+    "dimension": "finite two-row relational strip with genuine diagonal face subdivision",
+    "limit": "none; n=2,3 finite local equality only",
+    "model": "PAH-001 + PAH-OMC-008 researcher successor",
+    "normalization": "finite counting-measure Gibbs midpoint rate c=m exp(-beta DeltaF/2)",
+    "regulator": "K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1; all displayed couplings one where used",
+    "volume": "full G_2 and neutral inclusion in G_3; one nonzero charge quantum in the anchor patch"
+  },
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-005": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5",
+    "PAH-OMC-006": "cb1c84e320d2bd24b430ec2b8f19ef9467e3564e1f2a3cd820487730946ddad5",
+    "PAH-OMC-007": "7e4621abecb577855f740b52c14c83bbfd43eb6b0b30b0b9197e7baa9503280a",
+    "PAH-OMC-008": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+    "PAH-OMC-008-MANIFEST": "83df59e369f2d10dc9c98b05210bff3fc39eb0055936a799953bda4696b02be2"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "support_audit": {
+    "G2": {
+      "link_h00_plus": [
+        "face:0"
+      ],
+      "link_h01_plus": [
+        "face:1"
+      ],
+      "radial_h00_b_to_a": [
+        "covariant:d0",
+        "covariant:d1",
+        "covariant:h10",
+        "covariant:v0",
+        "covariant:v1",
+        "onsite:0,0",
+        "onsite:1,0"
+      ]
+    },
+    "G3": {
+      "link_h00_plus": [
+        "face:0"
+      ],
+      "link_h01_plus": [
+        "face:1"
+      ],
+      "radial_h00_b_to_a": [
+        "covariant:d0",
+        "covariant:d1",
+        "covariant:h10",
+        "covariant:v0",
+        "covariant:v1",
+        "onsite:0,0",
+        "onsite:1,0"
+      ]
+    },
+    "equal": true
+  },
+  "task_id": "T-054",
+  "verdict": "EXACT_NONZERO_Q_MATTER_CLOSED_FACE_HOLONOMY_JOINT_CYLINDER_COMPATIBILITY",
+  "verification": "PASS",
+  "verification_summary": {
+    "hostile": "12/12 mutations rejected",
+    "independent": "16/16",
+    "lean": "PASS",
+    "primary": "25/25"
+  }
+}
