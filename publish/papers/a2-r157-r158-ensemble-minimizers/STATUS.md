@@ -1,7 +1,7 @@
 # STATUS — A2/R-157/R-158 ensemble-minimizers
 
 Lifecycle: `draft`
-Version: `0.1.38`
+Version: `0.1.39`
 Date: `2026-09-04`
 Owner: TECT publication lane
 
@@ -11,7 +11,7 @@ The folder contains a manual integrated manuscript draft, its cited-claim
 list, a literature-first crosswalk, a reproduction protocol, and an explicit
 external-review handoff.  The draft
 uses only the registered A2 claim, R-157, R-158, and the non-bearing R-472
-assurance sidecar.  Version 0.1.38 retains the closest 2026 Belin--Schneider quasilinear amplitude-theory comparison, narrows the residual contribution accordingly, and retains the self-contained generators, internal matrices,
+assurance sidecar.  Version 0.1.39 retains the closest 2026 Belin--Schneider quasilinear amplitude-theory comparison, narrows the residual contribution accordingly, and retains the self-contained generators, internal matrices,
 density floor, and Class-II coefficient formulas, displays the indexed
 Class-II Euler--Lagrange formula and coefficient tensor `\mathit{C}(u)`, and
 retains the corrected integration-by-parts sign and explicit nonlinear energy
@@ -37,7 +37,9 @@ records the final v0.1.25 release recheck (`PASS -- safe to push the public
 surface`).  `EXP-001418` records the transient post-PDF catalog-staleness repair
 and the subsequent governed release PASS.  `EXP-001419` records the hash-pinned reproduction manifest and its integrity PASS.  `EXP-001421` and `EXP-001422` record the focused primary-source crosswalk and v0.1.26 manuscript update; `TC-0014` corrects only the future wall-clock field of `EXP-001422`; `EXP-001425` records the hash-pinned source-sign decision aid, `EXP-001426` records the v0.1.27 Hölder proof-text repair, and `EXP-001430` records the v0.1.28 shifted-base proof repair, `EXP-001432` records the v0.1.29 endpoint-estimate repair, and `EXP-001435` records the v0.1.30 explicit endpoint-constant repair, and `EXP-001436` records the v0.1.31 temporal-bootstrap repair and final governed release recheck after generated-surface refresh; `EXP-001437` records the finite-interval time-derivative endpoint repair and subsequent governed recheck; `EXP-001439` records the repository-status wording synchronization and subsequent governed recheck; `EXP-001440` records the bibliography-layout compaction; `EXP-001441` records the final manifest and subsequent governed release recheck.  This is a repository-state result,
 not a theorem or publication-readiness result; the lifecycle remains `draft` while
-external proof, source-sign, novelty, operator, and capstone gates remain open.  The non-bearing
+external proof, novelty, operator, and capstone gates remain open.  The canonical
+source-sign issue is separately open only for transfer to the TECT/P1
+interpretation.  The non-bearing
 R-472 assurance pins were
 resynchronized to the current R-157/R-158 manifests and its fresh
 30/30-primary, 22/22-independent, 12/12-hostile, and 22/22-integrated Lean
@@ -46,7 +48,7 @@ repair is recorded in `EXP-001381`.  The v0.1.10 wording correction removes an
 unsupported global-charge-jump reading (recorded in `EXP-001382`): the theorem retains coexistence at
 `\mu_t` and the saturated value `Q_*`, but does not identify every global
 minimizer's charge for `\mu>\mu_t`.  A separate source-reconciliation
-gate `EXP-001386` is open because the canonical A2 v2.0 note writes the
+gate `EXP-001386` is open for canonical transfer because the canonical A2 v2.0 note writes the
 opposite Class-II principal sign from the paper and executable audit; no
 canonical source hash has been changed.  The explicit v1.1/v2.0 comparison and
 its clean v0.1.11 replay are recorded in `EXP-001387`.  The convention-narrowing analysis is recorded in `EXP-001388`; the v0.1.18 source/PDF replay, graph-equivalent H2 norm, exact coercivity certificate, nearest-integer shell argument, paper-local Class-II sign audit, and full finite-scope replay are recorded in `EXP-001395`--`EXP-001400`; the v0.1.19 H3 provenance separation, fresh compile, and PDF QA are recorded in `EXP-001401`--`EXP-001402`; the v0.1.20 Fourier-multiplier realization, fresh compile, PDF QA, and finite-scope replay are recorded in `EXP-001403`; the bundled-base-Python smoke replay is recorded in `EXP-001405`; the v0.1.21 coexistence-wording clarification, fresh compile, PDF QA, and finite-scope replay are recorded in `EXP-001406`; the paper-local ensemble identity audit and 24/24 artifact are recorded in `EXP-001407`; the analytic-dependency audit baseline and 28/28 artifact are recorded in `EXP-001409`; the chain-rule regularity repair and 30/30 artifact are recorded in `EXP-001411`; the fixed-charge closure repair and 31/31 artifact are recorded in `EXP-001412`; the paper-local 13/13 and 8/8 artifacts are recorded in `EXP-001396`--`EXP-001399`.
@@ -63,8 +65,8 @@ its clean v0.1.11 replay are recorded in `EXP-001387`.  The convention-narrowing
 - [x] Functional data are self-contained in the manuscript: generators, internal matrices, density floor, and Class-II coefficient formulas are displayed explicitly.
 - [x] The A2 energy identity now states the Gelfand-triple and Hilbert-space chain-rule hypotheses (external audit still required).
 - [x] LaTeX compile and zero-overfull visual review (Tectonic exit 0; the
-  16-page v0.1.38 A4 PDF was rendered and the changed functional, spectral,
-  operator, sign, related-work, and shifted-base proof pages inspected on 2026-09-04).
+  16-page v0.1.39 A4 PDF was rendered in full and pages 1, 5, and 16 were
+  inspected at full resolution on 2026-09-04).
 - [x] Paper-local exact coercivity certificate and 13/13 self-test artifact recorded in `verification/runs/exact-coercivity.json`.
 - [x] Paper-local Class-II source/sign audit and 8/8 exact one-mode artifact recorded in `verification/runs/classii-sign.json` (canonical source reconciliation remains open).
 - [x] Standalone theorem statements are explicitly decoupled from H3; H3 is retained only as a provenance/transfer boundary (`EXP-001401`).
@@ -98,13 +100,20 @@ its clean v0.1.11 replay are recorded in `EXP-001387`.  The convention-narrowing
 - [x] The positive-time smoothing proof explicitly states the shifted-base Sobolev bootstrap, endpoint cancellation in `X_m`, Hölder propagation, nested induction, the strict Hölder range, the split-kernel integral, and the endpoint semigroup factor plus the explicit interval/integral constants and temporal Banach-scale induction (`EXP-001430`, `EXP-001432`, `EXP-001435`, `EXP-001436`; external proof audit remains required).
 - [x] A hash-pinned reproduction manifest records the package file hashes, audit artifact counts, manuscript-hash consistency, and expected replay commands (`verification/runs/reproduction-manifest.json`, `EXP-001419`; auxiliary integrity evidence only).
 - [x] The four paper-local audits reproduce under the bundled base-Python runtime with unchanged artifact hashes (`EXP-001420`; portability evidence only).
-- [ ] Reconcile the Class-II principal sign between the canonical A2 v2.0 note,
-  the executable local-jet audit, and the integrated manuscript (`EXP-001386`).
+- [x] Classify the unresolved canonical A2 v2.0 Class-II sign as a TECT/P1
+  transfer-only gate; the standalone paper fixes the raw-Laplacian convention
+  and does not depend on source intent.  Canonical reconciliation itself remains
+  open under `EXP-001386`.
 - [ ] Full proof audit by an independent mathematician.
 - [ ] Specialist literature/novelty review and crosswalk update.
 - [ ] Operator adversarial review and confirmation of the integrated referee package.
 - [ ] Dedicated capstone PUBLISHED reproduction bundle for R-157/R-158.
-- [x] The v0.1.38 review-packet audit `19/19`, reproduction manifest, complete finite replay, 16-page rendered-PDF review, governed regeneration, and release check pass at `EXP-001450` after the labelled-theorem and blank review-contract checkpoint `EXP-001449`; the preceding v0.1.37 checkpoint is `EXP-001448`.
+- [x] The v0.1.39 package passes A2 `61/61`, R-157 `144/144`, R-158
+  `155/155`, the non-bearing R-472 Lean replay `22/22`, paper-local
+  `13/13`, `8/8`, `24/24`, `50/50`, and review-packet `20/20`, plus the
+  reproduction manifest and 16-page rendered-PDF review (`EXP-001452`).
+- [x] Post-EXP-001452 exploration/time verification, governed regeneration,
+  and the complete repository release check pass at `EXP-001453`.
 - [ ] Submission freeze/tag (requires separate explicit authorization).
 
 ## Non-claims
@@ -115,6 +124,14 @@ new integrated package.  The existing claim cards and their registered tiers
 remain authoritative.
 
 ## Version history
+
+- `0.1.39` (2026-09-04): classified the unresolved canonical A2 Laplacian
+  convention as a TECT/P1 transfer-only gate rather than an analytic premise or
+  independent-paper submission gate.  The standalone functional, theorem
+  statements, coefficients, and proofs are unchanged.  `EXP-001452` records
+  the complete finite replay, `20/20` review-packet audit, passing manifest,
+  and 16-page PDF review.  `EXP-001453` records the governed regeneration and
+  complete repository release PASS.
 
 - `0.1.38` (2026-09-04): added stable labels to all three main theorems, separated the external mathematical and specialist novelty decisions into two blank signed-review contracts, added a `19/19` hash/structure audit, exposed the omitted R-157 integrated verifier command, replayed all finite lanes, and visually reviewed the 16-page PDF. `EXP-001449` records the packet and replay; `EXP-001450` records governed regeneration and release PASS. No external response, source-owner decision, theorem expansion, or submission authorization is claimed.
 

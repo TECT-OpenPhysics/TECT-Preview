@@ -1,9 +1,10 @@
 # Canonical Class-II sign reconciliation
 
-Status: `OPEN` (2026-09-04).  This document fixes the exact source snapshots,
-the two possible Laplacian conventions, and the decision required from the
-canonical source owner.  It is a review input, not an erratum or a claim-tier
-promotion.
+Status: `OPEN FOR CANONICAL TRANSFER` (2026-09-04).  This document fixes the
+exact source snapshots, the two possible Laplacian conventions, and the
+decision required from the canonical source owner.  It is a provenance and
+transfer review input, not an erratum, a premise of the standalone paper
+theorems, or a claim-tier promotion.
 
 ## Scope and source snapshots
 
@@ -63,7 +64,11 @@ mode as `+1`, while `+\Delta` pairs as `-1`.
    the compatibility to be auditable.
 
 The paper fixes the raw-Laplacian convention and therefore writes
-`-B(u)\Delta u`.  It does not silently edit either canonical snapshot.
+`-B(u)\Delta u`.  It does not silently edit either canonical snapshot.  Because
+the functional and convention are printed in the manuscript, the paper's
+standalone theorem is well-defined without deciding which shorthand the later
+canonical note intended.  The unresolved choice matters only when transferring
+the theorem back to the canonical TECT/P1 interpretation.
 
 ## Required source-owner disposition
 
@@ -77,8 +82,11 @@ dispositions:
 * `UNRESOLVED`: retain the gate and do not promote the integrated paper.
 
 Until a signed disposition and, where necessary, an authorized source update
-exist, the A2/R-157/R-158 paper remains `draft` and the source-sign gate is
-open.
+exist, canonical A2/P1 transfer remains blocked and the source-sign gate stays
+open.  This gate does not by itself block independent mathematical submission
+of a manuscript that retains the explicit raw-Laplacian definition and makes
+no canonical-transfer claim.  The paper remains `draft` for its separate
+independent-proof, specialist-novelty, operator, and capstone gates.
 
 ## Reviewer response template
 

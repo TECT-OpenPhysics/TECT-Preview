@@ -98,7 +98,7 @@ def build_assertions(
         )
     )
     return {
-        "manuscript_version_is_v018": "Draft v0.1.38" in manuscript,
+        "manuscript_version_is_v019": "Draft v0.1.39" in manuscript,
         "all_theorem_labels_are_unique": all(
             manuscript.count(rf"\label{{{label}}}") == 1 for label in THEOREM_LABELS
         ),
@@ -133,6 +133,11 @@ def build_assertions(
         "forms_are_routed_by_readiness_matrix": (
             "independent-proof-review-form.md" in readiness
             and "specialist-novelty-review-form.md" in readiness
+        ),
+        "canonical_source_sign_is_transfer_only": (
+            "standalone theorem" in manuscript
+            and "Separate transfer-only disposition" in readiness
+            and "is not an independent-paper submission gate" in readiness
         ),
         "proof_form_forbids_internal_impersonation": (
             "may not fill the independent-review fields" in proof_form
@@ -202,7 +207,7 @@ def main() -> int:
         "non_claims": [
             "This audit does not judge the analytic proof.",
             "This audit does not establish novelty or simulate an independent reviewer.",
-            "This audit does not close source-owner, operator, capstone, submission, or publication gates.",
+            "This audit does not close canonical-transfer source-owner, operator, capstone, submission, or publication gates.",
         ],
     }
     atomic_write(RUN_PATH, json.dumps(result, indent=2, sort_keys=True) + "\n")

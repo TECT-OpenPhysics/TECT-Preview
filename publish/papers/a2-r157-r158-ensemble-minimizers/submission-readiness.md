@@ -1,6 +1,6 @@
 # Submission-readiness matrix — A2/R-157/R-158
 
-Status: `DRAFT / NOT SUBMISSION-AUTHORIZED` (v0.1.38, 2026-09-04).
+Status: `DRAFT / NOT SUBMISSION-AUTHORIZED` (v0.1.39, 2026-09-04).
 This matrix is a decision aid for the finite side-16 classical paper and its
 reproduction package.  It is not a referee report, a novelty certificate, a
 source-owner response, an operator approval, or a publication record.
@@ -22,27 +22,33 @@ physical vacuum, or any TECT cosmological conclusion.
 |---|---|---|---|
 | Scope and closest prior work | Self-contained functional and spectral data in `manuscript.tex`; bounded primary-source crosswalk including the 2026 Belin--Schneider quasilinear amplitude results (`EXP-001442`); explicit non-subsumption and no-general-method language | `PARTIAL` | Specialist literature/novelty review and any required crosswalk repair |
 | Self-contained proof | A2/R-157/R-158 proof text with stable theorem labels; indexed Class-II variation; direct-method and chain-rule dependencies; direct fixed-point, Fourier compactness, and singular-Grönwall reductions; hypothesis map in `theorem-applicability-audit.md`; paper-local structural audit `50/50` | `INTERNAL-READY` | Independent mathematician must complete and sign `independent-proof-review-form.md` |
-| Independent/adversarial audit | Exact audits `13/13`, `8/8`, `24/24`, `50/50`; integrated replays A2 `61/61`, R-157 `144/144`, R-158 `155/155`; blank proof and novelty contracts fix itemized hostile tests and signed response fields | `FINITE-AUDIT-PASS` | Signed mathematician proof audit, signed specialist novelty disposition, operator adversarial response, and canonical source-sign disposition |
+| Independent/adversarial audit | Exact audits `13/13`, `8/8`, `24/24`, `50/50`; integrated replays A2 `61/61`, R-157 `144/144`, R-158 `155/155`; blank proof and novelty contracts fix itemized hostile tests and signed response fields; the canonical source-sign issue is classified as transfer-only | `FINITE-AUDIT-PASS` | Signed mathematician proof audit, signed specialist novelty disposition, and operator adversarial response |
 | Reproducible package | Hash-pinned `verification/runs/reproduction-manifest.json`; bundled commands and source hashes; strict note-PDF check | `PACKAGE-PASS` | Operator-confirmed integrated referee/capstone bundle after external review |
-| Manuscript and registration | 16-page v0.1.38 Tectonic PDF with fifteen references, stable main-theorem labels, rendered-page review, `README.md`, `STATUS.md`, `claims-cited.md`, source-sign aid, and two blank signed-review contracts under `publish/papers/` | `DRAFT-REGISTERED` | Actual signed responses, repaired version if needed, and explicit submission authorization |
-| Final quality gate | v0.1.38 passes review-packet audit `19/19`, complete finite replay, hash-pinned manifest, 16-page rendered-PDF review, governed regeneration, exploration/time verification, strict PDF validation, and release check at `EXP-001450` after the packet checkpoint `EXP-001449` | `REPOSITORY-PASS` | Operator-side commit/backup confirmation and the dedicated `PUBLISHED` capstone; no public submission is implied |
+| Manuscript and registration | 16-page v0.1.39 Tectonic PDF with fifteen references, stable main-theorem labels, `README.md`, `STATUS.md`, `claims-cited.md`, transfer-only source-sign aid, and two blank signed-review contracts under `publish/papers/`; complete replay and PDF review at `EXP-001452` | `DRAFT-REGISTERED` | Actual signed proof and novelty responses, repaired version if needed, and explicit submission authorization |
+| Final quality gate | v0.1.39 passes review-packet audit `20/20`, complete finite replay, hash-pinned manifest, and 16-page rendered-PDF review at `EXP-001452`; governed regeneration and the complete release check pass at `EXP-001453` | `REPOSITORY-PASS` | Operator-side commit/backup confirmation and the dedicated `PUBLISHED` capstone; no public submission is implied |
 
-## Required signed dispositions
+## Required signed dispositions for the independent paper
 
 The paper must remain `draft` until each applicable response is recorded with
 identity, date, toolchain or source hash, evidence locations, and disposition.
 
-1. **Canonical source owner:** choose `POSITIVE-LAPLACIAN`, authorize
-   `RAW-LAPLACIAN-ERRATUM`, or return `UNRESOLVED` as specified in
-   `source-sign-reconciliation.md` (`EXP-001386` remains open).
-2. **Independent mathematician:** answer all eight questions in
+1. **Independent mathematician:** answer all eight questions in
    `external-review-handoff.md`; a `PASS` must list hypotheses and exact
    equations, while a `REPAIR` must identify every dependent statement.
-3. **Specialist reviewer:** complete the search and decision matrix in
+2. **Specialist reviewer:** complete the search and decision matrix in
    `specialist-novelty-review-form.md`; no world-first claim may be
    inferred from a clean search.
-4. **Operator:** confirm the integrated referee package, source hashes, fresh
+3. **Operator:** confirm the integrated referee package, source hashes, fresh
    PDF, manifest, and commit/backup state before any `PUBLISHED` marker.
+
+## Separate transfer-only disposition
+
+The **canonical source owner** must choose `POSITIVE-LAPLACIAN`, authorize
+`RAW-LAPLACIAN-ERRATUM`, or return `UNRESOLVED` as specified in
+`source-sign-reconciliation.md` before any theorem is transferred to the
+canonical TECT/P1 interpretation (`EXP-001386` remains open).  This disposition
+is not a premise of the standalone theorem for the explicitly printed
+raw-Laplacian functional and is not an independent-paper submission gate.
 
 ## Current finite evidence
 
@@ -52,10 +58,10 @@ The current package records the following finite-scope evidence only:
 - R-157 integrated replay: `144/144` PASS, including the A2 `61/61` regression.
 - R-158 integrated replay: `155/155` PASS, including the R-157/A2 regression.
 - Paper-local audits: exact coercivity `13/13`, Class-II sign `8/8`, ensemble
-  identity `24/24`, analytic dependencies `50/50`.
+  identity `24/24`, analytic dependencies `50/50`, review packet `20/20`.
 - Manifest: `PAPER-REPRODUCTION-MANIFEST-PASS` with package hashes and matching
   manuscript hashes.
-- PDF: 16 A4 pages, bundled Tectonic exit 0, changed-page visual review
+- PDF: v0.1.39, 16 A4 pages, bundled Tectonic exit 0, all-page and full-resolution visual review at `EXP-001452`; preceding changed-page review
   (`EXP-001447`; direct-analytic/applicability repair EXP-001446; preceding v0.1.36 governed checkpoint EXP-001445 and proof-text repair EXP-001444 and provenance-only TC-0015; preceding v0.1.35 governed checkpoint EXP-001443 and closest-source boundary EXP-001442; preceding v0.1.34 final checkpoint EXP-001441 and bibliography-layout repair EXP-001440, plus v0.1.33 repository-status synchronization EXP-001439, finite-interval endpoint checkpoint EXP-001437 and temporal-bootstrap checkpoint EXP-001436 and endpoint-constant checkpoint EXP-001435 and endpoint-estimate checkpoint EXP-001432), and strict note-PDF validation PASS.
 - Repository: `release_check.py` PASS with only pre-existing large-file
   warnings.
@@ -77,7 +83,8 @@ this matrix and rerun the affected audits after any of the following:
 - a failed replay, stale manifest, PDF drift, or release-check failure;
 - an operator request for a different commit, backup, tag, upload, or venue.
 
-A `PUBLISHED` or submission marker may be added only after the signed
-responses, repaired-and-replayed package, operator capstone, and separate
-explicit authorization all exist.  Until then the correct disposition is
-`DRAFT / NOT SUBMISSION-AUTHORIZED`.
+A `PUBLISHED` or submission marker may be added only after the applicable
+paper-review responses, repaired-and-replayed package, operator capstone, and
+separate explicit authorization all exist.  Until then the correct disposition
+is `DRAFT / NOT SUBMISSION-AUTHORIZED`.  Canonical transfer additionally
+requires the separate source-owner disposition above.

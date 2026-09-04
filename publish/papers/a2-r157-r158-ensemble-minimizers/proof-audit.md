@@ -17,8 +17,8 @@ Fourier multiplier with operator domain `H^4` and form domain `H^2`.  The declar
 functional and shell bottom remain reconstructible from the source.  The external
 review questions and signed response protocol are consolidated in
 `external-review-handoff.md`; the hypothesis-by-hypothesis analytic theorem map is `theorem-applicability-audit.md`; the exact canonical Class-II sign alternatives
-and source-owner response schema are fixed in `source-sign-reconciliation.md`;
-no external response has yet been received.
+and source-owner response schema are fixed in `source-sign-reconciliation.md` as
+a transfer-only gate; no external response has yet been received.
 It does not audit a removed
 regulariser, a historical backend, a thermodynamic or continuum limit, a
 quantum/KMS construction, a physical charge, a physical vacuum, BCC selection,
@@ -27,12 +27,18 @@ or any Sector-A interpretation.
 The source claims are `A2-FULL-PRODUCTION-WELLPOSED`, `R-157`, and `R-158`.
 `R-472` is an assurance-only exact/Lean sidecar and is not load-bearing.
 
+Version 0.1.39 changes only the gate classification: the canonical A2 source
+sign remains open for TECT/P1 transfer but is not a premise of the explicitly
+defined standalone theorem.  `EXP-001452` records the unchanged finite results,
+the `20/20` packet audit, passing manifest, and 16-page PDF review;
+`EXP-001453` records the governed regeneration and repository release PASS.
+
 ## Theorem-by-theorem checklist
 
 | item | proof obligation | current evidence | internal disposition | external review |
 |---|---|---|---|---|
 | A2-1 | The fourth-order symbol is positive and the form domain is `H^2`, operator domain `H^4`. | `manuscript.tex`, Sec. 4.1; A2 full-production audits | exact constants and operator statement are recorded; the manuscript now defines the graph-equivalent H2 norm, proves the explicit 1/5 lower bound by a negative discriminant, and realizes the modewise Hermitian positive multiplier with operator domain `H^4` and form domain `H^2`, independently replayed by `verification/exact_coercivity_audit.py` (13/13); the paper-local source/sign audit also passes 8/8 with source hashes recorded, while canonical sign intent remains open | required: check self-adjoint realization and norm equivalence |
-| A2-2 | The regularised Class-II Euler map has order two and is locally Lipschitz `H^2 -> L^2`. | `manuscript.tex`, Sec. 4.2; nonlinear-mapping audit; explicit `N=N_loc+N_II` definition and indexed Eq. `eq:euler-classii` | the integration-by-parts sign, component formula, coefficient tensor, and full lower-order map are displayed; the coefficient/product H2-to-L2 local-Lipschitz estimate is now written explicitly, while the product exponents and coefficient dependence remain subject to external verification. `EXP-001386` also records a source-reconciliation gate: the canonical A2 v2.0 note writes the opposite principal sign from the paper/code. `EXP-001388` narrows this to a possible undocumented positive-Laplacian shorthand, but source intent is unresolved. | required: verify every product exponent, coefficient dependence, denominator derivative, sign convention, and whether the canonical note needs an authorized erratum |
+| A2-2 | The regularised Class-II Euler map has order two and is locally Lipschitz `H^2 -> L^2`. | `manuscript.tex`, Sec. 4.2; nonlinear-mapping audit; explicit `N=N_loc+N_II` definition and indexed Eq. `eq:euler-classii` | the integration-by-parts sign, component formula, coefficient tensor, and full lower-order map are displayed; the coefficient/product H2-to-L2 local-Lipschitz estimate is now written explicitly, while the product exponents and coefficient dependence remain subject to external verification. `EXP-001386` records the separate canonical-transfer discrepancy, and `EXP-001388` narrows it to a possible undocumented positive-Laplacian shorthand. | required for the paper: verify every product exponent, coefficient dependence, denominator derivative, and the raw-Laplacian sign; separately required for canonical transfer: decide whether the canonical note needs an authorized erratum |
 | A2-3 | Analytic-semigroup mild theory gives local existence and continuation. | `manuscript.tex`, Sec. 4.2; A2 wrapper; paper-local analytic-dependency audit `50/50` | the multiplier, Duhamel map, `T^{1/2}` contraction, and continuation alternative are displayed directly; structural presence is checked | required: check sectorial hypotheses and the singular-kernel contraction |
 | A2-4 | Galerkin solutions pass to a global weak/strong solution and satisfy the exact energy identity. | `manuscript.tex`, Sec. 4.3; energy-continuation audit; explicit Gelfand-triple/Hilbert-space chain-rule statement; analytic-dependency audit `50/50` | Fourier high-mode tails, finite-mode `H^1_t` compactness, the diagonal strong-convergence argument, and chain-rule prerequisites are displayed and structurally checked, including the explicit Galerkin-limit `L^2_tL^2_x` time-derivative upgrade on every finite interval, its `s=0` energy-identity endpoint control, and the weak closure of the fixed-charge constraint; the analytic passage is not machine-proved | required: audit projection, compactness, and chain-rule passage |
 | A2-5 | Endpoint Duhamel cancellation yields `H^4` for positive time and Moser iteration yields smoothness. | `manuscript.tex`, Sec. 4.4; smoothing audit; analytic-dependency audit `50/50` | positive-time Hölder interpolation and the shifted-base endpoint bootstrap are now explicit structural dependencies, including the strict $0<\theta<1$ range, split-kernel integral, full $C^\theta$ norm, and endpoint semigroup factor; cancellation, Hölder propagation, and iteration remain subject to signed review | required: verify endpoint integrability, shifted-base domain, Hölder estimate, and iteration domains |
@@ -140,3 +146,11 @@ PUBLISHED capstone bundle.  The preceding v0.1.36 finite replay, manifest, PDF a
 full one-sided global-charge discontinuity can be proved from the current
 ensemble estimates or must remain outside scope.  Any objection from those reviews must be recorded
 here and in the appropriate governed ledger before the lifecycle advances.
+
+Gate classification clarification (v0.1.39): the independent-paper gates are
+the signed mathematical audit, specialist novelty review, operator adversarial
+confirmation, and capstone package.  The unresolved canonical A2 sign is a
+separate TECT/P1 transfer gate, because the standalone manuscript prints its
+functional and raw-Laplacian convention explicitly.  It must be resolved before
+canonical transfer, but it is not an analytic premise or submission gate for
+the independent mathematical paper.

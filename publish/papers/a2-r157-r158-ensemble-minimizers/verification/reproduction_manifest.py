@@ -58,7 +58,7 @@ EXPECTED_AUDITS = {
     "classii-sign": {"verdict": "PAPER-CLASSII-SIGN-AUDIT-PASS", "passed": 8, "total": 8},
     "ensemble-identity": {"verdict": "PAPER-ENSEMBLE-IDENTITY-AUDIT-PASS", "passed": 24, "total": 24},
     "analytic-dependency": {"verdict": "PAPER-ANALYTIC-DEPENDENCY-AUDIT-PASS", "passed": 50, "total": 50},
-    "review-packet": {"verdict": "PAPER-REVIEW-PACKET-AUDIT-PASS", "passed": 19, "total": 19},
+    "review-packet": {"verdict": "PAPER-REVIEW-PACKET-AUDIT-PASS", "passed": 20, "total": 20},
 }
 
 EXPECTED_COMMANDS = (
@@ -99,7 +99,7 @@ EXPECTED_COMMANDS = (
     },
     {
         "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py --self-test",
-        "expected": "PAPER-REVIEW-PACKET-AUDIT-PASS: 19/19",
+        "expected": "PAPER-REVIEW-PACKET-AUDIT-PASS: 20/20",
         "scope": "blank external-review packet structure and hash consistency",
     },
 )
@@ -201,7 +201,7 @@ def build() -> dict[str, Any]:
         "non_claims": [
             "This manifest proves package integrity only; it is not an analytic proof or external review.",
             "Expected command strings are finite-scope replay oracles and do not promote claim tiers.",
-            "No source-sign, novelty, operator, physical-limit, submission, upload, tag, push, or publication conclusion is asserted.",
+            "No canonical-transfer source-sign, novelty, operator, physical-limit, submission, upload, tag, push, or publication conclusion is asserted.",
         ],
     }
 

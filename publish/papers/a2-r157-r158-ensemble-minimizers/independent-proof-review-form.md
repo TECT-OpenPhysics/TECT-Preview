@@ -1,6 +1,6 @@
 # Independent proof-review form — A2/R-157/R-158
 
-Status: `BLANK / NO REVIEW DISPOSITION RECORDED` (manuscript v0.1.38,
+Status: `BLANK / NO REVIEW DISPOSITION RECORDED` (manuscript v0.1.39,
 2026-09-04).
 
 This form is the frozen contract for an independent mathematical audit.  It
@@ -11,10 +11,10 @@ assistant, or an author self-check may not fill the independent-review fields.
 
 - Manuscript: `manuscript.tex`
 - Manuscript SHA-256:
-  `c6b2b5be29ca5bf567fd68ce2647bba24e3b242a433ddb44b5295bbfc545da24`
+  `6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155`
 - Rendered PDF: `manuscript.pdf`, 16 pages
 - PDF SHA-256:
-  `87f145e1c8744e1ee2c7a10656d919bcaba17c7c8b0e5c5b3658e1670a573860`
+  `28bbb7d231dfcd0abc75b657e4a2d8556fc491d284bfecf7fb8757ce6dfacb07`
 - Scope: one explicitly printed three-component complex field, realified as
   six components, on the fixed periodic torus `T^3_16`, with the positive
   density floor and coefficients printed in the manuscript.
@@ -37,10 +37,11 @@ author.  For each item return exactly one of:
 - `OUTSIDE-SCOPE`: the requested proposition is not asserted by the paper.
 
 A global `PASS` is valid only if every applicable item is `PASS`, every cited
-dependency is checked, the source-sign question is separately disposed by its
-owner, and no unlisted major objection remains.  Blank fields, silence, a
-successful executable replay, or `OUTSIDE-SCOPE` on a claimed implication do
-not count as approval.
+dependency is checked, and no unlisted major objection remains.  Blank fields,
+silence, a successful executable replay, or `OUTSIDE-SCOPE` on a claimed
+implication do not count as approval.  The source owner separately controls any
+transfer to the canonical TECT/P1 interpretation; that provenance disposition
+is not a premise of this standalone mathematical review.
 
 ## Proof-obligation matrix
 
@@ -106,8 +107,8 @@ reviewer_name: <name>
 affiliation: <affiliation>
 expertise: <relevant expertise>
 independence_statement: <relationship to author and project>
-manuscript_sha256_checked: c6b2b5be29ca5bf567fd68ce2647bba24e3b242a433ddb44b5295bbfc545da24
-pdf_sha256_checked: 87f145e1c8744e1ee2c7a10656d919bcaba17c7c8b0e5c5b3658e1670a573860
+manuscript_sha256_checked: 6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155
+pdf_sha256_checked: 28bbb7d231dfcd0abc75b657e4a2d8556fc491d284bfecf7fb8757ce6dfacb07
 reproduction_toolchain_and_commit: <exact environment and commit>
 items_completed: P-01,...,P-15
 unlisted_objections: <details, or NONE>

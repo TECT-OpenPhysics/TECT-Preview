@@ -1,6 +1,6 @@
 # Specialist novelty-review form — A2/R-157/R-158
 
-Status: `BLANK / NO NOVELTY DISPOSITION RECORDED` (manuscript v0.1.38,
+Status: `BLANK / NO NOVELTY DISPOSITION RECORDED` (manuscript v0.1.39,
 2026-09-04).
 
 This form requests a specialist literature and publishability opinion.  It is
@@ -10,9 +10,9 @@ reviewed the paper.
 ## Frozen review object and residual proposition
 
 - Manuscript SHA-256:
-  `c6b2b5be29ca5bf567fd68ce2647bba24e3b242a433ddb44b5295bbfc545da24`
+  `6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155`
 - PDF SHA-256:
-  `87f145e1c8744e1ee2c7a10656d919bcaba17c7c8b0e5c5b3658e1670a573860`
+  `28bbb7d231dfcd0abc75b657e4a2d8556fc491d284bfecf7fb8757ce6dfacb07`
 - Detailed bounded crosswalk: `literature-crosswalk.md`
 
 The only proposed residual contribution is the model-specific conjunction,
@@ -99,7 +99,7 @@ independence_statement: <relationship to author and project>
 search_dates: <YYYY-MM-DD through YYYY-MM-DD>
 databases_and_indexes: <complete list>
 queries_and_citation_chains: <reproducible list or attached record>
-manuscript_sha256_checked: c6b2b5be29ca5bf567fd68ce2647bba24e3b242a433ddb44b5295bbfc545da24
+manuscript_sha256_checked: 6d28693dded70d4015b63a9c56eeea39ea3ac3e106b8cfae83064fbe667b9155
 decisions_completed: D-01,...,D-07
 global_disposition: PUBLISHABLY-DISTINCT | REPAIR-AND-REREVIEW | SUBSUMED | INCONCLUSIVE
 required_repairs: <exact list, or NONE>
@@ -109,5 +109,5 @@ date: <YYYY-MM-DD>
 
 Only a signed `PUBLISHABLY-DISTINCT` disposition, after any required repairs
 are incorporated and rechecked, can close the specialist novelty gate.  It
-does not by itself close the mathematical proof, source-sign, operator,
+does not by itself close the mathematical proof, canonical-transfer source-sign, operator,
 commit/backup, capstone, or submission-authorization gates.

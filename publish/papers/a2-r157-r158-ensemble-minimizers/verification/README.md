@@ -36,14 +36,14 @@ Expected registered results are:
 * paper-local Class-II source/sign audit: `8/8` PASS, with both source hashes recorded and the undefined v2.0 Laplacian convention retained as an open gate;
 * paper-local ensemble identity/Bregman/coexistence/witness audit: `24/24` PASS, reconstructed from the pinned A1 manifest with hostile mutations rejected;
 * paper-local analytic-dependency audit: `50/50` PASS, with exact Sobolev, compactness, kernel, direct-method, floor, and sign-prerequisite checks and hostile mutations rejected;
-* review-packet structural/hash audit: `19/19` PASS, checking the three stable theorem labels, `P-01`--`P-15`, nine hostile tests, `N-01`--`N-07`, `D-01`--`D-07`, blank status, signature fields, and current manuscript/PDF hashes without filling either form;
+* review-packet structural/hash audit: `20/20` PASS, checking the three stable theorem labels, `P-01`--`P-15`, nine hostile tests, `N-01`--`N-07`, `D-01`--`D-07`, blank status, signature fields, current manuscript/PDF hashes, and the transfer-only source-sign classification without filling either form;
 * hash-pinned reproduction manifest: `PAPER-REPRODUCTION-MANIFEST-PASS`, with package file SHA-256 values, audit artifact counts, manuscript-hash consistency, and expected replay commands recorded;
 * R-472 exact-core sidecar: primary `30/30`, independent `22/22`, hostile
   `12/12`, integrated `22/22`, with Lean compilation PASS.
 
 The last command is assurance-only: R-472 is explicitly non-bearing and must
 not be used to promote the A2/R-157/R-158 theorem claims.  The manuscript
-version 0.1.38 records the self-contained functional and spectral specification, the closest 2026 Belin--Schneider quasilinear amplitude-theory comparison and narrowed residual-contribution language,
+version 0.1.39 records the self-contained functional and spectral specification, the closest 2026 Belin--Schneider quasilinear amplitude-theory comparison, the transfer-only canonical source-sign classification, and narrowed residual-contribution language,
 the indexed Class-II Euler--Lagrange formula and coefficient tensor, the paper-local
 Fourier-multiplier realization with `H^4`/`H^2` domains, and a bounded primary-source
 literature crosswalk; the displayed data and those sources are
@@ -65,7 +65,7 @@ recorded as `EXP-001372`, correcting the earlier replay boundary `EXP-001370`.
 
 A fresh replay now passes R-157 integrated verification `144/144` (including
 legacy A2 `61/61`) and R-158 integrated verification `155/155` (including the
-R-157/A2 regression).  Manuscript v0.1.38 additionally displays the generators,
+R-157/A2 regression).  Manuscript v0.1.39 additionally displays the generators,
 internal matrices, density floor, Class-II coefficient formulas, explicit
 shell-bottom scalar symbol, the indexed Euler--Lagrange formula and coefficient
 tensor, the integration-by-parts sign in `N_II`, and the nonlinear energy `Phi`,

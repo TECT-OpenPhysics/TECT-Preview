@@ -1,11 +1,23 @@
 # A2/R-157/R-158 ensemble-minimizers paper
 
-Lifecycle: `draft` (version `0.1.38`, 2026-09-04).
+Lifecycle: `draft` (version `0.1.39`, 2026-09-04).
 
 This folder is the self-contained draft lane for the paper
 “Global Well-Posedness, Neutral-State Rejection, and Ensemble-Induced Shell
 Coexistence in a Regularized Multicomponent Brazovskii Functional.”  It is a
 manual P2 manuscript, not a submission or a publication record.
+
+Version 0.1.39 classifies the unresolved canonical A2 Laplacian shorthand as
+a TECT/P1 transfer-only gate.  The standalone paper fixes the raw-Laplacian
+convention and derives its gradient from the displayed functional, so it does
+not depend on source-owner intent.  Its independent proof, novelty, operator,
+and capstone gates remain open; no theorem statement, coefficient, or proof
+conclusion changed in this classification repair.  `EXP-001452` records the
+fresh A2 `61/61`, R-157 `144/144`, R-158 `155/155`, non-bearing R-472 Lean
+`22/22`, paper-local `13/13`, `8/8`, `24/24`, `50/50`, review-packet
+`20/20`, passing manifest, and 16-page rendered-PDF review.  `EXP-001453`
+records the subsequent governed regeneration and complete repository release
+PASS.
 
 ## Contents
 
@@ -19,7 +31,8 @@ manual P2 manuscript, not a submission or a publication record.
 * `STATUS.md` — completion gates and lifecycle history.
 * `proof-audit.md` — internal adversarial checklist and external-review questions.
 * `external-review-handoff.md` — signed-review request, theorem questions, and reproduction response template.
-* `source-sign-reconciliation.md` — hash-pinned Class-II sign comparison and source-owner disposition template.
+* `source-sign-reconciliation.md` — hash-pinned Class-II sign comparison and
+  source-owner disposition template for canonical TECT/P1 transfer only.
 * `submission-readiness.md` — requirement matrix, signed-disposition checklist, and promotion/re-review rules.
 * `theorem-applicability-audit.md` — hypothesis-by-hypothesis map for every general analytic result used by the proof.
 * `verification/runs/reproduction-manifest.json` — hash-pinned package manifest and expected replay outputs.
@@ -65,6 +78,16 @@ independent proof audit.  The internal checklist in `proof-audit.md` makes the
 remaining analytic and external-review obligations explicit.
 
 ## Release boundary
+
+For v0.1.39, the canonical Class-II source reconciliation remains open only
+for a TECT/P1 transfer claim.  The independent paper remains `draft` because
+the signed mathematical audit, specialist novelty review, operator review,
+commit/remote-backup confirmation, and capstone package are not yet complete.
+The fresh replay, manifest, PDF review, governed regeneration, and repository
+release check pass at `EXP-001452`--`EXP-001453`.
+
+The next paragraph is retained as historical checkpoint context; its older
+source-sign-as-paper-gate wording is superseded by the v0.1.39 boundary above.
 
 The paper remains `draft` because the requirement matrix in `submission-readiness.md` still records the Class-II sign reconciliation (with the decision aid in `source-sign-reconciliation.md`), independent proof audit, specialist literature review, operator adversarial review, and dedicated integrated reproduction bundle remain open.  The historical v0.1.25 release check is `EXP-001417`, the post-PDF catalog-staleness repair is `EXP-001418`, `EXP-001426` records the v0.1.27 Hölder proof repair, `EXP-001430` records the v0.1.28 shifted-base proof repair, and `EXP-001432` records the v0.1.29 endpoint-estimate repair and governed release recheck; `EXP-001435` records the v0.1.30 explicit endpoint-constant repair and governed release recheck; `EXP-001436` records the v0.1.31 temporal-bootstrap repair and governed release recheck; `EXP-001437` records the finite-interval time-derivative endpoint repair and governed release recheck; `EXP-001439` records the repository-status wording synchronization and governed release recheck; `EXP-001440` records the bibliography-layout compaction; `EXP-001441` records the final v0.1.34 manifest and governed release recheck; `EXP-001442` records the v0.1.35 closest-source boundary and `EXP-001443` its synchronized manifest and governed recheck; `EXP-001444` records the v0.1.36 proof-text repair; `TC-0015` is its provenance-only timestamp correction; `EXP-001445` records the v0.1.36 finite replay, manifest, PDF, and governed release PASS; `EXP-001446` records the v0.1.37 direct-analytic proof and applicability-audit repair; `EXP-001447` records the synchronized finite replay, manifest, rendered-PDF review, regeneration, and governed release PASS. `TC-0014` remains provenance-only historical context.  No submission, upload, tag, or claim-tier promotion is authorized by this folder.
 

@@ -9,14 +9,18 @@ cited claim set (rule M2); no paper may cite a claim above its registered tier
 
 ## Current draft registration
 
-- `a2-r157-r158-ensemble-minimizers/` — Draft v0.1.38.  This is the
+- `a2-r157-r158-ensemble-minimizers/` — Draft v0.1.39.  This is the
   self-contained fixed-side-16 classical A2/R-157/R-158 manuscript and its
   reproducibility package.  It cites `A2-FULL-PRODUCTION-WELLPOSED`, `R-157`,
   and `R-158`; `R-472` is assurance-only.  Its lifecycle remains `draft` and
-  it is not a submission, upload, tag, or publication record.  The repository
-  the v0.1.38 package adds stable main-theorem labels, distinct blank proof and novelty review contracts, a `19/19` review-packet audit, and the complete finite replay at `EXP-001449`; governed regeneration and release PASS at `EXP-001450`. It builds on the v0.1.37 direct-analytic proof and theorem-applicability audit repair in `EXP-001446` and synchronized checkpoint `EXP-001447`. The preceding release check passes at `EXP-001445` after the v0.1.36 Galerkin/Hilbert-scale proof repair in `EXP-001444`, expanded 47/47 structural audit, full finite replay, 16-page PDF review, final manifest, and governed regeneration; `TC-0015` is provenance-only. The preceding v0.1.35 checkpoint is `EXP-001443`, and `TC-0014` remains historical provenance-only context.  See the
-  folder's `STATUS.md` and `proof-audit.md` for the still-open source-sign,
-  independent-audit, novelty, operator, and capstone gates.
+  it is not a submission, upload, tag, or publication record.  Version 0.1.39
+  classifies the unresolved canonical Laplacian shorthand as a TECT/P1
+  transfer-only gate and passes the complete finite replay, `20/20` review
+  packet, manifest, and 16-page PDF review at `EXP-001452`; governed
+  regeneration and repository release PASS are recorded at `EXP-001453`.  See the folder's
+  `STATUS.md` and `proof-audit.md` for the still-open independent mathematical,
+  novelty, operator, and capstone gates; canonical source reconciliation is
+  additionally required only for TECT/P1 transfer.
 
 First target: Packet A — "Reading-H vacuum selection in a corrected
 Brazovskii-TECT model" (10-20 pages).
