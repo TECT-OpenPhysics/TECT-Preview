@@ -219,14 +219,21 @@ Because `sum_y a_y=0`, the zero-sum Poisson solution is well-defined.  The
 minimum-norm time-constant edge field is
 
 ```text
-h=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j.
+h_FSS=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j.
 ```
 
 It satisfies
 
 ```text
-c*(G omega,h)_N=(j,omega)_N,
-(c/2)*|h|_N^2=(1/(2c))*(j,L_sp^(-1)j)_N.
+B_FSS h_FSS=j,
+|h_FSS|_N^2=(j,L_sp^(-1)j)_N.
+```
+
+The bond completion-square field is `b=h_FSS/c`.  It therefore satisfies
+
+```text
+c*(G omega,b)_N=(j,omega)_N,
+(c/2)*|b|_N^2=(1/(2c))*(j,L_sp^(-1)j)_N.
 ```
 
 The finite FSS domination inequality consequently reads

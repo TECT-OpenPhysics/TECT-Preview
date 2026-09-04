@@ -104,11 +104,16 @@ For a convex function, choose differentiability points `h_n>0` with
 P_beta'(h_n) -> D_+P_beta(0).
 ```
 
-For each fixed `h_n`, apply KKK Proposition 2.21 to a periodic-volume
-subsequence.  It supplies a translation-invariant tempered Euclidean DLR
-accumulation point `mu_n` for the source `h_n`.  The finite-volume derivative
-identity and the common exponential estimate imply uniform integrability of
-`(u,omega_0(0))`.  Consequently,
+For each fixed `h_n`, the convex-derivative lemma recorded in
+`q3lock-pressure-derivative-subsequence-audit-260905.md` applies: finite
+periodic pressures are convex `C^1`, and EXP-000780 supplies locally uniform
+convergence, so `P_(beta,L)'(h_n) -> P_beta'(h_n)` along the full periodic
+sequence and hence along the subsequence selected for DLR compactness.  Apply
+KKK Proposition 2.21 to that periodic-volume subsequence.  It supplies a
+translation-invariant tempered Euclidean DLR accumulation point `mu_n` for
+the source `h_n`.  The finite-volume derivative identity and the common
+exponential estimate imply uniform integrability of `(u,omega_0(0))`.
+Consequently,
 
 ```text
 (1/8) * integral (u,omega_0(0)) dmu_n
@@ -122,7 +127,10 @@ tempered configuration space.  Translation invariance passes to the limit.
 
 No assertion that the different `mu_n` are a single cofinal-volume sequence
 is needed: each fixed-source DLR accumulation is taken first, and the source
-limit is then a separate compactness step.
+limit is then a separate compactness step.  The derivative identification is
+not supplied by DLR compactness alone; it uses local uniform pressure
+convergence, finite-volume trace differentiability, and local-observable
+uniform integrability as isolated in EXP-001560.
 
 ## 5. Passing the DLR equation through `h_n -> 0`
 

@@ -17195,13 +17195,13 @@ mathematical theorem.
 
 | source | SHA-256 |
 |---|---|
-| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `2e6d7953e311c7c437eeda3677e7b0cbf032e7637119878ca04c72669a9c6e96` |
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `fc0566d5148de518b88c70824a8a9c8a8f50c5c4626ce356e8077f0cafaef03e` |
 | upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
 | upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
 | EXP-000782 upstream scope-firewall audit | `cce56eed01dfe6239d8ddbcc43e823df4e2c68ebeebe51dfc71823b545b165e9` |
 | KP v1 theorem-locator correction audit | `b077d49dc26976212175ed11b7d212e0210d3af9d29fc7fc8bce6519988ec0e5` |
 | Temporal-correction sidecar (TC-0030) | `0216f0d1c9776013ccae9552dff1390e6b8395e8e53fb104554f566dd33bab3c` |
-| P-06/P-09 audit round 2 | `ab0af1d2f4942d6c646bdb44c2dc9f53fad00be3a944a0dddd35cb0790ea4f03` |
+| P-06/P-09 audit round 2 | `df142c6bd3cc5115396e2bee953045a4ceec08a3f222c10c38e0aad2d40114c5` |
 | Jensen normalizer sub-obligation audit | `abc9535a004a548e3a348211320e9bc859f6be73bc181b878ee6c92ed4e635b1` |
 | Quartic coercivity and form-domain audit | `afcb0d694c950e0c63a3c46f0e8e78ccdef81c9fea726116905b49da00bcfe9e` |
 | Integrated proof-text insertion map | `e398f852ed56a40f7b2cd45108aa6d6272996c2c752ec2fda4b0070edc922ec2` |
@@ -17211,16 +17211,22 @@ mathematical theorem.
 | Fixed-volume Gaussian tightness, Jensen normalizer and source-UI audit | `5c8f01ad2bde0b438fd840083a478b69b08b16924fa11c1ca04ef0ac0da43b4c` |
 | Fixed-volume massive Gaussian reference convergence audit | `8fe1644e9b478fe22ee3ecd7835391597ddaea6dea7962cc9be9125cd2399538` |
 | P-09 FSS Poisson-shift and infrared-constant audit | `00346f69df3c26be0af419ae2b4323880f2fd147322cfe4e6eb1f8c35b192381` |
-| P-09 constant-source loop-limit audit | `eb50fe2d55727b09d0e466a3208e28e74a7d28a7f31fb7904e814f7499cd0c4e` |
-| FSS divergence-incidence convention audit | `8f9bda6a88afb3e9b71a6c2075bf54a7d027f78994bad1b10db248b08cf6509e` |
+| P-09 constant-source loop-limit audit | `63768652651051e6cdfbe7bc9052b5cfc8654d2cb80080f7cbacb81eb83b8669` |
+| FSS divergence-incidence convention audit | `5b5957fb9ebd34e3b6afe24d35b4b7ab2cf025753bb6096a66bd491d3b24fe92` |
 | FSS incidence convention repair audit | `67dc69cfdce97ac9c904f999aff914fca0ce80f335025a50c9c0126976625972` |
-| FSS gradient-adjoint notation correction audit | `441e01bdfd8b07ce48d2712bedf52e77fc312cdb0e13b09889d5e6bbda49b2ee` |
+| FSS gradient-adjoint notation correction audit | `bd16163fdd38551811b761acc2bcffe141ababd817d9b157ecabd864071a26bc` |
+| FSS theorem-factor transcription audit | `1d5e3d6d05a53f14d9370998a94a2b4e31f23e8af34947329ecd3f738909ce95` |
+| FSS coupling-rescaling audit | `0b606675a1bb91646047daa26fb0482ac78bdd24148e35a55659c2bbf0fba9da` |
+| KKK Falk--Bruch and Griffiths pressure-factor audit | `7a840ac3c86dece38e2bc4bfafe90982a0cd605f231a21070520b266d7280d36` |
 | Pressure zero-mode, Griffiths and tangent-state audit | `2a94560bfcd53f8a2dc2da6098e64cdbcea9fefb9a1c8dc19800549b38e73c40` |
 | Finite-volume translation trace-differentiation audit | `a2659b62fbf5e344d683a2a9638c425fdcf6ba3062e8e45224e4e69a46deff9b` |
 | KKK endpoint-interval and non-differentiable cusp correction | `e5bdd2ed72f19dddd1e3c6325a131d12c04b4a59124745b09dfe665fb8a2c1fb` |
 | P-06 weak-limit versus total-variation correction | `71ead8d0f88e98f7f535104587e24193e52fcb5fee652353b37a0c9020575d79` |
 | R-497 source-hash integrity correction audit | `8dc21caa243e48f7796b76108d7e583fb0f511bd70039d278ca5a12f1d46b043` |
-| Source-tangent and zero-source DLR composition audit | `7047c3a7860afd3cb44d500b8d4aed55dde07bafeb5dd563ca09f102df79d966` |
+| Source-tangent and zero-source DLR composition audit | `7fad177cda60fa3532bb8fc1c56ff2e7ca2f3fdd83ccbfb860bab6d403adb80b` |
+| Pressure-derivative subsequence and source-tangent audit | `18cdd0708fbbd19dad97b8ec6040b5b2a8b58223d40c56dd7de0e400f34526ce` |
+| Source-tangent SHA-256 provenance correction audit | `12239d6e65d8b6e8d78111179973f2407008d08e31665fafad2374f207f21ece` |
+| Source-tangent hash direct recomputation audit | `cc04a7b9d2b3792dc293b882c857b1c7956dce6a6a3c34701a91e6a14adf2fdf` |
 | Verification-lane result hash integrity audit | `f9e896ee3b1c0de2999d59778f024e2b53a8ed67feb7eac852501ca4c39c2bfb` |
 | Momentum-translation hbar normalization audit | `634c266b985c3a65e1ec64a91e8ba942a2cbe7f7e46a24d09dc26773491d2237` |
 | FSS theorem and hypothesis crosswalk | `55d9f02281bb1462a438123e9f6294b3e7d6b15cae399b3aa2a6bb6d0c614fcd` |
@@ -17235,7 +17241,7 @@ mathematical theorem.
 in `strategy/q3lock-exp782-independent-result-manifest-260905.json`. The
 upstream authority records are EXP-000780, EXP-000781, and EXP-000782 in
 `explorations/log.jsonl`; the current seam decisions are EXP-001516, EXP-001522, EXP-001526,
-EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, EXP-001534, EXP-001536, EXP-001537, EXP-001538, EXP-001540, EXP-001541, EXP-001543, EXP-001545, EXP-001546, EXP-001548, EXP-001549, EXP-001550, EXP-001551, EXP-001552, EXP-001554, and EXP-001555. The proof
+EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, EXP-001534, EXP-001536, EXP-001537, EXP-001538, EXP-001540, EXP-001541, EXP-001543, EXP-001545, EXP-001546, EXP-001548, EXP-001549, EXP-001550, EXP-001551, EXP-001552, EXP-001554, EXP-001555, EXP-001556, EXP-001557, EXP-001559, EXP-001560, EXP-001561, and EXP-001562. The proof
 text and its boundaries are audited in
 `strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`, with the
 finite-grid FKG, source-uniform loop limit, topology, edge-incidence,
@@ -17347,6 +17353,44 @@ replaces the edge-valued typo `h=G*L_sp^(-1)j` by the domain-correct
 `h=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j`. The Poisson identity, source pairing,
 Fourier denominator, and infrared constants remain unchanged. This is a
 notation correction only; all analytic and publication gates remain open.
+The EXP-001556 FSS theorem-factor transcription audit is recorded in
+`strategy/q3lock-fss-theorem-factor-transcription-audit-260905.md`; it visually
+transcribes Theorems 2.1--2.3 from the hash-frozen source and rederives the
+`beta/(2c)`, `beta/c`, and `1/(2*beta*c*E(p))` factors with the corrected
+scaled-spin and Poisson-domain map. This is a T0 reproducibility audit only;
+all loop, pressure, cusp, DLR, claim, external-review, and PDF gates remain
+open. The EXP-001557 coupling-rescaling audit is recorded in
+`strategy/q3lock-fss-coupling-rescaling-audit-260905.md`; it separates the
+FSS field `h_FSS` solving `B_FSS h_FSS=j` from the square-completion field
+`b=h_FSS/c`, repairing a load-bearing factor-of-coupling ambiguity without
+changing the finite-grid constants or scientific scope. All analytic and
+publication gates remain open.
+The EXP-001559 KKK Falk--Bruch and Griffiths factor audit is recorded in
+`strategy/q3lock-kkk-griffiths-falk-bruch-factor-audit-260905.md`; it proves the
+scalar monotonicity used in the theta_Q substitution, fixes the bounded cutoff,
+the M_L=V Griffiths scale, the beta and `1/8` pressure conversion, and the
+explicit beta_star algebra. This remains a conditional T0 audit: all finite
+limit, source-tangent, DLR, and independent-review gates stay open, and PDF
+generation remains deferred.
+The EXP-001560 pressure-derivative subsequence audit is recorded in
+`strategy/q3lock-pressure-derivative-subsequence-audit-260905.md`; it adds the
+secant proof that locally uniform convergence of finite convex pressures fixes
+the derivative at every differentiability source, so any fixed-source periodic
+DLR accumulation point inherits the same magnetization once local-observable
+uniform integrability is supplied. It also keeps the source-to-zero limit as a
+separate specification-continuity step. This is a T0 correction only; cusp, DLR
+multiplicity, and PDF gates remain open.
+The EXP-001561 source-tangent hash correction is recorded in
+`strategy/q3lock-source-tangent-hash-correction-audit-260905.md`; it replaces a
+63-character manifest value with the directly recomputed 64-character SHA-256
+without changing the source note or any scientific content. This is a
+provenance-only correction; all mathematical and publication gates remain
+open.
+The EXP-001562 source-tangent hash recomputation audit is recorded in
+`strategy/q3lock-source-tangent-hash-recompute-audit-260905.md`; it catches a
+second one-character truncation in the newly copied projection and requires the
+final digest to be generated from bytes. The source proof text is unchanged and
+all mathematical and PDF gates remain open.
 
 **Reuse scope.** This result is reusable for mathematical-physics analysis of
 the declared fixed-lattice Q3LOCK quantum anharmonic model and for a possible

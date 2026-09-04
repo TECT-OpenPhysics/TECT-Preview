@@ -58,10 +58,17 @@ The spatial action uses the corresponding signed gradient `G=B_FSS^*`:
 
 Since `B_FSS h=j`, the cross term is, up to the fixed orientation sign,
 `<j,omega>`; choosing the opposite edge orientation if necessary makes it
-exactly `+<j,omega>` in the FSS source convention.  Consequently
+exactly `+<j,omega>` in the FSS source convention.  The square-completion cost is
 
 ```text
-(c/2)||h||^2 = (1/(2c))*<j,L_sp^(-1)j>,
+(1/(2c))||h||^2 = (1/(2c))*<j,L_sp^(-1)j>.
+```
+
+Equivalently, with `b=h/c`, one has
+
+```text
+c*(G omega,b)=<j,omega>,
+(c/2)||b||^2=(1/(2c))*<j,L_sp^(-1)j>.
 ```
 
 and the finite-grid estimate remains

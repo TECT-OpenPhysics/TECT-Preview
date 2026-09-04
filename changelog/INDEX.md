@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**930 accepted events** · latest 25 shown below · machine locator: `index.json`
+**935 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,11 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-q3lock-source-tangent-hash-recomputation-record` — [Q3LOCK source-tangent hash recomputation recorded (EXP-001562)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-tangent-hash-recomputation-record) |
+| 2026-09-05 | `20260905-q3lock-pressure-derivative-subsequence-audit-re` — [Q3LOCK pressure-derivative subsequence audit recorded (EXP-001560)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-pressure-derivative-subsequence-audit-re) |
+| 2026-09-05 | `20260905-q3lock-kkk-falk-bruch-and-griffiths-factor-audi` — [Q3LOCK KKK Falk-Bruch and Griffiths factor audit recorded (EXP-001559)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kkk-falk-bruch-and-griffiths-factor-audi) |
+| 2026-09-05 | `20260905-q3lock-fss-coupling-rescaling-corrected-exp-001` — [Q3LOCK FSS coupling-rescaling corrected (EXP-001557)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-fss-coupling-rescaling-corrected-exp-001) |
+| 2026-09-05 | `20260905-q3lock-fss-theorem-factors-transcribed-exp-0015` — [Q3LOCK FSS theorem factors transcribed (EXP-001556)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-fss-theorem-factors-transcribed-exp-0015) |
 | 2026-09-05 | `20260905-q3lock-fss-gradient-adjoint-notation-corrected` — [Q3LOCK FSS gradient-adjoint notation corrected (EXP-001555)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-fss-gradient-adjoint-notation-corrected) |
 | 2026-09-05 | `20260905-q3lock-fss-incidence-convention-repaired-exp-00` — [Q3LOCK FSS incidence convention repaired (EXP-001554)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-fss-incidence-convention-repaired-exp-00) |
 | 2026-09-05 | `20260905-q3lock-public-event-projection-p0-redaction-rep` — [Q3LOCK public event projection P0 redaction repaired (EXP-001552)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-public-event-projection-p0-redaction-rep) |
@@ -37,11 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-q3lock-fixed-volume-massive-gaussian-reference` — [Q3LOCK fixed-volume massive Gaussian reference convergence audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-fixed-volume-massive-gaussian-reference) |
 | 2026-09-05 | `20260905-q3lock-fixed-volume-gaussian-tightness-and-mesh` — [Q3LOCK fixed-volume Gaussian tightness and mesh-uniform normalizer audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-fixed-volume-gaussian-tightness-and-mesh) |
 | 2026-09-05 | `20260905-q3lock-finite-volume-operator-form-domain-and-b` — [Q3LOCK finite-volume operator/form-domain and bounded Falk-Bruch audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-finite-volume-operator-form-domain-and-b) |
-| 2026-09-05 | `20260905-q3lock-external-source-bytes-and-bibliography-f` — [Q3LOCK external source bytes and bibliography freeze] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-external-source-bytes-and-bibliography-f) |
-| 2026-09-05 | `20260905-q3lock-fss-bibliography-page-range-correction-2` — [Q3LOCK FSS bibliography page-range correction] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-fss-bibliography-page-range-correction-2) |
-| 2026-09-05 | `20260905-q3lock-external-kp-fss-source-scope-audit-and-s` — [Q3LOCK external KP/FSS source-scope audit and scalar-vector firewall] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-external-kp-fss-source-scope-audit-and-s) |
-| 2026-09-05 | `20260905-q3lock-proof-text-integration-map-for-jensen-no` — [Q3LOCK proof-text integration map for Jensen normalizer and coercivity inputs] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-proof-text-integration-map-for-jensen-no) |
-| 2026-09-05 | `20260905-q3lock-quartic-coercivity-and-form-domain-audit` — [Q3LOCK quartic coercivity and form-domain audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-quartic-coercivity-and-form-domain-audit) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 919–930 | 12 | [000919-000968.md](pages/000919-000968.md) |
+| 919–935 | 17 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |

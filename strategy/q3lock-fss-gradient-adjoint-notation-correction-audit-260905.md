@@ -32,14 +32,14 @@ L_sp=G^*G=B_FSS B_FSS^* on V_0,
 the zero-sum source `j` has minimum-norm solution
 
 ```text
-h=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j.
+h_FSS=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j.
 ```
 
-Therefore `B_FSS h=j`,
-`c*(G omega,h)=(j,omega)`, and
-`(c/2)||h||^2=(1/(2c))*(j,L_sp^(-1)j)`.  These are the same identities
-used by the FSS domination route; only the domain-consistent display is
-retained.
+Therefore `B_FSS h_FSS=j` and
+`||h_FSS||^2=(j,L_sp^(-1)j)`.  The bond completion-square field is
+`b=h_FSS/c`; hence `c*(G omega,b)=(j,omega)` and
+`(c/2)||b||^2=(1/(2c))*(j,L_sp^(-1)j)`.  The FSS theorem and the bond
+completion use these two related fields; they must not be identified.
 
 ## 3. Verification boundary
 

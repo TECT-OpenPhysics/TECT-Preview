@@ -1,0 +1,181 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 17,
+  "assertions": [
+    {
+      "actual": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+        "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+        "R492": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f"
+      },
+      "expected": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+        "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+        "R492": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f"
+      },
+      "name": "baseline PAH hashes",
+      "pass": true
+    },
+    {
+      "actual": "dfa66f5dfcb6f8120f502fd0e2802efe78753689fe1c652cd6e3ad9c55b0906b",
+      "expected": "dfa66f5dfcb6f8120f502fd0e2802efe78753689fe1c652cd6e3ad9c55b0906b",
+      "name": "baseline Lean hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "AUXILIARY_SUPPORT_NONIDENTIFIABILITY",
+        "omega_status": "NOT_DEFINED",
+        "physical_promotion": false,
+        "projective_consistency": "NOT_TESTABLE",
+        "source_law_present": false,
+        "verdict": "HOLD_FOR_EVIDENCE"
+      },
+      "expected": "HOLD/no source law",
+      "name": "baseline status is HOLD",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "mutation rejected",
+      "name": "reject forged source-law flag",
+      "pass": true
+    },
+    {
+      "actual": "source-owned w_(n,R,Q)=delta_Q=0",
+      "expected": "counterfactual-only text required",
+      "name": "reject adopting delta weights",
+      "pass": true
+    },
+    {
+      "actual": "For the separation argument only, w^(0)=delta_Q=0 and w^(1)=delta_Q=1 are nonnegative normalized laws on the finite grade index. They are not source-owned, fitted, adopted, or used to define PAH-OMC-014.; fitted to ell_a",
+      "expected": "no fitting",
+      "name": "reject fitted weights",
+      "pass": true
+    },
+    {
+      "actual": "grade tag Q itself",
+      "expected": "grade-blind ell_a",
+      "name": "reject grade-sensitive observable",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "false",
+      "name": "reject physical promotion",
+      "pass": true
+    },
+    {
+      "actual": "F_rho=sum_v[lambda_s(s_v-1)^2/2+m2|psi_v|^2/2+lambda_4|psi_v|^4/4+eta_6|psi_v|^6/6+g s_v^2|psi_v|^2/2]+kappa_s sum_(e=(v,w))(s_v-s_w)^2/2+kappa_D sum_(e=(v,w))J_e(s)|psi_w-U_e psi_v|^2/2+kappa_g sum_p J_p(s)(1-Re U_p) + counterterm",
+      "expected": "immutable parent",
+      "name": "reject parent functional mutation",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "positive witness required",
+      "name": "reject missing positive witness",
+      "pass": true
+    },
+    {
+      "actual": {
+        "forbidden": false
+      },
+      "expected": "none allowed",
+      "name": "Lean escape hatch absent",
+      "pass": true
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "parent gate remains open",
+      "pass": true
+    },
+    {
+      "actual": [
+        "This is an underdetermination theorem, not a source-owned sector law and not a choice of weights.",
+        "It does not prove that every future cross-Q law fails projective consistency; it proves only that the current component data do not select one uniquely.",
+        "It does not supply a Cauchy error, a weak cylinder limit, R-488 global nonzero, stationarity, closability or an infinite-volume state.",
+        "R-484 defect 16/9 and R-490 C_sw=540 are untouched and are not used as a weight or limit estimate."
+      ],
+      "expected": "domination-only",
+      "name": "C_sw remains domination-only",
+      "pass": true
+    },
+    {
+      "actual": [
+        "This is an underdetermination theorem, not a source-owned sector law and not a choice of weights.",
+        "It does not prove that every future cross-Q law fails projective consistency; it proves only that the current component data do not select one uniquely.",
+        "It does not supply a Cauchy error, a weak cylinder limit, R-488 global nonzero, stationarity, closability or an infinite-volume state.",
+        "R-484 defect 16/9 and R-490 C_sw=540 are untouched and are not used as a weight or limit estimate."
+      ],
+      "expected": "defect retained",
+      "name": "reject R-484 cancellation",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "R501 registry entry",
+      "name": "Lean registry remains pinned",
+      "pass": true
+    },
+    {
+      "actual": {
+        "global": "NOT_DEFINED_BY_PARENT; not required for this domain-map gate",
+        "source": false
+      },
+      "expected": "absent/undefined",
+      "name": "full-Q law still absent",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R501.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compilation",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-IDENTIFIABILITY-LEAN-HOSTILE-001",
+  "claim_bearing": false,
+  "classification": "AUXILIARY_SUPPORT_NONIDENTIFIABILITY",
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R501.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "mutation_policy": "All adversarial mutations are in-memory only and must be rejected; no source file is changed.",
+  "next_question": "Can a source owner provide one exact normalized w_(n,R,Q) or projective cross-Q kernel, with topology and Cauchy bound, so that the already-proved conditional separation is no longer an underdetermined counterfactual?",
+  "non_claims": [
+    "No full-Q Gibbs state, projective limit or omega is defined.",
+    "No infinite-volume semigroup, quantum real-time dynamics, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "omega_status": "NOT_DEFINED",
+  "passed": 17,
+  "projective_consistency": "NOT_TESTABLE",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc014-identifiability-lean-hostile/1.0",
+  "source_hashes": {
+    "OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "R492": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f",
+    "lean": "dfa66f5dfcb6f8120f502fd0e2802efe78753689fe1c652cd6e3ad9c55b0906b",
+    "manifest": "1ef79e5a354e2a7abf32cbe92a98501a206cb5feacfef4a246d49453ab45d497"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

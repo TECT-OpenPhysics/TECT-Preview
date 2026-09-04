@@ -1,0 +1,110 @@
+{
+  "schema": "tect/pah-omc014-identifiability-lean-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-IDENTIFIABILITY-LEAN",
+  "version": "0.1.0",
+  "title": "Conditional full-Q sector-weight non-identifiability bridge",
+  "purpose": "Show that, when two fixed-Q component cylinder expectations differ, the absent sector-law input cannot be recovered uniquely from the component Gibbs family. The two delta laws are counterfactual admissible probability assignments used only as a separation proof; no PAH law is selected or instantiated.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "source_law_present": false,
+    "constructed_hypothesis": false,
+    "synthetic_fixture": false,
+    "physical_authority": false,
+    "claim_bearing": false,
+    "model_change": false,
+    "epistemic_layer": "L2_FINITE_IDENTIFIABILITY_OBLIGATION"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-012": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+    },
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PAH-OMC-014-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "sha256": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812"
+    },
+    "R-492-INTEGRATED": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain/integrated.json",
+      "sha256": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f"
+    }
+  },
+  "fixed_scope": {
+    "carrier_and_path": "Use exactly the PAH-OMC-004 strip and the PAH-OMC-010 finite parameter path already inherited by PAH-OMC-012; this bridge takes no refinement, cutoff, volume, beta or observation limit.",
+    "components": "Use the unchanged PAH-001 fixed-Q component Gibbs functionals on the PAH-OMC-012 graded union. The index set contains Q=0 and Q=1 at n=2 because Q_n={0,...,2(n+2)}.",
+    "cylinder": "Use the declared grade-blind R-488 cylinder f=ell_a with anchor a=(0,0). It is bounded, gauge-invariant and anchor-preserving.",
+    "component_values": "The Q=0 component has phi_0(f)=0 because every nonnegative ell_v sums to zero. The Q=1 component has phi_1(f)>0 because an allowed finite configuration with ell_a=1 has strictly positive PAH Gibbs mass; R-492 records the corresponding value-1 finite-Gibbs-positive witness.",
+    "counterfactual_weights": "For the separation argument only, w^(0)=delta_Q=0 and w^(1)=delta_Q=1 are nonnegative normalized laws on the finite grade index. They are not source-owned, fitted, adopted, or used to define PAH-OMC-014."
+  },
+  "lean": {
+    "path": "verification/lean/Tect/R501.lean",
+    "sha256": "dfa66f5dfcb6f8120f502fd0e2802efe78753689fe1c652cd6e3ad9c55b0906b",
+    "declarations": [
+      "mix_deltaWeight",
+      "delta_mixtures_separate",
+      "positive_witness_implies_nonidentifiable"
+    ],
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "scope": "Abstract finite convex mixtures: a zero component value and a strictly positive component value are separated by two normalized nonnegative delta weights. No PAH weight law is instantiated."
+  },
+  "theorem_contract": {
+    "assumptions": [
+      "A finite sector index type contains two grades q0 and q1.",
+      "Each component functional is already defined on the same cylinder f.",
+      "The q0 component value is exactly zero.",
+      "The q1 component value is strictly positive.",
+      "Only nonnegative normalized sector laws are admissible for the counterfactual comparison."
+    ],
+    "conclusion": "At least two admissible finite sector-weight laws give different values for f, so the component Gibbs family alone does not identify a unique full-Q mixture functional.",
+    "PAH_instantiation": "PAH-OMC-012/R-492 supplies the finite Q=0 zero fact and the Q=1 ell_a value-1 positive-mass witness; the strict expectation implication uses finite counting normalization and exp(-beta F)>0."
+  },
+  "status": {
+    "classification": "AUXILIARY_SUPPORT_NONIDENTIFIABILITY",
+    "verdict": "HOLD_FOR_EVIDENCE",
+    "source_law_present": false,
+    "omega_status": "NOT_DEFINED",
+    "projective_consistency": "NOT_TESTABLE",
+    "active_gate_change": false,
+    "claim_bearing": false,
+    "physical_promotion": false
+  },
+  "boundaries": [
+    "This is an underdetermination theorem, not a source-owned sector law and not a choice of weights.",
+    "It does not prove that every future cross-Q law fails projective consistency; it proves only that the current component data do not select one uniquely.",
+    "It does not supply a Cauchy error, a weak cylinder limit, R-488 global nonzero, stationarity, closability or an infinite-volume state.",
+    "R-484 defect 16/9 and R-490 C_sw=540 are untouched and are not used as a weight or limit estimate."
+  ],
+  "adversarial_firewall": [
+    "Do not relabel delta_Q=0 or delta_Q=1 as the PAH source law.",
+    "Do not fit weights to the target cylinder or observation data.",
+    "Do not use a component witness as a global nonzero limit.",
+    "Do not promote this finite identifiability result to physical Pre-A, spacetime, QFT, gravity, Yang--Mills, continuum, mass-gap or TOE evidence."
+  ],
+  "missing_inputs": [
+    "A source-authorized hash-pinned full-Q sector law or equivalent projective kernel.",
+    "Its normalization and source/beta/phase policy.",
+    "A common cylinder topology and PAH-specific Cauchy error under the fixed PAH-001 order.",
+    "A domain and uniform-integrability estimate for the stationarity identity."
+  ],
+  "reproduction": {
+    "lean": "Set-Location verification/lean; lake env lean Tect/R501.lean",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_identifiability_lean_verify.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_identifiability_lean_verify_independent.py",
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_identifiability_lean_verify_hostile.py"
+  },
+  "next_question": "Can a source owner provide one exact normalized w_(n,R,Q) or projective cross-Q kernel, with topology and Cauchy bound, so that the already-proved conditional separation is no longer an underdetermined counterfactual?",
+  "non_claims": [
+    "No full-Q Gibbs state, projective limit or omega is defined.",
+    "No infinite-volume semigroup, quantum real-time dynamics, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ]
+}

@@ -4491,6 +4491,666 @@
       "task_id": "T-054",
       "title": "Q3LOCK FSS Poisson field uses the gradient, not its adjoint",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the FSS exponential theorem have the factor (2J)^(-1), or can the later graph factor 2 be merged into it?",
+          "disposition": "DISMISSED: the rendered source display has (2J)^(-1); the additional factor 2 in the Q3LOCK Fourier denominator is the cubic graph eigenvalue ell(p)=2*E(p)."
+        },
+        {
+          "check": "Can the ordinary FSS source omit sqrt(epsilon) after encoding s_y=sqrt(epsilon)x_y?",
+          "disposition": "UPHELD AS FALSE: the ordinary Euclidean pairing requires eta_y(t)=t*sqrt(epsilon)*(a_y*u)_k, while the epsilon-weighted coordinates use j_y(k)=a_y*u."
+        },
+        {
+          "check": "Is G^*L_sp^(-1)eta the edge-valued Poisson field under the declared incidence convention?",
+          "disposition": "UPHELD AS FALSE: G:V_0->E and B_FSS=G^*:E->V_0, so the edge field is h_t=G L_sp^(-1)eta=B_FSS^*L_sp^(-1)eta."
+        },
+        {
+          "check": "Does the exact theorem transcription close the continuous-loop FSS or strict-cusp result?",
+          "disposition": "UPHELD AS FALSE: fixed-mesh application, source-uniform integrability, grid-to-loop covariance, pressure/source tangent, and DLR composition remain separate open gates."
+        },
+        {
+          "check": "Can the FSS all-quadratic-moments hypothesis be treated as uniform in N_t?",
+          "disposition": "UPHELD AS FALSE: FSS is applied at each finite component dimension d=8*N_t; a uniform mesh bound is a Q3LOCK-local obligation."
+        }
+      ],
+      "assumptions": [
+        "The source PDF is the byte-frozen Caltech copy at https://math.caltech.edu/SimonPapers/65.pdf with SHA-256 108b70f69d707c77c46bb4d4870c9df43be635394d3013be043f8f1a566178e1.",
+        "The source Section 2 orientation is matched to the declared Q3LOCK incidence convention up to a global sign, which is absorbed by h -> -h.",
+        "The Q3LOCK scaled-spin map uses epsilon=beta/N_t, s_y=(sqrt(epsilon)x_(y,k))_k, and spatial coupling c>0.",
+        "The zero-sum source condition makes L_sp^(-1) well-defined on V_0."
+      ],
+      "boundary": "T0 source theorem transcription and normalization audit only; no theorem certification, claim-card promotion, manuscript release, or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The rendered FSS source display was transcribed and substituted into the Q3LOCK ordinary coordinates. The calculation fixes the source factor sqrt(epsilon), the FSS constants beta/(2c) and beta/c, the domain-correct Poisson field, and the later Fourier factor 2 without importing any continuous-loop or thermodynamic conclusion.",
+      "evidence_refs": [
+        "strategy/q3lock-fss-theorem-factor-transcription-audit-260905.md#3-exact-theorem-display-used-in-this-audit",
+        "strategy/q3lock-fss-theorem-factor-transcription-audit-260905.md#4-q3lock-ordinary-coordinate-substitution",
+        "strategy/q3lock-fss-theorem-factor-transcription-audit-260905.md#5-domain-correct-poisson-field-and-exact-constants",
+        "strategy/q3lock-fss-theorem-hypothesis-crosswalk-260904.md#2.2-exact-theorem-block-used-by-q3lock",
+        "strategy/q3lock-literature-source-freeze-260905.md#2-reproduction-command-and-capture-date",
+        "strategy/q3lock-p09-constant-source-loop-limit-audit-260905.md#3-finite-grid-fss-inequality-with-the-corrected-source-coordinates"
+      ],
+      "finding": "The visual FSS Theorems 2.1--2.3 display the constants (2J)^(-1), J^(-1), and J^(-1), respectively. Under s_y=sqrt(epsilon)x_y, J=c, d=8*N_t, and eta_y(t)=t*sqrt(epsilon)*(a_y*u)_k, the domain-correct field h_t=G L_sp^(-1)eta(t) has squared norm beta*t^2<a,L_sp^(-1)a>. Hence the finite-grid bounds are log E exp(tX)<=beta*t^2/(2c)<a,L_sp^(-1)a> and Var(X)<=beta/c<a,L_sp^(-1)a>. After the separately justified Duhamel identity and ell(p)=2*E(p), the unit-direction covariance bound is Dhat(p)<=1/(2*beta*c*E(p)) for p!=0. The transcription fixes bookkeeping only; all loop, pressure, cusp, and state-composition gates remain open.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001556",
+      "method": [
+        "Read the hash-frozen FSS source metadata and render the theorem page for visual inspection of Theorems 2.1--2.3.",
+        "Record the source displays with the source notation for sigma, partial_i, and Delta, preserving their constants and theorem separation.",
+        "Substitute the Q3LOCK scaled-spin map and distinguish the epsilon-weighted source from the ordinary FSS source coordinates.",
+        "Apply the explicit G/B_FSS/L_sp convention, compute the Poisson-field norm, and derive the beta and Fourier factors.",
+        "Record source hypotheses, nonimports, adversarial checks, and the remaining independent-audit and PDF gates."
+      ],
+      "missing_assumptions": [
+        "Independent line-by-line review of the finite-grid FSS application and the exact source-divergence orientation.",
+        "Uniform-in-N_t quartic integrability and normalizer bounds, plus the weak grid-to-loop covariance passage.",
+        "Operator/form-domain control, spatial pressure/source tangent composition, strict cusp, and DLR-state separation.",
+        "Claim/result lineage, content freeze, clean replay, release check, and external mathematical referee review."
+      ],
+      "next_action": "Use this factor transcription in the independent P-06/P-09 audit, then complete the local limit and operator obligations before any claim-card or manuscript content freeze; keep LaTeX/PDF deferred.",
+      "non_claims": [
+        "No strict cusp, positive infrared zero-mode lower bound, phase coexistence, DLR multiplicity, extremality, purity, clustering, KMS, ground-state, spectral-gap, continuum, physical-vacuum, cosmological, C6, CP1, Sector A, or Pre-A conclusion is certified.",
+        "No claim card, P2 manuscript, submission, upload, release, tag, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Do the exact FSS Theorems 2.1--2.3 factors and the Q3LOCK scaled-spin/Poisson substitution yield beta/(2c), beta/c, and 1/(2*beta*c*E(p)) without a hidden mesh or graph factor?",
+      "recorded_at": "2026-09-04T22:35:46Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001555",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001554",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK FSS theorem factors and scaled-spin normalization are transcribed",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Can the minimum-norm field h_FSS solving B_FSS h_FSS=j be used directly as the square-completion shift for a bond with coupling c?",
+          "disposition": "UPHELD AS FALSE: the square-completion field is b=h_FSS/c; using h_FSS directly multiplies the source pairing by c."
+        },
+        {
+          "check": "Does separating h_FSS and b change the finite-grid FSS bound or its beta/(2c) constant?",
+          "disposition": "DISMISSED: h_FSS remains the field in the FSS theorem, and b=h_FSS/c gives the equivalent bond cost (2c)^(-1)||h_FSS||^2."
+        },
+        {
+          "check": "Does the correction alter the source scaling, graph eigenvalue, or component normalization?",
+          "disposition": "DISMISSED: sqrt(epsilon), u's unit norm, and ell(p)=2*E(p) are unchanged."
+        },
+        {
+          "check": "Does this finite algebraic repair close the continuous-loop, pressure, cusp, or DLR-state theorem?",
+          "disposition": "UPHELD AS FALSE: source/UI, grid-to-loop covariance, thermodynamic pressure, source-tangent, and independent review gates remain open."
+        },
+        {
+          "check": "Can the old two-field notation remain in the manuscript until PDF generation?",
+          "disposition": "UPHELD AS FALSE: the distinction is load-bearing and must be fixed before content freeze, clean replay, or PDF generation."
+        }
+      ],
+      "assumptions": [
+        "The declared incidence convention is G:V_0->E, B_FSS=G^*:E->V_0, and L_sp=G^*G.",
+        "The spatial bond coefficient is c>0 and the source is zero-sum.",
+        "The FSS theorem field and the bond square-completion field are allowed to be represented by related but distinct symbols."
+      ],
+      "boundary": "T0 coupling-rescaling and operator-notation correction only; no theorem certification, claim-card promotion, manuscript release, or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The load-bearing notes used h=G L_sp^(-1)j both as the FSS divergence solution and as the shifted-bond field, but these roles require different coupling scalings. Defining h_FSS=G L_sp^(-1)j and b=h_FSS/c makes B_FSS h_FSS=j, c(G omega,b)=<j,omega>, and (c/2)||b||^2=(1/(2c))<j,L_sp^(-1)j> simultaneously true. The finite-grid constants and scientific scope are unchanged.",
+      "evidence_refs": [
+        "strategy/q3lock-fss-coupling-rescaling-audit-260905.md#2-two-edge-fields-with-their-domains",
+        "strategy/q3lock-fss-coupling-rescaling-audit-260905.md#3-consequence-for-the-finite-grid-bound",
+        "strategy/q3lock-p09-constant-source-loop-limit-audit-260905.md#3-finite-grid-fss-inequality-with-the-corrected-source-coordinates",
+        "strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md#4.2-finite-grid-fss-domination-and-duhamel-normalization",
+        "strategy/q3lock-fss-finite-grid-transfer-check-260904.md#minimum-norm-poisson-field",
+        "strategy/q3lock-low-temperature-dlr-paper-preregistration-audit-260904.md#reflection-positive-fss-transfer"
+      ],
+      "finding": "A domain-correct field h_FSS=G L_sp^(-1)j has B_FSS h_FSS=j and norm squared <j,L_sp^(-1)j>. The bond square-completion shift is b=h_FSS/c, for which c*(G omega,b)=<j,omega> and (c/2)||b||^2=(1/(2c))<j,L_sp^(-1)j>. Four Q3LOCK load-bearing notes are repaired to use these distinct fields. The FSS theorem, source scaling, beta/(2c) and beta/c constants, and 1/(2*beta*c*E(p)) Fourier consequence are unchanged; the repair closes only a notation/algebra seam.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001557",
+      "method": [
+        "Search the Q3LOCK FSS proof notes for simultaneous use of the divergence solution and the square-completion shift.",
+        "Check the declared operator domains and expand the bond square with coupling c.",
+        "Introduce h_FSS and b=h_FSS/c, verify the source pairing and norm identities, and preserve the finite-grid FSS bound.",
+        "Rewrite every affected tracked note atomically and record the correction with explicit nonclaims and review gates."
+      ],
+      "missing_assumptions": [
+        "Independent line-by-line verification of the FSS transfer theorem's source-divergence convention.",
+        "Uniform source/UI and finite-grid-to-loop covariance passage.",
+        "Operator/form-domain, pressure/source-tangent, strict-cusp, and DLR-state composition review.",
+        "Claim/result lineage, content freeze, clean replay, release check, and external mathematical referee review."
+      ],
+      "next_action": "Use h_FSS for FSS theorem statements and b=h_FSS/c for every bond square completion in the independent P-06/P-09 audit; then continue the source/UI and pressure bridges before any manuscript freeze or PDF.",
+      "non_claims": [
+        "No strict cusp, phase coexistence, DLR multiplicity, extremality, purity, clustering, KMS, ground-state, gap, continuum, physical-vacuum, cosmological, C6, CP1, Sector A, or Pre-A conclusion is certified.",
+        "No claim card, P2 manuscript, submission, upload, release, tag, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Do the Q3LOCK FSS notes distinguish the edge field solving B_FSS h=j from the coupling-rescaled field used in the bond square completion?",
+      "recorded_at": "2026-09-04T22:52:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001556",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001555",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001545",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK FSS theorem field and bond shift are separated",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Can the two delta weights be silently promoted to the PAH source law?",
+          "disposition": "UPHELD AS FALSE: the manifest and all runs mark them counterfactual, source_law_present=false and HOLD_FOR_EVIDENCE."
+        },
+        {
+          "check": "Does a positive Q=1 witness prove a positive global R-488 limit?",
+          "disposition": "UPHELD AS FALSE: it only separates two finite component mixtures; no selected weights or limit exists."
+        },
+        {
+          "check": "Does the result refute every future cross-Q projective kernel?",
+          "disposition": "UPHELD AS FALSE: it proves non-identifiability of the current component data, not a universal mixture no-go."
+        },
+        {
+          "check": "Can C_sw=540 or the R-484 defect supply the missing law?",
+          "disposition": "UPHELD AS FALSE: C_sw remains domination-only and 16/9 remains an unrepaired boundary datum."
+        }
+      ],
+      "assumptions": [
+        "The PAH-001 finite fixed-Q state space uses 0<=ell_v<=M_psi and sum_v ell_v=Q.",
+        "The declared n=2 strip has an allowed anchor coordinate ell_a and Q=0,Q=1 grades.",
+        "Finite counting Gibbs weights are strictly positive for every allowed state because F_rho and Z_(rho,Q) are finite.",
+        "The R-492 witness is the unchanged grade-blind ell_a cylinder at Q=1.",
+        "Only nonnegative normalized weights are considered in the counterfactual separation."
+      ],
+      "boundary": "Auxiliary finite identifiability support only. PAH-001 functional, rates, fixed-Q Gibbs states, OMC-012 graded domain, projection, R-484 16/9 defect, R-490 C_sw=540 and PAH-001 limit order are unchanged. No projective consistency, Cauchy error, weak cylinder limit, R-488 global nonzero, stationarity, closability, semigroup, continuum or physical conclusion is claimed.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is a conditional separation result rather than a new sector law. It removes an ambiguity in the next evidence contract: absent a source-owned weight/kernel, even the finite full-Q cylinder value is not uniquely selected. The Q=0 projective obstruction remains route-local; no universal projective no-go is inferred.",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json#theorem_contract",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json#status",
+        "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json#exact_scope",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain/integrated.json#derived",
+        "verification/lean/Tect/R501.lean#positive_witness_implies_nonidentifiable",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-identifiability-lean/integrated.json#separation",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-identifiability-lean/independent.json#separation",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-identifiability-lean/hostile.json#mutation_policy"
+      ],
+      "finding": "The component Gibbs family is not identifiable as a unique full-Q mixture from the current parent bytes. On the declared grade-blind ell_a cylinder, Q=0 is exactly zero while the Q=1 component contains a strictly positive finite-Gibbs value-1 witness. Lean R501 proves that delta_Q=0 and delta_Q=1 are distinct nonnegative normalized counterfactual mixtures. These deltas are not source-owned, adopted or fitted, so the result strengthens the underdetermination boundary but does not define mu_(n,R) or omega.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001558",
+      "method": [
+        "Hash-pin PAH-001, PAH-OMC-012, PAH-OMC-014, its manifest and the R-492 integrated finite-domain witness.",
+        "Enumerate the exact M_psi=1 ell assignments on the n=2 coarse strip: Q=0 has only the all-zero assignment, while Q=1 contains the anchor ell_a=1 assignment.",
+        "Use fixed-Q counting normalization and finite positive Gibbs weights to separate phi_0(ell_a)=0 from phi_1(ell_a)>0 without evaluating or fitting a sector weight.",
+        "Compile R501, whose abstract delta-mixture theorem proves that two nonnegative normalized counterfactual weights produce different cylinder values.",
+        "Run integrated, independent non-importing and hostile in-memory mutation lanes; retain PAH-OMC-014 at HOLD_FOR_EVIDENCE."
+      ],
+      "missing_assumptions": [
+        "A source-authorized hash-pinned w_(n,R,Q) or equivalent projective cross-Q kernel.",
+        "Its normalization, source/beta/phase policy and fixed-order topology.",
+        "A PAH-specific Cauchy error tending to zero for every finite-support cylinder.",
+        "A common stationarity domain and uniform-integrability estimate."
+      ],
+      "next_action": "Obtain one source-owner packet containing the exact normalized full-Q law or projective kernel, then apply the existing R500 projective bridge and R496/R499 conditional limit/stationarity bridges without selecting a law from the cylinder values.",
+      "non_claims": [
+        "No full-Q Gibbs state, projective limit or omega is defined.",
+        "No exact projective no-go for all cross-Q laws is claimed.",
+        "No infinite-volume semigroup, quantum real-time, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+        "Markov time remains external stochastic time."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the existing fixed-Q Gibbs family determine a unique full-Q cylinder functional when Q=0 gives ell_a expectation zero and the Q=1 component has a positive finite Gibbs ell_a witness?",
+      "recorded_at": "2026-09-04T23:01:33Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001553",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen when the source-owner law and its topology/Cauchy/stationarity payload are hash-pinned, or when an exact parent-scope counterexample invalidates the Q=0/Q=1 separation assumptions.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "PAH-OMC-014 conditional sector-weight non-identifiability is Lean-checked",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Is the monotonicity of s -> s*f(k/s) merely assumed when replacing a finite-volume moment by theta_Q?",
+          "disposition": "DISMISSED: for k>0, x_s*tanh(x_s)=k/s gives F_k(s)=k/x_s^2; strict increase of x*tanh(x) makes x_s decrease and F_k increase, while k=0 is immediate."
+        },
+        {
+          "check": "Does Proposition 3.18 permit the unbounded Q_0 directly without a domain argument?",
+          "disposition": "UPHELD AS FALSE: the audited route uses Q_R=R*tanh(Q_0/R), applies the bounded Falk--Bruch statement, and removes the cutoff by bounded convergence of the double commutator and the Duhamel form."
+        },
+        {
+          "check": "Is the KKK Griffiths scale M_L=V or beta*V, and can the pressure derivative acquire an extra beta or volume factor?",
+          "disposition": "DISMISSED: Proposition 3.9 uses M_L=V and U_L=X_L; Pi_L=E[(X_L/(beta V))^2], so p_beta'(0+)>=beta*limsup sqrt(Pi_L), and P_beta=p_beta/(8 beta) gives D_+P_beta(0)>=sqrt(delta_beta)/8."
+        },
+        {
+          "check": "Does the threshold algebra use an unverified scalar identity or wrong factor in A_0?",
+          "disposition": "DISMISSED: x_beta*tanh(x_beta)=beta*hbar^2/(4*chi*theta_Q) implies 2*beta*c*theta_Q*f(...)=A_0*tanh(x_beta)^2 with A_0=8*c*chi*theta_Q^2/hbar^2; the beta_star expression follows from strict increase."
+        },
+        {
+          "check": "Does this scalar and pressure audit establish a strict cusp or phase coexistence by itself?",
+          "disposition": "UPHELD AS FALSE: finite moment, FSS, continuous-loop, pressure-limit, source-to-zero DLR, and independent-review hypotheses remain open; the result stays T0 and claim-nonbearing."
+        }
+      ],
+      "assumptions": [
+        "The KKK source is the hash-frozen arXiv:0710.2303v1 capture recorded in strategy/q3lock-literature-source-freeze-260905.md with SHA-256 90f0f42b017c71d194159cdfe59f180aed06f8c928847816e7bfced57b490e1d.",
+        "The finite-volume Duhamel moment rho_L(Q_0^2) has the audited lower bound theta_Q>0 under the explicit Q3LOCK parameter regime.",
+        "The finite-grid FSS, loop-limit, and locally uniform pressure inputs are used only conditionally and are not promoted by this audit.",
+        "The pressure convention is p_beta=lim V^(-1)log Z_beta and the fine energy pressure is P_beta=p_beta/(8 beta)."
+      ],
+      "boundary": "T0 KKK scalar, Falk--Bruch, Griffiths-scale, and pressure-factor audit only; no theorem certification, claim-card promotion, manuscript release, or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The KKK input has been reduced to explicit source-located inequalities and the scalar substitution is checked without an appeal to an unnamed monotonicity theorem. The bounded cutoff supplies the required operator-domain bridge. The Griffiths variable scale M_L=V, the beta factor in p_beta'(0+), and the 1/(8 beta) fine-pressure conversion are fixed together, and the beta_star threshold is algebraically consistent. These repairs make the conditional proof spine reproducible but do not close any upstream limit or DLR gate.",
+      "evidence_refs": [
+        "strategy/q3lock-kkk-griffiths-falk-bruch-factor-audit-260905.md#2-exact-kkk-input-and-scalar-monotonicity",
+        "strategy/q3lock-kkk-griffiths-falk-bruch-factor-audit-260905.md#3-falk-bruch-substitution",
+        "strategy/q3lock-kkk-griffiths-falk-bruch-factor-audit-260905.md#4-griffiths-scale-and-pressure-factors",
+        "strategy/q3lock-kkk-griffiths-falk-bruch-factor-audit-260905.md#5-threshold-algebra-cross-check",
+        "strategy/q3lock-p12-griffiths-pressure-slope-factor8-audit-260905.md#3-pressure-slope-and-fine-pressure",
+        "strategy/q3lock-kkk-endpoint-interval-cusp-audit-260905.md#3-endpoint-interval-to-cusp"
+      ],
+      "finding": "With Q_R=R*tanh(Q_0/R), the KKK Proposition 3.18 route yields d_L >= rho_L(Q_0^2)*f((beta*hbar^2/chi)/(4*rho_L(Q_0^2))). Direct monotonicity of F_k(s)=s*f(k/s) then gives the theta_Q lower bound. The KKK Proposition 3.9 scale is M_L=V, U_L=X_L, Pi_L=E[(X_L/(beta V))^2], so a liminf Pi_L>=delta_beta implies p_beta'(0+)>=beta*sqrt(delta_beta), and P_beta=p_beta/(8 beta) implies D_+P_beta(0)>=sqrt(delta_beta)/8. The explicit threshold beta_star is consistent with A_0=8*c*chi*theta_Q^2/hbar^2. The result is conditional and non-claim-bearing.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001559",
+      "method": [
+        "Read the hash-frozen KKK source at the exact proposition and equation locations used by the pressure route.",
+        "Derive the monotonicity of s*f(k/s) from the defining equation for f and the strict increase of x*tanh(x).",
+        "Apply the bounded Q_R cutoff to the collective double commutator and pass to the finite-volume Duhamel form by bounded convergence.",
+        "Match the Griffiths variables and pressure conventions, then recompute the beta, volume, and factor-8 conversions.",
+        "Recheck the beta_star algebra and record the remaining conditional gates and nonclaims."
+      ],
+      "missing_assumptions": [
+        "Independent verification of the Q3LOCK finite-volume second moment and its theta_Q lower bound.",
+        "Independent FSS application, continuous-loop covariance/UI passage, and locally uniform thermodynamic pressure limit.",
+        "Source-to-zero DLR specification continuity and composition with the pressure tangent.",
+        "Claim/result lineage, content freeze, clean replay, release check, and external mathematical referee review."
+      ],
+      "next_action": "Use the explicit KKK factor map in the P-12 pressure and source-tangent audit; obtain independent line-by-line review of every conditional input before any cusp or DLR claim is promoted, and keep manuscript/PDF generation deferred.",
+      "non_claims": [
+        "No strict source cusp, positive zero-mode lower bound, phase coexistence, or DLR multiplicity is certified.",
+        "No extremality, purity, clustering, KMS, common dynamics, ground-state, spectral-gap, continuum, physical-vacuum, cosmological, C6, CP1, Sector A, or Pre-A conclusion is certified.",
+        "No claim card, P2 manuscript, submission, upload, release, tag, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Are the KKK Falk--Bruch scalar substitution, Griffiths volume scale, beta conversion, and beta_star threshold factors explicitly correct for the conditional Q3LOCK cusp route?",
+      "recorded_at": "2026-09-04T23:03:19Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001557",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001553",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK KKK Falk--Bruch and Griffiths factors are explicit",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does DLR compactness by itself identify the pressure derivative of the limiting state?",
+          "disposition": "UPHELD AS FALSE: convex finite-volume derivative convergence and uniform integrability of the local observable are both required before the DLR limit inherits the derivative."
+        },
+        {
+          "check": "Can a periodic-volume subsequence selected for DLR compactness change the limiting magnetization at a differentiability source?",
+          "disposition": "DISMISSED: local uniform convergence of finite convex pressures and the secant squeeze force every periodic subsequence to have the same derivative limit."
+        },
+        {
+          "check": "Must the limiting pressure be differentiable at h=0 to construct a tangent state?",
+          "disposition": "UPHELD AS FALSE: choose differentiability points h_n>0 approaching zero and use the one-sided endpoint derivative only after the fixed-source DLR selections."
+        },
+        {
+          "check": "Is a diagonal pair sequence (L_n,h_n) interchangeable with fixed-source DLR composition?",
+          "disposition": "UPHELD AS FALSE: the proof first takes a spatial-volume accumulation at each fixed h_n, then takes the source-to-zero subsequence with common tightness and specification continuity."
+        },
+        {
+          "check": "Does global parity alone prove that the two tangent DLR states are distinct?",
+          "disposition": "UPHELD AS FALSE: parity supplies the image state, while distinctness requires a strictly positive endpoint pressure slope."
+        }
+      ],
+      "assumptions": [
+        "EXP-000780 supplies finite, convex periodic pressures converging locally uniformly on compact source intervals to P_beta.",
+        "Finite-volume trace differentiation is justified by the compact-resolvent quartic Hamiltonian and the linear source form bound.",
+        "EXP-000781 supplies fixed-source tempered Euclidean DLR compactness and a common source-window exponential/UI estimate.",
+        "The source-to-zero specification continuity argument is retained as a separate hypothesis and is not silently supplied by convexity."
+      ],
+      "boundary": "T0 convex-derivative and source-tangent limit-order audit only; no theorem certification, claim-card promotion, manuscript release, or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The source-tangent text omitted the explicit reason that a DLR compactness subsequence carries the limiting pressure derivative. A secant squeeze for locally uniformly convergent finite convex pressures repairs this seam: at every differentiability source h, the full finite-volume derivative sequence converges, so any periodic DLR accumulation point has the same local magnetization once uniform integrability is supplied. Differentiability points h_n>0 then support the separate source-to-zero DLR composition without a diagonal-limit shortcut.",
+      "evidence_refs": [
+        "strategy/q3lock-pressure-derivative-subsequence-audit-260905.md#3-convex-derivative-convergence-lemma",
+        "strategy/q3lock-pressure-derivative-subsequence-audit-260905.md#4-correct-selection-of-fixed-source-dlr-accumulation-points",
+        "strategy/q3lock-pressure-derivative-subsequence-audit-260905.md#5-endpoint-source-sequence-and-source-to-zero-order",
+        "strategy/q3lock-source-tangent-dlr-composition-audit-260905.md#4-from-pressure-differentiability-points-to-source-dlr-states",
+        "strategy/q3lock-source-tangent-dlr-composition-audit-260905.md#7-limit-order-ledger",
+        "strategy/pre-a-cp1-st8-q3lock-fixed-lattice-3d-quantum-pressure-ground-density-effective-reduction-route-split-certificate-260804.md#section-7-source-and-scalar-covariance"
+      ],
+      "finding": "For finite convex C^1 periodic pressures P_(beta,L) converging locally uniformly to finite convex P_beta, the secant inequalities imply P_(beta,L)'(h)->P_beta'(h) at every differentiability point h. Therefore any fixed-source periodic DLR accumulation point selected using KKK compactness has local magnetization (1/8) integral (u,omega_0(0)) dmu_h=P_beta'(h), provided the source-window uniform-integrability bound is independently verified. Selecting differentiability points h_n down to zero and only then passing through the source specification gives the endpoint tangent identity without a diagonal volume/source limit. The result remains conditional and claim-nonbearing.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001560",
+      "method": [
+        "Write the finite-volume Hamiltonian, source observable, pressure normalization and Duhamel derivative identity.",
+        "Prove the convex-derivative convergence lemma by two-sided secant bounds under local uniform pressure convergence.",
+        "Apply the lemma along the same periodic subsequences used for fixed-source KKK DLR compactness and use local-observable uniform integrability.",
+        "Choose positive differentiability sources approaching the cusp endpoint, then keep source-to-zero specification continuity as a distinct limit step.",
+        "Record parity and strict-slope requirements, adversarial objections, nonclaims and the deferred PDF gate."
+      ],
+      "missing_assumptions": [
+        "Independent verification of the finite-volume trace/form derivative and its source-uniform majorant.",
+        "Independent verification of the EXP-000780 locally uniform pressure limit in the exact collective source restriction.",
+        "Independent verification of KKK W_alpha compactness, local observable uniform integrability and source/specification continuity.",
+        "Independent proof audits of the preceding FKG, FSS, Falk--Bruch, zero-mode and Griffiths inputs, followed by clean replay and external review."
+      ],
+      "next_action": "Insert the secant lemma and fixed-source subsequence wording into the P-12/source-tangent proof audit, then obtain independent review of the form derivative, common source-window estimates and specification continuity before any cusp or DLR claim promotion; keep manuscript/PDF generation deferred.",
+      "non_claims": [
+        "No strict source cusp, positive-lambda phase theorem, or DLR multiplicity is certified by this audit.",
+        "No extremality, purity, clustering, KMS, common dynamics, ground-state, spectral-gap, continuum, physical-vacuum, cosmological, C6, CP1, Sector A, or Pre-A conclusion is certified.",
+        "No claim card, P2 manuscript, submission, upload, release, tag, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "What additional convex-analysis step is required for a fixed-source periodic DLR accumulation point to inherit the limiting pressure derivative before the source-to-zero tangent limit?",
+      "recorded_at": "2026-09-04T23:13:16Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001559",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000781",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK pressure derivatives select fixed-source DLR tangents by convexity",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Did the source-tangent proof note change while its manifest digest was being corrected?",
+          "disposition": "DISMISSED: the current source bytes were hashed directly and were not rewritten; only the manifest and ledger pins are changed."
+        },
+        {
+          "check": "Can a 63-character value be accepted as a SHA-256 source pin?",
+          "disposition": "UPHELD AS FALSE: SHA-256 requires the complete 64-character hexadecimal digest, and the direct manifest audit rejects the truncated value."
+        },
+        {
+          "check": "Does the correction alter EXP-001560 or any scientific scope?",
+          "disposition": "DISMISSED: the pressure-derivative lemma, source-tangent proof text, nonclaims, and T0 status remain unchanged."
+        },
+        {
+          "check": "Does source-hash integrity certify the pressure-to-DLR theorem?",
+          "disposition": "UPHELD AS FALSE: hash provenance is independent of finite trace differentiation, uniform integrability, DLR specification continuity, and external mathematical review."
+        },
+        {
+          "check": "Does a clean hash check permit PDF generation before content freeze?",
+          "disposition": "UPHELD AS FALSE: PDF generation remains deferred until all mathematical audits, content freeze, clean replay, and final release review pass."
+        }
+      ],
+      "assumptions": [
+        "The source-tangent audit file is the current tracked byte sequence under strategy/q3lock-source-tangent-dlr-composition-audit-260905.md.",
+        "The digest is recomputed with SHA-256 over the exact UTF-8/LF source bytes.",
+        "The R-497 manifest and RESULTS-LEDGER are the two canonical projections requiring synchronized source pins."
+      ],
+      "boundary": "T0 manifest and ledger hash-integrity correction only; no theorem certification, claim-card promotion, manuscript release, or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The direct digest audit found that the source-tangent note's manifest value was one hexadecimal character short. The source file was already correct; the complete 64-character SHA-256 was recomputed and must be copied identically into the R-497 manifest and RESULTS-LEDGER. This repairs provenance without changing mathematical content or publication scope.",
+      "evidence_refs": [
+        "strategy/q3lock-source-tangent-hash-correction-audit-260905.md#2-direct-recomputation",
+        "strategy/q3lock-pressure-derivative-subsequence-audit-260905.md#8-disposition",
+        "strategy/q3lock-exp782-independent-result-manifest-260905.json#source_files",
+        "RESULTS-LEDGER.md#r-497"
+      ],
+      "finding": "The directly recomputed SHA-256 for strategy/q3lock-source-tangent-dlr-composition-audit-260905.md is 7fad177cda60fa3532bb8fc1c56ff2e7ca2f3fdd83ccbfb860bab6d403adb80b. The previous 63-character manifest value was invalid. The manifest and ledger are to be synchronized to the complete digest; no proof text or scientific scope changes.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001561",
+      "method": [
+        "Hash the current source-tangent audit file directly with SHA-256 and verify the digest length.",
+        "Compare the digest against the R-497 manifest and RESULTS-LEDGER source pins.",
+        "Record the discrepancy without rewriting the source file, then update only the canonical projection fields.",
+        "Retain the mathematical and publication gates as open and defer PDF work."
+      ],
+      "missing_assumptions": [
+        "Independent review of the source-tangent proof content and all source hypotheses.",
+        "Complete R-497 source freeze after all remaining proof-text repairs.",
+        "Clean primary/independent/integrated replay and external mathematical review."
+      ],
+      "next_action": "Synchronize the complete digest in the R-497 manifest and RESULTS-LEDGER, rerun all integrity and release checks, and continue the independent P-06/P-09/P-12/source-tangent audit; keep PDF generation deferred.",
+      "non_claims": [
+        "No strict cusp, DLR multiplicity, or phase theorem is certified by this hash correction.",
+        "No extremality, purity, clustering, KMS, common dynamics, ground-state, spectral-gap, continuum, physical-vacuum, cosmological, C6, CP1, Sector A, or Pre-A conclusion is certified.",
+        "No claim card, manuscript, submission, upload, release, tag, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Is the R-497 source-tangent audit pin a complete SHA-256 digest after the EXP-001560 text correction?",
+      "recorded_at": "2026-09-04T23:17:16Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001560",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001559",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001549",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK source-tangent audit SHA-256 pin is repaired",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Was the source-tangent hash-correction note's manifest value independently checked after EXP-001561?",
+          "disposition": "UPHELD AS FALSE: a direct byte comparison found a second one-character truncation in the newly copied hash-correction-note value."
+        },
+        {
+          "check": "Can the final digest be safely copied by hand from a terminal display?",
+          "disposition": "UPHELD AS FALSE: the final value must be generated programmatically from the source bytes and compared at length 64."
+        },
+        {
+          "check": "Did either hash correction rewrite the pressure-derivative or source-tangent proof content?",
+          "disposition": "DISMISSED: only manifest/ledger digest projections and provenance notes change; the scientific notes remain unchanged."
+        },
+        {
+          "check": "Does a complete source digest certify any phase, cusp, or DLR theorem?",
+          "disposition": "UPHELD AS FALSE: provenance integrity is independent of all analytic, limit, specification, and external-review gates."
+        },
+        {
+          "check": "Does manifest consistency permit PDF generation before content freeze?",
+          "disposition": "UPHELD AS FALSE: the PDF remains deferred until the complete proof text, independent review, clean replay and final release review pass."
+        }
+      ],
+      "assumptions": [
+        "The hash-correction note is the current UTF-8/LF file at strategy/q3lock-source-tangent-hash-correction-audit-260905.md.",
+        "SHA-256 is computed over exact file bytes and must be represented by 64 lowercase hexadecimal characters.",
+        "The R-497 manifest and RESULTS-LEDGER are synchronized projections and neither is a substitute for direct byte verification."
+      ],
+      "boundary": "T0 direct source-hash recomputation and projection correction only; no theorem certification, claim-card promotion, manuscript release, or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A second direct audit found that the digest copied for the EXP-001561 hash-correction note was also truncated. The current file's digest is recomputed programmatically and must replace the faulty manifest/ledger value. The correction is purely provenance-level and does not alter any source bytes or mathematical claim.",
+      "evidence_refs": [
+        "strategy/q3lock-source-tangent-hash-recompute-audit-260905.md#2-direct-byte-derived-value",
+        "strategy/q3lock-source-tangent-hash-correction-audit-260905.md#2-direct-recomputation",
+        "strategy/q3lock-exp782-independent-result-manifest-260905.json#source_files",
+        "RESULTS-LEDGER.md#r-497"
+      ],
+      "finding": "The exact SHA-256 of strategy/q3lock-source-tangent-hash-correction-audit-260905.md is 12239d6e65d8b6e8d78111179973f2407008d08e31665fafad2374f207f21ece. The manifest value introduced after EXP-001561 was 63 characters and invalid. The source note remains unchanged; only the manifest and ledger projections require correction.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001562",
+      "method": [
+        "Read the source-hash correction note as exact UTF-8/LF bytes.",
+        "Compute SHA-256 directly and assert a 64-character digest.",
+        "Compare the computed value to every R-497 manifest source pin and ledger projection.",
+        "Record the discrepancy and preserve the mathematical/PDF gates as open."
+      ],
+      "missing_assumptions": [
+        "Atomic synchronization of the computed value in the R-497 manifest and RESULTS-LEDGER.",
+        "A final whole-manifest source freeze after all remaining proof-text repairs.",
+        "Clean primary/independent/integrated replay and external mathematical review."
+      ],
+      "next_action": "Replace the faulty hash-correction-note pin with the directly computed digest, rerun manifest and release checks, and continue the independent Q3LOCK proof audit without generating a PDF.",
+      "non_claims": [
+        "No strict cusp, phase coexistence, DLR multiplicity, or theorem-tier promotion is certified by this correction.",
+        "No extremality, purity, clustering, KMS, common dynamics, ground-state, spectral-gap, continuum, physical-vacuum, cosmological, C6, CP1, Sector A, or Pre-A conclusion is certified.",
+        "No manuscript, submission, upload, release, tag, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "What is the exact byte-derived SHA-256 that must replace the truncated R-497 pin for the source-tangent hash-correction audit?",
+      "recorded_at": "2026-09-04T23:20:44Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001561",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001560",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001549",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK source-tangent hash correction is recomputed from bytes",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

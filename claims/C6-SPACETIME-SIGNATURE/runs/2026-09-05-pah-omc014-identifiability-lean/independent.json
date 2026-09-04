@@ -1,0 +1,297 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 21,
+  "assertions": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "PAH-001 hash",
+      "pass": true
+    },
+    {
+      "actual": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+      "expected": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+      "name": "PAH-OMC-012 hash",
+      "pass": true
+    },
+    {
+      "actual": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "expected": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "name": "PAH-OMC-014 hash",
+      "pass": true
+    },
+    {
+      "actual": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+      "expected": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+      "name": "PAH-OMC-014-MANIFEST hash",
+      "pass": true
+    },
+    {
+      "actual": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f",
+      "expected": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f",
+      "name": "R492 hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "AUXILIARY_SUPPORT_NONIDENTIFIABILITY",
+        "omega_status": "NOT_DEFINED",
+        "physical_promotion": false,
+        "projective_consistency": "NOT_TESTABLE",
+        "source_law_present": false,
+        "verdict": "HOLD_FOR_EVIDENCE"
+      },
+      "expected": "HOLD/no source law",
+      "name": "manifest status",
+      "pass": true
+    },
+    {
+      "actual": {
+        "global": "NOT_DEFINED_BY_PARENT; not required for this domain-map gate",
+        "omega": "NOT_DEFINED"
+      },
+      "expected": "undefined",
+      "name": "parent PAH status",
+      "pass": true
+    },
+    {
+      "actual": "Q=sum_v ell_v is fixed within one finite comparison",
+      "expected": "nonnegative bounded ell with fixed Q",
+      "name": "fixed-Q source semantics",
+      "pass": true
+    },
+    {
+      "actual": {
+        "aperture_cutoff": "M_s>=1 with s_v in {epsilon+j(1-epsilon)/M_s: j=0,...,M_s}",
+        "aperture_floor": "0<epsilon<=1",
+        "carrier": "G=(V,E,P) is a finite connected oriented bounded-degree two-cell complex with disjoint nonempty outer-readout anchor O and core anchor C; no embedding coordinates or Lorentzian metric are part of rho.",
+        "common_norm": "supremum norm on bounded gauge- and anchor-automorphism-invariant cylinder observables",
+        "degree_bound": "deg_G(v)<=d_max with d_max fixed before regulator removal",
+        "dimension": "finite relational two-cell complex; emergent spatial dimension is an output target and is not inserted",
+        "edge_scale": "a>0 is a refinement label only; physical length is not identified",
+        "finite_parts": "none beyond the displayed finite functional; additive constants are fixed by the displayed formula",
+        "gauge_cutoff": "K>=2 for Z_K",
+        "matter_cutoff": "M_psi>=1 with radial level ell_v in {0,...,M_psi} and |psi_v|=R_max ell_v/M_psi",
+        "normalization": "counting measure on the fixed-Q finite configuration space and Z_(rho,Q)=sum_x exp(-beta F_rho(x))",
+        "parameter_domain": "beta>0, nu>0, R_max>0, lambda_s>0, eta_6>0, kappa_s>0, kappa_D>0, kappa_g>0, g>0; m2 and lambda_4 are real inserted parameters; every rate scale is positive and frozen before any comparison",
+        "spatial_boundary_condition": "the finite anchored complex and its incidence data are fixed; O and C are labels, not imposed field values",
+        "time_boundary_condition": "stationary initial-value Markov law on t>=0 with initial distribution pi_(rho,Q), right-continuous paths, and no terminal conditioning",
+        "tuple": "rho=(G,O,C,K,M_s,M_psi,R_max,epsilon,a,beta,nu,theta,Q)",
+        "volume": "|V| finite; no physical volume interpretation is admitted"
+      },
+      "expected": "finite counting Gibbs state",
+      "name": "finite positive Gibbs premise",
+      "pass": true
+    },
+    {
+      "actual": {
+        "assignments": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "count": 1,
+        "vertices": 8
+      },
+      "expected": "one all-zero assignment",
+      "name": "Q=0 is uniquely zero",
+      "pass": true
+    },
+    {
+      "actual": {
+        "anchor_witnesses": 1,
+        "count": 8
+      },
+      "expected": "one ell_a=1 assignment",
+      "name": "Q=1 has anchor witness",
+      "pass": true
+    },
+    {
+      "actual": {
+        "coarse_Q": 1,
+        "finite_gibbs_positive": true,
+        "lift_value": 1,
+        "n": 2,
+        "observable": "ell_a",
+        "value": 1
+      },
+      "expected": "positive finite Gibbs Q=1 ell_a witness",
+      "name": "R492 witness is current",
+      "pass": true
+    },
+    {
+      "actual": {
+        "verdict": "MAINLINE_ADVANCE",
+        "verification": "PASS"
+      },
+      "expected": "PASS/MAINLINE_ADVANCE",
+      "name": "R492 status",
+      "pass": true
+    },
+    {
+      "actual": "Use the declared grade-blind R-488 cylinder f=ell_a with anchor a=(0,0). It is bounded, gauge-invariant and anchor-preserving.",
+      "expected": "declared ell_a cylinder",
+      "name": "cylinder declaration",
+      "pass": true
+    },
+    {
+      "actual": {
+        "w0": [
+          1,
+          0
+        ],
+        "w1": [
+          0,
+          1
+        ]
+      },
+      "expected": "nonnegative normalized",
+      "name": "both delta rows are probability rows",
+      "pass": true
+    },
+    {
+      "actual": {
+        "phi_Q0": "0",
+        "phi_Q1": ">0"
+      },
+      "expected": "strictly separated component values",
+      "name": "separation has strict sign",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declarations": [
+          "mix_deltaWeight",
+          "delta_mixtures_separate",
+          "positive_witness_implies_nonidentifiable"
+        ],
+        "registry_tail": {
+          "declarations": [
+            "mix_deltaWeight",
+            "delta_mixtures_separate",
+            "positive_witness_implies_nonidentifiable"
+          ],
+          "path": "verification/lean/Tect/R501.lean",
+          "sha256": "dfa66f5dfcb6f8120f502fd0e2802efe78753689fe1c652cd6e3ad9c55b0906b"
+        }
+      },
+      "expected": "R501 declarations registered",
+      "name": "Lean source is independent theorem",
+      "pass": true
+    },
+    {
+      "actual": {
+        "final": true,
+        "hash": "dfa66f5dfcb6f8120f502fd0e2802efe78753689fe1c652cd6e3ad9c55b0906b",
+        "lf": true
+      },
+      "expected": "pinned LF source",
+      "name": "Lean bytes",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R501.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compilation",
+      "pass": true
+    },
+    {
+      "actual": "For the separation argument only, w^(0)=delta_Q=0 and w^(1)=delta_Q=1 are nonnegative normalized laws on the finite grade index. They are not source-owned, fitted, adopted, or used to define PAH-OMC-014.",
+      "expected": "counterfactual only",
+      "name": "no adopted source law",
+      "pass": true
+    },
+    {
+      "actual": [
+        "No full-Q Gibbs state, projective limit or omega is defined.",
+        "No infinite-volume semigroup, quantum real-time dynamics, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+        "Markov time remains external stochastic time."
+      ],
+      "expected": "no physical claim",
+      "name": "no physical promotion",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-IDENTIFIABILITY-LEAN-INDEPENDENT-001",
+  "claim_bearing": false,
+  "classification": "AUXILIARY_SUPPORT_NONIDENTIFIABILITY",
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R501.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "next_question": "Can a source owner provide one exact normalized w_(n,R,Q) or projective cross-Q kernel, with topology and Cauchy bound, so that the already-proved conditional separation is no longer an underdetermined counterfactual?",
+  "non_claims": [
+    "No full-Q Gibbs state, projective limit or omega is defined.",
+    "No infinite-volume semigroup, quantum real-time dynamics, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "omega_status": "NOT_DEFINED",
+  "passed": 21,
+  "projective_consistency": "NOT_TESTABLE",
+  "reproduction": {
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_identifiability_lean_verify_hostile.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_identifiability_lean_verify_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_identifiability_lean_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R501.lean"
+  },
+  "run_kind": "independent",
+  "schema": "tect/pah-omc014-identifiability-lean-independent/1.0",
+  "scope": {
+    "carrier": "PAH-OMC-004 G_2 finite component",
+    "cylinder": "f=ell_a",
+    "enumeration": {
+      "n": 2,
+      "q0_states": 1,
+      "q1_states": 8,
+      "vertices": 8
+    },
+    "grades": [
+      0,
+      1
+    ]
+  },
+  "separation": {
+    "counterfactual_laws": {
+      "w0": [
+        1,
+        0
+      ],
+      "w1": [
+        0,
+        1
+      ]
+    },
+    "phi_Q0": "0",
+    "phi_Q1": ">0 from finite positive Gibbs witness"
+  },
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "PAH-OMC-014-MANIFEST": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+    "R492": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f",
+    "lean": "dfa66f5dfcb6f8120f502fd0e2802efe78753689fe1c652cd6e3ad9c55b0906b",
+    "manifest": "1ef79e5a354e2a7abf32cbe92a98501a206cb5feacfef4a246d49453ab45d497"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

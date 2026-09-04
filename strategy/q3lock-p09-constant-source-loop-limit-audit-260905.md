@@ -89,11 +89,13 @@ Because `sum_y a_y=0`, the zero-sum Poisson solution is well-defined.  The
 time-constant minimum-norm edge field is
 
 ```text
-h=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j.
+h_FSS=G L_sp^(-1)j=B_FSS^*L_sp^(-1)j.
 ```
 
-It obeys `c*(G x,h)_N=<j,x>_N` and
-`(c/2)||h||_N^2=(1/(2c))<j,L_sp^(-1)j>_N`.  The positive-definite crossing
+It obeys `B_FSS h_FSS=j` and
+`||h_FSS||_N^2=<j,L_sp^(-1)j>_N`.  For the bond completion square set
+`b=h_FSS/c`; then `c*(G x,b)_N=<j,x>_N` and
+`(c/2)||b||_N^2=(1/(2c))<j,L_sp^(-1)j>_N`.  The positive-definite crossing
 kernel in the finite-dimensional FSS transfer theorem therefore gives
 
 ```text
