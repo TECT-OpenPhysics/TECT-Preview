@@ -2304,6 +2304,158 @@
       "task_id": "T-054",
       "title": "PAH-OMC-014 projective consistency requires a grade-transition kernel and weight recursion",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Use the pure periodic kinetic Gaussian as a probability reference.",
+          "disposition": "UPHELD AS FALSE: its constant mode is singular; a>0 is required."
+        },
+        {
+          "check": "Use weak convergence without source-uniform integrability.",
+          "disposition": "UPHELD AS FALSE: quartic Holder-Young and Jensen denominator are load-bearing."
+        },
+        {
+          "check": "Call the increment estimate spatial-volume uniform.",
+          "disposition": "UPHELD AS FALSE: constants are uniform in N at fixed L only."
+        },
+        {
+          "check": "Treat the discrete kinetic action as uniformly convergent on all C_per compacts.",
+          "disposition": "UPHELD AS FALSE: only residual Riemann sums converge on equicontinuous compacts; Gaussian reference carries kinetic limit."
+        }
+      ],
+      "boundary": "T0 fixed-volume Gaussian tightness, normalizer and source-UI audit only; no claim-card, theorem-tier, phase, DLR, publication or PDF status change.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The explicit reference and bounds repair the previously informal tightness and denominator insertion in the P-06/P-09 proof text. They are analytic fixed-volume inputs only; the finite FKG/FSS theorems, operator trace differentiation, spatial limit, DLR/source tangent composition and external review remain separate.",
+      "evidence_refs": [
+        "strategy/q3lock-p06-gaussian-tightness-normalizer-audit-260905.md#3-exact-gaussian-covariance-bounds",
+        "strategy/q3lock-p06-gaussian-tightness-normalizer-audit-260905.md#4-uniform-increment-estimate-and-interpolation-tightness",
+        "strategy/q3lock-p06-gaussian-tightness-normalizer-audit-260905.md#5-jensen-lower-bound-for-the-residual-normalizer",
+        "strategy/q3lock-p06-gaussian-tightness-normalizer-audit-260905.md#6-quartic-uniform-integrability-for-the-loop-and-source-limits",
+        "strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md#3-p-06-finite-grid-association-and-the-loop-limit",
+        "strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md#4-p-09-finite-fss-domination-and-duhamel-normalization"
+      ],
+      "finding": "At fixed finite spatial volume and compact source interval, the massive periodic Gaussian reference has g_N(0)<=1/(beta*a)+beta/(12*m) and E_gamma|x_k-x_l|^2<=epsilon*r/m by exact csc-squared and cyclic-resistance identities. Quartic coercivity and Jensen give mesh-uniform fixed-volume interacting increment bounds and a positive residual normalizer; Holder-Young gives uniform integrability of the source exponential and its second derivative. The cyclic piecewise-linear interpolation integrates the source exactly, so no O(epsilon) source error is introduced.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001530",
+      "method": [
+        "Introduce the normalized product Gaussian with cyclic precision 4*m/epsilon*sin^2(pi*j/N)+a*epsilon and isolate the residual Q3LOCK action.",
+        "Derive the diagonal covariance bound from the exact csc-squared sum and the cyclic resistance identity for increments.",
+        "Transfer fixed-volume increment moments through the quartic lower bound and Jensen denominator, then apply Kolmogorov tightness to periodic piecewise-linear interpolation.",
+        "Use weighted Holder-Young bounds and the Jensen normalizer lower bound to pass source exponentials and second derivatives through the loop limit.",
+        "Audit the fixed-volume boundary separately from the spatial thermodynamic, common-core, DLR, source-tangent, independent-referee, content-freeze and PDF gates."
+      ],
+      "next_action": "Insert the bounds into the P-06/P-09 manuscript proof and obtain independent review of the Gaussian comparison, residual split, exact source identity and order of limits.",
+      "non_claims": [
+        "No strict infrared lower bound, strict source cusp, phase coexistence or DLR multiplicity is certified.",
+        "No extremality, purity, clustering, real-time dynamics, KMS state, ground-state, spectral-gap or continuum theorem is asserted.",
+        "No physical vacuum, cosmological interpretation, C6, CP1, Sector A or Pre-A closure follows.",
+        "No claim card, P2 manuscript, submission, upload, tag, release or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the P-06/P-09 time-grid-to-loop passage use an explicit massive periodic Gaussian reference with mesh-uniform increments, denominator control, and quartic source uniform integrability?",
+      "recorded_at": "2026-09-04T18:42:19Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001528",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001516",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK fixed-volume Gaussian tightness and mesh-uniform normalizer bounds are explicit",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Use the discrete kinetic term as a uniform Riemann sum on arbitrary compact sets.",
+          "disposition": "UPHELD AS FALSE: the kinetic term is represented by the Gaussian reference and only residual terms use compact Riemann sums."
+        },
+        {
+          "check": "Discard high Fourier modes without a uniform tail bound.",
+          "disposition": "UPHELD AS FALSE: the sine lower bound gives a summable n^-2 majorant."
+        },
+        {
+          "check": "Infer loop convergence from finite-dimensional distributions alone.",
+          "disposition": "UPHELD AS FALSE: interpolation error and Kolmogorov tightness are both required."
+        },
+        {
+          "check": "Treat fixed-volume weighted convergence as the spatial thermodynamic limit.",
+          "disposition": "UPHELD AS FALSE: the note fixes L and leaves weighted tempered accumulation open."
+        }
+      ],
+      "boundary": "T0 fixed-volume Gaussian-reference and residual-weighted loop convergence only; no claim-card, theorem-tier, phase, DLR, publication or PDF status change.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The explicit Fourier tail and interpolation argument fills the Gaussian-reference convergence insertion left open in the P-06/P-09 audit. It closes only the fixed-volume grid-to-loop analytic interface; theorem applicability, spatial accumulation, operator common core, pressure tangent and independent referee review remain separate.",
+      "evidence_refs": [
+        "strategy/q3lock-p06-gaussian-reference-convergence-260905.md#2-discrete-massive-gaussian-and-its-fourier-covariance",
+        "strategy/q3lock-p06-gaussian-reference-convergence-260905.md#3-interpolation-and-weak-convergence-on-periodic-continuous-loops",
+        "strategy/q3lock-p06-gaussian-reference-convergence-260905.md#4-residual-riemann-sums-on-compact-loop-sets",
+        "strategy/q3lock-p06-gaussian-reference-convergence-260905.md#5-weighted-law-convergence-and-denominator-control",
+        "strategy/q3lock-p06-gaussian-tightness-normalizer-audit-260905.md#3-exact-gaussian-covariance-bounds",
+        "strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md#3-p-06-finite-grid-association-and-the-loop-limit"
+      ],
+      "finding": "At fixed finite spatial volume, the discrete massive periodic Gaussian covariance converges uniformly on the time circle to G_a(tau)=(1/beta)*sum_n exp(2*pi*i*n*tau/beta)/(a+4*pi^2*m*n^2/beta^2). Piecewise-linear interpolation has vanishing L2 vertex error and the existing increment moments give C_per tightness, hence weak convergence of the Gaussian reference. The residual Q3LOCK Riemann sums converge uniformly on compact loop sets, the quartic lower bound supplies a mesh-uniform weight envelope, Jensen keeps the normalizer positive, and the exact cyclic source identity plus Holder-Young gives the source-derivative passage.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001531",
+      "method": [
+        "Diagonalize the massive cyclic precision and rewrite the vertex covariance using least-absolute Fourier representatives.",
+        "Use the sine lower bound and a summable n^-2 majorant to prove covariance convergence to the periodic Green kernel for m*(-d^2/dtau^2)+a.",
+        "Bound the interpolation-to-vertex error by the exact cyclic increment estimate and combine finite-dimensional convergence with Kolmogorov tightness.",
+        "Prove uniform residual Riemann-sum convergence on Arzela-Ascoli compact sets while carrying the kinetic term in the Gaussian reference.",
+        "Combine the mesh-uniform residual envelope, Jensen denominator and quartic source uniform integrability to pass bounded tests and source derivatives."
+      ],
+      "next_action": "Have an independent reviewer check the Fourier reindexing and tail majorant, interpolation covariance passage, residual compact convergence, and compatibility with the finite FKG/FSS inequalities before any claim or manuscript freeze.",
+      "non_claims": [
+        "No continuous-loop FKG, infrared bound, strict cusp, phase coexistence or DLR multiplicity is certified.",
+        "No spatial thermodynamic limit, uniform common core, source-tangent composition or pressure differentiation is asserted.",
+        "No extremality, purity, clustering, real-time dynamics, KMS state, ground-state, spectral-gap, continuum, physical-vacuum or cosmological theorem is asserted.",
+        "No claim card, P2 manuscript, submission, upload, tag, release or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the P-06 finite time-grid passage identify the limiting continuous-loop Gaussian reference and transfer the residual-weighted laws at fixed spatial volume?",
+      "recorded_at": "2026-09-04T18:52:30Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001530",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001516",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK fixed-volume massive Gaussian reference converges to the periodic loop law",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

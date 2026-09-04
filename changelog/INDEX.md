@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**911 accepted events** · latest 25 shown below · machine locator: `index.json`
+**913 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-q3lock-fixed-volume-massive-gaussian-reference` — [Q3LOCK fixed-volume massive Gaussian reference convergence audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-fixed-volume-massive-gaussian-reference) |
+| 2026-09-05 | `20260905-q3lock-fixed-volume-gaussian-tightness-and-mesh` — [Q3LOCK fixed-volume Gaussian tightness and mesh-uniform normalizer audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-fixed-volume-gaussian-tightness-and-mesh) |
 | 2026-09-05 | `20260905-q3lock-finite-volume-operator-form-domain-and-b` — [Q3LOCK finite-volume operator/form-domain and bounded Falk-Bruch audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-finite-volume-operator-form-domain-and-b) |
 | 2026-09-05 | `20260905-q3lock-external-source-bytes-and-bibliography-f` — [Q3LOCK external source bytes and bibliography freeze] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-external-source-bytes-and-bibliography-f) |
 | 2026-09-05 | `20260905-q3lock-fss-bibliography-page-range-correction-2` — [Q3LOCK FSS bibliography page-range correction] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-fss-bibliography-page-range-correction-2) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-04 | `20260904-q3lock-continuous-loop-fkg-limit-audit-2026-09` — [Q3LOCK continuous-loop FKG limit audit] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-continuous-loop-fkg-limit-audit-2026-09) |
 | 2026-09-04 | `20260904-q3lock-finite-grid-fss-source-differentiation-a` — [Q3LOCK finite-grid FSS source differentiation audit] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-finite-grid-fss-source-differentiation-a) |
 | 2026-09-04 | `20260904-q3lock-exp-000780-integrated-verifier-byte-stab` — [Q3LOCK EXP-000780 integrated verifier byte stability repaired] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-exp-000780-integrated-verifier-byte-stab) |
-| 2026-09-04 | `20260904-q3lock-association-passage-records-necessary-no` — [Q3LOCK association passage records necessary nonnegative shifts] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-association-passage-records-necessary-no) |
-| 2026-09-04 | `20260904-q3lock-proof-synthesis-pins-finite-volume-feynm` — [Q3LOCK proof synthesis pins finite-volume Feynman-Kac boundary] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-proof-synthesis-pins-finite-volume-feynm) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 869–911 | 43 | [000869-000918.md](pages/000869-000918.md) |
+| 869–913 | 45 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |

@@ -67,6 +67,20 @@
       "record_line": 1528,
       "role": "finite-volume operator/form-domain and bounded Falk--Bruch cutoff audit",
       "scope": "fixed-volume form core, translation double commutator and cutoff removal only; uniform common-core and thermodynamic composition remain open"
+    },
+    {
+      "exploration_id": "EXP-001530",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1530,
+      "role": "fixed-volume Gaussian tightness, Jensen normalizer and source-uniform-integrability audit",
+      "scope": "mesh-uniform time-grid interpolation, residual denominator and source-UI inputs at fixed spatial volume only; no spatial or thermodynamic closure"
+    },
+    {
+      "exploration_id": "EXP-001531",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1531,
+      "role": "fixed-volume massive Gaussian reference convergence and residual-weighted loop-limit audit",
+      "scope": "Fourier covariance, interpolation tightness and compact residual passage at fixed spatial volume only; no spatial or thermodynamic closure"
     }
   ],
   "model_scope": {
@@ -240,11 +254,23 @@
       "path": "codes/foundations/pre_a_cp1_st8_q3lock_positive_lambda_fkg_infrared_cusp_phase_route_split_verify.py",
       "role": "integrated verifier source",
       "sha256": "c452e620933005ff12c84194b8f57f3aedb296bbc2d63358c57d9e505777b834"
+    },
+    {
+      "path": "strategy/q3lock-p06-gaussian-tightness-normalizer-audit-260905.md",
+      "role": "fixed-volume Gaussian tightness, Jensen normalizer and source-uniform-integrability audit",
+      "sha256": "5c8f01ad2bde0b438fd840083a478b69b08b16924fa11c1ca04ef0ac0da43b4c"
+    },
+    {
+      "path": "strategy/q3lock-p06-gaussian-reference-convergence-260905.md",
+      "role": "fixed-volume massive Gaussian reference convergence and residual-weighted loop-limit audit",
+      "sha256": "8fe1644e9b478fe22ee3ecd7835391597ddaea6dea7962cc9be9125cd2399538"
     }
   ],
   "open_gates": [
     "independent mathematical audit of P-06 finite-grid-to-continuous-loop FKG",
     "independent mathematical audit of P-09 finite FSS-to-loop Duhamel passage",
+    "independent review of the P-06/P-09 Gaussian tightness, normalizer and source-uniform-integrability insertion",
+    "independent review of the P-06 Gaussian Fourier covariance, interpolation and residual-weighted loop-limit insertion",
     "independent review of the KP/FSS theorem-domain and hypothesis crosswalk",
     "independent review of the operator/form-domain and unbounded-commutator audit",
     "bounded independent claim-card and result-lineage decision",
@@ -262,7 +288,7 @@
     "No C0, N1-N5, C6, CP1, Sector A or Pre-A closure.",
     "No claim-tier promotion, P2 manuscript, submission, upload, tag, release or PDF is created by this registration."
   ],
-  "next_action": "Obtain independent line-by-line review of P-06/P-09, the finite-volume operator/form-domain derivation, and the unbounded cutoff removal using the hash-frozen source scope; repair any objection, then decide whether a bounded claim card and manuscript content freeze are warranted. Only after that decision may final LaTeX compilation, PDF rendering and page-by-page visual review begin.",
+  "next_action": "Obtain independent line-by-line review of P-06/P-09, including the Gaussian tightness, Fourier covariance, interpolation, Jensen normalizer and source-uniform-integrability insertions, the finite-volume operator/form-domain derivation, and the unbounded cutoff removal using the hash-frozen source scope; repair any objection, then decide whether a bounded claim card and manuscript content freeze are warranted. Only after that decision may final LaTeX compilation, PDF rendering and page-by-page visual review begin.",
   "source_freeze": {
     "status": "HASHED_TEMPORARY_CAPTURE",
     "captured_utc": "2026-09-04",

@@ -17195,7 +17195,7 @@ mathematical theorem.
 
 | source | SHA-256 |
 |---|---|
-| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `e916118d03afaf86d9cb6b7ff2ecd160c2fc4dfff683937d1b651e86204d1b43` |
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `5bea9308cdce398b7d19968adeae6af642f181dcba4ca9391b155b618afd90f7` |
 | upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
 | upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
 | P-06/P-09 audit round 2 | `c5e62f8b7d4c0b3351063c0f9d5707e387be858f301e01d05a1b79ec0686b960` |
@@ -17205,6 +17205,8 @@ mathematical theorem.
 | KP/FSS external source-scope audit | `c4c3d227fc118ea76f0cff09e608d05814dba5b6baa52b73deee58c248a2a6e8` |
 | Literature source freeze (KP/FSS/KKK bytes and bibliography) | `0add649eb71dcc377572a65806f37a6034042e4271d54a3bad99ea1acf9beb28` |
 | Operator/form-domain and unbounded-commutator audit | `87bdbcb594dabb380395811ea7facaa6c7a54c68760c94ebf3bcfde5ff82718f` |
+| Fixed-volume Gaussian tightness, Jensen normalizer and source-UI audit | `5c8f01ad2bde0b438fd840083a478b69b08b16924fa11c1ca04ef0ac0da43b4c` |
+| Fixed-volume massive Gaussian reference convergence audit | `8fe1644e9b478fe22ee3ecd7835391597ddaea6dea7962cc9be9125cd2399538` |
 | FSS theorem and hypothesis crosswalk | `f0508567fe898785677726b366c078e72141c5fa66b4605b3e68abe1ae409be0` |
 | primary verifier source | `d707e17db34fa2f17b09483a55d172edbcd3ff44ecb65e6a40165c01a7286fd3` |
 | independent verifier source | `11ee55c1d225645d8621ae34f2223f4c99e90024cc3c46b6cefc325f4b457e71` |
@@ -17216,8 +17218,8 @@ mathematical theorem.
 **Where proven.** The exact model and candidate component ledger are recorded
 in `strategy/q3lock-exp782-independent-result-manifest-260905.json`. The
 upstream authority records are EXP-000780, EXP-000781, and EXP-000782 in
-`explorations/log.jsonl`; the current seam decisions are EXP-001516, EXP-001522,
-EXP-001526, and EXP-001528. The proof
+`explorations/log.jsonl`; the current seam decisions are EXP-001516, EXP-001522, EXP-001526,
+EXP-001528, EXP-001530, and EXP-001531. The proof
 text and its boundaries are audited in
 `strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`, with the
 finite-grid FKG, source-uniform loop limit, topology, edge-incidence,
@@ -17243,7 +17245,17 @@ only and leaves applicability review open. The finite-volume operator/form-domai
 Falk--Bruch cutoff derivation is recorded in
 `strategy/q3lock-operator-form-domain-unbounded-commutator-audit-260905.md`;
 it advances the fixed-volume proof text while retaining the uniform
-common-core and thermodynamic operator gates. The primary, independent, and integrated verifiers and their
+common-core and thermodynamic operator gates. The explicit fixed-volume
+Gaussian tightness, cyclic-resistance, Jensen-normalizer and source-uniform-
+integrability audit is recorded in
+`strategy/q3lock-p06-gaussian-tightness-normalizer-audit-260905.md`; it repairs
+the mesh-uniform P-06/P-09 insertion at fixed spatial volume only and leaves
+spatial, theorem-applicability, common-core, thermodynamic and independent-
+review gates open. The fixed-volume massive Gaussian Fourier covariance and
+residual-weighted loop-limit audit is recorded in
+`strategy/q3lock-p06-gaussian-reference-convergence-260905.md`; it supplies
+the missing reference-convergence insertion while retaining all spatial,
+operator, source-tangent and external-review gates. The primary, independent, and integrated verifiers and their
 result JSON paths are listed in the companion manifest.
 
 **Reuse scope.** This result is reusable for mathematical-physics analysis of
@@ -17266,8 +17278,10 @@ No P2 manuscript, submission package, or PDF is created at this stage; PDF
 compilation, rendering, visual QA, and hash capture are explicitly deferred to
 the final content-frozen stage.
 
-**Next.** Obtain an external-level mathematical audit of P-06 and P-09 and the
-unbounded-operator passages, repair any objection, then decide whether a
+**Next.** Obtain an external-level mathematical audit of P-06 and P-09,
+including the Gaussian tightness, Fourier covariance, interpolation,
+Jensen-normalizer and source-uniform-integrability insertions, and the
+unbounded-operator passages; repair any objection, then decide whether a
 bounded claim card and manuscript content freeze are warranted. Re-run all
 verification lanes from a clean snapshot before any final LaTeX or PDF work.
 
