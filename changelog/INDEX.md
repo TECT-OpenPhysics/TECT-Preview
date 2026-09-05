@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**954 accepted events** · latest 25 shown below · machine locator: `index.json`
+**955 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-q3lock-exp-001588-assembles-finite-volume-absol` — [Q3LOCK EXP-001588 assembles finite-volume absolute pressure content] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001588-assembles-finite-volume-absol) |
 | 2026-09-05 | `20260905-q3lock-exp-001587-corrects-doubled-spatial-diag` — [Q3LOCK EXP-001587 corrects doubled spatial diagonal in harmonic residual] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001587-corrects-doubled-spatial-diag) |
 | 2026-09-05 | `20260905-q3lock-exp-001586-r-501-quantitative-gaussian-w` — [Q3LOCK EXP-001586/R-501 quantitative Gaussian weak-limit audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001586-r-501-quantitative-gaussian-w) |
 | 2026-09-05 | `20260905-q3lock-exp-001584-p-06-gaussian-fourier-covaria` — [Q3LOCK EXP-001584 P-06 Gaussian Fourier covariance audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001584-p-06-gaussian-fourier-covaria) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-q3lock-kkk-falk-bruch-and-griffiths-factor-audi` — [Q3LOCK KKK Falk-Bruch and Griffiths factor audit recorded (EXP-001559)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kkk-falk-bruch-and-griffiths-factor-audi) |
 | 2026-09-05 | `20260905-q3lock-fss-coupling-rescaling-corrected-exp-001` — [Q3LOCK FSS coupling-rescaling corrected (EXP-001557)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-fss-coupling-rescaling-corrected-exp-001) |
 | 2026-09-05 | `20260905-q3lock-fss-theorem-factors-transcribed-exp-0015` — [Q3LOCK FSS theorem factors transcribed (EXP-001556)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-fss-theorem-factors-transcribed-exp-0015) |
-| 2026-09-05 | `20260905-q3lock-fss-gradient-adjoint-notation-corrected` — [Q3LOCK FSS gradient-adjoint notation corrected (EXP-001555)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-fss-gradient-adjoint-notation-corrected) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 919–954 | 36 | [000919-000968.md](pages/000919-000968.md) |
+| 919–955 | 37 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |

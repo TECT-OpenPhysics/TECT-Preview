@@ -17401,6 +17401,14 @@ a clean snapshot before considering any bounded claim or manuscript freeze.
 <a id="r-497"></a>
 ### R-497 -- EXP-000782 Q3LOCK low-temperature phase route: independent result registration
 
+**Finite-volume content (EXP-001588).**
+`strategy/q3lock-finite-volume-pressure-content-260905.md` assembles the
+corrected physical Hamiltonian, absolute Gaussian normalization and its
+harmonic heat-trace limit, reference-split independence, finite heat-trace
+bound and analytic convex source pressure. Exact determinant/normalization
+diagnostics pass 120/120. The spatial pressure limit, phase composition and
+external signed review remain open; this is internal T0 manuscript content.
+
 **Corrective precedence (EXP-001587).** The later coercivity/integration
 insertion blocks contain a spatial-diagonal double allocation and a
 residual/physical-potential mismatch. Use
