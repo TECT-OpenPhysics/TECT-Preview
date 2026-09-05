@@ -1,0 +1,293 @@
+{
+  "contract_id": "PAH-OMC-016",
+  "preregistration_sha256": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+    "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "strategy/pa-hyp/PAH-OMC-015-counting-prereg-v1.json": "0e07bd05c56c9765f15074505a5ce791622282a0e0c884bba277e780bbda0b35",
+    "strategy/pa-hyp/PAH-OMC-015-result-v1.json": "900aeadbc97aff76018615b61d829207d994cb6f8ad3e2fbf0a999a9d9a7d23e"
+  },
+  "verifier_sha256": "ae137e00f5d346abb473a1d33467a175d6f3f222f49b7860bdde90b05e16f616",
+  "verdict": "CONTRACT_REVIEW_PASS_NOT_MATHEMATICAL_ADMISSION",
+  "nondegeneracy_gate": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "checks": [
+    {
+      "name": "preregistration_hash",
+      "pass": true
+    },
+    {
+      "name": "parent_hash:strategy/pa-hyp/PAH-001-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent_hash:strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent_hash:strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent_hash:strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent_hash:strategy/pa-hyp/PAH-OMC-015-counting-prereg-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent_hash:strategy/pa-hyp/PAH-OMC-015-result-v1.json",
+      "pass": true
+    },
+    {
+      "name": "source_coordinate",
+      "pass": true
+    },
+    {
+      "name": "source_move",
+      "pass": true
+    },
+    {
+      "name": "no_source_rate_modification",
+      "pass": true
+    },
+    {
+      "name": "explicit_observable_change",
+      "pass": true
+    },
+    {
+      "name": "nondegeneracy_unproved",
+      "pass": true
+    },
+    {
+      "name": "no_polar_jacobian",
+      "pass": true
+    },
+    {
+      "name": "path_syntax",
+      "pass": true
+    },
+    {
+      "name": "dyadic_base",
+      "pass": true
+    },
+    {
+      "name": "independent_grid_recurrence",
+      "pass": true
+    },
+    {
+      "name": "exact_state_injection",
+      "pass": true
+    },
+    {
+      "name": "unit_amplitude_witness_all_test_levels",
+      "pass": true
+    },
+    {
+      "name": "baseline_matches_old_binary_ell",
+      "pass": true
+    },
+    {
+      "name": "hostile_raw_index_substitution",
+      "pass": true
+    },
+    {
+      "name": "hostile_normalized_index_substitution",
+      "pass": true
+    },
+    {
+      "name": "hostile_fixed_resolution_mesh",
+      "pass": true
+    },
+    {
+      "name": "hostile_injection_is_not_root_transport",
+      "pass": true
+    },
+    {
+      "name": "hostile_equal_sector_prior",
+      "pass": true
+    },
+    {
+      "name": "hostile_no_540_import",
+      "pass": true
+    }
+  ],
+  "assertions_passed": 25,
+  "primary": [
+    {
+      "j": 0,
+      "range": 1,
+      "levels": 1,
+      "mesh": "1",
+      "samples": [
+        {
+          "ell": 0,
+          "amplitude": "0",
+          "bounded_witness": "0"
+        },
+        {
+          "ell": 1,
+          "amplitude": "1",
+          "bounded_witness": "1"
+        }
+      ]
+    },
+    {
+      "j": 1,
+      "range": 2,
+      "levels": 4,
+      "mesh": "1/2",
+      "samples": [
+        {
+          "ell": 0,
+          "amplitude": "0",
+          "bounded_witness": "0"
+        },
+        {
+          "ell": 1,
+          "amplitude": "1/2",
+          "bounded_witness": "1/2"
+        },
+        {
+          "ell": 2,
+          "amplitude": "1",
+          "bounded_witness": "1"
+        },
+        {
+          "ell": 4,
+          "amplitude": "2",
+          "bounded_witness": "1"
+        }
+      ]
+    },
+    {
+      "j": 2,
+      "range": 4,
+      "levels": 16,
+      "mesh": "1/4",
+      "samples": [
+        {
+          "ell": 0,
+          "amplitude": "0",
+          "bounded_witness": "0"
+        },
+        {
+          "ell": 1,
+          "amplitude": "1/4",
+          "bounded_witness": "1/4"
+        },
+        {
+          "ell": 4,
+          "amplitude": "1",
+          "bounded_witness": "1"
+        },
+        {
+          "ell": 16,
+          "amplitude": "4",
+          "bounded_witness": "1"
+        }
+      ]
+    },
+    {
+      "j": 3,
+      "range": 8,
+      "levels": 64,
+      "mesh": "1/8",
+      "samples": [
+        {
+          "ell": 0,
+          "amplitude": "0",
+          "bounded_witness": "0"
+        },
+        {
+          "ell": 1,
+          "amplitude": "1/8",
+          "bounded_witness": "1/8"
+        },
+        {
+          "ell": 8,
+          "amplitude": "1",
+          "bounded_witness": "1"
+        },
+        {
+          "ell": 64,
+          "amplitude": "8",
+          "bounded_witness": "1"
+        }
+      ]
+    },
+    {
+      "j": 4,
+      "range": 16,
+      "levels": 256,
+      "mesh": "1/16",
+      "samples": [
+        {
+          "ell": 0,
+          "amplitude": "0",
+          "bounded_witness": "0"
+        },
+        {
+          "ell": 1,
+          "amplitude": "1/16",
+          "bounded_witness": "1/16"
+        },
+        {
+          "ell": 16,
+          "amplitude": "1",
+          "bounded_witness": "1"
+        },
+        {
+          "ell": 256,
+          "amplitude": "16",
+          "bounded_witness": "1"
+        }
+      ]
+    }
+  ],
+  "independent": [
+    {
+      "j": 0,
+      "range": 1,
+      "levels": 1,
+      "mesh": "1"
+    },
+    {
+      "j": 1,
+      "range": 2,
+      "levels": 4,
+      "mesh": "1/2"
+    },
+    {
+      "j": 2,
+      "range": 4,
+      "levels": 16,
+      "mesh": "1/4"
+    },
+    {
+      "j": 3,
+      "range": 8,
+      "levels": 64,
+      "mesh": "1/8"
+    },
+    {
+      "j": 4,
+      "range": 16,
+      "levels": 256,
+      "mesh": "1/16"
+    }
+  ],
+  "scope": "Exact coordinate and source/contract audit; not a Gibbs expectation, rate convergence, common core or uniform estimate.",
+  "universal_argument_locator": "strategy/pa-hyp/PAH-OMC-016-review.md#coordinate-review",
+  "lean": "NOT_RUN: definition/planning audit only; no analytic theorem claimed. A future lower-bound theorem needs its own primary/independent/hostile and Lean scope.",
+  "next_single_question": "Does there exist c>0 independent of n>=2 with liminf_(j->infinity) mu_(n,j)(b_v^2)>=c for both v=a,d, with tight fixed-n amplitude laws?",
+  "non_claims": [
+    "The candidate and new observable topology are not mathematically admitted by registration.",
+    "PAH-OMC-014 remains unresolved; R-508 remains valid; T-054 active gate and all claim tiers remain unchanged.",
+    "No infinite-volume dynamics, full joint regulator removal, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass gap or TOE conclusion.",
+    "No Q3LOCK input; no observation fit, prediction credit or reinterpretation of Markov time."
+  ]
+}

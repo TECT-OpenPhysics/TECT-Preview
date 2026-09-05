@@ -1,0 +1,71 @@
+{
+  "schema": "tect/pah-state-cutoff-review/1.0",
+  "contract_id": "PAH-OMC-016",
+  "version": "0.1.0",
+  "date": "2026-09-05",
+  "title": "Resolved radial counting ensemble: candidate contract review",
+  "task_id": "T-054",
+  "provenance": "New researcher-owned hypothesis under the explicit state-selection/cutoff redesign review goal; not an inherited theorem or physical owner law.",
+  "status_at_registration": "PREREGISTERED_BEFORE_CANDIDATE_TESTS_NOT_ADMITTED",
+  "sources": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+    "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "strategy/pa-hyp/PAH-OMC-015-counting-prereg-v1.json": "0e07bd05c56c9765f15074505a5ce791622282a0e0c884bba277e780bbda0b35",
+    "strategy/pa-hyp/PAH-OMC-015-result-v1.json": "900aeadbc97aff76018615b61d829207d994cb6f8ad3e2fbf0a999a9d9a7d23e"
+  },
+  "independent_motivation": {
+    "source_locator": "PAH-001 /finite_regulator/matter_cutoff and /ordered_limits/order/0",
+    "reason": "The source has two distinct radial controls: an amplitude range R_max and resolution M_psi. A discretization of a fixed amplitude coordinate should enlarge the range while shrinking R_max/M_psi. This criterion concerns coordinate resolution, not a desired Gibbs expectation, and was not chosen from candidate outputs.",
+    "selection_boundary": "Counting reference remains an explicit hypothesis, not a uniquely selected ensemble. This review considers exactly one coordinate-resolution path and no alternative priors.",
+    "new_assumptions": ["The dyadic resolved radial path below replaces only the separately tested OMC-010 restricted path for this new study.", "Amplitude-based bounded cylinders define the new test topology. This is an explicit new observable contract, not silent identification with raw R-488 integer labels."]
+  },
+  "scope": {
+    "geometry": "Exactly G_n of PAH-OMC-004 with n>=2, the same oriented edges, split triangles, unsplit frontier square and anchors O,C.",
+    "dimension_volume": "Finite relational two-cell strip; n is exhaustion, not physical dimension, lattice spacing or physical volume.",
+    "path": {"index": "j is an integer >=0", "base": 2, "R_max": "2^j", "M_psi": "2^(2j)", "radial_mesh": "2^(-j)"},
+    "fixed_parameters": {"K": 2, "M_s": 1, "epsilon": "1/2", "beta": 1, "nu": 1, "m2": 0, "lambda_s": 1, "lambda_4": 1, "eta_6": 1, "g": 1, "kappa_s": 1, "kappa_D": 1, "kappa_g": 1, "theta": 0},
+    "configuration": "At every n,j use all PAH-001 tuples with ell_v=0,...,M_psi; Q=sum ell is deterministic; phases at zero amplitude remain labelled; no gauge quotient and no optional probe.",
+    "amplitude": "r_v=|psi_v|=R_max ell_v/M_psi",
+    "functional": "Exactly PAH-001 /functional_or_action/formula, evaluated at these original allowed regulator values; no term, coefficient, finite part, counterterm or Jacobian is added.",
+    "generator": "Exactly PAH-001 /dynamics/generator and its original move families, inverse channels, beta, nu and mobility. One radial move transfers one ell quantum. No acceleration of time or rescaling of rates is allowed.",
+    "projection": "Exactly the finite Z_2 gauge and anchor-automorphism Reynolds projection on each component; no new physical projection.",
+    "state": "Z_(n,j,Q)=sum_(q(x)=Q) exp(-F_(n,j)(x)); Z_(n,j)=sum_Q Z_(n,j,Q); w_Q=Z_Q/Z; mu_(n,j)(x)=exp(-F_(n,j)(x))/Z_(n,j). All Q from 0 to |V_n|M_psi are included.",
+    "reference": "Labelled finite counting measure. A common mesh factor (R_max/M_psi)^|V_n| may cancel from numerator and denominator when analyzing sums, but is not a sector prior or a polar radial Jacobian.",
+    "time_boundary": "Stationary finite initial law mu_(n,j), t>=0, no terminal conditioning. External stochastic time only.",
+    "limit_order": "j->infinity at each fixed n, followed by n->infinity only if the first limit and a uniform nondegeneracy estimate are proved. K,M_s,epsilon,beta remain fixed. No reversed order, full joint local-cutoff, lattice or aperture limit is claimed.",
+    "state_topology_target": "Local bounded continuous functions of amplitudes r_v, aperture labels and closed Z_2 holonomies, with gauge and anchor invariance. This is a new state-comparison topology, not an admitted completed generator core."
+  },
+  "observable_contract": {
+    "new_matter_witness": "b_v=min(1,r_v), v=a=(0,0) or d=(1,1)",
+    "threshold_role": "The fixed unit threshold defines a bounded witness in the source amplitude units; it is an inserted test convention, not a fitted physical scale.",
+    "old_witness_firewall": "At j=0, R_max=M_psi=1 and b_v=ell_v. At j>0, b_v is NOT ell_v, ell_v/M_psi or a regulator-independent raw integer cylinder. Report these distinctions; no R-488 or R-508 conclusion is revised.",
+    "holonomies": "Retain exactly H_0,H_1 from PAH-OMC-008; K remains 2. They are controls, not matter nondegeneracy evidence.",
+    "state_embedding": "On a fixed graph the dyadic set injection ell_v -> 2 ell_v from j to j+1 preserves r_v; all other labels are retained. It is not a coarse Gibbs pushforward, a root map, a charge-preserving map or a generator intertwiner.",
+    "exhaustion_map": "At each fixed j retain old coordinates under the OMC-004 neutral restriction and recompute the grade. Old exact-intertwining and C_sw=540 results are reference-only outside their M_psi=1 scope."
+  },
+  "future_discriminating_gate": {
+    "question": "Does there exist c>0 independent of n>=2 with liminf_(j->infinity) mu_(n,j)(b_v^2)>=c for both v=a,d, with tight fixed-n amplitude laws?",
+    "why_not_a_finite_table": "A bounded coordinate witness existing in each finite set and a finite positive Gibbs weight do not prove this inequality.",
+    "candidate_failure": "An exact vanishing bound or counterexample to the stated uniform lower bound rejects this candidate for its stated test, not all PAH laws.",
+    "hold": "Without the amplitude-tail and local small-ball estimates retain HOLD_FOR_EVIDENCE for nondegeneracy; do not infer acceptance from registration, finite normalization or grid resolution.",
+    "follow_on": "Only after this necessary gate may a separate Cauchy/common-state/stationarity question be proposed. It is not included or solved by this contract."
+  },
+  "review_budget": "One candidate, source/coordinate/rate-preservation audit and one exact independent contract check; no partition sweep, replacement-prior search, theorem promotion or synthesis PDF in this planning review.",
+  "falsifiers": [
+    "Any parent hash mismatch or change to functional, couplings, move families, mobilities or time units.",
+    "An undeclared sector prior, chemical potential, radial Jacobian, gauge quotient or removal of zero-amplitude phase labels.",
+    "The declared path fails either unbounded range or vanishing radial spacing.",
+    "A raw-ell, normalized-ell or amplitude observable is silently substituted for another.",
+    "The state injection is treated as rootwise generator compatibility or old C_sw=540 is imported beyond its proved path.",
+    "A finite test is called the uniform small-ball theorem, or limits are interchanged.",
+    "Post-test changes to the path or witness intended to rescue the chosen output without a new version."
+  ],
+  "non_claims": [
+    "The candidate and new observable topology are not mathematically admitted by registration.",
+    "PAH-OMC-014 remains unresolved; R-508 remains valid; T-054 active gate and all claim tiers remain unchanged.",
+    "No infinite-volume dynamics, full joint regulator removal, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass gap or TOE conclusion.",
+    "No Q3LOCK input; no observation fit, prediction credit or reinterpretation of Markov time."
+  ]
+}
