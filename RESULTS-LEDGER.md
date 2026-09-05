@@ -17344,6 +17344,15 @@ any claim or manuscript freeze.
 <a id="r-498"></a>
 ### R-498 -- EXP-001580 Q3LOCK periodic/open pressure seam and min--max audit
 
+**Corrective precedence (EXP-001589).** Section 4 of the hash-pinned audit
+note displays `48*c^2*L^2/(eta*g)` once. That display is false; use
+`288*c^2*L^2/(eta*g)`, as already stated below, in the original EXP-000780
+authority and in the existing verifier. The exact counterexample and the
+assembled thermodynamic argument are recorded in
+`strategy/q3lock-thermodynamic-pressure-content-260905.md`, Sections 5--7,
+and `AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION`.
+This pointer does not alter the pinned historical note or promote R-498.
+
 **Statement.** R-498 / EXP-001580 registers a standalone T0,
 claim-nonbearing auxiliary result for the finite-volume pressure comparison
 in the exact fixed-spacing positive-lambda eight-component Q3LOCK model.  The
@@ -17400,6 +17409,15 @@ a clean snapshot before considering any bounded claim or manuscript freeze.
 
 <a id="r-497"></a>
 ### R-497 -- EXP-000782 Q3LOCK low-temperature phase route: independent result registration
+
+**Thermodynamic content (EXP-001589).**
+`strategy/q3lock-thermodynamic-pressure-content-260905.md` supplies the
+actual-model common form and uniform pressure bounds, explicit even-box
+subadditivity/tiling limit, periodic seam equality, local uniformity and
+source derivative convergence. It also corrects one displayed seam constant
+in the later R-498 note from 48 to 288, retaining the original authority
+and verifier. The pressure content is assembled internally; independent
+signed acceptance and the source-DLR/phase composition remain open at T0.
 
 **Finite-volume content (EXP-001588).**
 `strategy/q3lock-finite-volume-pressure-content-260905.md` assembles the

@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION](#audit-2026-09-05-q3lock-seam-coefficient-transcription) | reuse the displayed 48 seam constant in the later pressure audit | exact L=2 counterexample gives seam energy 768 against the erroneous bound 320; endpoint summation requires 288, already used by the original authority and verifier |
 | [AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION](#audit-2026-09-05-q3lock-harmonic-spatial-double-allocation) | combine allocated Q3LOCK onsite potential with full spatial differences | the old physical-potential defect is (3c-a/2) times the squared field norm and the Gaussian residual defect is 3c times the time-integrated squared norm; corrected equivalent residuals and consumer precedence are recorded in EXP-001587 |
 | [AUDIT-2026-09-05-PAH-OMC-014-Q0-COMPONENT-PUSHFORWARD](#audit-2026-09-05-pah-omc-014-q0-component-pushforward) | treat deterministic Q=0 component restriction as a projective Gibbs push-forward on PAH-OMC-004 | exact finite Z_2 enumeration gives a coarse/fine expectation mismatch with 2,784 rational-exponent terms; this retires only the deterministic Q=0 factorization and leaves cross-Q mixtures open |
 | [NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING](#ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining) | use positive scalar beta or kappa_s transport to repair the natural free-vertex forgetful pullback | the exact rate defect is beta*kappa_s*delta*(z_1-z_2)/2, nonzero for every positive transported beta, kappa_s, step and distinct hidden values; only block, weighted, conditional or separately versioned successors remain open |
@@ -10648,3 +10649,27 @@ and restore a/2 for the physical Hamiltonian. The Gaussian R-500/R-501
 identities are unchanged, but their interacting-law use must receive this
 correction. Internal T0 status and external proof/phase/publication gates
 remain unchanged. This is a proof-text defect, not a no-go for the model.
+
+<a id="audit-2026-09-05-q3lock-seam-coefficient-transcription"></a>
+### AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION -- one displayed seam bound loses a factor six
+
+**Failure mode.** Reuse the Section 4 displayed inequality with constant
+48 in `strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md`.
+There are 48L^2 scalar endpoint occurrences and the per-endpoint Young
+constant is 6c^2/(eta g), so their product has coefficient 288.
+
+**Evidence.** At L=2, c=g=eta=1, with all eight components equal to
+2(-1)^(y1+y2+y3), exact evaluation gives B_L=768 and Q_L=128. The
+displayed 48 bound would give 320, strictly below B_L. The corrected bound
+gives 1280. The complete derivation and finite verifier are
+`strategy/q3lock-thermodynamic-pressure-content-260905.md` Section 5 and
+`verification/scripts/q3lock_thermodynamic_pressure_audit.py`. The latter
+passes 55/55 exact diagnostics; its artifact is
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-thermodynamic-pressure-audit/result.json`.
+
+**Consequence.** Supersede only the erroneous displayed 48 coefficient with
+288. The original EXP-000780 authority, later sections of the same audit and
+the R-498 verifier already use 288 and retain their bytes. The error density
+remains O(L^(-1/2)) for eta=L^(-1/2). This is a later transcription defect;
+the assembled pressure proof and remaining phase/DLR/external-review gates
+retain their internal T0 status.

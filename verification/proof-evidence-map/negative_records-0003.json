@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-30-a13-total-covariance-temporal-shell-intertwining",
+      "branch": "infer `[Delta C_b,Pi_m]=0` for every temporal chart block from Fourier diagonality of the total covariance",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Infer shell commutation for every temporal covariance increment from the Fourier-multiplier form of the total covariance `C_J`.",
+        "consequence": "A blockwise spectral covariance path would be an additional hypothesis. R-129 avoids it by applying physical-shell analysis after the source synthesis and the true predictable coanalysis afterward.",
+        "evidence": "R-129 proof note, Section 5; exact primary and independent matrix audits; R-120 total-covariance symbol and R-104 temporal factorization.",
+        "failure_mode": "The projections `P_+=(1/2)[[1,1],[1,1]]` and `P_-=(1/2)[[1,-1],[-1,1]]` are positive orthogonal increments whose sum is the identity. The total commutes with `Pi=diag(1,0)`, while neither increment does. Their positive square roots are themselves, so the source synthesis also fails the proposed blockwise intertwiner."
+      },
+      "detail_title": "total Fourier covariance does not diagonalize every temporal increment",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "the orthogonal increments `P_+` and `P_-` sum to the identity but each fails to commute with `Pi=diag(1,0)`. Total spectral covariance does not identify the temporal factorization; R-129 instead uses physical-shell analysis followed by legal source coanalysis",
+      "tag": "NG-2026-07-30-A13-TOTAL-COVARIANCE-TEMPORAL-SHELL-INTERTWINING"
+    },
+    {
       "anchor": "ng-2026-07-30-a13-swapped-geometric-reverse-band-adjoint",
       "branch": "identify the true adjoint orientation of a proved shell/source cell with a distinct swapped-label geometric reverse cell",
       "claim_ref_basis": {
@@ -2210,28 +2233,6 @@
       "kind": "no_go",
       "summary": "an admissible two-root later control has `d_jA=d_jDA=0` but a nonzero production coefficient-curvature innovation; the exact conditional Jensen defect is an additional upper-triangular branch",
       "tag": "NG-2026-07-25-A13-NONLINEAR-COEFFICIENT-DJA-FACTORISATION"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-negative-flow-cat0-shortcut",
-      "branch": "A13 Nelson/assembly closure from a positive-Jacobian negative flow or conditional CAT(0) barycentering alone",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "A flow must still control the material derivative and surjectivity/cutoff boundary, while CAT(0) geometry still needs production spatial/source coupling. Neither shortcut proves `H_A`, OVERLAP, or Nelson.",
-        "evidence": "For a compactly supported localization, the negative flow has an exact Liouville identity, but its defect is the signed material derivative `|b|^2+delta_gamma(Db b)+Tr(Db^2)`. For the untruncated scalar model `b(x)=x^3`, the exact flow `x/sqrt(1+2t x^2)` has positive Jacobian everywhere yet maps only onto `(-1/sqrt(2t),1/sqrt(2t))`, leaving a positive high-field complement. Separately, the scaled flat reset target remains exactly conditionally barycentered while its paid ledger is `[-lambda^2/2+eta+120 zeta](J-1)+15 zeta`, which diverges negatively after choosing `lambda^2>2(eta+120 zeta)` for any fixed allocations.",
-        "failure_mode": "Replace the signed packet proof by either a negative flow with positive Jacobian or conditional CAT(0) barycentric convexity alone."
-      },
-      "detail_title": "determinant-free geometry retains the analytic obstruction",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "the flow trades the Ramer determinant zero for a signed material derivative and possible high-field non-surjectivity, while a scaled exactly barycentered reset model diverges negatively for every fixed CM/sextic allocation",
-      "tag": "NG-2026-07-25-A13-NEGATIVE-FLOW-CAT0-SHORTCUT"
     }
   ],
   "kind": "negative_records",

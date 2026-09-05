@@ -389,6 +389,13 @@
       "record_line": 1588,
       "role": "finite-volume absolute pressure and harmonic-split independence content block",
       "scope": "exact mesh normalization, harmonic heat-trace factor, split independence and finite-volume analytic convex source pressure; spatial limit and external signed review remain open"
+    },
+    {
+      "exploration_id": "EXP-001589",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1589,
+      "role": "thermodynamic pressure content and seam coefficient correction",
+      "scope": "actual-model form and volume bounds, even rectangular pressure limit, periodic seam equality and local uniform derivative passage assembled internally; signed review and phase/DLR composition remain open"
     }
   ],
   "model_scope": {
@@ -411,8 +418,8 @@
   "candidate_proof_spine": [
     {
       "component": "finite and infinite-volume source pressure",
-      "status": "FINITE_VOLUME_CONTENT_ASSEMBLED_THERMODYNAMIC_PENDING",
-      "source": "EXP-000780 plus EXP-000782 source-normalization ledger, EXP-001587 correction and EXP-001588 finite-volume pressure content"
+      "status": "PRESSURE_CONTENT_ASSEMBLED_PENDING_INDEPENDENT_REVIEW",
+      "source": "EXP-000780 plus EXP-000782 source normalization, EXP-001587 correction, EXP-001588 finite-volume and EXP-001589 thermodynamic pressure content"
     },
     {
       "component": "tempered Euclidean DLR existence, compactness and source tangents",
@@ -850,6 +857,21 @@
       "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-absolute-partition-audit/result.json",
       "role": "EXP-001588 deterministic exact and floating-point diagnostic artifact",
       "sha256": "aac8674312822530e70ad698c2bf65ed31e8e2589cc9af0daf1c78cad83b473b"
+    },
+    {
+      "path": "strategy/q3lock-thermodynamic-pressure-content-260905.md",
+      "role": "EXP-001589 consolidated thermodynamic pressure proof and seam correction precedence",
+      "sha256": "aa8059a801f67de2af16981a0967572465d6d8d19df263fa1572b37a9a6fff45"
+    },
+    {
+      "path": "verification/scripts/q3lock_thermodynamic_pressure_audit.py",
+      "role": "EXP-001589 exact seam and even-tiling verifier",
+      "sha256": "5c7a4103223c534346c1ea6fbf3b90bc11736d4bda11e6dbf7b4a8f57e2024dc"
+    },
+    {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-thermodynamic-pressure-audit/result.json",
+      "role": "EXP-001589 deterministic exact diagnostic artifact",
+      "sha256": "8d63bc9c492e0239f4299d39dd2f674d8ef508cdcc860014be88a52fd0ad207f"
     }
   ],
   "correction_precedence": [
@@ -864,10 +886,18 @@
       ],
       "rule": "Historical hash-pinned bytes are retained. Final consumers must use the corrected residual, physical form and constants; old allocated-local-plus-full-difference formulas are not current premises.",
       "review_status": "INTERNAL_CORRECTION_RECORDED_EXTERNAL_ACCEPTANCE_OPEN"
+    },
+    {
+      "exploration_id": "EXP-001589",
+      "audit_id": "AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION",
+      "current_definition": "strategy/q3lock-thermodynamic-pressure-content-260905.md#5-periodic-seam-and-correction-of-a-displayed-coefficient",
+      "superseded_blocks": ["strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md Section 4: the one displayed seam inequality with coefficient 48"],
+      "rule": "Use coefficient 288 from endpoint summation. The original EXP-000780 authority, subsequent min--max lines and R-498 verifier already use 288 and remain byte-preserved.",
+      "review_status": "INTERNAL_CORRECTION_RECORDED_EXTERNAL_ACCEPTANCE_OPEN"
     }
   ],
   "open_gates": [
-    "independent review of EXP-001588 finite-volume pressure content and its connection to the spatial seam/Fekete thermodynamic limit",
+    "independent review of EXP-001588/EXP-001589 finite-volume and thermodynamic pressure content, including the corrected seam constant, local uniformity and source derivative passage",
     "independent acceptance and consumer crosswalk of EXP-001587 harmonic/spatial allocation correction and absolute pressure reference factor",
     "independent mathematical audit of P-06 finite-grid-to-continuous-loop FKG",
     "independent review of the P-06 convergence mode, OU-bridge support-nullity and weak-limit/UI replacement",
@@ -897,7 +927,7 @@
     "No C0, N1-N5, C6, CP1, Sector A or Pre-A closure.",
     "No claim-tier promotion, P2 manuscript, submission, upload, tag, release or PDF is created by this registration."
   ],
-  "next_action": "Connect the EXP-001588 finite-volume pressure content to the spatial seam/Fekete argument, preserving the exact absolute normalization and EXP-001587 correction precedence. Obtain independent acceptance of corrected loop/FKG, R-500/R-501 Gaussian, P-09 FSS, operator/KKK and KP source-window/projective W_t/DLR inputs, then consolidate the entire phase proof and bounded claim. Content freeze, clean replay, signed external reviews and final PDF remain required. Remote push remains pending operator authorization after the prior automatic-review rejection.",
+  "next_action": "Compose the EXP-001588/EXP-001589 pressure and derivative limits with source-dependent tempered DLR extraction. Preserve both recorded correction-precedence entries. Obtain independent acceptance of pressure, corrected loop/FKG, R-500/R-501 Gaussian, P-09 FSS, operator/KKK and KP source-window/projective W_t/DLR inputs, then consolidate the entire phase proof and bounded claim. Content freeze, clean replay, signed external reviews and final PDF remain required.",
   "source_freeze": {
     "status": "HASHED_TEMPORARY_CAPTURE",
     "captured_utc": "2026-09-04",

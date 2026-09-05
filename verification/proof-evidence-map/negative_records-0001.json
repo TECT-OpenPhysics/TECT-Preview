@@ -1,6 +1,26 @@
 {
   "data": [
     {
+      "anchor": "audit-2026-09-05-q3lock-seam-coefficient-transcription",
+      "branch": "reuse the displayed 48 seam constant in the later pressure audit",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "structured_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "consequence": "Supersede only the erroneous displayed 48 coefficient with 288. The original EXP-000780 authority, later sections of the same audit and the R-498 verifier already use 288 and retain their bytes. The error density remains O(L^(-1/2)) for eta=L^(-1/2). This is a later transcription defect; the assembled pressure proof and remaining phase/DLR/external-review gates retain their internal T0 status.",
+        "evidence": "At L=2, c=g=eta=1, with all eight components equal to 2(-1)^(y1+y2+y3), exact evaluation gives B_L=768 and Q_L=128. The displayed 48 bound would give 320, strictly below B_L. The corrected bound gives 1280. The complete derivation and finite verifier are `strategy/q3lock-thermodynamic-pressure-content-260905.md` Section 5 and `verification/scripts/q3lock_thermodynamic_pressure_audit.py`. The latter passes 55/55 exact diagnostics; its artifact is `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-thermodynamic-pressure-audit/result.json`.",
+        "failure_mode": "Reuse the Section 4 displayed inequality with constant 48 in `strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md`. There are 48L^2 scalar endpoint occurrences and the per-endpoint Young constant is 6c^2/(eta g), so their product has coefficient 288."
+      },
+      "detail_title": "one displayed seam bound loses a factor six",
+      "family_refs": [],
+      "kind": "audit",
+      "summary": "exact L=2 counterexample gives seam energy 768 against the erroneous bound 320; endpoint summation requires 288, already used by the original authority and verifier",
+      "tag": "AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION"
+    },
+    {
       "anchor": "audit-2026-09-05-q3lock-harmonic-spatial-double-allocation",
       "branch": "combine allocated Q3LOCK onsite potential with full spatial differences",
       "claim_ref_basis": {
@@ -2017,27 +2037,6 @@
       "kind": "no_go",
       "summary": "a Gaussian and its quadratic phase chirp have the same position characteristic `exp(-t^2/4)` but momentum variances `1/2` and `1`. Retain reflection-positive reconstruction, direct momentum estimates, or another joint Weyl-functional construction",
       "tag": "NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE"
-    },
-    {
-      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-strang-one-slice-exact-hamiltonian-semigroup",
-      "branch": "identify the explicit symmetric finite-time Gaussian-link slice with the exact registered CL8 heat semigroup merely from symmetry, positivity, and low-order agreement",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-exp-000761-closes-the-fixed-regulator-cl8-heat"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "artifacts": "`strategy/pre-a-cp1-cl8-time-local-rp-feynman-kac-bridge-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-time-local-rp-feynman-kac-bridge-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split.py`; `codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split_independent.py`; `codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split_verify.py`.",
-        "consequence": "Retain the exact Feynman--Kac heat transfer `exp(-epsilon H_a)`. The explicit Gaussian-link slice remains a useful aligned-even-ring reflection-positive approximation, and its products converge in trace norm to the exact semigroup. No regulator limit, physical time, vacuum selection, energy reference, C6, CP1, or Pre-A conclusion follows.",
-        "evidence": "Let `f` be smooth, compactly supported, and equal to one near a point `q`. For `T=-kappa Delta` and any smooth `V`, direct expansion on this plateau gives ```text [epsilon^3](S_epsilon-exp[-epsilon(T+V)])f(q) =-(kappa/12)|grad V(q)|^2-(kappa^2/12)Delta^2 V(q). ``` For the actual registered CL8 potential, `grad U_a(0)=0`. Quadratic spatial and mass terms have zero bi-Laplacian. Each of the `8M` self-quartics gives `6wg`, while each of the twelve Q3 edges at each node gives `16w lambda`. Therefore ```text Delta^2 U_a(0)=48wM(g+4lambda)>0, [epsilon^3](S_epsilon-exp[-epsilon H_a])f(0) =-4 kappa_a^2 wM(g+4lambda)<0. ``` The two independent verifiers reconstruct both the general quartic jet and the actual Q3 bi-Laplacian without importing one another. This proves failure of the one-parameter operator identity and nonzero defect for every sufficiently small positive step; it does not exclude an isolated accidental matrix element at another step.",
-        "failure_mode": "Identify `S_epsilon=exp(-epsilon U_a/2) exp(epsilon kappa_a Delta) exp(-epsilon U_a/2)` with `exp(-epsilon H_a)` at finite nonzero step merely because the slice is symmetric, operator positive, has a strictly positive kernel, and agrees through the epsilon-squared core expansion."
-      },
-      "detail_title": "the explicit symmetric slice is not the exact registered interacting heat step",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "on a compactly supported plateau at zero, the actual CL8 potential has `grad U_a(0)=0` and `Delta^2 U_a(0)=48wM(g+4lambda)>0`, so the epsilon-cubed coefficient of `S_epsilon-exp(-epsilon H_a)` is `-4 kappa_a^2 wM(g+4lambda)<0`. Retain the exact heat kernel or the controlled trace-norm product limit",
-      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP"
     }
   ],
   "kind": "negative_records",

@@ -1,6 +1,27 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-strang-one-slice-exact-hamiltonian-semigroup",
+      "branch": "identify the explicit symmetric finite-time Gaussian-link slice with the exact registered CL8 heat semigroup merely from symmetry, positivity, and low-order agreement",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-exp-000761-closes-the-fixed-regulator-cl8-heat"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "artifacts": "`strategy/pre-a-cp1-cl8-time-local-rp-feynman-kac-bridge-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-time-local-rp-feynman-kac-bridge-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split.py`; `codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split_independent.py`; `codes/foundations/pre_a_cp1_cl8_time_local_rp_feynman_kac_bridge_route_split_verify.py`.",
+        "consequence": "Retain the exact Feynman--Kac heat transfer `exp(-epsilon H_a)`. The explicit Gaussian-link slice remains a useful aligned-even-ring reflection-positive approximation, and its products converge in trace norm to the exact semigroup. No regulator limit, physical time, vacuum selection, energy reference, C6, CP1, or Pre-A conclusion follows.",
+        "evidence": "Let `f` be smooth, compactly supported, and equal to one near a point `q`. For `T=-kappa Delta` and any smooth `V`, direct expansion on this plateau gives ```text [epsilon^3](S_epsilon-exp[-epsilon(T+V)])f(q) =-(kappa/12)|grad V(q)|^2-(kappa^2/12)Delta^2 V(q). ``` For the actual registered CL8 potential, `grad U_a(0)=0`. Quadratic spatial and mass terms have zero bi-Laplacian. Each of the `8M` self-quartics gives `6wg`, while each of the twelve Q3 edges at each node gives `16w lambda`. Therefore ```text Delta^2 U_a(0)=48wM(g+4lambda)>0, [epsilon^3](S_epsilon-exp[-epsilon H_a])f(0) =-4 kappa_a^2 wM(g+4lambda)<0. ``` The two independent verifiers reconstruct both the general quartic jet and the actual Q3 bi-Laplacian without importing one another. This proves failure of the one-parameter operator identity and nonzero defect for every sufficiently small positive step; it does not exclude an isolated accidental matrix element at another step.",
+        "failure_mode": "Identify `S_epsilon=exp(-epsilon U_a/2) exp(epsilon kappa_a Delta) exp(-epsilon U_a/2)` with `exp(-epsilon H_a)` at finite nonzero step merely because the slice is symmetric, operator positive, has a strictly positive kernel, and agrees through the epsilon-squared core expansion."
+      },
+      "detail_title": "the explicit symmetric slice is not the exact registered interacting heat step",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "on a compactly supported plateau at zero, the actual CL8 potential has `grad U_a(0)=0` and `Delta^2 U_a(0)=48wM(g+4lambda)>0`, so the epsilon-cubed coefficient of `S_epsilon-exp(-epsilon H_a)` is `-4 kappa_a^2 wM(g+4lambda)<0`. Retain the exact heat kernel or the controlled trace-norm product limit",
+      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP"
+    },
+    {
       "anchor": "ng-2026-08-04-pre-a-cp1-cl8-scalar-mass-only-q3-wick-renormalization",
       "branch": "Wick-order the local Q3 quartic interaction against the declared common-diagonal Gaussian reference while allowing only a scalar mass and scalar energy counterterm",
       "claim_ref_basis": {
@@ -2206,29 +2227,6 @@
       "kind": "no_go",
       "summary": "with two scalar blocks `S_1=S_2=1`, trivial first past, second past `sigma(xi)`, and `G=xi`, the legal source adjoint is `(0,xi)` and its physical Riesz vector is `xi`, whereas `C_JG=2xi`. Predictable projections retain their block labels and cannot be moved outside the covariance sum",
       "tag": "NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE"
-    },
-    {
-      "anchor": "ng-2026-07-30-a13-total-covariance-temporal-shell-intertwining",
-      "branch": "infer `[Delta C_b,Pi_m]=0` for every temporal chart block from Fourier diagonality of the total covariance",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Infer shell commutation for every temporal covariance increment from the Fourier-multiplier form of the total covariance `C_J`.",
-        "consequence": "A blockwise spectral covariance path would be an additional hypothesis. R-129 avoids it by applying physical-shell analysis after the source synthesis and the true predictable coanalysis afterward.",
-        "evidence": "R-129 proof note, Section 5; exact primary and independent matrix audits; R-120 total-covariance symbol and R-104 temporal factorization.",
-        "failure_mode": "The projections `P_+=(1/2)[[1,1],[1,1]]` and `P_-=(1/2)[[1,-1],[-1,1]]` are positive orthogonal increments whose sum is the identity. The total commutes with `Pi=diag(1,0)`, while neither increment does. Their positive square roots are themselves, so the source synthesis also fails the proposed blockwise intertwiner."
-      },
-      "detail_title": "total Fourier covariance does not diagonalize every temporal increment",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "the orthogonal increments `P_+` and `P_-` sum to the identity but each fails to commute with `Pi=diag(1,0)`. Total spectral covariance does not identify the temporal factorization; R-129 instead uses physical-shell analysis followed by legal source coanalysis",
-      "tag": "NG-2026-07-30-A13-TOTAL-COVARIANCE-TEMPORAL-SHELL-INTERTWINING"
     }
   ],
   "kind": "negative_records",
