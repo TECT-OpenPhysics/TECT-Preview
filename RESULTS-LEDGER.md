@@ -17410,6 +17410,18 @@ a clean snapshot before considering any bounded claim or manuscript freeze.
 <a id="r-497"></a>
 ### R-497 -- EXP-000782 Q3LOCK low-temperature phase route: independent result registration
 
+**Continuous-loop FKG content (EXP-001593).**
+`strategy/q3lock-continuous-loop-fkg-content-260905.md` supplies a direct
+finite product-density association induction, receives the corrected actual
+loop limit and periodic moments, and proves the bounded Borel extension and
+association of the selected periodic/source-tangent limits internally. It
+derives the parity-symmetric expectations `E D<=3 E S` and `E Q^2>=E S/8`,
+without claiming association of arbitrary DLR mixtures or a positive cusp.
+The finite alternative diagnostic passes 504/504; the pinned EXP-001583
+polynomial/interpolation diagnostic replays 306/306 byte-identically.
+This is internal T0 content, not signed mathematical acceptance or a phase
+promotion; the full FSS/operator/Falk-Bruch/Griffiths composition is open.
+
 **DLR/tangent content (EXP-001591).**
 `strategy/q3lock-dlr-source-tangent-content-260905.md` supplies the
 source-uniform finite-periodic moment closure, correctly directed weighted
