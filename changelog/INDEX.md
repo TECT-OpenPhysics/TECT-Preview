@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**935 accepted events** · latest 25 shown below · machine locator: `index.json`
+**941 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,12 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-q3lock-collective-dictionary-receives-independe` — [Q3LOCK collective dictionary receives independent limit-order audit (EXP-001570)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-collective-dictionary-receives-independe) |
+| 2026-09-05 | `20260905-q3lock-collective-dictionary-inserted-into-p-06` — [Q3LOCK collective dictionary inserted into P-06/P-09 proof text (EXP-001568)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-collective-dictionary-inserted-into-p-06) |
+| 2026-09-05 | `20260905-q3lock-exp-000780-collective-source-restriction` — [Q3LOCK EXP-000780 collective-source restriction audit recorded (EXP-001567)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-000780-collective-source-restriction) |
+| 2026-09-05 | `20260905-q3lock-fss-arbitrary-prior-source-scope-confirm` — [Q3LOCK FSS arbitrary-prior source scope confirmed (EXP-001566)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-fss-arbitrary-prior-source-scope-confirm) |
+| 2026-09-05 | `20260905-q3lock-kkk-pressure-scale-correction-recorded-e` — [Q3LOCK KKK pressure-scale correction recorded (EXP-001564)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kkk-pressure-scale-correction-recorded-e) |
+| 2026-09-05 | `20260905-q3lock-kp-source-window-feller-audit-recorded-e` — [Q3LOCK KP source-window Feller audit recorded (EXP-001563)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kp-source-window-feller-audit-recorded-e) |
 | 2026-09-05 | `20260905-q3lock-source-tangent-hash-recomputation-record` — [Q3LOCK source-tangent hash recomputation recorded (EXP-001562)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-tangent-hash-recomputation-record) |
 | 2026-09-05 | `20260905-q3lock-pressure-derivative-subsequence-audit-re` — [Q3LOCK pressure-derivative subsequence audit recorded (EXP-001560)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-pressure-derivative-subsequence-audit-re) |
 | 2026-09-05 | `20260905-q3lock-kkk-falk-bruch-and-griffiths-factor-audi` — [Q3LOCK KKK Falk-Bruch and Griffiths factor audit recorded (EXP-001559)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kkk-falk-bruch-and-griffiths-factor-audi) |
@@ -36,12 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-q3lock-source-tangent-dlr-composition-audit-202` — [Q3LOCK source-tangent DLR composition audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-tangent-dlr-composition-audit-202) |
 | 2026-09-05 | `20260905-q3lock-loop-limit-corrected-from-total-variatio` — [Q3LOCK loop limit corrected from total variation to weak convergence] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-loop-limit-corrected-from-total-variatio) |
 | 2026-09-05 | `20260905-q3lock-kkk-endpoint-interval-correction-for-the` — [Q3LOCK KKK endpoint-interval correction for the cusp bridge] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-kkk-endpoint-interval-correction-for-the) |
-| 2026-09-05 | `20260905-q3lock-finite-volume-translation-trace-differen` — [Q3LOCK finite-volume translation trace-differentiation audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-finite-volume-translation-trace-differen) |
-| 2026-09-05 | `20260905-q3lock-pressure-zero-mode-griffiths-and-tangent` — [Q3LOCK pressure zero-mode Griffiths and tangent-state audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-pressure-zero-mode-griffiths-and-tangent) |
-| 2026-09-05 | `20260905-q3lock-p-09-fss-poisson-shift-and-infrared-cons` — [Q3LOCK P-09 FSS Poisson-shift and infrared-constant audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-p-09-fss-poisson-shift-and-infrared-cons) |
-| 2026-09-05 | `20260905-q3lock-fixed-volume-massive-gaussian-reference` — [Q3LOCK fixed-volume massive Gaussian reference convergence audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-fixed-volume-massive-gaussian-reference) |
-| 2026-09-05 | `20260905-q3lock-fixed-volume-gaussian-tightness-and-mesh` — [Q3LOCK fixed-volume Gaussian tightness and mesh-uniform normalizer audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-fixed-volume-gaussian-tightness-and-mesh) |
-| 2026-09-05 | `20260905-q3lock-finite-volume-operator-form-domain-and-b` — [Q3LOCK finite-volume operator/form-domain and bounded Falk-Bruch audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-finite-volume-operator-form-domain-and-b) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 919–935 | 17 | [000919-000968.md](pages/000919-000968.md) |
+| 919–941 | 23 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |

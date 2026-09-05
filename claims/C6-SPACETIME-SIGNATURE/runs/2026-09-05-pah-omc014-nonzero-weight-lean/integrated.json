@@ -1,0 +1,332 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 30,
+  "assertions": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "PAH-001 hash",
+      "pass": true
+    },
+    {
+      "actual": "strategy/pa-hyp/PAH-001-v1.json",
+      "expected": "strategy/pa-hyp/PAH-001-v1.json",
+      "name": "PAH-001 locator",
+      "pass": true
+    },
+    {
+      "actual": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+      "expected": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+      "name": "PAH-OMC-012 hash",
+      "pass": true
+    },
+    {
+      "actual": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "expected": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "name": "PAH-OMC-012 locator",
+      "pass": true
+    },
+    {
+      "actual": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "expected": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "name": "PAH-OMC-014 hash",
+      "pass": true
+    },
+    {
+      "actual": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "expected": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "name": "PAH-OMC-014 locator",
+      "pass": true
+    },
+    {
+      "actual": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+      "expected": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+      "name": "PAH-OMC-014-MANIFEST hash",
+      "pass": true
+    },
+    {
+      "actual": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "expected": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "name": "PAH-OMC-014-MANIFEST locator",
+      "pass": true
+    },
+    {
+      "actual": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f",
+      "expected": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f",
+      "name": "R-492-INTEGRATED hash",
+      "pass": true
+    },
+    {
+      "actual": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain/integrated.json",
+      "expected": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain/integrated.json",
+      "name": "R-492-INTEGRATED locator",
+      "pass": true
+    },
+    {
+      "actual": {
+        "final": true,
+        "lf": true
+      },
+      "expected": true,
+      "name": "R502 LF/final newline",
+      "pass": true
+    },
+    {
+      "actual": "37a9014b8d9f99fe0e3e23f18ddefcbb6960da7bcf4dd029b5f168b42c4d8b00",
+      "expected": "37a9014b8d9f99fe0e3e23f18ddefcbb6960da7bcf4dd029b5f168b42c4d8b00",
+      "name": "R502 hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declarations": [
+          "twoSectorValue_factor",
+          "twoSectorValue_nonzero_iff",
+          "lower_bound_requires_positive_weight"
+        ],
+        "path": "verification/lean/Tect/R502.lean",
+        "sha256": "37a9014b8d9f99fe0e3e23f18ddefcbb6960da7bcf4dd029b5f168b42c4d8b00"
+      },
+      "expected": [
+        "twoSectorValue_factor",
+        "twoSectorValue_nonzero_iff",
+        "lower_bound_requires_positive_weight"
+      ],
+      "name": "registry declaration/hash pin",
+      "pass": true
+    },
+    {
+      "actual": [
+        "twoSectorValue_factor",
+        "twoSectorValue_nonzero_iff",
+        "lower_bound_requires_positive_weight"
+      ],
+      "expected": [
+        "twoSectorValue_factor",
+        "twoSectorValue_nonzero_iff",
+        "lower_bound_requires_positive_weight"
+      ],
+      "name": "declarations present",
+      "pass": true
+    },
+    {
+      "actual": "leanprover/lean4:v4.32.1",
+      "expected": "leanprover/lean4:v4.32.1",
+      "name": "toolchain pin",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "none",
+      "name": "Lean escape tokens absent",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R502.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compilation",
+      "pass": true
+    },
+    {
+      "actual": {
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+          "constructed_hypothesis": false,
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "epistemic_layer": "L2_FINITE_NONZERO_OBLIGATION",
+          "external_source": false,
+          "model_change": false,
+          "physical_authority": false,
+          "source_law_present": false,
+          "synthetic_fixture": false
+        },
+        "status": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "AUXILIARY_SUPPORT_NONZERO_WEIGHT_OBLIGATION",
+          "omega_status": "NOT_DEFINED",
+          "physical_promotion": false,
+          "projective_consistency": "NOT_TESTABLE",
+          "r488_global_nonzero": "NOT_TESTABLE",
+          "source_law_present": false,
+          "verdict": "HOLD_FOR_EVIDENCE",
+          "weak_cylinder_limit": "NOT_TESTABLE"
+        }
+      },
+      "expected": "HOLD/no source law/no promotion",
+      "name": "HOLD/non-bearing firewall",
+      "pass": true
+    },
+    {
+      "actual": {
+        "global": "NOT_DEFINED_BY_PARENT; not required for this domain-map gate",
+        "omega": "NOT_DEFINED"
+      },
+      "expected": "undefined",
+      "name": "parent omega remains undefined",
+      "pass": true
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "parent manifest status remains source-scoped",
+      "pass": true
+    },
+    {
+      "actual": {
+        "ell_a_values": [
+          0
+        ],
+        "states": 1
+      },
+      "expected": "one zero state",
+      "name": "exact Q=0 anchor value",
+      "pass": true
+    },
+    {
+      "actual": {
+        "anchor_states": 1,
+        "states": 8
+      },
+      "expected": "one ell_a=1 witness",
+      "name": "exact Q=1 anchor witness",
+      "pass": true
+    },
+    {
+      "actual": {
+        "coarse_Q": 1,
+        "finite_gibbs_positive": true,
+        "lift_value": 1,
+        "n": 2,
+        "observable": "ell_a",
+        "value": 1
+      },
+      "expected": "Q=1 ell_a positive witness",
+      "name": "R492 positive finite witness",
+      "pass": true
+    },
+    {
+      "actual": "Use the unchanged grade-blind R-488 cylinder f=ell_a at n=2, with Q=0 and Q=1 components on the PAH-OMC-012 graded union.",
+      "expected": "grade-blind ell_a",
+      "name": "cylinder scope fixed",
+      "pass": true
+    },
+    {
+      "actual": [
+        "0",
+        "1/3",
+        "1"
+      ],
+      "expected": "w1*positive component",
+      "name": "factorization V=w1*a1",
+      "pass": true
+    },
+    {
+      "actual": [
+        "0",
+        "1/3",
+        "1"
+      ],
+      "expected": "zero exactly at w1=0",
+      "name": "finite nonzero iff positive weight",
+      "pass": true
+    },
+    {
+      "actual": {
+        "delta": "1/4",
+        "positive_weight_value": "1",
+        "zero_weight_value": "0"
+      },
+      "expected": "delta>0 forces w1>0",
+      "name": "positive lower bound excludes zero weight",
+      "pass": true
+    },
+    {
+      "actual": "w0 and w1 are symbolic nonnegative variables only. No normalized source law, fitted weight, delta law, beta dependence, phase dependence or cross-Q kernel is introduced.",
+      "expected": "no adopted law",
+      "name": "weights remain symbolic",
+      "pass": true
+    },
+    {
+      "actual": [
+        "This is conditional algebra and an exact finite obligation, not a sector-law construction.",
+        "It does not prove projective consistency, weak cylinder convergence, positivity of a global state, stationarity, closability or an infinite-volume limit.",
+        "R-484 defect 16/9 and R-490 C_sw=540 are untouched; C_sw is not a measure or sector weight.",
+        "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion is made."
+      ],
+      "expected": "boundary retained",
+      "name": "R484/Csw firewalls",
+      "pass": true
+    },
+    {
+      "actual": [
+        "This is conditional algebra and an exact finite obligation, not a sector-law construction.",
+        "It does not prove projective consistency, weak cylinder convergence, positivity of a global state, stationarity, closability or an infinite-volume limit.",
+        "R-484 defect 16/9 and R-490 C_sw=540 are untouched; C_sw is not a measure or sector weight.",
+        "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion is made."
+      ],
+      "expected": "no physical promotion",
+      "name": "physical non-claims",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-NONZERO-WEIGHT-LEAN-INTEGRATED-001",
+  "claim_bearing": false,
+  "classification": "AUXILIARY_SUPPORT_NONZERO_WEIGHT_OBLIGATION",
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R502.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "next_question": "Can a source owner provide the normalized full-Q sector law together with a nonvanishing lower-bound contract for the R-488 positive component under the fixed PAH-001 limit order?",
+  "non_claims": [
+    "This is conditional algebra and an exact finite obligation, not a sector-law construction.",
+    "It does not prove projective consistency, weak cylinder convergence, positivity of a global state, stationarity, closability or an infinite-volume limit.",
+    "R-484 defect 16/9 and R-490 C_sw=540 are untouched; C_sw is not a measure or sector weight.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion is made."
+  ],
+  "obligation": "global ell_a nonzero requires positive Q=1 sector weight; a positive lower bound requires a corresponding source-owned lower-bound input",
+  "omega_status": "NOT_DEFINED",
+  "passed": 30,
+  "projective_consistency": "NOT_TESTABLE",
+  "reproduction": {
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_nonzero_weight_lean_verify_hostile.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_nonzero_weight_lean_verify_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_nonzero_weight_lean_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R502.lean"
+  },
+  "run_kind": "integrated",
+  "schema": "tect/pah-omc014-nonzero-weight-lean-integrated/1.0",
+  "scope": {
+    "component_values": {
+      "Q0": "0",
+      "Q1": ">0"
+    },
+    "cylinder": "ell_a",
+    "n": 2,
+    "symbolic_weights": true
+  },
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "PAH-OMC-014-MANIFEST": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+    "R-492-INTEGRATED": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f",
+    "R492": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f",
+    "lean": "37a9014b8d9f99fe0e3e23f18ddefcbb6960da7bcf4dd029b5f168b42c4d8b00",
+    "manifest": "a98d38646bb7c1f7edeab49b9cefa706c95f364297e61bb941ab807db6f2eeb0"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_cylinder_limit": "NOT_TESTABLE"
+}

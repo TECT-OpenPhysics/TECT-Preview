@@ -58,6 +58,53 @@ projection is `D_KKK^u=beta^2 D_L`; no component-count factor is inserted into
 the unit projection.  The spatial Laplacian eigenvalue is
 `ell(p)=2 E(p)`, with `E(p)=sum_j(1-cos(p_j))`.
 
+### 2.1 Collective source restriction and pressure dictionary
+
+EXP-000780 uses an energy source `J` in `R^8`.  The proof below uses only its
+collective line
+
+```text
+u=(1,...,1)/sqrt(8),       J(h)=h*u,
+Q_y=(u,q_y),                H_L(h)=H_L(0)-h*sum_y Q_y.
+```
+
+If `Z_(beta,L)(J)=Tr exp(-beta*H_L(J))` and `V=L^3`, the upstream
+per-oscillator pressure is `pi=(1/(8V))*log Z` and `P=pi/beta`.  The scalar
+cell-normalized pressure used by the Euclidean source is therefore
+
+```text
+p_col(beta,L,h)=(1/V)*log Z_(beta,L)(h*u)=8*pi(beta,L,h*u),
+P_col(beta,L,h)=p_col(beta,L,h)/(8*beta)=P(beta,L,h*u).
+```
+
+The map `h -> h*u` sends compact scalar source windows to compact vector
+windows, so upstream local-uniform convergence and convexity restrict to this
+line.  Global parity gives evenness in `h`; no componentwise sign flip and no
+radial or `O(8)` invariance is introduced.
+
+The finite trace derivative and its periodic Feynman--Kac counterpart are
+
+```text
+d/dh P_col(beta,L,h) = (1/(8V))*E_(L,h)[sum_y Q_y]
+                         = (1/8)*E_(L,h)[Q_0],
+X_L = sum_y integral_0^beta Q_y(tau) d tau,
+E_(L,0) exp(h*X_L) = Z_(beta,L)(h*u)/Z_(beta,L)(0).
+```
+
+Thus
+
+```text
+(1/V)*log E_(L,0) exp(h*X_L)
+  = p_col(beta,L,h)-p_col(beta,L,0)
+  = 8*beta*(P_col(beta,L,h)-P_col(beta,L,0)).
+```
+
+The source in the exponential is `h`, not `beta*h`; the factor `beta` enters
+only when the integrated observable is converted to the pressure derivative.
+For the KKK comparison, retain `U_L=X_L` and `M_L=V`; their double-integral
+covariance is `D_KKK^u=beta^2 D_L`.  This dictionary is an exact source
+restriction and unit check, not a cusp or DLR conclusion.
+
 ## 3. P-06: finite-grid association and the loop limit
 
 ### 3.1 Mixed-derivative ledger

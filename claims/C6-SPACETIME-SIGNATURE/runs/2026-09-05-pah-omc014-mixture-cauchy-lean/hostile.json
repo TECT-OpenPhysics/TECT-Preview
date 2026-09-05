@@ -1,0 +1,185 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 16,
+  "assertions": [
+    {
+      "actual": "0bf2dd8506c100d727bdc79e25b2d2fd06638093206c8657fb2cc3bb9ebb5ffc",
+      "expected": "0bf2dd8506c100d727bdc79e25b2d2fd06638093206c8657fb2cc3bb9ebb5ffc",
+      "name": "baseline Lean hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+          "constructed_hypothesis": false,
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "epistemic_layer": "L2_FINITE_MIXTURE_ERROR_OBLIGATION",
+          "external_source": false,
+          "model_change": false,
+          "physical_authority": false,
+          "source_law_present": false,
+          "synthetic_fixture": false
+        },
+        "status": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "CONDITIONAL_SUPPORT_ONLY",
+          "physical_promotion": false,
+          "source_law_present": false,
+          "verdict": "HOLD_FOR_EVIDENCE"
+        }
+      },
+      "expected": "HOLD/no law/no gate change",
+      "name": "baseline conditional HOLD",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "mutation rejected",
+      "name": "reject invented source law",
+      "pass": true
+    },
+    {
+      "actual": "Adopt w_i from a fitted full-Q law.",
+      "expected": "source-owned law remains absent",
+      "name": "reject adopted or fitted weights",
+      "pass": true
+    },
+    {
+      "actual": [
+        "No normalized full-Q sector weights or projective kernel.",
+        "No PAH-specific e_w/e_a Cauchy rates, topology, boundary estimate or stationarity passage."
+      ],
+      "expected": "tail obligation must remain explicit",
+      "name": "reject omitted growing-Q tail obligation",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": false,
+      "name": "reject physical promotion",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": false,
+      "name": "reject premature claim-bearing status",
+      "pass": true
+    },
+    {
+      "actual": "F_rho=sum_v[lambda_s(s_v-1)^2/2+m2|psi_v|^2/2+lambda_4|psi_v|^4/4+eta_6|psi_v|^6/6+g s_v^2|psi_v|^2/2]+kappa_s sum_(e=(v,w))(s_v-s_w)^2/2+kappa_D sum_(e=(v,w))J_e(s)|psi_w-U_e psi_v|^2/2+kappa_g sum_p J_p(s)(1-Re U_p) + counterterm",
+      "expected": "immutable PAH-001",
+      "name": "reject parent functional mutation",
+      "pass": true
+    },
+    {
+      "actual": {
+        "canonical_sha": "0bf2dd8506c100d727bdc79e25b2d2fd06638093206c8657fb2cc3bb9ebb5ffc",
+        "mutated": true
+      },
+      "expected": "exact source retained",
+      "name": "reject weakened theorem conclusion",
+      "pass": true
+    },
+    {
+      "actual": "mutated registry pin",
+      "expected": "0bf2dd8506c100d727bdc79e25b2d2fd06638093206c8657fb2cc3bb9ebb5ffc",
+      "name": "reject registry hash mismatch",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_component_only_drift": "1/20",
+        "dropped_term_bound": "0"
+      },
+      "expected": "component term is required",
+      "name": "reject dropped component-error term",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "no escape tokens in canonical source",
+      "name": "reject Lean escape hatch",
+      "pass": true
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "parent OMC-014 remains open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "intake_ready": true,
+        "omega_status": "NOT_DEFINED",
+        "source_law": "ABSENT_IN_PARENT",
+        "verdict": "HOLD_FOR_EVIDENCE"
+      },
+      "expected": "ABSENT_IN_PARENT",
+      "name": "weight intake remains absent",
+      "pass": true
+    },
+    {
+      "actual": "NOT_DEFINED_BY_PARENT; not required for this domain-map gate",
+      "expected": "undefined",
+      "name": "graded parent global measure undefined",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R503.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compilation of canonical source",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-MIXTURE-CAUCHY-LEAN-HOSTILE-001",
+  "claim_bearing": false,
+  "classification": "AUXILIARY_SUPPORT_FINITE_MIXTURE_BOUND",
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R503.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "mutation_policy": "All hostile mutations are in-memory only; no canonical file, source law, weight, tail estimate or physical interpretation is adopted.",
+  "next_question": "Can a source owner provide the common finite-sector embedding or tail control and source-owned e_w/e_a bounds that vanish in the fixed PAH-001 order?",
+  "non_claims": [
+    "This theorem does not instantiate mu_(n,R), omega or any sector law.",
+    "It does not prove projective consistency, a PAH Cauchy estimate, weak cylinder convergence, positivity/normalization of a global mixture, R-488 nonzero, stationarity, closability or a semigroup.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+  ],
+  "omega_status": "NOT_DEFINED",
+  "passed": 16,
+  "projective_consistency": "NOT_TESTABLE",
+  "reproduction": {
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_mixture_cauchy_lean_verify_hostile.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_mixture_cauchy_lean_verify_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_mixture_cauchy_lean_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R503.lean"
+  },
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc014-mixture-cauchy-lean-hostile/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "lean": "0bf2dd8506c100d727bdc79e25b2d2fd06638093206c8657fb2cc3bb9ebb5ffc",
+    "manifest": "25ae1c3e67444c4dcca73c93bb2ecb82b30d2750daf477feb0b7cafe4a393d2a",
+    "weight_intake": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_cylinder_limit": "NOT_TESTABLE"
+}

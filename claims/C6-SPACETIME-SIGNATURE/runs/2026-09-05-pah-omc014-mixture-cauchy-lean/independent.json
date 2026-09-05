@@ -1,0 +1,219 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 11,
+  "assertions": [
+    {
+      "actual": {
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-012-full-Q-graded-domain-v1.json": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-identifiability-lean-manifest.json": "1ef79e5a354e2a7abf32cbe92a98501a206cb5feacfef4a246d49453ab45d497"
+      },
+      "expected": {
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-012-full-Q-graded-domain-v1.json": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-identifiability-lean-manifest.json": "1ef79e5a354e2a7abf32cbe92a98501a206cb5feacfef4a246d49453ab45d497"
+      },
+      "name": "all parent hashes",
+      "pass": true
+    },
+    {
+      "actual": {
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+          "constructed_hypothesis": false,
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "epistemic_layer": "L2_FINITE_MIXTURE_ERROR_OBLIGATION",
+          "external_source": false,
+          "model_change": false,
+          "physical_authority": false,
+          "source_law_present": false,
+          "synthetic_fixture": false
+        },
+        "status": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "CONDITIONAL_SUPPORT_ONLY",
+          "physical_promotion": false,
+          "source_law_present": false,
+          "verdict": "HOLD_FOR_EVIDENCE"
+        }
+      },
+      "expected": "HOLD/no law/no gate change",
+      "name": "manifest remains conditional HOLD",
+      "pass": true
+    },
+    {
+      "actual": {
+        "global": "NOT_DEFINED_BY_PARENT; not required for this domain-map gate",
+        "omega": "NOT_DEFINED"
+      },
+      "expected": "undefined",
+      "name": "parent limit remains undefined",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "intake_ready": true,
+        "omega_status": "NOT_DEFINED",
+        "source_law": "ABSENT_IN_PARENT",
+        "verdict": "HOLD_FOR_EVIDENCE"
+      },
+      "expected": "HOLD/ABSENT_IN_PARENT",
+      "name": "weight intake is still uninstantiated",
+      "pass": true
+    },
+    {
+      "actual": "Use one finite sector index type \u03b9 representing a supplied common finite sector block. Growing-Q tails and their mass are not silently identified with this block.",
+      "expected": "finite block with explicit tail separation",
+      "name": "fixed finite index semantics",
+      "pass": true
+    },
+    {
+      "actual": {
+        "C": "2",
+        "component_drift": [
+          "1/20",
+          "1/20",
+          "0"
+        ],
+        "e_a": "1/20",
+        "e_w": "1/10",
+        "weight_drift": [
+          "1/10",
+          "1/10",
+          "0"
+        ]
+      },
+      "expected": "all finite hypotheses",
+      "name": "independent pointwise hypotheses",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual": "7/50",
+        "bound": "3/4",
+        "value_1": "1",
+        "value_2": "43/50"
+      },
+      "expected": "actual <= card*(C*e_w+e_a)",
+      "name": "independent exact mixture arithmetic",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declared": [
+          "finite_mixture_difference_bound"
+        ],
+        "registry": {
+          "declarations": [
+            "finite_mixture_difference_bound"
+          ],
+          "path": "verification/lean/Tect/R503.lean",
+          "sha256": "0bf2dd8506c100d727bdc79e25b2d2fd06638093206c8657fb2cc3bb9ebb5ffc"
+        },
+        "sha256": "0bf2dd8506c100d727bdc79e25b2d2fd06638093206c8657fb2cc3bb9ebb5ffc"
+      },
+      "expected": [
+        "finite_mixture_difference_bound"
+      ],
+      "name": "Lean declaration/hash/registry",
+      "pass": true
+    },
+    {
+      "actual": {
+        "final": true,
+        "lf": true
+      },
+      "expected": "LF/no escape",
+      "name": "Lean source policy",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R503.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compilation",
+      "pass": true
+    },
+    {
+      "actual": {
+        "non_claims": [
+          "This theorem does not instantiate mu_(n,R), omega or any sector law.",
+          "It does not prove projective consistency, a PAH Cauchy estimate, weak cylinder convergence, positivity/normalization of a global mixture, R-488 nonzero, stationarity, closability or a semigroup.",
+          "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+        ],
+        "physical_promotion": false
+      },
+      "expected": "no physical or global-limit promotion",
+      "name": "non-claim firewall",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-MIXTURE-CAUCHY-LEAN-INDEPENDENT-001",
+  "claim_bearing": false,
+  "classification": "AUXILIARY_SUPPORT_FINITE_MIXTURE_BOUND",
+  "derived": {
+    "actual_mixture_drift": "7/50",
+    "certified_upper_bound": "3/4",
+    "formula": "card(\u03b9)*(C*e_w+e_a)"
+  },
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R503.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "next_question": "Can a source owner provide the common finite-sector embedding or tail control and source-owned e_w/e_a bounds that vanish in the fixed PAH-001 order?",
+  "non_claims": [
+    "This theorem does not instantiate mu_(n,R), omega or any sector law.",
+    "It does not prove projective consistency, a PAH Cauchy estimate, weak cylinder convergence, positivity/normalization of a global mixture, R-488 nonzero, stationarity, closability or a semigroup.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+  ],
+  "omega_status": "NOT_DEFINED",
+  "passed": 11,
+  "projective_consistency": "NOT_TESTABLE",
+  "reproduction": {
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_mixture_cauchy_lean_verify_hostile.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_mixture_cauchy_lean_verify_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_mixture_cauchy_lean_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R503.lean"
+  },
+  "run_kind": "independent",
+  "schema": "tect/pah-omc014-mixture-cauchy-lean-independent/1.0",
+  "scope": {
+    "component_bound": "2",
+    "component_error": "1/20",
+    "finite_index_card": 3,
+    "tail": "not supplied",
+    "weight_error": "1/10"
+  },
+  "source_hashes": {
+    "PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-012-full-Q-graded-domain-v1.json": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+    "PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+    "PAH-OMC-014-identifiability-lean-manifest.json": "1ef79e5a354e2a7abf32cbe92a98501a206cb5feacfef4a246d49453ab45d497",
+    "lean": "0bf2dd8506c100d727bdc79e25b2d2fd06638093206c8657fb2cc3bb9ebb5ffc",
+    "manifest": "25ae1c3e67444c4dcca73c93bb2ecb82b30d2750daf477feb0b7cafe4a393d2a"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_cylinder_limit": "NOT_TESTABLE"
+}

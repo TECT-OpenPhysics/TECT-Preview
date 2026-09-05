@@ -142,9 +142,11 @@ applies at each fixed source.  The source dependence is only the local factor
 exp(+h * sum_(y in Delta) integral_0^beta (u,omega_y(tau)) d tau).
 ```
 
-The common quartic estimate gives an integrable majorant for this factor and
-for the corresponding normalized partition functions on every compact set of
-boundary configurations.  Hence
+The compact-boundary source-window lemma recorded in
+`q3lock-kp-source-window-feller-audit-260905.md` makes the needed uniformity
+explicit: boundary linear terms are bounded on compact sets, quartic Young
+absorption supplies a common exponential majorant, and KP continuity plus a
+bounded interior set supplies a uniform normalizer lower bound.  Hence
 
 ```text
 (h,xi) -> pi_Delta^h(f | xi)

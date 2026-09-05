@@ -1,0 +1,61 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-014 finite mixture drift separates weight and component errors",
+  "question": "What exact finite-sector estimate separates drift of a future full-Q sector weight from drift of its component cylinder value under the unchanged PAH-OMC-014 order?",
+  "finding": "For one supplied finite sector block ι, Lean R503 proves |M(w1,a1)-M(w2,a2)| <= card(ι)*(C*e_w+e_a) when the first weights are bounded by one, the second component values by C, and pointwise weight/component drifts are bounded by e_w/e_a. An exact rational fixture gives actual drift 7/50 <= 3/4. The estimate isolates the two finite errors but does not supply a sector law, a common embedding, or a growing-Q tail bound.",
+  "decision_reason": "R502 identified a necessary positive weight for the nonzero R-488 component. R503 adds the next reusable algebraic bridge: once a source owner supplies a common finite index block and separate weight/component error bounds, their mixture drift is controlled by an explicit finite constant. Keeping the index block finite prevents the growing-Q tail from being silently absorbed into a finite Cauchy estimate.",
+  "boundary": "Conditional finite-mixture support only. PAH-001 functional/rates, PAH-OMC-010 Gibbs weighting, PAH-OMC-012 graded domain, PAH-OMC-014 limit order, R-484 boundary defect 16/9 and R-490 C_sw=540 are unchanged. No projective consistency, full-Q sector law, weak cylinder limit, stationarity, closability, semigroup, continuum, or physical conclusion is claimed.",
+  "next_action": "Obtain a source-owned normalized full-Q law or projective kernel with a common finite-sector embedding/tail estimate and explicit e_w/e_a bounds that vanish in the fixed order; then instantiate R503 together with R500/R502 without fitting weights.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "task_id": "T-054",
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "related": [{"id": "EXP-001565", "relation": "continues"}],
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-012, PAH-OMC-014, its manifest, the weight-intake contract and R501.",
+    "Use the exact abstract finite mixture M(w,a)=sum_i w_i a_i with separate pointwise weight and component drifts.",
+    "Compile R503 under Lean 4.32.1 and check the theorem source, registry pin and escape-token policy.",
+    "Replay the rational fixture independently and run integrated, independent and hostile mutation verifiers.",
+    "Retain HOLD_FOR_EVIDENCE because no source-owned full-Q law, common embedding or tail estimate is present."
+  ],
+  "assumptions": [
+    "The finite index block ι is supplied as a common block for the two compared levels.",
+    "The second-level component cylinder values have a common absolute bound C.",
+    "The first-level weights are pointwise bounded by one and both pointwise drifts have declared bounds.",
+    "The exact PAH-OMC-014 finite path and limit order remain unchanged."
+  ],
+  "missing_assumptions": [
+    "A source-authorized normalized full-Q sector law or projective kernel.",
+    "A common embedding for the growing-Q union or a separately controlled tail mass.",
+    "Source-owned e_w/e_a rates, topology and an order in which the finite mixture error vanishes.",
+    "A common stationarity domain and uniform-integrability estimate for any later omega(Lf)=0 passage."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json#status",
+    "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json#status",
+    "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json#status",
+    "verification/lean/Tect/R503.lean#finite_mixture_difference_bound",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-mixture-cauchy-lean/integrated.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-mixture-cauchy-lean/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-mixture-cauchy-lean/hostile.json#mutation_policy"
+  ],
+  "adversarial_review": [
+    {"check": "Does R503 choose a full-Q sector law or normalize weights?", "disposition": "UPHELD AS FALSE: weights are variables and the manifest explicitly requires a future source owner to supply normalized nonnegative weights."},
+    {"check": "Does the finite bound hide the growing-Q tail in card(ι)?", "disposition": "UPHELD AS FALSE: ι is explicitly one supplied finite block and the manifest leaves the tail estimate as not supplied."},
+    {"check": "Can the fixture be cited as a PAH Cauchy rate?", "disposition": "UPHELD AS FALSE: the fixture is exact rational tooling only; no PAH-specific e_w/e_a sequence or topology is instantiated."},
+    {"check": "Does R503 use C_sw=540 to prove a limit or erase R-484?", "disposition": "UPHELD AS FALSE: C_sw remains domination-only and the 16/9 boundary defect is retained."},
+    {"check": "Does the theorem promote a physical Pre-A or QFT conclusion?", "disposition": "UPHELD AS FALSE: all physical, continuum, QFT, gravity, Yang--Mills, mass-gap and TOE claims remain non-claims."}
+  ],
+  "non_claims": [
+    "No source-owned full-Q sector law, projective kernel or normalized global Gibbs state is defined.",
+    "No common embedding, tail estimate, PAH Cauchy convergence or weak cylinder limit is proved.",
+    "No R-488 global nonzero, stationarity, closability or semigroup conclusion follows.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "revisit_condition": "Reopen when a source owner supplies the common finite-sector embedding or tail control and source-owned e_w/e_a bounds in the fixed PAH-001 order, or when an exact parent-scope counterexample invalidates the finite mixture estimate.",
+  "provenance": "contemporaneous",
+  "verdict": "advanced"
+}

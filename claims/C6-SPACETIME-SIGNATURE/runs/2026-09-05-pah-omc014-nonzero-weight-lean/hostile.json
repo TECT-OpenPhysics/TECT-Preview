@@ -1,0 +1,149 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "37a9014b8d9f99fe0e3e23f18ddefcbb6960da7bcf4dd029b5f168b42c4d8b00",
+      "expected": "37a9014b8d9f99fe0e3e23f18ddefcbb6960da7bcf4dd029b5f168b42c4d8b00",
+      "name": "baseline Lean hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "AUXILIARY_SUPPORT_NONZERO_WEIGHT_OBLIGATION",
+        "omega_status": "NOT_DEFINED",
+        "physical_promotion": false,
+        "projective_consistency": "NOT_TESTABLE",
+        "r488_global_nonzero": "NOT_TESTABLE",
+        "source_law_present": false,
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "weak_cylinder_limit": "NOT_TESTABLE"
+      },
+      "expected": "HOLD/no source law",
+      "name": "baseline HOLD",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "mutation rejected",
+      "name": "reject source-law promotion",
+      "pass": true
+    },
+    {
+      "actual": [
+        "A source-authorized hash-pinned normalized full-Q sector law or projective kernel.",
+        "A source-owned topology and Cauchy error under the fixed PAH-001 order.",
+        "A common stationarity domain and uniform-integrability estimate for omega(Lf)=0."
+      ],
+      "expected": "source-owned lower bound remains required",
+      "name": "reject omitted nonzero obligation",
+      "pass": true
+    },
+    {
+      "actual": "source-owned w1=1",
+      "expected": "symbolic/no adopted law",
+      "name": "reject adopted weight",
+      "pass": true
+    },
+    {
+      "actual": "w0 and w1 are symbolic nonnegative variables only. No normalized source law, fitted weight, delta law, beta dependence, phase dependence or cross-Q kernel is introduced.; fitted to R-488",
+      "expected": "fitting rejected",
+      "name": "reject fitted weight",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": false,
+      "name": "reject physical promotion",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "immutable parent",
+      "name": "reject parent functional mutation",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "witness required",
+      "name": "reject missing positive witness",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "none",
+      "name": "Lean escape hatch absent",
+      "pass": true
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "parent gate remains open",
+      "pass": true
+    },
+    {
+      "actual": "NOT_DEFINED_BY_PARENT; not required for this domain-map gate",
+      "expected": "undefined",
+      "name": "graded parent has no global mixture",
+      "pass": true
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "R492 baseline remains PASS",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "R502 registry pin",
+      "name": "registry pins R502",
+      "pass": true
+    },
+    {
+      "actual": {
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compilation",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-NONZERO-WEIGHT-LEAN-HOSTILE-001",
+  "claim_bearing": false,
+  "classification": "AUXILIARY_SUPPORT_NONZERO_WEIGHT_OBLIGATION",
+  "failed": 0,
+  "lean": {
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "mutation_policy": "All hostile changes are in-memory only; no source file is changed and no weight is adopted.",
+  "next_question": "Can a source owner provide the normalized full-Q sector law together with a nonvanishing lower-bound contract for the R-488 positive component under the fixed PAH-001 limit order?",
+  "non_claims": [
+    "This is conditional algebra and an exact finite obligation, not a sector-law construction.",
+    "It does not prove projective consistency, weak cylinder convergence, positivity of a global state, stationarity, closability or an infinite-volume limit.",
+    "R-484 defect 16/9 and R-490 C_sw=540 are untouched; C_sw is not a measure or sector weight.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion is made."
+  ],
+  "omega_status": "NOT_DEFINED",
+  "passed": 15,
+  "projective_consistency": "NOT_TESTABLE",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc014-nonzero-weight-lean-hostile/1.0",
+  "source_hashes": {
+    "OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "R492": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f",
+    "lean": "37a9014b8d9f99fe0e3e23f18ddefcbb6960da7bcf4dd029b5f168b42c4d8b00",
+    "manifest": "a98d38646bb7c1f7edeab49b9cefa706c95f364297e61bb941ab807db6f2eeb0"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

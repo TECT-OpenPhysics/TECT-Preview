@@ -1,0 +1,94 @@
+{
+  "schema": "tect/pah-omc014-mixture-cauchy-lean-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-MIXTURE-CAUCHY-LEAN",
+  "version": "0.1.0",
+  "title": "Conditional finite-sector mixture Cauchy error bridge",
+  "purpose": "Give an exact finite-sector bound separating weight drift from component-cylinder drift. The bound is an input contract for a future source-owned full-Q law; it does not define weights, a tail law or a PAH limit.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "source_law_present": false,
+    "constructed_hypothesis": false,
+    "synthetic_fixture": false,
+    "physical_authority": false,
+    "claim_bearing": false,
+    "model_change": false,
+    "epistemic_layer": "L2_FINITE_MIXTURE_ERROR_OBLIGATION"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-012": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+    },
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PAH-OMC-014-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "sha256": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812"
+    },
+    "PAH-OMC-014-WEIGHT-INTAKE": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+      "sha256": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502"
+    },
+    "R-501": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json",
+      "sha256": "1ef79e5a354e2a7abf32cbe92a98501a206cb5feacfef4a246d49453ab45d497"
+    }
+  },
+  "fixed_scope": {
+    "carrier_and_path": "Use the unchanged PAH-OMC-004 strip and PAH-OMC-010 finite path inherited by PAH-OMC-014. This theorem takes no refinement, cutoff, volume, beta or phase limit.",
+    "finite_index": "Use one finite sector index type ι representing a supplied common finite sector block. Growing-Q tails and their mass are not silently identified with this block.",
+    "mixture": "M(w,a)=sum_i w_i a_i. For two candidate finite levels, e_w bounds the pointwise weight drift and e_a bounds the pointwise component-cylinder drift.",
+    "bound": "If |a2_i|<=C and |w1_i|<=1, then |M(w1,a1)-M(w2,a2)| <= card(ι)*(C*e_w+e_a).",
+    "source_owner_obligation": "A full-Q packet must supply a common index embedding or tail estimate, normalized nonnegative weights with the pointwise bound, component Cauchy errors, and a declared limit in which both e_w and e_a (and any tail term) vanish."
+  },
+  "lean": {
+    "path": "verification/lean/Tect/R503.lean",
+    "sha256": "0bf2dd8506c100d727bdc79e25b2d2fd06638093206c8657fb2cc3bb9ebb5ffc",
+    "declarations": ["finite_mixture_difference_bound"],
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "scope": "Abstract finite index set and real-valued weights/components; no PAH law or limit instantiated."
+  },
+  "theorem_contract": {
+    "assumptions": [
+      "ι is finite.",
+      "Every component value at the second level is bounded in absolute value by C.",
+      "The first-level weight is pointwise bounded in absolute value by one.",
+      "Pointwise drifts satisfy |w1_i-w2_i|<=e_w and |a1_i-a2_i|<=e_a.",
+      "e_w is nonnegative."
+    ],
+    "conclusion": "The total finite mixture drift is bounded by card(ι)*(C*e_w+e_a).",
+    "not_supplied": [
+      "No normalized full-Q sector weights or projective kernel.",
+      "No common finite index embedding for the growing-Q union or tail-mass estimate.",
+      "No PAH-specific e_w/e_a Cauchy rates, topology, boundary estimate or stationarity passage."
+    ]
+  },
+  "status": {
+    "classification": "CONDITIONAL_SUPPORT_ONLY",
+    "source_law_present": false,
+    "active_gate_change": false,
+    "claim_bearing": false,
+    "physical_promotion": false,
+    "verdict": "HOLD_FOR_EVIDENCE"
+  },
+  "non_claims": [
+    "This theorem does not instantiate mu_(n,R), omega or any sector law.",
+    "It does not prove projective consistency, a PAH Cauchy estimate, weak cylinder convergence, positivity/normalization of a global mixture, R-488 nonzero, stationarity, closability or a semigroup.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+  ],
+  "reproduction": {
+    "lean": "Set-Location verification/lean; lake env lean Tect/R503.lean",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_mixture_cauchy_lean_verify.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_mixture_cauchy_lean_verify_independent.py",
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_mixture_cauchy_lean_verify_hostile.py"
+  },
+  "next_question": "Can a source owner provide the common finite-sector embedding or tail control and source-owned e_w/e_a bounds that vanish in the fixed PAH-001 order?"
+}

@@ -82,10 +82,17 @@ integral exp(a*|sigma|^2) d lambda(sigma) < infinity
 for every finite `a`; magnetic fields may be placed in that single-site
 measure.  Theorem 2.1 is the vector-valued exponential Gaussian-domination
 inequality, Theorem 2.2 its translation-invariant form, and Theorem 2.3 the
-discrete-Laplacian estimate used for infrared bounds.  The source explicitly
-states that the constants are independent of the single-site distribution,
-the number of components and the internal symmetry, while the geometry is
-the cubic nearest-neighbour torus.
+discrete-Laplacian estimate used for infrared bounds.  The source explicitly states that the constants are independent of the
+single-site distribution, the number of components and the internal symmetry,
+while the geometry is the cubic nearest-neighbour torus.  A direct recheck of
+the pinned Caltech PDF confirms this reading: Section 2 defines the periodic
+torus with an arbitrary one-site measure having all quadratic exponential
+moments, and its Theorems 2.1--2.3 are stated for finite vector spins without
+an O(d)-invariance hypothesis.  The introductory discussion separately warns
+that the geometry and nearest-neighbour restrictions remain essential.  Thus
+nonradial Q3LOCK history priors are within the finite-grid source theorem's
+prior class, but the source still supplies neither the time-grid-to-loop limit
+nor any Q3LOCK-specific pressure, cusp or DLR conclusion.
 
 For Q3LOCK, the scaled history spin
 

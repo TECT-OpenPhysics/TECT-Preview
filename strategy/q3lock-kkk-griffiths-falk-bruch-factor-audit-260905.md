@@ -106,21 +106,27 @@ U_L=X_L,
 Pi_L=E_(nu_L)[(X_L/(beta*V))^2].
 ```
 
-Then `Pi_L=E[U_L^2/M_L^2]`, exactly the scale in KKK Proposition 3.9.  The
-limiting log moment generating function is
+The KKK normalized second moment is
+`E[U_L^2/M_L^2]=E[(X_L/V)^2]=beta^2*Pi_L`; it is not `Pi_L` itself.  The
+limiting log moment generating function in Proposition 3.9 is formed with
+`exp(y*U_L)`, so the Q3LOCK map is
 
 ```text
-f_KKK(y)=lim_L V^(-1)*log E_(nu_L) exp(y*X_L/V)
+f_KKK(y)=lim_L V^(-1)*log E_(nu_L) exp(y*X_L)
        =p_beta(y)-p_beta(0),
 ```
 
 where EXP-000780 supplies the finite, locally uniform pressure limit.  Global
-parity makes `f_KKK` even, so `f_KKK'(0-)=-f_KKK'(0+)`.  Equation (3.24) with
-`k=1` consequently gives
+parity makes `f_KKK` even, so `f_KKK'(0-)=-f_KKK'(0+)`.  Applying the
+endpoint-interval inequality (3.23) with `g(z)=z^2` consequently gives
 
 ```text
 p_beta'(0+) >= beta*limsup_L sqrt(Pi_L).
 ```
+
+The correction and its dimensional analysis are recorded in
+`q3lock-kkk-pressure-scaling-correction-audit-260905.md`; the endpoint
+slope inequality is unchanged after restoring the missing beta relation.
 
 The identity `Pi_L=Dhat_L(0)/V` follows from the audited Fourier convention and
 the double time integral.  If

@@ -1,0 +1,104 @@
+{
+  "schema": "tect/pah-omc014-nonzero-weight-lean-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-NONZERO-WEIGHT-LEAN",
+  "version": "0.1.0",
+  "title": "Conditional R-488 nonzero sector-weight obligation",
+  "purpose": "Formalize the exact finite implication that a grade-blind R-488 cylinder with a zero Q=0 component and a positive Q=1 component is globally nonzero only if the Q=1 sector receives positive weight. The weight remains an unspecified variable; no PAH sector law is selected.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "source_law_present": false,
+    "constructed_hypothesis": false,
+    "synthetic_fixture": false,
+    "physical_authority": false,
+    "claim_bearing": false,
+    "model_change": false,
+    "epistemic_layer": "L2_FINITE_NONZERO_OBLIGATION"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-012": {
+      "path": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "sha256": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72"
+    },
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PAH-OMC-014-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "sha256": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812"
+    },
+    "R-492-INTEGRATED": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc012-full-q-graded-domain/integrated.json",
+      "sha256": "a3262487b384e02100f7875c0ac87db614552e0a20a9db20501b8fa5d6308e0f"
+    },
+    "PAH-OMC-014-IDENTIFIABILITY-LEAN": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json",
+      "sha256": "1ef79e5a354e2a7abf32cbe92a98501a206cb5feacf4a246d49453ab45d497"
+    }
+  },
+  "fixed_scope": {
+    "carrier_and_path": "Use exactly the PAH-OMC-004 two-row strip and the PAH-OMC-010 finite path inherited by PAH-OMC-014; this bridge takes no refinement, cutoff, volume or phase limit.",
+    "cylinder": "Use the unchanged grade-blind R-488 cylinder f=ell_a at n=2, with Q=0 and Q=1 components on the PAH-OMC-012 graded union.",
+    "component_values": "The Q=0 component has phi_0(ell_a)=0; the Q=1 component has phi_1(ell_a)>0 from the exact finite Gibbs positive witness in R-492.",
+    "variable_sector_values": "For arbitrary real w0,w1,a1, define V=w0*0+w1*a1. The Lean bridge proves V=w1*a1, V!=0 iff w1>0 when w1>=0 and a1>0, and any lower bound delta<=V with delta>0 forces w1>0.",
+    "weight_policy": "w0 and w1 are symbolic nonnegative variables only. No normalized source law, fitted weight, delta law, beta dependence, phase dependence or cross-Q kernel is introduced."
+  },
+  "lean": {
+    "path": "verification/lean/Tect/R502.lean",
+    "sha256": "37a9014b8d9f99fe0e3e23f18ddefcbb6960da7bcf4dd029b5f168b42c4d8b00",
+    "declarations": [
+      "twoSectorValue_factor",
+      "twoSectorValue_nonzero_iff",
+      "lower_bound_requires_positive_weight"
+    ],
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "scope": "Abstract two-component real algebra instantiated only with the R-492 finite zero/positive witness signs."
+  },
+  "theorem_contract": {
+    "assumptions": [
+      "w1 is nonnegative",
+      "a1 is strictly positive",
+      "the Q=0 component value is exactly zero",
+      "a global nonzero or positive lower bound is being tested for the same cylinder"
+    ],
+    "conclusion": "The finite mixture value is w1*a1; it is nonzero exactly when w1>0, and a positive uniform lower bound cannot hold when w1=0.",
+    "PAH_instantiation": "R-492 supplies the Q=0 ell_a zero fact and the Q=1 finite-Gibbs positive witness. The source-owned w_(n,R,Q) and any liminf lower bound remain absent."
+  },
+  "status": {
+    "classification": "AUXILIARY_SUPPORT_NONZERO_WEIGHT_OBLIGATION",
+    "verdict": "HOLD_FOR_EVIDENCE",
+    "source_law_present": false,
+    "omega_status": "NOT_DEFINED",
+    "r488_global_nonzero": "NOT_TESTABLE",
+    "projective_consistency": "NOT_TESTABLE",
+    "weak_cylinder_limit": "NOT_TESTABLE",
+    "active_gate_change": false,
+    "claim_bearing": false,
+    "physical_promotion": false
+  },
+  "missing_inputs": [
+    "A source-authorized hash-pinned normalized full-Q sector law or projective kernel.",
+    "A source-owned topology and Cauchy error under the fixed PAH-001 order.",
+    "A source-owned lower-bound or asymptotic statement ensuring the positive R-488 component receives enough weight for global nonzero.",
+    "A common stationarity domain and uniform-integrability estimate for omega(Lf)=0."
+  ],
+  "boundaries": [
+    "This is conditional algebra and an exact finite obligation, not a sector-law construction.",
+    "It does not prove projective consistency, weak cylinder convergence, positivity of a global state, stationarity, closability or an infinite-volume limit.",
+    "R-484 defect 16/9 and R-490 C_sw=540 are untouched; C_sw is not a measure or sector weight.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion is made."
+  ],
+  "reproduction": {
+    "lean": "Set-Location verification/lean; lake env lean Tect/R502.lean",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_nonzero_weight_lean_verify.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_nonzero_weight_lean_verify_independent.py",
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_nonzero_weight_lean_verify_hostile.py"
+  },
+  "next_question": "Can a source owner provide the normalized full-Q sector law together with a nonvanishing lower-bound contract for the R-488 positive component under the fixed PAH-001 limit order?"
+}
