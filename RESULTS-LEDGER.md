@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-508](#r-508) | PAH-OMC-015 counting-ensemble cutoff nondegeneracy obstruction | Exact charge-erasure counting gives mu(ell_v^2)<=2^(N-1) exp(-R^2/8-R^4/4-R^6/6). On the fixed OMC-010 path, R then n gives squared limits (0,0,1,1) for the four R-488 observables. CANDIDATE_REJECTED for this ensemble only; primary 21, independent 20, hostile 12 and integrated 33 checks pass with nine Lean declarations. No host claim or active gate promotion. |
 | [R-501](#r-501) | EXP-001586 Q3LOCK P-06 quantitative Gaussian weak-limit audit | R-501 / EXP-001586 records a T0 claim-nonbearing analytic and executable audit of the fixed-volume periodic Gaussian weak limit. It derives a uniform O(N^-1) grid covariance bound, an O(N^-1/2) polygonal covariance bound, an arbitrary-time Kolmogorov increment estimate and a bounded residual-weight transfer lemma. The verifier passes 13502/13502 assertions with byte-identical replay; spatial W_t, P-09, phase, DLR and external-review gates remain open, and no PDF is issued. |
 | [R-500](#r-500) | EXP-001584 Q3LOCK P-06 Gaussian Fourier covariance audit | R-500 / EXP-001584 records a T0 claim-nonbearing fixed-mesh audit of the massive periodic Gaussian convention, csc-squared normalization, Fourier covariance, cyclic resistance, increment bound, and exact source interpolation. The verifier passes 255/255 assertions; loop-limit, weighted-tempered, pressure, phase, DLR and external-review gates remain open, and no PDF is issued. |
 | [R-499](#r-499) | EXP-001583 Q3LOCK FKG mixed-derivative and interpolation audit | R-499 / EXP-001583 records a T0 claim-nonbearing finite-algebra audit of the Q3 mixed-derivative, supermodularity, periodic interpolation, and clipped-product steps. The verifier passes 306/306 exact-rational assertions; P-06 loop-topology, moment, pressure, phase, DLR and external-review gates remain open, and no PDF is issued. |
@@ -17410,6 +17411,17 @@ a clean snapshot before considering any bounded claim or manuscript freeze.
 <a id="r-497"></a>
 ### R-497 -- EXP-000782 Q3LOCK low-temperature phase route: independent result registration
 
+**Reflection/infrared content (EXP-001595).**
+The content block `strategy/q3lock-reflection-infrared-content-260905.md`
+supplies direct Hilbert Gaussian-kernel spatial reflection positivity,
+zero-sum source uniform integrability from finite FSS, the actual loop
+Duhamel bound, and the three-dimensional singular infrared sum limit.
+The separate collective/Falk--Bruch local lower bound is still required
+before a positive zero-mode conclusion. The exact finite graph, source,
+shell and kernel diagnostics pass 90/90 with byte-stable replay; these are
+not an infinite-dimensional proof or signed external review. R-497 remains
+T0, claim-nonbearing and INTERNAL_REVIEW_ONLY. No PDF is generated.
+
 **Continuous-loop FKG content (EXP-001593).**
 `strategy/q3lock-continuous-loop-fkg-content-260905.md` supplies a direct
 finite product-density association induction, receives the corrected actual
@@ -17991,6 +18003,61 @@ run artefacts under
 **Next.** Ask whether these finite compatible generators admit closable
 realizations and a common infinite-volume semigroup under a source-authorized
 uniform estimate, without changing PAH-001 or adding a cross-Q Gibbs mixture.
+
+### R-508 -- PAH-OMC-015 counting-ensemble cutoff nondegeneracy obstruction
+
+**Date and host.** 2026-09-05; C6-SPACETIME-SIGNATURE / T-054.
+Candidate-local `negative_result`, verdict `CANDIDATE_REJECTED`.
+Evidence: ANALYTIC, EXACT, EXECUTED, with a pinned Lean cross-check.
+The host claim remains T1 and the active mainline gate remains unchanged.
+
+**Statement.** On the exact OMC-004 strip with the OMC-010 restricted
+parameters, let the separately preregistered full-Q counting ensemble have
+weights w_Q=Z_Q/sum Z_Q. For N=|V_n|=2(n+2), every n>=2 and integer R>=1,
+`0<=mu_(n,R)(ell_v^2)<=2^(N-1) exp(-c(R))`, where
+`c(R)=R^2/8+R^4/4+R^6/6`. A second charge-tail argument gives
+`mu(Q>0)<=(2^N-1) exp(-c(R))`. The explicit fixed-n cutoff modulus is
+`R>=floor(6*2^(N-1)/delta)+1`. Thus the ordered squared expectations for
+`(ell_a,ell_d,H_0,H_1)` are `(0,0,1,1)`. The four-way nondegeneracy target
+fails even though the finite ensemble is strictly positive, normalized,
+recovers the exact conditional Gibbs laws and is stationary for the
+unchanged charge-preserving generator.
+
+**Proof and reproduction.** The immutable preregistration, exact all-state
+energy decomposition, multiplicity-preserving comparison and independent
+charge-tail argument are in
+`strategy/pa-hyp/PAH-OMC-015-counting-prereg-v1.json` and
+`strategy/pa-hyp/PAH-OMC-015-cutoff-certificate.md`.
+The result card and complete source pins are
+`strategy/pa-hyp/PAH-OMC-015-result-v1.json`.
+Run `python -X utf8 verification/scripts/pah_omc015_counting_cutoff_verify.py`.
+Primary 21/21, independent 20/20, hostile 12/12 and integrated 33/33 pass;
+the independent polynomial energy agrees with the full inherited energy
+digest. Nine theorems in `verification/lean/Tect/PahOmc015.lean` compile
+without diagnostics. Those formalize the Gibbs algebra, mass bound,
+exponential estimate, penalty divergence, squeeze and character square;
+the source-incidence and combinatorial translations are proved in the
+certificate. Finite diagnostic tables are not the all-n/all-R proof.
+
+**Synthesis.**
+`claims/C6-SPACETIME-SIGNATURE/notes/pah-omc015-cutoff-260905-v1.0.tex.txt`
+and its three-page PDF; rendered pages reviewed, overfull boxes zero.
+Verification JSONs are under the host claim's
+`runs/2026-09-05-pah-omc015-counting-cutoff/` directory.
+
+**Reuse boundary.** This is a restricted-path negative for one new ensemble.
+It does not exclude a degenerate weak state, another prior, the fixed-Q
+parent laws, or a different full joint regulator limit. PAH-OMC-014 remains
+unresolved. No physical Pre-A, spacetime, QFT, gravity, continuum,
+Yang--Mills, mass-gap or TOE conclusion follows; stochastic time retains
+its original meaning. R-484's boundary defect and C_sw=540's original role
+are unchanged. No Q3LOCK premise is imported.
+
+**Next/revisit.** Only a separately authorized, independently motivated
+state-selection/cutoff contract or an exact counterexample to the displayed
+bound reopens this route. Do not automatically tune or replace the law.
+Publication target: candidate-level verification appendix after independent
+external mathematical review; no physical publication claim.
 
 ## Notes on status
 

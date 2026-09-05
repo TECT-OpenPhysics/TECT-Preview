@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**958 accepted events** · latest 25 shown below · machine locator: `index.json`
+**960 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-pah-omc-015-r-508-counting-ensemble-fails-restr` — [PAH-OMC-015 R-508 counting ensemble fails restricted cutoff nondegeneracy] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-pah-omc-015-r-508-counting-ensemble-fails-restr) |
+| 2026-09-05 | `20260905-q3lock-exp-001595-assembles-hilbert-reflection` — [Q3LOCK EXP-001595 assembles Hilbert reflection and continuous-loop infrared content] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001595-assembles-hilbert-reflection) |
 | 2026-09-05 | `20260905-q3lock-exp-001593-assembles-continuous-loop-fkg` — [Q3LOCK EXP-001593 assembles continuous-loop FKG and selected-limit association content] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001593-assembles-continuous-loop-fkg) |
 | 2026-09-05 | `20260905-q3lock-exp-001591-assembles-dlr-tangent-content` — [Q3LOCK EXP-001591 assembles DLR tangent content and corrects source and weight directions] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001591-assembles-dlr-tangent-content) |
 | 2026-09-05 | `20260905-q3lock-exp-001589-assembles-thermodynamic-press` — [Q3LOCK EXP-001589 assembles thermodynamic pressure and corrects seam coefficient] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001589-assembles-thermodynamic-press) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-q3lock-fss-arbitrary-prior-source-scope-confirm` — [Q3LOCK FSS arbitrary-prior source scope confirmed (EXP-001566)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-fss-arbitrary-prior-source-scope-confirm) |
 | 2026-09-05 | `20260905-q3lock-kkk-pressure-scale-correction-recorded-e` — [Q3LOCK KKK pressure-scale correction recorded (EXP-001564)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kkk-pressure-scale-correction-recorded-e) |
 | 2026-09-05 | `20260905-q3lock-kp-source-window-feller-audit-recorded-e` — [Q3LOCK KP source-window Feller audit recorded (EXP-001563)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kp-source-window-feller-audit-recorded-e) |
-| 2026-09-05 | `20260905-q3lock-source-tangent-hash-recomputation-record` — [Q3LOCK source-tangent hash recomputation recorded (EXP-001562)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-tangent-hash-recomputation-record) |
-| 2026-09-05 | `20260905-q3lock-pressure-derivative-subsequence-audit-re` — [Q3LOCK pressure-derivative subsequence audit recorded (EXP-001560)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-pressure-derivative-subsequence-audit-re) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 919–958 | 40 | [000919-000968.md](pages/000919-000968.md) |
+| 919–960 | 42 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |

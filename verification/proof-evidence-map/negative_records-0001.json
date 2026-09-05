@@ -1,6 +1,26 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy",
+      "branch": "require all four R-488 squared norms to survive the full-Q counting ensemble's restricted cutoff-before-volume limit",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "structured_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "consequence": "`CANDIDATE_REJECTED` for this necessary condition and restricted path only. No weak-state nonexistence or all-ensemble no-go is asserted. PAH-OMC-014, full joint cutoff removal, the active T-054 gate and host physical claims remain unresolved. No counterterm, fitted prior, chemical potential, new carrier or automatic replacement law is introduced. Revisit only under a separately authorized changed definition or an exact counterexample to the displayed energy/counting argument.",
+        "evidence": "R-508; `strategy/pa-hyp/PAH-OMC-015-result-v1.json`, `strategy/pa-hyp/PAH-OMC-015-cutoff-certificate.md`, and the synthesis note `claims/C6-SPACETIME-SIGNATURE/notes/pah-omc015-cutoff-260905-v1.0.tex.txt`. Reproduce with `python -X utf8 verification/scripts/pah_omc015_counting_cutoff_verify.py`. Primary/independent/hostile/integrated assertions: 21/20/12/33, all PASS; nine Lean declarations compile without diagnostics. The all-n/all-R result uses the analytic counting argument, not a finite sampling extrapolation.",
+        "failure_mode": "Compare every charge configuration with the configuration of zero occupation and identical aperture/phase/link labels. The exact source energy difference is bounded below by `Q(R^2/8+R^4/4+R^6/6)`. Counting all binary occupancies and keeping every phase multiplicity gives `mu(ell_v^2)<=2^(|V_n|-1) exp(-R^2/8-R^4/4-R^6/6)`. At every fixed n the right side tends to zero; the outer n limit remains zero. Both Z_2 holonomy squares equal one identically. Thus the ordered four-observable target has values `(0,0,1,1)` and its required positivity conjunction fails. Finite normalization, conditional Gibbs recovery and stationarity hold and do not prevent this degeneration."
+      },
+      "detail_title": "**Branch.** The new preregistered PAH-OMC-015 full-Q counting ensemble",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "exact suppression exp(-R^2/8-R^4/4-R^6/6) makes both radial limits zero, while both holonomy squares stay one; rejects this ensemble's nondegeneracy requirement only",
+      "tag": "NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY"
+    },
+    {
       "anchor": "audit-2026-09-05-q3lock-tangent-beta-and-weight-direction",
       "branch": "reuse later source-tangent normalization and weighted diagonal displays",
       "claim_ref_basis": {
@@ -2015,27 +2035,6 @@
       "kind": "no_go",
       "summary": "`X_N=N` on an event of probability `N^-4` satisfies `||X_N||_2=N^-1->0` while `E exp(X_N)->infinity`. Retain the actual centered-Q3 route, but prove a regulator-uniform exponential moment before invoking Vitali or passing reflection positivity",
       "tag": "NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT"
-    },
-    {
-      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-transverse-zero-restriction-as-interacting-marginal",
-      "branch": "infer that a bare transverse-zero restriction by itself establishes the interacting marginal of a higher-dimensional parent",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-exp-000772-closes-constant-source-q3-pressure-a"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "artifacts": "`strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-q3-source-pressure-phase-diagnostic-physical-reference-3d-parent-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split.py`; `codes/foundations/pre_a_cp1_cl8_q3_source_pressure_phase_diagnostic_physical_reference_3d_parent_route_split_independent.py`.",
-        "consequence": "The witness refutes only the inference that bare transverse-zero agreement is sufficient to establish an interacting marginal. It does not compute the full registered ST8/Q3LOCK marginal, exclude cancellations in a complete effective action, or rule out a constraint, decoupling limit, dressed embedding or controlled RG reduction. A direct classical three-dimensional parent is a Euclidean `Phi4_3`-type problem, while a quantum parent with three spatial dimensions has a four-dimensional Euclidean route; the present `P(Phi)_2` result proves neither. C6, CP1, Sector A and Pre-A remain open.",
-        "evidence": "In the exact two-cell scalar control `phi_1=(q+r)/sqrt(2)`, `phi_2=(q-r)/sqrt(2)`, ```text phi_1^4+phi_2^4=q^4/2+3q^2 r^2+r^4/2. ``` For `S(q,r)=a(q^2+r^2)/2+b(q^4/2+3q^2r^2+r^4/2)` with `a,b>0`, integrating `r` gives `S_eff(q)=S(q,0)+F(q^2)-F(0)`, where `F'(s)=3b E_s[r^2]>0` and `F''(s)=-9b^2 Var_s(r^2)<0`. The discarded-mode term is therefore nonconstant and is absent from the bare `r=0` restriction.",
-        "failure_mode": "Identify the inserted one-dimensional Q3 comparator with the interacting marginal of the three-dimensional ST8/Q3LOCK parent merely because setting transverse modes to zero reproduces a restricted classical action."
-      },
-      "detail_title": "bare restriction does not establish an interacting marginal",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "the exact two-cell quartic produces a discarded-mode correction `F(q^2)-F(0)` with `F'>0` and `F''<0`. This refutes only the bare inference; the full ST8/Q3LOCK marginal, possible cancellations, constrained limits and derived effective actions remain open",
-      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL"
     }
   ],
   "kind": "negative_records",

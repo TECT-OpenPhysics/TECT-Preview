@@ -1,0 +1,65 @@
+{
+  "schema": "tect/pah-omc015-counting-preregistration/1.0",
+  "contract_id": "PAH-OMC-015",
+  "version": "1.0.0",
+  "date": "2026-09-05",
+  "definition_owner": "TECT_RESEARCH_PROGRAM_UNDER_OPERATOR_GOAL",
+  "provenance": "NEW_RESEARCHER_ENSEMBLE_HYPOTHESIS_NOT_PHYSICAL_AUTHORITY",
+  "status": "PREREGISTERED_BEFORE_CANDIDATE_COMPUTATION",
+  "sources": {
+    "PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-008-multi-cylinder-v1.json": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+    "PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "PAH-OMC-012-full-Q-graded-domain-v1.json": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "PAH-OMC-014-reentry-scope-review-260905.md": "0d154c4119d5bc5354af0f901afeee53ed229ba2f640e05a651e6239385b35eb",
+    "PAH-OMC-015-goal-v1.md": "62bdf835282981e88ddbbb48bea5299a8a6af22e744ccf9a3068c73010fd3e4b"
+  },
+  "source_path_base": "strategy/pa-hyp",
+  "parameter_source": "PAH-OMC-008-multi-cylinder-v1.json#/exact_scope/fixture",
+  "parameter_extension": "Remove only fixed Q and fixed R_max from that fixture as explicitly authorized by OMC-010, OMC-012 and the OMC-015 goal. Every other parameter retains its exact source value.",
+  "domain": {
+    "carrier": "Exact OMC-004 G_n for every integer n>=2; anchored open strip with its unsplit frontier square.",
+    "vertex_coordinates": "At EVERY vertex: aperture bit j_v, radial bit ell_v, phase bit k_v in {0,1}; s_v=epsilon+(1-epsilon)j_v and psi_v=R ell_v (-1)^k_v.",
+    "edge_coordinates": "One link bit u_e per oriented representative edge, U_e=(-1)^u_e; inverse edges are determined, not independent.",
+    "multiplicity": "Phase labels at ell_v=0 remain distinct coordinates, as in the OMC-012 neutral projection and component root domain. No gauge quotient is taken. Q is sum ell and is only a deterministic grade tag. There is no tagged probe in this cylinder/dynamics task.",
+    "charges": "Q=0,...,|V_n|",
+    "measure": "Counting measure on the entire component-disjoint union; exactly the inherited counting measure in each Q.",
+    "norm": "The squared finite Gibbs L2 norm mu_(n,R)(|f|^2); this is the new ensemble norm, with component conditional laws unchanged.",
+    "generator": "Unchanged blockwise PAH-001 L on all finite functions. Retain phase/link + and - channels separately at K=2. Radial transfers obey binary occupation constraints. Aperture roots obey the two-point aperture grid. Each allowed root has its declared inverse and positive symmetric mobility.",
+    "projection": "Existing finite gauge/anchor Reynolds projection, with the OMC-012 coordinate restriction and OMC-013 pointwise common-cylinder generator. No projection-based charge redistribution or new physical projection.",
+    "time_boundary": "Finite stationary initial-value Markov law, external stochastic time t>=0, no terminal conditioning. No quantum KMS assertion."
+  },
+  "ensemble": {
+    "Z_Q": "sum_(x:q_n(x)=Q) exp(-beta F_(n,R)(x))",
+    "Z_total": "sum_Q Z_Q",
+    "w_Q": "Z_Q/Z_total",
+    "mu": "sum_Q w_Q pi_Q",
+    "allowed_dependencies": "Only the fixed source functional, exact state domain, n and R through the displayed partition sums. beta and all other parameters are frozen.",
+    "forbidden": ["chemical potential", "additional Q or R or volume dependent rescue weight", "parameter fitting", "new energy term", "new carrier", "conditional averaging map", "rate modification"]
+  },
+  "observables": {
+    "ell_a": "ell_(0,0)",
+    "ell_d": "ell_(1,1)",
+    "H_0": "(-1)^(u_h00+u_v1-u_d0)",
+    "H_1": "(-1)^(u_d0-u_h01-u_v0)",
+    "target": "All four iterated limits lim_n lim_R mu_(n,R)(|f|^2) exist and are strictly positive."
+  },
+  "limits": {
+    "inner": "R_max=R->infinity over positive integers at every fixed n>=2, with K=2,M_s=M_psi=1,epsilon=1/2,beta=nu=1,m2=0 and other fixture parameters unchanged.",
+    "outer": "n->infinity only after the inner limit.",
+    "scope": "Restricted OMC-010 path only, not full joint local-cutoff removal, not physical lattice refinement.",
+    "interchange": false
+  },
+  "planned_verification": {
+    "primary": "Direct all-configuration energy decomposition, counting of radial patterns, finite Gibbs algebra and inverse-root stationarity; exact rational tests on inherited strips only.",
+    "independent": "Independently reimplement the energy from integer polynomials and incidence, prove a separate charge-tail bound, compare coefficients and root reversals without importing primary mathematics.",
+    "hostile": "Attempt negative sign/factor, missing phase multiplicity, sector-prior replacement, omitted inverse channels, zero cutoff penalty, finite-positive versus limit-positive, and reversed-order mutations.",
+    "lean": "Kernel-check appropriate exact algebra and bounds with the pinned local toolchain. Report precisely which analytic limit or source translation remains on paper.",
+    "C_sw": "540 is not used to prove this nondegeneracy gate; original scope retained.",
+    "R484": "Boundary defect retained; no cross-level exact Gibbs projectivity assumed."
+  },
+  "non_claims": ["No candidate verdict before the calculation and audit.", "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, continuum, mass gap or TOE conclusion.", "No weak-state nonexistence inferred solely from loss of required observable nondegeneracy."]
+}

@@ -9,10 +9,11 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  18 proof units  ·  tier span T1
+## (all notes)/  ·  19 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `pah-omc015-cutoff` | v1.0 | T1 | Ordered squared limits are (0,0,1,1). | ANALYTIC, EXACT, EXECUTED; Lean cross-check | Separate owner contract for a new law |
 | `pre-a-q3lock-common-alpha-topology-critical-graph-route-split` | v0.4 | T1 | All-bond kick graph form and one-layer recurrence proved; subcritical finite-volume graph Trotter convergence proved conditionally on strong product … | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove a non-Leibniz or state-weighted critical onsite topology and thermodynamic boundary… |
 | `pre-a-q3lock-cubic-graph-product-locality-route-split` | v0.2 | T1 | Weighted cubic graph embedding, Q3 force multiplier, moving-center graph comparison, and prescribed-word heat simplex proved. Raw absolute animal and… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove either the first-passage RT-PV response plus Hamiltonian energy-tail algebra, or th… |
 | `pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint` | v1.1 | T1 | Actual fixed-beta periodic-Q3 local fifth moment, cubic-growth subset-shear fifth graph transport, two-orientation twentieth history moment and hard … | ANALYTIC + EXACT + primary + non-importing in… | Prove the split/all-exhaustion limit; construct and control the connected oscillator elim… |

@@ -1,0 +1,48 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-015 counting ensemble loses radial nondegeneracy in the declared cutoff-first limit",
+  "question": "Does the separately preregistered full-Q counting ensemble preserve strictly positive ordered squared expectations for all four R-488 cylinders?",
+  "finding": "No. Exact source energy minus the zero-occupation comparison is at least Q(R^2/8+R^4/4+R^6/6). Counting all radial patterns while preserving phase multiplicity bounds each radial squared expectation by 2^(|V_n|-1) exp(-c(R)). Its inner R limit is zero for every fixed n, whereas both Z_2 holonomy squares are identically one. The ordered vector is (0,0,1,1). Finite normalization, conditional Gibbs recovery and stationarity for the unchanged Q-preserving generator hold.",
+  "verdict": "failed",
+  "decision_reason": "CANDIDATE_REJECTED / negative_result for this ensemble's four-observable necessary condition on the restricted OMC-010 path. The failure supplies a concrete discriminator after the prior missing-input hold, without modifying the parent functional or fitting weights.",
+  "boundary": "R first at each fixed n, then n; K=2,M_s=M_psi=1,epsilon=1/2,beta=nu=1,m2=0, other displayed couplings one. This does not remove all cutoffs jointly, exclude a degenerate weak state, or change T-054's active gate or the host claim tier. PAH-OMC-014 remains unresolved.",
+  "next_action": "Archive this candidate-local failure. A different state-selection or cutoff rule requires a separate owner-authorized hypothesis and preregistration; do not automatically tune, repair or replace the law under this goal.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "task_id": "T-054",
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "formal_refs": {
+    "results": ["R-508"],
+    "negatives": ["NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY"],
+    "events": ["20260905-pah-omc-015-r-508-counting-ensemble-fails-restr"]
+  },
+  "related": [{"id": "EXP-001594", "relation": "continues"}, {"id": "EXP-001590", "relation": "continues"}],
+  "method": [
+    "Hash-pin the new full-domain counting ensemble, exact labelled state multiplicities and nine parent sources before computation.",
+    "Derive finite disjoint-sum normalization, conditional recovery and inverse-root midpoint-flux stationarity.",
+    "Prove an all-configuration charge-energy lower bound and sum radial patterns at fixed background.",
+    "Independently reconstruct polynomial coefficients and prove a total-charge tail bound without primary or prior PAH code imports.",
+    "Run exact source-translation, labelled-root, gauge, sign/factor, multiplicity and order controls.",
+    "Compile nine Lean declarations including charge-penalty divergence and the analytic squeeze; render-review one three-page checkpoint synthesis note."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-015-counting-prereg-v1.json#sources",
+    "strategy/pa-hyp/PAH-OMC-015-cutoff-certificate.md#primary-energy-and-counting-proof",
+    "strategy/pa-hyp/PAH-OMC-015-cutoff-certificate.md#independent-proof-and-explicit-modulus",
+    "strategy/pa-hyp/PAH-OMC-015-result-v1.json#conclusion",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc015-counting-cutoff/integrated.json#coverage",
+    "verification/lean/Tect/PahOmc015.lean#cutoff_squeeze",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc015-cutoff-260905-v1.0.tex.txt#Result-footer"
+  ],
+  "assumptions": ["The separately proposed counting reference and the exactly pinned labelled finite domain.", "The declared restricted parameter path and order of limits."],
+  "missing_assumptions": ["None for this candidate-local negative. Full joint cutoff removal, a common completed Gibbs space and limiting stationarity remain outside this result."],
+  "adversarial_review": [
+    {"check": "Could wrong Gibbs sign or a missing denominator cause suppression?", "disposition": "DISMISSED: independent coefficients and explicit hostile controls reject those mutations."},
+    {"check": "Could phase quotienting at ell=0 silently change the state?", "disposition": "DISMISSED within the pinned labelled domain: component counting and both inverse channels are retained."},
+    {"check": "Does the finite positive law ensure a positive limiting radial witness?", "disposition": "DISMISSED by the exact cutoff modulus and Lean squeeze."},
+    {"check": "Does this prove weak-state nonexistence or all-law failure?", "disposition": "UPHELD against that overclaim; no such conclusion is made."}
+  ],
+  "verification_summary": "Primary 21/21, independent 20/20, hostile 12/12, integrated 33/33; identical independent full-energy digest; Lean nine declarations, diagnostics-free. Finite diagnostics audit implementation; the universal quantifiers are proved in the certificate.",
+  "non_claims": ["No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, continuum, infinite-volume dynamics, mass gap or TOE conclusion.", "No external signed review, no reinterpretation of stochastic time, and no Q3LOCK premise."],
+  "revisit_condition": "A separately authorized new law/cutoff contract or an exact counterexample to the source-energy, multiplicity or counting argument. Preserve this version and the parent hashes.",
+  "provenance": "contemporaneous"
+}

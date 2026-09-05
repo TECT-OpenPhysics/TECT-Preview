@@ -69,6 +69,7 @@ Tier profile: T6x4 T5x1 T1x1
 | AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION | residual and physical potential transcription mismatch | Combine the allocated local coefficient (r+6c-a)/2 |
 | AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION | one displayed seam bound loses a factor six | Reuse the Section 4 displayed inequality with constant |
 | AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION | source normalization and compactness direction | An extra source beta and a reversed weighted compactness step appear in later audit notes. |
+| NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY |  | Compare every charge configuration with the configuration of |
 
 ---
 

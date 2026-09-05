@@ -1,0 +1,157 @@
+% Title: PAH-OMC-015: counting-ensemble cutoff nondegeneracy
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-09-05; this version issued 2026-09-05
+% Status: R-508; candidate-local negative result; no host claim promotion
+
+\section*{Purpose and scope}
+This checkpoint tests one additional researcher hypothesis: counting
+reference measure on the already declared full-charge PAH domain.
+The functional, rates, mobility and anchored strip are unchanged.
+The source dictionary and all nine parent hashes are in
+\texttt{PAH-OMC-015-counting-prereg-v1.json}, with SHA-256
+\begin{verbatim}
+0e07bd05c56c9765f15074505a5ce7916222
+82a0e0c884bba277e780bbda0b35
+\end{verbatim}
+The line break in this displayed hash is typographic only.
+The full derivation and source crosswalk are in the associated
+\texttt{PAH-OMC-015-cutoff-certificate.md}.
+
+Let $G_n$ be the OMC-004 strip, $n\geq2$, with $N=2(n+2)$ vertices.
+Use $K=2$, $M_s=M_\psi=1$, $\epsilon=1/2$, $\beta=\nu=1$,
+$m^2=0$, and every other displayed coupling equal to one.
+First let the positive integer $R=R_{\max}$ tend to infinity at each fixed
+$n$, then let $n$ tend to infinity. This restricted OMC-010 path does not
+remove all local cutoffs jointly and is not a physical continuum limit.
+
+Every vertex has aperture, occupation and phase bits $(j_v,\ell_v,k_v)$;
+every representative edge has one link bit $u_e$. Phase labels at
+$\ell_v=0$ remain distinct. Set $s_v=(1+j_v)/2$,
+$\psi_v=R\ell_v(-1)^{k_v}$ and $U_e=(-1)^{u_e}$.
+The deterministic grade $Q=\sum_v\ell_v$ adds no multiplicity.
+There is no tagged probe in this task and no quotient of the counting space.
+
+\section*{Finite ensemble and stationarity}
+For each nonempty grade define
+\[
+ Z_Q=\sum_{q(x)=Q}e^{-F_R(x)},\qquad
+ Z=\sum_QZ_Q,\qquad w_Q=\frac{Z_Q}{Z}.
+\]
+All sums are finite and strictly positive. The mixture of the original
+component Gibbs laws satisfies
+\[
+ \mu(x)=w_Q\pi_Q(x)=\frac{e^{-F_R(x)}}{Z},\qquad
+ \mu(\,\cdot\mid Q)=\pi_Q,\qquad \mu(1)=1.
+\]
+This choice of weights is a new ensemble hypothesis, not a uniquely
+derived or physically selected state.
+
+For every allowed root $r$ and $y=rx$, inverse pairing and symmetric
+mobility give the exact identity
+\[
+ \mu(x)c_r(x)=\frac{m_r(x)}Z e^{-(F_R(x)+F_R(y))/2}
+             =\mu(y)c_{r^{-1}}(y).
+\]
+Summing against $f(y)-f(x)$ proves $\mu(Lf)=0$ on the entire finite
+function domain. The two labelled phase/link channels at $K=2$ are retained.
+Gauge transformations preserve the squared covariant differences and the
+Wilson characters, hence the energy, counting law and finite projection.
+This does not prove limiting stationarity or an infinite-volume semigroup.
+
+\section*{Exact cutoff estimate}
+Write $z=(j,k,u)$ and let $F_0(z)=F_R(z,0)$. Erasing occupancy for this
+comparison is a summation device, not a changed transition or projection.
+The original energy decomposes as
+\begin{align*}
+ F_R(z,\ell)-F_0(z)
+ &=Q\left(\frac{R^4}{4}+\frac{R^6}{6}\right)
+   +\frac{R^2}{2}\sum_vs_v^2\ell_v\\
+ &\quad+\frac{R^2}{2}\sum_{e=(v,w)}J_e(s)
+    \bigl(\ell_w(-1)^{k_w}-U_e\ell_v(-1)^{k_v}\bigr)^2.
+\end{align*}
+Since $s_v\geq1/2$, binary occupancy and nonnegative squares imply
+\[
+ F_R(z,\ell)\geq F_0(z)+Qc(R),\qquad
+ c(R)=\frac{R^2}{8}+\frac{R^4}{4}+\frac{R^6}{6}.
+\]
+All aperture and Wilson boundary terms remain in $F_0$. Summing over the
+same $z$ gives $\sum_z e^{-F_R(z,\ell)}\leq e^{-Qc(R)}Z_0$.
+Let $t=e^{-c(R)}\in(0,1]$. For any fixed vertex $v$, $Z\geq Z_0$ gives
+\[
+ 0\leq\mu_{n,R}(\ell_v^2)
+ \leq\sum_{\ell:\ell_v=1}t^{\sum\ell}
+ =t(1+t)^{N-1}\leq 2^{N-1}e^{-c(R)}.
+\]
+The binomial sum counts every occupation pattern; phase multiplicities
+already occur identically in $Z_0$. Independently, summing entire charge
+sectors gives
+\[
+ \mu_{n,R}(Q>0)\leq(1+t)^N-1\leq(2^N-1)t,
+ \qquad \ell_v^2\leq\mathbf1_{Q>0}.
+\]
+This provides a second bound with the same conclusion.
+
+For an explicit modulus, $c(R)\geq R/6$ for $R\geq1$ and
+$e^c\geq1+c$. Therefore
+\[
+ \mu_{n,R}(\ell_v^2)\leq\frac{6\,2^{N-1}}R.
+\]
+For any $\delta>0$, $R\geq\lfloor6\,2^{N-1}/\delta\rfloor+1$ makes
+the right side smaller than $\delta$. The modulus depends on $n$;
+no uniform-volume bound or interchange of limits is asserted.
+
+\section*{Verdict and verification scope}
+Both closed $\mathbb Z_2$ characters satisfy $H_0^2=H_1^2=1$ pointwise.
+The ordered squared expectations of the R-488 observables are thus
+\[
+ \lim_{n\to\infty}\lim_{R\to\infty}
+ \bigl(\mu(\ell_a^2),\mu(\ell_d^2),\mu(H_0^2),\mu(H_1^2)\bigr)
+ =(0,0,1,1).
+\]
+This rejects the preregistered conjunction requiring all four entries
+to be positive. It does not exclude a degenerate weak state limit.
+
+Primary verification evaluates the inherited complete energy and root
+catalog. The independent implementation reconstructs the polynomial
+coefficients from incidence without importing that implementation.
+Adversarial controls cover signs, factors, multiplicity and limit order.
+Lean checks Gibbs algebra, the finite mass bound, exponential estimate,
+divergence of $c(R)$, the squeeze implication and character squares.
+The source-to-energy decomposition and full combinatorial argument are
+given above; finite diagnostic sampling is not their universal proof.
+The integrated run records exact counts, hashes and compilation output.
+
+\section*{Devil's-advocate review}
+\begin{enumerate}
+\item Sign/factor: reversed Gibbs sign and missing sextic or aperture
+denominators are rejected by exact coefficient controls.
+\item Multiplicity: identifying zero-radius phases changes the counting
+measure. Both lanes retain the coordinate labels and count all grades.
+\item Domain: charge erasure is used only for a summation bound. All
+generator roots still conserve charge and retain their inverse channels.
+\item Limit: finite positivity is insufficient. The displayed modulus
+proves the inner limits; it does not justify reversing the order.
+\item Scope: a vanishing radial witness rejects this nondegeneracy target
+only. The holonomy witnesses remain nonzero. No other ensemble is tested.
+\end{enumerate}
+These objections are dismissed within the explicitly retained restrictions.
+External review of multiplicity and limit quantifiers is invited.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID: R-508
+Claim ID: C6-SPACETIME-SIGNATURE
+Precise statement: Ordered squared limits are (0,0,1,1).
+Verdict: CANDIDATE_REJECTED
+Dependencies: PAH-001; OMC-004/008/010/012/013; OMC-015 prior
+Hypotheses: Exactly the preregistered labelled counting domain
+Evidence grade: ANALYTIC, EXACT, EXECUTED; Lean cross-check
+Scope: fixed OMC-010 path, R before n, counting ensemble
+Tier before / after: T1 / T1 (host); PAH-OMC-014 unresolved
+No-overclaim statement: No physical or full joint-limit claim
+Next required action: Separate owner contract for a new law
+Falsification gate: Exact failure of charge-energy/counting bound
+Reproduction command: python -X utf8
+  verification/scripts/pah_omc015_counting_cutoff_verify.py
+Expected output: PASS; CANDIDATE_REJECTED; Lean PASS
+\end{verbatim}

@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy) | require all four R-488 squared norms to survive the full-Q counting ensemble's restricted cutoff-before-volume limit | exact suppression exp(-R^2/8-R^4/4-R^6/6) makes both radial limits zero, while both holonomy squares stay one; rejects this ensemble's nondegeneracy requirement only |
 | [AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION](#audit-2026-09-05-q3lock-tangent-beta-and-weight-direction) | reuse later source-tangent normalization and weighted diagonal displays | X already integrates imaginary time, so p'=E X/V; compactness requires a smaller-alpha input for a larger-alpha target, not the reverse |
 | [AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION](#audit-2026-09-05-q3lock-seam-coefficient-transcription) | reuse the displayed 48 seam constant in the later pressure audit | exact L=2 counterexample gives seam energy 768 against the erroneous bound 320; endpoint summation requires 288, already used by the original authority and verifier |
 | [AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION](#audit-2026-09-05-q3lock-harmonic-spatial-double-allocation) | combine allocated Q3LOCK onsite potential with full spatial differences | the old physical-potential defect is (3c-a/2) times the squared field norm and the Gaussian residual defect is 3c times the time-integrated squared norm; corrected equivalent residuals and consumer precedence are recorded in EXP-001587 |
@@ -10704,3 +10705,39 @@ This repairs the argument for the all-k compact set; it does not refute that
 set's compactness or the Q3LOCK model. The original EXP-000781 time-zero
 dictionary is unchanged. Internal T0, strict-sign and signed-review gates
 remain unchanged; finite checks are not a proof of the infinite limits.
+
+### NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY
+
+**Branch.** The new preregistered PAH-OMC-015 full-Q counting ensemble
+`w_Q=Z_Q/sum Z_Q` on the exact OMC-004/010/012 domain and restricted
+parameter path. Source registration SHA-256:
+`0e07bd05c56c9765f15074505a5ce791622282a0e0c884bba277e780bbda0b35`.
+
+**Failure mode.** Compare every charge configuration with the configuration of
+zero occupation and identical aperture/phase/link labels. The exact source
+energy difference is bounded below by
+`Q(R^2/8+R^4/4+R^6/6)`. Counting all binary occupancies and keeping every
+phase multiplicity gives
+`mu(ell_v^2)<=2^(|V_n|-1) exp(-R^2/8-R^4/4-R^6/6)`.
+At every fixed n the right side tends to zero; the outer n limit remains
+zero. Both Z_2 holonomy squares equal one identically. Thus the ordered
+four-observable target has values `(0,0,1,1)` and its required positivity
+conjunction fails. Finite normalization, conditional Gibbs recovery and
+stationarity hold and do not prevent this degeneration.
+
+**Evidence.** R-508; `strategy/pa-hyp/PAH-OMC-015-result-v1.json`,
+`strategy/pa-hyp/PAH-OMC-015-cutoff-certificate.md`, and the synthesis
+note `claims/C6-SPACETIME-SIGNATURE/notes/pah-omc015-cutoff-260905-v1.0.tex.txt`.
+Reproduce with
+`python -X utf8 verification/scripts/pah_omc015_counting_cutoff_verify.py`.
+Primary/independent/hostile/integrated assertions: 21/20/12/33, all PASS;
+nine Lean declarations compile without diagnostics. The all-n/all-R result
+uses the analytic counting argument, not a finite sampling extrapolation.
+
+**Consequence.** `CANDIDATE_REJECTED` for this necessary condition and
+restricted path only. No weak-state nonexistence or all-ensemble no-go is
+asserted. PAH-OMC-014, full joint cutoff removal, the active T-054 gate and
+host physical claims remain unresolved. No counterterm, fitted prior,
+chemical potential, new carrier or automatic replacement law is introduced.
+Revisit only under a separately authorized changed definition or an exact
+counterexample to the displayed energy/counting argument.

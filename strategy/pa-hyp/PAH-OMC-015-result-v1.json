@@ -1,0 +1,69 @@
+{
+  "schema": "tect/pah-omc015-result/1.0",
+  "result_id": "R-508",
+  "contract_id": "PAH-OMC-015",
+  "date": "2026-09-05",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "CANDIDATE_REJECTED",
+  "classification": "negative_result",
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["ANALYTIC", "EXACT", "EXECUTED"],
+  "epistemic_scope": "The separately hypothesized ensemble fails its stated nondegeneracy requirement on the restricted OMC-010 path. No host claim-tier promotion.",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-015-counting-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-OMC-015-counting-prereg-v1.json": "0e07bd05c56c9765f15074505a5ce791622282a0e0c884bba277e780bbda0b35",
+    "strategy/pa-hyp/PAH-OMC-015-cutoff-certificate.md": "89c72cef58253a0d185a62f461934fb8f6d247541a0688cbf9f40520e309e24b",
+    "codes/foundations/pah_omc015_counting_cutoff.py": "edf574d395bb052a6c1f3ca91399f221285f624da80d6df7dce74bbe66b69bfb",
+    "codes/foundations/pah_omc015_counting_cutoff_independent.py": "727c3d98cf453164f3280c8780693acc12f3a9095918966bc110e89d2972b7d0",
+    "codes/foundations/pah_omc015_counting_cutoff_hostile.py": "cea71813972ce01f9247bf5b52b052a6639c493c4ce218efd7ed60ef8466db37",
+    "verification/scripts/pah_omc015_counting_cutoff_verify.py": "4b2935e9fef7a645d105057296548d1e433bcc140d4f02e4ca0295daf0417656",
+    "verification/lean/Tect/PahOmc015.lean": "540d57c655da7e27e1b204a0bfe9b91111622bf37d84f6a0e3843cd4c331a023",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc015-cutoff-260905-v1.0.tex.txt": "6a89b691f40959d76d5d695e2da7a7cfd6bc4321a6a979ee7a16326256dcbefc",
+    "codes/foundations/pah_omc013_full_q_eventual_intertwining.py": "bda0c7bd7ed5f8b3871fd7590b600458589c4b5feba0a147219e94cdae0526a0"
+  },
+  "conclusion": {
+    "exact_question": "Do all four R-488 squared expectations remain strictly positive under lim_n lim_R for the preregistered counting ensemble?",
+    "finite_properties": "Strictly positive normalized mu, exact conditional fixed-Q Gibbs recovery, unchanged inverse-root detailed balance and finite stationarity.",
+    "penalty": "c(R)=R^2/8+R^4/4+R^6/6",
+    "primary_bound": "0<=mu_(n,R)(ell_v^2)<=2^(|V_n|-1) exp(-c(R))",
+    "independent_bound": "mu_(n,R)(Q>0)<=(2^|V_n|-1) exp(-c(R))",
+    "modulus": "For delta>0, R>=floor(6*2^(|V_n|-1)/delta)+1 gives mu(ell_v^2)<delta at fixed n.",
+    "ordered_squared_limits": {"ell_a": "0", "ell_d": "0", "H_0": "1", "H_1": "1"},
+    "failure": "Two required matter witnesses lose nondegeneracy on the restricted path; the required four-way conjunction is false."
+  },
+  "assumptions": [
+    "Exactly the source-defined labelled counting domain, including phases at zero occupation and both K=2 inverse channels.",
+    "Exactly the separately proposed full-domain counting law; all weights arise from the displayed partition sums.",
+    "OMC-010 fixed parameters, integer R first at each fixed n, then strip exhaustion n."
+  ],
+  "missing_assumptions": ["No additional assumption is needed for this candidate-local negative. Full joint regulator removal, a common limiting Gibbs state and limiting stationarity remain separate unresolved questions."],
+  "lean": {
+    "path": "verification/lean/Tect/PahOmc015.lean",
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "declarations": ["conditional_weight_cancellation", "midpoint_exponent", "gibbs_root_flux", "finite_mass_bound", "exponential_reciprocal_bound", "positive_prefactor_no_finite_zero", "cutoff_squeeze", "charge_penalty_diverges", "binary_character_square"],
+    "scope": "Finite Gibbs algebra, generic mass bound, exponential reciprocal bound, penalty divergence, analytic squeeze, character square. The model-to-energy and all-occupation counting translations are given in the analytic certificate and independently checked."
+  },
+  "verification": {
+    "command": "python -X utf8 verification/scripts/pah_omc015_counting_cutoff_verify.py",
+    "runs": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc015-counting-cutoff",
+    "independence": "Primary uses hash-pinned inherited full-energy/root evaluator; independent reconstructs polynomial energy and charge-tail bound without importing primary or prior PAH implementation. Hostile checks are internal; no external signed mathematical review is claimed."
+  },
+  "adversarial_review": [
+    {"objection": "Wrong Gibbs sign or denominator produces suppression.", "disposition": "DISMISSED by exact independent coefficients, labelled-root flux and hostile mutations."},
+    {"objection": "Unrecorded phase quotient changes sector weights.", "disposition": "DISMISSED within the explicitly pinned labelled domain; quotienting changes the hypothesis and is excluded."},
+    {"objection": "A finite positive probability cannot have zero limit.", "disposition": "DISMISSED by the explicit cutoff modulus and Lean squeeze."},
+    {"objection": "The bound justifies reversing limits or proves absence of weak states.", "disposition": "UPHELD against either broader assertion; neither is claimed."}
+  ],
+  "synthesis_note": "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc015-cutoff-260905-v1.0.tex.txt",
+  "pdf_review": "Three rendered pages inspected; no clipping, overlap or missing glyph found. Compiler overfull count zero.",
+  "next_single_question": "Under a separately authorized state-selection and cutoff contract, is there an independently motivated law retaining the required matter observable? No replacement law is launched by this result.",
+  "revisit_condition": "A changed owner law, cutoff path, source pin, multiplicity or exact counterexample to the displayed energy bound requires a new version and audit.",
+  "non_claims": [
+    "PAH-OMC-014 remains unresolved; the active T-054 gate and host C6 tier are unchanged.",
+    "No failure of every sector law, fixed-Q PAH state, weak state limit or TECT model is asserted.",
+    "No full joint cutoff removal, reversed-order limit, infinite-volume dynamics, continuum or physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass gap or TOE conclusion.",
+    "Markov time is external stochastic time. No Q3LOCK result is used as a premise."
+  ]
+}

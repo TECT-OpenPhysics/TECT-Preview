@@ -1,0 +1,198 @@
+{
+  "checks": [
+    {
+      "name": "source pin strategy/pa-hyp/PAH-OMC-015-counting-prereg-v1.json",
+      "pass": true
+    },
+    {
+      "name": "source pin strategy/pa-hyp/PAH-OMC-015-cutoff-certificate.md",
+      "pass": true
+    },
+    {
+      "name": "source pin codes/foundations/pah_omc015_counting_cutoff.py",
+      "pass": true
+    },
+    {
+      "name": "source pin codes/foundations/pah_omc015_counting_cutoff_independent.py",
+      "pass": true
+    },
+    {
+      "name": "source pin codes/foundations/pah_omc015_counting_cutoff_hostile.py",
+      "pass": true
+    },
+    {
+      "name": "source pin verification/scripts/pah_omc015_counting_cutoff_verify.py",
+      "pass": true
+    },
+    {
+      "name": "source pin verification/lean/Tect/PahOmc015.lean",
+      "pass": true
+    },
+    {
+      "name": "source pin claims/C6-SPACETIME-SIGNATURE/notes/pah-omc015-cutoff-260905-v1.0.tex.txt",
+      "pass": true
+    },
+    {
+      "name": "source pin codes/foundations/pah_omc013_full_q_eventual_intertwining.py",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-001-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-004-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-008-multi-cylinder-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-010-state-weighted-envelope-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-014-reentry-scope-review-260905.md",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-015-goal-v1.md",
+      "pass": true
+    },
+    {
+      "name": "primary checks",
+      "pass": true
+    },
+    {
+      "name": "independent checks",
+      "pass": true
+    },
+    {
+      "name": "hostile checks",
+      "pass": true
+    },
+    {
+      "name": "independent full-energy digest",
+      "pass": true
+    },
+    {
+      "name": "independent polynomial coefficients",
+      "pass": true
+    },
+    {
+      "name": "strict charge penalty",
+      "pass": true
+    },
+    {
+      "name": "four-observable proof mapping",
+      "pass": true
+    },
+    {
+      "name": "single-candidate scope",
+      "pass": true
+    },
+    {
+      "name": "Lean registry source",
+      "pass": true
+    },
+    {
+      "name": "Lean declarations",
+      "pass": true
+    },
+    {
+      "name": "Lean source policy",
+      "pass": true
+    },
+    {
+      "name": "toolchain toolchain_file",
+      "pass": true
+    },
+    {
+      "name": "toolchain lakefile",
+      "pass": true
+    },
+    {
+      "name": "toolchain lockfile",
+      "pass": true
+    },
+    {
+      "name": "Lean compilation diagnostics-free",
+      "pass": true
+    }
+  ],
+  "code_sha256": "4b2935e9fef7a645d105057296548d1e433bcc140d4f02e4ca0295daf0417656",
+  "conclusion": {
+    "exact_question": "Do all four R-488 squared expectations remain strictly positive under lim_n lim_R for the preregistered counting ensemble?",
+    "failure": "Two required matter witnesses lose nondegeneracy on the restricted path; the required four-way conjunction is false.",
+    "finite_properties": "Strictly positive normalized mu, exact conditional fixed-Q Gibbs recovery, unchanged inverse-root detailed balance and finite stationarity.",
+    "independent_bound": "mu_(n,R)(Q>0)<=(2^|V_n|-1) exp(-c(R))",
+    "modulus": "For delta>0, R>=floor(6*2^(|V_n|-1)/delta)+1 gives mu(ell_v^2)<delta at fixed n.",
+    "ordered_squared_limits": {
+      "H_0": "1",
+      "H_1": "1",
+      "ell_a": "0",
+      "ell_d": "0"
+    },
+    "penalty": "c(R)=R^2/8+R^4/4+R^6/6",
+    "primary_bound": "0<=mu_(n,R)(ell_v^2)<=2^(|V_n|-1) exp(-c(R))"
+  },
+  "coverage": {
+    "finite_normalization_conditional_recovery": "certificate#finite-ensemble-and-generator; conditional_weight_cancellation",
+    "finite_stationarity": "certificate#finite-ensemble-and-generator; inverse root replays; gibbs_root_flux",
+    "holonomy_ordered_limits": "pointwise binary_character_square",
+    "radial_ordered_limits": "certificate#independent-proof-and-explicit-modulus; cutoff_squeeze and charge_penalty_diverges",
+    "source_translation_boundary": "all-n incidence/counting proof is written in certificate; finite diagnostics audit implementation only",
+    "uniform_in_R_at_each_fixed_n": "certificate#primary-energy-and-counting-proof; independent coefficient/charge-tail proof"
+  },
+  "lane_counts": {
+    "hostile": 12,
+    "independent": 20,
+    "primary": 21
+  },
+  "lean": {
+    "command": "lake env lean Tect/PahOmc015.lean",
+    "output": "",
+    "source_sha256": "540d57c655da7e27e1b204a0bfe9b91111622bf37d84f6a0e3843cd4c331a023",
+    "status": "PASS",
+    "toolchain": {
+      "lakefile": "verification/lean/lakefile.toml",
+      "lakefile_sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "lockfile": "verification/lean/lake-manifest.json",
+      "lockfile_sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "mathlib_input_revision": "v4.32.1",
+      "mathlib_revision": "520045ab14e26149ee970e2e617ca04b09bde5d6",
+      "toolchain": "leanprover/lean4:v4.32.1",
+      "toolchain_file": "verification/lean/lean-toolchain",
+      "toolchain_sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    }
+  },
+  "manifest_sha256": "900aeadbc97aff76018615b61d829207d994cb6f8ad3e2fbf0a999a9d9a7d23e",
+  "non_claims": [
+    "PAH-OMC-014 remains unresolved; the active T-054 gate and host C6 tier are unchanged.",
+    "No failure of every sector law, fixed-Q PAH state, weak state limit or TECT model is asserted.",
+    "No full joint cutoff removal, reversed-order limit, infinite-volume dynamics, continuum or physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass gap or TOE conclusion.",
+    "Markov time is external stochastic time. No Q3LOCK result is used as a premise."
+  ],
+  "result_id": "R-508",
+  "run_hashes": {
+    "hostile": "f66b62da89716de3da90cc265318d413c7f38e4561d3443deec4e8409bbe65f2",
+    "independent": "2888dccf374dddbbc1cdc4e2a7873eb7fcb354184b69a691b29c318ff7416506",
+    "primary": "cecb17a93b783a17848e15a084163674182ed4fb2582199ea2457cf084604185"
+  },
+  "schema": "tect/pah-omc015-integrated/1.0",
+  "status": "PASS",
+  "verdict": "CANDIDATE_REJECTED"
+}

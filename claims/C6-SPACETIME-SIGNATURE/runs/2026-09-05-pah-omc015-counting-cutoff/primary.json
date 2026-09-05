@@ -1,0 +1,150 @@
+{
+  "checks": [
+    {
+      "name": "prereg bytes",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-001-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-004-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-008-multi-cylinder-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-010-state-weighted-envelope-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-014-reentry-scope-review-260905.md",
+      "pass": true
+    },
+    {
+      "name": "parent PAH-OMC-015-goal-v1.md",
+      "pass": true
+    },
+    {
+      "name": "inherited evaluator bytes",
+      "pass": true
+    },
+    {
+      "name": "parameter scope",
+      "pass": true
+    },
+    {
+      "name": "positive penalty coefficients",
+      "pass": true
+    },
+    {
+      "name": "n2 counting partition and zero-phase multiplicity",
+      "pass": true
+    },
+    {
+      "name": "n2 full energy charge-erasure bound",
+      "pass": true
+    },
+    {
+      "name": "n2 all allowed roots inverse and reversible flux",
+      "pass": true
+    },
+    {
+      "name": "n2 exact occupation counting polynomial",
+      "pass": true
+    },
+    {
+      "name": "n3 counting partition and zero-phase multiplicity",
+      "pass": true
+    },
+    {
+      "name": "n3 full energy charge-erasure bound",
+      "pass": true
+    },
+    {
+      "name": "n3 all allowed roots inverse and reversible flux",
+      "pass": true
+    },
+    {
+      "name": "n3 exact occupation counting polynomial",
+      "pass": true
+    }
+  ],
+  "code_sha256": "edf574d395bb052a6c1f3ca91399f221285f624da80d6df7dce74bbe66b69bfb",
+  "energy_digest": "aff4116bfba7b39a3552687512993e800bfc4b6909a5d32143b0dc1ba495c6ea",
+  "ordered_squared_limits": {
+    "H_0": 1,
+    "H_1": 1,
+    "ell_a": 0,
+    "ell_d": 0
+  },
+  "penalty_coefficients_R2_R4_R6": [
+    "1/8",
+    "1/4",
+    "1/6"
+  ],
+  "schema": "tect/pah-omc015-primary/1.0",
+  "scope": "Exact derivation in certificate; finite checks are source-translation diagnostics, not an enumeration proof of all n/R. No physical conclusion.",
+  "source_hash": "0e07bd05c56c9765f15074505a5ce791622282a0e0c884bba277e780bbda0b35",
+  "status": "PASS",
+  "strip_checks": [
+    {
+      "component_counts": [
+        268435456,
+        2147483648,
+        7516192768,
+        15032385536,
+        18790481920,
+        15032385536,
+        7516192768,
+        2147483648,
+        268435456
+      ],
+      "edges": 12,
+      "energy_checks": 1536,
+      "full_count": 68719476736,
+      "n": 2,
+      "radial_upper": "128 * exp(-(1/8) R^2-(1/4) R^4-(1/6) R^6)",
+      "root_checks": 54,
+      "vertices": 8
+    },
+    {
+      "component_counts": [
+        68719476736,
+        687194767360,
+        3092376453120,
+        8246337208320,
+        14431090114560,
+        17317308137472,
+        14431090114560,
+        8246337208320,
+        3092376453120,
+        687194767360,
+        68719476736
+      ],
+      "edges": 16,
+      "energy_checks": 6144,
+      "full_count": 70368744177664,
+      "n": 3,
+      "radial_upper": "512 * exp(-(1/8) R^2-(1/4) R^4-(1/6) R^6)",
+      "root_checks": 70,
+      "vertices": 10
+    }
+  ],
+  "verdict": "CANDIDATE_REJECTED"
+}
