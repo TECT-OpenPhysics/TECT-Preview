@@ -1,0 +1,64 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-014 finite weighted tail bound for the future full-Q Cauchy split",
+  "question": "What exact finite inequality controls the omitted full-Q tail once a source-owned normalized law supplies a tail-mass bound and a common cylinder envelope?",
+  "finding": "Lean R506 proves that for a finite tail set s, nonnegative weights w, a nonnegative envelope c with |a_i|<=c, and a supplied tail-mass bound sum_i w_i<=tau, the exact weighted tail satisfies |sum_i w_i*a_i|<=c*tau. The zero-component corollary is also proved. Integrated, independent and hostile verifiers pass on distinct exact rational fixtures.",
+  "decision_reason": "R503 controls finite-block weight and component drift but leaves the growing-Q tail as a separate term. R506 supplies that missing algebraic bridge without selecting sector weights, fitting tau, changing PAH-001, or treating C_sw=540 as a probability. It is reusable support only: the source owner still has to provide the law, the envelope, tail decay and the fixed-order topology.",
+  "boundary": "Conditional finite tail inequality only. PAH-001 functional/rates, PAH-OMC-010 Gibbs weighting, PAH-OMC-012 graded domain/projection and PAH-OMC-014 limit order remain unchanged. R-484 hidden-diagonal defect 16/9 is retained; R-490 C_sw=540 remains domination-only. No source law, projective limit, Cauchy sequence, positivity/normalization, stationarity, semigroup, continuum or physical conclusion is claimed.",
+  "next_action": "Obtain from the source owner one normalized cross-Q law with a finite-block/tail split, a common cylinder envelope c, and a source-owned tau->0 estimate in the fixed PAH-001 order; then combine R503 and R506 without fitting weights.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "task_id": "T-054",
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "related": [{"id": "EXP-001579", "relation": "continues"}],
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-014, the projective-kernel obligation, R503, R504, R505 and the route-local Q=0 obstruction.",
+    "Formalize the finite weighted-tail absolute-value inequality and its zero-tail corollary in Lean 4.32.1 using the exact Finset sum, nonnegative weights and envelope assumptions.",
+    "Register R506 with its exact source SHA-256 and run the pinned Lean toolchain check.",
+    "Replay integrated, independent and hostile verifiers using distinct Fraction fixtures, in-memory mutation tests and canonical source compilation.",
+    "Retain HOLD_FOR_EVIDENCE because no source-owned cross-Q law, tail mass, common envelope, topology or ordered decay estimate is present."
+  ],
+  "assumptions": [
+    "The future source-owned component block supplies a finite tail index set for each fixed comparison.",
+    "The future component cylinder values are real and uniformly bounded by a common nonnegative c on that tail.",
+    "The future sector weights are nonnegative and the source-owned tail mass is at most tau.",
+    "The fixed PAH-001 functional, Gibbs weighting, boundary convention and limit order remain unchanged."
+  ],
+  "missing_assumptions": [
+    "A source-authorized normalized cross-Q sector law or projective kernel.",
+    "Source-owned values or bounds for the tail mass tau and common envelope c, with tau tending to zero in the declared order.",
+    "A common cylinder topology and a Cauchy estimate combining the R503 finite-block term with this tail term.",
+    "A uniform-integrability/domain argument for positivity, normalization and stationarity after the functional is defined."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-separator-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-sign-change-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-projective-kernel-obligation-260905.md#required_source_owned_statement",
+    "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json#status",
+    "verification/lean/Tect/R506.lean#weighted_tail_abs_bound",
+    "verification/lean/Tect/R506.lean#tail_bound_zero",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-tail-bound-lean/integrated.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-tail-bound-lean/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-tail-bound-lean/hostile.json#mutation_policy"
+  ],
+  "adversarial_review": [
+    {"check": "Does R506 choose or fit a source-owned sector law?", "disposition": "UPHELD AS FALSE: weights and tau are theorem variables and exact fixtures only; no source law is supplied."},
+    {"check": "Does finite tail control imply tau tends to zero?", "disposition": "UPHELD AS FALSE: R506 assumes a supplied tau bound and proves only c*tau; decay is a missing source-owner input."},
+    {"check": "Can C_sw=540 be used as tau or a probability?", "disposition": "UPHELD AS FALSE: the manifest and hostile verifier retain C_sw=540 as domination-only."},
+    {"check": "Does the bound remove the R-484 16/9 boundary defect?", "disposition": "UPHELD AS FALSE: the defect is explicitly retained and no averaging or counterterm is introduced."},
+    {"check": "Does R506 prove a full-Q Cauchy limit or positivity?", "disposition": "UPHELD AS FALSE: source law, topology, block error, tail decay and stationarity domain remain open."},
+    {"check": "Does this establish physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusions?", "disposition": "UPHELD AS FALSE: all physical interpretations remain explicit non-claims."}
+  ],
+  "non_claims": [
+    "No source-owned sector law, projective kernel, tail mass or common envelope is supplied.",
+    "No full-Q Cauchy sequence, weak cylinder limit, positivity/normalization, stationarity, closability or semigroup is proved.",
+    "No R-484 boundary repair or use of C_sw=540 as a measure is allowed.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "revisit_condition": "Reopen when a source owner supplies the normalized cross-Q law, exact finite-block/tail split, common cylinder envelope and tau->0 estimate in the fixed order, or if a parent-scope counterexample invalidates the finite inequality.",
+  "provenance": "contemporaneous",
+  "verdict": "advanced"
+}

@@ -1,0 +1,307 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 23,
+  "assertions": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "PAH-001 hash",
+      "pass": true
+    },
+    {
+      "actual": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "expected": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "name": "PAH-OMC-014 hash",
+      "pass": true
+    },
+    {
+      "actual": "25ae1c3e67444c4dcca73c93bb2ecb82b30d2750daf477feb0b7cafe4a393d2a",
+      "expected": "25ae1c3e67444c4dcca73c93bb2ecb82b30d2750daf477feb0b7cafe4a393d2a",
+      "name": "R-503 hash",
+      "pass": true
+    },
+    {
+      "actual": "83f0c578fb44de7e33b646ef2cee3a7d757c6ede6db40c60da31b9651e463186",
+      "expected": "83f0c578fb44de7e33b646ef2cee3a7d757c6ede6db40c60da31b9651e463186",
+      "name": "R-504 hash",
+      "pass": true
+    },
+    {
+      "actual": "b7918dec2224b66523c5ed872c23b67a0a331d36d3765df65a242ae0457f8497",
+      "expected": "b7918dec2224b66523c5ed872c23b67a0a331d36d3765df65a242ae0457f8497",
+      "name": "R-505 hash",
+      "pass": true
+    },
+    {
+      "actual": "ea8495c9e12e464506ece41f4e75fe3044c922c1da71ea56dea0e387d8ac5d1e",
+      "expected": "ea8495c9e12e464506ece41f4e75fe3044c922c1da71ea56dea0e387d8ac5d1e",
+      "name": "PROJECTIVE hash",
+      "pass": true
+    },
+    {
+      "actual": "3938987009c2ccf1a81272655277f1fa21dbfddc47fd49e2497975dc86e7f6fe",
+      "expected": "3938987009c2ccf1a81272655277f1fa21dbfddc47fd49e2497975dc86e7f6fe",
+      "name": "Q0 hash",
+      "pass": true
+    },
+    {
+      "actual": "1156ed970d985df2bded2ce5bea399e0502128fc608883802c88c19e74827b51",
+      "expected": "1156ed970d985df2bded2ce5bea399e0502128fc608883802c88c19e74827b51",
+      "name": "R506 source hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declarations": [
+          "weighted_tail_abs_bound",
+          "tail_bound_zero"
+        ],
+        "path": "verification/lean/Tect/R506.lean",
+        "sha256": "1156ed970d985df2bded2ce5bea399e0502128fc608883802c88c19e74827b51"
+      },
+      "expected": [
+        "weighted_tail_abs_bound",
+        "tail_bound_zero"
+      ],
+      "name": "R506 registry pin",
+      "pass": true
+    },
+    {
+      "actual": {
+        "final_newline": true,
+        "lf": true
+      },
+      "expected": "LF/no escape",
+      "name": "R506 source policy",
+      "pass": true
+    },
+    {
+      "actual": [
+        "weighted_tail_abs_bound",
+        "tail_bound_zero"
+      ],
+      "expected": [
+        "weighted_tail_abs_bound",
+        "tail_bound_zero"
+      ],
+      "name": "declaration markers",
+      "pass": true
+    },
+    {
+      "actual": "leanprover/lean4:v4.32.1",
+      "expected": "leanprover/lean4:v4.32.1",
+      "name": "toolchain pin",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R506.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compilation",
+      "pass": true
+    },
+    {
+      "actual": {
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+          "constructed_hypothesis": false,
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "epistemic_layer": "L2_FINITE_TAIL_ERROR_OBLIGATION",
+          "external_source": false,
+          "model_change": false,
+          "physical_authority": false,
+          "source_law_present": false,
+          "synthetic_fixture": false
+        },
+        "status": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "CONDITIONAL_SUPPORT_ONLY",
+          "physical_promotion": false,
+          "source_law_present": false,
+          "verdict": "HOLD_FOR_EVIDENCE"
+        }
+      },
+      "expected": "HOLD/no law/no promotion",
+      "name": "conditional HOLD firewall",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "HOLD_FOR_EVIDENCE_SOURCE_OWNER_FULL_Q_WEIGHT_LAW_ABSENT",
+        "csw_role": "DOMINATION_ONLY",
+        "omega_status": "NOT_DEFINED",
+        "physical_promotion": false,
+        "positivity_normalization": "NOT_TESTABLE",
+        "projective_consistency": "NOT_TESTABLE",
+        "r484_boundary_defect": "RETAINED_16_OVER_9",
+        "stationarity": "NOT_TESTABLE",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "weak_cylinder_limit": "NOT_TESTABLE"
+      },
+      "expected": "HOLD/omega undefined",
+      "name": "parent full-Q state remains open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "R503": "HOLD_FOR_EVIDENCE",
+        "R504": "HOLD_FOR_EVIDENCE",
+        "R505": "HOLD_FOR_EVIDENCE"
+      },
+      "expected": "all HOLD",
+      "name": "conditional bridges remain open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "R-484": "The hidden-diagonal boundary defect 16/9 remains retained in every future component input; this theorem neither removes nor averages it.",
+        "R-490": "C_sw=540 is a domination-only input and is not a probability, a tail mass, or a proof of this theorem.",
+        "limit_order": "The PAH-001 declared order is unchanged. A future source owner must establish tail mass decay in that order; finite tail control alone is not an ordered-limit proof."
+      },
+      "expected": "defect retained; C_sw domination-only",
+      "name": "R484 and C_sw roles retained",
+      "pass": true
+    },
+    {
+      "actual": {
+        "combination_role": "A future full-Q Cauchy proof may add this tail term to the R-503 finite-block error. R-503, R-504 and R-505 remain conditional support only; none supplies the present tail mass or the common envelope.",
+        "hypotheses": "Weights satisfy w_i>=0, the common component envelope satisfies |a_i|<=c on s with c>=0, and the supplied tail mass satisfies sum_{i in s} w_i<=tau. The latter is a future source-owned input, not a value asserted by this packet."
+      },
+      "expected": "tail mass is an input contract",
+      "name": "source-owned tail input remains absent",
+      "pass": true
+    },
+    {
+      "actual": {
+        "c": "3",
+        "tail_mass": "1",
+        "tau": "1",
+        "values": [
+          "2",
+          "-1",
+          "3"
+        ],
+        "weights": [
+          "1/4",
+          "1/4",
+          "1/2"
+        ]
+      },
+      "expected": "w>=0, c>=0, |a_i|<=c, sum(w)<=tau",
+      "name": "finite tail hypotheses",
+      "pass": true
+    },
+    {
+      "actual": {
+        "absolute_tail": "7/4",
+        "bound": "3",
+        "weighted_tail": "7/4"
+      },
+      "expected": "|sum w_i*a_i| <= c*tau",
+      "name": "finite weighted-tail inequality",
+      "pass": true
+    },
+    {
+      "actual": {
+        "zero_tail": "0"
+      },
+      "expected": "zero",
+      "name": "zero-tail corollary",
+      "pass": true
+    },
+    {
+      "actual": "A future full-Q Cauchy proof may add this tail term to the R-503 finite-block error. R-503, R-504 and R-505 remain conditional support only; none supplies the present tail mass or the common envelope.",
+      "expected": "finite block plus explicit tail term",
+      "name": "R503 combination boundary",
+      "pass": true
+    },
+    {
+      "actual": [
+        "This is a finite conditional inequality, not a source-owned full-Q Gibbs law.",
+        "It does not prove a Cauchy sequence, a weak cylinder limit, projective consistency, positivity/normalization, stationarity, closability or a semigroup.",
+        "It does not repair the R-484 boundary defect or convert C_sw=540 into a measure.",
+        "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+        "Markov time remains external stochastic time."
+      ],
+      "expected": "global limit and physical claims excluded",
+      "name": "non-claim text",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-TAIL-BOUND-LEAN-INTEGRATED-001",
+  "claim_bearing": false,
+  "classification": "AUXILIARY_SUPPORT_FINITE_TAIL_BOUND",
+  "derived": {
+    "absolute_tail": "7/4",
+    "certified_upper_bound": "3",
+    "formula": "|sum_i w_i a_i| <= c * tau",
+    "tail_mass": "1",
+    "weighted_tail": "7/4"
+  },
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R506.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "next_question": "Can the source owner supply a normalized cross-Q law with a finite-block/tail split, a common cylinder envelope c, and tau->0 in the fixed PAH-001 limit order?",
+  "non_claims": [
+    "This is a finite conditional inequality, not a source-owned full-Q Gibbs law.",
+    "It does not prove a Cauchy sequence, a weak cylinder limit, projective consistency, positivity/normalization, stationarity, closability or a semigroup.",
+    "It does not repair the R-484 boundary defect or convert C_sw=540 into a measure.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "omega_status": "NOT_DEFINED",
+  "passed": 23,
+  "projective_consistency": "NOT_TESTABLE",
+  "reproduction": {
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_tail_bound_lean_verify_hostile.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_tail_bound_lean_verify_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_tail_bound_lean_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R506.lean"
+  },
+  "run_kind": "integrated",
+  "schema": "tect/pah-omc014-tail-bound-lean-integrated/1.0",
+  "scope": {
+    "common_envelope": "3",
+    "component_values": [
+      "2",
+      "-1",
+      "3"
+    ],
+    "source_owned_tail_law": "not supplied",
+    "tail_card": 3,
+    "tail_mass_bound": "1",
+    "weights": [
+      "1/4",
+      "1/4",
+      "1/2"
+    ]
+  },
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "PROJECTIVE": "ea8495c9e12e464506ece41f4e75fe3044c922c1da71ea56dea0e387d8ac5d1e",
+    "Q0": "3938987009c2ccf1a81272655277f1fa21dbfddc47fd49e2497975dc86e7f6fe",
+    "R-503": "25ae1c3e67444c4dcca73c93bb2ecb82b30d2750daf477feb0b7cafe4a393d2a",
+    "R-504": "83f0c578fb44de7e33b646ef2cee3a7d757c6ede6db40c60da31b9651e463186",
+    "R-505": "b7918dec2224b66523c5ed872c23b67a0a331d36d3765df65a242ae0457f8497",
+    "lean": "1156ed970d985df2bded2ce5bea399e0502128fc608883802c88c19e74827b51",
+    "manifest": "310a73ea82b794b7aabe190de514764fe6ea5e45727bc623566dd3d64710686c"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_cylinder_limit": "NOT_TESTABLE"
+}

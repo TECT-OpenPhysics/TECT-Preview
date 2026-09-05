@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**947 accepted events** · latest 25 shown below · machine locator: `index.json`
+**950 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,9 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-q3lock-exp-001581-multidimensional-fekete-and-m` — [Q3LOCK EXP-001581 multidimensional Fekete and moving-temperature convexity audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001581-multidimensional-fekete-and-m) |
+| 2026-09-05 | `20260905-q3lock-r-498-periodic-open-pressure-seam-and-mi` — [Q3LOCK R-498 periodic/open pressure seam and min--max audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-r-498-periodic-open-pressure-seam-and-mi) |
+| 2026-09-05 | `20260905-q3lock-source-window-projective-w-t-tightness-d` — [Q3LOCK source-window projective W_t tightness diagonal audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-window-projective-w-t-tightness-d) |
 | 2026-09-05 | `20260905-q3lock-source-zero-dlr-kernel-determining-class` — [Q3LOCK source-zero DLR kernel determining-class audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-zero-dlr-kernel-determining-class) |
 | 2026-09-05 | `20260905-q3lock-kp-source-window-uniform-moment-audit-20` — [Q3LOCK KP source-window uniform moment audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kp-source-window-uniform-moment-audit-20) |
 | 2026-09-05 | `20260905-q3lock-kp-vector-theorem-domain-crosswalk-audit` — [Q3LOCK KP vector theorem-domain crosswalk audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kp-vector-theorem-domain-crosswalk-audit) |
@@ -39,9 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-q3lock-public-event-projection-p0-redaction-rep` — [Q3LOCK public event projection P0 redaction repaired (EXP-001552)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-public-event-projection-p0-redaction-rep) |
 | 2026-09-05 | `20260905-q3lock-r-497-manifest-json-delimiter-repaired-e` — [Q3LOCK R-497 manifest JSON delimiter repaired (EXP-001551)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-r-497-manifest-json-delimiter-repaired-e) |
 | 2026-09-05 | `20260905-q3lock-temporal-sidecar-manifest-pin-refreshed` — [Q3LOCK temporal-sidecar manifest pin refreshed (EXP-001550)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-temporal-sidecar-manifest-pin-refreshed) |
-| 2026-09-05 | `20260905-q3lock-scope-firewall-source-hash-pin-corrected` — [Q3LOCK scope-firewall source-hash pin corrected (EXP-001549)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-scope-firewall-source-hash-pin-corrected) |
-| 2026-09-05 | `20260905-q3lock-kp-v1-theorem-locators-corrected-2026-09` — [Q3LOCK KP v1 theorem locators corrected] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kp-v1-theorem-locators-corrected-2026-09) |
-| 2026-09-05 | `20260905-q3lock-exp-000782-upstream-scope-firewall-recor` — [Q3LOCK EXP-000782 upstream scope firewall recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-000782-upstream-scope-firewall-recor) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 919–947 | 29 | [000919-000968.md](pages/000919-000968.md) |
+| 919–950 | 32 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |

@@ -1,0 +1,99 @@
+{
+  "schema": "tect/pah-omc014-sign-change-lean-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-SIGN-CHANGE-LEAN",
+  "version": "0.1.0",
+  "title": "Conditional finite-mixture sign-change diagnostic",
+  "purpose": "Record an exact finite diagnostic for a future PAH-OMC-014 component mismatch. If a normalized nonnegative mixture has zero scalar mismatch for one fixed common cylinder, at least one component mismatch is nonpositive and at least one is nonnegative. This narrows the source-owner task without supplying sector weights or asserting that cancellation is attainable.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "source_law_present": false,
+    "claim_bearing": false,
+    "physical_authority": false,
+    "model_change": false,
+    "synthetic_fixture": false,
+    "epistemic_layer": "L2_FINITE_CONVEX_HULL_DIAGNOSTIC"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PROJECTIVE-KERNEL-OBLIGATION": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-projective-kernel-obligation-260905.md",
+      "sha256": "ea8495c9e12e464506ece41f4e75fe3044c922c1da71ea56dea0e387d8ac5d1e"
+    },
+    "R504-SEPARATOR": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-separator-lean-manifest.json",
+      "sha256": "83f0c578fb44de7e33b646ef2cee3a7d757c6ede6db40c60da31b9651e463186"
+    },
+    "Q0-COMPONENT-OBSTRUCTION": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-q0-projective-obstruction/integrated.json",
+      "sha256": "3938987009c2ccf1a81272655277f1fa21dbfddc47fd49e2497975dc86e7f6fe"
+    }
+  },
+  "lean": {
+    "path": "verification/lean/Tect/R505.lean",
+    "sha256": "c99b4c0a5d4e138d2c956a00ffe7d9a64ca3583317eb96b70821a40e8654c5c5",
+    "declarations": ["zero_mixture_requires_sign_change"],
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "scope": "Abstract finite nonempty index type, normalized nonnegative real weights and an exact zero scalar weighted mismatch; no PAH component vector or source law is instantiated."
+  },
+  "fixed_scope": {
+    "functional_and_states": "Use unchanged PAH-001 fixed-Q functional/rates and PAH-OMC-014 fixed-Q Gibbs components; no counterterm, refit, conditional averaging, new carrier or altered projection.",
+    "mismatch_definition": "For one fixed bounded grade-blind common cylinder f and a future source-owned finite component block, d(i) is the exact scalar projective mismatch of component i. R505 uses only the supplied real values.",
+    "mixture_definition": "weightedMismatch(w,d)=sum_i w_i*d(i) over a finite nonempty component index type.",
+    "hypothesis": "Weights are nonnegative, normalized, and the weighted mismatch is exactly zero.",
+    "conclusion": "The component mismatch range crosses zero weakly: some d(i)<=0 and some d(j)>=0.",
+    "boundary": "Retain the R-484 hidden-diagonal defect 16/9 in any future d(i); retain R-490 C_sw=540 as domination-only. Neither is a sector probability or a separator."
+  },
+  "theorem_contract": {
+    "assumptions": [
+      "The component index type is finite and nonempty.",
+      "Every mixture weight is nonnegative and the weights sum to one.",
+      "The exact scalar weighted mismatch is zero."
+    ],
+    "conclusion": "At least one component mismatch is <=0 and at least one is >=0.",
+    "not_supplied": [
+      "No converse construction of weights is asserted.",
+      "No PAH component mismatch vector or source-owned full-Q law is supplied.",
+      "No claim that zero lies in the convex hull for the actual PAH components is made.",
+      "No projective kernel, common embedding, tail estimate, Cauchy error, weak limit or stationarity passage is established."
+    ]
+  },
+  "status": {
+    "classification": "CONDITIONAL_SUPPORT_ONLY",
+    "source_law_present": false,
+    "active_gate_change": false,
+    "claim_bearing": false,
+    "physical_promotion": false,
+    "verdict": "HOLD_FOR_EVIDENCE"
+  },
+  "source_owner_obligation": [
+    "Supply the exact d(i) vector for one fixed common cylinder and finite component block.",
+    "If exact projectivity is claimed, supply normalized nonnegative weights or a cross-Q stochastic kernel independently of the observed mismatch.",
+    "If exact projectivity is denied, prove a source-owned one-sided separator or a convex-hull no-zero certificate; R505 shows that any exact zero mixture would require weak sign crossing.",
+    "Retain the fixed PAH-001 limit order, R-484 boundary defect and R-490 domination role."
+  ],
+  "non_claims": [
+    "This theorem does not instantiate PAH sector weights, a projective kernel, or a full-Q Gibbs state.",
+    "It does not prove that cancellation exists when signs cross, and it does not upgrade the Q=0 route-local obstruction to a global no-go.",
+    "It does not prove a weak cylinder limit, positivity/normalization of omega, R-488 global nonzero, stationarity, closability or a semigroup.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "reproduction": {
+    "lean": "Set-Location verification/lean; lake env lean Tect/R505.lean",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_sign_change_lean_verify.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_sign_change_lean_verify_independent.py",
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_sign_change_lean_verify_hostile.py"
+  },
+  "next_question": "For one source-owned PAH-OMC-014 cylinder, does the exact finite component mismatch vector admit a common one-sided separator, or does its convex hull contain zero under an independently supplied normalized law?",
+  "revisit_condition": "Reopen when the source owner supplies the exact mismatch vector and normalized law/kernel, or a no-zero convex-hull certificate, without fitting to the target cylinder.",
+  "related": ["R-500", "R-501", "R-502", "R-503", "R-504" ]
+}

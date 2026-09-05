@@ -1,0 +1,62 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-014 zero-mixture requires weak component sign crossing",
+  "question": "For one fixed common cylinder, what necessary finite condition must a normalized nonnegative full-Q mixture satisfy if its scalar projective mismatch is exactly zero?",
+  "finding": "Lean R505 proves that on a finite nonempty component block, nonnegative weights summing to one and an exactly zero weighted mismatch imply that some component mismatch d(i) is <=0 and some component mismatch d(j) is >=0. The integrated exact fixture uses weights (1/2,1/2) and mismatches (-1,1); the independent fixture uses weights (1/3,1/3,1/3) and mismatches (-2,0,2). Neither fixture is a PAH sector law or PAH mismatch vector.",
+  "decision_reason": "R504 supplied a sufficient one-sided positive-separator obstruction, while R500-R503 separated kernel, positivity, witness-weight and finite-mixture-error obligations. R505 complements that obstruction with the necessary weak sign-crossing condition for any exact scalar cancellation. It narrows the future source-owner task without asserting the converse, choosing weights, or upgrading the route-local Q=0 result to a global no-go.",
+  "boundary": "Conditional finite convex-hull diagnostic only. PAH-001 functional/rates, PAH-OMC-010 Gibbs weighting, PAH-OMC-012 full-Q graded domain/projection and PAH-OMC-014 order remain unchanged. R-484 hidden-diagonal defect 16/9 is retained and R-490 C_sw=540 remains domination-only. No source law, common embedding, tail estimate, projective equality, weak cylinder limit, positivity/normalization, stationarity, closability, semigroup, continuum or physical conclusion is claimed.",
+  "next_action": "Obtain from a source owner the exact component mismatch vector for one fixed common cylinder and the independently specified normalized full-Q law/kernel; classify its finite convex hull using R504/R505, then supply the separate tail and Cauchy estimates required by PAH-OMC-014.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "task_id": "T-054",
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "related": [{"id": "EXP-001576", "relation": "continues"}],
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-014, the projective-kernel obligation, the R504 separator manifest and the route-local Q=0 run.",
+    "Formalize the finite weightedMismatch sign implication for a nonempty finite component index type without inserting PAH values.",
+    "Compile R505 under Lean 4.32.1, register its exact source hash and reject escape tokens.",
+    "Replay independent exact rational zero fixtures and run integrated, independent and hostile mutation verifiers.",
+    "Retain HOLD_FOR_EVIDENCE because no source-owned law, mismatch vector, common embedding or tail estimate is present."
+  ],
+  "assumptions": [
+    "The future component block is finite and nonempty and refers to one fixed bounded common cylinder.",
+    "The future component mismatch values are real and are evaluated before any weight fitting.",
+    "The future sector weights are nonnegative and normalized.",
+    "The fixed PAH-001 functional, boundary convention and limit order remain unchanged."
+  ],
+  "missing_assumptions": [
+    "An exact source-owned mismatch vector for the declared full-Q component block.",
+    "A source-owned normalized nonnegative sector law or cross-Q stochastic kernel.",
+    "A source-owned one-sided separator or a convex-hull no-zero certificate if projective equality is to be ruled out.",
+    "A common embedding, tail control, topology/Cauchy estimate and stationarity domain for the ordered limit."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-014-sign-change-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-separator-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-projective-kernel-obligation-260905.md#required_source_owned_statement",
+    "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json#status",
+    "verification/lean/Tect/R505.lean#zero_mixture_requires_sign_change",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-sign-change-lean/integrated.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-sign-change-lean/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-sign-change-lean/hostile.json#mutation_policy",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-q0-projective-obstruction/integrated.json#boundary"
+  ],
+  "adversarial_review": [
+    {"check": "Does R505 select, fit or normalize a PAH sector law?", "disposition": "UPHELD AS FALSE: weights appear only as theorem variables and exact fixtures; source_law_present remains false."},
+    {"check": "Does weak sign crossing prove that cancellation exists for PAH?", "disposition": "UPHELD AS FALSE: R505 is only a necessary condition and supplies no converse construction."},
+    {"check": "Does sign crossing erase the R504 one-sided obstruction?", "disposition": "UPHELD AS FALSE: R504 remains a separate sufficient no-zero certificate when a source owner proves a common positive separator."},
+    {"check": "Does the finite theorem control a growing-Q tail or ordered limit?", "disposition": "UPHELD AS FALSE: tail, embedding, topology and Cauchy data remain missing."},
+    {"check": "Does R505 promote the route-local Q=0 negative to a global no-go?", "disposition": "UPHELD AS FALSE: Q=0 is retained only as scoped evidence; other components may cancel."},
+    {"check": "Does this establish physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusions?", "disposition": "UPHELD AS FALSE: all such interpretations remain explicit non-claims."}
+  ],
+  "non_claims": [
+    "No source-owned mismatch vector, sector weight law, projective kernel or full-Q Gibbs state is supplied.",
+    "No converse cancellation construction, global projective no-go, Cauchy estimate or weak cylinder limit is proved.",
+    "No R-488 global nonzero, stationarity, closability or Markov semigroup conclusion follows.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "revisit_condition": "Reopen when a source owner supplies the exact all-component mismatch vector and normalized law/kernel, or a source-owned one-sided/no-zero convex-hull certificate, without fitting to the target cylinder; also reopen if an exact parent-scope counterexample invalidates the finite theorem.",
+  "provenance": "contemporaneous",
+  "verdict": "advanced"
+}

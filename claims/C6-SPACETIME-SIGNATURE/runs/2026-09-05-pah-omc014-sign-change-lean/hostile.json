@@ -1,0 +1,175 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "c99b4c0a5d4e138d2c956a00ffe7d9a64ca3583317eb96b70821a40e8654c5c5",
+      "expected": "c99b4c0a5d4e138d2c956a00ffe7d9a64ca3583317eb96b70821a40e8654c5c5",
+      "name": "canonical source hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "epistemic_layer": "L2_FINITE_CONVEX_HULL_DIAGNOSTIC",
+          "external_source": false,
+          "model_change": false,
+          "physical_authority": false,
+          "source_law_present": false,
+          "synthetic_fixture": false
+        },
+        "status": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "CONDITIONAL_SUPPORT_ONLY",
+          "physical_promotion": false,
+          "source_law_present": false,
+          "verdict": "HOLD_FOR_EVIDENCE"
+        }
+      },
+      "expected": "HOLD/no law/no claim",
+      "name": "canonical HOLD",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": false,
+      "name": "reject source-law injection",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": false,
+      "name": "reject status promotion",
+      "pass": true
+    },
+    {
+      "actual": "R-484 is cancelled and C_sw=540 is a probability.",
+      "expected": "retained defect/domination only",
+      "name": "reject boundary/C_sw mutation",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "unchanged parent",
+      "name": "reject PAH functional mutation",
+      "pass": true
+    },
+    {
+      "actual": "mutated hash",
+      "expected": "canonical hash",
+      "name": "reject parent hash tampering",
+      "pass": true
+    },
+    {
+      "actual": "mutated pin",
+      "expected": "c99b4c0a5d4e138d2c956a00ffe7d9a64ca3583317eb96b70821a40e8654c5c5",
+      "name": "reject registry mismatch",
+      "pass": true
+    },
+    {
+      "actual": {
+        "canonical_sha": "c99b4c0a5d4e138d2c956a00ffe7d9a64ca3583317eb96b70821a40e8654c5c5",
+        "mutated": true
+      },
+      "expected": "canonical theorem retained",
+      "name": "reject weakened conclusion",
+      "pass": true
+    },
+    {
+      "actual": {
+        "sum": "5/6"
+      },
+      "expected": "weights sum to one",
+      "name": "reject dropped normalization",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/2",
+        "-1/2"
+      ],
+      "expected": "weights nonnegative",
+      "name": "reject negative weight",
+      "pass": true
+    },
+    {
+      "actual": {
+        "mismatch": [
+          "-1",
+          "1"
+        ],
+        "value": "0"
+      },
+      "expected": "sign crossing retained",
+      "name": "reject erased sign crossing",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "no escape tokens",
+      "name": "no escape token",
+      "pass": true
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "parent remains open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R505.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "canonical Lean compilation",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-SIGN-CHANGE-LEAN-HOSTILE-001",
+  "claim_bearing": false,
+  "classification": "CONDITIONAL_SUPPORT_ONLY",
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R505.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "mutation_policy": "All hostile changes are in-memory only; no canonical model, source law, separator, boundary term, weight or physical interpretation is adopted.",
+  "next_question": "For one source-owned PAH-OMC-014 cylinder, does the exact finite component mismatch vector admit a common one-sided separator, or does its convex hull contain zero under an independently supplied normalized law?",
+  "non_claims": [
+    "This theorem does not instantiate PAH sector weights, a projective kernel, or a full-Q Gibbs state.",
+    "It does not prove that cancellation exists when signs cross, and it does not upgrade the Q=0 route-local obstruction to a global no-go.",
+    "It does not prove a weak cylinder limit, positivity/normalization of omega, R-488 global nonzero, stationarity, closability or a semigroup.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "passed": 15,
+  "projective_consistency": "NOT_TESTABLE",
+  "reproduction": {
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_sign_change_lean_verify_hostile.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_sign_change_lean_verify_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_sign_change_lean_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R505.lean"
+  },
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc014-sign-change-lean-hostile/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "lean": "c99b4c0a5d4e138d2c956a00ffe7d9a64ca3583317eb96b70821a40e8654c5c5",
+    "manifest": "b7918dec2224b66523c5ed872c23b67a0a331d36d3765df65a242ae0457f8497"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_cylinder_limit": "NOT_TESTABLE"
+}

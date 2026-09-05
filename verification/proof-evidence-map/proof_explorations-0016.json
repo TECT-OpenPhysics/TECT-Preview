@@ -6742,6 +6742,533 @@
       "title": "Q3LOCK source-to-zero DLR kernel passage has an explicit determining-class bridge",
       "topic": "Q3LOCK source-varying KP specification and DLR limit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Relative compactness in one fixed W_alpha automatically gives W_t tightness.",
+          "disposition": "UPHELD AS FALSE: the projective topology requires one cofinal diagonal compact set."
+        },
+        {
+          "check": "A compact set may be selected after seeing the source sequence.",
+          "disposition": "UPHELD AS FALSE: the radii and tail budgets are fixed uniformly over the complete source window."
+        },
+        {
+          "check": "Bounds in Omega_alpha alone supply the KP compact embedding.",
+          "disposition": "UPHELD AS FALSE: the stronger Holder scale Omega_(alpha,sigma) is required."
+        },
+        {
+          "check": "A decreasing cofinal alpha_k sequence misses uncountably many KP weights.",
+          "disposition": "DISMISSED: cofinality and the compact embeddings control every alpha in I."
+        },
+        {
+          "check": "Pointwise kernel Feller continuity passes the source-zero DLR equation without a tightness split.",
+          "disposition": "UPHELD AS FALSE: uniform compact-boundary continuity and a complement tail bound are both required."
+        },
+        {
+          "check": "The diagonal extraction certifies the strict cusp or two phases.",
+          "disposition": "UPHELD AS FALSE: pressure, FKG, FSS, zero-mode, KKK and parity inputs remain conditional."
+        }
+      ],
+      "assumptions": [
+        "The exact Q3LOCK quartic and KP kernel estimates provide source-uniform second moments in Omega_(alpha_k,sigma) for every k.",
+        "KP compactly embeds Omega_(alpha,sigma) into Omega_(alpha') whenever alpha < alpha'.",
+        "The source-varying measures mu_n belong to G_t(h_n) and are probability measures on the Polish projective-limit space Omega_t.",
+        "The compact-boundary source-continuity estimate and KP Lemmas 2.8 and 2.11 apply to the selected topology and determining class."
+      ],
+      "boundary": "Conditional source-window W_t extraction and source-to-zero DLR topology audit only. No cusp, phase theorem, claim registration, manuscript, or PDF is produced.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The preceding source-window audit supplied source-independent Holder-scale moments but left the projective-limit quantifier implicit. A cofinal sequence alpha_k decreasing to zero, summable Markov tail budgets, and the KP compact embeddings yield one compact Omega_t set carrying all projective coordinates. This makes the union of G_t(h) for |h|<=h_0 W_t-tight and permits extraction of a W_t-convergent subsequence for h_n -> 0 before applying the compact-boundary kernel estimate.",
+      "evidence_refs": [
+        "strategy/q3lock-kp-source-window-projective-tightness-diagonal-audit-260905.md#2-kp-scales-and-the-uniform-estimates-to-be-used",
+        "strategy/q3lock-kp-source-window-projective-tightness-diagonal-audit-260905.md#3-explicit-diagonal-compact-set",
+        "strategy/q3lock-kp-source-window-projective-tightness-diagonal-audit-260905.md#4-source-varying-dlr-extraction",
+        "strategy/q3lock-kp-source-window-uniform-moment-audit-260905.md#4-uniform-kp-exponential-moments-for-all-source-dlr-states",
+        "strategy/q3lock-kp-source-window-uniform-moment-audit-260905.md#5-a-common-weighted-tempered-tightness-bound",
+        "strategy/q3lock-source-zero-dlr-kernel-determining-class-audit-260905.md#5-passing-the-dlr-identity-to-zero-source",
+        "strategy/q3lock-literature-source-freeze-260905.md#3-1-kozitsky--pasurek-kp"
+      ],
+      "finding": "Assuming the common source-window Holder moments and KP compact-embedding hypotheses, choose alpha_k in I with alpha_k decreasing to zero and radii R_k whose Markov tail costs are summable. The intersection of the corresponding stronger-space balls is compact in Omega_t by a diagonal subsequence and lower-semicontinuity argument, and every source DLR state assigns it probability at least 1-epsilon. Hence source-varying states with h_n -> 0 admit W_t-convergent subsequences. The compact-boundary kernel estimate and KP determining-class step can then pass the DLR equation to h=0. The result remains conditional on independent acceptance of the imported estimates and does not close a cusp or phase theorem.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001578",
+      "method": [
+        "Fix the KP exponential-weight interval, a Holder exponent sigma, and a strictly decreasing cofinal sequence alpha_k -> 0.",
+        "Use the source-uniform Omega_(alpha_k,sigma) second-moment constants from EXP-001575 and choose summable Markov tail budgets with radii R_k.",
+        "Construct the intersection of stronger-space balls and prove compactness in the projective-limit topology by the KP compact embeddings, diagonal extraction and lower semicontinuity.",
+        "Apply the common compact set to a sequence mu_n in G_t(h_n), obtain a W_t-convergent subsequence by Prokhorov, and then invoke the EXP-001577 compact-boundary source-zero kernel passage.",
+        "Record the quantifier boundary and retain the independent review, claim, content-freeze and PDF gates."
+      ],
+      "missing_assumptions": [
+        "Independent line-by-line acceptance of the source-uniform KP Holder moments and their constants.",
+        "Independent verification that the compact-embedding and lower-semicontinuity diagonal is valid for the exact KP Omega_(alpha,sigma) spaces.",
+        "Independent acceptance of the source-varying kernel estimate, pressure-limit/source-tangent composition, and the other P-06, P-09, operator, KKK and FKG inputs.",
+        "Claim/result registration, clean replay, content freeze, release review, external mathematical referee and final PDF gate."
+      ],
+      "next_action": "Use this explicit W_t extraction in the source-tangent proof, then obtain independent acceptance of the moment and compactness constants before deciding whether any bounded result line can be promoted.",
+      "non_claims": [
+        "No strict source cusp, positive zero-mode lower bound, positive-lambda phase theorem, or DLR multiplicity is certified by this record alone.",
+        "No extremality, purity, clustering, KMS state, common real-time dynamics, ground-state phase, spectral gap, continuum limit, physical vacuum, cosmological interpretation, C6, CP1, Sector A, Pre-A, or Yang--Mills conclusion is certified.",
+        "No claim card, manuscript, submission, upload, release, tag, or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can source-uniform Holder moments be converted into one projective-limit compact set so that source DLR states with h_n -> 0 have a W_t-convergent subsequence before the zero-source kernel passage?",
+      "recorded_at": "2026-09-05T01:36:18Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001575",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001577",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001574",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000781",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK source-window moments yield an explicit projective W_t extraction",
+      "topic": "Q3LOCK source-window KP projective-limit tightness and DLR source tangent",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does R505 select, fit or normalize a PAH sector law?",
+          "disposition": "UPHELD AS FALSE: weights appear only as theorem variables and exact fixtures; source_law_present remains false."
+        },
+        {
+          "check": "Does weak sign crossing prove that cancellation exists for PAH?",
+          "disposition": "UPHELD AS FALSE: R505 is only a necessary condition and supplies no converse construction."
+        },
+        {
+          "check": "Does sign crossing erase the R504 one-sided obstruction?",
+          "disposition": "UPHELD AS FALSE: R504 remains a separate sufficient no-zero certificate when a source owner proves a common positive separator."
+        },
+        {
+          "check": "Does the finite theorem control a growing-Q tail or ordered limit?",
+          "disposition": "UPHELD AS FALSE: tail, embedding, topology and Cauchy data remain missing."
+        },
+        {
+          "check": "Does R505 promote the route-local Q=0 negative to a global no-go?",
+          "disposition": "UPHELD AS FALSE: Q=0 is retained only as scoped evidence; other components may cancel."
+        },
+        {
+          "check": "Does this establish physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusions?",
+          "disposition": "UPHELD AS FALSE: all such interpretations remain explicit non-claims."
+        }
+      ],
+      "assumptions": [
+        "The future component block is finite and nonempty and refers to one fixed bounded common cylinder.",
+        "The future component mismatch values are real and are evaluated before any weight fitting.",
+        "The future sector weights are nonnegative and normalized.",
+        "The fixed PAH-001 functional, boundary convention and limit order remain unchanged."
+      ],
+      "boundary": "Conditional finite convex-hull diagnostic only. PAH-001 functional/rates, PAH-OMC-010 Gibbs weighting, PAH-OMC-012 full-Q graded domain/projection and PAH-OMC-014 order remain unchanged. R-484 hidden-diagonal defect 16/9 is retained and R-490 C_sw=540 remains domination-only. No source law, common embedding, tail estimate, projective equality, weak cylinder limit, positivity/normalization, stationarity, closability, semigroup, continuum or physical conclusion is claimed.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R504 supplied a sufficient one-sided positive-separator obstruction, while R500-R503 separated kernel, positivity, witness-weight and finite-mixture-error obligations. R505 complements that obstruction with the necessary weak sign-crossing condition for any exact scalar cancellation. It narrows the future source-owner task without asserting the converse, choosing weights, or upgrading the route-local Q=0 result to a global no-go.",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-014-sign-change-lean-manifest.json#theorem_contract",
+        "strategy/pa-hyp/PAH-OMC-014-separator-lean-manifest.json#theorem_contract",
+        "strategy/pa-hyp/PAH-OMC-014-projective-kernel-obligation-260905.md#required_source_owned_statement",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json#status",
+        "verification/lean/Tect/R505.lean#zero_mixture_requires_sign_change",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-sign-change-lean/integrated.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-sign-change-lean/independent.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-sign-change-lean/hostile.json#mutation_policy",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-q0-projective-obstruction/integrated.json#boundary"
+      ],
+      "finding": "Lean R505 proves that on a finite nonempty component block, nonnegative weights summing to one and an exactly zero weighted mismatch imply that some component mismatch d(i) is <=0 and some component mismatch d(j) is >=0. The integrated exact fixture uses weights (1/2,1/2) and mismatches (-1,1); the independent fixture uses weights (1/3,1/3,1/3) and mismatches (-2,0,2). Neither fixture is a PAH sector law or PAH mismatch vector.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001579",
+      "method": [
+        "Hash-pin PAH-001, PAH-OMC-014, the projective-kernel obligation, the R504 separator manifest and the route-local Q=0 run.",
+        "Formalize the finite weightedMismatch sign implication for a nonempty finite component index type without inserting PAH values.",
+        "Compile R505 under Lean 4.32.1, register its exact source hash and reject escape tokens.",
+        "Replay independent exact rational zero fixtures and run integrated, independent and hostile mutation verifiers.",
+        "Retain HOLD_FOR_EVIDENCE because no source-owned law, mismatch vector, common embedding or tail estimate is present."
+      ],
+      "missing_assumptions": [
+        "An exact source-owned mismatch vector for the declared full-Q component block.",
+        "A source-owned normalized nonnegative sector law or cross-Q stochastic kernel.",
+        "A source-owned one-sided separator or a convex-hull no-zero certificate if projective equality is to be ruled out.",
+        "A common embedding, tail control, topology/Cauchy estimate and stationarity domain for the ordered limit."
+      ],
+      "next_action": "Obtain from a source owner the exact component mismatch vector for one fixed common cylinder and the independently specified normalized full-Q law/kernel; classify its finite convex hull using R504/R505, then supply the separate tail and Cauchy estimates required by PAH-OMC-014.",
+      "non_claims": [
+        "No source-owned mismatch vector, sector weight law, projective kernel or full-Q Gibbs state is supplied.",
+        "No converse cancellation construction, global projective no-go, Cauchy estimate or weak cylinder limit is proved.",
+        "No R-488 global nonzero, stationarity, closability or Markov semigroup conclusion follows.",
+        "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+        "Markov time remains external stochastic time."
+      ],
+      "provenance": "contemporaneous",
+      "question": "For one fixed common cylinder, what necessary finite condition must a normalized nonnegative full-Q mixture satisfy if its scalar projective mismatch is exactly zero?",
+      "recorded_at": "2026-09-05T01:49:19Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001576",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "revisit_condition": "Reopen when a source owner supplies the exact all-component mismatch vector and normalized law/kernel, or a source-owned one-sided/no-zero convex-hull certificate, without fitting to the target cylinder; also reopen if an exact parent-scope counterexample invalidates the finite theorem.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "PAH-OMC-014 zero-mixture requires weak component sign crossing",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Counting the seam bonds alone controls the unbounded seam form.",
+          "disposition": "UPHELD AS FALSE: quartic Young absorption is required before min--max comparison."
+        },
+        {
+          "check": "The periodic onsite allocation is 3c/2 under the declared difference Hamiltonian.",
+          "disposition": "UPHELD AS FALSE: the constant-field identity gives the corrected allocation 3c."
+        },
+        {
+          "check": "Periodic L=2 bonds may be collapsed to a simple graph without changing the proof.",
+          "disposition": "UPHELD AS FALSE: the positive-direction edge multiset retains parallel bond occurrences."
+        },
+        {
+          "check": "The heat-trace sandwich follows from operator monotonicity of exp(-beta H).",
+          "disposition": "UPHELD AS FALSE: the upper eigenvalue comparison and min--max principle supply the direction."
+        },
+        {
+          "check": "Fixed-beta pointwise convergence automatically handles the moving beta(1+eta) argument.",
+          "disposition": "UPHELD AS FALSE: convex equicontinuity on an interior beta interval is required."
+        },
+        {
+          "check": "The seam density error is O(L^-1) after choosing eta=L^(-1/2).",
+          "disposition": "UPHELD AS FALSE: the optimized displayed bound is O(L^(-1/2)) in density."
+        },
+        {
+          "check": "This finite audit closes the pressure limit or the Q3LOCK phase cusp.",
+          "disposition": "UPHELD AS FALSE: form-domain, Fekete, convex-limit, P-06/P-09 and KKK inputs remain conditional."
+        }
+      ],
+      "assumptions": [
+        "The EXP-000780 open-rectangle forms share the polynomial core needed for the periodic seam comparison.",
+        "The quartic coercivity and linear-volume bounds used in EXP-000780 hold uniformly on the declared compact source and positive-beta windows.",
+        "The multidimensional Fekete construction and the local convex-equicontinuity argument apply to the corrected periodic/open edge convention.",
+        "The eight-component volume normalization is n_L=8L^3 and the periodic positive-direction edge multiset is retained for L=2."
+      ],
+      "boundary": "Finite edge-count, corrected onsite-allocation, Young-constant and seam-density diagnostics only. No operator min--max theorem, thermodynamic pressure limit, phase conclusion, claim promotion, manuscript or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The periodic/open comparison requires an unbounded seam estimate. Recomputing the edge multiset gives 3L^2 seam scalar bonds and 48L^2 endpoint occurrences over eight components; incidence-based Young absorption gives 0 <= B_L <= eta Q_L + 288 c^2 L^2/(eta g). With eta=L^(-1/2), the resulting density scale is O(L^(-1/2)). The corrected periodic onsite allocation is 3c, while open boxes require the site-dependent degree. The executable finite checks pass and are deterministic, but analytic min--max, Fekete and convex-limit acceptance remain open.",
+      "evidence_refs": [
+        "strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md#2-explicit-edge-convention",
+        "strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md#3-periodic-spatial-expansion-and-the-onsite-factor",
+        "strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md#4-seam-young-bound-from-incidence",
+        "strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md#5-form-comparison-and-min--max-direction",
+        "strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md#6-density-scale-and-moving-temperature-seam",
+        "verification/scripts/q3lock_pressure_seam_minmax_audit.py#build_payload",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-pressure-seam-minmax-audit/result.json#assertions"
+      ],
+      "finding": "For the declared positive-direction periodic edge multiset, enumeration and closed formulas agree for L=2,4,6,8: open plus seam occurrences equal periodic occurrences, seam endpoint incidence is two per bond, and maximum site seam incidence is three per scalar component. The constant-field test rejects the 3c/2 onsite mutation. The incidence-derived Young split passes zero, alternating and seeded-random fixtures; the eta=L^(-1/2) density diagnostic decreases with L. The two-run output is byte-identical.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-498"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001580",
+      "method": [
+        "Enumerate the positive-direction open and periodic edge multisets, retaining wrap multiplicity and the L=2 case.",
+        "Compute scalar and eight-component endpoint incidences directly and cross-check the closed 3L^2 and 48L^2 formulas.",
+        "Expand the periodic difference form on a constant field and reject the half-incidence onsite coefficient.",
+        "Derive the per-endpoint quartic Young coefficient from the Q_L budget and maximize the residual quadratic to obtain its constant.",
+        "Check the resulting seam inequality on deterministic and seeded-random fields and recompute the min--max density scale for eta=L^(-1/2).",
+        "Replay the verifier twice to check deterministic JSON bytes and retain the analytic proof boundary."
+      ],
+      "missing_assumptions": [
+        "Independent mathematical acceptance of the common form core and Friedrichs/min--max comparison for the unbounded seam.",
+        "Independent acceptance of the multidimensional Fekete limit and the open/periodic moving-temperature convex-equicontinuity step.",
+        "Recomputation of every affected Q3LOCK/KP/FSS note with the corrected periodic onsite coefficient and explicit L=2 convention.",
+        "Completion of the P-06, P-09, KKK, source-window and external referee gates before any claim or manuscript promotion."
+      ],
+      "next_action": "Use the corrected edge and seam convention in the finite-volume pressure proof, obtain an independent line-by-line form/min--max/Fekete review, and only then decide whether any pressure result can be promoted while keeping the cusp and PDF gates deferred.",
+      "non_claims": [
+        "No unconditional thermodynamic pressure limit or periodic/open equality is certified by this diagnostic.",
+        "No strict source cusp, positive zero-mode lower bound, positive-lambda phase theorem or DLR multiplicity is certified.",
+        "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap, continuum, cosmological or Sector A conclusion follows.",
+        "No claim card, manuscript, submission, upload, release, tag or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the EXP-000780 periodic/open pressure comparison have the correct seam edge count, unbounded Young absorption, onsite factor and min--max density scaling under the declared eight-component Q3LOCK Hamiltonian?",
+      "recorded_at": "2026-09-05T02:02:44Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001571",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001572",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001573",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001578",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK periodic/open pressure seam and min--max scaling audit",
+      "topic": "Q3LOCK finite-volume pressure seam comparison, edge normalization and convex limit",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "A one-dimensional Fekete citation is enough for the three-dimensional even rectangles.",
+          "disposition": "UPHELD AS FALSE: the product tiling and remainder-volume estimate are explicit."
+        },
+        {
+          "check": "Odd remainders can be ignored as a boundary convention.",
+          "disposition": "UPHELD AS FALSE: every remainder must remain an admissible even rectangle."
+        },
+        {
+          "check": "The remainder terms need no linear stability bounds.",
+          "disposition": "UPHELD AS FALSE: the superadditive lower and subadditive upper bounds are used with opposite signs."
+        },
+        {
+          "check": "Pointwise convergence controls the moving beta without convexity.",
+          "disposition": "UPHELD AS FALSE: the interior secant estimate supplies the uniform O(eta) bridge."
+        },
+        {
+          "check": "The convex estimate is uniform down to beta=0.",
+          "disposition": "UPHELD AS FALSE: the constant diverges with the distance to the interval endpoint."
+        },
+        {
+          "check": "The finite fixtures prove the actual EXP-000780 pressure theorem.",
+          "disposition": "UPHELD AS FALSE: actual common-form, trace, thermodynamic and external-review hypotheses remain open."
+        }
+      ],
+      "assumptions": [
+        "The actual EXP-000780 open Hamiltonian forms are defined on a common polynomial core for every even rectangle and concatenation.",
+        "The finite-volume coercive lower and product-trial upper bounds are linear in coarse volume uniformly on the declared compact source and positive-beta windows.",
+        "The min--max eigenvalue comparison gives the stated log-partition subadditivity and periodic/open trace sandwich.",
+        "The moving-beta base point stays in an interior compact positive-beta interval before the limit is taken."
+      ],
+      "boundary": "Finite tiling, synthetic semigroup-sign, convex secant and moving-temperature seam diagnostics only. No EXP-000780 analytic form-domain, trace, Fekete, pressure-limit, phase, DLR or publication theorem is certified; no PDF is created.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R-498 verified the finite seam algebra but left the multidimensional Fekete and moving-temperature bridges as analytic obligations. Writing the product tiling and convex secant lemmas separately exposes the only finite hypotheses needed for those bridges and rejects odd-remainder, wrong-sign, endpoint-uniformity and normalization shortcuts. The checks are diagnostic fixtures and do not replace the EXP-000780 common-form or thermodynamic proof.",
+      "evidence_refs": [
+        "strategy/q3lock-fekete-convex-equicontinuity-audit-260905.md#2-even-rectangular-semigroup-and-the-two-fekete-directions",
+        "strategy/q3lock-fekete-convex-equicontinuity-audit-260905.md#3-explicit-three-dimensional-tiling",
+        "strategy/q3lock-fekete-convex-equicontinuity-audit-260905.md#4-convex-equicontinuity-for-the-moving-beta",
+        "verification/scripts/q3lock_fekete_convex_equicontinuity_audit.py#build_payload",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-fekete-convex-equicontinuity-audit/result.json#assertions"
+      ],
+      "finding": "The explicit product tiling partitions every tested even rectangle into full copies of a fixed even block and even remainder rectangles. Synthetic boundary-area envelopes satisfy the superadditive ground-energy and subadditive log-partition remainder inequalities with the correct lower/upper linear bounds. Exact piecewise-linear convex fixtures satisfy the interior secant estimate, while a max-margin mutation fails. Coupling the estimate to the independently derived seam constants gives the expected square-root density scale and keeps beta*(1+eta) inside an interior interval for sufficiently large L.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001581",
+      "method": [
+        "Define the even rectangular semigroup and write the superadditive ground-energy and subadditive log-partition directions used after the EXP-000780 form comparison.",
+        "Construct the three-dimensional product tiling with q_i full blocks and even remainders, prove the exact tile/remainder volume identity and derive the vanishing remainder fraction.",
+        "Evaluate the superadditive lower and subadditive upper remainder bounds on exact rational synthetic boundary-area envelopes.",
+        "Evaluate the interior convex secant constant on a max-of-affine convex function and reject a wrong max-margin mutation.",
+        "Recompute the eight-component seam constant and the eta=L^(-1/2) density scale, then check the moving beta remains in the interior interval for large L.",
+        "Replay the verifier to a temporary output and compare byte hashes for deterministic evidence."
+      ],
+      "missing_assumptions": [
+        "Independent line-by-line acceptance of the unbounded Q3LOCK Friedrichs form and min--max comparison in the actual EXP-000780 family.",
+        "Independent acceptance that the source-uniform linear bounds used in the synthetic remainder test hold for the actual open forms.",
+        "Independent acceptance of the full multidimensional Fekete limit and local-uniform pressure convergence, not just the finite tiling fixture.",
+        "Completion of P-06/P-09, KKK, source-window, projective extraction and external referee review before any claim or manuscript promotion."
+      ],
+      "next_action": "Obtain an independent line-by-line audit of the actual EXP-000780 common form core, linear bounds, min--max trace ordering and multidimensional Fekete hypotheses, then combine that review with the existing R-498 seam and P-06/P-09/KKK/source-window audits.",
+      "non_claims": [
+        "No unconditional pressure limit or periodic/open equality is certified.",
+        "No strict cusp, positive-lambda phase theorem or DLR multiplicity is certified.",
+        "No extremality, purity, clustering, real-time dynamics, KMS, ground-state phase, spectral gap or continuum result follows.",
+        "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap, cosmological or Sector A conclusion follows.",
+        "No claim promotion, manuscript, submission, upload, release, tag or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Do the multidimensional even-box Fekete step and the moving-beta convex-equicontinuity step used by EXP-000780 have the required parity, sign, remainder and interior-temperature hypotheses?",
+      "recorded_at": "2026-09-05T03:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001580",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "revisit_condition": "Reopen if the actual EXP-000780 source reveals an odd-remainder geometry, a missing uniform linear bound, a reversed semigroup sign, a beta-endpoint use, or a source/form-domain mismatch not represented by the finite fixtures.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK multidimensional Fekete and moving-temperature convexity audit",
+      "topic": "Q3LOCK open-rectangle tiling, semigroup signs and convex seam limit",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does R506 choose or fit a source-owned sector law?",
+          "disposition": "UPHELD AS FALSE: weights and tau are theorem variables and exact fixtures only; no source law is supplied."
+        },
+        {
+          "check": "Does finite tail control imply tau tends to zero?",
+          "disposition": "UPHELD AS FALSE: R506 assumes a supplied tau bound and proves only c*tau; decay is a missing source-owner input."
+        },
+        {
+          "check": "Can C_sw=540 be used as tau or a probability?",
+          "disposition": "UPHELD AS FALSE: the manifest and hostile verifier retain C_sw=540 as domination-only."
+        },
+        {
+          "check": "Does the bound remove the R-484 16/9 boundary defect?",
+          "disposition": "UPHELD AS FALSE: the defect is explicitly retained and no averaging or counterterm is introduced."
+        },
+        {
+          "check": "Does R506 prove a full-Q Cauchy limit or positivity?",
+          "disposition": "UPHELD AS FALSE: source law, topology, block error, tail decay and stationarity domain remain open."
+        },
+        {
+          "check": "Does this establish physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusions?",
+          "disposition": "UPHELD AS FALSE: all physical interpretations remain explicit non-claims."
+        }
+      ],
+      "assumptions": [
+        "The future source-owned component block supplies a finite tail index set for each fixed comparison.",
+        "The future component cylinder values are real and uniformly bounded by a common nonnegative c on that tail.",
+        "The future sector weights are nonnegative and the source-owned tail mass is at most tau.",
+        "The fixed PAH-001 functional, Gibbs weighting, boundary convention and limit order remain unchanged."
+      ],
+      "boundary": "Conditional finite tail inequality only. PAH-001 functional/rates, PAH-OMC-010 Gibbs weighting, PAH-OMC-012 graded domain/projection and PAH-OMC-014 limit order remain unchanged. R-484 hidden-diagonal defect 16/9 is retained; R-490 C_sw=540 remains domination-only. No source law, projective limit, Cauchy sequence, positivity/normalization, stationarity, semigroup, continuum or physical conclusion is claimed.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R503 controls finite-block weight and component drift but leaves the growing-Q tail as a separate term. R506 supplies that missing algebraic bridge without selecting sector weights, fitting tau, changing PAH-001, or treating C_sw=540 as a probability. It is reusable support only: the source owner still has to provide the law, the envelope, tail decay and the fixed-order topology.",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-manifest.json#theorem_contract",
+        "strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-manifest.json#theorem_contract",
+        "strategy/pa-hyp/PAH-OMC-014-separator-lean-manifest.json#theorem_contract",
+        "strategy/pa-hyp/PAH-OMC-014-sign-change-lean-manifest.json#theorem_contract",
+        "strategy/pa-hyp/PAH-OMC-014-projective-kernel-obligation-260905.md#required_source_owned_statement",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json#status",
+        "verification/lean/Tect/R506.lean#weighted_tail_abs_bound",
+        "verification/lean/Tect/R506.lean#tail_bound_zero",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-tail-bound-lean/integrated.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-tail-bound-lean/independent.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-tail-bound-lean/hostile.json#mutation_policy"
+      ],
+      "finding": "Lean R506 proves that for a finite tail set s, nonnegative weights w, a nonnegative envelope c with |a_i|<=c, and a supplied tail-mass bound sum_i w_i<=tau, the exact weighted tail satisfies |sum_i w_i*a_i|<=c*tau. The zero-component corollary is also proved. Integrated, independent and hostile verifiers pass on distinct exact rational fixtures.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001582",
+      "method": [
+        "Hash-pin PAH-001, PAH-OMC-014, the projective-kernel obligation, R503, R504, R505 and the route-local Q=0 obstruction.",
+        "Formalize the finite weighted-tail absolute-value inequality and its zero-tail corollary in Lean 4.32.1 using the exact Finset sum, nonnegative weights and envelope assumptions.",
+        "Register R506 with its exact source SHA-256 and run the pinned Lean toolchain check.",
+        "Replay integrated, independent and hostile verifiers using distinct Fraction fixtures, in-memory mutation tests and canonical source compilation.",
+        "Retain HOLD_FOR_EVIDENCE because no source-owned cross-Q law, tail mass, common envelope, topology or ordered decay estimate is present."
+      ],
+      "missing_assumptions": [
+        "A source-authorized normalized cross-Q sector law or projective kernel.",
+        "Source-owned values or bounds for the tail mass tau and common envelope c, with tau tending to zero in the declared order.",
+        "A common cylinder topology and a Cauchy estimate combining the R503 finite-block term with this tail term.",
+        "A uniform-integrability/domain argument for positivity, normalization and stationarity after the functional is defined."
+      ],
+      "next_action": "Obtain from the source owner one normalized cross-Q law with a finite-block/tail split, a common cylinder envelope c, and a source-owned tau->0 estimate in the fixed PAH-001 order; then combine R503 and R506 without fitting weights.",
+      "non_claims": [
+        "No source-owned sector law, projective kernel, tail mass or common envelope is supplied.",
+        "No full-Q Cauchy sequence, weak cylinder limit, positivity/normalization, stationarity, closability or semigroup is proved.",
+        "No R-484 boundary repair or use of C_sw=540 as a measure is allowed.",
+        "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+        "Markov time remains external stochastic time."
+      ],
+      "provenance": "contemporaneous",
+      "question": "What exact finite inequality controls the omitted full-Q tail once a source-owned normalized law supplies a tail-mass bound and a common cylinder envelope?",
+      "recorded_at": "2026-09-05T02:30:38Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001579",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "revisit_condition": "Reopen when a source owner supplies the normalized cross-Q law, exact finite-block/tail split, common cylinder envelope and tau->0 estimate in the fixed order, or if a parent-scope counterexample invalidates the finite inequality.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "PAH-OMC-014 finite weighted tail bound for the future full-Q Cauchy split",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

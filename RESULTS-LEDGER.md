@@ -22,7 +22,8 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes; EXP-001567 adds the exact EXP-000780 collective-source restriction and pressure dictionary; EXP-001568 inserts that dictionary into the integrated P-06/P-09 proof text; EXP-001570 independently audits its algebra and limit order; EXP-001571 audits the finite-grid-to-fixed-loop FKG association passage; EXP-001572 audits the finite FSS-to-loop Duhamel and Fourier passage; EXP-001573 audits the conditional pressure-to-cusp and tangent-state bridge; EXP-001574 audits the KP general-vector theorem-domain and source-window hypothesis crosswalk; EXP-001575 audits the source-window KP moment constants and common tempered tightness bound; EXP-001577 audits the compact-boundary source-to-zero DLR kernel and the KP determining-class passage. P-06/P-09, source/form-domain review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
+| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes; EXP-001567 adds the exact EXP-000780 collective-source restriction and pressure dictionary; EXP-001568 inserts that dictionary into the integrated P-06/P-09 proof text; EXP-001570 independently audits its algebra and limit order; EXP-001571 audits the finite-grid-to-fixed-loop FKG association passage; EXP-001572 audits the finite FSS-to-loop Duhamel and Fourier passage; EXP-001573 audits the conditional pressure-to-cusp and tangent-state bridge; EXP-001574 audits the KP general-vector theorem-domain and source-window hypothesis crosswalk; EXP-001575 audits the source-window KP moment constants and common tempered tightness bound; EXP-001577 audits the compact-boundary source-to-zero DLR kernel and the KP determining-class passage; EXP-001578 audits the explicit projective W_t tightness diagonal and source-varying extraction. P-06/P-09, source/form-domain review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
+| [R-498](#r-498) | EXP-001580 Q3LOCK periodic/open pressure seam and min--max audit | R-498 / EXP-001580 records a T0 claim-nonbearing finite edge/seam normalization and min--max scaling audit. Correct periodic onsite allocation is 3c (not 3c/2); the incidence Young bound gives 288 c^2 L^2/(eta g), and eta=L^(-1/2) yields an O(L^(-1/2)) density diagnostic. Conditional pressure/form-domain, Fekete and moving-beta steps remain open; deterministic evidence is 64/64 and no theorem or PDF is issued. |
 | [R-494](#r-494) | PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit | R-494 / EXP-001504 finds no source-owned cross-Q sector weight law in the hash-pinned PAH-001/OMC-010/OMC-011/OMC-012/OMC-013 scope. Primary 20/20, independent 14/14, hostile 12/12, integrated 31/31 pass; verdict HOLD_FOR_EVIDENCE. Fixed-Q component Gibbs states remain valid, but a global mu_(n,R), omega, Cauchy error and stationarity test are not defined. This is T0 claim-nonbearing source-input evidence only; no physical or continuum conclusion follows. |
 | [R-493](#r-493) | PAH-OMC-013 full-Q eventual generator intertwining on the grade-blind cylinder | R-493 / EXP-001474 proves pointwise intertwining after N(f)=max(2,m_f+1) on the full-Q grade-blind finite cylinder algebra for unchanged PAH-001 rates; primary 22/22, independent 16/16, hostile 13/13, integrated 21/21 and Lean R493 pass. This is T0 claim-nonbearing finite algebraic progress only; weak Gibbs-L2, closability, infinite volume, continuum and physical conclusions remain open. |
 
@@ -17161,6 +17162,63 @@ scheme class and asymmetric anomaly boundary.
 **Publication target:** methods note (with a paired honest-negative: individually-positive channels can jointly fail an additive budget)
 
 
+<a id="r-498"></a>
+### R-498 -- EXP-001580 Q3LOCK periodic/open pressure seam and min--max audit
+
+**Statement.** R-498 / EXP-001580 registers a standalone T0,
+claim-nonbearing auxiliary result for the finite-volume pressure comparison
+in the exact fixed-spacing positive-lambda eight-component Q3LOCK model.  The
+explicit positive-direction periodic edge multiset has `3L^2` scalar seam
+occurrences and `48L^2` endpoint occurrences over eight components.  The
+declared difference form expands with periodic onsite coefficient `3c` (and
+with site-dependent open degree `(c/2)d_R(y)`), not `3c/2`.  Incidence-based
+Young absorption gives
+`0 <= B_L <= eta Q_L + 288*c^2*L^2/(eta*g)`.  With `eta=L^(-1/2)` this is an
+`O(L^(-1/2))` density comparison after division by `8L^3`.  The audit also
+fixes the min--max trace-sandwich direction and the need for convex
+equicontinuity when the open trace is evaluated at `beta(1+eta)`.
+
+**Status.** `T0`, `claim_bearing=false`, finite diagnostic only.  The result
+does not certify the common form core, unbounded min--max comparison,
+multidimensional Fekete limit, or local-uniform pressure convergence; those
+remain independent mathematical review gates in R-497.
+
+**Evidence.** The executable audit passes `64/64` assertions and writes a
+deterministic JSON artifact.  It enumerates open, periodic and seam edge
+multisets for `L=2,4,6,8`, rejects the half-incidence constant-field mutation,
+checks the incidence-derived Young bound on deterministic and seeded-random
+fields, and verifies the decreasing `eta=L^(-1/2)` density diagnostic.  Two
+clean runs have identical artifact bytes.
+
+**Source pins.**
+
+| source | SHA-256 |
+|---|---|
+| EXP-000780 fixed-lattice certificate | `d3fe75aff3960df90f8b0567bd6d0114c54baba6642b1def90d62f6e52333628` |
+| independent audit note | `03e44ad940cf2fb123f6fd0edd9478b70bb5e64e5ad5b99f3c059f56cb0442c8` |
+| auxiliary verifier | `961a9b47a3a06b8657ba39f77443a273658109a97762c873c89fbc9b98dbe5e4` |
+| result artifact | `288e0e8ea37f66f11d99371b5012284fff4defabb3ccff25519f0d4d260dd1c4` |
+
+**Where proven.**
+`strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md`,
+`verification/scripts/q3lock_pressure_seam_minmax_audit.py`, and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-pressure-seam-minmax-audit/result.json`.
+
+**Classification and boundary.** R-498 is T0 and claim-nonbearing.  It is a
+normalization and finite scaling audit, not an unconditional pressure result.
+It preserves the EXP-000780 -> EXP-000781 -> EXP-000782 authority chain and
+does not promote EXP-000782 or R-497.  No strict cusp, positive zero mode,
+DLR multiplicity, extremality, purity, clustering, common dynamics, KMS
+state, ground-state phase, gap, continuum, physical-vacuum, cosmological,
+Sector-A, CP1, C6, Pre-A, or Yang--Mills conclusion follows.  No manuscript,
+submission, upload, release, tag, or PDF is created; PDF work remains
+deferred until content review and final freeze.
+
+**Next.** Obtain independent acceptance of the shared form core, min--max
+trace comparison, multidimensional Fekete argument and convex
+equicontinuity, then re-run the complete EXP-000780--782 and R-497 lanes from
+a clean snapshot before considering any bounded claim or manuscript freeze.
+
 <a id="r-497"></a>
 ### R-497 -- EXP-000782 Q3LOCK low-temperature phase route: independent result registration
 
@@ -17195,7 +17253,7 @@ mathematical theorem.
 
 | source | SHA-256 |
 |---|---|
-| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `f6ac4124586e5c4c8d6a9f155cad81715725608d5526d0f1b6b6ed1b997560f1` |
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `b4a1742a569f974e078f81417ece2a7c48aea8edd081d0ed464f14dc7982f62c` |
 | upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
 | upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
 | EXP-000782 upstream scope-firewall audit | `cce56eed01dfe6239d8ddbcc43e823df4e2c68ebeebe51dfc71823b545b165e9` |
@@ -17228,6 +17286,7 @@ mathematical theorem.
 | KP vector theorem-domain crosswalk independent audit | `8f3d24cafb2bf7f620c6ad52e7255a203626aa1cc59bef279a4a747267d5507f` |
 | KP source-window uniform-moment and tempered-tightness audit | `0d7f1817ef2c8804510a83d8042f18b930d3b4f8ef19487de55c32e63e0f319f` |
 | Source-zero DLR kernel and determining-class audit | `7a3652955439671d109b0656d5361a8cb4f19f8e622d4f88af855e92fedb4df2` |
+| KP source-window projective W_t tightness diagonal audit | `ae974047089afcdaae1b638d935eab2f844480d9746b69fde75f3f50a1f5f0df` |
 | Pressure zero-mode, Griffiths and tangent-state audit | `2a94560bfcd53f8a2dc2da6098e64cdbcea9fefb9a1c8dc19800549b38e73c40` |
 | Finite-volume translation trace-differentiation audit | `a2659b62fbf5e344d683a2a9638c425fdcf6ba3062e8e45224e4e69a46deff9b` |
 | KKK endpoint-interval and non-differentiable cusp correction | `e5bdd2ed72f19dddd1e3c6325a131d12c04b4a59124745b09dfe665fb8a2c1fb` |
@@ -17252,7 +17311,7 @@ mathematical theorem.
 in `strategy/q3lock-exp782-independent-result-manifest-260905.json`. The
 upstream authority records are EXP-000780, EXP-000781, and EXP-000782 in
 `explorations/log.jsonl`; the current seam decisions are EXP-001516, EXP-001522, EXP-001526,
-EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, EXP-001534, EXP-001536, EXP-001537, EXP-001538, EXP-001540, EXP-001541, EXP-001543, EXP-001545, EXP-001546, EXP-001548, EXP-001549, EXP-001550, EXP-001551, EXP-001552, EXP-001554, EXP-001555, EXP-001556, EXP-001557, EXP-001559, EXP-001560, EXP-001561, EXP-001562, EXP-001563, EXP-001564, EXP-001566, EXP-001567, EXP-001568, EXP-001570, EXP-001571, EXP-001572, EXP-001573, EXP-001574, EXP-001575, and EXP-001577. The proof
+EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, EXP-001534, EXP-001536, EXP-001537, EXP-001538, EXP-001540, EXP-001541, EXP-001543, EXP-001545, EXP-001546, EXP-001548, EXP-001549, EXP-001550, EXP-001551, EXP-001552, EXP-001554, EXP-001555, EXP-001556, EXP-001557, EXP-001559, EXP-001560, EXP-001561, EXP-001562, EXP-001563, EXP-001564, EXP-001566, EXP-001567, EXP-001568, EXP-001570, EXP-001571, EXP-001572, EXP-001573, EXP-001574, EXP-001575, EXP-001577, and EXP-001578. The proof
 text and its boundaries are audited in
 `strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`, with the
 finite-grid FKG, source-uniform loop limit, topology, edge-incidence,
@@ -17496,6 +17555,14 @@ source-continuity estimate, and the KP Lemma 2.11 determining-class step for
 the limiting Borel DLR equation. This remains conditional on the source-window
 tightness and exact Q3LOCK/KP hypotheses; cusp, phase, claim, external-review
 and PDF gates remain open.
+The EXP-001578 projective-tightness audit is recorded in
+`strategy/q3lock-kp-source-window-projective-tightness-diagonal-audit-260905.md`; it
+makes the source-window quantifier explicit by choosing a cofinal Holder-scale
+sequence, summable Markov tail budgets, and a compact diagonal in `Omega_t`.
+Conditional on the EXP-001575 moment constants and KP compact embeddings, this
+supplies the `W_t` subsequence needed before the EXP-001577 kernel passage.
+It remains T0 and conditional; cusp, phase, claim, external-review and PDF
+gates remain open.
 
 **Reuse scope.** This result is reusable for mathematical-physics analysis of
 the declared fixed-lattice Q3LOCK quantum anharmonic model and for a possible

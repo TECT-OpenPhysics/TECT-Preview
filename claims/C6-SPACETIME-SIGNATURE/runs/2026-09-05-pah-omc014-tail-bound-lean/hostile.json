@@ -1,0 +1,235 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 19,
+  "assertions": [
+    {
+      "actual": "1156ed970d985df2bded2ce5bea399e0502128fc608883802c88c19e74827b51",
+      "expected": "1156ed970d985df2bded2ce5bea399e0502128fc608883802c88c19e74827b51",
+      "name": "canonical Lean hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+          "constructed_hypothesis": false,
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "epistemic_layer": "L2_FINITE_TAIL_ERROR_OBLIGATION",
+          "external_source": false,
+          "model_change": false,
+          "physical_authority": false,
+          "source_law_present": false,
+          "synthetic_fixture": false
+        },
+        "status": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "CONDITIONAL_SUPPORT_ONLY",
+          "physical_promotion": false,
+          "source_law_present": false,
+          "verdict": "HOLD_FOR_EVIDENCE"
+        }
+      },
+      "expected": "HOLD/no law/no promotion",
+      "name": "canonical HOLD firewall",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "mutation is visible and not canonical",
+      "name": "reject invented source law",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": true,
+        "claim_bearing": false,
+        "classification": "CONDITIONAL_SUPPORT_ONLY",
+        "physical_promotion": false,
+        "source_law_present": false,
+        "verdict": "MAINLINE_ADVANCE"
+      },
+      "expected": "canonical status must remain HOLD",
+      "name": "reject premature promotion",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": false,
+      "name": "reject physical promotion mutation",
+      "pass": true
+    },
+    {
+      "actual": "0000000000000000000000000000000000000000000000000000000000000000",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "reject parent hash tamper",
+      "pass": true
+    },
+    {
+      "actual": {
+        "canonical_has_bound": true,
+        "mutated_has_bound": true
+      },
+      "expected": "exact c*tau conclusion",
+      "name": "reject weakened conclusion",
+      "pass": true
+    },
+    {
+      "actual": "Weights are arbitrary.",
+      "expected": "tail mass must remain explicit",
+      "name": "reject omitted tail-mass hypothesis",
+      "pass": true
+    },
+    {
+      "actual": "C_sw=540 is the sector probability.",
+      "expected": "domination-only",
+      "name": "reject C_sw as measure",
+      "pass": true
+    },
+    {
+      "actual": "boundary defect removed",
+      "expected": "16/9 retained",
+      "name": "reject boundary erasure",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "canonical source contains no escape token",
+      "name": "reject Lean escape hatch",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_absolute_tail": "3",
+        "dropped_bound": "0"
+      },
+      "expected": "tail factor is nonzero for this witness",
+      "name": "reject dropped tail factor",
+      "pass": true
+    },
+    {
+      "actual": [
+        "-1/2",
+        "3/2"
+      ],
+      "expected": "all weights nonnegative",
+      "name": "reject negative weights",
+      "pass": true
+    },
+    {
+      "actual": [
+        "4",
+        "0"
+      ],
+      "expected": "|a_i|<=c is required",
+      "name": "reject failed envelope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "mass": "1",
+        "tau": "1/2"
+      },
+      "expected": "sum(w)<=tau is required",
+      "name": "reject understated tail mass",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "HOLD_FOR_EVIDENCE_SOURCE_OWNER_FULL_Q_WEIGHT_LAW_ABSENT",
+        "csw_role": "DOMINATION_ONLY",
+        "omega_status": "NOT_DEFINED",
+        "physical_promotion": false,
+        "positivity_normalization": "NOT_TESTABLE",
+        "projective_consistency": "NOT_TESTABLE",
+        "r484_boundary_defect": "RETAINED_16_OVER_9",
+        "stationarity": "NOT_TESTABLE",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "weak_cylinder_limit": "NOT_TESTABLE"
+      },
+      "expected": "HOLD/omega undefined",
+      "name": "parent full-Q remains open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declarations": [
+          "weighted_tail_abs_bound",
+          "tail_bound_zero"
+        ],
+        "path": "verification/lean/Tect/R506.lean",
+        "sha256": "1156ed970d985df2bded2ce5bea399e0502128fc608883802c88c19e74827b51"
+      },
+      "expected": [
+        "weighted_tail_abs_bound",
+        "tail_bound_zero"
+      ],
+      "name": "registry exact declarations/hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "final_newline": true,
+        "lf": true
+      },
+      "expected": "LF/no escape",
+      "name": "source policy",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R506.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "canonical Lean compilation",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-TAIL-BOUND-LEAN-HOSTILE-001",
+  "claim_bearing": false,
+  "classification": "AUXILIARY_SUPPORT_FINITE_TAIL_BOUND",
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R506.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "mutation_policy": "All hostile mutations are in-memory only; no canonical source law, tail rate, probability, boundary repair or physical interpretation is adopted.",
+  "next_question": "Can the source owner supply a normalized cross-Q law with a finite-block/tail split, a common cylinder envelope c, and tau->0 in the fixed PAH-001 limit order?",
+  "non_claims": [
+    "This is a finite conditional inequality, not a source-owned full-Q Gibbs law.",
+    "It does not prove a Cauchy sequence, a weak cylinder limit, projective consistency, positivity/normalization, stationarity, closability or a semigroup.",
+    "It does not repair the R-484 boundary defect or convert C_sw=540 into a measure.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "omega_status": "NOT_DEFINED",
+  "passed": 19,
+  "projective_consistency": "NOT_TESTABLE",
+  "reproduction": {
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_tail_bound_lean_verify_hostile.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_tail_bound_lean_verify_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_tail_bound_lean_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R506.lean"
+  },
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc014-tail-bound-lean-hostile/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "lean": "1156ed970d985df2bded2ce5bea399e0502128fc608883802c88c19e74827b51",
+    "manifest": "310a73ea82b794b7aabe190de514764fe6ea5e45727bc623566dd3d64710686c"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_cylinder_limit": "NOT_TESTABLE"
+}
