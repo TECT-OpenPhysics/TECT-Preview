@@ -6056,6 +6056,692 @@
       "title": "Q3LOCK P-06 finite-grid association chain passes an independent fixed-volume audit",
       "topic": "Q3LOCK continuous-loop FKG association",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the spatial coupling become 2c because of six neighbours?",
+          "disposition": "UPHELD AS FALSE: the undirected bond expansion has cross coefficient -c and FSS uses J=c."
+        },
+        {
+          "check": "Can the ordinary FSS source omit sqrt(epsilon)?",
+          "disposition": "UPHELD AS FALSE: the scaled-spin isometry requires eta=t*sqrt(epsilon)*a*u."
+        },
+        {
+          "check": "Does the component count add a factor eight to the bound?",
+          "disposition": "UPHELD AS FALSE: u is unit norm and the full history is one R^(8N) spin."
+        },
+        {
+          "check": "Can L_sp^(-1) act on the constant mode?",
+          "disposition": "UPHELD AS FALSE: the Poisson shift is restricted to the zero-sum subspace."
+        },
+        {
+          "check": "Does finite-grid FSS already imply a continuous-loop thermodynamic IR theorem?",
+          "disposition": "UPHELD AS FALSE: loop convergence, volume uniformity, pressure and DLR composition remain separate."
+        },
+        {
+          "check": "Does the finite IR cap itself prove a strict cusp?",
+          "disposition": "UPHELD AS FALSE: a positive zero-mode lower bound and KKK endpoint argument are still required."
+        }
+      ],
+      "assumptions": [
+        "The pinned FSS Theorems 2.1--2.3 apply to the periodic cubic graph and arbitrary finite single-site prior with all finite quadratic exponential moments.",
+        "The Q3LOCK periodic edge multiset has six endpoint incidences per site and coupling c>0.",
+        "u=(1,...,1)/sqrt(8) is unit norm and a is spatially zero-sum.",
+        "Fixed-volume Gaussian/residual weak convergence, source UI and KP Feynman--Kac identification are supplied by separate audits.",
+        "The Q3LOCK onsite interaction remains nonradial; no KKK rotational corollary is imported."
+      ],
+      "boundary": "T0 internal P-09 finite-grid normalization and conditional loop-passage audit only; no theorem certification, claim-card promotion, manuscript release or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A fresh derivation starts from the periodic bond expansion and the finite FSS Theorem 2.1, rather than copying the existing P-09 text. The scaled history spin s_y=sqrt(epsilon)(x_(y,k)) maps the Q3LOCK spatial coupling to J=c, the ordinary source to eta=t*sqrt(epsilon)*a_y*u, and the zero-sum source to the minimum-norm Poisson field. The finite FSS constant, beta factor, graph eigenvalue 2E(p), and Duhamel normalization are then recomputed in one convention.",
+      "evidence_refs": [
+        "strategy/q3lock-p09-fss-loop-duhamel-independent-audit-260905.md#2-spatial-finite-grid-map",
+        "strategy/q3lock-p09-fss-loop-duhamel-independent-audit-260905.md#3-source-scaling-and-poisson-shift",
+        "strategy/q3lock-p09-fss-loop-duhamel-independent-audit-260905.md#4-variance-and-fourier-ledger",
+        "strategy/q3lock-p09-fss-loop-duhamel-independent-audit-260905.md#5-time-grid-to-periodic-loop-passage",
+        "strategy/q3lock-p09-fss-poisson-shift-constant-audit-260905.md#4-minimum-norm-poisson-shift",
+        "strategy/q3lock-kp-fss-external-source-audit-260905.md#2-fss-source-hypotheses-and-theorem-locations"
+      ],
+      "finding": "The finite-grid inequality log E exp(t X_(N,L)(a)) <= beta*t^2/(2c)<a,L_sp^(-1)a> and the bound Dhat_L(p)<=1/(2 beta c E(p)) for p != 0 are internally consistent under the declared periodic edge set. The source observable has an exact piecewise-linear interpolation identity, but passing its exponential and second derivative to the loop law still requires fixed-volume Gaussian/residual convergence, a uniform normalizer bound and quartic source uniform integrability. No volume-uniform or thermodynamic conclusion follows.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001572",
+      "method": [
+        "Re-expand the periodic spatial difference action and count each undirected bond once.",
+        "Map the complete time history to the ordinary R^(8N) FSS spin and derive the sqrt(epsilon) source coordinates.",
+        "Define the edge divergence, adjoint gradient and zero-sum graph Laplacian, then compute the minimum-norm Poisson shift.",
+        "Differentiate the finite analytic log-MGF and convert the integrated variance to the Duhamel matrix and Fourier eigenvalue.",
+        "Check the exact cyclic interpolation identity and list the independent hypotheses required for source-exponential convergence."
+      ],
+      "missing_assumptions": [
+        "Independent line-by-line verification of the pinned FSS theorem statement and divergence convention.",
+        "Independent KP finite-volume loop identification and source-exponential/second-derivative convergence.",
+        "Volume-uniform weighted-tempered estimates and the pressure-limit bridge.",
+        "Claim/result registration, external mathematical referee review, clean replay and final PDF gate."
+      ],
+      "next_action": "Obtain independent line-by-line review of the FSS theorem version, KP loop topology, source-uniform integrability and volume-uniform extension, then compose P-09 with the audited P-06 and pressure/DLR bridges while keeping theorem and PDF gates deferred.",
+      "non_claims": [
+        "No positive infrared zero mode, strict source cusp, phase theorem or DLR multiplicity is certified.",
+        "No extremality, purity, clustering, KMS, common dynamics, ground-state, spectral-gap, continuum, physical-vacuum, cosmological, C6, CP1, Sector A, Pre-A or Yang--Mills conclusion is certified.",
+        "No claim card, P2 manuscript, submission, upload, release, tag or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Are the finite-grid FSS source map, Poisson shift, variance conversion and Fourier factor internally consistent, and what hypotheses remain for the continuous-loop passage?",
+      "recorded_at": "2026-09-05T00:40:50Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001571",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001570",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001568",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000781",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK P-09 FSS-to-loop Duhamel passage passes an independent normalization audit",
+      "topic": "Q3LOCK FSS Gaussian domination and infrared bound",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Is the local Duhamel value itself the zero-mode density?",
+          "disposition": "UPHELD AS FALSE: subtract the nonzero Fourier modes; Pi_L=Dhat_L(0)/V."
+        },
+        {
+          "check": "Can the FSS Poisson inverse be evaluated at p=0?",
+          "disposition": "UPHELD AS FALSE: the source is zero-sum and only nonzero modes are capped."
+        },
+        {
+          "check": "Does the factor-eight normalization disappear in the pressure slope?",
+          "disposition": "UPHELD AS FALSE: p_beta=8 beta P_beta, yielding D_+P_beta>=sqrt(delta_beta)/8."
+        },
+        {
+          "check": "Does A_0<=I_3 prove absence of a phase?",
+          "disposition": "UPHELD AS FALSE: the explicit route is inconclusive outside A_0>I_3."
+        },
+        {
+          "check": "Does parity alone make the tangent DLR states distinct?",
+          "disposition": "UPHELD AS FALSE: distinctness requires the strict positive endpoint slope."
+        },
+        {
+          "check": "Does the conditional bridge already certify the Q3LOCK theorem or PDF?",
+          "disposition": "UPHELD AS FALSE: all imported analytic, external-review, claim, manuscript and PDF gates remain open."
+        }
+      ],
+      "assumptions": [
+        "The finite-volume form/core and bounded-cutoff commutator audit is accepted for the periodic Q3LOCK Hamiltonian.",
+        "The fixed-volume continuous-loop FKG and P-09 nonzero-mode FSS bound hold with the declared conventions.",
+        "The periodic pressure limit is locally uniform and globally even on the collective source line.",
+        "KKK Propositions 3.9 and 3.18 apply to the projected loop measures with their endpoint and Duhamel hypotheses.",
+        "EXP-000781 supplies common source-window tempered compactness and specification continuity for the source-to-zero composition."
+      ],
+      "boundary": "T0 conditional pressure-to-cusp and source-tangent bridge audit only; no theorem certification, claim-card promotion, manuscript release or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A fresh derivation rechecks the normalized global translation identity, the 3-regular Q3 graph inequalities, the bounded-cutoff Falk--Bruch limit, the Fourier zero-mode subtraction, the A_0/I_3/beta_star threshold algebra, the KKK endpoint-interval slope and the EXP-000781 source-tangent composition. The derivation keeps every imported analytic input conditional and does not use the FSS nonzero-mode estimate at the constant mode.",
+      "evidence_refs": [
+        "strategy/q3lock-pressure-cusp-bridge-independent-audit-260905.md#2-local-moment-lower-bound",
+        "strategy/q3lock-pressure-cusp-bridge-independent-audit-260905.md#3-falk-bruch-lower-bound",
+        "strategy/q3lock-pressure-cusp-bridge-independent-audit-260905.md#4-zero-mode-subtraction-from-the-nonzero-mode-ir-cap",
+        "strategy/q3lock-pressure-cusp-bridge-independent-audit-260905.md#5-explicit-threshold-algebra",
+        "strategy/q3lock-pressure-cusp-bridge-independent-audit-260905.md#6-kkk-griffiths-conversion-and-the-cusp",
+        "strategy/q3lock-pressure-cusp-bridge-independent-audit-260905.md#7-source-tangent-dlr-pair",
+        "strategy/q3lock-pressure-zero-mode-griffiths-tangent-audit-260905.md#4-from-the-local-moment-and-infrared-cap-to-pi_l"
+      ],
+      "finding": "The displayed bridge is algebraically consistent: rho(Q_0^2)>=theta_Q, d_L>=theta_Q*f(beta*hbar^2/(4 chi theta_Q)), Pi_L>=delta_beta, A_0>I_3 and beta>beta_star imply delta_beta>0, KKK gives p_beta'(0+)>=beta*sqrt(delta_beta), and the fine pressure slope is at least sqrt(delta_beta)/8. Under the separate source-window DLR compactness/specification passage, the tangent states have opposite nonzero collective expectations. This remains a conditional T0 proof-text result because each analytic hypothesis still requires independent external acceptance.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001573",
+      "method": [
+        "Recompute the finite-volume normalized translation second derivative and use the Q3 3-regular graph identity with the zero-source FKG products.",
+        "Apply the bounded tanh cutoff and KKK Proposition 3.18, then verify monotonicity of s*f(k/s) before substituting theta_Q.",
+        "Use translation-invariant Fourier inversion and the P-09 nonzero-mode cap to subtract the infrared tail from the local Duhamel value.",
+        "Derive the threshold formulas from x*tanh(x) and verify the strict regime A_0>I_3, beta>beta_star.",
+        "Apply KKK Proposition 3.9 with U_L=X_L, M_L=V and convert p_beta to the eight-component energy pressure, then trace the source-tangent DLR and parity step."
+      ],
+      "missing_assumptions": [
+        "Independent external line-by-line review of the operator/form-domain, FKG, FSS and KP hypotheses.",
+        "Independent verification of the periodic pressure limit and the finite-to-infinite-volume derivative bridge.",
+        "Independent KKK endpoint-interval hypothesis check for the exact Q3LOCK projected loop family.",
+        "Claim/result registration, manuscript content freeze, clean replay and final PDF gate."
+      ],
+      "next_action": "Obtain independent line-by-line acceptance of the FKG, operator, FSS, KKK, pressure-limit and KP hypotheses; only then decide whether the bounded result can be registered and transcribed into a frozen manuscript.",
+      "non_claims": [
+        "No strict cusp is certified until every conditional input is independently accepted; no phase conclusion is asserted outside the sufficient regime.",
+        "No extremality, purity, clustering, KMS, common dynamics, ground-state, spectral-gap, continuum, physical-vacuum, cosmological, C6, CP1, Sector A, Pre-A or Yang--Mills conclusion is certified.",
+        "No claim card, P2 manuscript, submission, upload, release, tag or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Under the declared finite-volume FKG, operator, FSS, KKK and KP hypotheses, are the Q3LOCK local moment, zero-mode subtraction, threshold, pressure cusp and parity-related DLR steps algebraically consistent?",
+      "recorded_at": "2026-09-05T00:46:20Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001572",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001571",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001570",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001564",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000781",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK pressure-to-cusp bridge passes an independent conditional audit",
+      "topic": "Q3LOCK zero mode, Falk--Bruch, Griffiths and source-tangent bridge",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Can the KP exponent r be identified with the Q3LOCK quadratic coefficient r?",
+          "disposition": "UPHELD AS FALSE: the KP exponent is renamed r_KP=2, while the Q3LOCK r<0 is a separate quadratic coefficient."
+        },
+        {
+          "check": "Should the positive Q3 locking polynomial be counted in the KP pair matrix and Jhat_0?",
+          "disposition": "UPHELD AS FALSE: it is onsite in the spatial lattice index and belongs in V_(h,a); putting it in J changes the model."
+        },
+        {
+          "check": "Does finite range remove the need to verify KP's weighted assumptions?",
+          "disposition": "UPHELD AS FALSE: the exponential weights, finite Jhat_alpha and Jhat_alpha-Jhat_0 limit are displayed explicitly."
+        },
+        {
+          "check": "Does KP Theorem 3.1 give a common compact set for all sources h in a window?",
+          "disposition": "UPHELD AS FALSE: the theorem is applied pointwise to a fixed model/source; common source-window tightness is an additional Q3LOCK estimate."
+        },
+        {
+          "check": "Does restricting the source to h*u make KP's scalar nu=1 order theorem applicable?",
+          "disposition": "UPHELD AS FALSE: the field remains R^8 and the onsite law remains nonradial; only the source parameter is one-dimensional."
+        },
+        {
+          "check": "Does the KP compactness crosswalk by itself prove a cusp or two distinct DLR states?",
+          "disposition": "UPHELD AS FALSE: pressure, zero-mode, endpoint slope, parity and source-to-zero composition remain separate conditional steps."
+        },
+        {
+          "check": "Does completing this crosswalk authorize manuscript or PDF generation?",
+          "disposition": "UPHELD AS FALSE: claim registration, independent referee review, content freeze, clean replay and final PDF review remain deferred."
+        }
+      ],
+      "assumptions": [
+        "The Q3LOCK quartic coercivity and finite-volume form-domain audit is accepted for every fixed compact source window.",
+        "The canonical Q3LOCK-to-KP mass rescaling m=chi/hbar^2 and the declared periodic six-incidence edge convention are the conventions used in the final proof.",
+        "The hash-frozen KP v1 source and theorem locations remain unchanged.",
+        "The KP general-vector Euclidean construction is used only after matching its boundary, topology and specification definitions."
+      ],
+      "boundary": "T0 independent KP theorem-domain and hypothesis crosswalk only; no theorem certification, claim-card promotion, manuscript release or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A direct source-to-model crosswalk checks KP Assumption (A), the interaction norm, the lattice regularity and weighted-topology conditions, the finite-volume form input, and the permitted use of Theorems 3.1--3.3. The Q3LOCK map is general-vector with nu=8, L=Z^3, r_KP=2, Jhat_0=6c and finite-range exponential weights. KP's scalar nu=1 phase and FKG results are explicitly excluded, and source-window uniformity remains a Q3LOCK-local obligation.",
+      "evidence_refs": [
+        "strategy/q3lock-kp-vector-hypothesis-crosswalk-independent-audit-260905.md#3-assumption-a-line-by-line-verification",
+        "strategy/q3lock-kp-vector-hypothesis-crosswalk-independent-audit-260905.md#4-lattice-regularity-and-assumption-b",
+        "strategy/q3lock-kp-vector-hypothesis-crosswalk-independent-audit-260905.md#5-what-kp-theorems-31--33-do-and-do-not-supply",
+        "strategy/q3lock-kp-vector-hypothesis-crosswalk-independent-audit-260905.md#6-source-window-and-source-tangent-firewall",
+        "strategy/q3lock-quartic-coercivity-form-domain-audit-260905.md#3-explicit-lower-bound-on-compact-source-intervals",
+        "strategy/q3lock-kp-source-window-feller-audit-260905.md#5-integrating-the-specification-difference-against-source-varying-states",
+        "strategy/q3lock-literature-source-freeze-260905.md#3-1-kozitsky--pasurek-kp"
+      ],
+      "finding": "The Q3LOCK residual potential is continuous, normalized at zero and quartically coercive on every compact source window, so KP Assumption (A) matches with r_KP=2, A_V=g/128 and a finite lower-bound constant. The six-incidence periodic nearest-neighbour matrix gives Jhat_0=6c and satisfies KP's weighted conditions with w_alpha=exp(-alpha|y-z|). The finite-volume form provides the operator input used by KP. These facts support only a conditional fixed-source general-vector loop/DLR crosswalk; they do not supply source-uniform compactness, the continuous-loop FKG, the FSS infrared passage, the pressure cusp or DLR multiplicity.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001574",
+      "method": [
+        "Read the hash-frozen KP v1 Assumption (A), lattice regularity, interaction norm, finite-volume operator statement, weighted topology and Theorems 3.1--3.3 at their source locations.",
+        "Map the exact periodic Q3LOCK Hamiltonian to KP notation with nu=8, L=Z^3, m=chi/hbar^2, an auxiliary a>0, residual quartic potential and J_(y,z)=c on directed nearest-neighbour edges.",
+        "Insert the explicit Q3LOCK quartic lower and continuous upper bounds and keep the KP exponent distinct from the Q3LOCK quadratic coefficient r.",
+        "Verify finite-range exponential weights, Jhat_0=6c, the Jhat_alpha-Jhat_0 limit and the separation between finite-product loop topology and global W_t topology.",
+        "Build a permitted-use table for KP Theorems 3.1--3.3 and a firewall against KP's scalar nu=1 FKG, pressure and phase results, then record all remaining source-window and external-review gates."
+      ],
+      "missing_assumptions": [
+        "Independent external acceptance of the mass/form-domain and finite-volume Feynman--Kac map.",
+        "A source-uniform weighted-tempered tightness bound for the selected h_n -> 0 DLR states.",
+        "Independent verification of the compact-boundary source-window specification passage and the exact W_t topology in the final manuscript.",
+        "Independent P-06, P-09, operator, KKK and pressure audits, claim/result registration, clean replay, content freeze and final PDF gate."
+      ],
+      "next_action": "Obtain independent line-by-line acceptance of the mass/form-domain map, common source-window constants and exact W_t/specification passage, then make a bounded claim/result-lineage decision while keeping the manuscript and PDF gates deferred.",
+      "non_claims": [
+        "No strict infrared lower bound, source cusp, positive-lambda phase theorem or DLR multiplicity is certified.",
+        "No extremality, purity, clustering, KMS, common dynamics, ground-state, spectral-gap, continuum, physical-vacuum, cosmological, C6, CP1, Sector A, Pre-A or Yang--Mills conclusion is certified.",
+        "No claim card, P2 manuscript, submission, upload, release, tag or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Do the general-vector KP finite-volume and tempered-DLR hypotheses match the eight-component Q3LOCK model, and which KP results must remain outside the phase proof?",
+      "recorded_at": "2026-09-05T00:55:16Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001573",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001563",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001524",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000781",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK KP vector theorem-domain crosswalk passes a conditional hypothesis audit",
+      "topic": "Q3LOCK KP general-vector assumptions, weighted topology and DLR scope",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does KP Theorem 3.1 itself state uniform compactness over a family of sources?",
+          "disposition": "UPHELD AS FALSE: the common bound is an additional source-window derivation from the KP moment proof."
+        },
+        {
+          "check": "Can the linear source be absorbed without a source-dependent quartic constant?",
+          "disposition": "DISMISSED UNDER THE WINDOW: the quartic audit supplies one constant C_0 for |h|<=h_0."
+        },
+        {
+          "check": "Is positivity of the KP partition denominator implied by the lower potential bound?",
+          "disposition": "UPHELD AS FALSE: the denominator lower bound uses the source-window upper function and a positive Gaussian integral."
+        },
+        {
+          "check": "Does a per-site moment automatically imply W_t tightness?",
+          "disposition": "UPHELD AS FALSE: summability of the spatial weight, a stronger-to-weaker compact embedding and projective-limit diagonalization are required."
+        },
+        {
+          "check": "Does common source-window tightness alone make the zero-source limit a DLR state?",
+          "disposition": "UPHELD AS FALSE: uniform-on-compact specification continuity, Feller continuity and a monotone-class extension remain required."
+        },
+        {
+          "check": "Does this source-window estimate prove a pressure cusp or phase transition?",
+          "disposition": "UPHELD AS FALSE: it only supports source-tangent compactness; FKG, FSS, zero-mode and KKK slope steps remain separate."
+        },
+        {
+          "check": "Does completing the estimate authorize a manuscript or PDF?",
+          "disposition": "UPHELD AS FALSE: claim registration, external referee review, content freeze, clean replay, release review and PDF generation remain deferred."
+        }
+      ],
+      "assumptions": [
+        "The Q3LOCK quartic coercivity and finite-volume form-domain estimates hold uniformly on the declared compact source window.",
+        "The canonical Q3LOCK-to-KP mass and harmonic-split conventions match the hash-frozen KP source.",
+        "KP Lemmas 4.1--4.5 and Theorems 3.1--3.3 may be imported only after the vector theorem-domain crosswalk and its topology map are accepted.",
+        "The selected source-varying measures are tempered Euclidean DLR states at their fixed sources, as supplied conditionally by EXP-000781."
+      ],
+      "boundary": "T0 conditional source-window KP moment and tempered-tightness audit only; no theorem certification, claim-card promotion, manuscript release or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The proof of KP Lemma 4.1 depends on the lower and upper bounds in Assumption (A), the OU/Fernique constant and the fixed interaction norm. The Q3LOCK quartic audit supplies lower and upper envelopes uniform on a compact collective-source window, while finite-range coupling keeps Jhat_0 and every exponential weighted norm source-independent. Reusing the KP Lemma 4.1, Lemma 4.3, Lemma 4.4 and Theorem 3.2 proof therefore gives common sitewise exponential moments and, after summing a summable weight and using KP's compact embedding, a conditional common W_t tightness bound.",
+      "evidence_refs": [
+        "strategy/q3lock-kp-source-window-uniform-moment-audit-260905.md#3-uniformity-of-the-kp-one-site-kernel-estimate",
+        "strategy/q3lock-kp-source-window-uniform-moment-audit-260905.md#4-uniform-kp-exponential-moments-for-all-source-dlr-states",
+        "strategy/q3lock-kp-source-window-uniform-moment-audit-260905.md#5-a-common-weighted-tempered-tightness-bound",
+        "strategy/q3lock-kp-source-window-uniform-moment-audit-260905.md#6-consequence-for-the-source-to-zero-specification-step",
+        "strategy/q3lock-kp-vector-hypothesis-crosswalk-independent-audit-260905.md#4-lattice-regularity-and-assumption-b",
+        "strategy/q3lock-quartic-coercivity-form-domain-audit-260905.md#3-explicit-lower-bound-on-compact-source-intervals",
+        "strategy/q3lock-kp-source-window-feller-audit-260905.md#3-compact-boundary-quartic-envelope"
+      ],
+      "finding": "For |h|<=h_0, the Q3LOCK residual potential obeys V_(h,a)>=A_4|q|^4-C_0 and V_(h,a)<=V^+_(a,h_0). The KP one-site denominator has a positive h-independent lower bound from V^+, and the numerator has an h-independent integrable majorant from the quartic lower bound. Thus the KP conditional-kernel and DLR exponential-moment constants can be chosen uniformly over all source DLR states G_t(h) in the window. Summation with w_alpha=exp(-alpha|y-z|) gives a uniform weighted moment, and KP's compact embedding yields common tightness in each weaker W_alpha topology and conditionally in W_t. This advances, but does not independently certify, the source-to-zero specification passage.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001575",
+      "method": [
+        "Write the exact source-dependent Q3LOCK residual potential after the positive harmonic split and insert its uniform quartic lower and upper envelopes.",
+        "Inspect KP Lemma 4.1 equation (4.3) and bound its denominator from below with the source-window upper function and its numerator from above with the quartic lower bound plus KP Proposition 2.2.",
+        "Choose finite-range exponential weights and a small interaction-absorption parameter so that the KP Lemma 4.3 recursion closes with constants independent of h.",
+        "Apply the proof of KP Theorem 3.2 to obtain a uniform sitewise exponential moment for every mu in G_t(h), then sum its quadratic consequence against a summable weight.",
+        "Use KP's compact embedding Omega_(alpha,sigma) -> Omega_(alpha') and a countable projective-limit diagonal to formulate the common W_t tightness required before the compact-boundary DLR source limit."
+      ],
+      "missing_assumptions": [
+        "Independent reviewer confirmation that the numerator majorant remains integrable with the exact KP Holder norm and OU reference constants.",
+        "Independent verification of the projective-limit compact-set construction and the chosen alpha sequence in W_t.",
+        "Independent acceptance of the compact-boundary Feller/source-continuity estimate and its monotone-class extension to the DLR identity.",
+        "Independent P-06, P-09, operator, KKK and pressure audits, claim/result registration, clean replay, content freeze and final PDF gate."
+      ],
+      "next_action": "Obtain independent line-by-line acceptance of the uniform KP constants, compact embedding and compact-boundary specification passage, then re-evaluate whether the source-tangent DLR component can be promoted to a bounded claim/result line.",
+      "non_claims": [
+        "No strict source cusp, positive-lambda phase theorem, pressure-to-DLR multiplicity or zero-source DLR identity is certified by this note alone.",
+        "No extremality, purity, clustering, KMS, common dynamics, ground-state, spectral-gap, continuum, physical-vacuum, cosmological, C6, CP1, Sector A, Pre-A or Yang--Mills conclusion is certified.",
+        "No claim card, P2 manuscript, submission, upload, release, tag or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the KP general-vector moment proof be made uniform for Q3LOCK sources |h|<=h_0 so that source-varying DLR states at h_n -> 0 have a common W_t tightness bound?",
+      "recorded_at": "2026-09-05T01:06:43Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001574",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001563",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000781",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK KP source-window moments yield a conditional common tempered-tightness bound",
+      "topic": "Q3LOCK source-window KP exponential moments and W_t compactness",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does R504 choose or fit sector weights?",
+          "disposition": "UPHELD AS FALSE: weights are theorem variables only; no source-owned law is instantiated."
+        },
+        {
+          "check": "Does the abstract separator prove that every PAH component has the same sign?",
+          "disposition": "UPHELD AS FALSE: the common positive lower bound is an uninstantiated future assumption."
+        },
+        {
+          "check": "Does the finite theorem absorb a growing-Q tail or prove a projective limit?",
+          "disposition": "UPHELD AS FALSE: the finite block is explicit and tail, embedding and topology remain missing."
+        },
+        {
+          "check": "Does the Q=0 route-local negative become a global full-Q no-go?",
+          "disposition": "UPHELD AS FALSE: Q=0 is retained only as a scoped obstruction and other components may cancel it."
+        },
+        {
+          "check": "Are R-484 or C_sw=540 used to manufacture the separator?",
+          "disposition": "UPHELD AS FALSE: 16/9 remains a boundary defect and C_sw=540 is domination-only."
+        },
+        {
+          "check": "Does this support a physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE claim?",
+          "disposition": "UPHELD AS FALSE: all such interpretations remain explicit non-claims."
+        }
+      ],
+      "assumptions": [
+        "The future component index block is finite and common to the compared levels.",
+        "The future source-owned component mismatches d(i) are real values for one fixed bounded common cylinder.",
+        "The future weights are normalized and nonnegative.",
+        "The positive separator c is proved by the source owner rather than fitted after observing the cylinder.",
+        "The fixed PAH-001 functional, finite order and boundary conventions remain unchanged."
+      ],
+      "boundary": "Conditional finite convex-separation support only. PAH-001 functional/rates, PAH-OMC-010 Gibbs weighting, PAH-OMC-012 full-Q graded domain/projection and PAH-OMC-014 order remain unchanged. R-484 hidden-diagonal defect 16/9 is retained and R-490 C_sw=540 remains domination-only. No source law, common embedding, tail estimate, projective equality, weak cylinder limit, positivity/normalization, stationarity, closability, semigroup, continuum or physical conclusion is claimed.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R500-R503 separated projective recursion, nonzero-sector weight, and finite mixture error obligations. R504 adds the next conditional bridge: a source owner cannot obtain exact projective equality for a fixed cylinder from a mixture if all declared components share a source-proved positive mismatch. The theorem is deliberately agnostic about whether such a separator exists and does not turn the route-local Q=0 obstruction into a global no-go.",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-014-separator-lean-manifest.json#theorem_contract",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json#status",
+        "strategy/pa-hyp/PAH-OMC-014-projective-kernel-obligation-260905.md#required_source_owned_statement",
+        "strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-exploration.json#boundary",
+        "verification/lean/Tect/R504.lean#weighted_mismatch_lower_bound",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-separator-lean/integrated.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-separator-lean/independent.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-separator-lean/hostile.json#mutation_policy",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-q0-projective-obstruction/integrated.json#boundary"
+      ],
+      "finding": "Lean R504 proves that for a finite component index type, normalized nonnegative weights, and a common c>0 with c<=d(i) for every component mismatch d(i), the weighted mismatch sum_i w_i*d(i) is at least c and therefore nonzero. The integrated fixture gives weights (1/2,1/2), mismatches (1,3/2), c=1 and value 5/4; the independent fixture gives weights (1/3,1/3,1/3), mismatches (1,2,3), c=1 and value 2. No PAH component mismatch vector, sector law, projective kernel or separator is supplied.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001576",
+      "method": [
+        "Hash-pin PAH-001, PAH-OMC-014, the projective-kernel obligation and the route-local Q=0 run.",
+        "Use the abstract finite weightedMismatch definition with no PAH-specific weights or mismatch values in the theorem.",
+        "Compile R504 under Lean 4.32.1 and verify its registry hash and no-escape-token policy.",
+        "Replay separate exact rational fixtures through integrated, independent and hostile mutation verifiers.",
+        "Keep the parent gate at HOLD_FOR_EVIDENCE because the source-owned mismatch vector, separator, full-Q law and tail estimate are absent."
+      ],
+      "missing_assumptions": [
+        "An exact source-owned mismatch vector for all components in a declared finite block.",
+        "A source-owned common positive separator or a convex-hull no-zero certificate.",
+        "A normalized full-Q Gibbs weight law or projective kernel and a common embedding/tail estimate.",
+        "A topology/Cauchy bound and a common stationarity domain for any later weak-limit argument."
+      ],
+      "next_action": "Obtain a source-owned exact mismatch vector for one fixed common cylinder over a declared finite component block and either a common positive separator or a convex-hull certificate that excludes zero, while separately supplying the normalized full-Q kernel/weight law and its tail control.",
+      "non_claims": [
+        "No source-owned component mismatch vector or positive separator is supplied.",
+        "No full-Q Gibbs law, projective kernel, common embedding, tail bound or weak cylinder limit is proved.",
+        "No global projective no-go, R-488 nonzero, stationarity, closability or semigroup conclusion follows.",
+        "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+        "Markov time remains external stochastic time."
+      ],
+      "provenance": "contemporaneous",
+      "question": "If a future source-owned full-Q packet supplies one common positive lower bound for every component mismatch of one fixed common cylinder, what exact finite consequence follows for every normalized nonnegative sector mixture?",
+      "recorded_at": "2026-09-05T01:10:13Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001569",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "revisit_condition": "Reopen when a source owner supplies the exact all-component mismatch vector plus a common positive separator or convex-hull no-zero certificate, and independently supplies the normalized full-Q kernel/weight and tail data; or when an exact parent-scope counterexample invalidates the R504 finite theorem.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "PAH-OMC-014 conditional convex separator for a component mismatch",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Pointwise Feller continuity at one fixed source is enough for h_n -> 0.",
+          "disposition": "UPHELD AS FALSE: a compact-boundary uniform source estimate and a tightness split are required."
+        },
+        {
+          "check": "A normalizer lower bound may be obtained after the kernel quotient is formed.",
+          "disposition": "UPHELD AS FALSE: a bounded positive interior loop set gives a uniform lower bound before division."
+        },
+        {
+          "check": "The Q3LOCK energy source enters the Euclidean local kernel as beta*h.",
+          "disposition": "UPHELD AS FALSE: the source is h and the time integral is already part of X_Delta."
+        },
+        {
+          "check": "Weak W_t convergence cannot pass the zero-source kernel.",
+          "disposition": "DISMISSED UNDER KP LEMMA 2.8: pi_Delta^0(f|.) is bounded continuous on Omega_alpha for f in C_b(Omega_alpha)."
+        },
+        {
+          "check": "One local cylinder observable is enough to conclude the Borel DLR equation.",
+          "disposition": "UPHELD AS FALSE: the C_b(Omega_alpha) measure-determining class in KP Lemma 2.11 must be used."
+        },
+        {
+          "check": "The bridge itself proves a strict cusp or two distinct phases.",
+          "disposition": "UPHELD AS FALSE: pressure slope, FKG, FSS, zero-mode and parity inputs remain separate."
+        }
+      ],
+      "assumptions": [
+        "The exact Q3LOCK residual potential has a source-uniform quartic lower bound on |h|<=h_0 and the finite boundary action has the stated Young-absorbed form.",
+        "The compact set K is compact in the KP Omega_alpha topology and the finite-range boundary maps are continuous there.",
+        "The Gaussian reference gives positive mass to a bounded interior-loop set and the finite-region quartic majorant is integrable.",
+        "The source-window KP moment audit supplies common W_t tightness for the selected DLR states.",
+        "The fixed-source measures satisfy the KP DLR equation and the limit is taken in W_t."
+      ],
+      "boundary": "Conditional source-to-zero local specification bridge only. The source-window moment estimate, exact Q3LOCK form bounds and KP theorem hypotheses remain subject to independent acceptance. No cusp, phase theorem, claim registration, manuscript, or PDF is produced.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A direct compact-boundary estimate bounds the Q3LOCK local action uniformly on a source window, constructs a positive normalizer lower bound before quotienting, and gives Lipschitz source continuity of the finite-region kernel. Applying the tightness split to source-varying DLR states and then using KP Lemma 2.8 passes the zero-source kernel against W_t-convergent measures. KP Lemma 2.11 supplies the C_b(Omega_alpha) determining class, so the limiting identity is equivalent to the full Borel DLR equation without a hidden total-variation or single-observable shortcut.",
+      "evidence_refs": [
+        "strategy/q3lock-source-zero-dlr-kernel-determining-class-audit-260905.md#3-uniform-boundary-coercivity-on-compact-sets",
+        "strategy/q3lock-source-zero-dlr-kernel-determining-class-audit-260905.md#4-uniform-source-continuity-of-the-local-kernel",
+        "strategy/q3lock-source-zero-dlr-kernel-determining-class-audit-260905.md#5-passing-the-dlr-identity-to-zero-source",
+        "strategy/q3lock-source-zero-dlr-kernel-determining-class-audit-260905.md#6-determining-class-step-and-exact-scope",
+        "strategy/q3lock-kp-source-window-feller-audit-260905.md#4-uniform-source-continuity-on-compact-boundary-sets",
+        "strategy/q3lock-kp-source-window-uniform-moment-audit-260905.md#5-a-common-weighted-tempered-tightness-bound",
+        "strategy/q3lock-pressure-derivative-subsequence-audit-260905.md#5-endpoint-source-sequence-and-source-to-zero-order",
+        "strategy/q3lock-literature-source-freeze-260905.md#3-1-kozitsky--pasurek-kp",
+        "strategy/q3lock-kp-source-window-feller-audit-260905.md#2-finite-region-conditional-law-and-source-factor"
+      ],
+      "finding": "For a finite Q3LOCK region and a compact KP boundary set, the source-window quartic lower bound plus boundary Young absorption yields an integrable, source-uniform majorant. A bounded interior loop set gives a positive uniform local normalizer, and the numerator/normalizer differences are O(|h-h'|). Consequently the source-dependent kernel converges uniformly on compact boundary sets. If mu_n in G_t(h_n) are W_t-tight and h_n -> 0, the compact-boundary split and KP Feller continuity give the zero-source DLR identity for every f in C_b(Omega_alpha); KP Lemma 2.11 then identifies this class with the full Borel DLR equation. This advances the local source-to-zero proof text but remains conditional on the imported KP and Q3LOCK estimates.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001577",
+      "method": [
+        "Freeze the Q3LOCK collective energy-source convention and the KP local specification notation.",
+        "Use compactness in Omega_alpha to bound the finitely many boundary loop functionals and absorb all boundary and source-linear terms into the quartic interior coercivity.",
+        "Construct a positive source- and boundary-uniform normalizer lower bound from a bounded interior loop set of positive Gaussian reference mass.",
+        "Apply the exponential difference estimate and quartic Young absorption to obtain uniform numerator and denominator continuity, then divide using the explicit lower bound.",
+        "Pass the DLR identity along a W_t-convergent source sequence with a compact-boundary tightness split, use KP Lemma 2.8 for the zero-source kernel, and invoke KP Lemma 2.11 for the determining-class extension."
+      ],
+      "missing_assumptions": [
+        "Independent line-by-line acceptance of the exact Q3LOCK quartic/form estimates and the Gaussian-reference integrability constants.",
+        "Independent acceptance of the common source-window KP moment and W_t compactness construction.",
+        "Independent review of the source-varying kernel bound for the final choice of KP alpha, sigma and boundary norm.",
+        "Independent acceptance of the EXP-000780 pressure limit and pressure-derivative tangent selection before composing the cusp.",
+        "Claim/result registration, clean replay, content freeze, release review, external mathematical referee and final PDF gate."
+      ],
+      "next_action": "Use this determining-class bridge in the complete source-tangent proof, then obtain independent acceptance of the source-window constants and compose it with the FKG, FSS, operator, KKK and pressure audits without promoting the phase claim.",
+      "non_claims": [
+        "No strict source cusp, positive zero-mode lower bound, positive-lambda phase theorem or DLR multiplicity is certified by this record alone.",
+        "No extremality, purity, clustering, KMS state, common real-time dynamics, ground-state phase, spectral gap, continuum limit, physical vacuum, cosmological interpretation, C6, CP1, Sector A, Pre-A or Yang--Mills conclusion is certified.",
+        "No claim card, manuscript, submission, upload, release, tag or PDF is created."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the source-dependent Q3LOCK KP specification be passed to h=0 along W_t-convergent source DLR states, with a non-circular compact-boundary kernel estimate and an explicit determining-class argument?",
+      "recorded_at": "2026-09-05T01:16:44Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001575",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001563",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001560",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000781",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK source-to-zero DLR kernel passage has an explicit determining-class bridge",
+      "topic": "Q3LOCK source-varying KP specification and DLR limit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

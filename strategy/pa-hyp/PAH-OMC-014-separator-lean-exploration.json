@@ -1,0 +1,63 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-014 conditional convex separator for a component mismatch",
+  "question": "If a future source-owned full-Q packet supplies one common positive lower bound for every component mismatch of one fixed common cylinder, what exact finite consequence follows for every normalized nonnegative sector mixture?",
+  "finding": "Lean R504 proves that for a finite component index type, normalized nonnegative weights, and a common c>0 with c<=d(i) for every component mismatch d(i), the weighted mismatch sum_i w_i*d(i) is at least c and therefore nonzero. The integrated fixture gives weights (1/2,1/2), mismatches (1,3/2), c=1 and value 5/4; the independent fixture gives weights (1/3,1/3,1/3), mismatches (1,2,3), c=1 and value 2. No PAH component mismatch vector, sector law, projective kernel or separator is supplied.",
+  "decision_reason": "R500-R503 separated projective recursion, nonzero-sector weight, and finite mixture error obligations. R504 adds the next conditional bridge: a source owner cannot obtain exact projective equality for a fixed cylinder from a mixture if all declared components share a source-proved positive mismatch. The theorem is deliberately agnostic about whether such a separator exists and does not turn the route-local Q=0 obstruction into a global no-go.",
+  "boundary": "Conditional finite convex-separation support only. PAH-001 functional/rates, PAH-OMC-010 Gibbs weighting, PAH-OMC-012 full-Q graded domain/projection and PAH-OMC-014 order remain unchanged. R-484 hidden-diagonal defect 16/9 is retained and R-490 C_sw=540 remains domination-only. No source law, common embedding, tail estimate, projective equality, weak cylinder limit, positivity/normalization, stationarity, closability, semigroup, continuum or physical conclusion is claimed.",
+  "next_action": "Obtain a source-owned exact mismatch vector for one fixed common cylinder over a declared finite component block and either a common positive separator or a convex-hull certificate that excludes zero, while separately supplying the normalized full-Q kernel/weight law and its tail control.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "task_id": "T-054",
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "related": [{"id": "EXP-001569", "relation": "continues"}],
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-014, the projective-kernel obligation and the route-local Q=0 run.",
+    "Use the abstract finite weightedMismatch definition with no PAH-specific weights or mismatch values in the theorem.",
+    "Compile R504 under Lean 4.32.1 and verify its registry hash and no-escape-token policy.",
+    "Replay separate exact rational fixtures through integrated, independent and hostile mutation verifiers.",
+    "Keep the parent gate at HOLD_FOR_EVIDENCE because the source-owned mismatch vector, separator, full-Q law and tail estimate are absent."
+  ],
+  "assumptions": [
+    "The future component index block is finite and common to the compared levels.",
+    "The future source-owned component mismatches d(i) are real values for one fixed bounded common cylinder.",
+    "The future weights are normalized and nonnegative.",
+    "The positive separator c is proved by the source owner rather than fitted after observing the cylinder.",
+    "The fixed PAH-001 functional, finite order and boundary conventions remain unchanged."
+  ],
+  "missing_assumptions": [
+    "An exact source-owned mismatch vector for all components in a declared finite block.",
+    "A source-owned common positive separator or a convex-hull no-zero certificate.",
+    "A normalized full-Q Gibbs weight law or projective kernel and a common embedding/tail estimate.",
+    "A topology/Cauchy bound and a common stationarity domain for any later weak-limit argument."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-014-separator-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json#status",
+    "strategy/pa-hyp/PAH-OMC-014-projective-kernel-obligation-260905.md#required_source_owned_statement",
+    "strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-exploration.json#boundary",
+    "verification/lean/Tect/R504.lean#weighted_mismatch_lower_bound",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-separator-lean/integrated.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-separator-lean/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-separator-lean/hostile.json#mutation_policy",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-q0-projective-obstruction/integrated.json#boundary"
+  ],
+  "adversarial_review": [
+    {"check": "Does R504 choose or fit sector weights?", "disposition": "UPHELD AS FALSE: weights are theorem variables only; no source-owned law is instantiated."},
+    {"check": "Does the abstract separator prove that every PAH component has the same sign?", "disposition": "UPHELD AS FALSE: the common positive lower bound is an uninstantiated future assumption."},
+    {"check": "Does the finite theorem absorb a growing-Q tail or prove a projective limit?", "disposition": "UPHELD AS FALSE: the finite block is explicit and tail, embedding and topology remain missing."},
+    {"check": "Does the Q=0 route-local negative become a global full-Q no-go?", "disposition": "UPHELD AS FALSE: Q=0 is retained only as a scoped obstruction and other components may cancel it."},
+    {"check": "Are R-484 or C_sw=540 used to manufacture the separator?", "disposition": "UPHELD AS FALSE: 16/9 remains a boundary defect and C_sw=540 is domination-only."},
+    {"check": "Does this support a physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE claim?", "disposition": "UPHELD AS FALSE: all such interpretations remain explicit non-claims."}
+  ],
+  "non_claims": [
+    "No source-owned component mismatch vector or positive separator is supplied.",
+    "No full-Q Gibbs law, projective kernel, common embedding, tail bound or weak cylinder limit is proved.",
+    "No global projective no-go, R-488 nonzero, stationarity, closability or semigroup conclusion follows.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "revisit_condition": "Reopen when a source owner supplies the exact all-component mismatch vector plus a common positive separator or convex-hull no-zero certificate, and independently supplies the normalized full-Q kernel/weight and tail data; or when an exact parent-scope counterexample invalidates the R504 finite theorem.",
+  "provenance": "contemporaneous",
+  "verdict": "advanced"
+}

@@ -22,7 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes; EXP-001567 adds the exact EXP-000780 collective-source restriction and pressure dictionary; EXP-001568 inserts that dictionary into the integrated P-06/P-09 proof text; EXP-001570 independently audits its algebra and limit order; EXP-001571 audits the finite-grid-to-fixed-loop FKG association passage. P-06/P-09, source/form-domain review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
+| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes; EXP-001567 adds the exact EXP-000780 collective-source restriction and pressure dictionary; EXP-001568 inserts that dictionary into the integrated P-06/P-09 proof text; EXP-001570 independently audits its algebra and limit order; EXP-001571 audits the finite-grid-to-fixed-loop FKG association passage; EXP-001572 audits the finite FSS-to-loop Duhamel and Fourier passage; EXP-001573 audits the conditional pressure-to-cusp and tangent-state bridge; EXP-001574 audits the KP general-vector theorem-domain and source-window hypothesis crosswalk; EXP-001575 audits the source-window KP moment constants and common tempered tightness bound; EXP-001577 audits the compact-boundary source-to-zero DLR kernel and the KP determining-class passage. P-06/P-09, source/form-domain review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
 | [R-494](#r-494) | PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit | R-494 / EXP-001504 finds no source-owned cross-Q sector weight law in the hash-pinned PAH-001/OMC-010/OMC-011/OMC-012/OMC-013 scope. Primary 20/20, independent 14/14, hostile 12/12, integrated 31/31 pass; verdict HOLD_FOR_EVIDENCE. Fixed-Q component Gibbs states remain valid, but a global mu_(n,R), omega, Cauchy error and stationarity test are not defined. This is T0 claim-nonbearing source-input evidence only; no physical or continuum conclusion follows. |
 | [R-493](#r-493) | PAH-OMC-013 full-Q eventual generator intertwining on the grade-blind cylinder | R-493 / EXP-001474 proves pointwise intertwining after N(f)=max(2,m_f+1) on the full-Q grade-blind finite cylinder algebra for unchanged PAH-001 rates; primary 22/22, independent 16/16, hostile 13/13, integrated 21/21 and Lean R493 pass. This is T0 claim-nonbearing finite algebraic progress only; weak Gibbs-L2, closability, infinite volume, continuum and physical conclusions remain open. |
 
@@ -17195,7 +17195,7 @@ mathematical theorem.
 
 | source | SHA-256 |
 |---|---|
-| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `1070e8a2c4880c920c361ccab0c2733bba1ca9b06de6ab4ecfca09b5368154af` |
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `f6ac4124586e5c4c8d6a9f155cad81715725608d5526d0f1b6b6ed1b997560f1` |
 | upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
 | upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
 | EXP-000782 upstream scope-firewall audit | `cce56eed01dfe6239d8ddbcc43e823df4e2c68ebeebe51dfc71823b545b165e9` |
@@ -17223,6 +17223,11 @@ mathematical theorem.
 | KKK Duhamel and Fourier source-normalization pin | `d4f3f22773a2773abf0a5b3811b48332edeb5738bcf7ce9c6d04e9a60a53bc5a` |
 | Collective dictionary and limit-order audit | `186b6e08490d28e3b9af9372fbf09f2db260e5153f421a136a15b3909a0a29ad` |
 | P-06 continuous-loop association independent audit | `f7ac2c816cc20a957800d6c7b9d02ebb9ada70a112ae2d99b806131c18b040a3` |
+| P-09 FSS-to-loop Duhamel independent audit | `bbc3b9351376a230d8f31867cc7451ecde29305da08f14ab3a3971b33d96caca` |
+| Pressure-to-cusp bridge independent audit | `2eb990e736646840e07cb98830276b9ed8fddbda8bed3f047aae5f797628f4a5` |
+| KP vector theorem-domain crosswalk independent audit | `8f3d24cafb2bf7f620c6ad52e7255a203626aa1cc59bef279a4a747267d5507f` |
+| KP source-window uniform-moment and tempered-tightness audit | `0d7f1817ef2c8804510a83d8042f18b930d3b4f8ef19487de55c32e63e0f319f` |
+| Source-zero DLR kernel and determining-class audit | `7a3652955439671d109b0656d5361a8cb4f19f8e622d4f88af855e92fedb4df2` |
 | Pressure zero-mode, Griffiths and tangent-state audit | `2a94560bfcd53f8a2dc2da6098e64cdbcea9fefb9a1c8dc19800549b38e73c40` |
 | Finite-volume translation trace-differentiation audit | `a2659b62fbf5e344d683a2a9638c425fdcf6ba3062e8e45224e4e69a46deff9b` |
 | KKK endpoint-interval and non-differentiable cusp correction | `e5bdd2ed72f19dddd1e3c6325a131d12c04b4a59124745b09dfe665fb8a2c1fb` |
@@ -17247,7 +17252,7 @@ mathematical theorem.
 in `strategy/q3lock-exp782-independent-result-manifest-260905.json`. The
 upstream authority records are EXP-000780, EXP-000781, and EXP-000782 in
 `explorations/log.jsonl`; the current seam decisions are EXP-001516, EXP-001522, EXP-001526,
-EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, EXP-001534, EXP-001536, EXP-001537, EXP-001538, EXP-001540, EXP-001541, EXP-001543, EXP-001545, EXP-001546, EXP-001548, EXP-001549, EXP-001550, EXP-001551, EXP-001552, EXP-001554, EXP-001555, EXP-001556, EXP-001557, EXP-001559, EXP-001560, EXP-001561, EXP-001562, EXP-001563, EXP-001564, EXP-001566, EXP-001567, EXP-001568, EXP-001570, and EXP-001571. The proof
+EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, EXP-001534, EXP-001536, EXP-001537, EXP-001538, EXP-001540, EXP-001541, EXP-001543, EXP-001545, EXP-001546, EXP-001548, EXP-001549, EXP-001550, EXP-001551, EXP-001552, EXP-001554, EXP-001555, EXP-001556, EXP-001557, EXP-001559, EXP-001560, EXP-001561, EXP-001562, EXP-001563, EXP-001564, EXP-001566, EXP-001567, EXP-001568, EXP-001570, EXP-001571, EXP-001572, EXP-001573, EXP-001574, EXP-001575, and EXP-001577. The proof
 text and its boundaries are audited in
 `strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`, with the
 finite-grid FKG, source-uniform loop limit, topology, edge-incidence,
@@ -17451,6 +17456,46 @@ convergence, and clipped coordinate products. It validates the fixed-volume
 association chain only under the separately audited KP topology and moment
 bounds; spatial tempered accumulation, cusp, DLR, claim, external-review and
 PDF gates remain open.
+
+The EXP-001572 P-09 audit is recorded in
+`strategy/q3lock-p09-fss-loop-duhamel-independent-audit-260905.md`; it
+recomputes the periodic bond expansion, scaled-spin source, zero-sum Poisson
+shift, variance/Duhamel conversion, and `2*E(p)` factor. It validates only the
+finite-grid normalization and conditional fixed-volume loop passage; volume-
+uniform extension, cusp, DLR, claim, external-review and PDF gates remain open.
+
+The EXP-001573 pressure-to-cusp audit is recorded in
+`strategy/q3lock-pressure-cusp-bridge-independent-audit-260905.md`; it
+re-derives the Q3 local moment bound, Falk--Bruch lower bound, nonzero-mode
+subtraction, `A_0>I_3` threshold, KKK endpoint slope, and parity-related
+source-tangent DLR expectations. Every link remains conditional on its
+upstream audit; no cusp or phase theorem is promoted and the claim, external-
+review and PDF gates remain open.
+
+The EXP-001574 KP vector crosswalk is recorded in
+`strategy/q3lock-kp-vector-hypothesis-crosswalk-independent-audit-260905.md`; it
+checks the general `R^8`/`Z^3` map, quartic `r_KP=2` bounds, finite-range
+`Jhat_0=6c`, admissible exponential weights, and the permitted use of KP
+Theorems 3.1--3.3. It explicitly excludes the scalar `nu=1` KP phase route and
+keeps source-window common compactness and source-to-zero specification
+continuity as separate obligations. This is a T0 crosswalk only; all cusp,
+DLR, claim, external-review and PDF gates remain open.
+
+The EXP-001575 KP source-window audit is recorded in
+`strategy/q3lock-kp-source-window-uniform-moment-audit-260905.md`; it derives
+source-independent one-site denominators and exponential-moment constants from
+the KP proof, sums them against finite-range exponential weights, and obtains a
+conditional common `W_t` tightness input for `h` in a compact window. The
+compact-boundary Feller/source-to-zero passage and all cusp, DLR, claim,
+external-review and PDF gates remain open.
+
+The EXP-001577 source-zero DLR kernel audit is recorded in
+`strategy/q3lock-source-zero-dlr-kernel-determining-class-audit-260905.md`; it
+gives a non-circular compact-boundary normalizer lower bound, an O(|h-h'|)
+source-continuity estimate, and the KP Lemma 2.11 determining-class step for
+the limiting Borel DLR equation. This remains conditional on the source-window
+tightness and exact Q3LOCK/KP hypotheses; cusp, phase, claim, external-review
+and PDF gates remain open.
 
 **Reuse scope.** This result is reusable for mathematical-physics analysis of
 the declared fixed-lattice Q3LOCK quantum anharmonic model and for a possible

@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**942 accepted events** · latest 25 shown below · machine locator: `index.json`
+**947 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,11 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-q3lock-source-zero-dlr-kernel-determining-class` — [Q3LOCK source-zero DLR kernel determining-class audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-zero-dlr-kernel-determining-class) |
+| 2026-09-05 | `20260905-q3lock-kp-source-window-uniform-moment-audit-20` — [Q3LOCK KP source-window uniform moment audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kp-source-window-uniform-moment-audit-20) |
+| 2026-09-05 | `20260905-q3lock-kp-vector-theorem-domain-crosswalk-audit` — [Q3LOCK KP vector theorem-domain crosswalk audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kp-vector-theorem-domain-crosswalk-audit) |
+| 2026-09-05 | `20260905-q3lock-pressure-to-cusp-bridge-receives-indepen` — [Q3LOCK pressure-to-cusp bridge receives independent audit (EXP-001573)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-pressure-to-cusp-bridge-receives-indepen) |
+| 2026-09-05 | `20260905-q3lock-p-09-fss-to-loop-duhamel-passage-receive` — [Q3LOCK P-09 FSS-to-loop Duhamel passage receives independent audit (EXP-001572)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-p-09-fss-to-loop-duhamel-passage-receive) |
 | 2026-09-05 | `20260905-q3lock-p-06-continuous-loop-association-receive` — [Q3LOCK P-06 continuous-loop association receives independent audit (EXP-001571)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-p-06-continuous-loop-association-receive) |
 | 2026-09-05 | `20260905-q3lock-collective-dictionary-receives-independe` — [Q3LOCK collective dictionary receives independent limit-order audit (EXP-001570)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-collective-dictionary-receives-independe) |
 | 2026-09-05 | `20260905-q3lock-collective-dictionary-inserted-into-p-06` — [Q3LOCK collective dictionary inserted into P-06/P-09 proof text (EXP-001568)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-collective-dictionary-inserted-into-p-06) |
@@ -37,11 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-q3lock-scope-firewall-source-hash-pin-corrected` — [Q3LOCK scope-firewall source-hash pin corrected (EXP-001549)] - 2026-09-05 | R-497 | [bounded page](pages/000919-000968.md#20260905-q3lock-scope-firewall-source-hash-pin-corrected) |
 | 2026-09-05 | `20260905-q3lock-kp-v1-theorem-locators-corrected-2026-09` — [Q3LOCK KP v1 theorem locators corrected] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kp-v1-theorem-locators-corrected-2026-09) |
 | 2026-09-05 | `20260905-q3lock-exp-000782-upstream-scope-firewall-recor` — [Q3LOCK EXP-000782 upstream scope firewall recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-000782-upstream-scope-firewall-recor) |
-| 2026-09-05 | `20260905-q3lock-fss-divergence-incidence-convention-corr` — [Q3LOCK FSS divergence-incidence convention correction] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-fss-divergence-incidence-convention-corr) |
-| 2026-09-05 | `20260905-q3lock-operator-translation-hbar-normalization` — [Q3LOCK operator translation hbar normalization correction] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-operator-translation-hbar-normalization) |
-| 2026-09-05 | `20260905-q3lock-verification-lane-result-hash-correction` — [Q3LOCK verification-lane result hash correction] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-verification-lane-result-hash-correction) |
-| 2026-09-05 | `20260905-q3lock-source-tangent-dlr-composition-audit-202` — [Q3LOCK source-tangent DLR composition audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-tangent-dlr-composition-audit-202) |
-| 2026-09-05 | `20260905-q3lock-loop-limit-corrected-from-total-variatio` — [Q3LOCK loop limit corrected from total variation to weak convergence] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-loop-limit-corrected-from-total-variatio) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 919–942 | 24 | [000919-000968.md](pages/000919-000968.md) |
+| 919–947 | 29 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |

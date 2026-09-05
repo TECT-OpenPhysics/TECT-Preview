@@ -1,0 +1,217 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 11,
+  "assertions": [
+    {
+      "actual": {
+        "E:\\Dev\\TECT\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-09-05-pah-omc014-q0-projective-obstruction\\integrated.json": "3938987009c2ccf1a81272655277f1fa21dbfddc47fd49e2497975dc86e7f6fe",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-projective-kernel-obligation-260905.md": "ea8495c9e12e464506ece41f4e75fe3044c922c1da71ea56dea0e387d8ac5d1e"
+      },
+      "expected": {
+        "E:\\Dev\\TECT\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-09-05-pah-omc014-q0-projective-obstruction\\integrated.json": "3938987009c2ccf1a81272655277f1fa21dbfddc47fd49e2497975dc86e7f6fe",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+        "E:\\Dev\\TECT\\strategy\\pa-hyp\\PAH-OMC-014-projective-kernel-obligation-260905.md": "ea8495c9e12e464506ece41f4e75fe3044c922c1da71ea56dea0e387d8ac5d1e"
+      },
+      "name": "all parent hashes",
+      "pass": true
+    },
+    {
+      "actual": {
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+          "constructed_hypothesis": false,
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "epistemic_layer": "L2_FINITE_CONVEX_SEPARATION_OBLIGATION",
+          "external_source": false,
+          "model_change": false,
+          "physical_authority": false,
+          "source_law_present": false,
+          "synthetic_fixture": false
+        },
+        "status": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "CONDITIONAL_SUPPORT_ONLY",
+          "physical_promotion": false,
+          "source_law_present": false,
+          "verdict": "HOLD_FOR_EVIDENCE"
+        }
+      },
+      "expected": "HOLD/no law/no gate change",
+      "name": "manifest HOLD/no source law",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "HOLD_FOR_EVIDENCE_SOURCE_OWNER_FULL_Q_WEIGHT_LAW_ABSENT",
+        "csw_role": "DOMINATION_ONLY",
+        "omega_status": "NOT_DEFINED",
+        "physical_promotion": false,
+        "positivity_normalization": "NOT_TESTABLE",
+        "projective_consistency": "NOT_TESTABLE",
+        "r484_boundary_defect": "RETAINED_16_OVER_9",
+        "stationarity": "NOT_TESTABLE",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "weak_cylinder_limit": "NOT_TESTABLE"
+      },
+      "expected": "HOLD/NOT_DEFINED",
+      "name": "parent OMC-014 open",
+      "pass": true
+    },
+    {
+      "actual": "source-owned K_n absent",
+      "expected": "open kernel input",
+      "name": "kernel obligation still open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "verdict": "NEGATIVE_RESULT",
+        "verification": "PASS"
+      },
+      "expected": "scoped negative",
+      "name": "Q0 negative is route-local",
+      "pass": true
+    },
+    {
+      "actual": {
+        "c": "1",
+        "mismatch": [
+          "1",
+          "2",
+          "3"
+        ],
+        "weights": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ]
+      },
+      "expected": "normalized/nonnegative/one-sided",
+      "name": "independent separator hypotheses",
+      "pass": true
+    },
+    {
+      "actual": {
+        "lower_bound": "1",
+        "weighted_mismatch": "2"
+      },
+      "expected": "2 >= 1 > 0",
+      "name": "independent exact arithmetic",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declared": [
+          "weighted_mismatch_lower_bound",
+          "weighted_mismatch_nonzero"
+        ],
+        "registry": {
+          "declarations": [
+            "weighted_mismatch_lower_bound",
+            "weighted_mismatch_nonzero"
+          ],
+          "path": "verification/lean/Tect/R504.lean",
+          "sha256": "3a412b6a288d3c556606caea4be41ddb57ed2b935d0976eb0bb679bc17ab8f6e"
+        },
+        "sha256": "3a412b6a288d3c556606caea4be41ddb57ed2b935d0976eb0bb679bc17ab8f6e"
+      },
+      "expected": "R504 registered",
+      "name": "Lean declarations/hash/registry",
+      "pass": true
+    },
+    {
+      "actual": {
+        "final": true,
+        "lf": true
+      },
+      "expected": "LF/no escape",
+      "name": "Lean source policy",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R504.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compilation",
+      "pass": true
+    },
+    {
+      "actual": [
+        "This theorem does not instantiate a sector law, projective kernel, component mismatch vector or positive separator.",
+        "It does not upgrade the route-local Q=0 obstruction to a global full-Q no-go.",
+        "It does not prove a full-Q Gibbs state, weak cylinder limit, R-488 nonzero, stationarity, closability or a semigroup.",
+        "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+        "Markov time remains external stochastic time."
+      ],
+      "expected": "no promotion",
+      "name": "non-claims retained",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-SEPARATOR-LEAN-INDEPENDENT-001",
+  "claim_bearing": false,
+  "classification": "CONDITIONAL_SUPPORT_ONLY",
+  "derived": {
+    "formula": "sum_i w_i d_i >= c",
+    "lower_bound": "1",
+    "weighted_mismatch": "2"
+  },
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R504.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "next_question": "Can a source owner provide an exact all-component mismatch vector and a common positive separator (or a convex-hull no-zero certificate) for one fixed cylinder without selecting or fitting sector weights?",
+  "non_claims": [
+    "This theorem does not instantiate a sector law, projective kernel, component mismatch vector or positive separator.",
+    "It does not upgrade the route-local Q=0 obstruction to a global full-Q no-go.",
+    "It does not prove a full-Q Gibbs state, weak cylinder limit, R-488 nonzero, stationarity, closability or a semigroup.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "passed": 11,
+  "projective_consistency": "NOT_TESTABLE",
+  "reproduction": {
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_separator_lean_verify_hostile.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_separator_lean_verify_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_separator_lean_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R504.lean"
+  },
+  "run_kind": "independent",
+  "schema": "tect/pah-omc014-separator-lean-independent/1.0",
+  "scope": {
+    "finite_index_card": 3,
+    "mismatch": [
+      "1",
+      "2",
+      "3"
+    ],
+    "separator": "1"
+  },
+  "source_hashes": {
+    "PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "PAH-OMC-014-projective-kernel-obligation-260905.md": "ea8495c9e12e464506ece41f4e75fe3044c922c1da71ea56dea0e387d8ac5d1e",
+    "integrated.json": "3938987009c2ccf1a81272655277f1fa21dbfddc47fd49e2497975dc86e7f6fe",
+    "lean": "3a412b6a288d3c556606caea4be41ddb57ed2b935d0976eb0bb679bc17ab8f6e",
+    "manifest": "83f0c578fb44de7e33b646ef2cee3a7d757c6ede6db40c60da31b9651e463186"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_cylinder_limit": "NOT_TESTABLE"
+}

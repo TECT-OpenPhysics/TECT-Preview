@@ -1,0 +1,94 @@
+{
+  "schema": "tect/pah-omc014-separator-lean-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-SEPARATOR-LEAN",
+  "version": "0.1.0",
+  "title": "Conditional one-sided component-mismatch separator",
+  "purpose": "Provide an exact finite convex-separation test for the PAH-OMC-014 projective obligation. If a future source-owned packet proves that every component mismatch for one common cylinder is bounded below by the same positive constant, no normalized nonnegative sector mixture can have zero total mismatch. This packet does not supply weights or claim that the separator exists.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "source_law_present": false,
+    "constructed_hypothesis": false,
+    "synthetic_fixture": false,
+    "physical_authority": false,
+    "claim_bearing": false,
+    "model_change": false,
+    "epistemic_layer": "L2_FINITE_CONVEX_SEPARATION_OBLIGATION"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PROJECTIVE-KERNEL-OBLIGATION": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-projective-kernel-obligation-260905.md",
+      "sha256": "ea8495c9e12e464506ece41f4e75fe3044c922c1da71ea56dea0e387d8ac5d1e"
+    },
+    "Q0-COMPONENT-OBSTRUCTION": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-q0-projective-obstruction/integrated.json",
+      "sha256": "3938987009c2ccf1a81272655277f1fa21dbfddc47fd49e2497975dc86e7f6fe"
+    }
+  },
+  "lean": {
+    "path": "verification/lean/Tect/R504.lean",
+    "sha256": "3a412b6a288d3c556606caea4be41ddb57ed2b935d0976eb0bb679bc17ab8f6e",
+    "declarations": ["weighted_mismatch_lower_bound", "weighted_mismatch_nonzero"],
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "scope": "Abstract finite index type, normalized nonnegative weights, and an uninstantiated common positive component separator; no PAH sector law or cylinder mismatch vector is supplied."
+  },
+  "fixed_scope": {
+    "functional_and_states": "Use unchanged PAH-001 fixed-Q functional/rates and PAH-OMC-014 fixed-Q Gibbs components; no counterterm, refit, conditional averaging, new carrier or altered projection.",
+    "mismatch_definition": "For one fixed bounded grade-blind common cylinder f and any source-owned fine/coarse component comparison, d(i) denotes the exact component projective mismatch for index i. The theorem uses only the supplied real values d(i).",
+    "separator_condition": "A future source owner must prove one common c>0 with c<=d(i) for every component index in the declared finite block. No such c is asserted here.",
+    "conclusion_if_supplied": "For every normalized nonnegative weight vector w, weightedMismatch(w,d)=sum_i w_i*d(i) >= c > 0, so exact projective equality for that cylinder is impossible for that block.",
+    "boundary": "Retain the R-484 hidden-diagonal defect 16/9 in any component mismatch calculation; retain R-490 C_sw=540 as domination-only. Neither may be averaged away or used as a probability."
+  },
+  "theorem_contract": {
+    "assumptions": [
+      "The component index type is finite.",
+      "All component weights are nonnegative and sum to one.",
+      "A common positive constant c is a lower bound for every component mismatch d(i)."
+    ],
+    "conclusion": "The weighted mismatch is at least c and therefore nonzero.",
+    "not_supplied": [
+      "No PAH component mismatch vector d(i) for all Q is computed.",
+      "No source-owned sector weights, cross-Q kernel, common embedding or sign separator is supplied.",
+      "No claim that the Q=0 component mismatch has the same sign as every other component is made.",
+      "No global projective no-go, Cauchy estimate, weak cylinder limit or stationarity passage is established."
+    ]
+  },
+  "required_source_owner_payload": [
+    "An exact component mismatch vector for a fixed common cylinder and declared finite index block.",
+    "A source-owned proof of a common positive one-sided separator, or an exact certificate that zero lies outside the attainable convex hull.",
+    "The normalized nonnegative full-Q weight law or projective kernel, if a projective equality rather than a no-go is claimed.",
+    "An explicit treatment of the R-484 boundary defect and the fixed PAH-001 limit order.",
+    "A statement that no weights or separator were selected after observing the target cylinder or holdout data."
+  ],
+  "status": {
+    "classification": "CONDITIONAL_SUPPORT_ONLY",
+    "source_law_present": false,
+    "active_gate_change": false,
+    "claim_bearing": false,
+    "physical_promotion": false,
+    "verdict": "HOLD_FOR_EVIDENCE"
+  },
+  "non_claims": [
+    "This theorem does not instantiate a sector law, projective kernel, component mismatch vector or positive separator.",
+    "It does not upgrade the route-local Q=0 obstruction to a global full-Q no-go.",
+    "It does not prove a full-Q Gibbs state, weak cylinder limit, R-488 nonzero, stationarity, closability or a semigroup.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "reproduction": {
+    "lean": "Set-Location verification/lean; lake env lean Tect/R504.lean",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_separator_lean_verify.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_separator_lean_verify_independent.py",
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_separator_lean_verify_hostile.py"
+  },
+  "next_question": "Can a source owner provide an exact all-component mismatch vector and a common positive separator (or a convex-hull no-zero certificate) for one fixed cylinder without selecting or fitting sector weights?"
+}
