@@ -1,0 +1,118 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "Q3LOCK P-06 quantitative Gaussian weak-limit and bounded-weight transfer audit",
+  "question": "Can the fixed-mesh Gaussian Fourier input in R-500 be promoted to a quantitative fixed-volume weak-convergence proof in the exact periodic sup-norm loop topology used by KP, without conflating that topology with the spatial W_t limit?",
+  "finding": "For every beta,m,a>0 and even N>=4, the retained-mode and omitted-mode estimates give a uniform grid covariance error at most beta*(pi^2/48+3/(2*pi^2))/(m*N). Periodic polygonal interpolation adds at most sqrt(2*K*beta/(m*N)), where K=1/(beta*a)+beta/(12m). Arbitrary-time increments have variance below 14*d_beta/m and fourth moments of order d_beta^2, yielding fixed-volume C_per tightness and Gaussian weak convergence. A bounded residual-weight lemma then transfers the convergence to normalized finite-volume Q3LOCK loop laws under the separately stated compact Riemann-sum and quartic bounds. The verifier passes 13502/13502 assertions and two replay artifacts are byte-identical.",
+  "decision_reason": "R-500 verified the finite identities but explicitly left the analytic Gaussian weak limit open. The new retained-mode estimate, Fourier-tail estimate, interpolation modulus and arbitrary-time Kolmogorov bound supply that missing fixed-volume argument with derived constants. The KP source check confirms that C_beta with the sup norm is the correct one-site loop space, while Omega_t and W_t remain separate spatial projective-limit objects.",
+  "boundary": "Quantitative fixed-spatial-volume Gaussian covariance, interpolation, tightness, bounded residual-weight transfer and source-UI proof text only. External mathematical acceptance, the exact final residual split, spatial W_t accumulation, P-09/FSS, operator, pressure, cusp, DLR multiplicity, claim promotion, manuscript and PDF remain open.",
+  "next_action": "Obtain an external line-by-line audit of the covariance and Kolmogorov bounds and verify the identical harmonic residual split in the final Q3LOCK theorem text; then combine the accepted fixed-volume loop input with P-06 association and P-09 without promoting the spatial W_t or phase gates.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "task_id": "T-054",
+  "formal_refs": {
+    "results": [
+      "R-501"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "related": [
+    {
+      "id": "EXP-000780",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-000781",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-000782",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001530",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001531",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001584",
+      "relation": "continues"
+    }
+  ],
+  "method": [
+    "Split the discrete-to-continuum covariance difference into retained modes and omitted continuum modes.",
+    "Derive the retained-mode bound from sin(x)>=2x/pi and x^2-sin^2(x)<=x^4/3, and bound the asymmetric Nyquist tail explicitly.",
+    "Use the continuum massless increment comparison to control the covariance modulus and polygonal interpolation error.",
+    "Treat arbitrary times in same or adjacent cells separately from separated cells and derive the uniform variance factor 14.",
+    "Apply the Gaussian fourth-moment formula and Kolmogorov criterion to obtain fixed-volume periodic sup-norm tightness.",
+    "Prove the bounded residual-weight transfer by a common compact/tail split and retain quartic Young uniform integrability for unbounded source witnesses.",
+    "Check the analytic constants, hostile weakened inequalities and interpolation probes across three parameter triples and five meshes, then replay twice and compare output hashes."
+  ],
+  "assumptions": [
+    "The Gaussian reference action is S_G,N=(1/2)sum_k[(m/epsilon)(x_(k+1)-x_k)^2+a*epsilon*x_k^2] with beta=N*epsilon and a,m>0.",
+    "The spatial volume is fixed and finite during the time-mesh limit, so the reference is a finite product of independent scalar periodic Gaussians.",
+    "The Q3LOCK residual weights are uniformly bounded above by the quartic lower bound and their actions converge uniformly on compact equicontinuous loop sets.",
+    "The source family uses a mesh-uniform positive normalizer lower bound and the displayed quartic coercivity constant.",
+    "The KP v1 C_beta sup-norm topology is the target only for the fixed-volume loop limit; W_t is reserved for later spatial accumulation."
+  ],
+  "missing_assumptions": [
+    "External mathematical acceptance of every analytic inequality and the Kolmogorov tightness passage.",
+    "A final line-by-line confirmation that the Q3LOCK finite-grid residual and continuum Feynman--Kac action use the identical harmonic split and boundary convention.",
+    "Independent acceptance of the P-06 association composition, P-09/FSS loop passage and the spatial weighted-tempered accumulation.",
+    "Completion of pressure, operator, KKK, source-tangent, bounded claim registration, clean replay, content freeze and external referee gates."
+  ],
+  "evidence_refs": [
+    "strategy/q3lock-p06-gaussian-weak-limit-quantitative-audit-260905.md#3-quantitative-covariance-convergence-on-the-grid",
+    "strategy/q3lock-p06-gaussian-weak-limit-quantitative-audit-260905.md#5-uniform-tightness-in-the-periodic-sup-norm-topology",
+    "strategy/q3lock-p06-gaussian-weak-limit-quantitative-audit-260905.md#6-bounded-residual-weight-transfer",
+    "verification/scripts/q3lock_p06_gaussian_weak_limit_quantitative_audit.py#build_payload",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-p06-gaussian-weak-limit-quantitative-audit/result.json#assertions"
+  ],
+  "adversarial_review": [
+    {
+      "check": "Does pointwise convergence of each Fourier mode imply the loop weak limit?",
+      "disposition": "UPHELD AS FALSE: a uniform retained-mode error, omitted-mode tail, interpolation modulus and tightness proof are all explicit."
+    },
+    {
+      "check": "Can the polygonal laws converge in total variation to the OU loop law?",
+      "disposition": "UPHELD AS FALSE: their supports are mutually singular at every finite mesh; only weak convergence is used."
+    },
+    {
+      "check": "Do vertex increment estimates automatically control arbitrary interpolation times?",
+      "disposition": "UPHELD AS FALSE: same/adjacent cells and separated cells are treated separately before the factor 14 is obtained."
+    },
+    {
+      "check": "Is the finite-product C_per topology the same as KP W_t?",
+      "disposition": "UPHELD AS FALSE: W_t is a spatial weighted projective-limit topology and remains a later gate."
+    },
+    {
+      "check": "Does weak convergence alone pass the source exponential and second derivative?",
+      "disposition": "UPHELD AS FALSE: a quartic Young Lp bound and a mesh-uniform normalizer lower bound are required."
+    },
+    {
+      "check": "Do 13502 finite assertions replace external acceptance of the analytic theorem?",
+      "disposition": "UPHELD AS FALSE: the fixtures are deterministic regression evidence only."
+    },
+    {
+      "check": "Does this result close the cusp, phase or PDF gates?",
+      "disposition": "UPHELD AS FALSE: every spatial, operator, pressure, DLR, claim, referee and publication gate remains separate."
+    }
+  ],
+  "non_claims": [
+    "No spatial W_t thermodynamic limit or source-varying DLR compactness is proved by the time-mesh result.",
+    "No unconditional continuous-loop FKG, FSS infrared bound, pressure cusp, phase coexistence or DLR multiplicity is certified.",
+    "No extremality, purity, clustering, KMS state, common real-time dynamics, ground-state phase, spectral gap or continuum limit follows.",
+    "No physical-vacuum, cosmological, Sector A, CP1, C6, Pre-A, Yang--Mills or mass-gap conclusion follows.",
+    "No claim-tier promotion, P2 manuscript, submission, upload, release, tag or PDF is created."
+  ],
+  "revisit_condition": "Reopen if the Gaussian precision, interpolation, harmonic split, finite-volume topology, residual action or KP source version changes, or if external review finds a constant, topology or compactness defect.",
+  "provenance": "contemporaneous",
+  "verdict": "advanced"
+}

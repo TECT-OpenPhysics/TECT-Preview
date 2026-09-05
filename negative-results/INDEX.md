@@ -5,12 +5,13 @@
 
 Authorities: `negative-results/registry.md`.
 
-**380 registered records** · audit: 61 · fired_falsifier: 6 · no_go: 308 · retraction: 5
+**381 registered records** · audit: 62 · fired_falsifier: 6 · no_go: 308 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION`](registry.md#audit-2026-09-05-q3lock-harmonic-spatial-double-allocation) | audit | combine allocated Q3LOCK onsite potential with full spatial differences |
 | [`AUDIT-2026-09-05-PAH-OMC-014-Q0-COMPONENT-PUSHFORWARD`](registry.md#audit-2026-09-05-pah-omc-014-q0-component-pushforward) | audit | treat deterministic Q=0 component restriction as a projective Gibbs push-forward on PAH-OMC-004 |
 | [`NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE`](registry.md#ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence) | no_go | require a cutoff-independent PAH-001 root-rate interaction envelope along R_max->infinity |
 | [`NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining) | no_go | use the natural forgetful pullback after adding a freely varying adjacent fine vertex as an exact PAH generator refinement morphism |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-pointwise-positive-time-trace-class-automatic-short-time-l1-domination) | no_go | infer an integrable short-time Duhamel majorant from trace-class energy dressing at every separately fixed positive time |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonessentially-constant-linfinity-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonessentially-constant bounded measurable configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONCONSTANT-CB-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonconstant-cb-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonconstant bounded continuous configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-GEVREY-TWO-ASYMPTOTIC-REMAINDER-AUTOMATIC-ALL-ORDER-SW-CONVERGENCE`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-gevrey-two-asymptotic-remainder-automatic-all-order-sw-convergence) | no_go | infer convergent all-order SW from a Gevrey-two majorant and optimally scaled asymptotic remainder |
 
 Search without loading the full registry:
 

@@ -1,0 +1,63 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-014 finite-block and two-tail errors compose into one full-Q Cauchy envelope",
+  "question": "How do the R-503 finite-block mixture drift and the two R-506 weighted-tail bounds combine into the exact comparison error required by PAH-OMC-014?",
+  "finding": "Lean R507 proves that if the finite block drift is at most card(I)*(C*e_w+e_a) and the two omitted tails satisfy |t_j|<=C*tau_j, then the full comparison obeys |(b1+t1)-(b2+t2)|<=card(I)*(C*e_w+e_a)+C*tau1+C*tau2. A zero-tail corollary is also proved. Integrated, independent and hostile verifiers pass on distinct exact rational fixtures.",
+  "decision_reason": "R503 and R506 are separate conditional bridges. R507 composes them without choosing a sector law, fitting errors, changing PAH-001, or using C_sw=540 as a measure. The result identifies the exact source-owner deliverable needed for a future Cauchy proof: instantiate the block and tail quantities on every cylinder and prove the displayed envelope tends to zero in the fixed order.",
+  "boundary": "Conditional finite error composition only. PAH-001 functional/rates, PAH-OMC-010 Gibbs weighting, PAH-OMC-012 graded domain/projection and PAH-OMC-014 limit order remain unchanged. R-484 hidden-diagonal defect 16/9 is retained; R-490 C_sw=540 remains domination-only. No source law, projective limit, Cauchy sequence, positivity/normalization, stationarity, semigroup, continuum or physical conclusion is claimed.",
+  "next_action": "Obtain a source-owned normalized cross-Q law and instantiate b_j,t_j,e_w,e_a,C,tau_j for every finite-support cylinder, with the composed envelope tending to zero under the fixed PAH-001 order; then apply the existing R498/R496 convergence bridge.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "task_id": "T-054",
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "related": [{"id": "EXP-001582", "relation": "continues"}],
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-014, the projective-kernel obligation and the R503, R504, R505 and R506 manifests.",
+    "Formalize the exact real triangle-inequality composition of one finite-block bound and two tail bounds in Lean 4.32.1, keeping the block and tail values abstract.",
+    "Register R507 with its exact source SHA-256 and verify the source policy and declaration markers.",
+    "Replay integrated, independent and hostile verifiers with distinct exact Fraction fixtures and in-memory mutation tests.",
+    "Retain HOLD_FOR_EVIDENCE because no source-owned cross-Q law or ordered decay estimate is present."
+  ],
+  "assumptions": [
+    "A finite common index type supplies the card(I) factor inherited from R503.",
+    "The finite block has the R503 bound card(I)*(C*e_w+e_a).",
+    "Each omitted full-Q tail has the R506 bound C*tau_j.",
+    "All quantities are supplied under unchanged PAH-001 conventions and are not fit to the target observable."
+  ],
+  "missing_assumptions": [
+    "A source-authorized normalized cross-Q sector law or projective kernel.",
+    "Source-owned block/tail values, common envelope and e_w/e_a/tau decay for every finite-support cylinder.",
+    "A common cylinder topology and proof that the composed envelope tends to zero in the declared n/R_max order.",
+    "A domain and uniform-integrability argument for positivity, normalization and stationarity after convergence."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-014-composed-cauchy-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-manifest.json#theorem_contract",
+    "strategy/pa-hyp/PAH-OMC-014-projective-kernel-obligation-260905.md#required_source_owned_statement",
+    "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json#status",
+    "verification/lean/Tect/R507.lean#finite_block_plus_two_tail_bound",
+    "verification/lean/Tect/R507.lean#zero_tail_pair_is_block_bound",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-composed-cauchy-lean/integrated.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-composed-cauchy-lean/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-pah-omc014-composed-cauchy-lean/hostile.json#mutation_policy"
+  ],
+  "adversarial_review": [
+    {"check": "Does R507 instantiate a full-Q sector law?", "disposition": "UPHELD AS FALSE: block, tail and error quantities are abstract theorem inputs and no weights are selected."},
+    {"check": "Does the composition prove that e_w, e_a or tau_j vanish?", "disposition": "UPHELD AS FALSE: decay and the cylinder topology remain source-owner obligations."},
+    {"check": "Can C_sw=540 be substituted for a tail probability or tau_j?", "disposition": "UPHELD AS FALSE: C_sw is retained as domination-only."},
+    {"check": "Can the R-484 16/9 boundary defect be cancelled inside the triangle inequality?", "disposition": "UPHELD AS FALSE: the defect is retained in future inputs and no averaging or counterterm is introduced."},
+    {"check": "Does a finite exact envelope establish weak cylinder convergence or stationarity?", "disposition": "UPHELD AS FALSE: a source law, ordered decay, positivity, common domain and generator estimate are still missing."},
+    {"check": "Does this establish physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusions?", "disposition": "UPHELD AS FALSE: all physical interpretations remain non-claims."}
+  ],
+  "non_claims": [
+    "No source-owned sector law, projective kernel, full-Q Gibbs state or omega is supplied.",
+    "No PAH-specific Cauchy rate, weak cylinder limit, positivity/normalization, stationarity, closability or semigroup is proved.",
+    "No R-484 boundary repair or use of C_sw=540 as a measure is allowed.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "revisit_condition": "Reopen when a source owner supplies the normalized cross-Q law, exact block/tail split, common envelope and ordered decay estimate, or if a parent-scope counterexample invalidates the composition theorem.",
+  "provenance": "contemporaneous",
+  "verdict": "advanced"
+}

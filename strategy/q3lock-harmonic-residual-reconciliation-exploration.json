@@ -1,0 +1,36 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "Q3LOCK harmonic residual correction and actual weighted-loop passage",
+  "question": "Do the positive-difference and allocated-pair residuals in the current Q3LOCK proof text reconstruct the EXP-000782 Hamiltonian with identical harmonic splitting?",
+  "finding": "The coercivity and integration notes combine (r+6c-a)/2 with the full spatial difference term. As a physical potential this has defect (3c-a/2) sum|q|^2, and as a Gaussian residual it creates excess 3c epsilon sum|x|^2. A correction defines the two exactly equivalent residuals, recomputes coercivity and the centered Gaussian normalizer, and supplies compact Riemann convergence for the actual Q3LOCK residual. The exact verifier passes 138/138 checks including polynomial coefficient maps and nonzero hostile defects.",
+  "verdict": "advanced",
+  "decision_reason": "Resolving the actual Hamiltonian-to-residual identity changes the next action from generic Gaussian refinement to reviewing the corrected interacting-law composition. Historical hash-pinned notes are retained with explicit superseding precedence.",
+  "boundary": "Internal T0 corrective proof audit. Fixed-volume weighted convergence is conditional on the R-501 Gaussian input; finite-FKG and Feynman--Kac source review, spatial tempered limits and the full phase theorem remain outstanding.",
+  "next_action": "Use the corrected action in every consumer of the affected insertion blocks, retain the reference partition factor in pressure, and review the fixed-volume association and FSS passage before manuscript content freeze.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "task_id": "T-054",
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "formal_refs": {"results": ["R-497", "R-501"], "negatives": ["AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION"], "events": []},
+  "related": [
+    {"id": "EXP-000780", "relation": "continues"},
+    {"id": "EXP-000781", "relation": "continues"},
+    {"id": "EXP-000782", "relation": "continues"},
+    {"id": "EXP-001520", "relation": "corrects"},
+    {"id": "EXP-001521", "relation": "corrects"},
+    {"id": "EXP-001522", "relation": "corrects"},
+    {"id": "EXP-001586", "relation": "continues"}
+  ],
+  "method": ["Expand the spatial difference energy and count endpoint incidences including L=2 parallel bonds.", "Compare the physical potential and both harmonic residuals symbolically and on exact rational fixtures.", "Derive the corrected quartic lower bound and exact equal-time Gaussian residual expectation.", "Apply compact equicontinuity to the actual polynomial residual Riemann sums and the existing bounded-weight weak-limit lemma.", "Separate residual normalizers from the absolute heat trace and integrated source UI from instantaneous Gaussian moments."],
+  "assumptions": ["Fixed finite spatial volume, beta,a,m,c,g,lambda>0 and a compact real source interval.", "R-501 Gaussian weak convergence and EXP-001571 finite-FKG inputs are accepted only within their displayed internal scope.", "The temporal reference is a centered product Gaussian with m=chi/hbar^2."],
+  "missing_assumptions": ["Signed independent mathematical and literature review.", "Final Feynman--Kac and finite-FKG hypothesis acceptance.", "Spatial DLR, FSS, operator, pressure, cusp and publication composition."],
+  "evidence_refs": ["strategy/q3lock-harmonic-residual-reconciliation-260905.md#1-discovered-transcription-defect-and-precedence", "strategy/q3lock-harmonic-residual-reconciliation-260905.md#5-compact-riemann-passage-for-the-actual-interaction", "verification/scripts/q3lock_harmonic_residual_reconciliation.py#build_payload", "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-harmonic-residual-reconciliation/result.json#assertions"],
+  "adversarial_review": [
+    {"check": "Can allocated onsite and full difference terms be combined?", "disposition": "UPHELD defect: exact nonzero quadratic excess; repaired with two explicitly equivalent formulas."},
+    {"check": "Does a=6c hide the defect?", "disposition": "VALID with mitigation: old U alone matches accidentally, but the Gaussian residual still has excess; both usages tested."},
+    {"check": "Are residual and heat-trace normalizers interchangeable?", "disposition": "UPHELD as false: restore the harmonic reference partition factor."},
+    {"check": "Do finite rational checks prove the analytic weak passage?", "disposition": "UPHELD as false: the compactness and domination arguments are separately written and require independent review."}
+  ],
+  "non_claims": ["No claim-tier promotion or new phase/DLR conclusion.", "No spatial-uniform estimate, continuum, KMS, spectral-gap or cosmological conclusion.", "No signed external review, manuscript PDF or submission is supplied."],
+  "revisit_condition": "Reopen when boundary conventions, reference splitting, source normalization, polynomial interaction or upstream Gaussian/FKG inputs change.",
+  "provenance": "contemporaneous"
+}

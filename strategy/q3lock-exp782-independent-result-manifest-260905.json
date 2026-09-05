@@ -354,6 +354,34 @@
       "record_line": 1581,
       "role": "multidimensional Fekete and moving-temperature convexity audit",
       "scope": "finite even-box tiling, semigroup signs, convex secant and seam moving-beta crosswalk; actual form and thermodynamic hypotheses remain conditional"
+    },
+    {
+      "exploration_id": "EXP-001583",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1583,
+      "role": "Q3 mixed-derivative, finite supermodularity, periodic interpolation and clip audit",
+      "scope": "finite P-06 association algebra only; KP topology, loop convergence and uniform-integrability hypotheses remain conditional"
+    },
+    {
+      "exploration_id": "EXP-001584",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1584,
+      "role": "P-06 massive periodic Gaussian Fourier covariance and cyclic-resistance audit",
+      "scope": "finite-mesh covariance, high-mode, resistance and source-interpolation diagnostics only; analytic loop and thermodynamic limits remain conditional"
+    },
+    {
+      "exploration_id": "EXP-001586",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1586,
+      "role": "P-06 quantitative fixed-volume Gaussian weak-limit audit",
+      "scope": "analytic covariance convergence, Kolmogorov tightness and bounded residual-weight transfer at fixed spatial volume only; projective spatial W_t and thermodynamic limits remain open"
+    },
+    {
+      "exploration_id": "EXP-001587",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1587,
+      "role": "harmonic residual correction and actual weighted-loop passage",
+      "scope": "corrects doubled spatial diagonal and residual/physical-potential confusion in later insertion notes; fixed-volume composition remains subject to external mathematical review"
     }
   ],
   "model_scope": {
@@ -368,7 +396,9 @@
       "D_L=(1/beta) integral_0^beta C(tau) d tau",
       "Var(X_L(a))=beta^2<a,D_L a>",
       "spatial Laplacian eigenvalue is 2 E(p), E(p)=sum_j(1-cos p_j)",
-      "finite-grid source uses eta=t sqrt(epsilon) (a_y u)"
+      "finite-grid source uses eta=t sqrt(epsilon) (a_y u)",
+      "EXP-001587: residual local coefficient (r-a)/2 accompanies the full positive difference term; (r+6c-a)/2 accompanies only the negative pair term",
+      "EXP-001587: restore a|q|^2/2 for the physical Hamiltonian and the harmonic heat-trace factor for absolute pressure"
     ]
   },
   "candidate_proof_spine": [
@@ -566,7 +596,13 @@
     {
       "path": "explorations/temporal-corrections.jsonl",
       "role": "append-only wall-clock provenance sidecar",
-      "sha256": "7e39df86b1b6d907d3535c2714da53857ec1d7ae54fcf6de4e4f64ab9dc229df"
+      "sha256": "0da273af9d2eaf0fde2c9cbf0066228e37f26661caecbb0d480f258e8b5e85e7",
+      "capture_through": "TC-0032",
+      "previous_capture": {
+        "through": "TC-0031",
+        "sha256": "7e39df86b1b6d907d3535c2714da53857ec1d7ae54fcf6de4e4f64ab9dc229df",
+        "verification": "Exact-byte prefix through 31 lines matches the previous digest; TC-0032 is an appended committed record."
+      }
     },
     {
       "path": "strategy/q3lock-manifest-source-hash-integrity-audit-260905.md",
@@ -732,15 +768,90 @@
       "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-fekete-convex-equicontinuity-audit/result.json",
       "role": "EXP-001581 deterministic diagnostic artifact",
       "sha256": "9577cfb15ab4632d29a6c3f824712281b85157d449885327aab0b03e4a886b6f"
+    },
+    {
+      "path": "strategy/q3lock-fkg-mixed-derivative-interpolation-audit-260905.md",
+      "role": "independent finite FKG mixed-derivative and interpolation audit",
+      "sha256": "328d666ea41fa0a3366fd097c58b906b9bc6233336507ba93d7e2ee0ed981266"
+    },
+    {
+      "path": "verification/scripts/q3lock_fkg_mixed_derivative_interpolation_audit.py",
+      "role": "auxiliary finite FKG algebra verifier",
+      "sha256": "2c84b20103355de2b5dc73d7ad20ede8adb6a0e3bf66fa61c0c966b2748e234a"
+    },
+    {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-fkg-mixed-derivative-interpolation-audit/result.json",
+      "role": "R-499 / EXP-001583 deterministic diagnostic artifact",
+      "sha256": "65d0ae7cd131cc309be116b962abae072e52cda45da369a83de1b79d74273268"
+    },
+    {
+      "path": "strategy/q3lock-p06-gaussian-fourier-covariance-audit-260905.md",
+      "role": "independent P-06 Gaussian Fourier covariance audit",
+      "sha256": "177ec77a66e6da9a33874d47577a7a41dfacfe7253035f0107dcc81745fa822e"
+    },
+    {
+      "path": "verification/scripts/q3lock_p06_gaussian_fourier_covariance_audit.py",
+      "role": "auxiliary Gaussian covariance and resistance verifier",
+      "sha256": "d09dc9121c2bd5bf99362119683f110ca4603c78789b269ccc8b922eb5df0447"
+    },
+    {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-p06-gaussian-fourier-covariance-audit/result.json",
+      "role": "R-500 / EXP-001584 deterministic diagnostic artifact",
+      "sha256": "f8de926d7b6806a14d0b93e90a32bc450aa1de256cbde6573833d91c2de55097"
+    },
+    {
+      "path": "strategy/q3lock-p06-gaussian-weak-limit-quantitative-audit-260905.md",
+      "role": "R-501 / EXP-001586 quantitative fixed-volume Gaussian weak-limit audit",
+      "sha256": "0f5d3ce7881faca9b4474f4c1b68dd00fb08e8917549de3e5882f6ee778ca651"
+    },
+    {
+      "path": "verification/scripts/q3lock_p06_gaussian_weak_limit_quantitative_audit.py",
+      "role": "R-501 quantitative Gaussian weak-limit verifier",
+      "sha256": "4b7ae856bae70c3f53fb669a52cd3cc1483ce032010aa4443acb3105c00a8b23"
+    },
+    {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-p06-gaussian-weak-limit-quantitative-audit/result.json",
+      "role": "R-501 / EXP-001586 deterministic audit artifact",
+      "sha256": "ee6ef8863ee9b69e3014183488a5086dc8c171ae43e75ce376b1300f6970231c"
+    },
+    {
+      "path": "strategy/q3lock-harmonic-residual-reconciliation-260905.md",
+      "role": "EXP-001587 corrective precedence for harmonic residual and actual weighted-law composition",
+      "sha256": "72e67cea0d36abe29b6d79c7a3be5c322a9e4795a3e16be848c13b29105d20de"
+    },
+    {
+      "path": "verification/scripts/q3lock_harmonic_residual_reconciliation.py",
+      "role": "EXP-001587 exact residual identity and hostile doubled-diagonal verifier",
+      "sha256": "297e6060b4fb43bd5c9f75a0591516059a2a14e65faaecaf833eecda5e1af46b"
+    },
+    {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-harmonic-residual-reconciliation/result.json",
+      "role": "EXP-001587 exact rational correction artifact",
+      "sha256": "204edab322a035a4a2e07e929dc4c46bc54975759920b4477cdc39cc8b96fd41"
+    }
+  ],
+  "correction_precedence": [
+    {
+      "exploration_id": "EXP-001587",
+      "audit_id": "AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION",
+      "current_definition": "strategy/q3lock-harmonic-residual-reconciliation-260905.md#2-exact-model-and-the-two-equivalent-residuals",
+      "superseded_blocks": [
+        "strategy/q3lock-quartic-coercivity-form-domain-audit-260905.md Sections 5--6: physical/residual identification",
+        "strategy/q3lock-proof-text-integration-addendum-260905.md Sections 3--4: U definition and its residual use",
+        "strategy/q3lock-normalizer-jensen-uniformity-audit-260905.md Section 2: V symbol when inherited from the allocated-local convention"
+      ],
+      "rule": "Historical hash-pinned bytes are retained. Final consumers must use the corrected residual, physical form and constants; old allocated-local-plus-full-difference formulas are not current premises.",
+      "review_status": "INTERNAL_CORRECTION_RECORDED_EXTERNAL_ACCEPTANCE_OPEN"
     }
   ],
   "open_gates": [
+    "independent acceptance and consumer crosswalk of EXP-001587 harmonic/spatial allocation correction and absolute pressure reference factor",
     "independent mathematical audit of P-06 finite-grid-to-continuous-loop FKG",
     "independent review of the P-06 convergence mode, OU-bridge support-nullity and weak-limit/UI replacement",
     "complete source-file hash recomputation after final content freeze",
     "independent mathematical audit of P-09 finite FSS-to-loop Duhamel passage",
     "independent review of the P-06/P-09 Gaussian tightness, normalizer and source-uniform-integrability insertion",
-    "independent review of the P-06 Gaussian Fourier covariance, interpolation and residual-weighted loop-limit insertion",
+    "independent review of the R-500/R-501 Gaussian Fourier covariance, quantitative interpolation, Kolmogorov tightness and residual-weighted loop-limit insertion",
     "independent review of the P-09 FSS theorem transcription, Poisson-shift adjoint convention and infrared constant",
     "independent review of the pressure zero-mode, KKK Griffiths factor and EXP-000781 tangent-state composition",
     "independent review of common source-window KP constants and source-to-zero DLR specification continuity",
@@ -763,7 +874,7 @@
     "No C0, N1-N5, C6, CP1, Sector A or Pre-A closure.",
     "No claim-tier promotion, P2 manuscript, submission, upload, tag, release or PDF is created by this registration."
   ],
-  "next_action": "Obtain independent line-by-line acceptance of the finite pressure form core, periodic/open seam min--max comparison, multidimensional Fekete tiling and moving-beta convex equicontinuity, plus FKG, operator, FSS, KKK, pressure-limit, KP vector, source-window moment, projective W_t extraction and specification hypotheses; only then decide whether the bounded result can be registered and transcribed into a frozen manuscript, with PDF generation still deferred.",
+  "next_action": "Apply EXP-001587 correction precedence to all Hamiltonian/residual insertion consumers and preserve the harmonic heat-trace factor in pressure. Obtain independent acceptance of the corrected fixed-volume weighted loop and FKG composition, finite pressure form/seam/Fekete arguments, R-500/R-501 Gaussian inputs, P-09 FSS, operator and KKK steps, KP vector/source-window/projective W_t and DLR specification hypotheses. Then consolidate the manuscript and bounded claim within the reviewed scope; content freeze, clean replay, signed external reviews and final PDF remain required.",
   "source_freeze": {
     "status": "HASHED_TEMPORARY_CAPTURE",
     "captured_utc": "2026-09-04",

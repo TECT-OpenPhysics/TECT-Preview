@@ -1,6 +1,26 @@
 {
   "data": [
     {
+      "anchor": "audit-2026-09-05-q3lock-harmonic-spatial-double-allocation",
+      "branch": "combine allocated Q3LOCK onsite potential with full spatial differences",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "structured_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "consequence": "Supersede the affected model-identification blocks with the correction note; retain their hash-pinned historical bytes. Use (r-a)/2 with the full difference term, or (r+6c-a)/2 with the negative pair term, and restore a/2 for the physical Hamiltonian. The Gaussian R-500/R-501 identities are unchanged, but their interacting-law use must receive this correction. Internal T0 status and external proof/phase/publication gates remain unchanged. This is a proof-text defect, not a no-go for the model.",
+        "evidence": "Relative to EXP-000782 equation (2.1), the displayed potential has defect (3c-a/2) sum_y|q_y|^2. Used as a Gaussian residual, it instead produces excess 3c epsilon sum_(y,k)|x_(y,k)|^2 after restoring the harmonic action. These are field-dependent terms. The correction note `strategy/q3lock-harmonic-residual-reconciliation-260905.md` gives the exact two equivalent representations and corrected coercivity/Jensen constants. Its verifier `verification/scripts/q3lock_harmonic_residual_reconciliation.py` passes 138/138 exact rational diagnostics, including complete spatial quadratic coefficient comparisons, periodic L=2 parallel bonds, open-box degrees, two harmonic splits, and hostile nonzero defects. Artifact: `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-harmonic-residual-reconciliation/result.json`.",
+        "failure_mode": "Combine the allocated local coefficient (r+6c-a)/2 with the full positive spatial difference energy and identify the result with either the residual action or the physical Hamiltonian potential. This occurs in the Section 5 form block of `strategy/q3lock-quartic-coercivity-form-domain-audit-260905.md` and Section 3 of `strategy/q3lock-proof-text-integration-addendum-260905.md`; the Jensen note inherits it if supplied their V_(h,a)."
+      },
+      "detail_title": "residual and physical potential transcription mismatch",
+      "family_refs": [],
+      "kind": "audit",
+      "summary": "the old physical-potential defect is (3c-a/2) times the squared field norm and the Gaussian residual defect is 3c times the time-integrated squared norm; corrected equivalent residuals and consumer precedence are recorded in EXP-001587",
+      "tag": "AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION"
+    },
+    {
       "anchor": "audit-2026-09-05-pah-omc-014-q0-component-pushforward",
       "branch": "treat deterministic Q=0 component restriction as a projective Gibbs push-forward on PAH-OMC-004",
       "claim_ref_basis": {},
@@ -2018,27 +2038,6 @@
       "kind": "no_go",
       "summary": "on a compactly supported plateau at zero, the actual CL8 potential has `grad U_a(0)=0` and `Delta^2 U_a(0)=48wM(g+4lambda)>0`, so the epsilon-cubed coefficient of `S_epsilon-exp(-epsilon H_a)` is `-4 kappa_a^2 wM(g+4lambda)<0`. Retain the exact heat kernel or the controlled trace-norm product limit",
       "tag": "NG-2026-08-04-PRE-A-CP1-CL8-STRANG-ONE-SLICE-EXACT-HAMILTONIAN-SEMIGROUP"
-    },
-    {
-      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-scalar-mass-only-q3-wick-renormalization",
-      "branch": "Wick-order the local Q3 quartic interaction against the declared common-diagonal Gaussian reference while allowing only a scalar mass and scalar energy counterterm",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-split-interacting-state-projectivity-and-q3-wic"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "artifacts": "`strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split.py`; `codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split_independent.py`.",
-        "consequence": "Scalar-mass-only renormalization is refuted within this specific common-diagonal Wick scheme. A fixed renormalized parameterization requires at least a scalar mass direction, a distinct Q3-Laplacian quadratic direction, and a scalar energy convention. Necessity does not prove that this enlarged basis is sufficient or convergent. Other fully specified schemes, `lambda=0`, constrained or gauge sectors, non-Gaussian references, and a separately constructed vector `P(phi)_2` limit remain open. This reference is not identified with physical empty space, so no physical-vacuum or below-empty-space conclusion follows.",
-        "evidence": "Exact Gaussian contraction gives ```text delta K=-3C[(g+lambda)I+lambda L_Q3], E_shift=6C^2(g+4lambda). ``` The cube Laplacian has Walsh levels `0,2,4,6` with multiplicities `1,3,3,1`. For `lambda>0`, `L_Q3` is nonzero and linearly independent of `I`. In the separately declared positive-mass centered reference, `C_N=Theta(log N)`, so the separation between Walsh level `s` and the singlet is `-6s*lambda*C_N` and is unbounded with the cutoff.",
-        "failure_mode": "Wick-order the local Q3 quartic interaction against the declared common-diagonal Gaussian reference while permitting only a scalar mass `r_N I` and a scalar energy counterterm, with no quadratic Q3-matrix counterterm."
-      },
-      "detail_title": "one scalar mass cannot absorb the declared Q3 Wick contraction",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "the exact quadratic contraction is `-3C[(g+lambda)I+lambda L_Q3]`; for `lambda>0` its Q3-Laplacian direction is independent of `I`, and its Walsh-level separations grow as `C_N=Theta(log N)`. Retain a Q3-matrix counterterm basis, another declared scheme, `lambda=0`, or a separately proved constructive limit",
-      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION"
     }
   ],
   "kind": "negative_records",

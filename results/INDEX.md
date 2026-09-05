@@ -5,10 +5,13 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**329 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**332 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-501`](../RESULTS-LEDGER.md#r-501) | EXP-001586 Q3LOCK P-06 quantitative Gaussian weak-limit audit | T0 |
+| [`R-500`](../RESULTS-LEDGER.md#r-500) | EXP-001584 Q3LOCK P-06 Gaussian Fourier covariance audit | T0 |
+| [`R-499`](../RESULTS-LEDGER.md#r-499) | EXP-001583 Q3LOCK FKG mixed-derivative and interpolation audit | T0 |
 | [`R-498`](../RESULTS-LEDGER.md#r-498) | EXP-001580 Q3LOCK periodic/open pressure seam and min--max audit | T0 |
 | [`R-497`](../RESULTS-LEDGER.md#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | T0 |
 | [`R-494`](../RESULTS-LEDGER.md#r-494) | PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit | T0 |
@@ -31,9 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-476`](../RESULTS-LEDGER.md#r-476) | Researcher-proposed Pre-A minimum microscopic axiom packet structural intake | T0 claim-nonbearing mainline hypothesis intake; active scientific gate and every claim tier remain unchanged. |
 | [`R-475`](../RESULTS-LEDGER.md#r-475) | Lean cross-check of the A5 branch-aware conditional-composition contract | T0 claim-nonbearing auxiliary support; no gate or claim-tier change. |
 | [`R-474`](../RESULTS-LEDGER.md#r-474) | Conditional ordered-limit rectangular-tail bridge | T0 |
-| [`R-473`](../RESULTS-LEDGER.md#r-473) | HOLD-LC-001 TTE event-row feature index | T0 |
-| [`R-472`](../RESULTS-LEDGER.md#r-472) | A2/R-157-R-158 exact-core Lean cross-check | T0 |
-| [`R-471`](../RESULTS-LEDGER.md#r-471) | Fail-closed P1 owner and observation-map admission contract | T0 |
 
 Search without loading the full ledger:
 

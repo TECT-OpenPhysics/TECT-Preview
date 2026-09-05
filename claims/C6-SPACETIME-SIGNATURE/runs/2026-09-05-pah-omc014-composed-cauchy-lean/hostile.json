@@ -1,0 +1,221 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 18,
+  "assertions": [
+    {
+      "actual": "59c0fb6b703c300e6216d8f1980553d8792a5f36d24b9c8f517254262081cbac",
+      "expected": "59c0fb6b703c300e6216d8f1980553d8792a5f36d24b9c8f517254262081cbac",
+      "name": "canonical Lean hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+          "constructed_hypothesis": false,
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "epistemic_layer": "L2_FULL_Q_CAUCHY_COMPOSITION",
+          "external_source": false,
+          "model_change": false,
+          "physical_authority": false,
+          "source_law_present": false,
+          "synthetic_fixture": false
+        },
+        "status": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "CONDITIONAL_SUPPORT_ONLY",
+          "physical_promotion": false,
+          "source_law_present": false,
+          "verdict": "HOLD_FOR_EVIDENCE"
+        }
+      },
+      "expected": "HOLD/no law/no promotion",
+      "name": "canonical HOLD firewall",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "canonical remains source-law absent",
+      "name": "reject invented source law",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": true,
+        "claim_bearing": false,
+        "classification": "CONDITIONAL_SUPPORT_ONLY",
+        "physical_promotion": false,
+        "source_law_present": false,
+        "verdict": "MAINLINE_ADVANCE"
+      },
+      "expected": "canonical HOLD/no gate change",
+      "name": "reject premature gate promotion",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": false,
+      "name": "reject physical promotion",
+      "pass": true
+    },
+    {
+      "actual": "0000000000000000000000000000000000000000000000000000000000000000",
+      "expected": "310a73ea82b794b7aabe190de514764fe6ea5e45727bc623566dd3d64710686c",
+      "name": "reject parent hash tamper",
+      "pass": true
+    },
+    {
+      "actual": {
+        "canonical_has_tail_factor": true,
+        "mutated": true
+      },
+      "expected": "exact tail factors retained",
+      "name": "reject weakened composition conclusion",
+      "pass": true
+    },
+    {
+      "actual": "No omitted error.",
+      "expected": "both tail budgets explicit",
+      "name": "reject omitted second tail",
+      "pass": true
+    },
+    {
+      "actual": "No finite block error.",
+      "expected": "finite block term explicit",
+      "name": "reject omitted block term",
+      "pass": true
+    },
+    {
+      "actual": "boundary defect removed",
+      "expected": "16/9 retained",
+      "name": "reject R-484 erasure",
+      "pass": true
+    },
+    {
+      "actual": "C_sw=540 is a probability.",
+      "expected": "domination-only",
+      "name": "reject C_sw as probability",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": "canonical source contains no escape token",
+      "name": "reject Lean escape hatch",
+      "pass": true
+    },
+    {
+      "actual": {
+        "block_only_bound": "3/10",
+        "full_bound": "23/10",
+        "full_drift": "3"
+      },
+      "expected": "tails are needed in this witness",
+      "name": "reject dropped tail budgets",
+      "pass": true
+    },
+    {
+      "actual": "-1",
+      "expected": "C must be nonnegative in source inputs",
+      "name": "reject negative envelope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "HOLD_FOR_EVIDENCE_SOURCE_OWNER_FULL_Q_WEIGHT_LAW_ABSENT",
+        "csw_role": "DOMINATION_ONLY",
+        "omega_status": "NOT_DEFINED",
+        "physical_promotion": false,
+        "positivity_normalization": "NOT_TESTABLE",
+        "projective_consistency": "NOT_TESTABLE",
+        "r484_boundary_defect": "RETAINED_16_OVER_9",
+        "stationarity": "NOT_TESTABLE",
+        "verdict": "HOLD_FOR_EVIDENCE",
+        "weak_cylinder_limit": "NOT_TESTABLE"
+      },
+      "expected": "HOLD/omega undefined",
+      "name": "parent full-Q remains open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declarations": [
+          "finite_block_plus_two_tail_bound",
+          "zero_tail_pair_is_block_bound"
+        ],
+        "path": "verification/lean/Tect/R507.lean",
+        "sha256": "59c0fb6b703c300e6216d8f1980553d8792a5f36d24b9c8f517254262081cbac"
+      },
+      "expected": [
+        "finite_block_plus_two_tail_bound",
+        "zero_tail_pair_is_block_bound"
+      ],
+      "name": "registry exact declarations/hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "final_newline": true,
+        "lf": true
+      },
+      "expected": "LF/no escape",
+      "name": "source policy",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R507.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "canonical Lean compilation",
+      "pass": true
+    }
+  ],
+  "audit_id": "PAH-OMC-014-COMPOSED-CAUCHY-LEAN-HOSTILE-001",
+  "claim_bearing": false,
+  "classification": "AUXILIARY_SUPPORT_FINITE_Q_CAUCHY_COMPOSITION",
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R507.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "mutation_policy": "All hostile mutations are in-memory only; no canonical source law, block/tail rate, boundary repair or physical interpretation is adopted.",
+  "next_question": "Can the source owner instantiate this envelope with a normalized cross-Q law and prove e_w,e_a,tau1,tau2 tend to zero for every finite-support cylinder in the fixed PAH-001 order?",
+  "non_claims": [
+    "This theorem does not define mu_(n,R), a full-Q Gibbs state or omega.",
+    "It does not prove projective consistency, a Cauchy rate, weak cylinder convergence, positivity/normalization, stationarity, closability or a semigroup.",
+    "It does not remove the R-484 boundary defect or use C_sw=540 as a measure.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time."
+  ],
+  "omega_status": "NOT_DEFINED",
+  "passed": 18,
+  "projective_consistency": "NOT_TESTABLE",
+  "reproduction": {
+    "hostile": "python -X utf8 verification/scripts/pah_omc014_composed_cauchy_lean_verify_hostile.py",
+    "independent": "python -X utf8 verification/scripts/pah_omc014_composed_cauchy_lean_verify_independent.py",
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_composed_cauchy_lean_verify.py",
+    "lean": "Set-Location verification/lean; lake env lean Tect/R507.lean"
+  },
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc014-composed-cauchy-lean-hostile/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "lean": "59c0fb6b703c300e6216d8f1980553d8792a5f36d24b9c8f517254262081cbac",
+    "manifest": "fc5d57fd6685c172b84780448d71dd759643ad3e40d5087ae8e0e1997d104c20"
+  },
+  "source_law_present": false,
+  "task_id": "T-054",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS",
+  "weak_cylinder_limit": "NOT_TESTABLE"
+}

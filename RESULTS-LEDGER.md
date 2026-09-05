@@ -22,8 +22,11 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes; EXP-001567 adds the exact EXP-000780 collective-source restriction and pressure dictionary; EXP-001568 inserts that dictionary into the integrated P-06/P-09 proof text; EXP-001570 independently audits its algebra and limit order; EXP-001571 audits the finite-grid-to-fixed-loop FKG association passage; EXP-001572 audits the finite FSS-to-loop Duhamel and Fourier passage; EXP-001573 audits the conditional pressure-to-cusp and tangent-state bridge; EXP-001574 audits the KP general-vector theorem-domain and source-window hypothesis crosswalk; EXP-001575 audits the source-window KP moment constants and common tempered tightness bound; EXP-001577 audits the compact-boundary source-to-zero DLR kernel and the KP determining-class passage; EXP-001578 audits the explicit projective W_t tightness diagonal and source-varying extraction. P-06/P-09, source/form-domain review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
+| [R-501](#r-501) | EXP-001586 Q3LOCK P-06 quantitative Gaussian weak-limit audit | R-501 / EXP-001586 records a T0 claim-nonbearing analytic and executable audit of the fixed-volume periodic Gaussian weak limit. It derives a uniform O(N^-1) grid covariance bound, an O(N^-1/2) polygonal covariance bound, an arbitrary-time Kolmogorov increment estimate and a bounded residual-weight transfer lemma. The verifier passes 13502/13502 assertions with byte-identical replay; spatial W_t, P-09, phase, DLR and external-review gates remain open, and no PDF is issued. |
+| [R-500](#r-500) | EXP-001584 Q3LOCK P-06 Gaussian Fourier covariance audit | R-500 / EXP-001584 records a T0 claim-nonbearing fixed-mesh audit of the massive periodic Gaussian convention, csc-squared normalization, Fourier covariance, cyclic resistance, increment bound, and exact source interpolation. The verifier passes 255/255 assertions; loop-limit, weighted-tempered, pressure, phase, DLR and external-review gates remain open, and no PDF is issued. |
+| [R-499](#r-499) | EXP-001583 Q3LOCK FKG mixed-derivative and interpolation audit | R-499 / EXP-001583 records a T0 claim-nonbearing finite-algebra audit of the Q3 mixed-derivative, supermodularity, periodic interpolation, and clipped-product steps. The verifier passes 306/306 exact-rational assertions; P-06 loop-topology, moment, pressure, phase, DLR and external-review gates remain open, and no PDF is issued. |
 | [R-498](#r-498) | EXP-001580 Q3LOCK periodic/open pressure seam and min--max audit | R-498 / EXP-001580 records a T0 claim-nonbearing finite edge/seam normalization and min--max scaling audit. Correct periodic onsite allocation is 3c (not 3c/2); the incidence Young bound gives 288 c^2 L^2/(eta g), and eta=L^(-1/2) yields an O(L^(-1/2)) density diagnostic. Conditional pressure/form-domain, Fekete and moving-beta steps remain open; deterministic evidence is 64/64 and no theorem or PDF is issued. |
+| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes; EXP-001567 adds the exact EXP-000780 collective-source restriction and pressure dictionary; EXP-001568 inserts that dictionary into the integrated P-06/P-09 proof text; EXP-001570 independently audits its algebra and limit order; EXP-001571 audits the finite-grid-to-fixed-loop FKG association passage; EXP-001572 audits the finite FSS-to-loop Duhamel and Fourier passage; EXP-001573 audits the conditional pressure-to-cusp and tangent-state bridge; EXP-001574 audits the KP general-vector theorem-domain and source-window hypothesis crosswalk; EXP-001575 audits the source-window KP moment constants and common tempered tightness bound; EXP-001577 audits the compact-boundary source-to-zero DLR kernel and the KP determining-class passage; EXP-001578 audits the explicit projective W_t tightness diagonal and source-varying extraction. P-06/P-09, source/form-domain review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
 | [R-494](#r-494) | PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit | R-494 / EXP-001504 finds no source-owned cross-Q sector weight law in the hash-pinned PAH-001/OMC-010/OMC-011/OMC-012/OMC-013 scope. Primary 20/20, independent 14/14, hostile 12/12, integrated 31/31 pass; verdict HOLD_FOR_EVIDENCE. Fixed-Q component Gibbs states remain valid, but a global mu_(n,R), omega, Cauchy error and stationarity test are not defined. This is T0 claim-nonbearing source-input evidence only; no physical or continuum conclusion follows. |
 | [R-493](#r-493) | PAH-OMC-013 full-Q eventual generator intertwining on the grade-blind cylinder | R-493 / EXP-001474 proves pointwise intertwining after N(f)=max(2,m_f+1) on the full-Q grade-blind finite cylinder algebra for unchanged PAH-001 rates; primary 22/22, independent 16/16, hostile 13/13, integrated 21/21 and Lean R493 pass. This is T0 claim-nonbearing finite algebraic progress only; weak Gibbs-L2, closability, infinite volume, continuum and physical conclusions remain open. |
 
@@ -17162,6 +17165,182 @@ scheme class and asymmetric anomaly boundary.
 **Publication target:** methods note (with a paired honest-negative: individually-positive channels can jointly fail an additive budget)
 
 
+<a id="r-501"></a>
+### R-501 -- EXP-001586 Q3LOCK P-06 quantitative Gaussian weak-limit audit
+
+**Statement.** R-501 / EXP-001586 records a standalone T0,
+claim-nonbearing analytic audit of the massive periodic Gaussian time-mesh
+limit at fixed spatial volume.  For beta,m,a>0 and every even N>=4 it derives
+
+```text
+sup_r |G_N(r)-G(beta*r/N)|
+ <= beta/(m*N)*(pi^2/48+3/(2*pi^2)),
+```
+
+and, for periodic piecewise-linear interpolation,
+
+```text
+sup_(t,s)|Cov(I_N X(t),I_N X(s))-G(t-s)|
+ <= beta/(m*N)*(pi^2/48+3/(2*pi^2))
+    +sqrt(2*K*beta/(m*N)),
+K=1/(beta*a)+beta/(12m).
+```
+
+It also proves the arbitrary-time increment bound
+`E|I_N X(t)-I_N X(s)|^2<14*d_beta(t,s)/m`, obtains the fourth-moment
+Kolmogorov estimate for the finite `8*|Lambda|` product, and gives a compact
+set/tail lemma transferring Gaussian weak convergence through uniformly
+bounded residual weights.  The quartic Young constant needed for source
+uniform integrability is derived rather than fitted.
+
+**Status.** T0, claim_bearing=false, internal analytic audit with executable
+regression evidence.  The result proves the fixed-volume Gaussian reference
+weak limit within its displayed hypotheses, but external mathematical
+acceptance and the exact final Q3LOCK residual crosswalk remain required.  It
+does not identify the finite-product `C_beta` topology with KP's spatial
+projective `W_t` topology.
+
+**Evidence.** The verifier passes 13502/13502 assertions across three
+positive `(beta,m,a)` parameter triples and five even meshes.  It checks the
+sine-square remainder, chord bound, asymmetric Nyquist tail, uniform grid and
+interpolated covariance estimates, arbitrary-time increment and fourth-moment
+bounds, three convergence refinements, exact quartic Young optimizers and four
+hostile weakened inequalities.  Two clean replay outputs are byte-identical.
+
+**Source pins.**
+
+| source | SHA-256 |
+|---|---|
+| analytic audit note | 0f5d3ce7881faca9b4474f4c1b68dd00fb08e8917549de3e5882f6ee778ca651 |
+| quantitative verifier | 4b7ae856bae70c3f53fb669a52cd3cc1483ce032010aa4443acb3105c00a8b23 |
+| result artifact | ee6ef8863ee9b69e3014183488a5086dc8c171ae43e75ce376b1300f6970231c |
+
+**Where proven.**
+strategy/q3lock-p06-gaussian-weak-limit-quantitative-audit-260905.md,
+verification/scripts/q3lock_p06_gaussian_weak_limit_quantitative_audit.py,
+and
+claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-p06-gaussian-weak-limit-quantitative-audit/result.json.
+
+**Classification and boundary.** R-501 preserves the
+EXP-000780 -> EXP-000781 -> EXP-000782 authority chain and strengthens only
+the fixed-spatial-volume P-06 Gaussian/weighted-law seam.  It does not by
+itself prove continuous-loop association, the P-09/FSS passage, spatial
+tempered accumulation, pressure, infrared positivity, a strict cusp, phase
+coexistence, DLR multiplicity, extremality, purity, clustering, common
+dynamics, KMS, a ground phase or gap, continuum removal, physical vacuum,
+cosmology, Sector A, CP1, C6, Pre-A, Yang--Mills or mass gap.  No P2
+manuscript, submission, upload, release, tag or PDF is created.
+
+**Next.** Obtain external line-by-line review of the quantitative covariance,
+Kolmogorov and weighted-transfer arguments and confirm the identical harmonic
+split in the final Q3LOCK residual.  Then compose the accepted input with the
+P-06 association and P-09/FSS audits without promoting the separate spatial
+`W_t`, phase, claim or publication gates.
+
+<a id="r-500"></a>
+### R-500 -- EXP-001584 Q3LOCK P-06 Gaussian Fourier covariance audit
+
+**Statement.** R-500 / EXP-001584 records a standalone T0,
+claim-nonbearing fixed-mesh audit for the massive periodic Gaussian input to
+the P-06 loop route.  It checks the csc-squared normalization, the zero-mode
+diagonal bound, least-representative Fourier reindexing, the closed-form
+periodic covariance, the n^-2 high-mode majorant, the cyclic resistance
+factor, the increment upper bound, and the exact source integral of periodic
+linear interpolation.
+
+**Status.** T0, claim_bearing=false, finite diagnostic only.  It does not
+certify analytic Gaussian weak convergence, weighted loop convergence, the
+KP/Feynman--Kac topology, spatial compactness, a pressure limit, a source
+cusp, or DLR multiplicity.
+
+**Evidence.** The executable audit passes 255/255 assertions.  It covers
+seven csc-squared meshes, six diagonal-bound meshes, direct/reindexed
+covariances, finite-to-closed-form refinement, Fourier truncation, all tested
+high-mode majorants, cyclic resistance values, increment bounds, Gaussian
+fourth-moment envelopes, and exact rational source interpolation.  Two clean
+replay outputs are byte-identical.
+
+**Source pins.**
+
+| source | SHA-256 |
+|---|---|
+| independent audit note | 177ec77a66e6da9a33874d47577a7a41dfacfe7253035f0107dcc81745fa822e |
+| auxiliary verifier | d09dc9121c2bd5bf99362119683f110ca4603c78789b269ccc8b922eb5df0447 |
+| result artifact | f8de926d7b6806a14d0b93e90a32bc450aa1de256cbde6573833d91c2de55097 |
+
+**Where proven.**
+strategy/q3lock-p06-gaussian-fourier-covariance-audit-260905.md,
+verification/scripts/q3lock_p06_gaussian_fourier_covariance_audit.py, and
+claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-p06-gaussian-fourier-covariance-audit/result.json.
+
+**Classification and boundary.** R-500 is T0 and claim-nonbearing.  It
+preserves the EXP-000780 -> EXP-000781 -> EXP-000782 authority chain and
+does not promote EXP-000782 or R-497.  No unconditional Gaussian loop-limit,
+continuous-loop FKG, FSS, infrared, pressure, cusp, phase, DLR,
+extremality, purity, clustering, common dynamics, KMS state, ground-state
+phase, gap, continuum, physical-vacuum, cosmological, Sector-A, CP1, C6,
+Pre-A, or Yang--Mills conclusion follows.  No manuscript, submission,
+upload, release, tag, or PDF is created; PDF work remains deferred until
+content review and final freeze.
+
+**Next.** Obtain independent line-by-line acceptance of the Fourier
+summable-majorant argument, Gaussian-to-loop tightness, residual compact
+Riemann sums, and source-uniform integrability before any claim or manuscript
+freeze.
+
+<a id="r-499"></a>
+### R-499 -- EXP-001583 Q3LOCK FKG mixed-derivative and interpolation audit
+
+**Statement.** R-499 / EXP-001583 records a standalone T0,
+claim-nonbearing finite-algebra audit for the P-06 association route of the
+fixed-spacing positive-lambda eight-component Q3LOCK model.  The exact
+nonradial Q3 edge identity
+-partial_x partial_y W=(lambda/4)((x+y)^2+5(x-y)^2)>=0 is checked together
+with finite rectangle supermodularity, order-preserving periodic
+piecewise-linear interpolation, and the constant-shifted clip construction.
+The audit explicitly retains second-moment or uniform-integrability hypotheses
+for removing the clips.
+
+**Status.** T0, claim_bearing=false, finite diagnostic only.  It does not
+certify a continuous-loop FKG theorem, the KP/Feynman--Kac topology, fixed-
+volume Gaussian/residual convergence, spatial accumulation, a pressure limit,
+a source cusp, or DLR multiplicity.
+
+**Evidence.** The executable audit passes 306/306 exact-rational assertions.
+It checks the Q3 and quadratic mixed-derivative identities and rectangle
+increments, every periodic wrap cell in the interpolation fixture, a hostile
+negative coefficient, shifted clip ranges and monotonicity, clipped-product
+domination, and a parity-symmetric covariance fixture.  Two clean replay
+outputs are byte-identical.
+
+**Source pins.**
+
+| source | SHA-256 |
+|---|---|
+| independent audit note | 328d666ea41fa0a3366fd097c58b906b9bc6233336507ba93d7e2ee0ed981266 |
+| auxiliary verifier | 2c84b20103355de2b5dc73d7ad20ede8adb6a0e3bf66fa61c0c966b2748e234a |
+| result artifact | 65d0ae7cd131cc309be116b962abae072e52cda45da369a83de1b79d74273268 |
+
+**Where proven.**
+strategy/q3lock-fkg-mixed-derivative-interpolation-audit-260905.md,
+verification/scripts/q3lock_fkg_mixed_derivative_interpolation_audit.py, and
+claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-fkg-mixed-derivative-interpolation-audit/result.json.
+
+**Classification and boundary.** R-499 is T0 and claim-nonbearing.  It
+preserves the EXP-000780 -> EXP-000781 -> EXP-000782 authority chain and
+does not promote EXP-000782 or R-497.  No path-space MTP2 theorem,
+continuous-loop theorem, strict cusp, positive zero mode, phase coexistence,
+DLR multiplicity, extremality, purity, clustering, common dynamics, KMS
+state, ground-state phase, gap, continuum, physical-vacuum, cosmological,
+Sector-A, CP1, C6, Pre-A, or Yang--Mills conclusion follows.  No manuscript,
+submission, upload, release, tag, or PDF is created; PDF work remains
+deferred until content review and final freeze.
+
+**Next.** Obtain independent acceptance of the KP/Feynman--Kac topology,
+fixed-volume Gaussian/residual convergence, and source-uniform moment bounds,
+then combine this finite FKG input with the P-09 and pressure bridges before
+any claim or manuscript freeze.
+
 <a id="r-498"></a>
 ### R-498 -- EXP-001580 Q3LOCK periodic/open pressure seam and min--max audit
 
@@ -17221,6 +17400,17 @@ a clean snapshot before considering any bounded claim or manuscript freeze.
 
 <a id="r-497"></a>
 ### R-497 -- EXP-000782 Q3LOCK low-temperature phase route: independent result registration
+
+**Corrective precedence (EXP-001587).** The later coercivity/integration
+insertion blocks contain a spatial-diagonal double allocation and a
+residual/physical-potential mismatch. Use
+`strategy/q3lock-harmonic-residual-reconciliation-260905.md` and the
+manifest's `correction_precedence` before reusing those blocks. The exact
+residual has (r-a)/2 with full spatial differences, or (r+6c-a)/2 with
+negative pair coupling; the physical Hamiltonian restores the harmonic
+term. Audit authority:
+`AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION`.
+This internal correction leaves R-497 at T0 and external acceptance open.
 
 **Statement.** R-497 / EXP-000782 registers a standalone T0,
 claim-nonbearing research result for the exact fixed-spacing positive-lambda

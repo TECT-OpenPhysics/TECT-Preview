@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION](#audit-2026-09-05-q3lock-harmonic-spatial-double-allocation) | combine allocated Q3LOCK onsite potential with full spatial differences | the old physical-potential defect is (3c-a/2) times the squared field norm and the Gaussian residual defect is 3c times the time-integrated squared norm; corrected equivalent residuals and consumer precedence are recorded in EXP-001587 |
 | [AUDIT-2026-09-05-PAH-OMC-014-Q0-COMPONENT-PUSHFORWARD](#audit-2026-09-05-pah-omc-014-q0-component-pushforward) | treat deterministic Q=0 component restriction as a projective Gibbs push-forward on PAH-OMC-004 | exact finite Z_2 enumeration gives a coarse/fine expectation mismatch with 2,784 rational-exponent terms; this retires only the deterministic Q=0 factorization and leaves cross-Q mixtures open |
 | [NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING](#ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining) | use positive scalar beta or kappa_s transport to repair the natural free-vertex forgetful pullback | the exact rate defect is beta*kappa_s*delta*(z_1-z_2)/2, nonzero for every positive transported beta, kappa_s, step and distinct hidden values; only block, weighted, conditional or separately versioned successors remain open |
 | [NG-2026-09-02-PAH-OMC-002-CONDITIONAL-GIBBS-PROJECTED-INTERTWINING](#ng-2026-09-02-pah-omc-002-conditional-gibbs-projected-intertwining) | use the exact PAH-OMC-002 Gibbs fibre average as a projected generator intertwiner on the fine-only-vertex map | the invariant cylinder witness `f=j_v` has coarse increment 0 but fine hidden increments `+1/8` and `-1/8`; the conditional factor `(exp(-1/16)+exp(1/16))/2>1`, so the projected identity fails; this is route-local and does not reject other owner-authorized block kernels |
@@ -10616,3 +10617,34 @@ law is present in PAH-OMC-012.  The active PAH-OMC-014 verdict remains
 dynamics, continuum, physical Pre-A, spacetime, gravity, QFT, Yang--Mills,
 mass-gap or TOE conclusion follows.  Markov time remains external stochastic
 time.
+
+<a id="audit-2026-09-05-q3lock-harmonic-spatial-double-allocation"></a>
+### AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION -- residual and physical potential transcription mismatch
+
+**Failure mode.** Combine the allocated local coefficient (r+6c-a)/2
+with the full positive spatial difference energy and identify the result
+with either the residual action or the physical Hamiltonian potential.
+This occurs in the Section 5 form block of
+`strategy/q3lock-quartic-coercivity-form-domain-audit-260905.md` and Section 3
+of `strategy/q3lock-proof-text-integration-addendum-260905.md`; the Jensen
+note inherits it if supplied their V_(h,a).
+
+**Evidence.** Relative to EXP-000782 equation (2.1), the displayed potential
+has defect (3c-a/2) sum_y|q_y|^2. Used as a Gaussian residual, it instead
+produces excess 3c epsilon sum_(y,k)|x_(y,k)|^2 after restoring the harmonic
+action. These are field-dependent terms. The correction note
+`strategy/q3lock-harmonic-residual-reconciliation-260905.md` gives the exact
+two equivalent representations and corrected coercivity/Jensen constants.
+Its verifier `verification/scripts/q3lock_harmonic_residual_reconciliation.py`
+passes 138/138 exact rational diagnostics, including complete spatial
+quadratic coefficient comparisons, periodic L=2 parallel bonds, open-box
+degrees, two harmonic splits, and hostile nonzero defects. Artifact:
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-harmonic-residual-reconciliation/result.json`.
+
+**Consequence.** Supersede the affected model-identification blocks with the
+correction note; retain their hash-pinned historical bytes. Use (r-a)/2
+with the full difference term, or (r+6c-a)/2 with the negative pair term,
+and restore a/2 for the physical Hamiltonian. The Gaussian R-500/R-501
+identities are unchanged, but their interacting-law use must receive this
+correction. Internal T0 status and external proof/phase/publication gates
+remain unchanged. This is a proof-text defect, not a no-go for the model.

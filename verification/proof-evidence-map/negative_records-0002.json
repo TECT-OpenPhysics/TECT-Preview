@@ -1,6 +1,27 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-scalar-mass-only-q3-wick-renormalization",
+      "branch": "Wick-order the local Q3 quartic interaction against the declared common-diagonal Gaussian reference while allowing only a scalar mass and scalar energy counterterm",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-split-interacting-state-projectivity-and-q3-wic"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "artifacts": "`strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split.py`; `codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split_independent.py`.",
+        "consequence": "Scalar-mass-only renormalization is refuted within this specific common-diagonal Wick scheme. A fixed renormalized parameterization requires at least a scalar mass direction, a distinct Q3-Laplacian quadratic direction, and a scalar energy convention. Necessity does not prove that this enlarged basis is sufficient or convergent. Other fully specified schemes, `lambda=0`, constrained or gauge sectors, non-Gaussian references, and a separately constructed vector `P(phi)_2` limit remain open. This reference is not identified with physical empty space, so no physical-vacuum or below-empty-space conclusion follows.",
+        "evidence": "Exact Gaussian contraction gives ```text delta K=-3C[(g+lambda)I+lambda L_Q3], E_shift=6C^2(g+4lambda). ``` The cube Laplacian has Walsh levels `0,2,4,6` with multiplicities `1,3,3,1`. For `lambda>0`, `L_Q3` is nonzero and linearly independent of `I`. In the separately declared positive-mass centered reference, `C_N=Theta(log N)`, so the separation between Walsh level `s` and the singlet is `-6s*lambda*C_N` and is unbounded with the cutoff.",
+        "failure_mode": "Wick-order the local Q3 quartic interaction against the declared common-diagonal Gaussian reference while permitting only a scalar mass `r_N I` and a scalar energy counterterm, with no quadratic Q3-matrix counterterm."
+      },
+      "detail_title": "one scalar mass cannot absorb the declared Q3 Wick contraction",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "the exact quadratic contraction is `-3C[(g+lambda)I+lambda L_Q3]`; for `lambda>0` its Q3-Laplacian direction is independent of `I`, and its Walsh-level separations grow as `C_N=Theta(log N)`. Retain a Q3-matrix counterterm basis, another declared scheme, `lambda=0`, or a separately proved constructive limit",
+      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-SCALAR-MASS-ONLY-Q3-WICK-RENORMALIZATION"
+    },
+    {
       "anchor": "ng-2026-08-04-pre-a-cp1-cl8-principal-floquet-gibbs-reference",
       "branch": "obtain a preferred thermal state and absolute energy reference from the principal logarithm of the split-circuit unitary",
       "claim_ref_basis": {
@@ -2208,29 +2229,6 @@
       "kind": "no_go",
       "summary": "the orthogonal increments `P_+` and `P_-` sum to the identity but each fails to commute with `Pi=diag(1,0)`. Total spectral covariance does not identify the temporal factorization; R-129 instead uses physical-shell analysis followed by legal source coanalysis",
       "tag": "NG-2026-07-30-A13-TOTAL-COVARIANCE-TEMPORAL-SHELL-INTERTWINING"
-    },
-    {
-      "anchor": "ng-2026-07-30-a13-swapped-geometric-reverse-band-adjoint",
-      "branch": "identify the true adjoint orientation of a proved shell/source cell with a distinct swapped-label geometric reverse cell",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Reflect a proved forward root/output-shell block into a distinct reverse geometric band merely by swapping its two labels.",
-        "consequence": "Shell coanalysis gives the legal adjoint of the same proved aggregate region with the same norm. A distinct lower geometric band still needs its own production identification or symmetry theorem.",
-        "evidence": "R-129 proof note, Eqs. (6.14)--(6.15); primary symbolic and independent rational audits.",
-        "failure_mode": "With orthogonal source and shell coordinates, `L=2^(-1/2)[[1,1],[1,-1]]`, and `B=[[0,1],[1,-1]]`, the exact cells `T_mb=L^* Pi_m B L E_b` obey `T_21=0` and `T_12!=0`. Thus `T_21^*=0!=T_12` even though the complete pulled Hessian is selfadjoint."
-      },
-      "detail_title": "the true adjoint orientation is not a swapped geometric cell",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "an exact two-dimensional orthogonal-shell fixture has `T_21=0` but `T_12!=0`, so `T_21^*=0!=T_12`. Shell coanalysis supplies the adjoint of the same aggregate region, not reflection into an unproved lower band",
-      "tag": "NG-2026-07-30-A13-SWAPPED-GEOMETRIC-REVERSE-BAND-ADJOINT"
     }
   ],
   "kind": "negative_records",
