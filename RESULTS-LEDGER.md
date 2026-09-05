@@ -22,7 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes; EXP-001567 adds the exact EXP-000780 collective-source restriction and pressure dictionary; EXP-001568 inserts that dictionary into the integrated P-06/P-09 proof text; EXP-001570 independently audits its algebra and limit order. P-06/P-09, source/form-domain review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
+| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes; EXP-001567 adds the exact EXP-000780 collective-source restriction and pressure dictionary; EXP-001568 inserts that dictionary into the integrated P-06/P-09 proof text; EXP-001570 independently audits its algebra and limit order; EXP-001571 audits the finite-grid-to-fixed-loop FKG association passage. P-06/P-09, source/form-domain review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
 | [R-494](#r-494) | PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit | R-494 / EXP-001504 finds no source-owned cross-Q sector weight law in the hash-pinned PAH-001/OMC-010/OMC-011/OMC-012/OMC-013 scope. Primary 20/20, independent 14/14, hostile 12/12, integrated 31/31 pass; verdict HOLD_FOR_EVIDENCE. Fixed-Q component Gibbs states remain valid, but a global mu_(n,R), omega, Cauchy error and stationarity test are not defined. This is T0 claim-nonbearing source-input evidence only; no physical or continuum conclusion follows. |
 | [R-493](#r-493) | PAH-OMC-013 full-Q eventual generator intertwining on the grade-blind cylinder | R-493 / EXP-001474 proves pointwise intertwining after N(f)=max(2,m_f+1) on the full-Q grade-blind finite cylinder algebra for unchanged PAH-001 rates; primary 22/22, independent 16/16, hostile 13/13, integrated 21/21 and Lean R493 pass. This is T0 claim-nonbearing finite algebraic progress only; weak Gibbs-L2, closability, infinite volume, continuum and physical conclusions remain open. |
 
@@ -17195,12 +17195,12 @@ mathematical theorem.
 
 | source | SHA-256 |
 |---|---|
-| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `37b722a880cc4154c5d3924b418d7a400dbb5f0e47a029387b143dd6d41573d4` |
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `1070e8a2c4880c920c361ccab0c2733bba1ca9b06de6ab4ecfca09b5368154af` |
 | upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
 | upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
 | EXP-000782 upstream scope-firewall audit | `cce56eed01dfe6239d8ddbcc43e823df4e2c68ebeebe51dfc71823b545b165e9` |
 | KP v1 theorem-locator correction audit | `b077d49dc26976212175ed11b7d212e0210d3af9d29fc7fc8bce6519988ec0e5` |
-| Temporal-correction sidecar (TC-0030) | `0216f0d1c9776013ccae9552dff1390e6b8395e8e53fb104554f566dd33bab3c` |
+| Temporal-correction sidecar (TC-0031) | `7e39df86b1b6d907d3535c2714da53857ec1d7ae54fcf6de4e4f64ab9dc229df` |
 | P-06/P-09 audit round 2 | `2e095b1443ac6f237d7fcacc09315c5eb5b08da665b7e3caba615d7e912de218` |
 | Jensen normalizer sub-obligation audit | `abc9535a004a548e3a348211320e9bc859f6be73bc181b878ee6c92ed4e635b1` |
 | Quartic coercivity and form-domain audit | `afcb0d694c950e0c63a3c46f0e8e78ccdef81c9fea726116905b49da00bcfe9e` |
@@ -17222,6 +17222,7 @@ mathematical theorem.
 | EXP-000780 collective-source restriction audit | `d13fcae5064a553e31ef9164521ce43bbbbd3c85762547367b5163a26d48703a` |
 | KKK Duhamel and Fourier source-normalization pin | `d4f3f22773a2773abf0a5b3811b48332edeb5738bcf7ce9c6d04e9a60a53bc5a` |
 | Collective dictionary and limit-order audit | `186b6e08490d28e3b9af9372fbf09f2db260e5153f421a136a15b3909a0a29ad` |
+| P-06 continuous-loop association independent audit | `f7ac2c816cc20a957800d6c7b9d02ebb9ada70a112ae2d99b806131c18b040a3` |
 | Pressure zero-mode, Griffiths and tangent-state audit | `2a94560bfcd53f8a2dc2da6098e64cdbcea9fefb9a1c8dc19800549b38e73c40` |
 | Finite-volume translation trace-differentiation audit | `a2659b62fbf5e344d683a2a9638c425fdcf6ba3062e8e45224e4e69a46deff9b` |
 | KKK endpoint-interval and non-differentiable cusp correction | `e5bdd2ed72f19dddd1e3c6325a131d12c04b4a59124745b09dfe665fb8a2c1fb` |
@@ -17246,7 +17247,7 @@ mathematical theorem.
 in `strategy/q3lock-exp782-independent-result-manifest-260905.json`. The
 upstream authority records are EXP-000780, EXP-000781, and EXP-000782 in
 `explorations/log.jsonl`; the current seam decisions are EXP-001516, EXP-001522, EXP-001526,
-EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, EXP-001534, EXP-001536, EXP-001537, EXP-001538, EXP-001540, EXP-001541, EXP-001543, EXP-001545, EXP-001546, EXP-001548, EXP-001549, EXP-001550, EXP-001551, EXP-001552, EXP-001554, EXP-001555, EXP-001556, EXP-001557, EXP-001559, EXP-001560, EXP-001561, EXP-001562, EXP-001563, EXP-001564, EXP-001566, EXP-001567, EXP-001568, and EXP-001570. The proof
+EXP-001528, EXP-001530, EXP-001531, EXP-001532, EXP-001533, EXP-001534, EXP-001536, EXP-001537, EXP-001538, EXP-001540, EXP-001541, EXP-001543, EXP-001545, EXP-001546, EXP-001548, EXP-001549, EXP-001550, EXP-001551, EXP-001552, EXP-001554, EXP-001555, EXP-001556, EXP-001557, EXP-001559, EXP-001560, EXP-001561, EXP-001562, EXP-001563, EXP-001564, EXP-001566, EXP-001567, EXP-001568, EXP-001570, and EXP-001571. The proof
 text and its boundaries are audited in
 `strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`, with the
 finite-grid FKG, source-uniform loop limit, topology, edge-incidence,
@@ -17442,6 +17443,14 @@ re-derives the trace, Feynman--Kac, Duhamel and KKK volume factors and fixes
 the order of mesh, spatial-volume, source and DLR limits. It confirms algebraic
 consistency only and is not external referee sign-off; P-06/P-09, cusp, DLR,
 claim, external-review and PDF gates remain open.
+
+The EXP-001571 P-06 audit is recorded in
+`strategy/q3lock-p06-continuous-loop-association-independent-audit-260905.md`;
+it separates finite-lattice FKG, compact-cube limits, interpolation, weak loop
+convergence, and clipped coordinate products. It validates the fixed-volume
+association chain only under the separately audited KP topology and moment
+bounds; spatial tempered accumulation, cusp, DLR, claim, external-review and
+PDF gates remain open.
 
 **Reuse scope.** This result is reusable for mathematical-physics analysis of
 the declared fixed-lattice Q3LOCK quantum anharmonic model and for a possible

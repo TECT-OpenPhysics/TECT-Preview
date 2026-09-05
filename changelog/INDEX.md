@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**941 accepted events** · latest 25 shown below · machine locator: `index.json`
+**942 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-q3lock-p-06-continuous-loop-association-receive` — [Q3LOCK P-06 continuous-loop association receives independent audit (EXP-001571)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-p-06-continuous-loop-association-receive) |
 | 2026-09-05 | `20260905-q3lock-collective-dictionary-receives-independe` — [Q3LOCK collective dictionary receives independent limit-order audit (EXP-001570)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-collective-dictionary-receives-independe) |
 | 2026-09-05 | `20260905-q3lock-collective-dictionary-inserted-into-p-06` — [Q3LOCK collective dictionary inserted into P-06/P-09 proof text (EXP-001568)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-collective-dictionary-inserted-into-p-06) |
 | 2026-09-05 | `20260905-q3lock-exp-000780-collective-source-restriction` — [Q3LOCK EXP-000780 collective-source restriction audit recorded (EXP-001567)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-000780-collective-source-restriction) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-q3lock-verification-lane-result-hash-correction` — [Q3LOCK verification-lane result hash correction] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-verification-lane-result-hash-correction) |
 | 2026-09-05 | `20260905-q3lock-source-tangent-dlr-composition-audit-202` — [Q3LOCK source-tangent DLR composition audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-tangent-dlr-composition-audit-202) |
 | 2026-09-05 | `20260905-q3lock-loop-limit-corrected-from-total-variatio` — [Q3LOCK loop limit corrected from total variation to weak convergence] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-loop-limit-corrected-from-total-variatio) |
-| 2026-09-05 | `20260905-q3lock-kkk-endpoint-interval-correction-for-the` — [Q3LOCK KKK endpoint-interval correction for the cusp bridge] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-kkk-endpoint-interval-correction-for-the) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 919–941 | 23 | [000919-000968.md](pages/000919-000968.md) |
+| 919–942 | 24 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
