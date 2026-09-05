@@ -1,0 +1,22 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "reviewed_on": "2026-09-05",
+  "recorded_by": "Codex",
+  "title": "Q3LOCK EXP-001591 relation metadata correction",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "task_id": "T-054",
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "question": "Which prior exploration records own the two historical notes corrected by EXP-001591?",
+  "method": ["Resolve the note titles against the canonical exploration ledger and R-497 manifest."],
+  "finding": "EXP-001591 incorrectly names EXP-001561 and EXP-001579 in its corrects edges. The actual source-tangent composition owner is EXP-001540, and the projective diagonal owner is EXP-001578. EXP-001561 is only a hash audit; EXP-001579 belongs to PAH and is not corrected by this Q3LOCK work. Disregard those two mistaken edges semantically and use the corrected owner edges in this record. The evidence paths, mathematics and corrective formulas in EXP-001591 are unchanged.",
+  "verdict": "advanced",
+  "decision_reason": "Append-only correction prevents false cross-project and hash-audit lineage without rewriting the original ledger record.",
+  "boundary": "Metadata repair only; no new proof, audit acceptance, status promotion or PAH research change.",
+  "evidence_refs": ["strategy/q3lock-source-tangent-dlr-composition-audit-260905.md#2-frozen-model-and-source-convention", "strategy/q3lock-kp-source-window-projective-tightness-diagonal-audit-260905.md#3-explicit-diagonal-compact-set", "strategy/q3lock-dlr-source-tangent-content-260905.md#7-review-and-reproduction-boundary"],
+  "related": [{"id":"EXP-001591","relation":"corrects"},{"id":"EXP-001540","relation":"corrects"},{"id":"EXP-001578","relation":"corrects"}],
+  "formal_refs": {"results":["R-497"],"negatives":[],"events":[]},
+  "next_action": "Use the corrected owner mapping in R-497 consumers; continue the mathematical content and signed review gates unchanged.",
+  "revisit_condition": "Reopen only if the canonical source-owner mapping changes.",
+  "non_claims": ["No new mathematical result or claim status change."],
+  "provenance": "contemporaneous"
+}

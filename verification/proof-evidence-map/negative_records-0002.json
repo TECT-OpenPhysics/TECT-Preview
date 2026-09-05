@@ -1,6 +1,27 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-time-zero-configuration-only-full-weyl-state",
+      "branch": "identify a full canonical Weyl state from all time-zero configuration characteristics alone",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-register-exp-000759-q3-vector-p-phi-2-construct"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "artifacts": "`strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split.py`; `codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split_independent.py`.",
+        "consequence": "The constructive comparator's time-zero configuration limit is retained, but it does not determine the joint Weyl functional, canonical momentum, or a canonical state. Reflection-positive reconstruction, direct momentum-characteristic estimates, a Feynman--Kac bridge, or another joint construction remains possible. No negative verdict on the existence of a full CL8 state is claimed, and C6, CP1 and Pre-A remain open.",
+        "evidence": "In one oscillator with `[Q,P]=i`, let ```text psi_0(x)=pi^(-1/4) exp(-x^2/2), psi_1=exp(iQ^2/2) psi_0. ``` The two vectors have the same position probability density and therefore the same configuration characteristic `exp(-t^2/4)`. If `U=exp(iQ^2/2)`, then `U^* P U=P+Q`. Thus their momentum variances are respectively `1/2` and `1`.",
+        "failure_mode": "Promote convergence of every time-zero configuration characteristic to convergence or identification of a full regular canonical Weyl state without separately constructing the momentum sector."
+      },
+      "detail_title": "configuration characteristics do not determine the momentum sector",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "a Gaussian and its quadratic phase chirp have the same position characteristic `exp(-t^2/4)` but momentum variances `1/2` and `1`. Retain reflection-positive reconstruction, direct momentum estimates, or another joint Weyl-functional construction",
+      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE"
+    },
+    {
       "anchor": "ng-2026-08-04-pre-a-cp1-cl8-strang-one-slice-exact-hamiltonian-semigroup",
       "branch": "identify the explicit symmetric finite-time Gaussian-link slice with the exact registered CL8 heat semigroup merely from symmetry, positivity, and low-order agreement",
       "claim_ref_basis": {
@@ -2204,29 +2225,6 @@
       "kind": "no_go",
       "summary": "at fixed spatial shell `m0`, the anticipative family `a^(J)=2^(-2m0) phi(xi_J)e_(m0)` has constant `H2` scale while bare reverse weights `2^(J-4m0)` and `2^(J-2m0)` diverge. This refutes only the unrestricted anticipative extension; it is not a legal progressive-control or complete signed production counterexample",
       "tag": "NG-2026-07-30-A13-UNRESTRICTED-REVERSE-BAND-EXTENSION"
-    },
-    {
-      "anchor": "ng-2026-07-30-a13-unrestricted-predictable-covariance-collapse",
-      "branch": "replace the legal blockwise predictable source Riesz vector by the unrestricted physical covariance expression `C_JG`",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Replace the legal predictable source adjoint `g_b=E[S_b^*G|F_(t_(b-1))]` and physical Riesz vector `sum_b S_b g_b` by the unrestricted covariance expression `C_JG`, with `C_J=sum_bS_bS_b^*`.",
-        "consequence": "Conditional Jensen still gives the valid sharp upper bound `||g||^2<=E<G,C_JG>`, but it is not an identity. Every production source block must retain its own strict-past conditional projection before the covariance increments are summed. This is not a no-go for a correctly projected production force.",
-        "evidence": "R-127 proof note, Theorem 2.1 and Counterfixture 2.2; primary exact source audit and non-importing independent finite-law audit.",
-        "failure_mode": "Use two scalar blocks `S_1=S_2=1`, let the first strict past be trivial, let the second strict past be `sigma(xi)`, and take `xi=+/-1` equiprobably and `G=xi`. Then `g_1=0`, `g_2=xi`, so the legal physical vector is `xi`; the unrestricted expression is `C_JG=2xi`. The legal quotient norm squared is one, while the unrestricted covariance energy is two."
-      },
-      "detail_title": "blockwise predictability cannot collapse to the unrestricted covariance",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "with two scalar blocks `S_1=S_2=1`, trivial first past, second past `sigma(xi)`, and `G=xi`, the legal source adjoint is `(0,xi)` and its physical Riesz vector is `xi`, whereas `C_JG=2xi`. Predictable projections retain their block labels and cannot be moved outside the covariance sum",
-      "tag": "NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE"
     }
   ],
   "kind": "negative_records",

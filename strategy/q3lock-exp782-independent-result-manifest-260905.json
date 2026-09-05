@@ -396,6 +396,20 @@
       "record_line": 1589,
       "role": "thermodynamic pressure content and seam coefficient correction",
       "scope": "actual-model form and volume bounds, even rectangular pressure limit, periodic seam equality and local uniform derivative passage assembled internally; signed review and phase/DLR composition remain open"
+    },
+    {
+      "exploration_id": "EXP-001591",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1591,
+      "role": "periodic DLR and pressure-tangent manuscript content with two proof-text corrections",
+      "scope": "source-uniform periodic moment closure, correctly directed projective compactness, finite-range DLR passage and tangent expectation; strict-sign composition and signed acceptance remain open"
+    },
+    {
+      "exploration_id": "EXP-001592",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1592,
+      "role": "EXP-001591 correction-owner metadata repair",
+      "scope": "corrected historical owners are EXP-001540 and EXP-001578, not EXP-001561 or unrelated PAH EXP-001579; no mathematics or PAH status change"
     }
   ],
   "model_scope": {
@@ -423,8 +437,8 @@
     },
     {
       "component": "tempered Euclidean DLR existence, compactness and source tangents",
-      "status": "ASSEMBLED_PENDING_AUDIT",
-      "source": "EXP-000781 with the exact Q3LOCK hypothesis crosswalk"
+      "status": "DLR_TANGENT_CONTENT_ASSEMBLED_PENDING_INDEPENDENT_REVIEW",
+      "source": "EXP-000781 with the exact KP hypothesis crosswalk and EXP-001591 periodic moment, corrected weight-direction and pressure-tangent content"
     },
     {
       "component": "continuous-loop FKG",
@@ -872,6 +886,21 @@
       "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-thermodynamic-pressure-audit/result.json",
       "role": "EXP-001589 deterministic exact diagnostic artifact",
       "sha256": "8d63bc9c492e0239f4299d39dd2f674d8ef508cdcc860014be88a52fd0ad207f"
+    },
+    {
+      "path": "strategy/q3lock-dlr-source-tangent-content-260905.md",
+      "role": "EXP-001591 DLR/source-tangent content and correction precedence",
+      "sha256": "f31cd35b6eeabef707d58980a1790d3a776e5c431d82ecc4375a2181b1d9bd65"
+    },
+    {
+      "path": "verification/scripts/q3lock_dlr_tangent_content_audit.py",
+      "role": "EXP-001591 exact normalization and weight-direction diagnostics",
+      "sha256": "c84c4a8510d2a9d52ba5d4daa096c18385a759c1a822275f5957ed8848792214"
+    },
+    {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-dlr-tangent-content-audit/result.json",
+      "role": "EXP-001591 deterministic finite diagnostic artifact",
+      "sha256": "3e87618fdd5a86d145d934411dd7f07e80e90a21d3a0d705eada73eef2d1f921"
     }
   ],
   "correction_precedence": [
@@ -894,9 +923,28 @@
       "superseded_blocks": ["strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md Section 4: the one displayed seam inequality with coefficient 48"],
       "rule": "Use coefficient 288 from endpoint summation. The original EXP-000780 authority, subsequent min--max lines and R-498 verifier already use 288 and remain byte-preserved.",
       "review_status": "INTERNAL_CORRECTION_RECORDED_EXTERNAL_ACCEPTANCE_OPEN"
+    },
+    {
+      "exploration_id": "EXP-001591",
+      "audit_id": "AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION",
+      "current_definition": "strategy/q3lock-dlr-source-tangent-content-260905.md Sections 1 and 4",
+      "superseded_blocks": [
+        "strategy/q3lock-source-tangent-dlr-composition-audit-260905.md Section 2: p_L derivative display with beta E X_L/V",
+        "strategy/q3lock-kp-source-window-projective-tightness-diagonal-audit-260905.md Section 3: extraction from alpha_k to the smaller alpha_(k+1)"
+      ],
+      "rule": "Use p_L'=E X_L/V=beta E Q_0. For decreasing alpha_k, use stronger alpha_(k+1) bounds to converge in target alpha_k. Preserve historical pinned files and the original EXP-000781 time-zero normalization.",
+      "review_status": "INTERNAL_CORRECTION_RECORDED_EXTERNAL_ACCEPTANCE_OPEN"
     }
   ],
+  "exploration_relation_precedence": {
+    "correction_record": "EXP-001592",
+    "affected_record": "EXP-001591",
+    "disregard_mistaken_corrects_targets": ["EXP-001561", "EXP-001579"],
+    "use_corrects_targets": ["EXP-001540", "EXP-001578"],
+    "rule": "Preserve append-only historical bytes; the later correction governs source-owner interpretation. No PAH result is corrected by this Q3LOCK work."
+  },
   "open_gates": [
+    "independent review of EXP-001591 source-uniform periodic moment closure, corrected projective embedding direction, eventual local DLR identities, and clipped tangent expectation passage",
     "independent review of EXP-001588/EXP-001589 finite-volume and thermodynamic pressure content, including the corrected seam constant, local uniformity and source derivative passage",
     "independent acceptance and consumer crosswalk of EXP-001587 harmonic/spatial allocation correction and absolute pressure reference factor",
     "independent mathematical audit of P-06 finite-grid-to-continuous-loop FKG",
@@ -927,7 +975,7 @@
     "No C0, N1-N5, C6, CP1, Sector A or Pre-A closure.",
     "No claim-tier promotion, P2 manuscript, submission, upload, tag, release or PDF is created by this registration."
   ],
-  "next_action": "Compose the EXP-001588/EXP-001589 pressure and derivative limits with source-dependent tempered DLR extraction. Preserve both recorded correction-precedence entries. Obtain independent acceptance of pressure, corrected loop/FKG, R-500/R-501 Gaussian, P-09 FSS, operator/KKK and KP source-window/projective W_t/DLR inputs, then consolidate the entire phase proof and bounded claim. Content freeze, clean replay, signed external reviews and final PDF remain required.",
+  "next_action": "Compose the EXP-001588/EXP-001589 pressure and EXP-001591 DLR/tangent content with continuous-loop FKG, P-09 FSS and operator/Griffiths strict-sign inputs. Preserve every recorded correction-precedence entry. Obtain independent acceptance of the assembled entire phase proof, then complete the bounded claim, clean replay, signed external reviews and final PDF.",
   "source_freeze": {
     "status": "HASHED_TEMPORARY_CAPTURE",
     "captured_utc": "2026-09-04",

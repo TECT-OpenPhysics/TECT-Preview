@@ -5,12 +5,13 @@
 
 Authorities: `negative-results/registry.md`.
 
-**382 registered records** · audit: 63 · fired_falsifier: 6 · no_go: 308 · retraction: 5
+**383 registered records** · audit: 64 · fired_falsifier: 6 · no_go: 308 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION`](registry.md#audit-2026-09-05-q3lock-tangent-beta-and-weight-direction) | audit | reuse later source-tangent normalization and weighted diagonal displays |
 | [`AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION`](registry.md#audit-2026-09-05-q3lock-seam-coefficient-transcription) | audit | reuse the displayed 48 seam constant in the later pressure audit |
 | [`AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION`](registry.md#audit-2026-09-05-q3lock-harmonic-spatial-double-allocation) | audit | combine allocated Q3LOCK onsite potential with full spatial differences |
 | [`AUDIT-2026-09-05-PAH-OMC-014-Q0-COMPONENT-PUSHFORWARD`](registry.md#audit-2026-09-05-pah-omc-014-q0-component-pushforward) | audit | treat deterministic Q=0 component restriction as a projective Gibbs push-forward on PAH-OMC-004 |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RITZ-CORNER-UCP-AUTOMATIC-ASYMPTOTIC-MULTIPLICATIVITY-AND-DYNAMICS-INTERTWINING`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-ritz-corner-ucp-automatic-asymptotic-multiplicativity-and-dynamics-intertwining) | no_go | infer norm-asymptotic multiplication and generator intertwining from strong convergence of Ritz projections and the corner UCP state pullback |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0) | no_go | include a nonzero raw configuration Weyl character in a point-norm C0 carrier equivariant for the exact finite-volume full Q3 Hamiltonian |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-POINTWISE-POSITIVE-TIME-TRACE-CLASS-AUTOMATIC-SHORT-TIME-L1-DOMINATION`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-pointwise-positive-time-trace-class-automatic-short-time-l1-domination) | no_go | infer an integrable short-time Duhamel majorant from trace-class energy dressing at every separately fixed positive time |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-NONESSENTIALLY-CONSTANT-LINFINITY-CONFIGURATION-MULTIPLIER-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-nonessentially-constant-linfinity-configuration-multiplier-full-hamiltonian-point-norm-c0) | no_go | include a nonessentially-constant bounded measurable configuration multiplier in a point-norm C0 carrier equivariant for the exact finite-volume full Hamiltonian |
 
 Search without loading the full registry:
 

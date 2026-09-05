@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-30-a13-unrestricted-predictable-covariance-collapse",
+      "branch": "replace the legal blockwise predictable source Riesz vector by the unrestricted physical covariance expression `C_JG`",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Replace the legal predictable source adjoint `g_b=E[S_b^*G|F_(t_(b-1))]` and physical Riesz vector `sum_b S_b g_b` by the unrestricted covariance expression `C_JG`, with `C_J=sum_bS_bS_b^*`.",
+        "consequence": "Conditional Jensen still gives the valid sharp upper bound `||g||^2<=E<G,C_JG>`, but it is not an identity. Every production source block must retain its own strict-past conditional projection before the covariance increments are summed. This is not a no-go for a correctly projected production force.",
+        "evidence": "R-127 proof note, Theorem 2.1 and Counterfixture 2.2; primary exact source audit and non-importing independent finite-law audit.",
+        "failure_mode": "Use two scalar blocks `S_1=S_2=1`, let the first strict past be trivial, let the second strict past be `sigma(xi)`, and take `xi=+/-1` equiprobably and `G=xi`. Then `g_1=0`, `g_2=xi`, so the legal physical vector is `xi`; the unrestricted expression is `C_JG=2xi`. The legal quotient norm squared is one, while the unrestricted covariance energy is two."
+      },
+      "detail_title": "blockwise predictability cannot collapse to the unrestricted covariance",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "with two scalar blocks `S_1=S_2=1`, trivial first past, second past `sigma(xi)`, and `G=xi`, the legal source adjoint is `(0,xi)` and its physical Riesz vector is `xi`, whereas `C_JG=2xi`. Predictable projections retain their block labels and cannot be moved outside the covariance sum",
+      "tag": "NG-2026-07-30-A13-UNRESTRICTED-PREDICTABLE-COVARIANCE-COLLAPSE"
+    },
+    {
       "anchor": "ng-2026-07-30-a13-total-covariance-temporal-shell-intertwining",
       "branch": "infer `[Delta C_b,Pi_m]=0` for every temporal chart block from Fourier diagonality of the total covariance",
       "claim_ref_basis": {
@@ -2211,28 +2234,6 @@
       "kind": "no_go",
       "summary": "a bounded one-mode progressive control has a terminal displacement at positive `L2` distance from every initially measurable one-shot displacement, even with independent auxiliary randomness",
       "tag": "NG-2026-07-25-A13-ONESHOT-GRAPH-PROGRESSIVE-NONDENSITY"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-nonlinear-coefficient-dja-factorisation",
-      "branch": "A13 complete nonlinear NEAR coefficient represented only through `D_j=d_jA*`",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "For `a_j=P_jA*` and `D_j=a_j-a_(j-1)`, the exact nonduplicating identity is `d_jH(A*)=integral_0^1 DH(a_(j-1)+tD_j)D_j dt +(Dfrak_j^H-Dfrak_(j-1)^H)`, where `Dfrak_j^H=P_jH(A*)-H(a_j)`. Only the first secant may enter the diagonal vector estimate based on `D_j`. The upper-triangular Jensen-defect/all-higher-chaos branch must remain with the signed square, trace, forest, compensator, and control--control terms. This narrows NEAR-G/NEAR-C without refuting a complete adapted NEAR theorem.",
-        "evidence": "Let `eps_j,eps_(j+1)` be independent Rademacher roots and insert the later admissible control `A=lambda eps_(j+1)(1+c eps_j)e_1` at a shell `p>j+1`. Then `d_jA=d_jDA=0`, but `d_j|A|^2=2c lambda^2 eps_j`. More specifically, for the production trace along the pure-doublet ray, `h(t)=12c_0t^2+c_1[12t^2-8 alpha t^4/(t^2+e) +4 alpha^2t^6/(t^2+e)^2]`, `alpha=5/9`, one has `d_jh(A)=24(c_0+c_1)c lambda^2 eps_j+O(lambda^4)`, which is nonzero for small nonzero `lambda`. Both executables reproduce the zero linear root and nonzero quadratic root with independent coefficient choices.",
-        "failure_mode": "Treat the complete future-adapted coefficient, covariance trace, or square--trace--forest innovation as a linear or Lipschitz operator of the single diagonal control martingale difference `D_j=d_jA*`."
-      },
-      "detail_title": "complete nonlinear coefficient innovation is not determined by `d_jA*`",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "an admissible two-root later control has `d_jA=d_jDA=0` but a nonzero production coefficient-curvature innovation; the exact conditional Jensen defect is an additional upper-triangular branch",
-      "tag": "NG-2026-07-25-A13-NONLINEAR-COEFFICIENT-DJA-FACTORISATION"
     }
   ],
   "kind": "negative_records",

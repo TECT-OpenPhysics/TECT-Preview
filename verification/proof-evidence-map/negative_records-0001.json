@@ -1,6 +1,26 @@
 {
   "data": [
     {
+      "anchor": "audit-2026-09-05-q3lock-tangent-beta-and-weight-direction",
+      "branch": "reuse later source-tangent normalization and weighted diagonal displays",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "structured_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "consequence": "Retain historical hashes and supersede the two displays: remove the extra beta, and use alpha_(k+1) bounds to converge at alpha_k. This repairs the argument for the all-k compact set; it does not refute that set's compactness or the Q3LOCK model. The original EXP-000781 time-zero dictionary is unchanged. Internal T0, strict-sign and signed-review gates remain unchanged; finite checks are not a proof of the infinite limits.",
+        "evidence": "The exact source identity is `p_L'=E X_L/V=beta E Q_0` and `P_L'=E Q_0/8`. For beta other than one and nonzero mean, the old formula has an extra beta. For the reversed embedding, constant loops supported at (n,0,0) with squared amplitude 4^n and beta=1 have weighted squared norm one at alpha=log(4) but 2^n at alpha=log(2). Thus boundedness cannot pass in that direction. The derivation, proper all-weight diagonal and periodic moment-to-DLR proof are in `strategy/q3lock-dlr-source-tangent-content-260905.md`, Sections 1, 3--6. `verification/scripts/q3lock_dlr_tangent_content_audit.py` passes 70/70 finite exact diagnostics; the run is `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-dlr-tangent-content-audit/result.json`.",
+        "failure_mode": "An extra source beta and a reversed weighted compactness step appear in later audit notes. Section 2 of `strategy/q3lock-source-tangent-dlr-composition-audit-260905.md` writes `p_L'=beta E X_L/V` although X_L already includes the time integral. Section 3 of `strategy/q3lock-kp-source-window-projective-tightness-diagonal-audit-260905.md` extracts from alpha_k to alpha_(k+1) while the alpha sequence is decreasing. The source compact embedding instead requires input alpha<target alpha'."
+      },
+      "detail_title": "source normalization and compactness direction",
+      "family_refs": [],
+      "kind": "audit",
+      "summary": "X already integrates imaginary time, so p'=E X/V; compactness requires a smaller-alpha input for a larger-alpha target, not the reverse",
+      "tag": "AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION"
+    },
+    {
       "anchor": "audit-2026-09-05-q3lock-seam-coefficient-transcription",
       "branch": "reuse the displayed 48 seam constant in the later pressure audit",
       "claim_ref_basis": {
@@ -2016,27 +2036,6 @@
       "kind": "no_go",
       "summary": "the exact two-cell quartic produces a discarded-mode correction `F(q^2)-F(0)` with `F'>0` and `F''<0`. This refutes only the bare inference; the full ST8/Q3LOCK marginal, possible cancellations, constrained limits and derived effective actions remain open",
       "tag": "NG-2026-08-04-PRE-A-CP1-CL8-TRANSVERSE-ZERO-RESTRICTION-AS-INTERACTING-MARGINAL"
-    },
-    {
-      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-time-zero-configuration-only-full-weyl-state",
-      "branch": "identify a full canonical Weyl state from all time-zero configuration characteristics alone",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-register-exp-000759-q3-vector-p-phi-2-construct"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "artifacts": "`strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-q3-vector-phi2-constructive-comparator-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split.py`; `codes/foundations/pre_a_cp1_cl8_q3_vector_phi2_constructive_comparator_route_split_independent.py`.",
-        "consequence": "The constructive comparator's time-zero configuration limit is retained, but it does not determine the joint Weyl functional, canonical momentum, or a canonical state. Reflection-positive reconstruction, direct momentum-characteristic estimates, a Feynman--Kac bridge, or another joint construction remains possible. No negative verdict on the existence of a full CL8 state is claimed, and C6, CP1 and Pre-A remain open.",
-        "evidence": "In one oscillator with `[Q,P]=i`, let ```text psi_0(x)=pi^(-1/4) exp(-x^2/2), psi_1=exp(iQ^2/2) psi_0. ``` The two vectors have the same position probability density and therefore the same configuration characteristic `exp(-t^2/4)`. If `U=exp(iQ^2/2)`, then `U^* P U=P+Q`. Thus their momentum variances are respectively `1/2` and `1`.",
-        "failure_mode": "Promote convergence of every time-zero configuration characteristic to convergence or identification of a full regular canonical Weyl state without separately constructing the momentum sector."
-      },
-      "detail_title": "configuration characteristics do not determine the momentum sector",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "a Gaussian and its quadratic phase chirp have the same position characteristic `exp(-t^2/4)` but momentum variances `1/2` and `1`. Retain reflection-positive reconstruction, direct momentum estimates, or another joint Weyl-functional construction",
-      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-TIME-ZERO-CONFIGURATION-ONLY-FULL-WEYL-STATE"
     }
   ],
   "kind": "negative_records",

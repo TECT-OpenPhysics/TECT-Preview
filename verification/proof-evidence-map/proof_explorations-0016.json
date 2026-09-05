@@ -8122,6 +8122,171 @@
       "task_id": "T-054",
       "title": "PAH-OMC-014 reentry review separates component projectivity from the ordered cylinder target",
       "verdict": "parked"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does X_L need another factor beta?",
+          "disposition": "UPHELD defect: it already integrates time; dp/dh=E X_L/V."
+        },
+        {
+          "check": "Does a bound at a larger alpha compactly embed into smaller alpha?",
+          "disposition": "UPHELD as false: a dyadic escaping constant loop has bounded weak norm and diverging strong norm."
+        },
+        {
+          "check": "May M<=exp(C1)M^t be divided before finiteness is known?",
+          "disposition": "UPHELD as false: finite periodic quartic domination and Fernique integrability are established first."
+        },
+        {
+          "check": "Are zero-extended finite tori globally translation invariant?",
+          "disposition": "UPHELD as false: use eventual cylinder identities and only assert invariance of the limit."
+        },
+        {
+          "check": "Does the tangent construction prove a strictly positive slope?",
+          "disposition": "UPHELD as false: the full separate strict-sign chain remains required."
+        }
+      ],
+      "assumptions": [
+        "The original fixed-lattice positive-lambda Q3LOCK model and energy-source normalization.",
+        "EXP-001587/EXP-001588 corrected residual and finite-volume loop/trace correspondence and EXP-001589 pressure limit.",
+        "KP general-vector hypotheses, Fernique and Feller inputs as explicitly crosswalked in the content note."
+      ],
+      "boundary": "Internal T0 content proof and source applicability audit only; signed independent mathematical acceptance remains pending. The endpoint slope is not shown positive here and no phase theorem or claim card is promoted.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The periodic-family moment input is supplied before DLR extraction, closing an internal quantifier gap not covered by an estimate only for already constructed DLR states. Two later proof-text errors receive explicit replacement formulas and hostile diagnostics.",
+      "evidence_refs": [
+        "strategy/q3lock-dlr-source-tangent-content-260905.md#1-model-specification-and-exact-source-dictionary",
+        "strategy/q3lock-dlr-source-tangent-content-260905.md#3-a-source-uniform-periodic-one-site-bound",
+        "strategy/q3lock-dlr-source-tangent-content-260905.md#4-correct-projective-compactness-argument",
+        "strategy/q3lock-dlr-source-tangent-content-260905.md#5-periodic-accumulation-is-dlr-and-translation-invariant",
+        "strategy/q3lock-dlr-source-tangent-content-260905.md#6-pressure-derivatives-and-the-source-to-zero-limit",
+        "verification/scripts/q3lock_dlr_tangent_content_audit.py#build_payload",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-dlr-tangent-content-audit/result.json#assertions"
+      ],
+      "finding": "The manuscript-content block supplies a direct finite-periodic moment estimate M<=exp(C1)M^t with t=1/2, a W_t compact-set construction using alpha_(k+1) to target alpha_k, eventual exact local specification identities away from the torus seam, and source-tangent identification with the right pressure slope. The older composition display adds an extra beta to E X_L/V, and the older diagonal extraction reverses the weight direction; both are corrected without altering pinned historical bytes. The finite diagnostic replay passes 70/70 checks.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION"
+        ],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001591",
+      "method": [
+        "Inspect EXP-000781 and the KP general-vector one-site/Feller/compactness source statements.",
+        "Derive a common periodic moment bound from the one-site conditional kernel, finite integrability, Holder and translation invariance.",
+        "Prove finite-range periodic-to-DLR passage and corrected cofinal weighted compactness.",
+        "Pass clipped local expectations and the source-to-zero DLR identity after the spatial limit.",
+        "Test exact source normalization, a dyadic escaping weighted profile, directed gaps and moment tail budgets."
+      ],
+      "missing_assumptions": [
+        "Signed independent mathematical and literature review.",
+        "Acceptance and complete composition of the FKG, infrared, commutator, Falk-Bruch and Griffiths strict-sign inputs."
+      ],
+      "next_action": "Compose the corrected pressure and DLR manuscript blocks with the Q3LOCK continuous-loop FKG and FSS/operator/Griffiths chain. Preserve all correction-precedence records and obtain independent mathematical acceptance before content freeze and final PDF.",
+      "non_claims": [
+        "No strict cusp or distinct-phase assertion without the strict-sign input.",
+        "No claim promotion, signed external review, submission, upload or PDF.",
+        "No extremality, purity, clustering, KMS, ground-state gap, continuum or cosmological result."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the corrected pressure derivative be attached to actual periodic DLR accumulation points with source-uniform moments and a correctly directed projective compactness argument?",
+      "recorded_at": "2026-09-05T04:18:09Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000781",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001561",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001579",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001589",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "revisit_condition": "Reopen if the source convention, periodic embedding, weight orientation, local specification or reference Gaussian changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK periodic DLR and source-tangent content with normalization and weight-direction corrections",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "Metadata repair only; no new proof, audit acceptance, status promotion or PAH research change.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "Append-only correction prevents false cross-project and hash-audit lineage without rewriting the original ledger record.",
+      "evidence_refs": [
+        "strategy/q3lock-source-tangent-dlr-composition-audit-260905.md#2-frozen-model-and-source-convention",
+        "strategy/q3lock-kp-source-window-projective-tightness-diagonal-audit-260905.md#3-explicit-diagonal-compact-set",
+        "strategy/q3lock-dlr-source-tangent-content-260905.md#7-review-and-reproduction-boundary"
+      ],
+      "finding": "EXP-001591 incorrectly names EXP-001561 and EXP-001579 in its corrects edges. The actual source-tangent composition owner is EXP-001540, and the projective diagonal owner is EXP-001578. EXP-001561 is only a hash audit; EXP-001579 belongs to PAH and is not corrected by this Q3LOCK work. Disregard those two mistaken edges semantically and use the corrected owner edges in this record. The evidence paths, mathematics and corrective formulas in EXP-001591 are unchanged.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001592",
+      "method": [
+        "Resolve the note titles against the canonical exploration ledger and R-497 manifest."
+      ],
+      "next_action": "Use the corrected owner mapping in R-497 consumers; continue the mathematical content and signed review gates unchanged.",
+      "non_claims": [
+        "No new mathematical result or claim status change."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Which prior exploration records own the two historical notes corrected by EXP-001591?",
+      "recorded_at": "2026-09-05T04:20:17Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001591",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001540",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001578",
+          "relation": "corrects"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "revisit_condition": "Reopen only if the canonical source-owner mapping changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK EXP-001591 relation metadata correction",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

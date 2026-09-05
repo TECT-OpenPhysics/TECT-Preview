@@ -17410,6 +17410,16 @@ a clean snapshot before considering any bounded claim or manuscript freeze.
 <a id="r-497"></a>
 ### R-497 -- EXP-000782 Q3LOCK low-temperature phase route: independent result registration
 
+**DLR/tangent content (EXP-001591).**
+`strategy/q3lock-dlr-source-tangent-content-260905.md` supplies the
+source-uniform finite-periodic moment closure, correctly directed weighted
+compactness, eventual exact local specification identity, and pressure-slope
+identification by clipped observables. It records corrective precedence for
+the extra beta in the older source dictionary and the reversed alpha-step
+in the older diagonal audit. Exact finite diagnostics pass 70/70, not an
+infinite-limit certification. The strict endpoint sign and signed external
+acceptance remain open; R-497 stays internal T0 and claim-nonbearing.
+
 **Thermodynamic content (EXP-001589).**
 `strategy/q3lock-thermodynamic-pressure-content-260905.md` supplies the
 actual-model common form and uniform pressure bounds, explicit even-box

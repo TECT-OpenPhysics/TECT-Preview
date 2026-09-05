@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION](#audit-2026-09-05-q3lock-tangent-beta-and-weight-direction) | reuse later source-tangent normalization and weighted diagonal displays | X already integrates imaginary time, so p'=E X/V; compactness requires a smaller-alpha input for a larger-alpha target, not the reverse |
 | [AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION](#audit-2026-09-05-q3lock-seam-coefficient-transcription) | reuse the displayed 48 seam constant in the later pressure audit | exact L=2 counterexample gives seam energy 768 against the erroneous bound 320; endpoint summation requires 288, already used by the original authority and verifier |
 | [AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION](#audit-2026-09-05-q3lock-harmonic-spatial-double-allocation) | combine allocated Q3LOCK onsite potential with full spatial differences | the old physical-potential defect is (3c-a/2) times the squared field norm and the Gaussian residual defect is 3c times the time-integrated squared norm; corrected equivalent residuals and consumer precedence are recorded in EXP-001587 |
 | [AUDIT-2026-09-05-PAH-OMC-014-Q0-COMPONENT-PUSHFORWARD](#audit-2026-09-05-pah-omc-014-q0-component-pushforward) | treat deterministic Q=0 component restriction as a projective Gibbs push-forward on PAH-OMC-004 | exact finite Z_2 enumeration gives a coarse/fine expectation mismatch with 2,784 rational-exponent terms; this retires only the deterministic Q=0 factorization and leaves cross-Q mixtures open |
@@ -10673,3 +10674,33 @@ the R-498 verifier already use 288 and retain their bytes. The error density
 remains O(L^(-1/2)) for eta=L^(-1/2). This is a later transcription defect;
 the assembled pressure proof and remaining phase/DLR/external-review gates
 retain their internal T0 status.
+
+<a id="audit-2026-09-05-q3lock-tangent-beta-and-weight-direction"></a>
+### AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION -- source normalization and compactness direction
+
+**Failure mode.** An extra source beta and a reversed weighted compactness step appear in later audit notes.
+Section 2 of
+`strategy/q3lock-source-tangent-dlr-composition-audit-260905.md` writes
+`p_L'=beta E X_L/V` although X_L already includes the time integral. Section
+3 of `strategy/q3lock-kp-source-window-projective-tightness-diagonal-audit-260905.md`
+extracts from alpha_k to alpha_(k+1) while the alpha sequence is decreasing.
+The source compact embedding instead requires input alpha<target alpha'.
+
+**Evidence.** The exact source identity is `p_L'=E X_L/V=beta E Q_0` and
+`P_L'=E Q_0/8`. For beta other than one and nonzero mean, the old formula
+has an extra beta. For the reversed embedding, constant loops supported at
+(n,0,0) with squared amplitude 4^n and beta=1 have weighted squared norm one
+at alpha=log(4) but 2^n at alpha=log(2). Thus boundedness cannot pass in
+that direction. The derivation, proper all-weight diagonal and periodic
+moment-to-DLR proof are in
+`strategy/q3lock-dlr-source-tangent-content-260905.md`, Sections 1, 3--6.
+`verification/scripts/q3lock_dlr_tangent_content_audit.py` passes 70/70 finite
+exact diagnostics; the run is
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-dlr-tangent-content-audit/result.json`.
+
+**Consequence.** Retain historical hashes and supersede the two displays:
+remove the extra beta, and use alpha_(k+1) bounds to converge at alpha_k.
+This repairs the argument for the all-k compact set; it does not refute that
+set's compactness or the Q3LOCK model. The original EXP-000781 time-zero
+dictionary is unchanged. Internal T0, strict-sign and signed-review gates
+remain unchanged; finite checks are not a proof of the infinite limits.
