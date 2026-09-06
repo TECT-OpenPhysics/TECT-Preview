@@ -1,0 +1,163 @@
+{
+  "schema": "tect/pah-omc017-result/1.0",
+  "result_id": "R-510",
+  "contract_id": "PAH-OMC-017",
+  "date": "2026-09-06",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED",
+    "INHERITED_GENERAL_SPECTRAL_THEOREMS"
+  ],
+  "base_commit": "13aeae0dfab73aed281473370269ce74dbee62f5",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-017-cauchy-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-OMC-017-cauchy-prereg-v1.json": "249bf12f71b4869e566925b8c011291ec74ef2fc4f5df2faeeafc4050f04fdff",
+    "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+    "strategy/pa-hyp/PAH-OMC-017-spectral-proof.md": "2c77894c0846dd0664dea08c192fceb1850bb63812429b710604a5d30a4aa419",
+    "codes/foundations/pah_omc017_transfer.py": "7c7a7326fd8024a6cdb17e536847ac5aa43b37f0cb9a5b4c9a791031196f80c3",
+    "codes/foundations/pah_omc017_transfer_independent.py": "9ceaba8e3fe1ae17a6bc180696910393860098b471d9b9e3652d802114e539b6",
+    "codes/foundations/pah_omc017_transfer_hostile.py": "606e76b62caff077d5f8366c909d77f8d3acfcc8cb9865f2f1d802470c580155",
+    "verification/scripts/pah_omc017_verify.py": "b5578d5bf040a205a1c30f50e98585f46319cc9bf92ded0414160c614ac07f38",
+    "verification/lean/Tect/PahOmc017.lean": "30271ebdea410e1aeac71bd4b56f188d9a881dfb61bd73c9ebefef2037af2e0d",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc017-cauchy-260906-v1.0.tex.txt": "e0777d88eac89f6036aed3359abd6f642b4f9af7acdb383f4199f3a5091fceae"
+  },
+  "exact_scope": {
+    "model": "Exactly PAH-001 on the PAH-OMC-004 anchored two-cell strip G_n, n>=2, at the PAH-OMC-016 fixed parameters.",
+    "fixed_parameters_source": "PAH-OMC-016-resolved-radial-prereg-v1.json /scope/fixed_parameters",
+    "state": "nu_n is exactly the R-509 j-limit with density exp(-F_n)/Z_n relative to product dr_v times labelled counting measure on aperture, phase and link bits. Phases at r=0 are retained; no gauge quotient, probe, radial Jacobian or sector fitting.",
+    "order": "First j->infinity at each fixed n on R_max=2^j, M_psi=2^(2j), then n->infinity. K=2, M_s=1, epsilon=1/2, beta=nu=1 and every source coupling remain fixed. No joint limit or limit interchange.",
+    "geometry": "Two vertices per column; split triangular cells i<n and the original unsplit frontier square i=n. O={(0,0)} and C={(0,1)} remain labels, not field boundary values.",
+    "volume": "|V_n|=2(n+2); n is an anchored relational exhaustion, not physical volume or dimension.",
+    "normalization": "Original labelled Gibbs normalization; additive finite parts fixed by the source. Positive transfer normalization is an algebraic ratio identity only.",
+    "dynamics": "Original rates and external Markov time are unchanged but no temporal generator or dynamics limit is evaluated by this contract."
+  },
+  "common_observable_algebra": {
+    "prefix_Lambda_m": "For integer m>=0 retain vertices and vertical edges in columns 0,...,m and horizontal/diagonal links in cells 0,...,m-1. Every retained cell is split in all G_n with n>=max(2,m).",
+    "A_m": "Real bounded continuous functions of the retained amplitudes and finite labels, invariant under the induced local Z_2 gauge action and anchor-preserving automorphisms. Discrete labels carry the discrete topology. Complex observables are obtained by linear extension, not a new measure.",
+    "embeddings": "I_(m,m+1)f=f composed with coordinate forgetting. Retain exact amplitudes and old labels; no Gibbs conditional expectation, interpolation, grade selection or rate modification.",
+    "all_local_coverage": "Every finite set of vertices/edges of the infinite half-strip lies in some Lambda_m. An observable originally involving the unsplit terminal square of G_k is a function of its boundary links in Lambda_(k+1), ignoring the added diagonal; no equality of finite Gibbs laws is assumed.",
+    "support_stage": "N_support(f)=max(2,m(f)), where m(f) is the smallest prefix containing every vertex/edge coordinate used by f. This is a support definition, not a convergence assertion.",
+    "norm": "||f||_infinity on its fixed prefix. No raw integer occupation cylinder is substituted for an amplitude cylinder."
+  },
+  "conclusion": {
+    "exact_question": "Are the fixed-graph amplitude-limit states nu_n of R-509 Cauchy on every fixed finite-support bounded continuous gauge-invariant amplitude cylinder under the same neutral coordinate restrictions as n tends to infinity?",
+    "answer": "For each fixed prefix Lambda_m and f in A_m, nu_n(f) converges without subsequence selection to the explicit compatible prefix state nu_infty(f).",
+    "transfer_identity": "Z_n=<u,K^n S u>; decorated insertions give nu_n(f)=<w_f,K^(n-m)g>/<w_1,K^(n-m)g> on exactly the original labelled measure.",
+    "spectral": "The exact positive Hilbert-Schmidt spatial K has lambda=r(K)>=256 exp(-319/12)>0, algebraically simple with no peripheral competitor; K need not be self-adjoint.",
+    "power_bound": "||lambda^(-k) K^k-P||<=C q^k, k>=0. With A=K/lambda-P, q=(1+r(A))/2, p=min{l>=1:||A^l||<=q^l}, C=max(1,||I-P||,max_(0<=r<p)||A^r||/q^r).",
+    "cauchy_bound": "D_m=C||g||_2||(K*)^m u||_2/<(K*)^m u,Pg>. If D_m q^(n-m)<=1/2 then |nu_n(f)-nu_infty(f)|<=4||f|| D_m q^(n-m).",
+    "explicit_stage": "For F=||f||>0, N(eps,f)=max(2,m+ceil(log(max(1,2D_m,8F D_m/eps))/log(1/q))). For n,l>=N the pair difference is <=eps; zero f needs max(2,m).",
+    "constant_limit": "C,q,D_m are exact analytic operator-defined constants with proved existence, not certified numeric gap values, a computable interval modulus or uniform constants for changed widths/regulators/beta.",
+    "state_scope": "Compatible finite-prefix probability densities and a positive normalized state on the algebraic local union for this one anchored free-boundary sequence. No uniqueness claim over all Gibbs/DLR boundaries."
+  },
+  "proof_constants": {
+    "column_box": "149/24",
+    "column_labels": "32",
+    "edge_box": "33/8",
+    "face_box": "4",
+    "kernel_box_cost": "319/12",
+    "radius_lower_prefactor": "256",
+    "scalar_integral_bound": "3",
+    "scalar_tail_split": "2",
+    "split_box": "163/8",
+    "split_labels": "8",
+    "square_labels": "4",
+    "u_norm_squared_bound": "288",
+    "vertex_box": "25/24"
+  },
+  "proof_coverage": {
+    "source_bridge": "Universal term/multiplicity bijection in transfer certificate; primary and independent exact finite fixtures audit implementations, not the all-n proof.",
+    "unbounded_space": "Product sextic Hilbert-Schmidt envelope, positivity improving, full-domain compactness and proof-box positive radius; no compact Gibbs cutoff.",
+    "spectral_import": "Weak total-cone Krein-Rutman only. Strong solid-cone form explicitly rejected. Primary-source locators, SHA256 and assumption crosswalk in spectral companion.",
+    "residual_spectral_proof": "Strict-row triangle equality excludes peripheral competitors; dual pairing excludes Jordan vectors; compact spectra and two independent power-bound presentations.",
+    "normalization": "Decorated insertions before link summation; positive d_m with explicit half-denominator threshold; exact ratio inequality.",
+    "formal_scope": "Nine Lean declarations compile without diagnostics. Infinite-dimensional compact spectral theory, integral construction and all-n measure argument are NOT formalized.",
+    "independence": "Non-importing direct face/vertex expanded-edge lane; exact fixtures and bounds match primary. Internal hostile controls, not external signed review."
+  },
+  "assumptions": [
+    "The frozen original PAH functional, OMC-004 incidence, OMC-016 counting hypothesis and R-509 fixed-n j-limit.",
+    "Bounded continuous amplitude cylinders with the pinned coordinate restrictions.",
+    "Standard weak Krein-Rutman and compact spectral theory with all hypotheses discharged for this exact kernel; ordinary L2 integration and spectral-radius formula."
+  ],
+  "missing_assumptions": [
+    "No additional unproved premise is used for this scoped local-state theorem. Limiting generator/domain, temporal stationarity, PAH-OMC-014 and physical identification remain open and are not inferred."
+  ],
+  "lean": {
+    "path": "verification/lean/Tect/PahOmc017.lean",
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "declarations": [
+      "labelled_count",
+      "endpoint_halves",
+      "column_box",
+      "split_box",
+      "kernel_box",
+      "radius_lower_positive",
+      "denominator_lower",
+      "ratio_identity",
+      "normalized_ratio_bound"
+    ],
+    "scope": "Source box arithmetic, multiplicity and endpoint identity, positive radius arithmetic, positive denominator, exact ratio identity and the normalized Cauchy ratio bound. No analytic spectral formalization."
+  },
+  "verification": {
+    "command": "python -X utf8 verification/scripts/pah_omc017_verify.py",
+    "stored_replay": "python -X utf8 verification/scripts/pah_omc017_verify.py --check",
+    "runs": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy-v2",
+    "external_review": "Invited for strict-kernel simplicity, decorated insertions and ordered passages; no signed referee review claimed."
+  },
+  "adversarial_review": [
+    {
+      "objection": "Endpoint halves or terminal square omitted.",
+      "disposition": "DISMISSED: source bijection and exact deletion deltas."
+    },
+    {
+      "objection": "L2 solid cone, symmetric kernel or nonnormal norm identity assumed.",
+      "disposition": "UPHELD against those shortcuts; weak theorem and explicit strict-kernel/dual arguments used instead."
+    },
+    {
+      "objection": "Compactness on unbounded amplitudes or positive radius merely assumed.",
+      "disposition": "DISMISSED by separate product envelope and compact-box test function bounds on the full domain."
+    },
+    {
+      "objection": "Ratios converge despite a missing positive-denominator bound.",
+      "disposition": "DISMISSED by d_m>0 and the proved half-denominator threshold; hostile near-zero countercontrol."
+    },
+    {
+      "objection": "Analytic q is a certified numeric gap or static convergence constructs dynamics.",
+      "disposition": "UPHELD against both stronger interpretations; neither is claimed."
+    }
+  ],
+  "synthesis_note": "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc017-cauchy-260906-v1.0.tex.txt",
+  "pdf_review": "All four pages rendered and visually inspected on 2026-09-06; no clipping, overlap or missing glyph; zero overfull boxes. One gate-level PDF.",
+  "closed_scoped_gate": "PAH-OMC-017 local bounded-amplitude cylinder Cauchy passage for the specified j-before-n state sequence.",
+  "remaining_gates": [
+    "T-054 active gate unchanged",
+    "PAH-OMC-014 unresolved",
+    "Unaccelerated generator j-limit and stationary local-form passage on the common state",
+    "Infinite-volume dynamics and physical/continuum identification"
+  ],
+  "next_single_question": "On the same resolved radial path and common limiting state, what is the j-limit of the original unaccelerated generators on a frozen bounded-amplitude domain, and does it define a stationary local form?",
+  "revisit_condition": "Reopen upon a source/hash mismatch, a missing cell or labelled insertion, an invalid L2/spectral hypothesis, or an exact violation of the denominator/prefix estimate. Different state, width, regulator or limit order needs a new contract.",
+  "non_claims": [
+    "No resolution of PAH-OMC-014, no common generator domain, no infinite-volume dynamics or stationary dynamics construction.",
+    "No full local-cutoff removal, lattice/continuum, arbitrary exhaustion or boundary-condition uniformity, phase/beta limit or thermodynamic uniqueness across all Gibbs boundary states.",
+    "No physical Pre-A, spacetime, event horizon, common causal cone, QFT, gravity, Yang-Mills, mass gap, observation prediction or TOE conclusion.",
+    "No Q3LOCK result is imported; R-509 is only the fixed-graph amplitude-state input and previously proved uniform bounds.",
+    "T-054 active gate and every claim tier remain unchanged by registration or auxiliary success."
+  ],
+  "publication_correction": {
+    "kind": "FOOTER_AND_EVIDENCE_LINKAGE_ONLY",
+    "previous_manifest_sha256": "846a4e88766b46ef941eb35d9014cc788e7a60d47d7d87e96b6f6b5ba59abc73",
+    "reversible_patch": "strategy/pa-hyp/PAH-OMC-017-publication-repair-v1.patch",
+    "preserved_previous_runs": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy",
+    "reason": "Prepublication proof-map check required labelled standard footer fields. Mathematical content, source preregistration and all analytic/executable conclusions are unchanged. Prior run JSONs remain byte-for-byte; v2 replays the final document and verifier pins. Reverse this patch in a disposable copy to recover the prior note/manifest/verifier inputs."
+  }
+}

@@ -5,30 +5,30 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**8628 artefacts** · **49 live claim cards** ·
+**8650 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
 
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
-| Claim cards (registry layer) (`claim-card`) | 604 | 5,142,526 |
-| Working proof notes (on claim cards) (`proof-note`) | 994 | 107,696,361 |
+| Claim cards (registry layer) (`claim-card`) | 604 | 5,142,785 |
+| Working proof notes (on claim cards) (`proof-note`) | 996 | 108,082,756 |
 | Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,747,022 |
 | Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
 | Migrated legacy scripts (runnable) (`archive-script`) | 22 | 319,000 |
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 2236 | 274,398,597 |
-| Domain codes (`code`) | 1798 | 28,482,110 |
-| Verification harness (`verification`) | 784 | 20,915,406 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 2244 | 274,452,619 |
+| Domain codes (`code`) | 1801 | 28,497,277 |
+| Verification harness (`verification`) | 788 | 20,946,025 |
 | Papers (publication layer) (`paper`) | 29 | 523,659 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,597,672 |
+| Registries and ledgers (`registry`) | 42 | 1,597,807 |
 | Governance policies (`policy`) | 24 | 227,425 |
-| Root documents (`root-doc`) | 14 | 2,223,702 |
-| Other tracked files (`other`) | 1483 | 28,168,115 |
+| Root documents (`root-doc`) | 14 | 2,227,794 |
+| Other tracked files (`other`) | 1488 | 28,235,638 |
 
 ## Use
 

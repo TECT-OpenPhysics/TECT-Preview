@@ -1,0 +1,74 @@
+{
+  "schema": "tect/pah-local-state-cauchy-prereg/1.0",
+  "contract_id": "PAH-OMC-017",
+  "version": "1.0.0",
+  "date": "2026-09-06",
+  "task_id": "T-054",
+  "base_commit": "13aeae0dfab73aed281473370269ce74dbee62f5",
+  "status_at_registration": "PREREGISTERED_BEFORE_TRANSFER_TESTS",
+  "question": "Are the fixed-graph amplitude-limit states nu_n of R-509 Cauchy on every fixed finite-support bounded continuous gauge-invariant amplitude cylinder under the same neutral coordinate restrictions as n tends to infinity?",
+  "classification_if_success": "AUXILIARY_SUPPORT: one common local-state input, not closure of the active T-054 evidence-role gate or of a generator limit.",
+  "sources": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-016-resolved-radial-prereg-v1.json": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md": "076f14a9f724403fe4e46b17cea91f650863b4bda67e25ff47f91348d77e6ca2"
+  },
+  "scope": {
+    "model": "Exactly PAH-001 on the PAH-OMC-004 anchored two-cell strip G_n, n>=2, at the PAH-OMC-016 fixed parameters.",
+    "fixed_parameters_source": "PAH-OMC-016-resolved-radial-prereg-v1.json /scope/fixed_parameters",
+    "state": "nu_n is exactly the R-509 j-limit with density exp(-F_n)/Z_n relative to product dr_v times labelled counting measure on aperture, phase and link bits. Phases at r=0 are retained; no gauge quotient, probe, radial Jacobian or sector fitting.",
+    "order": "First j->infinity at each fixed n on R_max=2^j, M_psi=2^(2j), then n->infinity. K=2, M_s=1, epsilon=1/2, beta=nu=1 and every source coupling remain fixed. No joint limit or limit interchange.",
+    "geometry": "Two vertices per column; split triangular cells i<n and the original unsplit frontier square i=n. O={(0,0)} and C={(0,1)} remain labels, not field boundary values.",
+    "volume": "|V_n|=2(n+2); n is an anchored relational exhaustion, not physical volume or dimension.",
+    "normalization": "Original labelled Gibbs normalization; additive finite parts fixed by the source. Positive transfer normalization is an algebraic ratio identity only.",
+    "dynamics": "Original rates and external Markov time are unchanged but no temporal generator or dynamics limit is evaluated by this contract."
+  },
+  "common_observable_algebra": {
+    "prefix_Lambda_m": "For integer m>=0 retain vertices and vertical edges in columns 0,...,m and horizontal/diagonal links in cells 0,...,m-1. Every retained cell is split in all G_n with n>=max(2,m).",
+    "A_m": "Real bounded continuous functions of the retained amplitudes and finite labels, invariant under the induced local Z_2 gauge action and anchor-preserving automorphisms. Discrete labels carry the discrete topology. Complex observables are obtained by linear extension, not a new measure.",
+    "embeddings": "I_(m,m+1)f=f composed with coordinate forgetting. Retain exact amplitudes and old labels; no Gibbs conditional expectation, interpolation, grade selection or rate modification.",
+    "all_local_coverage": "Every finite set of vertices/edges of the infinite half-strip lies in some Lambda_m. An observable originally involving the unsplit terminal square of G_k is a function of its boundary links in Lambda_(k+1), ignoring the added diagonal; no equality of finite Gibbs laws is assumed.",
+    "support_stage": "N_support(f)=max(2,m(f)), where m(f) is the smallest prefix containing every vertex/edge coordinate used by f. This is a support definition, not a convergence assertion.",
+    "norm": "||f||_infinity on its fixed prefix. No raw integer occupation cylinder is substituted for an amplitude cylinder."
+  },
+  "exact_spatial_transfer_proposal": {
+    "role": "A regrouping of the existing Gibbs integral, not a new carrier, Hamiltonian, physical projection, conditional state selection or time evolution.",
+    "column": "x=(r_0,r_1,s_0,s_1,k_0,k_1,v) with r>=0, aperture bits s in {1/2,1}, phase bits k in Z_2 and vertical link bit v in Z_2; measure xi=dr_0 dr_1 times labelled counting. H=L2(X,xi).",
+    "W": "The two original onsite energies plus the original vertical-edge aperture and covariant-matter energies, each with its original coefficient.",
+    "B_triangle": "For adjacent columns x,y and cross-link bits eta=(h0,h1,d), sum the original two horizontal-edge energies, the original bottom-left to top-right diagonal-edge energy, and the two original triangular Wilson energies. Every J_p is its own boundary average including the appropriate vertical edge.",
+    "B_square": "For adjacent columns x,y and theta=(h0,h1), sum the original two horizontal-edge energies and the original unsplit square Wilson energy. There is no diagonal in this terminal cell.",
+    "u": "u(x)=exp(-W(x)/2)",
+    "decorated_kernel": "k_eta(x,y)=u(x) exp(-B_triangle(x,y;eta)) u(y)",
+    "K": "K(x,y)=sum_(eta in Z_2^3) k_eta(x,y), (Kh)(x)=integral K(x,y)h(y) dxi(y)",
+    "S": "S(x,y)=u(x) sum_(theta in Z_2^2) exp(-B_square(x,y;theta)) u(y)",
+    "boundary": "g=Su; target exact identity Z_n=<u,K^n g>. The unsplit square stays in g; the endpoint half-onsite factors stay in u.",
+    "insertion": "For real f in A_m, integrate u(x_0) f times product_(i<m) k_(eta_i)(x_i,x_(i+1)) over earlier columns and sum cross-link bits, leaving x_m free; call this w_f. Target identities w_1=(K*)^m u and nu_n(f)=<w_f,K^(n-m)g>/<w_1,K^(n-m)g>.",
+    "not_assumed": ["K is self-adjoint", "the L2 positive cone has nonempty interior", "a uniform lower bound K(x,y)>=c u(x)u(y) on unbounded amplitudes", "a numeric spectral gap from finite matrices", "any equality of old and new finite Gibbs marginals"]
+  },
+  "proof_plan_and_budget": {
+    "budget": "One bounded contract/proof attempt under DCTRL-000008; intermediate checks are accumulated into one gate-level synthesis.",
+    "steps": [
+      "Verify source pins and the term-by-term transfer factorization, edge directions, multiplicities and endpoint normalization.",
+      "Prove Hilbert-Schmidt compactness and positivity improving on the stated unbounded L2 space; prove positive spectral radius by a fixed compact test box, not a change of the Gibbs domain.",
+      "Audit a weak Krein-Rutman import for the total L2 cone; prove simplicity, absence of peripheral competitors and the normalized power bound without assuming self-adjointness or using a solid-cone theorem.",
+      "Control numerator and positive denominator for each frozen prefix to obtain an explicit Cauchy bound in the declared order.",
+      "Run primary and non-importing independent algebra/normalization checks, hostile mutation checks and a limited Lean bridge; record what those executions do not formalize."
+    ],
+    "quantitative_convention": "A theorem with exact operator-defined constants q in (0,1) and C_q finite counts as analytic Cauchy control if their existence is proved for this K and a formula for the prefix error and N(epsilon,f) is given. This is not a certified numerical value of the spectral gap or a computable interval enclosure; no sampled eigenvalue is evidence for the infinite-dimensional gap.",
+    "review_after": "Re-review after this one attempt, an exact counterexample, any source/observable/limit drift, or a missing imported-theorem hypothesis. No replacement kernel or subsequence may be introduced to rescue it."
+  },
+  "outcomes": {
+    "PASS": "Exact local Cauchy proof on every frozen prefix, applicable analytic inputs, independent and hostile verification and bounded Lean disposition.",
+    "NEGATIVE_RESULT": "An exact non-Cauchy witness for the frozen state/observable sequence; failure of a proposed proof method alone is not such a witness.",
+    "HOLD_FOR_EVIDENCE": "A named analytic or map hypothesis remains open; state exactly the single next evidence question."
+  },
+  "non_claims": [
+    "No resolution of PAH-OMC-014, no common generator domain, no infinite-volume dynamics or stationary dynamics construction.",
+    "No full local-cutoff removal, lattice/continuum, arbitrary exhaustion or boundary-condition uniformity, phase/beta limit or thermodynamic uniqueness across all Gibbs boundary states.",
+    "No physical Pre-A, spacetime, event horizon, common causal cone, QFT, gravity, Yang-Mills, mass gap, observation prediction or TOE conclusion.",
+    "No Q3LOCK result is imported; R-509 is only the fixed-graph amplitude-state input and previously proved uniform bounds.",
+    "T-054 active gate and every claim tier remain unchanged by registration or auxiliary success."
+  ]
+}

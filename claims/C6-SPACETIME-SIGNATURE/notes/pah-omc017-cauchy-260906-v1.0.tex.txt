@@ -1,0 +1,239 @@
+% Title: PAH-OMC-017: a common local Gibbs state on the fixed strip
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-09-06; this version issued 2026-09-06
+% Status: R-510; scoped analytic checkpoint; no host claim promotion
+
+\section*{Purpose and scope}
+The single question is whether the R-509 fixed-graph cutoff-limit laws
+$\nu_n$ are Cauchy on each fixed finite-support bounded continuous
+amplitude cylinder as $n\to\infty$. The preregistration is
+\texttt{PAH-OMC-017-cauchy-prereg-v1.json}, with SHA-256:
+\begin{verbatim}
+249bf12f71b4869e566925b8c011291ec7
+4ef2fc4f5df2faeeafc4050f04fdff
+\end{verbatim}
+The immutable PAH-001 functional, OMC-004 strip, and OMC-016 state are
+unchanged. Use $K=2$, $M_s=1$, $\epsilon=1/2$, $\beta=\nu=1$,
+$m^2=\theta=0$, all other couplings one. First take $j\to\infty$ at
+fixed $n$ on $R_j=2^j$, $M_j=2^{2j}$, then $n\to\infty$.
+The reference for $\nu_n$ is product $dr$ times labelled counting.
+Zero-amplitude phase labels remain; all $Q$ have the original weights
+$w_Q=Z_Q/Z$. No Jacobian, probe, gauge quotient, fitted prior, counterterm
+or altered rate is inserted. The terminal square and all boundary terms
+remain. The strip is relational: no physical dimension, length or volume
+is assigned. All constants below are analytic bounds, not fitted data.
+
+\paragraph{Statement.}
+On the frozen prefix $\Lambda_m$, consisting of columns $0,\ldots,m$,
+their vertical edges and the three cross links of every cell $i<m$,
+let $\mathcal A_m$ be the real bounded continuous gauge-invariant cylinder
+algebra. Anchor automorphisms are the declared identity. Comparison maps
+only forget new coordinates. There is a normalized positive local state
+$\nu_\infty$ and constants $0<q<1$, $D_m>0$ such that
+\[
+ |\nu_n(f)-\nu_\infty(f)|\leq4\|f\|_\infty D_m q^{n-m}
+ \quad\text{when }n\geq\max(2,m),\ D_mq^{n-m}\leq\tfrac12.
+\]
+The constants are defined by the exact integral operator below; their
+existence is proved, but no certified numerical spectral gap is supplied.
+This is convergence of the specified static-state sequence, not a
+limiting dynamics construction or a theorem about all Gibbs boundaries.
+
+\section*{Exact source-to-transfer dictionary}
+A column $x$ has amplitudes $r_0,r_1\geq0$, apertures $s_0,s_1$,
+phase signs $p_0,p_1$ and vertical link sign $v$. Its measure $\xi$ is
+$dr_0dr_1$ times counting on $2^5$ labels. Set
+\begin{align*}
+ V(r,s)&=\tfrac12(s-1)^2+\tfrac16r^6+\tfrac14r^4+\tfrac12s^2r^2,\\
+ J(s,t)&=\frac2{s+t},\\
+ E(x_a,y_b;U)&=\tfrac12(s_a-t_b)^2+
+ \tfrac12J(s_a,t_b)(p'_b r'_b-U p_a r_a)^2.
+\end{align*}
+Let $W(x)=V(x_0)+V(x_1)+E(x_0,x_1;v_x)$. For adjacent columns,
+$B_\triangle(x,y;h_0,h_1,d)$ is the sum of the two horizontal and one
+bottom-left to top-right diagonal edge energies, plus
+\[
+ \frac{J_{h_0}+J_{v_y}+J_d}{3}(1-h_0v_yd)
+ +\frac{J_d+J_{h_1}+J_{v_x}}3(1-dh_1v_x).
+\]
+The final $B_\square(x,y;h_0,h_1)$ has just the two horizontal energies
+and $\tfrac14(J_{h_0}+J_{v_y}+J_{h_1}+J_{v_x})(1-h_0v_yh_1v_x)$.
+Thus every edge and each face retains its own original stiffness average.
+
+Put $u(x)=e^{-W(x)/2}$ and define on $H=L^2(X,\xi)$
+\begin{align*}
+ k_\eta(x,y)&=u(x)e^{-B_\triangle(x,y;\eta)}u(y),&
+ K(x,y)&=\sum_{\eta\in\{\pm1\}^3}k_\eta(x,y),\\
+ S(x,y)&=u(x)\sum_{\theta\in\{\pm1\}^2}
+       e^{-B_\square(x,y;\theta)}u(y),&g&=Su.
+\end{align*}
+These are spatial partition operators, not $e^{tL_\rho}$.
+Every vertex/vertical edge occurs once in $W$, and every other edge and
+face once in its cell. For every configuration and every $n$,
+\[
+ F_n=\sum_{i=0}^{n+1}W(x_i)+\sum_{i=0}^{n-1}B_\triangle(x_i,x_{i+1};\eta_i)
+      +B_\square(x_n,x_{n+1};\theta_n).
+\]
+Interior half-onsite factors combine to one; outer $u$ factors supply
+the two missing endpoint halves. The label count is exactly
+$5(n+2)+3n+2=2|V_n|+|E_n|=8n+12$. Tonelli gives
+\[
+ Z_n=\langle u,K^nSu\rangle=\langle u,K^ng\rangle.
+\]
+In particular the unsplit square is in $g$, not deleted. This is a
+term/multiplicity identity, not assumed finite Gibbs projectivity.
+
+\section*{Unbounded-domain and spectral estimates}
+All source terms are nonnegative, and
+$W\geq(r_0^6+r_1^6)/6$. Splitting the scalar integral at $2$ gives
+$\int_0^\infty e^{-t^6/6}dt\leq3$, so $\|u\|_2^2\leq32\cdot9$.
+Moreover $0<K(x,y)\leq8u(x)u(y)$ and $0<S(x,y)\leq4u(x)u(y)$.
+Thus both kernels are Hilbert--Schmidt and compact on the full unbounded
+space. Product-simple-function approximations give a finite-rank proof;
+no self-adjoint spectral expansion is needed. Strictly positive rows
+make $K,K^*,S$ positivity improving, and $g\in H$ is strictly positive.
+
+On the proof box $B=[0,1]^2$ times all labels, $\xi(B)=32$.
+The source bounds $V\leq25/24$, $E\leq33/8$, face energy $\leq4$ give
+$W\leq149/24$, $B_\triangle\leq163/8$ and
+$K(x,y)\geq8e^{-319/12}$ on $B\times B$. With $h=1_B$,
+$Kh\geq256e^{-319/12}h$. Hence
+\[
+ \lambda=r(K)\geq256e^{-319/12}>0.
+\]
+The box is a proof test function, not a cutoff or replacement state.
+
+\paragraph{Applicable theorem and residual proof.}
+The weak Krein--Rutman theorem applies: $H$ is Banach, its positive cone
+is closed and total, and $K$ is positive, compact with positive radius.
+It supplies positive eigenvectors $K\phi=\lambda\phi$,
+$K^*\psi=\lambda\psi$. Strict positivity follows from the kernel.
+Normalize $\|\phi\|_2=1$, $\langle\psi,\phi\rangle=1$.
+The solid-cone version does \emph{not} apply to this $L^2$ cone.
+
+If $Kw=zw$ and $|z|=\lambda$, then
+$K|w|\geq\lambda|w|$; pairing the difference with $\psi>0$ forces
+equality. Equality in the integral triangle inequality in a strictly
+positive row forces a single complex phase of $w$, hence $z=\lambda$.
+Two independent positive eigenvectors would yield a sign-changing real
+eigenvector by subtraction, impossible by the same argument. A generalized
+vector $(K-\lambda I)v=c\phi$ would give $0=c$ upon pairing with $\psi$.
+Thus the leading eigenvalue is algebraically simple and has no peripheral
+competitor. Compact spectral theory excludes accumulation at nonzero
+$\lambda$. For $Ph=\phi\langle\psi,h\rangle$ and $A=K/\lambda-P$,
+$P^2=P$, $PA=AP=0$ and $s=r(A)<1$.
+
+Set $q=(1+s)/2$ and choose the least $p\geq1$ with
+$\|A^p\|\leq q^p$, which exists by the spectral-radius formula. Let
+\[
+ C=\max\{1,\|I-P\|,\max_{0\leq r<p}\|A^r\|/q^r\}.
+\]
+Writing $k=lp+r$ and using submultiplicativity proves
+$\|A^k\|\leq Cq^k$. For $k\geq1$, $\lambda^{-k}K^k=P+A^k$;
+for $k=0$ the residual is $I-P$, separately covered. Therefore
+\[
+ \|\lambda^{-k}K^k-P\|\leq Cq^k\quad(k\geq0).
+\]
+An independent derivation integrates $z^k(zI-A)^{-1}$ around $|z|=q$;
+the bounded resolvent gives the same exponential form. Neither derivation
+assumes $\|A\|=r(A)$, self-adjointness or fitted finite eigenvalues.
+
+\section*{Decorated insertions and the Cauchy estimate}
+For $f\in\mathcal A_m$, integrate the left decorated prefix including
+$f$ and $u(x_0)$, leaving $x_m$ free; call the result $w_f$.
+Then $w_1=(K^*)^m u>0$ and $|w_f|\leq\|f\|_\infty w_1$.
+Cross-link labels are summed \emph{after} inserting $f$.
+Exactly, for $n\geq\max(2,m)$,
+\[
+ \nu_n(f)=\frac{\langle w_f,K^{n-m}g\rangle}
+                  {\langle w_1,K^{n-m}g\rangle}.
+\]
+Let $d_m=\langle w_1,Pg\rangle>0$, $a_f=\langle w_f,Pg\rangle$ and
+$D_m=C\|g\|_2\|w_1\|_2/d_m$. Positivity gives $|a_f|\leq\|f\|d_m$.
+For $k=n-m$, numerator and denominator residuals are at most
+$\|f\|d_mD_mq^k$ and $d_mD_mq^k$. The latter is at most $d_m/2$
+once $D_mq^k\leq1/2$. Applying
+\[
+ \frac{a+e}{d+\delta}-\frac ad
+ =\frac{de-a\delta}{d(d+\delta)}
+\]
+gives the stated bound with $\nu_\infty(f)=a_f/d_m$.
+For $F=\|f\|>0$, put
+\[
+ N(\varepsilon,f)=\max\left\{2,m+
+ \left\lceil\frac{\log\max(1,2D_m,8FD_m/\varepsilon)}
+                         {\log(1/q)}\right\rceil\right\}.
+\]
+For $n,l\geq N$, $|\nu_n(f)-\nu_l(f)|\leq\varepsilon$.
+The zero observable needs only $N=\max(2,m)$.
+The limiting prefix density is the decorated left weight times
+$\phi(x_m)$, normalized by $\langle w_1,\phi\rangle$.
+Integrating its last kernel using $K\phi=\lambda\phi$ proves neutral
+restriction consistency. This defines a positive normalized state on the
+common local algebra. The estimate applies to bounded measurable prefixes
+of $\nu_n$, but not to discrete-to-continuous total variation in $j$.
+
+\section*{Devil's-advocate audit and verification boundary}
+\begin{enumerate}
+\item Missing half factors or the terminal square: rejected by the exact
+incidence bijection and hostile deletion controls.
+\item A solid $L^2$ cone or symmetric kernel: those shortcuts are invalid
+and unused; weak eigenvectors plus strict-row and dual-pairing arguments
+give the required spectral conclusion.
+\item Unbounded amplitudes or zero spectral radius: controlled separately
+by the Hilbert--Schmidt envelope and the positive proof-box test.
+\item A vanishing normalization denominator: controlled by $d_m>0$ and
+the explicit half-denominator threshold; that threshold cannot be dropped.
+\item Static convergence implies dynamics or arbitrary-boundary uniqueness:
+upheld as objections to those stronger claims, which are excluded.
+\end{enumerate}
+Primary and independent rational/symbolic implementations audit the same
+source energy and derived bounds. Hostile checks attack boundary factors,
+periodic positive matrices, nonnormal norms and normalization. Lean checks
+label/endpoint arithmetic and the actual normalized ratio inequality;
+the infinite-dimensional analytic and measure proof is not formalized.
+See the result manifest for exact fresh run counts and hashes.
+No external signed referee report is claimed; external review is invited.
+
+The detailed applicability crosswalk is in
+\texttt{PAH-OMC-017-spectral-proof.md}. Imports are Lu--Lu (2022),
+Communications of the AMS 2, Theorem 5.2 (weak Krein--Rutman only);
+Schenker's MSU functional-analysis notes, Theorem 32.1; and Sorensen's LMU
+FA2 lecture of 14 November 2011 (spectral-radius formula). Their hypotheses
+are checked for this exact operator, not inferred from theorem names.
+
+\section*{Result footer and next question}
+This closes only the preregistered static local-state Cauchy question.
+It supplies an auxiliary common-state input; T-054's active gate and
+C6 T1 remain unchanged. PAH-OMC-014 remains unresolved. No infinite-volume
+dynamics, full cutoff/continuum, physical Pre-A, spacetime, QFT, gravity,
+Yang--Mills, causal cone, mass gap or TOE follows.
+Next: freeze a separate domain and determine the $j$-limit of the original
+unaccelerated generators against this common state. A shrinking radial
+step may remove radial dynamics despite nondegenerate static amplitudes.
+No time rescaling is authorized by the present result.
+
+
+\begin{verbatim}
+Result ID: R-510
+Claim ID: C6-SPACETIME-SIGNATURE
+Precise statement: The frozen nu_n converge on every
+ fixed bounded-amplitude prefix, with the stated Cauchy bound.
+Scope: Original OMC-004 strip and OMC-016 counting state;
+ fixed K=2, M_s=1, epsilon=1/2, beta=nu=1; j before n.
+Dependencies: Pinned PAH parents, R-509 and the audited
+ weak Krein-Rutman and compact spectral theorems.
+Evidence grade: ANALYTIC, EXACT, EXECUTED;
+ inherited general spectral results, no physical promotion.
+Reproduction command: python -X utf8
+ verification/scripts/pah_omc017_verify.py --check
+Expected output: All lanes PASS; diagnostics-free Lean.
+Falsification gate: Missing source term, label, spectral
+ hypothesis or positive-denominator/Cauchy estimate.
+Tier before / after: T1 / T1 (host unchanged).
+No-overclaim statement: No PAH-OMC-014 closure, limiting
+ dynamics, full cutoff/continuum, physical Pre-A, spacetime,
+ QFT, gravity, Yang-Mills, mass gap or TOE.
+Next required action: Separate original-generator j-limit
+ contract on a frozen bounded-amplitude domain.
+\end{verbatim}

@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**964 accepted events** · latest 25 shown below · machine locator: `index.json`
+**966 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-06 | `20260906-pah-omc-017-publication-footer-and-immutable-ru` — [PAH-OMC-017 publication footer and immutable-run linkage correction] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-pah-omc-017-publication-footer-and-immutable-ru) |
+| 2026-09-06 | `20260906-pah-omc-017-r-510-exact-spatial-transfer-and-co` — [PAH-OMC-017 R-510: exact spatial transfer and common local Gibbs state] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-pah-omc-017-r-510-exact-spatial-transfer-and-co) |
 | 2026-09-06 | `20260906-operator-standing-authorization-for-release-gat` — [Operator standing authorization for release-gated PAH and Q3LOCK batch commits and pushes] - 2026-09-06 | — | [bounded page](pages/000919-000968.md#20260906-operator-standing-authorization-for-release-gat) |
 | 2026-09-06 | `20260906-pah-omc-016-r-509-radial-tightness-and-uniform` — [PAH-OMC-016 R-509: radial tightness and uniform matter nondegeneracy; host gates unchanged] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-pah-omc-016-r-509-radial-tightness-and-uniform) |
 | 2026-09-05 | `20260905-q3lock-exp-001598-r-497-register-collective-low` — [Q3LOCK EXP-001598/R-497: register collective lower bound and strict cusp/tangent content; retain T0] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001598-r-497-register-collective-low) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-q3lock-pressure-to-cusp-bridge-receives-indepen` — [Q3LOCK pressure-to-cusp bridge receives independent audit (EXP-001573)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-pressure-to-cusp-bridge-receives-indepen) |
 | 2026-09-05 | `20260905-q3lock-p-09-fss-to-loop-duhamel-passage-receive` — [Q3LOCK P-09 FSS-to-loop Duhamel passage receives independent audit (EXP-001572)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-p-09-fss-to-loop-duhamel-passage-receive) |
 | 2026-09-05 | `20260905-q3lock-p-06-continuous-loop-association-receive` — [Q3LOCK P-06 continuous-loop association receives independent audit (EXP-001571)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-p-06-continuous-loop-association-receive) |
-| 2026-09-05 | `20260905-q3lock-collective-dictionary-receives-independe` — [Q3LOCK collective dictionary receives independent limit-order audit (EXP-001570)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-collective-dictionary-receives-independe) |
-| 2026-09-05 | `20260905-q3lock-collective-dictionary-inserted-into-p-06` — [Q3LOCK collective dictionary inserted into P-06/P-09 proof text (EXP-001568)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-collective-dictionary-inserted-into-p-06) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 919–964 | 46 | [000919-000968.md](pages/000919-000968.md) |
+| 919–966 | 48 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |

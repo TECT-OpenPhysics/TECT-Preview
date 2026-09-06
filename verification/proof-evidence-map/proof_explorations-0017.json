@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "boundary": "Same R-510 model, state, maps and ordered limits; no mathematical definition or theorem changed.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "Publication-integrity correction only, with no claim, scientific gate, proof conclusion or research-budget change.",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-017-result-v1.json#publication_correction",
+        "strategy/pa-hyp/PAH-OMC-017-publication-repair-v1.patch#L1",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy-v2/integrated.json#checks",
+        "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc017-cauchy-260906-v1.0.tex.txt#L240"
+      ],
+      "finding": "The footer now contains all required labels. The proof, source preregistration, constants and all 50/70/23/28 checks are unchanged. Nine Lean declarations pass. Prior runs remain byte-for-byte; the new v2 run binds the corrected note and verifier. R-510 is the same auxiliary result, not a second scientific advance.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-510"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001601",
+      "method": [
+        "Add only the standard labelled result footer; rebuild and visually inspect the changed final PDF page.",
+        "Preserve original run JSONs and record final-document replay in the separate cauchy-v2 folder.",
+        "Keep a reversible minimal patch for the old note, manifest and verifier inputs; git apply --reverse --check passes."
+      ],
+      "next_action": "Finish final replay, release and offsite publication; retain the one queued original-generator j-limit question.",
+      "non_claims": [
+        "No second proof advance or changed numerical result.",
+        "No limiting dynamics, physical Pre-A, spacetime, QFT, gravity or continuum conclusion."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the standard note-footer omission found by the prepublication proof-map gate be corrected while preserving every existing run JSON and the unchanged mathematical statement?",
+      "recorded_at": "2026-09-06T05:11:51Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001600",
+          "relation": "corrects"
+        }
+      ],
+      "reviewed_on": "2026-09-06",
+      "revisit_condition": "A mismatch in preserved runs, reverse-patch reconstruction, final source pins or required footer labels reopens publication readiness.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "PAH-OMC-017 publication footer and reproducible hash-linkage correction",
+      "verdict": "advanced"
+    }
+  ],
+  "kind": "proof_explorations",
+  "map_schema": "tect/proof-evidence-map/1.3",
+  "part": 17,
+  "schema": "tect/proof-evidence-map-shard/1.0"
+}

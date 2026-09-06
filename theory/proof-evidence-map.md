@@ -58,13 +58,13 @@ flowchart LR
 |---|---:|---|
 | Status cards | 49 | 48 active; 1 refuted |
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
-| Reusable result records | 334 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
+| Reusable result records | 335 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 384 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1599 | Route decisions: advanced 1170, failed 254, inconclusive 120, parked 55; non-tier-bearing |
-| Accepted chronological events | 964 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1601 | Route decisions: advanced 1172, failed 254, inconclusive 120, parked 55; non-tier-bearing |
+| Accepted chronological events | 966 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 62 | 12 live; 50 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 416 lineage notes / 397 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2026 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 417 lineage notes / 398 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2034 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -76,7 +76,7 @@ These are visible migration or metadata debts, not silently dropped records.
 | Historical/superseded notes without sibling PDF | 19 | Paths remain in machine inventory; current-note PDF enforcement is unchanged |
 | Grandfathered notes with incomplete standard footer | 118 | Kept visible; notes first issued on/after 2026-07-24 fail the map gate if any mandatory footer label is absent |
 | Claim cards listing a gate whose registered status begins `CLOSED` | 0 | Exposed as reconciliation debt; the map does not silently flip claim cards |
-| Claim-unbound reusable results / negative records | 74 / 15 | Ambiguous family references stay unbound; no claim edge is invented |
+| Claim-unbound reusable results / negative records | 75 / 15 | Ambiguous family references stay unbound; no claim edge is invented |
 | Completed-task references to retired gate identifiers | 5 | Preserved as `historical_gate_reference` nodes anchored to `todo/todo.json`, never mislinked to the current gate registry |
 | Changelog tokens that are not current claim-card IDs | 468 | Preserved in event metadata but never promoted to claim edges; many are historical proof-unit IDs from the legacy extractor |
 | Changelog negative tags absent from the indexed registry | 3 | Preserved as historical event text, rendered without a false registry anchor, and excluded from negative graph edges |
@@ -24358,6 +24358,36 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** [R-509](../RESULTS-LEDGER.md#r-509)
 - **Located evidence:** [`strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json`](../strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json) (conclusion); [`strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md`](../strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md) (fixed-n-mesh-passage-and-tightness); [`strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md`](../strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md) (boundary-valid-integration-by-parts-and-local-moment-maximum); [`strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md`](../strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md) (conditional-small-ball-bound); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc016-uniform/integrated.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc016-uniform/integrated.json) (checks); [`verification/lean/Tect/PahOmc016.lean`](../verification/lean/Tect/PahOmc016.lean) (L17); [`claims/C6-SPACETIME-SIGNATURE/notes/pah-omc016-uniform-260906-v1.0.tex.txt`](../claims/C6-SPACETIME-SIGNATURE/notes/pah-omc016-uniform-260906-v1.0.tex.txt) (L1)
 
+<a id="exp-001600"></a>
+#### EXP-001600 — PAH-OMC-017 exact spatial transfer and common local Gibbs state
+
+- **Review metadata:** reviewed 2026-09-06; recorded 2026-09-06T05:03:22Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Do the R-509 fixed-graph amplitude-limit states nu_n form a Cauchy sequence on every fixed bounded continuous invariant amplitude cylinder, preserving the original functional, labelled state, terminal square and j-before-n order?
+- **Finite checks:** (1) Preregister and hash-pin the common prefix algebra, coordinate restrictions and decorated spatial transfer before computations. (2) Prove all-n term and label bijections including endpoint halves and the unsplit terminal square. (3) Prove full-domain Hilbert-Schmidt control, positivity improving and a positive spectral radius from a proof-box test, not a modified state. (4) Audit primary weak Krein-Rutman, compact spectral and spectral-radius hypotheses; reject solid-cone and self-adjoint shortcuts. (5) Prove strict-kernel simplicity and absence of peripheral/Jordan competitors; obtain power decay by spectral-radius and resolvent formulations. (6) Retain decorated local link insertions and control the normalization denominator to prove an analytic Cauchy modulus. (7) Execute primary 50, non-importing independent 70, hostile 23 and integrated 28 checks with nine diagnostics-free Lean declarations; issue one visually reviewed four-page synthesis PDF.
+- **Finding:** The exact identity Z_n=<u,K^n S u> holds on the original labelled dr measure. The positive Hilbert-Schmidt spatial kernel has r(K)>=256 exp(-319/12)>0 and an algebraically simple leading eigenvalue with no peripheral competitor. Its normalized powers converge at C q^k with exact operator-defined constants. Positive decorated numerator/denominator control gives |nu_n(f)-nu_infty(f)|<=4||f|| D_m q^(n-m) once D_m q^(n-m)<=1/2, and the stated N(epsilon,f) makes every fixed-prefix sequence Cauchy. Compatible prefix densities define a common static local state.
+- **Decision reason:** auxiliary_support: the distinct preregistered static-state Cauchy gate passes and supplies a common-state input. T-054's active mainline gate and the host C6 T1 tier do not change.
+- **Boundary:** Exactly OMC-004 G_n, n>=2, R-509 dr state, K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0 and remaining couplings one. First j->infinity on the OMC-016 dyadic radial path, then n. No prior, quotient, Jacobian, rate, carrier or boundary change. Operator-defined C,q are not certified numerical gap values.
+- **Next / revisit condition:** Freeze a separate bounded-amplitude generator-domain contract and determine the j-limit of the original unaccelerated generators against the same common state; do not infer nontrivial radial dynamics from static nondegeneracy.
+- **Related explorations:** continues [EXP-001599](#exp-001599)
+- **Formal authorities:** [R-510](../RESULTS-LEDGER.md#r-510)
+- **Located evidence:** [`strategy/pa-hyp/PAH-OMC-017-result-v1.json`](../strategy/pa-hyp/PAH-OMC-017-result-v1.json) (conclusion); [`strategy/pa-hyp/PAH-OMC-017-cauchy-prereg-v1.json`](../strategy/pa-hyp/PAH-OMC-017-cauchy-prereg-v1.json) (common_observable_algebra); [`strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md`](../strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md) (normalization-and-explicit-analytic-cauchy-control); [`strategy/pa-hyp/PAH-OMC-017-spectral-proof.md`](../strategy/pa-hyp/PAH-OMC-017-spectral-proof.md) (literature-first-applicability); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy/integrated.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy/integrated.json) (checks); [`verification/lean/Tect/PahOmc017.lean`](../verification/lean/Tect/PahOmc017.lean) (L30); [`RESULTS-LEDGER.md`](../RESULTS-LEDGER.md) (r-510)
+
+<a id="exp-001601"></a>
+#### EXP-001601 — PAH-OMC-017 publication footer and reproducible hash-linkage correction
+
+- **Review metadata:** reviewed 2026-09-06; recorded 2026-09-06T05:11:51Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Can the standard note-footer omission found by the prepublication proof-map gate be corrected while preserving every existing run JSON and the unchanged mathematical statement?
+- **Finite checks:** (1) Add only the standard labelled result footer; rebuild and visually inspect the changed final PDF page. (2) Preserve original run JSONs and record final-document replay in the separate cauchy-v2 folder. (3) Keep a reversible minimal patch for the old note, manifest and verifier inputs; git apply --reverse --check passes.
+- **Finding:** The footer now contains all required labels. The proof, source preregistration, constants and all 50/70/23/28 checks are unchanged. Nine Lean declarations pass. Prior runs remain byte-for-byte; the new v2 run binds the corrected note and verifier. R-510 is the same auxiliary result, not a second scientific advance.
+- **Decision reason:** Publication-integrity correction only, with no claim, scientific gate, proof conclusion or research-budget change.
+- **Boundary:** Same R-510 model, state, maps and ordered limits; no mathematical definition or theorem changed.
+- **Next / revisit condition:** Finish final replay, release and offsite publication; retain the one queued original-generator j-limit question.
+- **Related explorations:** corrects [EXP-001600](#exp-001600)
+- **Formal authorities:** [R-510](../RESULTS-LEDGER.md#r-510)
+- **Located evidence:** [`strategy/pa-hyp/PAH-OMC-017-result-v1.json`](../strategy/pa-hyp/PAH-OMC-017-result-v1.json) (publication_correction); [`strategy/pa-hyp/PAH-OMC-017-publication-repair-v1.patch`](../strategy/pa-hyp/PAH-OMC-017-publication-repair-v1.patch) (L1); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy-v2/integrated.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy-v2/integrated.json) (checks); [`claims/C6-SPACETIME-SIGNATURE/notes/pah-omc017-cauchy-260906-v1.0.tex.txt`](../claims/C6-SPACETIME-SIGNATURE/notes/pah-omc017-cauchy-260906-v1.0.tex.txt) (L240)
+
 
 ## Claim evidence matrix
 
@@ -24412,7 +24442,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (20 notes; 1285 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), [AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION](../negative-results/registry.md#audit-2026-09-05-q3lock-tangent-beta-and-weight-direction), +128 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +653 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [PAH-OMC-016 R-509: radial tightness and uniform matter nondegeneracy; host gates... | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (21 notes; 1293 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), [AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION](../negative-results/registry.md#audit-2026-09-05-q3lock-tangent-beta-and-weight-direction), +128 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +655 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [PAH-OMC-017 publication footer and immutable-run linkage correction] - 2026-09-06 | - |
 
 ### Sector D
 
@@ -24451,6 +24481,7 @@ entries are no-go lemmas, partial reductions, or conditional consolidations.
 
 | Result | Host claim(s) / same-event route history | Core verified content | Honest boundary |
 |---|---|---|---|
+| [R-510](../RESULTS-LEDGER.md#r-510) PAH-OMC-017 common local Gibbs state on the fixed strip | - | Exact spatial transfer with the terminal square retained; local cylinder Cauchy bound 4 norm(f) D_m q^(n-m) and an explicit analytic threshold. Primary 50, independent 70, hostile 23, integrated 28 and nine Lean declarations; auxiliary static-state input only, no limiting dynamics or host tier change. | See the detailed result record. |
 | [R-509](../RESULTS-LEDGER.md#r-509) PAH-OMC-016 radial tightness and uniform matter nondegeneracy | - | Fixed-n all-j tightness and radial weak limit; lim_j mu(b_v^2)>=(11/80)exp(-1550/3)>0 for both declared witnesses uniformly in n>=2. Analytic local-moment/conditional proof; primary 30, independent 23, hostile 17, integrated 29 and ten Lean theorems pass. Scoped PASS only; T-054 and host tier unchanged. | See the detailed result record. |
 | [R-508](../RESULTS-LEDGER.md#r-508) PAH-OMC-015 counting-ensemble cutoff nondegeneracy obstruction | -; same event: [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy) | Exact charge-erasure counting gives mu(ell_v^2)<=2^(N-1) exp(-R^2/8-R^4/4-R^6/6). On the fixed OMC-010 path, R then n gives squared limits (0,0,1,1) for the four R-488 observables. CANDIDATE_REJECTED for this ensemble only; primary 21, independent 20, hostile 12 and integrated 33 checks pass with nine Lean declarations. No host claim or active gate promotion. | See the detailed result record. |
 | [R-501](../RESULTS-LEDGER.md#r-501) EXP-001586 Q3LOCK P-06 quantitative Gaussian weak-limit audit | -; same event: [AUDIT-2026-09-05-Q3LOCK-HARMONIC-SPATIAL-DOUBLE-ALLOCATION](../negative-results/registry.md#audit-2026-09-05-q3lock-harmonic-spatial-double-allocation) | R-501 / EXP-001586 records a T0 claim-nonbearing analytic and executable audit of the fixed-volume periodic Gaussian weak limit. It derives a uniform O(N^-1) grid covariance bound, an O(N^-1/2) polygonal covariance bound, an arbitrary-time Kolmogorov increment estimate and a bounded residual-weight transfer lemma. The verifier passes 13502/13502 assertions with byte-identical replay; spatial W_t, P-09, phase, DLR and external-review gates remain open, and no PDF is issued. | See the detailed result record. |
@@ -25190,6 +25221,8 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-06 | [PAH-OMC-017 publication footer and immutable-run linkage correction] - 2026-09-06 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
+| 2026-09-06 | [PAH-OMC-017 R-510: exact spatial transfer and common local Gibbs state] - 2026-09-06 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-06 | [Operator standing authorization for release-gated PAH and Q3LOCK batch commits and pushes] - 2026-09-06 | - | - |
 | 2026-09-06 | [PAH-OMC-016 R-509: radial tightness and uniform matter nondegeneracy; host gates unchanged] - 2026-09-06 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK EXP-001598/R-497: register collective lower bound and strict cusp/tangent content; retain T0] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -25208,8 +25241,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-05 | [Q3LOCK R-498 periodic/open pressure seam and min--max audit] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK source-window projective W_t tightness diagonal audit] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [Q3LOCK source-zero DLR kernel determining-class audit] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-05 | [Q3LOCK KP source-window uniform moment audit] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-05 | [Q3LOCK KP vector theorem-domain crosswalk audit] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 

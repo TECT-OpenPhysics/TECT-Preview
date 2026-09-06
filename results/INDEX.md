@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**334 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**335 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-510`](../RESULTS-LEDGER.md#r-510) | PAH-OMC-017 common local Gibbs state on the fixed strip | See authority |
 | [`R-509`](../RESULTS-LEDGER.md#r-509) | PAH-OMC-016 radial tightness and uniform matter nondegeneracy | See authority |
 | [`R-508`](../RESULTS-LEDGER.md#r-508) | PAH-OMC-015 counting-ensemble cutoff nondegeneracy obstruction | See authority |
 | [`R-501`](../RESULTS-LEDGER.md#r-501) | EXP-001586 Q3LOCK P-06 quantitative Gaussian weak-limit audit | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-479`](../RESULTS-LEDGER.md#r-479) | PAH-OMC-001 finite common dynamics and refinement-boundary theorem | T5 finite exact theorem for a hash-pinned composite T0 candidate; claim-nonbearing and no active canonical gate change. |
 | [`R-478`](../RESULTS-LEDGER.md#r-478) | PAH-001 finite reversible dynamics and common-core compatibility audit | T0 claim-nonbearing exact finite/definition audit; no gate or scientific transition. |
 | [`R-477`](../RESULTS-LEDGER.md#r-477) | Exact positive-lambda ST8/Q3LOCK common-alpha five-condition audit | T0 claim-nonbearing exact audit; no scientific or gate transition. |
-| [`R-476`](../RESULTS-LEDGER.md#r-476) | Researcher-proposed Pre-A minimum microscopic axiom packet structural intake | T0 claim-nonbearing mainline hypothesis intake; active scientific gate and every claim tier remain unchanged. |
 
 Search without loading the full ledger:
 

@@ -23,6 +23,7 @@ policy in `governance/development-history.md`.
 | ID | Result | Summary |
 |---|---|---|
 | [R-509](#r-509) | PAH-OMC-016 radial tightness and uniform matter nondegeneracy | Fixed-n all-j tightness and radial weak limit; lim_j mu(b_v^2)>=(11/80)exp(-1550/3)>0 for both declared witnesses uniformly in n>=2. Analytic local-moment/conditional proof; primary 30, independent 23, hostile 17, integrated 29 and ten Lean theorems pass. Scoped PASS only; T-054 and host tier unchanged. |
+| [R-510](#r-510) | PAH-OMC-017 common local Gibbs state on the fixed strip | Exact spatial transfer with the terminal square retained; local cylinder Cauchy bound 4 norm(f) D_m q^(n-m) and an explicit analytic threshold. Primary 50, independent 70, hostile 23, integrated 28 and nine Lean declarations; auxiliary static-state input only, no limiting dynamics or host tier change. |
 | [R-508](#r-508) | PAH-OMC-015 counting-ensemble cutoff nondegeneracy obstruction | Exact charge-erasure counting gives mu(ell_v^2)<=2^(N-1) exp(-R^2/8-R^4/4-R^6/6). On the fixed OMC-010 path, R then n gives squared limits (0,0,1,1) for the four R-488 observables. CANDIDATE_REJECTED for this ensemble only; primary 21, independent 20, hostile 12 and integrated 33 checks pass with nine Lean declarations. No host claim or active gate promotion. |
 | [R-501](#r-501) | EXP-001586 Q3LOCK P-06 quantitative Gaussian weak-limit audit | R-501 / EXP-001586 records a T0 claim-nonbearing analytic and executable audit of the fixed-volume periodic Gaussian weak limit. It derives a uniform O(N^-1) grid covariance bound, an O(N^-1/2) polygonal covariance bound, an arbitrary-time Kolmogorov increment estimate and a bounded residual-weight transfer lemma. The verifier passes 13502/13502 assertions with byte-identical replay; spatial W_t, P-09, phase, DLR and external-review gates remain open, and no PDF is issued. |
 | [R-500](#r-500) | EXP-001584 Q3LOCK P-06 Gaussian Fourier covariance audit | R-500 / EXP-001584 records a T0 claim-nonbearing fixed-mesh audit of the massive periodic Gaussian convention, csc-squared normalization, Fourier covariance, cyclic resistance, increment bound, and exact source interpolation. The verifier passes 255/255 assertions; loop-limit, weighted-tempered, pressure, phase, DLR and external-review gates remain open, and no PDF is issued. |
@@ -18156,6 +18157,65 @@ QFT, gravity, Yang-Mills, mass gap or TOE conclusion. The next single
 question is whether nu_n is Cauchy on the same local bounded-amplitude
 cylinders as n grows. An exact source/measure/boundary/uniform-estimate
 defect reopens this verdict; changed definitions require a new version.
+
+### R-510 -- PAH-OMC-017 common local Gibbs state on the fixed strip
+
+**Date and host.** 2026-09-06; C6-SPACETIME-SIGNATURE / T-054. Scoped
+`PASS`, classified `auxiliary_support` relative to the unchanged active
+mainline gate. The host remains T1. Evidence is analytic, exact and
+executed, with explicitly inherited general spectral theorems.
+
+**Exact scope.** The unchanged PAH-001 functional on OMC-004 G_n, n>=2,
+with the R-509 full labelled dr Gibbs law nu_n. K=2, M_s=1, epsilon=1/2,
+beta=nu=1, m2=theta=0 and all other couplings one. R_j=2^j, M_j=2^(2j):
+j goes to infinity at each fixed n BEFORE n grows. All original frontier
+and boundary terms stay, including the final unsplit square. No Jacobian,
+gauge quotient, fixed-Q selection, changed rates or physical time is used.
+The common prefix algebra and coordinate-forgetting maps were hash-pinned
+before computations. Integer cylinders are not substituted for amplitudes.
+
+**Statement.** Exact term/multiplicity regrouping gives Z_n=<u,K^n S u>
+on the original measure. The spatial K is positivity improving and
+Hilbert-Schmidt on the full unbounded column L2 space. A proof-box test
+gives r(K)>=256 exp(-319/12)>0. Weak total-cone Krein-Rutman supplies right
+and dual eigenvectors; strict-row triangle equality excludes peripheral
+competitors, dual pairing excludes a leading Jordan chain, and compact
+spectral theory gives normalized power decay. No symmetric-kernel or
+solid-L2-cone theorem is imported. Decorated insertions preserve cross-link
+observables, and a positive denominator proves
+`|nu_n(f)-nu_infty(f)|<=4 norm(f) D_m q^(n-m)` once
+`D_m q^(n-m)<=1/2`, on each fixed prefix Lambda_m. The certificate gives
+N(epsilon,f) explicitly. The compatible prefix laws define a normalized
+positive state on the common local algebra. C,q,D_m are exact
+operator-defined analytic constants with proved existence, NOT certified
+numeric spectral gaps, fitted eigenvalues or regulator-uniform rates.
+
+**Source and reproduction.** Preregistration SHA-256:
+`249bf12f71b4869e566925b8c011291ec74ef2fc4f5df2faeeafc4050f04fdff`.
+Result card and all hashes: `strategy/pa-hyp/PAH-OMC-017-result-v1.json`.
+Proof and applicability: `PAH-OMC-017-transfer-certificate.md` and
+`PAH-OMC-017-spectral-proof.md` in that directory. Run
+`python -X utf8 verification/scripts/pah_omc017_verify.py --check`.
+Primary 50, independent 70, hostile 23 and integrated 28 checks pass;
+nine Lean declarations compile without diagnostics. The independent
+face/vertex expanded-edge implementation imports no primary code. Lean
+checks the normalized ratio bound and exact arithmetic, not the complete
+spectral/measure theorem. Internal reconstruction is not an external signed
+review. External review is invited for strict-kernel and insertion steps.
+One four-page synthesis PDF was rendered and every page visually reviewed;
+the note is `pah-omc017-cauchy-260906-v1.0.tex.txt` under the host notes.
+
+**Boundary and next contract.** Only this fixed-sequence static Cauchy gate
+closes. T-054's active gate, PAH-OMC-014 and all physical gates stay open.
+No all-boundary Gibbs uniqueness, reversed j/n passage, discrete-to-dr
+total variation, limiting generator or temporal stationarity follows.
+Next ask for the j-limit of the ORIGINAL unaccelerated generators on a
+separately frozen bounded-amplitude domain against this common state.
+Shrinking radial steps can change dynamic nontriviality; static
+nondegeneracy does not decide it. No Q3LOCK premise, infinite-volume
+dynamics, full cutoff/continuum, physical Pre-A, spacetime, QFT, gravity,
+Yang-Mills, causal cone, mass gap or TOE conclusion. Reopen upon a missing
+source term, label, imported hypothesis or normalization estimate.
 
 ## Notes on status
 

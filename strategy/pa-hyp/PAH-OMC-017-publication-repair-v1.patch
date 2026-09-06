@@ -1,0 +1,83 @@
+--- a/claims/C6-SPACETIME-SIGNATURE/notes/pah-omc017-cauchy-260906-v1.0.tex.txt
++++ b/claims/C6-SPACETIME-SIGNATURE/notes/pah-omc017-cauchy-260906-v1.0.tex.txt
+@@ -212,3 +212,28 @@
+ unaccelerated generators against this common state. A shrinking radial
+ step may remove radial dynamics despite nondegenerate static amplitudes.
+ No time rescaling is authorized by the present result.
++
++
++\begin{verbatim}
++Result ID: R-510
++Claim ID: C6-SPACETIME-SIGNATURE
++Precise statement: The frozen nu_n converge on every
++ fixed bounded-amplitude prefix, with the stated Cauchy bound.
++Scope: Original OMC-004 strip and OMC-016 counting state;
++ fixed K=2, M_s=1, epsilon=1/2, beta=nu=1; j before n.
++Dependencies: Pinned PAH parents, R-509 and the audited
++ weak Krein-Rutman and compact spectral theorems.
++Evidence grade: ANALYTIC, EXACT, EXECUTED;
++ inherited general spectral results, no physical promotion.
++Reproduction command: python -X utf8
++ verification/scripts/pah_omc017_verify.py --check
++Expected output: All lanes PASS; diagnostics-free Lean.
++Falsification gate: Missing source term, label, spectral
++ hypothesis or positive-denominator/Cauchy estimate.
++Tier before / after: T1 / T1 (host unchanged).
++No-overclaim statement: No PAH-OMC-014 closure, limiting
++ dynamics, full cutoff/continuum, physical Pre-A, spacetime,
++ QFT, gravity, Yang-Mills, mass gap or TOE.
++Next required action: Separate original-generator j-limit
++ contract on a frozen bounded-amplitude domain.
++\end{verbatim}
+--- a/verification/scripts/pah_omc017_verify.py
++++ b/verification/scripts/pah_omc017_verify.py
+@@ -16,10 +16,10 @@
+ import sys
+ import tempfile
+ 
+-__version__='1.0.0'
++__version__='1.0.1'
+ ROOT=Path(__file__).resolve().parents[2]
+ MANIFEST=ROOT/'strategy/pa-hyp/PAH-OMC-017-result-v1.json'
+-RUN=ROOT/'claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy'
++RUN=ROOT/'claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy-v2'
+ 
+ 
+ def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+--- a/strategy/pa-hyp/PAH-OMC-017-result-v1.json
++++ b/strategy/pa-hyp/PAH-OMC-017-result-v1.json
+@@ -26,9 +26,9 @@
+     "codes/foundations/pah_omc017_transfer.py": "7c7a7326fd8024a6cdb17e536847ac5aa43b37f0cb9a5b4c9a791031196f80c3",
+     "codes/foundations/pah_omc017_transfer_independent.py": "9ceaba8e3fe1ae17a6bc180696910393860098b471d9b9e3652d802114e539b6",
+     "codes/foundations/pah_omc017_transfer_hostile.py": "606e76b62caff077d5f8366c909d77f8d3acfcc8cb9865f2f1d802470c580155",
+-    "verification/scripts/pah_omc017_verify.py": "467a47baa4464a60d23ebf345045f3be6f7ae45d5c30ed0e635050a05b6af94d",
++    "verification/scripts/pah_omc017_verify.py": "b5578d5bf040a205a1c30f50e98585f46319cc9bf92ded0414160c614ac07f38",
+     "verification/lean/Tect/PahOmc017.lean": "30271ebdea410e1aeac71bd4b56f188d9a881dfb61bd73c9ebefef2037af2e0d",
+-    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc017-cauchy-260906-v1.0.tex.txt": "4299359d98587f83b7752aec781e004e23df031fc5a1843a4226fa565235d966"
++    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc017-cauchy-260906-v1.0.tex.txt": "e0777d88eac89f6036aed3359abd6f642b4f9af7acdb383f4199f3a5091fceae"
+   },
+   "exact_scope": {
+     "model": "Exactly PAH-001 on the PAH-OMC-004 anchored two-cell strip G_n, n>=2, at the PAH-OMC-016 fixed parameters.",
+@@ -110,7 +110,7 @@
+   "verification": {
+     "command": "python -X utf8 verification/scripts/pah_omc017_verify.py",
+     "stored_replay": "python -X utf8 verification/scripts/pah_omc017_verify.py --check",
+-    "runs": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy",
++    "runs": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy-v2",
+     "external_review": "Invited for strict-kernel simplicity, decorated insertions and ordered passages; no signed referee review claimed."
+   },
+   "adversarial_review": [
+@@ -152,5 +152,12 @@
+     "No physical Pre-A, spacetime, event horizon, common causal cone, QFT, gravity, Yang-Mills, mass gap, observation prediction or TOE conclusion.",
+     "No Q3LOCK result is imported; R-509 is only the fixed-graph amplitude-state input and previously proved uniform bounds.",
+     "T-054 active gate and every claim tier remain unchanged by registration or auxiliary success."
+-  ]
++  ],
++  "publication_correction": {
++    "kind": "FOOTER_AND_EVIDENCE_LINKAGE_ONLY",
++    "previous_manifest_sha256": "846a4e88766b46ef941eb35d9014cc788e7a60d47d7d87e96b6f6b5ba59abc73",
++    "reversible_patch": "strategy/pa-hyp/PAH-OMC-017-publication-repair-v1.patch",
++    "preserved_previous_runs": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc017-cauchy",
++    "reason": "Prepublication proof-map check required labelled standard footer fields. Mathematical content, source preregistration and all analytic/executable conclusions are unchanged. Prior run JSONs remain byte-for-byte; v2 replays the final document and verifier pins. Reverse this patch in a disposable copy to recover the prior note/manifest/verifier inputs."
++  }
+ }
