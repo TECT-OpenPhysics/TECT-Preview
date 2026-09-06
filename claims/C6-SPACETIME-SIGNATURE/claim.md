@@ -48,6 +48,13 @@ TOE target with no established result.
 
 ## History
 
+- 2026-09-06: R-509 is hosted as a separate PAH-OMC-016 static-state result:
+  fixed-n radial tightness/weak convergence and a volume-uniform positive
+  bound for the two preregistered bounded-amplitude witnesses. This is not
+  evidence of emergent signature, and this host claim remains T1 OPEN.
+  Exact scope, assumptions, falsifiers and independent/Lean reproduction:
+  [result card](../../strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json).
+
 - 2026-06-09: registered as an OPEN scaffold by the TOE-completeness audit to close
   a Sector-C coverage gap (pillar 3).
 

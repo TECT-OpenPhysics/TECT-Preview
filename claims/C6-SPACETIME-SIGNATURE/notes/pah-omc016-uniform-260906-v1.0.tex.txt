@@ -1,0 +1,227 @@
+% Title: PAH-OMC-016: radial tightness and uniform matter nondegeneracy
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-09-06; this version issued 2026-09-06
+% Status: R-509; scoped analytic result; no host claim promotion
+
+\section*{Purpose and scope}
+This checkpoint tests the single preregistered PAH-OMC-016 candidate.
+The functional, rates, mobility, projection and ordered limits are unchanged.
+The preregistration is \texttt{PAH-OMC-016-resolved-radial-prereg-v1.json},
+SHA-256 (the line break is typographic only):
+\begin{verbatim}
+1cebe3acff477175125c7abf2ebdfa2cd5
+b65089530ae3581bbaa69b23c161b7
+\end{verbatim}
+The source crosswalk and a second proof presentation are in
+\texttt{PAH-OMC-016-uniform-certificate.md}. All six immutable parent
+hashes are checked by both executable reconstructions.
+
+Use exactly the finite relational strip $G_n$ of OMC-004, $n\geq2$,
+including its unsplit frontier square and boundary interactions. Write
+$N=2(n+2)$, $E=4n+4$, $P=2n+1$. Its degree is at most five, directly
+from the two horizontal, one vertical and at most two diagonal incidences.
+No physical dimension, length or volume is assigned to the strip.
+Set $K=2$, $M_s=1$, $\epsilon=1/2$, $\beta=\nu=1$, $m^2=\theta=0$,
+and all other displayed couplings equal to one. For $j\geq0$,
+\[
+ R_j=2^j,\quad M_j=2^{2j},\quad h_j=2^{-j},\quad
+ r_v=h_j\ell_v,\quad 0\leq\ell_v\leq M_j.
+\]
+Let $z$ contain every aperture, phase and representative link label.
+Its cardinality is $2^{2N+E}$; phases at zero amplitude remain distinct.
+The deterministic grade $Q=\sum_v\ell_v$ adds no multiplicity.
+The declared weights $w_Q=Z_Q/\sum_Q Z_Q$ therefore give
+\[
+ \mu_{n,j}(x)=Z_{n,j}^{-1}e^{-F(x)}
+\]
+on the full labelled counting domain, without a radial Jacobian or probe.
+The witnesses are exactly $b_v=\min(1,r_v)$, $v=a,d$.
+They are not the old raw or normalized integer labels for $j>0$.
+
+\paragraph{Statement.}
+At each fixed $n$, these laws are tight uniformly in $j$ and converge weakly
+to the finite-graph radial Gibbs law $\nu_n$ below. For every vertex,
+\[
+ \lim_{j\to\infty}\mu_{n,j}(b_v^2)=\nu_n(b_v^2)
+ \geq c:=\frac{11}{80}e^{-1550/3}>0,
+ \qquad n\geq2.
+\]
+The same $c$ works for all $n$; no limit in $n$ is taken here.
+It is a conservative derived lower bound, not a fitted expectation.
+
+\section*{Exact energy and fixed-graph cutoff limit}
+Write $s_v\in\{1/2,1\}$ and let $\sigma_e\in\{-1,1\}$ be the
+product of the endpoint phase and link signs. The source formula is exactly
+\[
+ F(r,z)=F_0(z)+\sum_v\left(\frac{r_v^6}{6}+\frac{r_v^4}{4}
+                  +\frac{s_v^2r_v^2}{2}\right)
+       +\sum_{e=\{v,w\}}\frac{J_e(s)}2(r_v-\sigma_e r_w)^2,
+ \qquad 1\leq J_e=\frac2{s_v+s_w}\leq2.
+\]
+Here $F_0$ is the unchanged nonnegative aperture/Wilson energy. Thus
+$F\geq\sum_v r_v^6/6$ with no term discarded from the model.
+
+For $x\in\mathbb R_+^N$ define $a_j(x)_v=h_j\lfloor x_v/h_j\rfloor$,
+$D_j=[0,R_j+h_j)^N$ and
+$q_j(x,z)=\mathbf1_{D_j}(x)e^{-F(a_j(x),z)}$. The upper endpoint
+$\ell=M_j$ has its own half-open cell. Consequently
+\[
+ \sum_z\int q_j(x,z)\,dx=h_j^N Z_{n,j}
+\]
+exactly. This common factor cancels from expectations; it does not change
+the finite reference measure. Pointwise $a_j(x)\to x$ and $D_j$ exhausts
+the orthant. Since $h_j\leq1$,
+\[
+ q_j(x,z)\leq W(x):=\prod_v w(x_v),\qquad
+ w(t)=\exp\left(-\frac{\max(t-1,0)^6}{6}\right).
+\]
+For $t\geq4$, $(t-1)^6/6\geq t$, so
+$\int_0^\infty w(t)\,dt\leq4+e^{-4}\leq5$.
+Every polynomial moment of $W$ is finite.
+Dominated convergence gives the finite, positive normalization
+\[
+ Z_n^{\mathrm{rad}}=\sum_z\int_{\mathbb R_+^N}e^{-F(r,z)}\,dr,
+ \qquad d\nu_n=(Z_n^{\mathrm{rad}})^{-1}e^{-F(r,z)}\,dr
+\]
+with labelled counting in $z$. Applying the same argument to
+$g(a_j(x),z)q_j(x,z)$ proves weak convergence for every bounded continuous
+$g$, including $b_v^2$.
+
+An explicit all-$j$ tightness bound uses the unit cube, where
+\[
+ F\leq C_n:=\frac{25}{24}N+\frac{33}{8}E+4P.
+\]
+The vertex contribution is $1/8+1/6+1/4+1/2$, the edge contribution is
+$1/8+4$, and each Wilson term is at most $2\cdot2$.
+Every $D_j$ contains this cube, so the lifted partition is at least
+$2^{2N+E}e^{-C_n}$. For $L\geq4$, a finite union bound and $a_j(x)\leq x$
+give
+\[
+ \sup_j\mu_{n,j}\{\max_v r_v\geq L\}
+ \leq e^{C_n}N5^{N-1}e^{-L}\longrightarrow0.
+\]
+This estimate is only fixed-$n$; its volume-dependent constant is never
+used to infer the uniform lower bound.
+
+\section*{Boundary-valid identity and a uniform local moment}
+All polynomial moments under $\nu_n$ are finite. For fixed other
+coordinates and labels, $r_v e^{-F}$ vanishes at $0$ and at infinity.
+Its derivative, and its integral over the other coordinates, are absolutely
+integrable by polynomial-times-sextic domination. Integration by parts
+and Fubini therefore yield
+\[
+ 1=\nu_n(r_v\partial_v F)
+  =\nu_n\left(r_v^6+r_v^4+s_v^2r_v^2+
+       \sum_{w\sim v}J_{vw}(r_v^2-\sigma_{vw}r_vr_w)\right).
+\]
+The value $1$ uses reference $dr$, not $r\,dr$. This identity is applied
+to the constructed continuous radial law, not asserted at a finite mesh.
+
+Let $X=\max_v\nu_n(r_v^2)$, finite and attained. At a maximizing vertex,
+Jensen, the identity above and Cauchy--Schwarz imply
+\[
+ X^3\leq\nu_n(r_v^6)
+ \leq1+2\sum_{w\sim v}\nu_n(r_vr_w)\leq1+10X.
+\]
+If $X\geq4$, then $X^3-10X=X(X^2-10)\geq24>1$, a contradiction.
+Hence $\nu_n(r_v^2)\leq4$ for every $v,n$. This is a local maximum
+argument, not a volume sum; it assumes no translation symmetry and retains
+all frontier terms.
+
+\section*{Uniform conditional probability away from zero}
+Let $A_v=\{r_w\leq8\text{ for every }w\sim v\}$. Markov's inequality
+and the degree bound give $\nu_n(A_v)\geq1-5\cdot4/64=11/16$.
+Conditioning on all other amplitudes and $z$ leaves density proportional
+to $e^{-V(t)}dt$, where
+\[
+ V(t)=\frac{t^6}{6}+\frac{t^4}{4}+\frac{A t^2}{2}-Ht,
+ \quad A=s_v^2+\sum_{w\sim v}J_{vw}\in[1/4,11],
+ \quad H=\sum_{w\sim v}J_{vw}\sigma_{vw}r_w.
+\]
+On $A_v$, $|H|\leq80$. For $1\leq t\leq2$,
+\[
+ V(t)\leq\frac{64}{6}+\frac{16}{4}+22+160=\frac{590}{3}.
+\]
+For $0\leq t\leq4$, $V(t)\geq-320$; for $t\geq4$,
+$80t\leq t^6/12$ and $t\leq t^6/12$, so $V(t)\geq t$.
+The conditional normalization is at most $4e^{320}+e^{-4}\leq5e^{320}$.
+Therefore, on $A_v$,
+\[
+ \Pr_{\nu_n}\{1\leq r_v\leq2\mid r_{-v},z\}
+ \geq\frac15 e^{-1550/3}.
+\]
+Since $b_v^2=1$ on this interval, averaging gives the stated
+$\nu_n(b_v^2)\geq(11/80)e^{-1550/3}$.
+The thresholds $4,8$ are auxiliary proof constants, not model or witness
+changes. This conditioning is ordinary disintegration, not a new dynamics
+or a refinement averaging map.
+
+\section*{Verification and literature applicability}
+The primary lane differentiates the exact signed-edge polynomial and
+derives the constants from source inputs. The independent lane directly
+expands coefficients using rational arithmetic, verifies all permitted
+signed/aperture star types, and independently derives the barriers.
+The certificate also gives a finite-box Riemann/tail proof: uniform
+continuity controls each fixed box, the integrable majorant controls its
+complement, and the positive partition lower bound permits normalization.
+Neither lane extrapolates a finite table to prove a limit.
+
+The standard dominated convergence theorem is imported only with its
+measurability, pointwise convergence and integrable-majorant hypotheses
+verified above. A primary reference is MIT 18.102, Spring 2021,
+Lecture 12, Theorem 125, printed page 61; its exact URL and the
+finite-product/Fubini crosswalk are in the certificate.
+Jensen, Cauchy--Schwarz and Markov use the explicitly proved moments.
+No Q3LOCK or infinite-volume Gibbs theorem is imported. R-508 retains its
+different, restricted-cutoff negative conclusion.
+
+Lean cross-checks signed-edge algebra, the cubic barrier, the neighbor
+probability arithmetic, tail inequalities, exponent assembly and strict
+positivity. The measure construction, integration by parts and
+source-to-polynomial translation remain explicit analytic proofs, not
+claims of a fully formalized measure-theoretic theorem. The result manifest
+lists the exact source, toolchain and declaration hashes. All independent
+and hostile reviews here are internal; no external signed referee report
+is claimed.
+
+\section*{Devil's-advocate audit}
+\begin{enumerate}
+\item Wrong sign or missing edge factor $1/2$: DISMISSED within the pinned
+ scope by independent expansion and hostile mutations.
+\item A hidden polar Jacobian or lost endpoint cell: DISMISSED by the
+ labelled cell identity and the boundary-valid $dr$ virial formula.
+\item Volume-dependent domination proves volume uniformity: UPHELD as an
+ objection to that inference. The independent local maximum argument,
+ not $C_n$, supplies the uniform estimate.
+\item Negative conditional field $H$ invalidates the small-ball bound:
+ DISMISSED by the two-sided bound $|H|\leq80$.
+\item Positive finite weights or the new witnesses repair R-488/R-508:
+ UPHELD against such a claim; neither old statement is changed.
+\item A common positive bound proves a unique outer state or dynamics:
+ UPHELD against that extension. Outer convergence and stationarity passage
+ remain separate questions; no Markov-time reinterpretation is made.
+\end{enumerate}
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID: R-509
+Claim ID: C6-SPACETIME-SIGNATURE
+Precise statement: Fixed-n radial weak convergence/tightness
+ and a common positive lower bound on both declared b_v^2.
+Verdict: PASS within the frozen PAH-OMC-016 state test.
+Scope: G_n, n>=2; resolved radial j limit first;
+ K=2, M_s=1, epsilon=1/2, beta=nu=1; no n limit.
+Dependencies: Six preregistered immutable PAH parent files.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command: python -X utf8
+ verification/scripts/pah_omc016_uniform_verify.py
+Expected output: All lanes PASS; diagnostics-free Lean.
+Falsification gate: Source/measure/cell/energy mismatch,
+ invalid boundary passage, or failure of the uniform bound.
+Tier before / after: T1 / T1 (host claim unchanged).
+No-overclaim statement: No PAH-OMC-014 closure,
+ infinite-volume dynamics, continuum, physical Pre-A,
+ spacetime, QFT, gravity, Yang-Mills, mass gap or TOE.
+Next required action: A separate bounded-cylinder Cauchy
+ question for the cutoff-limit laws nu_n as n grows.
+\end{verbatim}

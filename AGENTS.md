@@ -157,6 +157,22 @@ configuration without a separate explicit instruction. Authentication or
 branch-protection failures are reported with the commit preserved locally.
 This closes both the skipped-commit and skipped-offsite-backup gaps.
 
+**Standing batch authorization (2026-09-06 operator directive):** ordinary
+release-gated commits and non-force pushes of queued PAH and Q3LOCK research
+checkpoints in this repository are always authorized, including a combined
+batch of both lanes. Do not request the same per-batch approval again merely
+because the shared worktree includes both lanes. This also lifts the prior
+publication-approval hold on Q3LOCK EXP-001598 and PAH-OMC-016 R-509.
+A pending scientific/external review or deferred paper synthesis is not by
+itself a reason to ask for publication permission again: preserve the stated
+tier, open gates and non-claims, and still pass every release/fresh-PDF gate.
+This authorization does not certify the mathematics, approve claim promotion,
+authorize unrelated changes, bypass failed checks, or allow force-pushes,
+remote reconfiguration, tags or releases. A later explicit operator hold,
+unresolved conflict, authentication failure or branch-protection refusal
+still stops the affected operation. Push only to the configured current
+branch target and verify remote HEAD equals local HEAD.
+
 ## 5. Honesty contract
 
 State multi-turn needs upfront. Label prototype code as prototype. If a proof

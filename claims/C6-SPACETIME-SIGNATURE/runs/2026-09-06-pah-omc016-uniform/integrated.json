@@ -1,0 +1,260 @@
+{
+  "base_commit": "f459c4bfa7a08363c0e0abcc3c008418f422db44",
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "name": "pin:strategy/pa-hyp/PAH-OMC-016-resolved-radial-prereg-v1.json",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "pin:strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "pin:codes/foundations/pah_omc016_uniform.py",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "pin:codes/foundations/pah_omc016_uniform_independent.py",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "pin:codes/foundations/pah_omc016_uniform_hostile.py",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "pin:verification/scripts/pah_omc016_uniform_verify.py",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "pin:verification/lean/Tect/PahOmc016.lean",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "pin:claims/C6-SPACETIME-SIGNATURE/notes/pah-omc016-uniform-260906-v1.0.tex.txt",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "parent:strategy/pa-hyp/PAH-001-v1.json",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "parent:strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "parent:strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "parent:strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "parent:strategy/pa-hyp/PAH-OMC-015-counting-prereg-v1.json",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "parent:strategy/pa-hyp/PAH-OMC-015-result-v1.json",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "primary executed",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent executed",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile executed",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent derived constants",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "derived-to-Lean input bridge",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "derived positive lower bound",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "result constants",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "fixed-n and uniform scopes separate",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean registry pin",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean declaration coverage",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean source policy",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "toolchain:toolchain_file",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "toolchain:lakefile",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "toolchain:lockfile",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean diagnostics-free",
+      "pass": true
+    }
+  ],
+  "code_sha256": "06aa246525440846e91d0df9613ba6cdb2208b2b131545cfd77715c179d994e1",
+  "code_version": "1.0.0",
+  "conclusion": {
+    "constant_role": "DERIVED conservative strict-positive proof bound; not a fit, measured value or estimate of actual expectation.",
+    "exact_question": "Are fixed-n amplitude laws tight in j, and is liminf_j mu_(n,j)(b_v^2)>=c>0 for v=a,d with one c for every n>=2?",
+    "fixed_n": "Uniform-in-j tightness and weak convergence to nu_n proportional to exp(-F(r,z)) dr with labelled background counting.",
+    "local_moment": "nu_n(r_v^2)<=4 at every vertex, uniformly in n, from X^3<=1+10X for X=max_v nu_n(r_v^2).",
+    "tail": "For L>=4, sup_j mu_(n,j)(max_v r_v>=L)<=exp(C_n) N 5^(N-1) exp(-L); C_n=25N/24+33E/8+4P.",
+    "uniform_witness": "lim_j mu_(n,j)(b_v^2)=nu_n(b_v^2)>=(11/80)exp(-1550/3)>0 for every n>=2 and v=a,d (indeed all vertices)."
+  },
+  "coverage": {
+    "boundary_and_domain": "Certificate: r_v exp(-F) vanishes at 0 and infinity; absolute polynomial-times-sextic domination justifies Fubini and integration by parts.",
+    "encoded_not_full_formalization": "Lean checks ten named algebraic/inequality propositions. The measure construction and analytic source crosswalk are not fully formalized.",
+    "fixed_n_tightness_and_weak_passage": "Certificate: product sextic majorant, positive unit-cube denominator, dominated convergence; independent finite-box/Riemann plus tail reconstruction.",
+    "local_probability": "Certificate conditional dr density with A in [1/4,11] and |H|<=80 on the good-neighbor event; Lean tail and positive-bound algebra.",
+    "measure_normalization": "Certificate: exact h_j^N endpoint-inclusive step-cell identity; no added Jacobian.",
+    "no_finite_table_promotion": "Executable local-star and endpoint probes audit implementation; universal n,j statements follow from the explicit analytic proof.",
+    "volume_uniformity": "Certificate local maximum moment argument; Lean cubic_moment_barrier, independently derived moment/degree constants."
+  },
+  "environment": {
+    "python": "3.12.9",
+    "sympy": "1.14.0"
+  },
+  "lane_counts": {
+    "hostile": 17,
+    "independent": 23,
+    "primary": 30
+  },
+  "lean": {
+    "command": "lake env lean Tect/PahOmc016.lean",
+    "output": "",
+    "source_sha256": "ef70a382964668375f4a98b328f0e6aafd5d2405716f9d7d35f5b0600dcd036e",
+    "status": "PASS",
+    "toolchain": {
+      "lakefile": "verification/lean/lakefile.toml",
+      "lakefile_sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "lockfile": "verification/lean/lake-manifest.json",
+      "lockfile_sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "mathlib_input_revision": "v4.32.1",
+      "mathlib_revision": "520045ab14e26149ee970e2e617ca04b09bde5d6",
+      "toolchain": "leanprover/lean4:v4.32.1",
+      "toolchain_file": "verification/lean/lean-toolchain",
+      "toolchain_sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    }
+  },
+  "manifest_sha256": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+  "non_claims": [
+    "PAH-OMC-014 remains unresolved; R-488 and R-508 are unchanged; the active T-054 gate and host C6 T1 tier do not change.",
+    "No outer-state uniqueness, Cauchy convergence, projective Gibbs compatibility or limiting stationarity is asserted.",
+    "No infinite-volume dynamics, full joint cutoff removal, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass gap or TOE conclusion.",
+    "No Q3LOCK premise, observation fit, prediction credit or quantum/proper/Lorentzian interpretation of Markov time."
+  ],
+  "proof_constants": {
+    "A_cap": "11",
+    "H_cap": "80",
+    "J_max": "2",
+    "degree": 5,
+    "denominator_cost": "320",
+    "denominator_prefactor": "5",
+    "drift_coefficient": "10",
+    "good_event_lower": "11/16",
+    "lower_exponent": "1550/3",
+    "lower_prefactor": "11/80",
+    "neighbor_radius": "8",
+    "numerator_cost": "590/3",
+    "scalar_majorant_integral_upper": "5",
+    "second_moment_bound": "4",
+    "tail_split": "4",
+    "unit_cube_edge": "33/8",
+    "unit_cube_face": "4",
+    "unit_cube_vertex": "25/24"
+  },
+  "result_id": "R-509",
+  "run_hashes": {
+    "hostile": "15e1ea14eebd779271807aa686c5ab5bcda1aa6acaaea733658be068c40c123f",
+    "independent": "82256db02f6ea5a1ca34cdecf65ddf4516cc538ef27d58fb3108c34b03e9de33",
+    "primary": "58e4d15ff52009b43834253df82c5632bd33a3dd3ffee8f267c10755fd9020fc"
+  },
+  "schema": "tect/pah-omc016-integrated/1.0",
+  "status": "PASS",
+  "verdict": "PASS"
+}

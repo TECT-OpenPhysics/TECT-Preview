@@ -8747,6 +8747,211 @@
       "title": "PAH-OMC-016 preregisters a resolved radial counting candidate and separates its observable and dynamics obligations",
       "verdict": "inconclusive",
       "verification_summary": "25 exact contract/source/independent-recurrence/hostile checks pass. No Gibbs expectation sweep, no new carrier computation and no analytic nondegeneracy proof. Lean not run for a planning/coordinate-only audit; external signed review absent."
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the variational translation argument differentiate an unbounded heat trace?",
+          "disposition": "DISMISSED: two scalar Jensen inequalities use the unitary equivalence Z(t)=Z and differentiate only an integrable finite-degree polynomial."
+        },
+        {
+          "check": "Is the Hessian accidentally multiplied by an extra hbar squared?",
+          "disposition": "DISMISSED: the physical displacement Hessian and the nested momentum commutator are kept as distinct normalizations; the finite diagnostic rejects the extra factor."
+        },
+        {
+          "check": "Does the unbounded Falk--Bruch step rely on a formal positive-time exponential or an unverified common core?",
+          "disposition": "UPHELD as a remaining review target: bounded coordinate cutoffs, form identities, finite spectral matrices and monotone removal are written explicitly, but signed independent operator review is still required."
+        },
+        {
+          "check": "Can the local FKG component inequalities be used without a zero-source selected-law association proof?",
+          "disposition": "DISMISSED: the content receives the specific EXP-001593 loop limits and moment bounds and does not extend association to arbitrary DLR mixtures."
+        },
+        {
+          "check": "Does a positive local Duhamel bound survive subtraction of all nonzero Fourier modes?",
+          "disposition": "DISMISSED: EXP-001595 supplies the nonzero-mode upper bound and singular three-dimensional sum; the strict sign is asserted only when the explicit delta_beta is positive."
+        },
+        {
+          "check": "Can weak convergence alone pass the squared collective moment to the pressure slope?",
+          "disposition": "DISMISSED: the direct Griffiths lemma controls the second-moment tail by fixed nonzero source MGFs before taking the slope."
+        },
+        {
+          "check": "Does a pressure cusp automatically give two DLR states or a complete phase classification?",
+          "disposition": "UPHELD as false: the source-window compactness, kernel continuity and clipped expectation passage are separate, and extremality, purity, clustering and completeness are explicitly excluded."
+        }
+      ],
+      "assumptions": [
+        "The exact fixed-spacing positive-lambda three-dimensional eight-component Q3LOCK Hamiltonian, even periodic cubes L>=4, and collective source convention.",
+        "The finite/thermodynamic pressure, DLR/source-tangent, continuous-loop FKG and reflection/infrared content in EXP-001588, EXP-001589, EXP-001591, EXP-001593 and EXP-001595.",
+        "The KKK Proposition 3.18 and Proposition 3.9 source-scope mappings recorded in the hash-frozen literature audit.",
+        "All imported analytic and operator passages remain conditional until an independent mathematical reviewer accepts their hypotheses and limit order."
+      ],
+      "boundary": "T0 internal registered manuscript content for R-497. The collective lower bound, strict cusp and parity-related DLR pair are assembled conditionally from the listed sources; no signed independent acceptance or theorem-tier promotion is recorded.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The two new content blocks close the previously missing internal manuscript assembly: the collective translation double commutator and bounded-cutoff Falk--Bruch route provide a volume-independent local Duhamel lower bound, and the direct squared-tail Griffiths lemma joins that bound to the explicit infrared subtraction, pressure cusp and source-tangent DLR construction. This is a genuine proof-spine advance while preserving the T0 claim-nonbearing and PDF-deferred boundaries.",
+      "evidence_refs": [
+        "strategy/q3lock-collective-falk-bruch-content-260905.md#2-thermal-energy-and-a-variational-lemma-proved-from-scalar-jensen",
+        "strategy/q3lock-collective-falk-bruch-content-260905.md#5-bounded-local-coordinate-and-form-spectral-commutator-identity",
+        "strategy/q3lock-collective-falk-bruch-content-260905.md#6-falk-bruch-source-and-finite-rank-domain-crosswalk",
+        "strategy/q3lock-collective-falk-bruch-content-260905.md#7-remove-the-coordinate-cutoff-and-substitute-the-uniform-moment",
+        "strategy/q3lock-strict-cusp-tangent-content-260905.md#2-local-lower-bound-minus-the-nonzero-mode-infrared-sum",
+        "strategy/q3lock-strict-cusp-tangent-content-260905.md#4-direct-even-pressure-griffiths-lemma-with-a-squared-tail-estimate",
+        "strategy/q3lock-strict-cusp-tangent-content-260905.md#5-strict-collective-source-cusp-with-the-exact-factor-eight",
+        "strategy/q3lock-strict-cusp-tangent-content-260905.md#6-tangent-state-construction-and-strict-distinctness",
+        "verification/scripts/q3lock_collective_falk_bruch_content_audit.py#build_payload",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-collective-falk-bruch-content-audit/result.json#assertions",
+        "verification/scripts/q3lock_strict_cusp_tangent_content_audit.py#build_payload",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-strict-cusp-tangent-content-audit/result.json#assertions"
+      ],
+      "finding": "The registered collective/Falk--Bruch content derives rho(Q_0^2)>=theta_Q from scalar Jensen, the exact global displacement Hessian, parity and the selected zero-source FKG correlations. A bounded coordinate cutoff and finite spectral-matrix truncation make the KKK Falk--Bruch application and its cutoff limits explicit, yielding D_L(0,0)>=d_beta uniformly in V. The registered cusp/tangent content subtracts the EXP-001595 nonzero-mode infrared sum, proves an explicit delta_beta>0 regime A0>I3 and beta>beta_star, controls squared tails of the collective source without differentiability at zero, and composes the positive pressure slope with the EXP-001591 source-window DLR construction to obtain a parity-related pair with opposite integrable Q_0 expectations. The finite diagnostics pass 40/40 and 42/42 and each result is byte-identical on replay. These are conditional internal proof-text results, not an independently certified phase theorem.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001598",
+      "method": [
+        "Freeze the two completed proof-content notes and their exact verifier paths after the PAH checkpoint returned the shared work window.",
+        "Replace the unsafe heat-trace differentiation route by the unitary global displacement, scalar Jensen spectral measures and finite-degree polynomial Hessian.",
+        "Derive the exact collective double commutator, parity/continuous-loop FKG moment inequalities, bounded-coordinate form identity and finite-rank Falk--Bruch passage.",
+        "Remove the coordinate cutoff at fixed finite volume and use the monotonicity of s f(k/s) to obtain the volume-independent d_beta lower bound.",
+        "Join the local bound to the reflection/infrared nonzero-mode subtraction and write the sufficient threshold A0>I3, beta>beta_star without claims outside that regime.",
+        "Prove the required Griffiths second-moment estimate directly by two-sided Chernoff bounds and a layer-cake squared-tail estimate, then convert the slope using the exact factor eight.",
+        "Compose fixed-source pressure derivatives with the EXP-001591 source-window compactness, kernel continuity and clipped expectation passage, and replay both finite diagnostic scripts twice."
+      ],
+      "missing_assumptions": [
+        "Signed line-by-line independent mathematical review of the variational, form-domain, finite spectral cutoff, FSS/infrared and source-to-zero passages.",
+        "Independent literature applicability review, complete source-hash recomputation after final manuscript freeze, and a clean-snapshot primary/independent/integrated replay.",
+        "A bounded claim-card and result-lineage decision, external mathematical referee review, and final manuscript convention/content freeze."
+      ],
+      "next_action": "Update the R-497 manifest with the two registered notes, verifiers and byte-stable result artifacts; retain all correction precedences and open gates. Then commission independent mathematical and literature review before any claim promotion, paper freeze or PDF generation.",
+      "non_claims": [
+        "No all-parameter positive-lambda phase theorem or phase-absence result below the sufficient threshold.",
+        "No assertion of extremality, purity, clustering, uniqueness or completeness of the DLR states.",
+        "No common infinite-volume real-time dynamics, algebraic KMS identification, ground-state phase or spectral gap.",
+        "No continuum regulator removal, physical-vacuum ordering, cosmological interpretation, C6/CP1/Sector-A/Pre-A closure or Yang--Mills conclusion.",
+        "No external signed review, submission, upload, release, tag or PDF; PDF remains deferred until content freeze and final organization."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the registered collective/Falk--Bruch lower-bound content be joined to the EXP-001595 infrared estimate and the pressure/DLR chain to obtain the strict cusp and parity-related DLR states under one explicit sufficient regime without importing a scalar phase theorem?",
+      "recorded_at": "2026-09-05T08:30:23Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000780",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000781",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000782",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001588",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001589",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001591",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001593",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001595",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-05",
+      "revisit_condition": "Reopen if an independent audit finds a sign, domain, normalization, source-limit or topology defect, or if the exact Hamiltonian, dimension, source path or sufficient-regime statement changes. Preserve this registered version and its result hashes.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK collective lower bound and strict cusp/tangent composition registered as conditional content",
+      "verdict": "advanced",
+      "verification_summary": "Collective diagnostic 40/40 and cusp/tangent diagnostic 42/42; both outputs are byte-identical under immediate replay. Diagnostics are finite reproduction evidence and do not substitute for independent mathematical review."
+    },
+    {
+      "assumptions": [
+        "Exactly the already preregistered labelled counting state, resolved radial path and bounded-amplitude witness topology.",
+        "Finite bounded-degree strips, the original positive sextic term and retained boundary interactions.",
+        "Standard measure/inequality theorems are used only with the displayed domination and finite-moment hypotheses."
+      ],
+      "boundary": "Exactly OMC-004 G_n, n>=2; K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0 and other source couplings one. R_j=2^j and M_psi,j=2^(2j); j limit only, at each fixed n. Full labelled counting ensemble, phases at zero retained, no Jacobian, no changed generator/projection/mobility. No n limit taken.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "auxiliary_support: PASS for the exact preregistered state-test gate. This supplies a new rigorous uniform input but does not change the active T-054 gate, the host C6 T1 tier or physical admission.",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json#conclusion",
+        "strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md#fixed-n-mesh-passage-and-tightness",
+        "strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md#boundary-valid-integration-by-parts-and-local-moment-maximum",
+        "strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md#conditional-small-ball-bound",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc016-uniform/integrated.json#checks",
+        "verification/lean/Tect/PahOmc016.lean#L17",
+        "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc016-uniform-260906-v1.0.tex.txt#L1"
+      ],
+      "finding": "The endpoint-inclusive h_j^N cell identity, sextic product majorant and positive unit-cube denominator give all-j fixed-n tightness and weak convergence to the labelled dr Gibbs law nu_n. Boundary-valid radial integration by parts and a vertexwise maximum yield X^3<=1+10X, hence nu_n(r_v^2)<=4 uniformly in n. On the good-neighbor event of probability at least 11/16, the exact conditional polynomial has A<=11 and |H|<=80, giving nu_n(b_v^2)>=(11/80)exp(-1550/3)>0. Both preregistered witnesses satisfy the bound. The exact analytic statement is not an extrapolation from finite diagnostics.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-509"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001599",
+      "method": [
+        "Recheck the unchanged preregistration SHA-256 1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7 and its six parent hashes.",
+        "Translate the original K=2 covariant energy into the signed radial polynomial without removing boundary terms or zero-amplitude labels.",
+        "Prove fixed-n tightness and the expanding-grid weak limit with endpoint-inclusive step cells and an integrable sextic majorant; independently reconstruct with finite boxes and a tail bound.",
+        "Justify integration by parts at both radial endpoints and use the local maximum of second moments rather than a volume sum.",
+        "Derive the conditional good-neighbor and small-ball constants independently from the frozen degree and couplings.",
+        "Run primary 30, independent 23, hostile 17 and integrated 29 checks; compile ten Lean theorems without diagnostics; replay all stored JSONs byte-for-byte.",
+        "Create one four-page synthesis PDF, inspect every rendered page and retain explicit physical and ordered-limit non-claims."
+      ],
+      "missing_assumptions": [
+        "None additionally needed for this scoped test. Outer Cauchy convergence, common limiting state, limiting dynamics/stationarity and physical identity are not proved."
+      ],
+      "next_action": "Propose one separate bounded-cylinder Cauchy question for the finite-graph cutoff-limit laws nu_n as n grows. Do not infer outer convergence, stationarity passage or dynamics from the lower bound.",
+      "non_claims": [
+        "PAH-OMC-014 remains unresolved; R-488, R-508 and C_sw=540 retain their original scopes.",
+        "No outer-state uniqueness/Cauchy convergence, projective Gibbs compatibility, limiting stationarity or infinite-volume dynamics.",
+        "No full joint regulator removal, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass gap or TOE.",
+        "No Q3LOCK premise, fitting, changed rates or reinterpretation of Markov time."
+      ],
+      "provenance": "contemporaneous",
+      "question": "For the frozen resolved-radial counting candidate, are fixed-n amplitude laws tight as j grows, and is liminf_j mu_(n,j)(b_v^2)>=c>0 for v=a,d with a common c for every n>=2?",
+      "recorded_at": "2026-09-06T03:17:16Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001597",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-06",
+      "revisit_condition": "An exact defect in source translation, cell normalization, boundary passage, domination or uniform moment/small-ball bound reopens the verdict. Changed state, cutoff or witness requires a new version.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "PAH-OMC-016 fixed-graph radial limit and volume-uniform matter-witness lower bound",
+      "verdict": "advanced",
+      "verification_summary": "Primary 30/30, non-importing independent 23/23, hostile 17/17, integrated 29/29; ten diagnostics-free Lean declarations. Stored replay matches all three lane JSONs byte-for-byte and the complete integrated payload. Analytic measure construction is explicit, not fully formalized in Lean; no external signed review claimed."
     }
   ],
   "kind": "proof_explorations",

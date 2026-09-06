@@ -1,0 +1,148 @@
+{
+  "schema": "tect/pah-omc016-result/1.0",
+  "result_id": "R-509",
+  "contract_id": "PAH-OMC-016",
+  "date": "2026-09-06",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED"
+  ],
+  "base_commit": "f459c4bfa7a08363c0e0abcc3c008418f422db44",
+  "epistemic_scope": "Closed only within the preregistered static-state tightness and uniform matter-witness test. The host claim remains T1; no production owner or physical identity is supplied.",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-016-resolved-radial-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-OMC-016-resolved-radial-prereg-v1.json": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md": "076f14a9f724403fe4e46b17cea91f650863b4bda67e25ff47f91348d77e6ca2",
+    "codes/foundations/pah_omc016_uniform.py": "b28751758f89983932e80ce80957352742bf85879d45dd88b1a7c4ef4e40cd53",
+    "codes/foundations/pah_omc016_uniform_independent.py": "1291c4462e275068d489009999fbb92cff088d496dbcf4148bb41704b7eeb58e",
+    "codes/foundations/pah_omc016_uniform_hostile.py": "98091b64426b1a0fcca2214097d6f3778add1c03f12ab56a1e5f4b443c3e0669",
+    "verification/scripts/pah_omc016_uniform_verify.py": "06aa246525440846e91d0df9613ba6cdb2208b2b131545cfd77715c179d994e1",
+    "verification/lean/Tect/PahOmc016.lean": "ef70a382964668375f4a98b328f0e6aafd5d2405716f9d7d35f5b0600dcd036e",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc016-uniform-260906-v1.0.tex.txt": "dfa4f6bcd0d279f5d64cc2869c43184110ef3daa9839616d98f34ce175db4d6b"
+  },
+  "exact_scope": {
+    "geometry": "Exactly OMC-004 anchored two-row relational strip G_n, n>=2, including frontier and boundary interactions; no physical dimension, length or volume assigned.",
+    "parameters": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0; all other displayed couplings one.",
+    "cutoff": "R_j=2^j, M_psi,j=2^(2j), h_j=2^(-j), j>=0; fixed n first. No n limit or joint local-cutoff limit is taken.",
+    "state": "mu_(n,j)=exp(-F)/Z over the full labelled counting domain, deterministic Q=sum ell, weights w_Q=Z_Q/Z. Zero-amplitude phase labels retained; no probe, quotient or radial Jacobian.",
+    "witness": "Exactly b_v=min(1,r_v), r_v=h_j ell_v, v=a,d. These are not raw ell or ell/M_psi at j>0.",
+    "dynamics": "No rate, root, mobility, projection or time-unit change; only the declared finite stationary states are studied. Markov time remains external stochastic time."
+  },
+  "conclusion": {
+    "exact_question": "Are fixed-n amplitude laws tight in j, and is liminf_j mu_(n,j)(b_v^2)>=c>0 for v=a,d with one c for every n>=2?",
+    "fixed_n": "Uniform-in-j tightness and weak convergence to nu_n proportional to exp(-F(r,z)) dr with labelled background counting.",
+    "tail": "For L>=4, sup_j mu_(n,j)(max_v r_v>=L)<=exp(C_n) N 5^(N-1) exp(-L); C_n=25N/24+33E/8+4P.",
+    "local_moment": "nu_n(r_v^2)<=4 at every vertex, uniformly in n, from X^3<=1+10X for X=max_v nu_n(r_v^2).",
+    "uniform_witness": "lim_j mu_(n,j)(b_v^2)=nu_n(b_v^2)>=(11/80)exp(-1550/3)>0 for every n>=2 and v=a,d (indeed all vertices).",
+    "constant_role": "DERIVED conservative strict-positive proof bound; not a fit, measured value or estimate of actual expectation."
+  },
+  "proof_constants": {
+    "A_cap": "11",
+    "H_cap": "80",
+    "J_max": "2",
+    "degree": 5,
+    "denominator_cost": "320",
+    "denominator_prefactor": "5",
+    "drift_coefficient": "10",
+    "good_event_lower": "11/16",
+    "lower_exponent": "1550/3",
+    "lower_prefactor": "11/80",
+    "neighbor_radius": "8",
+    "numerator_cost": "590/3",
+    "scalar_majorant_integral_upper": "5",
+    "second_moment_bound": "4",
+    "tail_split": "4",
+    "unit_cube_edge": "33/8",
+    "unit_cube_face": "4",
+    "unit_cube_vertex": "25/24"
+  },
+  "proof_coverage": {
+    "measure_normalization": "Certificate: exact h_j^N endpoint-inclusive step-cell identity; no added Jacobian.",
+    "fixed_n_tightness_and_weak_passage": "Certificate: product sextic majorant, positive unit-cube denominator, dominated convergence; independent finite-box/Riemann plus tail reconstruction.",
+    "boundary_and_domain": "Certificate: r_v exp(-F) vanishes at 0 and infinity; absolute polynomial-times-sextic domination justifies Fubini and integration by parts.",
+    "volume_uniformity": "Certificate local maximum moment argument; Lean cubic_moment_barrier, independently derived moment/degree constants.",
+    "local_probability": "Certificate conditional dr density with A in [1/4,11] and |H|<=80 on the good-neighbor event; Lean tail and positive-bound algebra.",
+    "encoded_not_full_formalization": "Lean checks ten named algebraic/inequality propositions. The measure construction and analytic source crosswalk are not fully formalized.",
+    "no_finite_table_promotion": "Executable local-star and endpoint probes audit implementation; universal n,j statements follow from the explicit analytic proof."
+  },
+  "assumptions": [
+    "Exactly the frozen labelled counting state hypothesis and the six preregistered parent definitions.",
+    "The fixed dyadic resolved radial path and explicitly preregistered bounded-amplitude witness topology.",
+    "Finite bounded-degree anchored strips and positive sextic source coefficient; all original retained boundary terms.",
+    "Only standard dominated convergence, Fubini, one-dimensional integration by parts, Jensen, Cauchy--Schwarz, Markov and finite union bound with the displayed hypotheses."
+  ],
+  "missing_assumptions": [
+    "No extra unproved premise is used for this bounded state-test theorem. Outer Cauchy convergence, a common limiting state, limiting generator/stationarity and physical identification remain separate unproved obligations."
+  ],
+  "lean": {
+    "path": "verification/lean/Tect/PahOmc016.lean",
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "declarations": [
+      "amplitude_injection",
+      "signed_edge_expansion",
+      "cubic_moment_barrier",
+      "neighbor_event_bound",
+      "conditional_cost",
+      "linear_tail_absorption",
+      "integrable_tail_comparison",
+      "lower_bound_assembly",
+      "bound_strictly_positive",
+      "exponent_assembly"
+    ],
+    "scope": "Exact source-amplitude algebra, signed-edge expansion, cubic barrier, neighbor arithmetic, tail inequalities, lower-bound assembly and positivity. All measure-theoretic hypotheses are discharged analytically in the certificate, not encoded here."
+  },
+  "verification": {
+    "command": "python -X utf8 verification/scripts/pah_omc016_uniform_verify.py",
+    "stored_replay": "python -X utf8 verification/scripts/pah_omc016_uniform_verify.py --check",
+    "runs": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc016-uniform",
+    "independence": "Non-importing Fraction-based coefficient reconstruction versus primary symbolic differentiation; independent finite-box/tail presentation versus step-density DCT. Hostile controls are internal, not external signed referee review."
+  },
+  "adversarial_review": [
+    {
+      "objection": "Missing half/sign or an omitted boundary interaction invalidates the polynomial.",
+      "disposition": "DISMISSED within pinned definitions by direct expansion, exact incidence bound and sign/factor countercontrols."
+    },
+    {
+      "objection": "A polar Jacobian changes the virial constant or upper-endpoint cells are lost.",
+      "disposition": "DISMISSED by the explicit labelled cell identity and boundary-valid dr integration by parts; hostile gamma-integral control distinguishes 1 from 2."
+    },
+    {
+      "objection": "The fixed-n tail constant implies volume uniformity.",
+      "disposition": "UPHELD against this inference; the local maximum proof, not that tail constant, supplies uniformity."
+    },
+    {
+      "objection": "Conditioning replaces the generator or assumes a positive field H.",
+      "disposition": "DISMISSED: it is ordinary disintegration of the declared state and the estimate uses both signs through |H|."
+    },
+    {
+      "objection": "The state lower bound closes outer convergence or repairs R-508.",
+      "disposition": "UPHELD against either stronger claim; both are explicitly excluded."
+    }
+  ],
+  "synthesis_note": "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc016-uniform-260906-v1.0.tex.txt",
+  "pdf_review": "All four rendered pages inspected on 2026-09-06; no clipping, overlap or missing glyph. Overfull boxes zero. One gate-level synthesis PDF.",
+  "closed_scoped_gate": "PAH-OMC-016 future_discriminating_gate: tight fixed-n amplitude laws and n-uniform positive matter witness.",
+  "remaining_gates": [
+    "T-054 active gate unchanged",
+    "PAH-OMC-014 unresolved",
+    "Outer bounded-cylinder Cauchy convergence and separately limiting stationarity/dynamics",
+    "Physical Pre-A, Sector-A, spacetime, QFT and gravity admission"
+  ],
+  "next_single_question": "Do the cutoff-limit finite-graph laws nu_n form a Cauchy family on the same local bounded-amplitude cylinder observables as n increases, without changing the model or using a post-selected state?",
+  "revisit_condition": "An exact counterexample to source-energy translation, endpoint/multiplicity identity, domination, boundary integration or uniform moment/small-ball estimate reopens this verdict. Changed owner state, regulator path or witness requires a new version.",
+  "non_claims": [
+    "PAH-OMC-014 remains unresolved; R-488 and R-508 are unchanged; the active T-054 gate and host C6 T1 tier do not change.",
+    "No outer-state uniqueness, Cauchy convergence, projective Gibbs compatibility or limiting stationarity is asserted.",
+    "No infinite-volume dynamics, full joint cutoff removal, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass gap or TOE conclusion.",
+    "No Q3LOCK premise, observation fit, prediction credit or quantum/proper/Lorentzian interpretation of Markov time."
+  ]
+}

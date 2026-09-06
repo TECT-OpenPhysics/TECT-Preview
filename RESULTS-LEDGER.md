@@ -22,12 +22,13 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-509](#r-509) | PAH-OMC-016 radial tightness and uniform matter nondegeneracy | Fixed-n all-j tightness and radial weak limit; lim_j mu(b_v^2)>=(11/80)exp(-1550/3)>0 for both declared witnesses uniformly in n>=2. Analytic local-moment/conditional proof; primary 30, independent 23, hostile 17, integrated 29 and ten Lean theorems pass. Scoped PASS only; T-054 and host tier unchanged. |
 | [R-508](#r-508) | PAH-OMC-015 counting-ensemble cutoff nondegeneracy obstruction | Exact charge-erasure counting gives mu(ell_v^2)<=2^(N-1) exp(-R^2/8-R^4/4-R^6/6). On the fixed OMC-010 path, R then n gives squared limits (0,0,1,1) for the four R-488 observables. CANDIDATE_REJECTED for this ensemble only; primary 21, independent 20, hostile 12 and integrated 33 checks pass with nine Lean declarations. No host claim or active gate promotion. |
 | [R-501](#r-501) | EXP-001586 Q3LOCK P-06 quantitative Gaussian weak-limit audit | R-501 / EXP-001586 records a T0 claim-nonbearing analytic and executable audit of the fixed-volume periodic Gaussian weak limit. It derives a uniform O(N^-1) grid covariance bound, an O(N^-1/2) polygonal covariance bound, an arbitrary-time Kolmogorov increment estimate and a bounded residual-weight transfer lemma. The verifier passes 13502/13502 assertions with byte-identical replay; spatial W_t, P-09, phase, DLR and external-review gates remain open, and no PDF is issued. |
 | [R-500](#r-500) | EXP-001584 Q3LOCK P-06 Gaussian Fourier covariance audit | R-500 / EXP-001584 records a T0 claim-nonbearing fixed-mesh audit of the massive periodic Gaussian convention, csc-squared normalization, Fourier covariance, cyclic resistance, increment bound, and exact source interpolation. The verifier passes 255/255 assertions; loop-limit, weighted-tempered, pressure, phase, DLR and external-review gates remain open, and no PDF is issued. |
 | [R-499](#r-499) | EXP-001583 Q3LOCK FKG mixed-derivative and interpolation audit | R-499 / EXP-001583 records a T0 claim-nonbearing finite-algebra audit of the Q3 mixed-derivative, supermodularity, periodic interpolation, and clipped-product steps. The verifier passes 306/306 exact-rational assertions; P-06 loop-topology, moment, pressure, phase, DLR and external-review gates remain open, and no PDF is issued. |
 | [R-498](#r-498) | EXP-001580 Q3LOCK periodic/open pressure seam and min--max audit | R-498 / EXP-001580 records a T0 claim-nonbearing finite edge/seam normalization and min--max scaling audit. Correct periodic onsite allocation is 3c (not 3c/2); the incidence Young bound gives 288 c^2 L^2/(eta g), and eta=L^(-1/2) yields an O(L^(-1/2)) density diagnostic. Conditional pressure/form-domain, Fekete and moving-beta steps remain open; deterministic evidence is 64/64 and no theorem or PDF is issued. |
-| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes; EXP-001567 adds the exact EXP-000780 collective-source restriction and pressure dictionary; EXP-001568 inserts that dictionary into the integrated P-06/P-09 proof text; EXP-001570 independently audits its algebra and limit order; EXP-001571 audits the finite-grid-to-fixed-loop FKG association passage; EXP-001572 audits the finite FSS-to-loop Duhamel and Fourier passage; EXP-001573 audits the conditional pressure-to-cusp and tangent-state bridge; EXP-001574 audits the KP general-vector theorem-domain and source-window hypothesis crosswalk; EXP-001575 audits the source-window KP moment constants and common tempered tightness bound; EXP-001577 audits the compact-boundary source-to-zero DLR kernel and the KP determining-class passage; EXP-001578 audits the explicit projective W_t tightness diagonal and source-varying extraction. P-06/P-09, source/form-domain review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
+| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes; EXP-001567 adds the exact EXP-000780 collective-source restriction and pressure dictionary; EXP-001568 inserts that dictionary into the integrated P-06/P-09 proof text; EXP-001570 independently audits its algebra and limit order; EXP-001571 audits the finite-grid-to-fixed-loop FKG association passage; EXP-001572 audits the finite FSS-to-loop Duhamel and Fourier passage; EXP-001573 audits the conditional pressure-to-cusp and tangent-state bridge; EXP-001574 audits the KP general-vector theorem-domain and source-window hypothesis crosswalk; EXP-001575 audits the source-window KP moment constants and common tempered tightness bound; EXP-001577 audits the compact-boundary source-to-zero DLR kernel and the KP determining-class passage; EXP-001578 audits the explicit projective W_t tightness diagonal and source-varying extraction; EXP-001598 registers the collective/Falk--Bruch lower-bound and strict cusp/tangent content with 40/40 and 42/42 byte-stable finite replays. P-06/P-09, operator/form-domain, independent mathematical review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
 | [R-494](#r-494) | PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit | R-494 / EXP-001504 finds no source-owned cross-Q sector weight law in the hash-pinned PAH-001/OMC-010/OMC-011/OMC-012/OMC-013 scope. Primary 20/20, independent 14/14, hostile 12/12, integrated 31/31 pass; verdict HOLD_FOR_EVIDENCE. Fixed-Q component Gibbs states remain valid, but a global mu_(n,R), omega, Cauchy error and stationarity test are not defined. This is T0 claim-nonbearing source-input evidence only; no physical or continuum conclusion follows. |
 | [R-493](#r-493) | PAH-OMC-013 full-Q eventual generator intertwining on the grade-blind cylinder | R-493 / EXP-001474 proves pointwise intertwining after N(f)=max(2,m_f+1) on the full-Q grade-blind finite cylinder algebra for unchanged PAH-001 rates; primary 22/22, independent 16/16, hostile 13/13, integrated 21/21 and Lean R493 pass. This is T0 claim-nonbearing finite algebraic progress only; weak Gibbs-L2, closability, infinite volume, continuum and physical conclusions remain open. |
 
@@ -17416,11 +17417,12 @@ The content block `strategy/q3lock-reflection-infrared-content-260905.md`
 supplies direct Hilbert Gaussian-kernel spatial reflection positivity,
 zero-sum source uniform integrability from finite FSS, the actual loop
 Duhamel bound, and the three-dimensional singular infrared sum limit.
-The separate collective/Falk--Bruch local lower bound is still required
-before a positive zero-mode conclusion. The exact finite graph, source,
-shell and kernel diagnostics pass 90/90 with byte-stable replay; these are
-not an infinite-dimensional proof or signed external review. R-497 remains
-T0, claim-nonbearing and INTERNAL_REVIEW_ONLY. No PDF is generated.
+The registered EXP-001598 collective/Falk--Bruch content now supplies the
+separate local lower-bound input needed before a positive zero-mode
+conclusion. The exact finite graph, source, shell and kernel diagnostics
+pass 90/90 with byte-stable replay; these are not an infinite-dimensional
+proof or signed external review. R-497 remains T0, claim-nonbearing and
+INTERNAL_REVIEW_ONLY. No PDF is generated.
 
 **Continuous-loop FKG content (EXP-001593).**
 `strategy/q3lock-continuous-loop-fkg-content-260905.md` supplies a direct
@@ -17432,7 +17434,39 @@ without claiming association of arbitrary DLR mixtures or a positive cusp.
 The finite alternative diagnostic passes 504/504; the pinned EXP-001583
 polynomial/interpolation diagnostic replays 306/306 byte-identically.
 This is internal T0 content, not signed mathematical acceptance or a phase
-promotion; the full FSS/operator/Falk-Bruch/Griffiths composition is open.
+promotion; the complete FSS/operator/Falk-Bruch/Griffiths composition is
+recorded conditionally in EXP-001598 and remains open to independent review.
+
+**Collective/Falk--Bruch content (EXP-001598).**
+The registered content block
+strategy/q3lock-collective-falk-bruch-content-260905.md replaces the unsafe
+heat-trace differentiation route by a unitary global displacement and two
+scalar Jensen inequalities. It derives the exact collective Hessian and
+double-commutator normalization, uses the selected zero-source FKG
+correlations to obtain rho(Q_0^2)>=theta_Q, and applies the KKK
+Falk--Bruch inequality through bounded coordinate cutoffs and finite
+spectral matrices. The cutoff and monotonicity steps give the
+volume-independent lower bound D_L(0,0)>=d_beta, conditional on the
+displayed form and loop inputs. The finite diagnostic
+q3lock_collective_falk_bruch_content_audit.py passes 40/40 and is
+byte-identical on replay. The operator/domain and thermodynamic passages
+still require signed independent mathematical review; no theorem-tier
+promotion is made.
+
+**Strict cusp and tangent-state content (EXP-001598).**
+The registered content block
+strategy/q3lock-strict-cusp-tangent-content-260905.md joins the local
+lower bound to the EXP-001595 nonzero-mode subtraction, derives the explicit
+sufficient regime A0>I3 and beta>beta_star, and proves the pressure-slope
+step with a direct two-sided Chernoff and squared-tail lemma. It then
+composes the EXP-001591 source-window compactness, specification continuity
+and clipped-expectation passage to construct a conditional parity-related
+pair of zero-source tempered DLR states with opposite Q_0 expectations.
+The finite diagnostic q3lock_strict_cusp_tangent_content_audit.py passes
+42/42 and is byte-identical on replay. Equality or parameter values outside
+the sufficient regime are inconclusive, and extremality, purity, clustering
+and completeness are not asserted. This is registered T0 manuscript
+content, not external acceptance of a phase theorem.
 
 **DLR/tangent content (EXP-001591).**
 `strategy/q3lock-dlr-source-tangent-content-260905.md` supplies the
@@ -17503,7 +17537,7 @@ mathematical theorem.
 
 | source | SHA-256 |
 |---|---|
-| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `b4a1742a569f974e078f81417ece2a7c48aea8edd081d0ed464f14dc7982f62c` |
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `799b5372c1f6f29bf97c4c6366c9cc1ef486404272e02ecbc531aa8af2054e66` |
 | upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
 | upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
 | EXP-000782 upstream scope-firewall audit | `cce56eed01dfe6239d8ddbcc43e823df4e2c68ebeebe51dfc71823b545b165e9` |
@@ -17556,6 +17590,12 @@ mathematical theorem.
 | primary result JSON | `a42c5f5684002b2b71908a739c91867411c9d269ca3f4b0343c49d986cfc9882` |
 | independent result JSON | `566942655d7ffce9f3e83b415cdb2d3339ec32a7b3b49b2828390e17993e0af9` |
 | integrated result JSON | `2aaafe56bd215735bae89b54d87852dd804d7014c6f6fc66ff275903ba6d661e` |
+| `strategy/q3lock-collective-falk-bruch-content-260905.md` | `618f477b846f212b5f62b4ce61d58508b583451e4415f29df8cb3df215bb7439` |
+| `verification/scripts/q3lock_collective_falk_bruch_content_audit.py` | `a855ef77122b79992476a438a9d99c920ad552e19f6159c10ad068b53ddc0933` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-collective-falk-bruch-content-audit/result.json` | `4a75de744f712be49059ec76deddda9794517b798f7658eafb9f60736181f1f3` |
+| `strategy/q3lock-strict-cusp-tangent-content-260905.md` | `ea94a80d9ba225b50aeaa8cf2d712b305f106bd5aa7797e9946052e83c487e87` |
+| `verification/scripts/q3lock_strict_cusp_tangent_content_audit.py` | `8ec2fd6a79fbf17afc4a5400da02dbe13ed755ba9ea86b0463329f2cda41ddec` |
+| `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-strict-cusp-tangent-content-audit/result.json` | `bd7c50b10f8fc3667966b0340bf7c942a34661ac2bbb313611a9b86300b4d45d` |
 
 **Where proven.** The exact model and candidate component ledger are recorded
 in `strategy/q3lock-exp782-independent-result-manifest-260905.json`. The
@@ -18058,6 +18098,64 @@ state-selection/cutoff contract or an exact counterexample to the displayed
 bound reopens this route. Do not automatically tune or replace the law.
 Publication target: candidate-level verification appendix after independent
 external mathematical review; no physical publication claim.
+
+<a id="r-509"></a>
+### R-509 -- PAH-OMC-016 radial tightness and uniform matter nondegeneracy
+
+**Date and host.** 2026-09-06; C6-SPACETIME-SIGNATURE / T-054.
+Verdict `PASS` for the frozen candidate's static-state gate;
+`auxiliary_support` relative to the unchanged mainline gate. Evidence:
+ANALYTIC, EXACT, EXECUTED. The host remains T1; no physical promotion.
+
+**Exact scope.** OMC-004 anchored strip G_n, n>=2, all boundary/frontier
+interactions retained. K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0,
+other source couplings one. R_j=2^j, M_psi,j=2^(2j), radial mesh 2^(-j).
+The j limit is taken only at each fixed n; no n limit is taken. The source
+functional, rates, mobility, projection and time scale are unchanged.
+Reference is full labelled counting with w_Q=Z_Q/Z and zero-amplitude phase
+labels retained. No Jacobian or quotient is inserted.
+
+**Statement and proof.** The endpoint-inclusive lifted-cell identity gives
+the exact partition h_j^N Z_(n,j). A product sextic majorant and positive
+unit-cube denominator prove uniform-in-j fixed-n tightness and weak
+convergence to nu_n proportional to exp(-F(r,z)) dr with labelled z.
+At L>=4 the all-j tail is bounded by exp(C_n) N 5^(N-1) exp(-L), with
+C_n=25N/24+33E/8+4P; this part is not volume-uniform. Boundary-valid radial
+integration by parts gives 1=nu_n(r_v partial_v F). For the maximum local
+second moment, X^3<=1+10X, so nu_n(r_v^2)<=4 uniformly in n. The good-neighbor
+event has probability at least 11/16; the conditional radial polynomial
+has A<=11 and |H|<=80 there. Hence, for both b_v=min(1,r_v), v=a,d,
+`lim_j mu_(n,j)(b_v^2)=nu_n(b_v^2)>=(11/80)exp(-1550/3)>0`
+with one derived c for every n>=2 (indeed every vertex). This is a proof
+bound, not an estimate or fitted expectation.
+
+**Source and reproduction.** Immutable preregistration SHA-256:
+`1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7`.
+The result card, complete source pins, assumptions and coverage bridge are
+`strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json`; the full analytic and
+independent finite-box/tail proof is `PAH-OMC-016-uniform-certificate.md`
+in the same directory. Run
+`python -X utf8 verification/scripts/pah_omc016_uniform_verify.py --check`.
+Primary 30/30, independent 23/23, hostile 17/17 and integrated 29/29 pass;
+all stored JSONs match replay, with ten diagnostics-free Lean declarations.
+The independent code imports neither primary nor prior PAH implementations.
+Lean encodes algebra/barriers, not the entire measure-theoretic proof.
+No external signed referee report is claimed.
+
+**Checkpoint.** One four-page synthesis note/PDF:
+`claims/C6-SPACETIME-SIGNATURE/notes/pah-omc016-uniform-260906-v1.0.tex.txt`.
+All rendered pages reviewed; zero overfull boxes. Runs are in
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc016-uniform/`.
+
+**Boundary and next question.** Only the preregistered tightness/uniform
+nondegeneracy gate is closed. PAH-OMC-014, outer Cauchy convergence, common
+limiting state, limiting stationarity and dynamics remain unproved.
+R-488/R-508 are not changed; old integer cylinders and C_sw=540 are not
+imported to this mesh. No Q3LOCK input, continuum, physical Pre-A, spacetime,
+QFT, gravity, Yang-Mills, mass gap or TOE conclusion. The next single
+question is whether nu_n is Cauchy on the same local bounded-amplitude
+cylinders as n grows. An exact source/measure/boundary/uniform-estimate
+defect reopens this verdict; changed definitions require a new version.
 
 ## Notes on status
 

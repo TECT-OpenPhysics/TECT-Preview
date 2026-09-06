@@ -1,0 +1,65 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-016 fixed-graph radial limit and volume-uniform matter-witness lower bound",
+  "question": "For the frozen resolved-radial counting candidate, are fixed-n amplitude laws tight as j grows, and is liminf_j mu_(n,j)(b_v^2)>=c>0 for v=a,d with a common c for every n>=2?",
+  "finding": "The endpoint-inclusive h_j^N cell identity, sextic product majorant and positive unit-cube denominator give all-j fixed-n tightness and weak convergence to the labelled dr Gibbs law nu_n. Boundary-valid radial integration by parts and a vertexwise maximum yield X^3<=1+10X, hence nu_n(r_v^2)<=4 uniformly in n. On the good-neighbor event of probability at least 11/16, the exact conditional polynomial has A<=11 and |H|<=80, giving nu_n(b_v^2)>=(11/80)exp(-1550/3)>0. Both preregistered witnesses satisfy the bound. The exact analytic statement is not an extrapolation from finite diagnostics.",
+  "verdict": "advanced",
+  "decision_reason": "auxiliary_support: PASS for the exact preregistered state-test gate. This supplies a new rigorous uniform input but does not change the active T-054 gate, the host C6 T1 tier or physical admission.",
+  "boundary": "Exactly OMC-004 G_n, n>=2; K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0 and other source couplings one. R_j=2^j and M_psi,j=2^(2j); j limit only, at each fixed n. Full labelled counting ensemble, phases at zero retained, no Jacobian, no changed generator/projection/mobility. No n limit taken.",
+  "next_action": "Propose one separate bounded-cylinder Cauchy question for the finite-graph cutoff-limit laws nu_n as n grows. Do not infer outer convergence, stationarity passage or dynamics from the lower bound.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "task_id": "T-054",
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-509"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "related": [
+    {
+      "id": "EXP-001597",
+      "relation": "continues"
+    }
+  ],
+  "method": [
+    "Recheck the unchanged preregistration SHA-256 1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7 and its six parent hashes.",
+    "Translate the original K=2 covariant energy into the signed radial polynomial without removing boundary terms or zero-amplitude labels.",
+    "Prove fixed-n tightness and the expanding-grid weak limit with endpoint-inclusive step cells and an integrable sextic majorant; independently reconstruct with finite boxes and a tail bound.",
+    "Justify integration by parts at both radial endpoints and use the local maximum of second moments rather than a volume sum.",
+    "Derive the conditional good-neighbor and small-ball constants independently from the frozen degree and couplings.",
+    "Run primary 30, independent 23, hostile 17 and integrated 29 checks; compile ten Lean theorems without diagnostics; replay all stored JSONs byte-for-byte.",
+    "Create one four-page synthesis PDF, inspect every rendered page and retain explicit physical and ordered-limit non-claims."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json#conclusion",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md#fixed-n-mesh-passage-and-tightness",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md#boundary-valid-integration-by-parts-and-local-moment-maximum",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md#conditional-small-ball-bound",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc016-uniform/integrated.json#checks",
+    "verification/lean/Tect/PahOmc016.lean#L17",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc016-uniform-260906-v1.0.tex.txt#L1"
+  ],
+  "assumptions": [
+    "Exactly the already preregistered labelled counting state, resolved radial path and bounded-amplitude witness topology.",
+    "Finite bounded-degree strips, the original positive sextic term and retained boundary interactions.",
+    "Standard measure/inequality theorems are used only with the displayed domination and finite-moment hypotheses."
+  ],
+  "missing_assumptions": [
+    "None additionally needed for this scoped test. Outer Cauchy convergence, common limiting state, limiting dynamics/stationarity and physical identity are not proved."
+  ],
+  "verification_summary": "Primary 30/30, non-importing independent 23/23, hostile 17/17, integrated 29/29; ten diagnostics-free Lean declarations. Stored replay matches all three lane JSONs byte-for-byte and the complete integrated payload. Analytic measure construction is explicit, not fully formalized in Lean; no external signed review claimed.",
+  "non_claims": [
+    "PAH-OMC-014 remains unresolved; R-488, R-508 and C_sw=540 retain their original scopes.",
+    "No outer-state uniqueness/Cauchy convergence, projective Gibbs compatibility, limiting stationarity or infinite-volume dynamics.",
+    "No full joint regulator removal, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass gap or TOE.",
+    "No Q3LOCK premise, fitting, changed rates or reinterpretation of Markov time."
+  ],
+  "revisit_condition": "An exact defect in source translation, cell normalization, boundary passage, domination or uniform moment/small-ball bound reopens the verdict. Changed state, cutoff or witness requires a new version.",
+  "provenance": "contemporaneous"
+}
