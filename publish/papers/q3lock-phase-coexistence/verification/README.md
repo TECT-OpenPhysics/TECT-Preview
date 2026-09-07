@@ -13,7 +13,7 @@ in memory, compares saved results,
 checks the historical output bytes and frozen authority hashes, and compares
 the complete new payload with the separate current replay record:
 
-    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r3/result.json
+    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r4/result.json
 
 The research environment must include the existing symbolic dependencies,
 including SymPy. A minimal bundled Python is not an equivalent runtime;
@@ -61,8 +61,8 @@ its six predecessors. Its seven groups retain the registered counts: source
 32. Their original JSON files remain historical and byte-preserved.
 
 The documentation delta is limited to README.md, external-review-handoff.md,
-literature-qps-addendum.md, this README, package-manifest.json and
-replay-safety-audit.md and nonimporting-algebra-audit.md. Changes to
+literature-qps-addendum.md, submission-readiness.md, this README,
+package-manifest.json, replay-safety-audit.md and nonimporting-algebra-audit.md. Changes to
 assertions, the manuscript, analytic notes, code or other source hashes fail.
 The current saved replay additionally pins the resulting document bytes.
 The package remains T0, claim_bearing=false, UNFROZEN_CONTENT_REVIEW and

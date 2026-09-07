@@ -1441,6 +1441,128 @@
       "task_id": "T-054",
       "title": "Q3LOCK non-overwriting fresh audit checkpoint",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 documentation and reproducibility checkpoint, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY; the immutable fresh audit is current evidence for R6 only. Independent replay, integrated replay, signed reviews, content/hash freeze and final PDF remain open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The readiness matrix previously described only existing runs while the non-overwriting fresh checkpoint was already validated. Updating R6 to name the immutable checkpoint aligns the reader-facing gate with the current evidence without promoting an analytic theorem or treating internal replay as independent acceptance.",
+      "evidence_refs": [
+        "publish/papers/q3lock-phase-coexistence/submission-readiness.md#r6-primary-replay",
+        "publish/papers/q3lock-phase-coexistence/submission-readiness.md#final-pdf-rule",
+        "strategy/q3lock-fresh-audit-checkpoint-260907.md#recorded-replay",
+        "verification/scripts/q3lock_fresh_audit_checkpoint.py#checkpoint-construction",
+        "verification/scripts/q3lock_paper_replay.py#check",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-checkpoint/result.json#audits",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-checkpoint/source-map.json#files"
+      ],
+      "finding": "The R6 row now records that the immutable fresh checkpoint is present, while explicitly retaining the independent and integrated replay gates as required. The paper PDF count remains zero and the final-PDF rule is unchanged.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001624",
+      "method": [
+        "Revalidate the current immutable checkpoint and aggregate paper replay before changing the matrix.",
+        "Compare the matrix wording with the checkpoint result, source map, and final-PDF rule.",
+        "Rewrite only the stale R6 status line with explicit preservation of the independent and integrated replay requirements.",
+        "Verify the resulting file as UTF-8 LF text and retain the change as a reader-surface status correction, not an analytic result."
+      ],
+      "next_action": "Continue the A1-A23 proof audit and external mathematics/literature review. Rebuild a new immutable checkpoint after any manuscript or source change; perform independent and integrated replay only at the corresponding review gates, and generate the first PDF only after content and hash freeze.",
+      "non_claims": [
+        "The immutable checkpoint is not an independent mathematical proof or external theorem acceptance.",
+        "R6 alignment does not close R7, R8, R9, R10, R12, R13, R14 or R16.",
+        "No theorem tier, claim-bearing status, priority, novelty or submission authorization changes.",
+        "No KMS dynamics, ground-state gap, continuum limit, physical vacuum, C6, CP1 or Sector A conclusion follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the submission-readiness matrix accurately reflect the current non-overwriting fresh replay checkpoint while preserving the independent-replay and final-PDF gates?",
+      "recorded_at": "2026-09-07T07:23:37Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001623",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Reopen if the checkpoint validation, paper replay, source map, manuscript package, or PDF deferral rule changes; any content or source change requires a new immutable checkpoint rather than an in-place rewrite.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK readiness matrix alignment with immutable replay checkpoint",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 provenance repair, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY. EXP-001624's matrix alignment was correct as a documentation change, but it invalidated the prior checkpoint hash as expected; this record supersedes that stale-checkpoint state with a new immutable replay pair. Independent mathematics, integrated acceptance, content/hash freeze and final PDF remain open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The protected source-map and historical replay guards correctly detected the readiness-document hash change. Rather than rewriting either historical checkpoint, the tooling now derives an explicitly labeled immutable checkpoint path, the replay package admits the readiness document as a declared documentation delta, and a new integrated result is recorded. This preserves provenance while making the current reader surface reproducible.",
+      "evidence_refs": [
+        "strategy/q3lock-r6-replay-alignment-260907.md#non-overwriting-repair",
+        "strategy/q3lock-r6-replay-alignment-260907.md#recorded-checks",
+        "publish/papers/q3lock-phase-coexistence/submission-readiness.md#r6-primary-replay",
+        "verification/scripts/q3lock_fresh_audit_checkpoint.py#checkpoint_paths",
+        "verification/scripts/q3lock_paper_replay.py#documents",
+        "publish/papers/q3lock-phase-coexistence/verification/package-manifest.json#tooling-checkpoint",
+        "publish/papers/q3lock-phase-coexistence/verification/README.md#creating-a-separate-tooling-checkpoint",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-r6-alignment/result.json#audits",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r4/result.json#manuscript-replay",
+        "verification/tests/test_q3lock_fresh_audit_checkpoint.py#test_checkpoint_validates"
+      ],
+      "finding": "The old fresh checkpoint was intentionally left historical and the current package now has a separate r6-alignment source map/result plus an r4 integrated replay. The new fresh checkpoint validates seven audit payloads and 1171 assertions; the integrated replay passes with seven canonical groups, seven manuscript groups, nineteen preserved historical records and 46 algebra checks. The PDF remains deferred.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001625",
+      "method": [
+        "Observe the protected replay failure after the R6 documentation hash changed and retain the prior result bytes untouched.",
+        "Add a validated safe-label path parameter to the fresh checkpoint builder and preserve default overwrite refusal.",
+        "Declare submission-readiness.md as an explicit documentation delta in the integrated replay, update the package manifest to an absent r4 output, and write that output atomically.",
+        "Run the labeled fresh-checkpoint validation, integrated replay check, guard self-test, and companion unit tests.",
+        "Record the new source map and result paths without changing the R-497 tier, analytic scope, or final-PDF rule."
+      ],
+      "next_action": "Continue independent A1-A23 mathematics and specialist literature review. Rebuild only a new immutable checkpoint after subsequent source/content changes, and defer the first PDF until final content and hash freeze.",
+      "non_claims": [
+        "This repair is provenance and tooling evidence, not an independent proof of any unbounded analytic passage.",
+        "The seven audit payloads and replay counts do not certify the Q3LOCK phase theorem or external theorem applicability.",
+        "No theorem tier, claim-bearing status, priority, novelty, publication readiness or submission authorization changes.",
+        "No KMS dynamics, ground-state gap, continuum limit, physical vacuum, C6, CP1 or Sector A conclusion follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the current readiness-document change be integrated without overwriting historical Q3LOCK checkpoints, while preserving an immutable current fresh audit and replay?",
+      "recorded_at": "2026-09-07T07:33:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001624",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001623",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Reopen if any current source hash, package manifest, audit builder, or replay output changes; use another absent labeled result path and keep all historical records byte-preserved.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK non-overwriting R6 replay alignment checkpoint",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

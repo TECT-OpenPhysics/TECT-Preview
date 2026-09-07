@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**988 accepted events** · latest 25 shown below · machine locator: `index.json`
+**990 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-07 | `20260907-q3lock-non-overwriting-r6-replay-alignment-chec` — [Q3LOCK non-overwriting R6 replay alignment checkpoint (EXP-001625)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-non-overwriting-r6-replay-alignment-chec) |
+| 2026-09-07 | `20260907-q3lock-readiness-matrix-alignment-with-immutabl` — [Q3LOCK readiness matrix alignment with immutable replay checkpoint (EXP-001624)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-readiness-matrix-alignment-with-immutabl) |
 | 2026-09-07 | `20260907-c6-q3lock-non-overwriting-fresh-audit-checkpoin` — [C6 Q3LOCK non-overwriting fresh audit checkpoint (EXP-001623)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-non-overwriting-fresh-audit-checkpoin) |
 | 2026-09-07 | `20260907-c6-q3lock-fresh-audit-historical-snapshot-guard` — [C6 Q3LOCK fresh-audit historical snapshot guard correction (EXP-001622)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-fresh-audit-historical-snapshot-guard) |
 | 2026-09-07 | `20260907-c6-q3lock-fresh-manuscript-audit-checkpoint-exp` — [C6 Q3LOCK fresh manuscript audit checkpoint (EXP-001621)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-fresh-manuscript-audit-checkpoint-exp) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-06 | `20260906-q3lock-exp-001604-manuscript-sign-and-analytici` — [Q3LOCK EXP-001604: manuscript sign and analyticity repair with expanded pressure proof] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-q3lock-exp-001604-manuscript-sign-and-analytici) |
 | 2026-09-06 | `20260906-q3lock-v0-1-0-content-first-publication-package` — [Q3LOCK v0.1.0 content-first publication package assembled with PDF deferred] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-q3lock-v0-1-0-content-first-publication-package) |
 | 2026-09-06 | `20260906-pah-omc-017-publication-footer-and-immutable-ru` — [PAH-OMC-017 publication footer and immutable-run linkage correction] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-pah-omc-017-publication-footer-and-immutable-ru) |
-| 2026-09-06 | `20260906-pah-omc-017-r-510-exact-spatial-transfer-and-co` — [PAH-OMC-017 R-510: exact spatial transfer and common local Gibbs state] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-pah-omc-017-r-510-exact-spatial-transfer-and-co) |
-| 2026-09-06 | `20260906-operator-standing-authorization-for-release-gat` — [Operator standing authorization for release-gated PAH and Q3LOCK batch commits and pushes] - 2026-09-06 | — | [bounded page](pages/000919-000968.md#20260906-operator-standing-authorization-for-release-gat) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 969–988 | 20 | [000969-001018.md](pages/000969-001018.md) |
+| 969–990 | 22 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |

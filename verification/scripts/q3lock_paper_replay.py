@@ -33,8 +33,9 @@ CANONICAL = tuple("verification/scripts/q3lock_" + name + "_audit.py" for name i
     "collective_falk_bruch_content", "strict_cusp_tangent_content"))
 DOCUMENTS = frozenset(PAPER + name for name in (
     "README.md", "external-review-handoff.md", "literature-qps-addendum.md",
-    "verification/README.md", "verification/package-manifest.json",
-    "verification/replay-safety-audit.md", "verification/nonimporting-algebra-audit.md"))
+    "submission-readiness.md", "verification/README.md",
+    "verification/package-manifest.json", "verification/replay-safety-audit.md",
+    "verification/nonimporting-algebra-audit.md"))
 
 
 def digest(path):

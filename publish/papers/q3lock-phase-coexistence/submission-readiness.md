@@ -10,7 +10,7 @@ content is reviewed and finally organized.
 | R3 external theorem crosswalk | KP/FSS/KKK hypotheses checked line by line | DRAFT; signed review open |
 | R4 literature comparison | Bounded primary-source comparison and no priority claim | DRAFT; specialist opinion open |
 | R5 claim/result lineage | R-497 remains T0 and claim-bearing=false | CURRENT; bounded decision open |
-| R6 primary replay | All canonical finite diagnostics and source hashes | EXISTING RUNS; fresh frozen replay open |
+| R6 primary replay | All canonical finite diagnostics and source hashes | IMMUTABLE FRESH CHECKPOINT PRESENT; independent replay still open |
 | R7 independent replay | Non-importing implementation and hostile checks | REQUIRED |
 | R8 integrated replay | Current frozen manuscript, manifest, and inputs | REQUIRED |
 | R9 content freeze | Notation, bibliography, equations, nonclaims, version | NOT STARTED |

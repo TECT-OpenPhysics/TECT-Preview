@@ -12,15 +12,25 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import runpy
 import tempfile
 
 
 ROOT = Path(__file__).resolve().parents[2]
 RUNS = ROOT / "claims/C6-SPACETIME-SIGNATURE/runs"
-OUT_DIR = RUNS / "2026-09-07-q3lock-manuscript-fresh-audit-checkpoint"
-OUT = OUT_DIR / "result.json"
-SOURCE_MAP = OUT_DIR / "source-map.json"
+DEFAULT_LABEL = "2026-09-07-q3lock-manuscript-fresh-audit-checkpoint"
+
+
+def checkpoint_paths(label=DEFAULT_LABEL):
+    if (not isinstance(label, str)
+            or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", label)):
+        raise ValueError("Checkpoint label must be one safe public-run directory name.")
+    out_dir = RUNS / label
+    return out_dir, out_dir / "result.json", out_dir / "source-map.json"
+
+
+OUT_DIR, OUT, SOURCE_MAP = checkpoint_paths()
 
 AUDIT_SPECS = (
     ("source", "verification/scripts/q3lock_manuscript_source_audit.py"),
@@ -80,8 +90,9 @@ def _collect_hashes(node, hashes):
             _collect_hashes(value, hashes)
 
 
-def build_payload():
-    if OUT.exists() or SOURCE_MAP.exists():
+def build_payload(label=None):
+    _, out, source_map_path = checkpoint_paths(label or DEFAULT_LABEL)
+    if out.exists() or source_map_path.exists():
         raise FileExistsError("Fresh audit checkpoint already exists; refusing overwrite.")
     before = {path: path.read_bytes() for path in PROTECTED}
     results = []
@@ -109,19 +120,19 @@ def build_payload():
     }
     source_map = {
         "schema": "tect/q3lock-fresh-audit-source-map/1.0",
-        "checkpoint": OUT.relative_to(ROOT).as_posix(),
+        "checkpoint": out.relative_to(ROOT).as_posix(),
         "files": [
             {"source": source, "sha256": value}
             for source, value in sorted(hashes.items())
         ],
     }
-    _atomic_json(SOURCE_MAP, source_map)
-    hashes[SOURCE_MAP.relative_to(ROOT).as_posix()] = digest(SOURCE_MAP)
+    _atomic_json(source_map_path, source_map)
+    hashes[source_map_path.relative_to(ROOT).as_posix()] = digest(source_map_path)
     return {
         "schema": "tect/q3lock-manuscript-fresh-audit-checkpoint/1.0",
         "status": "PASS",
         "claim_bearing": False,
-        "checkpoint": OUT.relative_to(ROOT).as_posix(),
+        "checkpoint": out.relative_to(ROOT).as_posix(),
         "recorded_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "audit_count": len(results),
         "audits": results,
@@ -129,23 +140,24 @@ def build_payload():
         "protected_record_count": len(PROTECTED),
         "protected_records_preserved": True,
         "protected_record_hashes": protected_hashes,
-        "source_map": SOURCE_MAP.relative_to(ROOT).as_posix(),
-        "source_map_sha256": hashes[SOURCE_MAP.relative_to(ROOT).as_posix()],
+        "source_map": source_map_path.relative_to(ROOT).as_posix(),
+        "source_map_sha256": hashes[source_map_path.relative_to(ROOT).as_posix()],
         "source_hashes": dict(sorted(hashes.items())),
         "scope": "Current internal manuscript replay only; no analytic closure, external review, theorem promotion, novelty certificate, or PDF.",
     }
 
 
-def validate_checkpoint():
-    if not OUT.is_file() or not SOURCE_MAP.is_file():
+def validate_checkpoint(label=None):
+    _, out, source_map_path = checkpoint_paths(label or DEFAULT_LABEL)
+    if not out.is_file() or not source_map_path.is_file():
         raise FileNotFoundError("Fresh audit checkpoint is missing.")
-    result = json.loads(OUT.read_text(encoding="utf-8"))
-    source_map = json.loads(SOURCE_MAP.read_text(encoding="utf-8"))
+    result = json.loads(out.read_text(encoding="utf-8"))
+    source_map = json.loads(source_map_path.read_text(encoding="utf-8"))
     if result.get("status") != "PASS" or result.get("claim_bearing") is not False:
         raise ValueError("Fresh audit checkpoint scope/status changed.")
-    if result.get("source_map_sha256") != digest(SOURCE_MAP):
+    if result.get("source_map_sha256") != digest(source_map_path):
         raise ValueError("Fresh audit source map hash changed.")
-    if source_map.get("checkpoint") != OUT.relative_to(ROOT).as_posix():
+    if source_map.get("checkpoint") != out.relative_to(ROOT).as_posix():
         raise ValueError("Fresh audit source map points to a different checkpoint.")
     for source, expected in result.get("source_hashes", {}).items():
         path = (ROOT / source).resolve()
@@ -165,18 +177,21 @@ def validate_checkpoint():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--write", action="store_true",
-                        help="run the seven in-memory auditors and write the new checkpoint")
+                        help="run the seven in-memory auditors and write a new checkpoint")
+    parser.add_argument("--label", default=DEFAULT_LABEL,
+                        help="absent public-run directory name for this checkpoint")
     args = parser.parse_args()
+    _, out, _ = checkpoint_paths(args.label)
     if args.write:
-        payload = build_payload()
-        _atomic_json(OUT, payload)
+        payload = build_payload(args.label)
+        _atomic_json(out, payload)
         print("Q3LOCK fresh manuscript audit checkpoint: PASS",
               payload["audit_count"], "audits;", payload["total_assertions"], "assertions")
     else:
-        payload = validate_checkpoint()
+        payload = validate_checkpoint(args.label)
         print("Q3LOCK fresh manuscript audit checkpoint: VALID",
               payload["audit_count"], "audits;", payload["total_assertions"], "assertions")
-    print(OUT.relative_to(ROOT).as_posix())
+    print(out.relative_to(ROOT).as_posix())
 
 
 if __name__ == "__main__":
