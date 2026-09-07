@@ -31,11 +31,15 @@ CANONICAL = tuple("verification/scripts/q3lock_" + name + "_audit.py" for name i
     "absolute_partition", "thermodynamic_pressure", "dlr_tangent_content",
     "fkg_content", "reflection_infrared_content",
     "collective_falk_bruch_content", "strict_cusp_tangent_content"))
+FROZEN = "strategy/q3lock-exp782-independent-result-manifest-260905.json"
+TEMPORAL_CORRECTION = "explorations/temporal-corrections.jsonl"
 DOCUMENTS = frozenset(PAPER + name for name in (
     "README.md", "external-review-handoff.md", "literature-qps-addendum.md",
     "submission-readiness.md", "verification/README.md",
     "verification/package-manifest.json", "verification/replay-safety-audit.md",
-    "verification/nonimporting-algebra-audit.md"))
+    "verification/nonimporting-algebra-audit.md")) | frozenset((
+        FROZEN,
+    ))
 
 
 def digest(path):
@@ -98,9 +102,49 @@ def differences(old, new, path=""):
     return [] if old == new else [{"path": path, "old": old, "new": new}]
 
 
-def require_document_only(old, new, allowed_hashes):
+def temporal_integrity_delta_paths(old, new):
+    """Validate the one explicitly declared append-only temporal provenance delta."""
+    old_rows = old.get("integrated_composition_checks", {}).get(
+        "frozen_source_integrity", [])
+    new_rows = new.get("integrated_composition_checks", {}).get(
+        "frozen_source_integrity", [])
+    if not isinstance(old_rows, list) or not isinstance(new_rows, list):
+        raise ValueError("Missing frozen-source integrity rows for provenance delta.")
+    if len(old_rows) != len(new_rows):
+        raise ValueError("Frozen-source integrity row count changed.")
+    changed = []
+    for index, (before, after) in enumerate(zip(old_rows, new_rows)):
+        if before == after:
+            continue
+        if (before.get("path") != TEMPORAL_CORRECTION
+                or after.get("path") != TEMPORAL_CORRECTION):
+            raise ValueError("Unexpected frozen-source row changed at index " + str(index))
+        expected = digest(ROOT / TEMPORAL_CORRECTION)
+        if (after.get("expected") != expected
+                or after.get("actual") != expected
+                or after.get("match") is not True
+                or before.get("match") is not True):
+            raise ValueError("Temporal correction row is not a verified current hash.")
+        changed.append(index)
+    temporal_indices = [
+        index for index, row in enumerate(new_rows)
+        if row.get("path") == TEMPORAL_CORRECTION
+    ]
+    if changed != temporal_indices:
+        raise ValueError("Expected exactly the temporal correction row to change.")
+    manifest = json.loads((ROOT / FROZEN).read_text(encoding="utf-8"))
+    pins = {row["path"]: row["sha256"] for row in manifest["source_files"]}
+    if pins.get(TEMPORAL_CORRECTION) != digest(ROOT / TEMPORAL_CORRECTION):
+        raise ValueError("Current authority manifest does not pin the temporal sidecar.")
+    return {"/integrated_composition_checks/frozen_source_integrity"}
+
+
+def require_document_only(old, new, allowed_hashes, allowed_paths=()):
     rows = differences(old, new)
+    allowed_paths = frozenset(allowed_paths)
     for row in rows:
+        if row["path"] in allowed_paths:
+            continue
         _, separator, source = row["path"].rpartition("/source_hashes/")
         if (not separator or source not in allowed_hashes
                 or row["new"] != allowed_hashes[source]):
@@ -118,8 +162,15 @@ def require_draft_scope(manifest):
 
 
 def require_exact_algebra(stored, fresh):
-    if stored != fresh:
-        raise ValueError("Independent algebra differs from its saved source/identity checkpoint.")
+    if stored == fresh:
+        return []
+    rows = differences(stored, fresh)
+    allowed = "/source_hashes/" + FROZEN
+    expected = digest(ROOT / FROZEN)
+    if (rows and all(row["path"] == allowed for row in rows)
+            and fresh.get("source_hashes", {}).get(FROZEN) == expected):
+        return rows
+    raise ValueError("Independent algebra differs from its saved source/identity checkpoint.")
 
 
 def guard_self_tests():
@@ -167,7 +218,7 @@ def build_payload():
     for source, expected in dffr["source_hashes"].items():
         if source not in DOCUMENTS and digest(ROOT / source) != expected:
             raise ValueError("Protected source changed: " + source)
-    frozen = ROOT / "strategy/q3lock-exp782-independent-result-manifest-260905.json"
+    frozen = ROOT / FROZEN
     for row in json.loads(frozen.read_text())["source_files"]:
         if digest(ROOT / row["path"]) != row["sha256"]:
             raise ValueError("Frozen authority changed: " + row["path"])
@@ -183,7 +234,10 @@ def build_payload():
     before = {path: path.read_bytes() for path in historical_paths}
     current = runpy.run_path(str(ROOT / SOURCE), run_name="q3lock_source_readonly")["build_payload"]()
     allowed_hashes = {path: digest(ROOT / path) for path in DOCUMENTS}
-    changes = require_document_only(json.loads(before[ROOT / HISTORICAL]), current, allowed_hashes)
+    historical_source = json.loads(before[ROOT / HISTORICAL])
+    provenance_paths = temporal_integrity_delta_paths(historical_source, current)
+    changes = require_document_only(
+        historical_source, current, allowed_hashes, provenance_paths)
     canonical_replay = []
     for script, module in modules:
         replay = module["build_payload"]()
@@ -194,7 +248,8 @@ def build_payload():
                                  "payload_sha256": payload_digest(replay)})
     algebra = runpy.run_path(str(ROOT / ALGEBRA),
                              run_name="q3lock_nonimporting_readonly")["build_payload"]()
-    require_exact_algebra(json.loads(before[ROOT / ALGEBRA_RESULT])["replay"], algebra)
+    algebra_changes = require_exact_algebra(
+        json.loads(before[ROOT / ALGEBRA_RESULT])["replay"], algebra)
     for path, original in before.items():
         if path.read_bytes() != original:
             raise ValueError("Historical output bytes changed: " + str(path))
@@ -246,6 +301,10 @@ def build_payload():
         },
         "manuscript_payload_sha256": payload_digest(current),
         "documentation_changes_from_source_checkpoint": changes,
+        "provenance_changes_from_authority": {
+            "temporal_correction_paths": sorted(provenance_paths),
+            "algebra_source_hash_changes": algebra_changes,
+        },
         "historical_records_preserved": len(before),
         "guard_assertions": guards, "guard_assertions_passed": len(guards),
         "source_hashes": dict(sorted(hashes.items())),

@@ -1833,6 +1833,63 @@
       "task_id": "T-054",
       "title": "Q3LOCK regime reflection parity and scope audit",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 provenance and reproducibility checkpoint, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY; independent mathematics, literature, content freeze, hash freeze, integrated acceptance and final PDF remain open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The original exploration record must remain byte-preserved even when its timestamp is not trustworthy. A sidecar correction plus a fail-closed, explicitly whitelisted replay delta preserves the authority chain without treating provenance repair as new analytic evidence. The r5 result is therefore an internal reproducibility checkpoint only.",
+      "evidence_refs": [
+        "strategy/q3lock-r5-temporal-provenance-replay-260907.md#temporal-provenance-correction",
+        "strategy/q3lock-r5-temporal-provenance-replay-260907.md#replay-r5",
+        "explorations/temporal-corrections.jsonl#TC-0033",
+        "verification/scripts/q3lock_paper_replay.py#temporal_integrity_delta_paths",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r5/result.json#provenance_changes_from_authority",
+        "publish/papers/q3lock-phase-coexistence/submission-readiness.md#final-pdf-rule"
+      ],
+      "finding": "The append-only correction and its manifest hash repair are reproducible as a narrowly scoped provenance delta. The replay guard accepts only the temporal-sidecar path and matching manifest hash leaf; the new r5 result passes with seven canonical groups, seven manuscript groups, 19 protected historical records, 46 non-importing algebra checks and six guard fixtures. No mathematical, theorem-tier, publication, or PDF disposition changes.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001630",
+      "method": [
+        "Inspect the append-only temporal-corrections sidecar and retain the original EXP-001629 exploration line byte-for-byte.",
+        "Verify TC-0033 marks the untrusted future timestamp as unknown and compute the current sidecar SHA-256.",
+        "Update only the corresponding frozen-manifest source-hash leaf and extend the replay guard to admit exactly this temporal provenance delta while rejecting every other authority change.",
+        "Run the replay safety unit tests and write a new non-overwriting r5 result rather than replacing the prior replay.",
+        "Check that the result remains claim_bearing=false, retains the seven canonical and seven manuscript groups, preserves 19 historical records and 46 algebra checks, and leaves the PDF deferred."
+      ],
+      "next_action": "Create a fresh absent-label audit checkpoint after the remaining reader-surface updates, point the package manifest to a new immutable integrated replay, rerun the complete Q3LOCK tests and release gates, and keep the first PDF deferred until content and hash freeze.",
+      "non_claims": [
+        "The temporal sidecar and r5 replay do not prove any unbounded analytic limit or phase-coexistence theorem.",
+        "The seven canonical and seven manuscript groups are internal diagnostics, not signed independent mathematical acceptance.",
+        "No theorem tier, claim-bearing status, priority, novelty, publication readiness, submission authorization, C6, CP1, KMS, ground-state, continuum, physical-vacuum, or Sector A conclusion follows.",
+        "No paper PDF was generated."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the EXP-001629 timestamp correction and its manifest hash repair be integrated as an explicit provenance-only delta while preserving the protected Q3LOCK replay chain?",
+      "recorded_at": "2026-09-07T08:18:03Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001629",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Reopen if the temporal-correction sidecar, manifest source hash, replay guard whitelist, package documents, or any analytic source changes; use another non-overwriting replay path and preserve this r5 record.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK temporal provenance correction and replay r5",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
