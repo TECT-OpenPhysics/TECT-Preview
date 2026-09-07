@@ -1239,6 +1239,139 @@
       "task_id": "T-054",
       "title": "Q3LOCK KP general-vector/scalar phase boundary audit",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 internal verification checkpoint, claim_bearing=false. The sole Q3LOCK research authority remains EXP-000780 -> EXP-000781 -> EXP-000782 / R-497. The audit passes do not prove unbounded analytic limits, signed external acceptance, theorem promotion, or a paper PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "All seven current manuscript audits completed with PASS: source 34 checks, loop 203, DLR 81, infrared 612, collective 150, composition 59 with 91 frozen source hashes, and content 32/32. The source audit also preserved six historical outputs and the dependency chain remained intact. This is a reproducibility and package-alignment result, not acceptance of the conditional analytic theorem.",
+      "evidence_refs": [
+        "strategy/q3lock-manuscript-fresh-audit-260907.md#fresh-results",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-source-audit/result.json#result",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-q3lock-manuscript-loop-audit/result.json#result",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-q3lock-manuscript-dlr-audit/result.json#result",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-q3lock-manuscript-infrared-audit/result.json#result",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-q3lock-manuscript-collective-audit/result.json#result",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-q3lock-manuscript-composition-audit/result.json#result",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-q3lock-manuscript-content-audit/result.json#result",
+        "publish/papers/q3lock-phase-coexistence/proof-audit.md#load-bearing-audit-table",
+        "publish/papers/q3lock-phase-coexistence/submission-readiness.md#final-pdf-rule"
+      ],
+      "finding": "The current paper package is internally consistent under the registered audit scripts at this checkpoint. The remaining distinction is explicit: finite identities, regression checks, source hashes, and integrated replay do not by themselves establish the unbounded loop/DLR/infrared/collective/source-tangent limits or replace signed independent mathematics and specialist literature review.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001621",
+      "method": [
+        "Run the source/package audit against the current manuscript and package manifest.",
+        "Run the loop, DLR, infrared, collective, composition, and content audits in dependency order.",
+        "Check the reported primary, independent, integrated, historical-preservation, and source-hash assertions without changing the authority chain.",
+        "Record the exact fresh counts and retain the generated JSON artifacts under the C6 run directory.",
+        "Keep the analytic proof gates, specialist literature review, content freeze, hash freeze, and final PDF rule separate from internal replay status."
+      ],
+      "next_action": "Use the fresh run artifacts in the proof and literature review handoff, then resolve the open A1-A23 and R2-R14 items before content/hash freeze. Do not generate the first PDF until that final review checkpoint.",
+      "non_claims": [
+        "No theorem tier or claim-bearing status changes.",
+        "No unbounded analytic limit, DLR multiplicity theorem, priority claim, or publication-readiness certificate follows from these script passes.",
+        "The current passes do not close any signed external mathematics or specialist literature gate.",
+        "No KMS dynamics, ground-state gap, continuum limit, physical vacuum, C6 closure, CP1 closure, or Sector A closure follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Do the current Q3LOCK manuscript, proof-block interfaces, source ledger, and replay records remain internally aligned after the latest content and literature updates?",
+      "recorded_at": "2026-09-07T07:05:26Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001620",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001619",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001598",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Reopen if any audit fails, a source hash changes, a proof-block interface changes, or an external reviewer identifies a mismatch hidden by the internal scripts.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK fresh manuscript audit checkpoint",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 provenance correction, claim_bearing=false. The protected R-497 manuscript snapshot and authority chain are preserved; no new analytic evidence, theorem promotion, or PDF is accepted from the attempted rerun.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The individual scripts printed PASS, but q3lock_paper_replay.py --check failed with 'Historical manuscript source snapshot changed.' The attempted reruns rewrote protected historical result paths because their source-hash payload now enumerates the expanded paper package. Restoring the exact prior bytes preserves the original R-497 replay chain. The printed counts are diagnostics of the attempted run only, not accepted new evidence.",
+      "evidence_refs": [
+        "strategy/q3lock-manuscript-fresh-audit-260907.md#replay-guard-and-next-gate",
+        "verification/scripts/q3lock_paper_replay.py#historical-snapshot-check",
+        "publish/papers/q3lock-phase-coexistence/verification/replay-safety-audit.md#historical-output-preservation",
+        "publish/papers/q3lock-phase-coexistence/verification/package-manifest.json#tooling-checkpoint",
+        "publish/papers/q3lock-phase-coexistence/submission-readiness.md#final-pdf-rule"
+      ],
+      "finding": "The replay safety guard worked as designed. A current audit cannot be accepted by overwriting a historical run. The correct next action is to create a new immutable checkpoint path and manifest, or obtain signed review using the preserved historical package; no theorem or claim status changes.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001622",
+      "method": [
+        "Run the seven registered manuscript audit scripts against the current paper lane and observe their printed PASS counts.",
+        "Run the aggregate q3lock_paper_replay check against the protected QPS historical_run_sha256 and source-audit result.",
+        "Compare the changed historical result bytes and identify that the scripts target protected paths rather than a new immutable checkpoint path.",
+        "Restore the seven protected result artifacts byte-for-byte from the pre-attempt HEAD and retain the replay guard failure as the disposition.",
+        "Record the required repair: use a new non-overwriting run path and manifest before accepting any future fresh audit."
+      ],
+      "next_action": "Design and register a non-overwriting fresh-audit checkpoint, with a new run path and source manifest, only if it is needed for the final content freeze. Until then preserve the restored historical replay and keep A1-A23 and R2-R14 open.",
+      "non_claims": [
+        "The individual PASS counts do not prove the unbounded analytic proof or external acceptance.",
+        "The replay guard failure is not a mathematical counterexample and does not invalidate the preserved R-497 historical result.",
+        "No source-hash, theorem tier, claim-bearing, priority, or publication-readiness promotion is made.",
+        "No PDF was generated and no KMS, ground-state, continuum, physical, C6, CP1, or Sector A conclusion follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the current manuscript audits be rerun in place as a new accepted replay checkpoint without changing the historical source snapshot pinned by the Q3LOCK paper replay?",
+      "recorded_at": "2026-09-07T07:08:34Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001621",
+          "relation": "corrects"
+        },
+        {
+          "id": "EXP-001620",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001598",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Reopen when a new immutable replay path and manifest are available, or when an external reviewer identifies a substantive issue beyond the provenance mismatch.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK fresh-audit historical snapshot guard correction",
+      "verdict": "inconclusive"
     }
   ],
   "kind": "proof_explorations",
