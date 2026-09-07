@@ -13,7 +13,7 @@ in memory, compares saved results,
 checks the historical output bytes and frozen authority hashes, and compares
 the complete new payload with the separate current replay record:
 
-    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r6/result.json
+    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r7/result.json
 
 The research environment must include the existing symbolic dependencies,
 including SymPy. A minimal bundled Python is not an equivalent runtime;

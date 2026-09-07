@@ -14,7 +14,9 @@ repairs or a clear refusal to certify a step.
 4. proof-audit.md;
 5. verification/README.md and the R-497 manifest;
 6. the registered strategy notes referenced by EXP-001588, EXP-001589,
-   EXP-001591, EXP-001593, EXP-001595, and EXP-001598.
+   EXP-001591, EXP-001593, EXP-001595, and EXP-001598; and
+7. strategy/q3lock-literature-vector-scalar-primary-audit-260907.md,
+   which records the exact scalar/vector/classical comparison boundary.
 
 ## Requested review sequence
 
