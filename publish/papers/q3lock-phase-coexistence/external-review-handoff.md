@@ -16,11 +16,19 @@ repairs or a clear refusal to certify a step.
 6. the registered strategy notes referenced by EXP-001588, EXP-001589,
    EXP-001591, EXP-001593, EXP-001595, and EXP-001598; and
 7. strategy/q3lock-literature-vector-scalar-primary-audit-260907.md,
-   which records the exact scalar/vector/classical comparison boundary.
+   which records the exact scalar/vector/classical comparison boundary; and
+8. strategy/q3lock-independent-review-matrix-260907.md, together with its
+   coverage validator
+   (`verification/scripts/q3lock_independent_review_matrix_audit.py`) and
+   result
+   (`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-independent-review-matrix-audit/result.json`).
+   The reviewer must return a disposition for every A1--A23 row; the validator
+   checks packet coverage only and is not a mathematical review.
 
 ## Requested review sequence
 
-Please review in this order, preserving the declared limits:
+Use the A1--A23 matrix as the row-by-row review order.  Please review in this
+order, preserving the declared limits:
 
 * Hamiltonian, form domain, source units, and finite trace;
 * cyclic mesh/Feynman--Kac normalization and pressure seam;

@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**998 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1000 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-07 | `20260907-q3lock-review-matrix-handoff-and-replay-checkpo` — [Q3LOCK review-matrix handoff and replay checkpoint update] - 2026-09-07 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-review-matrix-handoff-and-replay-checkpo) |
+| 2026-09-07 | `20260907-q3lock-a1-a23-independent-review-matrix-and-cov` — [Q3LOCK A1-A23 independent review matrix and coverage validator] - 2026-09-07 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-a1-a23-independent-review-matrix-and-cov) |
 | 2026-09-07 | `20260907-q3lock-a6-a13-dlr-fkg-reflection-and-infrared-a` — [Q3LOCK A6-A13 DLR FKG reflection and infrared audit] - 2026-09-07 | A6-A13, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-a6-a13-dlr-fkg-reflection-and-infrared-a) |
 | 2026-09-07 | `20260907-q3lock-a1-a5-finite-volume-and-pressure-audit-e` — [Q3LOCK A1-A5 finite-volume and pressure audit (EXP-001632)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-a1-a5-finite-volume-and-pressure-audit-e) |
 | 2026-09-07 | `20260907-q3lock-primary-literature-vector-scalar-applica` — [Q3LOCK primary literature vector-scalar applicability audit (EXP-001631)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-primary-literature-vector-scalar-applica) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-07 | `20260907-parallel-lane-isolation-and-checkpoint-controll` — [Parallel lane isolation and checkpoint controller for TECT proof and paper work] - 2026-09-07 | — | [bounded page](pages/000969-001018.md#20260907-parallel-lane-isolation-and-checkpoint-controll) |
 | 2026-09-07 | `20260907-c6-q3lock-dffr-primary-source-reassessment-and` — [C6 Q3LOCK DFFR primary-source reassessment and occupation-regularity boundary] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-dffr-primary-source-reassessment-and) |
 | 2026-09-07 | `20260907-c6-q3lock-broader-perturbative-theorem-comparis` — [C6 Q3LOCK broader perturbative-theorem comparison and legacy cutoff quarantine] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-broader-perturbative-theorem-comparis) |
-| 2026-09-07 | `20260907-c6-q3lock-source-applicability-and-standard-met` — [C6 Q3LOCK source-applicability and standard-method comparison audit (EXP-001611)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-source-applicability-and-standard-met) |
-| 2026-09-07 | `20260907-pah-omc-018-r-511-canonical-generator-limit-and` — [PAH-OMC-018 R-511 canonical generator-limit and local pre-form registration] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-pah-omc-018-r-511-canonical-generator-limit-and) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 969–998 | 30 | [000969-001018.md](pages/000969-001018.md) |
+| 969–1000 | 32 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |

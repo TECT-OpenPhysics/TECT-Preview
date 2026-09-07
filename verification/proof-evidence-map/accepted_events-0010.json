@@ -3181,6 +3181,90 @@
       "unresolved_claim_ids": [
         "A6-A13"
       ]
+    },
+    {
+      "claim_ids": [
+        "A1-A23",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-09-07",
+      "header": "[Q3LOCK A1-A23 independent review matrix and coverage validator] - 2026-09-07",
+      "id": "20260907-q3lock-a1-a23-independent-review-matrix-and-cov",
+      "keywords": [
+        "A1",
+        "A23",
+        "Q3LOCK",
+        "coverage",
+        "external",
+        "matrix",
+        "review",
+        "validator"
+      ],
+      "linked_result_ids": [],
+      "negative_results": [],
+      "notes": [
+        "strategy/q3lock-independent-review-matrix-260907.md",
+        "EXP-001634"
+      ],
+      "raw": "## [Q3LOCK A1-A23 independent review matrix and coverage validator] - 2026-09-07\n\nRecorded EXP-001634 for a complete external-review handoff matrix covering A1-A23. The matrix binds each row to a manuscript/source locator and a concrete reviewer decision, while the standalone validator rejects missing-row, duplicate-row, and missing-locator mutations. The diagnostic passes 76/76 and changes no theorem tier, claim-bearing status, proof-audit disposition, content/hash freeze, or paper PDF status.\n\n",
+      "result_ids": [],
+      "result_link_basis": {},
+      "scripts": [
+        "verification/scripts/q3lock_independent_review_matrix_audit.py"
+      ],
+      "unresolved_claim_ids": [
+        "A1-A23"
+      ]
+    },
+    {
+      "claim_ids": [
+        "A1-A23",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-09-07",
+      "header": "[Q3LOCK review-matrix handoff and replay checkpoint update] - 2026-09-07",
+      "id": "20260907-q3lock-review-matrix-handoff-and-replay-checkpo",
+      "keywords": [
+        "PDF-deferred",
+        "Q3LOCK",
+        "replay",
+        "review-matrix"
+      ],
+      "linked_result_ids": [
+        "R-497"
+      ],
+      "negative_results": [],
+      "notes": [
+        "R-497",
+        "EXP-001635"
+      ],
+      "raw": "## [Q3LOCK review-matrix handoff and replay checkpoint update] - 2026-09-07\n\nAdded the complete A1-A23 external-review matrix to the Q3LOCK handoff and wired its coverage validator into the package documentation. Issued the non-overwriting fresh manuscript audit r9 and integrated replay r8 after the documentation hashes changed. All rows remain OPEN, R-497 remains T0 and claim_bearing=false, and the first paper PDF remains deferred until final content and hash freeze plus release review.\n\n",
+      "result_ids": [
+        "R-497"
+      ],
+      "result_link_basis": {
+        "R-497": "explicit_result_id"
+      },
+      "scripts": [
+        "verification/scripts/q3lock_independent_review_matrix_audit.py",
+        "verification/scripts/q3lock_fresh_audit_checkpoint.py",
+        "verification/scripts/q3lock_paper_replay.py"
+      ],
+      "unresolved_claim_ids": [
+        "A1-A23"
+      ]
     }
   ],
   "kind": "accepted_events",

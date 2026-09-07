@@ -13,7 +13,7 @@ in memory, compares saved results,
 checks the historical output bytes and frozen authority hashes, and compares
 the complete new payload with the separate current replay record:
 
-    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r7/result.json
+    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r8/result.json
 
 The research environment must include the existing symbolic dependencies,
 including SymPy. A minimal bundled Python is not an equivalent runtime;
@@ -59,6 +59,14 @@ The manuscript chain is replayed from q3lock_manuscript_source_audit.py through
 its six predecessors. Its seven groups retain the registered counts: source
 34, composition 59, collective 150, infrared 612, DLR 81, loop 203 and content
 32. Their original JSON files remain historical and byte-preserved.
+
+The external-review handoff also includes the complete A1--A23 review matrix
+and its hostile-coverage validator.  Run the validator with:
+
+    & E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/q3lock_independent_review_matrix_audit.py
+
+Its result is a packet-coverage diagnostic, not an independent proof review or
+theorem certificate.
 
 The documentation delta is limited to README.md, external-review-handoff.md,
 literature-qps-addendum.md, submission-readiness.md, this README,

@@ -2091,6 +2091,126 @@
       "task_id": "T-054",
       "title": "Q3LOCK A6-A13 DLR FKG reflection and infrared audit",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 review-handoff diagnostic, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY and all A1-A23 remain OPEN. The matrix and validator organize external review; they do not certify any proof, literature applicability, claim promotion, or paper PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The new matrix enumerates every load-bearing row A1 through A23 exactly once, attaches a stable manuscript locator and a concrete review question to each row, and records cross-cutting checks for hypotheses, limit order, normalization, sufficient-regime scope, DLR construction, and literature boundaries. The independent validator passes the unmutated matrix and rejects missing-row, duplicate-row, and missing-locator mutations.",
+      "evidence_refs": [
+        "strategy/q3lock-independent-review-matrix-260907.md#complete-load-bearing-matrix",
+        "strategy/q3lock-independent-review-matrix-260907.md#required-cross-cutting-checks",
+        "verification/scripts/q3lock_independent_review_matrix_audit.py#validate_matrix",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-independent-review-matrix-audit/result.json#assertions",
+        "publish/papers/q3lock-phase-coexistence/proof-audit.md#load-bearing-audit-table",
+        "publish/papers/q3lock-phase-coexistence/external-review-handoff.md#requested-review-sequence",
+        "publish/papers/q3lock-phase-coexistence/submission-readiness.md#r12-signed-mathematics-review"
+      ],
+      "finding": "The external-review handoff now has a complete, machine-checked A1-A23 coverage instrument. The validator reports PASS 76/76 and stores the exact row list and source hashes. This is a packaging and omission-control advance only; it does not supply a reviewer signature or change any scientific status.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001634",
+      "method": [
+        "Write a source-grounded A1-A23 matrix with one row per proof-audit identifier, a load-bearing question, manuscript/source locators, and an explicit reviewer decision requirement.",
+        "Require cross-cutting answers for imported-theorem hypotheses, limit order, source normalization, sufficient-regime scope, DLR identity, and primary-source literature boundaries.",
+        "Implement a standalone validator that derives row coverage from the matrix text, hashes the matrix and script, writes an atomic JSON artifact, and rejects missing-row, duplicate-row, and erased-manuscript-locator mutations.",
+        "Run the validator and inspect the JSON artifact to confirm all row identifiers are ordered A1 through A23 and every row has a nonempty question, manuscript locator, and reviewer decision.",
+        "Keep the review disposition, R-497 tier, claim-bearing flag, proof-audit rows, content freeze, hash freeze, and paper PDF status unchanged."
+      ],
+      "next_action": "Send the packet to an independent mathematics reviewer and a literature specialist. Record each location-specific response, repair any accepted defect with a new exploration and replay, and leave every row OPEN until signed review evidence exists. Do not generate the paper PDF before content and hash freeze.",
+      "non_claims": [
+        "The matrix validator checks document coverage and hostile mutations, not mathematical truth.",
+        "A validator PASS is not an independent proof audit, theorem acceptance, novelty decision, or claim promotion.",
+        "No A1-A23 row, R-497 result, TECT sector, KMS, ground-state, continuum, physical-vacuum, cosmological, or Yang-Mills conclusion changes.",
+        "No paper PDF was generated."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the external-review handoff enumerate all A1-A23 load-bearing rows exactly once with source locators and cross-cutting questions, and does a standalone validator reject omission, duplication, or missing-evidence mutations?",
+      "recorded_at": "2026-09-07T08:57:35Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001633",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK A1-A23 independent review matrix and coverage validator",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 review-handoff documentation and replay checkpoint, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY; A1-A23 remain OPEN. The package PDF remains deferred until content review, signed independent reviews, final freeze, release checks, and operator backup.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The A1-A23 matrix and validator were wired into the external-review handoff, verification README, submission-readiness matrix, and package manifest. A new immutable fresh manuscript audit checkpoint and a no-overwrite integrated replay record were issued after those documentation changes. The replay confirms only the allowed package-document delta and preserved historical diagnostics; no analytic assertion or claim tier changed.",
+      "evidence_refs": [
+        "publish/papers/q3lock-phase-coexistence/external-review-handoff.md#materials-supplied",
+        "publish/papers/q3lock-phase-coexistence/verification/README.md#coverage-and-historical-results",
+        "publish/papers/q3lock-phase-coexistence/submission-readiness.md#submission-readiness-matrix--q3lock",
+        "publish/papers/q3lock-phase-coexistence/verification/package-manifest.json#tooling_checkpoint",
+        "strategy/q3lock-independent-review-matrix-260907.md#complete-load-bearing-matrix",
+        "verification/scripts/q3lock_independent_review_matrix_audit.py#validate_matrix",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-independent-review-matrix-audit/result.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-r9-review-matrix-handoff/result.json#summary",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r8/result.json#summary"
+      ],
+      "finding": "The external handoff now names the complete A1-A23 matrix, its coverage validator, and its diagnostic result. The package README and readiness matrix point to the new review-matrix-handoff fresh checkpoint and replay r8, while the manifest tooling checkpoint is advanced to replay r8. Fresh audit r9 reports 7 audits and 1171 assertions; integrated replay r8 reports seven canonical groups, seven manuscript groups, nineteen protected historical records, and 46 algebra checks. These are documentation and provenance advances only; A1-A23 remain OPEN and no independent mathematics or literature disposition has been supplied.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001635",
+      "method": [
+        "Rewrite the external-review handoff to require the A1-A23 matrix row order and to expose the matrix, validator, and result artifact as review materials.",
+        "Update the package verification README, submission-readiness matrix, and manifest tooling checkpoint while preserving the T0, claim_bearing=false, UNFROZEN_CONTENT_REVIEW, and PDF DEFERRED scope.",
+        "Issue a non-overwriting fresh manuscript audit checkpoint with the review-matrix-handoff label and a non-overwriting integrated replay after the documentation hashes changed.",
+        "Run the matrix validator, replay check, exploration verification and time checks, and the remaining repository release checks; retain all historical outputs.",
+        "Record the remaining independent mathematics, literature, content-freeze, hash-freeze, release, commit, and backup gates without treating the new replay as a theorem or referee certificate."
+      ],
+      "next_action": "Send the updated package to independent mathematics and literature reviewers. Record signed location-specific A1-A23 dispositions and repair any accepted defect with a new exploration and fresh replay. Keep the first paper PDF deferred until the content/hash freeze, release check, operator commit, and backup gates are complete.",
+      "non_claims": [
+        "The documentation update does not certify any proof row, theorem applicability, literature novelty, DLR state, cusp, or phase coexistence.",
+        "Fresh audit r9 and integrated replay r8 are reproducibility and provenance checks, not independent implementations or external reviews.",
+        "No claim tier, result lineage, TECT sector, KMS, ground-state, continuum, physical-vacuum, cosmological, or Yang-Mills conclusion changes.",
+        "No paper PDF was generated."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does wiring the A1-A23 review matrix into the external handoff and issuing new non-overwriting r9/r8 provenance checkpoints preserve the declared T0 and PDF-deferral boundaries?",
+      "recorded_at": "2026-09-07T09:02:48Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001634",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001631",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK review-matrix handoff and replay checkpoint update",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
