@@ -49,9 +49,11 @@ Please review in this order, preserving the declared limits:
 9. Can a more general continuous-oscillator or quantum Pirogov--Sinai
    theorem cover the untruncated model with the stated quantifiers?
    Distinguish direct operator-norm hypotheses, relative-form alternatives,
-   fixed-Ritz results and cutoff-uniform state passage. The addendum's two
-   source-access items remain unassessed; provide exact text and locators
-   before accepting or excluding their application.
+   fixed-Ritz results and cutoff-uniform state passage. DFFR II has now been
+   checked at its Hilbert--Schmidt and occupation-regularity hypotheses;
+   assess any proposed replacement reference explicitly. The remaining
+   Schneider--Beck--Stoll source-access item is still unassessed; provide
+   exact text and locators before accepting or excluding its application.
 
 ## Response template
 

@@ -110,12 +110,56 @@ they are not a proof for the untruncated paper model. They are comparison
 history only, not additions to the paper's authority chain. This audit does
 not rerun or reaccept those legacy analytic arguments.
 
-DFFR II, Theorem 5.2 / (5.21)--(5.22), is identified in those authorities.
-The [author's publication list](https://luc-umass.github.io/publications.html)
-links [the reprint](https://luc-umass.github.io/pdf/ql2.pdf), but live retrieval
-failed in this pass; the ETH archive returned a verification page. A fresh
-primary-source reassessment of that theorem remains NOT-YET-ASSESSED here.
-Legacy descriptions are not substituted for a newly checked primary import.
+DFFR II was initially unavailable in EXP-001612. A subsequent public-source
+download from the [author-linked reprint](https://luc-umass.github.io/pdf/ql2.pdf)
+succeeded on 2026-09-07. The scan's article title page credits N. Datta,
+J. Frohlich, L. Rey-Bellet and R. Fernandez (the archive cover omits the last
+author). It is *Helvetica Physica Acta* 69 (1996), 752--820,
+DOI 10.5169/seals-116979. The privately cached source is not redistributed
+with this package; its SHA-256 is
+`7f130e15e90d75b49b193d75cc5f647f713f2abf1a90c0a795a930f3ccb11fbd`.
+This is a comparison-source capture, not a modification of the R-497 manifest.
+
+### DFFR II primary reassessment
+
+Text extraction was checked against rendered pages 772, 776 and 796--800
+(PDF pages 22, 26 and 46--50; the cover accounts for the offset).
+Equation (4.7) uses the Hilbert--Schmidt norm; (4.10)--(4.13) give a
+dimension-dependent comparison with operator norm. Section 4.2, p. 776,
+requires bosonic occupation regularity (4.38), not unrestricted infinite
+occupation by default. Theorem 5.2, pp. 799--800, requires reference-data,
+two-level Peierls and block-smallness hypotheses, including parameter
+derivatives in (5.21) and the strict condition (5.22).
+
+| Requirement | Q3LOCK assessment for a direct import |
+|---|---|
+| Classical reference, regular parameter family, low/high projections and two-level Peierls data | UNASSESSED for an untruncated replacement construction; the R-167 fixed-Ritz data do not provide one |
+| Actual Hilbert--Schmidt block bounds and derivatives | FAILED for the direct kinetic perturbation, which is unbounded; UNASSESSED for a different transformed reference |
+| Bosonic regularity of the stated type | UNASSESSED for an identified Q3 occupation representation; coordinate-loop moments are not this hypothesis |
+| Uniform strict smallness and passage to the same untruncated states | UNASSESSED; no cutoff-uniform constants or state-identification theorem supplied here |
+
+Disposition: DOES-NOT-APPLY to the direct coordinate/kinetic split; a
+different construction remains NOT-YET-ASSESSED. This replaces the earlier
+source-access gap with a checked applicability boundary, not a proof that
+all infinite-onsite contour methods fail. Neither a DFFR phase conclusion
+nor the R-167 cutoff result is added to the paper's authority chain.
+
+### Why occupation regularity cannot be replaced by trace finiteness
+
+This is an elementary comparison fixture, not the Q3LOCK Hamiltonian.
+For a single harmonic oscillator with occupation operator N and Gibbs ratio
+q=exp(-beta omega) in (0,1), the probabilities are p_n=(1-q)q^n. Hence
+
+    E exp(t N) = (1-q)/(1-q exp(t))    if t < beta omega,
+              = infinity            if t >= beta omega.
+
+Indeed, the summands form a geometric series; at the endpoint they are
+constant and positive, and above it they grow. Every polynomial occupation
+moment is finite, by the ratio test. Thus a finite heat trace and finite
+polynomial moments do not imply an occupation MGF finite for all real t.
+This does not show that Q3 fails (4.38): its number operator, reference and
+state mapping must first be specified. It only prevents an unsupported
+replacement of the newly checked hypothesis by existing moment statements.
 
 Schneider--Beck--Stoll, *Quantum effects in an n-component vector model for
 structural phase transitions*, Phys. Rev. B 13, 1123 (1976), is verified in
@@ -164,17 +208,17 @@ manuscript's standard infrared and threshold mechanisms remain standard.
 The next useful review must identify an exact covering theorem, give a
 hypothesis-level reduction, or explain the model-specific residual. Repeating
 finite diagnostics cannot replace that decision. Obtain accessible source
-text for the two unassessed candidates and a signed specialist disposition;
+text for the remaining Schneider--Beck--Stoll candidate and a signed specialist disposition;
 keep every analytic review gate open until independently resolved. Do not
 generate the paper PDF before the final content-review checkpoint.
 
 ## Documentation checkpoint replay
 
-Run:
+The EXP-001612 historical snapshot command was:
 
     E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/q3lock_literature_addendum_snapshot.py
 
-The script calls the existing manuscript checker in memory, compares its
+That script calls the existing manuscript checker in memory, compares its
 entire nested payload with the preserved v0.1.7 run, and permits only source
 hash changes for this addendum, README.md and external-review-handoff.md.
 It records a new JSON under the claim runs directory; it does not overwrite
@@ -188,3 +232,23 @@ Adversarial code boundary: an unexpected mathematical assertion, manuscript
 hash, source hash, or canonical authority difference must fail the comparison.
 No derived physical number is hardcoded, no new numerical approximation is
 used, and the script cannot establish the applicability dispositions above.
+
+For the current DFFR reassessment, use instead:
+
+    E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/q3lock_dffr_source_audit.py --source-pdf PATH_TO_AUTHOR_REPRINT
+
+The new command checks the source bytes and exact geometric-series fixtures,
+invokes the prior manuscript diagnostics in memory, and writes a compact
+replay record with deduplicated source hashes. It does not duplicate the full
+historical assertion payload or overwrite either older run. Source-page
+interpretation is a recorded human-readable audit, not an automated theorem
+certificate. Do not run an older standalone writer against revised documents.
+
+Adversarial checks for this checkpoint: the regularity parameter t is not
+the inverse temperature beta or the locking lambda; a finite truncation
+has an entire MGF while the infinite oscillator need not; the equality
+endpoint diverges; polynomial moments alone are insufficient. The fixture
+changes no Q3 parameter, proves no absence of Q3 regularity, and cannot
+replace the independent mathematical or literature review. The collective
+proof section was also reread at this checkpoint; no new lemma or
+independent acceptance is claimed from that repeated inspection.
