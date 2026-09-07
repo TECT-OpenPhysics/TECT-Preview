@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**991 accepted events** · latest 25 shown below · machine locator: `index.json`
+**992 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-07 | `20260907-q3lock-fss-to-loop-and-infrared-interface-audit` — [Q3LOCK FSS-to-loop and infrared interface audit (EXP-001627)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-fss-to-loop-and-infrared-interface-audit) |
 | 2026-09-07 | `20260907-q3lock-simon-feynman-kac-source-applicability-a` — [Q3LOCK Simon Feynman-Kac source-applicability audit (EXP-001626)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-simon-feynman-kac-source-applicability-a) |
 | 2026-09-07 | `20260907-q3lock-non-overwriting-r6-replay-alignment-chec` — [Q3LOCK non-overwriting R6 replay alignment checkpoint (EXP-001625)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-non-overwriting-r6-replay-alignment-chec) |
 | 2026-09-07 | `20260907-q3lock-readiness-matrix-alignment-with-immutabl` — [Q3LOCK readiness matrix alignment with immutable replay checkpoint (EXP-001624)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-readiness-matrix-alignment-with-immutabl) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-06 | `20260906-q3lock-exp-001606-integrate-periodic-moments-an` — [Q3LOCK EXP-001606: integrate periodic moments and weighted source-tangent DLR proofs in paper v0.1.3] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260906-q3lock-exp-001606-integrate-periodic-moments-an) |
 | 2026-09-06 | `20260906-q3lock-exp-001605-manuscript-integrates-finite` — [Q3LOCK EXP-001605: manuscript integrates finite-volume loop limit and Borel FKG] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260906-q3lock-exp-001605-manuscript-integrates-finite) |
 | 2026-09-06 | `20260906-q3lock-exp-001604-manuscript-sign-and-analytici` — [Q3LOCK EXP-001604: manuscript sign and analyticity repair with expanded pressure proof] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-q3lock-exp-001604-manuscript-sign-and-analytici) |
-| 2026-09-06 | `20260906-q3lock-v0-1-0-content-first-publication-package` — [Q3LOCK v0.1.0 content-first publication package assembled with PDF deferred] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-q3lock-v0-1-0-content-first-publication-package) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 969–991 | 23 | [000969-001018.md](pages/000969-001018.md) |
+| 969–992 | 24 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |

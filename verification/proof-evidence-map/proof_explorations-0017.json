@@ -1626,6 +1626,72 @@
       "task_id": "T-054",
       "title": "Q3LOCK Simon Feynman-Kac source-applicability audit",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 conditional finite-mesh and fixed-volume source-limit audit, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY. FSS Theorem 2.1 is used only for the finite-dimensional MGF bound; the loop weak limit, source uniform integrability, Duhamel conversion, infrared sum, zero-mode lower bound, cusp and DLR pair remain separate and externally unsigned.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The primary FSS theorem's fixed-dimension, periodic rectangular, positive dot-product and all-quadratic-moments hypotheses match the Q3LOCK time-mesh prior at each fixed N after the explicit spatial diagonal allocation. The edge-divergence source map gives the Poisson norm, not the vertex norm, and the source pairing and beta/epsilon factors are exact. Weak convergence is used only on bounded truncations; two-sided exponential estimates supply the missing uniform integrability before derivatives and second moments are passed.",
+      "evidence_refs": [
+        "strategy/q3lock-fss-loop-infrared-interface-audit-260907.md#primary-finite-dimensional-input",
+        "strategy/q3lock-fss-loop-infrared-interface-audit-260907.md#exact-q3lock-map",
+        "strategy/q3lock-fss-loop-infrared-interface-audit-260907.md#passage-order-and-uniform-integrability",
+        "strategy/q3lock-fss-loop-infrared-interface-audit-260907.md#duhamel-and-infrared-boundary",
+        "publish/papers/q3lock-phase-coexistence/manuscript.tex#eq:fss-theorem-input",
+        "publish/papers/q3lock-phase-coexistence/manuscript.tex#eq:fss-poisson-energy",
+        "publish/papers/q3lock-phase-coexistence/manuscript.tex#eq:fss-source-ui",
+        "publish/papers/q3lock-phase-coexistence/manuscript.tex#eq:infrared-bound",
+        "publish/papers/q3lock-phase-coexistence/imported-source-ledger.md#fss-gd",
+        "publish/papers/q3lock-phase-coexistence/theorem-applicability-audit.md#fss-theorem-2-1-section-2-page-81",
+        "publish/papers/q3lock-phase-coexistence/proof-audit.md#load-bearing-audit-table"
+      ],
+      "finding": "At fixed L,beta,N, the FSS source map and MGF bound are correctly typed, and the exact loop passage requires bounded truncation followed by a two-sided exponential UI estimate. The inverse spatial Laplacian is restricted to the zero-sum source and the constant mode is not controlled by FSS. The derived nonzero-mode Duhamel/infrared bound is internally consistent, but its complete analytic acceptance remains open.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001627",
+      "method": [
+        "Read the primary FSS PDF, Section 2 Theorem 2.1 and proof pages 81-84, retaining its fixed finite spin dimension, arbitrary common prior with all quadratic exponential moments, periodic rectangular geometry and edge-divergence source.",
+        "Reconstruct the Q3LOCK rescaling s=sqrt(epsilon)x and the positive 3c spatial allocation, then verify the edge Poisson norm and source pairing with N epsilon=beta.",
+        "Check the order of the interacting weak limit, bounded exponential truncation and monotone convergence, followed by the two-sign exponential estimate for uniform integrability of derivatives and second moments.",
+        "Derive the Duhamel covariance factor beta^2 and the Fourier eigenvalue 2E(p), while excluding the constant mode from the inverse and retaining the separate three-dimensional singular-sum proof.",
+        "Record hostile failures for using the vertex norm, assuming mesh-uniform prior constants, passing unbounded exponentials directly through weak convergence, or importing FSS Theorems 2.2-2.3 as a phase result."
+      ],
+      "next_action": "Obtain independent review of the FSS theorem invocation, the interacting loop weak-limit/UI passage and the subsequent Duhamel/Fourier normalization; keep A12-A13 and all cusp/DLR gates open.",
+      "non_claims": [
+        "The audit does not prove the continuous-loop FKG or the infinite-volume infrared estimate independently.",
+        "FSS does not control the spatial zero mode and supplies no DLR or cusp conclusion.",
+        "No theorem tier, claim-bearing status, priority, novelty, publication readiness or submission authorization changes.",
+        "No KMS dynamics, ground-state gap, continuum limit, physical vacuum, C6, CP1 or Sector A conclusion follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Do the primary FSS finite-dimensional hypotheses and the Q3LOCK edge-source map support the stated MGF-to-loop-to-Duhamel passage without losing the beta, epsilon, coupling or zero-mode factors?",
+      "recorded_at": "2026-09-07T07:42:39Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001626",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001620",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Reopen if the FSS source version, spatial edge orientation, source normalization, mesh interpolation, UI estimate, Duhamel convention or zero-mode treatment changes, or if an independent reviewer finds a factor or limit-order defect.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK FSS-to-loop and infrared interface audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
