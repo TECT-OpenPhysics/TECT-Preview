@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**982 accepted events** · latest 25 shown below · machine locator: `index.json`
+**983 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-07 | `20260907-c6-q3lock-scalar-comparator-boundary-audit-exp` — [C6 Q3LOCK scalar comparator boundary audit (EXP-001618)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-scalar-comparator-boundary-audit-exp) |
 | 2026-09-07 | `20260907-c6-q3lock-fss-primary-source-applicability-audi` — [C6 Q3LOCK FSS primary-source applicability audit (EXP-001617)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-fss-primary-source-applicability-audi) |
 | 2026-09-07 | `20260907-c6-q3lock-non-importing-polynomial-cross-check` — [C6 Q3LOCK non-importing polynomial cross-check and explicit R3 integration] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-non-importing-polynomial-cross-check) |
 | 2026-09-07 | `20260907-c6-q3lock-replay-r2-preflight-correction-and-r1` — [C6 Q3LOCK replay R2 preflight correction and R1 source preservation] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-replay-r2-preflight-correction-and-r1) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-pah-omc-016-resolved-radial-counting-candidate` — [PAH-OMC-016 resolved radial counting candidate contract review] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-pah-omc-016-resolved-radial-counting-candidate) |
 | 2026-09-05 | `20260905-pah-omc-015-r-508-counting-ensemble-fails-restr` — [PAH-OMC-015 R-508 counting ensemble fails restricted cutoff nondegeneracy] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-pah-omc-015-r-508-counting-ensemble-fails-restr) |
 | 2026-09-05 | `20260905-q3lock-exp-001595-assembles-hilbert-reflection` — [Q3LOCK EXP-001595 assembles Hilbert reflection and continuous-loop infrared content] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001595-assembles-hilbert-reflection) |
-| 2026-09-05 | `20260905-q3lock-exp-001593-assembles-continuous-loop-fkg` — [Q3LOCK EXP-001593 assembles continuous-loop FKG and selected-limit association content] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001593-assembles-continuous-loop-fkg) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 969–982 | 14 | [000969-001018.md](pages/000969-001018.md) |
+| 969–983 | 15 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |

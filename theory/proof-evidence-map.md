@@ -60,8 +60,8 @@ flowchart LR
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
 | Reusable result records | 336 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 385 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1617 | Route decisions: advanced 1187, failed 254, inconclusive 121, parked 55; non-tier-bearing |
-| Accepted chronological events | 982 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1618 | Route decisions: advanced 1188, failed 254, inconclusive 121, parked 55; non-tier-bearing |
+| Accepted chronological events | 983 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 62 | 12 live; 50 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
 | Proof evidence inventory | 418 lineage notes / 399 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2053 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
@@ -24629,6 +24629,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** [R-497](../RESULTS-LEDGER.md#r-497)
 - **Located evidence:** [`strategy/q3lock-fss-primary-source-applicability-audit-260907.md`](../strategy/q3lock-fss-primary-source-applicability-audit-260907.md) (primary-source-and-exact-scope); [`strategy/q3lock-reflection-infrared-content-260905.md`](../strategy/q3lock-reflection-infrared-content-260905.md) (exact-finite-mesh-fss-crosswalk); [`strategy/q3lock-literature-source-freeze-260905.md`](../strategy/q3lock-literature-source-freeze-260905.md) (3.2-fss); [`verification/scripts/q3lock_fss_applicability_audit.py`](../verification/scripts/q3lock_fss_applicability_audit.py) (build_payload); [`verification/tests/test_q3lock_fss_applicability_audit.py`](../verification/tests/test_q3lock_fss_applicability_audit.py) (FSSApplicabilityTests); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-fss-applicability-audit/result.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-fss-applicability-audit/result.json) (assertions)
 
+<a id="exp-001618"></a>
+#### EXP-001618 — Q3LOCK Kargol-Kozitsky asymmetric scalar boundary audit
+
+- **Review metadata:** reviewed 2026-09-07; recorded 2026-09-07T06:34:36Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Does the primary Kargol-Kozitsky asymmetric quantum-crystal theorem directly cover the positive-lambda eight-component Q3LOCK phase-coexistence statement?
+- **Finite checks:** (1) Read the versioned arXiv primary PDF and record the abstract, equations (1)-(7), scalar potential hypothesis (4), Definition 1.3, and Theorem 1.4 locators. (2) Map the source's scalar onsite space, bilinear interaction, asymmetric field location, and polarization conclusion against the Q3LOCK R^8 Q3LOCK Hamiltonian, zero-source parity cusp, and DLR-pair target. (3) Check the tempting projection-to-u reduction and reject it unless a separate conditional/invariant reduction removes the transverse non-bilinear Q3 terms; no such reduction is present in the current authority chain. (4) Record the comparison as a bounded literature disposition with adversarial nonclaims; do not treat search snippets, scalar results, or source metadata as an analytic premise.
+- **Finding:** Kargol-Kozitsky 0611017 is a close scalar comparator and cannot be cited as the Q3LOCK phase theorem. The exact mismatch is dimensional, interaction-level, source-location, and conclusion-level; the comparison narrows a direct-import shortcut but is not a novelty certificate or an exhaustive anisotropic literature search.
+- **Decision reason:** The primary source explicitly defines a scalar displacement q_l in R, a scalar continuous onsite potential V_0, and a bilinear nearest-neighbour interaction. Its Theorem 1.4 proves a discontinuity of a thermodynamic scalar polarization at some external field for d>=3 and sufficiently large mass and coupling. Q3LOCK instead has q_y in R^8, a non-radial positive-lambda Q3 onsite locking polynomial, a normalized collective source, a strict cusp at the parity-symmetric source zero, and a separately constructed pair of tempered Euclidean DLR states. No scalar reduction or state-identification map is proved.
+- **Boundary:** T0 literature comparison only, claim_bearing=false, no priority claim. The sole Q3LOCK research authority remains EXP-000780 -> EXP-000781 -> EXP-000782 / R-497. No analytic import, theorem promotion, or PDF.
+- **Next / revisit condition:** Continue the primary-source search for genuinely vector/anisotropic finite-temperature Euclidean phase theorems and obtain a signed specialist disposition; keep all direct-import and novelty gates open until that review is complete.
+- **Related explorations:** continues [EXP-001617](#exp-001617)
+- **Formal authorities:** [R-497](../RESULTS-LEDGER.md#r-497)
+- **Located evidence:** [`strategy/q3lock-kargol-kozitsky-scalar-boundary-audit-260907.md`](../strategy/q3lock-kargol-kozitsky-scalar-boundary-audit-260907.md) (primary-source); [`publish/papers/q3lock-phase-coexistence/literature-crosswalk.md`](../publish/papers/q3lock-phase-coexistence/literature-crosswalk.md) (closest-model-comparators); [`publish/papers/q3lock-phase-coexistence/literature-crosswalk.md`](../publish/papers/q3lock-phase-coexistence/literature-crosswalk.md) (novelty-boundary); [`publish/papers/q3lock-phase-coexistence/external-review-handoff.md`](../publish/papers/q3lock-phase-coexistence/external-review-handoff.md) (questions-that-require-an-explicit-answer)
+
 
 ## Claim evidence matrix
 
@@ -24683,7 +24698,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (22 notes; 1312 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace), [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), +129 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +671 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [C6 Q3LOCK FSS primary-source applicability audit (EXP-001617)] - 2026-09-07 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (22 notes; 1312 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace), [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), +129 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +672 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [C6 Q3LOCK scalar comparator boundary audit (EXP-001618)] - 2026-09-07 | - |
 
 ### Sector D
 
@@ -25464,6 +25479,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-07 | [C6 Q3LOCK scalar comparator boundary audit (EXP-001618)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK FSS primary-source applicability audit (EXP-001617)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK non-importing polynomial cross-check and explicit R3 integration] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK replay R2 preflight correction and R1 source preservation] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -25483,7 +25499,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-06 | [PAH-OMC-017 publication footer and immutable-run linkage correction] - 2026-09-06 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-06 | [PAH-OMC-017 R-510: exact spatial transfer and common local Gibbs state] - 2026-09-06 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-06 | [Operator standing authorization for release-gated PAH and Q3LOCK batch commits and pushes] - 2026-09-06 | - | - |
-| 2026-09-06 | [PAH-OMC-016 R-509: radial tightness and uniform matter nondegeneracy; host gates unchanged] - 2026-09-06 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 

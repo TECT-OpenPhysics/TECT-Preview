@@ -1061,6 +1061,60 @@
       "task_id": "T-054",
       "title": "Q3LOCK FSS primary-source applicability and finite-mesh crosswalk",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 literature comparison only, claim_bearing=false, no priority claim. The sole Q3LOCK research authority remains EXP-000780 -> EXP-000781 -> EXP-000782 / R-497. No analytic import, theorem promotion, or PDF.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The primary source explicitly defines a scalar displacement q_l in R, a scalar continuous onsite potential V_0, and a bilinear nearest-neighbour interaction. Its Theorem 1.4 proves a discontinuity of a thermodynamic scalar polarization at some external field for d>=3 and sufficiently large mass and coupling. Q3LOCK instead has q_y in R^8, a non-radial positive-lambda Q3 onsite locking polynomial, a normalized collective source, a strict cusp at the parity-symmetric source zero, and a separately constructed pair of tempered Euclidean DLR states. No scalar reduction or state-identification map is proved.",
+      "evidence_refs": [
+        "strategy/q3lock-kargol-kozitsky-scalar-boundary-audit-260907.md#primary-source",
+        "publish/papers/q3lock-phase-coexistence/literature-crosswalk.md#closest-model-comparators",
+        "publish/papers/q3lock-phase-coexistence/literature-crosswalk.md#novelty-boundary",
+        "publish/papers/q3lock-phase-coexistence/external-review-handoff.md#questions-that-require-an-explicit-answer"
+      ],
+      "finding": "Kargol-Kozitsky 0611017 is a close scalar comparator and cannot be cited as the Q3LOCK phase theorem. The exact mismatch is dimensional, interaction-level, source-location, and conclusion-level; the comparison narrows a direct-import shortcut but is not a novelty certificate or an exhaustive anisotropic literature search.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001618",
+      "method": [
+        "Read the versioned arXiv primary PDF and record the abstract, equations (1)-(7), scalar potential hypothesis (4), Definition 1.3, and Theorem 1.4 locators.",
+        "Map the source's scalar onsite space, bilinear interaction, asymmetric field location, and polarization conclusion against the Q3LOCK R^8 Q3LOCK Hamiltonian, zero-source parity cusp, and DLR-pair target.",
+        "Check the tempting projection-to-u reduction and reject it unless a separate conditional/invariant reduction removes the transverse non-bilinear Q3 terms; no such reduction is present in the current authority chain.",
+        "Record the comparison as a bounded literature disposition with adversarial nonclaims; do not treat search snippets, scalar results, or source metadata as an analytic premise."
+      ],
+      "next_action": "Continue the primary-source search for genuinely vector/anisotropic finite-temperature Euclidean phase theorems and obtain a signed specialist disposition; keep all direct-import and novelty gates open until that review is complete.",
+      "non_claims": [
+        "This scalar boundary does not exclude every vector, anisotropic, contour, or conditional-reduction theorem.",
+        "The source's scalar discontinuity does not prove the Q3LOCK strict zero-source cusp or two parity-related tempered DLR states.",
+        "No priority, world-first, publication-value, or novelty certificate is issued.",
+        "No KMS dynamics, ground-state gap, continuum limit, physical vacuum, C6, CP1, or Sector A closure follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the primary Kargol-Kozitsky asymmetric quantum-crystal theorem directly cover the positive-lambda eight-component Q3LOCK phase-coexistence statement?",
+      "recorded_at": "2026-09-07T06:34:36Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001617",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "A source version with vector onsite space, a proved Q3-compatible reduction, or a specialist objection identifying a covering theorem reopens this boundary audit.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK Kargol-Kozitsky asymmetric scalar boundary audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
