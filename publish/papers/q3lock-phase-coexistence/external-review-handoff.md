@@ -8,7 +8,8 @@ repairs or a clear refusal to certify a step.
 
 1. manuscript.tex and the exact source dictionary in Section 2;
 2. theorem-applicability-audit.md and imported-source-ledger.md;
-3. literature-crosswalk.md, the frozen KP/FSS/KKK source identifiers and
+3. literature-crosswalk.md, literature-qps-addendum.md,
+   the frozen KP/FSS/KKK source identifiers and
    Simon arXiv:math-ph/9907022v1 (new source byte capture still required);
 4. proof-audit.md;
 5. verification/README.md and the R-497 manifest;
@@ -45,6 +46,12 @@ Please review in this order, preserving the declared limits:
 8. Is the positive-lambda collective estimate a substantial contribution,
    or an immediate corollary of an earlier anisotropic comparison theorem?
    Treat nonradial infrared domination and the threshold shape as standard.
+9. Can a more general continuous-oscillator or quantum Pirogov--Sinai
+   theorem cover the untruncated model with the stated quantifiers?
+   Distinguish direct operator-norm hypotheses, relative-form alternatives,
+   fixed-Ritz results and cutoff-uniform state passage. The addendum's two
+   source-access items remain unassessed; provide exact text and locators
+   before accepting or excluding their application.
 
 ## Response template
 

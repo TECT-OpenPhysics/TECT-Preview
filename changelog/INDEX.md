@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**975 accepted events** · latest 25 shown below · machine locator: `index.json`
+**976 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-07 | `20260907-c6-q3lock-broader-perturbative-theorem-comparis` — [C6 Q3LOCK broader perturbative-theorem comparison and legacy cutoff quarantine] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-broader-perturbative-theorem-comparis) |
 | 2026-09-07 | `20260907-c6-q3lock-source-applicability-and-standard-met` — [C6 Q3LOCK source-applicability and standard-method comparison audit (EXP-001611)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-source-applicability-and-standard-met) |
 | 2026-09-07 | `20260907-pah-omc-018-r-511-canonical-generator-limit-and` — [PAH-OMC-018 R-511 canonical generator-limit and local pre-form registration] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-pah-omc-018-r-511-canonical-generator-limit-and) |
 | 2026-09-06 | `20260906-c6-q3lock-source-to-phase-composition-and-bound` — [C6 Q3LOCK source-to-phase composition and bounded-state witness (EXP-001609)] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260906-c6-q3lock-source-to-phase-composition-and-bound) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-q3lock-exp-001587-corrects-doubled-spatial-diag` — [Q3LOCK EXP-001587 corrects doubled spatial diagonal in harmonic residual] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001587-corrects-doubled-spatial-diag) |
 | 2026-09-05 | `20260905-q3lock-exp-001586-r-501-quantitative-gaussian-w` — [Q3LOCK EXP-001586/R-501 quantitative Gaussian weak-limit audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001586-r-501-quantitative-gaussian-w) |
 | 2026-09-05 | `20260905-q3lock-exp-001584-p-06-gaussian-fourier-covaria` — [Q3LOCK EXP-001584 P-06 Gaussian Fourier covariance audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001584-p-06-gaussian-fourier-covaria) |
-| 2026-09-05 | `20260905-q3lock-exp-001583-finite-fkg-mixed-derivative-a` — [Q3LOCK EXP-001583 finite FKG mixed-derivative and interpolation audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001583-finite-fkg-mixed-derivative-a) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 969–975 | 7 | [000969-001018.md](pages/000969-001018.md) |
+| 969–976 | 8 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |

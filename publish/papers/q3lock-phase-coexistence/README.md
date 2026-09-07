@@ -27,6 +27,9 @@ cosmology, or sector closure.
   with individual hypothesis dispositions and external-acceptance boundary.
 * literature-crosswalk.md — bounded primary-literature comparison and
   non-subsumption boundary.
+* literature-qps-addendum.md — broader perturbative-theorem comparison,
+  fixed-Ritz legacy quarantine, and explicitly unassessed source-access items
+  (2026-09-07 supplement; manuscript version remains v0.1.7).
 * proof-audit.md — adversarial checklist and acceptance record.
 * external-review-handoff.md — independent referee request and response
   template.
