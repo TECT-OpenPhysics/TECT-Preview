@@ -19,6 +19,17 @@ SPEC.loader.exec_module(REPLAY)
 
 
 class ReplaySafetyTests(unittest.TestCase):
+    def test_independent_algebra_requires_exact_payload(self):
+        payload = {"identity": {"residual": []}, "source_hashes": {"script": "same"}}
+        REPLAY.require_exact_algebra(payload, deepcopy(payload))
+        for mutant in (
+            {"identity": {"residual": ["nonzero"]}, "source_hashes": {"script": "same"}},
+            {"identity": {"residual": []}, "source_hashes": {"script": "changed"}},
+            {**payload, "new_scope": None},
+        ):
+            with self.assertRaises(ValueError):
+                REPLAY.require_exact_algebra(payload, mutant)
+
     def test_embedded_guards(self):
         rows = REPLAY.guard_self_tests()
         self.assertTrue(rows)

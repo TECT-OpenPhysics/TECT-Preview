@@ -84,6 +84,27 @@ also exercise changed archive hashes, manifest routing, path rejection and
 the missing-dependency branch. A tooling PASS still does not close any
 mathematical, source-applicability, external-review or publication gate.
 
+## R3 explicit integration of the non-importing algebra supplement
+
+At clean checkpoint 0ef6c0d2da2f570755c3e5b645a88170985302a4, R2 replay
+passed. Adding nonimporting-algebra-audit.md caused the old checker to reject
+an undeclared document source hash. That is its intended closed-inventory
+behavior, not a mathematical counterexample or an erased failure.
+
+R3 adds exactly that document to the allowed documentation inventory, executes
+the supplemental algebra builder in memory, and requires equality of its
+entire stored replay payload, including every source hash and coefficient
+identity. A changed identity, code hash or extra scope key fails. The current
+manifest points to a new R3 result; R2 and the independent result remain
+immutable historical inputs. R2's implementation and source versions are
+recoverable from the fixed commit above, not silently replaced in its record.
+
+The algebra note records its issuance before this explicit integration.
+Its statement that the supplement preserves existing files describes that
+standalone supplement operation; this R3 checkpoint separately updates
+current reader metadata and retains the original metadata in Git history.
+No change is made to the manuscript, analytic proof, claim tier or PDF gate.
+
 ## Workspace and release boundary
 
 The first isolated paper checkout lacked four gitignored tmp evidence files

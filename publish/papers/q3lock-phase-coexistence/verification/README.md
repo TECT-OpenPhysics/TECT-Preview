@@ -8,11 +8,12 @@ their source root from their own location, not from that interpreter's path.
 
 The default invocation is also read-only. Its target is selected by the
 package manifest's tooling_checkpoint field, confined to public claim runs. It executes the canonical finite
-diagnostics and current manuscript checker in memory, compares saved results,
+diagnostics, current manuscript checker and non-importing algebra supplement
+in memory, compares saved results,
 checks the historical output bytes and frozen authority hashes, and compares
 the complete new payload with the separate current replay record:
 
-    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r2/result.json
+    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r3/result.json
 
 The research environment must include the existing symbolic dependencies,
 including SymPy. A minimal bundled Python is not an equivalent runtime;
@@ -61,7 +62,7 @@ its six predecessors. Its seven groups retain the registered counts: source
 
 The documentation delta is limited to README.md, external-review-handoff.md,
 literature-qps-addendum.md, this README, package-manifest.json and
-replay-safety-audit.md. Changes to
+replay-safety-audit.md and nonimporting-algebra-audit.md. Changes to
 assertions, the manuscript, analytic notes, code or other source hashes fail.
 The current saved replay additionally pins the resulting document bytes.
 The package remains T0, claim_bearing=false, UNFROZEN_CONTENT_REVIEW and
@@ -78,6 +79,22 @@ audits. Their original standalone commands require their original checkout
 Do not run those writers on this revised package. The current entrypoint checks
 their preserved identities but does not rerun the separate harmonic-comparison
 fixtures or certify the manually inspected source pages.
+
+## Non-importing algebra supplement and R3 integration
+
+The current R3 record additionally compares every source hash, coefficient
+identity and assertion in the separately issued non-importing algebra result.
+See nonimporting-algebra-audit.md for its exact scope and standalone command.
+It uses only standard-library rational algebra and does not import the
+canonical implementation. Same-task authorship is not an independent reviewer.
+
+The R2 checker correctly refused the newly added supplement document under its
+closed documentation list. R3 explicitly admits that one document hash and
+separately checks the entire algebra payload; it does not waive an assertion,
+manuscript or analytic-source change. R2 remains reproducible at its original
+fixed commit 0ef6c0d2da2f570755c3e5b645a88170985302a4. Its saved JSON is
+preserved, not updated. The integrated current result has nineteen historical
+output records to protect. This is still not the final frozen-paper replay.
 
 ## Tooling tests and remaining scientific review
 

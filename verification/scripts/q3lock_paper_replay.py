@@ -22,6 +22,9 @@ SOURCE = "verification/scripts/q3lock_manuscript_source_audit.py"
 HISTORICAL = RUNS + "2026-09-07-q3lock-manuscript-source-audit/result.json"
 QPS = RUNS + "2026-09-07-q3lock-literature-qps-addendum/result.json"
 DFFR = RUNS + "2026-09-07-q3lock-dffr-source-audit/result.json"
+R2 = RUNS + "2026-09-07-q3lock-paper-readonly-replay-r2/result.json"
+ALGEBRA = "verification/scripts/q3lock_nonimporting_algebra.py"
+ALGEBRA_RESULT = RUNS + "2026-09-07-q3lock-nonimporting-algebra/result.json"
 R1 = RUNS + "2026-09-07-q3lock-paper-readonly-replay/result.json"
 R1_SOURCES = str(Path(R1).parent / "source-map.json").replace("\\", "/")
 CANONICAL = tuple("verification/scripts/q3lock_" + name + "_audit.py" for name in (
@@ -31,7 +34,7 @@ CANONICAL = tuple("verification/scripts/q3lock_" + name + "_audit.py" for name i
 DOCUMENTS = frozenset(PAPER + name for name in (
     "README.md", "external-review-handoff.md", "literature-qps-addendum.md",
     "verification/README.md", "verification/package-manifest.json",
-    "verification/replay-safety-audit.md"))
+    "verification/replay-safety-audit.md", "verification/nonimporting-algebra-audit.md"))
 
 
 def digest(path):
@@ -113,6 +116,11 @@ def require_draft_scope(manifest):
         raise ValueError("Draft scope changed; this tooling checkpoint cannot accept it.")
 
 
+def require_exact_algebra(stored, fresh):
+    if stored != fresh:
+        raise ValueError("Independent algebra differs from its saved source/identity checkpoint.")
+
+
 def guard_self_tests():
     # Tooling fixtures only; these strings are not scientific/source hashes.
     rows = []
@@ -163,7 +171,7 @@ def build_payload():
         if digest(ROOT / row["path"]) != row["sha256"]:
             raise ValueError("Frozen authority changed: " + row["path"])
 
-    historical_paths = {ROOT / path for path in (HISTORICAL, QPS, DFFR, R1)}
+    historical_paths = {ROOT / path for path in (HISTORICAL, QPS, DFFR, R1, R2, ALGEBRA_RESULT)}
     historical_paths.update(ROOT / (RUNS + "2026-09-06-q3lock-manuscript-" +
                                    part + "-audit/result.json")
                             for part in ("content", "loop", "dlr", "infrared",
@@ -183,6 +191,9 @@ def build_payload():
         canonical_replay.append({"script": script, "status": "PASS",
                                  "assertions_passed": replay["assertions_passed"],
                                  "payload_sha256": payload_digest(replay)})
+    algebra = runpy.run_path(str(ROOT / ALGEBRA),
+                             run_name="q3lock_nonimporting_readonly")["build_payload"]()
+    require_exact_algebra(json.loads(before[ROOT / ALGEBRA_RESULT])["replay"], algebra)
     for path, original in before.items():
         if path.read_bytes() != original:
             raise ValueError("Historical output bytes changed: " + str(path))
@@ -206,6 +217,10 @@ def build_payload():
                 collect(value)
 
     collect(current)
+    for source, value in algebra["source_hashes"].items():
+        if digest(ROOT / source) != value or source in hashes and hashes[source] != value:
+            raise ValueError("Independent algebra source hash differs: " + source)
+        hashes[source] = value
     extra = (Path(__file__).resolve(), frozen,
              ROOT / "verification/tests/test_q3lock_paper_replay.py",
              ROOT / (PAPER + "verification/replay-safety-audit.md"))
@@ -221,6 +236,13 @@ def build_payload():
         "manuscript_version": manifest["version"], "pdf_status": manifest["pdf_status"],
         "canonical_replay": canonical_replay,
         "manuscript_replay": list(groups.values()),
+        "nonimporting_algebra_replay": {
+            "assertions_passed": algebra["assertions_passed"],
+            "coefficient_identities": len(algebra["identities"]),
+            "payload_sha256": payload_digest(algebra),
+            "scope": algebra["scope"],
+            "independence": algebra["independence"]
+        },
         "manuscript_payload_sha256": payload_digest(current),
         "documentation_changes_from_source_checkpoint": changes,
         "historical_records_preserved": len(before),
@@ -276,7 +298,8 @@ def main(argv=None):
         print("Q3LOCK PAPER REPLAY: PASS; canonical groups",
               len(payload["canonical_replay"]), "; manuscript groups",
               len(payload["manuscript_replay"]), "; historical records preserved",
-              payload["historical_records_preserved"])
+              payload["historical_records_preserved"], "; algebra checks",
+              payload.get("nonimporting_algebra_replay", {}).get("assertions_passed", 0))
         return 0
     except ImportError as error:
         print("Q3LOCK PAPER REPLAY: FAIL: missing research dependency:", error,
