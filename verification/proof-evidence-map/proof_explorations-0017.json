@@ -1952,6 +1952,71 @@
       "task_id": "T-054",
       "title": "Q3LOCK primary literature audit: vector framework versus scalar phase theorems",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 internal finite-volume and pressure audit, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY; no DLR, FKG, infrared, cusp, phase, theorem-tier, publication, or PDF status changes.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The audit found no contradictory sign, factor, or declared limit-order defect in the current text, but it is an internal reread of the same manuscript and registered finite diagnostics, not an independent referee signature. Preserving OPEN status is required by the proof-audit protocol.",
+      "evidence_refs": [
+        "strategy/q3lock-finite-volume-pressure-independent-audit-260907.md#scope",
+        "strategy/q3lock-finite-volume-pressure-independent-audit-260907.md#a1-model-and-form-domain",
+        "strategy/q3lock-finite-volume-pressure-independent-audit-260907.md#a3-cyclic-mesh-loop-limit-and-absolute-normalization",
+        "strategy/q3lock-finite-volume-pressure-independent-audit-260907.md#a4-periodic-seam",
+        "strategy/q3lock-finite-volume-pressure-independent-audit-260907.md#a5-open-pressure-and-periodic-transfer",
+        "publish/papers/q3lock-phase-coexistence/proof-audit.md#load-bearing-audit-table",
+        "publish/papers/q3lock-phase-coexistence/theorem-applicability-audit.md#hypothesis-matrix",
+        "publish/papers/q3lock-phase-coexistence/submission-readiness.md#r2-seven-proof-blocks"
+      ],
+      "finding": "At the displayed internal level, the A1-A5 chain is coherent: the Q3LOCK polynomial and form domain match the eight-component model; min--max gives the finite trace comparison; Z_L(z) is entire while log Z_L is only locally real analytic on the real axis; the mesh proof supplies tightness beyond covariance convergence and keeps the harmonic absolute factor; seam counting gives 3L^2 bonds, 48L^2 scalar endpoint occurrences and the displayed 288 allocation; and the open pressure plus secant transfer gives a finite locally uniform periodic limit. The form-core/kernel passage, unbounded residual truncation, exact form-to-trace sandwich, arbitrary-rectangle remainder partition, and moving-beta secants remain external-review interfaces. A1-A5 therefore stay OPEN.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001632",
+      "method": [
+        "Read the model, finite-volume, Gaussian mesh, Feynman--Kac, source-moment, pressure, seam, and derivative-limit sections of the current manuscript against the A1-A5 proof-audit rows.",
+        "Recompute the quartic coercive allocation and separate the finite trace bound from the statement that only the partition function, not its global logarithm, is entire.",
+        "Trace the cyclic determinant recurrence, covariance/tightness order, compact-uniform residual convergence, and the distinction between normalized loop convergence and the absolute harmonic trace factor.",
+        "Recount periodic seam bonds and scalar endpoint incidences, and follow the Young allocation into the coefficient 288 and trace sandwich.",
+        "Check the subadditive even-rectangle pressure proof, the enlarged beta/source secant windows, local-uniform transfer, and derivative squeezing at differentiability points.",
+        "Record unresolved form/kernel and pressure-review interfaces without promoting any row to independent PASS."
+      ],
+      "next_action": "Obtain a signed independent review of A1-A5 focused on the finite form/core, Simon mass and harmonic trace map, cyclic mesh passage, seam trace inequality and arbitrary-rectangle pressure transfer; then perform the A6-A13 audit without changing the PDF deferral rule.",
+      "non_claims": [
+        "The audit does not independently certify Simon's theorem applicability or the harmonic form/kernel convergence.",
+        "The finite diagnostic counts are not a proof of any unbounded or infinite-volume passage.",
+        "The seam coefficient check does not by itself close the pressure thermodynamic limit or derivative exchange.",
+        "No strict cusp, DLR pair, extremality, purity, clustering, KMS, ground-state, gap, continuum, physical-vacuum, TECT, C6, CP1, or Sector-A conclusion follows.",
+        "No paper PDF was generated."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Are the finite-volume Hamiltonian/form, trace and source analyticity, cyclic mesh/Feynman--Kac normalization, periodic seam, and open-to-periodic pressure arguments internally consistent without silently exchanging the later infinite-volume limits?",
+      "recorded_at": "2026-09-07T08:36:01Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001631",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001628",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Reopen if the Hamiltonian, source normalization, form domain, seam convention, pressure window, imported Simon source, or any finite-volume equation changes, or if an external reviewer identifies a factor or limit-order defect.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK A1-A5 finite-volume and pressure audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**996 accepted events** · latest 25 shown below · machine locator: `index.json`
+**997 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-07 | `20260907-q3lock-a1-a5-finite-volume-and-pressure-audit-e` — [Q3LOCK A1-A5 finite-volume and pressure audit (EXP-001632)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-a1-a5-finite-volume-and-pressure-audit-e) |
 | 2026-09-07 | `20260907-q3lock-primary-literature-vector-scalar-applica` — [Q3LOCK primary literature vector-scalar applicability audit (EXP-001631)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-primary-literature-vector-scalar-applica) |
 | 2026-09-07 | `20260907-q3lock-temporal-provenance-correction-and-repla` — [Q3LOCK temporal provenance correction and replay r5 (EXP-001630)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-temporal-provenance-correction-and-repla) |
 | 2026-09-07 | `20260907-q3lock-regime-reflection-parity-and-scope-audit` — [Q3LOCK regime reflection parity and scope audit (EXP-001629)] - 2026-09-07 | A19-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-regime-reflection-parity-and-scope-audit) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-07 | `20260907-c6-q3lock-source-applicability-and-standard-met` — [C6 Q3LOCK source-applicability and standard-method comparison audit (EXP-001611)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-source-applicability-and-standard-met) |
 | 2026-09-07 | `20260907-pah-omc-018-r-511-canonical-generator-limit-and` — [PAH-OMC-018 R-511 canonical generator-limit and local pre-form registration] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-pah-omc-018-r-511-canonical-generator-limit-and) |
 | 2026-09-06 | `20260906-c6-q3lock-source-to-phase-composition-and-bound` — [C6 Q3LOCK source-to-phase composition and bounded-state witness (EXP-001609)] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260906-c6-q3lock-source-to-phase-composition-and-bound) |
-| 2026-09-06 | `20260906-c6-q3lock-manuscript-collective-forms-and-finit` — [C6 Q3LOCK manuscript collective forms and finite Falk-Bruch integration (EXP-001608)] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260906-c6-q3lock-manuscript-collective-forms-and-finit) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 969–996 | 28 | [000969-001018.md](pages/000969-001018.md) |
+| 969–997 | 29 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
