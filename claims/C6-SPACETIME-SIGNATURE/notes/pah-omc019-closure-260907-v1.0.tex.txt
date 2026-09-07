@@ -1,0 +1,174 @@
+% Title: PAH-OMC-019: Minimal form closure and radial nullspace
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-09-07; this version issued 2026-09-07
+% Status: Scoped auxiliary theorem; inherited state premises; host T1 unchanged
+
+\section*{Purpose and scope}
+This checkpoint concerns the exact R-511 pre-form on the invariant R-510
+state Hilbert space. It adds no model, rate, projection or time rescaling.
+The PAH parameters remain $K=2$, $M_s=1$, $\epsilon=1/2$, $\beta=\nu=1$,
+$m^2=\theta=0$, with all other OMC-016 displayed couplings one. The anchored
+two-row strip has $2(n+2)$ vertices and its unsplit frontier square remains.
+The full labelled all-$Q$ law has weights $Z_Q/Z$. The state uses
+$h_j=2^{-j}$, $R_j=2^j$, $M_j=2^{2j}$, first $j$ at fixed $n$, then the
+specified anchored $n$ exhaustion. Closure below is on that fixed state;
+it is not another regulator limit or a physical continuum construction.
+
+The preregistration preceded checks:
+\begin{verbatim}
+strategy/pa-hyp/PAH-OMC-019-closure-prereg-v1.json
+4337e21a140206956ea52ee10e20d04358af868969e3edb9f055e5ea64b055b7
+\end{verbatim}
+The full proof, hypothesis crosswalk and falsifiers are in the companion
+closure certificate. This is its one gate-level synthesis, not a replacement
+for the inherited R-509--R-511 measure and local-generator arguments.
+
+\section*{Exact domain and result}
+Let $H$ be the real invariant R-510 cylinder-state Hilbert space modulo
+zero $L^2$ norm. Let $D$ be exactly the R-511 bounded, gauge-invariant,
+globally amplitude-$\ell^1$-Lipschitz finite-prefix cylinder domain. R-511 gives
+\[
+ A:D\longrightarrow H,\qquad \|Ag\|_H\leq 2D_gM_g,
+ \qquad E(f,g)=-\langle f,Ag\rangle_H
+ =\frac12\sum_r\nu(c_r\Delta_rf\Delta_rg).
+\]
+Here $A$ is the derived original PH/LK/AP sum, with the same partial domains,
+rates and label multiplicities. The sum is finite on each fixed local pair.
+The form is nonnegative and symmetric, $D$ is dense, and amplitude-only
+elements of $D$ have zero $A$. None of these are inferred merely from finite
+fixture agreement. Write $S=-A$, $D_{\rm rad}$ for the amplitude-only
+subspace and $H_{\rm rad}=\overline{D_{\rm rad}}^{\|\cdot\|_H}$.
+
+\textbf{Scoped theorem.} The exact form $E$ is closable. Its minimal closed
+nonnegative extension $\overline E$ has dense domain and satisfies
+\[
+ H_{\rm rad}\subset\operatorname{Dom}(\overline E),\qquad
+ \overline E(h,h)=\overline E(h,u)=0
+ \quad(h\in H_{\rm rad},\ u\in\operatorname{Dom}(\overline E)).
+\]
+The original aperture witness retains strictly positive energy. This does
+not classify the complete kernel and does not construct a limit path law.
+
+\section*{Applicability and quotient check}
+The standard nonnegative symmetric-operator form construction is used; it is
+not claimed as a new theorem. The primary reference is G.~Teschl,
+\emph{Mathematical Methods in Quantum Mechanics}, second edition, Section 2.3,
+printed pp.~77--81, equations (2.47)--(2.49), Theorem 2.13; author-hosted text
+consulted 2026-09-07. Theorem 2.14 assumes closedness and is not used circularly.
+Density, symmetry, nonnegativity and $Sg\in H$ match. Self-adjointness,
+$S(D)\subset D$, bounded global exit rate and a uniform operator norm are not
+required. The quantum interpretation of the reference does not apply.
+
+First let $x\in D$ be zero in $H$. For every $y\in D$,
+\[
+ \langle y,Sx\rangle=E(y,x)=E(x,y)=\langle x,Sy\rangle=0.
+\]
+Density implies $Sx=0$. Thus both $S$ and $E$ descend to the state quotient;
+the operator theorem is not applied to an ill-defined representative map.
+
+\section*{Two closability proofs}
+Positivity of $E(x+ty,x+ty)$ for all real $t$ gives form Cauchy--Schwarz.
+Let $K$ be the Hilbert completion of $D/\ker E$ in the energy norm and let
+$j:D\to K$ be its dense natural map. The exact pairing is
+\[
+ \langle jf,jg\rangle_K=E(f,g)=\langle f,Sg\rangle_H. \tag{1}
+\]
+For any $f_n\to0$ in $H$ which is energy-Cauchy, completeness gives
+$jf_n\to v$ in $K$. For each \emph{fixed} $g\in D$, (1) gives
+$\langle v,jg\rangle=\lim_n\langle f_n,Sg\rangle=0$. Density implies
+$v=0$, hence $E(f_n,f_n)\to0$. Supports may grow arbitrarily: neither a
+common support nor a bound on $\|Sf_n\|$ was used.
+
+Independently, the form seminorms of an energy-Cauchy sequence are bounded
+by $M$. For $\varepsilon>0$ choose $N$ with
+$\sqrt{E(f_n-f_m)}<\varepsilon$ for $m,n\geq N$, and fix $m\geq N$. Then
+\[
+ E(f_n,f_n)\leq M\varepsilon+|E(f_n,f_m)|
+ =M\varepsilon+|\langle f_n,Sf_m\rangle|.
+\]
+The last term tends to zero against the fixed $Sf_m\in H$. Arbitrary
+$\varepsilon$ proves the same criterion. Taking $m=n$ would be an invalid
+shortcut; the hostile audit explicitly tests that error.
+
+\section*{Minimal closure and the entire radial subspace}
+Complete $D$ in $\|f\|_1^2=\|f\|_H^2+E(f,f)$ to $V$. Its contractive
+map $i:V\to H$ is injective: a completion vector over zero is represented
+by an $H$-null energy-Cauchy sequence, so closability makes its form norm
+tend to zero. On $\overline D=i(V)$ define
+\[
+ \overline E(iu,iv)=\langle u,v\rangle_V-\langle iu,iv\rangle_H.
+\]
+It is nonnegative, agrees with $E$, and its form norm is the complete $V$
+norm. Any other closed nonnegative extension agreeing on $D$ contains the
+limits of all these form-Cauchy sequences and agrees on $\overline D$.
+This proves minimality, not equality with a maximal jump-form domain or
+uniqueness of all self-adjoint extensions.
+
+For every $h\in H_{\rm rad}$ choose $a_n\in D_{\rm rad}$ with $a_n\to h$
+in $H$. Every difference $a_n-a_m$ has zero energy, so it is form-Cauchy.
+Consequently $h\in\overline D$ and $\overline E(h,h)=0$. Form
+Cauchy--Schwarz gives zero cross-energy against all of $\overline D$.
+The form norm on $H_{\rm rad}$ equals its $H$ norm. Finite-prefix bounded
+Lipschitz functions are dense in the spatial amplitude $L^2$ space by
+compact approximation and the cylinder monotone-class argument. Thus this
+is the whole amplitude-only $L^2$ subspace, not a finite list of witnesses.
+No conditional averaging of the generator is introduced.
+
+Since the source aperture cylinder $s_v$ belongs to the original domain,
+$\overline E(s_v,s_v)=E(s_v,s_v)>0$. Positive radial variance and zero
+radial energy coexist with nonzero label activity at the unchanged time scale.
+
+\section*{Devil's-advocate}
+\begin{enumerate}
+\item Positivity alone implies closability: UPHELD against that shortcut.
+For $q(f)=f(0)^2$ on $C[0,1]\subset L^2[0,1]$, the tents
+$f_n=\max(1-nx,0)$ have $\|f_n\|_2^2=1/(3n)$, $q(f_n)=1$ and
+$q(f_n-f_m)=0$. This is a control, not a PAH counterexample. A fixed
+$L^2$ representer is precisely missing.
+\item $\|f_n\|\to0$ controls the diagonal pairing: UPHELD objection.
+$Se_n=n^2e_n$, $f_n=e_n/n$ gives unit energy but is not energy-Cauchy.
+The proof pairs only with fixed test vectors.
+\item Quotient or domain mismatch: DISMISSED under the pinned R-511 inputs
+by the explicit density and symmetry argument; no graph-core assumption.
+\item A different closed extension might add vectors: VALID with mitigation.
+Only the minimal completion is used; maximal-domain equality remains open.
+\item Radial retention implies a complete kernel classification: UPHELD
+objection. Additional nonradial null modes are not excluded.
+\end{enumerate}
+
+\section*{Verification boundary and next question}
+Nine Lean declarations check the universal no-ghost/Cauchy-sequence argument,
+energy convergence, quotient representer, completion injectivity, radial
+closed-graph passage and zero-energy cross consequences. Model measure
+construction, analytic completion applicability and amplitude density are
+not fully formalized. Non-importing symbolic checks audit the direct
+epsilon proof; exact hostile controls attack the missing assumptions.
+These are internal cross-checks, not an external signed referee report.
+
+The next single question is whether the original finite stationary
+semigroups converge, with the fixed comparison maps and $j$-before-$n$
+order, to the semigroup selected by this minimal closed form. That requires
+a separately activated contract, topology and bounded review budget.
+No temporal construction or convergence is claimed here. Re-review after
+this one attempt, or upon any source, state, density or representer defect.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID: R-512; contract PAH-OMC-019
+Claim ID: C6-SPACETIME-SIGNATURE
+Precise statement: Closable exact pre-form; minimal closure retains
+ all H_rad at zero energy, with positive original aperture energy.
+Scope: R-510 H and R-511 D, A, E; unchanged j-before-n path.
+Dependencies: Exact inherited R-510 state and R-511 local pre-form.
+Evidence grade: ANALYTIC, EXACT, EXECUTED; abstract Lean consequences.
+Reproduction command: python -X utf8
+ verification/scripts/pah_omc019_verify.py --check
+Expected output: PAH-OMC-019 INTEGRATED: PASS; Lean PASS.
+Falsification gate: State, density, symmetry or representer defect;
+ nonzero completion ghost or failure of radial closure passage.
+Tier before / after: T1 / T1; auxiliary_support; T-054 unchanged.
+No-overclaim statement: No full kernel or temporal limit theorem;
+ no physical Pre-A, spacetime, QFT, gravity, continuum or TOE result.
+Next required action: Separately contract finite-semigroup selection
+ and convergence; no next temporal attempt activated here.
+\end{verbatim}

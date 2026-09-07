@@ -9,7 +9,7 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  22 proof units  ·  tier span T1
+## (all notes)/  ·  23 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -17,6 +17,7 @@
 | `pah-omc016-uniform` | v1.0 | T1* | Fixed-n radial weak convergence/tightness and a common positive lower bound on both declared b_v^2. | ANALYTIC, EXACT, EXECUTED. | A separate bounded-cylinder Cauchy question for the cutoff-limit laws nu_n as n grows. |
 | `pah-omc017-cauchy` | v1.0 | T1* | The frozen nu_n converge on every fixed bounded-amplitude prefix, with the stated Cauchy bound. | ANALYTIC, EXACT, EXECUTED; inherited general … | Separate original-generator j-limit contract on a frozen bounded-amplitude domain. |
 | `pah-omc018-generator` | v1.0 | T1* | Sampled original-generator j-limit and ordered stationary symmetric nonnegative local pre-form; radial part vanishes. | ANALYTIC, EXACT, EXECUTED, INHERITED state in… | Test closability of the frozen local pre-form and preservation of its radial nullspace in… |
+| `pah-omc019-closure` | v1.0 | T1* | Closable exact pre-form; minimal closure retains all H_rad at zero energy, with positive original aperture energy. | ANALYTIC, EXACT, EXECUTED; abstract Lean cons… | Separately contract finite-semigroup selection and convergence; no next temporal attempt … |
 | `pre-a-q3lock-common-alpha-topology-critical-graph-route-split` | v0.4 | T1 | All-bond kick graph form and one-layer recurrence proved; subcritical finite-volume graph Trotter convergence proved conditionally on strong product … | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove a non-Leibniz or state-weighted critical onsite topology and thermodynamic boundary… |
 | `pre-a-q3lock-cubic-graph-product-locality-route-split` | v0.2 | T1 | Weighted cubic graph embedding, Q3 force multiplier, moving-center graph comparison, and prescribed-word heat simplex proved. Raw absolute animal and… | ANALYTIC + EXACT EXECUTED + INDEPENDENT + PDF… | Prove either the first-passage RT-PV response plus Hamiltonian energy-tail algebra, or th… |
 | `pre-a-q3lock-fifth-history-rank2-gap-and-m2-response-boundary-checkpoint` | v1.1 | T1 | Actual fixed-beta periodic-Q3 local fifth moment, cubic-growth subset-shear fifth graph transport, two-orientation twentieth history moment and hard … | ANALYTIC + EXACT + primary + non-importing in… | Prove the split/all-exhaustion limit; construct and control the connected oscillator elim… |

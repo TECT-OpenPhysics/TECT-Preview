@@ -59,3 +59,35 @@ Stop the present BCC-premised inheritance route. A successor must first provide 
 ## 8 No-overclaim boundary
 
 This record does not change the C6 T1/ACTIVE scaffold. It does not prove or universally refute emergent spacetime, close `C6-BCC-PREMISE-BLOCKED`, restore B3, or advance Round-1, physical Sector A, or Pre-A.
+
+## 9 PAH-OMC-019 scoped analytic addendum (2026-09-07)
+
+This addendum is load-bearing only for the auxiliary R-512 form-closure
+statement, not for the C6 signature target or the failed BCC inheritance.
+The overall physical disposition above is unchanged.
+
+Source: G. Teschl, Mathematical Methods in Quantum Mechanics, second edition,
+author-hosted PDF, section 2.3, printed pp. 77-81, equations (2.47)-(2.49),
+Theorem 2.13; consulted 2026-09-07:
+https://www.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe2.pdf .
+The imported standard construction concerns a dense nonnegative symmetric
+operator's form. Theorem 2.14 is not used to assume the desired closedness.
+
+Crosswalk: R-511 gives dense D, symmetry, nonnegative E and S=-A:D->H with
+||Ag||<=2 D_g M_g. The quotient check is supplied in the new certificate.
+All are SATISFIED conditional on the pinned R-510/R-511 analytic inputs.
+Self-adjointness, S(D) subset D and a global operator bound are not required;
+the reference's quantum-time interpretation DOES-NOT-APPLY. Independent
+direct epsilon and completion arguments, nine abstract Lean declarations
+and non-importing/hostile exact checks support this scope; no signed
+external review or formalized model measure theorem is claimed.
+
+Objections: positivity alone suffices (UPHELD against that shortcut; exact
+point-evaluation control); H-null diagonal pairing vanishes (UPHELD unless
+energy-Cauchy, fixed-test proof used); complete-kernel or maximal-domain
+identification (UPHELD, not asserted). The residual proposition is original
+finite-semigroup selection/convergence in the fixed ordered comparison,
+not further finite root tables. The method is standard reuse, while the
+pinned PAH applicability and whole radial-subspace retention are the
+programme-specific result. See the hash-pinned PAH-OMC-019 certificate and
+result card for complete scope and the next separately activated contract.

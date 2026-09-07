@@ -48,6 +48,15 @@ TOE target with no established result.
 
 ## History
 
+- 2026-09-07: R-512 / PAH-OMC-019 closes only the separate analytic
+  closability question for the exact R-511 pre-form on R-510's H. Its minimal
+  closed nonnegative extension retains the entire amplitude-only H_rad at
+  zero energy and retains positive original aperture energy. Standard
+  symmetric-operator form theory is reused with universal Lean consequences
+  and independent/hostile checks; inherited state inputs remain explicit.
+  No active T-054 gate, physical signature or C6 T1 promotion follows.
+  [Exact result, assumptions and non-claims](../../strategy/pa-hyp/PAH-OMC-019-result-v1.json).
+
 - 2026-09-07: R-511 is registered as a separately scoped PAH-OMC-018
   auxiliary result: sampled original-generator radial-cutoff consistency
   and an ordered stationary symmetric local pre-form in the R-510 state.

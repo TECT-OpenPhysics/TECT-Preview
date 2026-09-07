@@ -1,0 +1,59 @@
+{
+  "schema": "tect/pah-omc019-prereg/1.0",
+  "contract_id": "PAH-OMC-019",
+  "date": "2026-09-07",
+  "status_at_registration": "PREREGISTERED_BEFORE_NEW_CHECKS",
+  "base_commit": "0775b22a9e567c1ac426cc8ce29bea7b6bc55a78",
+  "task_id": "T-054",
+  "lane": "tect-proof",
+  "question": "Is the exact R-511 local pre-form closable in the R-510 invariant state Hilbert space, and is its entire amplitude-only L2 nullspace retained in the minimal form closure?",
+  "sources": {
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json": "92a4fa92cb8c0384812220acd2e9929539a10a114fe348ea3f8aa7676f98aa05",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb"
+  },
+  "scope": {
+    "model": "Exactly the issued PAH-001/OMC-001/004/016/018 source chain, all original F terms, directed partial-root labels and multiplicities, all-Q counting law and finite parts; no new dynamics or carrier.",
+    "parameters": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0, all remaining displayed OMC-016 couplings one.",
+    "regulator_volume_order": "h_j=2^-j, R_j=2^j, M_j=2^(2j), first j at each fixed G_n then the specified anchored two-row n exhaustion, |V_n|=2(n+2). The closure is on the resulting fixed R-510 state, not an additional regulator or physical continuum limit.",
+    "time": "Original unaccelerated external Markov time, stationary finite initial law, no terminal conditioning. No process or temporal limit is constructed."
+  },
+  "objects": {
+    "H": "Real Hilbert completion of the R-510 gauge-invariant local cylinder state modulo zero L2 norm. Complexification, if used for a source theorem, changes neither real form nor model.",
+    "D": "Exactly R-511's algebraic union of bounded gauge-invariant finite-prefix cylinders, globally amplitude-l1-Lipschitz uniformly in finite labels. Constants included; not assumed A-invariant or an operator graph core.",
+    "A": "The SAME derived PH/LK/AP sum from R-511 on D, with original rates and root multiplicity. A maps D into H with ||Af||_2<=2 D_f M_f; this is not a global bounded-operator estimate.",
+    "form": "E(f,g)=-<f,Ag>_H=(1/2) sum_r nu_infty[c_r Delta_r f Delta_r g] on D. Every sum on a local pair is finite. R-511 gives symmetry, nonnegativity and E(1,1)=0.",
+    "conductance": "For each original nonradial root use the positive local weighted functional nu_infty(c_r h), consistently on containing prefixes, c_r in L2 and positive on its declared partial domain. Use only the original directed 1/2 convention. No total global exit-rate finiteness or new global rate envelope is assumed.",
+    "minimal_closure": "Complete D in ||f||_E1^2=||f||_H^2+E(f,f), prove its natural map into H is injective, and transport E to its image. Prove this is the smallest domain closed extension agreeing with E on D, not a maximal jump-domain identification.",
+    "radial_space": "D_rad={f in D: f depends only on finitely many amplitudes}; H_rad is its H-norm closure. Do not replace H_rad by only selected witnesses. The target is H_rad subset Dom(Ebar) and Ebar(h,h)=0 for ALL h in H_rad. If identified with measurable amplitude-only L2 functions, supply the density argument.",
+    "kernel_boundary": "Do not claim ker(Ebar)=H_rad or absence of nonradial tail zero modes. Retention of the radial subspace does not classify the entire kernel."
+  },
+  "acceptance": [
+    "Revalidate the source pins and exact inherited R-510/R-511 premises, including the quotient well-definedness of A and the form.",
+    "Establish closability for every H-null E-Cauchy sequence in D, not only fixed-support or finite-dimensional approximations.",
+    "Construct and prove the well-definedness, closedness, dense domain and minimal-extension property of the exact form closure.",
+    "Extend the radial zero-energy property to all H_rad by H-norm approximation and prove cross-form annihilation; preserve nonzero aperture energy.",
+    "Provide exact primary, non-importing independent and hostile checks with reproducible JSON and meaningful Lean cross-checks. Separate analytic model applicability from formal abstract consequences.",
+    "Record scope, missing premises, non-claims and an evidence-based single next question, then one gate-level synthesis checkpoint; no intermediate-lemma PDFs."
+  ],
+  "routes": [
+    "Literature-first applicability of the standard nonnegative symmetric-operator form/Friedrichs construction to S=-A on D; no self-adjointness or A(D) subset D assumption.",
+    "Independent direct E-Cauchy sequence proof and a form-completion embedding proof, with the inherited L2 generator used only against each fixed test vector.",
+    "Root-conductance and normal-contraction interpretation retained as a source cross-check; a positive form without an L2 representer is an explicit hostile control, not an alternative PAH model."
+  ],
+  "falsifiers": [
+    "Source/hash, functional/rate/state/time/limit-order drift.",
+    "A or E fails to descend to H equivalence classes, D is not dense, or Ag is not H-valued.",
+    "A nonzero ghost vector in the form completion maps to zero in H; or a concrete H-null E-Cauchy sequence has nonzero energy limit.",
+    "Radial H approximation fails to be form-Cauchy or acquires energy in the minimal closure.",
+    "Proof confuses operator closability with form closability, or minimal form closure with every self-adjoint extension or the maximal jump domain."
+  ],
+  "budget": "One distinct closability attempt under DCTRL-000012, then REVIEW_REQUIRED. This active user goal authorizes the attempt; it does not authorize a new physical candidate.",
+  "non_claims": [
+    "No active T-054 gate or C6 T1 promotion; PAH-OMC-014 remains unresolved.",
+    "No essential self-adjointness, operator graph core, equality of minimal/maximal jump domains or full kernel classification.",
+    "No finite-semigroup convergence, path law, infinite-volume physical dynamics, ergodicity, spectral gap or quantum real-time automorphism.",
+    "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, continuum, causal cone, mass gap or TOE conclusion; no Q3LOCK import."
+  ]
+}

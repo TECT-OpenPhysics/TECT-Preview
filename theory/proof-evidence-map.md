@@ -58,13 +58,13 @@ flowchart LR
 |---|---:|---|
 | Status cards | 49 | 48 active; 1 refuted |
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
-| Reusable result records | 336 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
+| Reusable result records | 337 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 385 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1613 | Route decisions: advanced 1183, failed 254, inconclusive 121, parked 55; non-tier-bearing |
-| Accepted chronological events | 978 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1614 | Route decisions: advanced 1184, failed 254, inconclusive 121, parked 55; non-tier-bearing |
+| Accepted chronological events | 979 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 62 | 12 live; 50 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 418 lineage notes / 399 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2047 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 419 lineage notes / 400 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2054 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -76,7 +76,7 @@ These are visible migration or metadata debts, not silently dropped records.
 | Historical/superseded notes without sibling PDF | 19 | Paths remain in machine inventory; current-note PDF enforcement is unchanged |
 | Grandfathered notes with incomplete standard footer | 118 | Kept visible; notes first issued on/after 2026-07-24 fail the map gate if any mandatory footer label is absent |
 | Claim cards listing a gate whose registered status begins `CLOSED` | 0 | Exposed as reconciliation debt; the map does not silently flip claim cards |
-| Claim-unbound reusable results / negative records | 76 / 15 | Ambiguous family references stay unbound; no claim edge is invented |
+| Claim-unbound reusable results / negative records | 77 / 15 | Ambiguous family references stay unbound; no claim edge is invented |
 | Completed-task references to retired gate identifiers | 5 | Preserved as `historical_gate_reference` nodes anchored to `todo/todo.json`, never mislinked to the current gate registry |
 | Changelog tokens that are not current claim-card IDs | 468 | Preserved in event metadata but never promoted to claim edges; many are historical proof-unit IDs from the legacy extractor |
 | Changelog negative tags absent from the indexed registry | 4 | Preserved as historical event text, rendered without a false registry anchor, and excluded from negative graph edges |
@@ -24569,6 +24569,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** [R-497](../RESULTS-LEDGER.md#r-497)
 - **Located evidence:** [`publish/papers/q3lock-phase-coexistence/literature-qps-addendum.md`](../publish/papers/q3lock-phase-coexistence/literature-qps-addendum.md) (dffr-ii-primary-reassessment); [`publish/papers/q3lock-phase-coexistence/literature-qps-addendum.md`](../publish/papers/q3lock-phase-coexistence/literature-qps-addendum.md) (why-occupation-regularity-cannot-be-replaced-by-trace-finiteness); [`publish/papers/q3lock-phase-coexistence/external-review-handoff.md`](../publish/papers/q3lock-phase-coexistence/external-review-handoff.md) (questions-that-require-an-explicit-answer); [`verification/scripts/q3lock_dffr_source_audit.py`](../verification/scripts/q3lock_dffr_source_audit.py) (build_payload); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-dffr-source-audit/result.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-dffr-source-audit/result.json) (source); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-dffr-source-audit/result.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-dffr-source-audit/result.json) (fixture_assertions)
 
+<a id="exp-001614"></a>
+#### EXP-001614 — PAH-OMC-019 R-512 exact local pre-form closability and entire radial-subspace retention
+
+- **Review metadata:** reviewed 2026-09-07; recorded 2026-09-07T06:16:58Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Is the exact R-511 local pre-form closable in the R-510 invariant Hilbert space, with the entire amplitude-only H_rad retained in its minimal closure?
+- **Finite checks:** (1) Freeze PAH-OMC-019 preregistration and the exact R-510/R-511 parents before new checks; preserve functional, rates, all-Q state and j-before-n order. (2) Prove quotient well-definedness, the universal energy-Cauchy no-ghost criterion and an independent fixed-test epsilon argument; construct the dense minimal closed form. (3) Extend zero energy by every H_rad approximation, preserve the positive original aperture witness and exclude any assertion classifying the full kernel. (4) Execute primary 11, independent 9, hostile 14 and integrated 74 checks; compile nine universal Hilbert Lean declarations and freshly replay R-511's three stored runs and eleven Lean declarations. Build and visually inspect one three-page synthesis.
+- **Finding:** The exact form is closable for arbitrary H-null energy-Cauchy sequences, including growing supports. The form completion embeds injectively in H, yields the dense-domain minimal closed nonnegative extension and retains every H_rad vector at zero energy and zero cross-energy. Original aperture energy remains positive. R-512 is auxiliary_support; no active T-054 gate or C6 T1 promotion.
+- **Decision reason:** The exact inherited H-valued local generator and symmetry satisfy standard nonnegative symmetric-operator form hypotheses. Two analytic derivations and universal abstract Lean consequences close this distinct scoped obligation, without new finite PAH carriers or changing dynamics.
+- **Boundary:** Exact R-510 state and R-511 local D, A and directed-half E. Two-row relational strip, original OMC-016 parameters, all-Q weights Z_Q/Z, h=2^-j, R=2^j, M=2^(2j), j then anchored n. Inherited measure theory remains analytic. Minimal closure does not imply finite-semigroup selection/convergence or maximal-domain equality.
+- **Next / revisit condition:** REVIEW_REQUIRED after the one DCTRL-000012 attempt. Separately preregister one temporal comparison question: original finite stationary semigroup convergence to the minimal-form selection with fixed maps/topology and unchanged order/time. Finish this lane checkpoint and integration handoff; do not launch the next proof.
+- **Related explorations:** continues [EXP-001610](#exp-001610)
+- **Formal authorities:** [R-512](../RESULTS-LEDGER.md#r-512), `event:20260907-pah-omc-019-r-512-minimal-form-closure-and-radi`
+- **Located evidence:** [`strategy/pa-hyp/PAH-OMC-019-closure-prereg-v1.json`](../strategy/pa-hyp/PAH-OMC-019-closure-prereg-v1.json) (question); [`strategy/pa-hyp/PAH-OMC-019-closure-certificate.md`](../strategy/pa-hyp/PAH-OMC-019-closure-certificate.md) (4-primary-proof-energy-completion-has-no-ghost-vectors); [`strategy/pa-hyp/PAH-OMC-019-result-v1.json`](../strategy/pa-hyp/PAH-OMC-019-result-v1.json) (proof_coverage); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc019-closure/integrated.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc019-closure/integrated.json) (checks); [`verification/lean/Tect/PahOmc019.lean`](../verification/lean/Tect/PahOmc019.lean) (L1); [`RESULTS-LEDGER.md`](../RESULTS-LEDGER.md) (r-512)
+
 
 ## Claim evidence matrix
 
@@ -24623,7 +24638,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (22 notes; 1306 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace), [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), +129 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +667 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [C6 Q3LOCK DFFR primary-source reassessment and occupation-regularity boundary] -... | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (23 notes; 1313 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace), [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), +129 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +668 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [PAH-OMC-019 R-512 minimal form closure and radial-nullspace retention] - 2026-09-07 | - |
 
 ### Sector D
 
@@ -24662,6 +24677,7 @@ entries are no-go lemmas, partial reductions, or conditional consolidations.
 
 | Result | Host claim(s) / same-event route history | Core verified content | Honest boundary |
 |---|---|---|---|
+| [R-512](../RESULTS-LEDGER.md#r-512) PAH-OMC-019 minimal form closure and radial nullspace | - | Exact R-511 pre-form is closable on R-510 H; dense minimal closure retains all amplitude-only H_rad at zero energy and positive aperture energy. Universal Hilbert Lean bridge and independent/hostile checks; auxiliary_support, no temporal convergence or host promotion. | See the detailed result record. |
 | [R-511](../RESULTS-LEDGER.md#r-511) PAH-OMC-018 original-generator cutoff limit and stationary local pre-form | -; same event: [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace) | Sampled Gibbs-L2 residual at most 2 H_f L_f h_j; ordered stationary symmetric local pre-form, with zero radial action and nonzero aperture form. Primary 178, independent 72, hostile 39, integrated 48 and eleven Lean declarations; auxiliary only, no closed form, temporal process or host promotion. | See the detailed result record. |
 | [R-510](../RESULTS-LEDGER.md#r-510) PAH-OMC-017 common local Gibbs state on the fixed strip | -; same event: [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace) | Exact spatial transfer with the terminal square retained; local cylinder Cauchy bound 4 norm(f) D_m q^(n-m) and an explicit analytic threshold. Primary 50, independent 70, hostile 23, integrated 28 and nine Lean declarations; auxiliary static-state input only, no limiting dynamics or host tier change. | See the detailed result record. |
 | [R-509](../RESULTS-LEDGER.md#r-509) PAH-OMC-016 radial tightness and uniform matter nondegeneracy | - | Fixed-n all-j tightness and radial weak limit; lim_j mu(b_v^2)>=(11/80)exp(-1550/3)>0 for both declared witnesses uniformly in n>=2. Analytic local-moment/conditional proof; primary 30, independent 23, hostile 17, integrated 29 and ten Lean theorems pass. Scoped PASS only; T-054 and host tier unchanged. | See the detailed result record. |
@@ -25404,6 +25420,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-07 | [PAH-OMC-019 R-512 minimal form closure and radial-nullspace retention] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [Parallel lane isolation and checkpoint controller for TECT proof and paper work] - 2026-09-07 | - | - |
 | 2026-09-07 | [C6 Q3LOCK DFFR primary-source reassessment and occupation-regularity boundary] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK broader perturbative-theorem comparison and legacy cutoff quarantine] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -25423,7 +25440,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-05 | [Q3LOCK EXP-001598/R-497: register collective lower bound and strict cusp/tangent content; retain T0] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [PAH-OMC-016 resolved radial counting candidate contract review] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [PAH-OMC-015 R-508 counting ensemble fails restricted cutoff nondegeneracy] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy) |
-| 2026-09-05 | [Q3LOCK EXP-001595 assembles Hilbert reflection and continuous-loop infrared content] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 

@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-512](#r-512) | PAH-OMC-019 minimal form closure and radial nullspace | Exact R-511 pre-form is closable on R-510 H; dense minimal closure retains all amplitude-only H_rad at zero energy and positive aperture energy. Universal Hilbert Lean bridge and independent/hostile checks; auxiliary_support, no temporal convergence or host promotion. |
 | [R-511](#r-511) | PAH-OMC-018 original-generator cutoff limit and stationary local pre-form | Sampled Gibbs-L2 residual at most 2 H_f L_f h_j; ordered stationary symmetric local pre-form, with zero radial action and nonzero aperture form. Primary 178, independent 72, hostile 39, integrated 48 and eleven Lean declarations; auxiliary only, no closed form, temporal process or host promotion. |
 | [R-509](#r-509) | PAH-OMC-016 radial tightness and uniform matter nondegeneracy | Fixed-n all-j tightness and radial weak limit; lim_j mu(b_v^2)>=(11/80)exp(-1550/3)>0 for both declared witnesses uniformly in n>=2. Analytic local-moment/conditional proof; primary 30, independent 23, hostile 17, integrated 29 and ten Lean theorems pass. Scoped PASS only; T-054 and host tier unchanged. |
 | [R-510](#r-510) | PAH-OMC-017 common local Gibbs state on the fixed strip | Exact spatial transfer with the terminal square retained; local cylinder Cauchy bound 4 norm(f) D_m q^(n-m) and an explicit analytic threshold. Primary 50, independent 70, hostile 23, integrated 28 and nine Lean declarations; auxiliary static-state input only, no limiting dynamics or host tier change. |
@@ -18274,6 +18275,63 @@ No time acceleration, fitted rates, new state or projection is authorized.
 No closed form, infinite-volume process, semigroup convergence, physical
 Pre-A, spacetime, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap
 or TOE result. PAH-OMC-014 and T-054's active gate remain unresolved.
+
+### R-512 -- PAH-OMC-019 minimal form closure and radial nullspace
+
+**Scoped statement.** `auxiliary_support`, ANALYTIC/EXACT/EXECUTED with
+abstract Hilbert Lean consequences and explicit inherited R-510/R-511 inputs.
+On the exact R-511 dense bounded invariant amplitude-Lipschitz cylinder
+domain D in R-510 H, `E(f,g)=-<f,Ag>` is closable. Its form-norm completion
+embeds injectively in H and defines the dense-domain minimal closed
+nonnegative extension Ebar. The H closure H_rad of ALL amplitude-only
+cylinders is contained in Dom(Ebar), with Ebar(h,h)=Ebar(h,u)=0 for every
+h in H_rad and u in Dom(Ebar). The original aperture cylinder retains its
+strictly positive energy. Full kernel and maximal jump-domain equality are
+not asserted. The host C6 T1 and active T-054 gate remain unchanged.
+
+**Exact scope and assumptions.** Original PAH functional, PH/LK/AP root
+labels/rates/partial domains, all-Q weights Z_Q/Z, two-row G_n with 2(n+2)
+vertices and retained frontier square. The OMC-016 parameter point and
+h_j=2^-j, R_j=2^j, M_j=2^(2j), j-before-n order are unchanged. Closure is on
+the fixed limiting state, not a new regulator limit or time acceleration.
+The inherited dense D, H-valued Ag bound, symmetric nonnegative E and
+radial annihilation are explicit hypotheses. Quotient well-definedness is
+proved before treating -A as a Hilbert-space operator.
+
+**Proof and reuse.** The energy-completion argument pairs every H-null
+energy-Cauchy sequence against fixed Sg=-Ag; density excludes a nonzero
+completion vector above zero. No fixed-support restriction or uniform
+operator norm is assumed. The independent direct epsilon proof fixes m
+before sending n to infinity. Form completion proves closedness and the
+minimal-extension containment property. Zero-energy differences extend
+radial retention to the entire H_rad, not only selected witnesses.
+Standard Friedrichs-form analysis (Teschl, second edition, section 2.3) is
+reused; this is a model-applicability result, not a new general theorem.
+Publication target: a bounded analytic component of a PAH synthesis after
+external review, not a physical-origin paper.
+
+**Evidence and reproduction.** Source pins and exact proof coverage:
+`strategy/pa-hyp/PAH-OMC-019-result-v1.json`; preregistration SHA-256
+`4337e21a140206956ea52ee10e20d04358af868969e3edb9f055e5ea64b055b7`.
+Proof: `strategy/pa-hyp/PAH-OMC-019-closure-certificate.md`.
+Run `python -X utf8 verification/scripts/pah_omc019_verify.py --check`;
+an isolated worktree may select an existing read-only locked package cache
+with `--lean-cache E:/Dev/TECT/verification/lean/.lake/packages`.
+Primary/independent/hostile algebra checks are 11/9/14; nine Lean declarations
+cover the universal Hilbert consequences, not the inherited model measure
+theorems. R-511's three exact runs and Lean source are freshly replayed.
+The one three-page synthesis PDF is visually reviewed with zero overfull
+boxes. Internal independent checks are not an external signed referee report.
+
+**Next question and non-claims.** Do the original finite stationary semigroups
+converge to the minimal-form selection in the fixed j-before-n comparison?
+Preregister the maps/topology under a separately activated bounded contract.
+REVIEW_REQUIRED after the one DCTRL-000012 attempt. Reopen for any inherited
+state, density, symmetry, quotient, representer or closure defect. No new
+rates, conditional averaging, carrier or time scaling. No temporal process,
+finite-semigroup convergence, graph-core uniqueness, physical Pre-A,
+spacetime, QFT, gravity, continuum, Yang-Mills, causal cone, mass gap or TOE
+conclusion. PAH-OMC-014 remains unresolved; Q3LOCK is not imported.
 
 ## Notes on status
 
