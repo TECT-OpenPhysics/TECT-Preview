@@ -1,6 +1,8 @@
 # =============================================================================
 # commit_watcher.ps1 - Windows-side auto-commit daemon for the TECT repository
-# Version: 1.7.0 -- first issued 2026-06-05; this version issued 2026-07-23
+# Version: 1.8.0 -- isolated-lane checkpoint serialization, 2026-09-07
+#   1.8.0: per-worktree OS lock, source fingerprint recheck, fail on PDF build
+#     errors, bundled Python fallback. Canonical integration pushes separately.
 #   1.7.0 (2026-07-23): remove ambient-PATH dependence. Prefer the adjacent
 #     external repository venv, then the workspace venv, then python on PATH;
 #     resolve Git from PATH or the Codex bundled runtime. Fail before touching
@@ -68,11 +70,14 @@ if (-not (Test-Path (Join-Path $repo ".git"))) {
 
 $externalVenvPython = Join-Path "${repo}.venv" "Scripts\python.exe"
 $workspaceVenvPython = Join-Path $repo ".venv\Scripts\python.exe"
+$bundledPython = Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
 $pythonCommand = Get-Command python -ErrorAction SilentlyContinue
 $pythonExe = if (Test-Path -LiteralPath $externalVenvPython) {
     $externalVenvPython
 } elseif (Test-Path -LiteralPath $workspaceVenvPython) {
     $workspaceVenvPython
+} elseif (Test-Path -LiteralPath $bundledPython) {
+    $bundledPython
 } elseif ($pythonCommand) {
     $pythonCommand.Source
 } else {
@@ -117,6 +122,22 @@ function Move-ToDone($file, $prefix) {
 }
 
 function Process-Queue {
+    # One checkpoint writer per worktree. OS ownership ends on process exit;
+    # another process must never steal the lock because a wall-clock TTL passed.
+    $lockDir = Join-Path $repo "internal\lane-control\locks"
+    New-Item -ItemType Directory -Force -Path $lockDir | Out-Null
+    try {
+        $releaseLock = [System.IO.File]::Open((Join-Path $lockDir "release.lock"),
+            [System.IO.FileMode]::OpenOrCreate, [System.IO.FileAccess]::ReadWrite,
+            [System.IO.FileShare]::None)
+    } catch {
+        Write-Warning "[commit-watcher] release owner busy; this queue remains pending."
+        return
+    }
+    try { Process-QueueLocked } finally { $releaseLock.Dispose() }
+}
+
+function Process-QueueLocked {
     $pending = @(Get-ChildItem -Path $queue -Filter *.json -File | Sort-Object Name)
     if ($pending.Count -eq 0) { return }
 
@@ -135,6 +156,10 @@ function Process-Queue {
     # pre-commit NOTE-PDF build: every current note must enter history with a fresh
     # PDF. Build missing/stale ones now (operator-side; no sandbox timeout).
     & $pythonExe verification/scripts/verify_note_pdfs.py --build | Out-Host
+    if ($LASTEXITCODE -ne 0) {
+        Write-Warning "[commit-watcher] PDF build failed; queue remains pending."
+        return
+    }
 
     # stage the whole tree; resilient to Google-Drive sync races. Drive briefly
     # creates then deletes temp files (e.g. .tmp.driveupload/*) during sync; if one
@@ -178,9 +203,20 @@ function Process-Queue {
 
     # pre-commit RELEASE gate (single source: release_check.py = the publication
     # gate; gate list in gates.py). Refuse to commit a stale/broken tree.
+    $sourceFingerprint = & $pythonExe verification/scripts/lane_control.py fingerprint
+    if ($LASTEXITCODE -ne 0) {
+        Write-Warning "[commit-watcher] cannot pin source snapshot; queue remains pending."
+        return
+    }
     & $pythonExe verification/scripts/release_check.py | Out-Host
     if ($LASTEXITCODE -ne 0) {
         Write-Warning "[commit-watcher] BLOCKED: release_check failed (stale generated surface or hygiene/policy error). Queue left intact -- run python verification/scripts/regen_all.py (or fix the reported error), then re-run."
+        return
+    }
+
+    $afterFingerprint = & $pythonExe verification/scripts/lane_control.py fingerprint
+    if ($LASTEXITCODE -ne 0 -or $sourceFingerprint -ne $afterFingerprint) {
+        Write-Warning "[commit-watcher] source/index changed during verification; retry this checkpoint after its writer settles."
         return
     }
 

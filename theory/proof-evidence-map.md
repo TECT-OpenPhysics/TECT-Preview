@@ -61,7 +61,7 @@ flowchart LR
 | Reusable result records | 336 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 385 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
 | Proof explorations | 1613 | Route decisions: advanced 1183, failed 254, inconclusive 121, parked 55; non-tier-bearing |
-| Accepted chronological events | 977 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Accepted chronological events | 978 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 62 | 12 live; 50 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
 | Proof evidence inventory | 418 lineage notes / 399 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2047 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
@@ -25404,6 +25404,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-07 | [Parallel lane isolation and checkpoint controller for TECT proof and paper work] - 2026-09-07 | - | - |
 | 2026-09-07 | [C6 Q3LOCK DFFR primary-source reassessment and occupation-regularity boundary] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK broader perturbative-theorem comparison and legacy cutoff quarantine] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK source-applicability and standard-method comparison audit (EXP-001611)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -25423,7 +25424,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-05 | [PAH-OMC-016 resolved radial counting candidate contract review] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-05 | [PAH-OMC-015 R-508 counting ensemble fails restricted cutoff nondegeneracy] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy) |
 | 2026-09-05 | [Q3LOCK EXP-001595 assembles Hilbert reflection and continuous-loop infrared content] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-05 | [Q3LOCK EXP-001593 assembles continuous-loop FKG and selected-limit association content] - 2026-09-05 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 

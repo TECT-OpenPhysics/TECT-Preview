@@ -30,6 +30,18 @@ Do not load the complete map when a narrow lookup is sufficient.
 
 ## 2. Write discipline
 
+- **Parallel writer admission (2026-09-07):** before any write, follow
+  `governance/parallel-lanes.md` and register the task with
+  `verification/scripts/lane_control.py` in the canonical checkout. The
+  canonical checkout is reserved for the integration controller; every other
+  same-repository writer uses its registered isolated worktree. New task lanes
+  use the same admission rule. Independent TECT-YM work stays in its own
+  repository. Submit fixed checkpoint commits; do not run shared-root regen,
+  stage, commit or push from a proof/paper lane. Lane-local checkpoints retain
+  every release/PDF/evidence gate, with canonical push performed by integration.
+  Read-only tasks need no writer admission. The controller owns runtime state
+  under `internal/lane-control/` and reconciles task state before dispatch.
+
 - All tracked files are **English-only**. Korean stays in chat.
 - **Exact-byte provenance:** `.gitattributes` disables automatic Git newline
   conversion. Write new text as UTF-8 with explicit LF (`newline="\n"` in
