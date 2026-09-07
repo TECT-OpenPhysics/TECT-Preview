@@ -1563,6 +1563,69 @@
       "task_id": "T-054",
       "title": "Q3LOCK non-overwriting R6 replay alignment checkpoint",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 conditional primary-source applicability audit, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY. The source supports the fixed finite-dimensional free Feynman-Kac input after the printed mass scaling and lower-bound check; the harmonic reweighting, absolute trace, mesh, thermodynamic, DLR, phase and external-review gates remain separate and open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The primary PDF states Theorem 1.1 for continuous potentials bounded below with kinetic operator -Delta/2. The manuscript's fixed-volume polynomial potential meets that condition after the unitary change z=sqrt(m)q, and the original-coordinate heat-kernel prefactor is restored. The absolute harmonic trace still depends on the manuscript's own truncation, form-convergence, kernel-continuity and Tonelli arguments, so the result is a conditional crosswalk rather than theorem acceptance.",
+      "evidence_refs": [
+        "strategy/q3lock-simon-fk-source-applicability-audit-260907.md#primary-source-and-exact-scope",
+        "strategy/q3lock-simon-fk-source-applicability-audit-260907.md#hypothesis-map",
+        "strategy/q3lock-simon-fk-source-applicability-audit-260907.md#harmonic-reweighting-and-absolute-trace",
+        "publish/papers/q3lock-phase-coexistence/manuscript.tex#eq:residual-lower",
+        "publish/papers/q3lock-phase-coexistence/manuscript.tex#sec:fk-identification",
+        "publish/papers/q3lock-phase-coexistence/manuscript.tex#eq:trace-bound",
+        "publish/papers/q3lock-phase-coexistence/imported-source-ledger.md#s-fk",
+        "publish/papers/q3lock-phase-coexistence/proof-audit.md#load-bearing-audit-table"
+      ],
+      "finding": "Simon Theorem 1.1 is a valid conditional finite-volume source for the free-bridge kernel: dimension D=8V, the mass scaling maps the kinetic term exactly, and the retained quartic gives a continuous lower-bounded potential at fixed volume and source. The harmonic absolute normalization and unbounded-residual form passage are manuscript arguments requiring signed independent review; no infinite-volume or phase result is imported.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001626",
+      "method": [
+        "Read Simon arXiv:math-ph/9907022v1, Theorem 1.1 and equations (1.1)-(1.4), with the theorem's printed kinetic and potential hypotheses.",
+        "Map the finite-volume Q3LOCK Hamiltonian to the source convention using z=sqrt(m)q and verify the unitary amplitude, dimension and original-coordinate heat-kernel prefactor.",
+        "Check the manuscript's fixed-volume quartic lower bound before the source invocation, and separate Theorem 1.1 from Simon's stronger Theorem 1.2.",
+        "Audit the harmonic bridge reweighting, residual truncation/form-limit route, diagonal-kernel majorant and Tonelli trace identity as manuscript steps rather than imported conclusions.",
+        "Record adversarial failures for mass-one normalization, normalized-versus-absolute partition functions and unsupported unbounded residual passage."
+      ],
+      "next_action": "Obtain independent mathematics review of the form-core, monotone-form, kernel-continuity and mesh-identification interfaces; retain Simon as a conditional finite-volume input and keep A1-A5 and R2-R3 open.",
+      "non_claims": [
+        "The source does not prove the Q3LOCK thermodynamic pressure, DLR compactness, continuous-loop FKG, infrared, collective cusp or phase coexistence result.",
+        "The audit does not independently certify the manuscript's harmonic reweighting or unbounded-residual form passage.",
+        "No theorem tier, claim-bearing status, priority, novelty, publication readiness or submission authorization changes.",
+        "No KMS dynamics, ground-state gap, continuum limit, physical vacuum, C6, CP1 or Sector A conclusion follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does Simon's primary Feynman-Kac source, after the printed mass change and harmonic split, cover the exact finite-volume Q3LOCK kernel input without silently importing a mass-one convention or an absolute-trace conclusion?",
+      "recorded_at": "2026-09-07T07:38:25Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001611",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001620",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Reopen if the Hamiltonian, mass convention, harmonic split, lower-bound constants, source window or Simon source version changes, or if an independent reviewer rejects the form/trace interface.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK Simon Feynman-Kac source-applicability audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
