@@ -12,8 +12,9 @@ from __future__ import annotations
 import argparse
 import sys
 from pathlib import Path
+from repo_inventory import real_files
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 __first_issued__ = "2026-08-22"
 __version_issued__ = "2026-08-22"
 MAX_PATH_CHARS = 256
@@ -28,7 +29,9 @@ def scan(
     offenders: list[tuple[int, str]] = []
     repo = repo.resolve()
     root = absolute_root.resolve() if absolute_root is not None else None
-    for path in repo.rglob("*"):
+    # Same public-file inventory as release_check: isolated ignored worktrees
+    # are independent checkouts, not part of this repository's release payload.
+    for path in real_files(repo):
         try:
             rel = path.relative_to(repo)
         except ValueError:

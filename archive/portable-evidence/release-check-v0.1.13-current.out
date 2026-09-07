@@ -1,0 +1,62 @@
+RELEASE-CHECK: pre-publication gate
+  [ledger] PASS
+  [catalog] FAIL
+  [lineage] FAIL
+  [index] PASS
+  [todo] PASS
+  [changelog] PASS
+  [changelog-integrity] PASS
+  [dossier] PASS
+  [exploration-integrity] PASS
+  [exploration-time] PASS
+  [observation-inverse] PASS
+  [research-continuity] PASS
+  [direction-control] PASS
+  [legacy-research] PASS
+  [legacy-search-contract] PASS
+  [proof-evidence-map] FAIL
+  [management-indexes] FAIL
+  [aggregate-consumers] PASS
+  [protocol-single-source] PASS
+  [lean-toolchain] FAIL
+  [code-discipline] PASS
+  [website-smoke] PASS
+  [note-pdf] PASS
+  [p0-fence] done
+  [english-only] done
+  [no-overclaim] done
+  [p2-clean-citation] done
+  [verification-baseline] done
+  [hygiene] done
+  [path-length] PASS
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-independent-rectangular_matching_general_lemma\independent.json (11693 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-integrated-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison\integrated.json (8136 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-integrated-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress\integrated.json (5429 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-primary-pre_a_cp1_st8_q3lock_conditional_poincare_shell\primary.json (9568 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-primary-pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence\primary.json (6708 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-primary-pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge\primary.json (7285 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-primary-pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov\primary.json (6210 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-primary-rectangular_matching_general_lemma\primary.json (11803 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-31-independent-pre_a_m5_isolated_node_equation_level_audit\independent.json (10255 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-31-primary-pre_a_m5_isolated_node_equation_level_audit\primary.json (10805 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-09-04-pah-omc005-nonzero-q-generator\independent.json (13513 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-09-04-pah-omc005-nonzero-q-generator\primary.json (14444 KB)
+  WARN large file (>5MB): explorations\log.jsonl (5330 KB)
+  WARN large file (>5MB): theory\proof-evidence-map.md (6393 KB)
+RELEASE-CHECK: FAIL (5 error(s))
+  ERR catalog: CATALOG-CHECK: FAIL (legacy ok, legacy-json ok, index STALE, summary STALE, shards STALE)
+  - verification\catalog\kinds\run-artefact.json
+  - verification\catalog\kinds\code.json
+  - verification\catalog\kinds\verification.json
+  - verification\catalog\kinds\paper.json
+  - verification\catalog\kind
+  ERR lineage: LINEAGE-CHECK: FAIL (stale: C6-SPACETIME-SIGNATURE)
+  ERR proof-evidence-map: PROOF-EVIDENCE-MAP CHECK: FAIL (24 stale)
+  stale: theory/proof-evidence-map.md
+  stale: verification/proof-evidence-map/claims-0001.json
+  stale: verification/proof-evidence-map/core-0001.json
+  stale: verification/proof-evidence-map/graph_edges-0133.json
+  stale: verification/proof-evidence-map/gr
+  ERR management-indexes: MANAGEMENT-INDEX-CHECK: FAIL
+  - theory\proof-evidence\INDEX.md
+  ERR lean-toolchain: LEAN TOOLCHAIN CHECK: FAIL (entrypoint registry is complete: actual=['verification/lean/Tect/R488.lean'], expected=[])

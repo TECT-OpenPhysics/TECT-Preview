@@ -26,6 +26,7 @@ SYNC_GATES = [
     ("changelog-integrity", ["changelog.py", "verify"]),
     ("dossier",   ["build_dossier.py", "--check"]),
     ("exploration-integrity", ["exploration.py", "verify"]),
+    ("portable-evidence", ["portable_evidence.py"]),
     ("exploration-time", ["check_exploration_time.py"]),
     ("observation-inverse", ["check_obs_inverse.py"]),
     ("research-continuity", ["check_research_continuity.py"]),

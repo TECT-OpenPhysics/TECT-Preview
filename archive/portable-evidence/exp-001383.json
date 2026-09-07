@@ -1,0 +1,93 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001383",
+  "recorded_at": "2026-09-03T17:15:35Z",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "title": "A2/R-157/R-158 v0.1.10 charge-scope repair compile and replay",
+  "question": "Does the v0.1.10 charge-scope correction preserve the mathematical paper source, PDF integrity, and registered A2/R-157/R-158 executable evidence?",
+  "classification": "PUBLICATION_REPLAY_AND_SCOPE_REPAIR",
+  "verdict": "advanced",
+  "decision_reason": "The narrowed wording removes a claim stronger than the current R-158 proof while preserving all equations, constants, theorem statements, and executable evidence. A fresh Tectonic build, rendered-page review, source/PDF structural checks, and A2/R-157/R-158 replay all pass.",
+  "evidence_level": "T5 repository-local source/PDF and executable regression; no external proof audit",
+  "finding": "Manuscript v0.1.10 compiles with bundled Tectonic to a 12-page PDF. Source QA reports 69 labels, 32 references with no missing targets, zero non-whitespace controls, zero placeholders, zero unescaped qquad tokens, and no overfull, underfull, undefined-reference, or citation-warning markers. All 12 pages render; the contact sheet and representative changed pages are legible. A2 full production passes 61/61, R-157 integrated passes 144/144, R-158 integrated passes 155/155 with regression, and the exploration ledger verifies 1382 records.",
+  "method": [
+    "Compile the corrected manuscript source with the bundled Tectonic compiler after the PDF edit marker.",
+    "Run source/PDF structural checks for labels, references, control bytes, placeholders, equation-control hygiene, PDF page count, and compiler warnings.",
+    "Render all PDF pages at 150 dpi with Poppler, review the contact sheet and the changed introduction, ensemble, and conclusion pages.",
+    "Run the registered A2 full-production, R-157 integrated, R-158 integrated, and exploration-ledger verifiers.",
+    "Confirm that the wording repair changes no theorem tier, source coefficient, executable assertion, or scope firewall."
+  ],
+  "assumptions": [
+    "The compiled PDF is generated from the current v0.1.10 manuscript source in the publish folder.",
+    "The registered executable lanes remain the authority for exact arithmetic and provenance checks.",
+    "The concurrent PAH process is separate and its generated files do not constitute evidence for this paper."
+  ],
+  "missing_assumptions": [
+    "Independent mathematician sign-off on the A2 analytic proof and the R-158 direct-method/selection boundary.",
+    "Specialist novelty review, operator confirmation, capstone bundle, and clean repository release check."
+  ],
+  "boundary": "A2/R-157/R-158 integrated paper source, PDF, and repository-local replay only. No external proof sign-off, novelty decision, claim-tier change, physical interpretation, infinite-volume or continuum result, submission, upload, tag, or release.",
+  "claim_ids": [
+    "A2-FULL-PRODUCTION-WELLPOSED"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": [
+      "R-157",
+      "R-158"
+    ]
+  },
+  "evidence_refs": [
+    "publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.tex#Draft-v0.1.10",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.pdf#12-pages",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/STATUS.md#Version-history",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/proof-audit.md#R-158-3",
+    "publish/papers/a2-r157-r158-ensemble-minimizers/verification/README.md#Current-replay-boundary",
+    "codes/foundations/a2_full_production_verify.py#A2-FULL-PRODUCTION-VERIFY-PASS",
+    "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py#integrated",
+    "codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py#integrated"
+  ],
+  "related": [
+    {
+      "id": "EXP-001382",
+      "relation": "continues"
+    }
+  ],
+  "revisit_condition": "Reopen if the external proof audit rejects the revised charge boundary or if the manuscript source, canonical claims, or replay results change.",
+  "stop_or_redesign": [
+    "Do not advance the lifecycle from draft on the basis of compile or executable PASS alone.",
+    "Do not restore a global-charge jump claim without a new selection/stability proof.",
+    "Keep the current PDF and source synchronized with the v0.1.10 wording before any capstone build."
+  ],
+  "non_claims": [
+    "The replay confirms repository-local consistency, not analytic theorem closure.",
+    "The 12-page PDF is a draft artifact and not a submission or publication record.",
+    "No external referee or specialist novelty opinion has been received.",
+    "The concurrent PAH work remains independent and does not change this paper status."
+  ],
+  "adversarial_review": [
+    {
+      "check": "Could the added qualification be omitted from the PDF or source during a later rebuild?",
+      "disposition": "DISMISSED FOR THIS CHECKPOINT: source and compiled PDF were compared by version text and rendered-page inspection; future builds must rerun the same QA."
+    },
+    {
+      "check": "Could executable PASS counts be read as proof of the analytic charge-selection statement?",
+      "disposition": "DISMISSED AS OVERCLAIM: the manuscript, proof-audit, and verification README retain the selection/stability question as open."
+    },
+    {
+      "check": "Could the 12-page expansion indicate a layout defect?",
+      "disposition": "DISMISSED: all pages render with legible margins and no overfull/underfull markers; representative changed pages were inspected."
+    },
+    {
+      "check": "Could this replay close the publication gate?",
+      "disposition": "UPHELD AS LIMITATION: independent proof, specialist, operator, capstone, and release gates remain open."
+    }
+  ],
+  "next_action": "Keep v0.1.10 at draft and route the updated proof-audit questions to an independent mathematician; after signed review and operator confirmation, build the dedicated capstone bundle and rerun the repository release gate."
+}

@@ -2594,6 +2594,54 @@
         "verification/scripts/commit_watcher.ps1"
       ],
       "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [],
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "date": "2026-09-07",
+      "header": "[Preserve ignored historical evidence for isolated workspace readiness] - 2026-09-07",
+      "id": "20260907-preserve-ignored-historical-evidence-for-isolat",
+      "keywords": [
+        "exact-bytes",
+        "portability",
+        "tooling"
+      ],
+      "linked_result_ids": [],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [Preserve ignored historical evidence for isolated workspace readiness] - 2026-09-07\n\nFresh proof and paper worktrees exposed four historical exploration references whose evidence existed only in ignored tmp paths. Preserve those four files byte-for-byte in archive/portable-evidence with a SHA256 manifest. Admission, provisioning, validation and doctor --fix restore only missing copies, refusing differing targets or source hashes; a release gate checks the contract. Historical exploration records and expected hashes remain unchanged. Twelve real-Git and adversarial tooling tests pass, including exact CRLF preservation, corruption refusal and path confinement. This is an operational portability repair, not scientific progress.\n\n",
+      "result_ids": [],
+      "result_link_basis": {},
+      "scripts": [
+        "verification/scripts/portable_evidence.py",
+        "verification/scripts/lane_control.py",
+        "verification/scripts/doctor.py"
+      ],
+      "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [],
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "date": "2026-09-07",
+      "header": "[Scope path-length audit to public files instead of isolated internal worktrees] - 2026-09-07",
+      "id": "20260907-scope-path-length-audit-to-public-files-instead",
+      "keywords": [
+        "concurrency",
+        "path-length",
+        "tooling"
+      ],
+      "linked_result_ids": [],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [Scope path-length audit to public files instead of isolated internal worktrees] - 2026-09-07\n\nThe first live paper worktree exposed a mismatch: path-length scanned physical internal worktrees although other release checks use the Git-visible public inventory. Align the path audit with repo_inventory.real_files; preserve the same public path budget. A real-Git regression confirms ignored nested worktrees do not block the canonical checkout while oversized public files still fail. Thirteen lane-control tooling tests pass. Scientific claims, authority hashes and historical records are unchanged.\n\n",
+      "result_ids": [],
+      "result_link_basis": {},
+      "scripts": [
+        "verification/scripts/check_path_lengths.py"
+      ],
+      "unresolved_claim_ids": []
     }
   ],
   "kind": "accepted_events",

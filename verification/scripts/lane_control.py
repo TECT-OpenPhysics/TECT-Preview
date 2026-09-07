@@ -200,6 +200,10 @@ class Controller:
         record = {"id": lane, "thread": thread, "role": role, "repo": str(repo),
                   "external": external, "workspace": str(workspace) if workspace else None,
                   "base": commit(repo, "HEAD"), "registered_at": now()}
+        if workspace and not external:
+            from portable_evidence import hydrate
+            hydrate(workspace, self.root, restore=True)
+            inherit_pdf_freshness(workspace, self.root)
         data["lanes"][lane] = record
         save(self.db, data)
         return record
@@ -221,6 +225,8 @@ class Controller:
             destination.parent.mkdir(parents=True, exist_ok=True)
             git(self.root, "worktree", "add", "-b", branch, str(destination), record["base"])
         inherit_pdf_freshness(destination, self.root)
+        from portable_evidence import hydrate
+        hydrate(destination, self.root, restore=True)
         record["workspace"] = str(destination)
         save(self.db, data)
         return record
@@ -297,6 +303,8 @@ class Controller:
         inherit_pdf_freshness(destination, self.root)
         source_lane = self.registry()["lanes"][request["lane"]]
         inherit_pdf_freshness(destination, Path(source_lane["workspace"]))
+        from portable_evidence import hydrate
+        hydrate(destination, self.root, restore=True)
         return {"request": key, "workspace": str(destination), "head": request["head"],
                 "next": "Run release/PDF/scope checks here; only then promote under the release lock"}
 

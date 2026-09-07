@@ -61,6 +61,12 @@ def main() -> int:
                     help="regenerate all generated surfaces (regen_all.py) before checking")
     a = ap.parse_args()
     if a.fix:
+        from portable_evidence import hydrate
+        try:
+            hydrate(REPO, restore=True)
+        except (OSError, ValueError, KeyError) as error:
+            print(f"PORTABLE-EVIDENCE: FAIL {error}")
+            return 1
         subprocess.run([sys.executable, str(SCRIPTS / "regen_all.py")], cwd=str(REPO))
     print(f"TECT doctor -- workspace readiness ({REPO})")
 

@@ -8,6 +8,7 @@ import tempfile
 import unittest
 
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts/lane_control.py"
+sys.path.insert(0, str(SCRIPT.parent))
 spec = importlib.util.spec_from_file_location("lane_control", SCRIPT)
 mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mod)
@@ -193,6 +194,45 @@ class LaneTests(unittest.TestCase):
         self.assertEqual(new["supersedes"], old["id"])
         self.assertEqual(len(self.ctl.tick()["actions"]), 1)
         self.assertEqual(self.ctl.tick()["actions"][0]["kind"], "VALIDATE_CHECKPOINT")
+
+    def test_portable_evidence_exact_restore_and_corruption_refusal(self):
+        from portable_evidence import hydrate, confined
+        archive = self.root / "archive/portable-evidence"
+        archive.mkdir(parents=True)
+        payload = b"historical\r\nexact bytes\n"
+        (archive / "reference.out").write_bytes(payload)
+        manifest = {"files": [{"source": "archive/portable-evidence/reference.out",
+                    "target": "tmp/reference.out", "sha256": mod.hashlib.sha256(payload).hexdigest()}]}
+        mod.save(self.root / "verification/portable-evidence.json", manifest)
+        target = Path(self.tmp.name) / "fresh"
+        target.mkdir()
+        with self.assertRaises(ValueError):
+            hydrate(target, self.root)
+        self.assertEqual(hydrate(target, self.root, True), {"restored": 1, "checked": 1})
+        self.assertEqual((target / "tmp/reference.out").read_bytes(), payload)
+        self.assertEqual(hydrate(target, self.root, True)["restored"], 0)
+        (target / "tmp/reference.out").write_bytes(b"owner change")
+        with self.assertRaises(ValueError):
+            hydrate(target, self.root, True)
+        self.assertEqual((target / "tmp/reference.out").read_bytes(), b"owner change")
+        (archive / "reference.out").write_bytes(b"source corruption")
+        with self.assertRaises(ValueError):
+            hydrate(target, self.root, True)
+        with self.assertRaises(ValueError):
+            confined(target, "tmp/../../escape", "tmp")
+
+    def test_path_gate_keeps_public_limits_and_ignores_other_worktrees(self):
+        from check_path_lengths import scan
+        nested = self.root / "internal/lane-workspaces/paper" / ("a" * 45)
+        nested.mkdir(parents=True)
+        (nested / "evidence.txt").write_bytes(b"different checkout\n")
+        self.assertEqual(scan(self.root, max_chars=64), [])
+        public = self.root / "publish" / ("b" * 45)
+        public.mkdir(parents=True)
+        (public / "evidence-long.txt").write_bytes(b"real release surface\n")
+        offenders = scan(self.root, max_chars=64)
+        self.assertEqual(len(offenders), 1)
+        self.assertIn("publish/", offenders[0][1])
 
 
 if __name__ == "__main__":

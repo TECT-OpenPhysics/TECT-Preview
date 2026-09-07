@@ -1,0 +1,47 @@
+RELEASE-CHECK: pre-publication gate
+  [ledger] PASS
+  [catalog] PASS
+  [lineage] PASS
+  [index] PASS
+  [todo] PASS
+  [changelog] PASS
+  [changelog-integrity] PASS
+  [dossier] PASS
+  [exploration-integrity] PASS
+  [exploration-time] PASS
+  [observation-inverse] PASS
+  [research-continuity] PASS
+  [direction-control] PASS
+  [legacy-research] PASS
+  [legacy-search-contract] PASS
+  [proof-evidence-map] PASS
+  [management-indexes] PASS
+  [aggregate-consumers] PASS
+  [protocol-single-source] PASS
+  [lean-toolchain] PASS
+  [code-discipline] PASS
+  [website-smoke] PASS
+  [note-pdf] WARN
+  [p0-fence] done
+  [english-only] done
+  [no-overclaim] done
+  [p2-clean-citation] done
+  [verification-baseline] done
+  [hygiene] done
+  [path-length] PASS
+  WARN note-pdf: current notes lack fresh PDFs -- commit_watcher --build fixes (or run: python verification/scripts/verify_note_pdfs.py --build)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-independent-rectangular_matching_general_lemma\independent.json (11693 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-integrated-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison\integrated.json (8136 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-integrated-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress\integrated.json (5429 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-primary-pre_a_cp1_st8_q3lock_conditional_poincare_shell\primary.json (9568 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-primary-pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence\primary.json (6708 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-primary-pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge\primary.json (7285 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-primary-pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov\primary.json (6210 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-30-primary-rectangular_matching_general_lemma\primary.json (11803 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-31-independent-pre_a_m5_isolated_node_equation_level_audit\independent.json (10255 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-08-31-primary-pre_a_m5_isolated_node_equation_level_audit\primary.json (10805 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-09-04-pah-omc005-nonzero-q-generator\independent.json (13513 KB)
+  WARN large file (>5MB): claims\C6-SPACETIME-SIGNATURE\runs\2026-09-04-pah-omc005-nonzero-q-generator\primary.json (14444 KB)
+  WARN large file (>5MB): explorations\log.jsonl (5725 KB)
+  WARN large file (>5MB): theory\proof-evidence-map.md (6684 KB)
+RELEASE-CHECK: PASS -- safe to push the public surface

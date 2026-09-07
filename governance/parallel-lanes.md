@@ -134,3 +134,15 @@ Checkout timestamps are not new PDF content: provisioning/validation may restore
 PDF freshness only when BOTH source and PDF bytes exactly match an already fresh
 pair in the source or canonical workspace. This changes filesystem timestamps
 only. Changed/missing/stale pairs still require the original checkpoint checks.
+
+Historical references to ignored `tmp/` evidence are preserved byte-for-byte in
+`archive/portable-evidence/`, pinned by `verification/portable-evidence.json`.
+Admission, provisioning and validation restore only missing targets, verify
+SHA-256, and refuse any differing existing target. `doctor.py --fix` performs
+the same bootstrap on an independently copied workspace. Historical exploration
+records and their expected hashes are never rewritten to hide missing evidence.
+
+Publication checks enumerate the Git-visible release surface. In particular,
+the path-length check uses the same inventory as release_check, so an ignored
+isolated checkout cannot cause a false central path-length failure. Public
+tracked/new files retain the original path budget.
