@@ -60,11 +60,11 @@ flowchart LR
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
 | Reusable result records | 336 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 385 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1638 | Route decisions: advanced 1207, failed 254, inconclusive 122, parked 55; non-tier-bearing |
-| Accepted chronological events | 1003 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1639 | Route decisions: advanced 1208, failed 254, inconclusive 122, parked 55; non-tier-bearing |
+| Accepted chronological events | 1004 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 62 | 12 live; 50 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 418 lineage notes / 399 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2074 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 418 lineage notes / 399 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2075 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -24945,6 +24945,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** [R-497](../RESULTS-LEDGER.md#r-497)
 - **Located evidence:** [`strategy/q3lock-simon-fk-source-capture-260907.md`](../strategy/q3lock-simon-fk-source-capture-260907.md) (captured-identity); [`verification/scripts/q3lock_simon_source_capture.py`](../verification/scripts/q3lock_simon_source_capture.py) (build_payload); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-simon-source-capture/result.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-simon-source-capture/result.json) (assertions); [`strategy/q3lock-simon-fk-source-applicability-audit-260907.md`](../strategy/q3lock-simon-fk-source-applicability-audit-260907.md) (remaining-acceptance-boundary)
 
+<a id="exp-001639"></a>
+#### EXP-001639 — Q3LOCK finite-volume form closure and harmonic truncation audit
+
+- **Review metadata:** reviewed 2026-09-07; recorded 2026-09-07T10:15:00Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Does a graph-derived finite form/envelope audit make the Q3LOCK A1-A3 interface explicit while preserving the distinction between finite diagnostics and the still-open unbounded-operator/semigroup review?
+- **Finite checks:** (1) Write the physical and harmonic-residual lower/upper envelopes from the declared Q3 and spatial graph degrees, keeping the physical form distinct from the residual. (2) Derive the g/128 lower coefficient and both scalar Young constants at their analytic maximisers. (3) Recompute Q3 edges, spatial multigraph bonds and endpoint degrees, then evaluate generated rational/real fields against the declared envelopes. (4) Apply hostile fixtures that omit the Q3 degree or spatial endpoint budget and require failure, and check that min(R,M) is monotone and convergent on residual fixtures. (5) Run the source-hash and manuscript-locator checks; retain the external form, monotone-form, kernel and semigroup review boundary.
+- **Finding:** The finite algebraic audit passed 52/52 checks. It reconstructs the Q3 edge count 12 and vertex degree 3, the six spatial endpoint incidences, the residual coefficient g/128, both scalar Young maxima, generated-field physical/residual envelopes, hostile rejection of omitted Q3/spatial budgets, monotone min(R,M) truncation, and the manuscript locators. The note gives the corresponding closed-form/compact-embedding argument and isolates the remaining monotone-form, kernel, semigroup, and Simon application acceptance as open.
+- **Decision reason:** The finite Q3 and spatial graph degrees were recomputed from the declared graphs. Exact Young-maximisation formulas, physical and harmonic-residual lower envelopes, a polynomial upper envelope, hostile under-budget fixtures, and monotone residual truncation were checked in a new standard-library audit. The audit strengthens the finite proof interface but does not replace the closed-form theorem or semigroup review.
+- **Boundary:** T0 finite-volume form/envelope audit, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY; A1-A3, Simon operator identification, all spatial limits, external reviews and PDF gates remain open.
+- **Next / revisit condition:** Use this finite interface in the next manuscript proof review. Obtain a signed audit of the closed-form norm equivalence, compact embedding, monotone-form/semigroup convergence, endpoint kernel continuity and the exact Simon hypothesis map before changing any A1-A3 disposition.
+- **Related explorations:** continues [EXP-001638](#exp-001638), alternative_to [EXP-001626](#exp-001626)
+- **Formal authorities:** [R-497](../RESULTS-LEDGER.md#r-497)
+- **Located evidence:** [`strategy/q3lock-finite-form-closure-audit-260907.md`](../strategy/q3lock-finite-form-closure-audit-260907.md) (lower-envelope-and-physical-form); [`strategy/q3lock-finite-form-closure-audit-260907.md`](../strategy/q3lock-finite-form-closure-audit-260907.md) (closed-form-and-compact-embedding); [`verification/scripts/q3lock_finite_form_closure_audit.py`](../verification/scripts/q3lock_finite_form_closure_audit.py) (build_payload); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-finite-form-closure-audit/result.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-finite-form-closure-audit/result.json) (assertions); [`publish/papers/q3lock-phase-coexistence/manuscript.tex`](../publish/papers/q3lock-phase-coexistence/manuscript.tex) (eq:form-domain)
+
 
 ## Claim evidence matrix
 
@@ -24999,7 +25014,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (22 notes; 1333 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace), [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), +129 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +692 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [Q3LOCK Simon Feynman-Kac provisional source-byte capture] - 2026-09-07 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (22 notes; 1334 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace), [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), +129 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +693 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [Q3LOCK finite-volume form closure and harmonic truncation audit] - 2026-09-07 | - |
 
 ### Sector D
 
@@ -25780,6 +25795,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-07 | [Q3LOCK finite-volume form closure and harmonic truncation audit] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [Q3LOCK Simon Feynman-Kac provisional source-byte capture] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [Q3LOCK independent replay determinism correction] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [Q3LOCK package-level independent replay] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -25799,7 +25815,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-07 | [C6 Q3LOCK fresh-audit historical snapshot guard correction (EXP-001622)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK fresh manuscript audit checkpoint (EXP-001621)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK KP general-vector/scalar phase boundary audit (EXP-001620)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-07 | [C6 Q3LOCK radial-vector theorem boundary audit (EXP-001619)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 
