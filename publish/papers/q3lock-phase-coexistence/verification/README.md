@@ -13,7 +13,7 @@ in memory, compares saved results,
 checks the historical output bytes and frozen authority hashes, and compares
 the complete new payload with the separate current replay record:
 
-    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r8/result.json
+    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r10/result.json
 
 The research environment must include the existing symbolic dependencies,
 including SymPy. A minimal bundled Python is not an equivalent runtime;
@@ -67,6 +67,17 @@ and its hostile-coverage validator.  Run the validator with:
 
 Its result is a packet-coverage diagnostic, not an independent proof review or
 theorem certificate.
+
+The current package-level independent replay is separate from the integrated
+replay.  Run it read-only with:
+
+    & E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/q3lock_independent_replay.py --check
+
+The replay runs the EXP-000782 standard-library independent verifier in a
+temporary output directory, compares the complete payload with its frozen
+306-assertion result, checks current manuscript scope and PDF deferral, and
+rejects hostile forbidden-import, claim-promotion, and assertion-mutation
+fixtures.  It is reproducibility evidence, not a signed mathematical review.
 
 The documentation delta is limited to README.md, external-review-handoff.md,
 literature-qps-addendum.md, submission-readiness.md, this README,

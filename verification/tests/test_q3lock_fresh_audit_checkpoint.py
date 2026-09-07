@@ -9,7 +9,7 @@ MODULE = runpy.run_path(
     str(ROOT / "verification/scripts/q3lock_fresh_audit_checkpoint.py"),
     run_name="q3lock_fresh_audit_checkpoint_test",
 )
-CURRENT_LABEL = "2026-09-07-q3lock-manuscript-fresh-audit-r9-review-matrix-handoff"
+CURRENT_LABEL = "2026-09-07-q3lock-manuscript-fresh-audit-r12-independent-replay-handoff"
 
 
 class TestQ3LockFreshAuditCheckpoint(unittest.TestCase):

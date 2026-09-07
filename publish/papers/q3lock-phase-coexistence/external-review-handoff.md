@@ -23,7 +23,12 @@ repairs or a clear refusal to certify a step.
    result
    (`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-independent-review-matrix-audit/result.json`).
    The reviewer must return a disposition for every A1--A23 row; the validator
-   checks packet coverage only and is not a mathematical review.
+   checks packet coverage only and is not a mathematical review; and
+9. the current package-level independent replay
+   (`verification/scripts/q3lock_independent_replay.py` and
+   `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-independent-replay/result.json`).
+   It re-executes the frozen EXP-000782 standard-library independent verifier in
+   a temporary directory and rejects source-import and result-mutation fixtures.
 
 ## Requested review sequence
 

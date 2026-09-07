@@ -10,8 +10,8 @@ content is reviewed and finally organized.
 | R3 external theorem crosswalk | KP/FSS/KKK hypotheses checked line by line | DRAFT; signed review open |
 | R4 literature comparison | Bounded primary-source comparison and no priority claim | DRAFT; specialist opinion open |
 | R5 claim/result lineage | R-497 remains T0 and claim-bearing=false | CURRENT; bounded decision open |
-| R6 primary replay | All canonical finite diagnostics and source hashes | IMMUTABLE FRESH CHECKPOINT PRESENT: `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-r9-review-matrix-handoff/`; integrated read-only replay `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r8/result.json`; independent replay still open |
-| R7 independent replay | Non-importing implementation and hostile checks | REQUIRED |
+| R6 primary replay | All canonical finite diagnostics and source hashes | IMMUTABLE FRESH CHECKPOINT PRESENT: `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-r12-independent-replay-handoff/`; integrated read-only replay `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r10/result.json`; independent replay still open |
+| R7 independent replay | Non-importing implementation and hostile checks | CURRENT INTERNAL REPLAY: `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-independent-replay/result.json` (`306/306` child assertions; package mutation checks PASS); external mathematical acceptance remains open |
 | R8 integrated replay | Current frozen manuscript, manifest, and inputs | REQUIRED |
 | R9 content freeze | Notation, bibliography, equations, nonclaims, version | NOT STARTED |
 | R10 hash freeze | Fresh SHA-256 for manuscript and all cited package files | NOT STARTED |
