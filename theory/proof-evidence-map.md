@@ -60,11 +60,11 @@ flowchart LR
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
 | Reusable result records | 336 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 385 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1622 | Route decisions: advanced 1191, failed 254, inconclusive 122, parked 55; non-tier-bearing |
-| Accepted chronological events | 987 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1623 | Route decisions: advanced 1192, failed 254, inconclusive 122, parked 55; non-tier-bearing |
+| Accepted chronological events | 988 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 62 | 12 live; 50 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 418 lineage notes / 399 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2053 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 418 lineage notes / 399 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2055 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -24705,6 +24705,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** [R-497](../RESULTS-LEDGER.md#r-497)
 - **Located evidence:** [`strategy/q3lock-manuscript-fresh-audit-260907.md`](../strategy/q3lock-manuscript-fresh-audit-260907.md) (replay-guard-and-next-gate); [`verification/scripts/q3lock_paper_replay.py`](../verification/scripts/q3lock_paper_replay.py) (historical-snapshot-check); [`publish/papers/q3lock-phase-coexistence/verification/replay-safety-audit.md`](../publish/papers/q3lock-phase-coexistence/verification/replay-safety-audit.md) (historical-output-preservation); [`publish/papers/q3lock-phase-coexistence/verification/package-manifest.json`](../publish/papers/q3lock-phase-coexistence/verification/package-manifest.json) (tooling-checkpoint); [`publish/papers/q3lock-phase-coexistence/submission-readiness.md`](../publish/papers/q3lock-phase-coexistence/submission-readiness.md) (final-pdf-rule)
 
+<a id="exp-001623"></a>
+#### EXP-001623 — Q3LOCK non-overwriting fresh audit checkpoint
+
+- **Review metadata:** reviewed 2026-09-07; recorded 2026-09-07T07:14:15Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Can the seven current manuscript audits be replayed in memory and recorded under a new immutable path while preserving every protected historical result byte?
+- **Finite checks:** (1) Import the seven registered manuscript-audit build_payload functions in dependency order without invoking their historical result writers. (2) Snapshot all seven protected manuscript result files before the in-memory replay and compare their bytes after every payload has been built. (3) Require PASS and claim_bearing=false for every payload, compute each payload digest and total assertion count, and collect consistent source hashes. (4) Write a new source map and aggregate result exactly once with atomic replacement, refusing an existing destination; validate the checkpoint and test overwrite refusal. (5) Keep the checkpoint explicitly separate from unbounded analytic acceptance, external review, theorem promotion, and final PDF generation.
+- **Finding:** A current manuscript replay can be accepted without mutating the historical R-497 chain when the audit builders are executed in memory and their aggregate is written under a new immutable run path. The checkpoint is now available for the final content/hash-freeze handoff.
+- **Decision reason:** The non-overwriting checkpoint writer completed with seven PASS audit payloads and 1171 total assertions. It preserved all seven protected historical result bytes, stored their SHA-256 values and the source map hash, and the companion tests passed. The new result is a reproducibility checkpoint, not an analytic phase theorem.
+- **Boundary:** T0 internal reproducibility checkpoint, claim_bearing=false. The sole Q3LOCK authority remains EXP-000780 -> EXP-000781 -> EXP-000782 / R-497. No analytic theorem tier, publication status, or PDF status changes.
+- **Next / revisit condition:** Use the immutable checkpoint in the proof and literature review handoff, then resolve the open A1-A23 and R2-R14 items. Rebuild this checkpoint under a new path after any content or source change; do not overwrite it and do not generate the PDF before final freeze.
+- **Related explorations:** continues [EXP-001622](#exp-001622), continues [EXP-001621](#exp-001621), continues [EXP-001620](#exp-001620), continues [EXP-001598](#exp-001598)
+- **Formal authorities:** [R-497](../RESULTS-LEDGER.md#r-497)
+- **Located evidence:** [`strategy/q3lock-fresh-audit-checkpoint-260907.md`](../strategy/q3lock-fresh-audit-checkpoint-260907.md) (recorded-replay); [`verification/scripts/q3lock_fresh_audit_checkpoint.py`](../verification/scripts/q3lock_fresh_audit_checkpoint.py) (checkpoint-construction); [`verification/tests/test_q3lock_fresh_audit_checkpoint.py`](../verification/tests/test_q3lock_fresh_audit_checkpoint.py) (test_checkpoint_validates); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-checkpoint/result.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-checkpoint/result.json) (audits); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-checkpoint/source-map.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-checkpoint/source-map.json) (files); [`publish/papers/q3lock-phase-coexistence/submission-readiness.md`](../publish/papers/q3lock-phase-coexistence/submission-readiness.md) (final-pdf-rule)
+
 
 ## Claim evidence matrix
 
@@ -24759,7 +24774,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (22 notes; 1312 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace), [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), +129 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +676 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [C6 Q3LOCK fresh-audit historical snapshot guard correction (EXP-001622)] - 2026-0... | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (22 notes; 1314 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace), [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), +129 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +677 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [C6 Q3LOCK non-overwriting fresh audit checkpoint (EXP-001623)] - 2026-09-07 | - |
 
 ### Sector D
 
@@ -25540,6 +25555,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-07 | [C6 Q3LOCK non-overwriting fresh audit checkpoint (EXP-001623)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK fresh-audit historical snapshot guard correction (EXP-001622)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK fresh manuscript audit checkpoint (EXP-001621)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK KP general-vector/scalar phase boundary audit (EXP-001620)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -25559,7 +25575,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-06 | [Q3LOCK EXP-001607: integrate Hilbert reflection, FSS source and singular infrared proof in paper v0.1.4] - 2026-09-06 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-06 | [Q3LOCK EXP-001606: integrate periodic moments and weighted source-tangent DLR proofs in paper v0.1.3] - 2026-09-06 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-06 | [Q3LOCK EXP-001605: manuscript integrates finite-volume loop limit and Borel FKG] - 2026-09-06 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-06 | [Q3LOCK EXP-001604: manuscript sign and analyticity repair with expanded pressure proof] - 2026-09-06 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 

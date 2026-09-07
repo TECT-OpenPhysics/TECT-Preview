@@ -1372,6 +1372,75 @@
       "task_id": "T-054",
       "title": "Q3LOCK fresh-audit historical snapshot guard correction",
       "verdict": "inconclusive"
+    },
+    {
+      "boundary": "T0 internal reproducibility checkpoint, claim_bearing=false. The sole Q3LOCK authority remains EXP-000780 -> EXP-000781 -> EXP-000782 / R-497. No analytic theorem tier, publication status, or PDF status changes.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The non-overwriting checkpoint writer completed with seven PASS audit payloads and 1171 total assertions. It preserved all seven protected historical result bytes, stored their SHA-256 values and the source map hash, and the companion tests passed. The new result is a reproducibility checkpoint, not an analytic phase theorem.",
+      "evidence_refs": [
+        "strategy/q3lock-fresh-audit-checkpoint-260907.md#recorded-replay",
+        "verification/scripts/q3lock_fresh_audit_checkpoint.py#checkpoint-construction",
+        "verification/tests/test_q3lock_fresh_audit_checkpoint.py#test_checkpoint_validates",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-checkpoint/result.json#audits",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-manuscript-fresh-audit-checkpoint/source-map.json#files",
+        "publish/papers/q3lock-phase-coexistence/submission-readiness.md#final-pdf-rule"
+      ],
+      "finding": "A current manuscript replay can be accepted without mutating the historical R-497 chain when the audit builders are executed in memory and their aggregate is written under a new immutable run path. The checkpoint is now available for the final content/hash-freeze handoff.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001623",
+      "method": [
+        "Import the seven registered manuscript-audit build_payload functions in dependency order without invoking their historical result writers.",
+        "Snapshot all seven protected manuscript result files before the in-memory replay and compare their bytes after every payload has been built.",
+        "Require PASS and claim_bearing=false for every payload, compute each payload digest and total assertion count, and collect consistent source hashes.",
+        "Write a new source map and aggregate result exactly once with atomic replacement, refusing an existing destination; validate the checkpoint and test overwrite refusal.",
+        "Keep the checkpoint explicitly separate from unbounded analytic acceptance, external review, theorem promotion, and final PDF generation."
+      ],
+      "next_action": "Use the immutable checkpoint in the proof and literature review handoff, then resolve the open A1-A23 and R2-R14 items. Rebuild this checkpoint under a new path after any content or source change; do not overwrite it and do not generate the PDF before final freeze.",
+      "non_claims": [
+        "The 1171 assertions are internal regression and provenance checks, not a proof of the unbounded analytic limits.",
+        "No signed independent mathematics or specialist literature review is replaced, and no priority or publication-readiness certificate is issued.",
+        "No theorem tier, claim-bearing status, or authority-chain membership changes.",
+        "No KMS dynamics, ground-state gap, continuum limit, physical vacuum, C6 closure, CP1 closure, or Sector A closure follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the seven current manuscript audits be replayed in memory and recorded under a new immutable path while preserving every protected historical result byte?",
+      "recorded_at": "2026-09-07T07:14:15Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001622",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001621",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001620",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001598",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Reopen after any manuscript, package, source-hash, or proof-interface change; create a new immutable checkpoint rather than rewriting this result.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK non-overwriting fresh audit checkpoint",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

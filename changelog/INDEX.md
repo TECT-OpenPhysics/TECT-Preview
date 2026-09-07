@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**987 accepted events** · latest 25 shown below · machine locator: `index.json`
+**988 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-07 | `20260907-c6-q3lock-non-overwriting-fresh-audit-checkpoin` — [C6 Q3LOCK non-overwriting fresh audit checkpoint (EXP-001623)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-non-overwriting-fresh-audit-checkpoin) |
 | 2026-09-07 | `20260907-c6-q3lock-fresh-audit-historical-snapshot-guard` — [C6 Q3LOCK fresh-audit historical snapshot guard correction (EXP-001622)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-fresh-audit-historical-snapshot-guard) |
 | 2026-09-07 | `20260907-c6-q3lock-fresh-manuscript-audit-checkpoint-exp` — [C6 Q3LOCK fresh manuscript audit checkpoint (EXP-001621)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-fresh-manuscript-audit-checkpoint-exp) |
 | 2026-09-07 | `20260907-c6-q3lock-kp-general-vector-scalar-phase-bounda` — [C6 Q3LOCK KP general-vector/scalar phase boundary audit (EXP-001620)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-kp-general-vector-scalar-phase-bounda) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-06 | `20260906-pah-omc-017-publication-footer-and-immutable-ru` — [PAH-OMC-017 publication footer and immutable-run linkage correction] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-pah-omc-017-publication-footer-and-immutable-ru) |
 | 2026-09-06 | `20260906-pah-omc-017-r-510-exact-spatial-transfer-and-co` — [PAH-OMC-017 R-510: exact spatial transfer and common local Gibbs state] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-pah-omc-017-r-510-exact-spatial-transfer-and-co) |
 | 2026-09-06 | `20260906-operator-standing-authorization-for-release-gat` — [Operator standing authorization for release-gated PAH and Q3LOCK batch commits and pushes] - 2026-09-06 | — | [bounded page](pages/000919-000968.md#20260906-operator-standing-authorization-for-release-gat) |
-| 2026-09-06 | `20260906-pah-omc-016-r-509-radial-tightness-and-uniform` — [PAH-OMC-016 R-509: radial tightness and uniform matter nondegeneracy; host gates unchanged] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-pah-omc-016-r-509-radial-tightness-and-uniform) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 969–987 | 19 | [000969-001018.md](pages/000969-001018.md) |
+| 969–988 | 20 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
