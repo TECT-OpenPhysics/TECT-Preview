@@ -60,11 +60,11 @@ flowchart LR
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
 | Reusable result records | 336 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 385 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1637 | Route decisions: advanced 1206, failed 254, inconclusive 122, parked 55; non-tier-bearing |
-| Accepted chronological events | 1002 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1638 | Route decisions: advanced 1207, failed 254, inconclusive 122, parked 55; non-tier-bearing |
+| Accepted chronological events | 1003 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 62 | 12 live; 50 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 418 lineage notes / 399 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2073 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 418 lineage notes / 399 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2074 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -24930,6 +24930,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** [R-497](../RESULTS-LEDGER.md#r-497)
 - **Located evidence:** [`verification/scripts/q3lock_independent_replay.py`](../verification/scripts/q3lock_independent_replay.py) (run_independent); [`verification/scripts/q3lock_independent_replay.py`](../verification/scripts/q3lock_independent_replay.py) (build_payload); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-independent-replay/result.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-independent-replay/result.json) (assertions); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-independent-replay/result.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-independent-replay/result.json) (files); [`publish/papers/q3lock-phase-coexistence/verification/README.md`](../publish/papers/q3lock-phase-coexistence/verification/README.md) (current-package-level-independent-replay)
 
+<a id="exp-001638"></a>
+#### EXP-001638 — Q3LOCK Simon Feynman-Kac provisional source-byte capture
+
+- **Review metadata:** reviewed 2026-09-07; recorded 2026-09-07T09:30:00Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Can the missing Simon source provenance be advanced by a raw-byte, version-pinned capture and hostile mutation check while preserving the historical R-497 manifest and all T0/PDF-deferral boundaries?
+- **Finite checks:** (1) Download the version-pinned Simon PDF into a temporary directory using the Python standard library and compute its raw byte length and SHA-256 without normalisation. (2) Run verification/scripts/q3lock_simon_source_capture.py with the captured path, supplied source-identity oracles, and a new result path. (3) Require the PDF magic, exact raw hash and byte length, and a one-byte hostile mutation rejection. (4) Record the capture as provisional provenance and retain the source-applicability, final source-freeze, external-review, and PDF boundaries.
+- **Finding:** B. Simon, arXiv:math-ph/9907022v1, Theorem 1.1 and equations (1.1)--(1.3), printed page 2, was captured as 110277 raw bytes with SHA-256 15ef936d49d5dd06333a0987fcf609c516048db3b330d37cff62c14bf7e063ff. The verifier passed 5/5 assertions, including the hostile one-byte mutation rejection. The PDF is not stored in the repository, and no historical R-497 manifest byte or manuscript claim was rewritten.
+- **Decision reason:** A fresh raw-byte capture of the version-pinned Simon Feynman-Kac source was made in a temporary directory. The companion standard-library verifier computed the raw byte length and SHA-256, checked the PDF magic, and rejected a one-byte hostile mutation. This advances source provenance only and intentionally leaves the historical R-497 source manifest unchanged.
+- **Boundary:** T0 provisional source provenance, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY; theorem applicability, external mathematics, literature, content freeze and PDF gates remain open.
+- **Next / revisit condition:** At the final source freeze, re-capture all cited primary sources together under a trust-managed download procedure and reconcile their hashes against the manuscript without altering the historical R-497 record. Keep the Simon form-core and monotone-form interfaces in the signed mathematics review.
+- **Related explorations:** continues [EXP-001626](#exp-001626)
+- **Formal authorities:** [R-497](../RESULTS-LEDGER.md#r-497)
+- **Located evidence:** [`strategy/q3lock-simon-fk-source-capture-260907.md`](../strategy/q3lock-simon-fk-source-capture-260907.md) (captured-identity); [`verification/scripts/q3lock_simon_source_capture.py`](../verification/scripts/q3lock_simon_source_capture.py) (build_payload); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-simon-source-capture/result.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-simon-source-capture/result.json) (assertions); [`strategy/q3lock-simon-fk-source-applicability-audit-260907.md`](../strategy/q3lock-simon-fk-source-applicability-audit-260907.md) (remaining-acceptance-boundary)
+
 
 ## Claim evidence matrix
 
@@ -24984,7 +24999,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (22 notes; 1332 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace), [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), +129 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +691 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [Q3LOCK independent replay determinism correction] - 2026-09-07 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (22 notes; 1333 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](../negative-results/registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace), [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](../negative-results/registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy), +129 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +692 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [Q3LOCK Simon Feynman-Kac provisional source-byte capture] - 2026-09-07 | - |
 
 ### Sector D
 
@@ -25765,6 +25780,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-07 | [Q3LOCK Simon Feynman-Kac provisional source-byte capture] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [Q3LOCK independent replay determinism correction] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [Q3LOCK package-level independent replay] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [Q3LOCK review-matrix handoff and replay checkpoint update] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -25784,7 +25800,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-07 | [C6 Q3LOCK fresh manuscript audit checkpoint (EXP-001621)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK KP general-vector/scalar phase boundary audit (EXP-001620)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-07 | [C6 Q3LOCK radial-vector theorem boundary audit (EXP-001619)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-07 | [C6 Q3LOCK scalar comparator boundary audit (EXP-001618)] - 2026-09-07 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 

@@ -2324,6 +2324,59 @@
       "task_id": "T-054",
       "title": "Q3LOCK independent replay determinism correction and provenance hash",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "T0 provisional source provenance, claim_bearing=false. R-497 remains INTERNAL_REVIEW_ONLY; theorem applicability, external mathematics, literature, content freeze and PDF gates remain open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A fresh raw-byte capture of the version-pinned Simon Feynman-Kac source was made in a temporary directory. The companion standard-library verifier computed the raw byte length and SHA-256, checked the PDF magic, and rejected a one-byte hostile mutation. This advances source provenance only and intentionally leaves the historical R-497 source manifest unchanged.",
+      "evidence_refs": [
+        "strategy/q3lock-simon-fk-source-capture-260907.md#captured-identity",
+        "verification/scripts/q3lock_simon_source_capture.py#build_payload",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-simon-source-capture/result.json#assertions",
+        "strategy/q3lock-simon-fk-source-applicability-audit-260907.md#remaining-acceptance-boundary"
+      ],
+      "finding": "B. Simon, arXiv:math-ph/9907022v1, Theorem 1.1 and equations (1.1)--(1.3), printed page 2, was captured as 110277 raw bytes with SHA-256 15ef936d49d5dd06333a0987fcf609c516048db3b330d37cff62c14bf7e063ff. The verifier passed 5/5 assertions, including the hostile one-byte mutation rejection. The PDF is not stored in the repository, and no historical R-497 manifest byte or manuscript claim was rewritten.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001638",
+      "method": [
+        "Download the version-pinned Simon PDF into a temporary directory using the Python standard library and compute its raw byte length and SHA-256 without normalisation.",
+        "Run verification/scripts/q3lock_simon_source_capture.py with the captured path, supplied source-identity oracles, and a new result path.",
+        "Require the PDF magic, exact raw hash and byte length, and a one-byte hostile mutation rejection.",
+        "Record the capture as provisional provenance and retain the source-applicability, final source-freeze, external-review, and PDF boundaries."
+      ],
+      "next_action": "At the final source freeze, re-capture all cited primary sources together under a trust-managed download procedure and reconcile their hashes against the manuscript without altering the historical R-497 record. Keep the Simon form-core and monotone-form interfaces in the signed mathematics review.",
+      "non_claims": [
+        "The byte capture does not prove Simon's theorem applies to the full Q3LOCK finite-volume operator.",
+        "The result does not establish form convergence, mesh identification, thermodynamic pressure, DLR compactness, FKG, infrared bounds, a cusp, or phase coexistence.",
+        "No claim tier, result lineage, TECT sector, KMS, ground-state, continuum, physical-vacuum, cosmological, or Yang-Mills conclusion changes.",
+        "No paper PDF was generated."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the missing Simon source provenance be advanced by a raw-byte, version-pinned capture and hostile mutation check while preserving the historical R-497 manifest and all T0/PDF-deferral boundaries?",
+      "recorded_at": "2026-09-07T09:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001626",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK Simon Feynman-Kac provisional source-byte capture",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

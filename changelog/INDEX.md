@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1002 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1003 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-07 | `20260907-q3lock-simon-feynman-kac-provisional-source-byt` — [Q3LOCK Simon Feynman-Kac provisional source-byte capture] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-simon-feynman-kac-provisional-source-byt) |
 | 2026-09-07 | `20260907-q3lock-independent-replay-determinism-correctio` — [Q3LOCK independent replay determinism correction] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-independent-replay-determinism-correctio) |
 | 2026-09-07 | `20260907-q3lock-package-level-independent-replay-2026-09` — [Q3LOCK package-level independent replay] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-package-level-independent-replay-2026-09) |
 | 2026-09-07 | `20260907-q3lock-review-matrix-handoff-and-replay-checkpo` — [Q3LOCK review-matrix handoff and replay checkpoint update] - 2026-09-07 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-review-matrix-handoff-and-replay-checkpo) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-07 | `20260907-c6-q3lock-non-importing-polynomial-cross-check` — [C6 Q3LOCK non-importing polynomial cross-check and explicit R3 integration] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-non-importing-polynomial-cross-check) |
 | 2026-09-07 | `20260907-c6-q3lock-replay-r2-preflight-correction-and-r1` — [C6 Q3LOCK replay R2 preflight correction and R1 source preservation] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-replay-r2-preflight-correction-and-r1) |
 | 2026-09-07 | `20260907-c6-q3lock-read-only-paper-replay-and-historical` — [C6 Q3LOCK read-only paper replay and historical-output preservation (EXP-001614)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-read-only-paper-replay-and-historical) |
-| 2026-09-07 | `20260907-parallel-lane-isolation-and-checkpoint-controll` — [Parallel lane isolation and checkpoint controller for TECT proof and paper work] - 2026-09-07 | — | [bounded page](pages/000969-001018.md#20260907-parallel-lane-isolation-and-checkpoint-controll) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 969–1002 | 34 | [000969-001018.md](pages/000969-001018.md) |
+| 969–1003 | 35 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
