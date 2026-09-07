@@ -11,7 +11,7 @@
     "publication_status": "RESEARCH_ONLY"
   },
   "manuscript": "publish/papers/q3lock-phase-coexistence/manuscript.tex",
-  "hash_policy": "Capture fresh SHA-256 only after notation, bibliography, nonclaims, proof audit, and external dispositions are frozen.",
+  "hash_policy": "Fill the final release source/output hash arrays only after content, notation, bibliography and external dispositions are frozen. Dated internal tooling checkpoints may separately record their provenance without declaring final freeze.",
   "canonical_inputs": [
     "strategy/q3lock-exp782-independent-result-manifest-260905.json",
     "strategy/q3lock-finite-volume-pressure-content-260905.md",
@@ -24,44 +24,12 @@
   ],
   "commands": [
     {
-      "path": "verification/scripts/q3lock_manuscript_source_audit.py",
-      "record": "EXP-001611",
-      "expected": "34 exact model-comparison, source-scaling and structural/provenance checks; integrates all six prior manuscript checkers in memory, preserves their historical runs and checks the frozen authority manifest"
-    },
-    {
-      "path": "verification/scripts/q3lock_absolute_partition_audit.py",
-      "record": "EXP-001588",
-      "expected": "registered finite determinant and normalization checks pass"
-    },
-    {
-      "path": "verification/scripts/q3lock_thermodynamic_pressure_audit.py",
-      "record": "EXP-001589",
-      "expected": "registered seam, tiling, and source-factor checks pass"
-    },
-    {
-      "path": "verification/scripts/q3lock_dlr_tangent_content_audit.py",
-      "record": "EXP-001591",
-      "expected": "70/70 registered finite content assertions"
-    },
-    {
-      "path": "verification/scripts/q3lock_fkg_content_audit.py",
-      "record": "EXP-001593",
-      "expected": "504/504 registered finite content assertions"
-    },
-    {
-      "path": "verification/scripts/q3lock_reflection_infrared_content_audit.py",
-      "record": "EXP-001595",
-      "expected": "registered finite graph, source, and shell checks"
-    },
-    {
-      "path": "verification/scripts/q3lock_collective_falk_bruch_content_audit.py",
-      "record": "EXP-001598",
-      "expected": "40/40 registered finite content assertions"
-    },
-    {
-      "path": "verification/scripts/q3lock_strict_cusp_tangent_content_audit.py",
-      "record": "EXP-001598",
-      "expected": "42/42 registered finite content assertions"
+      "path": "verification/scripts/q3lock_paper_replay.py",
+      "args": [
+        "--check"
+      ],
+      "mode": "read_only",
+      "expected": "Canonical finite diagnostics and seven manuscript groups replay; historical bytes and current checkpoint match. No result writes or PDF generation."
     }
   ],
   "required_before_pdf": [
@@ -81,5 +49,56 @@
     "Finite diagnostics are reproduction evidence, not theorem certification.",
     "No intermediate PDF is allowed; the first PDF is generated only after the final content freeze.",
     "No submission, upload, tag, or release is authorized by this manifest."
-  ]
+  ],
+  "historical_builders": [
+    {
+      "path": "verification/scripts/q3lock_manuscript_source_audit.py",
+      "record": "EXP-001611",
+      "expected": "34 exact model-comparison, source-scaling and structural/provenance checks; integrates all six prior manuscript checkers in memory, preserves their historical runs and checks the frozen authority manifest",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
+    },
+    {
+      "path": "verification/scripts/q3lock_absolute_partition_audit.py",
+      "record": "EXP-001588",
+      "expected": "registered finite determinant and normalization checks pass",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
+    },
+    {
+      "path": "verification/scripts/q3lock_thermodynamic_pressure_audit.py",
+      "record": "EXP-001589",
+      "expected": "registered seam, tiling, and source-factor checks pass",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
+    },
+    {
+      "path": "verification/scripts/q3lock_dlr_tangent_content_audit.py",
+      "record": "EXP-001591",
+      "expected": "70/70 registered finite content assertions",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
+    },
+    {
+      "path": "verification/scripts/q3lock_fkg_content_audit.py",
+      "record": "EXP-001593",
+      "expected": "504/504 registered finite content assertions",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
+    },
+    {
+      "path": "verification/scripts/q3lock_reflection_infrared_content_audit.py",
+      "record": "EXP-001595",
+      "expected": "registered finite graph, source, and shell checks",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
+    },
+    {
+      "path": "verification/scripts/q3lock_collective_falk_bruch_content_audit.py",
+      "record": "EXP-001598",
+      "expected": "40/40 registered finite content assertions",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
+    },
+    {
+      "path": "verification/scripts/q3lock_strict_cusp_tangent_content_audit.py",
+      "record": "EXP-001598",
+      "expected": "42/42 registered finite content assertions",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
+    }
+  ],
+  "tooling_checkpoint": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r2/result.json"
 }

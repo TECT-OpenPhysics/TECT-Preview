@@ -1,0 +1,77 @@
+# Read-only replay and historical-output preservation
+
+Date: 2026-09-07. Manuscript v0.1.7, R-497, T0, claim_bearing=false.
+Scope: tooling and reproduction instructions, not a new mathematical result.
+The sole paper research authority remains EXP-000780 -> EXP-000781 ->
+EXP-000782. Independent mathematical and literature acceptance remain OPEN.
+No paper PDF, final freeze, submission or claim promotion is supplied here.
+
+## Finding
+
+At checkpoint fb3f2e5c003fcb9e33e8eb2231528d0ccd2fd7e0, the top-level
+verification README and package command list still recommended the standalone
+q3lock_manuscript_source_audit.py writer. It writes to the already registered
+EXP-001611 result.json with os.replace. A read-only build_payload comparison
+found differences for README.md, external-review-handoff.md and
+literature-qps-addendum.md after the documentation supplements.
+
+Following that stale command would rewrite historical provenance even though
+the diagnostics passed. The diagnostic and all historical output files were
+preserved during diagnosis. No deliberate overwrite was needed to establish
+the behavior: the writer code and the unequal in-memory payload suffice.
+
+## Repair contract
+
+The new q3lock_paper_replay.py entrypoint is read-only by default. It checks
+the preserved QPS/source snapshot chain and the frozen R-497 authority before
+executing old builders in memory. Canonical payloads must equal their saved
+JSON. The entire manuscript payload is compared with the old source checkpoint;
+only explicitly listed documentation hash changes or additions are permitted.
+All other assertion, manuscript, analytic-source and code differences fail.
+
+The resulting compact checkpoint deduplicates manuscript diagnostic groups,
+captures source hashes, and records preserved historical outputs. A reader
+checks against that checkpoint without writing it. A stale or missing output
+fails; it is never repaired automatically. Assertion-disabled Python is refused.
+
+Explicit --write-new publishes to an absent output only. Same-volume hard-link
+publication makes a complete serialized file visible without replacing a
+concurrent winner. Unsupported hard-link publication fails without an unsafe
+overwrite fallback. No old result or code file is modified.
+
+## Adversarial tooling review
+
+1. Sign/factor mutation: a changed nested assertion cannot pass as a changed
+   documentation hash. UPHELD as a rejection test; no new physics arithmetic.
+2. Source identity: matching a leaf filename is insufficient; full relative
+   paths and current hashes must match the explicit allowance. UPHELD.
+3. Missing/null keys: adding or removing a JSON key is not equality merely
+   because its value is null. UPHELD as a rejection test.
+4. Scope: a tier/claim-bearing or PDF-state promotion is not a tooling change.
+   UPHELD; draft scope is checked separately.
+5. Output safety: missing, stale and matching reader checkpoints remain
+   unwritten; existing write destinations are refused before builder execution.
+   UPHELD, including a concurrent publication test.
+6. Limit and units: finite checks do not establish infinite-volume or
+   unbounded-operator arguments; no new physical number or unit is introduced.
+   UPHELD. Counts are read from executed diagnostic payloads, not proof counts.
+
+The standalone guard fixtures are also included in the tooling result JSON.
+The separate unittest suite exercises the CLI and actual temporary-file
+publication, including simultaneous writers and optimized Python.
+External operational review of this preservation contract is invited.
+
+## Workspace and release boundary
+
+The first isolated paper checkout lacked four gitignored tmp evidence files
+referenced by older, non-Q3 exploration records. Exact-byte copies from the
+canonical checkout restored its readiness; no original evidence reference,
+expected hash or tracked file was changed. This bootstrap is not proof that
+every fresh clone is self-contained. The integration owner was informed so
+portable preservation can be addressed in the operational lane.
+
+The new replay needs no private reference PDF, compiler or network. It is not
+the outstanding final frozen replay, non-importing mathematical implementation,
+or signed review. The phase theorem, nonclaims and manuscript bytes are
+unchanged. Source-content review, specialist disposition and final PDF review
+remain required before publication readiness can be accepted.

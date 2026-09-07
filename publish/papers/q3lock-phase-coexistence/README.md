@@ -36,7 +36,10 @@ cosmology, or sector closure.
 * submission-readiness.md — release gates, with PDF explicitly last.
 * version-history.md — content-only revision history.
 * verification/README.md and verification/package-manifest.json — canonical
-  replay commands, expected artifacts, and the deferred hash-freeze contract.
+  read-only replay command, historical builder inventory, and the deferred
+  hash-freeze contract.
+* verification/replay-safety-audit.md — historical-output preservation and
+  adversarial tooling checks; no mathematical promotion.
 
 ## Scope-preserving build rule
 

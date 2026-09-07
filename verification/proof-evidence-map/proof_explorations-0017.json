@@ -816,6 +816,126 @@
       "task_id": "T-054",
       "title": "Q3LOCK DFFR primary-source reassessment and occupation-regularity boundary",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "Tooling and documentation repair only. R-497 remains T0, claim_bearing=false, INTERNAL_REVIEW_ONLY; the sole paper chain is EXP-000780 through EXP-000782. This is not a new proof, independent mathematical implementation, signed review, final source freeze or clean final publication package.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "Reproduction no longer implicitly rewrites historical provenance. The new command and current instructions distinguish read-only verification from deliberate creation of a separate tooling checkpoint; mathematical changes cannot be hidden as documentation changes.",
+      "evidence_refs": [
+        "publish/papers/q3lock-phase-coexistence/verification/replay-safety-audit.md#finding",
+        "publish/papers/q3lock-phase-coexistence/verification/README.md#coverage-and-historical-results",
+        "publish/papers/q3lock-phase-coexistence/verification/package-manifest.json#commands",
+        "verification/scripts/q3lock_paper_replay.py#build_payload",
+        "verification/scripts/q3lock_paper_replay.py#write_new",
+        "verification/tests/test_q3lock_paper_replay.py#ReplaySafetyTests",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay/result.json#canonical_replay",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay/result.json#guard_assertions"
+      ],
+      "finding": "The stale reader instructions were replaced by a safe current entrypoint. Seven canonical diagnostic groups and seven manuscript groups replay, sixteen historical output records remain byte-preserved, six embedded guard fixtures pass and eleven tooling unittests pass. The new result has SHA-256 368003434250404d0a0a1ec273a109486c29ded3c4c8895ef2cc2ea3a7813b6d. No mathematical diagnostic assertion or manuscript byte changed.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001614",
+      "method": [
+        "Inspect the recommended standalone writer and compare its current in-memory payload with the historical source-audit result; do not invoke the writer to reproduce the defect.",
+        "Add a default read-only entrypoint that checks protected source identities before calling canonical and manuscript builders in memory.",
+        "Permit only explicit documentation hash changes or additions while rejecting changes to assertions, manuscript, analytic source, code, scope or unrelated keys.",
+        "Separate checkpoint creation behind an explicit write-new option with atomic no-replace publication and no overwrite fallback.",
+        "Exercise actual temporary-file publication, concurrent publishers, missing and stale reader outputs, wrong hashes, altered assertions, scope changes and optimized Python.",
+        "Run the current checker repeatedly and verify that the saved replay and all historical output bytes remain unchanged; retain the original research authority and deferred PDF gate."
+      ],
+      "next_action": "Complete remaining source/content and independent mathematical/literature review, then perform the separate final freeze and primary-independent-integrated replay. Submit this fixed lane checkpoint through the integration controller without writing or pushing the canonical checkout.",
+      "non_claims": [
+        "Existing finite diagnostic counts are not counts of independent mathematical proofs.",
+        "The repair supplies no source applicability verdict, novelty opinion or independent signature.",
+        "It supplies no KMS dynamics, ground-state gap, continuum limit, physical vacuum, C6, CP1 or Sector A closure.",
+        "No paper PDF, final source freeze, submission, tag or release is produced."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can a reader reproduce the current paper diagnostics without rewriting any already issued result JSON?",
+      "recorded_at": "2026-09-07T04:05:06Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001613",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Any manuscript, analytic source, code, result, scope or undeclared documentation change requires investigation and a separately recorded replay checkpoint; never overwrite history or weaken source checks to obtain PASS.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK read-only paper replay and historical-output preservation",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "Tooling and documentation repair only. R-497 remains T0, claim_bearing=false, INTERNAL_REVIEW_ONLY; the sole paper chain is EXP-000780 through EXP-000782. This is not a new proof, independent mathematical implementation, signed review, final source freeze or clean final publication package.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The reader target and dependency failure are explicit, while the failed pre-release candidate retains exact provenance. The correction does not turn a finite diagnostic PASS into release, mathematical or publication acceptance.",
+      "evidence_refs": [
+        "publish/papers/q3lock-phase-coexistence/verification/replay-safety-audit.md#r1-release-preflight-finding-and-r2-correction",
+        "publish/papers/q3lock-phase-coexistence/verification/README.md#creating-a-separate-tooling-checkpoint",
+        "verification/scripts/q3lock_paper_replay.py#default_output",
+        "verification/scripts/q3lock_paper_replay.py#preserved_r1_sources",
+        "verification/tests/test_q3lock_paper_replay.py#ReplaySafetyTests",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay/source-map.json#files",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r2/result.json#canonical_replay",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r2/result.json#source_hashes"
+      ],
+      "finding": "R1 finite diagnostics passed, but its initial repository release preflight failed on a private-file README example. That failed preflight is retained, not represented as a release PASS. R2 preserves seventeen historical output records and validates five archived R1 source files; seven canonical and seven manuscript groups replay with six embedded guards and fifteen passing tooling tests. R2 SHA-256 is bbb989d5d1da3d0540dfdbeb2fe15cecf3a9e12b5068a14506ccf82f57f3cdf1. The shared research Python succeeds; the minimal bundled Python lacks SymPy and now fails clearly without a result write. No mathematical assertion or manuscript byte changed.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-497"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001615",
+      "method": [
+        "Retain EXP-001614 and its result bytes, and compare five exact-byte source copies with the original R1 source hashes.",
+        "Remove the private-file example from public reader instructions without weakening the publication fence.",
+        "Resolve the default checkpoint through package metadata confined to public claim runs and test absolute, traversal and out-of-scope path rejection.",
+        "Validate R1 source archives before and after builder execution, then replay existing canonical and manuscript diagnostics in memory.",
+        "Exercise fifteen tooling tests including no-replace publication, concurrent writers, changed assertions, source hashes, scope, archive tampering and missing dependencies.",
+        "Create R2 at a separate absent destination, replay it with both reader modes and reject a repeat write-new request; verify R1, R2 and manuscript bytes remain unchanged."
+      ],
+      "next_action": "Complete remaining source/content and independent mathematical/literature review, then perform the separate final freeze and primary-independent-integrated replay. Submit this fixed lane checkpoint through the integration controller without writing or pushing the canonical checkout.",
+      "non_claims": [
+        "Existing finite diagnostic counts are not counts of independent mathematical proofs.",
+        "The repair supplies no source applicability verdict, novelty opinion or independent signature.",
+        "It supplies no KMS dynamics, ground-state gap, continuum limit, physical vacuum, C6, CP1 or Sector A closure.",
+        "No paper PDF, final source freeze, submission, tag or release is produced."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the replay instructions pass public-path preflight while preserving the failed pre-release candidate and all original mathematical diagnostics?",
+      "recorded_at": "2026-09-07T05:52:57Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001614",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-07",
+      "revisit_condition": "Any manuscript, analytic source, code, result, scope or undeclared documentation change requires investigation and a separately recorded replay checkpoint; never overwrite history or weaken source checks to obtain PASS.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Q3LOCK replay R2 release-preflight correction with preserved R1 sources",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

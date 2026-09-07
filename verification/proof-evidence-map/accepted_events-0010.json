@@ -2594,6 +2594,64 @@
         "verification/scripts/commit_watcher.ps1"
       ],
       "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-09-07",
+      "header": "[C6 Q3LOCK read-only paper replay and historical-output preservation (EXP-001614)] - 2026-09-07",
+      "id": "20260907-c6-q3lock-read-only-paper-replay-and-historical",
+      "keywords": [],
+      "linked_result_ids": [
+        "R-497"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [C6 Q3LOCK read-only paper replay and historical-output preservation (EXP-001614)] - 2026-09-07\n\nRecorded EXP-001614. Replace the paper's stale standalone-writer instructions with a default read-only replay entrypoint. Preserve all historical scripts and result files. The new command checks protected source identities before replay, compares canonical payloads and the full manuscript diagnostic payload, and permits only explicitly listed documentation provenance changes. Separate checkpoint creation requires --write-new and uses atomic no-replace publication; there is no overwrite fallback.\n\nThe saved tooling result replays seven canonical groups and seven manuscript groups, preserves sixteen historical output records, and includes six passing hostile guard fixtures. Eleven unittest cases exercise nested assertion and key changes, source allowances, scope/PDF flags, assertion-disabled Python, missing/stale reader outputs, overwrite refusal and concurrent publication. Repeated default and --check invocations preserve the saved result hash 368003434250404d0a0a1ec273a109486c29ded3c4c8895ef2cc2ea3a7813b6d.\n\nThis is tooling and documentation work in the registered paper worktree. The manuscript remains v0.1.7 with unchanged bytes; the sole EXP-000780--EXP-000782/R-497 authority, T0/claim_bearing=false boundary, external-review obligations and deferred final-paper PDF rule remain unchanged. No new phase proof, independent mathematical acceptance, final freeze, submission, tag or release is asserted.\n\n",
+      "result_ids": [
+        "R-497"
+      ],
+      "result_link_basis": {
+        "R-497": "explicit_result_id"
+      },
+      "scripts": [],
+      "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-09-07",
+      "header": "[C6 Q3LOCK replay R2 preflight correction and R1 source preservation] - 2026-09-07",
+      "id": "20260907-c6-q3lock-replay-r2-preflight-correction-and-r1",
+      "keywords": [],
+      "linked_result_ids": [
+        "R-497"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [C6 Q3LOCK replay R2 preflight correction and R1 source preservation] - 2026-09-07\n\nCorrect the R1 public-reader example rejected by repository preflight; keep\nEXP-001614, its result bytes and five exact-byte source archives intact.\nThe current R2 entrypoint resolves its target through the package manifest,\nrejects escaping targets, handles missing research dependencies clearly,\nand validates the R1 source archive against the original result hashes.\n\nFifteen tooling tests pass. Seven canonical diagnostic groups and seven\nmanuscript groups replay; seventeen historical output records are preserved.\nRepeated reader checks preserve R2 SHA-256\nbbb989d5d1da3d0540dfdbeb2fe15cecf3a9e12b5068a14506ccf82f57f3cdf1.\nExisting write destinations are refused. The shared research environment\nsucceeds; the bundled interpreter lacks SymPy and is not a successful replay.\n\nR-497 stays T0, claim_bearing=false and INTERNAL_REVIEW_ONLY. No mathematical\ndiagnostic or manuscript byte changes, external signature, final source\nfreeze, paper PDF, submission or claim promotion is supplied. R1's initial\nfailed release preflight is not erased or called a PASS. Subsequent repository\nrelease validation is an operational gate, not analytic acceptance.\n\nThis checkpoint belongs to the isolated paper lane. Canonical integration\nrequires the controller's fixed-commit and current-base review; this lane\ndoes not push the canonical branch.\n\n",
+      "result_ids": [
+        "R-497"
+      ],
+      "result_link_basis": {
+        "R-497": "explicit_result_id"
+      },
+      "scripts": [],
+      "unresolved_claim_ids": []
     }
   ],
   "kind": "accepted_events",

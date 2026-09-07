@@ -233,11 +233,11 @@ hash, source hash, or canonical authority difference must fail the comparison.
 No derived physical number is hardcoded, no new numerical approximation is
 used, and the script cannot establish the applicability dispositions above.
 
-For the current DFFR reassessment, use instead:
+For the historical EXP-001613 DFFR reassessment, the original command was:
 
     E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/q3lock_dffr_source_audit.py --source-pdf PATH_TO_AUTHOR_REPRINT
 
-The new command checks the source bytes and exact geometric-series fixtures,
+At its original checkpoint, that command checks the source bytes and exact geometric-series fixtures,
 invokes the prior manuscript diagnostics in memory, and writes a compact
 replay record with deduplicated source hashes. It does not duplicate the full
 historical assertion payload or overwrite either older run. Source-page
@@ -252,3 +252,15 @@ changes no Q3 parameter, proves no absence of Q3 regularity, and cannot
 replace the independent mathematical or literature review. The collective
 proof section was also reread at this checkpoint; no new lemma or
 independent acceptance is claimed from that repeated inspection.
+
+## Current reader command
+
+The documentation repair described in verification/replay-safety-audit.md
+supersedes the standalone commands above for the current checkout:
+
+    E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/q3lock_paper_replay.py --check
+
+This command preserves historical runs and executes the mathematical diagnostic
+builders in memory. It does not repeat the manually inspected DFFR pages or
+the separate historical harmonic fixtures. Those remain replayable at their
+original source checkpoint, with the public reprint supplied separately.
