@@ -22,5 +22,15 @@ cited claim set (rule M2); no paper may cite a claim above its registered tier
   novelty, operator, and capstone gates; canonical source reconciliation is
   additionally required only for TECT/P1 transfer.
 
+- q3lock-phase-coexistence/ — Draft v0.1.0.  This is the content-first
+  Q3LOCK phase-coexistence manuscript assembled from R-497 / EXP-001598.  It
+  contains a conditional seven-block theorem package, exact source and limit
+  conventions, theorem-applicability and literature crosswalks, adversarial
+  proof and external-review packets, and the canonical replay manifest.  Its
+  result remains T0 and claim-bearing=false; independent mathematical and
+  specialist literature review, clean frozen-tree replay, content/hash freeze,
+  and operator release gates remain open.  PDF generation is explicitly
+  deferred until the content review and final organization are complete.
+
 First target: Packet A — "Reading-H vacuum selection in a corrected
 Brazovskii-TECT model" (10-20 pages).

@@ -48,6 +48,14 @@ TOE target with no established result.
 
 ## History
 
+- 2026-09-07: R-511 is registered as a separately scoped PAH-OMC-018
+  auxiliary result: sampled original-generator radial-cutoff consistency
+  and an ordered stationary symmetric local pre-form in the R-510 state.
+  The derived operator has zero radial action but nonzero aperture form
+  energy. No closed form, time-evolution construction or emergent signature
+  is inferred; the host remains T1 OPEN and its gate does not change.
+  [Result card and exact non-claims](../../strategy/pa-hyp/PAH-OMC-018-result-v1.json).
+
 - 2026-09-06: R-509 is hosted as a separate PAH-OMC-016 static-state result:
   fixed-n radial tightness/weak convergence and a volume-uniform positive
   bound for the two preregistered bounded-amplitude witnesses. This is not

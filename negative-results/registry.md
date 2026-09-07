@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace) | infer surviving radial kinetics from the resolved counting state's static nondegeneracy at unchanged time scale | R-511 proves a nonconstant positive-variance amplitude cylinder has zero limiting generator action and form energy; sampled Gibbs-L2 convergence and nonzero aperture activity still hold |
 | [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy) | require all four R-488 squared norms to survive the full-Q counting ensemble's restricted cutoff-before-volume limit | exact suppression exp(-R^2/8-R^4/4-R^6/6) makes both radial limits zero, while both holonomy squares stay one; rejects this ensemble's nondegeneracy requirement only |
 | [AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION](#audit-2026-09-05-q3lock-tangent-beta-and-weight-direction) | reuse later source-tangent normalization and weighted diagonal displays | X already integrates imaginary time, so p'=E X/V; compactness requires a smaller-alpha input for a larger-alpha target, not the reverse |
 | [AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION](#audit-2026-09-05-q3lock-seam-coefficient-transcription) | reuse the displayed 48 seam constant in the later pressure audit | exact L=2 counterexample gives seam energy 768 against the erroneous bound 320; endpoint summation requires 288, already used by the original authority and verifier |
@@ -10741,3 +10742,38 @@ host physical claims remain unresolved. No counterterm, fitted prior,
 chemical potential, new carrier or automatic replacement law is introduced.
 Revisit only under a separately authorized changed definition or an exact
 counterexample to the displayed energy/counting argument.
+
+### NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE
+
+**Branch.** Infer nonzero limiting radial form energy from R-509/
+R-510 static amplitude nondegeneracy on the exact unaccelerated OMC-016
+resolved path. This is a kinetic inference test, not the R-511 consistency
+target and not a no-go for every PAH model.
+
+**Failure mode.** Keep PAH-001 F and rates, all OMC-001
+directed roots, OMC-004 G_n and full all-Q labelled counting weights;
+K=2, M_s=1, epsilon=1/2, beta=nu=1; first j then n. One radial root
+moves amplitude h_j=2^(-j). In the frozen bounded Lipschitz domain,
+R-511 proves radial generator norm <=2 H_f L_f h_j and radial form
+energy <=2 H_f L_f^2 h_j^2. The derived limit retains only PH/LK/AP.
+For b_v=min(1,r_v), A b_v=0 and E_infty(b_v,b_v)=0, while the positive
+R-510 prefix density gives Var_nu_infty(b_v)>0. No post-hoc rate or time
+rescaling is inserted. Aperture s_v has positive form energy, so this is
+not vanishing of the entire limiting local operator.
+
+**Evidence.** R-511, `strategy/pa-hyp/PAH-OMC-018-result-v1.json`, its
+generator certificate and the four-page synthesis note. Reproduce with
+`python -X utf8 verification/scripts/pah_omc018_verify.py --check`.
+Primary/independent/hostile/integrated 178/72/39/48 checks pass with eleven
+Lean declarations. The all-j,n bound and state-limit arguments are
+analytic, not finite-table extrapolations or a fully formalized theorem.
+
+**Consequence.** Nondegenerate radial kinetics cannot be
+inferred in the original time units. This boundary DOES NOT obstruct the
+sampled Gibbs-L2 generator consistency proved by R-511, the positive
+static radial law, or the stationary local pre-form. No closed form or
+infinite-volume process has yet been constructed. A different kinetic
+scaling would be a separately authorized contract, not a silent repair.
+Next test closability and radial-nullspace preservation of the frozen
+pre-form. T-054, C6 T1, PAH-OMC-014 and all physical/continuum gates stay
+unchanged; no physical Pre-A, spacetime, QFT, gravity or TOE conclusion.

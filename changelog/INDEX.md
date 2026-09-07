@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**966 accepted events** · latest 25 shown below · machine locator: `index.json`
+**975 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,15 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-07 | `20260907-c6-q3lock-source-applicability-and-standard-met` — [C6 Q3LOCK source-applicability and standard-method comparison audit (EXP-001611)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-c6-q3lock-source-applicability-and-standard-met) |
+| 2026-09-07 | `20260907-pah-omc-018-r-511-canonical-generator-limit-and` — [PAH-OMC-018 R-511 canonical generator-limit and local pre-form registration] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-pah-omc-018-r-511-canonical-generator-limit-and) |
+| 2026-09-06 | `20260906-c6-q3lock-source-to-phase-composition-and-bound` — [C6 Q3LOCK source-to-phase composition and bounded-state witness (EXP-001609)] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260906-c6-q3lock-source-to-phase-composition-and-bound) |
+| 2026-09-06 | `20260906-c6-q3lock-manuscript-collective-forms-and-finit` — [C6 Q3LOCK manuscript collective forms and finite Falk-Bruch integration (EXP-001608)] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260906-c6-q3lock-manuscript-collective-forms-and-finit) |
+| 2026-09-06 | `20260906-q3lock-exp-001607-integrate-hilbert-reflection` — [Q3LOCK EXP-001607: integrate Hilbert reflection, FSS source and singular infrared proof in paper v0.1.4] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260906-q3lock-exp-001607-integrate-hilbert-reflection) |
+| 2026-09-06 | `20260906-q3lock-exp-001606-integrate-periodic-moments-an` — [Q3LOCK EXP-001606: integrate periodic moments and weighted source-tangent DLR proofs in paper v0.1.3] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260906-q3lock-exp-001606-integrate-periodic-moments-an) |
+| 2026-09-06 | `20260906-q3lock-exp-001605-manuscript-integrates-finite` — [Q3LOCK EXP-001605: manuscript integrates finite-volume loop limit and Borel FKG] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260906-q3lock-exp-001605-manuscript-integrates-finite) |
+| 2026-09-06 | `20260906-q3lock-exp-001604-manuscript-sign-and-analytici` — [Q3LOCK EXP-001604: manuscript sign and analyticity repair with expanded pressure proof] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-q3lock-exp-001604-manuscript-sign-and-analytici) |
+| 2026-09-06 | `20260906-q3lock-v0-1-0-content-first-publication-package` — [Q3LOCK v0.1.0 content-first publication package assembled with PDF deferred] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-q3lock-v0-1-0-content-first-publication-package) |
 | 2026-09-06 | `20260906-pah-omc-017-publication-footer-and-immutable-ru` — [PAH-OMC-017 publication footer and immutable-run linkage correction] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-pah-omc-017-publication-footer-and-immutable-ru) |
 | 2026-09-06 | `20260906-pah-omc-017-r-510-exact-spatial-transfer-and-co` — [PAH-OMC-017 R-510: exact spatial transfer and common local Gibbs state] - 2026-09-06 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260906-pah-omc-017-r-510-exact-spatial-transfer-and-co) |
 | 2026-09-06 | `20260906-operator-standing-authorization-for-release-gat` — [Operator standing authorization for release-gated PAH and Q3LOCK batch commits and pushes] - 2026-09-06 | — | [bounded page](pages/000919-000968.md#20260906-operator-standing-authorization-for-release-gat) |
@@ -33,15 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-05 | `20260905-q3lock-exp-001586-r-501-quantitative-gaussian-w` — [Q3LOCK EXP-001586/R-501 quantitative Gaussian weak-limit audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001586-r-501-quantitative-gaussian-w) |
 | 2026-09-05 | `20260905-q3lock-exp-001584-p-06-gaussian-fourier-covaria` — [Q3LOCK EXP-001584 P-06 Gaussian Fourier covariance audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001584-p-06-gaussian-fourier-covaria) |
 | 2026-09-05 | `20260905-q3lock-exp-001583-finite-fkg-mixed-derivative-a` — [Q3LOCK EXP-001583 finite FKG mixed-derivative and interpolation audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001583-finite-fkg-mixed-derivative-a) |
-| 2026-09-05 | `20260905-q3lock-exp-001581-multidimensional-fekete-and-m` — [Q3LOCK EXP-001581 multidimensional Fekete and moving-temperature convexity audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-exp-001581-multidimensional-fekete-and-m) |
-| 2026-09-05 | `20260905-q3lock-r-498-periodic-open-pressure-seam-and-mi` — [Q3LOCK R-498 periodic/open pressure seam and min--max audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-r-498-periodic-open-pressure-seam-and-mi) |
-| 2026-09-05 | `20260905-q3lock-source-window-projective-w-t-tightness-d` — [Q3LOCK source-window projective W_t tightness diagonal audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-window-projective-w-t-tightness-d) |
-| 2026-09-05 | `20260905-q3lock-source-zero-dlr-kernel-determining-class` — [Q3LOCK source-zero DLR kernel determining-class audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-source-zero-dlr-kernel-determining-class) |
-| 2026-09-05 | `20260905-q3lock-kp-source-window-uniform-moment-audit-20` — [Q3LOCK KP source-window uniform moment audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kp-source-window-uniform-moment-audit-20) |
-| 2026-09-05 | `20260905-q3lock-kp-vector-theorem-domain-crosswalk-audit` — [Q3LOCK KP vector theorem-domain crosswalk audit] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-kp-vector-theorem-domain-crosswalk-audit) |
-| 2026-09-05 | `20260905-q3lock-pressure-to-cusp-bridge-receives-indepen` — [Q3LOCK pressure-to-cusp bridge receives independent audit (EXP-001573)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-pressure-to-cusp-bridge-receives-indepen) |
-| 2026-09-05 | `20260905-q3lock-p-09-fss-to-loop-duhamel-passage-receive` — [Q3LOCK P-09 FSS-to-loop Duhamel passage receives independent audit (EXP-001572)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-p-09-fss-to-loop-duhamel-passage-receive) |
-| 2026-09-05 | `20260905-q3lock-p-06-continuous-loop-association-receive` — [Q3LOCK P-06 continuous-loop association receives independent audit (EXP-001571)] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000919-000968.md#20260905-q3lock-p-06-continuous-loop-association-receive) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,8 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 919–966 | 48 | [000919-000968.md](pages/000919-000968.md) |
+| 969–975 | 7 | [000969-001018.md](pages/000969-001018.md) |
+| 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |

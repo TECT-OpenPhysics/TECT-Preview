@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-511](#r-511) | PAH-OMC-018 original-generator cutoff limit and stationary local pre-form | Sampled Gibbs-L2 residual at most 2 H_f L_f h_j; ordered stationary symmetric local pre-form, with zero radial action and nonzero aperture form. Primary 178, independent 72, hostile 39, integrated 48 and eleven Lean declarations; auxiliary only, no closed form, temporal process or host promotion. |
 | [R-509](#r-509) | PAH-OMC-016 radial tightness and uniform matter nondegeneracy | Fixed-n all-j tightness and radial weak limit; lim_j mu(b_v^2)>=(11/80)exp(-1550/3)>0 for both declared witnesses uniformly in n>=2. Analytic local-moment/conditional proof; primary 30, independent 23, hostile 17, integrated 29 and ten Lean theorems pass. Scoped PASS only; T-054 and host tier unchanged. |
 | [R-510](#r-510) | PAH-OMC-017 common local Gibbs state on the fixed strip | Exact spatial transfer with the terminal square retained; local cylinder Cauchy bound 4 norm(f) D_m q^(n-m) and an explicit analytic threshold. Primary 50, independent 70, hostile 23, integrated 28 and nine Lean declarations; auxiliary static-state input only, no limiting dynamics or host tier change. |
 | [R-508](#r-508) | PAH-OMC-015 counting-ensemble cutoff nondegeneracy obstruction | Exact charge-erasure counting gives mu(ell_v^2)<=2^(N-1) exp(-R^2/8-R^4/4-R^6/6). On the fixed OMC-010 path, R then n gives squared limits (0,0,1,1) for the four R-488 observables. CANDIDATE_REJECTED for this ensemble only; primary 21, independent 20, hostile 12 and integrated 33 checks pass with nine Lean declarations. No host claim or active gate promotion. |
@@ -18216,6 +18217,63 @@ nondegeneracy does not decide it. No Q3LOCK premise, infinite-volume
 dynamics, full cutoff/continuum, physical Pre-A, spacetime, QFT, gravity,
 Yang-Mills, causal cone, mass gap or TOE conclusion. Reopen upon a missing
 source term, label, imported hypothesis or normalization estimate.
+
+### R-511 -- PAH-OMC-018 original-generator cutoff limit and stationary local pre-form
+
+**Classification and scope.** `auxiliary_support`, scoped ANALYTIC/EXACT/
+EXECUTED result with inherited R-509/R-510 state inputs. C6 remains T1;
+T-054's active gate does not change. Exactly PAH-001 F and original rates,
+OMC-001 directed labels, OMC-004 anchored strip and OMC-016 full labelled
+all-Q state. K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0, other
+couplings one; h_j=2^(-j), R_j=2^j, M_j=2^(2j). First j at fixed n,
+then the specified n exhaustion. No physical volume or continuum limit.
+
+**Statement and proof.** On the preregistered bounded amplitude-Lipschitz
+invariant cylinder algebra D, with original same-amplitude sampling S_nj,
+the nonradial summands agree exactly with the derived A_n. The identity
+`pi(x)c_r(x)^2=m_r(x)^2*pi(T_r x)` and partial inverse transport give
+`norm(L_nj S_nj f-S_nj A_n f,L2(mu_nj))<=2 H_f L_f h_j` and radial form
+energy at most `2 H_f L_f^2 h_j^2`. The bounds are uniform for fixed f
+and n>=N(f)=max(2,m(f)+2), with H_f<=2 d_max size(V_f), d_max=5.
+K=2 duplicate channels and both radial endpoints remain. This is not a
+pointwise rate envelope or strong convergence on one Hilbert space.
+Exact finite interaction closure yields eventual stabilization of A_n f.
+The original nonradial images preserve amplitudes, giving a sextic
+dominated mesh passage. Uniform second moments control the unbounded
+local-generator tail in the R-510 prefix state limit. Therefore
+`nu_infty(A g)=0` and `E_infty(f,g)=-nu_infty(f A g)` is the symmetric
+nonnegative directed local pre-form. D is dense in the invariant cylinder-
+state Hilbert completion, not proved to be a graph core.
+
+**Activity boundary.** All amplitude-only f satisfy Af=0. The bounded
+witness b_v=min(1,r_v) has positive variance in the positive R-510 prefix
+density but zero form energy. Aperture s_v has strictly positive form
+energy. Static matter nondegeneracy and surviving radial kinetics are
+different: the latter fails on the original unaccelerated path. This does
+not block the proved sampled Gibbs-L2 convergence or refute the full model.
+See `NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE`.
+
+**Reproduction.** Preregistration SHA-256:
+`92a4fa92cb8c0384812220acd2e9929539a10a114fe348ea3f8aa7676f98aa05`.
+All source hashes and assumptions:
+`strategy/pa-hyp/PAH-OMC-018-result-v1.json`.
+Proof: `strategy/pa-hyp/PAH-OMC-018-generator-certificate.md`.
+Run `python -X utf8 verification/scripts/pah_omc018_verify.py --check`.
+Primary 178, independent 72, hostile 39, integrated 48 checks pass; all
+50 rational root fixtures and support counts match independently. Eleven
+fresh Lean declarations compile without diagnostics. Integral limits and
+operator domains remain analytic; internal reconstruction is not a signed
+external referee report. One four-page synthesis note/PDF was built and
+visually inspected, with zero overfull boxes.
+
+**Next single question and falsifier.** Is this exact pre-form closable
+in the R-510 invariant cylinder-state completion, retaining the radial
+nullspace in its minimal closure? Re-review after this one bounded attempt
+or a source, domain, multiplicity, closure or uniform-integrability defect.
+No time acceleration, fitted rates, new state or projection is authorized.
+No closed form, infinite-volume process, semigroup convergence, physical
+Pre-A, spacetime, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap
+or TOE result. PAH-OMC-014 and T-054's active gate remain unresolved.
 
 ## Notes on status
 

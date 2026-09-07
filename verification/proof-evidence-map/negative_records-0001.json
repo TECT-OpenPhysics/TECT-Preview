@@ -1,6 +1,26 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace",
+      "branch": "infer surviving radial kinetics from the resolved counting state's static nondegeneracy at unchanged time scale",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260907-pah-omc-018-r-511-canonical-generator-limit-and"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "consequence": "Nondegenerate radial kinetics cannot be inferred in the original time units. This boundary DOES NOT obstruct the sampled Gibbs-L2 generator consistency proved by R-511, the positive static radial law, or the stationary local pre-form. No closed form or infinite-volume process has yet been constructed. A different kinetic scaling would be a separately authorized contract, not a silent repair. Next test closability and radial-nullspace preservation of the frozen pre-form. T-054, C6 T1, PAH-OMC-014 and all physical/continuum gates stay unchanged; no physical Pre-A, spacetime, QFT, gravity or TOE conclusion.",
+        "evidence": "R-511, `strategy/pa-hyp/PAH-OMC-018-result-v1.json`, its generator certificate and the four-page synthesis note. Reproduce with `python -X utf8 verification/scripts/pah_omc018_verify.py --check`. Primary/independent/hostile/integrated 178/72/39/48 checks pass with eleven Lean declarations. The all-j,n bound and state-limit arguments are analytic, not finite-table extrapolations or a fully formalized theorem.",
+        "failure_mode": "Keep PAH-001 F and rates, all OMC-001 directed roots, OMC-004 G_n and full all-Q labelled counting weights; K=2, M_s=1, epsilon=1/2, beta=nu=1; first j then n. One radial root moves amplitude h_j=2^(-j). In the frozen bounded Lipschitz domain, R-511 proves radial generator norm <=2 H_f L_f h_j and radial form energy <=2 H_f L_f^2 h_j^2. The derived limit retains only PH/LK/AP. For b_v=min(1,r_v), A b_v=0 and E_infty(b_v,b_v)=0, while the positive R-510 prefix density gives Var_nu_infty(b_v)>0. No post-hoc rate or time rescaling is inserted. Aperture s_v has positive form energy, so this is not vanishing of the entire limiting local operator."
+      },
+      "detail_title": "**Branch.** Infer nonzero limiting radial form energy from R-509/",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "R-511 proves a nonconstant positive-variance amplitude cylinder has zero limiting generator action and form energy; sampled Gibbs-L2 convergence and nonzero aperture activity still hold",
+      "tag": "NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE"
+    },
+    {
       "anchor": "ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy",
       "branch": "require all four R-488 squared norms to survive the full-Q counting ensemble's restricted cutoff-before-volume limit",
       "claim_ref_basis": {
@@ -2014,27 +2034,6 @@
       "kind": "no_go",
       "summary": "the quotient occurrence graph is `K_(n,m)` with `mn` gates and endpoint degrees `m,n`, whereas one raw ring period is `C_M` with `M=m+n` gates and degree two. Equality forces `m=n=2`; even there an exact rational tangent separates the two maps. Retain the exact all-`k` swap-dressed routed seam conjugacy; it does not restore raw direct equality",
       "tag": "NG-2026-08-09-PRE-A-CP1-CL8-RAW-PERIODIC-EO-RECTANGLE-QUOTIENT"
-    },
-    {
-      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-wick-l2-only-interacting-density-limit",
-      "branch": "infer convergence of normalized interacting densities from finite-`Lp`, in particular `L2`, convergence of their Wick actions alone",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-close-centered-free-and-q3-wick-action-limits-a"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "artifacts": "`strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split.py`; `codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split_independent.py`.",
-        "consequence": "The centered-Q3 Wick `L2` and fixed finite-`Lp` theorem in EXP-000770 is not a density theorem. The surviving route must prove `sup_M E exp[(1+eta)R_M]<infinity` for some `eta>0` on the actual centered- dispersion nodal family, or an equivalent de la Vallee-Poussin bound. Once that lemma is available, the existing almost-sure/subsequence convergence and Vitali argument can identify the normalized density and pass reflection positivity. This is an inference no-go, not a counterexample to the actual Q3 family, and it has no physical-state, energy-reference, C6, CP1 or Pre-A consequence.",
-        "evidence": "On any nonatomic probability space, let `X_N=N` on an event of probability `N^-4` and zero elsewhere. Then ```text ||X_N||_2=N^-1 -> 0, E exp(X_N)=1-N^-4+N^-4 exp(N) -> infinity. ``` The primary and independent verifiers use distinct integer sequences and check both directions exactly or in logarithmic scale. The witness isolates rare positive tails, precisely the information not controlled by finite polynomial moments.",
-        "failure_mode": "Infer `L1` or total-variation convergence of normalized interacting weights `exp(R_M)/E exp(R_M)` solely from `L2` convergence of the Wick interactions `R_M`."
-      },
-      "detail_title": "Wick-action L2 convergence alone does not control exponential densities",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "`X_N=N` on an event of probability `N^-4` satisfies `||X_N||_2=N^-1->0` while `E exp(X_N)->infinity`. Retain the actual centered-Q3 route, but prove a regulator-uniform exponential moment before invoking Vitali or passing reflection positivity",
-      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT"
     }
   ],
   "kind": "negative_records",

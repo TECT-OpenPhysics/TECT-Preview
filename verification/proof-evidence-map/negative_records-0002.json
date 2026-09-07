@@ -1,6 +1,27 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-wick-l2-only-interacting-density-limit",
+      "branch": "infer convergence of normalized interacting densities from finite-`Lp`, in particular `L2`, convergence of their Wick actions alone",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-close-centered-free-and-q3-wick-action-limits-a"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "artifacts": "`strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-centered-q3-wick-weyl-limit-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split.py`; `codes/foundations/pre_a_cp1_cl8_centered_q3_wick_weyl_limit_route_split_independent.py`.",
+        "consequence": "The centered-Q3 Wick `L2` and fixed finite-`Lp` theorem in EXP-000770 is not a density theorem. The surviving route must prove `sup_M E exp[(1+eta)R_M]<infinity` for some `eta>0` on the actual centered- dispersion nodal family, or an equivalent de la Vallee-Poussin bound. Once that lemma is available, the existing almost-sure/subsequence convergence and Vitali argument can identify the normalized density and pass reflection positivity. This is an inference no-go, not a counterexample to the actual Q3 family, and it has no physical-state, energy-reference, C6, CP1 or Pre-A consequence.",
+        "evidence": "On any nonatomic probability space, let `X_N=N` on an event of probability `N^-4` and zero elsewhere. Then ```text ||X_N||_2=N^-1 -> 0, E exp(X_N)=1-N^-4+N^-4 exp(N) -> infinity. ``` The primary and independent verifiers use distinct integer sequences and check both directions exactly or in logarithmic scale. The witness isolates rare positive tails, precisely the information not controlled by finite polynomial moments.",
+        "failure_mode": "Infer `L1` or total-variation convergence of normalized interacting weights `exp(R_M)/E exp(R_M)` solely from `L2` convergence of the Wick interactions `R_M`."
+      },
+      "detail_title": "Wick-action L2 convergence alone does not control exponential densities",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "`X_N=N` on an event of probability `N^-4` satisfies `||X_N||_2=N^-1->0` while `E exp(X_N)->infinity`. Retain the actual centered-Q3 route, but prove a regulator-uniform exponential moment before invoking Vitali or passing reflection positivity",
+      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-WICK-L2-ONLY-INTERACTING-DENSITY-LIMIT"
+    },
+    {
       "anchor": "ng-2026-08-04-pre-a-cp1-cl8-transverse-zero-restriction-as-interacting-marginal",
       "branch": "infer that a bare transverse-zero restriction by itself establishes the interacting marginal of a higher-dimensional parent",
       "claim_ref_basis": {
@@ -2200,29 +2221,6 @@
       "kind": "audit",
       "summary": "the paired response has one extra product-support step, a positive common-heat Gram, and the R-125 future-variance/forest residual; zero far response is conditional at safe collar four on a root intertwiner and covariance/forest matching",
       "tag": "AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE"
-    },
-    {
-      "anchor": "audit-2026-07-31-a13-r132-gamma-four-successor-scope",
-      "branch": "treat a complete gamma-four estimate as the necessary next condition for shell acceptance",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Treat a new complete `gamma=4` estimate as necessary before the R-131 two-channel/low-coupled acceptance matrix can be used.",
-        "consequence": "Replace the `gamma=4 or stronger cancellation` successor wording by an aggregate fixed-collar route: prove one-use control of `B_(7/12)^out` or another positive-gamma tail, control the collar-dependent near/balanced contribution, and test the exact strict headroom. Neither that one-use bound nor the headroom is presently proved.",
-        "evidence": "R-133 proof note, Section 10; exact symbolic factorization and independent numerical threshold checks; R-091 lossless aggregate output-gap ledger.",
-        "failure_mode": "If `sigma=k^2/d<min(e,f)`, the exact strict acceptance threshold is `a<2 sqrt((e-sigma)(f-sigma))`. Therefore any aggregate tail `M 2^(-gamma(C-5))` with `gamma>0` fits a fixed positive headroom at a sufficiently large collar. At the accepted `gamma=7/12`, one may choose `C>5+(12/7)log2(M/headroom)`. However relabelling this tail as the old `2^(-4C)` or `2^(-2C)` prototypes creates effective constants growing as `2^((41/12)C+35/12)` or `2^((17/12)C+35/12)`."
-      },
-      "detail_title": "fixed-collar acceptance does not require the old uniform far exponent",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "audit",
-      "summary": "gamma four is neither available from the current sixth-amplitude route nor logically necessary for a fixed strict collar: any proved aggregate positive-gamma tail, including gamma `7/12`, can fit the exact three-channel headroom, but cannot be relabelled as the old uniform exponents",
-      "tag": "AUDIT-2026-07-31-A13-R132-GAMMA-FOUR-SUCCESSOR-SCOPE"
     }
   ],
   "kind": "negative_records",

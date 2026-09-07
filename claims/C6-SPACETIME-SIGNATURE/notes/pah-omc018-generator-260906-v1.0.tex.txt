@@ -1,0 +1,194 @@
+% Title: PAH-OMC-018: Unaccelerated generator limit and stationary local pre-form
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-09-06; this version issued 2026-09-06
+% Status: Scoped auxiliary theorem; host T1 unchanged; not a temporal process construction
+
+\section*{Purpose and scope}
+This checkpoint tests the original PAH generator on the resolved radial path,
+not a new Hamiltonian, rate law or physical sector. It uses precisely the
+PAH-001 functional and PAH-OMC-001 directed root labels on the OMC-004
+anchored two-row strip $G_n$, $n\geq2$, including its unsplit terminal square.
+The source parameters are $K=2$, $M_s=1$, $\epsilon=1/2$, $\beta=\nu=1$,
+$m^2=\theta=0$ and the remaining displayed couplings one. The volume is
+$|V_n|=2(n+2)$; this relational strip has no identified physical volume,
+dimension or length. First take
+\[
+ h_j=2^{-j},\quad R_j=2^j,\quad M_j=2^{2j},\quad r_v=h_j\ell_v,
+ \qquad j\longrightarrow\infty,
+\]
+at fixed $n$, then take $n\to\infty$. There is no time acceleration.
+The all-$Q$ state has exactly $w_Q=Z_Q/Z$ and labelled counting weights,
+retaining phase labels at zero amplitude. R-509 gives the fixed-$n$ limit
+$\nu_n\propto e^{-F_n}\prod_v dr_v$ times label counting. R-510 supplies
+the specified anchored common local state $\nu_\infty$. No radial Jacobian,
+gauge quotient, counterterm, optional probe or boundary value is added.
+
+The source preregistration is immutable and precedes calculations:
+\begin{verbatim}
+strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json
+92a4fa92cb8c0384812220acd2e9929539a10a114fe348ea3f8aa7676f98aa05
+\end{verbatim}
+Its parent pins include the final R-510 publication manifest, not the
+historical prepublication hash. Detailed proofs and applicability crosswalk
+are in the companion generator certificate. This note is their one synthesis.
+
+\section*{Frozen domain and statement}
+Let $\mathcal D$ be the real gauge-invariant bounded cylinder algebra that is
+globally Lipschitz in amplitude in the $\ell^1$ norm, uniformly over labels.
+Write $M_f=\|f\|_\infty$ and choose $L_f$ with
+\[
+ |f(r,z)-f(r',z)|\leq L_f\sum_v|r_v-r'_v|.
+\]
+For support in the R-510 prefix $\Lambda_m$, set $N(f)=\max(2,m+2)$.
+The original root-rate closures stabilize by this stage. Let $H_f$ count
+potential directed radial roots incident to read amplitudes, and $D_f$
+count potential phase, link and aperture roots that can change $f$. In
+terms of read vertices $V_f$ and links $E_f$,
+\[
+ H_f\leq 2d_{\max}|V_f|,\quad d_{\max}=5,
+ \qquad D_f\leq4|V_f|+2|E_f|.
+\]
+Coincident $K=2$ phase and link maps remain separate directed channels.
+The sampling map $S_{n,j}$ evaluates the same amplitude function on the grid;
+it is not a Gibbs pushforward or an isometry between Hilbert spaces.
+
+The derived limiting local operator $A_n$ consists of the original phase,
+link and aperture summands at continuous amplitudes. For every $n\geq N(f)$,
+\begin{align*}
+ \|L_{n,j}S_{n,j}f-S_{n,j}A_nf\|_{L^2(\mu_{n,j})}
+ &\leq 2H_fL_fh_j,\\
+ \mathcal E_{\mathrm{TR},n,j}(S_{n,j}f,S_{n,j}f)
+ &\leq 2H_fL_f^2h_j^2.
+\end{align*}
+The estimate is uniform in $j$ and $n$ for each fixed support. It is not
+a global norm bound on the full generator. The subsequent ordered passage
+gives a dense local pre-form
+\[
+ \nu_\infty(Ag)=0,\qquad
+ \mathcal E_\infty(f,g)=-\nu_\infty(fAg)
+ =\frac12\sum_r\nu_\infty[c_r\Delta_rf\Delta_rg].
+\]
+It is symmetric and nonnegative. Density of the test algebra is not
+graph-core density, closability or construction of an infinite-volume process.
+
+\section*{Inverse transport: the uniform estimate}
+For an admissible root write $y=T_rx$. The exact rates give
+\[
+ c_r(x)=m_r(x)e^{-(F(y)-F(x))/2},\quad
+ \pi(x)c_r(x)=m_r(x)\sqrt{\pi(x)\pi(y)},\quad
+ \pi(x)c_r(x)^2=m_r(x)^2\pi(y).
+\]
+Since $0<m_r\leq1$, inverse transport on its exact partial domain gives
+$\int\pi c_r^2\leq1$, and Cauchy--Schwarz gives $\int\pi c_r\leq1$.
+The radial donor and receiver constraints are both retained; the inverse
+image is a subset, not falsely the whole state space. No cutoff-independent
+pointwise upper bound for $c_r$ is used. Every radial jump has amplitude
+$\ell^1$ distance $2h_j$, hence $|\Delta_rf|\leq2L_fh_j$.
+Finite-sum Cauchy--Schwarz proves the generator bound; the directed
+factor $1/2$ proves the form bound. No paired-direction cancellation is
+assumed, so lower and upper endpoints are included.
+
+Nonradial actions and rates at sampled amplitudes agree exactly with $A_n$.
+Therefore $L_{n,j}S_{n,j}f-S_{n,j}A_nf=L_{\mathrm{TR},n,j}S_{n,j}f$.
+On both discrete states and $\nu_n$, the same square identity implies
+$\|A_nf\|_2\leq2D_fM_f$. The function $A_nf$ may be unbounded and outside
+$\mathcal D$. A shrinking radial root cannot be identified with the old
+integer-coordinate root under a dyadic embedding.
+
+\section*{The two limit passages}
+For fixed $n$, use the exact R-509 half-open cell representation, including
+the upper grid endpoint. Put $a_j(t)=h_j\lfloor t/h_j\rfloor$.
+A two-root term of $e^{-F}(A_nf)^2$ carries the weight
+\[
+ m_rm_s\exp\!\left[-\frac{F(T_rx)+F(T_sx)}2\right].
+\]
+Nonradial moves retain all amplitudes. Each source energy is bounded below
+by $\sum_v r_v^6/6$. Thus the sampled terms, with bounded increments, are
+dominated at fixed $n$ by a constant times
+\[
+ \prod_v\exp[-\max(t_v-1,0)^6/6].
+\]
+This integrable envelope and the positive limiting partition function
+justify the mesh passage of pairings, forms and second moments. Radial
+cross terms vanish by the proved form bound. Detailed balance then gives
+$\nu_n(A_ng)=0$ and the symmetric directed local form at fixed $n$.
+
+For the $n$ passage, the rate of a root acting on $f$ uses only a finite
+interaction closure. Phase and aperture roots at column at most $m$ use
+edges and faces reaching at most $m+1$; radial neighbors can reach $m+2$.
+For $n\geq N(f)$ all relevant split cells and edges already exist. The
+terminal square is preserved in the state but lies outside this rate
+increment. Hence $A_nf$ is the same local function $Af$ eventually.
+
+Let $B_f=2D_fM_f$. R-510 prefix total-variation convergence applied to
+$\min((Af)^2,K)$ gives $\nu_\infty((Af)^2)\leq B_f^2$. For $\nu_n$ and
+$\nu_\infty$ alike,
+\[
+ \int |Af|\,\mathbf1_{\{|Af|>K\}}\leq B_f^2/K.
+\]
+Truncate, pass the bounded local part, then remove the tail. This proves
+the stationary pairings and pre-form limit. The same argument applies to
+single conductances, whose second moments are at most one. Bounded weak
+convergence alone would not license this unbounded-generator passage.
+The order remains $j$ first, $n$ second.
+
+\section*{The activity discriminator}
+Every amplitude-only $f\in\mathcal D$ has $Af=0$ and
+$\mathcal E_\infty(f,f)=0$. Nevertheless $b_v=\min(1,r_v)$ has positive
+variance under the positive R-510 prefix density. Static nondegeneracy
+does not imply radial motion. In contrast the aperture observable $s_v$
+has positive form energy, since its admissible aperture move has positive
+rate and increment $1/2$. Thus the limiting local operator is not zero:
+it retains label jumps and freezes amplitudes at the original time scale.
+This is a bounded kinetic limitation, not a refutation of the full PAH model.
+
+\section*{Devil's-advocate audit and verification boundary}
+The primary lane uses squared source edges; the non-importing independent
+lane uses expanded signed edges and square-root Gibbs weights. Exact root
+fixtures, mobility factors and interaction closures agree. Hostile checks
+attack the half exponent, Gibbs sign, directed factor, duplicate channels,
+partial endpoints, false radial embedding, absent uniform integrability
+and improper deletion of global energy. Eleven Lean declarations check
+the algebraic weight identities, finite-sum bound, coefficients, tail
+inequality and activity arithmetic. Integral limits and operator domains
+remain an analytic proof, not a fully Lean-formalized theorem.
+\begin{itemize}
+\item Wrong exponent or factor: DISMISSED by independent identities and
+      mutation tests; the wrong conventions are explicitly rejected.
+\item Ignored endpoint or duplicate root: DISMISSED by exact inverse
+      subsets and label-distinct enumeration, without rate fitting.
+\item Divergent pointwise rates: UPHELD as a failed shortcut; the proof
+      uses weighted inverse transport, not a pointwise envelope.
+\item Weak convergence alone passes $Af$: UPHELD against that shortcut;
+      the sextic envelope and second-moment tail bound supply the missing step.
+\item Dense pre-form means dynamics: UPHELD. Closure and process/semigroup
+      convergence remain separate gates.
+\end{itemize}
+Background convention: Aldous--Fill, chapter 3, section 3.6.1,
+equations (3.74)--(3.76), continuous-time directed Dirichlet form.
+The finite identity is rederived; no external infinite-process theorem is
+imported. This is standard reversible analysis applied to this exact PAH
+path, not a claim of a new general mathematical method. External review
+of the inverse-domain and unbounded-rate passages is invited.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID: R-511
+Claim ID: C6-SPACETIME-SIGNATURE
+Precise statement: Sampled original-generator j-limit and ordered
+ stationary symmetric nonnegative local pre-form; radial part vanishes.
+Scope: PAH-001 / OMC-001 / OMC-004 / OMC-016 fixed parameters;
+ j first, then n; bounded Lipschitz amplitude cylinders.
+Dependencies: Frozen source packets, R-509 and R-510 exact state inputs.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, INHERITED state inputs.
+Reproduction command: python -X utf8
+ verification/scripts/pah_omc018_verify.py --check
+Expected output: PAH-OMC-018 INTEGRATED: PASS; Lean PASS.
+Falsification gate: Source drift, inverse-domain/factor error,
+ false interaction closure, or failure of the weighted tail passage.
+Tier before / after: T1 / T1 (host unchanged); auxiliary_support.
+No-overclaim statement: No closed form, infinite-volume dynamics,
+ physical Pre-A, spacetime, QFT, gravity, continuum or TOE result.
+Next required action: Test closability of the frozen local pre-form
+ and preservation of its radial nullspace in its minimal closure.
+\end{verbatim}

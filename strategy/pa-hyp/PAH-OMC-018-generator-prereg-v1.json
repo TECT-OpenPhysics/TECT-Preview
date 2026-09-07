@@ -1,0 +1,62 @@
+{
+  "schema": "tect/pah-omc018-prereg/1.0",
+  "contract_id": "PAH-OMC-018",
+  "date": "2026-09-06",
+  "status_at_registration": "PREREGISTERED_BEFORE_TESTS",
+  "base_commit": "7bc09f8608ab8bdb5a6aefdc7a2859f9e54765f7",
+  "task_id": "T-054",
+  "question": "Does the original unaccelerated generator have a sampled Gibbs-L2 radial-cutoff limit on the following domain, and does its subsequent local volume passage give a stationary symmetric nonnegative local form in the R-510 state? Determine radial activity separately.",
+  "sources": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-016-resolved-radial-prereg-v1.json": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb"
+  },
+  "provenance": "A proof-domain contract for the already issued researcher-owned model; not a new functional, dynamics, state, projection or physical owner packet. R-510 current final publication pins are used, not its historical prepublication hash.",
+  "scope": {
+    "geometry": "Exactly OMC-004 anchored two-row relational two-cell strip G_n, n>=2; original unsplit terminal square retained; no physical volume or length identification.",
+    "parameters": "Exactly OMC-016 /scope/fixed_parameters. K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0, remaining displayed couplings one.",
+    "path": "h_j=2^(-j), R_j=2^j, M_j=2^(2j), j>=0; r_v=h_j ell_v. No acceleration of external stochastic time.",
+    "state": "Original full labelled all-Q Gibbs counting state mu_nj, with w_Q=Z_Q/Z, no probe, quotient or radial Jacobian. R-509 nu_n uses product dr times counting labels; R-510 supplies its specified anchored local limit nu_infty.",
+    "reference_and_finite_parts": "Exactly the source displayed F, additive constants and counting normalization. No counterterm, chemical potential or conditional averaging.",
+    "order": "First j->infinity at each fixed n, then n->infinity on each fixed local test. K, M_s, epsilon, beta and nu remain fixed. No reversed or joint limit, continuum or other exhaustion.",
+    "time_boundary": "Finite stationary initial law, t>=0, no terminal conditioning. No infinite-time or path-law limit is claimed."
+  },
+  "domain": {
+    "prefix": "Lambda_m retains columns 0,...,m, vertical links there and all three cross links in cells i<m, exactly R-510. Former square observables retain their boundary-link formulas and ignore later diagonals.",
+    "test_algebra": "D is the real algebraic union over finite m of gauge-invariant, bounded functions f on Lambda_m that are globally Lipschitz in the amplitude vector in l1 norm, uniformly over the finite discrete labels. Anchored automorphism group is identity. Include constants. No global amplitude truncation is imposed.",
+    "seminorm": "Choose any declared L_f>=0 with |f(r,z)-f(r',z)|<=L_f sum_v |r_v-r'_v| for all nonnegative r,r' and the same labels. Record M_f=norm(f,infinity).",
+    "support": "m(f) is any containing prefix; V_f includes every vertex amplitude, phase or aperture read by f; E_f includes every link read by f. Overcounts are allowed and declared.",
+    "comparison": "S_nj f is direct evaluation of the SAME amplitude function at r=h_j ell. Compare L_nj S_nj f to S_nj A_n f in the original L2(mu_nj) norm. This is sampled consistency, not an isometry or strong-operator convergence between different Hilbert spaces.",
+    "future_core_boundary": "D is a test algebra only until density is proved. Even density is not an operator-core, essential-self-adjointness or closed-form assertion. A_n f need not be bounded or in D."
+  },
+  "root_correspondence": {
+    "authority": "OMC-001 /universal_directed_root_labels and /directed_root_hilbert_space/multiplicity",
+    "labels": "Retain PH(v,+/-), LK(e,+/-), AP(v,+/-), and the two directed TR(e,v_to_w) labels. K=2 coincident PH/LK maps remain separate channels. AP admissibility is exact; TR domain includes both lower and upper radial constraints.",
+    "j_map": "Use the same geometric root names across j. A TR root moves h_j at level j and h_(j+1) at level j+1; this naming is NOT exact root intertwining or a Gibbs pushforward. Nonradial root actions and original rates agree at identical amplitudes.",
+    "n_map": "Neutral retention of all old coordinates and root labels; new-variable roots act trivially only when they change no argument of f. Do not delete interactions in rates of retained roots.",
+    "stabilization_target": "Use N(f)=max(2,m(f)+2). Prove that the root-rate interaction closure lies in Lambda_(m+2), and that the moving terminal-square defect is beyond it for every n>=N(f).",
+    "count_targets": "H_f is the number of directed TR labels incident to amplitudes read by f, at most 2*d_max*|V_f|. D_f is the number of PH/LK/AP labels able to change f, at most 4*|V_f|+2*|E_f|. Use source d_max=5 only as a combinatorial overbound, not C_sw=540."
+  },
+  "acceptance": [
+    "Prove a uniform-in-j,n weighted bound for the radial residual on each fixed f, handling original boundary admissibility and inverse labels exactly.",
+    "Derive, not invent, the surviving local operator from the original rates; separately determine whether radial functions have nonzero action.",
+    "Justify integrability and the ordered stationary symmetric nonnegative local-form passage against R-510, rather than infer it from bounded weak convergence alone.",
+    "Give exact primary, non-importing independent and hostile checks with source pins and possible Lean algebraic cross-check. One final synthesis checkpoint only."
+  ],
+  "falsifiers": [
+    "A changed functional, rate, mobility, time unit, cutoff path, state, projection or original root multiplicity.",
+    "An invalid inverse-domain change of variables or an omitted upper/lower endpoint channel.",
+    "A nonintegrable local generator or unjustified passage of unbounded observables through the state limit.",
+    "A false stabilization index, unjustified generator-core or semigroup claim, or use of old fixed-M_psi C_sw as a new estimate."
+  ],
+  "outcomes": "Scoped PASS if the stated limit and local form are proved, including an explicitly degenerate radial limit if forced. NEGATIVE_RESULT only for an exact false target, with weak/strong scope separated. Otherwise HOLD_FOR_EVIDENCE with one missing question.",
+  "budget": "One generator-domain/j-limit attempt under DCTRL-000010, then REVIEW_REQUIRED. No new candidate or rate-rescaling rescue.",
+  "non_claims": [
+    "T-054 active gate, C6 T1, PAH-OMC-014 and prior fixed-integer results are unchanged.",
+    "No closed Dirichlet form, generated infinite-volume process, semigroup convergence, ergodicity or common quantum real-time automorphism is assumed.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, causal cone, mass gap or TOE conclusion. No Q3LOCK import."
+  ]
+}

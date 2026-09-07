@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "audit-2026-07-31-a13-r132-gamma-four-successor-scope",
+      "branch": "treat a complete gamma-four estimate as the necessary next condition for shell acceptance",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Treat a new complete `gamma=4` estimate as necessary before the R-131 two-channel/low-coupled acceptance matrix can be used.",
+        "consequence": "Replace the `gamma=4 or stronger cancellation` successor wording by an aggregate fixed-collar route: prove one-use control of `B_(7/12)^out` or another positive-gamma tail, control the collar-dependent near/balanced contribution, and test the exact strict headroom. Neither that one-use bound nor the headroom is presently proved.",
+        "evidence": "R-133 proof note, Section 10; exact symbolic factorization and independent numerical threshold checks; R-091 lossless aggregate output-gap ledger.",
+        "failure_mode": "If `sigma=k^2/d<min(e,f)`, the exact strict acceptance threshold is `a<2 sqrt((e-sigma)(f-sigma))`. Therefore any aggregate tail `M 2^(-gamma(C-5))` with `gamma>0` fits a fixed positive headroom at a sufficiently large collar. At the accepted `gamma=7/12`, one may choose `C>5+(12/7)log2(M/headroom)`. However relabelling this tail as the old `2^(-4C)` or `2^(-2C)` prototypes creates effective constants growing as `2^((41/12)C+35/12)` or `2^((17/12)C+35/12)`."
+      },
+      "detail_title": "fixed-collar acceptance does not require the old uniform far exponent",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "audit",
+      "summary": "gamma four is neither available from the current sixth-amplitude route nor logically necessary for a fixed strict collar: any proved aggregate positive-gamma tail, including gamma `7/12`, can fit the exact three-channel headroom, but cannot be relabelled as the old uniform exponents",
+      "tag": "AUDIT-2026-07-31-A13-R132-GAMMA-FOUR-SUCCESSOR-SCOPE"
+    },
+    {
       "anchor": "ng-2026-07-30-a13-unrestricted-reverse-band-extension",
       "branch": "extend a forward root/shell decay kernel coefficient-blindly to an unrestricted reverse band using only the source `H2` cost",
       "claim_ref_basis": {
@@ -2213,28 +2236,6 @@
       "kind": "no_go",
       "summary": "the companions form one exact matrix-perspective telescope; a positive-frame all-residual fixture has completed expectation `-623/5440`, and changing the payment at each filtration level introduces a new sign-indefinite inverse-matrix defect",
       "tag": "NG-2026-07-25-A13-PERSPECTIVE-INNOVATION-TERMWISE-POSITIVITY"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-pathwise-translated-model-norm-extraction",
-      "branch": "A13 Cartan one-use closure by extracting the translated `C^alpha` model norm before expectation",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "A generic pathwise translated-model multiplier cannot be extracted before expectation in the Cartan proof. The remaining one-use lemma must average the three exact tangent-paracomposition remainders first and exploit their adapted Fourier/Wick structure. This is a method no-go, not a counterexample to R-087 (4.10), the directly averaged complete Cartan atom, controlled Cartan CFAR, or the Nelson objective.",
-        "evidence": "R-087 proves (4.10) with `q_k^mod=C_e 2^(-(6alpha-1)k) sup_(j>=k) sum_A E int Z_(j,r)^6 (||a_k||_2^2+||D a_k||_2^2) dr`. The derivative smoothing term would require control of `sum_k 2^(-(beta+1)k) sup_(j>=k) E[Z_j^6 ||h_k||_2^2]`, where `beta=6alpha-1`. Let `E` have probability `p=N^(-6)` and take one predictable mode `h=N^3 1_E e_N`, so `a=K_N h=N 1_E e_N`. Then the Cameron--Martin energy `X`, terminal sextic quantity `Y`, and `E sqrt(XY)` are all of order one. On `E`, however, `Z` is of order `N^(1+alpha)`. Since `beta+1=6alpha`, the extracted ledger is of order `N^6=p^(-1)`.",
-        "failure_mode": "Start from the R-087 spatial atom estimate, use the Cameron--Martin smoothing bounds for `a_k`, and pull the random translated `C^alpha` norm outside the exact expectation in order to deduce R-085 (4.11) from the scalar energy and sextic budgets alone."
-      },
-      "detail_title": "translated model-norm extraction cannot prove the Cartan one-use ledger",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "a predictable rare-event single-mode family keeps the Cameron--Martin energy, terminal sextic moment, and mixed energy-sextic budget of order one while the extracted `q_k` ledger grows like `p^(-1)`; the remaining theorem must keep expectation inside the exact Cartan remainder atoms",
-      "tag": "NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION"
     }
   ],
   "kind": "negative_records",

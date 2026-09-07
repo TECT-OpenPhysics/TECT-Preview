@@ -1,0 +1,87 @@
+{
+  "schema": "tect/pah-omc018-result/1.0",
+  "result_id": "R-511",
+  "contract_id": "PAH-OMC-018",
+  "date": "2026-09-06",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["ANALYTIC", "EXACT", "EXECUTED", "INHERITED_R509_R510_STATE_INPUTS"],
+  "base_commit": "7bc09f8608ab8bdb5a6aefdc7a2859f9e54765f7",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json": "92a4fa92cb8c0384812220acd2e9929539a10a114fe348ea3f8aa7676f98aa05",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "codes/foundations/pah_omc018_generator.py": "661715cb6aed69ca9780b2cab39490b6b97157e74e12119b06b82cfb1a8eac86",
+    "codes/foundations/pah_omc018_generator_independent.py": "60c68ffe4b806b012cef94af31d5e425dab3377ae2dcb7123126efd622133947",
+    "codes/foundations/pah_omc018_generator_hostile.py": "51dfc2676d445ef37bb04e8ca91fd62781069e0d9d12abc4511113f399a9298e",
+    "verification/scripts/pah_omc018_verify.py": "6f5193c4dc14f72e1c1a1aa3ad4167c82b06899898cdf4e31f25a6d99316df97",
+    "verification/lean/Tect/PahOmc018.lean": "00ecb537a01cd16df5b5c43b07f3972c7ab670c3fc989a6e0596977108cae10d",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc018-generator-260906-v1.0.tex.txt": "34261a3e899a95e1283e3ce0e576ee099aa18ac0ac61cc808d340df09a2edc25"
+  },
+  "exact_scope": {
+    "model": "Original PAH-001 F and rates with OMC-001 directed labels on OMC-004 G_n, all n>=2; original unsplit terminal square and anchors.",
+    "dimension_volume": "Relational two-cell strip, two vertices per column, |V_n|=2(n+2); no physical dimension, lattice length or physical volume identification.",
+    "fixed_parameters": "OMC-016 /scope/fixed_parameters: K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0 and all remaining displayed couplings one.",
+    "normalization": "Full labelled all-Q counting Gibbs law w_Q=Z_Q/Z; product dr times labelled counting after j-limit; no quotient, Jacobian, probe, prior, counterterm or changed finite part.",
+    "path_and_order": "h_j=2^(-j), R_j=2^j, M_j=2^(2j), j first at fixed n, then the specified anchored n exhaustion. No acceleration, reversed order or other cutoff removal.",
+    "domain": "Gauge-invariant bounded globally amplitude-l1-Lipschitz finite-prefix cylinders D, dense in the invariant cylinder-state Hilbert completion; not a proved graph core.",
+    "comparison": "Direct same-amplitude sampling S_nj; Gibbs-L2(mu_nj) sampled residual. This is not strong operator convergence on a common Hilbert space.",
+    "time_boundary": "Original stationary finite initial law on t>=0 without terminal conditioning; external stochastic time only. No limit path law constructed."
+  },
+  "conclusion": "The sampled unaccelerated generator has the derived nonradial local limit A: ||L_nj S_nj f-S_nj A_n f||_L2(mu_nj)<=2 H_f L_f h_j uniformly for n>=N(f)=max(2,m(f)+2), and radial form energy <=2 H_f L_f^2 h_j^2. Original PH/LK/AP terms agree exactly on the grid. Weighted inverse transport, sextic fixed-n dominated convergence and volume-uniform local second-moment tails justify the j-before-n stationary symmetric nonnegative pre-form E_infty(f,g)=-nu_infty(f A g). This is a local operator/pre-form result, not closed-form or temporal process construction.",
+  "radial_activity": "ZERO_IN_DERIVED_LOCAL_OPERATOR",
+  "label_activity": "NONZERO_APERTURE_FORM",
+  "kinetic_boundary": "Every amplitude-only f in D is annihilated by A. b_v=min(1,r_v) has positive R-510 variance but zero form energy. This refutes the inference of surviving radial activity at the original time scale, not the proved sampled Gibbs-L2 convergence or the whole PAH model.",
+  "proof_bounds": {
+    "inverse_square": "pi(x)c_r(x)^2=m_r(x)^2*pi(T_r x)",
+    "mobility": "0<m_r<=1 from the frozen aperture interval and nu=1",
+    "root_counts": "H_f<=2*d_max*|V_f|, d_max=5; D_f<=4*|V_f|+2*|E_f|",
+    "radial_norm": "2*H_f*L_f*h_j",
+    "radial_form": "2*H_f*L_f^2*h_j^2",
+    "label_norm": "2*D_f*M_f",
+    "tail": "nu_n(|Af|*1_|Af|>K), nu_infty(|Af|*1_|Af|>K) <= (2*D_f*M_f)^2/K"
+  },
+  "proof_coverage": {
+    "source_bridge": "Exact original energy, directed partial-root domains, K=2 multiplicities and all-n finite interaction closure are proved in the certificate; 50 independent rational root fixtures audit implementations.",
+    "uniform_estimate": "Inverse-root change of variables plus finite-sum Cauchy-Schwarz; includes both radial endpoints and avoids divergent pointwise rate envelopes.",
+    "mesh_passage": "Original nonradial images preserve amplitudes, so one- and two-root weighted numerators share R-509's integrable sextic floor-cell envelope.",
+    "volume_passage": "R-510 bounded-prefix total variation plus uniform second-moment truncation gives the unbounded local-generator and form passage.",
+    "formal_scope": "Eleven Lean declarations prove weight algebra, exponents, inverse-pair sign/factor, finite-sum inequality, radial coefficients, tail inequality and activity arithmetic. Integral/measure limits, density and full operator domains are analytic, not fully formalized.",
+    "independence": "Primary squared-edge and non-importing expanded-edge implementations agree exactly; separate square-root-weight derivation and hostile mutation controls. No external signed review claimed."
+  },
+  "assumptions": [
+    "Immutable PAH/OMC definitions, original full counting state and ordered radial path.",
+    "R-509 fixed-n radial-state theorem and R-510 specified anchored local-state theorem at their exact scopes.",
+    "The preregistered bounded globally Lipschitz amplitude-cylinder domain; ordinary measure integration, Cauchy-Schwarz and dominated/monotone convergence."
+  ],
+  "missing_assumptions": [
+    "None beyond the explicit inherited state premises for this local pre-form theorem. Closability, minimal closure, operator-core uniqueness, temporal process existence and finite-semigroup convergence are separate unproved next obligations."
+  ],
+  "lean": {
+    "path": "verification/lean/Tect/PahOmc018.lean",
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "declarations": ["square_weight", "conductance_balance", "exponent_half", "cross_exponent", "inverse_pair_form", "directed_sum_bound", "radial_form_coefficient", "radial_square_coefficient", "tail_control", "amplitude_null", "aperture_positive"]
+  },
+  "verification": {
+    "command": "python -X utf8 verification/scripts/pah_omc018_verify.py",
+    "stored_replay": "python -X utf8 verification/scripts/pah_omc018_verify.py --check",
+    "runs": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-06-pah-omc018-generator",
+    "external_review": "Invited on inverse domains, local closure and unbounded-rate passage; no external signed review."
+  },
+  "synthesis_note": "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc018-generator-260906-v1.0.tex.txt",
+  "pdf_review": "All four pages rendered and visually inspected; no clipping or overlap; zero overfull boxes. One gate-level synthesis only.",
+  "closed_scoped_gate": "PAH-OMC-018 sampled original-generator radial-cutoff limit and ordered stationary symmetric local pre-form.",
+  "remaining_gates": ["T-054 active gate unchanged", "PAH-OMC-014 unresolved", "Closability and minimal closure of the local pre-form", "Infinite-volume process and semigroup convergence", "Physical/continuum identity"],
+  "next_single_question": "Is the frozen R-511 local pre-form closable in the invariant R-510 cylinder-state Hilbert completion, with its exact radial nullspace retained by the minimal closure?",
+  "revisit_condition": "REVIEW_REQUIRED after the one DCTRL-000010 attempt. Reopen for a source/hash, inverse-domain, multiplicity, support closure or uniform-integrability defect. Nondegenerate radial kinetics would require a separately authorized new contract, not a time-rescaling rescue here.",
+  "non_claims": [
+    "No T-054 mainline-gate or C6 T1 promotion; no repair of PAH-OMC-014 or of old fixed-integer/cutoff conclusions.",
+    "No closed Dirichlet form, graph core, generated infinite-volume dynamics, path-law/semigroup convergence, ergodicity or quantum real-time automorphism.",
+    "No full joint cutoff removal, continuum, physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, mass gap or TOE conclusion.",
+    "No Q3LOCK import, static-fit selection of rates, observation prediction credit or reinterpretation of Markov time."
+  ]
+}

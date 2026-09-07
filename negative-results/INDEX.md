@@ -5,12 +5,13 @@
 
 Authorities: `negative-results/registry.md`.
 
-**384 registered records** · audit: 64 · fired_falsifier: 6 · no_go: 309 · retraction: 5
+**385 registered records** · audit: 64 · fired_falsifier: 6 · no_go: 310 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE`](registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace) | no_go | infer surviving radial kinetics from the resolved counting state's static nondegeneracy at unchanged time scale |
 | [`NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY`](registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy) | no_go | require all four R-488 squared norms to survive the full-Q counting ensemble's restricted cutoff-before-volume limit |
 | [`AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION`](registry.md#audit-2026-09-05-q3lock-tangent-beta-and-weight-direction) | audit | reuse later source-tangent normalization and weighted diagonal displays |
 | [`AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION`](registry.md#audit-2026-09-05-q3lock-seam-coefficient-transcription) | audit | reuse the displayed 48 seam constant in the later pressure audit |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-uniform-relative-form-and-operator-block-bounds-automatic-m-uniform-dffr-hilbert-schmidt-entry) | no_go | infer simultaneous cutoff-uniform DFFR entry from uniform relative-form decay and a uniformly bounded high-high operator block |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-selector-add-subtract-automatic-zero-source-transfer) | no_go | remove the bounded selector by putting it in the reference and subtracting it as a small perturbation |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RITZ-CORNER-UCP-AUTOMATIC-ASYMPTOTIC-MULTIPLICATIVITY-AND-DYNAMICS-INTERTWINING`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-ritz-corner-ucp-automatic-asymptotic-multiplicativity-and-dynamics-intertwining) | no_go | infer norm-asymptotic multiplication and generator intertwining from strong convergence of Ritz projections and the corner UCP state pullback |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RAW-CONFIGURATION-WEYL-FULL-HAMILTONIAN-POINT-NORM-C0`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0) | no_go | include a nonzero raw configuration Weyl character in a point-norm C0 carrier equivariant for the exact finite-volume full Q3 Hamiltonian |
 
 Search without loading the full registry:
 
