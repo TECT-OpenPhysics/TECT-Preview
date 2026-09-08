@@ -1,0 +1,62 @@
+{
+  "boundary": "T0 primary-source/applicability audit only; sole paper authority remains EXP-000780 -> EXP-000781 -> EXP-000782 through R-497 / EXP-001598. No theorem promotion, priority or novelty claim, PDF, submission, or physical-sector conclusion.",
+  "capture": {
+    "bytes": 516155,
+    "cache_path": "ignored local source-capture cache (path intentionally outside the public package)",
+    "sha256": "4063397ab5af4502b69f2f030192fbd98b5ecc0ffb115b481dccee2ae2f0793c",
+    "version": "PhysRevB.13.1123 publisher harvest PDF"
+  },
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "decision_reason": "The remaining Schneider--Beck--Stoll source-access item is now resolved at bounded audit scope. The full publisher PDF was captured and visually checked. Its Eq. (11) inequality is stated for n=1, 2 and infinity, its Hamiltonian is radial rather than Q3LOCK nonradial, and its conclusions concern quantum-fluctuation suppression and large-n critical behaviour rather than the target finite-temperature n=8 DLR cusp/pair. Therefore it remains a comparison citation and direct-import boundary, not a Q3LOCK proof premise.",
+  "evidence_refs": [
+    "strategy/q3lock-schneider-beck-stoll-source-audit-260908.md#Captured-source",
+    "strategy/q3lock-schneider-beck-stoll-source-audit-260908.md#What-the-source-actually-studies",
+    "publish/papers/q3lock-phase-coexistence/literature-qps-addendum.md#Schneider--Beck--Stoll-source-audit",
+    "publish/papers/q3lock-phase-coexistence/literature-crosswalk.md#Schneider--Beck--Stoll-1976-source-audit",
+    "publish/papers/q3lock-phase-coexistence/theorem-applicability-audit.md#Hypothesis-matrix"
+  ],
+  "finding": "The eight-page primary PDF (516155 bytes; SHA-256 4063397ab5af4502b69f2f030192fbd98b5ecc0ffb115b481dccee2ae2f0793c) was captured and rendered. Eq. (1) is an isotropic radial n-component lattice Hamiltonian. Eq. (11) is reported as rigorous for n=1, 2 and infinity, with the text explicitly leaving 2<n<infinity unextended. The appendix supplies a Trotter ferromagnetic-measure construction, not an n=8 theorem for the Q3 internal quartic. Its conclusions are displacive-limit suppression and large-n critical exponents, not the Q3LOCK finite-temperature DLR coexistence package.",
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": [
+      "R-497"
+    ]
+  },
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "id": "EXP-001683",
+  "method": [
+    "Read the APS publisher record and retrieved the full-text PDF from the publisher harvest endpoint using the DOI.",
+    "Captured the PDF with Python urllib, verified the PDF signature, recomputed byte length and SHA-256, and rendered all eight pages for visual inspection.",
+    "Compared Eq. (1), Eq. (11), the n-range statement on pp. 1124--1125, the large-n section, and Appendix A with the Q3LOCK Hamiltonian, internal Q3 quartic, continuous-loop FKG route, and target DLR/cusp conclusion.",
+    "Recorded a direct-import boundary without adding the source to the EXP-000780--782 theorem authority chain or claiming novelty."
+  ],
+  "next_action": "Integrate the exact source/hash and model/conclusion boundary into the paper crosswalk and review handoff; obtain specialist literature and independent mathematics dispositions; recapture this source at final content/hash freeze before the one final PDF.",
+  "provenance": "contemporaneous",
+  "question": "Does the primary Schneider--Beck--Stoll vector-model paper cover the untruncated finite-temperature n=8 nonradial Q3LOCK DLR coexistence result, or only provide a bounded comparison boundary?",
+  "recorded_at": "2026-09-08T04:40:28Z",
+  "recorded_by": "Codex",
+  "related": [
+    {
+      "id": "EXP-001682",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001681",
+      "relation": "continues"
+    }
+  ],
+  "reviewed_on": "2026-09-08",
+  "schema": "tect/proof-exploration/1.0",
+  "source_urls": [
+    "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.13.1123",
+    "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.13.1123/fulltext"
+  ],
+  "task_id": "T-054",
+  "title": "Q3LOCK Schneider--Beck--Stoll primary source capture and n=8 applicability boundary",
+  "verdict": "advanced"
+}

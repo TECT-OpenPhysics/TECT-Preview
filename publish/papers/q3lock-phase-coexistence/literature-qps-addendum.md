@@ -1,6 +1,6 @@
 # Broader-theorem comparison: quantum Pirogov--Sinai and oscillator stability
 
-Date: 2026-09-07. Content-only addendum to manuscript v0.1.7.
+Date: 2026-09-08. Content-only addendum to manuscript v0.1.38.
 Status: BOUNDED INTERNAL REVIEW / NO PRIORITY CLAIM / PDF DEFERRED.
 This document changes no theorem, analytic import, registered tier or result.
 The sole paper authority remains EXP-000780 -> EXP-000781 -> EXP-000782,
@@ -161,13 +161,36 @@ This does not show that Q3 fails (4.38): its number operator, reference and
 state mapping must first be specified. It only prevents an unsupported
 replacement of the newly checked hypothesis by existing moment statements.
 
-Schneider--Beck--Stoll, *Quantum effects in an n-component vector model for
-structural phase transitions*, Phys. Rev. B 13, 1123 (1976), is verified in
-the [publisher record](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.13.1123).
-The full text required authorization. Its applicability is NOT-YET-ASSESSED;
-the abstract's broken mathematical rendering is not repaired by guessing,
-and neither a rigorous finite-component theorem nor an approximation is
-attributed to it without the text.
+### Schneider--Beck--Stoll full-text audit -- EXP-001683 (2026-09-08)
+
+The publisher record and full eight-page PDF are now captured and visually
+checked. The source is T. Schneider, H. Beck, and E. Stoll, *Quantum effects
+in an n-component vector model for structural phase transitions*, Phys. Rev.
+B 13, 1123--1130 (1976), DOI 10.1103/PhysRevB.13.1123. The publisher harvest
+capture is 516155 bytes with SHA-256
+`4063397ab5af4502b69f2f030192fbd98b5ecc0ffb115b481dccee2ae2f0793c`.
+
+Equation (1) is an isotropic radial n-component displacement Hamiltonian with
+quadratic kinetic energy, a radial quartic onsite term, bilinear ferromagnetic
+nearest-neighbour coupling, and a uniform field. The quantum correlation
+inequality in Eq. (11) is stated as rigorous for n=1, n=2, and n=infinity; the
+paper explicitly says that its proof was not extended to 2<n<infinity. The
+Trotter construction in Appendix A explains a ferromagnetic measure, but it
+does not provide an n=8 theorem for the Q3 internal quartic interaction.
+
+The paper's conclusions concern suppression of an ordered state by zero-point
+fluctuations near a displacive limit and critical exponents in the large-n
+limit. They do not construct the untruncated finite-temperature Q3LOCK source
+cusp or a parity-related pair of tempered Euclidean DLR states.
+
+**Disposition: DOES-NOT-APPLY as a direct phase-theorem import.** The decisive
+model-side boundaries are the non-radial positive-lambda Q3LOCK onsite
+polynomial, the finite component number n=8 outside the explicitly stated
+inequality range, and the different target conclusion. Q3LOCK's continuous-
+loop FKG, DLR compactness/tangent, infrared, collective lower bound, and
+strict-cusp composition remain its own conditional proof obligations. This is
+not a no-go theorem for every anisotropic reduction and is not a novelty or
+priority claim.
 
 ## Search coverage and adversarial disposition
 
@@ -207,10 +230,11 @@ manuscript's standard infrared and threshold mechanisms remain standard.
 
 The next useful review must identify an exact covering theorem, give a
 hypothesis-level reduction, or explain the model-specific residual. Repeating
-finite diagnostics cannot replace that decision. Obtain accessible source
-text for the remaining Schneider--Beck--Stoll candidate and a signed specialist disposition;
-keep every analytic review gate open until independently resolved. Do not
-generate the paper PDF before the final content-review checkpoint.
+finite diagnostics cannot replace that decision. The Schneider--Beck--Stoll
+source-access item is now resolved by EXP-001683, but a specialist must still
+review the model-by-model comparison and any later anisotropic theorem. Keep
+every analytic review gate open until independently resolved. Do not generate
+the paper PDF before the final content-review checkpoint.
 
 ## Documentation checkpoint replay
 

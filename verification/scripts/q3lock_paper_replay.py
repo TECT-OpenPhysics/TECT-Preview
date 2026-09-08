@@ -24,7 +24,12 @@ QPS = RUNS + "2026-09-07-q3lock-literature-qps-addendum/result.json"
 DFFR = RUNS + "2026-09-07-q3lock-dffr-source-audit/result.json"
 R2 = RUNS + "2026-09-07-q3lock-paper-readonly-replay-r2/result.json"
 ALGEBRA = "verification/scripts/q3lock_nonimporting_algebra.py"
-ALGEBRA_RESULT = RUNS + "2026-09-07-q3lock-nonimporting-algebra/result.json"
+ALGEBRA_RESULT = RUNS + "2026-09-08-q3lock-nonimporting-algebra-current-v016-r5/result.json"
+PRIOR_ALGEBRA_RESULT = RUNS + "2026-09-08-q3lock-nonimporting-algebra-current-v016-r4/result.json"
+LEGACY_ALGEBRA_RESULT = RUNS + "2026-09-08-q3lock-nonimporting-algebra-current-v016-r3/result.json"
+OLDER_ALGEBRA_RESULT = RUNS + "2026-09-08-q3lock-nonimporting-algebra-current-v016-r2/result.json"
+OLDEST_ALGEBRA_RESULT = RUNS + "2026-09-08-q3lock-nonimporting-algebra-current-v016/result.json"
+ANCESTOR_ALGEBRA_RESULT = RUNS + "2026-09-07-q3lock-nonimporting-algebra/result.json"
 R1 = RUNS + "2026-09-07-q3lock-paper-readonly-replay/result.json"
 R1_SOURCES = str(Path(R1).parent / "source-map.json").replace("\\", "/")
 CANONICAL = tuple("verification/scripts/q3lock_" + name + "_audit.py" for name in (
@@ -223,7 +228,7 @@ def build_payload():
         if digest(ROOT / row["path"]) != row["sha256"]:
             raise ValueError("Frozen authority changed: " + row["path"])
 
-    historical_paths = {ROOT / path for path in (HISTORICAL, QPS, DFFR, R1, R2, ALGEBRA_RESULT)}
+    historical_paths = {ROOT / path for path in (HISTORICAL, QPS, DFFR, R1, R2, ALGEBRA_RESULT, PRIOR_ALGEBRA_RESULT, LEGACY_ALGEBRA_RESULT, OLDER_ALGEBRA_RESULT, OLDEST_ALGEBRA_RESULT, ANCESTOR_ALGEBRA_RESULT)}
     historical_paths.update(ROOT / (RUNS + "2026-09-06-q3lock-manuscript-" +
                                    part + "-audit/result.json")
                             for part in ("content", "loop", "dlr", "infrared",

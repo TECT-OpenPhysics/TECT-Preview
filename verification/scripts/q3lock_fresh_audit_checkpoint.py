@@ -19,7 +19,7 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[2]
 RUNS = ROOT / "claims/C6-SPACETIME-SIGNATURE/runs"
-DEFAULT_LABEL = "2026-09-07-q3lock-manuscript-fresh-audit-checkpoint"
+DEFAULT_LABEL = "2026-09-08-q3lock-manuscript-fresh-audit-source-review-v1"
 
 
 def checkpoint_paths(label=DEFAULT_LABEL):

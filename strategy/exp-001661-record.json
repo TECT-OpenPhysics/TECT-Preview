@@ -1,0 +1,57 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001661",
+  "title": "Q3LOCK objective coverage and completion-gate audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001660",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001659",
+      "relation": "continues"
+    }
+  ],
+  "question": "Does the current Q3LOCK package cover every requested model/result block and publication-boundary requirement without silently promoting the conditional R-497 composition?",
+  "method": [
+    "Check the manuscript's model, pressure, DLR, FKG, reflection/infrared, collective, cusp and parity labels together with the strict sufficient-regime tokens.",
+    "Check the EXP-000780 -> EXP-000781 -> EXP-000782 authority chain, all A1-A23 proof-audit rows, the submission-readiness review/PDF gates and the current replay checkpoints.",
+    "Reject hostile missing-label, claim-promotion, premature-freeze and missing-authority mutations.",
+    "Publish a no-overwrite result with source hashes and a dedicated unit-test replay."
+  ],
+  "finding": "The objective-to-artifact coverage audit passes while reporting INCOMPLETE_EXTERNAL_REVIEW_AND_FREEZE. It covers 14 load-bearing manuscript labels, four strict-regime tokens, the three-record authority chain, all 23 proof-audit rows, the current locator/fresh/integrated replays, the independent child/package replay and the absence of a Q3LOCK paper PDF. The four hostile mutations are rejected.",
+  "decision_reason": "This is a readiness and provenance improvement, not a mathematical acceptance. It makes the remaining external mathematics, literature, content-freeze and final-PDF gates explicit and machine-checkable without changing R-497's T0 scope.",
+  "verdict": "advanced",
+  "boundary": "T0 objective-coverage audit only; claim_bearing=false; no theorem promotion, proof-row closure, result-tier change, phase conclusion, sector closure or PDF status change.",
+  "evidence_refs": [
+    "strategy/q3lock-completion-gate-audit-260908.md#Expected-current-finding",
+    "verification/scripts/q3lock_completion_gate_audit.py#build_payload",
+    "verification/tests/test_q3lock_completion_gate_audit.py#CompletionGateAuditTests",
+    "publish/papers/q3lock-phase-coexistence/proof-audit.md#Load-bearing-audit-table"
+  ],
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": [
+      "R-497"
+    ]
+  },
+  "next_action": "Give the completion-gate report with the A1-A23 matrix and theorem/literature crosswalk to independent reviewers; obtain signed dispositions, then perform final content/hash freeze before the first PDF.",
+  "non_claims": [
+    "No proof row is signed or closed by this audit.",
+    "No theorem applicability, form closure, thermodynamic limit, DLR pair, cusp, novelty or priority conclusion follows.",
+    "No TECT sector, C6, CP1, Pre-A or Sector-A closure changes.",
+    "No Q3LOCK paper PDF was generated."
+  ],
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-09-08",
+  "recorded_at": "2026-09-07T17:49:36Z",
+  "recorded_by": "Codex"
+}

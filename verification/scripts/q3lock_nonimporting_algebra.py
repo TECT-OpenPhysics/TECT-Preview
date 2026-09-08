@@ -19,16 +19,16 @@ import platform
 import sys
 import tempfile
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 ROOT = Path(__file__).resolve().parents[2]
 PAPER = "publish/papers/q3lock-phase-coexistence/"
 MANUSCRIPT = PAPER + "manuscript.tex"
 NOTE = PAPER + "verification/nonimporting-algebra-audit.md"
 TEST = "verification/tests/test_q3lock_nonimporting_algebra.py"
 FROZEN = "strategy/q3lock-exp782-independent-result-manifest-260905.json"
-BASELINE = "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r2/result.json"
-OUTPUT = ROOT / "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-nonimporting-algebra/result.json"
-SOURCE_BASE_COMMIT = "0ef6c0d2da2f570755c3e5b645a88170985302a4"
+PACKAGE = PAPER + "verification/package-manifest.json"
+OUTPUT = ROOT / "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-nonimporting-algebra-source-review-v1/result.json"
+SOURCE_BASE_COMMIT = "e0765cf7c5d66284684e0830c59527339de88550"
 INTERNAL_DIMENSION = 3  # Model input: binary cube Q3, not a derived count.
 
 
@@ -238,9 +238,13 @@ def algebra():
 def build_payload():
     if not __debug__:
         raise ValueError("Use assertion-enabled Python, without -O.")
-    baseline = json.loads((ROOT / BASELINE).read_text(encoding="utf-8"))
-    if sha(ROOT / MANUSCRIPT) != baseline["source_hashes"][MANUSCRIPT]:
-        raise ValueError("Manuscript differs from the reviewed R2 input; reassess this audit.")
+    package = json.loads((ROOT / PACKAGE).read_text(encoding="utf-8"))
+    expected_scope = {"result_id": "R-497", "tier": "T0",
+                      "claim_bearing": False, "publication_status": "RESEARCH_ONLY"}
+    if (package.get("claim_status") != expected_scope
+            or package.get("status") != "UNFROZEN_CONTENT_REVIEW"
+            or package.get("pdf_status") != "DEFERRED"):
+        raise ValueError("Current package scope or PDF boundary changed.")
     frozen = json.loads((ROOT / FROZEN).read_text(encoding="utf-8"))
     if frozen["tier"] != "T0" or frozen["claim_bearing"] is not False:
         raise ValueError("Unexpected result scope.")
@@ -266,7 +270,7 @@ def build_payload():
     if not imports <= allowed:
         raise ValueError("Non-standard or undeclared import.")
     result = algebra()
-    sources = (MANUSCRIPT, NOTE, TEST, FROZEN, BASELINE,
+    sources = (MANUSCRIPT, NOTE, FROZEN,
                Path(__file__).resolve().relative_to(ROOT).as_posix())
     result.update({"schema": "tect/q3lock-nonimporting-algebra/1.0", "status": "PASS",
                    "script_version": __version__, "result_id": "R-497",

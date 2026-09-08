@@ -8,6 +8,13 @@
   "tier": "T0",
   "claim_bearing": false,
   "status": "INTERNAL_REVIEW_ONLY",
+  "claim_lineage_decision": {
+    "exploration_id": "EXP-001665",
+    "decision_path": "strategy/q3lock-r497-claim-lineage-decision-260908.md",
+    "status": "RESULT_LEVEL_REGISTRATION_CONFIRMED",
+    "separate_tect_claim_card": false,
+    "reason": "R-497 is a standalone T0 result registration; C6-SPACETIME-SIGNATURE is routing metadata only, and a duplicate Sector A-F card would blur the paper result with a physical-sector claim."
+  },
   "pdf_status": "DEFERRED",
   "publication_status": "RESEARCH_ONLY",
   "upstream_result_id": "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-LOW-TEMPERATURE-DLR-PHASE-AND-COLLECTIVE-SOURCE-CUSP",
@@ -645,12 +652,12 @@
     {
       "path": "explorations/temporal-corrections.jsonl",
       "role": "append-only wall-clock provenance sidecar",
-      "sha256": "5492cfd3d762526a3ce254cd46b15f791e8d12850af2365a66ac1d5cc946fdf8",
-      "capture_through": "TC-0032",
+      "sha256": "c791ae3650f2db83a9c7c593d31be3790760646eba4fd5656c59aa2210023225",
+      "capture_through": "TC-0041",
       "previous_capture": {
-        "through": "TC-0031",
-        "sha256": "7e39df86b1b6d907d3535c2714da53857ec1d7ae54fcf6de4e4f64ab9dc229df",
-        "verification": "Exact-byte prefix through 31 lines matches the previous digest; TC-0032 is an appended committed record."
+        "through": "TC-0040",
+        "sha256": "e2a7d86ce55fe4b7f2890d26e70ba7498ceb9d8c7555501da635d5219a0925bf",
+        "verification": "Exact-byte prefix through 40 lines matches the previous digest; TC-0041 is an appended uncommitted record."
       }
     },
     {
@@ -982,6 +989,11 @@
       "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-05-q3lock-strict-cusp-tangent-content-audit/result.json",
       "role": "EXP-001598 deterministic strict-cusp/tangent diagnostic artifact",
       "sha256": "bd7c50b10f8fc3667966b0340bf7c942a34661ac2bbb313611a9b86300b4d45d"
+    },
+    {
+      "path": "strategy/q3lock-r497-claim-lineage-decision-260908.md",
+      "role": "EXP-001665 independent claim/result lineage decision",
+      "sha256": "c77001df1a76b8d1bd82ceaf1f7bd215e6478c1120c3c6afe077479b5a71bb07"
     }
   ],
   "correction_precedence": [
@@ -1001,7 +1013,9 @@
       "exploration_id": "EXP-001589",
       "audit_id": "AUDIT-2026-09-05-Q3LOCK-SEAM-COEFFICIENT-TRANSCRIPTION",
       "current_definition": "strategy/q3lock-thermodynamic-pressure-content-260905.md#5-periodic-seam-and-correction-of-a-displayed-coefficient",
-      "superseded_blocks": ["strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md Section 4: the one displayed seam inequality with coefficient 48"],
+      "superseded_blocks": [
+        "strategy/q3lock-pressure-seam-minmax-independent-audit-260905.md Section 4: the one displayed seam inequality with coefficient 48"
+      ],
       "rule": "Use coefficient 288 from endpoint summation. The original EXP-000780 authority, subsequent min--max lines and R-498 verifier already use 288 and remain byte-preserved.",
       "review_status": "INTERNAL_CORRECTION_RECORDED_EXTERNAL_ACCEPTANCE_OPEN"
     },
@@ -1020,8 +1034,14 @@
   "exploration_relation_precedence": {
     "correction_record": "EXP-001592",
     "affected_record": "EXP-001591",
-    "disregard_mistaken_corrects_targets": ["EXP-001561", "EXP-001579"],
-    "use_corrects_targets": ["EXP-001540", "EXP-001578"],
+    "disregard_mistaken_corrects_targets": [
+      "EXP-001561",
+      "EXP-001579"
+    ],
+    "use_corrects_targets": [
+      "EXP-001540",
+      "EXP-001578"
+    ],
     "rule": "Preserve append-only historical bytes; the later correction governs source-owner interpretation. No PAH result is corrected by this Q3LOCK work."
   },
   "open_gates": [
@@ -1045,7 +1065,6 @@
     "independent review of the operator/form-domain and unbounded-commutator audit",
     "independent review of EXP-001598 collective translation variational argument, form identity, finite spectral cutoff and Falk--Bruch lower-bound composition",
     "independent review of EXP-001598 squared-tail Griffiths lemma, strict threshold algebra and source-to-zero parity-related DLR construction",
-    "bounded independent claim-card and result-lineage decision",
     "manuscript convention, bibliography, nonclaim and content freeze after source-hash capture",
     "clean-snapshot primary, independent and integrated replay with byte-stable outputs",
     "release check on the frozen tree",
@@ -1060,7 +1079,7 @@
     "No C0, N1-N5, C6, CP1, Sector A or Pre-A closure.",
     "No claim-tier promotion, P2 manuscript, submission, upload, tag, release or PDF is created by this registration."
   ],
-  "next_action": "Obtain independent line-by-line acceptance of the registered EXP-001598 collective/Falk--Bruch and strict-cusp/tangent composition together with every upstream pressure, FKG, infrared and DLR input. Then complete source-hash recomputation, bounded claim/result-lineage review, clean replay, signed mathematical/literature review and final content freeze before any PDF generation.",
+  "next_action": "Obtain independent line-by-line acceptance of the registered EXP-001598 collective/Falk--Bruch and strict-cusp/tangent composition together with every upstream pressure, FKG, infrared and DLR input. Then complete source-hash recomputation, clean replay, signed mathematical/literature review and final content freeze before any PDF generation.",
   "source_freeze": {
     "status": "HASHED_TEMPORARY_CAPTURE",
     "captured_utc": "2026-09-04",

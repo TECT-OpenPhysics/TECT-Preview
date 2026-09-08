@@ -1,0 +1,81 @@
+{
+  "assertions_passed": 48,
+  "claim_bearing": false,
+  "coverage": {
+    "authority_chain": [
+      "EXP-000780",
+      "EXP-000781",
+      "EXP-000782"
+    ],
+    "completion_state": "INCOMPLETE_EXTERNAL_REVIEW_AND_FREEZE",
+    "fresh_assertions": 1171,
+    "fresh_audits": 7,
+    "independent_child_assertions": 306,
+    "independent_package_assertions": 14,
+    "integrated_canonical_groups": 7,
+    "integrated_manuscript_groups": 7,
+    "locator_manuscript_locators": 57,
+    "locator_rows": 23,
+    "paper_pdf_count": 0,
+    "proof_audit_dispositions": {
+      "OPEN": 23
+    },
+    "proof_audit_rows": 23,
+    "required_labels": 14,
+    "required_tokens": 4
+  },
+  "exploration_id": "EXP-001661",
+  "hostile_checks": [
+    {
+      "expected": "rejected",
+      "name": "missing-required-label",
+      "status": "PASS"
+    },
+    {
+      "expected": "rejected",
+      "name": "claim-promotion",
+      "status": "PASS"
+    },
+    {
+      "expected": "rejected",
+      "name": "premature-freeze",
+      "status": "PASS"
+    },
+    {
+      "expected": "rejected",
+      "name": "missing-authority",
+      "status": "PASS"
+    }
+  ],
+  "payload_sha256": "25d3d861944a6fab4c07bd946be780f26471f09f6e1856a666a12b9dda2e0969",
+  "pdf_status": "DEFERRED",
+  "result_id": "R-497",
+  "schema": "tect/q3lock-completion-gate-audit/1.0",
+  "scope": "Objective-coverage and publication-boundary audit for the EXP-000780 -> EXP-000781 -> EXP-000782/R-497 paper package. It does not certify any mathematical proof row or external review.",
+  "script_version": "0.1.0",
+  "source_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-kp-envelope-audit-v001/result.json": "177cfa9762db13ef2ed7d21fe125455c2bac2a4f6ff02a99a1b84c0baff9e08d",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-manuscript-fresh-audit-final-content-review-v042/result.json": "37809fea17d0f001ac260ff5fbce9469396004e4c13035c6229fef484c7b6cae",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-paper-integrated-replay-final-content-review-v039/result.json": "131994995c521ac53565a8e877413eee07f489dd9a0dd86e254102a258d37432",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-review-locator-audit-v016-r21/result.json": "0ff87c62a7edb5d1ec638cd3d5c5eb3acdb64f1a6b953dc3220394a8bda235fa",
+    "explorations/log.jsonl": "23da6a622dac892b6fac2fef5bf92a54a864275ca05393aa1cd92616d81e9fa7",
+    "publish/papers/q3lock-phase-coexistence/external-review-handoff.md": "333c2e299b0e1e5908440db663e0eb070e4fd4d374bcf560501a415eab61fcb8",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex": "e23e248bcf636076d1a8dc890e4febf5a704dddf8b11e1a965b8b978624dd803",
+    "publish/papers/q3lock-phase-coexistence/proof-audit.md": "4162b1a38960cae8896704e653ecb80f1168b8fe980ab801f692d79a24ba1c4c",
+    "publish/papers/q3lock-phase-coexistence/submission-readiness.md": "67f977a0324b4592be95a9d325d6725d7c28db1bde00580f8c906504a661959e",
+    "publish/papers/q3lock-phase-coexistence/verification/package-manifest.json": "bc34825517fa905911c033eba29338fbcabf551fc184a20f90a1663b500e2835",
+    "strategy/q3lock-completion-gate-audit-260908.md": "bfa265c7b8427d5a28c751f460f5f1399ce81b8c890ed504e829c3234f7bde62",
+    "strategy/q3lock-exp782-independent-result-manifest-260905.json": "0794b0ea9e1a36ff68f8ad77322113dec149d1aff47c3c24503d56f6d8ec7182",
+    "strategy/q3lock-general-asymmetric-primary-boundary-260908.md": "46e0f887ee448888d3d80cf872395729fd696decb598ab60258ee49f4b1e71c4",
+    "strategy/q3lock-independent-review-matrix-260907.md": "d6a64ca1e6d11fdf0f44541c805b190b9cf5b057cfebc7f7ac41bc8ed54bb87c",
+    "strategy/q3lock-kkk-vector-scalar-definition-boundary-260908.md": "3b671b4eb90fba42f36381e6263320905ad1b9c8453e5f394e24a40504be04bf",
+    "strategy/q3lock-kp-envelope-formula-audit-260908.md": "c093335b454ceff5318c2e67c7913dffbecc04062a5ed6b722d19c3294e88a80",
+    "strategy/q3lock-r497-claim-lineage-decision-260908.md": "c77001df1a76b8d1bd82ceaf1f7bd215e6478c1120c3c6afe077479b5a71bb07",
+    "verification/scripts/q3lock_completion_gate_audit.py": "93b62de5339d014642420ce63000ef27b2a63d2a7e6977eb858e254d45d6fe6d",
+    "verification/scripts/q3lock_kp_envelope_audit.py": "b14c98382111f6273ef18cb4da8efa05c28d2b645ae6bedaca6b59f64cc765aa",
+    "verification/tests/test_q3lock_completion_gate_audit.py": "5ae3a68f44c658382a3150edd333c4cd2a70b2d5aaff781327c48032e40388e7",
+    "verification/tests/test_q3lock_kp_envelope_audit.py": "118235cb64ad9c546d5c78aa5be0ea3f650496436f245c1a8e4c3c6f31c0b65b"
+  },
+  "status": "PASS",
+  "tier": "T0"
+}

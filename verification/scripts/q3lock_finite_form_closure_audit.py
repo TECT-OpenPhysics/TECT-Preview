@@ -5,7 +5,9 @@ The script derives graph degrees and envelope coefficients from the declared
 Q3 and spatial graphs, checks the two scalar Young maxima, evaluates generated
 finite fields, and exercises the residual truncation direction.  It is a
 claim-non-bearing diagnostic: it cannot prove closed-form convergence,
-semigroup convergence, or any infinite-volume statement.
+semigroup convergence, or any infinite-volume statement.  The manuscript
+resolvent audit also checks that upper truncation is not falsely claimed to
+provide a uniform quartic form bound.
 """
 
 from __future__ import annotations
@@ -21,13 +23,13 @@ from pathlib import Path
 from typing import Any
 
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 ROOT = Path(__file__).resolve().parents[2]
 NOTE = ROOT / "strategy/q3lock-finite-form-closure-audit-260907.md"
 PAPER = ROOT / "publish/papers/q3lock-phase-coexistence/manuscript.tex"
 OUTPUT = ROOT / (
     "claims/C6-SPACETIME-SIGNATURE/runs/"
-    "2026-09-07-q3lock-finite-form-closure-audit/result.json"
+    "2026-09-08-q3lock-finite-form-closure-audit-source-review-v1/result.json"
 )
 INTERNAL_DIM = 3
 COMPONENTS = 2**INTERNAL_DIM
@@ -247,6 +249,13 @@ def build_payload() -> dict[str, Any]:
     text = PAPER.read_text(encoding="utf-8")
     for label in ("eq:form-domain", "eq:residual-lower", "eq:trace-bound", "sec:fk-identification"):
         add(rows, "manuscript locator " + label, label in text, label, "present")
+    for phrase in (
+        "uniform quartic bound",
+        "lower-semicontinuity",
+        "compactness of the harmonic embedding",
+        "F_M(u_M)",
+    ):
+        add(rows, "resolvent repair phrase " + phrase, phrase in text, phrase, "present")
 
     return {
         "schema": "tect/q3lock-finite-form-closure-audit/1.0",

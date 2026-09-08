@@ -1,0 +1,51 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001662",
+  "title": "Q3LOCK KP envelope and finite-range weight formula audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001646",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001657",
+      "relation": "continues"
+    }
+  ],
+  "question": "Does the printed non-radial eight-component Q3LOCK onsite potential supply the exact lower/upper envelopes and finite-range weight data used in the KP general-vector fixed-source DLR input, without confusing the KP growth exponent with the Q3LOCK mass coefficient?",
+  "method": [
+    "Derive the spatial degree, Q3 component count, retained quartic coefficient, quadratic and linear absorption constants, and KP row sum from the declared model inputs.",
+    "Check the lower and upper envelope inequalities, nonnegative Q3 locking term, and degree-three locking upper budget on deterministic rational vectors.",
+    "Check finite-range exponential weight gaps, a shell-plus-integral lattice-sum bound, and the multiplicative weight inequality on a finite metric fixture.",
+    "Run hostile substitutions for the KP-growth/mass-parameter collision, an omitted neighbour, an unreserved quartic coefficient, and the Q3 degree budget."
+  ],
+  "finding": "The model-side audit passes 168 exact/derived checks. It recomputes A=g/(16 nu), C0 from the two scalar maxima, J0=2 d c, and the finite-range weight behaviour for nu=8 and d=3. The hostile substitutions are rejected. The audit supports the displayed internal KP crosswalk but does not reprove KP or close the source-window or source-to-zero DLR arguments.",
+  "decision_reason": "This removes a concrete algebraic ambiguity in the A6 crosswalk: the KP exponent r_KP=2 is independent of the Q3LOCK mass coefficient r, the Q3 degree contributes to the upper envelope, and the retained quartic coefficient must be reduced before the scalar absorptions. The remaining theorem application and all phase conclusions still require signed review.",
+  "verdict": "advanced",
+  "boundary": "T0 internal model-side applicability audit; no claim tier, theorem promotion, TECT sector, or PDF status change.",
+  "evidence_refs": [
+    "strategy/q3lock-kp-envelope-formula-audit-260908.md#model-side-derivation",
+    "verification/scripts/q3lock_kp_envelope_audit.py#build_payload",
+    "verification/tests/test_q3lock_kp_envelope_audit.py#test_kp_envelope_audit_current_payload",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-kp-envelope-audit-v001/result.json#assertions"
+  ],
+  "next_action": "Add the exact formula audit to the external mathematics packet and obtain a signed check of the KP source hypotheses, the finite form/trace interface, the source-window recursion, and the source-to-zero DLR passage.",
+  "non_claims": [
+    "The audit does not reprove Kozitsky--Pasurek or establish a DLR state.",
+    "No source-uniform finite-torus estimate is imported from KP.",
+    "No continuous-loop FKG, strict cusp, phase coexistence, novelty, or priority claim is made.",
+    "No claim tier, C6/CP1/Sector A status, or publication status changes.",
+    "No paper PDF was generated."
+  ],
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-09-08",
+  "recorded_at": "2026-09-07T18:08:00Z",
+  "recorded_by": "Codex"
+}

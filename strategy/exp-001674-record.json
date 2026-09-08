@@ -1,0 +1,55 @@
+{
+  "boundary": "T0 proof-text precision repair; no theorem promotion, claim-tier change, sector status change, submission, or PDF.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "decision_reason": "The collective Jensen argument gives a polynomial nonnegative at its translation minimum t=0. The proof needs only F''(0)>=0; a global-in-t convexity assertion is neither needed nor justified when r<0. The manuscript now states the local-minimum conclusion explicitly.",
+  "evidence_refs": [
+    "strategy/q3lock-collective-jensen-minimum-clarification-260908.md#Finding",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex#eq:collective-jensen-chain",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex#eq:collective-hessian"
+  ],
+  "finding": "The repaired text distinguishes F(t)>=F(0)=0 for all translations from the required local conclusion F''(0)>=0. It preserves the displayed B_L formula and the separate finite Gibbs-integrability argument.",
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": [
+      "R-497"
+    ]
+  },
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "id": "EXP-001674",
+  "method": [
+    "Inspect the translated-form Jensen chain and the sentence asserting nonnegative second derivative.",
+    "Check the role of r<0 and distinguish a global convexity claim from the second derivative at a polynomial local minimum.",
+    "Patch the manuscript to state only the required F''(0)>=0 conclusion and preserve the no-heat-trace-differentiation boundary.",
+    "Record the repair and issue a fresh non-overwriting replay family before external review."
+  ],
+  "next_action": "Run the refreshed primary, independent, finite-form, algebra, integrated and completion audits, then send the repaired collective line to the independent mathematics reviewer for A14-A17.",
+  "non_claims": [
+    "This does not prove the unbounded form/core, spectral-cutoff, Duhamel or thermodynamic collective passages.",
+    "A14-A17 remain OPEN and R-497 remains T0 claim_bearing=false.",
+    "No strict cusp, DLR multiplicity, physical-sector, cosmological, novelty, priority, submission, or PDF conclusion follows."
+  ],
+  "provenance": "contemporaneous",
+  "question": "Does the collective Jensen step require global convexity in the translation parameter, or only a nonnegative second derivative at its t=0 minimum?",
+  "recorded_at": "2026-09-07T23:09:00Z",
+  "recorded_by": "Codex",
+  "related": [
+    {
+      "id": "EXP-001673",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001669",
+      "relation": "corrects"
+    }
+  ],
+  "reviewed_on": "2026-09-08",
+  "schema": "tect/proof-exploration/1.0",
+  "task_id": "T-054",
+  "title": "Q3LOCK collective Jensen local-minimum precision repair",
+  "verdict": "advanced"
+}

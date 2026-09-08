@@ -1,104 +1,217 @@
 {
-  "schema": "tect/q3lock-paper-package/1.0",
-  "paper_id": "q3lock-phase-coexistence",
-  "version": "0.1.7",
-  "status": "UNFROZEN_CONTENT_REVIEW",
-  "pdf_status": "DEFERRED",
-  "claim_status": {
-    "result_id": "R-497",
-    "tier": "T0",
-    "claim_bearing": false,
-    "publication_status": "RESEARCH_ONLY"
-  },
-  "manuscript": "publish/papers/q3lock-phase-coexistence/manuscript.tex",
-  "hash_policy": "Fill the final release source/output hash arrays only after content, notation, bibliography and external dispositions are frozen. Dated internal tooling checkpoints may separately record their provenance without declaring final freeze.",
   "canonical_inputs": [
+    "strategy/q3lock-remaining-blocks-and-source-review-260908.md",
+    "strategy/q3lock-replay-portability-and-bounded-review-260908.md",
     "strategy/q3lock-exp782-independent-result-manifest-260905.json",
     "strategy/q3lock-finite-volume-pressure-content-260905.md",
+    "strategy/q3lock-a1-a5-current-fixture-refresh-260907.md",
     "strategy/q3lock-thermodynamic-pressure-content-260905.md",
     "strategy/q3lock-dlr-source-tangent-content-260905.md",
     "strategy/q3lock-continuous-loop-fkg-content-260905.md",
     "strategy/q3lock-reflection-infrared-content-260905.md",
     "strategy/q3lock-collective-falk-bruch-content-260905.md",
-    "strategy/q3lock-strict-cusp-tangent-content-260905.md"
+    "strategy/q3lock-strict-cusp-tangent-content-260905.md",
+    "strategy/q3lock-finite-form-closure-audit-260907.md",
+    "strategy/q3lock-simon-theorem-hypothesis-audit-260907.md",
+    "strategy/q3lock-upper-truncation-resolvent-repair-260907.md",
+    "strategy/q3lock-fss-primary-source-applicability-audit-260907.md",
+    "strategy/q3lock-fss-classical-phase-boundary-260907.md",
+    "strategy/q3lock-kp-assumption-crosswalk-260907.md",
+    "strategy/q3lock-schneider-beck-stoll-boundary-260907.md",
+    "strategy/q3lock-additional-direct-import-audit-260907.md",
+    "strategy/q3lock-faris-multidimensional-groundstate-boundary-260907.md",
+    "strategy/q3lock-fkg-cone-topology-audit-260907.md",
+    "strategy/q3lock-fkg-selected-limit-hostile-audit-260907.md",
+    "strategy/q3lock-dlr-source-window-topology-audit-260908.md",
+    "strategy/q3lock-kargol-kozitsky-scalar-boundary-260907.md",
+    "strategy/q3lock-review-locator-audit-260908.md",
+    "strategy/q3lock-completion-gate-audit-260908.md",
+    "strategy/q3lock-kp-envelope-formula-audit-260908.md",
+    "strategy/q3lock-general-asymmetric-primary-boundary-260908.md",
+    "strategy/q3lock-kkk-vector-scalar-definition-boundary-260908.md",
+    "strategy/q3lock-r497-claim-lineage-decision-260908.md",
+    "strategy/q3lock-r497-loop-limit-authority-disposition-260908.md",
+    "strategy/q3lock-kozitsky-survey-primary-boundary-260908.md",
+    "strategy/q3lock-anisotropic-direct-import-sweep-260908.md",
+    "strategy/q3lock-kp-vector-phase-scope-primary-260908.md",
+    "strategy/q3lock-collective-jensen-minimum-clarification-260908.md",
+    "strategy/q3lock-collective-block-audit-260908.md",
+    "strategy/q3lock-dlr-window-audit-260908.md",
+    "strategy/q3lock-a1-a9-boundary-coercivity-clarification-260908.md",
+    "strategy/q3lock-vector-normal-fluctuation-comparator-260908.md",
+    "strategy/q3lock-kkk-vector-rotation-source-locator-260908.md",
+    "strategy/q3lock-bounded-literature-supplement-260908.md",
+    "strategy/q3lock-kkk-threshold-boundary-260908.md",
+    "strategy/q3lock-collective-polynomial-integrability-260908.md",
+    "strategy/q3lock-targeted-literature-recheck-260908.md",
+    "strategy/q3lock-simon-source-capture-260908.md",
+    "strategy/q3lock-schneider-beck-stoll-source-audit-260908.md"
   ],
+  "claim_status": {
+    "claim_bearing": false,
+    "publication_status": "RESEARCH_ONLY",
+    "result_id": "R-497",
+    "tier": "T0"
+  },
   "commands": [
     {
-      "path": "verification/scripts/q3lock_paper_replay.py",
       "args": [
         "--check"
       ],
+      "expected": "Current collective-jensen manuscript checkpoint, canonical finite diagnostics, A1-A23 packet coverage, locator provenance, EXP-001657 DLR topology audit, EXP-001671 selected-limit FKG audit, EXP-001672 FKG cone-text repair, EXP-001673 KP vector/phase scope boundary, EXP-001674 collective Jensen minimum repair, EXP-001675 A1-A9 coercivity clarification, EXP-001676 vector normal-fluctuation literature comparator, EXP-001677 KKK vector-rotation source locator, EXP-001678 bounded Faris--Minlos/Froehlich--Lieb supplement, EXP-001679 KKK threshold/radial-boundary recheck, EXP-001680 collective polynomial-integrability repair, EXP-001681 targeted literature recheck, EXP-001682 Simon source-byte capture, current independent/finite-form/algebra replays, EXP-001662 KP envelope audit, EXP-001663 scalar boundary, EXP-001664 vector/scalar-definition boundary, EXP-001665 result-lineage decision, EXP-001667 literature boundary and EXP-001668 extended direct-import boundary match saved checkpoints; historical bytes are preserved. No result writes or PDF generation. EXP-001683 Schneider--Beck--Stoll primary-source audit and direct-import boundary; current fresh source-review-v1/integrated source-review-v1/independent source-review-v1/finite-form source-review-v1/algebra source-review-v1 family; no result writes or PDF generation.",
       "mode": "read_only",
-      "expected": "Canonical finite diagnostics, seven manuscript groups and the non-importing algebra supplement replay; historical bytes and current checkpoint match. No result writes or PDF generation."
+      "path": "verification/scripts/q3lock_manuscript_integrated_replay.py"
+    },
+    {
+      "args": [
+        "--check",
+        "--output",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-independent-replay-source-review-v1/result.json"
+      ],
+      "expected": "EXP-000782 standard-library replay and hostile mutation checks match the current source-review-v1 result; no theorem or PDF certification.",
+      "mode": "read_only",
+      "path": "verification/scripts/q3lock_independent_replay.py"
+    },
+    {
+      "args": [
+        "--check"
+      ],
+      "expected": "All A1-A23 review rows resolve to current manuscript labels and existing provenance records; hostile locator mutations are rejected. No mathematical sign-off or PDF generation.",
+      "mode": "read_only",
+      "path": "verification/scripts/q3lock_review_locator_audit.py"
+    },
+    {
+      "args": [
+        "--check"
+      ],
+      "expected": "The objective-to-artifact coverage audit passes while preserving R-497 as T0, claim_bearing=false, UNFROZEN_CONTENT_REVIEW and PDF DEFERRED; hostile coverage mutations are rejected. No proof-row sign-off or PDF generation.",
+      "mode": "read_only",
+      "path": "verification/scripts/q3lock_completion_gate_audit.py"
+    },
+    {
+      "args": [
+        "--check"
+      ],
+      "expected": "The Q3LOCK/KP model-side envelope, Q3 degree budget and finite-range weight audit recompute 168 exact/derived checks and reject hostile parameter substitutions. No KP reproof, DLR conclusion or PDF generation.",
+      "mode": "read_only",
+      "path": "verification/scripts/q3lock_kp_envelope_audit.py"
     }
   ],
+  "hash_policy": "Fill the final release source/output hash arrays only after content, notation, bibliography and external dispositions are frozen. Dated internal tooling checkpoints may separately record their provenance without declaring final freeze.",
+  "historical_builders": [
+    {
+      "expected": "34 exact model-comparison, source-scaling and structural/provenance checks; integrates all six prior manuscript checkers in memory, preserves their historical runs and checks the frozen authority manifest",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer.",
+      "path": "verification/scripts/q3lock_manuscript_source_audit.py",
+      "record": "EXP-001611"
+    },
+    {
+      "expected": "registered finite determinant and normalization checks pass",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer.",
+      "path": "verification/scripts/q3lock_absolute_partition_audit.py",
+      "record": "EXP-001588"
+    },
+    {
+      "expected": "registered seam, tiling, and source-factor checks pass",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer.",
+      "path": "verification/scripts/q3lock_thermodynamic_pressure_audit.py",
+      "record": "EXP-001589"
+    },
+    {
+      "expected": "70/70 registered finite content assertions",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer.",
+      "path": "verification/scripts/q3lock_dlr_tangent_content_audit.py",
+      "record": "EXP-001591"
+    },
+    {
+      "expected": "504/504 registered finite content assertions",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer.",
+      "path": "verification/scripts/q3lock_fkg_content_audit.py",
+      "record": "EXP-001593"
+    },
+    {
+      "expected": "registered finite graph, source, and shell checks",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer.",
+      "path": "verification/scripts/q3lock_reflection_infrared_content_audit.py",
+      "record": "EXP-001595"
+    },
+    {
+      "expected": "40/40 registered finite content assertions",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer.",
+      "path": "verification/scripts/q3lock_collective_falk_bruch_content_audit.py",
+      "record": "EXP-001598"
+    },
+    {
+      "expected": "42/42 registered finite content assertions",
+      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer.",
+      "path": "verification/scripts/q3lock_strict_cusp_tangent_content_audit.py",
+      "record": "EXP-001598"
+    }
+  ],
+  "manuscript": "publish/papers/q3lock-phase-coexistence/manuscript.tex",
+  "notes": [
+    "EXP-001685 records bounded remaining-block AI rereads and a two-location source-delimiter repair. The source-review-v1 family is not a new mathematical theorem or final freeze. The lexical tests do not compile or visually certify a PDF; all signed reviews remain open.",
+    "EXP-001684 repairs independent replay environment/location dependencies without weakening scientific equality; source-review-v1 is an internal tooling checkpoint. CPython 3.12.9 and 3.12.14 and a relocated dependency copy were tested, not all platforms or the final clean snapshot. Bounded AI rereads do not replace signed review. PDF remains deferred.",
+    "Finite diagnostics are reproduction evidence, not theorem certification.",
+    "No intermediate PDF is allowed; the first PDF is generated only after the final content freeze.",
+    "No submission, upload, tag, or release is authorized by this manifest.",
+    "Integrated source-review-v1, independent source-review-v1, finite-form source-review-v1 and non-importing algebra source-review-v1 are internal content-review checkpoints; EXP-001671, EXP-001672, EXP-001673, EXP-001674, EXP-001675, EXP-001676, EXP-001677, EXP-001678, EXP-001679, EXP-001680, EXP-001681, EXP-001682 and EXP-001683 do not replace external mathematical or literature review.",
+    "The Simon Theorem 1.1 bounded-below hypothesis is distinguished from the source condition (1.4) used by its unbounded-semigroup Theorem 1.2; exact source acceptance remains open.",
+    "The upper-truncation resolvent passage uses harmonic coercivity and fixed-cutoff lower semicontinuity; it makes no uniform quartic-bound claim for the cutoff forms.",
+    "EXP-001645 records FSS Theorem 3.3 as a classical finite-dimensional comparison-only result; it is not imported as a quantum-loop, DLR, cusp, or parity-state theorem.",
+    "EXP-001646 records the exact KP (A)/(B) finite-range crosswalk; only fixed-source Theorem 3.1 is imported and the source-window, scalar-phase, and cusp boundaries remain open.",
+    "EXP-001647 records the historical Schneider--Beck--Stoll access boundary; EXP-001683 captures and audits the full primary PDF and records its radial/n=1,2,infinity/different-conclusion comparison boundary. No direct theorem coverage or priority claim is made.",
+    "EXP-001648 adds the explicit positive-cone closure and compact-plus-cone upper-set lemma for the declared tempered metric; EXP-001649 records a hostile internal audit that found no new local defect while leaving A11/A16 and signed review open.",
+    "The finite-form r15 checkpoint refreshes the finite manuscript hash after the v0.1.19 literature-boundary synchronization; r13, r12, r11, r10, r8 and r7 remain immutable history and neither certifies the closed-form passage nor the infinite-volume theorem.",
+    "EXP-001650 adds bounded primary-source comparison boundaries for Froehlich--Lieb, Lebowitz--Presutti, Datta--Fernandez--Frohlich and Bricmont--Kuroda--Lebowitz; it narrows direct-import shortcuts without making a novelty or priority claim. Signed specialist literature review remains open.",
+    "EXP-001651 records the Faris--Minlos multidimensional ground-state comparison; its small-coupling zero-temperature theorem does not directly supply the finite-temperature Q3LOCK DLR/cusp/parity chain, and its nonzero-temperature remark is not imported.",
+    "EXP-001652 records a primary-source recheck of FSS Section 2 Theorem 2.1: the finite-mesh arbitrary-prior, non-radial, zero-sum edge-source input is conditionally applicable, while all loop, thermodynamic, DLR, cusp and parity conclusions remain outside that import.",
+    "EXP-001654 records the primary Kargol--Kozitsky scalar asymmetric boundary and the KKK rotation-invariant vector boundary; both remain comparison-only, no scalar reduction or novelty claim is made, and specialist literature review remains open.",
+    "EXP-001657 rechecks the KP source-window topology, finite-M Holder order, compact-boundary kernel continuity, and source-to-zero limit order; it finds no new local defect while leaving signed DLR review and PDF deferral open.",
+    "EXP-001661 records an objective-coverage and completion-boundary audit; it passes the artifact checks but deliberately reports INCOMPLETE_EXTERNAL_REVIEW_AND_FREEZE and does not sign A1-A23 or create a PDF.",
+    "EXP-001662 recomputes the Q3LOCK/KP envelope constants, Q3 degree budget and finite-range weight interface in 168 exact/derived checks; it supports the internal A6 map but does not sign KP applicability or create a PDF.",
+    "EXP-001663 rechecks the primary scalar Kargol--Kozitsky asymmetric theorem against the non-radial positive-lambda R^8 model; it is a comparison-only firewall and does not make a novelty or priority claim.",
+    "EXP-001664 rechecks the primary Kargol--Kondratiev--Kozitsky separation between symmetry-free multiplicity, rotation-invariant vector phase arguments and scalar asymmetric arguments; it is a comparison-only firewall and does not make a novelty or priority claim.",
+    "EXP-001665 records the result-level R-497 lineage decision: no duplicate Sector A-F claim card is created, C6 is routing metadata only, and external mathematical/literature review remains open.",
+    "EXP-001666 records the R-497 loop-limit authority correction: the historical total-variation sentence is provenance only; the current manuscript uses weak convergence with compact residual control and truncation/UI.",
+    "EXP-001667 records the exact Kozitsky primary scalar/radial boundary as a comparison-only locator; no non-radial R^8 theorem is imported and no novelty or priority claim is made.",
+    "EXP-001668 records the bounded general-vector-infrastructure versus scalar/radial-phase comparison; it is not an analytic import, absence, novelty or priority result.",
+    "The current content-review replay target is fresh source-review-v1 plus integrated source-review-v1; both are internal, non-claim-bearing checkpoints and do not replace signed mathematics or literature review.",
+    "The current non-importing algebra checkpoint is source-review-v1 after the Schneider--Beck--Stoll source audit; older collective-Jensen and earlier results remain historical.",
+    "EXP-001669 records a separate 93-assertion finite collective/Falk--Bruch load-bearing audit; it finds no new finite defect but does not sign A14-A17 or generate a PDF.",
+    "EXP-001670 records a separate 128-assertion finite DLR source-window interface audit; it finds no new finite defect but does not sign KP applicability, projective compactness, Feller continuity or the source-to-zero DLR passage.",
+    "EXP-001671 records a separate finite/topological FKG selected-limit audit; its 11115 assertions are diagnostic only and A10/A11/A16 remain open.",
+    "EXP-001672 makes the compact-plus-cone metric triangle step explicit and refreshes the content-review replay family; it does not sign A1-A23 or generate a PDF.",
+    "EXP-001673 records the primary Kozitsky--Pasurek split between general-vector DLR infrastructure and the nu=1 attractive-interaction FKG/low-temperature phase route; it is comparison-only, does not make an absence/novelty/priority claim, and does not generate a PDF.",
+    "EXP-001674 records the collective Jensen local-minimum precision repair; it does not sign A14-A17 or generate a PDF.",
+    "EXP-001675 records the beta-scaled DLR boundary-coercivity clarification and bounded A1-A9 reread; it does not sign A1-A9 or generate a PDF.",
+    "EXP-001676 records earlier radial/isotropic vector normal-fluctuation and quantum-stabilization comparators; it is comparison-only and does not make an absence, novelty or priority claim.",
+    "EXP-001677 records the KKK vector rotation-invariance source-role locator; it is comparison-only and does not make an absence, novelty or priority claim.",
+    "The current objective-coverage reader is completion-gate source-review-v1 and the locator reader is source-review-v1; they record artifact coverage only and do not sign mathematics.",
+    "EXP-001678 records bounded Faris--Minlos and Froehlich--Lieb primary-source comparisons plus the historical Schneider--Beck--Stoll access boundary; EXP-001683 later resolves that access item and preserves the comparison-only disposition. No novelty or priority claim is made, and specialist literature review remains open.",
+    "EXP-001679 rechecks the KKK radial/rotation-invariant vector threshold and scalar asymmetric boundary; it is comparison-only, makes no absence, novelty or priority claim, and leaves A20 and specialist literature review open.",
+    "EXP-001680 adds the finite-volume thermal-polynomial form-trace lemma for the collective Jensen block; it is a proof-text repair only and does not sign A14-A17 or replace external review.",
+    "EXP-001681 records a bounded scalar/vector/ground-state literature recheck; it is comparison-only, makes no absence/novelty/priority claim, does not alter the EXP-000780--782 authority chain, and does not generate a PDF.",
+    "EXP-001682 records a provisional 110277-byte capture of Simon arXiv:math-ph/9907022v1 with SHA-256 15ef936d49d5dd06333a0987fcf609c516048db3b330d37cff62c14bf7e063ff; it confirms the Theorem 1.1 source-role boundary, leaves final recapture and signed applicability review open, and does not generate a PDF.",
+    "EXP-001683 records the captured Schneider--Beck--Stoll publisher PDF (516155 bytes; SHA-256 4063397ab5af4502b69f2f030192fbd98b5ecc0ffb115b481dccee2ae2f0793c), its radial/n=1,2,infinity/different-conclusion boundary, and the comparison-only disposition; specialist review and final recapture remain open."
+  ],
+  "output_hashes": [],
+  "paper_id": "q3lock-phase-coexistence",
+  "pdf_status": "DEFERRED",
   "required_before_pdf": [
     "complete remaining internal citation/theorem-hypothesis and content review, including resulting repairs",
     "independent mathematical review",
     "specialist literature and novelty review",
-    "bounded claim/result-lineage decision",
+    "bounded claim/result-lineage decision recorded by EXP-001665; no duplicate TECT claim card is created",
     "final content and notation freeze",
     "fresh source hashes",
     "primary independent integrated clean replay",
     "repository release check",
     "operator commit and backup confirmation"
   ],
+  "schema": "tect/q3lock-paper-package/1.0",
   "source_hashes": [],
-  "output_hashes": [],
-  "notes": [
-    "Finite diagnostics are reproduction evidence, not theorem certification.",
-    "No intermediate PDF is allowed; the first PDF is generated only after the final content freeze.",
-    "No submission, upload, tag, or release is authorized by this manifest."
-  ],
-  "historical_builders": [
-    {
-      "path": "verification/scripts/q3lock_manuscript_source_audit.py",
-      "record": "EXP-001611",
-      "expected": "34 exact model-comparison, source-scaling and structural/provenance checks; integrates all six prior manuscript checkers in memory, preserves their historical runs and checks the frozen authority manifest",
-      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
-    },
-    {
-      "path": "verification/scripts/q3lock_absolute_partition_audit.py",
-      "record": "EXP-001588",
-      "expected": "registered finite determinant and normalization checks pass",
-      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
-    },
-    {
-      "path": "verification/scripts/q3lock_thermodynamic_pressure_audit.py",
-      "record": "EXP-001589",
-      "expected": "registered seam, tiling, and source-factor checks pass",
-      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
-    },
-    {
-      "path": "verification/scripts/q3lock_dlr_tangent_content_audit.py",
-      "record": "EXP-001591",
-      "expected": "70/70 registered finite content assertions",
-      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
-    },
-    {
-      "path": "verification/scripts/q3lock_fkg_content_audit.py",
-      "record": "EXP-001593",
-      "expected": "504/504 registered finite content assertions",
-      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
-    },
-    {
-      "path": "verification/scripts/q3lock_reflection_infrared_content_audit.py",
-      "record": "EXP-001595",
-      "expected": "registered finite graph, source, and shell checks",
-      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
-    },
-    {
-      "path": "verification/scripts/q3lock_collective_falk_bruch_content_audit.py",
-      "record": "EXP-001598",
-      "expected": "40/40 registered finite content assertions",
-      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
-    },
-    {
-      "path": "verification/scripts/q3lock_strict_cusp_tangent_content_audit.py",
-      "record": "EXP-001598",
-      "expected": "42/42 registered finite content assertions",
-      "invocation": "Historical builder only; current replay calls build_payload in memory, never its standalone writer."
-    }
-  ],
-  "tooling_checkpoint": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-paper-readonly-replay-r10/result.json"
+  "status": "UNFROZEN_CONTENT_REVIEW",
+  "tooling_checkpoint": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-paper-integrated-replay-source-review-v1/result.json",
+  "version": "0.1.38"
 }

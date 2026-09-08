@@ -276,7 +276,8 @@ def _sync(path, content, check, label):
             return False
         print(f"RENDER-CHECK: PASS — {label} in sync")
         return True
-    path.write_text(content, encoding="utf-8")
+    with path.open("w", encoding="utf-8", newline="\n") as stream:
+        stream.write(content)
     print(f"RENDERED: {path}")
     return True
 

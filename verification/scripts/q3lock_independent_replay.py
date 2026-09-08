@@ -24,7 +24,7 @@ from pathlib import Path
 from typing import Any
 
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 ROOT = Path(__file__).resolve().parents[2]
 INDEPENDENT_SCRIPT = ROOT / (
     "codes/foundations/"
@@ -41,7 +41,7 @@ EXP_MANIFEST = ROOT / (
 PAPER_MANIFEST = ROOT / "publish/papers/q3lock-phase-coexistence/verification/package-manifest.json"
 DEFAULT_OUTPUT = ROOT / (
     "claims/C6-SPACETIME-SIGNATURE/runs/"
-    "2026-09-07-q3lock-independent-replay/result.json"
+    "2026-09-08-q3lock-independent-replay-source-review-v1/result.json"
 )
 PRIMARY_MODULE_FRAGMENT = "pre_a_cp1_st8_q3lock_positive_lambda_fkg_infrared_cusp_phase_route_split"
 FORBIDDEN_IMPORT_ROOTS = {"numpy", "sympy", "mpmath"}
@@ -174,6 +174,8 @@ def run_independent() -> tuple[dict[str, Any], str]:
 
 
 def build_payload() -> dict[str, Any]:
+    if not __debug__:
+        raise ValueError("assertions must be enabled; do not use python -O")
     audit = Audit()
     historical = json.loads(HISTORICAL_RESULT.read_text(encoding="utf-8"))
     exp_manifest = json.loads(EXP_MANIFEST.read_text(encoding="utf-8"))
@@ -197,7 +199,7 @@ def build_payload() -> dict[str, Any]:
     audit.check("paper scope remains T0", paper_manifest["claim_status"]["tier"] == "T0", paper_manifest["claim_status"]["tier"], "T0")
     audit.check("paper scope remains non-bearing", paper_manifest["claim_status"]["claim_bearing"] is False, paper_manifest["claim_status"]["claim_bearing"], False)
     manuscript = ROOT / paper_manifest["manuscript"]
-    audit.check("current manuscript exists", manuscript.is_file(), manuscript, "file")
+    audit.check("current manuscript exists", manuscript.is_file(), manuscript.relative_to(ROOT).as_posix(), "file")
     audit.check("paper PDF remains deferred", paper_manifest["pdf_status"] == "DEFERRED", paper_manifest["pdf_status"], "DEFERRED")
 
     # Hostile fixtures must be rejected by the same checks used for the live
@@ -259,11 +261,6 @@ def build_payload() -> dict[str, Any]:
             "current_manuscript_sha256": sha256(manuscript),
         },
         "source_separation": source_meta,
-        "producer": {
-            "python": sys.version,
-            "implementation": platform.python_implementation(),
-            "platform": platform.platform(),
-        },
         "verdict": "PASS",
         "boundary": (
             "Current package replay of the frozen EXP-000782 standard-library "
@@ -271,6 +268,19 @@ def build_payload() -> dict[str, Any]:
             "This does not certify unbounded limits, external theorem applicability, "
             "a DLR phase, a cusp, literature novelty, or a paper PDF."
         ),
+    }
+
+
+def producer_environment() -> dict[str, str]:
+    """Record execution provenance outside the deterministic scientific replay.
+
+    No field is filtered from a saved replay during comparison. Historical
+    checkpoints remain strict and require their original source/runtime.
+    """
+    return {
+        "python": sys.version,
+        "implementation": platform.python_implementation(),
+        "platform": platform.platform(),
     }
 
 
@@ -295,7 +305,7 @@ def main(argv: list[str] | None = None) -> int:
                 args.output,
                 {
                     "replay": payload,
-                    "producer_environment": payload["producer"],
+                    "producer_environment": producer_environment(),
                 },
             )
         else:

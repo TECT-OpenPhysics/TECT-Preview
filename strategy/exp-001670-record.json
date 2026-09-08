@@ -1,0 +1,59 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001670",
+  "title": "Q3LOCK DLR source-window interface audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001657",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001669",
+      "relation": "continues"
+    }
+  ],
+  "question": "Do the finite envelope, graph, source-dictionary, Holder, projective-tail, clipping and mixed-derivative interfaces in the Q3LOCK DLR source-window construction agree with the manuscript?",
+  "method": [
+    "Recompute the quadratic and linear Young maxima, Q3 degree budget, spatial row sum and source-window Holder fixed point using exact rational arithmetic.",
+    "Check the cofinal alpha_(k+1)<alpha_k tail direction and the escaping-mass fixture, the full-beta source dictionary, normalizer event positivity and source-Lipschitz maximum.",
+    "Recompute fourth-moment clipping scales and the positive mixed derivative of the Q3 locking polynomial."
+  ],
+  "finding": "All 128 finite assertions pass. No new source-factor, envelope, row-sum, Holder, tail-direction, clipping, or mixed-derivative defect was found in the displayed DLR interface formulas.",
+  "decision_reason": "This is a finite formula and bookkeeping audit only. It does not prove Fernique integrability, KP applicability, projective compactness, Feller continuity, a DLR limit, a source-to-zero tangent, or phase coexistence.",
+  "verdict": "advanced",
+  "boundary": "T0 finite diagnostic only; A6-A9 and A18 remain OPEN, R-497 remains claim_bearing=false and RESEARCH_ONLY, and no theorem, novelty, priority, sector, submission, or PDF status changes.",
+  "evidence_refs": [
+    "strategy/q3lock-dlr-window-audit-260908.md#checks-performed",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-dlr-window-audit/result.json#assertions",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex#sec:dlr-specification"
+  ],
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": [
+      "R-497"
+    ]
+  },
+  "next_action": "Give this finite interface audit and EXP-001657 to the independent reviewer for signed review of KP hypotheses, projective compactness, Feller/source continuity and the source-to-zero DLR passage before content freeze.",
+  "non_claims": [
+    "Finite PASS does not prove the KP theorem or its Q3LOCK applicability.",
+    "No projective compactness, Feller passage, DLR state, cusp, or two-phase conclusion is certified.",
+    "No claim tier, novelty, priority, physical-sector, cosmological, submission, or PDF decision follows."
+  ],
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-09-08",
+  "recorded_at": "2026-09-07T21:43:39Z",
+  "recorded_by": "Codex",
+  "source_hashes": {
+    "strategy/q3lock-dlr-window-audit-260908.md": "719d857d7364957c14b3b67bbd121a9d766f18238fdf55131972db39dcf876a5",
+    "verification/scripts/q3lock_dlr_window_audit.py": "f08ff64c87bef1a10954bec3ff3e42d7fb73f66884b6d1bc22d341aee8948391",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex": "f41b03c60d66772e42463c08098aeb551574079f3a86f53310b1f4c33dd53479"
+  }
+}

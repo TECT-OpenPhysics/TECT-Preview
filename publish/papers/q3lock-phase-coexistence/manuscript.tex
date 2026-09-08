@@ -34,7 +34,7 @@
 
 \title{Phase Coexistence in an Eight-Component Q3-Locked Quantum Anharmonic Crystal}
 \author{Jusang Lee}
-\date{Draft v0.1.7 -- internal content review -- 2026-09-07}
+\date{Draft v0.1.38 -- internal content review -- 2026-09-08}
 
 \begin{document}
 \maketitle
@@ -153,17 +153,135 @@ $L^2(\R^{8V},\dd q)$ is
 The phase application uses $r<0$, but the finite-pressure statements allow
 arbitrary real $r$.
 
-The closed quadratic-form domain is
+Put
 \begin{equation}
- \mathsf Q_L=H^1(\R^{8V})\cap
- L^2\left(\R^{8V},\sum_y|q_y|^4\dd q\right).
+ w(q)=\sum_{y\in\Lambda_L}|q_y|^4,
+ \qquad
+ \mathsf Q_L=H^1(\R^{8V})\cap L^2(\R^{8V},w(q)\dd q).
  \label{eq:form-domain}
 \end{equation}
-The quartic scalar term and the nonnegative $Q_3$ and spatial terms dominate
-all negative quadratic and linear source terms after a constant shift.  The
-form is consequently semibounded and has compact form embedding at fixed
-volume.  These are finite-dimensional facts; they do not constitute a
-continuum or infinite-volume operator theorem.
+The following finite-dimensional lemma records the form and truncation facts
+used below.  It is included to distinguish the closed-form argument from the
+later spatial and thermodynamic limits.
+
+\begin{lemma}[Finite-volume form and residual truncation]
+\label{lem:finite-form-truncation}
+For $|h|\leq h_0$ the potential in \eqref{eq:potential} obeys
+\begin{align}
+ U_{L,h}(q)&\geq \frac{g}{128}w(q)-VC_{\rm phys},
+ \label{eq:physical-form-lower}\\
+ |U_{L,h}(q)|&\leq C_{\rm abs}+K_{\rm abs}w(q),
+ \label{eq:physical-form-upper}
+\end{align}
+where one may take
+\begin{align}
+ C_{\rm phys}&=\frac{4r^2}{g}
+   +\frac34h_0^{4/3}(32/g)^{1/3},\nonumber\\
+ C_{\rm abs}&=V\left(|r|/2+h_0+6c\right),\qquad
+ K_{\rm abs}=g/4+3\lambda+|r|/8+h_0/4+3c/2,\nonumber\\
+ C_{\rm res}(a)&=\frac{4(r-a)^2}{g}
+   +\frac34h_0^{4/3}(32/g)^{1/3}.
+ \label{eq:form-envelope-constants}
+\end{align}
+Consequently the form of $H_L(h)$ with domain $\mathsf Q_L$ is closed,
+semibounded, and has compact embedding into $L^2(\R^{8V})$.  If $a>0$, write
+$\mathsf Q_a=H^1(\R^{8V})\cap L^2(\R^{8V},|q|^2\dd q)$ for the harmonic
+form domain.  For $R=R_{a,h}$ and $R_M=\min(R,M)$ with
+$M\geq-VC_{\rm res}(a)$, the forms
+\[
+ \mathfrak q_M[\psi]=\mathfrak q_a[\psi]
+       +\int R_M|\psi|^2\dd q
+\]
+are closed on the harmonic form domain, increase to the physical form on
+$\mathsf Q_L$, and their resolvents converge strongly to the operator
+associated with $H_L(h)$.  The last statement is a finite-volume variational
+limit; it does not assert a spatial or continuum form limit.
+\end{lemma}
+
+\begin{proof}
+For a single site, Cauchy--Schwarz gives
+$\sum_e q_{y,e}^4\geq |q_y|^4/8$.  The locking and spatial difference terms
+are nonnegative.  With $t=|q_y|$, the two scalar maximisations
+\[
+ bt^2-\frac{g}{64}t^4\leq\frac{16b^2}{g},\qquad
+ h_0t-\frac{g}{128}t^4
+ \leq\frac34h_0^{4/3}(32/g)^{1/3}
+\]
+hold for every $b,t\geq0$.  Taking $b=|r|/2$ gives
+\eqref{eq:physical-form-lower}; taking $b=|r-a|/2$ gives the residual bound
+used in \eqref{eq:residual-lower}.
+
+For the upper envelope use
+$(x-y)^2(x^2+y^2)\leq4(x^4+y^4)$,
+$t^2\leq1+t^4/4$, and $t\leq1+t^4/4$.  Every Q3 vertex has degree three,
+and every periodic spatial site has six endpoint incidences.  Hence the
+locking term contributes at most $3\lambda w$, the spatial term contributes
+at most $6cV+(3c/2)w$, and the quadratic and source terms give the remaining
+parts of \eqref{eq:form-envelope-constants}.  This proves
+\eqref{eq:physical-form-upper}.
+
+Choose $C_0$ so that $U_{L,h}+C_0\geq1+(g/256)w$.  The form norm of
+$\mathfrak q_h+C_0\norm{\cdot}_2^2$ is then equivalent, by the two displayed
+envelopes, to
+\[
+ \norm{\nabla\psi}_2^2+\norm{\psi}_2^2+
+ \norm{w^{1/2}\psi}_2^2.
+\]
+The intersection defining $\mathsf Q_L$ is therefore complete.  For a form-
+bounded sequence, Rellich compactness on a ball gives an $L^2$-convergent
+subsequence there, while
+\[
+ \int_{|q|>R}|\psi(q)|^2\dd q
+ \leq VR^{-4}\int w(q)|\psi(q)|^2\dd q
+\]
+controls the tail uniformly.  Thus the embedding $\mathsf Q_L\hookrightarrow
+L^2$ is compact.
+
+The residual lower bound gives $H_L(h)\geq H_a-VC_{\rm res}(a)$ as a form inequality,
+with $C_{\rm res}(a)$ from \eqref{eq:residual-lower}.  For
+$M\geq-VC_{\rm res}(a)$, all forms have the harmonic form domain, $R_M$ is
+continuous and bounded, and $R_M\uparrow R$.  Monotone convergence of the
+positive part of $R_M$ and the common lower bound show
+$\mathfrak q_M[\psi]\uparrow\mathfrak q_h[\psi]$
+for $\psi\in\mathsf Q_L$.  To see the associated resolvent limit directly, fix $\alpha>VC_{\rm res}(a)$ and let $u_M$ minimize
+\[
+ \mathfrak q_M[u]+\alpha\norm{u}_2^2-2\Re\ip{f}{u}.
+\]
+The inequality $\mathfrak q_M\geq\mathfrak q_a-VC_{\rm res}(a)\norm{\cdot}_2^2$ and the
+minimizing inequality give a uniform bound in the harmonic form norm
+\[
+ \mathfrak q_a[u_M]+(\alpha-VC_{\rm res}(a))\norm{u_M}_2^2.
+\]
+This is deliberately only a harmonic-form bound: the upper truncation does not
+provide a uniform quartic bound.  The harmonic form embedding is compact in
+finite dimension, so every subsequence has a further subsequence converging
+weakly in $\mathsf Q_a$ and strongly in $L^2$ to some $u$.  For each fixed
+$k\geq-VC_{\rm res}(a)$ and all $M\geq k$, monotonicity gives
+$\mathfrak q_k[u_M]\leq\mathfrak q_M[u_M]$.  Since $\mathfrak q_k$ is closed and
+boundedly equivalent to the harmonic form norm, weak lower semicontinuity gives
+\[
+ \mathfrak q_k[u]+\alpha\norm{u}_2^2\leq
+ \liminf_{M\rightarrow\infty}\bigl(\mathfrak q_k[u_M]+\alpha\norm{u_M}_2^2\bigr).
+\]
+The uniform bound and monotone convergence in $k$ imply
+$\mathfrak q_h[u]<\infty$, so $u\in\mathsf Q_L$.  For
+$F_M(v)=\mathfrak q_M[v]+\alpha\norm{v}_2^2-2\Re\ip{f}{v}$ and any $v\in\mathsf Q_L$,
+minimality gives $F_M(u_M)\leq F_M(v)$.  Taking the limsup on the right gives
+$F_h(v)$.  On the other hand, for every fixed $k$ the lower bound
+$F_M(u_M)\geq\mathfrak q_k[u_M]+\alpha\norm{u_M}_2^2-2\Re\ip{f}{u_M}$ and the preceding lower-semicontinuity estimate give, after $k\rightarrow\infty$,
+$F_h(u)\leq\liminf_MF_M(u_M)$.  Hence $u$ minimizes $F_h$ on $\mathsf Q_L$.
+The minimizer is unique, and compactness of the harmonic embedding then upgrades
+subsequential convergence to strong $L^2$ convergence of the full resolvent
+sequence.  This proves the stated resolvent convergence without assuming an
+operator-monotonicity property of the exponential or a false uniform quartic
+bound for the upper-truncated forms.
+\end{proof}
+
+The lemma supplies only finite-volume operator control.  In particular, its
+compact embedding is not the tempered spatial compactness used in the DLR
+construction, and the resolvent argument does not by itself identify the
+unbounded Feynman--Kac kernel; that identification is carried out next by the
+bounded truncations and Simon's cited bridge theorem.
 
 \begin{remark}[Source and units]
 The parameter $h$ is an energy coefficient in $H_L(h)=H_L(0)-h\sum_yQ_y$.
@@ -413,7 +531,7 @@ continuous and bounded below at every fixed $L,h$, by the retained quartic
 bound. In the original coordinates the free bridge has covariance
 $m^{-1}(\min(s,t)-st/\beta)$, and its kernel prefactor is
 $(m/(2\pi\beta))^{D/2}$. No mass-one convention is silently imposed.
-The stronger unbounded-semigroup Theorem 1.2 of that source is not used.
+The stronger unbounded-semigroup Theorem 1.2 of that source is not used. Its weaker growth condition (1.4) is therefore not being substituted for the bounded-below hypothesis in this finite-volume application.
 
 The harmonic-reference version follows from this free-bridge input by defining
 \begin{equation}
@@ -916,7 +1034,20 @@ $J_0/2$ to the quadratic norm of each interior loop.  Consequently
  \qquad |h|\leq h_0,\ \xi\in K,
  \label{eq:boundary-coercivity}
 \end{align}
-using $(J_0/2)s^2-(A/2)s^4\leq J_0^2/(8A)$.
+where the time-volume factor is tracked as follows.  Put
+$S_y=\norm{\omega_y}_{L^2}^2$.  Cauchy--Schwarz gives
+$S_y^2\leq\beta\int_0^\beta|\omega_y(\tau)|^4\dd\tau$.  Hence
+\[
+ \frac A2\int_0^\beta|\omega_y|^4\dd\tau
+ \, + \, \frac{\beta J_0^2}{8A}
+ \geq \frac{A}{2\beta}S_y^2
+ \, + \, \frac{\beta J_0^2}{8A}
+ \geq \frac{J_0}{2}S_y,
+\]
+which, after summing over $y$, gives the displayed
+$C_{\Delta,K}=\beta n(C_0+J_0^2/(8A))+B_K$.  This explicit
+normalization is the only place where the imaginary-time length enters this
+coercivity estimate.
 
 For a noncircular lower bound on $Z_\Delta$, set
 $R_F^2=\log(2F_\sigma)/\ell_\sigma$.  Gaussian Markov gives
@@ -1115,9 +1246,38 @@ weak convergence \eqref{eq:weighted-loop-limit} to the three bounded
 continuous functions $F,G,FG$.  Their limiting covariance is nonnegative;
 $FG$ need not be increasing for this weak-convergence step.
 
-Here is the measurable extension used below. In a Polish topological vector
-space with a closed positive cone and a compatible translation-invariant
-metric $d$, let $C$ be a closed upper set. If $x\leq x'$, then
+Here is the measurable extension used below. We first verify the topological
+hypotheses for the actual tempered space rather than leave them implicit.
+\begin{lemma}[Positive cone in the tempered topology]
+\label{lem:positive-cone-topology}
+With the metric $d_t$ of \eqref{eq:tempered-metric}, the cone
+$\Omega_{t,+}=\{\omega\in\Omega_t:\omega_y(\tau)\geq0\;\text{for all }y,\tau\}$ is closed and $d_t$ is translation invariant. If
+$K\subset\Omega_t$ is compact, then $K+\Omega_{t,+}$ is closed and is an
+upper set.
+\end{lemma}
+\begin{proof}
+If $\omega^{(n)}\to\omega$ in $d_t$, each local sup-norm term in
+\eqref{eq:tempered-metric} tends to zero, so
+$\omega^{(n)}_y\to\omega_y$ uniformly for every fixed site $y$.
+Nonnegativity is therefore preserved in the limit, proving that
+$\Omega_{t,+}$ is closed. Every summand in $d_t$ depends only on a
+difference, so $d_t(\omega+a,\eta+a)=d_t(\omega,\eta)$.
+For closedness of $K+\Omega_{t,+}$, take
+$k_n+e_n\to x$ with $k_n\in K$ and $e_n\in\Omega_{t,+}$. After passing to
+a subsequence, $k_n\to k\in K$. Translation invariance and the triangle
+inequality give
+\[
+d_t(e_n,x-k)\leq d_t(k_n+e_n,x)+d_t(k_n+x-k,x)\longrightarrow0,
+\]
+so $e_n\to x-k$. The cone is closed, hence $x-k\in\Omega_{t,+}$ and
+$x=k+(x-k)\in K+\Omega_{t,+}$. Finally, adding any
+$v\in\Omega_{t,+}$ replaces $e$ by $e+v$, so the sum is upper.
+\end{proof}
+
+With $E_+=\Omega_{t,+}$, the following measurable extension applies in a
+Polish topological vector space with a closed positive cone and a compatible
+translation-invariant metric $d$. Let $C$ be a closed upper set.
+If $x\leq x'$, then
 $z+(x'-x)\in C$ for $z\in C$ and
 $d(x',z+(x'-x))=d(x,z)$. Thus $d(x,C)$ is nonincreasing in $x$.
 The bounded continuous increasing functions
@@ -1292,6 +1452,9 @@ source $B\mathfrak h$, the theorem is
 \end{equation}
 This is a finite-dimensional input, not an imported loop theorem.  Its
 constant has no dependence on spin dimension or prior moment constants.
+The primary-source recheck recorded in EXP-001652 confirms this exact
+fixed-mesh scope and leaves the mesh-to-loop, thermodynamic, DLR, cusp,
+and parity-state passages as Q3LOCK-local obligations.
 
 At a fixed time mesh $\eps=\beta/N$, set
 $s_y=(\sqrt\eps x_{y,k})_{k=0}^{N-1}\in\R^{8N}$.  The actual
@@ -1502,23 +1665,51 @@ that input before any cusp or distinct-state conclusion is drawn.
 In this section $L,\beta$ are fixed and the source is zero.  Write
 $H=H_L(0)=-(2m)^{-1}\Delta+U$, with closed form $h$, and let
 $(E_i,\psi_i)$ be an orthonormal eigenbasis.  Such a basis exists because
-the finite heat trace makes the heat operator compact.  Choose a constant
-$C$ so that $U+C\geq0$ and $h_C=h+C$ controls the kinetic form and
-$\sum_y|q_y|^4$.  The form domain in \eqref{eq:form-domain} is therefore
-unchanged by this shift.  For $s\geq0$,
+the finite heat trace makes the heat operator compact.  Choose a constant $C=C_0$ large enough that, for some $\kappa>0$,
+$U+C\geq1+\kappa\sum_y|q_y|^4$ as a form multiplier; the earlier envelope
+allows $\kappa=g/256$.  Write $h_C=h+C$.  The form domain in
+\eqref{eq:form-domain} is unchanged by this shift.  For $s\geq0$,
 \begin{equation}
  s e^{-\beta s}\leq\frac{2}{e\beta}e^{-\beta s/2},\qquad
  \rho_L(H+C)<\infty,\qquad
  \rho_L\left(\sum_y|q_y|^4\right)<\infty.
  \label{eq:collective-thermal-energy}
 \end{equation}
-The last two statements follow from the heat trace at $\beta/2$ and
-coercivity, respectively.  In particular, all multiplication polynomials
-of degree at most four are absolutely integrable.  Smooth compactly
-supported functions are a form core: radial cutoffs converge in $H^1$ and
-the quartic weighted norm, with their gradient terms supported in escaping
-annuli; mollification then converges on each compact support, where the
-potential is bounded.
+The last two statements follow from the heat trace at $\beta/2$ and the
+form inequality $\kappa\sum_y|q_y|^4\leq H+C$, respectively.
+
+For later use we make the unbounded-integrability statement precise.
+\begin{lemma}[Thermal polynomial integrability]
+\label{lem:collective-polynomial-integrability}
+At fixed $L,\beta$, if $P(q)$ is a multiplication polynomial of degree at most
+four, then the positive form trace
+\begin{equation}
+ {\mathsf T}_{\beta}(P):=\sum_i e^{-\beta E_i}
+       \int_{\mathbb R^{8V}}|P(q)|\,|\psi_i(q)|^2\,\dd q
+ \label{eq:collective-polynomial-trace}
+\end{equation}
+ is finite.  In particular $\rho_L(|P|)<\infty$ and
+ $\sum_i p_i|\langle\psi_i,P\psi_i\rangle|<\infty$.
+\end{lemma}
+\begin{proof}
+In finite dimension, $|P(q)|\leq K_{P,L}(1+w(q))$ for a constant depending
+only on the displayed polynomial and the fixed volume.  The form inequality
+above gives
+\[
+ \int w|\psi_i|^2\dd q\leq\kappa^{-1}(E_i+C)
+\]
+for every normalized eigenvector.  Since $E_i+C\geq1$ and
+$\sum_i e^{-\beta E_i}(E_i+C)<\infty$ by the first inequality in
+\eqref{eq:collective-thermal-energy} and the heat trace at $\beta/2$,
+summing the bound proves \eqref{eq:collective-polynomial-trace}.  The final
+statement follows from $|\langle\psi_i,P\psi_i\rangle|\leq\langle\psi_i,|P|\psi_i\rangle$.  This is a positive form trace defined by the
+spectral sum, not a cyclic trace involving an unbounded product.
+\end{proof}
+
+Smooth compactly supported functions are a form core: radial cutoffs converge
+in $H^1$ and the quartic weighted norm, with their gradient terms supported in
+escaping annuli; mollification then converges on each compact support, where
+the potential is bounded.
 
 Let $v_{y,e}=u_e/\sqrt V$, so that $|v|=1$, and set
 $H(t)=-(2m)^{-1}\Delta+U(q+tv)$ and $\Delta_t=U(q+tv)-U(q)$.
@@ -1546,10 +1737,14 @@ $\sum_i p_i|d_i|<\infty$ follows from the polynomial bound.  Consequently
 \begin{equation}
  \rho_L\big(U(q+tv)-U(q)\big)\geq0. \label{eq:jensen-shift}
 \end{equation}
-The finite polynomial $t\mapsto\rho_L(\Delta_t)$ has a minimum at zero.
-Its second derivative is nonnegative.  This differentiates finitely many
-integrable coefficients, not the heat trace under an unbounded cubic
-perturbation, and uses no operator monotonicity of the exponential.
+The finite polynomial $t\mapsto\rho_L(\Delta_t)$ has a minimum at zero,
+so its second derivative at the minimum satisfies
+\(\left.\partial_t^2\rho_L(\Delta_t)\right|_{t=0}\geq0\).
+No assertion that the second derivative is nonnegative for every $t$ is
+needed (and the negative quadratic coefficient $r<0$ would not justify such
+an assertion).  This differentiates finitely many integrable coefficients,
+not the heat trace under an unbounded cubic perturbation, and uses no operator
+monotonicity of the exponential.
 Spatial differences and internal differences are unchanged by the common
 displacement.  The mass term contributes $r$, the scalar quartic contributes
 $3g\sum_y S_y/(8V)$, and each locking edge contributes
@@ -2052,13 +2247,31 @@ Kozitsky--Pasurek, arXiv:math-ph/0609045v1 & General-vector DLR existence/compac
 Froehlich--Simon--Spencer (1976) & Finite-dimensional Poisson-shift infrared inequality & Applied at fixed time mesh after an explicit $8N$-component source map; loop passage is separate\\
 Fortuin--Kasteleyn--Ginibre (1971) & Finite partially ordered association mechanism & Continuous-loop association is proved by mesh induction and weak-limit passage\\
 Kargol--Kondratiev--Kozitsky, arXiv:0710.2303v1 & Endpoint Griffiths and Falk--Bruch comparators & The endpoint specialization and finite spectral inequality are proved here; no radial theorem is imported\\
+Kozitsky, LMP 51 (2000); CMP 5 (2002)~\cite{Koz-vector,Koz-CMP} & Vector/isotropic quantum-stabilization and normal-fluctuation comparators & Their radial/isotropic bounds do not supply the non-radial Q3LOCK cusp or DLR pair; no result is imported\\
+Schneider--Beck--Stoll~\cite{Schneider-Beck-Stoll} & Radial n-component structural-transition comparison; Eq. (11) is stated for $n=1,2,\infty$ & Comparison-only; the radial model, explicit n-range, and displacive/large-n conclusion do not cover non-radial finite-n=8 Q3LOCK\\
 EXP-001587/588/589 & Corrected residual, finite pressure, and open/periodic pressure limit & Internal model-specific inputs, still awaiting signed audit\\
 EXP-001591/593/595/1598 & DLR tangent, FKG, infrared, and collective lower-bound blocks & Conditional composition; finite diagnostics are not proof certification\\
+Faris--Minlos~\cite{Faris-Minlos} & Multidimensional anharmonic oscillators and a small-coupling ground-state cluster expansion & Zero-temperature ground-state comparison only; no finite-temperature DLR, source cusp, or parity-state result is imported\\
+Froehlich--Lieb~\cite{Frohlich-Lieb} & Anisotropic finite-spin classical/quantum phase-transition methods in two dimensions & Comparison-only; no direct unbounded continuous-loop, three-dimensional DLR, or Q3LOCK cusp theorem is imported\\
 \bottomrule
 \end{tabular}
 \caption{Proof dependency and source boundary.}
 \label{tab:crosswalk}
 \end{table}
+
+The bounded primary supplement~\cite{Faris-Minlos,Frohlich-Lieb} is included to
+make the non-subsumption boundary explicit. Faris--Minlos is a small-coupling
+zero-temperature multidimensional-oscillator comparison, whereas
+Froehlich--Lieb concerns finitely degenerate anisotropic spin systems on a
+two-dimensional lattice. Neither source supplies the finite-temperature
+unbounded-loop/DLR/source-cusp/parity composition proved conditionally here.
+The comparison is not a novelty or priority claim; specialist literature
+review remains open. Schneider--Beck--Stoll~\cite{Schneider-Beck-Stoll} is
+checked directly as a radial n-component structural-transition source. Its
+quantum inequality is stated only for $n=1,2,\infty$, and its conclusions concern
+zero-point suppression and large-n critical behaviour rather than the present
+finite-temperature non-radial n=8 DLR/cusp package. It is therefore a
+comparison-only boundary, not an imported theorem.
 
 FSS Theorem 2.1 already permits nonradial priors: lack of internal rotation
 symmetry is not a new infrared theorem. Likewise the functional form of our
@@ -2104,15 +2317,21 @@ possible comparison theorems or reductions. Setting $\lambda=0$ instead
 gives eight decoupled scalar crystals and changes the model; restricting
 every $q_y$ to the line spanned by $u$ also changes the finite-volume law.
 
-The scalar asymmetric-potential result \cite[Theorem 1.4]{KK-asym}
-allows a transition at a nonzero source. KKK Theorems 3.22 and 3.25 are
-also scalar results. They cannot supply the present vector conclusion by
-citation alone. The candidate contribution is consequently the exact
-positive-$\lambda$ collective lower bound and its explicit loop/DLR
-composition, not the standard inequalities or threshold shape. Failure of
-these particular imports does not establish novelty or publication value;
-a broader comparison theorem and specialist assessment remain to be checked.
-
+The scalar asymmetric-potential result \cite[Theorem 1.4]{KK-asym} is an
+established one-component comparator: it permits a polarization discontinuity
+at some, possibly nonzero, source for a scalar crystal in $d\geq3$ when mass
+and interaction are sufficiently large. The 2008 KKK vector theorem instead
+assumes rotation-invariant onsite structure, while its asymmetric results are
+scalar. Neither source supplies the present non-radial $R^8$ Q3LOCK block, the
+positive-$\lambda$ collective lower bound, the zero-source strict cusp, or the
+parity-related tempered DLR pair with the bounded witness. Setting
+$\lambda=0$ or restricting every vector to the collective line changes the
+finite-volume law and is not a reduction. The candidate contribution is
+consequently the exact positive-$\lambda$ collective lower bound and its
+explicit loop/DLR composition, not the standard inequalities or threshold
+shape. This comparison narrows a direct-import shortcut but does not establish
+novelty or publication value; a broader anisotropic theorem and specialist
+assessment remain to be checked.
 \section{Reproducibility and adversarial boundary}
 \label{sec:repro}
 
@@ -2212,6 +2431,41 @@ A.~Kargol and Y.~Kozitsky,
 A phase transition in a quantum crystal with asymmetric potentials,
 arXiv:math-ph/0611017 (2006),
 \url{https://web.ma.utexas.edu/mp_arc/c/06/06-321.pdf}.
+
+\bibitem{Koz-vector}
+Y.~Kozitsky,
+\emph{Quantum Effects in a Lattice Model of Anharmonic Vector Oscillators},
+\emph{Letters in Mathematical Physics} \textbf{51} (2000), 71--81,
+doi:10.1023/A:1007675606191,
+\url{https://doi.org/10.1023/A:1007675606191}.
+
+\bibitem{Koz-CMP}
+Y.~Kozitsky,
+\emph{Quantum Effects in an Anharmonic Crystal},
+\emph{Condensed Matter Physics} \textbf{5} (2002), 601--616,
+doi:10.5488/CMP.5.4.601,
+\url{https://icmp.lviv.ua/journal/zbirnyk.32/001/art01.pdf}.
+
+\bibitem{Faris-Minlos}
+W.~G.~Faris and R.~A.~Minlos,
+\emph{A quantum crystal with multidimensional anharmonic oscillators},
+\emph{Journal of Statistical Physics} \textbf{94} (1999), 365--387,
+doi:10.1023/A:1004588002407,
+\url{https://math.arizona.edu/~faris/Crystal.pdf}.
+
+\bibitem{Frohlich-Lieb}
+J.~Fr\"ohlich and E.~H.~Lieb,
+\emph{Phase transitions in anisotropic lattice spin systems},
+\emph{Communications in Mathematical Physics} \textbf{60} (1978), 233--267,
+doi:10.1007/BF01612891,
+\url{https://repo-archives.ihes.fr/FONDS_IHES/I_Prepublications/FROHLICH/1978-1980/P_78_199/P_78_199_web.pdf}.
+
+\bibitem{Schneider-Beck-Stoll}
+T.~Schneider, H.~Beck, and E.~Stoll,
+\emph{Quantum effects in an n-component vector model for structural phase transitions},
+\emph{Physical Review B} \textbf{13} (1976), 1123--1130,
+doi:10.1103/PhysRevB.13.1123,
+\url{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.13.1123}.
 
 \end{thebibliography}
 

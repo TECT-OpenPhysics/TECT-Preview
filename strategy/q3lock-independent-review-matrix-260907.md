@@ -3,7 +3,7 @@
 **Status:** T0 review handoff instrument; not a mathematical acceptance  
 **Date:** 2026-09-07  
 **Research authority:** EXP-000780 -> EXP-000781 -> EXP-000782 / R-497  
-**Package:** `publish/papers/q3lock-phase-coexistence` v0.1.7  
+**Package:** `publish/papers/q3lock-phase-coexistence` v0.1.15
 **PDF:** deferred until every content and external-review gate is closed
 
 ## 1. Purpose and disposition rule
@@ -58,7 +58,7 @@ cusp, or phase coexistence.
 | A9 | Does the finite specification pass to a source-zero DLR limit on a determining class? | `manuscript.tex#eq:dlr-normalizer-lower`, `manuscript.tex#eq:kernel-source-lipschitz`, `manuscript.tex#sec:dlr-source-tangents`; Feller audit | Check compact-boundary coercivity, normalizer lower bound, Feller topology, Borel extension, and source-limit order. |
 | A10 | Is the log-density mixed Hessian nonnegative with the correct sign for temporal, spatial, and Q3 locking bonds? | `manuscript.tex#eq:log-supermodular`; FKG mixed-derivative audit | Recompute the Q3 identity and verify finite-grid supermodularity without radiality. |
 | A11 | Does association pass from finite grids to continuous loops, bounded Borel tests, selected spatial limits, and clipped products? | `manuscript.tex#sec:fkg-loop-passage`, `manuscript.tex#eq:fkg-product-clipping`; FKG content audits | Check order-preserving wrap interpolation, closed-cone approximation, uniform integrability, and the explicit mixture nonclaim. |
-| A12 | Do Hilbert-valued reflection positivity and the finite-dimensional FSS theorem use exactly the stated finite-mesh prior and edge source? | `manuscript.tex#eq:hilbert-kernel-positive`, `manuscript.tex#eq:spatial-reflection-positive`, `manuscript.tex#eq:fss-poisson-energy`; FSS source audit | Check finite-rank Gaussian kernel passage, spatial-only scope, `J=c`, source pairing, and no mesh-uniform prior constant. |
+| A12 | Do Hilbert-valued reflection positivity and the finite-dimensional FSS theorem use exactly the stated finite-mesh prior and edge source? | `manuscript.tex#eq:hilbert-kernel-positive`, `manuscript.tex#eq:spatial-reflection-positive`, `manuscript.tex#eq:fss-poisson-energy`; FSS source audit, EXP-001652 | Check finite-rank Gaussian kernel passage, spatial-only scope, `J=c`, source pairing, and no mesh-uniform prior constant. |
 | A13 | Does the FSS-to-loop UI passage yield the correctly normalized nonzero-mode Duhamel bound and convergent three-dimensional sum while excluding the zero mode? | `manuscript.tex#eq:fss-source-ui`, `manuscript.tex#eq:duhamel-poisson`, `manuscript.tex#eq:infrared-bound`, `manuscript.tex#eq:infrared-subtraction`; FSS/infrared audit | Check truncation/UI, β factors, eigenvalue `2E(p)`, shell tails, and the missing zero-mode lower-bound boundary. |
 | A14 | Is scalar Jensen valid on the translated form domain and does it give the collective Hessian expectation without differentiating an unbounded trace? | `manuscript.tex#eq:collective-jensen-chain`, `manuscript.tex#eq:collective-hessian`; EXP-001628 | Check translated form-domain invariance, polynomial integrability, spectral Jensen, and the global minimum argument. |
 | A15 | Are the collective form identity, absolute energy-weighted sums, finite spectral cutoffs, and ordered coordinate cutoffs valid? | `manuscript.tex#eq:form-identity`, `manuscript.tex#eq:collective-absolute-energy-sums`, `manuscript.tex#eq:collective-spectral-cutoff`; EXP-001628 | Check common form core, row/column interchange, nonnegative regrouping, and fixed-R then R-limit order. |

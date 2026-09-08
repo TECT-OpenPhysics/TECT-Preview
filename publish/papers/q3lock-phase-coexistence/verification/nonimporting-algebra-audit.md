@@ -1,6 +1,6 @@
 # Non-importing exact algebra audit for the Q3LOCK draft
 
-Date: 2026-09-07. Manuscript v0.1.7. R-497, T0, claim_bearing=false,
+Date: 2026-09-08. Manuscript v0.1.16. R-497, T0, claim_bearing=false,
 INTERNAL_REVIEW_ONLY. Sole research authority: EXP-000780 -> EXP-000781 ->
 EXP-000782, with the registered R-497 content corrections. PDF DEFERRED.
 
@@ -145,7 +145,7 @@ Run from the registered paper worktree:
 
 The default is also read-only. The result is
 
-    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-nonimporting-algebra/result.json
+    claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-nonimporting-algebra-collective-jensen-v030/result.json
 
 An author creates it once using --write-new. Publication uses an atomic
 no-replace hard link; no overwrite fallback exists. Current replay must
@@ -155,12 +155,14 @@ different interpreter replays the exact same coefficients. The current
 interpreter is printed separately. This comparison rule is explicit, not
 an unexplained environment-hash relaxation.
 
-The saved R2 manuscript hash and every frozen R-497 authority hash are checked
-before the computation. The original manuscript, package manifest, R2 replay
-and all historical results remain unchanged. This supplement does not update
-their stored hashes or call their standalone writers. Its source-base commit
-identifies the clean checkpoint preceding this new, separately hash-recorded
-audit, not a claim that the new source already existed in that commit.
+The current package scope and PDF boundary are checked before the computation,
+together with every frozen R-497 authority hash. The current manuscript, note, frozen authority manifest and
+audit script are recorded in the new source-hash set. The package scope and
+PDF boundary are checked separately, and the test suite is run separately. The original R2 manuscript replay and the 2026-09-07 algebra result remain
+byte-preserved historical records; this current refresh does not overwrite them
+or call their standalone writers. Its source-base commit identifies the last
+committed paper-lane checkpoint used for the refresh, not a claim that the
+current uncommitted source already existed in that commit.
 
 A future integrated paper package must deliberately include this supplement,
 complete the remaining independent coverage, and freeze new hashes after
@@ -168,3 +170,20 @@ content review. Existing current-reader instructions retain their bounded
 R2 meaning. No intermediate PDF, final freeze or external submission is made.
 External review of the polynomial representation and conditional certificate
 is invited using the commands above.
+
+## Current source checkpoint
+
+The current content-review refresh is stored as the immutable collective-jensen-v030 result above; older v029, v028, v027, v026, v025, v024, r14, r4 and earlier files remain historical.
+
+The 2026-09-08 refresh removes the stale dependency on the historical R2
+manuscript hash. The standalone checker now accepts only the declared current
+package scope and records the current manuscript and audit-note hashes in a new
+no-overwrite result while checking the current package scope. This repairs provenance freshness; it does not enlarge the
+algebraic scope or turn the finite identities into an analytic theorem.
+
+The prior results at `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-nonimporting-algebra-current-v016-r4/result.json`,
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-nonimporting-algebra-current-v016-r3/result.json`,
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-nonimporting-algebra-current-v016-r2/result.json`,
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-nonimporting-algebra-current-v016/result.json`
+and `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-q3lock-nonimporting-algebra/result.json`
+remain historical checkpoints and are not rewritten.
