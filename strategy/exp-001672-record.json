@@ -1,0 +1,58 @@
+{
+  "boundary": "T0 proof-text clarification only; A10, A11, and A16 remain OPEN; R-497 remains claim_bearing=false and RESEARCH_ONLY; no theorem promotion, novelty or priority claim, sector status change, submission, or PDF.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "decision_reason": "The compact-plus-positive-cone closedness proof had the correct conclusion but compressed the metric convergence step. Displaying the translation-invariant triangle inequality improves auditability without changing a hypothesis, conclusion, limit order, or claim tier.",
+  "finding": "The explicit triangle estimate proves that e_n converges to x-k after a compact subsequence k_n converges to k; the cone is then closed and the compact-plus-cone sum is closed. This is a proof-text clarification only.",
+  "evidence_refs": [
+    "strategy/q3lock-fkg-cone-translation-triangle-repair-260908.md#Finding",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex#lem:positive-cone-topology",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-manuscript-fresh-audit-fkg-cone-explicit-v059/result.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-paper-integrated-replay-fkg-cone-explicit-v053/result.json#status",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-completion-gate-audit-fkg-cone-explicit-v051/result.json#status"
+  ],
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": [
+      "R-497"
+    ]
+  },
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "id": "EXP-001672",
+  "method": [
+    "Inspect the compact-plus-cone lemma and identify the compressed convergence implication.",
+    "Replace the phrase-only implication by the explicit translation-invariant triangle inequality.",
+    "Run the fresh seven-audit checkpoint and issue new non-overwriting finite-form, independent, algebra, integrated and completion replay checkpoints.",
+    "Verify that the package remains T0, claim-non-bearing and PDF-deferred."
+  ],
+  "next_action": "Give the clarified FKG topology step and its refreshed replay hashes to the independent mathematics reviewer; obtain signed dispositions for A10, A11 and A16 and the remaining A1-A23 rows before content/hash freeze and any PDF generation.",
+  "non_claims": [
+    "This does not prove path-space FKG or selected-limit association.",
+    "A10, A11 and A16 remain OPEN; no proof-audit row is signed.",
+    "No strict cusp, DLR multiplicity, KMS, gap, continuum, physical-sector, cosmological, novelty, priority or submission conclusion follows.",
+    "No paper PDF was generated."
+  ],
+  "provenance": "contemporaneous",
+  "question": "Does the compact-plus-positive-cone closedness step explicitly follow from translation invariance and the triangle inequality in the declared weighted metric?",
+  "recorded_at": "2026-09-07T22:25:17Z",
+  "recorded_by": "Codex",
+  "related": [
+    {
+      "id": "EXP-001671",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001648",
+      "relation": "corrects"
+    }
+  ],
+  "reviewed_on": "2026-09-08",
+  "schema": "tect/proof-exploration/1.0",
+  "task_id": "T-054",
+  "title": "Q3LOCK FKG cone-closure translation triangle repair",
+  "verdict": "advanced"
+}

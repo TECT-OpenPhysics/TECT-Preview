@@ -1,0 +1,27 @@
+{
+  "schema": "tect/q3lock-review-pdf-visual-check/1.0",
+  "review_date": "2026-09-08",
+  "reviewer": "Codex AI visual inspection; not external mathematical review",
+  "compiled_source_sha256": "3d7966ec718a7f2cedc861da640e9ff781ae022cb355441894aeebd05e7e1129",
+  "compiler": "Tectonic 0.17.0, untrusted mode, PDF output; two-pass references stabilized",
+  "compiler_flags": ["-X", "compile", "--untrusted", "--keep-logs", "--keep-intermediates"],
+  "renderer": "Poppler pdftoppm, PNG, 110 dpi",
+  "documents": {
+    "manuscript.pdf": {
+      "sha256": "0cfc4b0c9fbefd5923b566ec7b0aeaa70fced8bb85f0a782a6650d7b390ec43f",
+      "reviewed_pages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+      "disposition": "PASS",
+      "observations": "Inspected every rendered page in two-page spreads: title/status, formulas, equation numbers, proof flow, table columns, citations, bibliography and page numbers. No visible clipping, overlap, missing glyph or unresolved reference. All overfull boxes were removed by a presentation-only margin adjustment. Table and bibliography underfull spacing warnings remain but the content is legible and contained. This is not a new proof audit."
+    },
+    "reviewer-guide.pdf": {
+      "sha256": "d1713ebf3cf97e2b8e8d62527e80252af6054693c32ba5686423c80b4fd48c14",
+      "reviewed_pages": [1,2,3,4,5,6,7,8],
+      "disposition": "PASS",
+      "observations": "Inspected all eight pages after repairing the orphaned Efficient reading route heading. The A1-A23 cards are complete, remain OPEN and have readable labels. Final metadata-stabilized output has identical rendered-page PNG hashes to the visually reviewed edition."
+    }
+  },
+  "bounded_automated_checks": "All pages nonblank; no off-MediaBox glyphs or unresolved double-question-mark references; rendered-page count matches PDF page count. Visual review is separate from these checks.",
+  "environment_notes": "The default sandbox helper could not start; approved host execution was used. The LaTeX wrapper encountered Windows encoding and missing Perl issues, and installed MiKTeX lacked mathtools. Bundled Tectonic succeeded. Poppler emitted generic font-map warnings; all actual rendered pages were inspected. No runtime installation or source-PDF redistribution was performed.",
+  "scientific_acceptance": "OPEN",
+  "submission_authorization": false
+}

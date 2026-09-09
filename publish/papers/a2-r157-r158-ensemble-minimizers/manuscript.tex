@@ -34,7 +34,7 @@
        Ensemble-Induced Shell Coexistence in a Regularized
        Multicomponent Brazovskii Functional}
 \author{Jusang Lee}
-\date{Draft v0.1.40 -- 2026-09-04}
+\date{Draft v0.1.41 -- 2026-09-09}
 
 \begin{document}
 \maketitle
@@ -114,7 +114,17 @@ $\Psi:\T^3_{16}\to\C^3$.  We regard $\C^3$ as $\R^6$ and use the real pairing
  \ip{U}{V}_{\R}=\operatorname{Re}\int_{\T^3_{16}}U^\dagger V\,\dd x.
  \label{eq:real-pairing}
 \end{equation}
-For a periodic Fourier series, set
+Throughout, $\dd x$ is ordinary Lebesgue measure, not volume-normalized
+measure.  Put $V=16^3$ and use the orthonormal Fourier convention
+\begin{equation}
+ e_n(x)=V^{-1/2}e^{ik_n\cdot x},\qquad
+ \widehat U(n)=\int_{\T^3_{16}}\overline{e_n(x)}U(x)\,\dd x,
+ \qquad U=\sum_n\widehat U(n)e_n.
+ \label{eq:fourier-normalization}
+\end{equation}
+Thus Parseval has no missing factor of $V$.  In particular, a plane wave
+of pointwise squared amplitude $\rho$ has squared $L^2$ norm $V\rho$.
+For this periodic Fourier series, set
 \begin{equation}
  \|U\|_{H^2_\Delta}^2:=
  \sum_{n\in\mathbb Z^3}(1+|k_n|^4)|\widehat U(n)|_{\mathbb C^3}^2
@@ -557,10 +567,22 @@ $w\in L^2(0,T;D(L))\cap H^1(0,T;L^2)$,
  \label{eq:hilbert-scale-chain}
 \end{equation}
 Indeed, the identity is the ordinary finite-dimensional chain rule for
-$P_Mw$; $LP_Mw\to Lw$ and $P_M\partial_tw\to\partial_tw$ in
-$L^2(0,T;L^2)$, and the resulting absolutely continuous midpoint norm,
-together with weak midpoint continuity, gives strong continuity in
-$D(L^{1/2})$.  Applying this to $w=u$ and using
+$P_Mw$.  To justify passage uniformly in time, choose a time $t_0$ at which
+$w(t_0)\in D(L^{1/2})$ and apply the same identity to
+$z=(P_M-P_K)w$.  Cauchy--Schwarz gives
+\begin{equation}
+ \sup_{0\le t\le T}\|L^{1/2}z(t)\|_2^2
+ \le \|L^{1/2}z(t_0)\|_2^2
+      +2\|Lz\|_{L^2(0,T;L^2)}\|\partial_tz\|_{L^2(0,T;L^2)}.
+ \label{eq:midpoint-uniform-tail}
+\end{equation}
+Both tails on the right vanish as $K,M\to\infty$.  The projected curves
+therefore converge in $C([0,T];D(L^{1/2}))$, and their limit agrees with
+$w$ almost everywhere.  Also $LP_Mw\to Lw$ and
+$P_M\partial_tw\to\partial_tw$ in $L^2(0,T;L^2)$, which passes the
+integrated identity to the limit.  This supplies strong, and hence weak
+midpoint continuity without assuming the norm continuity being proved.
+Applying this to $w=u$ and using
 $D(L^{1/2})=H^2$ supplies the claimed $C([0,T];H^2)$ representative, preserves
 $u(0)=u_0$, and proves the quadratic chain rule including $s=0$.
 
@@ -785,13 +807,13 @@ spatial embeddings.  Taking $m=2,4,6,\ldots$ proves
 $u(t)\in H^{2+2q}$ for every $q$ and every $t>0$.  To make the time
 regularity explicit, set
 \begin{equation}
- \mathcal F(u):=Lu+N(u).
+ \mathcal G(u):=Lu+N(u).
  \label{eq:temporal-bootstrap-map}
 \end{equation}
 For every even integer $r\ge0$, the multiplier and periodic Moser estimates imply
 \begin{equation}
  \begin{aligned}
-  &\mathcal F:H^{r+4}\longrightarrow H^r
+  &\mathcal G:H^{r+4}\longrightarrow H^r
        \quad\text{is $C^\infty$ on bounded sets},\\
   &\|D^jN(u)[h_1,\ldots,h_j]\|_{H^r}
        \le C_{r,j,R}\prod_{\ell=1}^j\|h_\ell\|_{H^{r+2}},
@@ -803,10 +825,10 @@ For every even integer $r\ge0$, the multiplier and periodic Moser estimates impl
 The fourth-order part is linear, and the displayed bound follows by
  differentiating the smooth regularized coefficient maps and applying the
  periodic product estimates.  Thus the equation gives
- $u_t=-\mathcal F(u)\in C^\theta([a+\eta,b];H^r)$ whenever the spatial ladder
+ $u_t=-\mathcal G(u)\in C^\theta([a+\eta,b];H^r)$ whenever the spatial ladder
  has reached $H^{r+4}$.  Its continuous representative is the time
  derivative, so $u\in C^1([a+\eta,b];H^r)$.  Inductively, differentiating
- $u_t=-\mathcal F(u)$ in this Banach scale and using the same estimate at each
+ $u_t=-\mathcal G(u)$ in this Banach scale and using the same estimate at each
  stage gives $u\in C^k([a+\eta,b];H^r)$ after taking the spatial ladder through
  $H^{r+4(k+1)}$; each time derivative consumes at most four spatial
  derivatives.  Since even $r$, $k$, and the compact interval are arbitrary, all
@@ -937,10 +959,10 @@ The quadratic operator has the form
 \end{equation}
 The characteristic polynomial of $M$ is
 \begin{equation}
- p(t)=t^3-\frac25t^2+\frac{223}{5000}t-\frac3{3125}.
+ \chi(t)=t^3-\frac25t^2+\frac{223}{5000}t-\frac3{3125}.
  \label{eq:charpoly}
 \end{equation}
-An exact Sturm computation isolates its smallest root $m_*$ by
+An exact root-isolation computation isolates its smallest root $m_*$ by
 \begin{equation}
  \frac{2811617233511}{10^{14}}<m_*<
  \frac{2811617233512}{10^{14}}.
@@ -968,6 +990,9 @@ $n=(\pm1,\pm1,\pm1)$.  Thus
 \end{equation}
 This is a finite-torus commensurability statement.  It is not a BCC theorem
 and it does not remove the shell degeneracy in an infinite-volume limit.
+Appendix~\ref{sec:exact-spectral-certificate} supplies finite rational
+certificates for the root, $\pi$, and the displayed spectral interval, so
+these steps can be checked without trusting a floating-point eigensolver.
 
 \subsection{Nonnegative decomposition and saturation}
 
@@ -1068,7 +1093,19 @@ while coexistence is $\mu_t=\lambda_0-3\lambda^2/(16\gamma)$.  With the
 pinned coefficients this is exactly \eqref{eq:first-order-ordering}.  At
 $\mu=\mu_t$, the saturated plane-wave minimizer has charge $Q_*$, while
 zero is also a minimizer and remains a strict local minimum because
-$\mu_t<\mu_{\rm lin}$.  For $\mu>\mu_t$, the larger-amplitude plane-wave
+$\mu_t<\mu_{\rm lin}$.  Here strict local minimality is in the $H^2$
+topology: since $0<\mu_t<\lambda_0$ and $L\ge\lambda_0\Id$,
+\begin{equation}
+ L-\mu_t\Id\ge (1-\mu_t/\lambda_0)L,
+ \qquad
+ \cO_{\mu_t}(\Psi)\ge
+ \frac{1-\mu_t/\lambda_0}{10}\|\Psi\|_{H^2_\Delta}^2
+       -C\|\Psi\|_{H^2_\Delta}^4.
+ \label{eq:strict-local-zero}
+\end{equation}
+The sextic and Class-II terms are nonnegative, and the quartic estimate
+uses $H^2\hookrightarrow L^4$.  The positive quadratic term dominates
+for every sufficiently small nonzero $H^2$ field.  For $\mu>\mu_t$, the larger-amplitude plane-wave
 stationary root has $\rho>\rho_*$, but the direct-method argument above does
 not prove that this branch is the unique global minimizer or identify the
 charge of every global minimizer.  Thus the theorem establishes finite-volume
@@ -1269,7 +1306,72 @@ the ensemble mechanism is mathematically real, while its physical provenance
 and interpretation remain open.  The manuscript is therefore a candidate
 independent mathematical paper, currently at draft status pending the specialist novelty review, analytic proof
 audit, operator confirmation, and capstone bundle specified in the accompanying
-files; the repository release check is a separate passing consistency gate.
+files; the repository release check is a separate consistency gate.
+
+\appendix
+\section{A directly checkable spectral certificate}
+\label{sec:exact-spectral-certificate}
+
+Write $\chi(t)=t^3-2t^2/5+223t/5000-3/3125$ for the internal
+characteristic polynomial, distinguished from the scalar symbol $p(x)$.
+The first bracket has endpoints
+\[
+ a_*=\frac{2811617233511}{10^{14}},\qquad
+ b_*=\frac{2811617233512}{10^{14}}.
+\]
+Direct integer arithmetic gives the sign table
+\begin{equation}
+\begin{array}{c|rrrrrr}
+t&a_*&b_*&3/20&9/50&19/100&11/50\\ \hline
+\operatorname{sgn}\chi(t)&-&+&+&-&-&+
+\end{array}
+\label{eq:root-sign-certificate}
+\end{equation}
+The three disjoint intervals $(a_*,b_*)$, $(3/20,9/50)$ and
+$(19/100,11/50)$ therefore each contain a root by the intermediate value
+theorem.  A cubic has at most three distinct roots, so these are all its
+roots and the first interval contains the simple smallest eigenvalue.
+This also explains why a sign change in the first interval alone would
+not have sufficed to identify the spectral bottom.
+
+For a fully rational $\pi$ enclosure define, for $0<x<1$,
+\begin{equation}
+ S_N(x)=\sum_{j=0}^{N-1}\frac{(-1)^jx^{2j+1}}{2j+1},\qquad
+ R_N(x)=\frac{x^{2N+1}}{2N+1}.
+ \label{eq:arctan-certificate}
+\end{equation}
+The alternating-series bounds and Machin's identity yield
+\begin{align}
+ \pi_-&=16S_{20}(1/5)-4S_7(1/239)<\pi,\\
+ \pi_+&=16\{S_{20}(1/5)+R_{20}(1/5)\}
+       -4\{S_7(1/239)-R_7(1/239)\}>\pi.
+ \label{eq:machin-certificate}
+\end{align}
+For completeness, if $a=\arctan(1/5)$ and $b=\arctan(1/239)$, the
+double-angle formula gives $\tan(2a)=5/12$ and $\tan(4a)=120/119$.
+The subtraction formula then gives $\tan(4a-b)=1$.
+Since $0<4a-b<4/5<\pi/2$, the angle is $\pi/4$; this proves the
+Machin identity with its branch fixed.
+
+Set $\alpha_\pm=\pi_\pm^2/64$ and $x_c=-Z/(2Y)$.
+Rational substitution gives
+\begin{equation}
+ \frac52<\frac{x_c}{\alpha_+}<\frac{x_c}{\alpha_-}<\frac72,
+ \qquad 3\alpha_->x_c.
+ \label{eq:shell-rational-certificate}
+\end{equation}
+The last inequality makes $p$ increasing throughout
+$[3\alpha_-,3\alpha_+]$, not just at a numerical midpoint.  Consequently
+\begin{equation}
+ p(3\alpha_-)+a_*<\lambda_0<p(3\alpha_+)+b_*.
+ \label{eq:lambda-rational-certificate}
+\end{equation}
+Exact comparison of these fractions with the outward decimal endpoints
+in \eqref{eq:lambda0} proves that printed enclosure.  The supplemental
+\texttt{rereview\_audit.py} recomputes these inequalities from the pinned
+parameter manifest and checks deliberately wrong shell, root, volume and
+charge-normalization alternatives.  These finite checks supplement, but
+do not replace, the analytic proof or an independent referee's judgment.
 
 {\footnotesize
 \setlength{\emergencystretch}{2em}

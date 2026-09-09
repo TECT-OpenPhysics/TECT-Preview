@@ -1,0 +1,58 @@
+{
+  "boundary": "T0 provenance and source-applicability audit only; no theorem promotion, novelty or priority claim, signed review, submission, or PDF.",
+  "capture": {
+    "bytes": 110277,
+    "cache_path": "ignored local source-capture cache (path intentionally outside the public package)",
+    "sha256": "15ef936d49d5dd06333a0987fcf609c516048db3b330d37cff62c14bf7e063ff",
+    "version": "math-ph/9907022v1"
+  },
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "decision_reason": "This closes the current internal source-capture subtask without changing theorem tier or importing an unbounded-semigroup result. The capture remains provisional until content freeze and an external mathematician verifies the exact version, model map, and form/semigroup interfaces.",
+  "evidence_refs": [
+    "strategy/q3lock-simon-source-capture-260908.md#Captured-source",
+    "publish/papers/q3lock-phase-coexistence/literature-crosswalk.md#Imported-tools-and-comparison-citations",
+    "publish/papers/q3lock-phase-coexistence/theorem-applicability-audit.md#Hypothesis-matrix"
+  ],
+  "finding": "The primary PDF was captured at 110277 bytes with SHA-256 15ef936d49d5dd06333a0987fcf609c516048db3b330d37cff62c14bf7e063ff. The printed Theorem 1.1 bounded-below hypothesis is distinct from condition (1.4) and Theorem 1.2; the current manuscript assigns only Theorem 1.1 to the finite-volume bridge role.",
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": [
+      "R-497"
+    ]
+  },
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "id": "EXP-001682",
+  "method": [
+    "Read the version-pinned arXiv PDF at the primary URL and checked Theorem 1.1, equations (1.1)--(1.4), and Theorem 1.2.",
+    "Captured the same PDF with Python urllib into the ignored source-capture cache and recomputed its SHA-256 and byte length.",
+    "Compared the source hypotheses with the manuscript finite-dimensional bounded-below Feynman--Kac crosswalk and retained the unbounded-semigroup route as non-imported."
+  ],
+  "next_action": "Include the captured locator and hash in the external mathematics/literature handoff; recapture and verify it again at final content/hash freeze before any PDF generation.",
+  "provenance": "contemporaneous",
+  "question": "Can the version-pinned Simon primary source be captured as exact bytes and does its printed theorem role match the Q3LOCK finite-volume use?",
+  "recorded_at": "2026-09-08T04:21:36Z",
+  "recorded_by": "Codex",
+  "related": [
+    {
+      "id": "EXP-001642",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001681",
+      "relation": "continues"
+    }
+  ],
+  "reviewed_on": "2026-09-08",
+  "schema": "tect/proof-exploration/1.0",
+  "source_urls": [
+    "https://arxiv.org/pdf/math-ph/9907022v1"
+  ],
+  "task_id": "T-054",
+  "title": "Q3LOCK Simon primary source byte capture and theorem-role confirmation",
+  "verdict": "advanced"
+}

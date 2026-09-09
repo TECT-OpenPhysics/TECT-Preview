@@ -1,0 +1,102 @@
+{
+  "fatal_error": "",
+  "git_required": false,
+  "input_manifest_sha256": "11e875ed36f523d94f3195ec4425cc6d39966851b8406f43a90791098a0faeac",
+  "lean_cache": "E:\\Dev\\TECT\\verification\\lean\\.lake",
+  "non_claims": [
+    "Finite replay only; not external mathematical or novelty review.",
+    "Runtime dependencies and resolved Lean cache are external inputs."
+  ],
+  "passed": 14,
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "results": [
+    {
+      "command": "python -X utf8 codes/foundations/a2_full_production_verify.py",
+      "output_tail": "PASS: a2_full_production_wellposedness_checks (20/20)\nPASS: a2_full_production_nonlinear_mapping_audit (14/14)\nPASS: a2_full_production_energy_continuation_audit (12/12)\nPASS: a2_full_production_smoothing_audit (15/15)\nASSERTS: 61/61\nA2-FULL-PRODUCTION-VERIFY-PASS\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer.py",
+      "output_tail": "A2-PINNED-FUNCTIONAL-UNIQUE-ZERO-GLOBAL-MINIMIZER: 26/26 PASS; g=719818750025582338837/5400000000000000000000 (0.133299768523)\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_independent.py",
+      "output_tail": "A2-PINNED-FUNCTIONAL-UNIQUE-ZERO-GLOBAL-MINIMIZER independent: 24/24 PASS; g=719818750025582338837/5400000000000000000000\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+      "output_tail": "A2-PINNED-FUNCTIONAL-UNIQUE-ZERO-GLOBAL-MINIMIZER integrated: 144/144 PASS (50 child + 94 integrator-only); legacy A2 61/61 PASS\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition.py",
+      "output_tail": "A2-CHARGE-ENSEMBLE-FIRST-ORDER-SHELL-TRANSITION: 35/35 PASS; mu_t in (0.266715709382, 0.266715709382)\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_independent.py",
+      "output_tail": "A2-CHARGE-ENSEMBLE-FIRST-ORDER-SHELL-TRANSITION-INDEPENDENT: 24/24 PASS; Q_star=11008/27\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
+      "output_tail": "A2-CHARGE-ENSEMBLE-FIRST-ORDER-SHELL-TRANSITION integrated: 155/155 PASS (59 child + 96 integrator-only); R-157/A2 regression PASS\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 verification/scripts/a2_r472_lean_crosscheck_verify.py --output tmp/r472-integrated.json",
+      "output_tail": "R-472 INTEGRATED PASS 22/22; Lean=PASS; methods unchanged\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/exact_coercivity_audit.py",
+      "output_tail": "PAPER-EXACT-COERCIVITY-AUDIT-PASS: 13/13\nartifact: E:\\Dev\\TECT\\internal\\paper-submission-work\\a2-v0142-s1\\replay\\source\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\exact-coercivity.json\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/classii_sign_audit.py",
+      "output_tail": "PAPER-CLASSII-SIGN-AUDIT-PASS: 8/8\nartifact: E:\\Dev\\TECT\\internal\\paper-submission-work\\a2-v0142-s1\\replay\\source\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\classii-sign.json\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/ensemble_identity_audit.py",
+      "output_tail": "PAPER-ENSEMBLE-IDENTITY-AUDIT-PASS: 24/24\nartifact: E:\\Dev\\TECT\\internal\\paper-submission-work\\a2-v0142-s1\\replay\\source\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\ensemble-identity.json\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/analytic_dependency_audit.py",
+      "output_tail": "PAPER-ANALYTIC-DEPENDENCY-AUDIT-PASS: 50/50\nartifact: E:\\Dev\\TECT\\internal\\paper-submission-work\\a2-v0142-s1\\replay\\source\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\analytic-dependency.json\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py --self-test",
+      "output_tail": "PAPER-REVIEW-PACKET-AUDIT-PASS: 22/22\nartifact: E:\\Dev\\TECT\\internal\\paper-submission-work\\a2-v0142-s1\\replay\\source\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\review-packet.json\n\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py --self-test",
+      "output_tail": "PAPER-REPRODUCTION-MANIFEST-PASS\nartifact: E:\\Dev\\TECT\\internal\\paper-submission-work\\a2-v0142-s1\\replay\\source\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\reproduction-manifest.json\n\n",
+      "passed": true,
+      "returncode": 0
+    }
+  ],
+  "schema": "tect/archived-paper-replay/1.0",
+  "tectonic": "E:\\Dev\\TECT.venv\\Scripts\\tectonic.exe",
+  "total": 14,
+  "verdict": "PASS"
+}

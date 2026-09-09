@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,enumitem,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlist{itemsep=3pt,topsep=3pt,parsep=0pt}
+\title{Submission Notes\\\large A2 / R-157 / R-158}
+\author{Prepared for Jusang Lee}
+\date{Package v0.1.42 -- 9 September 2026}
+\begin{document}
+\maketitle
+\begin{center}
+\fbox{\parbox{0.9\linewidth}{\textbf{Review status: external review not performed.}
+The submission materials are prepared at the author's request without waiting
+for external review. Preparation is not scientific acceptance, a priority
+certificate, or an actual journal submission.}}
+\end{center}
+
+\section*{1. What is being submitted}
+\textit{Global Well-Posedness, Neutral-State Rejection, and Ensemble-Induced
+Shell Coexistence in a Regularized Multicomponent Brazovskii Functional.}
+
+The paper concerns one explicitly printed regularized classical functional on
+the fixed side-16 three-torus, with three complex (six real) field components.
+The positive density floor, coefficients, pairing, Laplacian convention and
+function spaces are part of the theorem, not optional implementation choices.
+
+The proposed contribution is the conjunction of:
+\begin{enumerate}[leftmargin=*]
+\item Global well-posedness for all $H^2$ data, energy dissipation and
+positive-time smoothness of the displayed gradient flow.
+\item Exact neutral coercivity and radial rejection, unique zero critical
+point/global minimizer, and exponential decay.
+\item A separately imposed charge/chemical-potential ensemble with explicit
+finite-shell saturation and zero/nonzero coexistence.
+\end{enumerate}
+Version 0.1.42 retains the v0.1.41 mathematical body and changes only
+publication-status/disclosure prose and submission materials.
+
+\section*{2. What the paper does not claim}
+No physical vacuum, BCC selection, derived physical charge, real-time quantum
+dynamics, quantum or infinite-volume limit, cosmology or Sector-A closure is
+claimed. The registered conditional tiers and the unresolved canonical-source
+transfer issue are unchanged. R-472 is non-bearing assurance only. The paper
+does not claim the standard analytic methods are individually new.
+
+\newpage
+\section*{3. Review and computational assistance}
+No external mathematical or signed specialist novelty review has been obtained.
+The blank proof and novelty forms are invitations to criticism and contain no
+reviewer outcome. Their hashes identify the reviewed object, not an endorsement.
+
+AI-assisted tools supported research discussion, drafting and internal criticism
+of proof text, verification-code development and document preparation. They
+are neither authors nor independent reviewers. The named author remains
+responsible for mathematical correctness, references and the final submission.
+The literature crosswalk is bounded internal work, not exhaustive novelty
+certification. A counterexample or subsuming result requires reassessment.
+
+\section*{4. File routing and reproducibility}
+\begin{description}[style=nextline,leftmargin=0pt]
+\item[Main manuscript] \texttt{manuscript.pdf} and \texttt{manuscript.tex}.
+The bibliography is included in the source.
+\item[Editor material] \texttt{cover-letter.md} and these submission notes.
+\item[Scientific supplement] The proof audit, theorem-applicability audit,
+literature crosswalk, internal re-review and canonical-transfer explanation.
+\item[Verification] The verification README, scripts, exact inputs, run JSON
+and reproduction manifest. Finite checks support auditability; they do not
+establish the analytic proof by execution.
+\item[Transport identity] The package builder records every archived file and
+its SHA-256. A fresh extraction must reproduce the declared checks. The
+source snapshot is distinct from Python, Lean and TeX runtime dependencies.
+\end{description}
+
+Install only the dependencies declared by the reproduction protocol. The
+historical full suite requires its pinned SymPy, Lean/Mathlib and Tectonic
+inputs; a resolved external cache is an environment input and must be
+reported. No private cache is presented as included source. Current receipts
+identify which checks were actually executed and which PDF was inspected.
+
+\section*{5. Before the author presses Submit}
+\begin{enumerate}[leftmargin=*]
+\item Select a journal and check its current format, source, supplementary
+material, code/data and AI-use requirements.
+\item Confirm the author identity and contact, affiliation, funding,
+competing interests, contributions, prior dissemination and any exclusivity
+attestation. No answer to these personal questions is fabricated here.
+\item Approve the final manuscript and cover letter. Freeze the actual
+integrated commit and separately authorize the required submission tag.
+\item Upload the approved files and retain the real submission receipt.
+Only then record the lifecycle as submitted. Acceptance/publication requires
+its own real event.
+\end{enumerate}
+These author and venue actions are not a requirement to find an external
+pre-submission reviewer. No claim-level operator-confirmed capstone grade,
+journal acceptance or submission authorization is inferred from package QA.
+\end{document}

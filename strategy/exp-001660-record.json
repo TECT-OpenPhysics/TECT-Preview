@@ -1,0 +1,43 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001660",
+  "title": "Q3LOCK A1-A23 review-locator provenance audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "related": [
+    {"id": "EXP-001634", "relation": "continues"},
+    {"id": "EXP-001659", "relation": "continues"}
+  ],
+  "question": "Do all A1-A23 rows in the independent-review matrix point to actual current manuscript labels and existing strategy/exploration sources, rather than merely containing a manuscript.tex locator string?",
+  "method": [
+    "Parse every A1-A23 matrix row and resolve manuscript.tex locators against actual label declarations in manuscript.tex.",
+    "Check every strategy path and EXP identifier, the authority chain and the PDF-deferral statement, and the current package scope.",
+    "Reject hostile missing-row, duplicate-row and missing-label mutations.",
+    "Publish a no-overwrite result with source hashes and run the dedicated unit tests."
+  ],
+  "finding": "All 23 matrix rows pass locator validation. The audit resolves 57 manuscript locators, one strategy-file reference and seven exploration identifiers; all three hostile mutations are rejected. The payload hashes the matrix, manuscript, package, exploration ledger, checker and test.",
+  "decision_reason": "This is an external-review handoff provenance improvement. It closes a locator-integrity question only; it does not assess the mathematics or replace a signed reviewer disposition for any A1-A23 row.",
+  "verdict": "advanced",
+  "boundary": "T0 review-packet provenance only; claim_bearing=false; no theorem promotion, result-tier change, phase conclusion, sector closure, or PDF status change.",
+  "evidence_refs": [
+    "strategy/q3lock-review-locator-audit-260908.md#Finding",
+    "verification/scripts/q3lock_review_locator_audit.py#build_payload",
+    "verification/tests/test_q3lock_review_locator_audit.py#ReviewLocatorAuditTests",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-review-locator-audit-v016-r2/result.json#coverage",
+    "strategy/q3lock-independent-review-matrix-260907.md#3-complete-load-bearing-matrix",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex#eq:bounded-phase-witness"
+  ],
+  "formal_refs": {"events": [], "negatives": [], "results": ["R-497"]},
+  "next_action": "Give the locator report to the independent mathematics reviewer with the row-by-row proof matrix; obtain signed A1-A23 and theorem/literature dispositions while keeping the PDF gate closed.",
+  "non_claims": [
+    "No proof row is signed or closed by this locator audit.",
+    "No theorem applicability, form closure, thermodynamic limit, DLR pair, cusp, novelty or priority conclusion follows.",
+    "No TECT sector, C6, CP1, Pre-A or Sector-A closure changes.",
+    "No paper PDF was generated."
+  ],
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-09-08",
+  "recorded_at": "2026-09-07T17:22:53Z",
+  "recorded_by": "Codex"
+}

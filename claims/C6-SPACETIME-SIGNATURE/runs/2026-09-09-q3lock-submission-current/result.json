@@ -1,0 +1,137 @@
+{
+  "archive_members": 349,
+  "archive_sha256": "0eec7d2e09f4ae6bf96f11a969fa5cbdaf2da4f56fb9467c42f45b778425a3ac",
+  "boundary": "Package integrity, finite/provenance replay and layout receipts only; no analytic, novelty, external-review, journal or sector acceptance. No transmission.",
+  "claim_bearing": false,
+  "current_repository_replay": {
+    "additional_replays": {
+      "algebra": "EXACT_SAVED_PAYLOAD_MATCH",
+      "finite_form": "EXACT_SAVED_PAYLOAD_MATCH",
+      "independent": "EXACT_SAVED_PAYLOAD_MATCH",
+      "matrix": "EXACT_SAVED_PAYLOAD_MATCH"
+    },
+    "canonical_groups": [
+      {
+        "assertions_passed": 120,
+        "script": "verification/scripts/q3lock_absolute_partition_audit.py"
+      },
+      {
+        "assertions_passed": 55,
+        "script": "verification/scripts/q3lock_thermodynamic_pressure_audit.py"
+      },
+      {
+        "assertions_passed": 70,
+        "script": "verification/scripts/q3lock_dlr_tangent_content_audit.py"
+      },
+      {
+        "assertions_passed": 504,
+        "script": "verification/scripts/q3lock_fkg_content_audit.py"
+      },
+      {
+        "assertions_passed": 90,
+        "script": "verification/scripts/q3lock_reflection_infrared_content_audit.py"
+      },
+      {
+        "assertions_passed": 40,
+        "script": "verification/scripts/q3lock_collective_falk_bruch_content_audit.py"
+      },
+      {
+        "assertions_passed": 42,
+        "script": "verification/scripts/q3lock_strict_cusp_tangent_content_audit.py"
+      }
+    ],
+    "checkpoint": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-q3lock-submission-locator-audit/result.json",
+    "historical_default_boundary": "The old source-review-v1 default is a snapshot check. Its complete payload differs only through the recursive inventory's two new Markdown locator files; use this new dated current replay or the unchanged archived replay.",
+    "historical_records_preserved": 90,
+    "historical_sources_unchanged": true,
+    "manuscript_groups": [
+      {
+        "assertions_passed": 34,
+        "label": "source"
+      },
+      {
+        "assertions_passed": 203,
+        "label": "loop"
+      },
+      {
+        "assertions_passed": 81,
+        "label": "dlr"
+      },
+      {
+        "assertions_passed": 612,
+        "label": "infrared"
+      },
+      {
+        "assertions_passed": 150,
+        "label": "collective"
+      },
+      {
+        "assertions_passed": 59,
+        "label": "composition"
+      },
+      {
+        "assertions_passed": 32,
+        "label": "content"
+      }
+    ],
+    "source_inventory_additions": [
+      "publish/papers/q3lock-phase-coexistence/submission-v0138-s1/README.md",
+      "publish/papers/q3lock-phase-coexistence/submission-v0138-s1/internal-review.md"
+    ],
+    "status": "PASS"
+  },
+  "extracted_integrated_replay": {
+    "command": "python -X utf8 verification/scripts/q3lock_manuscript_integrated_replay.py --check",
+    "returncode": 0,
+    "status": "PASS",
+    "stdout": "Q3LOCK INTEGRATED REPLAY: PASS; manuscript groups 7 ; canonical groups 7 ; independent child 306 / 306 ; historical records 90\nresearch-snapshot\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-09-08-q3lock-paper-integrated-replay-source-review-v1\\result.json"
+  },
+  "extracted_integrity": "PASS 348 file hashes; external review NOT PERFORMED",
+  "hostile_verifier_checks": {
+    "changed_bytes": {
+      "message": "FAIL changed member: changed.txt",
+      "rejected": true
+    },
+    "false_external_signature": {
+      "message": "FAIL: declared scientific/review scope changed",
+      "rejected": true
+    },
+    "missing_member": {
+      "message": "FAIL missing/unsafe member: missing.txt",
+      "rejected": true
+    },
+    "path_escape": {
+      "message": "FAIL unsafe member: ../escape",
+      "rejected": true
+    }
+  },
+  "optimized_python_rejected": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "result_id": "R-497",
+  "schema": "tect/q3lock-submission-package-audit/1.0",
+  "scientific_body_comparison": {
+    "bibliography_sha256": "fa2df1e5579a358e507af5627c513da8225359200ac3cf0888fb391e58948fa3",
+    "bibliography_unchanged": true,
+    "comparison": "Exact Unicode equality after newline normalization; no field filtering",
+    "scientific_body_sha256": "35b2016ee38299e957eab2908946b797b8cb50d264297540af0d2e710d1ee0a6",
+    "scientific_body_unchanged": true
+  },
+  "scope": {
+    "actual_submission": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "claim_bearing": false,
+    "external_review_required_for_packaging": false,
+    "literature_review": "NOT_PERFORMED",
+    "mathematics_review": "NOT_PERFORMED",
+    "result_id": "R-497",
+    "tier": "T0"
+  },
+  "source_hashes": {
+    "publish/submission-packages/q3lock/submission-v0138-s1/MANIFEST.json": "cca7522bc565018573c2c915b96984a309f461bbe73555935baed1d73499a029",
+    "publish/submission-packages/q3lock/submission-v0138-s1/build-report.json": "c189f68d130912669129352b57fb67eefad359343d5bf44ae6933a9aba35300a",
+    "publish/submission-packages/q3lock/submission-v0138-s1/render-review.json": "94465f4f4f15d8cc87c25fe5698d1e678d99adbd42cc844815720d42383fc4e5",
+    "verification/scripts/build_q3lock_submission.py": "cbc8296387d89ef5a74d88145494288e59a41692b9aa29c8c05e8bd8babbb8da",
+    "verification/scripts/q3lock_submission_package_audit.py": "0a1553ed237866e724e078e629c115eeffc824d46ded4575aa414ac025271aac"
+  },
+  "status": "PASS",
+  "verified_file_hashes": 348
+}

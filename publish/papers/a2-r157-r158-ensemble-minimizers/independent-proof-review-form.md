@@ -1,7 +1,7 @@
 # Independent proof-review form — A2/R-157/R-158
 
-Status: `BLANK / NO REVIEW DISPOSITION RECORDED` (manuscript v0.1.40,
-2026-09-04).
+Status: `BLANK / NO REVIEW DISPOSITION RECORDED` (manuscript v0.1.41,
+2026-09-09).
 
 This form is the frozen contract for an independent mathematical audit.  It
 does not report that a review has occurred.  A repository maintainer, an AI
@@ -11,10 +11,10 @@ assistant, or an author self-check may not fill the independent-review fields.
 
 - Manuscript: `manuscript.tex`
 - Manuscript SHA-256:
-  `2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768`
-- Rendered PDF: `manuscript.pdf`, 17 pages
+  `9e52ff285acf2643168e2b1846df214830f2aa9a560af143c13a8ece8cbfa1c3`
+- Rendered PDF: `manuscript.pdf`, 18 pages
 - PDF SHA-256:
-  `2edfb63ea7f884ff0faaaed9d3057e4baa2c4cff62ba038ffed146f4673f9b64`
+  `e44469909cd51d08622aed2ca4f64a993f339db5077bb5672f557ba673d6de45`
 - Scope: one explicitly printed three-component complex field, realified as
   six components, on the fixed periodic torus `T^3_16`, with the positive
   density floor and coefficients printed in the manuscript.
@@ -44,6 +44,11 @@ transfer to the canonical TECT/P1 interpretation; that provenance disposition
 is not a premise of this standalone mathematical review.
 
 ## Proof-obligation matrix
+
+For v0.1.41, also inspect `eq:fourier-normalization` (P-01/P-02/P-12),
+`eq:midpoint-uniform-tail` (P-07), `eq:strict-local-zero` (P-14), and
+Appendix `sec:exact-spectral-certificate` (P-11). The internal re-review is
+`rereview-2026-09-09.md`; it does not supply any independent disposition.
 
 | ID | proposition to audit | exact manuscript anchors | dependent items |
 |---|---|---|---|
@@ -107,8 +112,8 @@ reviewer_name: <name>
 affiliation: <affiliation>
 expertise: <relevant expertise>
 independence_statement: <relationship to author and project>
-manuscript_sha256_checked: 2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768
-pdf_sha256_checked: 2edfb63ea7f884ff0faaaed9d3057e4baa2c4cff62ba038ffed146f4673f9b64
+manuscript_sha256_checked: 9e52ff285acf2643168e2b1846df214830f2aa9a560af143c13a8ece8cbfa1c3
+pdf_sha256_checked: e44469909cd51d08622aed2ca4f64a993f339db5077bb5672f557ba673d6de45
 reproduction_toolchain_and_commit: <exact environment and commit>
 items_completed: P-01,...,P-15
 unlisted_objections: <details, or NONE>

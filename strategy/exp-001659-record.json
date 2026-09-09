@@ -1,0 +1,59 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001659",
+  "title": "Q3LOCK non-importing algebra current-source refresh",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001616",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001658",
+      "relation": "continues"
+    }
+  ],
+  "question": "Can the exact non-importing polynomial audit be replayed against the current manuscript and package without rewriting the older R2-era result?",
+  "method": [
+    "Run the standalone checker against the current manuscript and identify whether any failure is algebraic or only a stale source-hash refusal.",
+    "Remove the historical R2 manuscript-hash dependency while retaining the current package scope guard and frozen R-497 authority checks.",
+    "Publish a no-overwrite current result, preserve all prior algebra outputs, and integrate the current result into the fresh and integrated paper replay.",
+    "Run the current standalone, fresh manuscript, integrated, test, exploration and release checks without generating a PDF."
+  ],
+  "finding": "The prior standalone checker failed only because its reviewed R2 manuscript hash was stale. The current r3 result passes 46 exact-rational assertions and 38 coefficient identities; fresh r73 passes 7/7 manuscript groups and 1171 assertions; integrated r66 passes 7/7 manuscript groups, 7/7 canonical groups, independent 306/306, finite-form r10, and the current algebra payload. Historical algebra outputs remain byte-preserved.",
+  "decision_reason": "This is a provenance and reproducibility repair. The mutable package pointer is checked for T0/RESEARCH_ONLY/PDF-DEFERRED scope but is not included in the algebra source-hash set, preventing a pointer-only replay cycle. The algebra remains finite exact polynomial bookkeeping and does not discharge analytic proof obligations.",
+  "verdict": "advanced",
+  "boundary": "T0 internal provenance refresh only; claim_bearing=false; no theorem promotion, result-tier change, phase conclusion, sector closure, or PDF status change.",
+  "evidence_refs": [
+    "strategy/q3lock-nonimporting-algebra-refresh-260908.md#Finding",
+    "verification/scripts/q3lock_nonimporting_algebra.py#build_payload",
+    "verification/scripts/q3lock_manuscript_integrated_replay.py#build_payload",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-nonimporting-algebra-current-v016-r3/result.json#replay",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-manuscript-fresh-audit-r73-algebra-refresh-v016/result.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-paper-integrated-replay-r66-algebra-refresh-v016/result.json#replay"
+  ],
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": [
+      "R-497"
+    ]
+  },
+  "next_action": "Keep R-497 at T0 and PDF DEFERRED; obtain location-specific external mathematics and literature dispositions, then perform final content/notation freeze and fresh clean replay before any PDF is generated.",
+  "non_claims": [
+    "No analytic inequality, form-core theorem, thermodynamic limit, DLR state, strict cusp or parity-state conclusion follows from the finite polynomial identities.",
+    "No KMS, ground-state, gap, continuum, physical-vacuum, cosmology, novelty, priority or publication-readiness claim is made.",
+    "No TECT sector, C6, CP1, Pre-A or Sector-A closure changes.",
+    "No paper PDF was generated."
+  ],
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-09-08",
+  "recorded_at": "2026-09-07T17:00:58Z",
+  "recorded_by": "Codex"
+}

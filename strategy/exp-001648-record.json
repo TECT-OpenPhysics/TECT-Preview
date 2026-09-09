@@ -1,0 +1,44 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001648",
+  "title": "FKG positive-cone closure and compact-upper-set sum in the tempered topology",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001647",
+      "relation": "continues"
+    }
+  ],
+  "question": "Are the closed-cone and translation-invariant-metric hypotheses used by the continuous-loop FKG Borel extension valid for the actual projective tempered topology?",
+  "method": [
+    "Read the declared metric d_t and projective space in manuscript.tex.",
+    "Prove closure of the pointwise nonnegative cone using the local sup components of d_t.",
+    "Prove compact-plus-closed-cone sums are closed and upper using compact subsequences and translation invariance.",
+    "Insert the proof as a labeled manuscript lemma and retain the external-review boundary."
+  ],
+  "finding": "The actual d_t topology contains local sup convergence at each site, so the pointwise positive cone is closed. The metric is translation invariant, and compactness of K plus closedness of the cone proves K+E_+ is closed; upperness follows by addition. The manuscript now states and proves this as Lemma lem:positive-cone-topology before the Borel FKG extension.",
+  "decision_reason": "The repair removes an implicit topological premise from the FKG passage without changing the finite log-supermodularity, weak-limit, DLR, cusp or state claims. It is a local proof repair and still requires independent review of the surrounding FKG argument.",
+  "verdict": "advanced",
+  "boundary": "T0 internal topological sublemma; no claim tier, theorem promotion, TECT sector, or PDF status change.",
+  "evidence_refs": [
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex#lem:positive-cone-topology",
+    "strategy/q3lock-fkg-cone-topology-audit-260907.md#result"
+  ],
+  "next_action": "Re-run the manuscript and integrated audits, then obtain a signed review of the complete continuous-loop FKG and selected-limit passage.",
+  "non_claims": [
+    "This does not certify the continuous-loop FKG theorem or phase coexistence.",
+    "It does not prove the DLR tangent, infrared, cusp or parity-state conclusion.",
+    "No KMS, ground-state, continuum, cosmology, Sector A or publication conclusion changes.",
+    "No paper PDF was generated."
+  ],
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-09-07",
+  "recorded_at": "2026-09-07T12:30:00Z",
+  "recorded_by": "Codex"
+}

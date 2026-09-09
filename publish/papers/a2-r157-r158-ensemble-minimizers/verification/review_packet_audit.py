@@ -115,7 +115,7 @@ def build_assertions(
         )
     )
     return {
-        "manuscript_version_is_v0140": "Draft v0.1.40" in manuscript,
+        "manuscript_version_is_v0141": "Draft v0.1.41" in manuscript,
         "all_theorem_labels_are_unique": all(
             manuscript.count(rf"\label{{{label}}}") == 1 for label in THEOREM_LABELS
         ),

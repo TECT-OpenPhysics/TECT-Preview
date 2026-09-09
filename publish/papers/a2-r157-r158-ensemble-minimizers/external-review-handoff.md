@@ -1,9 +1,26 @@
 # External-review handoff — A2/R-157/R-158 draft
 
-Status: draft v0.1.40, finite classical side-16 torus only.  This handoff is
+Status: draft v0.1.41, finite classical side-16 torus only.  This handoff is
 an invitation and a review protocol; it is not evidence that an external
 mathematician, source owner, operator, or specialist has already reviewed the
 paper.
+
+## Current v0.1.41 review object
+
+The current manuscript is the 18-page PDF dated 2026-09-09. The two blank
+review forms pin its exact source/PDF hashes. `rereview-2026-09-09.md` explains
+the five internal repairs and maps them to P-01--P-15. Appendix A is now a
+direct rational spectral certificate; `eq:midpoint-uniform-tail` and
+`eq:strict-local-zero` expand the relevant analytic steps. Internal findings
+are not external acceptance. The new supplemental command is:
+
+```text
+python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/rereview_audit.py --self-test
+```
+
+The registered A2/R-157/R-158 numerical inputs and theorem scope are unchanged.
+Earlier version numbers, page counts and replay dates below describe prior
+checkpoints only. Use the current manifest and blank forms for this review.
 
 ## Requested disposition
 

@@ -1,0 +1,60 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001669",
+  "title": "Q3LOCK collective and Falk-Bruch load-bearing block audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001598",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001668",
+      "relation": "continues"
+    }
+  ],
+  "question": "Do the exact Q3LOCK collective-translation curvature, Q3 graph factor, finite Falk-Bruch normalization, clipping envelope, moment substitution and threshold cancellation agree with the manuscript's A14-A17 proof block?",
+  "method": [
+    "Run an independent standard-library checker on L=1,2,4 rational Q3LOCK fixtures and compare the degree-four translation Hessian with r + 3 g S/(8 V) + lambda D/(8 V).",
+    "Recompute the Q3 degree-three graph identity and the theta_Q moment factor under the FKG sign condition.",
+    "Check the formal beta-star cancellation, the bounded clipping derivative/envelope, and finite spectral Falk-Bruch inequalities with degenerate and nondegenerate energy levels."
+  ],
+  "finding": "All 93 finite assertions pass. The bounded audit finds no new local sign, factor-of-eight, finite-matrix normalization, clipping-envelope, or threshold-cancellation defect in the displayed collective block.",
+  "decision_reason": "The result is an internal consistency and replay aid. It does not establish the unbounded form/core passage, spectral cutoff removal, Duhamel identification, volume-uniform lower bound, thermodynamic limit, source cusp, or DLR pair.",
+  "verdict": "advanced",
+  "boundary": "T0 finite diagnostic only; A14-A17 remain OPEN, R-497 remains claim_bearing=false and RESEARCH_ONLY, no theorem promotion, novelty or priority claim, Sector A-F change, submission, or PDF.",
+  "evidence_refs": [
+    "strategy/q3lock-collective-block-audit-260908.md#checks-performed",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-collective-block-audit/result.json#assertions",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex#sec:collective"
+  ],
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": [
+      "R-497"
+    ]
+  },
+  "next_action": "Send the finite normalization aid to the independent reviewer and obtain a signed line-by-line audit of the unbounded form/core, finite spectral cutoff, Duhamel identification, and thermodynamic use before content freeze and PDF generation.",
+  "non_claims": [
+    "Finite PASS is not a proof of the unbounded operator-domain argument.",
+    "No volume-uniform Duhamel lower bound or infrared zero-mode result is certified by this audit.",
+    "No strict cusp, DLR multiplicity, KMS, gap, continuum, physical-sector or cosmological conclusion follows.",
+    "No novelty, priority, submission or PDF decision is made."
+  ],
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-09-08",
+  "recorded_at": "2026-09-07T21:19:31Z",
+  "recorded_by": "Codex",
+  "source_hashes": {
+    "strategy/q3lock-collective-block-audit-260908.md": "cc97db6522a8c741454029db88c9a8f5fbb3fae4af705800a02873b609ca4139",
+    "verification/scripts/q3lock_collective_block_audit.py": "42254efcda8a6f3efbe64efd82e1fb66a8d7eab67157a04090c524bf8f387dc8",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex": "f41b03c60d66772e42463c08098aeb551574079f3a86f53310b1f4c33dd53479"
+  }
+}

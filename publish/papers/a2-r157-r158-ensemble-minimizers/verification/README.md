@@ -1,5 +1,29 @@
 # Verification protocol for the A2/R-157/R-158 manuscript
 
+## Current v0.1.41 supplement
+
+The 2026-09-09 internal re-review is `../rereview-2026-09-09.md`.
+The unchanged canonical replay suite below is supplemented by these commands
+from the repository root (or the registered isolated paper worktree):
+
+```text
+python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/rereview_audit.py --self-test
+python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/pdf_review.py --self-test
+```
+
+The first recomputes 34 exact/structural checks, including actual wrong-shell,
+wrong-root and wrong-normalization alternatives. Its claim-run JSON is dated
+2026-09-09; `verification/runs/rereview.json` is the same current package
+result. The second renders the current PDF using Poppler and checks blank
+pages, unresolved-reference markers and page bounds. It requires Pillow and
+pdfplumber, and never automatically declares visual review complete.
+The fourteen-command clean-snapshot replay covers the existing mathematical
+suite; the two supplemental commands are identified separately, not silently
+counted as part of that historical suite. Current source/PDF hashes are in
+the manifest; earlier dates and counts below retain their historical meaning.
+
+## Canonical replay protocol and history
+
 This is a repository-facing draft protocol.  It points to the canonical P1
 source files and does not replace the claim-level reproduction bundles.  A
 standalone capstone bundle must be built only after operator confirmation of
@@ -12,6 +36,14 @@ the clean-snapshot runner.  The non-bearing R-472 step also needs the pinned
 Lean toolchain and a resolved Mathlib `.lake` cache.  Use
 `clean_snapshot_replay.py --lean-cache <path>` when that cache is outside the
 default `verification/lean/.lake` location.
+
+For deterministic historical note-PDF checks, supply
+`--tectonic <path-to-the-pinned-tectonic-executable>` to the clean runner.
+It records the executable hash and selects it in the child environment;
+an ambient MiKTeX `pdflatex` can otherwise produce different PDF bytes from
+the historical Tectonic contract. No expected hash should be changed to
+accommodate a different engine. The 2026-09-09 replay uses the Tectonic
+executable beside the declared repository Python interpreter.
 
 ```powershell
 $py = "E:\Dev\TECT.venv\Scripts\python.exe"

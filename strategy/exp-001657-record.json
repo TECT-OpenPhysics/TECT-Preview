@@ -1,0 +1,62 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001657",
+  "title": "Q3LOCK DLR source-window topology and limit-order audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001656",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001577",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001606",
+      "relation": "continues"
+    }
+  ],
+  "question": "Does the manuscript source-window DLR construction use the correct KP topology, source normalization, quantifiers, and limit order, without silently importing a source-to-zero theorem from KP?",
+  "method": [
+    "Read the manuscript tempered-DLR, source-window, compactness, kernel, and source-tangent sections line by line against the existing Q3LOCK DLR audit notes.",
+    "Check the primary KP statements for Assumption (A), Proposition 2.7, Lemma 2.8, Lemma 2.11, Lemma 4.1, Theorems 3.1--3.2, and the weighted projective topology.",
+    "Recompute the source convention, finite-M-before-Holder ordering, alpha_(k+1)<alpha_k tail direction, compact-boundary normalizer/lipschitz quotient, and the two-stage source-to-zero limit.",
+    "Separate fixed-source KP conclusions from Q3LOCK-local source-window and determining-class arguments, and retain the signed-review boundary."
+  ],
+  "finding": "No new local algebraic or limit-order defect was found. The manuscript consistently uses exp(h*X_Delta) with the time integral inside X_Delta, proves finite one-site moments before Holder closure, uses the stronger slower-decaying alpha_(k+1) weight for projective tails, establishes a compact-boundary normalizer lower bound before quotienting, and keeps the order fixed-source periodic limit -> pressure tangent -> source-to-zero DLR extraction -> clipping/UI. KP Lemma 2.11 is not treated as a source-varying theorem; the source passage remains a Q3LOCK-local compact-boundary Feller argument.",
+  "decision_reason": "The audit strengthens the DLR quantifier and topology boundary without promoting a theorem. Exact source-window constants, equivalence of the declared metric with the KP projective topology, finite form/trace hypotheses, and the bounded-continuous-to-Borel passage remain location-specific independent-review obligations.",
+  "verdict": "advanced",
+  "boundary": "T0 internal DLR source-window topology and limit-order audit; no claim-tier change, theorem certification, phase conclusion, sector closure, or PDF status change.",
+  "evidence_refs": [
+    "strategy/q3lock-dlr-source-window-topology-audit-260908.md#source-and-topology-crosswalk",
+    "strategy/q3lock-dlr-source-window-topology-audit-260908.md#quantifier-and-formula-audit",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex#sec:dlr",
+    "publish/papers/q3lock-phase-coexistence/manuscript.tex#sec:dlr-source-tangents",
+    "strategy/q3lock-kp-source-window-feller-audit-260905.md#uniform-source-continuity-on-compact-boundary-sets",
+    "strategy/q3lock-kp-source-window-projective-tightness-diagonal-audit-260905.md#explicit-diagonal-compact-set"
+  ],
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": []
+  },
+  "next_action": "Place this audit in the signed DLR applicability packet and obtain independent location-specific dispositions for the KP map, source-window constants, projective topology, form/trace interface, and source-to-zero DLR passage before content freeze.",
+  "non_claims": [
+    "No strict source cusp or positive-lambda phase theorem is certified.",
+    "No DLR multiplicity, extremality, purity, clustering, KMS state, ground-state phase, spectral gap, continuum, physical vacuum, or cosmology conclusion is certified.",
+    "No novelty, priority, or absence theorem is claimed.",
+    "No TECT sector, C6/CP1/master closure, or Pre-A status changes.",
+    "No paper PDF was generated."
+  ],
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-09-08",
+  "recorded_at": "2026-09-07T15:53:03Z",
+  "recorded_by": "Codex"
+}
