@@ -1,0 +1,192 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-STATIONARY-MODULUS-CORRECTION-INDEPENDENT-001",
+  "checks": [
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+        "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-result-v1.json": "90cf191edc5df6c05a7e7facaaa179e075c87129891d22456dfd36186994d27c",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+        "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-result-v1.json": "90cf191edc5df6c05a7e7facaaa179e075c87129891d22456dfd36186994d27c",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+      },
+      "name": "source pins",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-001",
+      "expected": "PAH-001",
+      "name": "PAH packet retained",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "source interaction is stationary weighted",
+      "status": "PASS"
+    },
+    {
+      "actual": 540,
+      "expected": 540,
+      "name": "C_sw source marker",
+      "status": "PASS"
+    },
+    {
+      "actual": 60,
+      "expected": 60,
+      "name": "C2 source marker",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "R-541 remains HOLD",
+      "status": "PASS"
+    },
+    {
+      "actual": "auxiliary_support",
+      "expected": "auxiliary_support",
+      "name": "R-541 remains auxiliary",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "registered order",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "external time",
+      "status": "PASS"
+    },
+    {
+      "actual": 180,
+      "expected": 180,
+      "name": "root list cardinality",
+      "status": "PASS"
+    },
+    {
+      "actual": "324/5",
+      "expected": "324/5",
+      "name": "K_Gamma exact reconstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": "1296",
+      "expected": "1296",
+      "name": "K_L exact reconstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "deterministic envelope nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "deterministic envelope decays in delta",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "rare-state averages decrease",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "rare-state deterministic scales decrease",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5,
+      "expected": 0.5,
+      "name": "hit-state jump probability is one half",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "conditional stopping-time owner is missing",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 18,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "deterministic_fixture": {
+    "K_Gamma": "324/5",
+    "K_L": "1296",
+    "delta": "1/1200",
+    "envelope": "549/5000",
+    "increment_count": 180,
+    "max_increment": "1/5",
+    "sum_increment_squares": "36/5",
+    "support_size": 3
+  },
+  "finding": "Independent exact-rational reconstruction confirms a deterministic-time stationary modulus and isolates the missing conditional stopping-time input. The rare-state diagnostic shows why a pi-weighted average cannot be promoted to a uniform Aldous bound without an additional owner estimate.",
+  "missing_assumptions": [
+    "Uniform conditional predictable-compensator or pointwise local-rate bound for bounded stopping times.",
+    "Source-authorized path-space construction, non-explosion, martingale-problem identification and uniqueness."
+  ],
+  "non_claims": [
+    "The abstract two-state diagnostic is not a PAH counterexample.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "proof_boundary": "Only the finite deterministic-time statement is supported; path-space tightness and all infinite-volume/target identifications remain open.",
+  "rare_state_diagnostic": {
+    "M_values": [
+      5,
+      10,
+      20,
+      40
+    ],
+    "conditional_jump": "rate M after hitting the rare state; delta=log(2)/M gives probability 1/2",
+    "deterministic_scale_values": [
+      "1/63",
+      "2/1001",
+      "2/8001",
+      "2/64001"
+    ],
+    "interpretation": "abstract implication diagnostic only; not an exact PAH counterexample",
+    "weighted_gamma_values": [
+      "5/63",
+      "20/1001",
+      "40/8001",
+      "80/64001"
+    ]
+  },
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_stationary_modulus_correction_independent.py --check",
+  "result_id": "R-542",
+  "schema": "tect/pah-omc020-stationary-modulus-correction-independent/1.0",
+  "source_constants": {
+    "C2_per_site": 60,
+    "C_sw": 540
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+    "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-result-v1.json": "90cf191edc5df6c05a7e7facaaa179e075c87129891d22456dfd36186994d27c",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+  },
+  "status": "PASS_STATIONARY_MODULUS_CORRECTION_HOLD",
+  "task_id": "T-064",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

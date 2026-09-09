@@ -1,0 +1,93 @@
+{
+  "schema": "tect/pah-omc020-diagonal-locality-result/1.0",
+  "result_id": "R-563",
+  "contract_id": "PAH-OMC-020-DIAGONAL-LOCALITY",
+  "date": "2026-09-08",
+  "task_id": "T-086",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "NEGATIVE_RESULT",
+  "classification": "negative_result",
+  "conditional": false,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["EXECUTED", "EXACT_ARITHMETIC", "INDEPENDENT", "HOSTILE", "LEAN_REPLAY", "SCOPED_NEGATIVE"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-diagonal-locality-contract-v1.json",
+  "certificate": "strategy/pa-hyp/PAH-OMC-020-diagonal-locality-certificate.md",
+  "exploration_id": "EXP-001693",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "strategy/pa-hyp/PAH-OMC-020-universal-locality-result-v1.json": "4474c3ecabe56ea08c6a9efe44d33cdd7f2cbc79d5ea891a70e89703171698bc"
+  },
+  "exact_scope": {
+    "question": "Can R-562's fixed-k locality thresholds provide one fixed finite n beyond the locality frontier for every generator power k?",
+    "model": "Exactly unchanged PAH-001/PAH-OMC-013/OMC-004 definitions, original pullback and external stochastic Markov time.",
+    "statement": "For every s_f>=0 and finite n, k=n+1 gives n<N_k(f)=max(2,s_f+2k+1). Thus sup_k N_k(f)=infinity and no fixed n satisfies n>=N_k(f) for all k.",
+    "route_boundary": "This blocks only the upgrade that uses R-562 fixed-k identities as an all-power identity at one fixed n and sums them termwise into an exponential.",
+    "limits": "No exponential series, j limit, anchored-n limit, common process, R-512 identification or physical limit is taken."
+  },
+  "finding": "The diagonal witness is exact: for every finite n and nonconstant finite-support maximum s_f>=0, k=n+1 lies beyond the R-562 sufficient threshold at that n. Therefore fixed-k locality alone cannot supply a fixed-n all-power premise for exponential semigroup intertwining.",
+  "route_consequence": "A separate uniform connected-word/factorial tail, cancellation estimate, common path-space construction or form/resolvent route is required. The obstruction does not refute the full PAH-OMC-020 objective by itself.",
+  "assumptions": [
+    "The R-562 radius-two catalog and threshold are unchanged and correctly derived from OMC-013.",
+    "The original PAH generator, comparison map, normalization and external Markov time remain fixed.",
+    "The conclusion concerns nonconstant finite-support cylinders with s_f>=0."
+  ],
+  "missing_assumptions": [
+    "Uniform-in-k word/factorial control or another mechanism that bypasses fixed-n all-power locality.",
+    "Source-authorized common U_n/path-space realization compatible with all powers.",
+    "N2b/N2c/N4/N2d and R-512 minimal-form identification."
+  ],
+  "adversarial_review": [
+    {"objection": "The obstruction proves the PAH semigroup cannot converge.", "disposition": "REJECTED: it refutes only one fixed-n termwise-summation route; independent uniform cancellation or form/path arguments remain open."},
+    {"objection": "The k=n+1 witness is just another finite table.", "disposition": "REJECTED: Lean proves the universal quantifier statement over all Nat n and s, while finite rows are only replay diagnostics."},
+    {"objection": "The constant cylinder is silently included.", "disposition": "REJECTED: the exact scope states s_f>=0 for nonconstant finite-support cylinders."},
+    {"objection": "Radius or rates were changed to create the obstruction.", "disposition": "REJECTED: radius two is re-derived from OMC-013 and PAH-001 remains byte-pinned."},
+    {"objection": "The result has physical or quantum-time meaning.", "disposition": "REJECTED: only external stochastic Markov time is used."}
+  ],
+  "formal_refs": {"results": ["R-493", "R-562", "R-563"], "negatives": [], "events": ["20260908-r-563-pah-omc-020-diagonal-locality-obstruction"]},
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-diagonal-locality/primary.json": "5ff231500407f32165bfaa3d3aef1de7609c9b375706c1eb6889eba13bda34c2",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-diagonal-locality/integrated.json": "b9cff009d45ea52181b442edde57e906d34e2670ffc0a8841db7b0284c5a35c4"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_diagonal_locality.py": "bbbdad6419c734e05f2f55fc3d2de7b22878be57da237279f44a35871519c65b",
+    "codes/foundations/pah_omc020_diagonal_locality_independent.py": "8f533308843c9ac37afcc55e61da3c791b8c850c44861d571a4b2c9bbe28fbfe",
+    "codes/foundations/pah_omc020_diagonal_locality_hostile.py": "cc83a6adf6f46e0d8787b9b6217d873a4620f74e06e2af2c440ef9e64a6ab64a",
+    "verification/scripts/pah_omc020_diagonal_locality_verify.py": "d3fefc62a30c4703ca8153816af8d2b9020a88380e2d3ffc380705c74e8a1a4b",
+    "verification/lean/Tect/PahOmc020DiagonalLocality.lean": "acd890ba7977965c5f383a3b1ef4a3c946216057e6b9551d1c2205c9e8a96e78",
+    "verification/lean/registry.json": "6f5f2e209044022ee8b79bc7abe12a15ea1efda1fa1efb96e3405cf80d5adcd5"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-diagonal-locality-contract-v1.json": "cd2f84df653e512914c00b745d23326c4acf920cfbe9f865c42087b766055115",
+    "strategy/pa-hyp/PAH-OMC-020-diagonal-locality-certificate.md": "01792e412cbdf6728358cad517bfc9a7ab37d8b093a0ab4ad019643d8d711819",
+    "strategy/pa-hyp/PAH-OMC-020-diagonal-locality-exploration.json": "af0a61fa34a71edb668d280686a8a2aff75549f7e921f248d1583c9302bce1eb",
+    "explorations/log.jsonl#EXP-001693": "e70ad38d6709ab3e87766a6f70149b729b33c3dcbde99923b09a9d0124387852",
+    "changelog/log.jsonl#20260908-r-563-pah-omc-020-diagonal-locality-obstruction": "d0dc8be943441b26416b0a35c16d121a27e032f4990b3fe64a02c80df2392152"
+  },
+  "verification": {
+    "primary": "PASS 9/9",
+    "independent": "PASS 7/7",
+    "hostile": "PASS 8/8",
+    "integrated": "PASS 4/4",
+    "lean": "PASS: Lean 4.32.1 compilation of the universal diagonal and no-uniform-eventuality theorems"
+  },
+  "closed_scoped_gate": "Exact route-local no-go: R-562 fixed-k thresholds do not provide a fixed-n all-power locality premise.",
+  "remaining_gates": [
+    "Uniform-in-k tail or independent cancellation/common-process route",
+    "Source-authorized common U_n/path-space realization",
+    "N2b/N2c/N4/N2d and R-512 target identification",
+    "Full PAH-OMC-020 ordered stationary-semigroup local-correlation convergence"
+  ],
+  "next_single_question": "Can a source-authorized uniform word/factorial tail or a common form/path route bypass the fixed-n all-power obstruction without changing PAH-001?",
+  "revisit_condition": "Reopen only when such a source-authorized uniform mechanism is hash-pinned or when a defect in the radius-two threshold derivation is found.",
+  "non_claims": [
+    "No full semigroup no-go or convergence theorem.",
+    "No j-before-n or anchored-n limit, common infinite-volume process or R-512 semigroup identification.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion.",
+    "External Markov time remains external stochastic time only."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-diagonal-locality-certificate.md"
+}

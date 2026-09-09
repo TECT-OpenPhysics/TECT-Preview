@@ -1,0 +1,120 @@
+{
+  "schema": "tect/pah-omc020-lyapunov-bridge-result/1.0",
+  "result_id": "R-531",
+  "contract_id": "PAH-OMC-020-LYAPUNOV-TO-N2C-BRIDGE",
+  "date": "2026-09-08",
+  "task_id": "T-074",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXACT_RATIONAL_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+    "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-result-v1.json": "1649077b5a522819b2153c13ef799b48cc3774f5adaf2256e4467e522d2a5d95",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+    "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json": "beaad87cde95e8e721ddfe94d196de10d0550a942f18895918733f2f3567d84f"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-lyapunov-bridge/primary.json": "bdd2ce40861927ef333e5316c1cb76020a839ae606532b113be1ea2d49b03b08",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-lyapunov-bridge/independent.json": "bee92ce46e2e5ee0137f25803f3a580d75b6a93e505bf71ffcfce65a64bcb422",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-lyapunov-bridge/hostile.json": "bb2718a149a0a83ebf2886e2d2cb582ec54892f6fc1a05d37f61d15cc30934ca",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-lyapunov-bridge/integrated.json": "622cb462757ed1dcb73a42faa39f0dba5ec4a978796e02ab6fa27ff8a7c8b71d"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_lyapunov_bridge.py": "a3225bb66ceac99729e56cd2b6e7b55265743946cf5f2679d7387add4ea479e4",
+    "codes/foundations/pah_omc020_lyapunov_bridge_independent.py": "3e9916c2ec5cae84ea4643da93071e55f83fdc85a20954ffedb1121fcae653df",
+    "codes/foundations/pah_omc020_lyapunov_bridge_hostile.py": "10bb39476c05bbbbfee2955303cba81cae8f6de218d3b9bef779300d35a57f90",
+    "verification/scripts/pah_omc020_lyapunov_bridge_verify.py": "b728d5bfe0b8b3c67a7afec21a1330fbfc4569a2d171495e57001abebc4f54ea",
+    "verification/lean/Tect/PahOmc020Lyapunov.lean": "c9f461b4d5ecb7811db20999672333c090ec823b7b833bd59b5eee413fe07815",
+    "verification/lean/registry.json": "b2bc4746a22a757e9234a24f0c950bb3b656b47e8bf41ac3a2903b702d289272"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json": "beaad87cde95e8e721ddfe94d196de10d0550a942f18895918733f2f3567d84f",
+    "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md": "e33d6cef9c75536e0ea4aaea13521bb272a2e671a81ad6a250e864acb1b61d90",
+    "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-exploration.json": "841c06e6fb1faf9e3ad3444eca4c1846e2ab7f4822e6ebd885b1462644f89568",
+    "explorations/log.jsonl#EXP-001650": "6cb38650199a4e17982e2cd62376f941fcb2640a43e8421dafdd6c6f1773270b",
+    "changelog/log.jsonl#20260908-r-531-pah-omc-020-conditional-lyapunov-bridge-2": "4937605d216dca58aa767e18fc9cf24268bffac02cb3a25181fb95e73ddf45f9"
+  },
+  "exact_scope": {
+    "model": "Exactly the immutable PAH-001 functional, original directed PH/LK/AP/TR rates and labelled Gibbs state.",
+    "input": "R-522 source-owned C2(A)<=60|A| static local second-rate-moment bound.",
+    "conditional_path_input": "A future source-authorized stopped exponential-Lyapunov estimate for an influence size Z_t with V(z)=b^z, b>1, and a stopped path law.",
+    "time": "External stochastic Markov time on a finite horizon [0,T]; no quantum, proper or Lorentzian interpretation.",
+    "order": "The PAH-OMC-020 j-before-anchored-n order is unchanged; no j or n limit is evaluated by this bridge.",
+    "volume": "Finite OMC-004 strips and local cylinder support; no infinite-volume process is asserted."
+  },
+  "conclusion": {
+    "probability": "Under the owner packet's stopped moment bound, P(tau_d<=T)<=M_T*b^w/b^d.",
+    "boundary": "With the separately required eta_(m,T)^2<=C2(A)P(tau_(d_m)<=T) attribution, eta_(m,T)^2<=C2(A)M_T*b^w/b^(d_m)->0.",
+    "fixture": "For test inputs M_T=3, b=2, w=2 and C2=120, exact envelopes at d=8,12,16 are 3/64, 3/1024 and 3/16384.",
+    "route_decision": "The implication is a conditional auxiliary bridge. The source path law, compensator, attribution, N2b/N2d comparison and full stationary semigroup convergence remain HOLD_FOR_EVIDENCE."
+  },
+  "proof_coverage": {
+    "primary": "37 exact source, theorem-marker, owner-boundary and rational-envelope checks.",
+    "independent": "23 non-importing checks reconstructing the probability and N4 envelopes with a separate rational fixture.",
+    "hostile": "14 checks reject b<=1, reversed decay, dropped C2, fabricated authorization and physical promotion.",
+    "integrated": "12 checks replay all lanes, verify Lean registry/hash/declarations and confirm conditional non-promotion.",
+    "lean": "Four declarations compile under Lean 4.32.1: probability_bound, n4_bound, envelope_step_decreases and zero_boundary_when_zero_mass."
+  },
+  "assumptions": [
+    "A source owner supplies a stopped path law, filtration and exponential-Lyapunov compensator uniformly in the retained finite systems.",
+    "The hitting times tau_d exhaust the non-explosion time on the same path law.",
+    "A source-authorized attribution bounds the actual evolved N2c/N4 term by the hitting event without changing PAH-001.",
+    "R-522 C2(A)<=60|A| is used only as a static coefficient."
+  ],
+  "missing_assumptions": [
+    "The source-authorized path-space/martingale law and predictable compensator are absent.",
+    "Compact-time non-explosion and uniqueness for the unchanged unbounded rates are absent.",
+    "The actual eta-to-hitting-event N2c/N4 attribution is absent.",
+    "N2b arbitrary-sequence liminf/recovery and N2d identification with R-512 remain open.",
+    "Anchored-n stationary semigroup correlation convergence remains open."
+  ],
+  "adversarial_review": [
+    {"objection": "The static C2 estimate is already a pathwise non-explosion proof.", "disposition": "UPHELD AGAINST PROMOTION: C2 is only stationary L2 information; the stopped compensator is a separate required input."},
+    {"objection": "Finite rational fixtures establish the PAH infinite-volume limit.", "disposition": "REJECTED: fixtures verify algebra and decay direction only; no uniform process limit is inferred."},
+    {"objection": "The probability envelope can be used with b<=1 or reversed powers.", "disposition": "REJECTED by hostile checks: b>1 and the decreasing b^(-d) direction are necessary."},
+    {"objection": "The C2 factor may be omitted when converting to N4.", "disposition": "REJECTED: the N4 square budget retains C2(A) explicitly."},
+    {"objection": "The conditional bridge supplies a path law or minimal form automatically.", "disposition": "UPHELD AGAINST PROMOTION: owner packet, N2b, N2d and R-512 identification remain missing."}
+  ],
+  "formal_refs": {"results": ["R-522", "R-523", "R-530"], "negatives": [], "events": ["20260908-r-531-pah-omc-020-conditional-lyapunov-bridge-2"]},
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_lyapunov_bridge.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_lyapunov_bridge_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_lyapunov_bridge_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_lyapunov_bridge_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "result": "Primary 37/37, independent 23/23, hostile 14/14, integrated 12/12 and Lean 4.32.1 four declarations pass."
+  },
+  "lean": {"path": "verification/lean/Tect/PahOmc020Lyapunov.lean", "toolchain": "leanprover/lean4:v4.32.1", "declarations": ["probability_bound", "n4_bound", "envelope_step_decreases", "zero_boundary_when_zero_mass"]},
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md",
+  "closed_scoped_gate": "Conditional exponential-Lyapunov probability and N2c/N4 budget implication for a future source owner packet.",
+  "remaining_gates": [
+    "Source-authorized path law, filtration and predictable compensator",
+    "Compact-time non-explosion and uniqueness",
+    "Actual eta-to-hitting-event N2c/N4 attribution",
+    "N2b weak-liminf/recovery and N2d R-512 minimal-form identification",
+    "Ordered PAH-OMC-020 stationary semigroup correlation convergence"
+  ],
+  "next_single_question": "Can a source owner provide the stopped exponential-Lyapunov compensator and exact eta_(m,T)^2-to-hitting-event attribution for the unchanged PAH-001 process?",
+  "revisit_condition": "Reopen only when every owner field is versioned and hash-pinned or an exact PAH-specific contradiction to the conditional inequality is found; do not repeat finite carrier or physical-empty calculations.",
+  "non_claims": [
+    "No source-authorized path-space law, non-explosion/uniqueness theorem, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal-form identification or PAH-OMC-020 semigroup convergence.",
+    "No universal impossibility follows from the absent owner packet or rational fixtures.",
+    "No PAH-001 functional, rate, state, carrier, regulator, normalization, external Markov time or limit order is changed.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion."
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "audit_id": "PAH-OMC-020-MINIMAL-DEPENDENCY-AUDIT-HOSTILE-001",
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "name": "full-domain promotion requires source packet",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile all-closed mutation is not current hold",
+      "status": "PASS"
+    },
+    {
+      "actual": "CLOSED_FULL_DOMAIN",
+      "expected": "CLOSED_RESTRICTED",
+      "name": "radial cannot be promoted by label",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "reversed limit order rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "physical promotion mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "missing owner row is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "CLOSED_FULL",
+      "expected": "CLOSED_CONDITIONAL",
+      "name": "conditional bridge cannot become full",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "sha256 pin width",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no new carrier repair",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 9,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "dcad066621f928ff0313e401d0605f5a30619c785f6cf70980c70feb1846afaa",
+  "finding": "Hostile mutations that promote the restricted radial scope, reverse the declared order, remove the owner rows or add physical promotion are rejected.",
+  "non_claims": [
+    "This audit does not prove full PAH-OMC-020 ordered semigroup convergence.",
+    "It does not construct a common Hilbert space, U_n, path-space law, N2b/N2c/N4 estimate or R-512 identification.",
+    "It does not promote the amplitude-only result to non-radial observables or to an infinite-volume process.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion is made.",
+    "External Markov time remains stochastic bookkeeping and is not quantum, proper or Lorentzian time."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_minimal_dependency_audit_hostile.py --check",
+  "result_id": "R-556",
+  "schema": "tect/pah-omc020-minimal-dependency-audit-hostile/1.0",
+  "source_hashes": {
+    "strategy\\pa-hyp\\PAH-OMC-020-minimal-dependency-audit-contract-v1.json": "4c229c549a40cb41039e750527a5afa0e4a548ea30b7f511112846d277ac826b"
+  },
+  "status": "HOSTILE_BOUNDARY_PASS",
+  "task_id": "T-086",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

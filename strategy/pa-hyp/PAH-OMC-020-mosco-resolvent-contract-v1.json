@@ -1,0 +1,116 @@
+{
+  "schema": "tect/pah-omc020-mosco-resolvent-contract/1.0",
+  "contract_id": "PAH-OMC-020-MOSCO-RESOLVENT",
+  "version": "1.0.0",
+  "date": "2026-09-08",
+  "task_id": "T-080",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "status": "RESEARCHER_OWNED_CONDITIONAL_CONTRACT",
+  "title": "Mosco variational resolvent bridge for the anchored comparison",
+  "question": "Do exact common-space liminf and recovery hypotheses identify every anchored resolvent limit with the R-512 minimal-form resolvent, before any semigroup or physical interpretation?",
+  "purpose": "Make the N2b form route mathematically explicit. The result is a conditional variational selection argument; it does not import an unmatched Mosco theorem or assert that the required source hypotheses hold.",
+  "provenance": {
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "source_authorized_packet_present": false,
+    "constructed_hypothesis": true,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_CONDITIONAL_FORM_SELECTION"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-020-prereg": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    },
+    "R-512": {
+      "path": "strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "sha256": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd"
+    },
+    "R-530": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json",
+      "sha256": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2"
+    },
+    "R-536": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json",
+      "sha256": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+    },
+    "R-537": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-core-duhamel-result-v1.json",
+      "sha256": "4062188d9419a42d74b0350d35a62950c987e5d7b5f38d329bb7f09d09844d01"
+    }
+  },
+  "fixed_scope": {
+    "model": "Exactly PAH-001 F_rho, original directed PH/LK/AP/TR rates, labelled Gibbs state, OMC-010 regulator path and OMC-004 relational strip.",
+    "forms": "E_n are the unchanged anchored finite reversible forms after the registered j limit; E_min is exactly the R-512 minimal closed nonnegative form.",
+    "comparison": "U_n and the common Hilbert space H are source-authorized antecedents only. No conditional averaging, direct sum or replacement carrier is introduced.",
+    "parameter": "For each fixed lambda>0, use the variational resolvent objectives J_n(u)=E_n(u)+lambda||u-U_n f_n||^2 and J(u)=E_min(u)+lambda||u-f||^2.",
+    "order": "The original j-to-infinity passage at fixed n precedes anchored n; no diagonal, reversed or joint limit.",
+    "time": "This checkpoint is static in the resolvent parameter lambda and does not reinterpret external stochastic Markov time."
+  },
+  "objects": {
+    "resolvent_minimizers": "u_n is a minimizer of J_n and u is the unique minimizer of J; the source packet must define them on one common H through U_n.",
+    "liminf": "For every anchored sequence U_n w_n converging weakly to w, E_min(w,w)<=liminf_n E_n(w_n,w_n), with the full arbitrary-sequence quantifier.",
+    "recovery": "For every local target v in Dom(E_min), a source-authorized v_n converges strongly through U_n and limsup_n E_n(v_n,v_n)<=E_min(v,v).",
+    "selection": "The lambda||u-f||^2 term is strictly convex for lambda>0, so the exact target minimizer is unique once E_min is fixed."
+  },
+  "required_owner_packet": {
+    "common_space_equicoercivity": "One H and U_n with source-resolvent minimizers bounded in a topology giving weakly convergent subsequences or nets, plus local norm compatibility.",
+    "arbitrary_sequence_liminf": "The N2b liminf inequality for every bounded-energy anchored sequence, not only the registered recovery sequence.",
+    "recovery_sequence": "A recovery sequence for every local target test vector, with the anchored quantifier and the unchanged terminal-square convention.",
+    "data_recovery": "U_n f_n converges strongly to f for each local cylinder and preserves the original stationary normalization in J_n.",
+    "target_exact_unique": "The limiting objective is exactly the R-512 minimal form and lambda>0 supplies uniqueness; no maximal extension is substituted.",
+    "norm_upgrade": "A source-authorized energy/norm argument upgrades weak resolvent convergence to strong convergence on every local cylinder.",
+    "semigroup_bridge": "A separate source-authorized resolvent-to-compact-time-correlation bridge is still required; this contract does not silently identify resolvents with semigroups."
+  },
+  "conditional_theorem": {
+    "energy_sandwich": "For any weak cluster u of u_n, liminf_n J_n(u_n)>=J(u), while a recovery sequence gives limsup_n inf J_n<=J(u).",
+    "cluster_selection": "The two inequalities force every cluster point to minimize J; strict convexity from lambda>0 makes it the unique R_min^lambda f.",
+    "strong_resolvent": "If the norm-upgrade field is supplied, U_n u_n converges strongly to R_min^lambda f for every local f and lambda>0.",
+    "scope_boundary": "Strong resolvent convergence alone is not called compact-time semigroup convergence here; the semigroup_bridge field remains open."
+  },
+  "diagnostic_fixture": {
+    "description": "A scalar quadratic oracle computes the exact resolvent minimizer lambda*f/(k+lambda) for a decreasing coefficient sequence. It tests the variational algebra only and is not a PAH estimate.",
+    "inputs": {
+      "lambda": "1",
+      "k_limit": "2",
+      "k_values": ["3", "5/2", "9/4"],
+      "f": "3"
+    },
+    "role": "Exact test oracle for minimizer uniqueness and convergence; no PAH carrier, source rate, physical constant or infinite-volume assertion."
+  },
+  "current_status": {
+    "common_space_equicoercivity": false,
+    "arbitrary_sequence_liminf": false,
+    "recovery_sequence": false,
+    "data_recovery": false,
+    "target_exact_unique": true,
+    "norm_upgrade": false,
+    "semigroup_bridge": false,
+    "resolvent_limit": false
+  },
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "Only when all variational owner fields and the separate semigroup bridge are source-authorized, hash-pinned and independently verified.",
+    "NEGATIVE_RESULT": "Only an exact PAH-specific violation of the arbitrary-sequence liminf, recovery, or target uniqueness requirements qualifies; the scalar oracle is not a PAH counterexample.",
+    "HOLD_FOR_EVIDENCE": "Use while any common-space, liminf, recovery, norm-upgrade or semigroup field is absent."
+  },
+  "single_next_question": "Can a source-authorized N2b packet supply the common U_n/Hilbert space, arbitrary-sequence liminf, all-local recovery and norm upgrade needed to identify the R-512 resolvent, without changing PAH-001?",
+  "revisit_condition": "Reopen only when the missing owner fields are versioned and hash-pinned or an exact PAH-specific liminf/recovery contradiction is found; do not repeat finite carrier or physical-empty calculations.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_mosco_resolvent.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_mosco_resolvent_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_mosco_resolvent_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_mosco_resolvent_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020MoscoResolvent.lean"
+  },
+  "non_claims": [
+    "No source-authorized common U_n, N2b liminf/recovery, norm upgrade, R-512 resolvent identification or semigroup convergence.",
+    "No import of a generic Mosco theorem with unmatched hypotheses and no change to PAH-001 function, rates, state, carrier, regulator, normalization or order.",
+    "The scalar quadratic oracle is not a PAH counterexample and does not prove a universal impossibility theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ]
+}

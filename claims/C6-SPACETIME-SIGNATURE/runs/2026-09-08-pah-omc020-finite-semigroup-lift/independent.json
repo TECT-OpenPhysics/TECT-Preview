@@ -1,0 +1,189 @@
+{
+  "audit_id": "PAH-OMC-020-FINITE-SEMIGROUP-LIFT-INDEPENDENT-001",
+  "checks": [
+    {
+      "detail": {
+        "actual": {
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+          "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+          "R493-Lean": "c350035719b939c429a9e09d163015d34a471c3e6ea7c4678d4a88049060bc88"
+        },
+        "expected": {
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+          "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+          "R493-Lean": "c350035719b939c429a9e09d163015d34a471c3e6ea7c4678d4a88049060bc88"
+        }
+      },
+      "name": "independent parent hashes",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "carrier_unchanged": true,
+        "external_markov_time_only": true,
+        "functional_unchanged": true,
+        "mobility_unchanged": true,
+        "no_charge_deletion": true,
+        "no_conditional_averaging": true,
+        "no_counterterm": true,
+        "no_cross_q_mixture": true,
+        "no_fixed_rmax_bypass": true,
+        "no_new_root": true,
+        "no_physical_promotion": true,
+        "no_rate_fitting": true,
+        "projection_unchanged": true,
+        "rates_unchanged": true,
+        "state_unchanged": true
+      },
+      "name": "unchanged model firewall",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "active_gate_change": false,
+        "anchored_n": "NOT_PROVED",
+        "claim_bearing": false,
+        "classification": "auxiliary_support",
+        "finite_conditional_bridge": "PROVED_CONDITIONALLY",
+        "paH_omc013_semigroup": "NOT_PROVED",
+        "physical_promotion": false,
+        "verdict": "HOLD_FOR_EVIDENCE"
+      },
+      "name": "contract status",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "A_I": [
+          [
+            "2",
+            "-1"
+          ],
+          [
+            "3",
+            "-1"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "I_B": [
+          [
+            "2",
+            "-1"
+          ],
+          [
+            "3",
+            "-1"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      "name": "independent generator intertwining",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "depth": 9,
+        "rows": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "name": "independent power induction replay",
+      "status": "PASS"
+    },
+    {
+      "detail": "N(f)=max(2,m_f+1). This is the least cofinal level at which the new d_n, the new column n+2 and the square-to-split frontier columns n,n+1 are outside cl(f).",
+      "name": "R-493 support-dependent threshold",
+      "status": "PASS"
+    },
+    {
+      "detail": "Split both finite root sums into active matched roots and zero-increment roots. The matched summands are equal by the preceding two identities and the zero class contributes zero. Therefore (L_(n+1) I_(n,n+1) f)(x)=(I_(n,n+1) L_n f)(x) for every x, every R>=1 and every n>=N(f).",
+      "name": "R-493 pointwise wording",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        "invariant_core",
+        "invariant_subspace",
+        "all_iterates",
+        "operator_identity"
+      ],
+      "name": "no imported invariant-core theorem",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        "The common cylinder is grade-blind; a function that reads the disjoint-union tag is outside this theorem.",
+        "The result is eventual and observable-dependent through N(f); it is not a single finite-volume operator-norm bound over all cylinders.",
+        "R-490 C_sw=540 remains domination-only and supplies no generator equality.",
+        "The exact identity does not prove closability, a common infinite-volume semigroup, uniform cutoff or volume estimates, or an ordered limit.",
+        "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+      ],
+      "name": "R-493 does not claim semigroup",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        "R-550 does not prove the PAH-OMC-020 ordered j-before-anchored-n semigroup convergence.",
+        "The conditional finite bridge does not construct a common infinite-volume process, a path law, or a closed operator from the PAH source.",
+        "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+        "Markov time remains the external stochastic time declared in PAH-001 and is not quantum real time, proper time or Lorentzian time.",
+        "The finite matrix regression fixtures are algebraic checks and are not replacement PAH carriers, counterterms, rates or state mixtures."
+      ],
+      "name": "physical firewall",
+      "status": "PASS"
+    }
+  ],
+  "checks_failed": 0,
+  "checks_passed": 10,
+  "classification": "auxiliary_support",
+  "code_sha256": "6de5e1cc2d5ce6b8b79c137aef25c089333444f4c8a708d1d6ddf4b2628815fc",
+  "finding": "An independent exact finite algebra replay confirms the power-intertwining implication. The pinned R-493 source remains local and support-dependent, with no invariant/all-iterate owner field; semigroup promotion therefore remains held rather than refuted.",
+  "missing_assumptions": [
+    "A source-authorized invariant finite common subspace containing the iterates of every target cylinder at the fixed successor pair, or an exact all-function operator identity A I=I B.",
+    "A source-authorized definition of the transition-kernel/projective consistency if the semigroup is to be used pathwise instead of through finite matrix exponentials.",
+    "The separate common-space/path-space, N2b/N2c/N4/N2d and R-512 minimal-form identification inputs required for anchored-n convergence."
+  ],
+  "non_claims": [
+    "R-550 does not prove the PAH-OMC-020 ordered j-before-anchored-n semigroup convergence.",
+    "The conditional finite bridge does not construct a common infinite-volume process, a path law, or a closed operator from the PAH source.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains the external stochastic time declared in PAH-001 and is not quantum real time, proper time or Lorentzian time.",
+    "The finite matrix regression fixtures are algebraic checks and are not replacement PAH carriers, counterterms, rates or state mixtures."
+  ],
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_finite_semigroup_lift_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/hostile.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_finite_semigroup_lift_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/independent.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_finite_semigroup_lift_verify.py",
+    "lean": "Set-Location verification/lean; lean Tect/PahOmc020FiniteSemigroup.lean",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_finite_semigroup_lift.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/primary.json"
+  },
+  "result_id": "R-550",
+  "schema": "tect/pah-omc020-finite-semigroup-lift-independent/1.0",
+  "single_next_question": "Can a source-authorized packet prove that the R-493 grade-blind cylinder is invariant under every finite coarse generator iterate, or provide the stronger all-function finite operator intertwining needed to exponentiate the lift?",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-012": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "R493-Lean": "c350035719b939c429a9e09d163015d34a471c3e6ea7c4678d4a88049060bc88"
+  },
+  "task_id": "T-082",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

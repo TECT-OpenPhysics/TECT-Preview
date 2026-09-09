@@ -1,0 +1,116 @@
+{
+  "schema": "tect/pah-omc020-radial-sector-result/1.0",
+  "result_id": "R-518",
+  "contract_id": "PAH-OMC-020-RADIAL-SECTOR",
+  "date": "2026-09-07",
+  "task_id": "T-069",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXACT_SOURCE_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-radial-sector/primary.json": "b9f5e74329aeb118b3f210e220fb4ab0bf9becc46f7bbd4224af4af7ad1c2d63",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-radial-sector/independent.json": "134d9468e2c289182b110e455f0b5ab35d7fc5f12683417af02932423d6d8df6",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-radial-sector/hostile.json": "52d23fd454792987c4e2a9f2b3f63a654470065543ca3f023b4760f5ff33e8e8",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-radial-sector/integrated.json": "3c9838828c9df77ae952efe83e09c671aa1cc5b50df1a8ec642d9faf2fd306f2"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_radial_sector.py": "8848ecd230bd72f0f23c16e4eb8ecbdb107380c8c7ce4fdf2251968140f4fa7d",
+    "codes/foundations/pah_omc020_radial_sector_independent.py": "2ab680fb2d04ea23f095f58f8270551128f5b646e00f6b089f9a2632861d7e8d",
+    "codes/foundations/pah_omc020_radial_sector_hostile.py": "3760ddc3500fe736d636c1853d1eb617bf8854bd425d151c90980569fcbe0c66",
+    "verification/scripts/pah_omc020_radial_sector_verify.py": "7694ea2d81cb66b881faaa03fcb918161686021390f5a926fa8fc5a043f5b589",
+    "verification/lean/Tect/PahOmc020Radial.lean": "4853227eca26da71d07dc996b7d8d0f090e758a7d69bad228795d2765b3cbdb7"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md": "18356a8256a699ebfdd7520742f2f56d187a65a7b540d48bb339a25839bc2aab",
+    "explorations/log.jsonl#EXP-001636": "036b78a061518ad491da986b37be44e3d47c31e11d9a7652e097a047539834f3"
+  },
+  "exact_scope": {
+    "observables": "Amplitude-only bounded globally amplitude-Lipschitz finite-prefix cylinders D_rad.",
+    "model": "Exactly PAH-001 with the original PH/LK/AP/TR move classes, Gibbs state, partial domains and finite stationary semigroup; no new functional, rate, state, carrier, projection or time.",
+    "geometry": "The registered OMC-004 anchored strip and R-510/R-511 local-state sequence; no physical dimension or volume assignment.",
+    "order": "At fixed n, j->infinity with h_j=2^(-j), followed by the original anchored n state passage.",
+    "time": "External unaccelerated Markov time on every compact interval [0,T].",
+    "target": "The R-512 minimal-form semigroup on the H_rad kernel, only for the D_rad correlation sector."
+  },
+  "conclusion": {
+    "finite_j": "For g in D_rad, all non-TR increments vanish and R-511 gives ||L_TR,nj S_nj g||_2 <= 2 H_g L_g h_j. Finite stationary L2 contraction and variation of constants give a uniform compact-time correlation error bounded by 2 T ||f||_infinity H_g L_g h_j.",
+    "ordered_passage": "R-510 local state convergence sends the static sampled inner product to the fixed-n local limit and then to the R-510 Hilbert inner product. R-512 identifies D_rad with the zero-form H_rad sector, whose minimal-form semigroup is stationary.",
+    "status": "The ordered scalar correlation convergence is established conditionally for D_rad. This is not a general varying-Hilbert-space semigroup theorem."
+  },
+  "derived_inputs": {
+    "primary_fixture": {"H_f": "3/2", "L_g": "5/3", "T": "7/4", "factor": "5", "j10_bound_lt": "1/100"},
+    "independent_fixture": {"norm_f": "4/3", "lipschitz_g": "7/2", "T": "5/4", "j11_bound_lt": "1/100"}
+  },
+  "proof_coverage": {
+    "primary": "31 exact checks pin PAH-001/R-510/R-511/R-512/OMC-020, isolate D_rad, reconstruct the R-511 residual factor, derive compact-time decay and retain all full-target firewalls.",
+    "independent": "23 non-importing checks independently reconstruct the source move classes, residual bound, state/form inputs and rational decay envelope.",
+    "hostile": "21 checks reject dropping the factor 2, replacing h_j by h_j^{-1}, omitting radial endpoint directions, promoting D_rad to mixed observables, and assigning physical meaning to Markov time.",
+    "integrated": "The integrated runner replays all lanes, checks auxiliary/conditional/non-bearing status, verifies independent non-importing code, checks the Lean registry and compiles Lean 4.32.1 (19 exact checks).",
+    "lean": "Seven finite rational declarations compile: residual/form coefficient, compact-time error, mesh halving/positivity/decay and two exact small fixtures. Measure limits and semigroup representation remain analytic."
+  },
+  "assumptions": [
+    "The exact R-511 radial residual estimate and source distinction between TR and non-TR moves apply to D_rad.",
+    "The finite stationary semigroup is an L2 contraction and admits the elementary variation-of-constants identity.",
+    "R-510 fixed-prefix local-state convergence applies to the selected amplitude-only cylinder pair.",
+    "The standard nonnegative closed-form implication that zero-form vectors are fixed by the semigroup represented by the R-512 minimal form."
+  ],
+  "missing_assumptions": [
+    "A common U_n/Hilbert realization for mixed aperture- or label-dependent cylinders.",
+    "Arbitrary-sequence N2b liminf/recovery and N2c/N4 boundary escape for general evolved observables.",
+    "N2d minimal-form identification beyond the already admitted radial kernel sector and the full anchored-n semigroup theorem."
+  ],
+  "adversarial_review": [
+    {"objection": "The factor 2 from the R-511 radial residual can be dropped.", "disposition": "REJECTED: the hostile lane changes the bound when the factor is removed; both endpoint directions are retained."},
+    {"objection": "Replacing h_j by h_j^{-1} gives a stronger convergence rate.", "disposition": "REJECTED: h_j=2^(-j) is source-pinned and inverse-h is an unauthorized time acceleration."},
+    {"objection": "R-512 zero form energy automatically proves the full semigroup theorem.", "disposition": "UPHELD against promotion: only D_rad is fixed by the minimal-form kernel; mixed observables and common-space maps remain open."},
+    {"objection": "Fixed-n scalar correlation convergence is a varying-Hilbert operator limit.", "disposition": "REJECTED: the result uses local scalar state convergence only and explicitly withholds U_n/operator convergence."},
+    {"objection": "Finite rational fixtures establish physical radial freezing.", "disposition": "REJECTED: fixtures test the source inequality only; no physical time, Pre-A, QFT, gravity, continuum, Yang--Mills, mass-gap or TOE claim is made."}
+  ],
+  "formal_refs": {"results": ["R-510", "R-511", "R-512", "R-518"], "negatives": [], "events": ["20260907-pah-omc-020-r-518-amplitude-only-radial-sector"]},
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_radial_sector.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_radial_sector_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_radial_sector_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_radial_sector_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "result": "Primary 31/31, independent 23/23, hostile 21/21, integrated 19/19; Lean 4.32.1 compiles seven declarations."
+  },
+  "closed_scoped_gate": "Conditional ordered compact-time scalar correlation convergence on the amplitude-only D_rad sector.",
+  "remaining_gates": [
+    "Common U_n/Hilbert realization and terminal-square-compatible map for mixed observables",
+    "N2b arbitrary-sequence liminf/recovery",
+    "N2c/N4 boundary escape for general evolved cylinders",
+    "N2d minimal-form selection beyond H_rad",
+    "Full anchored-n PAH-OMC-020 semigroup convergence"
+  ],
+  "next_single_question": "Can one non-radial local cylinder be compared to the R-512 minimal form by a source-authorized common-space or terminal-square-compatible map without changing PAH-001?",
+  "revisit_condition": "Reopen only when a source-authorized map packet or exact non-radial comparison estimate is supplied; otherwise do not repeat radial or finite carrier calculations.",
+  "non_claims": [
+    "This is a conditional auxiliary sector theorem, not completion of PAH-OMC-020.",
+    "No common U_n for mixed observables, full N2b/N2c/N2d closure, infinite-volume process or general anchored-n semigroup convergence is proved.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 22,
+  "audit_id": "PAH-OMC-020-MINIMAL-DEPENDENCY-AUDIT-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-556",
+      "expected": "R-556",
+      "name": "result identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "primary hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "independent hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "hostile hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "primary checks pass",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent checks pass",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile checks pass",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean registry entry",
+      "status": "PASS"
+    },
+    {
+      "actual": "d435123369476b9fdd8e2f67340fd06944f2c2788c86928c1573734fe427855f",
+      "expected": "d435123369476b9fdd8e2f67340fd06944f2c2788c86928c1573734fe427855f",
+      "name": "Lean source hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "conditional_bridge_needs_both",
+        "full_ready_of_all_fields",
+        "open_root_blocks_full",
+        "radial_support_is_not_full_without_owner"
+      ],
+      "expected": [
+        "conditional_bridge_needs_both",
+        "full_ready_of_all_fields",
+        "open_root_blocks_full",
+        "radial_support_is_not_full_without_owner"
+      ],
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "failed": 0,
+  "finding": "All four verification lanes agree on a bounded dependency ledger: R-555 is the exact ordered implication, R-514/R-548 are restricted inputs, and the full-domain route remains held by three source-owned obligations.",
+  "lean": {
+    "command": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe env lean C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\lean\\Tect\\PahOmc020MinimalDependency.lean",
+    "cwd": "E:\\Dev\\TECT\\verification\\lean",
+    "returncode": 0,
+    "status": "PASS",
+    "stderr": "",
+    "stdout": ""
+  },
+  "next_single_question": "Can one source-authorized packet simultaneously fix root multiplicity and supply a common map/form with full-domain J and D estimates, without changing PAH-001?",
+  "non_claims": [
+    "This audit does not prove full PAH-OMC-020 ordered semigroup convergence.",
+    "It does not construct a common Hilbert space, U_n, path-space law, N2b/N2c/N4 estimate or R-512 identification.",
+    "It does not promote the amplitude-only result to non-radial observables or to an infinite-volume process.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion is made.",
+    "External Markov time remains stochastic bookkeeping and is not quantum, proper or Lorentzian time."
+  ],
+  "passed": 22,
+  "physical_promotion": false,
+  "replay": {
+    "hostile": {
+      "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -X utf8 C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\codes\\foundations\\pah_omc020_minimal_dependency_audit_hostile.py --check",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-020 MINIMAL DEPENDENCY HOSTILE: PASS 9/9; full verdict remains HOLD_FOR_EVIDENCE"
+    },
+    "independent": {
+      "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -X utf8 C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\codes\\foundations\\pah_omc020_minimal_dependency_audit_independent.py --check",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-020 MINIMAL DEPENDENCY INDEPENDENT: PASS 15/15; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "primary": {
+      "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -X utf8 C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\scripts\\pah_omc020_minimal_dependency_audit.py --check",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-020 MINIMAL DEPENDENCY PRIMARY: PASS 24/24; verdict=HOLD_FOR_EVIDENCE"
+    }
+  },
+  "reproduction": "python -X utf8 verification/scripts/pah_omc020_minimal_dependency_audit_verify.py --check",
+  "result_id": "R-556",
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-minimal-dependency-audit/hostile.json": "f3018b684212f6c45053bfd01ef553ed26ea77c4e144668919208a420ae350cf",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-minimal-dependency-audit/independent.json": "4ca09aa7ef1c7374e34ddc8fd5b9ea05d322cc9437eea8023b0b4b80d7a664bf",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-minimal-dependency-audit/primary.json": "001bcf57549293997cfa1e2a4aff6cff597d3ebd91f900cd666d78d0df9d2266"
+  },
+  "schema": "tect/pah-omc020-minimal-dependency-audit-integrated/1.0",
+  "source_hashes": {
+    "codes\\foundations\\pah_omc020_minimal_dependency_audit_hostile.py": "dcad066621f928ff0313e401d0605f5a30619c785f6cf70980c70feb1846afaa",
+    "codes\\foundations\\pah_omc020_minimal_dependency_audit_independent.py": "87247f51d33461c460d1efa917b68e9cca6ad8c67b6989cb3ea4404badaa5af7",
+    "strategy\\pa-hyp\\PAH-OMC-020-minimal-dependency-audit-contract-v1.json": "4c229c549a40cb41039e750527a5afa0e4a548ea30b7f511112846d277ac826b",
+    "verification\\lean\\Tect\\PahOmc020MinimalDependency.lean": "d435123369476b9fdd8e2f67340fd06944f2c2788c86928c1573734fe427855f",
+    "verification\\scripts\\pah_omc020_minimal_dependency_audit.py": "4f1bdd0958b24b63c28094751f751618e8b875332deb589f93f4ed14dbba2da0",
+    "verification\\scripts\\pah_omc020_minimal_dependency_audit_verify.py": "ec7cd4a591f1b60edf6ff1e236a074fd0e499b9ba2c9f294c60d1b3791c8fe1c"
+  },
+  "status": "HOLD_FOR_EVIDENCE_MINIMAL_DEPENDENCY_LEDGER",
+  "task_id": "T-086",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

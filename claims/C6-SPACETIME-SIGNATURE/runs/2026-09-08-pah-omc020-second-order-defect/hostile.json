@@ -1,0 +1,74 @@
+{
+  "audit_id": "PAH-OMC-020-SECOND-ORDER-DEFECT-HOSTILE-001",
+  "checks": [
+    {
+      "detail": {
+        "first": 0.0,
+        "second": -0.008236755063627754
+      },
+      "name": "registered witness is accepted",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "mutated_n": 2,
+        "required_N_f": 3
+      },
+      "name": "below-threshold mutation is rejected",
+      "status": "PASS"
+    },
+    {
+      "detail": "rates_unchanged=False",
+      "name": "rate-preserving firewall rejects a changed-rate mutation",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "constant_residual": 0.0,
+        "registered_residual": -0.008236755063627754
+      },
+      "name": "constant-observable mutation is not a defect witness",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "N_f": 3,
+        "R493_threshold": "N(f)=max(2,m_f+1)=3",
+        "R_max": 1,
+        "coarse_level": 3,
+        "fine_level": 4,
+        "observable": "ell_a with a=(0,0)",
+        "sample_variant": 3,
+        "state_definition": "PAH-OMC-013 sample_state(4,3), followed by the unchanged neutral coordinate projection to level 3"
+      },
+      "name": "factorized oracle is pinned to preregistered R=1",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "negative_result",
+        "physical_promotion": false,
+        "scope": "route-local finite second-order semigroup obstruction",
+        "verdict": "NEGATIVE_RESULT"
+      },
+      "name": "physical overclaim mutation is rejected",
+      "status": "PASS"
+    }
+  ],
+  "checks_failed": 0,
+  "checks_passed": 6,
+  "code_sha256": "fc5e261d6570de165047667c90cef7a70f41636b5e6161f689cfe08a4329c7c3",
+  "non_claims": [
+    "No PAH-OMC-020 ordered j-before-anchored-n semigroup convergence is proved or universally refuted.",
+    "No common infinite-volume process, path law, closable operator, continuum limit or R-512 identification follows.",
+    "No physical Pre-A, spacetime, event-horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains the external stochastic time declared by PAH-001 and is not quantum real time, proper time or Lorentzian time."
+  ],
+  "result_id": "R-551",
+  "schema": "tect/pah-omc020-second-order-defect-hostile/1.0",
+  "task_id": "T-083",
+  "verdict": "NEGATIVE_RESULT",
+  "verification": "PASS"
+}

@@ -1,0 +1,146 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-MESH-UNIFORM-INDEPENDENT-001",
+  "checks": [
+    {
+      "actual": "PAH-OMC-020-MESH-UNIFORM-TRANSFER",
+      "expected": "PAH-OMC-020-MESH-UNIFORM-TRANSFER",
+      "name": "contract id",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json": "4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json": "4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "name": "pins",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "mesh cover is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "target continuity is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "ordered input is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "horizon positive",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "radius within horizon",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "modulus nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "mesh error nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/16",
+      "expected": "7/16",
+      "name": "independent bound value",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "refinement lowers envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "local error is dominated",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "scalar triangle route",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no finite-to-target promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no physical promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "mesh pointwise remains open",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 16,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "9c35900edc39e2af423a8e93c03c1d08cbb5a39ea80a2fdacbfa16693092defd",
+  "conditional": true,
+  "finding": "Independent exact-rational fixtures confirm the mesh-to-uniform scalar transfer. No PAH mesh-pointwise convergence is imported or asserted.",
+  "next_single_question": "Can a source-authorized common-space or path-space packet prove the ordered correlation convergence at every finite time mesh point for the unchanged PAH-001 dynamics?",
+  "non_claims": [
+    "No PAH mesh-pointwise convergence is assumed as an achieved result; it remains the missing dynamic input.",
+    "No common U_n, path law, non-explosion theorem, N2b/N2c/N4/N2d closure or R-512 finite-to-target identification.",
+    "No replacement of PAH-001 functional, rates, Gibbs state, external Markov time or j-before-anchored-n order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_mesh_uniform_independent.py --check",
+  "result_id": "R-545",
+  "schema": "tect/pah-omc020-mesh-uniform-independent/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json": "4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_INDEPENDENT_MESH_TRANSFER",
+  "task_id": "T-065",
+  "test_fixture": {
+    "M_fg": "5/2",
+    "T": "3/2",
+    "bound": "7/16",
+    "mesh_error": "1/20",
+    "omega_inf": "3/40",
+    "radius": "1/8"
+  },
+  "verdict": "PASS"
+}

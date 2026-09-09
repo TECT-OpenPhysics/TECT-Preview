@@ -1,0 +1,136 @@
+{
+  "checks": [
+    {
+      "actual": "3/64",
+      "expected": ">0",
+      "name": "valid envelope positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">1 required",
+      "name": "base-one mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "192",
+      "expected": ">3/64",
+      "name": "reversed decay is not a bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "45/8",
+      "expected": "45/8",
+      "name": "C2 retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "45/8",
+      "expected": "not probability envelope",
+      "name": "dropping C2 changes quantity",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": ">2",
+      "name": "distance must exceed width",
+      "status": "PASS"
+    },
+    {
+      "actual": -1,
+      "expected": ">=0 required",
+      "name": "negative distance rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "zero Lyapunov mass stays zero",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "constructed_hypothesis": true,
+        "definition_owner": "TECT_RESEARCH_PROGRAM",
+        "physical_promotion": false,
+        "source_authorized_packet_present": false
+      },
+      "expected": false,
+      "name": "fabricated authorization rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "predictable_lyapunov",
+        "boundary_hitting",
+        "N4_attribution",
+        "minimal_form"
+      ],
+      "expected": "N4_attribution",
+      "name": "N4 attribution remains required",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "predictable_lyapunov",
+        "boundary_hitting",
+        "N4_attribution",
+        "minimal_form"
+      ],
+      "expected": "minimal_form",
+      "name": "minimal form remains required",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "constructed_hypothesis": true,
+        "definition_owner": "TECT_RESEARCH_PROGRAM",
+        "physical_promotion": false,
+        "source_authorized_packet_present": false
+      },
+      "expected": false,
+      "name": "no physical promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "No source-authorized path-space law, non-explosion theorem, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal-form identification, or PAH-OMC-020 semigroup convergence.",
+        "No universal impossibility follows from the missing owner packet or from the rational fixtures.",
+        "No PAH-001 functional, rate, state, carrier, regulator, normalization, external Markov time, or limit order is changed.",
+        "No physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, mass-gap, or TOE conclusion."
+      ],
+      "expected": "process absent",
+      "name": "no direct process claim",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no PAH definition mutation",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 14,
+  "conditional": true,
+  "mutations_rejected": [
+    "b<=1",
+    "reversed decay",
+    "dropped C2",
+    "fabricated owner authorization",
+    "missing N4 attribution",
+    "physical promotion"
+  ],
+  "non_claims": [
+    "No source-authorized path-space law, non-explosion theorem, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal-form identification, or PAH-OMC-020 semigroup convergence.",
+    "No universal impossibility follows from the missing owner packet or from the rational fixtures.",
+    "No PAH-001 functional, rate, state, carrier, regulator, normalization, external Markov time, or limit order is changed.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, mass-gap, or TOE conclusion."
+  ],
+  "schema": "tect/pah-omc020-lyapunov-bridge-hostile/1.0",
+  "status": "PASS_HOSTILE_CONTROLS",
+  "verdict": "AUXILIARY_SUPPORT"
+}

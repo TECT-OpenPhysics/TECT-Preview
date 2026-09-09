@@ -1,0 +1,103 @@
+{
+  "schema": "tect/pah-omc020-minimal-dependency-audit-result/1.0",
+  "result_id": "R-556",
+  "contract_id": "PAH-OMC-020-MINIMAL-DEPENDENCY-AUDIT",
+  "date": "2026-09-08",
+  "task_id": "T-086",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["ANALYTIC_DEPENDENCY_AUDIT", "HASH_PINNED", "EXECUTED", "INDEPENDENT", "HOSTILE", "LEAN_FINITE_SCOPE"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-020-radial-semigroup-consistency-result-v1.json": "4ab544bb961b7beb3907482eece28faffde7443c4be3c49a3ee0f9585e132121",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a"
+  },
+  "exact_scope": {
+    "model": "Exactly PAH-001 with original directed PH/LK/AP/TR rates, labelled Gibbs state and external Markov time.",
+    "order": "j tends to infinity at fixed n first, followed by the anchored n limit.",
+    "abstract_bridge": "R-555: err_(n,j) <= J_(n,j)+D_n with fixed-n J and anchored-n D epsilon controls implies the registered nested order.",
+    "restricted_inputs": "R-514 supplies fixed-n convergence to finite Q_n(t); R-548 supplies the R-512 target only for amplitude-only D_rad.",
+    "full_domain_requirements": "A unique root-owner convention, a source-authorized common map/form, and full-domain J and D estimates."
+  },
+  "ledger": {
+    "ordered_bridge": "CLOSED_CONDITIONAL",
+    "fixed_n_J": "CLOSED_RESTRICTED_AND_FINITE_TARGET",
+    "root_owner": "OPEN",
+    "common_map_form": "OPEN",
+    "anchored_D": "OPEN",
+    "radial_instantiation": "CLOSED_RESTRICTED"
+  },
+  "finding": "The exact ordered-epsilon logic is closed conditionally, and the fixed-n/radial inputs are real but restricted. The full PAH-OMC-020 route remains HOLD_FOR_EVIDENCE because root multiplicity and root measure are not owner-fixed (R-552), no source-authorized common U_n/Hilbert packet is present (R-539), and the full-domain anchored target defect D_n is absent (R-536).",
+  "assumptions": [
+    "The pinned result records accurately state their registered scopes and do not silently enlarge the observable domain.",
+    "The unchanged PAH-001 functional, rates, state, external Markov time and j-before-n order remain frozen.",
+    "R-555 is used as a logical implication, not as a source estimate."
+  ],
+  "missing_assumptions": [
+    "Source-authorized root multiplicity, duplicate-transition, invalid-move and root-measure packet.",
+    "A measure-compatible common U_n or equivalent common-space/form packet with N2a, N2b recovery/liminf and N2c/N4 boundary control.",
+    "A full-domain PAH-specific J_(n,j) estimate and anchored target defect D_n -> 0 identifying the R-512 minimal form."
+  ],
+  "adversarial_review": [
+    {"objection": "R-555 plus R-548 proves the full non-radial objective.", "disposition": "UPHELD AGAINST PROMOTION: R-548 is explicitly amplitude-only and R-555 assumes, rather than proves, full-domain J and D."},
+    {"objection": "R-514's fixed-n Q_n(t) limit is already the R-512 minimal target.", "disposition": "UPHELD AGAINST PROMOTION: the record names finite Q_n(t), not a common anchored minimal-form identification."},
+    {"objection": "The root ambiguity is merely notation and can be ignored in the ledger.", "disposition": "REJECTED: R-552 exhibits distinct generator derivatives on the same cylinder under source-compatible multiplicity conventions."},
+    {"objection": "A researcher-owned U_n candidate can fill the common-map row.", "disposition": "REJECTED: T-063/T-064 require source authorization and the pinned intake explicitly records no authorized packet."},
+    {"objection": "The HOLD verdict is a universal no-go theorem.", "disposition": "REJECTED: it is an evidence boundary for the pinned corpus; a future owner packet can reopen the route."}
+  ],
+  "formal_refs": {
+    "results": ["R-514", "R-536", "R-539", "R-548", "R-552", "R-555", "R-556"],
+    "negatives": [],
+    "events": ["20260908-r-556-pah-omc-020-minimal-dependency-audit-2026"]
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-minimal-dependency-audit/primary.json": "001bcf57549293997cfa1e2a4aff6cff597d3ebd91f900cd666d78d0df9d2266",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-minimal-dependency-audit/independent.json": "4ca09aa7ef1c7374e34ddc8fd5b9ea05d322cc9437eea8023b0b4b80d7a664bf",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-minimal-dependency-audit/hostile.json": "f3018b684212f6c45053bfd01ef553ed26ea77c4e144668919208a420ae350cf",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-minimal-dependency-audit/integrated.json": "dcfa1c993c5623c9445f7cb8e4f365e7054e9d8dfd7e75cbedd7f7353e76ef4a"
+  },
+  "tooling_files": {
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-contract-v1.json": "4c229c549a40cb41039e750527a5afa0e4a548ea30b7f511112846d277ac826b",
+    "verification/scripts/pah_omc020_minimal_dependency_audit.py": "4f1bdd0958b24b63c28094751f751618e8b875332deb589f93f4ed14dbba2da0",
+    "codes/foundations/pah_omc020_minimal_dependency_audit_independent.py": "87247f51d33461c460d1efa917b68e9cca6ad8c67b6989cb3ea4404badaa5af7",
+    "codes/foundations/pah_omc020_minimal_dependency_audit_hostile.py": "dcad066621f928ff0313e401d0605f5a30619c785f6cf70980c70feb1846afaa",
+    "verification/scripts/pah_omc020_minimal_dependency_audit_verify.py": "ec7cd4a591f1b60edf6ff1e236a074fd0e499b9ba2c9f294c60d1b3791c8fe1c",
+    "verification/lean/Tect/PahOmc020MinimalDependency.lean": "d435123369476b9fdd8e2f67340fd06944f2c2788c86928c1573734fe427855f",
+    "verification/lean/registry.json": "45797af43a1eba11bec59ed7e9c4633bb2f5f13a4895db8bb316bc24f565327b"
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_minimal_dependency_audit.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_minimal_dependency_audit_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_minimal_dependency_audit_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_minimal_dependency_audit_verify.py --check",
+    "lean": "lake env lean Tect/PahOmc020MinimalDependency.lean",
+    "result": "Primary 24/24, independent 15/15, hostile 9/9, integrated 22/22; six Lean declarations compile."
+  },
+  "closed_scoped_gate": "A hash-pinned dependency ledger that separates the conditional ordered bridge and radial support from the full-domain owner obligations.",
+  "remaining_gates": [
+    "Source-authorized root multiplicity, duplicate-transition, invalid-move and root-measure owner packet",
+    "Source-authorized common U_n/Hilbert or equivalent path-space packet with N2a/N2b/N2c/N4 controls",
+    "Full-domain J_(n,j) and anchored D_n identification with the R-512 minimal form",
+    "Full PAH-OMC-020 ordered stationary semigroup convergence"
+  ],
+  "next_single_question": "Can one source-authorized packet simultaneously fix root multiplicity and supply a common map/form with full-domain J and D estimates, without changing PAH-001?",
+  "revisit_condition": "Reopen only when that packet is versioned and hash-pinned, or when an exact unchanged-source contradiction invalidates a ledger row; do not repeat radial or finite carrier calculations.",
+  "non_claims": [
+    "No full PAH-OMC-020 semigroup convergence, infinite-volume process or continuum limit is claimed.",
+    "No source-authorized common U_n, N2b/N2c/N4 proof, or R-512 minimal identification is claimed beyond the restricted radial record.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-certificate.md"
+}

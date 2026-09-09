@@ -1,0 +1,83 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "PASS_CONDITIONAL_FIXED_N_IMPLICATION",
+      "expected": "PASS_CONDITIONAL_FIXED_N_IMPLICATION",
+      "name": "primary conditional audit",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_INDEPENDENT_CONDITIONAL_AUDIT",
+      "expected": "PASS_INDEPENDENT_CONDITIONAL_AUDIT",
+      "name": "independent non-importing audit",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_HOSTILE_CONDITIONAL_AUDIT",
+      "expected": "PASS_HOSTILE_CONDITIONAL_AUDIT",
+      "name": "hostile shortcut audit",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "IN_PROGRESS",
+        "IN_PROGRESS",
+        "IN_PROGRESS"
+      ],
+      "expected": [
+        "IN_PROGRESS",
+        "IN_PROGRESS",
+        "IN_PROGRESS"
+      ],
+      "name": "all lanes keep temporal proof open",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes keep physical promotion false",
+      "status": "PASS"
+    },
+    {
+      "actual": "Non-importing tuple/Fraction reconstruction; no primary verifier code is imported.",
+      "expected": "Non-importing tuple/Fraction reconstruction; no primary verifier code is imported.",
+      "name": "independent lane does not import primary",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "conditional_scope": "F7--F9 imply F10 for fixed n only under the explicitly inherited R-509 cell/tail theorem, R-511 radial residual estimate and finite-fibre compact modulus; those hypotheses and all N2a--N2d obligations remain open.",
+  "lane_files": {
+    "hostile": {
+      "path": "codes/foundations/pah_omc020_fixedn_temporal_hostile.py",
+      "sha256": "b416dcb9d77688c46b3f40d11806d96f7f078defe7cf39c451edd5951975d678"
+    },
+    "independent": {
+      "path": "codes/foundations/pah_omc020_fixedn_temporal_independent.py",
+      "sha256": "22381ef5006990461a426d8ac3508e1e64151fa347ebba0a7a9b58d65f9e2ea0"
+    },
+    "primary": {
+      "path": "verification/scripts/pah_omc020_fixedn_temporal_conditional.py",
+      "sha256": "64ddeb719a5b606868e18d93ea241e410563aee4d533fe10e1477fa94ab92915"
+    }
+  },
+  "non_claims": [
+    "No unconditional fixed-n temporal theorem or PAH-OMC-020 completion.",
+    "No common-space U_n, Mosco liminf, anchored n passage or R-512 minimal-form selection.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass gap, Yang--Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "schema": "tect/pah-omc020-fixedn-conditional-integrated/1.0",
+  "status": "PASS_CONDITIONAL_FIXED_N_INTEGRATED",
+  "temporal_verdict": "IN_PROGRESS",
+  "verdict": "AUXILIARY_SUPPORT"
+}

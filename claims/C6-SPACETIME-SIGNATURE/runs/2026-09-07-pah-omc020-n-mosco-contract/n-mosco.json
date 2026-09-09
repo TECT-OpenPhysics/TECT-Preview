@@ -1,0 +1,318 @@
+{
+  "boundary_factor_fixture": {
+    "elementary_exp": 0.1353352832366127,
+    "formula": "Kbar=2*(1+exp(-2))^2 > S=2*(1+exp(-2))",
+    "scope": "finite boundary-map diagnostic; not a temporal or physical result",
+    "split_factor_Kbar": 2.5779724107239192,
+    "square_factor_S": 2.2706705664732256,
+    "state": "r=0, s=1, old links +1"
+  },
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+      "expected": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-017-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+      "expected": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-018-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+      "expected": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "J_p(s)=|boundary p|^(-1) sum_(e in boundary p) J_e(s)",
+      "expected": "boundary average of source edge stiffnesses",
+      "name": "PAH-001 plaquette stiffness input",
+      "status": "PASS"
+    },
+    {
+      "actual": "For each fixed prefix Lambda_m and f in A_m, nu_n(f) converges without subsequence selection to the explicit compatible prefix state nu_infty(f).",
+      "expected": "R-510 local prefix convergence",
+      "name": "R-510 local state input",
+      "status": "PASS"
+    },
+    {
+      "actual": "The sampled unaccelerated generator has the derived nonradial local limit A: ||L_nj S_nj f-S_nj A_n f||_L2(mu_nj)<=2 H_f L_f h_j uniformly for n>=N(f)=max(2,m(f)+2), and radial form energy <=2 H_f L_f^2 h_j^2. Original PH/LK/AP terms agree exactly on the grid. Weighted inverse transport, sextic fixed-n dominated convergence and volume-uniform local second-moment tails justify the j-before-n stationary symmetric nonnegative pre-form E_infty(f,g)=-nu_infty(f A g). This is a local operator/pre-form result, not closed-form or temporal process construction.",
+      "expected": "R-511 local pre-form",
+      "name": "R-511 form input",
+      "status": "PASS"
+    },
+    {
+      "actual": "The exact R-511 form is closable for every H-null energy-Cauchy sequence, with no fixed-support restriction. Its form-norm completion embeds injectively into H and defines the dense-domain minimal closed nonnegative extension Ebar. Every vector in the H-closure H_rad of amplitude-only cylinders belongs to Dom(Ebar), has zero energy and zero cross-energy against Dom(Ebar). The original aperture cylinder retains strictly positive energy.",
+      "expected": "R-512 minimal closure",
+      "name": "R-512 minimal closure input",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "j before anchored n",
+      "name": "OMC-020 target keeps anchored order",
+      "status": "PASS"
+    },
+    {
+      "actual": "Local stationary two-point correlation convergence, compact-time uniform. Not assumed strong operator convergence between different Hilbert spaces, multi-time path-law convergence, a Feller process, a common real-time automorphism or a physical limit.",
+      "expected": "local correlations",
+      "name": "OMC-020 target is correlation-level",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "No rate/functional/mobility/finite-part/state/time change, counterterm, time acceleration, conditional generator averaging, fixed-R_max bypass or new finite carrier.",
+        "No inference of semigroup selection from closability, form-core density, pointwise generator consistency or static Gibbs convergence alone.",
+        "No assumption that a form core is an operator graph core, or that the minimal closed form equals the maximal jump form.",
+        "No Q3LOCK or TECT-YM result imported as a PAH premise; no phasewise or source-dependent direct-sum rescue."
+      ],
+      "expected": "explicit firewall",
+      "name": "no varying-space shortcut is preregistered",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "(N1)",
+        "(N2a)",
+        "(N2b)",
+        "(N2c)",
+        "(N2d)",
+        "limsup/recovery",
+        "liminf"
+      ],
+      "expected": "all markers",
+      "name": "anchored-n contract markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "(N2a) missing input",
+      "expected": "explicitly missing",
+      "name": "common realization is identified as missing",
+      "status": "PASS"
+    },
+    {
+      "actual": "(N2c) missing input",
+      "expected": "explicitly missing",
+      "name": "boundary escape is identified as missing",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-512 is insufficient for liminf",
+      "expected": "present",
+      "name": "minimal selection is not silently inferred",
+      "status": "PASS"
+    },
+    {
+      "actual": "J_n core candidate only",
+      "expected": "explicit split",
+      "name": "local pullback realization is separated from full U_n",
+      "status": "PASS"
+    },
+    {
+      "actual": "N4 compact-time estimate",
+      "expected": "explicitly required",
+      "name": "boundary escape contract is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": "S/K boundary mismatch",
+      "expected": "explicitly unresolved",
+      "name": "terminal-square versus split-cell mismatch is retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "non-physical boundary",
+      "expected": "present",
+      "name": "physical non-claims remain present",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "expected": "N=max(2,m+2)",
+      "name": "support stabilization stage is monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "expected": "[2,3,...,10]",
+      "name": "support stage formula is exact on fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "expected": "stage>=m+2",
+      "name": "recovery candidates retain every local prefix",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2706705664732256,
+      "expected": ">0",
+      "name": "boundary fixture square factor positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.5779724107239192,
+      "expected": ">0",
+      "name": "boundary fixture split factor positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "name": "boundary fixture retains diagonal label",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.5779724107239192,
+      "expected": "2*(1+exp(-2))^2",
+      "name": "boundary fixture split factor formula",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2706705664732256,
+      "expected": "2*(1+exp(-2))",
+      "name": "boundary fixture square factor formula",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.1353352832366127,
+      "expected": ">0",
+      "name": "boundary fixture elementary exponential positive",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "Kbar": 2.5779724107239192,
+        "S": 2.2706705664732256
+      },
+      "expected": "Kbar>S",
+      "name": "boundary fixture S/K distinction is nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": "49b5c1ba1b194067bada2fdc10f04e782057d3736efd6ab3eddea7ce8f47bd2f",
+      "expected": "different from work hash",
+      "name": "hostile liminf omission changes work hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "no diagonal/reversed order",
+      "name": "hostile diagonal limit remains rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "maximal jump form",
+      "expected": "explicit firewall",
+      "name": "hostile maximal-form substitution remains rejected",
+      "status": "PASS"
+    }
+  ],
+  "code_sha256": "e2e0661f99fb45d7fc91cae22ce6dc5d136e3ffc46d7314502a06d88756b40ec",
+  "lean": {
+    "command": "lean verification/lean/Tect/PahOmc020.lean",
+    "compiler": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lean.exe",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "non_claims": [
+    "This is a recovery/liminf contract audit, not a Mosco theorem, semigroup convergence result or result-card admission.",
+    "No maximal-domain equality, operator graph core, infinite-volume process, anchored n limit, physical Pre-A, spacetime, QFT, gravity, continuum, mass gap or TOE conclusion; no Q3LOCK or TECT-YM import."
+  ],
+  "open_obligations": [
+    "construct and hash-pin a measure-compatible realization U_n for the varying finite Hilbert spaces",
+    "prove the arbitrary-sequence Mosco liminf and unbounded-rate boundary escape on [0,T]",
+    "identify the limiting closed form with the R-512 minimal closure and derive correlation semigroup convergence"
+  ],
+  "proved_scope": [
+    "R-510 local-state and R-511 local-form inputs are pinned for the anchored-n recovery candidate",
+    "support stabilization N(f,g)=max(2,m(f)+2,m(g)+2) is explicit",
+    "the exact missing varying-space liminf, boundary-escape and minimal-selection obligations are recorded",
+    "the coordinate pullback J_n is admitted only on the fixed local core, with full-space boundedness left open",
+    "the finite unsplit terminal-square versus infinite split-cell mismatch is retained as an N2a boundary obstruction",
+    "the source boundary fixture recomputes a nonzero S/K split factor difference without changing the process",
+    "the original-generator boundary-escape estimate N4 is stated without replacing the process",
+    "hostile shortcut/order/form-substitution controls and PahOmc020 Lean compilation PASS"
+  ],
+  "recovery_arithmetic": {
+    "N_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "support_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "schema": "tect/pah-omc020-n-mosco-contract/1.0",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_N_MOSCO_RECOVERY_CONTRACT",
+  "temporal_verdict": "IN_PROGRESS",
+  "work_sha256": "2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab"
+}

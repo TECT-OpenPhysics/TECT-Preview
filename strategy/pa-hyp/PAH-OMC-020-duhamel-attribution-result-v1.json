@@ -1,0 +1,142 @@
+{
+  "schema": "tect/pah-omc020-duhamel-attribution-result/1.0",
+  "result_id": "R-517",
+  "contract_id": "PAH-OMC-020-DUHAMEL-ATTRIBUTION",
+  "date": "2026-09-07",
+  "task_id": "T-068",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXACT_FINITE_ALGEBRA",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b",
+    "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json": "114699a4554e45260a6a6632f44a32e9c0494a9274c27b561c676e93c5d247d9",
+    "strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json": "9e357158eb6de66bb776b2d674964ddf9fb16547409ac36f8dd254154082bc11"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/primary.json": "b658703e8488baebb3f4dec8363adc1bd027987057248f3b5e4e8e78b9e9b8f5",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/independent.json": "39c6098ff999f675657ae9a057c7fffaab97cd2706150522e0491c4f9163e8dd",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/hostile.json": "ef3ac0995783197051c63008f2c79b76851b679ff2314755e3eb85e4f7f00162",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/integrated.json": "c1253ef2a73685076dc160bf107f7f661b5761e61f14f3ea36d248bd8d94365c"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_duhamel_attribution.py": "024216f651e63d68cbcf45b00b22751526d7015b50a5aaa74eb4bb6a719a4401",
+    "codes/foundations/pah_omc020_duhamel_attribution_independent.py": "8bc1d1a8745bb76c4b0c178390d44666e03990f340250512b28aef5f66985c25",
+    "codes/foundations/pah_omc020_duhamel_attribution_hostile.py": "63d4de975a4f5c02bebbaadf141afcfbeb52150bd9d2151582afe3c33c97dd2f",
+    "verification/scripts/pah_omc020_duhamel_attribution_verify.py": "17b46ef105441086fefcea44476fe6155488c382fd759131b912db892ef9c054",
+    "verification/lean/Tect/PahOmc020Duhamel.lean": "525985611d487103050983a2f2659e148e17d5b2d7211417fa4186fee9945778"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md": "6693dd4beb708ea2b5650d95a4b7b462853fa25e787c3c9838370e868f15f793"
+  },
+  "exact_scope": {
+    "model": "Exactly the unchanged PAH-001 PH/LK/AP finite-fibre generator after the registered R-511 j-limit; no radial TR term is added back.",
+    "geometry": "The exact OMC-004 two-row strip G_n, n>=2, with split triangular faces and terminal unsplit square.",
+    "state": "The R-510/R-511 labelled Gibbs state nu_n and the source partial-root domains; no new mixture or projection.",
+    "generator": "The source midpoint rate c_r(x)=m_r(x) exp[-beta(F_rho(r.x)-F_rho(x))/2] and its original local root maps.",
+    "locality": "R-516 dependency footprints have radius 2 columns, overlap branching b=144, and support-width first-root bound a_w=16*(w+2*2+1).",
+    "coupling": "A finite-amplitude two-copy basic coupling uses common clocks when local rates agree; rate discrepancies are bounded by c_r(X)+c_r(Y), giving an explicit two-copy factor 2.",
+    "normalization": "The R-515 Gibbs square-transport L2 word bound is used unchanged; no pointwise rate supremum or fitted weight is introduced.",
+    "time": "External stochastic Markov time only; the simplex expansion is finite-fibre bookkeeping.",
+    "limit_order": "The conditional boundary estimate is uniform in finite n and tends to zero as the prefix boundary m moves outward; no anchored-n, infinite-volume or continuum limit is taken here."
+  },
+  "conclusion": {
+    "attribution": "For a bounded local cylinder g, a disagreement from an outside root can influence g only through a connected overlap word. The finite jump-history expansion gives a factor t^(ell-1)/(ell-1)! for a word of length ell, and integrating over [0,T] gives T^ell/ell!.",
+    "bound": "Minkowski and the R-515 square-transport identity bound every word coefficient in L2(nu_n) by one. Reverse-word counting gives at most a_w*b^(ell-1) words, while the two-copy rate-difference triangle contributes 2^ell. Thus integral_0^T ||A_n^(out,m)Q_n(t)g||_2 dt <= 4||g||_infinity E_d(a_w,2b,T) whenever 2bT<d+1.",
+    "constants": "The exact source-derived connectivity constant is b=144 and the explicit coupling envelope uses b_eff=2b=288; for a two-column support a_w=112.",
+    "distance": "Because overlapping radius-2 footprints have base-column displacement at most 4, the graph distance from a fixed support to roots leaving Lambda_m grows at least as max(1,ceil((m-w-4)/4)).",
+    "n4_status": "The source-local finite-fibre attribution and the resulting N4 boundary-escape estimate pass conditionally on the stated finite coupling construction. The comparison of varying Hilbert spaces remains open."
+  },
+  "proof_coverage": {
+    "primary": "61 exact checks cover source pins, local maps, OMC-004 geometry, overlap derivation, the two-copy factor, graph-distance growth and factorial tails.",
+    "independent": "25 non-importing arithmetic checks independently reconstruct b=144, b_eff=288, support bounds and the integrated simplex envelope.",
+    "hostile": "18 checks reject diagonal omission, under-radius locality, dropping the two-copy factor, wrong integrated simplex power, unsafe ratios and anchored-n or physical promotion.",
+    "integrated": "The integrated verifier replays all lanes, checks auxiliary/conditional/non-bearing status, verifies non-importing independence, checks the Lean registry and compiles Lean 4.32.1.",
+    "lean": "Five finite arithmetic declarations compile: two-copy connected term, simplex factor, ratio condition, effective branching and connected-count scaling."
+  },
+  "assumptions": [
+    "At each fixed amplitude the source PH/LK/AP label chain is finite and has the ordinary basic coupling/jump-history construction.",
+    "The OMC-001 root maps and midpoint rates depend only on their R-516 dependency footprints, so disjoint footprints evolve identically under common clocks.",
+    "The R-515 Gibbs square-transport identity applies to every finite word in the registered post-R-511 fibre.",
+    "The boundary prefix Lambda_m is measured in the OMC-004 column coordinate used by the declared dependency footprints."
+  ],
+  "missing_assumptions": [
+    "A source-authorized common U_n/Hilbert realization and terminal-square-compatible comparison map.",
+    "N2b arbitrary-sequence liminf/recovery and N2d identification with the R-512 minimal closed form.",
+    "Anchored-n semigroup convergence and any common infinite-volume process construction."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The coupling hides a global bound on the unbounded PAH rates.",
+      "disposition": "DISMISSED: at fixed amplitude the chain is finite, and the only uniform-in-state input after integration is the R-515 Gibbs square-transport bound; the two-copy rate difference is written explicitly as a sum."
+    },
+    {
+      "objection": "The two-copy factor can be dropped so that b remains 144 in the tail.",
+      "disposition": "REJECTED: the hostile lane rejects the one-copy shortcut; the honest effective branching is b_eff=288 while the combinatorial overlap constant remains b=144."
+    },
+    {
+      "objection": "The finite jump expansion is already a varying-space or anchored-n theorem.",
+      "disposition": "UPHELD AGAINST PROMOTION: no common U_n, terminal-square comparison, liminf/recovery, minimal-form selection or anchored-n limit is proved."
+    },
+    {
+      "objection": "The factorial tail fixtures are physical estimates.",
+      "disposition": "REJECTED: T=1/4 and the listed distances are exact arithmetic fixtures only; no physical length or time is assigned."
+    },
+    {
+      "objection": "Lean compilation formalizes maximal coupling and N4.",
+      "disposition": "UPHELD against that overclaim: Lean checks only the finite arithmetic identities; the coupling construction and limit statement remain analytic and conditional."
+    }
+  ],
+  "formal_refs": {
+    "results": [
+      "R-515",
+      "R-516",
+      "R-517"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_duhamel_attribution.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/primary.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_duhamel_attribution_independent.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/independent.json",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_duhamel_attribution_hostile.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/hostile.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_duhamel_attribution_verify.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/integrated.json --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020Duhamel.lean (Lean 4.32.1 with LEAN_PATH from verification/lean/.lake/packages)",
+    "result": "Primary 61/61, non-importing independent 25/25, hostile 18/18 and integrated 18/18 pass; Lean 4.32.1 compiles five declarations."
+  },
+  "closed_scoped_gate": "Conditional finite-fibre connected-word to Duhamel/coupling attribution and N4 boundary-escape envelope with explicit b=144 and b_eff=288.",
+  "remaining_gates": [
+    "N2a source-authorized common U_n/Hilbert realization and terminal-square-compatible map",
+    "N2b arbitrary-sequence liminf and recovery",
+    "N2d R-512 minimal-form identification",
+    "Anchored-n semigroup convergence and the full PAH-OMC-020 objective"
+  ],
+  "next_single_question": "Can the conditional finite-fibre attribution be lifted through a source-authorized common U_n/Hilbert realization and terminal-square-compatible comparison map without changing PAH-001?",
+  "revisit_condition": "Reopen the anchored-n passage only after the common-space owner packet and terminal-square map are hash-pinned and independently verified; otherwise record an exact comparison-map obstruction.",
+  "non_claims": [
+    "This is a conditional auxiliary finite-fibre result, not the anchored-n PAH-OMC-020 theorem.",
+    "No N2a common U_n, N2b liminf/recovery, N2d minimal-form selection or infinite-volume process is proved.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion follows.",
+    "External stochastic Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

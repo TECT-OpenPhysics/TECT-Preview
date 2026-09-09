@@ -1,0 +1,659 @@
+{
+  "active_gate_change": false,
+  "certificate_sha256": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+      "expected": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+      "expected": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-018-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+      "expected": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-018-generator-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+      "expected": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "bf5409afc112c54b1596cce3272c193ff79517db6af593daf7011d85a898e911",
+      "expected": "bf5409afc112c54b1596cce3272c193ff79517db6af593daf7011d85a898e911",
+      "name": "source pin:claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fibre-modulus/fibre.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "d607dcac1bfa6e061a0b783f7ee9b339ba2d808cd237cb69f2a348d6a4557dd5",
+      "expected": "d607dcac1bfa6e061a0b783f7ee9b339ba2d808cd237cb69f2a348d6a4557dd5",
+      "name": "source pin:claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-cell-correlation/cell-correlation.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "expected": "midpoint rate",
+      "name": "source midpoint rate retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0; all other displayed couplings one.",
+      "expected": "K=2,M_s=1,epsilon=1/2,beta=nu=1",
+      "name": "frozen PAH parameters",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "constant_role": "DERIVED conservative strict-positive proof bound; not a fit, measured value or estimate of actual expectation.",
+        "exact_question": "Are fixed-n amplitude laws tight in j, and is liminf_j mu_(n,j)(b_v^2)>=c>0 for v=a,d with one c for every n>=2?",
+        "fixed_n": "Uniform-in-j tightness and weak convergence to nu_n proportional to exp(-F(r,z)) dr with labelled background counting.",
+        "local_moment": "nu_n(r_v^2)<=4 at every vertex, uniformly in n, from X^3<=1+10X for X=max_v nu_n(r_v^2).",
+        "tail": "For L>=4, sup_j mu_(n,j)(max_v r_v>=L)<=exp(C_n) N 5^(N-1) exp(-L); C_n=25N/24+33E/8+4P.",
+        "uniform_witness": "lim_j mu_(n,j)(b_v^2)=nu_n(b_v^2)>=(11/80)exp(-1550/3)>0 for every n>=2 and v=a,d (indeed all vertices)."
+      },
+      "expected": "tightness, weak passage, endpoint cells",
+      "name": "R-509 fixed-n weak/cell theorem is inherited",
+      "status": "PASS"
+    },
+    {
+      "actual": "The sampled unaccelerated generator has the derived nonradial local limit A: ||L_nj S_nj f-S_nj A_n f||_L2(mu_nj)<=2 H_f L_f h_j uniformly for n>=N(f)=max(2,m(f)+2), and radial form energy <=2 H_f L_f^2 h_j^2. Original PH/LK/AP terms agree exactly on the grid. Weighted inverse transport, sextic fixed-n dominated convergence and volume-uniform local second-moment tails justify the j-before-n stationary symmetric nonnegative pre-form E_infty(f,g)=-nu_infty(f A g). This is a local operator/pre-form result, not closed-form or temporal process construction.",
+      "expected": "radial residual",
+      "name": "R-511 radial residual is inherited",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "Compact fibre modulus",
+        "Duhamel estimate",
+        "Uniform cell passage",
+        "Removal of the amplitude cutoff"
+      ],
+      "expected": "all stages",
+      "name": "certificate contains the four proof stages",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "j then n",
+      "name": "j-before-n order retained",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "cell": "IN_PROGRESS",
+        "fibre": "IN_PROGRESS"
+      },
+      "expected": "diagnostics only",
+      "name": "finite audits remain subordinate",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "No change to T-054 active gate, C6 T1 or PAH-OMC-014 merely from this auxiliary temporal result.",
+        "No full kernel classification, unique physical vacuum, Reading-H comparison, spectral gap, mixing or ergodicity claim.",
+        "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap or TOE conclusion."
+      ],
+      "expected": "present",
+      "name": "physical firewall retained",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "name": "strip vertex count n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "name": "strip edge incidence n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "expected": 5,
+      "name": "strip face incidence n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 48,
+      "expected": ">0",
+      "name": "finite nonradial root bound n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 10,
+      "expected": 10,
+      "name": "strip vertex count n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "name": "strip edge incidence n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 7,
+      "expected": 7,
+      "name": "strip face incidence n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 62,
+      "expected": ">0",
+      "name": "finite nonradial root bound n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "name": "strip vertex count n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 20,
+      "expected": 20,
+      "name": "strip edge incidence n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 9,
+      "expected": 9,
+      "name": "strip face incidence n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 76,
+      "expected": ">0",
+      "name": "finite nonradial root bound n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 14,
+      "expected": 14,
+      "name": "strip vertex count n=5",
+      "status": "PASS"
+    },
+    {
+      "actual": 24,
+      "expected": 24,
+      "name": "strip edge incidence n=5",
+      "status": "PASS"
+    },
+    {
+      "actual": 11,
+      "expected": 11,
+      "name": "strip face incidence n=5",
+      "status": "PASS"
+    },
+    {
+      "actual": 90,
+      "expected": ">0",
+      "name": "finite nonradial root bound n=5",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "name": "strip vertex count n=6",
+      "status": "PASS"
+    },
+    {
+      "actual": 28,
+      "expected": 28,
+      "name": "strip edge incidence n=6",
+      "status": "PASS"
+    },
+    {
+      "actual": 13,
+      "expected": 13,
+      "name": "strip face incidence n=6",
+      "status": "PASS"
+    },
+    {
+      "actual": 104,
+      "expected": ">0",
+      "name": "finite nonradial root bound n=6",
+      "status": "PASS"
+    },
+    {
+      "actual": 18,
+      "expected": 18,
+      "name": "strip vertex count n=7",
+      "status": "PASS"
+    },
+    {
+      "actual": 32,
+      "expected": 32,
+      "name": "strip edge incidence n=7",
+      "status": "PASS"
+    },
+    {
+      "actual": 15,
+      "expected": 15,
+      "name": "strip face incidence n=7",
+      "status": "PASS"
+    },
+    {
+      "actual": 118,
+      "expected": ">0",
+      "name": "finite nonradial root bound n=7",
+      "status": "PASS"
+    },
+    {
+      "actual": 20,
+      "expected": 20,
+      "name": "strip vertex count n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 36,
+      "expected": 36,
+      "name": "strip edge incidence n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 17,
+      "expected": 17,
+      "name": "strip face incidence n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 132,
+      "expected": ">0",
+      "name": "finite nonradial root bound n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": "<=2",
+      "name": "nonradial energy degree n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": "<=2",
+      "name": "nonradial energy degree n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": "<=2",
+      "name": "nonradial energy degree n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "-3/5",
+          "3/5"
+        ],
+        [
+          "7/10",
+          "-7/10"
+        ]
+      ],
+      "expected": "zero rows",
+      "name": "fibre row sum",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/65",
+      "expected": "21/65",
+      "name": "fibre detailed balance",
+      "status": "PASS"
+    },
+    {
+      "actual": "847/3120",
+      "expected": "847/3120",
+      "name": "fibre form sign and factor",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "12",
+        "6",
+        "3",
+        "3/2",
+        "3/4",
+        "3/8",
+        "3/16",
+        "3/32",
+        "3/64",
+        "3/128"
+      ],
+      "expected": "strictly decreasing",
+      "name": "Duhamel mesh modulus decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/128",
+      "expected": "positive and smaller",
+      "name": "Duhamel modulus has zero j-limit",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "33/2",
+        "33/4",
+        "33/8",
+        "33/16",
+        "33/32",
+        "33/64",
+        "33/128",
+        "33/256"
+      ],
+      "expected": "nonnegative",
+      "name": "compact family cell error is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "33/2",
+        "33/4",
+        "33/8",
+        "33/16",
+        "33/32",
+        "33/64",
+        "33/128",
+        "33/256"
+      ],
+      "expected": "strictly decreasing",
+      "name": "compact family cell error decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "last_error": "33/256",
+        "mesh_levels": 8
+      },
+      "expected": "finite net plus vanishing mesh",
+      "name": "finite time net is uniform on [0,T]",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'exact_question': 'Are fixed-n amplitude laws tight in j, and is liminf_j mu_(n,j)(b_v^2)>=c>0 for v=a,d with one c for every n>=2?', 'fixed_n': 'Uniform-in-j tightness and weak convergence to nu_n proportional to exp(-F(r,z)) dr with labelled background counting.', 'tail': 'For L>=4, sup_j mu_(n,j)(max_v r_v>=L)<=exp(C_n) N 5^(N-1) exp(-L); C_n=25N/24+33E/8+4P.', 'local_moment': 'nu_n(r_v^2)<=4 at every vertex, uniformly in n, from X^3<=1+10X for X=max_v nu_n(r_v^2).', 'uniform_witness': 'lim_j mu_(n,j)(b_v^2)=nu_n(b_v^2)>=(11/80)exp(-1550/3)>0 for every n>=2 and v=a,d (indeed all vertices).', 'constant_role': 'DERIVED conservative strict-positive proof bound; not a fit, measured value or estimate of actual expectation.'}",
+      "expected": "sup_j tail",
+      "name": "stationary tail has all-j control",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'exact_question': 'Are fixed-n amplitude laws tight in j, and is liminf_j mu_(n,j)(b_v^2)>=c>0 for v=a,d with one c for every n>=2?', 'fixed_n': 'Uniform-in-j tightness and weak convergence to nu_n proportional to exp(-F(r,z)) dr with labelled background counting.', 'tail': 'For L>=4, sup_j mu_(n,j)(max_v r_v>=L)<=exp(C_n) N 5^(N-1) exp(-L); C_n=25N/24+33E/8+4P.', 'local_moment': 'nu_n(r_v^2)<=4 at every vertex, uniformly in n, from X^3<=1+10X for X=max_v nu_n(r_v^2).', 'uniform_witness': 'lim_j mu_(n,j)(b_v^2)=nu_n(b_v^2)>=(11/80)exp(-1550/3)>0 for every n>=2 and v=a,d (indeed all vertices).', 'constant_role': 'DERIVED conservative strict-positive proof bound; not a fit, measured value or estimate of actual expectation.'}",
+      "expected": "decay",
+      "name": "tail decays at large cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'measure_normalization': 'Certificate: exact h_j^N endpoint-inclusive step-cell identity; no added Jacobian.', 'fixed_n_tightness_and_weak_passage': 'Certificate: product sextic majorant, positive unit-cube denominator, dominated convergence; independent finite-box/Riemann plus tail reconstruction.', 'boundary_and_domain': 'Certificate: r_v exp(-F) vanishes at 0 and infinity; absolute polynomial-times-sextic domination justifies Fubini and integration by parts.', 'volume_uniformity': 'Certificate local maximum moment argument; Lean cubic_moment_barrier, independently derived moment/degree constants.', 'local_probability': 'Certificate conditional dr density with A in [1/4,11] and |H|<=80 on the good-neighbor event; Lean tail and positive-bound algebra.', 'encoded_not_full_formalization': 'Lean checks ten named algebraic/inequality propositions. The measure construction and analytic source crosswalk are not fully formalized.', 'no_finite_table_promotion': 'Executable local-star and endpoint probes audit implementation; universal n,j statements follow from the explicit analytic proof.'}",
+      "expected": "endpoint-inclusive",
+      "name": "tail proof retains endpoint normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1",
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/16",
+        "1/32",
+        "1/64",
+        "1/128",
+        "1/256",
+        "1/512"
+      ],
+      "expected": "strictly decreasing",
+      "name": "cutoff tail oracle decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": "41af0463b27a8127bea48ef0ae8c9b112152f7bcc01e28e7dec0e8ec73feaa37",
+      "expected": "different certificate",
+      "name": "hostile pointwise envelope changes source",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "present",
+      "name": "hostile diagonal order rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": "absent",
+      "name": "hostile acceleration absent",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "No change to T-054 active gate, C6 T1 or PAH-OMC-014 merely from this auxiliary temporal result.",
+        "No full kernel classification, unique physical vacuum, Reading-H comparison, spectral gap, mixing or ergodicity claim.",
+        "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap or TOE conclusion."
+      ],
+      "expected": "fenced",
+      "name": "hostile physical promotion fenced",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "code_sha256": "cff3de00fa21e55bf169c0b76c58a0bb7f16eab95d64164d7623f98a67e09c03",
+  "compact_time_net": {
+    "errors": [
+      "33/2",
+      "33/4",
+      "33/8",
+      "33/16",
+      "33/32",
+      "33/64",
+      "33/128",
+      "33/256"
+    ],
+    "mesh": [
+      "1/4",
+      "1/8",
+      "1/16",
+      "1/32",
+      "1/64",
+      "1/128",
+      "1/256",
+      "1/512"
+    ]
+  },
+  "conclusion": "For every fixed n>=2, f,g in the preregistered domain and finite T, the original stationary correlations converge uniformly on [0,T] as j->infinity to the exact PH/LK/AP fibre semigroup Q_n(t), after the stated amplitude cutoff is removed.",
+  "finite_algebra": {
+    "duhamel_bounds": [
+      "12",
+      "6",
+      "3",
+      "3/2",
+      "3/4",
+      "3/8",
+      "3/16",
+      "3/32",
+      "3/64",
+      "3/128"
+    ],
+    "form": "847/3120",
+    "generator": [
+      [
+        "-3/5",
+        "3/5"
+      ],
+      [
+        "7/10",
+        "-7/10"
+      ]
+    ],
+    "stationary": [
+      "7/13",
+      "6/13"
+    ]
+  },
+  "incidence": [
+    {
+      "edges": 12,
+      "faces": 5,
+      "n": 2,
+      "nonradial_root_bound": 48,
+      "vertices": 8
+    },
+    {
+      "edges": 16,
+      "faces": 7,
+      "n": 3,
+      "nonradial_root_bound": 62,
+      "vertices": 10
+    },
+    {
+      "edges": 20,
+      "faces": 9,
+      "n": 4,
+      "nonradial_root_bound": 76,
+      "vertices": 12
+    },
+    {
+      "edges": 24,
+      "faces": 11,
+      "n": 5,
+      "nonradial_root_bound": 90,
+      "vertices": 14
+    },
+    {
+      "edges": 28,
+      "faces": 13,
+      "n": 6,
+      "nonradial_root_bound": 104,
+      "vertices": 16
+    },
+    {
+      "edges": 32,
+      "faces": 15,
+      "n": 7,
+      "nonradial_root_bound": 118,
+      "vertices": 18
+    },
+    {
+      "edges": 36,
+      "faces": 17,
+      "n": 8,
+      "nonradial_root_bound": 132,
+      "vertices": 20
+    }
+  ],
+  "lean": {
+    "command": "lean verification/lean/Tect/PahOmc020.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "non_claims": [
+    "No common completed Hilbert-space U_n, Mosco theorem, boundary-escape theorem or R-512 minimal selection.",
+    "No infinite-volume process or anchored n convergence is claimed.",
+    "No physical Pre-A, spacetime, quantum real time, QFT, gravity, continuum, mass gap, Yang--Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "polynomial_degree": [
+    {
+      "cases": 48,
+      "max_total_degree": 2,
+      "n": 2
+    },
+    {
+      "cases": 62,
+      "max_total_degree": 2,
+      "n": 3
+    },
+    {
+      "cases": 76,
+      "max_total_degree": 2,
+      "n": 4
+    }
+  ],
+  "proof_coverage": [
+    "finite source root incidence and exact nonradial increment degree at most two",
+    "compact amplitude rate modulus from finite labels and source polynomial continuity",
+    "inverse-pair square bound plus exact finite-matrix Duhamel estimate",
+    "endpoint-inclusive R-509 cell passage upgraded to uniform time by a finite equicontinuity net",
+    "stationary tail removal in the declared j-before-K order"
+  ],
+  "remaining_gates": [
+    "source-authorized varying-space U_n/common-Hilbert realization",
+    "N2b arbitrary-sequence weak liminf and recovery",
+    "N2c/N4 boundary escape with unbounded original rates",
+    "N2d identification with the R-512 minimal closed form",
+    "anchored n semigroup convergence and full PAH-OMC-020 objective"
+  ],
+  "reproduction": {
+    "check": "python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_proof.py --check",
+    "run": "python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_proof.py"
+  },
+  "schema": "tect/pah-omc020-fixedn-temporal-proof/1.0",
+  "scope": {
+    "model": "Exact PAH-001 functional and original PH/LK/AP/TR rates",
+    "observables": "bounded globally amplitude-l1-Lipschitz finite-prefix cylinders f,g",
+    "order": "j->infinity at fixed n, then K->infinity; no anchored n limit here",
+    "strips": "OMC-004 two-row G_n, every fixed n>=2",
+    "target": "stationary local correlations with the exact finite-label fibre semigroup Q_n(t)",
+    "time": "external stochastic time, uniformly on every finite [0,T]"
+  },
+  "source_pins": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-cell-correlation/cell-correlation.json": "d607dcac1bfa6e061a0b783f7ee9b339ba2d808cd237cb69f2a348d6a4557dd5",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fibre-modulus/fibre.json": "bf5409afc112c54b1596cce3272c193ff79517db6af593daf7011d85a898e911",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_FIXED_N_TEMPORAL_CORRELATION",
+  "tail": {
+    "cutoffs": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "diagnostic_majorant": [
+      "1",
+      "1/2",
+      "1/4",
+      "1/8",
+      "1/16",
+      "1/32",
+      "1/64",
+      "1/128",
+      "1/256",
+      "1/512"
+    ]
+  },
+  "temporal_verdict": "FIXED_N_PASS_ANCHORED_N_OPEN",
+  "verdict": "AUXILIARY_SUPPORT"
+}

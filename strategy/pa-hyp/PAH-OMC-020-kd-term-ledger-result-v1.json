@@ -1,0 +1,150 @@
+{
+  "schema": "tect/pah-omc020-kd-term-ledger-result/1.0",
+  "result_id": "R-535",
+  "contract_id": "PAH-OMC-020-KD-TERM-LEDGER",
+  "date": "2026-09-08",
+  "task_id": "T-077",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "EXACT_SOURCE_CROSSWALK",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "exact_scope": {
+    "model": "Exactly unchanged PAH-001, original directed rates, labelled Gibbs state and OMC-004 strip.",
+    "order": "j tends to infinity at fixed n first, followed by anchored n; no diagonal or reversed order.",
+    "time": "Compact intervals of external stochastic Markov time only.",
+    "target": "R-512 minimal closed-form semigroup is a named target only; no process identification is asserted.",
+    "question_scope": "Term-by-term coverage of J_(n,j), K_(n,m) and D_n from already registered R-510/R-493/R-517/R-512 records."
+  },
+  "finding": "The ledger confirms that R-514 supplies the fixed-n J term; R-510 supplies a local stationary-state modulus; R-493 supplies finite eventual local generator equality; and R-517 supplies a conditional finite-fibre boundary envelope. No source-authorized common comparison, all-cylinder compact-time K_(n,m) limit, or R-512 target-process D_n limit is present.",
+  "coverage": {
+    "J_fixed_n": "PASS_REGISTERED_R514",
+    "K_state": "PARTIAL_LOCAL_R510",
+    "K_stabilization": "PARTIAL_EVENTUAL_R493",
+    "K_boundary": "CONDITIONAL_FINITE_R517",
+    "K_uniform": "ABSENT_ALL_TERM_BOUND",
+    "D_target": "ABSENT_R512_PROCESS_LINK"
+  },
+  "required_field_flags": {
+    "fixed_n_passage": true,
+    "state_formula": true,
+    "stabilization_formula": true,
+    "boundary_formula": true,
+    "common_comparison": false,
+    "uniform_K_limit": false,
+    "target_process_identification": false,
+    "D_limit": false
+  },
+  "proof_content": {
+    "available": [
+      "R-514 fixed-n compact-time j passage",
+      "R-510 explicit local stationary-state Cauchy modulus",
+      "R-493 support-dependent eventual finite generator identity",
+      "R-517 conditional finite-fibre connected-word boundary envelope"
+    ],
+    "not_available": [
+      "A single common U_n/path or common-Hilbert comparison",
+      "An all-cylinder compact-time K_(n,m) budget with lim_m limsup_n K_(n,m)=0",
+      "A source-authorized process/form identification with R-512 and D_n -> 0"
+    ],
+    "admission": "The eight-field conjunction is false on the current source snapshot, so the sequential-gluing implication cannot be promoted."
+  },
+  "assumptions": [
+    "All listed source bytes remain exactly hash-pinned.",
+    "R-510, R-493 and R-517 are used only at their registered finite or conditional scopes.",
+    "The term ledger is a coverage audit and does not synthesize an owner packet."
+  ],
+  "missing_assumptions": [
+    "Source-authorized common comparison U_n or equivalent path/common-Hilbert realization.",
+    "Source-authorized all-cylinder compact-time K_(n,m) bound with lim_m limsup_n K_(n,m)=0.",
+    "Source-authorized target-process/R-512 minimal-form identification with D_n -> 0.",
+    "A model-specific process theorem and independent verification of those three fields."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "R-510's explicit state modulus is already the full K_(n,m) bound.",
+      "disposition": "UPHELD AGAINST PROMOTION: it is a stationary local-state estimate and does not control the evolved comparison on compact time intervals."
+    },
+    {
+      "objection": "R-493 eventual generator equality makes K zero for every local correlation.",
+      "disposition": "UPHELD AGAINST PROMOTION: pointwise finite identity does not supply the common-space or boundary estimate needed for the anchored comparison."
+    },
+    {
+      "objection": "R-517's finite word envelope is an unconditional N2c/N4 result.",
+      "disposition": "UPHELD AGAINST PROMOTION: its own scope is conditional finite-fibre and lists the missing source-authorized common U_n."
+    },
+    {
+      "objection": "R-512 minimal-form closure identifies the finite stationary process automatically.",
+      "disposition": "UPHELD AGAINST PROMOTION: form closure and process/semigroup identification are separate fields."
+    },
+    {
+      "objection": "The false conjunction is a universal impossibility theorem.",
+      "disposition": "REJECTED: it is a current repository-scoped coverage result; a future hash-pinned owner packet remains admissible."
+    }
+  ],
+  "remaining_gates": [
+    "Common comparison/path-space or common-Hilbert realization",
+    "All-cylinder compact-time uniform K_(n,m) limit",
+    "R-512 target-process/minimal-form D_n identification",
+    "Ordered PAH-OMC-020 stationary semigroup convergence"
+  ],
+  "next_single_question": "Can one source-authorized packet provide a common comparison, one all-cylinder compact-time K_(n,m) limit and the R-512 target-process defect D_n without changing PAH-001?",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_kd_term_ledger.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_kd_term_ledger_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_kd_term_ledger_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_kd_term_ledger_verify.py --check --lean C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lean.exe",
+    "lean": "lean verification/lean/Tect/PahOmc020KD.lean"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-kd-term-ledger-contract-v1.json": "4e1984e17ae0d55d95f87b82cecef41437d8192593a38e418ff568621d346ad3",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json": "67825022b3db1078387534baacb818fdf60778ce19f4fe81514484a25cf7cb5d",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-contract-v1.json": "486b86853638bdd953e95ed2501446bb0780c8f0eb768c9c9fd1e18062c53984",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-result-v1.json": "a96b95f704ca9f7289bdc4767cd46a90f4bf3567ab1c3f2fae2b813840a11adc",
+    "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-result-v1.json": "9013fe5337965478c2e91c84fa693eacf3dbd0d948a3b2cafb900332d8b9dd19"
+  },
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-kd-term-ledger-contract-v1.json": "4e1984e17ae0d55d95f87b82cecef41437d8192593a38e418ff568621d346ad3",
+    "strategy/pa-hyp/PAH-OMC-020-kd-term-ledger-certificate.md": "cdc2f3ea82aa4a64d990b540af7efdc6ed753b50e9d14a0b4a6f99c27d166262",
+    "verification/scripts/pah_omc020_kd_term_ledger.py": "9d7d5fc590a00ee1c37a4a53489415895c9775d1e15555c3e80a67b4020ce9c8",
+    "codes/foundations/pah_omc020_kd_term_ledger_independent.py": "a4928dd514b02d2dcbdc79f5c248a94bdcfc28ddecbbfcf996dcb31f15fc4d7e",
+    "codes/foundations/pah_omc020_kd_term_ledger_hostile.py": "ed99b95e93a21bd65a55b71ef94aa7a906c528d24ac0d984550746a8184ae978",
+    "verification/scripts/pah_omc020_kd_term_ledger_verify.py": "f93a4e13e60c8b79b4ae0e206b081e6d07ec2038fe43c715ddea415e37a3a19d",
+    "verification/lean/Tect/PahOmc020KD.lean": "6d62a2f03b9242657f5a9c06746b9a7aa26f63bdea82ee190b21fd700582bcc5",
+    "verification/lean/registry.json": "6edcdeeea451ad83d205584949a7e6fe78660e9f5ea9767b6ad29863b5da3031",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-kd-term-ledger/primary.json": "137076c8b719abba5064a943e073db0a1fe7f01305682657df6f1907b80a9c2b",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-kd-term-ledger/independent.json": "44da031caf628703b481e1d9a32f1157adfddbf1070d85d8ab823fff95b2ef14",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-kd-term-ledger/hostile.json": "a71685fbf7cb5daf51c56b138d7edf052a0be06b0b8ede7e6c8dda0d9ca9ed59",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-kd-term-ledger/integrated.json": "62f0143575d17c634afe1d4b6b2945624d234c540d2628c25866f3f272f8903e"
+  },
+  "formal_refs": {
+    "results": ["R-510", "R-512", "R-514", "R-517", "R-533", "R-534"],
+    "negatives": [],
+    "events": [],
+    "explorations": ["EXP-001655"]
+  },
+  "exploration_id": "EXP-001655",
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-kd-term-ledger-certificate.md",
+  "non_claims": [
+    "No PAH-OMC-020 anchored-n semigroup convergence theorem.",
+    "No source path process, common U_n, N2b/N2c/N4/N2d closure or universal impossibility theorem.",
+    "No PAH-001 functional, rate, state, carrier, regulator, normalization, external time or limit-order change.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ]
+}

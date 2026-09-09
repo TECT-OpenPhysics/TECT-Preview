@@ -1,0 +1,916 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "independent source hash strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+      "expected": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+      "name": "independent source hash strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "independent source hash strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+      "expected": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+      "name": "independent source hash strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "61284627c3a74df7d30e346365df983bba2781138639877196f4fbf90229887c",
+      "expected": "61284627c3a74df7d30e346365df983bba2781138639877196f4fbf90229887c",
+      "name": "independent source hash strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+      "expected": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+      "name": "independent source hash strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+      "expected": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+      "name": "independent source hash strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab",
+      "expected": "2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab",
+      "name": "independent source hash strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+      "expected": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+      "name": "independent source hash strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "immutable PAH source",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-OMC-020",
+      "expected": "PAH-OMC-020",
+      "name": "temporal preregistration",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "external time text",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-522 C2 text",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-522 process gap",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-520 process gap",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "intake provenance remains false",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "N4 expression retained",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-512 is not temporal proof",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "strict owner admission remains empty",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "inventory contains PAH records",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "static C2 is not N4",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 21,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "finding": "Independent reconstruction agrees that R-522 is a static local C2 input and that no source-authorized path-space, compensator/Lyapunov, non-explosion or unconditional N2c/N4 packet is present.",
+  "inventory": [
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/finite-common-core-audit-exploration.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/owner-morphism-exploration.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-002-conditional-audit-exploration.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-002-contract-exploration.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-exploration.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-exploration.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-exploration.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-boundary-error-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-composed-cauchy-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-conditional-cauchy-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-conditional-mixture-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-projective-mixture-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-separator-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-sign-change-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-014-witness-stationarity-lean-manifest.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-015-result-v1.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-017-result-v1.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-018-result-v1.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/PAH-OMC-019-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-c2-moment-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "non-explosion"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-exploration.json"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "non-explosion"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "martingale",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "martingale",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "non-explosion"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-n-mosco-replay-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-N2a-owner-intake-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-inventory-replay-drift-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "martingale",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.1-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.1-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.1-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "martingale",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "martingale",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "martingale",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-pathword-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-radial-sector-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-root-overlap-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-exploration.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json"
+    },
+    {
+      "markers": [
+        "N2c",
+        "N4",
+        "lyapunov",
+        "non-explosion",
+        "path-space"
+      ],
+      "pah_omc020": true,
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-work.md"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/R483-certificate.md"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/R484-certificate.md"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/R485-certificate.md"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/R486-certificate.md"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/R487-certificate.md"
+    },
+    {
+      "markers": [
+        "N4"
+      ],
+      "pah_omc020": false,
+      "path": "strategy/pa-hyp/scalar-transport-boundary-exploration.json"
+    }
+  ],
+  "missing_assumptions": [
+    "Source-authorized path-space or martingale-problem law with filtration and cylinder generator.",
+    "Predictable compensator or Lyapunov drift estimate for compact-time non-explosion and uniqueness.",
+    "Unconditional N2c/N4 boundary escape for A_n^(out,m)Q_n(s)g under unchanged rates.",
+    "Identification of the process/form with the R-512 minimal closed form."
+  ],
+  "non_claims": [
+    "No PAH-OMC-020 temporal convergence theorem or universal no-go theorem.",
+    "No new PAH functional, rate, state, carrier, regulator, limit order or physical time.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_n2c_owner_audit_independent.py --check",
+  "schema": "tect/pah-omc020-n2c-owner-audit-independent/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md": "61284627c3a74df7d30e346365df983bba2781138639877196f4fbf90229887c",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+    "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab"
+  },
+  "status": "PASS_INDEPENDENT_N2C_OWNER_HOLD",
+  "strict_owner_candidates": [],
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

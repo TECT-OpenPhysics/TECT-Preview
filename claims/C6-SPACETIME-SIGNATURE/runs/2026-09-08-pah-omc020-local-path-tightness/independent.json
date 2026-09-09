@@ -1,0 +1,192 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-LOCAL-PATH-TIGHTNESS-INDEPENDENT-001",
+  "checks": [
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+        "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+        "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+      },
+      "name": "pinned sources",
+      "status": "PASS"
+    },
+    {
+      "actual": 540,
+      "expected": 540,
+      "name": "C_sw is source-derived",
+      "status": "PASS"
+    },
+    {
+      "actual": 60,
+      "expected": 60,
+      "name": "C2 is source-derived",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-001",
+      "expected": "PAH-001",
+      "name": "original PAH packet",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-OMC-010",
+      "expected": "PAH-OMC-010",
+      "name": "OMC-010 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "j-before-anchored-n order",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "bridge is still conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "no physical bridge promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "external Markov time",
+      "status": "PASS"
+    },
+    {
+      "actual": 180,
+      "expected": 180,
+      "name": "root incidence count",
+      "status": "PASS"
+    },
+    {
+      "actual": "729/5",
+      "expected": "729/5",
+      "name": "quadratic variation coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "2916",
+      "expected": "2916",
+      "name": "drift coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "coefficients nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "two-square envelope is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "envelope grows with delta",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Markov quotient is subunit in fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "halved-delta decrease 2400",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "halved-delta decrease 4800",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "halved-delta decrease 9600",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "envelope tends to zero algebraically",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 20,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "finding": "An independent exact-rational reconstruction gives the same stopped-time two-square envelope from the pinned source constants for a distinct support/increment fixture; this is local finite-path tightness support only.",
+  "fixture": {
+    "K_Gamma": "729/5",
+    "K_L": "2916",
+    "delta": "1/1200",
+    "delta_twice": "1/600",
+    "envelope": "4941/20000",
+    "envelope_twice": "2511/5000",
+    "epsilon": "1/2",
+    "halved_delta_sequence": [
+      "4941/20000",
+      "9801/80000",
+      "19521/320000",
+      "38961/1280000"
+    ],
+    "markov_bound": "4941/5000",
+    "max_increment": "3/10",
+    "root_count": 180,
+    "support_size": 3
+  },
+  "missing_assumptions": [
+    "Source-authorized path-space construction and non-explosion.",
+    "Uniform-integrability and martingale-problem identification for every subsequential limit.",
+    "Uniqueness and equality with the R-512 minimal-form semigroup."
+  ],
+  "non_claims": [
+    "No new functional, rate, state, carrier, regulator, normalization or time interpretation.",
+    "No infinite-volume, continuum, QFT, gravity, Pre-A, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "proof_boundary": "No limiting process, martingale-problem identification, non-explosion, uniqueness, R-512 semigroup equality or ordered semigroup convergence is established.",
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_local_path_tightness_independent.py --check",
+  "result_id": "R-541",
+  "schema": "tect/pah-omc020-local-path-tightness-independent/1.0",
+  "source_constants": {
+    "C2_per_site": 60,
+    "C_sw": 540
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+    "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+  },
+  "status": "PASS_LOCAL_PATH_TIGHTNESS_HOLD",
+  "task_id": "T-064",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

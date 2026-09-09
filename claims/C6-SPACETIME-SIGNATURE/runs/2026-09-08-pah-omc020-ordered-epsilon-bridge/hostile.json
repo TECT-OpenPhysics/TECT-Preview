@@ -1,0 +1,50 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-ORDERED-EPSILON-BRIDGE-HOSTILE-001",
+  "checks": [
+    {
+      "accepted_by_guard": false,
+      "mutation": "reversed_order",
+      "status": "PASS"
+    },
+    {
+      "accepted_by_guard": false,
+      "mutation": "removed_D_term",
+      "status": "PASS"
+    },
+    {
+      "accepted_by_guard": false,
+      "mutation": "physical_promotion",
+      "status": "PASS"
+    },
+    {
+      "accepted_by_guard": false,
+      "mutation": "changed_functional",
+      "status": "PASS"
+    },
+    {
+      "accepted_by_guard": true,
+      "mutation": "baseline",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 5,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "5f48bc34c412e49cbc461e8ffcb8a00970506f8dfe36bcb4b38bee41a46358c9",
+  "contract_sha256": "4848e28eed1c72b5db8cecd364678ccd3b7ca59ac59baa33604a272418e7233a",
+  "finding": "Hostile mutations removing the j-before-n order, D term, unchanged functional, or non-claim firewall are rejected while the baseline is accepted.",
+  "non_claims": [
+    "This bridge does not prove the PAH-specific J_(n,j) limit or D_n limit.",
+    "It does not construct U_n, a common Hilbert space, a path-space law, an N2c/N4 boundary estimate or R-512 identification.",
+    "It does not prove full PAH-OMC-020 semigroup convergence, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusions.",
+    "External Markov time remains stochastic bookkeeping and is not physical time."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_ordered_epsilon_bridge_hostile.py --check",
+  "result_id": "R-555",
+  "schema": "tect/pah-omc020-ordered-epsilon-bridge-hostile/1.0",
+  "status": "PASS_HOSTILE_FIREWALLS",
+  "task_id": "T-064",
+  "verdict": "PASS_CONDITIONAL"
+}

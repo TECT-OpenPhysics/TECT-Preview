@@ -1,0 +1,94 @@
+{
+  "schema": "tect/pah-omc020-energy-intertwining-contract/1.0",
+  "contract_id": "PAH-OMC-020-N2B-ENERGY-INTERTWINING",
+  "version": "1.0.0",
+  "date": "2026-09-08",
+  "status": "RESEARCHER_OWNED_CONDITIONAL_CONTRACT",
+  "title": "Root-wise energy-intertwining input contract for the PAH-OMC-020 common-space passage",
+  "purpose": "Specify the single dynamic datum missing between the R-525 static maximal-prefix coupling and the PAH-OMC-020 N2b form liminf. This contract tests an implication and does not define a new PAH dynamics or comparison map.",
+  "provenance": {
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "source_authorized": false,
+    "constructed_hypothesis": true,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_CONDITIONAL_FORM-COMPATIBILITY"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-020": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    },
+    "R-510": {
+      "path": "strategy/pa-hyp/PAH-OMC-017-result-v1.json",
+      "sha256": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb"
+    },
+    "R-511": {
+      "path": "strategy/pa-hyp/PAH-OMC-018-result-v1.json",
+      "sha256": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65"
+    },
+    "R-512": {
+      "path": "strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "sha256": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd"
+    },
+    "R-525": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "sha256": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2"
+    },
+    "R-525-CANDIDATE": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "sha256": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e"
+    },
+    "R-528-SNAPSHOT": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json",
+      "sha256": "86246c253273f5dc1fc630c37c70e7b7b2e3aefcf1fc3d81ae5ad2b0f56cdc35"
+    }
+  },
+  "fixed_scope": {
+    "functional_and_rates": "Exactly PAH-001 F_rho and original PH/LK/AP/TR rates through the pinned OMC-018 chain; no refit, counterterm, averaging or rate change.",
+    "state": "Original labelled finite Gibbs laws and the R-510 compatible limiting state; no phasewise or cross-Q direct sum.",
+    "comparison": "Use the R-525 maximal-prefix conditional-expectation candidate only as a static map. It is not promoted to a source-authorized owner packet.",
+    "forms": "E_n and E_infty are the unchanged reversible Dirichlet forms with the directed-half convention; E_infty is represented by the R-512 minimal closed form at its pinned scope.",
+    "order": "The preregistered j->infinity passage at fixed n precedes the anchored n comparison.",
+    "time": "External unaccelerated Markov time only; no quantum, proper or Lorentzian interpretation."
+  },
+  "required_dynamic_datum": {
+    "root_index": "A correspondence of every finite directed root with its limiting root(s), including multiplicity and partial-domain indicators.",
+    "difference_intertwining": "For every local f and root r, a declared defect d_(n,r)(f)=Delta_(infty,r)(U_n f)-K_(n,r)U_n(Delta_(n,r)f) with an explicit norm bound, or an exact root-wise dynamic coupling that defines it.",
+    "conductance_control": "The target/source conductance weights and the contraction factor K_(n,r) must satisfy the weighted square inequality before summing roots.",
+    "uniformity": "The defect and conductance bounds must be uniform in the anchored n exhaustion on the declared form domain; local N1 recovery alone is not enough.",
+    "terminal_boundary": "The unsplit finite terminal square and the R-510 split-cell boundary must be covered by the same root correspondence, without conditional averaging or an unpinned density multiplier."
+  },
+  "conditional_implication": {
+    "single_root": "If w_infty,r*kappa_(n,r)^2 <= w_n,r and Delta_infty,r(U_n f)=kappa_(n,r)Delta_n,r(f), then the target root contribution is no larger than the source root contribution.",
+    "sum": "If the root-wise conditions hold for all directed roots and the residual is summable with a uniform bound, then E_infty(U_n f) <= E_n(f)+defect_n(f), with defect_n(f)->0 yielding the N2b recovery-side estimate.",
+    "status": "Implication only; no PAH-specific kappa, root coupling, conductance comparison or uniform defect is supplied by R-525/R-528."
+  },
+  "diagnostic_witness": {
+    "description": "A two-state reversible oracle with identical stationary marginals and identity static coupling has L2 contraction but target Dirichlet energy larger than source when its target rate is doubled.",
+    "scope": "Abstract insufficiency witness only; not a PAH carrier, not a PAH counterexample and not an infinite-volume statement.",
+    "source_rate": "1",
+    "target_rate": "2",
+    "stationary_marginal": "(1/2,1/2)",
+    "observable": "(0,1)",
+    "static_map": "identity"
+  },
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "Only if a source-authorized root-wise dynamic intertwining or uniform form-defect packet is hash-pinned and all verification roles agree.",
+    "NEGATIVE_RESULT": "Only if the unchanged PAH definitions themselves yield an exact form-compatibility contradiction; the abstract diagnostic witness is not sufficient.",
+    "HOLD_FOR_EVIDENCE": "Use when only static coupling contraction is available and the required root-wise dynamic datum or uniform defect is absent."
+  },
+  "single_next_question": "Can a source owner provide a versioned root-wise conductance-compatible dynamic intertwining (including the terminal-square correspondence) for the exact R-525 U_n, or a uniform vanishing form defect, without changing PAH-001?",
+  "revisit_condition": "Reopen after a source-authorized packet with root multiplicity, dynamic defect, conductance weights, uniform n bound and terminal-boundary treatment is supplied; otherwise do not repeat static coupling fixtures.",
+  "non_claims": [
+    "No source-authorized U_n, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal-form identification or PAH-OMC-020 semigroup convergence.",
+    "The two-state witness is not a PAH counterexample and does not prove a universal impossibility theorem.",
+    "No change to PAH-001 functional, rates, state, carrier, regulator, time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ]
+}

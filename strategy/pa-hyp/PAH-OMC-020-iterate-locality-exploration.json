@@ -1,0 +1,78 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001691",
+  "recorded_at": "2026-09-08T12:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "provenance": "contemporaneous",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "task_id": "T-086",
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "PAH-OMC-020 fixed-power locality bridge",
+  "question": "Does the unchanged PAH-OMC-013 one-step local-generator identity extend to each fixed generator power after the recursively derived threshold N_k(f)?",
+  "finding": "Yes conditionally for fixed k: the frozen root catalog has radius two, the ell_(0,0) closure reaches column 2k, and N_k=max(2,2k+1) separates the active frontier on levels n and n+1. Primary 13/13, independent 8/8, hostile 8/8, integrated 4/4 and the existing Lean finite-semigroup declarations pass.",
+  "verdict": "advanced",
+  "decision_reason": "This is a reusable finite locality advance beyond the one-step R-493 record, while the growing threshold itself identifies why the full exponential semigroup remains open. The R-551 n=3 witness is below N_2 and is therefore retained as a route-local boundary diagnostic, not promoted to a universal no-go.",
+  "boundary": "PAH-001 functional, rates, Gibbs state, carrier, external stochastic Markov time and j-before-n order remain unchanged. The result is fixed-k and finite only; no uniform-in-k tail, common U_n/path comparison, semigroup summation, ordered limit or physical interpretation is added.",
+  "method": [
+    "Pin PAH-001, PAH-OMC-013, R-550, R-551, the fixed-power contract and the existing Lean file by SHA-256.",
+    "Derive the OMC-013 root core-to-support radius and recursively close the ell_(0,0) cylinder support for k=0,...,5.",
+    "Compute N_k=max(2,2k+1) and compare the active root frontier on levels n and n+1 at n=N_k.",
+    "Replay the frozen R-551 second-order defect at n=3 and n=5 to separate a below-threshold boundary witness from the sufficient geometric threshold.",
+    "Run independent strip reconstruction, hostile non-promotion mutations, integrated replay and Lean compilation."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-iterate-locality-contract-v1.json#decision_rule",
+    "strategy/pa-hyp/PAH-OMC-020-iterate-locality-result-v1.json#finding",
+    "strategy/pa-hyp/PAH-OMC-020-iterate-locality-certificate.md#Support calculation",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-iterate-locality/integrated.json#checks"
+  ],
+  "related": [
+    {
+      "id": "EXP-001674",
+      "relation": "continues"
+    }
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "strategy/pa-hyp/PAH-OMC-020-iterate-locality-contract-v1.json": "ade11a512c37ef22d011e4b4a07db646e44a3f97df32a422f71b8b50b5b6c316",
+    "verification/scripts/pah_omc020_iterate_locality.py": "8e4a9a100f9ee271fe1e85145587e5a62031de640e560436fe72d635354b04e2",
+    "codes/foundations/pah_omc020_iterate_locality_independent.py": "f3071a857bfe9b2570f94fe1366a50039c150042dec5948c2d03585667e032fa",
+    "codes/foundations/pah_omc020_iterate_locality_hostile.py": "c208f7260ccdd16e5d31fbc6111157caa54dad944549edc13a0016a89e0df993",
+    "verification/scripts/pah_omc020_iterate_locality_verify.py": "309f53b3d8da18b0fd7672cf6bbf46b97dc59bca0a7a573f3ff8653ea95caad2",
+    "verification/lean/Tect/PahOmc020FiniteSemigroup.lean": "77d0ff2180f9c6a6543dc3307cba35eca05e0ac175aaf854c8e63c750d0c0c0c"
+  },
+  "formal_refs": {
+    "results": [
+      "R-493",
+      "R-550",
+      "R-551",
+      "R-561"
+    ],
+    "negatives": [],
+    "events": [
+      "20260908-r-561-pah-omc-020-fixed-power-locality-bridge-2"
+    ]
+  },
+  "next_action": "Obtain one source-authorized common realization and prove a uniform connected-word or factorial tail that can sum the fixed-power identities in the original Markov time; do not treat the fixed-k bridge as full semigroup convergence.",
+  "revisit_condition": "Reopen when a source-authorized common realization, uniform tail estimate, or parent PAH/OMC-013 byte change is available; do not rerun the same finite support table without new input.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_iterate_locality.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_iterate_locality_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_iterate_locality_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_iterate_locality_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc020FiniteSemigroup.lean"
+  },
+  "verification_summary": "PASS_CONDITIONAL finite bridge: primary 13/13, independent 8/8, hostile 8/8, integrated 4/4 including Lean. The PAH-OMC-020 ordered objective remains open.",
+  "non_claims": [
+    "No single N(f) works for all generator powers; N_k grows with k.",
+    "No full exponential semigroup intertwining, anchored-n or j-before-n convergence, common infinite-volume process, path law or R-512 selection.",
+    "No universal comparison-map no-go and no source-authorized owner packet are established.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion."
+  ]
+}

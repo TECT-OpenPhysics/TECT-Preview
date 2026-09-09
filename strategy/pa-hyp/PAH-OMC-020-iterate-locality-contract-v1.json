@@ -1,0 +1,74 @@
+{
+  "schema": "tect/pah-omc020-iterate-locality-contract/1.0",
+  "contract_id": "PAH-OMC-020-ITERATE-LOCALITY",
+  "result_id": "R-561",
+  "task_id": "T-086",
+  "date": "2026-09-08",
+  "title": "Fixed-power local closure for the PAH-OMC-013 generator intertwining",
+  "question": "Does the unchanged PAH-OMC-013 support rule extend the one-step generator identity to every fixed generator power after an explicitly growing support threshold N_k(f)?",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_FINITE_LOCALITY_BRIDGE",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_FINITE_OPERATOR_ALGEBRA"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-013": {
+      "path": "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "sha256": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc"
+    },
+    "R-550": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-finite-semigroup-lift-result-v1.json",
+      "sha256": "a3e24dc96e3ca6fb01f991ab7d1062da06af82b3252100148f365c094b03c35c"
+    },
+    "R-551": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-second-order-defect-result-v1.json",
+      "sha256": "c0bb72f9cbb409c4474d3adc3b0754f10cc0825378443f9a61ad162a7febe134"
+    }
+  },
+  "fixed_scope": {
+    "model": "Exactly PAH-001 and the PAH-OMC-013/OMC-004 strip root catalog; no new carrier, rate, state, projection, counterterm or time interpretation.",
+    "comparison": "The original pointwise pullback I_(n,n+1) and the same finite backward generators used by R-493.",
+    "support_rule": "For a finite cylinder support C, one generator application enlarges support by the declared finite root support radius; iterate k uses the recursively enlarged C_k.",
+    "order": "This is a fixed-k finite algebra statement only. It does not exchange k with n, take j or n limits, or identify a target process.",
+    "time": "The original external stochastic Markov time remains unchanged; no quantum, proper or Lorentzian interpretation is used."
+  },
+  "conditional_statement": "If the R-493 one-step identity holds for every finite-support function in the recursively enlarged cylinder class, then for each fixed k the power identity L_(n+1)^k I f = I L_n^k f holds whenever n >= N_k(f). For the ell_(0,0) support in the frozen strip, the derived worst-case closure has column maximum 2k and N_k=max(2,2k+1).",
+  "finite_checks": {
+    "root_radius": "The OMC-013 root catalog has maximum core-to-support column radius 2 on the cofinal strip.",
+    "ell_a_closure": "Starting from {(0,0)}, the conservative support closure reaches both rows in columns 0,...,2k after k steps.",
+    "threshold": "N_k=max(2,2k+1) separates the k-step closure from the split terminal frontier.",
+    "boundary_witness": "The existing R-551 second-order defect at n=3 is compatible with n<N_2; the same frozen sample has zero second-order defect at n=5, consistent with the sufficient threshold."
+  },
+  "decision_rule": {
+    "PASS_CONDITIONAL": "Use only for the fixed-k finite locality implication and its exact support audit.",
+    "HOLD_FOR_EVIDENCE": "Keep the PAH-OMC-020 ordered objective open because no uniform-in-k tail, common-space packet, N2b/N2c/N4 estimate or R-512 identification follows.",
+    "NEGATIVE_RESULT": "Use only if the unchanged root catalog violates the derived closure/threshold or the frozen R-551 witness contradicts the stated separation."
+  },
+  "missing_assumptions": [
+    "A source-authorized common invariant cylinder or a uniform connected-word/factorial tail controlling k as n grows.",
+    "A source-authorized common U_n/path-space comparison, N2b liminf/recovery, N2c/N4 boundary escape and N2d R-512 minimal-form identification.",
+    "A proof that the fixed-k locality expansion can be summed in the original unaccelerated Markov time without an unbounded-rate shortcut."
+  ],
+  "non_claims": [
+    "No finite semigroup exponentiation for one fixed N(f) is claimed; N_k grows with k.",
+    "No anchored-n or j-before-n convergence, common infinite-volume process, path law or R-512 selection is proved.",
+    "No universal comparison-map no-go is proved; non-coordinate common-space maps remain open.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion follows."
+  ],
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_iterate_locality.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_iterate_locality_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_iterate_locality_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_iterate_locality_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc020FiniteSemigroup.lean"
+  }
+}

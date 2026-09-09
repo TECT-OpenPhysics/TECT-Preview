@@ -1,0 +1,180 @@
+{
+  "schema": "tect/pah-omc028-result/1.0",
+  "result_id": "R-567",
+  "contract_id": "PAH-OMC-028",
+  "task_id": "T-095",
+  "date": "2026-09-09",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "PASS_CONDITIONAL_PROOF_REPAIR",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "question": "Does the R-512 minimal closed form preserve every scalar normal contraction on its entire form domain, and does its existing spectral semigroup preserve one, after auditing the nonlinear Cauchy shortcut in R-530?",
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md": "ba00d4b5b96f63568d06caf885bcbcc7a3c7ce4faed72e28195d5bc86ac76583",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2"
+  },
+  "preregistration": {
+    "path": "strategy/pa-hyp/PAH-OMC-028-prereg-v1.json",
+    "sha256": "3bb509a383d7b4eba0bb04af1d7d9c37614c3f79f540fd96c09074c34aac81b0"
+  },
+  "evidence_files": {
+    "strategy/pa-hyp/PAH-OMC-028-prereg-v1.json": "3bb509a383d7b4eba0bb04af1d7d9c37614c3f79f540fd96c09074c34aac81b0",
+    "strategy/pa-hyp/PAH-OMC-028-certificate.md": "ce7ec6337e959529a030f1967c6b53595b1793e44cb1d90593a625c82df92c03",
+    "verification/scripts/pah_omc028_verify.py": "fb156cf0d59204476cab031ec3e992a266f1a50ec104bc64fa19d70381f827d8",
+    "codes/foundations/pah_omc028_independent.py": "1118a7d82a96a6b3708400dee66cef09a539f4151260752664bb57af42405167",
+    "verification/lean/Tect/PahOmc028Closure.lean": "11c61b174aa940cb12266ae6f00a98e664a3d68119f52e147560deb8d8d96546",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc028-closure/primary.json": "5b8d1896a11832429ea71d369bf41dcefeeb61e0c026525e96d5caaa05ae38bd",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc028-closure/independent.json": "821625d0eedc0d0f9680062b9fd0aff371ba313efbed592504b8e27596743954",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc028-closure/hostile.json": "fd64192bb7c62028bb9cbb7542ef00cc28848afb8c9a0ecd600584b77c27b6d5",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc028-closure/integrated.json": "c7103793893df9e7cf37b871e73e0b56b0755dcbce379e2f98fa8a5e50be2ab5",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc028-closure-260909-v1.0.tex.txt": "cf60b71537232ae995d9c1e92ae58c7ada0e455c53ffba4ae024722de929e743",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc028-closure-260909-v1.0.pdf": "cfcacd70a5b7d08918db6e5d1ada90920033c56ee22b09c3345f0f4ee7445a4b"
+  },
+  "exact_scope": {
+    "H": "R-510 real gauge-invariant state-L2 completion on its original probability state",
+    "D": "R-511 bounded gauge-invariant globally amplitude-l1-Lipschitz finite-prefix cylinders",
+    "form": "E(f,g)=(1/2) sum_r nu[c_r Delta_r f Delta_r g], with R-511 inherited conventions",
+    "closure": "Exactly R-512 form-norm completion V and its injective continuous inclusion into H",
+    "normal_contraction": "Any eta:R->R with eta(0)=0 and |eta(a)-eta(b)|<=|a-b|",
+    "scope": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0, other OMC-016 couplings one; original two-row strips, labelled all-Q state and j-before-anchored-n construction are inherited; this proof takes no new regulator limit",
+    "time": "Existing external stochastic Markov parameter t>=0"
+  },
+  "conclusion": {
+    "theorem": "On the entire R-512 minimal domain V, every scalar normal contraction eta preserves V and satisfies Ebar(eta(u))<=Ebar(u). The same spectral semigroup is positive, L-infinity contractive and preserves one.",
+    "proof_repair": "R-530's direct inference from single-vector contraction to form-Cauchy images is not justified by that estimate. The purported paired-energy and form-distance contraction estimates are false. Replace only that inference by the closed-energy-epigraph argument or the independent weak-compactness/Mazur argument.",
+    "exact_negative": {
+      "f": [
+        1,
+        2
+      ],
+      "g": [
+        0,
+        1
+      ],
+      "eta": "clipping to [0,1]",
+      "diagnostic_energy": "q(h)=(h_0-h_1)^2",
+      "raw_difference_energy": "0",
+      "clipped_difference_energy": "1",
+      "raw_difference_form_norm_sq": "1",
+      "clipped_difference_form_norm_sq": "3/2",
+      "scope": "Universal paired inequality only; not a PAH carrier or a counterexample to continuity of contractions on form-Cauchy sequences."
+    },
+    "audit_correction": "Supersedes only R-530 certificate section Domain and closure passage and the corresponding inference behind EXP-001649; historical bytes remain unchanged."
+  },
+  "assumptions": [
+    "R-510 probability-state real invariant L2 realization, with its scalar quotient and order structure.",
+    "Exact R-511 dense finite-prefix cylinder core, nonnegative root-square identity and finite energy per core vector.",
+    "R-512 closability, minimal Hilbert completion and injective continuous inclusion into H.",
+    "R-512 associated nonnegative self-adjoint operator and spectral representation.",
+    "Original domain contains constant one; its root differences vanish."
+  ],
+  "satisfied_in_this_proof": [
+    "Stability of the exact cylinder core under all normal contractions.",
+    "L2 continuity and quotient well-definedness of scalar composition.",
+    "Energy-epigraph closedness including domain membership.",
+    "Contraction on every vector of the full minimal domain.",
+    "Positive contractive conservative target semigroup under the inherited assumptions."
+  ],
+  "missing_assumptions": [
+    "No new discharge of R-510/R-511/R-512 source/state hypotheses.",
+    "No source-authorized finite-to-common-space comparison, arbitrary-sequence temporal boundary control or finite-to-R-512 identification.",
+    "No Markov-extension uniqueness, maximal/minimal-domain equality or path-space construction."
+  ],
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXACT_RATIONAL",
+    "NONIMPORTING_INDEPENDENT_EXECUTABLE",
+    "HOSTILE_CONTROLS",
+    "PARTIAL_UNIVERSAL_LEAN"
+  ],
+  "verification": {
+    "integrated": "python -X utf8 verification/scripts/pah_omc028_verify.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc028_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc028_independent.py --mode hostile --check",
+    "primary": "Exact directed-half root sum; rational paired-energy and form-norm diagnostic PASS.",
+    "independent_result": "PASS; six named checks, separate generator matrix and resolvent calculation; no primary-code import.",
+    "hostile_result": "PASS; nine named checks including five distinct rejected missing-premise controls.",
+    "integrated_result": "PASS; source pins, primary/independent agreement, Lean toolchain and dependency revisions verified.",
+    "independence_boundary": "Independent algorithm and separate analytic derivation, not a signed external referee report.",
+    "lean": {
+      "toolchain": "leanprover/lean4:v4.32.1",
+      "path": "verification/lean/Tect/PahOmc028Closure.lean",
+      "status": "PASS",
+      "declarations": [
+        "paired_energy_shortcut_false",
+        "paired_form_norm_shortcut_false",
+        "single_root_contraction",
+        "closed_epigraph_transfer",
+        "zero_energy_cross_term"
+      ],
+      "not_formalized": "Hilbert weak compactness, epigraph closedness from the model, Mazur lemma, probability construction and spectral representation."
+    },
+    "pdf": {
+      "status": "PASS",
+      "pages": 3,
+      "overfull_hbox": 0,
+      "render_review": "All pages inspected; final footer resized and final page re-inspected.",
+      "command": "python -X utf8 verification/scripts/build_note_pdf.py claims/C6-SPACETIME-SIGNATURE/notes/pah-omc028-closure-260909-v1.0.tex.txt"
+    }
+  },
+  "adversarial_review": [
+    {
+      "objection": "Single-vector contraction controls two-vector form differences.",
+      "disposition": "UPHELD; exact witness rejects the shortcut, not the original conclusion."
+    },
+    {
+      "objection": "A bounded-energy L2 limit automatically belongs to the minimal domain.",
+      "disposition": "VALID-with-mitigation; R-512 weak compactness, injectivity and the closed epigraph explicitly prove membership."
+    },
+    {
+      "objection": "The weak subsequence gives a liminf for the full energy sequence without selecting it.",
+      "disposition": "VALID-with-mitigation; first select an energy-liminf subsequence before weak extraction."
+    },
+    {
+      "objection": "The evaluation spikes alone violate lower semicontinuity at zero.",
+      "disposition": "UPHELD; they test nonclosability. The complements 1-s_n converge to one and give the actual lower-semicontinuity counterexample."
+    },
+    {
+      "objection": "Sub-Markov property alone implies conservation.",
+      "disposition": "UPHELD; killed scalar control rejected. Zero energy of the actual constant proves K1=0."
+    },
+    {
+      "objection": "The repaired Markov structure identifies the finite PAH semigroup limit.",
+      "disposition": "UPHELD against promotion; PAH-OMC-020 remains HOLD_FOR_EVIDENCE."
+    }
+  ],
+  "closed_scoped_gate": "Conditional extension of normal contractions from the exact cylinder core to the whole R-512 minimal form domain; corrected target Markov/conservation proof.",
+  "remaining_gates": [
+    "T-054 PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE unchanged.",
+    "PAH-OMC-020 source-owner/common-realization/finite-to-target ordered convergence remains HOLD_FOR_EVIDENCE.",
+    "Separate Markov-extension uniqueness/domain question has not been attempted."
+  ],
+  "next_single_question": "For the exact R-511 operator on the same H, is the R-512 minimal Markov extension unique, or does a distinct boundary extension survive? First freeze an explicit extension-domain contract; do not equate uniqueness with finite-to-target convergence.",
+  "revisit_condition": "Re-review if R-511 root-square positivity/domain stability, R-512 closedness/inclusion, or the probability-state realization fails; preserve the OMC-020 hold",
+  "non_claims": [
+    "No new model, rates, state, time scaling, root convention, common comparison map or limit order",
+    "No proof of PAH-OMC-020 ordered convergence, Markov uniqueness, maximal-domain equality or finite-to-R-512 identification",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion"
+  ],
+  "literature": {
+    "source": "Fukushima, Oshima and Takeda, Dirichlet Forms and Symmetric Markov Processes, second edition (2011)",
+    "locators": [
+      "Section 1.1",
+      "Theorem 1.4.1 forward form-to-semigroup implication",
+      "Theorem 1.4.2(v)"
+    ],
+    "url": "https://api.pageplace.de/preview/DT0400.9783110218091_A15362972/preview-9783110218091_A15362972.pdf",
+    "consulted": "2026-09-09",
+    "novelty_claim": false
+  }
+}

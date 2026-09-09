@@ -1,0 +1,89 @@
+{
+  "schema": "tect/pah-omc020-positive-time-separation-result/1.0",
+  "result_id": "R-553",
+  "contract_id": "PAH-OMC-020-POSITIVE-TIME-SEPARATION",
+  "date": "2026-09-08",
+  "task_id": "T-085",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["EXACT_FINITE", "EXECUTED", "INDEPENDENT", "HOSTILE", "LEAN_FINITE_SCOPE", "POSITIVE_TIME_BOUNDARY"],
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee"
+  },
+  "exact_scope": {
+    "question": "Does the R-552 positive derivative gap force finite-time separation for the two source-compatible semigroup evaluations?",
+    "observable": "f=1-Re(U_p) on the R-552 closed-face cylinder",
+    "initial_value": "The two completions use the same finite observable value at t=0.",
+    "derivatives": "u_A'(0)=2 exp(-2), u_B'(0)=exp(-2)",
+    "gap": "exp(-2)>0",
+    "conclusion": "There exists delta>0 such that u_A(t)>u_B(t) for every 0<t<delta.",
+    "delta_status": "Existential only; no numeric delta is asserted without a full finite generator remainder bound.",
+    "limits": "No j, n, volume, continuum, beta or observation limit is taken."
+  },
+  "finding": "The source-multiplicity derivative gap separates the two finite-time correlation orbits on some punctured right Markov-time interval. This strengthens the R-552 definition-level boundary from t=0 derivative disagreement to positive-time non-equivalence, without selecting an owner convention.",
+  "assumptions": [
+    "Finite-state semigroup evaluations are differentiable at t=0 with generator derivative.",
+    "The two source-compatible completions share the R-552 initial observable value.",
+    "The ordinary first-order derivative remainder estimate is used existentially."
+  ],
+  "missing_assumptions": [
+    "Source-owner root multiplicity, invalid-move behavior and root measure.",
+    "Full finite generator norm/remainder bound needed for an explicit delta.",
+    "Source-authorized common U_n/Hilbert realization, N2b liminf/recovery, N2c/N4 boundary escape and R-512 minimal-form identification."
+  ],
+  "adversarial_review": [
+    {"objection": "The derivative gap alone supplies a universal no-go for every owner-fixed completion.", "disposition": "REJECTED: only the two currently source-compatible unpinned completions are separated."},
+    {"objection": "A numeric time interval can be reported from exp(-2) alone.", "disposition": "UPHELD_AS_MISSING_BOUND: no finite generator norm or remainder constant is source-owned."},
+    {"objection": "The result rescales external Markov time.", "disposition": "REJECTED: the PAH external time and rates remain frozen."},
+    {"objection": "The finite witness is a physical correlation prediction.", "disposition": "REJECTED: it is a gauge-invariant finite cylinder only."},
+    {"objection": "Positive-time separation closes the anchored-n R-512 comparison.", "disposition": "REJECTED: no common U_n, N2b/N2c/N4 or minimal identification is supplied."}
+  ],
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-positive-time-separation/primary.json": "fda0455cbcf6a1948a8955a552c4e9624ccf0a93b1f194453bf4045a5f6075b0",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-positive-time-separation/independent.json": "38a14d1a21ba50ced0b56be45849f7091668a7ba9e994faf3eddcec1741308fe",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-positive-time-separation/hostile.json": "130a687f3c05b82a866ab18dde973e779b2db7c35036b44337145983d95ecca3",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-positive-time-separation/integrated.json": "6018ceeab174b706cd859f22bd7e111d9d3bb4613826305889b9dc4b2a54d63e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-positive-time-separation/lean.json": "312a59eddf0f4bea9b6be48963c363640f98fe5efa76d297eb62d9e4ef547ea6"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_positive_time_separation.py": "93db6d5dd7dcb7475c64ebbe1f09938cb5dc79984b1c03269bbf56e4f99f1b24",
+    "codes/foundations/pah_omc020_positive_time_separation_independent.py": "209c9e9acca4f4e67894979f2374942408598c9f7cf9c025ead432604a2ff3b6",
+    "codes/foundations/pah_omc020_positive_time_separation_hostile.py": "531e6d4db092c5ce0b5b4ba1b9626551bf52fb74be88dc4c3fb1860c68e4e49a",
+    "verification/scripts/pah_omc020_positive_time_separation_verify.py": "a10c1698b9afc2f3503fc58499afce998a039bd2f7c49971957e112c13d1acac",
+    "verification/lean/Tect/PahOmc020PositiveTimeSeparation.lean": "dba8055a47fd5e4c16f23c4874ec38e799910cee08d9b641f415bd5ee3b17389",
+    "verification/lean/registry.json": "ee7d6982d60f5ed5481c3a67a7a232c199df38631d0dcfc41d78432ff1de013a"
+  },
+  "formal_refs": {"results": ["R-527", "R-552", "R-553"], "negatives": [], "events": ["20260908-r-553-pah-omc-020-positive-time-separation-2026"]},
+  "verification": {
+    "primary": "PASS 23/23",
+    "independent": "PASS 13/13",
+    "hostile": "PASS 8/8",
+    "integrated": "PASS 16/16",
+    "lean": "PASS under Lean 4.32.1; three declarations"
+  },
+  "closed_scoped_gate": "Positive-time non-equivalence of the two currently source-compatible finite completions on a punctured right interval.",
+  "remaining_gates": [
+    "Source-owner root multiplicity, invalid-move and root-measure packet",
+    "N2a common-space map and PAH-specific energy intertwining",
+    "N2b weak liminf/recovery, N2c/N4 boundary escape and N2d minimal-form identification",
+    "Full PAH-OMC-020 ordered stationary semigroup correlation convergence"
+  ],
+  "next_single_question": "Can a source owner hash-pin one exact root convention and supply the full finite remainder/common-space packet needed to continue beyond this source-definition separation?",
+  "revisit_condition": "Reopen the anchored-n lane only after the owner packet is hash-pinned or a frozen parent source hash changes.",
+  "non_claims": [
+    "No universal no-go for an owner-fixed completion.",
+    "No explicit numeric delta without a source-owned generator remainder bound.",
+    "No anchored-n convergence or R-512 minimal-form identification.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-positive-time-separation-certificate.md"
+}

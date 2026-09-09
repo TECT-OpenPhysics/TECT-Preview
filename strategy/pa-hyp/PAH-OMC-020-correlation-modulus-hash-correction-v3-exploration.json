@@ -1,0 +1,47 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001666",
+  "title": "PAH-OMC-020 R-543 hash manifest correction v3",
+  "task_id": "T-064",
+  "question": "Does the R-543 provenance successor now contain the exact 64-character result-card digest?",
+  "finding": "Yes. The current R-543 result-card SHA-256 is 4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3, exactly 64 hexadecimal characters. Earlier correction records contained a transcription error; this append-only successor is the authoritative manifest correction and does not change the result.",
+  "decision_reason": "The append-only exploration ledger requires a successor rather than editing EXP-001665. The correction is byte-level provenance only and is recorded before the final generated-surface refresh.",
+  "boundary": "No PAH-001 functional, directed rate, state, carrier, regulator, normalization, external Markov time, finite bound, verifier result, limit order or physical interpretation changes.",
+  "method": [
+    "Recompute the result-card SHA-256 from the current worktree bytes.",
+    "Assert exact digest length 64 and byte-for-byte equality with the manifest value.",
+    "Append the corrected digest as the final provenance successor for R-543."
+  ],
+  "next_action": "Refresh generated catalog and proof-evidence surfaces, rerun the release gate, and hand the lane-local R-543 checkpoint to integration.",
+  "revisit_condition": "Reopen only if the R-543 result bytes or formal changelog locator changes again.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-09-08T03:15:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "formal_refs": {
+    "results": ["R-543"],
+    "negatives": [],
+    "events": ["20260908-r-543-pah-omc-020-correlation-modulus-2026-09-0"]
+  },
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json#artifact_hashes",
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-hash-correction-v2-exploration.json#source_hashes",
+    "changelog/log.jsonl#20260908-r-543-pah-omc-020-correlation-modulus-2026-09-0"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json": "4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3",
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-hash-correction-exploration.json": "c4cb924af979870b0310d5ac352ac9710d1db23c674210f4b10eb55b6cf63abf",
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-hash-correction-v2-exploration.json": "6ab3e4e2a5fb71830bc671dc3a9ce676ce6103008f1078d9c62c5bc7faca27d1"
+  },
+  "non_claims": [
+    "No new proof, counterexample, path-space estimate, anchored-n convergence or R-512 identification is claimed.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "related": [
+    {"id": "EXP-001665", "relation": "corrects"}
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-020 N-Mosco contract replay aligned to R-532",
+  "question": "Does the existing anchored-n Mosco/recovery contract replay against the current temporal-work record without importing a theorem or silently changing the PAH-OMC-020 order?",
+  "finding": "Yes as a contract audit only. The regenerated run passes 33 internal checks and Lean 4.32.1, with work SHA-256 2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab. It confirms that the R-510/R-511/R-512 inputs, support recovery rule, N1/N2a-N2d markers, terminal-square mismatch and non-physical firewalls are still explicit. The temporal verdict remains IN_PROGRESS because no common U_n, arbitrary-sequence Mosco liminf/recovery, unbounded-rate boundary estimate, R-512 identification or semigroup convergence is proved.",
+  "decision_reason": "The prior run artifact was stale only because it pinned the pre-R-530/R-531 temporal-work bytes. Replaying it against the current bytes repairs provenance and exposes the exact analytic obligations; it does not create a source owner packet or promote a conditional contract to a theorem.",
+  "boundary": "PAH-001 functional, original rates, labelled Gibbs state, external Markov time and j-before-anchored-n order are unchanged. The N-Mosco script uses only the declared finite boundary fixture and contract markers; no new carrier, rate, counterterm, averaging or physical interpretation is introduced.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "task_id": "T-064",
+  "verdict": "inconclusive",
+  "recorded_at": "2026-09-07T22:15:00Z",
+  "recorded_by": "Codex",
+  "related": [{"id": "EXP-001651", "relation": "continues"}],
+  "method": [
+    "Regenerate claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n-mosco-contract/n-mosco.json from the unchanged PAH-OMC-020 N-Mosco contract.",
+    "Replay the same run with --check after the temporal-work hash is updated, and retain its exact current work/script/run hashes.",
+    "Inspect the contract's hostile order/form substitutions and Lean 4.32.1 compilation, while treating all varying-space and temporal conclusions as open unless their hypotheses are present."
+  ],
+  "evidence_refs": [
+    "verification/scripts/pah_omc020_n_mosco_contract.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n-mosco-contract/n-mosco.json#checks",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json#scope",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.1-result-v1.json#remaining_gates"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab",
+    "verification/scripts/pah_omc020_n_mosco_contract.py": "e2e0661f99fb45d7fc91cae22ce6dc5d136e3ffc46d7314502a06d88756b40ec",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n-mosco-contract/n-mosco.json": "5864d7e10312a3a220d4fd7766f7bbd1d260287eb3441bc844e172a26026c96a",
+    "verification/lean/Tect/PahOmc020.lean": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c"
+  },
+  "formal_refs": {
+    "events": ["20260908-pah-omc-020-n-mosco-replay-aligned-to-r-532-202"],
+    "negatives": [],
+    "results": ["R-512", "R-529", "R-530", "R-532"]
+  },
+  "next_action": "Obtain one source-authorized measure-compatible U_n/common-Hilbert packet and then prove the arbitrary-sequence Mosco liminf/recovery, unbounded-rate boundary control and R-512 minimal-form identification in the fixed j-before-n order.",
+  "revisit_condition": "Reopen the temporal proof when the owner packet is versioned and hash-pinned, or when an exact PAH-specific liminf/boundary counterexample is found. Do not import a generic Mosco theorem with unmatched hypotheses or repeat finite carrier/physical-empty calculations.",
+  "non_claims": [
+    "No Mosco liminf/recovery theorem, common U_n, maximal-domain equality, path process, non-explosion theorem or ordered semigroup convergence.",
+    "No N2b, N2c/N4 or N2d closure follows from the 33-check contract replay.",
+    "No PAH-001 functional, rate, state, carrier, regulator, normalization, external Markov time or limit-order change.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "verification_summary": "Current replay: 33 contract checks PASS; Lean 4.32.1 PASS; temporal_verdict remains IN_PROGRESS. This is a provenance-aligned auxiliary audit, not a result-card theorem."
+}

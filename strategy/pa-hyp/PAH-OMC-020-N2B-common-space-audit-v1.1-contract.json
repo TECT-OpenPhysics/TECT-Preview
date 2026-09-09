@@ -1,0 +1,105 @@
+{
+  "schema": "tect/pah-omc020-n2b-common-space-audit-contract/1.1",
+  "contract_id": "PAH-OMC-020-N2B-COMMON-SPACE-AUDIT-V1.1",
+  "version": "1.1.0",
+  "date": "2026-09-08",
+  "task_id": "T-064",
+  "status": "CURRENT_BYTE_SUCCESSOR_AUDIT_CONTRACT",
+  "title": "Current-byte successor for the PAH-OMC-020 N2b common-space audit",
+  "purpose": "Repair the stale replay pins in the original T-064 N2b audit without changing its fail-closed admission predicate, then determine whether a source-authorized varying-space owner packet is present.",
+  "provenance": {
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "source_authorized_packet_present": false,
+    "constructed_hypothesis": false,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_CURRENT_BYTE_PROVENANCE_AUDIT"
+  },
+  "supersedes": {
+    "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json",
+    "sha256": "b87a2d8d7b0009c9f5bd30695823cb442376939ff18c1d48f1d890ae430fe8c7",
+    "reason": "The original T-064 replay expected stale bytes for PAH-OMC-020-temporal-work.md and the n-mosco diagnostic; this successor updates only those pins and preserves the audit predicate."
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-013": {
+      "path": "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "sha256": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc"
+    },
+    "R-510": {
+      "path": "strategy/pa-hyp/PAH-OMC-017-result-v1.json",
+      "sha256": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb"
+    },
+    "R-511": {
+      "path": "strategy/pa-hyp/PAH-OMC-018-result-v1.json",
+      "sha256": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65"
+    },
+    "R-512": {
+      "path": "strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "sha256": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd"
+    },
+    "R-512-closure": {
+      "path": "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md",
+      "sha256": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af"
+    },
+    "PAH-OMC-020": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    },
+    "temporal-work": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+      "sha256": "2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab"
+    },
+    "owner-inventory": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-inventory-stable/result.json",
+      "sha256": "e4ed74bed72b1b30a13ea059e51fab87af540ce85bc45515da6384b0e2a2ecf2"
+    },
+    "n-mosco": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n-mosco-contract/n-mosco.json",
+      "sha256": "5864d7e10312a3a220d4fd7766f7bbd1d260287eb3441bc844e172a26026c96a"
+    },
+    "finite-Lean": {
+      "path": "verification/lean/Tect/PahOmc020.lean",
+      "sha256": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c"
+    }
+  },
+  "fixed_scope": {
+    "functional_and_rates": "Exactly immutable PAH-001 F_rho and original directed PH/LK/AP/TR rates through the pinned OMC chain.",
+    "finite_spaces": "Original labelled finite G_n spaces, stationary laws and j-before-anchored-n regulator order; no phase or charge direct-sum rescue.",
+    "target": "R-512 minimal closed form on the anchored R-510/R-511 limit Hilbert space; no maximal extension substitution.",
+    "owner_fields": "Common H/U_n, N1 local recovery, arbitrary-sequence N2b liminf, recovery limsup, N2c/N4 boundary escape, N2d minimal identification and independent/hostile/Lean manifests.",
+    "time": "External unaccelerated stochastic Markov time only; no quantum, proper or Lorentzian interpretation."
+  },
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "Only when a source-authorized packet supplies every owner field and all verification roles agree.",
+    "NEGATIVE_RESULT": "Only an exact counterexample inside unchanged PAH definitions qualifies; stale replay bytes are not a mathematical counterexample.",
+    "HOLD_FOR_EVIDENCE": "Use when the current-byte audit is reproducible but any owner field or common-space estimate is absent."
+  },
+  "current_status": {
+    "source_packet": false,
+    "common_space_U_n": false,
+    "n2b_liminf": false,
+    "recovery_limsup": false,
+    "n2c_n4_boundary_escape": false,
+    "n2d_minimal_identification": false,
+    "semigroup_convergence": false
+  },
+  "single_next_question": "Can one source-authorized owner provide the complete common-space, arbitrary-sequence liminf, recovery, boundary and R-512 minimal-identification packet without changing PAH-001?",
+  "revisit_condition": "Reopen when a versioned owner packet or exact PAH-specific contradiction is supplied; otherwise do not repeat finite carrier, physical-empty, BCC or Reading-H calculations.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_n2b_common_space_audit_v11.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_n2b_common_space_audit_v11_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_n2b_common_space_audit_v11_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_n2b_common_space_audit_v11_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages"
+  },
+  "non_claims": [
+    "No source-authorized U_n/common-Hilbert realization, Mosco liminf, recovery theorem, boundary-escape theorem, minimal-form semigroup selection or PAH-OMC-020 convergence.",
+    "The repaired stale replay is not a universal impossibility theorem or a PAH counterexample.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion.",
+    "External Markov time remains stochastic bookkeeping and is not physical time."
+  ]
+}

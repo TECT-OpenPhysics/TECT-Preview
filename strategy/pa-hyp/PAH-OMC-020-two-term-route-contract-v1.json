@@ -1,0 +1,48 @@
+{
+  "schema": "tect/pah-omc020-two-term-route-contract/1.0",
+  "contract_id": "PAH-OMC-020-TWO-TERM-ROUTE",
+  "result_id": "R-546",
+  "task_id": "T-065",
+  "date": "2026-09-08",
+  "question": "Do the registered R-514 fixed-n passage and the R-536 target-identification defect compose directly into the full ordered compact-time correlation limit, so that no separate K_(n,m) intermediate is required once one complete owner route is admitted?",
+  "scope": {
+    "finite_correlation": "C_(n,j)(f,g;t) is the unchanged PAH-001 stationary correlation at finite n,j.",
+    "fixed_n_limit": "c_n(f,g;t) is exactly the post-j limit supplied by R-514, with J_(n,j)(T)=sup_(0<=t<=T)|C_(n,j)(t)-c_n(t)|.",
+    "target_defect": "c_star(f,g;t)=<f,T_min(t)g> in the R-512 minimal target and D_n(T)=sup_(0<=t<=T)|c_n(t)-c_star(t)| as defined by R-536.",
+    "time": "External stochastic Markov time on a fixed compact interval [0,T] only.",
+    "order": "j tends to infinity at fixed n first, followed by anchored n; no diagonal, reversed or joint order.",
+    "model": "Exactly unchanged PAH-001 functional, original rates, labelled Gibbs state, normalization and regulator order."
+  },
+  "hypotheses": {
+    "H_J": "For every fixed n and local f,g,T, R-514 gives J_(n,j)(T)->0 as j->infinity.",
+    "H_D": "A complete source-authorized form or path route from R-536 gives D_n(T)->0 as anchored n->infinity for the same c_n and c_star.",
+    "same_intermediate": "The c_n used in R-514 and R-536 is the same post-j stationary correlation, not an independently fitted or renamed target.",
+    "same_target": "The c_star used in R-536 is the exact R-512 minimal-form correlation with the original normalization."
+  },
+  "bound": "sup_(0<=t<=T)|C_(n,j)(t)-c_star(t)| <= J_(n,j)(T)+D_n(T).",
+  "ordered_conclusion": "If H_J and H_D hold with the displayed quantifiers, then lim_(n->infinity) lim_(j->infinity) sup_(0<=t<=T)|C_(n,j)(t)-c_star(t)|=0. The conclusion also discharges the finite mesh-pointwise premise of R-545, but no owner route is supplied here.",
+  "relation_to_existing": {
+    "R-514": "Supplies H_J at fixed n and identifies c_n with the finite-label Q_n correlation.",
+    "R-536": "Defines D_n and requires one complete source-authorized form/path route before H_D can be admitted.",
+    "R-534": "The two-term result is the direct specialization of its three-term triangle when the complete D_n route compares c_n directly to c_star; it does not erase the current H-D gap.",
+    "R-545": "The direct ordered conclusion is stronger than the mesh transfer for this route, while R-545 remains valid as a scalar consequence."
+  },
+  "verification_requirements": [
+    "Primary exact rational triangle and epsilon-order fixtures with the two source definitions frozen.",
+    "Independent non-importing reconstruction with different rational errors and explicit quantifier order.",
+    "Hostile controls rejecting mismatched c_n, omitted D_n, reversed order, partial R-536 fields and physical promotion.",
+    "Lean finite rational triangle and epsilon-budget declarations only; no infinite-limit theorem is claimed."
+  ],
+  "acceptance": {
+    "PASS": "The two-term implication and source-definition crosswalk replay in all lanes.",
+    "HOLD_FOR_EVIDENCE": "The mathematical reduction passes, but the source-authorized route required for H_D is absent in the current repository.",
+    "NEGATIVE_RESULT": "Only an exact mismatch between R-514's c_n and R-536's c_n, or a failing scalar triangle, would be negative."
+  },
+  "single_next_question": "Can one source-authorized, hash-pinned complete R-536 form or path route prove D_n(T)->0 for every declared local pair while preserving R-514's c_n and the original PAH-001 order?",
+  "non_claims": [
+    "No source-authorized form/path owner route or D_n limit is present in this contract.",
+    "No new U_n, common Hilbert space, path law, rate, state, carrier, counterterm, averaging or limit order is introduced.",
+    "No claim that R-534's H-K is source-authorized; the two-term route is admitted only after a complete direct D_n route.",
+    "No PAH-OMC-020 full convergence, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ]
+}

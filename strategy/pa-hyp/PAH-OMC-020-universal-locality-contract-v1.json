@@ -1,0 +1,73 @@
+{
+  "schema": "tect/pah-omc020-universal-locality-contract/1.0",
+  "contract_id": "PAH-OMC-020-UNIVERSAL-LOCALITY",
+  "result_id": "R-562",
+  "task_id": "T-086",
+  "date": "2026-09-08",
+  "title": "All finite-cylinder fixed-power locality envelope",
+  "question": "Does the unchanged PAH-OMC-013 root-radius bound give an explicit fixed-power stabilization threshold for every finite-support cylinder, rather than only ell_(0,0)?",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_FINITE_LOCALITY_EXTENSION",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_FINITE_OPERATOR_ALGEBRA"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-013": {
+      "path": "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "sha256": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc"
+    },
+    "R-561": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-iterate-locality-result-v1.json",
+      "sha256": "f9cef0e147be1c9fc084392e34a02c41a1be1ae78ad31ec641123e719e0a9d8e"
+    }
+  },
+  "fixed_scope": {
+    "model": "Exactly PAH-001, the PAH-OMC-013 full-Q grade-blind cylinder algebra and the OMC-004 two-row strip; no functional, rate, state, carrier, root family, projection or time change.",
+    "support_parameter": "For a finite cylinder f, s_f is the largest column of the vertex/link/face coordinates on which its declared generating coordinates depend; s_f=-1 for the constant cylinder.",
+    "root_locality": "The frozen OMC-013 root catalog has maximum core-to-support column radius 2 on every finite level n>=2.",
+    "threshold": "After k generator applications, the conservative support envelope has maximum column at most s_f+2k. The threshold is N_k(f)=max(2,s_f+2k+1).",
+    "comparison": "The original pointwise pullback I_(n,n+1) and the same finite backward generators used by R-493.",
+    "order": "Only fixed finite k is considered. No k/n exchange, exponential-series summation, j limit, anchored-n limit, common process or R-512 identification is claimed.",
+    "time": "The original external stochastic Markov time remains unchanged."
+  },
+  "conditional_statement": "If the R-493 one-step identity holds on every recursively enlarged finite-support cylinder class, then for every finite cylinder f, fixed k and n>=N_k(f), L_(n+1)^k I_(n,n+1) f = I_(n,n+1) L_n^k f.",
+  "finite_checks": {
+    "radius_levels": "The primary lane derives radius 2 from the OMC-013 catalog at levels 2 through 9.",
+    "support_families": "The independent lane tests constant, single-vertex, separated-vertex, adjacent-vertex and face-generated support envelopes.",
+    "threshold_table": "For each support maximum s in {-1,0,1,4,6} and k=0,...,5, the computed threshold separates the support envelope from the successor frontier columns.",
+    "R561_relation": "The ell_(0,0) row s=0 reproduces N_k=max(2,2k+1) from R-561.",
+    "Lean": "Lean proves the arithmetic strict-separation inequality and reuses the generic iterate-intertwining induction without asserting a uniform operator bound."
+  },
+  "decision_rule": {
+    "PASS_CONDITIONAL": "Use only for the all-finite-cylinder fixed-k locality envelope and its explicit threshold.",
+    "HOLD_FOR_EVIDENCE": "Keep PAH-OMC-020 open because a uniform-in-k tail, common realization, N2b/N2c/N4/N2d and R-512 selection are not supplied.",
+    "NEGATIVE_RESULT": "Use only if the frozen radius-two catalog or the threshold separation fails for a declared finite-support family."
+  },
+  "missing_assumptions": [
+    "The R-493 one-step identity must be available for every recursively enlarged cylinder in the envelope, not only for the tested support examples.",
+    "A source-authorized uniform-in-k word/factorial tail is still required to sum powers in compact Markov time.",
+    "A source-authorized common U_n/path-space realization, N2b liminf/recovery, N2c/N4 boundary escape and N2d R-512 minimal-form identification remain absent."
+  ],
+  "non_claims": [
+    "No single N(f) works for all generator powers; the threshold grows with k.",
+    "No full exponential semigroup intertwining, anchored-n convergence, common infinite-volume process or R-512 semigroup identification.",
+    "No universal comparison-map no-go is proved by this envelope.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion follows."
+  ],
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_universal_locality.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_universal_locality_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_universal_locality_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_universal_locality_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc020UniversalLocality.lean"
+  }
+}

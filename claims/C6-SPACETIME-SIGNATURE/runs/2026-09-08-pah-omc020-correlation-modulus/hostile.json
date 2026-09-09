@@ -1,0 +1,114 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-CORRELATION-MODULUS-HOSTILE-001",
+  "checks": [
+    {
+      "detail": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+        "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+        "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "name": "parent hash mutation",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "domain": "The declared bounded gauge-invariant globally amplitude-l1-Lipschitz finite-prefix cylinder domain D and its sampled representatives S_(n,j)f.",
+        "model": "Exactly the immutable PAH-001 functional, original PH/LK/AP/TR rates, labelled Gibbs state and finite stationary semigroup P_(n,j)(t)=exp(t L_(n,j)).",
+        "normalization": "Original labelled Gibbs normalization and directed-half reversible form; R-490/R-522 are not reinterpreted as pointwise bounds.",
+        "observable": "C_(n,j)(f,g;t)=<S_(n,j)f,P_(n,j)(t)S_(n,j)g>_(mu_(n,j)) for fixed local f,g.",
+        "order": "The preregistered j->infinity passage at fixed n followed by anchored n is unchanged; this checkpoint takes neither limit.",
+        "time": "External stochastic Markov time t>=0 on a compact deterministic interval [0,T]; no stopping-time or physical-time interpretation."
+      },
+      "name": "directed-half form retained",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"r-511_energy\": \"e_(n,j)(s_(n,j)f,s_(n,j)f)<=b_f for n>=n(f), j>=0.\", \"budget\": \"b_f=2 d_f m_f^2+2 h_f l_f^2, where d_f,h_f are source root-count bounds and m_f,l_f are the declared sup and amplitude-l1-lipschitz constants.\", \"finite_spectral_step\": \"for k_(n,j)=-l_(n,j), reversibility gives |d/dt c_(n,j)(f,g;t)|<=sqrt(e_(n,j)(s f)) sqrt(e_(n,j)(s g)).\", \"modulus\": \"sup_(0<=s<t<=t)|c_(n,j)(f,g;t)-c_(n,j)(f,g;s)|<=|t-s| sqrt(b_f b_g).\"}",
+      "name": "radial term cannot be dropped",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "claims": "[\"no bounded-stopping-time aldous estimate, path-space construction, non-explosion theorem or semigroup convergence.\", \"no n2a-n2d closure, r-512 process identification, infinite-volume dynamics, continuum or physical result.\", \"no change to pah-001 function, rates, state, carrier, regulator, normalization, external markov time or limit order.\", \"no physical pre-a, spacetime, qft, gravity, yang-mills, mass-gap or toe conclusion.\"]",
+        "time": "\"external stochastic markov time t>=0 on a compact deterministic interval [0,t]; no stopping-time or physical-time interpretation.\""
+      },
+      "name": "deterministic time only",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"r-511_energy\": \"e_(n,j)(s_(n,j)f,s_(n,j)f)<=b_f for n>=n(f), j>=0.\", \"budget\": \"b_f=2 d_f m_f^2+2 h_f l_f^2, where d_f,h_f are source root-count bounds and m_f,l_f are the declared sup and amplitude-l1-lipschitz constants.\", \"finite_spectral_step\": \"for k_(n,j)=-l_(n,j), reversibility gives |d/dt c_(n,j)(f,g;t)|<=sqrt(e_(n,j)(s f)) sqrt(e_(n,j)(s g)).\", \"modulus\": \"sup_(0<=s<t<=t)|c_(n,j)(f,g;t)-c_(n,j)(f,g;s)|<=|t-s| sqrt(b_f b_g).\"}",
+      "name": "no full generator norm shortcut",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"r-511_energy\": \"e_(n,j)(s_(n,j)f,s_(n,j)f)<=b_f for n>=n(f), j>=0.\", \"budget\": \"b_f=2 d_f m_f^2+2 h_f l_f^2, where d_f,h_f are source root-count bounds and m_f,l_f are the declared sup and amplitude-l1-lipschitz constants.\", \"finite_spectral_step\": \"for k_(n,j)=-l_(n,j), reversibility gives |d/dt c_(n,j)(f,g;t)|<=sqrt(e_(n,j)(s f)) sqrt(e_(n,j)(s g)).\", \"modulus\": \"sup_(0<=s<t<=t)|c_(n,j)(f,g;t)-c_(n,j)(f,g;s)|<=|t-s| sqrt(b_f b_g).\"}",
+      "name": "no reversed sign",
+      "status": "PASS"
+    },
+    {
+      "detail": "[\"no bounded-stopping-time aldous estimate, path-space construction, non-explosion theorem or semigroup convergence.\", \"no n2a-n2d closure, r-512 process identification, infinite-volume dynamics, continuum or physical result.\", \"no change to pah-001 function, rates, state, carrier, regulator, normalization, external markov time or limit order.\", \"no physical pre-a, spacetime, qft, gravity, yang-mills, mass-gap or toe conclusion.\"]",
+      "name": "no physical promotion",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "correct": "120",
+        "mutated": "80"
+      },
+      "name": "radial omission changes budget",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "correct": "120",
+        "mutated": "-120"
+      },
+      "name": "wrong sign is rejected",
+      "status": "PASS"
+    },
+    {
+      "detail": "[\"no bounded-stopping-time aldous estimate, path-space construction, non-explosion theorem or semigroup convergence.\", \"no n2a-n2d closure, r-512 process identification, infinite-volume dynamics, continuum or physical result.\", \"no change to pah-001 function, rates, state, carrier, regulator, normalization, external markov time or limit order.\", \"no physical pre-a, spacetime, qft, gravity, yang-mills, mass-gap or toe conclusion.\"]",
+      "name": "stopping-time upgrade remains open",
+      "status": "PASS"
+    },
+    {
+      "detail": "[\"no bounded-stopping-time aldous estimate, path-space construction, non-explosion theorem or semigroup convergence.\", \"no n2a-n2d closure, r-512 process identification, infinite-volume dynamics, continuum or physical result.\", \"no change to pah-001 function, rates, state, carrier, regulator, normalization, external markov time or limit order.\", \"no physical pre-a, spacetime, qft, gravity, yang-mills, mass-gap or toe conclusion.\"]",
+      "name": "semigroup limit remains open",
+      "status": "PASS"
+    },
+    {
+      "detail": "120",
+      "name": "finite modulus is finite",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 12,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "2b81c1afb283a57f70504df2da526142a8772bd811541f313cf0a9c07e449f33",
+  "conditional": true,
+  "finding": "Hostile mutations are rejected: the radial energy term, directed-half sign and deterministic-time scope are retained, while form-energy bounds are not promoted to stopping-time or infinite-volume conclusions.",
+  "non_claims": [
+    "No bounded-stopping-time Aldous estimate, path-space construction, non-explosion theorem or semigroup convergence.",
+    "No N2a-N2d closure, R-512 process identification, infinite-volume dynamics, continuum or physical result.",
+    "No change to PAH-001 function, rates, state, carrier, regulator, normalization, external Markov time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_correlation_modulus_hostile.py --check",
+  "result_id": "R-543",
+  "schema": "tect/pah-omc020-correlation-modulus-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_HOSTILE_CORRELATION_MODULUS_FIREWALL",
+  "task_id": "T-064",
+  "verdict": "PASS"
+}

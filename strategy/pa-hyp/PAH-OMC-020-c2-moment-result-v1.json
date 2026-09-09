@@ -1,0 +1,135 @@
+{
+  "schema": "tect/pah-omc020-c2-moment-result/1.0",
+  "result_id": "R-522",
+  "contract_id": "PAH-OMC-020-C2-MOMENT",
+  "date": "2026-09-08",
+  "task_id": "T-073",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "EXACT_SOURCE_ALGEBRA",
+    "GIBBS_WEIGHTED_SECOND_MOMENT",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-009-uniform-envelope-v1.json": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+    "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json": "698d7fc17d206b6c5d32bf14d7e575af7cee64e4a196b59f544bdb9a990d29a5"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-c2-moment/primary.json": "70875a114b40c8b9beeec469bdd7f9680c8bd7db4e6a69268b07c800cd6d957b",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-c2-moment/independent.json": "2e8fbbb466822d3148a49f2055763c522a261b12f5356876d0bd6871d210cb5f",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-c2-moment/hostile.json": "d27bf349d3217f8444af342184f8eac2a1ff3490e35607b3db98bf6429292253",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-c2-moment/integrated.json": "942e4db0942c029c050e20ea16a3daaa2e6a0ed0457e2561ee2bf99a16deea44"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_c2_moment.py": "af3dbb0b01279ada6c7b7e7c960b605cb382f50e095db50a44e237d395b04f90",
+    "codes/foundations/pah_omc020_c2_moment_independent.py": "5135cee5cf31eb54a912d27801af3020c9ef9a12583564eca677a6cd128d9ee4",
+    "codes/foundations/pah_omc020_c2_moment_hostile.py": "47a9baf99a820c8b3c92b3563dc6824f13608cf263d2f3775b844102ed8bfafc",
+    "verification/scripts/pah_omc020_c2_moment_verify.py": "6b147b47f2689b15205631a9241c1a01190946bf07727d693c5e0490910ffd7d",
+    "verification/lean/Tect/PahOmc020C2.lean": "d4e522977ac7581990f826805198d292478f52e3c6cfb59e9ab20b0092cacdce",
+    "verification/lean/registry.json": "62c89646e7672dddccb502804f02e373958eb4cd9d280b19373a62ca86274b03"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md": "61284627c3a74df7d30e346365df983bba2781138639877196f4fbf90229887c",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-exploration.json": "87a1fef5facf0ac6e198d3a4f1acd98c8fe1ba3a6be279baf2b5a1e31401c628",
+    "explorations/log.jsonl#EXP-001640": "86df50a66f7235fb4aa5439d4946189b5af88a75ffec7fe5712f39f343f104ab",
+    "changelog/log.jsonl#20260908-r-522-pah-omc-020-source-owned-c2-a-second-rate": "09f354c6c27af5792c829d032ba13bc4a22b08497311ebac8852240325e4ebbb"
+  },
+  "exact_scope": {
+    "functional": "Exactly the immutable PAH-001 F_rho and its original directed midpoint rates; no new term, counterterm, rate, state, carrier or time.",
+    "regulator": "PAH-OMC-010 path: K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, unit displayed couplings, n>=2 and R_max=R>=1.",
+    "moment": "C2(A)=sup_(n,R) sum_(r:supp(r) intersects A) sum_(omega in dom(r)) pi_(n,R)(omega)c_r(omega)^2 for every finite local support A.",
+    "geometry": "R-490 source-derived N_geom=60 directed roots per vertex, uniform in the OMC-004 strip level.",
+    "time": "External stochastic Markov time only; the registered j-before-anchored-n order is unchanged."
+  },
+  "conclusion": {
+    "transport_identity": "pi(x)c_r(x)^2=Z^-1 m_r(x)^2 exp(-beta F(r x)).",
+    "per_root": "Every PAH mobility has m_r<=1 on the registered path, and inverse-root injectivity gives sum_dom pi c_r^2<=1.",
+    "local_bound": "C2(A)<=N_geom|A|=60|A| for every finite A.",
+    "generator_input": "For bounded local f, ||Lf||_2^2 <= C2(A) sum_(r:supp(r) intersects A) ||f(r dot)-f||_infinity^2.",
+    "route_decision": "This closes the source-owned local second-moment input requested by R-521, but PAH-OMC-020 temporal convergence remains HOLD_FOR_EVIDENCE."
+  },
+  "proof_coverage": {
+    "primary": "40 exact source, mobility, transport, geometry and local-estimate checks.",
+    "independent": "31 non-importing checks reconstructing the source identity, mobility cap and C2 count.",
+    "hostile": "17 checks rejecting mobility changes, first/second-moment conflation, volume misuse and temporal/physical promotion.",
+    "integrated": "25 checks replay all lanes, compare source hashes, validate independence, registry and Lean compilation.",
+    "lean": "Six finite rational declarations compile under Lean 4.32.1; analytic process and boundary results remain outside formal scope."
+  },
+  "assumptions": [
+    "PAH-001 moves are partial bijections with the declared inverse-root rule.",
+    "The finite Gibbs partition is positive and finite on every admitted regulator.",
+    "The OMC-010 source path has apertures in (0,1] and nu=1, so every declared mobility is at most one.",
+    "R-490's N_geom=60 support-incidence bound applies uniformly to the retained OMC-004 strip family."
+  ],
+  "missing_assumptions": [
+    "A source-authorized path-space construction and non-explosion/uniqueness argument for the unbounded PAH process.",
+    "N2b arbitrary-sequence liminf/recovery and N2c/N4 boundary escape for evolved local tests.",
+    "N2d identification with the R-512 minimal closed form and anchored-n semigroup convergence."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The C_sw first-moment result is being silently reused as a squared-rate bound.",
+      "disposition": "DISMISSED: the proof squares the exact PAH midpoint rate and uses the target Gibbs factor; the per-root bound is derived independently of C_sw."
+    },
+    {
+      "objection": "A high mobility or a fitted rate could break the transport inequality.",
+      "disposition": "REJECTED: m_r<=1 follows from the immutable PAH mobility rules on the pinned OMC-010 path; m>1 is a hostile source mutation."
+    },
+    {
+      "objection": "N_geom=60 is a global volume count and fails as n grows.",
+      "disposition": "REJECTED: R-490 defines it per vertex; the result only claims C2(A)<=60|A| for fixed finite local A."
+    },
+    {
+      "objection": "A local L2 generator estimate implies non-explosion or semigroup convergence.",
+      "disposition": "UPHELD AGAINST PROMOTION: path-space construction, non-explosion, N2b/N2c/N4, N2d and anchored-n passage remain open."
+    },
+    {
+      "objection": "The estimate carries a physical or quantum time interpretation.",
+      "disposition": "REJECTED: time remains external stochastic bookkeeping only."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-489", "R-490", "R-520", "R-521"],
+    "negatives": [],
+    "events": ["20260908-r-522-pah-omc-020-source-owned-c2-a-second-rate"]
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_c2_moment.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_c2_moment_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_c2_moment_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_c2_moment_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020C2.lean with the registered package path",
+    "result": "Primary 40/40, independent 31/31, hostile 17/17, integrated 25/25 and six Lean declarations pass."
+  },
+  "closed_scoped_gate": "Source-owned Gibbs-weighted local second-rate-moment contract C2(A)<=60|A| and its local L2 generator consequence.",
+  "remaining_gates": [
+    "Source-authorized path-space construction and non-explosion/uniqueness",
+    "N2b liminf/recovery and N2c/N4 boundary escape",
+    "N2d R-512 minimal-form identification",
+    "Anchored-n semigroup convergence for all local cylinders"
+  ],
+  "next_single_question": "Can the C2(A)<=60|A| bound be combined with a source-authorized path-space/non-explosion proof to control the evolved boundary term and identify the R-512 minimal-form semigroup in the frozen j-before-n order?",
+  "revisit_condition": "Reopen only after a source-owned process/Lyapunov packet or an exact PAH-specific failure of the Gibbs-square transport identity, mobility cap or R-490 incidence premise. Do not repeat the abstract R-521 witness.",
+  "non_claims": [
+    "This is an auxiliary local-form result and does not change the active T-054 gate.",
+    "No source-grounded process, non-explosion, N2b/N2c/N4, R-512 identification, anchored-n semigroup convergence or infinite-volume dynamics is claimed.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion; external Markov time is not physical time."
+  ]
+}

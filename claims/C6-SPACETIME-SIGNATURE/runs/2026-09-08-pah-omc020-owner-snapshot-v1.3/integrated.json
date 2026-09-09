@@ -1,0 +1,200 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 21,
+  "audit_id": "PAH-OMC-020-OWNER-SNAPSHOT-V13-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-OMC-020-OWNER-SEARCH-SNAPSHOT-003",
+      "expected": "PAH-OMC-020-OWNER-SEARCH-SNAPSHOT-003",
+      "name": "snapshot id",
+      "status": "PASS"
+    },
+    {
+      "actual": 164,
+      "expected": 164,
+      "name": "fresh candidate count",
+      "status": "PASS"
+    },
+    {
+      "actual": "ee56276cb87bd1c95f3230ab581b38151c94b92e85f5897b328612a5a6c3ed30",
+      "expected": "ee56276cb87bd1c95f3230ab581b38151c94b92e85f5897b328612a5a6c3ed30",
+      "name": "fresh manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "authorization remains empty",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "completion remains empty",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "primary firewalls",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "independent firewalls",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "hostile firewalls",
+      "status": "PASS"
+    },
+    {
+      "actual": 847,
+      "expected": 847,
+      "name": "primary count",
+      "status": "PASS"
+    },
+    {
+      "actual": 667,
+      "expected": 667,
+      "name": "independent count",
+      "status": "PASS"
+    },
+    {
+      "actual": 10,
+      "expected": 10,
+      "name": "hostile count",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": "f2bea35647f54f305ac1fa3a3bc5bdf7e7078acb682cccb79da4e0eecd7d1638",
+      "expected": "f2bea35647f54f305ac1fa3a3bc5bdf7e7078acb682cccb79da4e0eecd7d1638",
+      "name": "source snapshot hash",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no physical promotion",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "failed": 0,
+  "finding": "A fresh current-byte v1.3 marker manifest includes 164 candidates after R-545/R-546, but authorized_paths and complete_paths remain empty. This is provenance only and not a universal no-go or semigroup theorem.",
+  "next_single_question": "Can a source owner provide one versioned, hash-pinned packet containing the common H/U_n comparison, anchored N2b liminf/recovery, N2c/N4 boundary escape and exact R-512 minimal-form identification?",
+  "non_claims": [
+    "No source-authorized U_n/common-Hilbert map, path law, N2b/N2c/N4/N2d closure or PAH-OMC-020 semigroup convergence.",
+    "No universal impossibility theorem follows from the empty snapshot.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "passed": 21,
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 verification/scripts/pah_omc020_owner_snapshot_v13_verify.py --check",
+  "result_id": "R-547",
+  "schema": "tect/pah-omc020-owner-snapshot-v13-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pah_omc020_owner_snapshot_v11_hostile.py": "a8c20daeef529aa211004cd13b2ea23448763db1fec0decf24cfc46bab0711f0",
+    "codes/foundations/pah_omc020_owner_snapshot_v11_independent.py": "e38d74970c485e5940abd5198b1eee8c07b5ea2f5493bd477f43033a98d9577c",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.3.json": "f2bea35647f54f305ac1fa3a3bc5bdf7e7078acb682cccb79da4e0eecd7d1638",
+    "verification/scripts/pah_omc020_owner_packet_snapshot.py": "f8cb8e8555117d00de1c474c3be51abfe3f82bb972cf559bdbac02deaa3a00e7",
+    "verification/scripts/pah_omc020_owner_snapshot_v13_verify.py": "cbb02988b1911a515c18a6b61d981c79262d9c388d54e54a73018c5fbffe7a10"
+  },
+  "status": "PASS_FRESH_OWNER_SNAPSHOT_V13",
+  "subprocesses": {
+    "hostile": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-020 OWNER SNAPSHOT V1.1 HOSTILE: PASS 10/10; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "independent": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-020 OWNER SNAPSHOT V1.1 INDEPENDENT: PASS 667/667; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "primary": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-020 OWNER SNAPSHOT: PASS 847/847; verdict=HOLD_FOR_EVIDENCE"
+    }
+  },
+  "task_id": "T-064",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

@@ -1,0 +1,257 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "PASS_PROJECTIVE_LOCAL_CORRELATION_ENVELOPE",
+      "expected": "PASS_PROJECTIVE_LOCAL_CORRELATION_ENVELOPE",
+      "name": "primary status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_INDEPENDENT_PROJECTIVE_ENVELOPE",
+      "expected": "PASS_INDEPENDENT_PROJECTIVE_ENVELOPE",
+      "name": "independent status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_HOSTILE_PROJECTIVE_ENVELOPE",
+      "expected": "PASS_HOSTILE_PROJECTIVE_ENVELOPE",
+      "name": "hostile status",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT"
+      ],
+      "expected": [
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT"
+      ],
+      "name": "all lanes auxiliary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "name": "all lanes conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes non-bearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes block physical promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": 50,
+      "expected": 50,
+      "name": "primary checks",
+      "status": "PASS"
+    },
+    {
+      "actual": 35,
+      "expected": 35,
+      "name": "independent checks",
+      "status": "PASS"
+    },
+    {
+      "actual": 31,
+      "expected": 31,
+      "name": "hostile checks",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "shared source hashes agree",
+      "status": "PASS"
+    },
+    {
+      "actual": 288,
+      "expected": 288,
+      "name": "effective branching",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "name": "finite word cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": 112,
+      "expected": 112,
+      "name": "support first-root bound",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "n envelope is not a semigroup assertion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "physical firewall in primary",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "physical firewall in hostile",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent does not import primary",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile does not import primary",
+      "status": "PASS"
+    },
+    {
+      "actual": "6738dd586073095132701adac1967f79d06ef6390a1be3f3970f0e994becbf02",
+      "expected": "6738dd586073095132701adac1967f79d06ef6390a1be3f3970f0e994becbf02",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "source_overlap_formula",
+        "source_two_copy_formula",
+        "source_first_root_formula",
+        "independent_first_root_formula",
+        "tail_ratio_fixture",
+        "tail_term_nonnegative",
+        "tail_term_fixture_positive",
+        "two_copy_tail_argument",
+        "finite_word_cutoff_precedes_n",
+        "state_fixture_pair_decreases",
+        "state_fixture_pair_second_decreases"
+      ],
+      "expected": [
+        "source_overlap_formula",
+        "source_two_copy_formula",
+        "source_first_root_formula",
+        "independent_first_root_formula",
+        "tail_ratio_fixture",
+        "tail_term_nonnegative",
+        "tail_term_fixture_positive",
+        "two_copy_tail_argument",
+        "finite_word_cutoff_precedes_n",
+        "state_fixture_pair_decreases",
+        "state_fixture_pair_second_decreases"
+      ],
+      "name": "Lean declaration list",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean source policy",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)",
+      "name": "Lean 4.32.1 compile",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "conditional": true,
+  "derived": {
+    "effective_branching": 288,
+    "overlap_branching": 144,
+    "tail_distances": [
+      128,
+      192,
+      256
+    ],
+    "word_cutoff": 6
+  },
+  "lane_counts": {
+    "hostile": 31,
+    "independent": 35,
+    "primary": 50
+  },
+  "non_claims": [
+    "No common U_n, weak Gibbs-L2 convergence, R-512 minimal-form selection or anchored-n semigroup theorem.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "physical_promotion": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_projective_correlation_hostile.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_projective_correlation_independent.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_projective_correlation_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020Projective.lean (Lean 4.32.1 with the registered package path)",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_projective_correlation.py --check"
+  },
+  "run_hashes": {
+    "hostile": "a70fda943bc6158092c0efbf16197b02b5a8988f0b833c1fcc4a501601f8a892",
+    "independent": "2b30a618741c7ba5c2a04c6b0f07061c786014780336aee1b3c1eb453bb9e6c5",
+    "primary": "75a3f0b3cca594f23504ba6f2467aa03ff6a4a9dea21401a01f6d3975475c0a1"
+  },
+  "schema": "tect/pah-omc020-projective-correlation-integrated/1.0",
+  "scope": "Conditional finite-word scalar n-Cauchy envelope for one non-radial grade-blind local cylinder; common U_n and full anchored semigroup remain open.",
+  "scripts": {
+    "hostile": {
+      "path": "codes/foundations/pah_omc020_projective_correlation_hostile.py",
+      "sha256": "61c7646cb8146d193279c2325fc6dae8cba52adbe7f27235f2f5ab80e2c9b378"
+    },
+    "independent": {
+      "path": "codes/foundations/pah_omc020_projective_correlation_independent.py",
+      "sha256": "0f35491df61e4599919c34a8978ed86bec13df85b0a53017c489114919b28a7b"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/PahOmc020Projective.lean",
+      "sha256": "6738dd586073095132701adac1967f79d06ef6390a1be3f3970f0e994becbf02",
+      "version": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)"
+    },
+    "primary": {
+      "path": "verification/scripts/pah_omc020_projective_correlation.py",
+      "sha256": "99f7ffaf736c627142adc88e2f00d2ef62aabe933213ac59a80cfa7afebb62ee"
+    }
+  },
+  "status": "PASS_INTEGRATED_PROJECTIVE_ENVELOPE",
+  "verdict": "AUXILIARY_SUPPORT"
+}

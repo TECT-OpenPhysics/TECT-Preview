@@ -1,0 +1,66 @@
+{
+  "audit_id": "PAH-OMC-020-SECOND-ORDER-DEFECT-INTEGRATED-001",
+  "checks": [
+    {
+      "name": "primary PASS 11/11 NEGATIVE_RESULT",
+      "pass": true
+    },
+    {
+      "name": "independent PASS 8/8",
+      "pass": true
+    },
+    {
+      "name": "hostile PASS 6/6",
+      "pass": true
+    },
+    {
+      "name": "residual agreement",
+      "pass": true
+    },
+    {
+      "name": "Lean source hash/declarations",
+      "pass": true
+    },
+    {
+      "name": "Lean compile",
+      "pass": true
+    },
+    {
+      "name": "nonphysical scope",
+      "pass": true
+    }
+  ],
+  "checks_failed": 0,
+  "checks_passed": 7,
+  "code_hashes": {
+    "hostile": "fc5e261d6570de165047667c90cef7a70f41636b5e6161f689cfe08a4329c7c3",
+    "independent": "62ac7d24c7487c3089b89bbc56ba19b93f88e5bf25b56ca15770b5aae89fd184",
+    "integrated": "df0efb71993524bf03c5568c17f24cbef66786b0f57e0d169f3124498be2d57f",
+    "primary": "553e8151aecb6871e2f2ed14bfcd46b213474833248658c6d2fbfa8fc23da006"
+  },
+  "lean": {
+    "command": "Set-Location verification/lean; lean Tect/PahOmc020SecondOrderDefect.lean",
+    "result": "Direct pinned-toolchain replay completed with no diagnostics; the proof-lane integrated replay uses this hash-pinned record when the canonical dependency cache is locked by another Windows process.",
+    "scope": "The compiled declarations prove only the cubic factorization, strict sign, and finite non-promotion firewall; they do not formalize the PAH state enumeration or any infinite-volume statement.",
+    "source": "verification/lean/Tect/PahOmc020SecondOrderDefect.lean",
+    "source_sha256": "a12ffbc3b80288846cb94229c608129f3bb1465687e9ee8935a8b393d065fb16",
+    "status": "PASS_MANUAL_REPLAY",
+    "toolchain": "leanprover/lean4:v4.32.1"
+  },
+  "non_claims": [
+    "No PAH-OMC-020 ordered j-before-anchored-n semigroup convergence is proved or universally refuted.",
+    "No common infinite-volume process, path law, closable operator, continuum limit or R-512 identification follows.",
+    "No physical Pre-A, spacetime, event-horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains the external stochastic time declared by PAH-001 and is not quantum real time, proper time or Lorentzian time."
+  ],
+  "result_id": "R-551",
+  "run_hashes": {
+    "hostile": "227204a676ab81f3bba3cf55e889738bbf275c495e06f24befd96f67965674c7",
+    "independent": "52dfa6743ed5604a8d9e0273aef8be27bcf568a45af39256de269524a98f9a8a",
+    "primary": "91f1868671c405e04aa413543256fe52385f329f3f55fbb7bb22e2883e16bc5f"
+  },
+  "schema": "tect/pah-omc020-second-order-defect-integrated/1.0",
+  "task_id": "T-083",
+  "verdict": "NEGATIVE_RESULT",
+  "verification": "PASS"
+}

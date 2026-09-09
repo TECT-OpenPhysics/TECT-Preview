@@ -1,0 +1,131 @@
+{
+  "schema": "tect/pah-omc020-pathword-result/1.0",
+  "result_id": "R-515",
+  "contract_id": "PAH-OMC-020-PATHWORD-TRANSPORT",
+  "date": "2026-09-07",
+  "task_id": "T-066",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_SUB_LEMMA",
+    "EXACT_FINITE_ALGEBRA",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b",
+    "strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md": "05abbf6379da1ad8fdd562da9198bc3a961d19ba929dda201b160d2728fe3845",
+    "verification/scripts/pah_omc020_pathword_transport.py": "56623de212a27c2e3ce0206720ce31b838489f0b68c4cfd97df16b2a1fb3414e",
+    "codes/foundations/pah_omc020_pathword_transport_independent.py": "7f03339f00e975b4a75493b01f42f920644f1648b6200d3f16135805114e02d4",
+    "codes/foundations/pah_omc020_pathword_transport_hostile.py": "3fa95e5306ff819eb1a924ea073323b19bcf2f7c6e81788054c7615b7df1e9f4",
+    "verification/scripts/pah_omc020_pathword_transport_verify.py": "76b2eabfdd20759302d94b25a05f689a5bb5ad7bf585afa489da1aed5fbfe295",
+    "verification/lean/Tect/PahOmc020Pathword.lean": "7d9a413835c84fffa3d09d6c659ebde99aef73232e311ba61c69ba88b5bd2032"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/primary.json": "62747886fe3eb6a40df4a64b9e9fa8693c0af1f151c6441b262b781aa7cdc0d7",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/independent.json": "4344bbdfa89538198a73652c48b04c5dbd500764e7a4249e15f9d53c1d4cd90d",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/hostile.json": "0394358630395478bc9283b7bf40649479189407afb0045ab678c21cad32fa8c",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/integrated.json": "c25823c8b2b60d7cb62d5dfed0d0650865fd544bb4d6b82923b17615d27a1c57"
+  },
+  "exact_scope": {
+    "model": "Exactly the PAH-001 non-radial PH/LK/AP generator on the OMC-004 two-row strip after the registered R-511 j-limit.",
+    "state": "The unchanged R-510/R-511 labelled Gibbs state nu_n with original partial root domains and inverse pairs.",
+    "word": "Every prescribed admissible finite root word; no new root, carrier, rate, counterterm or projection.",
+    "time": "External stochastic Markov time; the finite-fibre jump simplex only.",
+    "scope": "Exact stationary L2 square-transport and a conditional connected-word factorial envelope.",
+    "order": "No anchored-n, infinite-volume or continuation of the PAH-OMC-020 semigroup limit is taken."
+  },
+  "conclusion": {
+    "transport": "For every admissible word omega, nu_n(x) product_i c_{r_i}(x_{i-1})^2 equals the terminal density times the product of source mobility squares; partial-bijection transport gives integrated squared word mass at most one.",
+    "simplex": "At fixed amplitudes, a prescribed k-jump word has time-simplex factor T^k/k! and survival factor at most one, hence word probability at most T^k/k!.",
+    "connected_tail": "If a source-valid overlap count N_k<=a*b^(k-1) and boundary distance d are supplied, the connected-word tail is at most [a*b^(d-1)*T^d/d!] / [1-b*T/(d+1)] when b*T<d+1.",
+    "n2c_status": "The path-word input is proved, but its conversion to the exact A_n^(out,m) Q_n(s)g Duhamel term is not proved."
+  },
+  "proof_coverage": {
+    "primary": "45 exact checks pin the source, reconstruct a cyclic detailed-balance word, verify the L2 transport identity, simplex volumes and factorial ratios.",
+    "independent": "25 non-importing checks use a separate four-state cyclic fixture and independent tail arithmetic.",
+    "hostile": "13 controls reject a squared density-ratio mutation, mobility above one, a missing tail ratio condition and anchored/physical promotion.",
+    "lean": "Four Lean theorems compile under Lean 4.32.1: two-step square transport, mobility-product bound, stationary terminal bound and word-term successor ratio.",
+    "source_bridge": "OMC-004 degree/face bounds and R-511 inverse-square transport are hash-pinned; no unpinned theorem is imported."
+  },
+  "assumptions": [
+    "The exact R-511 detailed-balance square identity and measure-preserving partial-root composition hold at their registered finite-n scope.",
+    "At fixed amplitudes the non-radial label fibre is a finite continuous-time jump chain with ordinary jump-simplex expansion and survival factors no larger than one.",
+    "A future source-valid locality argument may count only connected root words when attributing influence to a boundary term; this is stated as a conditional input, not silently assumed for PAH-OMC-020."
+  ],
+  "missing_assumptions": [
+    "An n-uniform root-overlap branching constant and an exact boundary-distance count for all PH/LK/AP supports on OMC-004 G_n.",
+    "A source-valid coupling or Duhamel theorem converting connected-word influence into the N2c/N4 boundary term for Q_n(s)g.",
+    "A common U_n/Hilbert realization, N2b liminf/recovery and N2d identification with the R-512 minimal form."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The path estimate hides a global pointwise rate bound.",
+      "disposition": "DISMISSED: the exact Gibbs square transport is telescoped along each word; no supremum of c_r is used."
+    },
+    {
+      "objection": "The connected-word fixture supplies the OMC-004 branching constant.",
+      "disposition": "UPHELD: a,b,T are labelled arithmetic test inputs and the source overlap constant remains missing."
+    },
+    {
+      "objection": "The jump-word envelope is already N2c/N4.",
+      "disposition": "UPHELD AGAINST PROMOTION: the word-to-Duhamel/coupling attribution is explicitly unproved."
+    },
+    {
+      "objection": "A finite fibre jump expansion establishes an anchored-n process.",
+      "disposition": "UPHELD AGAINST PROMOTION: no common U_n, liminf/recovery, minimal selection or anchored limit is included."
+    },
+    {
+      "objection": "Markov time can be read as physical time.",
+      "disposition": "REJECTED: the source and all runs retain external stochastic time only."
+    }
+  ],
+  "formal_refs": {
+    "results": [
+      "R-509",
+      "R-510",
+      "R-511",
+      "R-512",
+      "R-514"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_pathword_transport.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/primary.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_pathword_transport_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/independent.json",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_pathword_transport_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/hostile.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_pathword_transport_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages"
+  },
+  "closed_scoped_gate": "Exact stationary L2 transport for every prescribed non-radial root word and the conditional factorial connected-word envelope.",
+  "remaining_gates": [
+    "Source-certified n-uniform overlap/distance data",
+    "Connected-word to N2c/N4 Duhamel or coupling attribution",
+    "N2a common realization, N2b liminf/recovery and N2d minimal-form selection",
+    "Anchored-n PAH-OMC-020 semigroup convergence"
+  ],
+  "next_single_question": "Can the exact OMC-004 incidence data provide an n-uniform overlap constant and a source-valid coupling/Duhamel lemma that turns this path-word envelope into the N2c/N4 boundary estimate?",
+  "revisit_condition": "Reopen the anchored-n passage only after the two missing source-level locality inputs are hash-pinned, or record an exact parent-scope counterexample if either cannot hold.",
+  "non_claims": [
+    "This is a conditional auxiliary path-word result, not the full PAH-OMC-020 anchored-n result.",
+    "No common completed Hilbert-space U_n, Mosco theorem, N2c/N4 boundary escape, R-512 minimal-form semigroup selection or infinite-volume process is proved.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion follows.",
+    "External stochastic Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

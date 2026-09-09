@@ -1,0 +1,82 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-020 projective local-correlation word envelope",
+  "question": "Can the unchanged PAH-001 grade-blind eventual intertwining and the registered R-515-R-517 word controls yield a scalar n-Cauchy envelope for one non-radial local cylinder without assuming a common U_n?",
+  "finding": "Conditionally yes for a finite word truncation. R-493 identifies every retained word after the support-dependent stabilization stage. R-510 supplies the local Gibbs-state passage for the product cylinder, while R-516 and R-517 give b=144 and the explicit two-copy b_eff=288 factorial boundary tail. The resulting scalar envelope decreases in the n and boundary-distance fixtures. This does not identify the envelope with the R-512 minimal semigroup or prove the full anchored-n limit.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This is a distinct projective comparison step rather than another finite carrier table. The finite cutoff makes the use of R-493 exact, and the two-copy factor and factorial remainder are exposed rather than hidden. Independent arithmetic, hostile shortcut rejection and Lean finite checks all pass. The result remains conditional because the common varying-space realization and minimal-form identification are absent.",
+  "boundary": "Exact PAH-001 functional, OMC-013 grade-blind cylinder, R-510 local state and R-515-R-517 post-j finite-fibre controls. No new rate, state, carrier, projection, counterterm, time interpretation or limit order.",
+  "next_action": "Supply or refute a source-authorized common U_n and terminal-square-compatible comparison that lifts the finite-word envelope to the anchored R-512 semigroup for all local cylinders.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "task_id": "T-070",
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-013, R-493, R-510 and R-515-R-517.",
+    "Fix one non-radial grade-blind cylinder of width two and a finite word cutoff m=6 before the n comparison.",
+    "Use R-493 eventual generator intertwining for all retained words after N(f)=3 and R-510 for the product-cylinder local-state Cauchy term.",
+    "Derive b=144 from the R-516 source footprint, retain b_eff=2b=288 from the R-517 two-copy triangle, and compute the factorial tail with exact Fraction arithmetic.",
+    "Replay primary, non-importing independent and hostile lanes and compile the finite Lean declarations; keep common U_n, minimal form and anchored-n limits open."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json#conclusion",
+    "strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md#Envelope",
+    "verification/scripts/pah_omc020_projective_correlation.py#compute",
+    "codes/foundations/pah_omc020_projective_correlation_independent.py#main",
+    "codes/foundations/pah_omc020_projective_correlation_hostile.py#main",
+    "verification/scripts/pah_omc020_projective_correlation_verify.py#build",
+    "verification/lean/Tect/PahOmc020Projective.lean#source_two_copy_formula",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-projective-correlation/integrated.json#checks"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-493",
+      "R-510",
+      "R-515",
+      "R-516",
+      "R-517"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "verification_summary": "Primary 50/50, non-importing independent 35/35, hostile 31/31 and integrated 23/23 pass; Lean 4.32.1 compiles eleven finite declarations. All lanes remain conditional auxiliary support.",
+  "assumptions": [
+    "R-493 eventual grade-blind generator intertwining applies term-by-term to every word below the fixed cutoff.",
+    "R-510 local-state Cauchy control applies to the bounded product cylinder f*g.",
+    "R-517 finite-fibre word-to-Duhamel attribution applies with the exact R-516 footprint and two-copy factor.",
+    "The finite word expansion can be split at m before comparing n; the omitted words are not declared equal and remain in the conditional tail."
+  ],
+  "missing_assumptions": [
+    "A source-authorized common U_n or completed Hilbert-space realization for the varying n spaces.",
+    "An arbitrary-sequence liminf/recovery theorem and identification with the R-512 minimal closed form.",
+    "A non-conditional all-cylinder anchored-n semigroup convergence theorem."
+  ],
+  "related": [
+    {
+      "id": "EXP-001636",
+      "relation": "continues"
+    }
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc013-full-q-eventual-intertwining/integrated.json": "8d005bea7ee33111712f58a32046cdb254f77bc8c17d8eb1a470abcc2adbbbc7",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json": "114699a4554e45260a6a6632f44a32e9c0494a9274c27b561c676e93c5d247d9",
+    "strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json": "9e357158eb6de66bb776b2d674964ddf9fb16547409ac36f8dd254154082bc11",
+    "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json": "67825022b3db1078387534baacb818fdf60778ce19f4fe81514484a25cf7cb5d",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "provenance": "contemporaneous",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-07",
+  "non_claims": [
+    "No common U_n, weak Gibbs-L2 convergence, R-512 minimal-form selection or anchored-n semigroup theorem.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

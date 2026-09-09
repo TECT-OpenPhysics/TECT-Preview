@@ -1,0 +1,68 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "task_id": "T-094",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-09",
+  "provenance": "contemporaneous",
+  "title": "PAH-OMC-020 conditional chain coverage audit",
+  "question": "Do the current R-537, R-538, R-555 and R-557 authorities cover every logical implication from fixed-n J and anchored-n D inputs to the requested j-before-n compact-time local-correlation conclusion, leaving only source-owned antecedents missing?",
+  "method": [
+    "Replay the R-537 common-core Duhamel transfer with its canonical pinned Lean cache.",
+    "Replay the R-538 Mosco/resolvent conditional selection, R-555 nested ordered-epsilon bridge and R-557 ten-field owner-packet sufficiency verifier.",
+    "Crosswalk each conclusion and missing antecedent against the original PAH-OMC-020 preregistered model, external stochastic time and j-before-anchored-n order.",
+    "Do not add a carrier, comparison map, rate, state, counterterm, limit or physical interpretation; treat current integrated run hashes as provenance data only."
+  ],
+  "finding": "The conditional logical chain is complete at its declared tier. R-537 gives the common-core variation-of-constants envelope with initial defect I_n and residual R_n; R-538 gives the conditional R-512 resolvent selection once common-space liminf/recovery/norm inputs exist; R-555 proves the exact nested j-before-n epsilon implication from J_(n,j) and D_n; and R-557 verifies that one compatible ten-field packet plus those estimates is sufficient. Current replays pass R-537 22/22, R-538 23/23, R-555 22/22 and R-557 22/22. None of the source-authorized antecedents is present, so the actual PAH-OMC-020 convergence theorem remains unproved.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This audit closes a proof-coverage question without promoting a conditional implication. It shows that the remaining gap is an owner-input and uniform-estimate cut-set, not an unexamined abstract epsilon, Duhamel or Mosco lemma.",
+  "boundary": "PAH-001, its original functional, rates, labelled Gibbs state, normalization, external stochastic Markov time, finite carrier and j-before-anchored-n order are unchanged. No successor dynamics, direct sum, conditional averaging, replacement carrier or physical interpretation is introduced.",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-result-v1.json#conditional_statement",
+    "strategy/pa-hyp/PAH-OMC-020-mosco-resolvent-result-v1.json#conditional_statement",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json#quantifier",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json#required_packet_fields",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-core-duhamel/integrated.json#checks",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mosco-resolvent/integrated.json#checks",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-ordered-epsilon-bridge/integrated.json#checks",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/integrated.json#checks"
+  ],
+  "formal_refs": {
+    "results": ["R-537", "R-538", "R-555", "R-557"],
+    "negatives": [],
+    "events": ["20260908-r-555-pah-omc-020-ordered-epsilon-bridge-2026-0", "20260908-r-557-pah-omc-020-owner-packet-sufficiency-brid"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "related": [
+    {"id": "EXP-001710", "relation": "continues"},
+    {"id": "EXP-001708", "relation": "continues"}
+  ],
+  "verification_summary": "R-537 integrated 22/22; R-538 integrated 23/23; R-555 integrated 22/22; R-557 integrated 22/22. All are conditional/auxiliary and preserve explicit missing owner fields and non-claims.",
+  "reproduction": {
+    "duhamel": "python -X utf8 verification/scripts/pah_omc020_core_duhamel_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "mosco": "python -X utf8 verification/scripts/pah_omc020_mosco_resolvent_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "ordered_epsilon": "python -X utf8 verification/scripts/pah_omc020_ordered_epsilon_bridge_verify.py --check",
+    "owner_packet": "python -X utf8 verification/scripts/pah_omc020_owner_packet_sufficiency_verify.py --check"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-result-v1.json": "4062188d9419a42d74b0350d35a62950c987e5d7b5f38d329bb7f09d09844d01",
+    "strategy/pa-hyp/PAH-OMC-020-mosco-resolvent-result-v1.json": "2abd831e224b0aef9e449c64ce50e7173cb4093f2ba4fabcd7c88ac6acdb8c6e",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+    "verification/lean/registry.json": "d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-core-duhamel/integrated.json": "15aaea0d2481c9f14c96fbc66ffa8d4fb52aec415e1c94a54ab57675c23f64c9",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mosco-resolvent/integrated.json": "0aa2906df1081515e32d7dfb6a9c4b0bf45dabcc5bc8903055185c0e5920686e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-ordered-epsilon-bridge/integrated.json": "a2be8e391d569d926140cc3d8b97d8e611e88b8ee93df23d0844d10f9d5f5e60",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/integrated.json": "b90e62ac6f21be561a17275473db1d96382197fffb6162748e1af3bafbb127d3"
+  },
+  "next_action": "Keep PAH-OMC-020 active at the owner-packet cut-set. Reopen the full convergence proof only when the ten fields and source-authorized J/D antecedents are hash-pinned; then instantiate this already verified chain without changing PAH-001.",
+  "revisit_condition": "Reopen on one complete source-authorized packet, a genuine PAH parent-byte change, or an exact contradiction to one conditional implication. Do not repeat the same abstract chain while its antecedents remain absent.",
+  "non_claims": [
+    "This audit does not prove the PAH-specific fixed-n J limit, anchored-n D limit or R-512 minimal-form identification.",
+    "It does not prove full PAH-OMC-020 semigroup convergence or refute every owner-fixed successor.",
+    "Current integrated run hashes may require provenance refresh after later Lean registrations; this does not alter the conditional mathematics.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion is made; external Markov time remains stochastic bookkeeping."
+  ]
+}

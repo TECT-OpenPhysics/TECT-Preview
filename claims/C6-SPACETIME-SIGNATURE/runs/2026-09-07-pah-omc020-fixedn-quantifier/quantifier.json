@@ -1,0 +1,232 @@
+{
+  "arithmetic_oracle": {
+    "cutoff_errors": [
+      1.296,
+      0.864,
+      0.648,
+      0.5184,
+      0.432,
+      0.3702857142857143,
+      0.324,
+      0.288,
+      0.2592
+    ],
+    "fixture": {
+      "H": 3.0,
+      "L": 2.0,
+      "Mf": 1.08,
+      "Mg": 1.2,
+      "T": 0.7
+    },
+    "mesh_residuals": [
+      8.4,
+      4.2,
+      2.1,
+      1.05,
+      0.525,
+      0.2625,
+      0.13125,
+      0.065625,
+      0.0328125
+    ]
+  },
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+      "expected": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+      "expected": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-018-generator-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "d607dcac1bfa6e061a0b783f7ee9b339ba2d808cd237cb69f2a348d6a4557dd5",
+      "expected": "d607dcac1bfa6e061a0b783f7ee9b339ba2d808cd237cb69f2a348d6a4557dd5",
+      "name": "source pin:claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-cell-correlation/cell-correlation.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "expected": "source midpoint rate",
+      "name": "original midpoint rate retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "For L>=4, sup_j mu_(n,j)(max_v r_v>=L)<=exp(C_n) N 5^(N-1) exp(-L); C_n=25N/24+33E/8+4P.",
+      "expected": "present",
+      "name": "OMC-016 tail theorem is the inherited cutoff input",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "(F7)",
+        "(F8)",
+        "(F9)",
+        "(F10)"
+      ],
+      "expected": "all four markers",
+      "name": "F7--F10 are explicitly recorded",
+      "status": "PASS"
+    },
+    {
+      "actual": "shared finite fibre",
+      "expected": "present",
+      "name": "same Q_n is used throughout",
+      "status": "PASS"
+    },
+    {
+      "actual": "stationary L1 contraction",
+      "expected": "present",
+      "name": "stationary L1 tail contraction is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": 9,
+      "expected": ">=3 occurrences",
+      "name": "uniform time interval is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": "endpoint-preserving cell theorem",
+      "expected": "present",
+      "name": "half-open upper endpoint is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "status": "PASS_COMMON_SPACE_CELL_AUDIT",
+        "temporal_verdict": "IN_PROGRESS"
+      },
+      "expected": "PASS_COMMON_SPACE_CELL_AUDIT/IN_PROGRESS",
+      "name": "cell audit is diagnostic, not temporal completion",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "No rate/functional/mobility/finite-part/state/time change, counterterm, time acceleration, conditional generator averaging, fixed-R_max bypass or new finite carrier.",
+        "No inference of semigroup selection from closability, form-core density, pointwise generator consistency or static Gibbs convergence alone.",
+        "No assumption that a form core is an operator graph core, or that the minimal closed form equals the maximal jump form.",
+        "No Q3LOCK or TECT-YM result imported as a PAH premise; no phasewise or source-dependent direct-sum rescue."
+      ],
+      "expected": "source restrictions",
+      "name": "preregistration forbids shortcuts",
+      "status": "PASS"
+    },
+    {
+      "actual": "not a temporal path-law construction",
+      "expected": "present",
+      "name": "source certificate is not a path-law construction",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "42/5",
+        "21/5",
+        "21/10",
+        "21/20",
+        "21/40",
+        "21/80",
+        "21/160",
+        "21/320",
+        "21/640"
+      ],
+      "expected": "strictly decreasing",
+      "name": "F7 radial Duhamel residual decreases with mesh",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/640",
+      "expected": "0<residual<1 at j=8",
+      "name": "F7 residual tends below diagnostic tolerance",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "162/125",
+        "108/125",
+        "81/125",
+        "324/625",
+        "54/125",
+        "324/875",
+        "81/250",
+        "36/125",
+        "162/625"
+      ],
+      "expected": "strictly decreasing",
+      "name": "F8 stationary L1 cutoff term decreases with tail control",
+      "status": "PASS"
+    },
+    {
+      "actual": "23361/80000",
+      "expected": "finite nonnegative",
+      "name": "two-term bound is finite and nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "4de98efdd7b35ae7cf663ebfff241ebcecf6179f8c96bedefb7f5c19c4a51d08",
+      "expected": "different from work hash",
+      "name": "hostile tail shortcut changes pinned work hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "j-before-n only",
+      "name": "hostile reversed order is not silently accepted",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "No change to T-054 active gate, C6 T1 or PAH-OMC-014 merely from this auxiliary temporal result.",
+        "No full kernel classification, unique physical vacuum, Reading-H comparison, spectral gap, mixing or ergodicity claim.",
+        "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap or TOE conclusion."
+      ],
+      "expected": "physical and hold fences",
+      "name": "hostile temporal promotion remains fenced",
+      "status": "PASS"
+    }
+  ],
+  "code_sha256": "838e59e69e54d017b6ddf06a1d458f7ab1cf07c74b7574077933a52265643826",
+  "conditional_analytic_statement": "Under the inherited R-509 cell-density/tail theorem, R-511 residual estimate and finite-fibre modulus, F7--F10 imply fixed-n uniform-on-[0,T] correlation convergence after j then K limits.",
+  "non_claims": [
+    "This is a quantifier/assumption audit, not a fixed-n temporal convergence theorem or result-card admission.",
+    "No strong operator convergence, common infinite-volume process, R-512 minimal/maximal equality or anchored n limit is claimed.",
+    "No physical Pre-A, spacetime, quantum real time, QFT, gravity, continuum, mass gap or TOE conclusion; no Q3LOCK or TECT-YM import."
+  ],
+  "open_obligations": [
+    "independently discharge the inherited all-test measure-theoretic cell theorem and Duhamel domain hypotheses",
+    "admit a fixed-n temporal result only after those hypotheses are proved at the exact PAH scope",
+    "prove the anchored n passage and identify the R-512 minimal-form semigroup"
+  ],
+  "proved_scope": [
+    "source-pinned F7--F10 quantifier and scope structure",
+    "exact rational two-term Duhamel/cutoff error decomposition for diagnostic fixtures",
+    "stationary L1 tail, half-open endpoint and shared-Q_n obligations retained",
+    "hostile shortcut/order/promotion controls and PahOmc020 Lean compilation PASS"
+  ],
+  "schema": "tect/pah-omc020-fixedn-quantifier-audit/1.0",
+  "source_pins": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-cell-correlation/cell-correlation.json": "d607dcac1bfa6e061a0b783f7ee9b339ba2d808cd237cb69f2a348d6a4557dd5",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_FIXED_N_QUANTIFIER_AUDIT",
+  "temporal_verdict": "IN_PROGRESS"
+}

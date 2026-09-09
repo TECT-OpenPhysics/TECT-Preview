@@ -48,6 +48,39 @@ TOE target with no established result.
 
 ## History
 
+- 2026-09-09: R-568 / PAH-OMC-029 proves uniqueness of the Markov
+  extension of the fixed R-511 generator on the same R-510 H, conditional
+  on the pinned R-510/R-511/R-512/R-567 realization. Every admissible
+  extension respects radial multipliers; a state-derived rate envelope,
+  all-extension domain bridge and vanishing factorial boundary remainder
+  identify it with the minimal extension. Independent commutator analysis,
+  primary/non-importing independent/hostile checks and six partial Lean
+  theorems support the result. This is auxiliary_support, not original
+  finite-semigroup convergence, physical signature or a T-054 gate change.
+  The host remains T1 OPEN.
+  [Exact extension class, proof and non-claims](../../strategy/pa-hyp/PAH-OMC-029-result-v1.json).
+
+- 2026-09-09: R-567 / PAH-OMC-028 repairs R-530's nonlinear closure
+  inference without changing any PAH source. On the full R-512 minimal
+  domain, normal contractions preserve the domain and decrease energy;
+  the target semigroup is positive, bounded-norm contractive and preserves
+  one, conditional on the inherited R-510/R-511/R-512 hypotheses. An exact
+  counterexample rejects the paired-energy shortcut, not this conclusion.
+  Closed-epigraph and weak-compactness proofs replace that inference;
+  primary/independent/hostile replay and five Lean theorems pass. This is
+  auxiliary proof repair only: T-054 and PAH-OMC-020 remain open, and the
+  host stays T1 OPEN with no physical signature claim.
+  [Result, assumptions and proof coverage](../../strategy/pa-hyp/PAH-OMC-028-result-v1.json).
+
+- 2026-09-07: R-512 / PAH-OMC-019 closes only the separate analytic
+  closability question for the exact R-511 pre-form on R-510's H. Its minimal
+  closed nonnegative extension retains the entire amplitude-only H_rad at
+  zero energy and retains positive original aperture energy. Standard
+  symmetric-operator form theory is reused with universal Lean consequences
+  and independent/hostile checks; inherited state inputs remain explicit.
+  No active T-054 gate, physical signature or C6 T1 promotion follows.
+  [Exact result, assumptions and non-claims](../../strategy/pa-hyp/PAH-OMC-019-result-v1.json).
+
 - 2026-09-07: R-511 is registered as a separately scoped PAH-OMC-018
   auxiliary result: sampled original-generator radial-cutoff consistency
   and an ordered stationary symmetric local pre-form in the R-510 state.

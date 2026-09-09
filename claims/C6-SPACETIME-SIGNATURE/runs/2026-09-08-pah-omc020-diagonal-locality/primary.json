@@ -1,0 +1,254 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+        "R-562": "4474c3ecabe56ea08c6a9efe44d33cdd7f2cbc79d5ea891a70e89703171698bc"
+      },
+      "expected": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+        "R-562": "4474c3ecabe56ea08c6a9efe44d33cdd7f2cbc79d5ea891a70e89703171698bc"
+      },
+      "name": "source pins",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-563",
+      "expected": "R-563",
+      "name": "contract identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_CONDITIONAL",
+      "expected": "PASS_CONDITIONAL",
+      "name": "R-562 parent is conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "source-derived radius two",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "name": "diagonal witness beats every sampled finite n",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "threshold strictly grows along diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no fixed-n all-power premise in sampled range",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "route consequence is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "nonpromotion firewall",
+      "status": "PASS"
+    }
+  ],
+  "checks_failed": 0,
+  "checks_passed": 9,
+  "claim_bearing": false,
+  "classification": "negative_result",
+  "code_sha256": "bbbdad6419c734e05f2f55fc3d2de7b22878be57da237279f44a35871519c65b",
+  "diagonal_rows": [
+    {
+      "N_k": 7,
+      "k": 3,
+      "n": 2,
+      "n_below_threshold": true,
+      "support_max": 0
+    },
+    {
+      "N_k": 9,
+      "k": 4,
+      "n": 3,
+      "n_below_threshold": true,
+      "support_max": 0
+    },
+    {
+      "N_k": 13,
+      "k": 6,
+      "n": 5,
+      "n_below_threshold": true,
+      "support_max": 0
+    },
+    {
+      "N_k": 25,
+      "k": 12,
+      "n": 11,
+      "n_below_threshold": true,
+      "support_max": 0
+    },
+    {
+      "N_k": 8,
+      "k": 3,
+      "n": 2,
+      "n_below_threshold": true,
+      "support_max": 1
+    },
+    {
+      "N_k": 10,
+      "k": 4,
+      "n": 3,
+      "n_below_threshold": true,
+      "support_max": 1
+    },
+    {
+      "N_k": 14,
+      "k": 6,
+      "n": 5,
+      "n_below_threshold": true,
+      "support_max": 1
+    },
+    {
+      "N_k": 26,
+      "k": 12,
+      "n": 11,
+      "n_below_threshold": true,
+      "support_max": 1
+    },
+    {
+      "N_k": 11,
+      "k": 3,
+      "n": 2,
+      "n_below_threshold": true,
+      "support_max": 4
+    },
+    {
+      "N_k": 13,
+      "k": 4,
+      "n": 3,
+      "n_below_threshold": true,
+      "support_max": 4
+    },
+    {
+      "N_k": 17,
+      "k": 6,
+      "n": 5,
+      "n_below_threshold": true,
+      "support_max": 4
+    },
+    {
+      "N_k": 29,
+      "k": 12,
+      "n": 11,
+      "n_below_threshold": true,
+      "support_max": 4
+    },
+    {
+      "N_k": 17,
+      "k": 3,
+      "n": 2,
+      "n_below_threshold": true,
+      "support_max": 10
+    },
+    {
+      "N_k": 19,
+      "k": 4,
+      "n": 3,
+      "n_below_threshold": true,
+      "support_max": 10
+    },
+    {
+      "N_k": 23,
+      "k": 6,
+      "n": 5,
+      "n_below_threshold": true,
+      "support_max": 10
+    },
+    {
+      "N_k": 35,
+      "k": 12,
+      "n": 11,
+      "n_below_threshold": true,
+      "support_max": 10
+    }
+  ],
+  "finding": "For every support maximum s_f>=0 and every finite n, there exists k (indeed k=n+1) with n<N_k(f). Equivalently sup_k N_k(f)=infinity and no fixed finite n can satisfy n>=N_k(f) for every k.",
+  "non_claims": [
+    "This is not a no-go theorem for the PAH stationary semigroup or for all possible convergence proofs.",
+    "It does not refute exponential convergence if an independent uniform estimate or cancellation is supplied.",
+    "It does not prove infinite-volume dynamics, ordered j-before-n convergence or R-512 equality.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion follows."
+  ],
+  "physical_promotion": false,
+  "radius_rows": [
+    {
+      "level": 2,
+      "radius": 2
+    },
+    {
+      "level": 3,
+      "radius": 2
+    },
+    {
+      "level": 4,
+      "radius": 2
+    },
+    {
+      "level": 5,
+      "radius": 2
+    },
+    {
+      "level": 6,
+      "radius": 2
+    },
+    {
+      "level": 7,
+      "radius": 2
+    },
+    {
+      "level": 8,
+      "radius": 2
+    },
+    {
+      "level": 9,
+      "radius": 2
+    }
+  ],
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_diagonal_locality_hostile.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_diagonal_locality_independent.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_diagonal_locality_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc020DiagonalLocality.lean",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_diagonal_locality.py --check"
+  },
+  "result_id": "R-563",
+  "route_consequence": "The R-562 fixed-k conditional identity cannot, by itself, be promoted to an all-power identity at one fixed volume and then summed termwise into an exponential semigroup. A separate uniform word/factorial tail, cancellation estimate, or common-process argument is required.",
+  "schema": "tect/pah-omc020-diagonal-locality-primary/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "R-562": "4474c3ecabe56ea08c6a9efe44d33cdd7f2cbc79d5ea891a70e89703171698bc"
+  },
+  "task_id": "T-086",
+  "verdict": "NEGATIVE_RESULT",
+  "verification": "PASS"
+}

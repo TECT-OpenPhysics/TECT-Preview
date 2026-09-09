@@ -1,0 +1,129 @@
+{
+  "schema": "tect/pah-omc020-stationary-modulus-correction-result/1.0",
+  "result_id": "R-542",
+  "contract_id": "PAH-OMC-020-STATIONARY-MODULUS-CORRECTION",
+  "date": "2026-09-08",
+  "task_id": "T-064",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "route_decision": "negative_result_for_unjustified_stopping_time_promotion",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "supersedes": {
+    "result_id": "R-541",
+    "scope": "stopping-time Aldous wording only; the finite deterministic-time modulus is retained"
+  },
+  "evidence_level": [
+    "FINITE_STATIONARY_MODULUS",
+    "IMPLICATION_BOUNDARY_DIAGNOSTIC",
+    "EXACT_SOURCE_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-contract-v1.json",
+  "certificate": "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-certificate.md",
+  "exploration_id": "EXP-001662",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-result-v1.json": "90cf191edc5df6c05a7e7facaaa179e075c87129891d22456dfd36186994d27c"
+  },
+  "exact_scope": {
+    "finite_processes": "Exactly the original finite PAH-001 stationary chains and labelled Gibbs laws at the registered levels and radial cutoffs.",
+    "stationary_inputs": "R-490 C_sw=540 and R-522 C2(A)<=60|A| are pi-weighted stationary domination inputs, not pointwise configuration-wise rate bounds.",
+    "retained_statement": "For deterministic t and delta>=0, stationarity and the finite martingale/drift decomposition give E|f(X_(t+delta))-f(X_t)|^2 <= 2 delta K_Gamma(f)+2 delta^2 K_L(f).",
+    "blocked_upgrade": "Aldous' bounded-stopping-time condition is not implied by those stationary averages alone; it needs a source-authorized conditional predictable-compensator or pointwise local-rate estimate.",
+    "diagnostic_scope": "The reversible two-state rare-state family is an abstract logical implication diagnostic only, not a PAH counterexample or a new carrier.",
+    "order_and_time": "The preregistered j-before-anchored-n order and external stochastic Markov time remain unchanged."
+  },
+  "conditional_statement": "The deterministic-time stationary modulus is exact under the pinned finite source inputs. Promoting it to a bounded-stopping-time Aldous estimate requires one additional conditional/pointwise owner field; the abstract rare-state diagnostic shows why that field cannot be omitted.",
+  "finding": "Primary 21/21, non-importing independent 18/18, hostile 11/11 and integrated 27/27 checks pass; five finite rational Lean declarations compile. The finite deterministic stationary modulus is retained, while the stopping-time Aldous promotion is held because R-490 and R-522 provide only pi-weighted averages.",
+  "assumptions": [
+    "Finite PAH-001 chains and their labelled Gibbs laws are well-defined and stationary at each admitted regulator.",
+    "The R-490 and R-522 source bounds apply to the same unchanged local observable and generator rates.",
+    "The finite martingale/drift decomposition is used only for deterministic time increments in this correction."
+  ],
+  "missing_assumptions": [
+    "A source-authorized pointwise local-rate or conditional predictable-compensator bound uniform over bounded stopping times.",
+    "A source-authorized path-space construction with non-explosion and martingale-problem identification.",
+    "Uniqueness and equality with the R-512 minimal-form semigroup, followed by the frozen ordered temporal limit."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The stationary weighted C_sw/C2 averages can be evaluated at an arbitrary stopping time without further input.",
+      "disposition": "UPHELD AGAINST PROMOTION: stopping times bias the state distribution; the rare-state diagnostic gives a nonzero conditional jump floor while the stationary scale decreases."
+    },
+    {
+      "objection": "The abstract rare-state chain is an exact PAH negative result.",
+      "disposition": "REJECTED: it is explicitly quarantined as an implication diagnostic and does not alter PAH-001."
+    },
+    {
+      "objection": "A deterministic-time modulus alone proves Aldous path tightness.",
+      "disposition": "UPHELD AGAINST PROMOTION: a conditional compensator or pointwise estimate is still required."
+    },
+    {
+      "objection": "The correction changes the PAH dynamics or the registered order.",
+      "disposition": "REJECTED: all source hashes, external-time wording and j-before-anchored-n order remain fixed."
+    },
+    {
+      "objection": "A finite modulus correction selects the R-512 semigroup.",
+      "disposition": "UPHELD AGAINST PROMOTION: path-space construction, uniqueness and minimal-form identification remain open."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-490", "R-522", "R-541"],
+    "negatives": [],
+    "events": []
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_stationary_modulus_correction.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_stationary_modulus_correction_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_stationary_modulus_correction_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_stationary_modulus_correction_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020StationaryModulus.lean",
+    "result": "Primary 21/21, independent 18/18, hostile 11/11, integrated 27/27; five finite rational Lean declarations compile."
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-stationary-modulus-correction/primary.json": "0b83118de06a617e21b471eb160e3272843d359a8d9116da9fa28994e52c8189",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-stationary-modulus-correction/independent.json": "913f5cb9e64513d6d25d7075f6a0b6080cbdd90958b352cdc8ce2c6d6546c4ca",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-stationary-modulus-correction/hostile.json": "ed26163a02e9e310befdc6fa42cc162f0a2903f4b401348c09803025fe75e066",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-stationary-modulus-correction/integrated.json": "8e4bfe08cbe9b99f0efb8cfa3e8ab70e2b45f0aa61e331d77054e56460489195"
+  },
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-contract-v1.json": "889713ff523a862f617936f398fc2b5755dec28626be1a763c632e5ed4b1d7fa",
+    "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-certificate.md": "c383f41f862928e0e8476b92bbd3657bd3ada47dc357ef54290144ceb1a7b3d8",
+    "verification/scripts/pah_omc020_stationary_modulus_correction.py": "dda176aec80a2196bf02c3259f319fbf51fd6c8d8cd281aa5eb5a17494d8483d",
+    "codes/foundations/pah_omc020_stationary_modulus_correction_independent.py": "8d2fc4cefd997abc04857ba8e30f33037822d3ecdb59b6df32bd744f99375f84",
+    "codes/foundations/pah_omc020_stationary_modulus_correction_hostile.py": "71fedddbc4bd7fb79c691da3e8cd4e2cbb18f3ab22787bccef4176800110a51a",
+    "verification/scripts/pah_omc020_stationary_modulus_correction_verify.py": "d0f2898af289846136d64db2e5a882a6988579dda73a4d0f7e902096e0e731b1",
+    "verification/lean/Tect/PahOmc020StationaryModulus.lean": "aab2e60116ee9e4df69f364d7693703cc0f8cc60ccf04dcb4a5d943c27155fe5",
+    "verification/lean/registry.json": "60634137184b5d999be4928829eeb3d8856b9d83a6d313b88cce382c20cc3d52"
+  },
+  "closed_scoped_gate": "The deterministic-time finite stationary L2 modulus is retained; the stopping-time Aldous promotion is explicitly blocked by a missing conditional owner field.",
+  "remaining_gates": [
+    "Source-authorized conditional predictable-compensator or pointwise rate estimate",
+    "Aldous path tightness and source-authorized path-space construction",
+    "Non-explosion, martingale-problem identification and process uniqueness",
+    "N2b/N2c/N4 and R-512 minimal-form identification",
+    "Ordered anchored-n semigroup correlation convergence"
+  ],
+  "next_single_question": "Can a source-authorized pointwise local-rate or conditional predictable-compensator estimate upgrade the deterministic stationary modulus to bounded-stopping-time Aldous control without changing PAH-001?",
+  "revisit_condition": "Reopen only when that one conditional owner field is versioned and hash-pinned or an exact PAH-specific deterministic-modulus failure is supplied; do not repeat finite carrier or physical reinterpretation work.",
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-certificate.md",
+  "non_claims": [
+    "No exact PAH counterexample or universal no-go theorem is claimed by the abstract rare-state diagnostic.",
+    "No Aldous path tightness, path-space process, semigroup convergence, N2b/N2c/N4 closure or R-512 identification.",
+    "No change to PAH-001 functional, rates, state, carrier, regulator, normalization, external time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ]
+}

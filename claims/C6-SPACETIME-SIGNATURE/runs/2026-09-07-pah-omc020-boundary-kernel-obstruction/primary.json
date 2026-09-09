@@ -1,0 +1,383 @@
+{
+  "arithmetic": {
+    "amplitude_grid": [
+      {
+        "A": 0.0,
+        "B_square": 0.0,
+        "B_triangle_d_minus": 4.0,
+        "B_triangle_d_plus": 0.0,
+        "split_over_square": 1.0183156388887342
+      },
+      {
+        "A": 1.0,
+        "B_square": 0.0,
+        "B_triangle_d_minus": 4.5,
+        "B_triangle_d_plus": 0.5,
+        "split_over_square": 0.6176396562508757
+      },
+      {
+        "A": 2.0,
+        "B_square": 0.0,
+        "B_triangle_d_minus": 6.0,
+        "B_triangle_d_plus": 2.0,
+        "split_over_square": 0.13781403541327905
+      },
+      {
+        "A": 4.0,
+        "B_square": 0.0,
+        "B_triangle_d_minus": 12.0,
+        "B_triangle_d_plus": 8.0,
+        "split_over_square": 0.00034160684025584005
+      },
+      {
+        "A": 8.0,
+        "B_square": 0.0,
+        "B_triangle_d_minus": 36.0,
+        "B_triangle_d_plus": 32.0,
+        "split_over_square": 1.2896117832118532e-14
+      }
+    ],
+    "fixed_old_labels": {
+      "h0": 1,
+      "h1": 1,
+      "vx": 1,
+      "vy": 1
+    },
+    "inverse_ratio_witnesses": [
+      {
+        "A": 1.6651092223153954,
+        "challenge": 1.0,
+        "inverse_ratio": 3.928055160151633
+      },
+      {
+        "A": 2.716203031481239,
+        "challenge": 10.0,
+        "inverse_ratio": 39.28055160151635
+      },
+      {
+        "A": 3.4616367652045708,
+        "challenge": 100.0,
+        "inverse_ratio": 392.8055160151637
+      }
+    ],
+    "prefactor": 1.0183156388887342,
+    "ratio_formula": "(1+exp(-4))*exp(-A^2/2)",
+    "scope": "coordinate-preserving terminal fibre only"
+  },
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "J_e(s)=2/(s_v+s_w) for e=(v,w)",
+      "expected": "J_e(s)=2/(s_v+s_w) for e=(v,w)",
+      "name": "source edge stiffness",
+      "status": "PASS"
+    },
+    {
+      "actual": "J_p(s)=|boundary p|^(-1) sum_(e in boundary p) J_e(s)",
+      "expected": "boundary average of source edge stiffnesses",
+      "name": "source plaquette boundary average",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "B_triangle",
+        "B_square",
+        "(J_h0+J_vy+J_d)/3",
+        "(J_d+J_h1+J_vx)/3",
+        "There is no diagonal in this",
+        "not finite Gibbs projectivity",
+        "does not drop a boundary interaction"
+      ],
+      "expected": [
+        "B_triangle",
+        "B_square",
+        "(J_h0+J_vy+J_d)/3",
+        "(J_d+J_h1+J_vx)/3",
+        "There is no diagonal in this",
+        "not finite Gibbs projectivity",
+        "does not drop a boundary interaction"
+      ],
+      "name": "source transfer boundary formula",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent square A=0.0 d=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.0,
+      "expected": 4.0,
+      "name": "primary/independent triangle A=0.0 d=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent square A=0.0 d=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent triangle A=0.0 d=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent square A=1.0 d=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.5,
+      "expected": 4.5,
+      "name": "primary/independent triangle A=1.0 d=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent square A=1.0 d=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5,
+      "expected": 0.5,
+      "name": "primary/independent triangle A=1.0 d=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent square A=2.0 d=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.0,
+      "expected": 6.0,
+      "name": "primary/independent triangle A=2.0 d=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent square A=2.0 d=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.0,
+      "expected": 2.0,
+      "name": "primary/independent triangle A=2.0 d=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent square A=4.0 d=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": 12.0,
+      "expected": 12.0,
+      "name": "primary/independent triangle A=4.0 d=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent square A=4.0 d=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.0,
+      "expected": 8.0,
+      "name": "primary/independent triangle A=4.0 d=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent square A=8.0 d=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": 36.0,
+      "expected": 36.0,
+      "name": "primary/independent triangle A=8.0 d=-1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "primary/independent square A=8.0 d=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 32.0,
+      "expected": 32.0,
+      "name": "primary/independent triangle A=8.0 d=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "fixed old-label square energy",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "diagonal plus triangle energy",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.0,
+      "expected": 4.0,
+      "name": "diagonal minus face penalty",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "A": 0.0,
+          "B_square": 0.0,
+          "B_triangle_d_minus": 4.0,
+          "B_triangle_d_plus": 0.0,
+          "split_over_square": 1.0183156388887342
+        },
+        {
+          "A": 1.0,
+          "B_square": 0.0,
+          "B_triangle_d_minus": 4.5,
+          "B_triangle_d_plus": 0.5,
+          "split_over_square": 0.6176396562508757
+        },
+        {
+          "A": 2.0,
+          "B_square": 0.0,
+          "B_triangle_d_minus": 6.0,
+          "B_triangle_d_plus": 2.0,
+          "split_over_square": 0.13781403541327905
+        },
+        {
+          "A": 4.0,
+          "B_square": 0.0,
+          "B_triangle_d_minus": 12.0,
+          "B_triangle_d_plus": 8.0,
+          "split_over_square": 0.00034160684025584005
+        },
+        {
+          "A": 8.0,
+          "B_square": 0.0,
+          "B_triangle_d_minus": 36.0,
+          "B_triangle_d_plus": 32.0,
+          "split_over_square": 1.2896117832118532e-14
+        }
+      ],
+      "expected": "(1+exp(-4))*exp(-A^2/2)",
+      "name": "exact split/square ratio formula",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0183156388887342,
+        0.6176396562508757,
+        0.13781403541327905,
+        0.00034160684025584005,
+        1.2896117832118532e-14
+      ],
+      "expected": "strict decrease after A=1",
+      "name": "ratio strictly decreases on positive witness grid",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0183156388887342,
+        0.6176396562508757,
+        0.13781403541327905,
+        0.00034160684025584005,
+        1.2896117832118532e-14
+      ],
+      "expected": ">0",
+      "name": "ratio is positive on witness grid",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.928055160151633,
+      "expected": ">1.0",
+      "name": "inverse ratio exceeds challenge 1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 39.28055160151635,
+      "expected": ">10.0",
+      "name": "inverse ratio exceeds challenge 10.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 392.8055160151637,
+      "expected": ">100.0",
+      "name": "inverse ratio exceeds challenge 100.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0183156388887342,
+      "expected": "different from source ratio",
+      "name": "hostile omission of diagonal E rejected A=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0183156388887342,
+      "expected": "different from source ratio",
+      "name": "hostile omission of diagonal E rejected A=2.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0183156388887342,
+      "expected": "different from source ratio",
+      "name": "hostile omission of diagonal E rejected A=4.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.5808627523618215,
+      "expected": "different from source-stiffness result",
+      "name": "hostile one-third face-average mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "OMC-020 non-claims retained",
+      "expected": "present",
+      "name": "no semigroup conclusion is encoded",
+      "status": "PASS"
+    }
+  ],
+  "finding": "For the retained old-label fibre h0=h1=vx=vy=+1, the source square weight is exp(-B_square)=1 while the diagonal-summed split weight is (1+exp(-4))*exp(-A^2/2). Its inverse exceeds every tested challenge and grows along the allowed A>=0 ray.",
+  "lean_entrypoint": "verification/lean/Tect/PahOmc020.lean",
+  "lean_source_sha256": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c",
+  "non_claims": [
+    "No full PAH semigroup negative result, no Mosco liminf failure, and no statement that every possible varying-Hilbert-space comparison map is impossible.",
+    "No change to the PAH-001 functional, rates, state, carrier, regulator order or external Markov time.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass gap, Yang-Mills or TOE conclusion."
+  ],
+  "schema": "tect/pah-omc020-boundary-kernel-obstruction/1.0",
+  "scope": "This is an exact obstruction to a uniformly bounded coordinate-preserving density-ratio lift for the terminal fibre. It is not a no-go theorem for every abstract U_n and not a counterexample to local temporal semigroup convergence.",
+  "script_sha256": "8672f9a6a0862e986e5df955c73411e07da1fb9a2ca9c760a5c2a4782b5971c6",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_COORDINATE_BOUNDARY_OBSTRUCTION"
+}

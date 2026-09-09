@@ -1,0 +1,80 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-020 source-local connected-word Duhamel attribution",
+  "question": "Can the exact unchanged PAH-001 finite-fibre generator use a source-local two-copy coupling to convert connected PH/LK/AP word transport into a uniform-in-n N4 boundary envelope?",
+  "finding": "Conditionally yes at the finite-fibre source-local level. OMC-001 local maps and the OMC-004/R-516 footprint permit a basic coupling in which disagreement propagates only along overlapping root supports. R-515 bounds each word coefficient in Gibbs L2; reverse counting gives b=144, and the explicit two-copy rate-difference triangle gives b_eff=288. The factorial simplex tail then tends to zero as the prefix boundary moves outward. This does not construct a common U_n or close anchored-n convergence.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This is a distinct attribution step rather than another finite carrier table. The coupling factor is exposed instead of hidden in a global rate bound, and source pins, independent arithmetic, hostile shortcuts and Lean finite identities all pass. The result is conditional because the varying-space comparison map and terminal-square compatibility are not supplied.",
+  "boundary": "Exact PAH-001 PH/LK/AP finite-fibre generator after the R-511 j-limit on OMC-004 G_n; external stochastic Markov time only. No new functional, rate, state, carrier, projection, regulator, counterterm or limit order.",
+  "next_action": "Supply or refute a source-authorized common U_n/Hilbert realization and terminal-square-compatible comparison map that lifts this finite-fibre N4 envelope to the preregistered anchored-n correlations.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "task_id": "T-068",
+  "method": [
+    "Hash-pin PAH-001, OMC-001, OMC-004, OMC-018, OMC-020, R-515 and R-516.",
+    "Verify from the exact source maps that each root rate and transition is local to its dependency footprint.",
+    "Construct the finite-amplitude two-copy basic coupling and bound rate discrepancies by the sum of the two copy rates.",
+    "Use symmetric reverse-word counting, R-516 b=144 and the R-515 Gibbs L2 word bound to derive the integrated factorial N4 envelope with b_eff=288.",
+    "Replay non-importing independent and hostile arithmetic lanes and compile the finite Lean consequences; keep common-space lifting open."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json#conclusion",
+    "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md#Finite-fibre-coupling-construction",
+    "verification/scripts/pah_omc020_duhamel_attribution.py#compute",
+    "codes/foundations/pah_omc020_duhamel_attribution_independent.py#compute",
+    "codes/foundations/pah_omc020_duhamel_attribution_hostile.py#compute",
+    "verification/scripts/pah_omc020_duhamel_attribution_verify.py#run",
+    "verification/lean/Tect/PahOmc020Duhamel.lean#two_copy_connected_term",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/integrated.json#checks"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-515",
+      "R-516",
+      "R-517"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "verification_summary": "Primary 61/61, non-importing independent 25/25, hostile 18/18 and integrated 18/18 pass; Lean 4.32.1 compiles five finite declarations. All lanes remain conditional auxiliary support.",
+  "assumptions": [
+    "At each fixed amplitude the source PH/LK/AP label chain is finite and admits the ordinary basic coupling and finite jump-history expansion.",
+    "The OMC-001 source maps and rates depend only on the R-516 footprints, so common clocks preserve equality away from the disagreement region.",
+    "The R-515 Gibbs square-transport identity applies to every word coefficient in the post-R-511 fibre.",
+    "The OMC-004 column coordinate defines the prefix boundary used for the graph-distance estimate."
+  ],
+  "missing_assumptions": [
+    "A source-authorized common U_n/Hilbert realization and terminal-square-compatible comparison map.",
+    "N2b arbitrary-sequence liminf/recovery and N2d identification with the R-512 minimal closed form.",
+    "Anchored-n semigroup convergence and any common infinite-volume process construction."
+  ],
+  "related": [
+    {
+      "id": "EXP-001634",
+      "relation": "continues"
+    }
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json": "114699a4554e45260a6a6632f44a32e9c0494a9274c27b561c676e93c5d247d9",
+    "strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json": "9e357158eb6de66bb776b2d674964ddf9fb16547409ac36f8dd254154082bc11",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/integrated.json": "c1253ef2a73685076dc160bf107f7f661b5761e61f14f3ea36d248bd8d94365c"
+  },
+  "provenance": "contemporaneous",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-07",
+  "non_claims": [
+    "No N2a common U_n, N2b liminf/recovery or N2d minimal-form selection.",
+    "No anchored-n, infinite-volume, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion.",
+    "External stochastic Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

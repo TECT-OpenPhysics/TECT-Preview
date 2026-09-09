@@ -1,0 +1,80 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "PASS_FIXED_N_TEMPORAL_CORRELATION",
+      "expected": "PASS_FIXED_N_TEMPORAL_CORRELATION",
+      "name": "primary fixed-n theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_INDEPENDENT_FIXED_N_TEMPORAL",
+      "expected": "PASS_INDEPENDENT_FIXED_N_TEMPORAL",
+      "name": "independent fixed-n theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_HOSTILE_FIXED_N_TEMPORAL",
+      "expected": "PASS_HOSTILE_FIXED_N_TEMPORAL",
+      "name": "hostile controls",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "FIXED_N_PASS_ANCHORED_N_OPEN",
+        "FIXED_N_PASS_ANCHORED_N_OPEN",
+        "FIXED_N_PASS_ANCHORED_N_OPEN"
+      ],
+      "expected": "FIXED_N_PASS_ANCHORED_N_OPEN",
+      "name": "all lanes keep anchored n open",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes keep physical promotion false",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "non_claims": [
+    "No infinite-volume dynamics, R-512 minimal-form identification or anchored n convergence.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "remaining_gates": [
+    "source-authorized U_n/common-Hilbert realization",
+    "N2b/N2c/N2d and anchored n semigroup passage"
+  ],
+  "reproduction": {
+    "check": "python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_proof_verify.py --check",
+    "run": "python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_proof_verify.py"
+  },
+  "schema": "tect/pah-omc020-fixedn-temporal-integrated/1.0",
+  "scope": "Fixed-n j-to-infinity stationary local correlations for the exact PAH-001 model; anchored n and physical layers are excluded.",
+  "scripts": {
+    "hostile": {
+      "path": "codes/foundations/pah_omc020_fixedn_temporal_proof_hostile.py",
+      "sha256": "3a31219ff4c16ac72c9c2663ce9f3aee689857e539b227e39fe533de7cac442f"
+    },
+    "independent": {
+      "path": "codes/foundations/pah_omc020_fixedn_temporal_proof_independent.py",
+      "sha256": "d0fa4c8806b4fb9427081d998697f8d76d90c6a67914b825d2297118d9f55186"
+    },
+    "primary": {
+      "path": "verification/scripts/pah_omc020_fixedn_temporal_proof.py",
+      "sha256": "cff3de00fa21e55bf169c0b76c58a0bb7f16eab95d64164d7623f98a67e09c03"
+    }
+  },
+  "status": "PASS_FIXED_N_TEMPORAL_INTEGRATED",
+  "temporal_verdict": "FIXED_N_PASS_ANCHORED_N_OPEN",
+  "verdict": "AUXILIARY_SUPPORT"
+}

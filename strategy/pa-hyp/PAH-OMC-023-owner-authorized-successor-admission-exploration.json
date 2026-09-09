@@ -1,0 +1,70 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001688",
+  "recorded_at": "2026-09-08T10:45:51Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "provenance": "contemporaneous",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "task_id": "T-090",
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "PAH-OMC-023 owner-authorized successor admission intake",
+  "question": "Does a source-authorized or explicitly owner-authorized hash-pinned successor packet currently exist that supplies every R-557 ordered-correlation field without editing immutable PAH-001?",
+  "finding": "The admission contract is now fixed. The latest pinned R-554 current-byte owner manifest reports authorized_paths=[] and complete_paths=[], so no packet is admitted at intake. This is an initial HOLD_FOR_EVIDENCE state, not a universal impossibility result and not a replacement for the missing owner packet.",
+  "verdict": "inconclusive",
+  "decision_reason": "The next stage must inspect one concrete owner-authorized packet, not repeat finite semigroup witnesses. R-554 is reused only as a current provenance snapshot; it does not supply authority, common realization or the six asymptotic fields.",
+  "boundary": "PAH-001 functional, rates, Gibbs state, carrier, external stochastic Markov time and j-before-n order remain unchanged. No new carrier, root convention, counterterm, finite witness, refinement or physical interpretation is added.",
+  "method": [
+    "Freeze PAH-001, R-559 and the R-554 current-byte owner manifest by SHA-256.",
+    "Require owner authority, root/measure rules, common realization, N1, N2b, N2c/N4, N2d, full-domain J, anchored D and replay manifests before admission.",
+    "Classify the current empty authorized and complete sets as HOLD_FOR_EVIDENCE rather than as a no-go.",
+    "Use the next run only for one newly supplied packet; do not rerun the same finite source-multiplicity witness."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json#decision_rule",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json#snapshot",
+    "strategy/pa-hyp/PAH-OMC-022-source-level-semigroup-wellposedness-result-v1.json#next_single_question",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-certificate.md#Boundary and next question"
+  ],
+  "related": [
+    {
+      "id": "EXP-001687",
+      "relation": "continues"
+    }
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json": "54329df2a6d3ca766f6ca24fbcc628263e6c7e8c2c0e8c8eba545f3508d75df7",
+    "strategy/pa-hyp/PAH-OMC-022-source-level-semigroup-wellposedness-result-v1.json": "48325dffbc24e7a8482fcaffbd9b32df24dd28cf466b7a33f621cba9741d101e",
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json": "a21e6235bc68f7760c83ffa98657a787258d906b39e482c79a1646b2b6da107a"
+  },
+  "formal_refs": {
+    "results": [
+      "R-554",
+      "R-559"
+    ],
+    "negatives": [
+      "NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS"
+    ],
+    "events": [
+      "20260908-r-559-pah-omc-022-source-level-stationary-semig"
+    ]
+  },
+  "next_action": "Wait for one owner-authorized, hash-pinned packet and run the admission contract against its exact fields; if none is supplied, preserve HOLD_FOR_EVIDENCE without new finite calculations.",
+  "revisit_condition": "Reopen when a concrete owner-authorized packet or a parent PAH hash is present; do not repeat R-554 unchanged.",
+  "reproduction": {
+    "contract": "Read strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json.",
+    "current_snapshot": "Read strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json and its existing replay artifacts.",
+    "future_verifier": "The primary, independent, hostile and Lean admission verifier will be added only when a concrete packet is supplied."
+  },
+  "verification_summary": "Initial intake recorded as HOLD_FOR_EVIDENCE from the pinned R-554 empty authorized/complete sets; no new proof or no-go is claimed.",
+  "non_claims": [
+    "No source-authorized successor packet is admitted by this intake record.",
+    "No universal no-go, R-512 convergence, ordered semigroup theorem, infinite-volume or continuum result.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion."
+  ]
+}

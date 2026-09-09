@@ -1,0 +1,152 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "hash:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "hash:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+      "expected": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+      "name": "hash:strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "2bfc217bfa7785726d7342ce5ec80d1adab5be030c561d4e6681d49f64cf3248",
+      "expected": "2bfc217bfa7785726d7342ce5ec80d1adab5be030c561d4e6681d49f64cf3248",
+      "name": "hash:strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "shortcut:finite word is not infinite proof",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "shortcut:state convergence is not U_n",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "True",
+      "name": "shortcut:closed form is not process uniqueness",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "shortcut:minimality is not automatic",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "shortcut:tail cannot be dropped",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "True",
+      "name": "shortcut:target defect is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "shortcut:boundary term has two-copy factor",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "shortcut:order is not diagonalized",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "shortcut:Markov time is not physical",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "shortcut:topology does not assume strong operator convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "mutation:dropping boundary changes budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "mutation:setting target defect to zero changes budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "[False, False]",
+      "name": "mutation:declaring HOLD as PASS is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "mutation:finite tail cannot be called uniform theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "True",
+      "name": "mutation:local state cannot imply minimal selection",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "mutation:physical promotion rejected",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "finding": "All tested shortcuts either alter the explicit bridge budget or erase a source-missing process/minimality premise; the honest verdict remains HOLD_FOR_EVIDENCE.",
+  "non_claims": [
+    "No universal no-go for abstract path-space constructions.",
+    "No PAH-OMC-020 semigroup convergence or counterexample.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "rejected_shortcuts": [
+    "Treat a finite word cutoff or factorial fixture as an infinite-series or uniform anchored-n theorem.",
+    "Infer a common U_n from R-510 local-state convergence or from the R-512 closed form.",
+    "Drop the boundary tail, the two-copy factor, or the target minimal-form defect.",
+    "Use form closability as automatic process uniqueness or minimal/maximal extension equality.",
+    "Promote external Markov time or any auxiliary result to a physical conclusion."
+  ],
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_pathspace_bridge_hostile.py --check",
+  "schema": "tect/pah-omc020-pathspace-bridge-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json": "2bfc217bfa7785726d7342ce5ec80d1adab5be030c561d4e6681d49f64cf3248",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_HOSTILE_PATHSPACE_BRIDGE_CONTROLS",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

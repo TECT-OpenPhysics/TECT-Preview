@@ -1,0 +1,56 @@
+{
+  "schema": "tect/pah-omc020-owner-packet-sufficiency-contract/1.0",
+  "contract_id": "PAH-OMC-020-OWNER-PACKET-SUFFICIENCY",
+  "result_id": "R-557",
+  "task_id": "T-087",
+  "date": "2026-09-08",
+  "question": "If the complete source-authorized owner packet is admitted without changing PAH-001, does it supply exactly the antecedents needed for full compact-time local-correlation convergence in the registered j-before-n order?",
+  "fixed_scope": {
+    "model": "Exactly PAH-001 and its original finite stationary PH/LK/AP/TR dynamics.",
+    "state": "Original labelled Gibbs state and normalization only.",
+    "time": "External stochastic Markov time on each finite interval [0,T].",
+    "order": "j tends to infinity at fixed n first, then anchored n.",
+    "target": "The R-512 minimal closed-form semigroup at the declared scope.",
+    "forbidden": "No rate, function, state, carrier, regulator, direct-sum, counterterm, physical-time or limit-order change."
+  },
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json": "75c162935a432da4c170c5157f1022c30a97b617ab18b657e57cb02ff91e95d0",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+  },
+  "required_packet_fields": [
+    {"id": "authority", "meaning": "versioned signer, provenance, SHA-256 and non-post-hoc owner authority"},
+    {"id": "root_semantics", "meaning": "root labels, multiplicities, duplicate-transition and invalid-move/root-measure convention"},
+    {"id": "common_realization", "meaning": "finite measurable spaces, target H, domain and measure-compatible U_n or equivalent path map"},
+    {"id": "n1_recovery", "meaning": "local-cylinder stabilization and norm/inner-product recovery with explicit N(f)"},
+    {"id": "n2b_form", "meaning": "arbitrary-sequence weak liminf plus compatible limsup/recovery for target-form vectors"},
+    {"id": "n2c_n4_boundary", "meaning": "compact-time boundary escape/non-explosion for the unchanged unbounded generator"},
+    {"id": "n2d_target", "meaning": "identification with the R-512 minimal closed form"},
+    {"id": "full_domain_J", "meaning": "fixed-n j-to-infinity residual estimate for every declared local cylinder pair"},
+    {"id": "anchored_D", "meaning": "anchored-n target defect D_n tending to zero for the same declared domain"},
+    {"id": "verification", "meaning": "primary, independent, hostile and Lean manifests for the model-specific packet"}
+  ],
+  "formal_consequence": {
+    "packet_complete": "All required_packet_fields are source-authorized, hash-pinned and jointly compatible with the unchanged model.",
+    "error_budget": "For every declared local f,g and T, 0<=err(n,j;f,g,T)<=J(n,j;f,g,T)+D(n;f,g,T).",
+    "fixed_n": "For each n and epsilon>0, J(n,j)<epsilon/2 eventually as j increases.",
+    "anchored_n": "For each epsilon>0, D(n)<epsilon/2 eventually as n increases.",
+    "conclusion": "For every epsilon>0 there is N such that each n>=N has a J(n) with err(n,j)<epsilon for all j>=J(n), uniformly on [0,T]."
+  },
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "Only a complete source-authorized packet plus all four verification roles can instantiate the formal consequence.",
+    "HOLD_FOR_EVIDENCE": "Any missing or researcher-owned field rejects admission; radial-only evidence is not full-domain evidence.",
+    "NEGATIVE_RESULT": "Only an exact unchanged-source contradiction in the packet consequence qualifies; packet absence is not a universal no-go theorem."
+  },
+  "current_status": "NO_SOURCE_AUTHORIZED_PACKET_PRESENT",
+  "next_single_question": "Can a versioned source-authorized packet satisfy all ten fields simultaneously while preserving the exact PAH-001 source bytes and j-before-n order?",
+  "non_claims": [
+    "This contract does not supply the owner packet or prove any PAH-specific J/D estimate.",
+    "It does not prove full semigroup convergence, an infinite-volume process or a continuum limit until the packet is admitted.",
+    "It makes no physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE claim.",
+    "External Markov time remains stochastic bookkeeping and is not quantum, proper or Lorentzian time."
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "tect/pah-omc020-n2a-owner-packet-intake/1.1",
+  "contract_id": "PAH-OMC-020-N2A-OWNER-INTAKE",
+  "version": "1.1.0",
+  "date": "2026-09-07",
+  "status": "INTAKE_CONTRACT_ONLY",
+  "title": "Frozen-snapshot successor for PAH-OMC-020 source-owned U_n evidence intake",
+  "supersedes": {
+    "path": "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+    "sha256": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a"
+  },
+  "owner_snapshot": {
+    "path": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json",
+    "sha256": "86246c253273f5dc1fc630c37c70e7b7b2e3aefcf1fc3d81ae5ad2b0f56cdc35",
+    "status": "FIXED_SEARCH_SNAPSHOT",
+    "authorized_paths": [],
+    "complete_paths": []
+  },
+  "provenance": {
+    "class": "RESEARCHER_OWNED_NEXT_EVIDENCE_CONTRACT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "source_authorized_packet_present": false,
+    "constructed_hypothesis": false,
+    "synthetic_fixture": false,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_CONDITIONAL_COMMON_SPACE_SPECIFICATION"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-020": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    },
+    "N2B-CURRENT": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json",
+      "sha256": "b87a2d8d7b0009c9f5bd30695823cb442376939ff18c1d48f1d890ae430fe8c7"
+    }
+  },
+  "fixed_scope": {
+    "functional_and_rates": "Exactly the PAH-001 functional and original directed PH/LK/AP/TR rates through the pinned OMC-018 chain; no refit, counterterm, averaging or rate change.",
+    "finite_spaces": "The original labelled finite G_n spaces, stationary laws and j-before-n order; no phase or charge direct-sum rescue.",
+    "limit_hilbert_space": "The single R-510 anchored H and R-512 minimal closed form at their pinned scope.",
+    "comparison_maps": "An owner packet must provide U_n into the fixed H with explicit domain, measure and norm control; a local coordinate pullback is not pre-admitted.",
+    "time": "The original external unaccelerated Markov time only; no quantum, proper or Lorentzian interpretation."
+  },
+  "acceptance_conditions": {
+    "owner_authority": "Versioned authority, signer, provenance, non-post-hoc policy and SHA-256 are fixed before estimates.",
+    "common_hilbert_realization": "Every finite measurable space, measure, target H, domain and U_n property is explicit.",
+    "local_cylinder_recovery": "Every local cylinder has an explicit N(f) and the declared N1 norm/inner-product convergence.",
+    "n2b_liminf": "The PAH-specific arbitrary-sequence weak-liminf inequality is proved with topology and bounded-energy quantifiers.",
+    "recovery_limsup": "Every target-form vector has a compatible recovery sequence and limsup estimate.",
+    "n2c_n4_boundary_escape": "The unchanged unbounded rates satisfy compact-time boundary escape for every local cylinder.",
+    "n2d_minimal_identification": "The selected closed form is identified with the R-512 minimal closure.",
+    "verification": "Primary, non-importing independent, hostile and Lean manifests verify the model-specific packet."
+  },
+  "required_owner_payload": [
+    "packet_id, version, owner authority and SHA-256",
+    "measurable/probability realization of every finite space and the common H",
+    "explicit U_n (or equivalent) with domain, linearity and norm/inner-product control",
+    "N1 local-cylinder stabilization and recovery quantifiers",
+    "N2b arbitrary-sequence weak-liminf theorem with topology and bounded-energy quantifiers",
+    "compatible limsup/recovery sequence for every target-form vector",
+    "N2c/N4 compact-time boundary-escape estimate for the unchanged generator",
+    "N2d identification with the R-512 minimal closed form",
+    "primary, independent, hostile and Lean reproducibility manifests"
+  ],
+  "forbidden_repairs": [
+    "Changing PAH-001 functional, transition rates, mobility, state, carrier, regulator or limit order",
+    "Conditional Gibbs averaging, phasewise or cross-Q direct-sum selection, fitted density weights or post-hoc tuning",
+    "Treating a coordinate pullback as a completed-space map without a source estimate",
+    "Importing a generic convergence theorem without discharging its PAH-specific hypotheses",
+    "Replacing the R-512 minimal closure by a maximal or boundary-selected extension",
+    "Promoting the packet to Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE evidence"
+  ],
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "Admit only when every payload item is source-authorized, hash-pinned and all verification roles agree.",
+    "NEGATIVE_RESULT": "Use only for an exact counterexample inside unchanged PAH definitions.",
+    "HOLD_FOR_EVIDENCE": "Use when any owner field, common-space estimate, boundary estimate, minimal identification or verification field is absent."
+  },
+  "current_finding": "The fixed snapshot reproduces the current candidate bytes and contains no source-authorized or complete owner packet. This successor repairs replay scope only; it does not define U_n.",
+  "single_next_question": "Can one source-authorized owner provide all nine payload fields, including root multiplicity, a measure-compatible U_n, N2b liminf/recovery, N2c/N4 boundary escape and R-512 minimal identification, without changing PAH-001?",
+  "revisit_condition": "Reopen after a versioned owner packet or a new candidate is detected; create a new snapshot whenever any parent or candidate byte changes.",
+  "reproduction": {
+    "snapshot": "python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot.py --check",
+    "new_candidate_scan": "python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot.py --detect-new",
+    "contract": "python -X utf8 verification/scripts/pah_omc020_n2a_owner_packet_successor_check.py --check"
+  },
+  "non_claims": [
+    "No source-authorized U_n/common-Hilbert realization, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal identification or PAH-OMC-020 semigroup convergence.",
+    "Snapshot absence is not a universal impossibility theorem and does not inspect future or external packets.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion.",
+    "External Markov time remains stochastic bookkeeping and is not physical time."
+  ]
+}

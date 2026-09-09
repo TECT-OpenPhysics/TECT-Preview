@@ -1,0 +1,154 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "frozen parent strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "frozen parent strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+      "expected": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+      "name": "frozen parent strategy/pa-hyp/PAH-OMC-018-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+      "expected": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+      "name": "frozen parent strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "one-Lipschitz is required",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "zero anchor is required",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "domain stability is required",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "closure route is form-norm based",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "normal map passes exact fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "2-Lipschitz mutation is rejected by energy",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "strict inequality is not required",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "constant-one mutation remains zero energy",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "missing domain stability blocks closure promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "missing temporal fields remain open",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "physical promotion remains false",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "active gate change remains false",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Markov time is explicitly external",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "non-claims contain Pre-A firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "non-claims contain semigroup comparison firewall",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 19,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "contract_sha256": "f0c4d37dc399e3c1996f7314f3644ebf17c432adb72606ffe04a752498624504",
+  "finding": "Hostile controls reject non-normal slopes, omitted domain stability and temporal/physical promotion; the R-512 structural result remains conditional.",
+  "fixture": {
+    "bad_slope_energy": "8825/36",
+    "normal_energy": "55/18",
+    "raw_energy": "8825/144"
+  },
+  "next_single_question": "Can a source-authorized comparison/process packet establish N2b liminf, N2c/N4 boundary escape and N2d equality with this now-Markov R-512 target without changing PAH-001?",
+  "non_claims": [
+    "No finite-j or anchored-n semigroup convergence, common U_n, Mosco liminf/recovery or minimal-form identification from finite spaces.",
+    "No path-space existence, non-explosion, uniqueness, maximal jump-domain equality, spectral gap or ergodicity theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time; no Q3LOCK or TECT-YM import."
+  ],
+  "physical_promotion": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_dirichlet_minimal_hostile.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_dirichlet_minimal_independent.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_dirichlet_minimal_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020Dirichlet.lean",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_dirichlet_minimal.py --check"
+  },
+  "schema": "tect/pah-omc020-dirichlet-minimal-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_HOSTILE_DIRICHLET_CONTROLS",
+  "verdict": "PASS"
+}

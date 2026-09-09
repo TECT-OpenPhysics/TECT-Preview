@@ -1,0 +1,153 @@
+{
+  "schema": "tect/pah-omc020-root-overlap-result/1.0",
+  "result_id": "R-516",
+  "contract_id": "PAH-OMC-020-ROOT-OVERLAP",
+  "date": "2026-09-07",
+  "task_id": "T-067",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_SUB_LEMMA",
+    "EXACT_COMBINATORIAL",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b",
+    "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json": "114699a4554e45260a6a6632f44a32e9c0494a9274c27b561c676e93c5d247d9",
+    "strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md": "05abbf6379da1ad8fdd562da9198bc3a961d19ba929dda201b160d2728fe3845"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/primary.json": "265cb2834916d069976f27a79220884b49f1bc930e65544f2c062df5e5960622",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/independent.json": "d0037f2818add71d8a0999413ef3426c11557cd272466f39ca9434f7853ebcb8",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/hostile.json": "3db84f8df2020aa38acc1eed1929403a1973724eca5e35d49ee0eb84aa058fa2",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/integrated.json": "2b3469deccd01436eb77c7c8646b55dfaaabf2aca4c3a798d5227bfdd8423410"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_root_overlap_bound.py": "3b46e5c3f3862014a1c95a23afc547821ff9252a4b1af58c5875dc04887a6342",
+    "codes/foundations/pah_omc020_root_overlap_bound_independent.py": "4dceb97c8a2d78b1c0cef23ff83e0fe3a0613ddc49f7f01c2787ed7d1eeee245",
+    "codes/foundations/pah_omc020_root_overlap_bound_hostile.py": "5bdf9b858498c47e78a0d230fabd4b24c3db7da7ba4a3259fdaff66a74aa1b66",
+    "verification/scripts/pah_omc020_root_overlap_bound_verify.py": "8976caecfbfe164a5f3886ff15da1edceb64497c5eeb4f3adcc065d2f7d94480",
+    "verification/lean/Tect/PahOmc020Overlap.lean": "ce8709b759169bfa0a3641ac2e7b8354f7c7f4318c9809f7d7dfb4b7c0c9a30a"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md": "9d65626b670ca0d4936f06ca404436b9a9ef1ae12a79c167d8b04fa6a402ec41",
+    "strategy/pa-hyp/PAH-OMC-020-root-overlap-exploration.json": "44de3e48d4a22664f06fb4a4d5af4eac1cabb654c2520363630fb37c020d3750"
+  },
+  "exact_scope": {
+    "model": "Exactly the unchanged PAH-001 non-radial PH/LK/AP root generator after the registered R-511 j-limit; radial TR roots are omitted only because that omission is part of the registered limit.",
+    "geometry": "The exact PAH-OMC-004 two-row relational strip G_n for every n>=2, including the split triangular faces and the terminal unsplit square.",
+    "dimensions": "Vertices (i,j), 0<=i<=n+1 and j in {0,1}; horizontal, vertical and diagonal edges exactly as OMC-004 declares; degree bound 5 and face-incidence bound 4.",
+    "root_families": "PH(v,+/-), AP(v,+/-), and LK(q,+/-), with the original K=2 channel multiplicity. No new root, carrier or interaction is introduced.",
+    "dependency_footprint": "PH uses incident edges and endpoint vertices; LK uses its edge and all incident-face edges; AP uses incident edges and all incident-face edges; endpoint vertices are retained.",
+    "normalization": "The combinatorial count is unweighted. PAH-001 midpoint rates, Gibbs state, mobility and the R-511 square-transport identity are source pins, not altered normalization factors.",
+    "regulator": "The R-511 j-limit non-radial fibre; no new cutoff, regulator, counterterm or rate envelope is introduced.",
+    "volume_boundary": "Finite G_n with its declared terminal boundary; the derived bound is uniform in n under the local degree/incidence rules, while the numerical enumerations use n in {2,3,4,6,10,20}.",
+    "time": "No time evolution is proved here. The R-515 external stochastic Markov-time word simplex is used only for the conditional tail input.",
+    "limit_order": "No anchored-n, infinite-volume, continuum or physical limit is taken; the only inherited order is the registered j->infinity limit before this finite non-radial analysis.",
+    "target": "A source-derived overlap branching input for the R-515 connected-word envelope, not the N2c/N4 boundary-escape or Duhamel theorem itself."
+  },
+  "conclusion": {
+    "footprint": "The OMC-004 degree and face-incidence bounds give at most 4 edge slots per base column, 16 PH/AP/LK roots per base column, and footprint radius at most 2 columns.",
+    "overlap": "The conservative proof-footprint branching bound is b=16*(4*2+1)=144. Exact enumeration gives maximum overlap degree including self 56 for n=2 and 70 for every tested n>=3, all below 144.",
+    "first_roots": "For a two-column local support the same source bound gives a=16*(2+2*2+1)=112 first roots. The non-importing independent lane uses a separate three-column fixture with first-root bound 128 and obtains the same b=144.",
+    "conditional_tail": "Substituting the source-derived a=112 and b=144 into the exact factorial connected-word envelope of R-515 gives a decreasing tail whenever b*T<d+1; the large-distance values are arithmetic diagnostics, not fitted PAH estimates.",
+    "boundary": "This closes only the combinatorial dependency-footprint input. It does not identify a connected word with A_n^(out,m)Q_n(s)g or any Duhamel/coupling term, so N2c/N4 remains open."
+  },
+  "proof_coverage": {
+    "primary": "The primary lane performs 45 exact checks, reconstructs G_n for six n values, derives b=144 from source local bounds, checks the enumerated overlap and fixed-support first-root bound, and verifies a factorial-tail fixture.",
+    "independent": "The non-importing independent lane performs 18 checks using a separate interval/slot reconstruction, obtains roots-per-column 16, radius 2, b=144 and an independent first-root bound 128.",
+    "hostile": "The hostile lane performs 13 checks: source pins, diagonal-slot omission, under-radius mutation, tail-ratio guard, mobility/rate-source preservation and rejection of anchored-n or physical promotion shortcuts.",
+    "integrated": "The integrated verifier re-executes all three lanes, checks auxiliary claim-nonbearing status, checks b=144 and the open Duhamel flag, verifies non-importing independence, and compiles the Lean source under Lean 4.32.1.",
+    "lean": "Lean verifies two finite arithmetic declarations, overlap_branching_bound and connected_word_count_bound. It does not formalize a measure-theoretic coupling, Duhamel attribution or an infinite-volume theorem."
+  },
+  "assumptions": [
+    "The OMC-004 strip, degree bound 5 and face-incidence bound 4 are the exact source geometry and apply uniformly for every n>=2.",
+    "The R-511 j-limit has already removed radial TR roots for the non-radial fibre, and the remaining PH/LK/AP labels and partial-root domains are unchanged.",
+    "A connected root word may be counted by the declared dependency-footprint overlap graph once a source-authorized coupling or Duhamel construction supplies that attribution; this attribution is not assumed in the result.",
+    "The R-515 factorial word envelope is used with external stochastic Markov time only and with its stated survival-factor and Gibbs square-transport hypotheses."
+  ],
+  "missing_assumptions": [
+    "A source-valid coupling or Duhamel theorem that bounds the exact A_n^(out,m)Q_n(s)g term by the connected-word event counted with b=144.",
+    "A source-authorized common U_n/Hilbert realization, N2b liminf/recovery and N2d identification with the R-512 minimal form.",
+    "The anchored-n temporal passage and any common infinite-volume process construction."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The finite enumerations alone are being called an all-n theorem.",
+      "disposition": "DISMISSED: b=144 is derived algebraically from the source degree/incidence bounds and the radius-2 footprint; enumerations are diagnostics of the derivation at six n values, not its sole basis."
+    },
+    {
+      "objection": "The footprint silently changes the PAH interaction or adds a carrier.",
+      "disposition": "DISMISSED: the footprint is a proof dependency set only; PH/LK/AP labels, midpoint rates, state, mobility, regulator and external time remain source-pinned."
+    },
+    {
+      "objection": "Dropping the diagonal edge would still give the same locality result.",
+      "disposition": "REJECTED: the hostile lane shows that omitting the diagonal changes the source root count and is therefore not the declared OMC-004 geometry."
+    },
+    {
+      "objection": "The radius or overlap constant is tuned to make the factorial tail converge.",
+      "disposition": "REJECTED: the hostile under-radius mutation is below the exact overlap oracle, and the tail ratio guard rejects b*T/(d+1)>=1."
+    },
+    {
+      "objection": "b=144 proves N2c/N4 or the anchored-n semigroup limit.",
+      "disposition": "UPHELD AGAINST PROMOTION: the source-valid word-to-Duhamel/coupling attribution, common spaces, liminf/recovery, minimal-form selection and anchored-n passage remain explicitly open."
+    },
+    {
+      "objection": "The stochastic word simplex is physical time or a continuum result.",
+      "disposition": "REJECTED: it is only an external Markov-time finite-fibre estimate and carries no physical interpretation."
+    }
+  ],
+  "formal_refs": {
+    "results": [
+      "R-509",
+      "R-510",
+      "R-511",
+      "R-514",
+      "R-515"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_root_overlap_bound.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/primary.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_root_overlap_bound_independent.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/independent.json",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_root_overlap_bound_hostile.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/hostile.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_root_overlap_bound_verify.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/integrated.json --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020Overlap.lean (Lean 4.32.1 with LEAN_PATH from verification/lean/.lake/packages)",
+    "result": "Primary 45/45, non-importing independent 18/18, hostile 13/13, integrated 13/13 and two Lean declarations pass with byte-stable replay."
+  },
+  "closed_scoped_gate": "Exact source-derived PH/LK/AP dependency-footprint radius and n-uniform conservative overlap branching input b=144 for the R-515 connected-word envelope.",
+  "remaining_gates": [
+    "Source-valid connected-word to A_n^(out,m)Q_n(s)g Duhamel/coupling attribution",
+    "N2c/N4 boundary escape for the unbounded original rates",
+    "N2a common U_n/Hilbert realization",
+    "N2b arbitrary-sequence liminf and recovery",
+    "N2d identification with the R-512 minimal closed form",
+    "Anchored-n PAH-OMC-020 semigroup convergence and the full objective"
+  ],
+  "next_single_question": "Can a source-authorized coupling or Duhamel construction use the exact OMC-004 dependency footprint and b=144 to bound A_n^(out,m)Q_n(s)g, without adding a new rate, state, carrier or time interpretation?",
+  "revisit_condition": "Reopen the anchored-n route only after that source-level attribution is hash-pinned and independently verified, or record an exact parent-scope counterexample if the attribution cannot be defined.",
+  "non_claims": [
+    "This is a conditional auxiliary combinatorial result, not the PAH-OMC-020 anchored-n theorem.",
+    "No N2c/N4 boundary-escape theorem, common U_n, Mosco liminf/recovery, R-512 minimal-form semigroup selection or infinite-volume process is proved.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion follows.",
+    "External stochastic Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "PASS_ROOT_OVERLAP_BOUND",
+      "expected": "PASS_ROOT_OVERLAP_BOUND",
+      "name": "primary status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_INDEPENDENT_ROOT_OVERLAP",
+      "expected": "PASS_INDEPENDENT_ROOT_OVERLAP",
+      "name": "independent status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_HOSTILE_ROOT_OVERLAP",
+      "expected": "PASS_HOSTILE_ROOT_OVERLAP",
+      "name": "hostile status",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT"
+      ],
+      "expected": "AUXILIARY_SUPPORT",
+      "name": "all lanes auxiliary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes claim-nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "NOT_PROVED",
+      "expected": "NOT_PROVED",
+      "name": "Duhamel attribution open",
+      "status": "PASS"
+    },
+    {
+      "actual": 144,
+      "expected": 144,
+      "name": "primary branching bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 144,
+      "expected": 144,
+      "name": "independent branching bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "__future__",
+        "fractions",
+        "pathlib",
+        "argparse",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "tempfile"
+      ],
+      "expected": "no primary import",
+      "name": "independent non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": "ce8709b759169bfa0a3641ac2e7b8354f7c7f4318c9809f7d7dfb4b7c0c9a30a",
+      "expected": "ce8709b759169bfa0a3641ac2e7b8354f7c7f4318c9809f7d7dfb4b7c0c9a30a",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "overlap_branching_bound",
+        "connected_word_count_bound"
+      ],
+      "expected": [
+        "overlap_branching_bound",
+        "connected_word_count_bound"
+      ],
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": "clean",
+      "expected": "clean",
+      "name": "Lean policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)",
+      "expected": "Lean 4.32.1",
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "conditional": true,
+  "derived_constants": {
+    "footprint_radius": 2,
+    "overlap_branching": 144,
+    "roots_per_column": 16
+  },
+  "lane_counts": {
+    "hostile": 13,
+    "independent": 18,
+    "primary": 45
+  },
+  "next_single_question": "Can a source-valid coupling or Duhamel construction bound the exact A_n^(out,m)Q_n(s)g term by the connected-word event with b=144?",
+  "non_claims": [
+    "No N2c/N4 boundary-escape theorem, anchored-n convergence, common U_n or R-512 minimal-form selection.",
+    "No infinite-volume, continuum or physical Pre-A/spacetime/QFT/gravity/Yang-Mills/mass-gap/TOE result."
+  ],
+  "physical_promotion": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_root_overlap_bound_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/hostile.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_root_overlap_bound_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/independent.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_root_overlap_bound_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_root_overlap_bound.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/primary.json"
+  },
+  "run_hashes": {
+    "hostile": "3db84f8df2020aa38acc1eed1929403a1973724eca5e35d49ee0eb84aa058fa2",
+    "independent": "d0037f2818add71d8a0999413ef3426c11557cd272466f39ca9434f7853ebcb8",
+    "primary": "265cb2834916d069976f27a79220884b49f1bc930e65544f2c062df5e5960622"
+  },
+  "schema": "tect/pah-omc020-overlap-integrated/1.0",
+  "scope": "Exact OMC-004 PH/LK/AP dependency-footprint overlap bound after the R-511 j-limit; connected-word-to-Duhamel attribution remains open.",
+  "scripts": {
+    "hostile": {
+      "path": "codes/foundations/pah_omc020_root_overlap_bound_hostile.py",
+      "sha256": "5bdf9b858498c47e78a0d230fabd4b24c3db7da7ba4a3259fdaff66a74aa1b66"
+    },
+    "independent": {
+      "path": "codes/foundations/pah_omc020_root_overlap_bound_independent.py",
+      "sha256": "4dceb97c8a2d78b1c0cef23ff83e0fe3a0613ddc49f7f01c2787ed7d1eeee245"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/PahOmc020Overlap.lean",
+      "sha256": "ce8709b759169bfa0a3641ac2e7b8354f7c7f4318c9809f7d7dfb4b7c0c9a30a",
+      "version": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)"
+    },
+    "primary": {
+      "path": "verification/scripts/pah_omc020_root_overlap_bound.py",
+      "sha256": "3b46e5c3f3862014a1c95a23afc547821ff9252a4b1af58c5875dc04887a6342"
+    }
+  },
+  "status": "PASS_ROOT_OVERLAP_INTEGRATED",
+  "verdict": "AUXILIARY_SUPPORT"
+}

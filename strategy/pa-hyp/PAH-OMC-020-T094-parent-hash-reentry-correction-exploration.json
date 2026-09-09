@@ -1,0 +1,57 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001706",
+  "recorded_at": "2026-09-08T16:14:09Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-09",
+  "provenance": "contemporaneous",
+  "task_id": "T-094",
+  "title": "PAH-OMC-020 T-094 parent-hash re-entry correction",
+  "question": "Do the current parent bytes for the parked PAH-OMC-020 dynamic form route still match the hash-pinned admission inputs, and does any mismatch represent a scientific input change?",
+  "method": [
+    "Re-run the unchanged owner-source delta check against E:/Dev/Contents.",
+    "Recompute every source hash listed by EXP-001704 for the PAH-OMC-027 admission route.",
+    "Cross-check the generator-factorization script digest with an independent Python hashlib replay and the primary/integrated run metadata.",
+    "Classify the result as a provenance correction only; do not admit a packet or repeat finite and abstract audits."
+  ],
+  "finding": "The owner source delta remains PASS_NO_NEW_INPUT (total=7503, fresh_after_cutoff=0). Nine parent pins in EXP-001704 match exactly. Its generator-factorization script pin contains one extra b in the recorded text (...0debb414...), while the current file, primary run and integrated run all agree on 14faa7caababeadba43b0deb414e6d05ff1f1eb4616d8488d7ef2c06f4820b22. The mismatch is a historical hash transcription error, not a source edit, owner packet, contradiction or scientific input change.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This append-only correction makes the T-094 parent-hash re-entry trigger exact without mutating EXP-001704 or changing PAH-001, PAH-OMC-020, the comparison route, or any dynamics. The source-authorized seven-field packet remains absent, so the scientific route stays parked at HOLD_FOR_EVIDENCE.",
+  "boundary": "PAH-001, PAH-OMC-018, PAH-OMC-020, the original functions, rates, Gibbs state, external stochastic Markov time, carrier, regulator and j-before-anchored-n order are unchanged. This is a provenance and re-entry audit only. No source-authorized U_n, C_n, G_n/D_n, terminal-square convention, anchored-n uniform bound or R-537 semigroup bridge is admitted.",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-027-dynamic-form-route-admission-exploration.json#source_hashes",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-generator-factorization/primary.json#code_sha256",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-generator-factorization/integrated.json#source_hashes",
+    "strategy/pa-hyp/PAH-OMC-020-owner-delta-after-r566-exploration.json#finding"
+  ],
+  "formal_refs": {
+    "results": ["R-549", "R-566"],
+    "negatives": [],
+    "events": []
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "verification_summary": "Primary PowerShell hash replay and independent Python hashlib replay agree on the corrected digest; the owner-delta verifier returns PASS_NO_NEW_INPUT. Existing primary, independent, hostile and integrated factorization results remain conditional finite checks. No scientific verifier was rerun because the parent bytes did not change.",
+  "reproduction": {
+    "owner_delta": "python -X utf8 verification/scripts/pah_omc020_owner_delta_after_r566.py --check",
+    "primary_hash": "powershell -NoProfile -Command \"(Get-FileHash -Algorithm SHA256 verification/scripts/pah_omc020_generator_factorization.py).Hash.ToLower()\"",
+    "independent_hash": "python -X utf8 -c \"import hashlib; from pathlib import Path; print(hashlib.sha256(Path('verification/scripts/pah_omc020_generator_factorization.py').read_bytes()).hexdigest())\""
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-027-dynamic-form-route-admission-exploration.json": "ceec35fb2542ddcae2ec304644f735aa98377b9352d57d0893b9772a043ef82f",
+    "verification/scripts/pah_omc020_generator_factorization.py": "14faa7caababeadba43b0deb414e6d05ff1f1eb4616d8488d7ef2c06f4820b22"
+  },
+  "next_action": "Keep T-094 parked and wait for one new source-authorized hash-pinned packet containing all seven dynamic form-route fields; reopen only on that packet, a genuine parent-byte change, or an exact unchanged-PAH contradiction. Do not repeat finite carrier, physical-empty, BCC, Reading-H or abstract-oracle checks.",
+  "revisit_condition": "Reopen only when a new owner artifact hash is present, a parent source byte genuinely changes, or an exact unchanged-PAH contradiction is supplied.",
+  "non_claims": [
+    "This correction does not admit a source-owned dynamics packet or prove PAH-OMC-020 semigroup convergence.",
+    "It is not a mathematical counterexample, a universal no-go theorem or a change to any PAH definition.",
+    "It does not prove minimal-form identification, infinite-volume dynamics, a continuum limit, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass gap or TOE."
+  ],
+  "related": [
+    {"id": "EXP-001704", "relation": "corrects"},
+    {"id": "EXP-001705", "relation": "continues"}
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "tect/pah-omc020-owner-search-v14-contract/1.0",
+  "contract_id": "PAH-OMC-020-OWNER-SEARCH-V1.4",
+  "result_id": "R-554",
+  "task_id": "T-064",
+  "date": "2026-09-08",
+  "question": "After the R-553 positive-time checkpoint, does a fresh current-byte marker scan contain a source-authorized and complete common-space/path-space owner packet for the anchored-n comparison?",
+  "parent_scope": {
+    "functional": "Exactly PAH-001-v1.json and its original displayed functional.",
+    "rates": "Original directed PH/LK/AP/TR transition rates only.",
+    "state": "Original labelled Gibbs normalization and stationary state.",
+    "time": "External stochastic Markov time only.",
+    "order": "j tends to infinity at fixed n first, then the preregistered anchored-n passage."
+  },
+  "snapshot": {
+    "path": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.4.json",
+    "created_at": "2026-09-08T08:20:00Z",
+    "snapshot_id": "PAH-OMC-020-OWNER-SEARCH-SNAPSHOT-004",
+    "candidate_path_count": 192,
+    "manifest_sha256": "caabc7d52c45a24e15d0d973fb494be7f43bd4df0575f341688edbaed1b97b26",
+    "snapshot_file_sha256": "47b0879ff4c55fe3d60a11cd744d6920a3e3eb18bf923cdd4782fa7e7674b4e9",
+    "authorized_paths": [],
+    "complete_paths": [],
+    "source_authorized_packet_present": false
+  },
+  "marker_policy": {
+    "candidate_set": "UTF-8 JSON or Markdown files under strategy/pa-hyp containing a PAH-OMC-020, source-authorized, owner_authorized or owner packet marker.",
+    "authorization": "Only an explicit source_authorized_packet_present=true provenance field counts as authorized.",
+    "completion": "Only an explicit status of SOURCE_AUTHORIZED_COMPLETE or OWNER_AUTHORIZED_COMPLETE counts as complete.",
+    "absence": "An empty snapshot is timestamped repository provenance, not a universal no-go theorem."
+  },
+  "required_evidence": [
+    "Fresh byte-frozen snapshot after the R-553 records.",
+    "Primary replay of every manifest hash and parent pin.",
+    "Non-importing independent replay.",
+    "Hostile mutation rejection for authorization, completion, manifest and byte pins.",
+    "Integrated equality of snapshot, lane verdicts and empty authorization/completion sets."
+  ],
+  "acceptance": {
+    "HOLD_FOR_EVIDENCE": "All required replays pass and the current snapshot has zero authorized and zero complete owner paths.",
+    "REOPEN": "A later source-authorized packet, parent-byte change or candidate-byte change requires a new versioned snapshot.",
+    "MAINLINE_ADVANCE": "Not available from provenance absence alone; the actual owner packet must be admitted and independently verified first."
+  },
+  "lean": "NOT_APPLICABLE_PROVENANCE_HASHING_ONLY",
+  "single_next_question": "Can a source owner supply one versioned, hash-pinned packet containing the common H/U_n comparison, anchored N2b liminf/recovery, N2c/N4 boundary escape and exact R-512 minimal-form identification?",
+  "non_claims": [
+    "No source-authorized U_n/common-Hilbert map, path law, non-explosion theorem, N2b/N2c/N4/N2d closure or ordered semigroup convergence.",
+    "No universal impossibility theorem follows from the empty current snapshot.",
+    "No change to PAH-001 functional, rates, state, carrier, regulator, external Markov time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ]
+}

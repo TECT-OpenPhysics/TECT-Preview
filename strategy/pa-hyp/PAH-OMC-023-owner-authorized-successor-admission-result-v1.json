@@ -1,0 +1,121 @@
+{
+  "schema": "tect/pah-omc023-owner-authorized-successor-admission-result/1.0",
+  "result_id": "R-560",
+  "contract_id": "PAH-OMC-023",
+  "date": "2026-09-08",
+  "task_id": "T-090",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "EXECUTED",
+    "EXACT_MANIFEST",
+    "INDEPENDENT",
+    "HOSTILE",
+    "CANONICAL_REPLAY",
+    "HOLD_FOR_EVIDENCE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.4.json": "47b0879ff4c55fe3d60a11cd744d6920a3e3eb18bf923cdd4782fa7e7674b4e9",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json": "54329df2a6d3ca766f6ca24fbcc628263e6c7e8c2c0e8c8eba545f3508d75df7",
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json": "a21e6235bc68f7760c83ffa98657a787258d906b39e482c79a1646b2b6da107a"
+  },
+  "exact_scope": {
+    "question": "Does the current repository contain an owner-authorized, hash-pinned successor packet satisfying the R-557 admission fields without editing immutable PAH-001?",
+    "manifest": "R-554 snapshot PAH-OMC-020-OWNER-SEARCH-SNAPSHOT-004 with a 192-record candidate manifest, source_authorized_packet_present=false, authorized_paths=[], and complete_paths=[] .",
+    "replay_repair": "The historical v1.4 integrated replay mismatch is caused by absolute interpreter/output paths stored in replay.command. The current canonical intake records stable relative commands and replays all three frozen child artifacts without changing their bytes.",
+    "limits": "No new carrier, rate, state, root convention, finite witness, refinement, volume, regulator, beta, observation-time, continuum or physical limit is introduced."
+  },
+  "finding": "Canonical current-environment replay passes for the primary, independently recomputed manifest, and hostile mutation lanes, but no authorized or complete owner packet is present. The admission gate therefore remains HOLD_FOR_EVIDENCE. The historical mismatch is a provenance-format issue, not a mathematical contradiction or packet admission.",
+  "assumptions": [
+    "The R-554 snapshot and result remain at their pinned hashes.",
+    "The existing child artifacts are frozen evidence and are rechecked with canonicalized command descriptions; they are not overwritten.",
+    "An empty authorized/complete manifest is treated as absence of an admission packet, not as a universal impossibility theorem."
+  ],
+  "missing_assumptions": [
+    "One source-authorized or explicitly owner-authorized successor packet with a version hash.",
+    "Root multiplicity, duplicate-transition, invalid-move and root-measure ownership plus a measure-compatible common realization.",
+    "R-557 N1, N2b, N2c/N4, N2d, full-domain J and anchored D fields with independent, hostile and Lean manifests."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The absence of authorized paths proves no successor can ever exist.",
+      "disposition": "REJECTED: the snapshot is a current-byte provenance audit only; a future owner packet remains possible."
+    },
+    {
+      "objection": "Canonicalizing replay paths hides a mismatch and promotes the old v1.4 artifact.",
+      "disposition": "REJECTED: the old artifact is preserved and its three child files are rechecked; only non-scientific absolute command strings are canonicalized in the new integrated record."
+    },
+    {
+      "objection": "A status-only mutation can turn the empty manifest into an owner packet.",
+      "disposition": "REJECTED by the hostile authorization, completion, provenance, manifest, byte-hash and order mutations."
+    },
+    {
+      "objection": "The intake closes PAH-OMC-020 ordered convergence.",
+      "disposition": "REJECTED: the result is auxiliary HOLD_FOR_EVIDENCE and supplies no common form, asymptotic estimate or R-512 convergence."
+    }
+  ],
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc023-owner-admission-intake/primary.json": "7a4b95ba7a64ff7e140041b92dd9f22ccf066025de3700037183dc80ed001ead",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc023-owner-admission-intake/independent.json": "e3f6e0faba3cb273398ff1301483de50c9f55729a7a309e8d03eb187b9d79cc1",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc023-owner-admission-intake/hostile.json": "b8b1aa2d5f5a1e05446bd63ea5d3ffbfded25055c591c4a27fba508c3ed8796a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc023-owner-admission-intake/integrated.json": "2cdea61f01271457cf3252de00098dca16ba6a1f3552bb8450bc21ebd730e7a8"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc023_owner_admission_intake.py": "c8382e2aea20cf69b924791a52a3021a52521cd6da8443c1be4f084a715e916f",
+    "codes/foundations/pah_omc023_owner_admission_intake_independent.py": "8d7ccf97337ca831c13d4fc7201df29c23ec3f5adfc2373bca6596c3bfbfe816",
+    "codes/foundations/pah_omc023_owner_admission_intake_hostile.py": "13e41f2ccf82c3fbbe4eb1a5e21cbef6b813f834d9c324b1793a026a28745b3b",
+    "verification/scripts/pah_omc023_owner_admission_verify.py": "230de0863ee79baaca1020f91b11adc37fa85ddeeee23ae8db277a727aeabd9c"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json": "a21e6235bc68f7760c83ffa98657a787258d906b39e482c79a1646b2b6da107a",
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-certificate.md": "5849e8aa202ff4380d9bb1138ab6b97ba2bcd8fa54b577c9040bf500bc342bde",
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-exploration.json": "fed1e5951d6cbdb339066c8a2a19b50e40b40a7c717a263a0e4394715e011a49",
+    "strategy/pa-hyp/PAH-OMC-023-owner-snapshot-replay-boundary-exploration.json": "2fd4cb4ecbf33a45428dd74b48f8c3da86668e643eb7f5fd276df7029db5187e",
+    "strategy/pa-hyp/PAH-OMC-023-owner-admission-canonical-replay-exploration.json": "8b59e90288d4f77a0382aaa2eae9d10074a2a380e0bbdd823448f7f64d8f8c97",
+    "explorations/log.jsonl#EXP-001690": "67c23e5fb91110d5959a79ba38f507fcdb0eb4b0144cf4d53ec5973ce093db38",
+    "changelog/log.jsonl#20260908-r-560-pah-omc-023-canonical-owner-admission-rep": "38be145fb6e60b82426cf81adedca96111858abc5e909bcbed69b6429087a3a0"
+  },
+  "formal_refs": {
+    "results": [
+      "R-554",
+      "R-559",
+      "R-560"
+    ],
+    "negatives": [
+      "NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS"
+    ],
+    "events": [
+      "20260908-r-560-pah-omc-023-canonical-owner-admission-rep"
+    ]
+  },
+  "verification": {
+    "primary": "PASS 29/29",
+    "independent": "PASS 783/783",
+    "hostile": "PASS 11/11",
+    "integrated": "PASS 24/24",
+    "lean": "Not required for non-admission; R-559 Lean source-level firewall remains pinned and physical promotion is false"
+  },
+  "closed_scoped_gate": "Historical replay-path mismatch is separated from mathematical evidence; current canonical replay of the frozen R-554 manifest is reproducible.",
+  "remaining_gates": [
+    "Owner-authorized packet admission",
+    "R-557 common realization, N1, N2b, N2c/N4, N2d, full-domain J and anchored D fields",
+    "PAH-OMC-020 ordered stationary-semigroup local-correlation convergence for an explicitly fixed model"
+  ],
+  "next_single_question": "Can one owner-authorized, hash-pinned packet satisfy every R-557 field without changing immutable PAH-001?",
+  "revisit_condition": "Reopen only when a concrete packet is hash-pinned or the parent PAH source hash changes; do not repeat the same unchanged manifest replay.",
+  "non_claims": [
+    "No successor packet is admitted by this result.",
+    "No universal no-go, R-512 limit, ordered semigroup convergence, infinite-volume or continuum theorem.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-certificate.md"
+}

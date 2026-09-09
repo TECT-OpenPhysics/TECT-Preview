@@ -1,0 +1,123 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "hostile source hash strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "hostile source hash strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+      "expected": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+      "name": "hostile source hash strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+      "expected": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+      "name": "hostile source hash strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "original packet is not admitted",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "authorization flag cannot replace payload",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "static C2 cannot become non-explosion by label",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "static promotion is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "missing N4 expression is detected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "N4 mutation is not admissible",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "physical-time relabel is detected",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "physical-time relabel cannot pass",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "partial owner payload is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "claim/physical flags are visible mutations",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "claim/physical mutations are not source evidence",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 15,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "finding": "All hostile shortcuts are rejected; the missing pathwise contract remains a hold, not a PAH counterexample.",
+  "mutations": [
+    "authorization flag without owner payload",
+    "static C2 relabelled as non-explosion",
+    "N4 evolved-vector term removed",
+    "external Markov time relabelled as Lorentzian time",
+    "partial owner payload with fabricated hash",
+    "claim/physical promotion flags"
+  ],
+  "non_claims": [
+    "No PAH functional, rate, state, carrier, regulator, time or limit order is changed.",
+    "No universal non-existence or physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE claim."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_n2c_owner_audit_hostile.py --check",
+  "schema": "tect/pah-omc020-n2c-owner-audit-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_HOSTILE_N2C_FAIL_CLOSED",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

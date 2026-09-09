@@ -1,6 +1,75 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-31-a13-bounded-multiplier-to-shell-decay",
+      "branch": "infer production mixed/far dyadic decay from a bounded frozen coefficient",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Deduce the required `C_mix` and `C_far` shell estimates from a uniform pointwise bound on a frozen complete coefficient, with no additional spatial regularity or commutator cancellation.",
+        "consequence": "Pointwise boundedness and frozen-Gram derivative constants alone cannot yield production shell decay. A production-specific paraproduct, commutator, coefficient-Sobolev, or complete-owner cancellation theorem remains viable.",
+        "evidence": "R-131 proof note, Section 6; exact Laurent-mode primary and independent audits at `r=3`, `m=19,20`; distinct state-derivative fixtures.",
+        "failure_mode": "For shell labels `r<m`, let the input Fourier mode be `n_r=2^r`, the output mode `n_m=2^m`, and `Q_(m,r)(x)=cos((n_m-n_r)x)`. Then `||Q_(m,r)||_infinity=1`, but multiplication transfers the input to the output with coefficient `1/2`. Prototype mixed and far bounds force respectively `C_mix>=2^(2m-r-1)` and `C_far>=2^(4m-r-1)`. Executed witnesses at consecutive output shells verify growth ratios four and sixteen. Separately, bounded state-dependent multipliers can have arbitrarily large first derivatives, which frozen-`Q` Gram envelopes do not see."
+      },
+      "detail_title": "bounded frozen coefficients supply no automatic dyadic off-diagonal decay",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "a unit-supremum cosine transfers mode 2^r to 2^m with coefficient 1/2 and forces constants growing as 2^(2m-r-1) and 2^(4m-r-1)",
+      "tag": "NG-2026-07-31-A13-BOUNDED-MULTIPLIER-TO-SHELL-DECAY"
+    },
+    {
+      "anchor": "ng-2026-07-31-a13-bare-last-insertion-r135-reanchoring",
+      "branch": "invoke the R-135 reveal-weighted future ledger from finite Fubini, an insertion-anchored FAR estimate, and an unweighted `sum_k q_k` alone",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "consequence": "This rejects an inference, not the production theorem, R-102, R-135, or a future last-insertion strategy with additional data. A separated nonnegative route needs a gap-weighted causal charge such as `sum_(r<k) 2^(2gamma(k-r))q_(r,k)`, plus a signed estimate of the uncovered near wedge. The alternative is a direct estimate of the complete signed current--trace--forest last-insertion owner.",
+        "evidence": "R-138 proof-note Sections 6--8; exact finite-Fubini and affine exponent checks in the two independent executables; signed insertion fixtures `1,-1` and `1,1`.",
+        "failure_mode": "Swap the finite future sums, prove an insertion-anchored estimate for `m>=k+5`, and then invoke R-135 with only the old unweighted `sum_k q_k` condition. For a future cell `r<k`, multiplication by the reveal-anchored weight gives `2^(2gamma(m-r-5)) 2^(-2s(m-k))` `=2^(-10gamma) 2^(2gamma(k-r)) 2^(-2(s-gamma)(m-k))`. The causal factor grows rather than decays. At `s=2/3`, `gamma=7/12`, and `k-r=6`, it equals `2^7=128`. In addition, the cells `r+5<=m<k+5` are FAR relative to the reveal but near or balanced relative to the insertion, so an insertion-FAR estimate does not cover them.",
+        "revisit_condition": "Revisit R-135 transfer only after proving the gap-weighted future charge, or after an owner-preserving theorem legitimately moves the final weight from reveal root `r` to insertion shell `k`."
+      },
+      "detail_title": "future reveal weights cannot be relabelled for free",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "reveal-to-insertion reanchoring creates `2^(2 gamma(k-r))`, equal to 128 at `gamma=7/12`, `k-r=6`, and leaves the wedge `r+5<=m<k+5` outside insertion-FAR geometry",
+      "tag": "NG-2026-07-31-A13-BARE-LAST-INSERTION-R135-REANCHORING"
+    },
+    {
+      "anchor": "audit-2026-07-31-a13-r132-polynomial-response-intertwiner-scope",
+      "branch": "promote the R-083 stopped polynomial-current zero directly to the R-132 owner-complete physical response at collar three",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Use R-083's exact stopped polynomial-current zero at collar `C=3` as an owner-complete R-132 paired-response zero with no further root, heat, covariance, or forest hypothesis.",
+        "consequence": "A zero polynomial far-response theorem is valid conditionally at `C>=4` after same-root visit recombination, one compatible R-083 changing-current tower, exhaustive contraction-closed outputs, common legal heat, and shellwise covariance/forest matching with no complement leakage. Those production hypotheses remain open. This audit corrects the R-132 successor wording; it does not withdraw R-083.",
+        "evidence": "R-133 proof note, Section 8; R-083 Theorems 3.1 and 7.1 and its Section-8 adapted fixture; R-125 future-variance/forest bridge; primary and independent R-133 support and exact-constant checks.",
+        "failure_mode": "The polynomial response has the owner decomposition `q_poly=q_R083_stop+q_Sigma,+-D2(Delta V_fut^L-Delta F063^(L,ad))/2`. R-083 kills only the first coordinate. The positive common-heat Gram is `2(c0+c1)=339/(4000P)` on an exact Fourier-pair fixture. R-083's adapted Hermite fixture separately has covariance-normal mean `-8(c0+c1)lambda^2=-339 lambda^2/(1000P)`. Moreover a stopped current is supported in `Q_(n+1)`, whereas its paired response is supported in `Q_(n+2)`, so the repository's safe support convention advances from collar three to collar four."
+      },
+      "detail_title": "stopped-current support is not the complete physical response",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "audit",
+      "summary": "the paired response has one extra product-support step, a positive common-heat Gram, and the R-125 future-variance/forest residual; zero far response is conditional at safe collar four on a root intertwiner and covariance/forest matching",
+      "tag": "AUDIT-2026-07-31-A13-R132-POLYNOMIAL-RESPONSE-INTERTWINER-SCOPE"
+    },
+    {
       "anchor": "audit-2026-07-31-a13-r132-gamma-four-successor-scope",
       "branch": "treat a complete gamma-four estimate as the necessary next condition for shell acceptance",
       "claim_ref_basis": {
@@ -2170,72 +2239,6 @@
       "kind": "no_go",
       "summary": "the exact Taylor-coordinate criterion requires L PSD independently of eta; the production scalar ray has L/e=-1/432, and a centered covariance-matched same-root Gaussian fixture has expectation -(688/13689)c1 e phi(1)<0",
       "tag": "NG-2026-07-25-A13-RATIONAL-ETA-MEAN-SPECTRAL-CLOSURE"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-pure-quartic-cartan-homogeneity",
-      "branch": "A13 complete production Cartan far atom controlled by a homogeneous pure-quartic payload alone",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "The direct Cartan coefficient energy must retain lower-order background/control tails and any form-payable constants or model moments. This does not refute R-088 (4.11)--(4.12), R-089 (3.12), or any coupled form bound carrying those terms.",
-        "evidence": "On the normalized production scalar ray `F(x)=x^3/(1+x^2)`, `B=v=cos x`, and `a_c=c cos x`, the exact sequential atom is `c H'(x)+O(c^2)`. The frequency-32 coefficient is `h_32=(sqrt(2)/2)(102sqrt(2)-137)(3-2sqrt(2))^15 =1.684765541129627e-11>0`, so the normalized squared shell energy is `(32h_32)^2/2=1.453278683431837e-19`. The squared atom is order `c^2`, whereas every homogeneous quartic payload is order `c^4`.",
-        "failure_mode": "Infer the complete production Cartan far atom from a bound whose only control payload is `A^3 D A` or `X_A^(1/2)Y_A^(1/2)`, with no additive form constant, model moment, or lower-order background/control coefficient tail."
-      },
-      "detail_title": "a homogeneous quartic payload misses the linear Cartan response",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "an exact production scalar ray has a nonzero frequency-32 linearised atom, so its squared far energy is order c^2 while the quartic payload is order c^4; lower-order background/control coefficient tails, model moments, or form constants cannot be deleted",
-      "tag": "NG-2026-07-25-A13-PURE-QUARTIC-CARTAN-HOMOGENEITY"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-projected-cartan-cumulative-z6-majorant",
-      "branch": "R-091 projected Cartan output ledger closed through an extracted cumulative translated-model `Z^6` norm",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "Retire the cumulative `Z^6` extraction as a route to projected one-use. The fixture does not refute the exact output ledger, projected CFAR, or A13. The remaining `H_C` theorem must keep expectation inside a saturation-aware cumulative vector/multimode paracomposition bound, including target heat and coherent nonlinear output collisions.",
-        "evidence": "For `N=2^k`, choose a predictable event of probability `N^-6` and the single-mode control `h_k=N^3 1_E e_N`, so that the smoothed secant is `a_k=N 1_E e_N`. On a fixed `r` interval, `Z_(k,r) asymp N^(1+alpha)`. Both terms of the R-087-derived cumulative majorant then equal order `N^3`, whereas the Cameron--Martin energy, terminal sixth moment, and their geometric mean remain order one. This is sharp for the extracted majorant. In contrast, the exact saturated scalar map `F(x)=x^3/(1+x^2)` has an explicit rational Fourier series: for the same rare fixture its fixed-gap Cartan trace is `O(N^-4)`, and its arbitrary-gap tail is superexponential.",
-        "failure_mode": "Bound the exact output-projected Cartan excess ledger by first extracting the cumulative translated-model factor `Z_(j,r)^6=(1+||u_(j,r)||_(C^alpha))^6`, and then pay the resulting weighted root sum using only the accepted Cameron--Martin, terminal sextic, and mixed energy--sextic budgets."
-      },
-      "detail_title": "extracted translated-model growth erases saturation",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "a predictable rare single-mode control makes the extracted majorant grow like `N^3` while CM, terminal sextic, and mixed budgets stay bounded; the exact saturated scalar Cartan trace instead decays like `N^-4`, so only the premature majorant is retired",
-      "tag": "NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-perspective-innovation-termwise-positivity",
-      "branch": "A13 `H_N` closed by separate positivity of Schur debt, covariance mismatch, `r_C`, `J_D`, or a newly adaptive derivative payment",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "Automatic local or termwise positivity is retired. The fixture is not a post-paid production counterexample. The exact successor is one augmented perspective--Carleson form bound retaining the complete low/paid packet; the special moment-matched one-reveal branch is closed, but the multistep production derivative-feedback branch is not.",
-        "evidence": "R-092 proves that all these quantities remain in one exact completed matrix-perspective identity. After the once-only baseline is restored, the terminal positive energy must also be split by Doob Pythagoras. The smallest inseparable density is `K_k+P_(k-1)|d_k y|^2-B_(k-1):DeltaGamma_k`. It is zero for frozen predictable coefficients and nonnegative for a coefficient-conditioned moment-matched one-reveal branch. In general a weighted conditional- covariance deficit remains. A finite positive-frame conditional fixture with every residual nonzero has exact branch minima `-13/272` and `-29/160`, hence total completed expectation `-623/5440`. Choosing a new matrix payment at each filtration level adds the uncontrolled defect `x_(k-1)^T(bar A_k^(-1)-A_(k-1)^(-1))x_(k-1)` unless the payments obey a backward Loewner condition.",
-        "failure_mode": "Close `H_N` by assigning independent signs or payments to the Schur debt, covariance mismatch, coefficient covariance `r_C`, quadratic residual `J_D`, or the positive matrix-perspective Jensen defect."
-      },
-      "detail_title": "conditional companions have no separate sign",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "the companions form one exact matrix-perspective telescope; a positive-frame all-residual fixture has completed expectation `-623/5440`, and changing the payment at each filtration level introduces a new sign-indefinite inverse-matrix defect",
-      "tag": "NG-2026-07-25-A13-PERSPECTIVE-INNOVATION-TERMWISE-POSITIVITY"
     }
   ],
   "kind": "negative_records",

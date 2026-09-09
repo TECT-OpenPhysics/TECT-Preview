@@ -1,0 +1,68 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS-HOSTILE-001",
+  "checks": [
+    {
+      "name": "baseline scoped negative",
+      "status": "PASS"
+    },
+    {
+      "name": "universal owner-fixed upgrade rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "parent hash drift rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "successor authority mutation cannot be silently accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "physical promotion mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "positive uniqueness mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "successor field remains non-authority",
+      "status": "PASS"
+    },
+    {
+      "name": "source ambiguity remains scoped",
+      "status": "PASS"
+    },
+    {
+      "name": "no new model fields",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 9,
+  "claim_bearing": false,
+  "classification": "negative_result",
+  "code_sha256": "9473c209e7f58260c53fe10e3d190792e59d87b110614924a3b53be6ad5c545e",
+  "finding": "Hostile mutations cannot turn the source-level formulation boundary into a universal owner-fixed no-go, repair parent hashes, or promote a physical claim.",
+  "mutations_rejected": 9,
+  "non_claims": [
+    "This does not refute convergence for every owner-fixed successor completion.",
+    "This does not prove or refute the R-512 limit after a future source-authorized completion is supplied.",
+    "No new carrier, rate, state, time interpretation, comparison map, counterterm or limit order is introduced.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang--Mills, mass-gap or TOE conclusion is made."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc022_source_level_semigroup_wellposedness_hostile.py --check",
+  "result_id": "R-559",
+  "schema": "tect/pah-omc022-source-level-semigroup-wellposedness-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+    "strategy/pa-hyp/PAH-OMC-020-positive-time-separation-result-v1.json": "381869f9637341dd6f55514f87ca1849831e9ca910a27cf4e601882cd5de9fc8",
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+    "strategy/pa-hyp/PAH-OMC-021-composite-owner-packet-transfer-result-v1.json": "12d80d1a9acde9c73971109ad49776a628c0c3b31e00e419382f15d05146c804"
+  },
+  "status": "PASS_MUTATIONS_REJECTED_SCOPED_NEGATIVE",
+  "task_id": "T-089",
+  "verdict": "NEGATIVE_RESULT"
+}

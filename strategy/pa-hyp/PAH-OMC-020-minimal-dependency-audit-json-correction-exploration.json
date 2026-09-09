@@ -1,0 +1,49 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001683",
+  "title": "PAH-OMC-020 R-556 JSON syntax correction",
+  "task_id": "T-086",
+  "question": "After correcting the R-556 result JSON closing delimiter, do the final bytes parse and preserve the same HOLD_FOR_EVIDENCE verdict?",
+  "finding": "The R-556 result now parses as valid JSON with final SHA-256 177cbf6e703c9118c7139d2bb62cb1756c468fba8054715f7cd90143c4123e73. Only the malformed closing delimiter was repaired; the dependency ledger, verdict, event reference and non-claims are unchanged.",
+  "decision_reason": "The append-only correction preserves the prior event-reference correction while making the result consumable by the repository hygiene and exploration validators.",
+  "boundary": "No PAH-001 source field, model scope, verification output, active gate or claim tier changed. This is provenance and syntax repair only.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "verdict": "inconclusive",
+  "recorded_at": "2026-09-08T09:21:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "related": [{"id": "EXP-001682", "relation": "corrects"}],
+  "method": [
+    "Parse the result with the bundled Python JSON parser.",
+    "Recompute its final SHA-256 after the delimiter repair.",
+    "Retain the prior append-only correction records and rerun the complete release surface."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json#non_claims",
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-hash-correction-exploration.json#source_hashes",
+    "verification/scripts/release_check.py#main"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json": "177cbf6e703c9118c7139d2bb62cb1756c468fba8054715f7cd90143c4123e73",
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-hash-correction-exploration.json": "7865496782d5601ed5a5a2792eb1735dbd5ba70572450e2021f15815528ca23e"
+  },
+  "formal_refs": {
+    "events": ["20260908-r-556-pah-omc-020-minimal-dependency-audit-2026"],
+    "negatives": [],
+    "results": ["R-556"]
+  },
+  "next_action": "Keep R-556 on HOLD_FOR_EVIDENCE and wait for the one source-authorized owner packet; do not repeat finite or radial calculations.",
+  "reproduction": {
+    "json_parse": "python -X utf8 -c \"import json; json.load(open('strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json',encoding='utf-8'))\"",
+    "release": "python -X utf8 verification/scripts/release_check.py"
+  },
+  "revisit_condition": "Reopen only if the result bytes change again or a source-authorized packet appears.",
+  "non_claims": [
+    "No scientific verdict, active gate, claim tier or PAH source field changed.",
+    "No full PAH-OMC-020 semigroup convergence or physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "verification_summary": "JSON parse and final-byte hash are consistent; this successor is provenance-only."
+}

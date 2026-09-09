@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1022 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1093 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,31 +17,31 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
-| 2026-09-09 | `20260909-a2-r-157-r-158-register-fixed-source-v0-1-42-su` — [A2 R-157 R-158: register fixed-source v0.1.42 submission distribution without external-review claims] - 2026-09-09 | A2-FULL-PRODUCTION-WELLPOSED | [bounded page](pages/001019-001068.md#20260909-a2-r-157-r-158-register-fixed-source-v0-1-42-su) |
-| 2026-09-09 | `20260909-r-497-preserve-historical-audit-contracts-while` — [R-497 preserve historical audit contracts while relocating sealed submission package] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260909-r-497-preserve-historical-audit-contracts-while) |
-| 2026-09-09 | `20260909-r-497-q3lock-submission-preparation-edition-wit` — [R-497 Q3LOCK submission-preparation edition without prior external review] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260909-r-497-q3lock-submission-preparation-edition-wit) |
-| 2026-09-09 | `20260909-a2-r-157-r-158-paper-v0-1-41-internal-re-review` — [A2 R-157 R-158 paper v0.1.41 internal re-review and referee-facing proof repairs] - 2026-09-09 | A2-FULL-PRODUCTION-WELLPOSED | [bounded page](pages/001019-001068.md#20260909-a2-r-157-r-158-paper-v0-1-41-internal-re-review) |
-| 2026-09-08 | `20260908-q3lock-r-497-external-review-pdf-distribution-a` — [Q3LOCK R-497 external-review PDF distribution authorized and assembled] - 2026-09-08 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260908-q3lock-r-497-external-review-pdf-distribution-a) |
-| 2026-09-08 | `20260908-q3lock-r-497-claim-result-lineage-decision-2026` — [Q3LOCK R-497 claim/result lineage decision] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260908-q3lock-r-497-claim-result-lineage-decision-2026) |
-| 2026-09-08 | `20260908-q3lock-kp-envelope-and-finite-range-weight-audi` — [Q3LOCK KP envelope and finite-range weight audit] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260908-q3lock-kp-envelope-and-finite-range-weight-audi) |
-| 2026-09-07 | `20260907-q3lock-fkg-positive-cone-topology-lemma-2026-09` — [Q3LOCK FKG positive-cone topology lemma] - 2026-09-07 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-fkg-positive-cone-topology-lemma-2026-09) |
-| 2026-09-07 | `20260907-q3lock-schneider-beck-stoll-comparison-boundary` — [[Q3LOCK Schneider--Beck--Stoll comparison boundary] - 2026-09-07] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-schneider-beck-stoll-comparison-boundary) |
-| 2026-09-07 | `20260907-q3lock-kp-exact-finite-range-assumption-crosswa` — [[Q3LOCK KP exact finite-range assumption crosswalk] - 2026-09-07] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-kp-exact-finite-range-assumption-crosswa) |
-| 2026-09-07 | `20260907-q3lock-fss-classical-phase-theorem-boundary-aud` — [Q3LOCK FSS classical phase-theorem boundary audit] - 2026-09-07 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-fss-classical-phase-theorem-boundary-aud) |
-| 2026-09-07 | `20260907-q3lock-upper-truncation-resolvent-repair-audit` — [Q3LOCK upper-truncation resolvent repair audit] - 2026-09-07 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-upper-truncation-resolvent-repair-audit) |
-| 2026-09-07 | `20260907-q3lock-package-pointer-synchronization-and-fres` — [Q3LOCK package-pointer synchronization and fresh replay] - 2026-09-07 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-package-pointer-synchronization-and-fres) |
-| 2026-09-07 | `20260907-q3lock-simon-theorem-hypothesis-audit-2026-09-0` — [Q3LOCK Simon theorem-hypothesis audit] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-simon-theorem-hypothesis-audit-2026-09-0) |
-| 2026-09-07 | `20260907-q3lock-residual-constant-label-repair-and-repla` — [Q3LOCK residual constant label repair and replacement replay] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-residual-constant-label-repair-and-repla) |
-| 2026-09-07 | `20260907-q3lock-manuscript-form-repair-and-integrated-re` — [Q3LOCK manuscript form repair and integrated replay checkpoint] - 2026-09-07 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-manuscript-form-repair-and-integrated-re) |
-| 2026-09-07 | `20260907-q3lock-finite-volume-form-closure-and-harmonic` — [Q3LOCK finite-volume form closure and harmonic truncation audit] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-finite-volume-form-closure-and-harmonic) |
-| 2026-09-07 | `20260907-q3lock-simon-feynman-kac-provisional-source-byt` — [Q3LOCK Simon Feynman-Kac provisional source-byte capture] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-simon-feynman-kac-provisional-source-byt) |
-| 2026-09-07 | `20260907-q3lock-independent-replay-determinism-correctio` — [Q3LOCK independent replay determinism correction] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-independent-replay-determinism-correctio) |
-| 2026-09-07 | `20260907-q3lock-package-level-independent-replay-2026-09` — [Q3LOCK package-level independent replay] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-package-level-independent-replay-2026-09) |
-| 2026-09-07 | `20260907-q3lock-review-matrix-handoff-and-replay-checkpo` — [Q3LOCK review-matrix handoff and replay checkpoint update] - 2026-09-07 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-review-matrix-handoff-and-replay-checkpo) |
-| 2026-09-07 | `20260907-q3lock-a1-a23-independent-review-matrix-and-cov` — [Q3LOCK A1-A23 independent review matrix and coverage validator] - 2026-09-07 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-a1-a23-independent-review-matrix-and-cov) |
-| 2026-09-07 | `20260907-q3lock-a6-a13-dlr-fkg-reflection-and-infrared-a` — [Q3LOCK A6-A13 DLR FKG reflection and infrared audit] - 2026-09-07 | A6-A13, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-a6-a13-dlr-fkg-reflection-and-infrared-a) |
-| 2026-09-07 | `20260907-q3lock-a1-a5-finite-volume-and-pressure-audit-e` — [Q3LOCK A1-A5 finite-volume and pressure audit (EXP-001632)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-a1-a5-finite-volume-and-pressure-audit-e) |
-| 2026-09-07 | `20260907-q3lock-primary-literature-vector-scalar-applica` — [Q3LOCK primary literature vector-scalar applicability audit (EXP-001631)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-primary-literature-vector-scalar-applica) |
+| 2026-09-09 | `20260909-c6-r-512-through-r-568-fixed-proof-checkpoint-i` — [C6 R-512 through R-568 fixed proof checkpoint integration provenance] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260909-c6-r-512-through-r-568-fixed-proof-checkpoint-i) |
+| 2026-09-09 | `20260909-r-568-pah-omc-029-fixed-generator-markov-unique` — [[R-568 PAH-OMC-029 fixed-generator Markov uniqueness] - 2026-09-09] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260909-r-568-pah-omc-029-fixed-generator-markov-unique) |
+| 2026-09-09 | `20260909-r-567-pah-omc-028-nonlinear-closure-proof-repai` — [R-567 PAH-OMC-028 nonlinear closure proof repair] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260909-r-567-pah-omc-028-nonlinear-closure-proof-repai) |
+| 2026-09-08 | `20260908-pah-omc-026-cut-set-packet-crosswalk-2026-09-08` — [PAH-OMC-026 cut-set packet crosswalk] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-pah-omc-026-cut-set-packet-crosswalk-2026-09-08) |
+| 2026-09-08 | `20260908-pah-omc-025-route-independent-owner-cut-set-202` — [PAH-OMC-025 route-independent owner cut-set] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-pah-omc-025-route-independent-owner-cut-set-202) |
+| 2026-09-08 | `20260908-r-564-pah-omc-024-anchored-n-persistence-2026-0` — [R-564 PAH-OMC-024 anchored-n persistence] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-564-pah-omc-024-anchored-n-persistence-2026-0) |
+| 2026-09-08 | `20260908-r-563-pah-omc-020-diagonal-locality-obstruction` — [R-563 PAH-OMC-020 diagonal locality obstruction] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-563-pah-omc-020-diagonal-locality-obstruction) |
+| 2026-09-08 | `20260908-r-562-pah-omc-020-universal-locality-bridge-2-2` — [R-562 PAH-OMC-020 universal locality bridge 2] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-562-pah-omc-020-universal-locality-bridge-2-2) |
+| 2026-09-08 | `20260908-r-561-pah-omc-020-fixed-power-locality-bridge-2` — [R-561 PAH-OMC-020 fixed-power locality bridge] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-561-pah-omc-020-fixed-power-locality-bridge-2) |
+| 2026-09-08 | `20260908-r-560-pah-omc-023-canonical-owner-admission-rep` — [R-560 PAH-OMC-023 canonical owner-admission replay boundary] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-560-pah-omc-023-canonical-owner-admission-rep) |
+| 2026-09-08 | `20260908-r-559-pah-omc-022-source-level-stationary-semig` — [R-559 PAH-OMC-022 source-level stationary-semigroup well-posedness boundary] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-559-pah-omc-022-source-level-stationary-semig) |
+| 2026-09-08 | `20260908-r-558-pah-omc-021-composite-owner-packet-transf` — [R-558 PAH-OMC-021 composite owner-packet transfer audit] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-558-pah-omc-021-composite-owner-packet-transf) |
+| 2026-09-08 | `20260908-r-557-pah-omc-020-owner-packet-sufficiency-brid` — [R-557 PAH-OMC-020 owner-packet sufficiency bridge] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-557-pah-omc-020-owner-packet-sufficiency-brid) |
+| 2026-09-08 | `20260908-r-556-pah-omc-020-minimal-dependency-audit-2026` — [R-556 PAH-OMC-020 minimal dependency audit] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-556-pah-omc-020-minimal-dependency-audit-2026) |
+| 2026-09-08 | `20260908-r-555-pah-omc-020-ordered-epsilon-bridge-2026-0` — [R-555 PAH-OMC-020 ordered-epsilon bridge] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-555-pah-omc-020-ordered-epsilon-bridge-2026-0) |
+| 2026-09-08 | `20260908-r-554-pah-omc-020-owner-snapshot-v1-4-2026-09-0` — [R-554 PAH-OMC-020 owner snapshot v1.4] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-554-pah-omc-020-owner-snapshot-v1-4-2026-09-0) |
+| 2026-09-08 | `20260908-r-553-pah-omc-020-positive-time-separation-2026` — [R-553 PAH-OMC-020 positive-time separation] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-553-pah-omc-020-positive-time-separation-2026) |
+| 2026-09-08 | `20260908-r-552-pah-omc-020-finite-semigroup-well-posedne` — [R-552 PAH-OMC-020 finite semigroup well-posedness] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-552-pah-omc-020-finite-semigroup-well-posedne) |
+| 2026-09-08 | `20260908-r-551-pah-omc-020-second-order-defect-2026-09-0` — [R-551 PAH-OMC-020 second-order defect] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-551-pah-omc-020-second-order-defect-2026-09-0) |
+| 2026-09-08 | `20260908-r-550-pah-omc-020-finite-semigroup-lift-2026-09` — [R-550 PAH-OMC-020 finite semigroup lift] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-550-pah-omc-020-finite-semigroup-lift-2026-09) |
+| 2026-09-08 | `20260908-r-549-pah-omc-020-generator-factorization-bridg` — [R-549 PAH-OMC-020 generator factorization bridge] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-549-pah-omc-020-generator-factorization-bridg) |
+| 2026-09-08 | `20260908-r-548-pah-omc-020-restricted-radial-semigroup-c` — [R-548 PAH-OMC-020 restricted radial semigroup consistency] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-548-pah-omc-020-restricted-radial-semigroup-c) |
+| 2026-09-08 | `20260908-r-547-pah-omc-020-owner-snapshot-v1-3-2026-09-0` — [R-547 PAH-OMC-020 owner snapshot v1.3] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-547-pah-omc-020-owner-snapshot-v1-3-2026-09-0) |
+| 2026-09-08 | `20260908-r-546-pah-omc-020-direct-two-term-route-2026-09` — [R-546 PAH-OMC-020 direct two-term route] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-546-pah-omc-020-direct-two-term-route-2026-09) |
+| 2026-09-08 | `20260908-r-545-pah-omc-020-mesh-uniform-transfer-2026-09` — [R-545 PAH-OMC-020 mesh-uniform transfer] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-545-pah-omc-020-mesh-uniform-transfer-2026-09) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,8 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1019–1022 | 4 | [001019-001068.md](pages/001019-001068.md) |
+| 1069–1093 | 25 | [001069-001118.md](pages/001069-001118.md) |
+| 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |

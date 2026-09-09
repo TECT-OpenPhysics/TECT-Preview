@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "detail": {
+        "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\scripts\\pah_omc020_diagonal_locality.py --check",
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH-OMC-020 DIAGONAL LOCALITY: PASS 9/9; verdict=NEGATIVE_RESULT\n"
+      },
+      "name": "primary",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\codes\\foundations\\pah_omc020_diagonal_locality_independent.py --check",
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH-OMC-020 DIAGONAL LOCALITY INDEPENDENT: PASS 7/7\n"
+      },
+      "name": "independent",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\codes\\foundations\\pah_omc020_diagonal_locality_hostile.py --check",
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH-OMC-020 DIAGONAL LOCALITY HOSTILE: PASS 8/8\n"
+      },
+      "name": "hostile",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "command": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe env lean C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\lean\\Tect\\PahOmc020DiagonalLocality.lean",
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "name": "lean",
+      "status": "PASS"
+    }
+  ],
+  "checks_failed": 0,
+  "checks_passed": 4,
+  "result_id": "R-563",
+  "schema": "tect/pah-omc020-diagonal-locality-integrated/1.0",
+  "tool_hashes": {
+    "codes/foundations/pah_omc020_diagonal_locality_hostile.py": "cc83a6adf6f46e0d8787b9b6217d873a4620f74e06e2af2c440ef9e64a6ab64a",
+    "codes/foundations/pah_omc020_diagonal_locality_independent.py": "8f533308843c9ac37afcc55e61da3c791b8c850c44861d571a4b2c9bbe28fbfe",
+    "verification/lean/Tect/PahOmc020DiagonalLocality.lean": "acd890ba7977965c5f383a3b1ef4a3c946216057e6b9551d1c2205c9e8a96e78",
+    "verification/scripts/pah_omc020_diagonal_locality.py": "bbbdad6419c734e05f2f55fc3d2de7b22878be57da237279f44a35871519c65b"
+  },
+  "verification": "PASS"
+}

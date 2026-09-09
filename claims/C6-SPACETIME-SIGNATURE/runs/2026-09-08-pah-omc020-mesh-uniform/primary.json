@@ -1,0 +1,228 @@
+{
+  "active_gate_change": false,
+  "assumptions": {
+    "finite_modulus": "There is M_fg independent of retained finite n,j such that |C_(n,j)(t)-C_(n,j)(s)| <= M_fg |t-s|; R-543 supplies M_fg=sqrt(B_f B_g) under its finite form-energy hypotheses.",
+    "mesh_cover": "For every delta>0, a finite mesh G_delta subset of [0,T] has covering radius at most delta.",
+    "mesh_pointwise": "For every fixed delta and every mesh point q in G_delta, the ordered j-before-anchored-n correlation error tends to zero. This is the remaining dynamic input, not proved by this contract.",
+    "target_continuity": "The fixed R-512 target correlation C_inf is uniformly continuous on [0,T]; R-530's spectral semigroup supplies continuity for each fixed Hilbert-space pair, but no finite-to-target identification is inferred."
+  },
+  "audit_id": "PAH-OMC-020-MESH-UNIFORM-PRIMARY-001",
+  "checks": [
+    {
+      "actual": "tect/pah-omc020-mesh-uniform-contract/1.0",
+      "expected": "tect/pah-omc020-mesh-uniform-contract/1.0",
+      "name": "contract schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-545",
+      "expected": "R-545",
+      "name": "contract identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json": "4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json": "4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "name": "source hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-001",
+      "expected": "PAH-001",
+      "name": "PAH packet",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "j-before-n order retained",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "external Markov time retained",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "R-543",
+        "PASS"
+      ],
+      "expected": [
+        "R-543",
+        "PASS"
+      ],
+      "name": "R-543 source modulus",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "R-543 finite only",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-530 target semigroup",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "R-530 no limit promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "compact horizon positive",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "mesh radius positive",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "finite modulus nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "target modulus nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "mesh error nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "mesh covers compact interval",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/25",
+      "expected": "9/25",
+      "name": "transfer formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/25",
+      "expected": "9/25",
+      "name": "transfer bound exact fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "finite modulus fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "target continuity fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "mesh-point error fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "supremum implication fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "finer mesh decreases bound",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "ordered limit is not reversed",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "mesh pointwise remains an assumption",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no physical promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no owner synthesis",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 27,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "8a7eecd9d787c7e2074450faf454affbe550556eb59bfb8a6bacbc95bd98f14d",
+  "conditional": true,
+  "finding": "The scalar mesh inequality is exact: finite equicontinuity from R-543 plus target continuity reduces compact-time uniform convergence to ordered convergence on every finite time mesh. The mesh-pointwise PAH convergence and owner packet remain unproved.",
+  "missing_assumptions": [
+    "For every fixed delta and every mesh point q in G_delta, the ordered j-before-anchored-n correlation error tends to zero. This is the remaining dynamic input, not proved by this contract.",
+    "Source-authorized common-space/path-space identification with R-512"
+  ],
+  "next_single_question": "Can a source-authorized common-space or path-space packet prove the ordered correlation convergence at every finite time mesh point for the unchanged PAH-001 dynamics?",
+  "non_claims": [
+    "No PAH mesh-pointwise convergence is assumed as an achieved result; it remains the missing dynamic input.",
+    "No common U_n, path law, non-explosion theorem, N2b/N2c/N4/N2d closure or R-512 finite-to-target identification.",
+    "No replacement of PAH-001 functional, rates, Gibbs state, external Markov time or j-before-anchored-n order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 verification/scripts/pah_omc020_mesh_uniform.py --check",
+  "result_id": "R-545",
+  "schema": "tect/pah-omc020-mesh-uniform-primary/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json": "4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_CONDITIONAL_MESH_TRANSFER",
+  "task_id": "T-065",
+  "test_fixture": {
+    "M_fg": "3",
+    "T": "1",
+    "delta": "1/10",
+    "mesh_error": "1/100",
+    "omega_inf": "1/20",
+    "transfer_bound": "9/25"
+  },
+  "verdict": "PASS"
+}

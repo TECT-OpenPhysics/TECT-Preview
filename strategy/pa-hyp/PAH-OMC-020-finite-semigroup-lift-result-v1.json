@@ -1,0 +1,124 @@
+{
+  "schema": "tect/pah-omc020-finite-semigroup-lift-result/1.0",
+  "result_id": "R-550",
+  "contract_id": "PAH-OMC-020-FINITE-SEMIGROUP-LIFT",
+  "date": "2026-09-08",
+  "task_id": "T-082",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-finite-semigroup-lift-contract-v1.json",
+  "certificate": "strategy/pa-hyp/PAH-OMC-020-finite-semigroup-lift-certificate.md",
+  "exploration_id": "EXP-001674",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "verification/lean/Tect/R493.lean": "c350035719b939c429a9e09d163015d34a471c3e6ea7c4678d4a88049060bc88"
+  },
+  "exact_scope": {
+    "finite_model": "One fixed finite successor pair (n,n+1), one positive R and one grade-blind cylinder at n>=N(f), using the unchanged PAH-001 finite backward generator and external Markov time.",
+    "conditional_theorem": "For finite function spaces, if the lift I is defined on the entire coarse space and L_(n+1) I=I L_n on that entire space, then every power intertwines and exp(t L_(n+1)) I=I exp(t L_n) for all real t. On a subspace, closure under every coarse generator iterate is additionally required.",
+    "registered_input": "R-493 supplies only the support-dependent pointwise identity for each local cylinder. Its N(f) changes with the observable, and it registers no invariant finite subspace, all-iterate identity or all-function operator identity.",
+    "scope_boundary": "The result is a finite algebraic bridge and a source-input audit. It does not take the j limit, the anchored-n limit or any physical limit."
+  },
+  "finding": "The finite power/exponential bridge is exact conditionally, but R-493 cannot yet be exponentiated: its first-order identity is local and support-dependent, while the required invariant/iterate closure is absent. The correct route status is HOLD_FOR_EVIDENCE rather than NEGATIVE_RESULT; no exact unchanged-PAH second-order defect was established.",
+  "formal_statement": "A first-order local generator identity A I f=I B f implies finite semigroup intertwining only after a common invariant subspace or the stronger all-function identity is hash-pinned. The current R-493 packet supplies neither.",
+  "assumptions": [
+    "The finite PAH configuration spaces and original midpoint-rate generators are bounded as declared by PAH-001.",
+    "The finite-dimensional matrix-exponential series or equivalent linear ODE uniqueness theorem is used only for the conditional algebraic bridge.",
+    "The R-493 parent hashes and its grade-blind support convention are unchanged."
+  ],
+  "missing_assumptions": [
+    "A source-authorized invariant finite common subspace containing every coarse generator iterate of the target cylinder, or an exact all-function operator identity.",
+    "A source-authorized transition-kernel/projective consistency packet if the bridge is to be used as a path-space statement.",
+    "The separate common-space/path-space, N2b/N2c/N4 and R-512 minimal-form identification inputs for anchored-n convergence."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "A derivative identity at t=0 already proves equality of the two semigroups.",
+      "disposition": "UPHELD AGAINST PROMOTION: equality of all generator iterates, supplied by invariant closure or an all-function identity, is required."
+    },
+    {
+      "objection": "The finite grade-blind cylinder is automatically the full finite function space.",
+      "disposition": "UPHELD AGAINST PROMOTION: R-493 explicitly uses an algebraic union of finite-support cylinders and excludes grade inspection, so no full-space identity is registered."
+    },
+    {
+      "objection": "The fixed N(f) separation remains valid after arbitrary generator iteration.",
+      "disposition": "UPHELD AGAINST PROMOTION: the current packet does not prove iteration closure or a uniform N for all B^k f."
+    },
+    {
+      "objection": "The conditional finite bridge closes PAH-OMC-020.",
+      "disposition": "REJECTED: anchored-n comparison, path-space identification and R-512 target selection remain open."
+    },
+    {
+      "objection": "The matrix regression fixtures are new PAH dynamics.",
+      "disposition": "REJECTED: they are exact algebraic regression inputs only and do not alter the PAH carrier, rates, state or time."
+    }
+  ],
+  "formal_refs": {
+    "results": [
+      "R-493",
+      "R-520",
+      "R-548",
+      "R-549",
+      "R-550"
+    ],
+    "negatives": [],
+    "events": [
+      "20260908-r-550-pah-omc-020-finite-semigroup-lift-2026-09"
+    ]
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/primary.json": "78ea363b3977fb984226e0f2ef2ddc0c0e5eee31e8f528fc6776634986f2e50c",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/independent.json": "ebda4f9f0a800840ed19821788dc9815076e8fb204b3ddb0da2b0110641c0a4c",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/hostile.json": "025f93e52c95c06b4d9409396d1c5dba3de5fa23f32e90ffff15ca5dfa2accad",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/integrated.json": "f9786165ceccf3ef08224c93bf4b69c2d24b36a52f754bb6dde5edb1ac59a2a3"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_finite_semigroup_lift.py": "18258197f14ab459983f2bdf9c546a95339ce87b9ebfe9bcd27167f2e254b250",
+    "codes/foundations/pah_omc020_finite_semigroup_lift_independent.py": "6de5e1cc2d5ce6b8b79c137aef25c089333444f4c8a708d1d6ddf4b2628815fc",
+    "codes/foundations/pah_omc020_finite_semigroup_lift_hostile.py": "278088be4bbd299967752a5e97386c5e1a0e9ce363987daf0efc21d2d0f7d783",
+    "verification/scripts/pah_omc020_finite_semigroup_lift_verify.py": "baf9983f538563d1c380ee92daaa56126fb0c1a18b1702ea61c4705f24a05eaf",
+    "verification/lean/Tect/PahOmc020FiniteSemigroup.lean": "77d0ff2180f9c6a6543dc3307cba35eca05e0ac175aaf854c8e63c750d0c0c0c",
+    "verification/lean/registry.json": "42b27ed32e80b15140a4c4315fe9cf5c822777ed42932041c2121b920da018e4"
+  },
+  "verification": {
+    "primary": "PASS 11/11",
+    "independent": "PASS 10/10",
+    "hostile": "PASS 7/7",
+    "integrated": "PASS 18/18",
+    "lean": "PahOmc020FiniteSemigroup.lean compiles five registered declarations under Lean 4.32.1"
+  },
+  "closed_scoped_gate": "Conditional finite power/exponential bridge for a source-authorized invariant or all-function operator intertwining.",
+  "remaining_gates": [
+    "Source-authorized invariant/iterate closure for the R-493 grade-blind cylinder",
+    "Source-authorized projective transition-kernel or common-space/path-space comparison",
+    "N2b/N2c/N4 boundary and target-identification inputs for anchored-n convergence"
+  ],
+  "next_single_question": "Can a source-authorized packet prove that the R-493 grade-blind cylinder is invariant under every finite coarse generator iterate, or provide the stronger all-function finite operator intertwining needed to exponentiate the lift?",
+  "revisit_condition": "Reopen when that packet is hash-pinned or when an exact unchanged-PAH finite second-order semigroup defect is found; do not repeat physical-empty, BCC or Reading-H calculations.",
+  "non_claims": [
+    "No PAH-OMC-020 ordered j-before-anchored-n semigroup convergence is proved.",
+    "No common infinite-volume process, path law, closed operator identification or R-512 finite-to-target theorem is constructed.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time only.",
+    "Matrix fixtures are algebraic checks, not a new PAH model."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-finite-semigroup-lift-certificate.md"
+}

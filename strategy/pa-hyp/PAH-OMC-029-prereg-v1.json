@@ -1,0 +1,65 @@
+{
+  "schema": "tect/pah-omc029-prereg/1.0",
+  "contract_id": "PAH-OMC-029",
+  "date": "2026-09-09",
+  "task_id": "T-096",
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "status_at_registration": "PREREGISTERED_BEFORE_NEW_PROOF_CHECKS",
+  "question": "On exactly the R-510 H and R-511 cylinder domain D, is every symmetric strongly continuous Markov semigroup whose generator extends A equal to the R-512/R-567 minimal semigroup?",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-016-resolved-radial-prereg-v1.json": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+    "strategy/pa-hyp/PAH-OMC-017-spectral-proof.md": "2c77894c0846dd0664dea08c192fceb1850bb63812429b710604a5d30a4aa419",
+    "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json": "92a4fa92cb8c0384812220acd2e9929539a10a114fe348ea3f8aa7676f98aa05",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-028-result-v1.json": "68ab16a43e15f6e1f987d393193a28e073485783a97c2282e1fd08aa2453c00e"
+  },
+  "exact_scope": {
+    "H": "Exactly the real gauge-invariant L2 space of the R-510 anchored probability law; the anchor-preserving automorphism group is identity.",
+    "D": "Exactly the R-511 algebraic union of bounded gauge-invariant globally amplitude-l1-Lipschitz finite-prefix cylinders, including constants.",
+    "A": "The R-511 derived PH/LK/AP sum c_r Delta_r, c_r=m_r exp(-Delta F/2); retain coincident K=2 directed PH/LK labels separately and exact AP partial domains. Amplitudes are fixed by this operator; no radial rate acceleration.",
+    "parameters": "OMC-016 fixed_parameters: K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0, all other displayed couplings one.",
+    "geometry": "The specified anchored two-row half-strip. Each finite-prefix rate uses the original eventual triangular incidence. No other width, spatial dimension, exhaustion, physical volume or continuum is asserted.",
+    "state_and_order": "R-510 labelled all-Q product-dr/counting local law obtained first j->infinity at fixed n, then anchored n. No new state limit is taken and no original finite-semigroup convergence is asserted.",
+    "time": "The existing external stochastic parameter t>=0, not quantum, proper or Lorentzian time.",
+    "target_extension": "The R-512 minimal closed form and its spectral semigroup, with the full-domain Markov/conservation repair in R-567."
+  },
+  "extension_class": {
+    "quantifier": "ALL strongly continuous contraction semigroups S_t on the SAME H, symmetric in its scalar product, positive and L-infinity contractive, with closed generator G satisfying D subset Dom(G) and Gf=Af for every f in D.",
+    "constants": "Conservation is to follow from 1 in D and A1=0; it is not obtained by conditioning a killed extension.",
+    "no_hidden_restriction": "Do not assume Dom(G) is the minimal operator domain, or that its form domain equals the R-512 minimal domain. Do not assume a graph core, essential self-adjointness, a path-space realization or a prescribed boundary extension.",
+    "equality_target": "For every f in D and every finite T, sup_(0<=t<=T) ||S_t f-T_min(t)f||_H=0, and hence equality on all H by density and contraction.",
+    "negative_target": "Two members of the declared class with a common f in H and t>0 on which their H values differ; a different model or non-Markov self-adjoint extension is not a counterexample."
+  },
+  "bounded_attempt": {
+    "route": "Try radial invariant localization, state-derived tempered rate bounds, and a finite-root backward-test boundary estimate that compares every declared extension. This is a proof route, not an extra hypothesis or accepted theorem.",
+    "proof_localization": "Only increasing amplitude-measurable events of full limiting probability may be used, without conditioning or replacing the state. Finite-root sums are auxiliary tests formed from the exact A summands, not substitute PAH Hamiltonians or finite-volume convergence evidence.",
+    "necessary_bridges": [
+      "Every extension fixes the full radial L2 subspace and commutes with bounded radial indicator multipliers.",
+      "The R-510 exact transfer envelope supplies a column-uniform amplitude tail bound; rates and dependence counts are derived from the source functional and incidence.",
+      "Localized finite-root backward tests belong to the domain of EVERY candidate G by the original D and generator closedness, not an assumed new core.",
+      "The residual boundary generator tends to zero uniformly on each finite time interval after growing support; remove localization in the original H."
+    ],
+    "budget": "One bounded analytic route and its independent/hostile verification package, then REVIEW_REQUIRED. No unchanged owner scan, old finite-table replay or replacement model.",
+    "hold": "If a bridge cannot be proved, record its exact missing statement, scope and changed-evidence reentry condition. HOLD_FOR_EVIDENCE is not a uniqueness theorem."
+  },
+  "acceptance": [
+    "Exact proof for the full declared extension class, or an exact pair of distinct extensions, with all inherited assumptions named.",
+    "Separate primary, non-importing independent and hostile evidence; executable checks do not replace analytic domain and limit arguments.",
+    "Lean where feasible, with an explicit list of formalized and unformalized propositions; no assumed uniqueness in a formalization.",
+    "One exploration decision and result record with source hashes, reproduction commands, falsifiers, non-claims and one next question; synthesis only at a logical checkpoint."
+  ],
+  "non_claims": [
+    "No proof of original finite-to-target ordered convergence or repair of PAH-OMC-020 owner/comparison gaps.",
+    "No changed model, functional, rate, state, projection, time scale, root multiplicity or limit order; no Q3LOCK import.",
+    "No physical Pre-A, Sector-A closure, spacetime, QFT, gravity, continuum, causal cone, Yang-Mills, mass gap or TOE conclusion.",
+    "No mainline or claim-tier promotion from an auxiliary extension theorem alone."
+  ]
+}

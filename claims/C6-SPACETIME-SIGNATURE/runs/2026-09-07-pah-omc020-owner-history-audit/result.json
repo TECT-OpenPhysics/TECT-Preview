@@ -1,0 +1,115 @@
+{
+  "bounded_search_roots": [
+    "strategy/pa-hyp",
+    "verification/scripts",
+    "verification/lean"
+  ],
+  "checks": [
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+        "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+        "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+        "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+        "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b"
+      },
+      "name": "all frozen source pins",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-OMC-020",
+      "expected": "PAH-OMC-020",
+      "name": "preregistration identity",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "bounded source paths are present",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": "list",
+      "name": "history scan completed",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "exit": 0,
+        "output": "unreachable tree fd00b9b4abfc19a2ad78b365695dd85cc860789a\nunreachable blob 4c0260abfe49b36b670351847c685035b5f87291\nunreachable tree 9b02b3b13d2895ba666b80ccd7a9c83a5c46403d\nunreachable blob 688805d199d9b8bb43e5be5cbfa35544faa1c76d\nunreachable blob 2689d2f6bf66c8881a718d7f022a47d348343671\nunreachable blob 88097108fcec4a9c58b8597ddc81db42527f3b64\nunreachable tree b3894100ddf7dd1a2d21fc6fa1b50ae1da219fb6\nunreachable tree d30b08ecb227e6c004d31aa6c26ecaa985a23f28\nunreachable tree 708fb8b4dcf3a9a048e027d8f51a4c142638a453\nunreachable blob 4b107c3a38cec22e0bd3d60accfbb2ab70ec72ef\nunreachable blob f193fde49a73f02f0ff1768eef0dfd2f2fc56233\nunreachable tree c5944b2ac271333c987276e339b35306904debce\nunreachable tree f094649129d54793a03a5f83b11408366861b007\nunreachable blob a115bbd23061da47481677aabea22b6b03ef17ae\nunreachable blob a79648e553c72e6790667c637ecbce0b2543b0dd\nunreachable tree 471722c23da8dca6a02d24be947e5a91d567ae75\nunreachable blob ba182797d740bfe4c6e2777f3462cb4b7dc50962\nunreachable blob 68990bebb3472a6aca4d417d95487d914f52aba2\nunreachable blob 4a1b01ee01bc073ad1ceee46955e63da6042149c\nunreachable blob e59b7bef414915fb2366f4ab194536ff5f0a4277\nunreachable blob 011cad1e3aa1f683fa11c4330dba3f644893f141\nunreachable blob 089c493873ab137f87e3f40f306c0bbedb86af99\nunreachable blob 329eda3f09e4db3b840433b608f0e26eac06443d\nunreachable blob 1b1fbbd18ba9739741f1acfa5ef2b72a1df85b28\nunreachable blob 6b1f6483cecce2d8890b8c8a3c266d348a3d892b\nunreachable blob bf9f9b3e3274601cb2e68402b48a94fa8851a2ec\nunreachable tree 27a0798f9a7c278d5bd8aa2838194ded4dd28299\nunreachable tree 9b21c256e2dac0d109c32fd6e2e491ea1d4533f0\nunreachable tree bb22cba8812186d59bb4af979a9fe95ac59a686c\nunreachable blob 4126876ac08def5f87a2f9ffd528720a511306b3\nunreachable blob 3e28a26fa4161db53de7dc14319f4fd90e433649\nunreachable blob ec28fdde3067d25750e46ee3d1c68b35c0d11a28\nunreachable blob c82b38415807a94b057028860946a913321ff278\nunreachable tree a22e031bb919bb85b5647caddde511840b9b903f\nunreachable tree 4fb043f23e628d90d46efa7f13364a608fbe68ef\nunreachable blob 6bb02b5ee114466c87793345a577227de1d787cc\nunreachable blob 84318e46aeca7dd0d8dbe5f7c3fff9115352c057\nunreachable tree b7310f3dcb1d135d5f265dcffc01301f189f4815\nunreachable tree 7133ca34be4ba0bbf552beebe8a7869f33243725\nunreachable blob bf34ebd666e6881c2050e0838238ce11ae7e1c01\nunreachable blob 0a3506c38ab79d300190bb6d5d6c62e4b1faa633\nunreachable tree 33b5128fa429ab791ca86432b596a2828bd402af\nunreachable blob bc359c47df1341d6030ba2f593bd80f9c3e66855\nunreachable blob 2bb83220eb74c017bedcb5399f0d0e30afe179cc\nunreachable tree a4b81817f8f61e432dace208c5b0c6a9e58a8cc3\nunreachable blob b5b88599ca59c1fffa6b8e75029404f410b30c9e\nunreachable tree bbb8fa374a075dd13f14730eb39e89ed1756043b\nunreachable blob 6d39cd521866a310e62443c29b2e834ad99ff376\nunreachable blob 2c3a36b1a2967d8ae3f68f301e75150da9fa3007\nunreachable tree dd3bc5b19d7c9eecdf980cca08ad3b5d4afd0461\nunreachable tree a33c17fb6b14ee816ab856bb347a190e82833bc3\nunreachable blob e4bc442d37b43200fa26f7bdb510604b27adaff8\nunreachable tree e3bd8b6377bc211d177529ed736b6798c7339deb\nunreachable blob 993f4c360b0f2260b585af6589354408f451dec7\nunreachable blob e43f3d92751795dcd93ece2f272577510efd7b86\nunreachable tree b3c12d8254af33ffe91b9b26e8be1d130b93b071\nunreachable blob 77421f7551d4cf0d4ae1ba755d0d6d0c3e712e5e\nunreachable blob c0c3aa38636f9eb6e20fda4c0565ae82764ddbf2\nunreachable blob b5c409ec618766dc2d94165adaa2f7997519898c\nunreachable blob fe4565d6ec9e1025284cbd501ce47de67ad0c11f\nunreachable blob 21c6e080dd7813556d226dd621b9ba47b2d40066\nunreachable blob 44464a6bbba46058906a954ef2ecc297ff3bb212\nunreachable tree 89469d6db6d2b10f9a00168af6ec6dad97a3c9b5\nunreachable blob 22471945a30cabddde2334a279c7d9576e0ff46b\nunreachable blob d848815986995cb67b13586770aaaf0544dbbb0f\nunreachable blob 10495ac34bb21ac5ddf2efa661b11076557088df\nunreachable blob 744d3bc64b6860436fdfe74df232714172c81567\nunreachable blob b5cef9293b40f83f681f15b5bfa3d171a16efc6c\nunreachable tree 674f99ff97766f91fc8f65b6348a86f50210aa0a\nunreachable blob 0f51e95da92c10aa12ca4ea91ee54bd55e36a255\nunreachable blob 66552f016d542f48d8b8e067337d1688822aa049\nunreachable blob b6551f91ef7089dcef93ca00aa163d23e8853222\nunreachable blob 2dd85704bc6212b2b2b8022aa1f6527cacb8b64c\nunreachable blob f359f219250538ad093f3d69d8dc9dac54849945\nunreachable tree 4fdb3471912d604f89bd13d3fb427737e7cd68bf\nunreachable blob b25d48328fd1544a4c8bdf7775bd9ca6cbdabbca\nunreachable blob 6d5ec3fbb9ee8c9378769b87041e1e534d89a137\nunreachable blob 6ae24d2fd3d1e391ffa0c85df73a6ef69fef68e9\nunreachable blob 79e4b108a17c6881a7730135c92d1e304acfa160\nunreachable tree 24e9d0e564d48e223ef07925527925a2e7a8529a\nunreachable tree 26ec146c6b571cd38d49fa768cd43ce8617948c6\nunreachable tree b46d8b6951f990068719306ce92e9b05fff69aa0\nunreachable blob d4ed71187164fb8b469524783ac737ac653cd868\nunreachable blob 31efde4d34b2c16052365abf68ffd9ff6bc82779\nunreachable blob a370dcabf7fe5cf2a14812e337f352d6aeb7e6f5\nunreachable tree 2b72659c0f3340316bd93cf0f13372df7cd36fa5\nunreachable blob f275a7fd680e9a3be9409e60c60c7e772f016801\nunreachable blob 3df6f4b50c1ff034f854fce2b57dd2e7d184e7c2\nunreachable blob 2cf84a6f464179a41307202c8bc73cdde1c7cefc\nunreachable blob 437c9bfae94096280bbfb0ddab4964475990b9c3\nunreachable blob b47c790ba41853b80182772eb3f545d29e896b4c\nunreachable blob e5fec54552e4e75b2701bfc70d535b6c30a33891"
+      },
+      "expected": {
+        "exit": 0,
+        "output": ""
+      },
+      "name": "recoverable-object audit completed",
+      "status": "PASS"
+    }
+  ],
+  "code_sha256": "9218bda6b899cf9e8eb394c78d62790277684ad57e6b998e00a3bd7c12936678",
+  "filesystem_token_hits": [
+    "strategy/pa-hyp/PAH-OMC-003-v1.json",
+    "strategy/pa-hyp/PAH-OMC-004-generator-replay-exploration.json",
+    "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+    "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+    "strategy/pa-hyp/PAH-OMC-014-boundary-error-lean-manifest.json",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-certificate.md",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-exploration.json",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json",
+    "strategy/pa-hyp/PAH-OMC-017-cauchy-prereg-v1.json",
+    "strategy/pa-hyp/PAH-OMC-017-publication-repair-v1.patch",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json",
+    "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md",
+    "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-intake-exploration.json",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+    "verification/scripts/a6_classii_branch_relative_compensator.py",
+    "verification/scripts/a6_classii_positive_mass_tube_envelope.py",
+    "verification/scripts/pah_omc014_boundary_error_lean_verify.py",
+    "verification/scripts/pah_omc020_boundary_kernel_obstruction.py",
+    "verification/scripts/pah_omc020_n2a_owner_packet_contract_check.py",
+    "verification/scripts/pah_omc020_n2b_common_space_audit.py",
+    "verification/scripts/pah_omc020_n_mosco_contract.py",
+    "verification/scripts/pah_omc020_owner_history_audit.py",
+    "verification/scripts/q3lock_manuscript_dlr_audit.py"
+  ],
+  "finding": "No standalone source-authorized non-coordinate U_n packet with an explicit measurable map, cylinder recovery, and bounded-energy estimate is present in the bounded current or reachable-history inventory. The corrected commit-graph-disabled fsck reports no unreachable objects.",
+  "historical_token_paths": [],
+  "n2a_verdict": "HOLD_FOR_EVIDENCE",
+  "next_question": "Can an owner-authorized non-coordinate U_n be supplied with explicit measure compatibility, local-cylinder recovery, bounded form energy, and independent/hostile/Lean verification without changing PAH-001?",
+  "non_claims": [
+    "No PAH semigroup convergence, Mosco liminf, N4 boundary escape, or R-512 minimal-form selection.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills, or TOE conclusion."
+  ],
+  "recoverable_object_audit": {
+    "command": "git -c core.commitGraph=false fsck --unreachable --no-reflogs --no-progress --no-full",
+    "exit": 0,
+    "output": "unreachable tree fd00b9b4abfc19a2ad78b365695dd85cc860789a\nunreachable blob 4c0260abfe49b36b670351847c685035b5f87291\nunreachable tree 9b02b3b13d2895ba666b80ccd7a9c83a5c46403d\nunreachable blob 688805d199d9b8bb43e5be5cbfa35544faa1c76d\nunreachable blob 2689d2f6bf66c8881a718d7f022a47d348343671\nunreachable blob 88097108fcec4a9c58b8597ddc81db42527f3b64\nunreachable tree b3894100ddf7dd1a2d21fc6fa1b50ae1da219fb6\nunreachable tree d30b08ecb227e6c004d31aa6c26ecaa985a23f28\nunreachable tree 708fb8b4dcf3a9a048e027d8f51a4c142638a453\nunreachable blob 4b107c3a38cec22e0bd3d60accfbb2ab70ec72ef\nunreachable blob f193fde49a73f02f0ff1768eef0dfd2f2fc56233\nunreachable tree c5944b2ac271333c987276e339b35306904debce\nunreachable tree f094649129d54793a03a5f83b11408366861b007\nunreachable blob a115bbd23061da47481677aabea22b6b03ef17ae\nunreachable blob a79648e553c72e6790667c637ecbce0b2543b0dd\nunreachable tree 471722c23da8dca6a02d24be947e5a91d567ae75\nunreachable blob ba182797d740bfe4c6e2777f3462cb4b7dc50962\nunreachable blob 68990bebb3472a6aca4d417d95487d914f52aba2\nunreachable blob 4a1b01ee01bc073ad1ceee46955e63da6042149c\nunreachable blob e59b7bef414915fb2366f4ab194536ff5f0a4277\nunreachable blob 011cad1e3aa1f683fa11c4330dba3f644893f141\nunreachable blob 089c493873ab137f87e3f40f306c0bbedb86af99\nunreachable blob 329eda3f09e4db3b840433b608f0e26eac06443d\nunreachable blob 1b1fbbd18ba9739741f1acfa5ef2b72a1df85b28\nunreachable blob 6b1f6483cecce2d8890b8c8a3c266d348a3d892b\nunreachable blob bf9f9b3e3274601cb2e68402b48a94fa8851a2ec\nunreachable tree 27a0798f9a7c278d5bd8aa2838194ded4dd28299\nunreachable tree 9b21c256e2dac0d109c32fd6e2e491ea1d4533f0\nunreachable tree bb22cba8812186d59bb4af979a9fe95ac59a686c\nunreachable blob 4126876ac08def5f87a2f9ffd528720a511306b3\nunreachable blob 3e28a26fa4161db53de7dc14319f4fd90e433649\nunreachable blob ec28fdde3067d25750e46ee3d1c68b35c0d11a28\nunreachable blob c82b38415807a94b057028860946a913321ff278\nunreachable tree a22e031bb919bb85b5647caddde511840b9b903f\nunreachable tree 4fb043f23e628d90d46efa7f13364a608fbe68ef\nunreachable blob 6bb02b5ee114466c87793345a577227de1d787cc\nunreachable blob 84318e46aeca7dd0d8dbe5f7c3fff9115352c057\nunreachable tree b7310f3dcb1d135d5f265dcffc01301f189f4815\nunreachable tree 7133ca34be4ba0bbf552beebe8a7869f33243725\nunreachable blob bf34ebd666e6881c2050e0838238ce11ae7e1c01\nunreachable blob 0a3506c38ab79d300190bb6d5d6c62e4b1faa633\nunreachable tree 33b5128fa429ab791ca86432b596a2828bd402af\nunreachable blob bc359c47df1341d6030ba2f593bd80f9c3e66855\nunreachable blob 2bb83220eb74c017bedcb5399f0d0e30afe179cc\nunreachable tree a4b81817f8f61e432dace208c5b0c6a9e58a8cc3\nunreachable blob b5b88599ca59c1fffa6b8e75029404f410b30c9e\nunreachable tree bbb8fa374a075dd13f14730eb39e89ed1756043b\nunreachable blob 6d39cd521866a310e62443c29b2e834ad99ff376\nunreachable blob 2c3a36b1a2967d8ae3f68f301e75150da9fa3007\nunreachable tree dd3bc5b19d7c9eecdf980cca08ad3b5d4afd0461\nunreachable tree a33c17fb6b14ee816ab856bb347a190e82833bc3\nunreachable blob e4bc442d37b43200fa26f7bdb510604b27adaff8\nunreachable tree e3bd8b6377bc211d177529ed736b6798c7339deb\nunreachable blob 993f4c360b0f2260b585af6589354408f451dec7\nunreachable blob e43f3d92751795dcd93ece2f272577510efd7b86\nunreachable tree b3c12d8254af33ffe91b9b26e8be1d130b93b071\nunreachable blob 77421f7551d4cf0d4ae1ba755d0d6d0c3e712e5e\nunreachable blob c0c3aa38636f9eb6e20fda4c0565ae82764ddbf2\nunreachable blob b5c409ec618766dc2d94165adaa2f7997519898c\nunreachable blob fe4565d6ec9e1025284cbd501ce47de67ad0c11f\nunreachable blob 21c6e080dd7813556d226dd621b9ba47b2d40066\nunreachable blob 44464a6bbba46058906a954ef2ecc297ff3bb212\nunreachable tree 89469d6db6d2b10f9a00168af6ec6dad97a3c9b5\nunreachable blob 22471945a30cabddde2334a279c7d9576e0ff46b\nunreachable blob d848815986995cb67b13586770aaaf0544dbbb0f\nunreachable blob 10495ac34bb21ac5ddf2efa661b11076557088df\nunreachable blob 744d3bc64b6860436fdfe74df232714172c81567\nunreachable blob b5cef9293b40f83f681f15b5bfa3d171a16efc6c\nunreachable tree 674f99ff97766f91fc8f65b6348a86f50210aa0a\nunreachable blob 0f51e95da92c10aa12ca4ea91ee54bd55e36a255\nunreachable blob 66552f016d542f48d8b8e067337d1688822aa049\nunreachable blob b6551f91ef7089dcef93ca00aa163d23e8853222\nunreachable blob 2dd85704bc6212b2b2b8022aa1f6527cacb8b64c\nunreachable blob f359f219250538ad093f3d69d8dc9dac54849945\nunreachable tree 4fdb3471912d604f89bd13d3fb427737e7cd68bf\nunreachable blob b25d48328fd1544a4c8bdf7775bd9ca6cbdabbca\nunreachable blob 6d5ec3fbb9ee8c9378769b87041e1e534d89a137\nunreachable blob 6ae24d2fd3d1e391ffa0c85df73a6ef69fef68e9\nunreachable blob 79e4b108a17c6881a7730135c92d1e304acfa160\nunreachable tree 24e9d0e564d48e223ef07925527925a2e7a8529a\nunreachable tree 26ec146c6b571cd38d49fa768cd43ce8617948c6\nunreachable tree b46d8b6951f990068719306ce92e9b05fff69aa0\nunreachable blob d4ed71187164fb8b469524783ac737ac653cd868\nunreachable blob 31efde4d34b2c16052365abf68ffd9ff6bc82779\nunreachable blob a370dcabf7fe5cf2a14812e337f352d6aeb7e6f5\nunreachable tree 2b72659c0f3340316bd93cf0f13372df7cd36fa5\nunreachable blob f275a7fd680e9a3be9409e60c60c7e772f016801\nunreachable blob 3df6f4b50c1ff034f854fce2b57dd2e7d184e7c2\nunreachable blob 2cf84a6f464179a41307202c8bc73cdde1c7cefc\nunreachable blob 437c9bfae94096280bbfb0ddab4964475990b9c3\nunreachable blob b47c790ba41853b80182772eb3f545d29e896b4c\nunreachable blob e5fec54552e4e75b2701bfc70d535b6c30a33891"
+  },
+  "schema": "tect/pah-omc020-owner-history-audit/1.0",
+  "scope_boundary": "The inventory does not prove that every abstract realization is impossible, and it does not inspect external or future owner input. Existing finite bridge, boundary, Mosco-contract, and fibre results remain auxiliary only.",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b"
+  },
+  "status": "PASS_SCOPED_PROVENANCE_AUDIT"
+}

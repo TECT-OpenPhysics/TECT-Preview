@@ -1,0 +1,62 @@
+{
+  "schema": "tect/pah-omc020-prereg/1.0",
+  "contract_id": "PAH-OMC-020",
+  "date": "2026-09-07",
+  "status_at_registration": "PREREGISTERED_BEFORE_TEMPORAL_CHECKS",
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "task_id": "T-054",
+  "lane": "tect-proof",
+  "question": "Do the original finite stationary semigroups converge, first in radial cutoff j at fixed n and then in the specified anchored volume n, to the R-512 minimal-form semigroup in local two-point correlations uniformly on every compact nonnegative time interval?",
+  "sources": {
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json": "92a4fa92cb8c0384812220acd2e9929539a10a114fe348ea3f8aa7676f98aa05",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb"
+  },
+  "scope": {
+    "model": "Exact PAH-001 functional and original directed PH/LK/AP/TR rates and partial domains through the pinned OMC-018 source chain. No Hamiltonian, generator, state or carrier change.",
+    "parameters": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0, all other displayed OMC-016 couplings one.",
+    "geometry": "Original OMC-004 two-row relational G_n, n>=2, 2(n+2) vertices; terminal unsplit square and label-only anchors retained. No physical dimension, length or volume assignment.",
+    "state": "Full labelled all-Q counting Gibbs mu_nj with w_Q=Z_Q/Z; fixed-n radial limit nu_n and specified anchored R-510 nu_infty. No quotient, prior, Jacobian or conditional state selection.",
+    "regulator_order": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+    "time": "Original external unaccelerated Markov time t>=0 with finite stationary initial law and no terminal conditioning. No infinite-time, quantum-real-time, proper-time or Lorentzian interpretation."
+  },
+  "objects_and_comparison": {
+    "D": "Exactly R-511/R-512 real bounded gauge-invariant globally amplitude-l1-Lipschitz finite-prefix cylinder algebra; constants included. No graph-core assumption.",
+    "S_nj": "Direct same-observable evaluation f(r,z) at r=h_j ell on G_n, retaining every original read label and old-coordinate formula. This linear map is defined only on cylinder representatives in D and is not claimed an isometry or a bounded map on completed H.",
+    "n_comparison": "Neutral retention of the same prefix Lambda_m and root labels for all n>=N(f,g)=max(2,m(f)+2,m(g)+2). No exterior conditional averaging or replacement of original boundary interactions.",
+    "finite_semigroup": "P_nj(t)=exp(t L_nj), where L_nj is the SAME finite original reversible generator. No truncation of its root set or fitted rates.",
+    "target_semigroup": "Let K_min be the nonnegative self-adjoint operator represented by the exact R-512 minimal closed nonnegative form Ebar on H. T_min(t)=exp(-t K_min). Derive its Markov/conservative properties when used; do not assume equality with another extension or maximal jump form.",
+    "finite_correlation": "C_nj(f,g;t)=<S_nj f,P_nj(t)S_nj g>_L2(mu_nj).",
+    "target_correlation": "C_min(f,g;t)=<f,T_min(t)g>_H.",
+    "target_quantifiers": "For every f,g in D and every finite T>=0: for each n>=N(f,g), a continuous C_n(f,g;.) exists with sup_{0<=t<=T}|C_nj-C_n|->0 as j->infinity; then sup_{0<=t<=T}|C_n-C_min|->0 as n->infinity. Both passages and identification with the minimal-form target must be proved.",
+    "topology_boundary": "Local stationary two-point correlation convergence, compact-time uniform. Not assumed strong operator convergence between different Hilbert spaces, multi-time path-law convergence, a Feller process, a common real-time automorphism or a physical limit."
+  },
+  "proof_obligations": [
+    "Revalidate source pins, the exact finite semigroup and state, and the spectral representation of the R-512 minimal closed form without importing a physical time interpretation.",
+    "Establish a support-dependent but j,n-uniform compact-time equicontinuity estimate for local correlations using original weighted energy bounds, not a divergent pointwise rate envelope.",
+    "Prove fixed-n j convergence with the declared sampling maps, including endpoint domains, unbounded label rates and the vanishing original radial part; a local-generator residual alone is insufficient.",
+    "Prove the anchored n temporal limit and identify the selected extension as the MINIMAL R-512 form. Supply a generalized Mosco liminf/recovery argument, a genuine operator-core/resolvent theorem, or an independently complete equivalent proof.",
+    "Separate a proof-route missing premise from an exact counterexample to the PAH target. In particular, a possible minimal/maximal-domain gap is not automatically a PAH no-go.",
+    "Reproduce exact primary, non-importing independent and hostile checks, with meaningful Lean consequences where feasible; distinguish inherited analytic inputs and internal verification from external review."
+  ],
+  "prohibited_shortcuts": [
+    "No rate/functional/mobility/finite-part/state/time change, counterterm, time acceleration, conditional generator averaging, fixed-R_max bypass or new finite carrier.",
+    "No inference of semigroup selection from closability, form-core density, pointwise generator consistency or static Gibbs convergence alone.",
+    "No assumption that a form core is an operator graph core, or that the minimal closed form equals the maximal jump form.",
+    "No Q3LOCK or TECT-YM result imported as a PAH premise; no phasewise or source-dependent direct-sum rescue."
+  ],
+  "outcomes": {
+    "PASS": "Both exact ordered temporal passages and minimal-form identification hold with the specified quantifiers and independent checks; remains auxiliary_support unless the separately governed active mainline gate actually changes.",
+    "NEGATIVE_RESULT": "An explicit exact PAH local observable/time or family violates a target passage or minimum-extension identification, with scope separated from weaker convergence.",
+    "HOLD_FOR_EVIDENCE": "A specified core, liminf, uniform estimate or selection premise remains unproved after the bounded attempt; preserve reusable boundary and next evidence contract, not repeated finite tables."
+  },
+  "budget_and_review": "One distinct temporal selection/convergence attempt under DCTRL-000014, now explicitly activated by the user. Intermediate proof work may span turns. Review after the attempt or a source/domain defect; do not count an intermediate lemma as completion or spend the next goal budget automatically.",
+  "publication": "Maintain intermediate evidence in contract, work certificate, exploration and run JSON. One synthesis PDF at the logical goal checkpoint only. The previous f0662623 checkpoint remains immutable while integration is pending; no second pending lane submission or shared-root writes.",
+  "non_claims": [
+    "No change to T-054 active gate, C6 T1 or PAH-OMC-014 merely from this auxiliary temporal result.",
+    "No full kernel classification, unique physical vacuum, Reading-H comparison, spectral gap, mixing or ergodicity claim.",
+    "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap or TOE conclusion."
+  ]
+}

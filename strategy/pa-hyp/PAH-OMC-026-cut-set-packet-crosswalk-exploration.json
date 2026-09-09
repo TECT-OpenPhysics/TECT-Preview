@@ -1,0 +1,83 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001697",
+  "recorded_at": "2026-09-08T14:25:00Z",
+  "reviewed_on": "2026-09-08",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-093",
+  "title": "PAH-OMC-026 cut-set to owner-packet sufficiency crosswalk",
+  "question": "Does a complete R-557 ten-field source-owner packet, together with the registered full-domain J/D estimates, instantiate every R-565 cut while preserving the exact PAH-001 model and j-before-anchored-n order?",
+  "method": [
+    "Hash-pin PAH-001, R-557, R-565 and the PAH-OMC-026 contract.",
+    "Partition the ten R-557 fields into S0 source semantics, S1 complete comparison, S2 temporal control and cross-cut verification.",
+    "Prove that a complete packet implies the coarse cuts, while a coarse-cut-only witness without verification is not a complete packet.",
+    "Combine the unchanged nonnegative J+D error budget with fixed-n J-zero and anchored-n D-zero in the nested ordered-error theorem.",
+    "Run primary, independent, hostile, integrated and Lean checks without adding a carrier, changing PAH-001 or importing a physical interpretation."
+  ],
+  "verdict": "advanced",
+  "finding": "The R-557 ten-field packet is a strict refinement of the R-565 coarse cut-set: authority/root semantics fill S0, common realization and N1/N2b/N2c-N4/N2d fill S1, full-domain J and anchored D fill S2, and verification is cross-cut. A complete packet plus the model-specific J/D estimates implies the registered nested ordered-error conclusion conditionally; the coarse cuts alone do not admit a packet. No source-authorized packet or PAH-specific J/D estimates are present, so R-566 and PAH-OMC-020 remain HOLD_FOR_EVIDENCE.",
+  "decision_reason": "This is a reusable logical crosswalk that closes the ambiguity between the minimal route frontier and the field-level owner contract. It advances the re-entry specification without repeating owner searches, finite carriers, radial diagnostics or abstract persistence oracles.",
+  "boundary": "PAH-001 functional, rates, state, carrier, external stochastic Markov time, R-512 target and j-before-anchored-n order remain unchanged. The crosswalk is conditional and does not construct any missing source object or analytic estimate.",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-contract-v1.json#cut_set",
+    "strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-result-v1.json#finding",
+    "strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-certificate.md#Crosswalk",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc026-cut-set-packet-crosswalk/integrated.json#checks"
+  ],
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-557",
+      "R-565",
+      "R-566"
+    ],
+    "negatives": [],
+    "events": [
+      "20260908-pah-omc-026-cut-set-packet-crosswalk-2026-09-08"
+    ]
+  },
+  "related": [
+    {
+      "id": "EXP-001696",
+      "relation": "continues"
+    }
+  ],
+  "verification_summary": "Primary 21/21, independent 15/15, hostile 8/8, integrated 17/17 and Lean PASS under Lean 4.32.1 with fourteen finite declarations.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc026_cut_set_packet_crosswalk.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc026_cut_set_packet_crosswalk_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc026_cut_set_packet_crosswalk_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc026_cut_set_packet_crosswalk_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc026CutSetPacketCrosswalk.lean"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-contract-v1.json": "49ed29ea3590b6e7849bc6fc992cd7a769da3c98ce89a04c50d41575fb9ca3db",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-contract-v1.json": "2171ae18d545ff26bfad9d5cb475d75c31280679fa41609a44ad143d9d7a9dd4",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-result-v1.json": "ed6707cebdeb758ab9218b8a61ddb7ad4fd11548df84d0ae6fa9706955130cfb",
+    "strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-contract-v1.json": "cf6f9eee617765b8e0b7ca231741a8c029937b0f19f4e35a3a098806b44a4339",
+    "strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-result-v1.json": "d6394f9e4bca3ae477821063d8b2ebf29fc09c362e080acd7f48ec4700d98e7e",
+    "strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-certificate.md": "cb7a42f01434533585d01fe7510b1f33d5ffe51b686a11a039fce40df22ae502",
+    "verification/scripts/pah_omc026_cut_set_packet_crosswalk.py": "5abfe9b19048038fd3eb1977178c19277b893fda106de5c4f853663d856a4c05",
+    "codes/foundations/pah_omc026_cut_set_packet_crosswalk_independent.py": "df554c1e7903ee8a1f1ac24104d52ed8c261f453e0df94cb6f3fbb50f772fe33",
+    "codes/foundations/pah_omc026_cut_set_packet_crosswalk_hostile.py": "48f4a7c79049fc9b99c8a8ce5a921d1e1f69522a893bb4a12864bc7254cc1027",
+    "verification/scripts/pah_omc026_cut_set_packet_crosswalk_verify.py": "19ecf8bbcb3c45dfa8a1b7fe5c0155e204d507395910482102564173872fff66",
+    "verification/lean/Tect/PahOmc026CutSetPacketCrosswalk.lean": "5f3e0ab0cd889ed9b0695a7a11f8ec7f5b33dff8d410826238ec0302c9bdb100",
+    "verification/lean/registry.json": "4f6027f2c5026f664aaffa9f5544d6aaa2e88e48c9d6cb7e52e106364243d72a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc026-cut-set-packet-crosswalk/integrated.json": "a9306f728e389006df90b058ba36e541a1e9ed7c870c0d6d5dc227c330f29dcf"
+  },
+  "next_action": "Obtain one source-authorized, hash-pinned packet filling all ten R-557 fields and the model-specific J/D estimates without changing PAH-001 or its j-before-anchored-n order; then run the unchanged admission predicate once.",
+  "revisit_condition": "Reopen only when that packet is present or an exact unchanged-source contradiction to the crosswalk is found; do not repeat finite, radial or abstract diagnostics.",
+  "non_claims": [
+    "This is a conditional logical crosswalk, not PAH-OMC-020 convergence or a universal no-go for owner-fixed successors.",
+    "No common Hilbert space, U_n, path law, N2b/N2c/N4 estimate, compensator, generator, carrier, rate, state, regulator or limit is constructed.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, continuum, mass-gap or TOE conclusion; external Markov time remains stochastic bookkeeping."
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "schema": "tect/pah-omc020-correlation-modulus-contract/1.0",
+  "contract_id": "PAH-OMC-020-CORRELATION-MODULUS",
+  "result_id": "R-543",
+  "task_id": "T-064",
+  "version": "1.0.0",
+  "date": "2026-09-08",
+  "title": "Deterministic-time form-energy modulus for local correlations",
+  "question": "Do the unchanged finite PAH semigroups satisfy a support-dependent deterministic-time correlation modulus uniformly in n and j, using only the pinned R-511 form-energy bounds?",
+  "purpose": "Make the compact-time equicontinuity input in the preregistration explicit without converting stationary averages into stopping-time bounds or claiming the anchored semigroup limit.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_CONDITIONAL_ANALYTIC_CHECKPOINT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-020": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    },
+    "R-511": {
+      "path": "strategy/pa-hyp/PAH-OMC-018-result-v1.json",
+      "sha256": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65"
+    },
+    "R-512": {
+      "path": "strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "sha256": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd"
+    },
+    "R-542": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json",
+      "sha256": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0"
+    }
+  },
+  "frozen_scope": {
+    "model": "Exactly the immutable PAH-001 functional, original PH/LK/AP/TR rates, labelled Gibbs state and finite stationary semigroup P_(n,j)(t)=exp(t L_(n,j)).",
+    "domain": "The declared bounded gauge-invariant globally amplitude-l1-Lipschitz finite-prefix cylinder domain D and its sampled representatives S_(n,j)f.",
+    "time": "External stochastic Markov time t>=0 on a compact deterministic interval [0,T]; no stopping-time or physical-time interpretation.",
+    "order": "The preregistered j->infinity passage at fixed n followed by anchored n is unchanged; this checkpoint takes neither limit.",
+    "observable": "C_(n,j)(f,g;t)=<S_(n,j)f,P_(n,j)(t)S_(n,j)g>_(mu_(n,j)) for fixed local f,g.",
+    "normalization": "Original labelled Gibbs normalization and directed-half reversible form; R-490/R-522 are not reinterpreted as pointwise bounds."
+  },
+  "source_formulas": {
+    "R-511_energy": "E_(n,j)(S_(n,j)f,S_(n,j)f)<=B_f for n>=N(f), j>=0.",
+    "budget": "B_f=2 D_f M_f^2+2 H_f L_f^2, where D_f,H_f are source root-count bounds and M_f,L_f are the declared sup and amplitude-l1-Lipschitz constants.",
+    "finite_spectral_step": "For K_(n,j)=-L_(n,j), reversibility gives |d/dt C_(n,j)(f,g;t)|<=sqrt(E_(n,j)(S f)) sqrt(E_(n,j)(S g)).",
+    "modulus": "sup_(0<=s<t<=T)|C_(n,j)(f,g;t)-C_(n,j)(f,g;s)|<=|t-s| sqrt(B_f B_g)."
+  },
+  "conditional_theorem": {
+    "hypotheses": [
+      "The finite PAH generator is reversible and nonnegative in the directed-half form convention.",
+      "R-511 energy bounds hold for the same unchanged sampled observables at n>=max(N(f),N(g)) and all j.",
+      "Finite spectral calculus gives form contraction E(P_t h)<=E(h) and the derivative identity for deterministic times."
+    ],
+    "conclusion": "The displayed deterministic-time modulus is uniform in n,j and t,s for each fixed f,g; its constant depends only on the registered source support and domain bounds.",
+    "role": "This supplies the compact-time equicontinuity input for correlation comparisons. It does not identify any limit or process."
+  },
+  "acceptance": {
+    "primary": "Recompute B_f and the modulus from source-derived root-count formulas with exact rational fixtures and verify deterministic-time monotonicity.",
+    "independent": "Reconstruct the energy budget and squared modulus with a different fixture and no primary import.",
+    "hostile": "Reject dropping the radial budget, confusing form energy with a full generator norm, changing the sign, or promoting the deterministic modulus to Aldous/path-space or physical convergence.",
+    "lean": "Prove nonnegativity, energy-product domination and exact rational budget/modulus fixtures; no measure or process theorem is claimed."
+  },
+  "status": {
+    "deterministic_correlation_modulus": "CONDITIONAL_FINITE_UNIFORM_INPUT",
+    "stopping_time_aldous": false,
+    "path_space": false,
+    "anchored_n_limit": false,
+    "R512_identification": false,
+    "physical_promotion": false
+  },
+  "decision_rule": {
+    "PASS": "Accept only the scoped deterministic-time modulus when all replay lanes and Lean agree.",
+    "HOLD_FOR_EVIDENCE": "Keep the parent temporal objective open if any R-511 hypothesis or spectral step is not discharged.",
+    "NEGATIVE_RESULT": "Reserve for an exact contradiction to the displayed finite energy-to-modulus implication; a missing infinite-volume input is not a negative result."
+  },
+  "remaining_gates": [
+    "A source-authorized conditional compensator or pointwise rate bound for stopping times (R-542)",
+    "Path-space construction, non-explosion, martingale-problem identification and uniqueness",
+    "N2a common realization, N2b liminf/recovery, N2c/N4 boundary escape and N2d R-512 identification",
+    "Ordered anchored-n semigroup correlation convergence"
+  ],
+  "next_single_question": "Can the pinned common-space or path-space owner packet identify the anchored-n limit of these equicontinuous finite correlations with the R-512 minimal-form semigroup?",
+  "revisit_condition": "Reopen this checkpoint only if a parent hash, R-511 energy bound, deterministic-time convention or sampled correlation definition changes; do not use it to bypass the missing stopping-time or common-space fields.",
+  "non_claims": [
+    "No bounded-stopping-time Aldous estimate, path-space construction, non-explosion theorem or semigroup convergence.",
+    "No N2a-N2d closure, R-512 process identification, infinite-volume dynamics, continuum or physical result.",
+    "No change to PAH-001 function, rates, state, carrier, regulator, normalization, external Markov time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ]
+}

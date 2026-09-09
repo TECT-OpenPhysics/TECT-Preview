@@ -1,0 +1,89 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-024-ANCHORED-N-PERSISTENCE-HOSTILE-001",
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "name": "primary is non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent is non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "contract holds immutable parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "contract verdict is hold rule",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "constant-gap mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "identity target remains abstract",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "physical-time relabel rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "mainline promotion rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "physical promotion rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "oracle-as-PAH-carrier rejected",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 10,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "contract_id": "PAH-OMC-024",
+  "mutations_rejected": [
+    "non-decaying constant gap",
+    "identity oracle relabelled as PAH target",
+    "abstract oracle imported as a PAH carrier",
+    "finite gap promoted to universal no-go or physical claim"
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc024_anchored_n_persistence_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/hostile.json",
+  "result_id": "R-564",
+  "schema": "tect/pah-omc024-anchored-n-persistence-hostile/1.0",
+  "source_hashes": {
+    "codes/foundations/pah_omc024_anchored_n_persistence_independent.py": "987ae2f0369bb488425166248be78f400d2b89f6031ba88cffafba4762ee9795",
+    "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-contract-v1.json": "c82d2679f1357861cb25cf9fdfc86ce6d8da61dc95a1b5f70ae079f9936a7819",
+    "verification/scripts/pah_omc024_anchored_n_persistence.py": "63ad849849054c4eb81f4bb819e748779664db00f0fbafe7d020b1440cb3a046"
+  },
+  "status": "PASS_HOSTILE_SCOPE",
+  "task_id": "T-091",
+  "tooling_hash": "ed1e8c0383174e06665291818faa49e1399c406c50d189a77f0940ca9181ce8c",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

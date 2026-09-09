@@ -1,0 +1,160 @@
+{
+  "audit_id": "PAH-OMC-020-MINIMAL-DEPENDENCY-AUDIT-INDEPENDENT-001",
+  "checks": [
+    {
+      "actual": "PAH-OMC-020-MINIMAL-DEPENDENCY-AUDIT",
+      "expected": "PAH-OMC-020-MINIMAL-DEPENDENCY-AUDIT",
+      "name": "contract identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+        "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+        "strategy/pa-hyp/PAH-OMC-020-radial-semigroup-consistency-result-v1.json": "4ab544bb961b7beb3907482eece28faffde7443c4be3c49a3ee0f9585e132121",
+        "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+        "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+        "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+        "strategy/pa-hyp/PAH-OMC-020-radial-semigroup-consistency-result-v1.json": "4ab544bb961b7beb3907482eece28faffde7443c4be3c49a3ee0f9585e132121",
+        "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+        "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+      },
+      "name": "pinned bytes",
+      "status": "PASS"
+    },
+    {
+      "actual": "Exactly strategy/pa-hyp/PAH-001-v1.json.",
+      "expected": "PAH-001",
+      "name": "unchanged model",
+      "status": "PASS"
+    },
+    {
+      "actual": "External stochastic Markov time on finite compact intervals; no physical-time interpretation.",
+      "expected": true,
+      "name": "external time firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "The registered j-to-infinity limit at fixed n followed by the anchored n limit.",
+      "expected": true,
+      "name": "ordered quantifier",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "R-555",
+        "PASS_CONDITIONAL"
+      ],
+      "expected": [
+        "R-555",
+        "PASS_CONDITIONAL"
+      ],
+      "name": "bridge is conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": "Fixed-n j-to-infinity stationary local-correlation convergence to Q_n(t), with the declared j-before-K order.",
+      "expected": "Fixed-n",
+      "name": "finite target input",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PASS_RESTRICTED",
+        "{\"model\": \"exactly unchanged pah-001 and its original directed ph/lk/ap/tr rates, labelled gibbs state and omc-004 strip.\", \"observable\": \"bounded gauge- and anchor-invariant finite-prefix cylinders depending only on matter-amplitude coordinates, with finite l1 lipschitz constant.\", \"finite_bound\": \"for n>=n(f), ||l_tr,nj s_nj f||_2 <= 2 h_f l_f h_j and sup_(0<=t<=t)||p_nj(t)s_nj f-s_nj f||_2 <= 2 t h_f l_f h_j.\", \"target\": \"r-512 minimal closed-form spectral semigroup; amplitude-only h_rad has zero energy and hence identity spectral action.\", \"time\": \"external stochastic markov time on compact intervals [0,t] only.\", \"order\": \"j tends to infinity at fixed n first, followed by the original anchored n exhaustion.\", \"normalization\": \"original labelled stationary normalization; no quotient, conditional averaging, direct sum or reweighting.\"}"
+      ],
+      "expected": "PASS_RESTRICTED amplitude-only",
+      "name": "radial target input",
+      "status": "PASS"
+    },
+    {
+      "actual": "Two source-compatible root-multiplicity completions preserve the displayed PAH state map, energy, mobility, midpoint rate, external Markov time and finite witness, but give different generator values on the same invariant cylinder. Their finite semigroup derivatives at t=0 therefore differ, so the current source does not select one finite stationary semigroup.",
+      "expected": "HOLD root multiplicity",
+      "name": "root ambiguity",
+      "status": "PASS"
+    },
+    {
+      "actual": "The exact R-512 target form is present, but the pinned corpus contains neither a complete common-Hilbert Mosco/resolvent identification route nor a complete common-path martingale route. D_n remains absent.",
+      "expected": "HOLD D_n",
+      "name": "form defect",
+      "status": "PASS"
+    },
+    {
+      "actual": "The original T-064 replay was stale only because two parent hashes no longer matched current bytes: PAH-OMC-020-temporal-work.md and the N-Mosco diagnostic. The v1.1 successor pins those current bytes and reproduces the same evidence hold. No source-authorized varying-space U_n/common-Hilbert packet, arbitrary-sequence N2b liminf, recovery, N2c/N4 boundary escape or R-512 minimal identification is present.",
+      "expected": "HOLD U_n",
+      "name": "common-space packet absent",
+      "status": "PASS"
+    },
+    {
+      "actual": "INTAKE_CONTRACT_ONLY",
+      "expected": "INTAKE_CONTRACT_ONLY",
+      "name": "intake does not authorize",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "anchored_D",
+        "common_map_form",
+        "root_owner"
+      ],
+      "expected": [
+        "anchored_D",
+        "common_map_form",
+        "root_owner"
+      ],
+      "name": "full-domain hold",
+      "status": "PASS"
+    },
+    {
+      "actual": "CLOSED_RESTRICTED",
+      "expected": "CLOSED_RESTRICTED",
+      "name": "radial remains restricted",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "non-physical scope",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 15,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "87247f51d33461c460d1efa917b68e9cca6ad8c67b6989cb3ea4404badaa5af7",
+  "finding": "An independent replay agrees that the ordered bridge is conditional, the finite/radial inputs are restricted, and three full-domain source obligations remain open.",
+  "next_single_question": "Can one source-authorized packet simultaneously fix root multiplicity and supply a common map/form with full-domain J and D estimates, without changing PAH-001?",
+  "non_claims": [
+    "This audit does not prove full PAH-OMC-020 ordered semigroup convergence.",
+    "It does not construct a common Hilbert space, U_n, path-space law, N2b/N2c/N4 estimate or R-512 identification.",
+    "It does not promote the amplitude-only result to non-radial observables or to an infinite-volume process.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion is made.",
+    "External Markov time remains stochastic bookkeeping and is not quantum, proper or Lorentzian time."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_minimal_dependency_audit_independent.py --check",
+  "result_id": "R-556",
+  "schema": "tect/pah-omc020-minimal-dependency-audit-independent/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+    "strategy/pa-hyp/PAH-OMC-020-radial-semigroup-consistency-result-v1.json": "4ab544bb961b7beb3907482eece28faffde7443c4be3c49a3ee0f9585e132121",
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+  },
+  "status": "HOLD_FOR_EVIDENCE_MINIMAL_DEPENDENCY_LEDGER",
+  "task_id": "T-086",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

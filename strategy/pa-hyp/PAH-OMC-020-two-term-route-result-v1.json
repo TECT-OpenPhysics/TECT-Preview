@@ -1,0 +1,116 @@
+{
+  "schema": "tect/pah-omc020-two-term-route-result/1.0",
+  "result_id": "R-546",
+  "contract_id": "PAH-OMC-020-TWO-TERM-ROUTE",
+  "date": "2026-09-08",
+  "task_id": "T-065",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ORDERED_TWO_TERM_REDUCTION",
+    "EXACT_SOURCE_CROSSWALK",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-two-term-route-contract-v1.json",
+  "certificate": "strategy/pa-hyp/PAH-OMC-020-two-term-route-certificate.md",
+  "exploration_id": "EXP-001669",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+    "strategy/pa-hyp/PAH-OMC-020-mesh-uniform-result-v1.json": "b959de7b0163fa776e7eae8b46aa4c86356b305ffe61692a0893561e05d2a2d9",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-contract-v1.json": "486b86853638bdd953e95ed2501446bb0780c8f0eb768c9c9fd1e18062c53984"
+  },
+  "exact_scope": {
+    "model": "Exactly unchanged PAH-001 functional, original directed rates, labelled Gibbs state, normalization and external stochastic Markov time.",
+    "finite_term": "R-514's J_(n,j)(T)=sup_t|C_(n,j)(t)-c_n(t)| at fixed n after the registered j limit.",
+    "target_term": "R-536's D_n(T)=sup_t|c_n(t)-<f,T_min(t)g>| for the exact R-512 minimal-form target.",
+    "compatibility": "The same post-j stationary c_n is required in both terms; no renamed or fitted intermediate is allowed.",
+    "bound": "sup_(0<=t<=T)|C_(n,j)(t)-c_star(t)| <= J_(n,j)(T)+D_n(T).",
+    "order": "j tends to infinity at fixed n first, followed by anchored n; no diagonal, reversed or joint order.",
+    "relation": "A complete direct D_n route makes a separate R-534 K_(n,m) intermediate unnecessary, but the current R-536 owner route is absent."
+  },
+  "finding": "R-514 and R-536 use the same post-j correlation c_n, so one complete source-authorized R-536 form or path route would reduce the full ordered compact-time error to J_(n,j)+D_n. The reduction is verified, but its D_n antecedent is not currently available.",
+  "assumptions": [
+    "R-514's fixed-n compact-time J_(n,j)->0 theorem applies to the same local pair and normalization.",
+    "A complete source-authorized R-536 form or path route proves D_n(T)->0 with the anchored quantifier.",
+    "The c_n definitions and external Markov-time convention in R-514 and R-536 are identical.",
+    "The R-512 target is the minimal form already fixed by R-530, not a maximal extension or phasewise direct sum."
+  ],
+  "missing_assumptions": [
+    "All five fields of one source-authorized R-536 form route or all five fields of one path route.",
+    "Anchored-n D_n(T)->0 for every declared bounded local cylinder pair and compact T.",
+    "Independent verification of the future owner packet, including common-space/path quantifiers and terminal-square normalization."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "R-514 fixed-n convergence already identifies R-512.",
+      "disposition": "REJECTED: R-514 ends at c_n/Q_n; R-536's D_n target identification is separate."
+    },
+    {
+      "objection": "The K_(n,m) term can always be dropped.",
+      "disposition": "REJECTED: it can be omitted only after a complete direct R-536 route proves D_n with the same c_n; that route is currently absent."
+    },
+    {
+      "objection": "A partial form or path packet is enough for D_n.",
+      "disposition": "REJECTED: R-536 requires all five fields of one complete source-authorized route."
+    },
+    {
+      "objection": "The two-term triangle proves the owner packet.",
+      "disposition": "REJECTED: it is an implication and constructs neither U_n/common-Hilbert data nor a path law."
+    },
+    {
+      "objection": "Compact external Markov time is physical time.",
+      "disposition": "REJECTED: the time variable remains stochastic bookkeeping only."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-514", "R-534", "R-536", "R-545"],
+    "negatives": [],
+    "events": ["20260908-r-546-pah-omc-020-direct-two-term-route-2026-09"]
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_two_term_route.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_two_term_route_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_two_term_route_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_two_term_route_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020TwoTerm.lean",
+    "result": "Primary 22/22, independent 14/14, hostile 14/14, integrated 32/32; four finite rational Lean declarations compile."
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-two-term-route/primary.json": "de0bf42e39444399805ba0802f29094706b948cd1763ee9e88060bebcf421c74",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-two-term-route/independent.json": "5a4b17a193a133c88b74481a52138f50c1c17aadbfab831287605fb58852030b",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-two-term-route/hostile.json": "309d5fc86caf2c8bfdbad2cf51a39aba19b1a0fd361c72d865b276ed64e194ce",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-two-term-route/integrated.json": "94dcbc353b88fca78f1abdbdf7c0923eeb85a813c95a62b6141d35fc030bbd35"
+  },
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-two-term-route-contract-v1.json": "d1863c0ae00608f72fd3bf426604a63c2ae0e0056538046066fcb7aa76e61026",
+    "strategy/pa-hyp/PAH-OMC-020-two-term-route-certificate.md": "1c49ab6221c84f1387ae5ad16a2d9fc2a51a83071733c47342b9c2e936ab77c3",
+    "verification/scripts/pah_omc020_two_term_route.py": "8973717bd4e225fdf90a4acac4927e502594fde21264eb5bd116c6f3aaea3a87",
+    "codes/foundations/pah_omc020_two_term_route_independent.py": "a42bd9d7eefb8b49fe6aa13933381d4470d754e49b2278ee38e43a9d03290079",
+    "codes/foundations/pah_omc020_two_term_route_hostile.py": "00dedf9badc056f193241ab2858f48ceeddf8434feb0a360b0b158c905ac4d1f",
+    "verification/scripts/pah_omc020_two_term_route_verify.py": "d9f8b2bcd9da90e3705427735961895f02ca64f138721da5a60cf1c4e0b7e3d7",
+    "verification/lean/Tect/PahOmc020TwoTerm.lean": "ca4eb53b8a4731b8d2ff189de5f45ccc194bc1b7b10862ef05e542805ba60e43",
+    "verification/lean/registry.json": "68debd5579b3ce0980428f4aab6490a5b534f378b659741b01d0ef8c840113af"
+  },
+  "closed_scoped_gate": "Conditional direct two-term sequential gluing from the registered fixed-n passage to the R-512 target defect.",
+  "next_single_question": "Can one source-authorized, hash-pinned complete R-536 form or path route prove D_n(T)->0 for every declared local pair while preserving R-514's c_n and the original PAH-001 order?",
+  "revisit_condition": "Reopen only when a complete R-536 owner packet is versioned and hash-pinned, or an exact mismatch between the R-514 and R-536 c_n definitions is found; do not repeat finite carrier or physical reinterpretation calculations.",
+  "non_claims": [
+    "No source-authorized form/path owner route or D_n limit is present in this result.",
+    "No new U_n, common Hilbert space, path law, rate, state, carrier, counterterm, averaging or limit order is introduced.",
+    "No claim that R-534's H-K is source-authorized; the two-term route is admitted only after a complete direct D_n route.",
+    "No PAH-OMC-020 full convergence, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ]
+}

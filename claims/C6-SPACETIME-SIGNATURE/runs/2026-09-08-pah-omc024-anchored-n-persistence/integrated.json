@@ -1,0 +1,220 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-024-ANCHORED-N-PERSISTENCE-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-OMC-024",
+      "expected": "PAH-OMC-024",
+      "name": "contract identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-564",
+      "expected": "R-564",
+      "name": "result identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "result hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "result claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "result physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "primary hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "primary internal checks",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "independent hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent internal checks",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "hostile hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile internal checks",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean registry path",
+      "status": "PASS"
+    },
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source bytes unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "prereg bytes unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+      "expected": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+      "name": "R-552 bytes unchanged",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 25,
+  "child_run_hashes": {
+    "hostile": "a92cfcc980b4a0b4920f3e411ad79fd061760bf2dffcaa79177526adb582a8ec",
+    "independent": "72f9cf5b27f0ac4c7287918421237c91c17a6575ba306053ac54d9e1daded3a1",
+    "primary": "4df71cc3ce029637a08dcde30580657f24aa099f5d4d1a834dc1c996477fffbc"
+  },
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "contract_id": "PAH-OMC-024",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "registry_entrypoints": 380
+  },
+  "finding": "All lanes agree on the scoped logical non-implication. The finite R-552 gap is compatible with geometric collapse, and no source-specific uniform estimate has been supplied.",
+  "lean": {
+    "command": "lake env lean Tect/PahOmc024Persistence.lean",
+    "dependency_scope": "read-only-canonical-pinned-packages",
+    "returncode": 0,
+    "schema": "tect/pah-omc024-lean-run/1.0",
+    "source_hash": "8bde7a64447dbf49c6cc052b93feb8487956ec573cc95099e3be76b65ee91799",
+    "status": "PASS",
+    "toolchain": "leanprover/lean4:v4.32.1"
+  },
+  "lean_run_hash": "505e6018334ce7882dbaf780c27aa9f9572ba016db4d5097a181cd04b5246f6b",
+  "next_single_question": "Can a source-authorized packet prove an n-uniform positive local correlation gap, or a uniform remainder that prevents the R-552 gap from collapsing, while preserving PAH-001 and the original all-Q Gibbs state?",
+  "non_claims": [
+    "No PAH-001 function, rate, state, carrier, regulator or j-before-n order is changed.",
+    "No universal no-go for an owner-fixed PAH completion.",
+    "No R-512 convergence, infinite-volume, continuum, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "replay": {
+    "hostile": {
+      "command": "python -X utf8 codes/foundations/pah_omc024_anchored_n_persistence_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/hostile.json",
+      "returncode": 0
+    },
+    "independent": {
+      "command": "python -X utf8 codes/foundations/pah_omc024_anchored_n_persistence_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/independent.json",
+      "returncode": 0
+    },
+    "primary": {
+      "command": "python -X utf8 verification/scripts/pah_omc024_anchored_n_persistence.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/primary.json",
+      "returncode": 0
+    }
+  },
+  "reproduction": "python -X utf8 verification/scripts/pah_omc024_anchored_n_persistence_verify.py --check",
+  "result_id": "R-564",
+  "schema": "tect/pah-omc024-anchored-n-persistence-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pah_omc024_anchored_n_persistence_hostile.py": "ed1e8c0383174e06665291818faa49e1399c406c50d189a77f0940ca9181ce8c",
+    "codes/foundations/pah_omc024_anchored_n_persistence_independent.py": "987ae2f0369bb488425166248be78f400d2b89f6031ba88cffafba4762ee9795",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-contract-v1.json": "c82d2679f1357861cb25cf9fdfc86ce6d8da61dc95a1b5f70ae079f9936a7819",
+    "verification/lean/Tect/PahOmc024Persistence.lean": "8bde7a64447dbf49c6cc052b93feb8487956ec573cc95099e3be76b65ee91799",
+    "verification/lean/registry.json": "0621fbfd67fbe4f9465c96e0cfdb8afe212c13a71900e38f7f187a6f4789aad7",
+    "verification/scripts/pah_omc024_anchored_n_persistence.py": "63ad849849054c4eb81f4bb819e748779664db00f0fbafe7d020b1440cb3a046",
+    "verification/scripts/pah_omc024_anchored_n_persistence_verify.py": "b12a8be1162036eea94cabf09dc5e0d76f3a2c7d93808dce76cee0add74970b6"
+  },
+  "status": "PASS_INTEGRATED_HOLD",
+  "task_id": "T-091",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

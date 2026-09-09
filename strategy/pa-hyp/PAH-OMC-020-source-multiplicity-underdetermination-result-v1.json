@@ -1,0 +1,90 @@
+{
+  "schema": "tect/pah-omc020-source-multiplicity-result/1.0",
+  "result_id": "R-527",
+  "contract_id": "PAH-OMC-020-SOURCE-LINK-MULTIPLICITY",
+  "date": "2026-09-08",
+  "task_id": "T-063",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["EXECUTED", "EXACT_FINITE", "INDEPENDENT", "HOSTILE", "LEAN", "UNDERDETERMINATION"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "exact_scope": {
+    "model": "Immutable PAH-001 functional, original midpoint rates, labelled Gibbs state and external stochastic Markov time.",
+    "witness": "Existing PAH-OMC-004 fine incidence witness, closed face [0,1,4], K=2, M_s=M_psi=1, Q=0, epsilon=1/2, beta=nu=1, unit displayed couplings.",
+    "observable": "f=1-Re(U_p) on the closed triangular face; gauge invariant by face incidence and anchor invariant under the declared identity automorphism group.",
+    "comparison": "Completion A counts the coincident sigma=+1 and sigma=-1 link roots separately; completion B deduplicates their common involution. Both preserve the displayed PAH map, energy, mobility and midpoint rate.",
+    "derived_identity": "J_e=J_p=2, Delta F=4, m=1/2, Delta f=2, one-root contribution=exp(-2), and L_A f-L_B f=exp(-2)>0.",
+    "limits": "None; this is one finite source-definition witness and does not take j, n, volume, continuum, beta or observation limits."
+  },
+  "finding": "The PAH-001 source text does not uniquely determine the finite link-root multiplicity at K=2. Two source-compatible inverse conventions on the existing OMC-004 closed-face witness yield different exact generator values for the same invariant observable, so the original finite semigroup is underdetermined until a root multiplicity, duplicate-transition and root-measure convention is owner-fixed.",
+  "assumptions": [
+    "The PAH-OMC-004 fine incidence witness is used only as a pre-existing finite geometry and not as retroactive PAH-001 authority.",
+    "The displayed PAH-001 phrase 'zeta_K or zeta_K^(-1)' permits either explicit channel labels or a set of distinct state maps when the two maps coincide.",
+    "The finite counting-measure midpoint rate is evaluated exactly on the declared neutral state and closed face."
+  ],
+  "missing_assumptions": [
+    "Source-owner declaration of root labels and multiplicities when inverse moves have the same state map, including K=2.",
+    "Source-owner invalid-move convention and root Hilbert-space counting measure for B and B*.",
+    "A source-authorized common-space map and PAH-specific energy intertwining for N2a/N2b/N2c/N2d."
+  ],
+  "adversarial_review": [
+    {"objection": "The two signs must be distinct by intent, so the ambiguity is artificial.", "disposition": "UPHELD_AS_MISSING_SOURCE_FIELD: intent is not an exact multiplicity rule in the immutable source; a future owner may choose the two-channel completion, but it is not currently pinned."},
+    {"objection": "The OMC-004 geometry changes PAH-001 and cannot witness a source defect.", "disposition": "DISMISSED: OMC-004 is an already hashed finite witness only; no theorem or model term from it is imported, and the source hash remains unchanged."},
+    {"objection": "Different root counts merely rescale time and are therefore irrelevant.", "disposition": "REJECTED: the source freezes external Markov time and the generator sum; rescaling is a model change forbidden by PAH-001."},
+    {"objection": "A nonzero generator gap is a universal no-go for every completion.", "disposition": "REJECTED: the result is source underdetermination, not a no-go after an owner fixes one convention."},
+    {"objection": "A closed-face link observable promotes the result to a physical gauge theory.", "disposition": "REJECTED: it is a finite gauge-invariant test function only; no physical identification is made."}
+  ],
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-multiplicity/primary.json": "25c5e234a91b63b50df9786480c2b61b4ad62e5b0a8cbb957ce12b5fa7753a15",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-multiplicity/independent.json": "8682857fa02f3f439fe48146f7df7f8b83d597d615035ed3c2059771ce83c146",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-multiplicity/hostile.json": "f1399c29d46818023502e2158db58d8cdc59d465157d1a934c3d462941a18030",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-multiplicity/integrated.json": "7a26f711e744a015b0c20e68a43fe8ba0065658261ce2f3f915c4d48432db5e5"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_source_multiplicity_underdetermination.py": "fd5b22450b28e6f15caa44ab1336766b9fe9d7bdd54bfb9e52ee84f4ce36119e",
+    "codes/foundations/pah_omc020_source_multiplicity_underdetermination_independent.py": "833ec9585330bf0cba0da50613f841cac099ea92ab65d374a10217a5c83e8b96",
+    "codes/foundations/pah_omc020_source_multiplicity_underdetermination_hostile.py": "6ca17ef28e642104c4a842e19b920df545d02a0a67140627fa7c5d91d1403030",
+    "verification/scripts/pah_omc020_source_multiplicity_underdetermination_verify.py": "e816c43511e6efc2ea01af9c12178ecc7213a181a7e1e053f8a4f3109f4a4db2",
+    "verification/lean/Tect/PahOmc020Multiplicity.lean": "3da441592573ce5162a070b274fc849fee6ee3e6ce7b36a41fbdd1414ed906d3"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md": "f3c94ec6615f1a66d9efd7241c4dacf75a667b8fe4a41e5b68045321109f5f6e",
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-exploration.json": "bd316eea6b0c16038512ee76c1010a38cbb61cde8a48723bf8978fd70dc8b0fc",
+    "explorations/log.jsonl#EXP-001645": "2f3f0ca7d545952477bd72b2bcef0fe24e369c2e305aeb01a632562c1e241255",
+    "changelog/log.jsonl#20260908-r-527-pah-omc-020-source-link-multiplicity-2026": "dcb56c1e68c61262bda159b3d6a4f12f3d93f1564192154974ebd3783bfcaef5"
+  },
+  "formal_refs": {"results": ["R-478", "R-526"], "negatives": [], "events": ["20260908-r-527-pah-omc-020-source-link-multiplicity-2026"]},
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_source_multiplicity_underdetermination.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_source_multiplicity_underdetermination_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_source_multiplicity_underdetermination_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_source_multiplicity_underdetermination_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "result": "Primary 38/38, independent 35/35, hostile 17/17 with 6/6 mutations rejected, integrated 33/33 and Lean 4.32.1 compile pass."
+  },
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md",
+  "closed_scoped_gate": "Exact finite source-definition underdetermination witness for K=2 link-root multiplicity.",
+  "remaining_gates": [
+    "Source-authorized root multiplicity, invalid-move and root-measure packet",
+    "N2a common-space map and PAH-specific energy intertwining",
+    "N2b weak liminf/recovery, N2c/N4 boundary escape and N2d minimal-form identification",
+    "Full PAH-OMC-020 ordered stationary semigroup correlation convergence"
+  ],
+  "next_single_question": "Can a source owner hash-pin one exact root-label multiplicity and root measure for PAH-001, then supply the energy-intertwining fields needed by the N2a owner packet without changing the immutable source?",
+  "revisit_condition": "Reopen the temporal lane only after that owner packet is present or a frozen parent hash changes.",
+  "non_claims": [
+    "No universal comparison-map no-go; the witness distinguishes two unpinned completions only.",
+    "No PAH-OMC-020 N2b/N2c/N4/N2d closure or stationary semigroup convergence.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ]
+}

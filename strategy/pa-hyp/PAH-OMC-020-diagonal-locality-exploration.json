@@ -1,0 +1,59 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001693",
+  "recorded_at": "2026-09-08T12:28:43Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "provenance": "contemporaneous",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "task_id": "T-086",
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "title": "PAH-OMC-020 diagonal obstruction to fixed-volume all-power locality",
+  "question": "Can the R-562 fixed-k locality threshold provide one fixed finite n beyond the locality frontier for every generator power k?",
+  "finding": "No. For every nonconstant finite-support maximum s_f>=0 and every finite n, k=n+1 gives n<N_k(f)=max(2,s_f+2k+1). Lean proves the universal diagonal witness and no-uniform-eventuality statement. This blocks only the route that sums R-562 fixed-k identities termwise at one fixed n.",
+  "verdict": "failed",
+  "decision_reason": "The proposed fixed-n all-power upgrade is exactly false by arithmetic. The result is a scoped negative boundary, not a no-go theorem for semigroup convergence: a uniform tail, cancellation estimate, common path route or form/resolvent route could still bypass it.",
+  "boundary": "PAH-001, PAH-OMC-013, OMC-004, the original comparison map, Gibbs/rate normalization and external stochastic Markov time remain unchanged. No exponential series, j limit, anchored-n limit or R-512 identification is taken.",
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-013 and R-562.",
+    "Re-derive the frozen OMC-013 root radius two at levels 2 through 9.",
+    "For arbitrary finite n choose the diagonal witness k=n+1 and verify n<N_k(f) for representative s_f values.",
+    "Compile Lean proofs of threshold_unbounded and no_uniform_eventual.",
+    "Run independent geometry reconstruction, hostile route-scope controls and the integrated replay."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-diagonal-locality-contract-v1.json#exact_statement",
+    "strategy/pa-hyp/PAH-OMC-020-diagonal-locality-certificate.md#Exact arithmetic statement",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-diagonal-locality/integrated.json#checks"
+  ],
+  "related": [{"id": "EXP-001692", "relation": "continues"}],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "strategy/pa-hyp/PAH-OMC-020-universal-locality-result-v1.json": "4474c3ecabe56ea08c6a9efe44d33cdd7f2cbc79d5ea891a70e89703171698bc",
+    "strategy/pa-hyp/PAH-OMC-020-diagonal-locality-contract-v1.json": "cd2f84df653e512914c00b745d23326c4acf920cfbe9f865c42087b766055115",
+    "verification/lean/Tect/PahOmc020DiagonalLocality.lean": "acd890ba7977965c5f383a3b1ef4a3c946216057e6b9551d1c2205c9e8a96e78"
+  },
+  "formal_refs": {
+    "results": ["R-493", "R-562", "R-563"],
+    "negatives": [],
+    "events": ["20260908-r-563-pah-omc-020-diagonal-locality-obstruction"]
+  },
+  "next_action": "Seek one source-authorized uniform word/factorial tail, cancellation estimate, common path-space construction or form/resolvent route that bypasses the fixed-n all-power obstruction without changing PAH-001.",
+  "revisit_condition": "Reopen when such a uniform mechanism is hash-pinned or when a defect in the OMC-013 radius-two/threshold derivation is found; do not repeat the same diagonal arithmetic.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_diagonal_locality.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_diagonal_locality_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_diagonal_locality_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_diagonal_locality_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc020DiagonalLocality.lean"
+  },
+  "verification_summary": "SCOPED_NEGATIVE: primary 9/9, independent 7/7, hostile 8/8, integrated 4/4 including Lean.",
+  "non_claims": [
+    "No full semigroup no-go or convergence theorem.",
+    "No uniform tail, common realization, ordered j-before-n or anchored-n limit is supplied.",
+    "No R-512 semigroup identification or infinite-volume process is proved.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion.",
+    "External Markov time remains external stochastic time only."
+  ]
+}

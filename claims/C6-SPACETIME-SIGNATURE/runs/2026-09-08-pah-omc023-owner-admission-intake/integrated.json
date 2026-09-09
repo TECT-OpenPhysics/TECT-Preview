@@ -1,0 +1,201 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-023-OWNER-ADMISSION-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary current replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent current replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile current replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-560",
+      "expected": "R-560",
+      "name": "contract reserved result",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "snapshot authorization absent",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "snapshot authorized empty",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "snapshot complete empty",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "primary hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary gate firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "primary all checks pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "independent hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent gate firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent all checks pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "hostile hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile gate firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile all checks pass",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile non-importing",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 24,
+  "child_run_hashes": {
+    "hostile": "b8b1aa2d5f5a1e05446bd63ea5d3ffbfded25055c591c4a27fba508c3ed8796a",
+    "independent": "e3f6e0faba3cb273398ff1301483de50c9f55729a7a309e8d03eb187b9d79cc1",
+    "primary": "7a4b95ba7a64ff7e140041b92dd9f22ccf066025de3700037183dc80ed001ead"
+  },
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "finding": "Canonicalized current-environment replay passes for all three lanes. The R-554 manifest still contains no authorized or complete owner packet, so admission remains HOLD_FOR_EVIDENCE. The historical integrated mismatch was a path-provenance mismatch, not a mathematical contradiction.",
+  "next_single_question": "Can one owner-authorized, hash-pinned packet satisfy every required field without changing immutable PAH-001?",
+  "non_claims": [
+    "No new function, rate, state, carrier, comparison map, counterterm or limit order is introduced.",
+    "No finite witness is repeated as a substitute for the packet.",
+    "No R-512 convergence, infinite-volume, continuum, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion is made."
+  ],
+  "physical_promotion": false,
+  "replay": {
+    "hostile": {
+      "command": "python -X utf8 codes/foundations/pah_omc023_owner_admission_intake_hostile.py --output <run>/hostile.json",
+      "returncode": 0
+    },
+    "independent": {
+      "command": "python -X utf8 codes/foundations/pah_omc023_owner_admission_intake_independent.py --output <run>/independent.json",
+      "returncode": 0
+    },
+    "primary": {
+      "command": "python -X utf8 verification/scripts/pah_omc023_owner_admission_intake.py --output <run>/primary.json",
+      "returncode": 0
+    }
+  },
+  "reproduction": "python -X utf8 verification/scripts/pah_omc023_owner_admission_verify.py --check",
+  "result_id": "R-560",
+  "schema": "tect/pah-omc023-owner-admission-integrated/1.0",
+  "snapshot": {
+    "authorized_paths": [],
+    "candidate_path_count": 192,
+    "complete_paths": [],
+    "manifest_sha256": "caabc7d52c45a24e15d0d973fb494be7f43bd4df0575f341688edbaed1b97b26",
+    "snapshot_id": "PAH-OMC-020-OWNER-SEARCH-SNAPSHOT-004"
+  },
+  "source_hashes": {
+    "codes\\foundations\\pah_omc023_owner_admission_intake_hostile.py": "13e41f2ccf82c3fbbe4eb1a5e21cbef6b813f834d9c324b1793a026a28745b3b",
+    "codes\\foundations\\pah_omc023_owner_admission_intake_independent.py": "8d7ccf97337ca831c13d4fc7201df29c23ec3f5adfc2373bca6596c3bfbfe816",
+    "strategy\\pa-hyp\\PAH-OMC-020-owner-search-snapshot-v1.4.json": "47b0879ff4c55fe3d60a11cd744d6920a3e3eb18bf923cdd4782fa7e7674b4e9",
+    "strategy\\pa-hyp\\PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json": "a21e6235bc68f7760c83ffa98657a787258d906b39e482c79a1646b2b6da107a",
+    "verification\\scripts\\pah_omc023_owner_admission_intake.py": "c8382e2aea20cf69b924791a52a3021a52521cd6da8443c1be4f084a715e916f",
+    "verification\\scripts\\pah_omc023_owner_admission_verify.py": "230de0863ee79baaca1020f91b11adc37fa85ddeeee23ae8db277a727aeabd9c"
+  },
+  "status": "PASS_CURRENT_ENVIRONMENT_REPLAY_HOLD",
+  "task_id": "T-090",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

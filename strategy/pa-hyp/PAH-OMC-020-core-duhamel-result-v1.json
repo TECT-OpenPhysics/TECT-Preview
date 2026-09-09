@@ -1,0 +1,126 @@
+{
+  "schema": "tect/pah-omc020-core-duhamel-result/1.0",
+  "result_id": "R-537",
+  "contract_id": "PAH-OMC-020-CORE-DUHAMEL",
+  "date": "2026-09-08",
+  "task_id": "T-079",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXACT_SOURCE_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-core-duhamel-contract-v1.json",
+  "exploration_id": "EXP-001657",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-result-v1.json": "a96b95f704ca9f7289bdc4767cd46a90f4bf3567ab1c3f2fae2b813840a11adc",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2"
+  },
+  "exact_scope": {
+    "model": "Exactly unchanged PAH-001 F_rho and its original directed PH/LK/AP/TR rates, labelled Gibbs state and OMC-004 strip.",
+    "comparison": "A source-authorized U_n and common cylinder core are required owner inputs; this result does not construct them.",
+    "finite_limit": "The fixed-n j-to-infinity stationary correlation c_n is inherited only at the registered R-514 scope; the bound addresses the anchored-n D_n comparison.",
+    "target": "R-512 minimal closed-form semigroup T_min(t)=exp(-t K_min), not a maximal extension or phasewise direct sum.",
+    "time": "External unaccelerated stochastic Markov time on compact intervals [0,T]; no quantum, proper or Lorentzian interpretation.",
+    "order": "j tends to infinity at fixed n first, then the anchored n exhaustion; no diagonal, reversed or joint limit.",
+    "normalization": "Original labelled stationary normalization; R-490 C_sw remains domination-only."
+  },
+  "conditional_statement": "If a source-authorized common H, U_n, invariant cylinder core and correlation identity exist, and if the transported finite evolution has initial defect I_n and integrable target-generator residual R_n with I_n(f)->0 and R_n(g;T)->0, then variation of constants gives sup_t ||u_n^g(t)-T_min(t)g|| <= I_n(g)+R_n(g;T) and D_n(f,g;T) <= N_f[I_n(g)+R_n(g;T)] + I_n(f)||g||.",
+  "finding": "The common-core Duhamel envelope is a closed, independently replayed conditional transfer contract. The current pinned corpus still lacks the common U_n/core, correlation identity, anchored initial recovery and vanishing residual domain/estimate, so D_n and PAH-OMC-020 convergence remain unproved.",
+  "assumptions": [
+    "R-512/R-530 supply the exact minimal closed target form and its contract-level contraction property.",
+    "R-534 retains D_n as a separate term in the preregistered j-before-n triangle.",
+    "A future owner packet, if supplied, will preserve PAH-001 function, rates, state, normalization, external time and order."
+  ],
+  "missing_assumptions": [
+    "Source-authorized common Hilbert space H, comparison U_n, invariant cylinder core and original correlation identity.",
+    "Anchored-n initial recovery I_n(f)=||U_n v_n(f)-f||->0 for every local cylinder.",
+    "A domain and absolute-continuity statement for the transported evolution defining r_n^g(s)=d u_n^g/ds+K_min u_n^g.",
+    "A uniform anchored-n residual integral R_n(g;T)->0 with the original terminal-square and boundary convention.",
+    "A source-authorized proof that the R-512 minimal semigroup variation-of-constants identity applies on the same core."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The Duhamel formula itself constructs U_n and the target process.",
+      "disposition": "REJECTED: U_n, the core, differentiability and residual are explicit antecedents and remain absent."
+    },
+    {
+      "objection": "R-512 target-form closure is enough to set I_n=R_n=0.",
+      "disposition": "UPHELD AGAINST PROMOTION: target closure does not identify the varying finite correlations or their generator residual."
+    },
+    {
+      "objection": "A static L2 contraction can replace the residual integral.",
+      "disposition": "UPHELD AGAINST PROMOTION: R-529 and the hostile oracle retain both dynamic terms."
+    },
+    {
+      "objection": "The scalar 23/256 fixture is a PAH estimate.",
+      "disposition": "REJECTED: it is labelled test arithmetic only and carries no PAH or infinite-volume constants."
+    },
+    {
+      "objection": "Compact external Markov-time convergence is a physical-time claim.",
+      "disposition": "REJECTED: the external stochastic-time firewall is explicit in the contract and runs."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-512", "R-529", "R-530", "R-534", "R-535", "R-536"],
+    "negatives": [],
+    "events": ["20260908-pah-omc-020-core-duhamel-transfer"]
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_core_duhamel.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_core_duhamel_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_core_duhamel_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_core_duhamel_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020CoreDuhamel.lean",
+    "result": "Primary 51/51, independent 33/33, hostile 19/19, integrated 22/22; eight finite Lean declarations compile."
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-core-duhamel/primary.json": "97ce12e3865aa7abb0d0287475a47c83745c122a05088f8df0cc01d012960017",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-core-duhamel/independent.json": "91711a3a99c95bac96ef0bbd1eff73892ac6ecc2648ddc62bfdf20e96e8a8a08",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-core-duhamel/hostile.json": "cae06bd772cf74ff8f06d8796dbfe0577e08de111e1e25cd9e5abaee1cbe07c2",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-core-duhamel/integrated.json": "756f658e631fe7866b65e7447ce468dab5115b781cac23e704adbf15e4694720"
+  },
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-contract-v1.json": "1a56da4afc45c15357f9e2aee9e35216ca515aa618a6af6077f53444a3d73dcf",
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-certificate.md": "f356a70d04c0e77f70d230e5bf9def6e1e72591dea4c1048245d9d38810004b9",
+    "verification/scripts/pah_omc020_core_duhamel.py": "5890bc26a63e82a9970478c809a7067795738a81751e1b0c78d94be9ab41fc69",
+    "codes/foundations/pah_omc020_core_duhamel_independent.py": "612f0e95b1a1462aa7b884108beb108e290c7d5090073fefefb6a893a1467c62",
+    "codes/foundations/pah_omc020_core_duhamel_hostile.py": "25f6d47794fddcf3226e7b64ad3549052a6f8cced2a57b36a89b6c7a368c9990",
+    "verification/scripts/pah_omc020_core_duhamel_verify.py": "2f21f012a9435d7f4ab799ac842007c22e1e640025f25697d1a7074f3d1dd9f8",
+    "verification/lean/Tect/PahOmc020CoreDuhamel.lean": "1d5eccfab67a25341104ba20c546640f753b8428baec3408b0da3a3d37ba721f",
+    "verification/lean/registry.json": "871452c62a02430ed1a5e73141c6a198bc38abe6a3598fc62a060bc9c4da185e"
+  },
+  "closed_scoped_gate": "Conditional common-core Duhamel transfer bound with retained initial and residual terms.",
+  "remaining_gates": [
+    "Source-authorized common H/U_n/core and correlation identity",
+    "Anchored initial recovery and domain control",
+    "Uniform vanishing residual R_n for every local cylinder",
+    "N2b/N2c/N4/N2d closure and exact R-512 target identification",
+    "Ordered PAH-OMC-020 stationary semigroup correlation convergence"
+  ],
+  "next_single_question": "Can a source-authorized packet provide U_n, a common invariant cylinder core, the original correlation identity, and a vanishing anchored-n residual R_n(g;T) for the exact PAH-001 semigroup?",
+  "revisit_condition": "Reopen only when all owner fields are versioned and hash-pinned or an exact PAH-specific residual contradiction is found; do not repeat finite carriers, physical-empty, BCC or Reading-H calculations.",
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-core-duhamel-certificate.md",
+  "non_claims": [
+    "No source-authorized U_n, common-core theorem, residual estimate, N2b/N2c/N4/N2d closure or PAH-OMC-020 semigroup convergence.",
+    "No new PAH-001 function, rate, state, carrier, regulator, normalization, external time or limit order.",
+    "The scalar rational fixture is not a PAH counterexample and does not prove a universal impossibility theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

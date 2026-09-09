@@ -1,0 +1,107 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-LOCAL-PATH-TIGHTNESS-HOSTILE-001",
+  "checks": [
+    {
+      "detail": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+        "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+      },
+      "name": "all parent source pins remain exact",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "correct": "171/1250",
+        "mutated": "9/5000"
+      },
+      "name": "omitting martingale term underbounds",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "correct": "171/1250",
+        "mutated": "171/2500"
+      },
+      "name": "dropping first factor 2 is detected",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "correct": "171/1250",
+        "mutated": "1359/10000"
+      },
+      "name": "dropping drift factor 2 is detected",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "mutated": "1935",
+        "small": "1359/20000"
+      },
+      "name": "delta-independent envelope fails tightness",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "C2": 60,
+        "C_sw": 540,
+        "correct": "900",
+        "mutated": "8100"
+      },
+      "name": "C_sw cannot replace C2",
+      "status": "PASS"
+    },
+    {
+      "detail": "original lorentzian physical time t>=0 with finite stationary initial law and no terminal conditioning. no infinite-time, quantum-real-time, proper-time or lorentzian interpretation.",
+      "name": "physical-time relabel is rejected",
+      "status": "PASS"
+    },
+    {
+      "detail": "HOLD_FOR_EVIDENCE",
+      "name": "bridge cannot be promoted to a process",
+      "status": "PASS"
+    },
+    {
+      "detail": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "name": "PAH generator remains original",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 9,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "finding": "Hostile in-memory mutations that omit martingale/drift factors, use C_sw as C2, remove delta decay, relabel time physically, or promote the bridge are all rejected.",
+  "fixture": {
+    "K_Gamma": "135/2",
+    "K_L": "900",
+    "correct_envelope": "171/1250",
+    "delta": "1/1000",
+    "max_increment": "1/4",
+    "support_size": 2
+  },
+  "non_claims": [
+    "No new PAH functional, rate, state, carrier, regulator or time convention.",
+    "No infinite-volume semigroup, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "proof_boundary": "The controls do not supply the missing path-space, non-explosion, uniqueness or R-512 identification theorem.",
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_local_path_tightness_hostile.py --check",
+  "result_id": "R-541",
+  "schema": "tect/pah-omc020-local-path-tightness-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+    "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+  },
+  "status": "PASS_HOSTILE_PATH_TIGHTNESS_REJECTIONS",
+  "task_id": "T-064",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

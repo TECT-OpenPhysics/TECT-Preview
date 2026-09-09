@@ -1,0 +1,49 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001682",
+  "title": "PAH-OMC-020 R-556 event-reference hash correction",
+  "task_id": "T-086",
+  "question": "After the R-556 changelog event received its generated suffix, do the result event reference and source-hash ledger point to the final byte state?",
+  "finding": "The R-556 result event reference was corrected from the unsuffixed proposal to the exact changelog id 20260908-r-556-pah-omc-020-minimal-dependency-audit-2026. The scientific verdict remains HOLD_FOR_EVIDENCE; only provenance bytes changed.",
+  "decision_reason": "Append-only correction is required to keep the result's formal event reference exact without rewriting EXP-001681. No model input, scope, ledger status or verification outcome changed.",
+  "boundary": "PAH-001, the original rates/state/time/order, the R-556 dependency ledger and all physical non-claims are unchanged. This is a provenance correction only.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "verdict": "inconclusive",
+  "recorded_at": "2026-09-08T09:18:30Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "related": [{"id": "EXP-001681", "relation": "corrects"}],
+  "method": [
+    "Read the generated changelog event id after adding R-556.",
+    "Correct only the formal event reference in the R-556 result record.",
+    "Recompute the final result hash and retain EXP-001681 as immutable historical evidence."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json#formal_refs",
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-exploration.json#source_hashes",
+    "changelog/log.jsonl#20260908-r-556-pah-omc-020-minimal-dependency-audit-2026"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json": "ccafed2b49ae7e6055bfe856802705c85ec379aa815894e2aef48c151917494c",
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-exploration.json": "7163656c739450aad104ee17b751a98bd5bc1291a6db1fbde4d39133d3514fce",
+    "changelog/log.jsonl": "8de2a8a412112193c097d8fcc8fb4d47ecb9269bafa78cfe2c31cd8acff83366"
+  },
+  "formal_refs": {
+    "events": ["20260908-r-556-pah-omc-020-minimal-dependency-audit-2026"],
+    "negatives": [],
+    "results": ["R-556"]
+  },
+  "next_action": "Keep R-556 on HOLD_FOR_EVIDENCE and wait for the one source-authorized owner packet; do not repeat finite or radial calculations.",
+  "reproduction": {
+    "result_hash": "Get-FileHash -Algorithm SHA256 strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json"
+  },
+  "revisit_condition": "Reopen only if the result event id or final-byte hash changes again, or a source-authorized packet appears.",
+  "non_claims": [
+    "No scientific verdict, active gate, claim tier or PAH source field changed.",
+    "No full PAH-OMC-020 semigroup convergence or physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "verification_summary": "Final-byte hash and generated changelog event reference are consistent; this successor is provenance-only."
+}

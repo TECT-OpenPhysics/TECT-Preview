@@ -1,0 +1,52 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "R-567 final synthesis footer-label and publication-hash correction",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-09",
+  "provenance": "contemporaneous",
+  "task_id": "T-095",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "classification": "auxiliary_support",
+  "verdict": "advanced",
+  "question": "Do the synthesis note's final footer labels and publication hashes match the release contract?",
+  "method": [
+    "Run the proof-evidence-map gate; it requires the labels Falsification gate and No-overclaim statement.",
+    "Correct only the two unpublished footer labels and rebuild/render-review the same synthesis PDF.",
+    "Preserve the R-567 result snapshot and EXP-001718, adding an explicit override for only their two synthesis-artifact hashes."
+  ],
+  "finding": "The pre-release metadata labels are repaired. PAH-OMC-028-release-addendum-v1.json supplies the final source/PDF hashes. The analytic certificate, preregistered sources, all four run JSONs, Lean source and R-567 theorem/verdict are unchanged.",
+  "decision_reason": "Release metadata must be reproducible and follow the canonical footer vocabulary; append-only correction avoids silently rewriting the recorded snapshot.",
+  "boundary": "Publication metadata only; no new proof, rate, state, domain, source or gate change.",
+  "next_action": "Run the full release gate and submit the existing R-567 checkpoint for integration; do not count this correction as a new scientific advance.",
+  "related": [
+    {
+      "id": "EXP-001718",
+      "relation": "corrects"
+    }
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-028-release-addendum-v1.json#effective_evidence_hash_overrides",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc028-closure-260909-v1.0.tex.txt#Result-footer"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-567"
+    ],
+    "negatives": [],
+    "events": [
+      "20260909-r-567-pah-omc-028-nonlinear-closure-proof-repai"
+    ]
+  },
+  "source_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc028-closure-260909-v1.0.tex.txt": "37fab59387c4509d75ba749d879f6335f5b6c83582526b490125243cc390200b",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc028-closure-260909-v1.0.pdf": "8273f3cdee779574adfc540aad6ed0fb4e16b1e8ad3521241d15b3fc3cc38fee"
+  },
+  "non_claims": [
+    "No new mathematical result; no physical Pre-A, spacetime, QFT, gravity, continuum or TOE conclusion."
+  ]
+}

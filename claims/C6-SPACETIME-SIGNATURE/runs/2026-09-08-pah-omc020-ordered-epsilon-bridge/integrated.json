@@ -1,0 +1,205 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 22,
+  "audit_id": "PAH-OMC-020-ORDERED-EPSILON-BRIDGE-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-555",
+      "expected": "R-555",
+      "name": "contract result",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "primary checks",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent checks",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile checks",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_CONDITIONAL",
+      "expected": "PASS_CONDITIONAL",
+      "name": "primary conditional verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_CONDITIONAL",
+      "expected": "PASS_CONDITIONAL",
+      "name": "independent conditional verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_CONDITIONAL",
+      "expected": "PASS_CONDITIONAL",
+      "name": "hostile conditional verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "entry",
+      "name": "Lean registry entry",
+      "status": "PASS"
+    },
+    {
+      "actual": "f5dec183a5207ca47149d7d72962d625a0f9ebacb02f8b7a0742f586cde64b1a",
+      "expected": "f5dec183a5207ca47149d7d72962d625a0f9ebacb02f8b7a0742f586cde64b1a",
+      "name": "Lean source hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "ordered_epsilon_bridge",
+        "ordered_epsilon_bridge_requires_both_terms",
+        "split_fixture"
+      ],
+      "expected": [
+        "ordered_epsilon_bridge",
+        "ordered_epsilon_bridge_requires_both_terms",
+        "split_fixture"
+      ],
+      "name": "Lean theorem declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "failed": 0,
+  "finding": "Primary, non-importing independent, hostile and Lean replay agree on the exact abstract j-before-n epsilon bridge. This does not instantiate the PAH-specific J and D estimates or advance the semigroup convergence gate.",
+  "lean": {
+    "command": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe env lean C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\lean\\Tect\\PahOmc020OrderedEpsilon.lean",
+    "cwd": "E:\\Dev\\TECT\\verification\\lean",
+    "returncode": 0,
+    "status": "PASS",
+    "stderr": "",
+    "stdout": ""
+  },
+  "next_single_question": "Can one source-authorized owner packet supply the PAH-specific fixed-n J estimate and anchored-n D estimate under the unchanged common space, so that this bridge can be instantiated rather than merely assumed?",
+  "non_claims": [
+    "This bridge does not prove the PAH-specific J_(n,j) limit or D_n limit.",
+    "It does not construct U_n, a common Hilbert space, a path-space law, an N2c/N4 boundary estimate or R-512 identification.",
+    "It does not prove full PAH-OMC-020 semigroup convergence, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusions.",
+    "External Markov time remains stochastic bookkeeping and is not physical time."
+  ],
+  "passed": 22,
+  "physical_promotion": false,
+  "replay": {
+    "hostile": {
+      "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -X utf8 C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\codes\\foundations\\pah_omc020_ordered_epsilon_bridge_hostile.py --check",
+      "returncode": 0,
+      "stdout": "PAH-OMC-020 ORDERED-EPSILON HOSTILE: PASS 5/5; verdict=PASS_CONDITIONAL"
+    },
+    "independent": {
+      "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -X utf8 C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\codes\\foundations\\pah_omc020_ordered_epsilon_bridge_independent.py --check",
+      "returncode": 0,
+      "stdout": "PAH-OMC-020 ORDERED-EPSILON INDEPENDENT: PASS 13/13; verdict=PASS_CONDITIONAL"
+    },
+    "primary": {
+      "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -X utf8 C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\scripts\\pah_omc020_ordered_epsilon_bridge.py --check",
+      "returncode": 0,
+      "stdout": "PAH-OMC-020 ORDERED-EPSILON PRIMARY: PASS 13/13; verdict=PASS_CONDITIONAL"
+    }
+  },
+  "reproduction": "python -X utf8 verification/scripts/pah_omc020_ordered_epsilon_bridge_verify.py --check",
+  "result_id": "R-555",
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-ordered-epsilon-bridge/hostile.json": "b39243454eae49c202db4b400d9d28581d9eb9f6e2b950a76e450c97580f0e28",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-ordered-epsilon-bridge/independent.json": "827f11072dbedb96712d7634af249fc55e9fd646c6f378061672d705df2b8eef",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-ordered-epsilon-bridge/primary.json": "f88c6a16db3e7d8450cb589d65b2e74a5b40d7dc612b865d7ea0ea298b96fcc7"
+  },
+  "schema": "tect/pah-omc020-ordered-epsilon-bridge-integrated/1.0",
+  "source_hashes": {
+    "codes\\foundations\\pah_omc020_ordered_epsilon_bridge_hostile.py": "5f48bc34c412e49cbc461e8ffcb8a00970506f8dfe36bcb4b38bee41a46358c9",
+    "codes\\foundations\\pah_omc020_ordered_epsilon_bridge_independent.py": "c0352084b6fd4c663ffe6fbe0881ddd29f86be2ac680997c4d4c8cd7c034e0a9",
+    "strategy\\pa-hyp\\PAH-OMC-020-ordered-epsilon-bridge-contract-v1.json": "4848e28eed1c72b5db8cecd364678ccd3b7ca59ac59baa33604a272418e7233a",
+    "verification\\lean\\Tect\\PahOmc020OrderedEpsilon.lean": "f5dec183a5207ca47149d7d72962d625a0f9ebacb02f8b7a0742f586cde64b1a",
+    "verification\\scripts\\pah_omc020_ordered_epsilon_bridge.py": "c1b5c27b1666ffa93771e805947566cb80454f249a69e7d6cfd775bf787e69e9",
+    "verification\\scripts\\pah_omc020_ordered_epsilon_bridge_verify.py": "65e65e563243d98b3f6f486253fe6747221b72c2326dcc8697dce38adf008a1b"
+  },
+  "status": "PASS_CONDITIONAL_ORDERED_EPSILON_BRIDGE",
+  "task_id": "T-064",
+  "verdict": "PASS_CONDITIONAL"
+}

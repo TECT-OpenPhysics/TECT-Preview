@@ -1,0 +1,70 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001700",
+  "recorded_at": "2026-09-08T14:40:10Z",
+  "reviewed_on": "2026-09-08",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-086",
+  "title": "PAH-OMC-020 composite source-chain scope reconciliation",
+  "question": "Does the pinned PAH-OMC-018 composite source chain resolve the R-552 parent-only root-multiplicity ambiguity for the PAH-OMC-020 temporal question?",
+  "method": [
+    "Hash-check the PAH-OMC-020 temporal preregistration and verify that it pins the OMC-018 result and generator preregistration.",
+    "Hash-check OMC-018's OMC-001 parent source and inspect the declared K=2 duplicate-channel convention and non-retroactive successor provenance.",
+    "Compare the exact R-552 source file scope with the R-557/R-566 owner-packet admission predicates, without changing the model or adding a comparison map."
+  ],
+  "verdict": "advanced",
+  "finding": "The PAH-OMC-020 temporal preregistration is explicitly scoped to the PAH-001 model through the pinned OMC-018 chain. OMC-001/OMC-018 therefore supplies a researcher-owned composite convention retaining K=2 coincident channels, so the R-552 negative applies to the parent-only PAH-001 source scope and does not by itself refute the composite temporal question. The composite convention is not source-authorized owner-packet evidence: OMC-001 is explicitly a successor contract, and R-557/R-566 still reject admission because common realization, N1/N2b/N2c/N4/N2d, full-domain J and anchored D are absent.",
+  "decision_reason": "This narrows the active blocker. Root semantics are fixed inside the declared researcher-owned composite model, but the anchored-n R-512 comparison remains unproved. Do not use R-552 as a full negative and do not silently promote OMC-001/OMC-018 into source-owner authority.",
+  "boundary": "Scope/provenance reconciliation only. PAH-001, the OMC-018 composite functional/rates/state, finite carrier, external stochastic time and j-before-anchored-n order are unchanged. No finite temporal calculation, new carrier, rate, state, comparison map or physical interpretation is introduced.",
+  "evidence_refs": [
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-chain-scope-audit/scope.json#checks",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json#sources",
+    "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json#root_correspondence",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json#provenance",
+    "strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-result-v1.json#remaining_gates"
+  ],
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-511",
+      "R-552",
+      "R-557",
+      "R-566"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "related": [
+    {
+      "id": "EXP-001699",
+      "relation": "continues"
+    }
+  ],
+  "verification_summary": "Primary scope script PASS: all twelve source-chain, provenance and open-field assertions hold; run status PASS_SCOPE_RECONCILIATION.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_source_chain_scope_audit.py --check"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json": "92a4fa92cb8c0384812220acd2e9929539a10a114fe348ea3f8aa7676f98aa05",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+    "strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-result-v1.json": "d6394f9e4bca3ae477821063d8b2ebf29fc09c362e080acd7f48ec4700d98e7e",
+    "verification/scripts/pah_omc020_source_chain_scope_audit.py": "d3aab3d9ad3095aab670fc3a5dc7d316a08774ba327fd5e49ddba348cd2eff77",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-chain-scope-audit/scope.json": "3e9073a40cf63d8dd3f0e86e455d55b2db677a142076ed5cfd2d8ba473795d7e"
+  },
+  "next_action": "Use the composite root convention only as a finite model input and seek the one source-authorized common-space/ordered-n packet that supplies N1, N2b, N2c/N4, N2d, full-domain J and anchored D.",
+  "revisit_condition": "Reopen if a source-authorized packet is admitted, a parent hash changes, or an exact unchanged-composite PAH target-correlation contradiction is found. Do not repeat the R-552 parent-only ambiguity audit.",
+  "non_claims": [
+    "The OMC-001/OMC-018 successor convention is not retroactive evidence inside PAH-001 and is not a source-authorized owner packet.",
+    "No full PAH-OMC-020 ordered semigroup convergence or R-512 minimal-form identification is proved or refuted.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang--Mills, mass-gap or TOE conclusion; external Markov time remains stochastic bookkeeping."
+  ]
+}

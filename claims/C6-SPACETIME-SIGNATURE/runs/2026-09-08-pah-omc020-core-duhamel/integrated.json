@@ -1,0 +1,265 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 22,
+  "audit_id": "PAH-OMC-020-CORE-DUHAMEL-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": "tect/pah-omc020-core-duhamel-contract/1.0",
+      "expected": "tect/pah-omc020-core-duhamel-contract/1.0",
+      "name": "contract schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-079",
+      "expected": "T-079",
+      "name": "task",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "conditional firewalls",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "name": "owner field count",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "primary no promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "independent no promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "hostile no promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "23/256",
+      "expected": "23/256",
+      "name": "primary-independent oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile retained-term checks",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean LF",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "admit": false,
+        "axiom": false,
+        "sorry": false,
+        "unsafe": false
+      },
+      "expected": {
+        "admit": false,
+        "axiom": false,
+        "sorry": false,
+        "unsafe": false
+      },
+      "name": "Lean forbidden tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean registry entry",
+      "status": "PASS"
+    },
+    {
+      "actual": "1d5eccfab67a25341104ba20c546640f753b8428baec3408b0da3a3d37ba721f",
+      "expected": "1d5eccfab67a25341104ba20c546640f753b8428baec3408b0da3a3d37ba721f",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "compact_time_epsilon",
+        "corr_bound_monotone",
+        "corr_bound_nonnegative",
+        "duhamel_triangle",
+        "missing_owner_field_blocks",
+        "omitted_initial_defect_is_unsound",
+        "omitted_residual_is_unsound",
+        "owner_packet_requires_all_fields"
+      ],
+      "expected": [
+        "compact_time_epsilon",
+        "corr_bound_monotone",
+        "corr_bound_nonnegative",
+        "duhamel_triangle",
+        "missing_owner_field_blocks",
+        "omitted_initial_defect_is_unsound",
+        "omitted_residual_is_unsound",
+        "owner_packet_requires_all_fields"
+      ],
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean compiler available",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "failed": 0,
+  "finding": "Integrated replay agrees that the Duhamel envelope is a valid conditional transfer bound while the common-space, core, initial-recovery and residual owner inputs remain absent.",
+  "lean": {
+    "command": [
+      "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lean.exe",
+      "C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\lean\\Tect\\PahOmc020CoreDuhamel.lean"
+    ],
+    "output": "",
+    "returncode": 0
+  },
+  "next_single_question": "Can a source-authorized packet provide U_n, a common invariant cylinder core, the original correlation identity, and a vanishing anchored-n residual R_n(g;T) for the exact PAH-001 semigroup?",
+  "non_claims": [
+    "No source-authorized U_n, common-core theorem, residual estimate, N2b/N2c/N4/N2d closure or PAH-OMC-020 semigroup convergence.",
+    "No new PAH-001 function, rate, state, carrier, regulator, normalization, external time or limit order.",
+    "The scalar rational fixture is not a PAH counterexample and does not prove a universal impossibility theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "passed": 22,
+  "physical_promotion": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_core_duhamel_hostile.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_core_duhamel_independent.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_core_duhamel_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020CoreDuhamel.lean",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_core_duhamel.py --check"
+  },
+  "required_owner_fields": {
+    "D_limit": false,
+    "common_space_and_core": false,
+    "correlation_identity": false,
+    "initial_recovery": false,
+    "residual_domain": false,
+    "target_contraction": true,
+    "uniform_residual": false
+  },
+  "schema": "tect/pah-omc020-core-duhamel-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pah_omc020_core_duhamel_hostile.py": "25f6d47794fddcf3226e7b64ad3549052a6f8cced2a57b36a89b6c7a368c9990",
+    "codes/foundations/pah_omc020_core_duhamel_independent.py": "612f0e95b1a1462aa7b884108beb108e290c7d5090073fefefb6a893a1467c62",
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-contract-v1.json": "1a56da4afc45c15357f9e2aee9e35216ca515aa618a6af6077f53444a3d73dcf",
+    "verification/lean/Tect/PahOmc020CoreDuhamel.lean": "1d5eccfab67a25341104ba20c546640f753b8428baec3408b0da3a3d37ba721f",
+    "verification/lean/registry.json": "d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4",
+    "verification/scripts/pah_omc020_core_duhamel.py": "5890bc26a63e82a9970478c809a7067795738a81751e1b0c78d94be9ab41fc69",
+    "verification/scripts/pah_omc020_core_duhamel_verify.py": "2f21f012a9435d7f4ab799ac842007c22e1e640025f25697d1a7074f3d1dd9f8"
+  },
+  "status": "PASS_INTEGRATED_CORE_DUHAMEL_BOUND",
+  "subprocesses": {
+    "hostile": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-020 CORE DUHAMEL HOSTILE: PASS 19/19; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "independent": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-020 CORE DUHAMEL INDEPENDENT: PASS 33/33; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "primary": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-020 CORE DUHAMEL PRIMARY: PASS 51/51; verdict=HOLD_FOR_EVIDENCE"
+    }
+  },
+  "task_id": "T-079",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

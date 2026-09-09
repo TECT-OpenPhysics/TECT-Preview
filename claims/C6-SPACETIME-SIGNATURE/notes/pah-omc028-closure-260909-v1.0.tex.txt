@@ -1,0 +1,172 @@
+% Title: PAH-OMC-028: Normal contractions on the minimal closure
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-09-09; this version issued 2026-09-09
+% Status: Conditional auxiliary proof repair; original temporal gate open
+
+\section*{Purpose and scope}
+This is the one gate-level synthesis for T-095 and R-567. It repairs the
+nonlinear closure argument of R-530 on the exact R-512 target. The full
+certificate and preregistration are in \texttt{strategy/pa-hyp/}, under
+\texttt{PAH-OMC-028-certificate.md} and
+\texttt{PAH-OMC-028-prereg-v1.json}. No microscopic definition is changed.
+The state is the R-510 labelled all-$Q$ probability law. The original
+two-row strip, $K=2$, $M_s=1$, $\epsilon=1/2$, $\beta=\nu=1$,
+$m^2=\theta=0$, and other OMC-016 couplings equal to one are inherited.
+Its $j$-before-anchored-$n$ construction is not repeated or exchanged.
+
+\section*{The statement under inherited hypotheses}
+Let $H$ be the real invariant state-$L^2$ space, $D$ the exact bounded
+gauge-invariant, globally amplitude-$\ell^1$-Lipschitz finite-prefix
+cylinders, and
+\[
+ E(f,g)=\frac12\sum_r\nu[c_r\Delta_r f\Delta_r g].
+\]
+R-511 supplies the dense domain, the nonnegative conductances and this
+identity. R-512 supplies the minimal closure $(\overline E,V)$, with
+$\|u\|_V^2=\|u\|_H^2+\overline E(u,u)$ and an injective continuous
+inclusion into $H$. These are inherited analytic hypotheses.
+
+For every scalar $\eta$ with $\eta(0)=0$ and
+$|\eta(a)-\eta(b)|\leq |a-b|$, and every $u\in V$,
+\[
+ \eta(u)\in V,\qquad
+ \overline E(\eta(u),\eta(u))\leq\overline E(u,u). \tag{1}
+\]
+The existing spectral semigroup $T_{\min}(t)$ is then positivity preserving,
+$L^\infty$ contractive and satisfies $T_{\min}(t)1=1$ for $t\geq0$.
+
+\section*{The precise flaw and its exact diagnostic}
+The R-530 closure paragraph passes from $E(\eta f)\leq E(f)$ directly
+to form-Cauchy behavior of $\eta(f_k)$. The implied difference estimate
+$E(\eta f-\eta g)\leq E(f-g)$ is false. To test that universal
+inequality, use probability weights $(1/2,1/2)$, both directed rates two,
+and the directed-half convention. Then $E(h)=(h_0-h_1)^2$.
+With $f=(1,2)$, $g=(0,1)$, and $\eta(x)=(0\vee x)\wedge1$,
+\[
+ E(f-g)=0,\quad E(\eta f-\eta g)=1,\qquad
+ \|f-g\|_V^2=1,\quad\|\eta f-\eta g\|_V^2=\frac32.
+\]
+Each single-vector inequality remains true. This diagnostic rejects the
+paired inequality; it does not refute (1), establish a non-Cauchy image
+sequence, or substitute a finite model for PAH. The original R-530 bytes
+are preserved, with this proof superseding only the flawed inference.
+
+\section*{Core stability}
+Scalar composition preserves finite-prefix dependence and gauge invariance.
+If $|f|\leq M$, then $|\eta f|\leq M$, and its amplitude Lipschitz
+constant does not increase. Thus $\eta(D)\subset D$. The scalar
+Lipschitz bound integrates to
+\[
+ \|\eta f-\eta g\|_H\leq\|f-g\|_H.
+\]
+This also proves quotient well-definedness and continuity on $H$.
+On $D$, the rootwise squared bound, weighted by the unchanged nonnegative
+conductances, proves $E(\eta f)\leq E(f)$.
+
+\section*{Primary proof: closed energy epigraph}
+Put $q(u)=\overline E(u,u)$ for $u\in V$. The set
+\[
+ C=\{(u,a)\in H\times\mathbb R:u\in V,\ q(u)\leq a\}
+\]
+is closed. Indeed, for $(u_k,a_k)\to(u,a)$ in $H\times\mathbb R$,
+the energies and $H$ norms are bounded. Choose an energy-liminf subsequence;
+Hilbert weak compactness supplies a weakly $V$-convergent further subsequence.
+Its weak $H$ limit is the strong
+$H$ limit $u$, so $u\in V$. Weak lower semicontinuity gives
+$q(u)\leq\liminf q(u_k)\leq a$. This lower semicontinuity follows
+because the energy balls are convex and norm-closed in $V$, hence weakly
+closed by separation. Domain membership is part of the argument.
+
+Given any $u\in V$, take $f_k\in D$ with $f_k\to u$ in $V$.
+The energy seminorm triangle inequality gives $E(f_k)\to q(u)$.
+Core contraction gives $(\eta f_k,E(f_k))\in C$, while $H$ continuity
+gives $\eta f_k\to\eta u$. Closedness of $C$ proves (1).
+No form-Cauchy hypothesis on $\eta f_k$ is inserted. Growing supports
+are allowed, and no root formula on all of $V$ is assumed.
+
+\section*{Independent proof: convex averages}
+The same $w_k=\eta f_k$ is bounded in $V$. A weakly convergent
+subsequence has limit $v=\eta u$ by strong $H$ convergence. Mazur's
+lemma yields finite convex combinations $z_m$ of successive tails with
+$\|z_m-v\|_V<1/m$. They belong to $D$. Convexity implies
+\[
+ E(z_m)\leq\sup_{\ell\geq m}E(w_{k_\ell})
+ \leq\sup_{\ell\geq m}E(f_{k_\ell})\longrightarrow q(u).
+\]
+Their strong $V$ limit gives $q(v)\leq q(u)$. The convex combinations
+are approximants in the proof, with no averaging of rates or states.
+
+\section*{Semigroup and conservation}
+For the self-adjoint $K\geq0$ associated with $q$, the resolvent
+$J_\lambda=(I+\lambda K)^{-1}$ uniquely minimizes
+$q(v)+\|v-h\|_H^2/\lambda$. If $0\leq h\leq1$, clipping to
+$[0,1]$ decreases both terms. Uniqueness forces $0\leq J_\lambda h\leq1$.
+The spectral limit $(J_{t/m})^m\to e^{-tK}$ in $H$ preserves that
+closed order interval. Positivity extends by bounded positive truncation.
+
+The original $D$ contains $1$, the state is a probability, and all root
+differences of $1$ vanish. Thus $q(1)=0$ and form Cauchy--Schwarz gives
+$\overline E(1,v)=0$ for every $v\in V$. The associated-operator
+definition implies $1\in\operatorname{Dom}K$ and $K1=0$.
+Consequently $e^{-tK}1=1$. Positivity and linearity now give the
+$L^\infty$ contraction. Preservation of $[0,1]$ alone would not prove
+conservation.
+
+\section*{Literature and proof coverage}
+Fukushima, Oshima and Takeda, \emph{Dirichlet Forms and Symmetric Markov
+Processes}, second edition (2011), Section 1.1, Theorem 1.4.1 and
+Theorem 1.4.2(v), supply the standard context. Only the forward
+form-to-semigroup implication is used; no locally compact topology or
+Hunt process is imported. This is a PAH proof repair using standard
+functional analysis, not a new general Dirichlet-form theorem.
+
+Five Lean theorems verify the paired energy and form-norm counterexamples,
+the arbitrary single-root inequality, the arbitrary-sequence closed
+epigraph passage, and the scalar zero-energy cross-term lemma. Epigraph
+closedness from the Hilbert completion, Mazur's lemma, the inherited
+measure construction and spectral representation are analytic here.
+Exact rational primary and independent generator-matrix checks agree.
+External review of the analytic crosswalk and closure proof is invited.
+
+\section*{Devil's-advocate}
+\begin{enumerate}
+\item Single-vector contraction implies pairwise energy contraction:
+UPHELD objection; the exact counterexample rejects this shortcut.
+\item Positivity alone implies closedness: UPHELD objection. For point
+evaluation energy $q(f)=f(0)^2$, let $s_n(x)=(1-nx)_+$ on $[0,1]$.
+Then $1-s_n\to1$ in $L^2$, but $q(1-s_n)=0<q(1)=1$.
+The spikes alone diagnose nonclosability; their complements exhibit the
+lower-semicontinuity failure. R-512 closedness is essential.
+\item Negative conductances or a two-Lipschitz map preserve the inequality:
+DISMISSED by explicit hostile controls; both violate named hypotheses.
+\item Bounded energy proves domain membership without closedness:
+UPHELD objection; weak compactness in $V$ and injectivity provide it here.
+\item Sub-Markov implies conservation: UPHELD objection; a killed scalar
+form has resolvent $J_1 1=1/2$. Zero energy of the actual constant is used.
+\item Target Markov structure implies finite-to-target convergence:
+UPHELD objection; the PAH-OMC-020 identification gate remains open.
+\end{enumerate}
+
+\section*{Result footer}
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: R-567; contract PAH-OMC-028; task T-095
+Claim ID: C6-SPACETIME-SIGNATURE
+Precise statement: Every scalar normal contraction preserves the
+ R-512 minimal form domain and decreases its energy. The associated
+ semigroup preserves positivity, bounded norm and constant one.
+Scope: Full minimal domain; inherited R-510/R-511/R-512 hypotheses.
+Dependencies: Fixed probability state, exact core and closed form.
+Evidence grade: ANALYTIC, EXACT, EXECUTED; partial Lean formalization.
+Reproduction command: python -X utf8
+ verification/scripts/pah_omc028_verify.py --check
+Expected output: PAH-OMC-028 PASS; five Lean theorems compile.
+Falsification gate: Failure of state/core/closedness hypotheses;
+ valid normal contraction with domain or energy violation.
+Tier before / after: T1 / T1; auxiliary_support; T-054 unchanged.
+No-overclaim statement: No OMC-020 convergence, Pre-A, spacetime,
+ QFT, gravity, continuum, mass gap or TOE conclusion.
+Next required action: Separately contract Markov-extension uniqueness
+ for the same exact operator and state; no new model or owner scan.
+\end{verbatim}
+\endgroup

@@ -1,0 +1,192 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-025-ROUTE-FRONTIER-INDEPENDENT-001",
+  "checks": [
+    {
+      "actual": "PAH-OMC-025",
+      "expected": "PAH-OMC-025",
+      "name": "contract id",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-565",
+      "expected": "R-565",
+      "name": "reserved result",
+      "status": "PASS"
+    },
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "hash PAH-001",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "hash PAH-OMC-020-prereg",
+      "status": "PASS"
+    },
+    {
+      "actual": "a96b95f704ca9f7289bdc4767cd46a90f4bf3567ab1c3f2fae2b813840a11adc",
+      "expected": "a96b95f704ca9f7289bdc4767cd46a90f4bf3567ab1c3f2fae2b813840a11adc",
+      "name": "hash R-534",
+      "status": "PASS"
+    },
+    {
+      "actual": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+      "expected": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+      "name": "hash R-536",
+      "status": "PASS"
+    },
+    {
+      "actual": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+      "expected": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+      "name": "hash R-542",
+      "status": "PASS"
+    },
+    {
+      "actual": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+      "expected": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+      "name": "hash R-557",
+      "status": "PASS"
+    },
+    {
+      "actual": "e9582ffa26d04dfd11d7951fe3e8fb62aa8981d4f436477ddbbf1a9d6f482bf0",
+      "expected": "e9582ffa26d04dfd11d7951fe3e8fb62aa8981d4f436477ddbbf1a9d6f482bf0",
+      "name": "hash R-559",
+      "status": "PASS"
+    },
+    {
+      "actual": "ddf325e36c8941c5ca1b7bf5b45b84c363e7d5082d9af95c61b623eb798534c1",
+      "expected": "ddf325e36c8941c5ca1b7bf5b45b84c363e7d5082d9af95c61b623eb798534c1",
+      "name": "hash R-564",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "registered order",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "gluing carries J and D",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "form route incomplete",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "path route incomplete",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "conditional owner field absent",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "packet finding remains absent",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "source negative scoped",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "anchored diagnostic is non-implication",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "no form admission",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "no path admission",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "no source admission",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "no temporal admission",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "route alternative requires all cuts",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "all true cuts would admit",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "physical firewall",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 25,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "contract_id": "PAH-OMC-025",
+  "cut_set": {
+    "FORM": false,
+    "PATH": false,
+    "S0": false,
+    "S2": false,
+    "admissible": false
+  },
+  "finding": "Independent reconstruction agrees that the three cuts are jointly required and none is currently instantiated.",
+  "non_claims": [
+    "This contract does not prove PAH-OMC-020 convergence or refute every owner-fixed successor.",
+    "It does not construct a common Hilbert space, path law, compensator, generator, carrier, rate, state, regulator or limit.",
+    "It does not promote R-559 source-level nonuniqueness or R-564 abstract persistence to an anchored-n universal no-go.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion; external Markov time remains stochastic bookkeeping."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc025_route_frontier_independent.py --check",
+  "result_id": "R-565",
+  "schema": "tect/pah-omc025-route-frontier-independent/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-result-v1.json": "a96b95f704ca9f7289bdc4767cd46a90f4bf3567ab1c3f2fae2b813840a11adc",
+    "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-022-source-level-semigroup-wellposedness-result-v1.json": "e9582ffa26d04dfd11d7951fe3e8fb62aa8981d4f436477ddbbf1a9d6f482bf0",
+    "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-result-v1.json": "ddf325e36c8941c5ca1b7bf5b45b84c363e7d5082d9af95c61b623eb798534c1"
+  },
+  "status": "PASS_INDEPENDENT_CUTSET",
+  "task_id": "T-092",
+  "tooling_hash": "eef999291d0477f35d2a811f2b9104434bc705e0b03b501e9e3df091a7e7d46a",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

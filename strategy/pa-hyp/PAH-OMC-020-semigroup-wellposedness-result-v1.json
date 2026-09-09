@@ -1,0 +1,89 @@
+{
+  "schema": "tect/pah-omc020-semigroup-wellposedness-result/1.0",
+  "result_id": "R-552",
+  "contract_id": "PAH-OMC-020-SEMIGROUP-WELLPOSEDNESS",
+  "date": "2026-09-08",
+  "task_id": "T-084",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["EXACT_FINITE", "EXECUTED", "INDEPENDENT", "HOSTILE", "LEAN_FINITE_SCOPE", "DEFINITION_BOUNDARY"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77"
+  },
+  "exact_scope": {
+    "question": "Does the current immutable PAH source determine one finite stationary semigroup before the R-512 comparison?",
+    "witness": "OMC-004 closed-face [0,1,4], K=2, epsilon=1/2, beta=nu=1, neutral labels and one flipped link.",
+    "observable": "f=1-Re(U_p), a gauge-invariant closed-face cylinder.",
+    "derived_values": "Delta F=4, one-channel midpoint contribution exp(-2), labelled multiplicity 2, deduplicated multiplicity 1.",
+    "semigroup_derivative": "d/dt at t=0 of exp(tL)f equals Lf for the finite generator; therefore derivatives are 2 exp(-2) and exp(-2).",
+    "gap": "exp(-2)>0",
+    "limits": "No j, n, volume, continuum, beta or observation limit is taken."
+  },
+  "finding": "Two source-compatible root-multiplicity completions preserve the displayed PAH state map, energy, mobility, midpoint rate, external Markov time and finite witness, but give different generator values on the same invariant cylinder. Their finite semigroup derivatives at t=0 therefore differ, so the current source does not select one finite stationary semigroup.",
+  "assumptions": [
+    "The R-527 OMC-004 finite witness is retained without importing a successor model.",
+    "The PAH phrase 'zeta_K or zeta_K^(-1)' does not itself fix whether coincident inverse state maps are counted as two labels or one map.",
+    "Finite-state semigroup differentiation at t=0 is used only as a definition-level identity."
+  ],
+  "missing_assumptions": [
+    "Source-owner root-label multiplicity and duplicate-transition convention.",
+    "Source-owner invalid-move behavior and root Hilbert-space counting measure.",
+    "After owner selection: common U_n/Hilbert realization, N2b liminf/recovery, N2c/N4 boundary escape and N2d R-512 minimal-form identification."
+  ],
+  "adversarial_review": [
+    {"objection": "The two signs are intended to be distinct, so the ambiguity is harmless.", "disposition": "UPHELD_AS_MISSING_FIELD: intent is not a hash-pinned multiplicity rule in the immutable source."},
+    {"objection": "A finite derivative gap is only a time rescaling.", "disposition": "REJECTED: external Markov time and the generator sum are frozen; rescaling changes PAH-001."},
+    {"objection": "Different finite completions prove every owner-fixed completion fails to converge.", "disposition": "REJECTED: this is a source-definition boundary, not a universal convergence no-go."},
+    {"objection": "The witness is physical gauge theory evidence.", "disposition": "REJECTED: it is only a finite gauge-invariant cylinder used to test source well-posedness."},
+    {"objection": "Lean proves the anchored-n target.", "disposition": "REJECTED: Lean checks only the finite exponential gap and equality contradiction."}
+  ],
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-semigroup-wellposedness/primary.json": "e382019558cf2d942b21104c84ef70144a217c80c4c03387964948d4ee7e83db",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-semigroup-wellposedness/independent.json": "481a6f0ab4f9fa4bb2bb8046283170d066d10f135c0a328f35e86b814accb40e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-semigroup-wellposedness/hostile.json": "564a64ac535a9293d8a14956a283830f8d597a44f34746b6d09dd4893ddfdfe2",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-semigroup-wellposedness/integrated.json": "4f4f7fff42e28c066b8adf80d43bbe147dd34dfadad42c28c06050a6fcf1d6f3",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-semigroup-wellposedness/lean.json": "42cc72dda38dc1e12845c554e766d9fd3a9747783643f4b7919ed124bce97b06"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_semigroup_wellposedness.py": "8ffe1bf750a1dd98060ebdf72bf13f3a48787e90b4c80b5c77a339a7d825ab04",
+    "codes/foundations/pah_omc020_semigroup_wellposedness_independent.py": "b0cb6d71d812e444cc99e58cb0e7697fc69b8932fe7181c01eea1549c395bfd6",
+    "codes/foundations/pah_omc020_semigroup_wellposedness_hostile.py": "ef5fbab8fe0c9978f3f7c246e2a80314c2f2b4713da011c1642d8ae1626d0a1c",
+    "verification/scripts/pah_omc020_semigroup_wellposedness_verify.py": "e6c4006146a222feff04a06d77250f0dffc9f00616fb4260ddd8dd2ffe04c8d5",
+    "verification/lean/Tect/PahOmc020SemigroupWellposedness.lean": "c75f3dc7a20e6df15cbb04351dc33662d18e19a8b939f9dfb73a79558cb9a00c",
+    "verification/lean/registry.json": "620479e049390688d26e99d0c0b59fd1d0d75545d68dcd0c55e26db135e40e8d"
+  },
+  "formal_refs": {"results": ["R-527", "R-540", "R-547"], "negatives": [], "events": ["20260908-r-552-pah-omc-020-finite-semigroup-well-posedne"]},
+  "verification": {
+    "primary": "PASS 21/21",
+    "independent": "PASS 9/9",
+    "hostile": "PASS 8/8",
+    "integrated": "PASS 14/14",
+    "lean": "PASS under Lean 4.32.1; five declarations"
+  },
+  "closed_scoped_gate": "Current PAH source-definition uniqueness fails until root multiplicity and root measure are owner-fixed.",
+  "remaining_gates": [
+    "Source-owner root multiplicity, invalid-move and root-measure packet",
+    "N2a common-space map and PAH-specific energy intertwining",
+    "N2b weak liminf/recovery, N2c/N4 boundary escape and N2d minimal-form identification",
+    "Full PAH-OMC-020 ordered stationary semigroup correlation convergence"
+  ],
+  "next_single_question": "Can a source owner hash-pin root labels, multiplicities, invalid-move behavior and root measure, then supply the common-space energy packet without changing PAH-001?",
+  "revisit_condition": "Reopen anchored-n convergence only after the owner packet is present or a frozen source hash changes.",
+  "non_claims": [
+    "No universal no-go for every owner-fixed completion.",
+    "No anchored-n convergence or R-512 minimal-form identification for an owner-fixed completion.",
+    "No change to PAH-001 functions, rates, state, carrier, regulator, external Markov time or j-before-n order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-certificate.md"
+}

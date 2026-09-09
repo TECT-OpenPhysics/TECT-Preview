@@ -1,0 +1,247 @@
+{
+  "active_gate_change": false,
+  "assumptions": [
+    "The finite PAH generator is reversible and nonnegative in the directed-half form convention.",
+    "R-511 energy bounds hold for the same unchanged sampled observables at n>=max(N(f),N(g)) and all j.",
+    "Finite spectral calculus gives form contraction E(P_t h)<=E(h) and the derivative identity for deterministic times."
+  ],
+  "audit_id": "PAH-OMC-020-CORRELATION-MODULUS-PRIMARY-001",
+  "checks": [
+    {
+      "actual": "tect/pah-omc020-correlation-modulus-contract/1.0",
+      "expected": "tect/pah-omc020-correlation-modulus-contract/1.0",
+      "name": "contract schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-543",
+      "expected": "R-543",
+      "name": "contract identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+        "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+        "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+        "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+        "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "name": "source hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-001",
+      "expected": "PAH-001",
+      "name": "PAH packet",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "preregistered target remains R-512",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "R-511",
+        "PASS"
+      ],
+      "expected": [
+        "R-511",
+        "PASS"
+      ],
+      "name": "R-511 source result",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "R-512",
+        "auxiliary_support"
+      ],
+      "expected": [
+        "R-512",
+        "auxiliary_support"
+      ],
+      "name": "R-512 remains auxiliary",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "R-542 stopping-time firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "j-before-n order",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "external Markov time",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-511 root-count formula",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-511 influence formula",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "expected": 5,
+      "name": "R-511 d_max",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": "10",
+      "name": "f D source-derived",
+      "status": "PASS"
+    },
+    {
+      "actual": "20",
+      "expected": "20",
+      "name": "f H source-derived",
+      "status": "PASS"
+    },
+    {
+      "actual": "8",
+      "expected": "8",
+      "name": "g D source-derived",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": "10",
+      "name": "g H source-derived",
+      "status": "PASS"
+    },
+    {
+      "actual": "120",
+      "expected": "120",
+      "name": "B_f formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "196",
+      "expected": "196",
+      "name": "B_g formula",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "budgets nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "squared modulus nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "deterministic modulus decreases with time gap",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "energy-product domination fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "modulus is finite",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "form-energy route retained",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no Aldous promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no physical promotion",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 27,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "b4dab0cebb152ca13730bc6a64b16f3a34f4152234659318bd8eb8555ec5068e",
+  "conditional": true,
+  "finding": "Under the pinned R-511 energy bounds and finite reversible spectral identity, the deterministic-time local correlation modulus is the exact support-dependent bound |t-s|*sqrt(B_f*B_g), uniform over the retained finite n,j indices. This is a conditional finite equicontinuity input only.",
+  "missing_assumptions": [
+    "A source-authorized conditional compensator or pointwise rate bound for stopping times (R-542)",
+    "Path-space construction, non-explosion, martingale-problem identification and uniqueness",
+    "N2a common realization, N2b liminf/recovery, N2c/N4 boundary escape and N2d R-512 identification",
+    "Ordered anchored-n semigroup correlation convergence"
+  ],
+  "next_single_question": "Can the pinned common-space or path-space owner packet identify the anchored-n limit of these equicontinuous finite correlations with the R-512 minimal-form semigroup?",
+  "non_claims": [
+    "No bounded-stopping-time Aldous estimate, path-space construction, non-explosion theorem or semigroup convergence.",
+    "No N2a-N2d closure, R-512 process identification, infinite-volume dynamics, continuum or physical result.",
+    "No change to PAH-001 function, rates, state, carrier, regulator, normalization, external Markov time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 verification/scripts/pah_omc020_correlation_modulus.py --check",
+  "result_id": "R-543",
+  "schema": "tect/pah-omc020-correlation-modulus-primary/1.0",
+  "source_derived": {
+    "d_max": 5,
+    "f_D": "10",
+    "f_H": "20",
+    "g_D": "8",
+    "g_H": "10"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_DETERMINISTIC_CORRELATION_MODULUS",
+  "task_id": "T-064",
+  "test_fixture": {
+    "B_f": "120",
+    "B_g": "196",
+    "delta": "1/100",
+    "f_L": "1",
+    "f_M": "2",
+    "g_L": "3",
+    "g_M": "1",
+    "squared_modulus": "294/125"
+  },
+  "verdict": "PASS"
+}

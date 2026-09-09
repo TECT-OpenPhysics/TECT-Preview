@@ -1,0 +1,72 @@
+{
+  "schema": "tect/pah-omc020-diagonal-locality-contract/1.0",
+  "contract_id": "PAH-OMC-020-DIAGONAL-LOCALITY",
+  "result_id": "R-563",
+  "task_id": "T-086",
+  "date": "2026-09-08",
+  "title": "Diagonal obstruction to fixed-volume all-power locality",
+  "question": "Does the R-562 threshold N_k(f)=max(2,s_f+2k+1) admit one fixed finite n that is beyond the locality frontier for every generator power k?",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_EXACT_ROUTE_BOUNDARY",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": false,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_FINITE_OPERATOR_ALGEBRA"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-013": {
+      "path": "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "sha256": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc"
+    },
+    "R-562": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-universal-locality-result-v1.json",
+      "sha256": "4474c3ecabe56ea08c6a9efe44d33cdd7f2cbc79d5ea891a70e89703171698bc"
+    }
+  },
+  "fixed_scope": {
+    "model": "Exactly PAH-001, the PAH-OMC-013 full-Q grade-blind cylinder algebra and the frozen OMC-004 two-row strip; no functional, rate, state, carrier, root family, projection or time change.",
+    "radius": "The OMC-013 root catalog has the R-562 source-derived radius r=2.",
+    "threshold": "For every nonconstant finite-support cylinder with support maximum s_f>=0, N_k(f)=max(2,s_f+2k+1).",
+    "diagonal_witness": "For every finite n, k=n+1 satisfies n<N_k(f), so no fixed n is beyond the envelope for all k.",
+    "comparison": "The original pointwise pullback I_(n,n+1) and the same finite backward generators used by R-493/R-562.",
+    "time": "The original external stochastic Markov time remains unchanged.",
+    "order": "This is a route-local quantifier obstruction only. No exponential series, j limit, anchored-n limit or R-512 identification is evaluated."
+  },
+  "exact_statement": "For every support maximum s_f>=0 and every finite n, there exists k (indeed k=n+1) with n<N_k(f). Equivalently sup_k N_k(f)=infinity and no fixed finite n can satisfy n>=N_k(f) for every k.",
+  "route_consequence": "The R-562 fixed-k conditional identity cannot, by itself, be promoted to an all-power identity at one fixed volume and then summed termwise into an exponential semigroup. A separate uniform word/factorial tail, cancellation estimate, or common-process argument is required.",
+  "finite_checks": {
+    "source_radius": "The primary lane re-derives the R-562 radius from the frozen OMC-013 catalog at levels 2 through 9.",
+    "diagonal_samples": "Representative supports s_f in {0,1,4,10} and finite levels n in {2,3,5,11} are checked with k=n+1.",
+    "lean": "Lean proves the universal diagonal witness, unbounded threshold and no-uniform-eventuality statements over Nat."
+  },
+  "decision_rule": {
+    "NEGATIVE_RESULT": "Use only for the route-local proposition that R-562's fixed-k threshold cannot supply a fixed-n all-power premise.",
+    "HOLD_FOR_EVIDENCE": "Keep PAH-OMC-020 open because the full semigroup could still be established by an independent uniform tail, cancellation, common realization or path/form route.",
+    "MAINLINE_ADVANCE": "Not available from this arithmetic obstruction; no active gate or claim tier changes."
+  },
+  "missing_assumptions": [
+    "A uniform-in-k connected-word or factorial tail in the unchanged Markov time.",
+    "A source-authorized common U_n or path-space realization compatible with all powers.",
+    "N2b liminf/recovery, N2c/N4 boundary escape and N2d R-512 minimal-form identification."
+  ],
+  "non_claims": [
+    "This is not a no-go theorem for the PAH stationary semigroup or for all possible convergence proofs.",
+    "It does not refute exponential convergence if an independent uniform estimate or cancellation is supplied.",
+    "It does not prove infinite-volume dynamics, ordered j-before-n convergence or R-512 equality.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion follows."
+  ],
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_diagonal_locality.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_diagonal_locality_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_diagonal_locality_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_diagonal_locality_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc020DiagonalLocality.lean"
+  }
+}

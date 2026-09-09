@@ -1,0 +1,97 @@
+{
+  "schema": "tect/pah-omc020-universal-locality-result/1.0",
+  "result_id": "R-562",
+  "contract_id": "PAH-OMC-020-UNIVERSAL-LOCALITY",
+  "date": "2026-09-08",
+  "task_id": "T-086",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS_CONDITIONAL",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["EXECUTED", "EXACT_SCOPE", "INDEPENDENT", "HOSTILE", "LEAN_REPLAY", "PASS_CONDITIONAL"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-universal-locality-contract-v1.json",
+  "certificate": "strategy/pa-hyp/PAH-OMC-020-universal-locality-certificate.md",
+  "exploration_id": "EXP-001692",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "strategy/pa-hyp/PAH-OMC-020-iterate-locality-result-v1.json": "f9cef0e147be1c9fc084392e34a02c41a1be1ae78ad31ec641123e719e0a9d8e",
+    "strategy/pa-hyp/PAH-OMC-020-universal-locality-contract-v1.json": "dbf1ae881e380dcacba53763956e80de6b4046efa87cfacc6daa65f44fde9ff6"
+  },
+  "exact_scope": {
+    "question": "Does the unchanged R-493 one-step identity extend to every finite-support cylinder at a support-dependent fixed-power threshold?",
+    "model": "Exactly PAH-001 and the frozen PAH-OMC-013/OMC-004 two-row strip; no new carrier, functional, rate, state, projection, counterterm, normalization or time.",
+    "dimension": "Finite two-row strip with columns and rows in {0,1}; levels n >= 2; finite cylinders with support maximum s_f.",
+    "root_locality": "Frozen OMC-013 core-to-support radius r=2, re-derived at levels 2 through 9.",
+    "threshold": "N_k(f)=max(2,s_f+2k+1), for fixed finite k.",
+    "comparison": "Original pointwise pullback I_(n,n+1) and finite backward generators used by R-493.",
+    "limit_range": "No k/n exchange, exponential summation, j limit, anchored-n limit, common process or R-512 identification.",
+    "time": "Original external stochastic Markov time only."
+  },
+  "conditional_statement": "If the R-493 one-step identity holds on every recursively enlarged finite-support cylinder, then for every finite cylinder f, fixed k and n >= N_k(f), L_(n+1)^k I_(n,n+1) f = I_(n,n+1) L_n^k f.",
+  "finding": "The radius-two envelope and frontier separation pass for all tested finite-support families and k=0,...,5. The ell_(0,0) row exactly recovers R-561. This supplies a conditional fixed-power locality bridge and no more.",
+  "assumptions": [
+    "R-493 one-step identity holds for every finite-support function in the recursively enlarged class.",
+    "The OMC-013 root catalog and radius are the hash-pinned definitions.",
+    "The original PAH finite generator and Gibbs/rate normalization are used on the declared cylinder domain."
+  ],
+  "missing_assumptions": [
+    "Uniform-in-k connected-word or factorial tail for the unbounded generator expansion.",
+    "Source-authorized common U_n or path-space realization.",
+    "N2b liminf/recovery, N2c/N4 boundary escape and N2d R-512 minimal-form identification.",
+    "A justified compact-time summation in the original unaccelerated Markov time."
+  ],
+  "adversarial_review": [
+    {"objection": "The k<=5 table is a uniform semigroup estimate.", "disposition": "UPHELD as a non-claim: N_k grows with k."},
+    {"objection": "A below-threshold R-551 defect refutes the envelope.", "disposition": "REJECTED: it lies below the sufficient threshold and remains a boundary diagnostic."},
+    {"objection": "Fixed-power induction sums the exponential automatically.", "disposition": "REJECTED: no uniform tail, common domain or interchange estimate is supplied."},
+    {"objection": "Representative supports prove all finite cylinders without the R-493 premise.", "disposition": "REJECTED: the conclusion is explicitly conditional on recursive finite-support closure."},
+    {"objection": "External Markov time can be read as physical time.", "disposition": "REJECTED: time reinterpretation is outside scope."}
+  ],
+  "formal_refs": {"results": ["R-493", "R-561", "R-562"], "negatives": [], "events": ["20260908-r-562-pah-omc-020-universal-locality-bridge-2-2"]},
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-universal-locality/primary.json": "6b6da97dd236c9b73818bc003611374e4ab9f12a8ee43f36953ce73688b6c288",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-universal-locality/integrated.json": "9062f14d49726e6f2e06235634b8318ba264a9b50e384f22027792b579984ab6"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_universal_locality.py": "5127808fc00128679d98f8603069c5ea375f7e959f45fa75abd73191c2e620af",
+    "codes/foundations/pah_omc020_universal_locality_independent.py": "5c125389d7e4bfff219574fd6f0e75ca5d5858a9f66fb65d41fd9c4987e26601",
+    "codes/foundations/pah_omc020_universal_locality_hostile.py": "8701dd364e8a5e359efd02b52439f76104ab4276255241002eedd5313c6d9086",
+    "verification/scripts/pah_omc020_universal_locality_verify.py": "f8a8119e48b3b82c30623fa005f463d50411b053e46414011c16d5c91971e532",
+    "verification/lean/Tect/PahOmc020UniversalLocality.lean": "b27262e08717941b36b42b4aa20833a43be1bb4d1215f632b38c95d117303336",
+    "verification/lean/registry.json": "0c8134e3c2b27cd14a48047ca8952c8bbc2b3a028c1131690e8f7aeda7e12841"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-universal-locality-contract-v1.json": "dbf1ae881e380dcacba53763956e80de6b4046efa87cfacc6daa65f44fde9ff6",
+    "strategy/pa-hyp/PAH-OMC-020-universal-locality-certificate.md": "6e1fb397d33a9d2d953cb73acbb4b1875f7b14ff28d2dd2cb7eea9430ba42cbe",
+    "strategy/pa-hyp/PAH-OMC-020-universal-locality-exploration.json": "6b7b220facea26b269531712cc32e07471b0bfbad08d0fe59ff89cb74b8ae538",
+    "explorations/log.jsonl#EXP-001692": "f09b4ad65418bb07d8cf95de90906cce97d97c276c5ec1fdbe3f3302cc9810cf",
+    "changelog/log.jsonl#20260908-r-562-pah-omc-020-universal-locality-bridge-2-2": "27dbc3fc730f81163b1a796cb13265cccf348415069e47a08e87c7c51965a14b"
+  },
+  "verification": {
+    "primary": "PASS 14/14",
+    "independent": "PASS 8/8",
+    "hostile": "PASS 8/8",
+    "integrated": "PASS 4/4",
+    "lean": "PASS: Lean 4.32.1 compilation in the pinned dependency environment"
+  },
+  "closed_scoped_gate": "Conditional all-finite-cylinder fixed-power locality envelope with explicit N_k(f).",
+  "remaining_gates": [
+    "Uniform-in-k tail and compact-time semigroup summation",
+    "Source-authorized common U_n or path-space realization",
+    "N2b/N2c/N4/N2d and R-512 target identification",
+    "PAH-OMC-020 ordered stationary-semigroup local-correlation convergence"
+  ],
+  "next_single_question": "Can a source-authorized common realization supply a uniform factorial tail and compatible comparison so the fixed-power identities sum without exchanging k and n?",
+  "revisit_condition": "Reopen only when such a source-authorized packet or a parent PAH/OMC-013 byte change is available.",
+  "non_claims": [
+    "No full exponential semigroup intertwining, ordered convergence, common infinite-volume process, path law or R-512 selection.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion.",
+    "Markov time remains external stochastic time only."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-universal-locality-certificate.md"
+}

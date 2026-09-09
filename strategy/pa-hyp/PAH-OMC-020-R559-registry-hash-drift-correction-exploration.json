@@ -1,0 +1,59 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001707",
+  "recorded_at": "2026-09-08T16:22:25Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-09",
+  "provenance": "contemporaneous",
+  "task_id": "T-094",
+  "title": "PAH-OMC-020 R-559 Lean registry hash drift correction",
+  "question": "Does the current R-559 source-level negative still replay, and is its historical Lean registry hash mismatch a mathematical change or only post-result registry drift?",
+  "method": [
+    "Recompute every present path hash referenced by the R-559 result card, excluding log locators and absent historical references.",
+    "Run the existing R-559 primary, non-importing independent, hostile and integrated verifiers against the unchanged PAH-001 source.",
+    "Compare the result-card registry hash with the current verification/lean/registry.json byte hash after later Lean registrations.",
+    "Keep the historical R-559 card immutable and record only an append-only provenance correction."
+  ],
+  "finding": "R-559 remains reproducible: primary 15/15, independent 12/12, hostile 9/9 and integrated 22/22 all pass with NEGATIVE_RESULT. The only stale path pin is verification/lean/registry.json: R-559 recorded 5a013bb5c01b5a80826b2c475b40505c7eb068c32e2f43ee1683a2f7f69e01c4, while the current byte is d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4. The registry changed because later Lean entrypoints were registered; PAH-001, R-552/R-553 logic, R-558 attribution boundary and the R-559 verifier conclusion are unchanged.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This is a post-result provenance correction, not a new theorem or counterexample. It preserves R-559 as a scoped source-level negative for the original immutable PAH-001 proposition while keeping every owner-fixed successor and its R-512 convergence question open.",
+  "boundary": "The immutable PAH-001 hash, original functions, rates, labelled Gibbs state, external stochastic Markov time and j-before-n order remain fixed. No owner packet, comparison map, carrier, counterterm, limit or physical interpretation is added.",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-022-source-level-semigroup-wellposedness-result-v1.json#record_files",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc022-source-level-semigroup-wellposedness/integrated.json#source_hashes",
+    "verification/lean/registry.json#entrypoints",
+    "explorations/log.jsonl#EXP-001687"
+  ],
+  "formal_refs": {
+    "results": ["R-559"],
+    "negatives": ["NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS"],
+    "events": []
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "verification_summary": "The four existing R-559 verification lanes pass on current bytes. The registry mismatch is isolated to a later generated Lean registry and does not alter any mathematical source or result input.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc022_source_level_semigroup_wellposedness.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc022_source_level_semigroup_wellposedness_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc022_source_level_semigroup_wellposedness_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc022_source_level_semigroup_wellposedness_verify.py --check",
+    "registry_hash": "powershell -NoProfile -Command \"(Get-FileHash -Algorithm SHA256 verification/lean/registry.json).Hash.ToLower()\""
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-022-source-level-semigroup-wellposedness-result-v1.json": "e9582ffa26d04dfd11d7951fe3e8fb62aa8981d4f436477ddbbf1a9d6f482bf0",
+    "verification/lean/registry.json": "d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4"
+  },
+  "next_action": "Keep the original-source branch recorded as the scoped R-559 negative and do not call it a universal successor no-go. Reopen the temporal convergence route only if a new owner-authorized successor packet or a genuine parent-byte change appears.",
+  "revisit_condition": "Reopen on an owner-authorized packet, a genuine PAH parent hash change, or a change to the R-559 verifier inputs; do not repeat the same source-level witness without one of these triggers.",
+  "non_claims": [
+    "This correction does not prove the R-512 limit or ordered local-correlation convergence for an owner-fixed successor.",
+    "It is not a universal no-go theorem for every future PAH completion and does not change R-559 scope.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion is made."
+  ],
+  "related": [
+    {"id": "EXP-001687", "relation": "corrects"},
+    {"id": "EXP-001706", "relation": "continues"}
+  ]
+}

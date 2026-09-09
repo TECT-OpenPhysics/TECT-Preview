@@ -1,0 +1,148 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-GENERATOR-FACTORIZATION-HOSTILE-001",
+  "checks": [
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "contract identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "parent hash pin",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "source authorization cannot be assumed",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "all owner status fields remain open",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "HOLD rule is present",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "physical promotion is forbidden",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "model mutation is forbidden",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "unmutated identity passes",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "drop divergence defect rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "drop gradient defect rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "flip gradient sign rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "wrong generator order rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "None",
+      "expected": "True",
+      "name": "static form shortcut is not identity",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 13,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "3ed3b98271c78e31131f348efc9d0c594dcfef6b906c31dad60ca565d4d6fa76",
+  "conditional": true,
+  "finding": "Hostile mutations reject omission or sign/order changes in either defect term and reject source-owner or physical promotion shortcuts.",
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_generator_factorization_hostile.py --check",
+  "result_id": "R-549",
+  "schema": "tect/pah-omc020-generator-factorization-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-contract-v1.json": "1a56da4afc45c15357f9e2aee9e35216ca515aa618a6af6077f53444a3d73dcf",
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-result-v1.json": "4062188d9419a42d74b0350d35a62950c987e5d7b5f38d329bb7f09d09844d01",
+    "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json": "37ffd8a1f82ac83b9dabb955f62a8e5b9bdb68ba5588ac9f30fdf154127883d1",
+    "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json": "0e0268925eee2dd4b74ed5b279f4a56fb66637f86cb9faa608df1edbb99c7299",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "task_id": "T-081",
+  "verdict": "PASS",
+  "witness": {
+    "BtWt_G": [
+      [
+        "8",
+        "10"
+      ],
+      [
+        "-1",
+        "1"
+      ]
+    ],
+    "D_B": [
+      [
+        "7",
+        "-9/2"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ],
+    "lhs": [
+      [
+        "15",
+        "11/2"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "rhs": [
+      [
+        "15",
+        "11/2"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ]
+  }
+}

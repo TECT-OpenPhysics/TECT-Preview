@@ -1,0 +1,87 @@
+{
+  "schema": "tect/pah-omc019-result/1.0",
+  "result_id": "R-512",
+  "contract_id": "PAH-OMC-019",
+  "date": "2026-09-07",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["ANALYTIC", "EXACT", "EXECUTED", "LEAN_ABSTRACT_HILBERT_CONSEQUENCES", "INHERITED_R510_R511_INPUTS"],
+  "base_commit": "0775b22a9e567c1ac426cc8ce29bea7b6bc55a78",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-019-closure-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-OMC-019-closure-prereg-v1.json": "4337e21a140206956ea52ee10e20d04358af868969e3edb9f055e5ea64b055b7",
+    "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+    "codes/foundations/pah_omc019_closure.py": "9357f5d0d47204ea998854e92cbcb61d59533f676767d32fcb8ad8a1af2046dc",
+    "codes/foundations/pah_omc019_closure_independent.py": "d9e4faa0fae3edb0a3da4976c788a39c017b9fe87de11cc947767c2022d49755",
+    "codes/foundations/pah_omc019_closure_hostile.py": "da135471c52dd9f03cc3088a13f4cff94acf309cb0036b4c65ef8d55ff619e02",
+    "verification/scripts/pah_omc019_verify.py": "21cb82692b2ea7be91a7ea37afcb85df4d49754f4ee17d237d5e6032aa614bff",
+    "verification/lean/Tect/PahOmc019.lean": "752646d249f2731eda65b79c2b0d00354969ea7b9513654ce41051e135f305d3",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc019-closure-260907-v1.0.tex.txt": "39460be0b167061ca3522fbaede7352406a3c3b54053f772d619b9cb45e209d0"
+  },
+  "exact_scope": {
+    "model": "The exact R-511 PH/LK/AP local pre-form derived from original PAH-001 rates, multiplicities and partial domains; no new functional, carrier, projection or dynamics.",
+    "state": "R-510 invariant real cylinder-state Hilbert completion modulo zero L2, with the specified anchored local probability state and original full labelled all-Q law Z_Q/Z.",
+    "dimension_volume": "Two-row relational strips G_n with 2(n+2) vertices, n>=2, original unsplit frontier square and label-only anchors; no physical dimension or volume identification.",
+    "parameters": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0, all other OMC-016 displayed couplings one.",
+    "path_and_order": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j first at fixed n, then the specified anchored n exhaustion. Closure is on the resulting state, not a further regulator or continuum limit.",
+    "domain": "Exactly the R-511 gauge-invariant bounded globally amplitude-l1-Lipschitz finite-prefix cylinder domain D. It is dense in H, not asserted an operator graph core or A-invariant.",
+    "normalization": "E(f,g)=-<f,Ag>_H=(1/2) sum_r nu[c_r Delta_r f Delta_r g]; original directed root counting and all-Q measure, no conditional averaging or rate fitting.",
+    "time": "Original unaccelerated external Markov time, stationary finite initial law, no terminal conditioning; no temporal process or semigroup limit is constructed."
+  },
+  "conclusion": "The exact R-511 form is closable for every H-null energy-Cauchy sequence, with no fixed-support restriction. Its form-norm completion embeds injectively into H and defines the dense-domain minimal closed nonnegative extension Ebar. Every vector in the H-closure H_rad of amplitude-only cylinders belongs to Dom(Ebar), has zero energy and zero cross-energy against Dom(Ebar). The original aperture cylinder retains strictly positive energy.",
+  "kernel_claim": "H_rad subset ker(Ebar); full kernel unclassified",
+  "proof_coverage": {
+    "quotient": "Symmetry plus dense fixed H-valued representers makes A and E well defined on state-L2 equivalence classes.",
+    "primary": "Universal energy-completion no-ghost proof against fixed Sg=-Ag in H, including sequences with growing supports. Lean checks the abstract argument and its Cauchy/energy consequence.",
+    "independent": "Direct form-Cauchy epsilon estimate with m fixed before n, and independent form-completion kernel argument with fixed (I+S)g; non-importing symbolic algebra checks.",
+    "closure": "Analytic construction from the form norm, injective map, closedness, dense domain and minimal-extension containment. Not maximal-domain equality or essential self-adjointness.",
+    "radial": "All H_rad via zero-energy differences and H-norm approximation; spatial cylinder/Lipschitz density identifies the measurable amplitude-only L2 subspace. No full-kernel classification.",
+    "formal_scope": "Nine Lean declarations check universal Hilbert no-ghost, closability criterion, energy convergence, quotient representer, completion kernel/injectivity, radial closed-graph limit and scalar consequences. The model measure construction, analytic completion crosswalk and spatial density remain analytic.",
+    "hostile": "Exact point-evaluation nonclosability control, diagonal unbounded-operator non-Cauchy control, ghost-vector, extra-kernel, sign and directed-half controls. None are substituted PAH carriers.",
+    "parent_replay": "R-511 primary, independent and hostile JSON are freshly replayed byte-for-byte; its Lean source is freshly compiled by the pinned compiler. The historical lake-based integrated runner is not misreported as executed in this isolated cache-free worktree.",
+    "independence_boundary": "Separate derivations and non-importing internal verifiers; no external signed mathematical review or full model formalization."
+  },
+  "assumptions": [
+    "Exact inherited R-509/R-510 state and R-511 dense local operator/form results at their registered scopes.",
+    "D dense in real H, A:D->H, E(f,g)=-<f,Ag> symmetric nonnegative, D_rad annihilated by A, and original positive aperture energy.",
+    "Ordinary real Hilbert completion, form Cauchy-Schwarz and continuity of inner products; spatial cylinder density for the amplitude-only L2 identification."
+  ],
+  "missing_assumptions": [
+    "None beyond the explicitly inherited inputs for this scoped form-closure theorem. Finite-semigroup selection/convergence, maximal-domain equality, graph-core uniqueness and full kernel classification remain separate obligations."
+  ],
+  "lean": {
+    "path": "verification/lean/Tect/PahOmc019.lean",
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "declarations": ["no_ghost", "closability_criterion", "energy_tends_zero", "quotient_representer_zero", "completion_kernel_zero", "completion_injective", "radial_graph_limit", "zero_energy_cross", "radial_form_norm"]
+  },
+  "verification": {
+    "command": "python -X utf8 verification/scripts/pah_omc019_verify.py",
+    "stored_replay": "python -X utf8 verification/scripts/pah_omc019_verify.py --check",
+    "isolated_worktree_command": "python -X utf8 verification/scripts/pah_omc019_verify.py --check --lean-cache E:/Dev/TECT/verification/lean/.lake/packages",
+    "runs": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc019-closure",
+    "external_review": "Invited on state/domain applicability and closure; no external signed review."
+  },
+  "literature": {
+    "source": "Gerald Teschl, Mathematical Methods in Quantum Mechanics, second edition, author-hosted PDF",
+    "url": "https://www.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe2.pdf",
+    "locator": "Section 2.3, printed pp. 77-81, equations (2.47)-(2.49), Theorem 2.13 and adjacent closability definition/counterexample; Theorem 2.14 not used circularly.",
+    "consulted": "2026-09-07",
+    "novelty": "Standard functional-analysis reuse with model-specific pinned applicability and full radial-subspace consequence; not a new general theorem or a quantum interpretation."
+  },
+  "synthesis_note": "claims/C6-SPACETIME-SIGNATURE/notes/pah-omc019-closure-260907-v1.0.tex.txt",
+  "pdf_review": "All three pages rendered and visually inspected; no clipping or overlap; zero overfull boxes. One logical checkpoint synthesis.",
+  "closed_scoped_gate": "PAH-OMC-019 closability and minimal form closure retaining the entire H_rad nullspace.",
+  "remaining_gates": ["T-054 active gate unchanged", "PAH-OMC-014 unresolved", "Original finite-semigroup convergence and selection of the minimal closure", "Maximal-domain or operator-core uniqueness", "Physical/continuum identity"],
+  "next_single_question": "Do the original finite stationary semigroups, in the frozen j-before-n order and with preregistered comparison maps/topology, converge on local observables to the semigroup selected by this minimal closed form?",
+  "revisit_condition": "REVIEW_REQUIRED after the one DCTRL-000012 attempt. A separately activated temporal comparison contract and one-question budget are required; no automatic next proof or time acceleration. Reopen immediately on a source, density, symmetry, quotient, representer or inherited-state defect.",
+  "non_claims": [
+    "No active T-054 gate or C6 T1 promotion; no repair of PAH-OMC-014; classification auxiliary_support.",
+    "No full kernel classification, maximal jump-domain equality, essential self-adjointness, operator graph core or uniqueness of all extensions.",
+    "No finite-semigroup convergence, temporal path law, physical infinite-volume dynamics, ergodicity, spectral gap or quantum real-time automorphism.",
+    "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap or TOE conclusion; no Q3LOCK import."
+  ]
+}

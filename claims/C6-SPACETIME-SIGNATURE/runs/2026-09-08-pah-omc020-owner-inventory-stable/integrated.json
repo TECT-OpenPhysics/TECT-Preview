@@ -1,0 +1,215 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-OWNER-INVENTORY-STABLE-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2"
+      },
+      "name": "frozen source hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE"
+      ],
+      "expected": [
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE"
+      ],
+      "name": "all lanes report hold",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "auxiliary_support",
+        "auxiliary_support",
+        "auxiliary_support"
+      ],
+      "expected": [
+        "auxiliary_support",
+        "auxiliary_support",
+        "auxiliary_support"
+      ],
+      "name": "all lanes are auxiliary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes are non-bearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes keep physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_STABLE_OWNER_INVENTORY",
+      "expected": "PASS_STABLE_OWNER_INVENTORY",
+      "name": "primary lane status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_INDEPENDENT_STABLE_OWNER_INVENTORY",
+      "expected": "PASS_INDEPENDENT_STABLE_OWNER_INVENTORY",
+      "name": "independent lane status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_HOSTILE_STABLE_OWNER_INVENTORY_CONTROLS",
+      "expected": "PASS_HOSTILE_STABLE_OWNER_INVENTORY_CONTROLS",
+      "name": "hostile lane status",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "primary has no authorized path",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "primary has no complete path",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "independent agrees on authorized paths",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "independent agrees on complete paths",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "history inventory avoids fsck",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "name": "hostile mutations are covered",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent does not import primary",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile does not import primary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "HOLD_FOR_EVIDENCE",
+        false,
+        false
+      ],
+      "expected": [
+        "HOLD_FOR_EVIDENCE",
+        false,
+        false
+      ],
+      "name": "R-525 remains conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_INTEGRATED_NONCOORDINATE_LOCAL_COUPLING",
+      "expected": "PASS_INTEGRATED_NONCOORDINATE_LOCAL_COUPLING",
+      "name": "R-525 Lean cross-check remains PASS",
+      "status": "PASS"
+    },
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "PAH model hash agrees",
+      "status": "PASS"
+    },
+    {
+      "actual": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+      "expected": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+      "name": "intake hash agrees",
+      "status": "PASS"
+    },
+    {
+      "actual": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+      "expected": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+      "name": "candidate hash agrees",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "no dynamic fsck command",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "finding": "Primary, independent and hostile lanes agree on a deterministic bounded provenance inventory: no source-authorized PAH-OMC-020 owner packet is present, and the previous dynamic-fsck replay defect is not part of the new evidence.",
+  "lane_counts": {
+    "hostile": 8,
+    "independent": 12,
+    "primary": 14
+  },
+  "lean_crosscheck": "R-525 integrated Lean 4.32.1 finite coupling declarations remain PASS; this provenance audit adds no physical or analytic Lean claim.",
+  "next_single_question": "Can a source owner authorize the exact R-525 maximal-prefix U_n and provide PAH-specific energy intertwining for N2b, N2c/N4 and N2d without changing PAH-001?",
+  "non_claims": [
+    "No source-authorized U_n packet, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal-form identification or PAH-OMC-020 semigroup convergence.",
+    "No universal comparison-map impossibility theorem.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "result_id": "R-526",
+  "schema": "tect/pah-omc020-owner-inventory-stable-integrated/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2"
+  },
+  "status": "PASS_INTEGRATED_STABLE_OWNER_INVENTORY",
+  "task_id": "T-063",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

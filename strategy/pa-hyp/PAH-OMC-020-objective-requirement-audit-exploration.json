@@ -1,0 +1,86 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001708",
+  "recorded_at": "2026-09-08T16:27:21Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-09",
+  "provenance": "contemporaneous",
+  "task_id": "T-094",
+  "title": "PAH-OMC-020 full objective requirement audit and branch split",
+  "question": "Do the current hash-pinned authorities satisfy every requirement of the original PAH-OMC-020 j-before-n stationary-correlation objective, and which obligations remain after separating the immutable-source negative from an owner-fixed successor?",
+  "method": [
+    "Freeze PAH-001 and the registered R-537, R-555, R-557 and R-559 authorities by their current SHA-256 values.",
+    "Map the objective into source semigroup identity, fixed-n j-to-infinity control, anchored-n target identification, compact-time uniform correlation transfer and independent/hostile/Lean verification roles.",
+    "Read each requirement against its authoritative result scope rather than treating conditional algebra or source absence as convergence evidence.",
+    "Report the immutable-source branch and any separately owner-fixed successor branch without changing the original function, rates, state, time or order."
+  ],
+  "finding": "The requirement audit has a split outcome. The immutable PAH-001 branch is covered by R-559's scoped NEGATIVE_RESULT: current bytes do not select one finite stationary semigroup. The fixed-n J bridge (R-537/R-555), anchored-n D and R-512 minimal-form identification (R-536/R-538/R-557), and full compact-time local-correlation transfer remain conditional or missing for any owner-fixed successor. Existing primary, independent, hostile and Lean evidence verifies the conditional contracts, not the final ordered convergence theorem.",
+  "verdict": "parked",
+  "classification": "auxiliary_support",
+  "decision_reason": "This audit does not redefine the goal or promote a smaller theorem. It makes the completion boundary explicit: the original source formulation has a scoped negative, while the requested R-512 ordered convergence remains unproved until a single owner-authorized successor packet instantiates every missing dynamic and form field.",
+  "boundary": "PAH-001 functional, original transition rates, labelled Gibbs state, external stochastic Markov time, carrier, normalization and j-before-anchored-n order remain unchanged. No new comparison map, carrier, counterterm, direct sum, averaging or physical interpretation is introduced.",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-022-source-level-semigroup-wellposedness-result-v1.json#finding",
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-result-v1.json#remaining_gates",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json#remaining_gates",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json#required_packet_fields",
+    "strategy/pa-hyp/PAH-OMC-020-owner-delta-after-r566-exploration.json#finding"
+  ],
+  "formal_refs": {
+    "results": ["R-537", "R-555", "R-557", "R-559"],
+    "negatives": ["NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS"],
+    "events": []
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "requirement_matrix": {
+    "source_finite_stationary_semigroup": {
+      "status": "NEGATIVE_SOURCE_BRANCH",
+      "evidence": ["R-552", "R-553", "R-558", "R-559"],
+      "meaning": "Immutable PAH-001 does not select one unique finite semigroup; this is not a universal successor no-go."
+    },
+    "fixed_n_j_to_infinity": {
+      "status": "CONDITIONAL_ONLY",
+      "evidence": ["R-537", "R-555"],
+      "missing": "Source-authorized full-domain J_(n,j) estimate for every declared local cylinder pair and compact time interval."
+    },
+    "anchored_n_D_and_R512": {
+      "status": "MISSING",
+      "evidence": ["R-536", "R-538", "R-557"],
+      "missing": "Common realization, arbitrary-sequence liminf/recovery, boundary escape, minimal-form identification and anchored D_n control."
+    },
+    "compact_time_local_correlation_transfer": {
+      "status": "CONDITIONAL_ONLY",
+      "evidence": ["R-537", "R-555"],
+      "missing": "Source-authorized common core, initial recovery and integrable residual bridge."
+    },
+    "verification_roles": {
+      "status": "PASS_FOR_CONDITIONAL_CONTRACTS_ONLY",
+      "evidence": ["R-537", "R-538", "R-559"],
+      "meaning": "Primary, independent, hostile and Lean checks do not substitute for the missing source-owned packet."
+    }
+  },
+  "verification_summary": "This is a requirement-to-authority audit. It reuses already verified result packages and adds no finite numerical fixture. The source-delta check remains PASS_NO_NEW_INPUT; no new owner packet is present.",
+  "reproduction": {
+    "source_delta": "python -X utf8 verification/scripts/pah_omc020_owner_delta_after_r566.py --check",
+    "exploration_verify": "python -X utf8 verification/scripts/exploration.py verify",
+    "release": "python -X utf8 verification/scripts/release_check.py"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-result-v1.json": "4062188d9419a42d74b0350d35a62950c987e5d7b5f38d329bb7f09d09844d01",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+    "strategy/pa-hyp/PAH-OMC-022-source-level-semigroup-wellposedness-result-v1.json": "e9582ffa26d04dfd11d7951fe3e8fb62aa8981d4f436477ddbbf1a9d6f482bf0"
+  },
+  "next_action": "Keep the full PAH-OMC-020 goal active but parked at the exact owner-packet cut-set. Reopen only when one source-authorized packet supplies the missing J/D/common-core/N2 fields or a genuine parent-byte change appears; then run the unchanged admission verifier and all four verification roles.",
+  "revisit_condition": "Reopen on a new source-authorized hash-pinned packet, a genuine PAH parent-byte change, or an exact PAH-specific contradiction to one requirement. Do not repeat finite or abstract audits without such an input.",
+  "non_claims": [
+    "This audit does not prove the R-512 minimal-form semigroup convergence or any owner-fixed successor theorem.",
+    "The scoped source-level negative is not a universal no-go for every successor completion.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion is made."
+  ],
+  "related": [
+    {"id": "EXP-001707", "relation": "continues"}
+  ]
+}

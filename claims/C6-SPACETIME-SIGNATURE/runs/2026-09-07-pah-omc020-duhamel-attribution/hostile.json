@@ -1,0 +1,154 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source unchanged:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+      "expected": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+      "name": "source unchanged:strategy/pa-hyp/PAH-OMC-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "expected": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "name": "source unchanged:strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "9e357158eb6de66bb776b2d674964ddf9fb16547409ac36f8dd254154082bc11",
+      "expected": "9e357158eb6de66bb776b2d674964ddf9fb16547409ac36f8dd254154082bc11",
+      "name": "source unchanged:strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "midpoint rate not replaced",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "aperture",
+        "link",
+        "matter_transfer",
+        "phase"
+      ],
+      "expected": "phase/link/aperture",
+      "name": "source PH/LK/AP labels retained",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "anchors": "O={(0,0)} and C={(0,1)}; the audited anchor-preserving automorphism group is the identity.",
+        "degree_bound": 5,
+        "diagonals": "d_i=((i,0),(i+1,1)) for 0<=i<n",
+        "face_incidence_bound": 4,
+        "faces": "For i<n, q_i is replaced by triangles [h_i^0,v_(i+1),d_i^(-1)] and [d_i,(h_i^1)^(-1),v_i^(-1)]; q_n remains the unsplit square with its oriented boundary.",
+        "horizontal_edges": "h_i^j=((i,j),(i+1,j)) for 0<=i<=n and j in {0,1}",
+        "vertical_edges": "v_i=((i,0),(i,1)) for 0<=i<=n+1",
+        "vertices": "V_n={(i,j):0<=i<=n+1, j in {0,1}}"
+      },
+      "expected": "degree=5, face-incidence=4",
+      "name": "source geometry retained",
+      "status": "PASS"
+    },
+    {
+      "actual": 144,
+      "expected": 144,
+      "name": "correct overlap value",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": "<70",
+      "name": "under-radius mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": "!=4",
+      "name": "diagonal omission changes slot count",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "two-copy factor is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": 144,
+      "expected": "must use 288",
+      "name": "one-copy shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": 288,
+      "expected": 288,
+      "name": "effective branching is source-derived",
+      "status": "PASS"
+    },
+    {
+      "actual": "24/43",
+      "expected": "<1",
+      "name": "tail ratio guard",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "14063099543939095809525351828499247216354249967128117316141851257421747881493833266279261435381697965217902482265184527594928154432766805847560560969033072446238388912128/1124970700866168711895729024076200974983767508307979542626767491371005162609139487533223410088308574800249473889581888657116233371198177337646484375",
+        "7200306966496817054476980136191614574773375983169596065864627843799934915324842632334981854915429358191566070919774478128603215069576604593951007216144933092474055123009536/2545986323012908137448228843961928522331684360907532649102684322576485368010157787575189822831435195600564598802737958539789370261132717132568359375"
+      ],
+      "expected": "different exact powers",
+      "name": "integrated simplex exponent is not k-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "96/43",
+      "expected": ">=1",
+      "name": "unsafe time shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "t is external stochastic time; local clock accumulation is d tau_v=s_v^nu dt",
+      "expected": "external stochastic time only",
+      "name": "no anchored-n promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "AUXILIARY_SUPPORT",
+      "expected": "AUXILIARY_SUPPORT",
+      "name": "no physical promotion",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "conditional": true,
+  "physical_promotion": false,
+  "rejected_shortcuts": [
+    "omitting the diagonal OMC-004 edge",
+    "using footprint radius one",
+    "dropping the two-copy rate-difference factor",
+    "using T^(ell-1)/(ell-1)! after time integration",
+    "accepting an unsafe factorial ratio",
+    "promoting the finite conditional bound to anchored-n or physical convergence"
+  ],
+  "remaining": [
+    "The common U_n/Hilbert realization and terminal-square comparison remain open.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "schema": "tect/pah-omc020-duhamel-attribution-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json": "9e357158eb6de66bb776b2d674964ddf9fb16547409ac36f8dd254154082bc11"
+  },
+  "status": "PASS_HOSTILE_DUHAMEL_ATTRIBUTION",
+  "verdict": "AUXILIARY_SUPPORT"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001679",
+  "title": "PAH-OMC-020 R-554 source-hash correction",
+  "task_id": "T-064",
+  "question": "After the R-554 changelog event id was normalized, do the owner-search v1.4 source-hash references point to the final byte state without changing the scientific verdict?",
+  "finding": "The v1.4 result event reference is now the exact changelog id emitted by changelog.py, so the result bytes changed once. The standalone v1.4 exploration file was corrected to the final R-554 result SHA-256 54329df2a6d3ca766f6ca24fbcc628263e6c7e8c2c0e8c8eba545f3508d75df7. This is a provenance correction only; R-554 remains HOLD_FOR_EVIDENCE with zero owner paths.",
+  "decision_reason": "The earlier EXP-001678 ledger line is append-only authority and is not rewritten. This successor records the final-byte hash after the event-id normalization so future readers can distinguish the historical pre-normalization hash from the final v1.4 result. No mathematical input or route decision changed.",
+  "boundary": "PAH-001, PAH-OMC-020 preregistration, original rates, Gibbs state, external Markov time and j-before-anchored-n order remain unchanged. No U_n, common space, path law, semigroup limit or physical interpretation is constructed.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "verdict": "inconclusive",
+  "recorded_at": "2026-09-08T08:22:42Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "related": [{"id": "EXP-001678", "relation": "corrects"}],
+  "method": [
+    "Recompute the final SHA-256 values of the R-554 result and v1.4 standalone exploration files after the exact changelog id was fixed.",
+    "Preserve EXP-001678 in the append-only ledger and record the final-byte successor rather than editing historical evidence.",
+    "Replay the v1.4 integrated verifier and release gate to confirm that only provenance bytes changed."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json#formal_refs",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-exploration.json#source_hashes",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.4/integrated.json#checks"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json": "54329df2a6d3ca766f6ca24fbcc628263e6c7e8c2c0e8c8eba545f3508d75df7",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-exploration.json": "7c67cfbd31f1e3bde7fc85e20faa2ab5d8704c288ea3e7b804b0fc524c48bb8b",
+    "verification/scripts/pah_omc020_owner_snapshot_v14_verify.py": "6371db443282ca884366bedb259cad8bce214c461e982d4beaaf1d2ccc9e7058",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.4/integrated.json": "83cc8b8483d1460768f19d5d9c6b38710e95d2e51639c8de9f92560a1e785fd2"
+  },
+  "formal_refs": {
+    "events": ["20260908-r-554-pah-omc-020-owner-snapshot-v1-4-2026-09-0"],
+    "negatives": [],
+    "results": ["R-554"]
+  },
+  "next_action": "Keep the v1.4 owner-intake route on HOLD_FOR_EVIDENCE and wait for one source-authorized, hash-pinned owner packet; do not repeat finite carrier or physical calculations.",
+  "reproduction": {
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_owner_snapshot_v14_verify.py --check",
+    "hashes": "Get-FileHash -Algorithm SHA256 strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json; Get-FileHash -Algorithm SHA256 strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-exploration.json"
+  },
+  "revisit_condition": "Reopen only when an owner packet appears, a parent source byte changes, or a new byte-consistency discrepancy is found.",
+  "non_claims": [
+    "No change to R-554 verdict, owner-path sets, PAH-001 source fields or the active gate.",
+    "No semigroup convergence, common-space theorem, R-512 identification or physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "verification_summary": "Final-byte hash recomputation and the v1.4 integrated replay are consistent; this correction is auxiliary provenance only."
+}

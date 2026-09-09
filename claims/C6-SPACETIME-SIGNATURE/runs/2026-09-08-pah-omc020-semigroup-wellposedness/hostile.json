@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "frozen PAH pin",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-527",
+      "expected": "R-527",
+      "name": "R-527 source witness present",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": "distinct source completions",
+      "name": "zero-multiplicity mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "t is external stochastic time; local clock accumulation is d tau_v=s_v^nu dt",
+      "expected": "unchanged external time",
+      "name": "time-rescale mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "expected": "original generator",
+      "name": "rate-fitting mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.0,
+      "expected": "nonzero",
+      "name": "derivative gap not collapsed",
+      "status": "PASS"
+    },
+    {
+      "actual": "route-local",
+      "expected": "route-local",
+      "name": "finite witness not universal no-go",
+      "status": "PASS"
+    },
+    {
+      "actual": "no universal comparison-map no-go; the witness distinguishes two unpinned completions only. no pah-omc-020 n2b/n2c/n4/n2d closure or stationary semigroup convergence. no physical pre-a, spacetime, qft, gravity, continuum, mass-gap, yang-mills or toe conclusion.",
+      "expected": "physical/QFT/gravity non-claims",
+      "name": "no physical promotion",
+      "status": "PASS"
+    }
+  ],
+  "classification": "auxiliary_support",
+  "mutations_rejected": [
+    "collapse the two source-compatible multiplicities",
+    "reinterpret root multiplicity as a time rescaling",
+    "fit or alter the PAH midpoint rate",
+    "promote a finite derivative gap to a universal convergence no-go",
+    "promote the finite cylinder to a physical claim"
+  ],
+  "status": "PASS",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

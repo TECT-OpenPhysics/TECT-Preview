@@ -1,0 +1,200 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "independent source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "independent source pin:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b",
+      "expected": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b",
+      "name": "independent source pin:strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "F7,F8,F9,F10",
+      "expected": "present",
+      "name": "independent F7--F10 markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "j then K",
+      "expected": "present",
+      "name": "independent order marker",
+      "status": "PASS"
+    },
+    {
+      "actual": "minimal selection remains open",
+      "expected": "present",
+      "name": "independent non-claim marker",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "-3/5",
+          "3/5"
+        ],
+        [
+          "7/10",
+          "-7/10"
+        ]
+      ],
+      "expected": "each row sums to zero",
+      "name": "independent row zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/65",
+      "expected": "21/65",
+      "name": "independent detailed balance",
+      "status": "PASS"
+    },
+    {
+      "actual": "847/3120",
+      "expected": "847/3120",
+      "name": "independent form sign",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/5",
+      "expected": "2/5",
+      "name": "independent generator modulus",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "3/5",
+        "7/10",
+        "2/5",
+        "4/5"
+      ],
+      "expected": ">0",
+      "name": "independent positive rate range",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "7/4",
+        "7/8",
+        "7/16",
+        "7/32",
+        "7/64",
+        "7/128",
+        "7/256"
+      ],
+      "expected": "strictly decreasing",
+      "name": "independent F7 monotonicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "162/125",
+        "108/125",
+        "81/125",
+        "324/625",
+        "54/125",
+        "324/875",
+        "81/250"
+      ],
+      "expected": "strictly decreasing",
+      "name": "independent F8 monotonicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "7/256",
+        "81/250"
+      ],
+      "expected": "diagnostic smallness",
+      "name": "independent limits approach zero",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "code_sha256": "22381ef5006990461a426d8ac3508e1e64151fa347ebba0a7a9b58d65f9e2ea0",
+  "error_oracle": {
+    "f7": [
+      "7/4",
+      "7/8",
+      "7/16",
+      "7/32",
+      "7/64",
+      "7/128",
+      "7/256"
+    ],
+    "f8": [
+      "162/125",
+      "108/125",
+      "81/125",
+      "324/625",
+      "54/125",
+      "324/875",
+      "81/250"
+    ],
+    "fixture": {
+      "H": "1/2",
+      "L": "5/2",
+      "M_f": "27/25",
+      "M_g": "6/5",
+      "T": "7/10"
+    }
+  },
+  "fibre_oracle": {
+    "generator": [
+      [
+        "-3/5",
+        "3/5"
+      ],
+      [
+        "7/10",
+        "-7/10"
+      ]
+    ],
+    "generator_row_l1_difference": "2/5",
+    "perturbed_generator": [
+      [
+        "-2/5",
+        "2/5"
+      ],
+      [
+        "4/5",
+        "-4/5"
+      ]
+    ],
+    "rates": {
+      "a": "3/5",
+      "a_prime": "2/5",
+      "b": "7/10",
+      "b_prime": "4/5"
+    },
+    "stationary_weights": [
+      "7/13",
+      "6/13"
+    ]
+  },
+  "independence": "Non-importing tuple/Fraction reconstruction; no primary verifier code is imported.",
+  "non_claims": [
+    "No unconditional fixed-n temporal theorem, common-space U_n, Mosco liminf or anchored n limit.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass gap, Yang--Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "schema": "tect/pah-omc020-fixedn-conditional-independent/1.0",
+  "scope": "Conditional F7--F9 to F10 implication at fixed n only; inherited analytic hypotheses remain open.",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b"
+  },
+  "status": "PASS_INDEPENDENT_CONDITIONAL_AUDIT",
+  "temporal_verdict": "IN_PROGRESS",
+  "verdict": "AUXILIARY_SUPPORT"
+}

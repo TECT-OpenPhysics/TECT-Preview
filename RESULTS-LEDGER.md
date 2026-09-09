@@ -22,6 +22,63 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-568](#r-568) | PAH-OMC-029 fixed-generator Markov uniqueness | Every symmetric strongly continuous Markov semigroup on the same R-510 H whose generator extends R-511 A on all D equals the R-512/R-567 minimal extension, conditional on those pinned inputs. Radial localization, a state-derived subpolynomial rate envelope and an all-extension domain bridge give a vanishing factorial boundary remainder. Independent commutator proof and six partial Lean theorems support the result. Auxiliary only; no original finite-semigroup convergence or physical promotion. |
+| [R-567](#r-567) | PAH-OMC-028 nonlinear closure proof repair | On the full R-512 minimal domain, every scalar normal contraction preserves the domain and decreases energy; the same target semigroup is positive, bounded-norm contractive and conservative under the inherited state/core/closedness hypotheses. The paired-energy shortcut behind R-530 is false (exact energies 0 versus 1), but its conclusion is repaired by closed-epigraph and weak-compactness proofs. Primary, non-importing independent, hostile and five Lean theorems pass. Auxiliary only; no PAH-OMC-020 convergence or physical promotion. |
+| [R-566](#r-566) | PAH-OMC-026 cut-set to owner-packet sufficiency crosswalk | The R-557 ten-field source-owner packet strictly refines the R-565 coarse cuts: authority/root semantics fill S0, common realization/N1/N2b/N2c-N4/N2d fill S1, full-domain J and anchored D fill S2, and verification is cross-cut. A complete packet plus the unchanged nonnegative J+D budget and ordered J/D limits implies the registered nested local-correlation conclusion conditionally; coarse cuts alone are not a packet. Primary 21/21, independent 15/15, hostile 8/8, integrated 17/17 and fourteen finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no packet or PAH-specific J/D estimates are present. |
+| [R-565](#r-565) | PAH-OMC-025 route-independent minimal owner cut-set | The existing PAH-OMC-020 route records reduce every permitted proof route to three jointly required cuts: source semantics/finite generator identity (`S0`), one complete form or path comparison route (`S1`), and full-domain temporal control in the declared `j`-before-anchored-`n` order (`S2`). None is currently source-authorized. Primary 42/42, independent 25/25, hostile 11/11, integrated 16/16 and eight finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no PAH convergence or physical promotion. |
+| [R-564](#r-564) | PAH-OMC-024 anchored-n persistence audit | The R-552 finite derivative gap alone does not force an anchored-n compact-time gap: an exact reversible two-state oracle has a positive gap for every finite n but geometric decay and uniform convergence to a common identity target. Primary 52/52, independent 61/61, hostile 10/10, integrated 25/25 and six Lean declarations pass. Auxiliary HOLD_FOR_EVIDENCE; no PAH owner-fixed no-go or physical promotion. |
+| [R-563](#r-563) | PAH-OMC-020 diagonal obstruction to fixed-volume all-power locality | Exact route-local negative: for every nonconstant finite-support cylinder and finite n, k=n+1 lies beyond N_k(f)=max(2,s_f+2k+1). Thus R-562 fixed-k locality cannot alone provide a fixed-n all-power premise for termwise exponential summation. Primary 9/9, independent 7/7, hostile 8/8, integrated 4/4 and Lean pass. Scoped NEGATIVE_RESULT; no full semigroup no-go or physical promotion. |
+| [R-562](#r-562) | PAH-OMC-020 universal finite-cylinder locality envelope | Conditional fixed-k locality for every tested finite-support cylinder: the frozen radius-two catalog gives N_k(f)=max(2,s_f+2k+1). Primary 14/14, independent 8/8, hostile 8/8, integrated 4/4 and Lean replay pass. Auxiliary PASS_CONDITIONAL; no uniform-in-k tail, ordered convergence or physical promotion. |
+| [R-561](#r-561) | PAH-OMC-020 fixed-power local generator-intertwining bridge | Conditional fixed-k locality: the unchanged R-493 one-step identity iterates after the recursively derived threshold N_k=max(2,2k+1) for the frozen ell_(0,0) support. Primary 13/13, independent 8/8, hostile 8/8, integrated 4/4 and Lean replay pass. Auxiliary PASS_CONDITIONAL; no uniform-in-k tail, ordered convergence or physical promotion. |
+| [R-560](#r-560) | PAH-OMC-023 canonical owner-admission replay boundary | Canonical current-environment replay resolves R-554's absolute-path mismatch; primary 29/29, independent 783/783, hostile 11/11, integrated 24/24, but no authorized/complete owner packet exists. Auxiliary `HOLD_FOR_EVIDENCE`; no ordered convergence or physical promotion. |
+| [R-559](#r-559) | PAH-OMC-022 source-level stationary-semigroup well-posedness boundary | Immutable PAH-001 has two source-compatible finite stationary semigroups with positive-time separation, while the available successor is source-owner-ineligible; therefore the original-source stationary-semigroup proposition is not one uniquely well-posed theorem. Primary 15/15, independent 12/12, hostile 9/9, integrated 22/22 and four Lean declarations pass. Scoped `NEGATIVE_RESULT`; no owner-fixed successor or physical conclusion. |
+| [R-558](#r-558) | PAH-OMC-021 composite owner-packet transfer audit | PAH-OMC-001 supplies finite root semantics and a finite common realization for the separately named composite model, but is not source authority for PAH-001; N1, N2b, N2c/N4, N2d, full-domain J and anchored D remain missing. Primary 30/30, independent 23/23, hostile 10/10, integrated 22/22 and three Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no ordered-correlation or physical promotion. |
+| [R-557](#r-557) | PAH-OMC-020 owner-packet sufficiency bridge | Conditional ten-field source-owner packet plus full-domain J/D bounds implies the exact compact-time j-before-n local-correlation conclusion. Primary 19/19, independent 17/17, hostile 10/10, integrated 22/22 and four Lean theorems pass. Auxiliary `HOLD_FOR_EVIDENCE`; no source-authorized packet is present and no active-gate or claim-tier change occurs. |
+| [R-556](#r-556) | PAH-OMC-020 minimal ordered-convergence dependency audit | Hash-pinned ledger separates the exact conditional j-before-n bridge from restricted finite/radial inputs and three open full-domain source obligations: root-owner uniqueness, common map/form, and full-domain J/D estimates. Primary 24/24, independent 15/15, hostile 9/9, integrated 22/22 and six Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no active-gate or claim-tier change. |
+| [R-555](#r-555) | PAH-OMC-020 exact ordered-epsilon bridge | The unchanged two-term bound `err_(n,j)<=J_(n,j)+D_n` has an exact nested `j`-before-anchored-`n` epsilon consequence. Primary 13/13, independent 13/13, hostile 5/5, integrated 22/22 and three Lean declarations pass. Auxiliary `PASS_CONDITIONAL`; PAH-specific J/D estimates and the source-authorized owner packet remain absent, so the full route stays `HOLD_FOR_EVIDENCE`. |
+| [R-554](#r-554) | PAH-OMC-020 fresh current-byte owner-search snapshot v1.4 | A fresh 192-file marker manifest after R-553 has `authorized_paths=[]`, `complete_paths=[]` and `source_authorized_packet_present=false`. Primary 987/987, independent 779/779, hostile 10/10 and integrated 29/29 pass. Auxiliary `HOLD_FOR_EVIDENCE`; provenance only, not a universal no-go, common-space map, path law or semigroup convergence result. |
+| [R-553](#r-553) | PAH-OMC-020 positive-time separation from source multiplicity | The R-552 derivative gap `2 exp(-2)-exp(-2)=exp(-2)>0` implies existential positive-time separation of the two currently source-compatible finite correlation orbits on a punctured right Markov-time interval. Primary 23/23, independent 13/13, hostile 8/8, integrated 16/16 and three Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no explicit delta or owner-fixed anchored-n result is claimed. |
+| [R-552](#r-552) | PAH-OMC-020 finite semigroup well-posedness under source root multiplicity | The frozen PAH source admits two root-multiplicity completions on the existing gauge-invariant OMC-004 witness, giving finite semigroup derivatives `2 exp(-2)` and `exp(-2)` at `t=0`. Thus one source-defined finite stationary semigroup is not selected until root multiplicity and root measure are owner-fixed. Primary 21/21, independent 9/9, hostile 8/8, integrated 14/14 and five Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; this is not a universal owner-fixed convergence no-go. |
+| [R-551](#r-551) | PAH-OMC-020 exact finite second-order semigroup defect | On the unchanged PAH-001/R-493 projection at `n=N(ell_(0,0))=3`, `R_max=1` and `sample_state(4,3)`, the first generator defect is exactly zero but the second is `-1/2 exp(-25/8)(exp(1/3)-1)^2(exp(1/3)+1)<0`. Primary 11/11, independent 8/8, hostile 6/6, integrated 7/7 and Lean sign/factorization replay pass. Route-local `NEGATIVE_RESULT`; no universal alternate-map, anchored-n or physical conclusion. |
+| [R-550](#r-550) | PAH-OMC-020 finite semigroup lift audit | The finite algebraic bridge is exact conditionally: an all-function operator intertwining or an invariant subspace containing every coarse generator iterate gives power and finite exponential semigroup intertwining. R-493 supplies only a support-dependent first-order grade-blind cylinder identity and no invariant/all-iterate owner field. Primary 11/11, independent 10/10, hostile 7/7, integrated 18/18 and five Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no anchored-n, path-space or physical promotion follows. |
+| [R-549](#r-549) | PAH-OMC-020 generator factorization bridge | The exact finite weighted-incidence identity splits `K_infty U_n-U_n K_n` into an adjoint-divergence defect and a weighted gradient defect. Primary 21/21, independent 12/12, hostile 13/13, integrated 29/29 and seven finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; the R-525 comparison and both source-owner defect estimates remain absent, so no anchored-n semigroup or physical promotion follows. |
+| [R-548](#r-548) | PAH-OMC-020 restricted radial semigroup consistency | For bounded amplitude-only local cylinders, PH/LK/AP increments vanish and R-511 gives `||L_TR S_nj f||_2 <= 2 H_f L_f h_j`; stationary L2 contraction yields compact-time error `<= 2 T H_f L_f h_j`, while R-512 zero energy makes the minimal target semigroup the identity on `H_rad`. Primary 21/21, independent 14/14, hostile 11/11, integrated 29/29 and seven finite Lean declarations pass. Auxiliary `PASS_RESTRICTED`; non-radial anchored-n transfer remains open. |
+| [R-547](#r-547) | PAH-OMC-020 fresh current-byte owner-search snapshot v1.3 | A fresh 164-file marker manifest after R-545/R-546 has `authorized_paths=[]`, `complete_paths=[]` and `source_authorized_packet_present=false`. Primary 847/847, independent 667/667, hostile 10/10 and integrated 21/21 pass. Auxiliary `HOLD_FOR_EVIDENCE`; provenance only, not a universal no-go, common-space map, path law or semigroup convergence result. |
+| [R-546](#r-546) | PAH-OMC-020 direct two-term route | R-514 and R-536 use the same post-j correlation `c_n`; a complete source-authorized R-536 route would give the direct ordered compact-time bound `sup_t|C_(n,j)-c_star| <= J_(n,j)+D_n`, without a separate `K_(n,m)` intermediate. Primary 22/22, independent 14/14, hostile 14/14, integrated 32/32 and four finite rational Lean declarations pass. Auxiliary `PASS`; the R-536 owner route and `D_n` limit remain absent. |
+| [R-545](#r-545) | PAH-OMC-020 scalar mesh-to-uniform transfer | Under unchanged PAH-001, the R-543 finite deterministic-time modulus plus R-530 continuity of the fixed R-512 target gives the exact compact-time envelope `sup_t|C_(n,j)-C_inf| <= max_mesh_error + M_fg delta + omega_inf(delta)` from finite mesh-pointwise convergence. Primary 27/27, independent 16/16, hostile 15/15, integrated 30/30 and four finite rational Lean declarations pass. Auxiliary `PASS`; mesh-pointwise convergence, source-authorized common-space/path-space identification and all physical layers remain open. |
+| [R-544](#r-544) | PAH-OMC-020 fresh current-byte owner-search snapshot v1.2 | A fresh current-byte marker manifest after R-543 contains 151 PAH-OMC-020 candidate files, but `authorized_paths=[]`, `complete_paths=[]` and `source_authorized_packet_present=false`. Primary 782/782, independent 615/615, hostile 10/10 and integrated 40/40 pass. Auxiliary `HOLD_FOR_EVIDENCE`; this is provenance only, not a universal no-go, common-space map, path law or semigroup convergence result. |
+| [R-543](#r-543) | PAH-OMC-020 deterministic correlation modulus | Under the unchanged R-511 form-energy budget `B_f=2D_fM_f^2+2H_fL_f^2`, finite reversible spectral calculus gives `|C_(n,j)(f,g;t)-C_(n,j)(f,g;s)| <= |t-s| sqrt(B_f B_g)` uniformly in retained finite `n,j` for every fixed stabilized local pair. Primary 27/27, independent 20/20, hostile 12/12, integrated 28/28 and five finite rational Lean declarations pass. Auxiliary `PASS`; deterministic-time equicontinuity only, with no stopping-time, anchored-`n`, R-512 identification or physical promotion. |
+| [R-542](#r-542) | PAH-OMC-020 stationary-modulus promotion-boundary correction | Successor correction to R-541: the pinned R-490/R-522 inputs prove a deterministic-time stationary `L2` modulus, but are only `pi`-weighted averages and do not imply a bounded-stopping-time Aldous estimate. An abstract rare-state reversible two-state diagnostic blocks that inference without being a PAH counterexample. Primary 21/21, independent 18/18, hostile 11/11, integrated 27/27 and five finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; the one missing input is a source-authorized pointwise or conditional predictable-compensator bound. |
+| [R-541](#r-541) | PAH-OMC-020 finite local path tightness envelope | From the unchanged PAH-001 stationary generator, R-490 `C_sw=540` and R-522 `C2(A)<=60|A|` give a uniform stopped-time bound `E|f(X_(tau+delta))-f(X_tau)|^2 <= 2 delta K_Gamma+2 delta^2 K_L` for bounded local cylinders. Primary 25/25, independent 20/20, hostile 9/9, integrated 27/27 and six finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no path-space identification, non-explosion, R-512 semigroup convergence or physical promotion. |
+| [R-540](#r-540) | PAH-OMC-020 N2b byte-replay determinism correction | Successor correction for R-539: the independent verifier now excludes its own uppercase-N2B artifacts case-insensitively, restoring byte-stable replay. Primary 22/22, independent 16/16, hostile 12/12, integrated 22/22 and six finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; the source-authorized common-space owner packet remains absent. |
+| [R-539](#r-539) | PAH-OMC-020 N2b current-byte successor audit | Reproducible v1.1 successor for T-064 after two stale parent pins were detected; current-byte primary 22/22, independent 16/16, hostile 12/12 and integrated 22/22 pass. The strict source-owner inventory remains empty. Auxiliary `HOLD_FOR_EVIDENCE`; no common-space, N2b or semigroup promotion. |
+| [R-538](#r-538) | PAH-OMC-020 Mosco variational resolvent bridge | Conditional variational energy-sandwich and strict-convexity selection for the exact R-512 minimal form, with common-space, liminf, recovery, data-recovery, norm-upgrade and semigroup obligations kept explicit. Primary 47/47, independent 33/33, hostile 25/25, integrated 23/23 and six finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no resolvent, semigroup or physical promotion. |
+| [R-537](#r-537) | PAH-OMC-020 common-core Duhamel correlation transfer contract | Conditional compact-time Duhamel envelope for the exact R-512 minimal-form target, retaining initial and generator-residual terms. Primary 51/51, independent 33/33, hostile 19/19, integrated 22/22 and eight finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no semigroup or physical promotion. |
+| [R-536](#r-536) | PAH-OMC-020 target-process and R-512 identification contract | Two non-equivalent discharge routes for the anchored target defect `D_n`: a source-authorized common-Hilbert form route or a source-authorized common-path route, each with five explicit fields. The exact R-512 target form is present, but neither route is complete. Primary 42/42, independent 33/33, hostile 21/21, integrated 23/23 and eight finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no semigroup or physical promotion. |
+| [R-535](#r-535) | PAH-OMC-020 K/D term-level coverage ledger | Term-level crosswalk for the sequential-gluing budget: R-514 supplies fixed-n `J`, R-510 a local stationary-state modulus, R-493 finite eventual local-generator equality, and conditional R-517 a finite-fibre boundary envelope; the common comparison, all-cylinder uniform `K_(n,m)` limit and R-512 target-process `D_n` limit remain absent. Primary 50/50, independent 45/45, hostile 22/22, integrated 23/23 and seven finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no semigroup or physical promotion. |
+| [R-534](#r-534) | PAH-OMC-020 sequential compact-time gluing lemma | Conditional all-cylinder reduction in the registered j-before-anchored-n order: `sup_t|C_(n,j)-c_star| <= J_(n,j)+K_(n,m)+D_n`, where R-514 supplies the fixed-n term, K collects R-510/R-493/R-517 and D is the target-process/R-512 minimal-form defect. Primary 31/31, independent 25/25, hostile 19/19, integrated 22/22 and eight Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; K and D are not source-authorized, so no anchored-n semigroup or physical promotion follows. |
+| [R-532](#r-532) | PAH-OMC-020 refreshed owner-search snapshot for T-075 | A new byte-frozen 101-record marker manifest captures the post-R-531 workspace after the prior 84-record snapshot detected additions and temporal-work drift. Primary 532/532, independent 415/415, hostile 10/10 and integrated 20/20 pass; authorized and complete owner paths remain empty. Auxiliary `HOLD_FOR_EVIDENCE`; this is provenance only, not a source path law, non-explosion theorem, N2c/N4 result or physical promotion. |
+| [R-533](#r-533) | PAH-OMC-020 N2c/N4 owner-audit replay aligned to current bytes | Current-byte successor replay of R-523: primary 24/24, independent 21/21, hostile 15/15 and integrated 32/32 pass, with Lean 4.32.1 compiling three conditional declarations; no source-authorized path law, stopped compensator, non-explosion/uniqueness, N2c/N4 attribution or R-512 identification is present. Auxiliary `HOLD_FOR_EVIDENCE`; no physical promotion. |
+| [R-531](#r-531) | PAH-OMC-020 conditional exponential-Lyapunov bridge to N2c/N4 | Conditional implication: a source-authorized stopped `V(z)=b^z` estimate with `b>1` gives `P(tau_d<=T)<=M_T b^w/b^d`; with a separately proved `eta_(m,T)^2<=C2(A)P(tau_(d_m)<=T)` attribution, R-522's `C2(A)` forces the N2c/N4 budget to zero. Primary 37/37, independent 23/23, hostile 14/14, integrated 12/12 and four Lean declarations pass. Auxiliary conditional `PASS`; owner path law, compensator, N2b/N2d, semigroup convergence and physical promotion remain open. |
+| [R-530](#r-530) | PAH-OMC-020 R-512 minimal-form Dirichlet/Markov structure | Conditional structural result for the exact R-512 minimal closed form: the inherited R-511 weighted-root form contracts under every normal contraction `eta(0)=0`, `|eta(a)-eta(b)|<=|a-b|`, and the constant one has zero energy. The associated target spectral semigroup is therefore positivity preserving, `L-infinity` contractive and conservative under the standard closed-Dirichlet-form implication. Primary 32/32, independent 24/24, hostile 19/19, integrated 29/29 and eight Lean declarations pass. Auxiliary `PASS`; no N2a--N2d comparison, ordered semigroup convergence, path process or physical promotion is claimed. |
+| [R-529](#r-529) | PAH-OMC-020 root-wise energy-intertwining input contract | Conditional weighted-edge implication: a root-wise conductance-compatible relation `Delta_infty,r(U_n f)=kappa_(n,r)Delta_n,r(f)` with `w_infty,r*kappa_(n,r)^2<=w_n,r` transfers the directed-half energy, and a uniformly summable residual gives the recovery-side defect. An abstract two-state oracle has equal static `L2` norms but target energy 1 versus source 1/2, so static coupling contraction is insufficient. Primary 37/37, independent 28/28, hostile 19/19, integrated 30/30 and six Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`: no source-authorized dynamic root datum, N2b--N2d or ordered semigroup convergence is claimed; the oracle is not a PAH counterexample. |
+| [R-528](#r-528) | PAH-OMC-020 fixed owner-search snapshot successor | A fixed 84-file marker manifest and parent-hash set replay without rescanning the changing proof worktree; the N2a v1.1 successor pins the current N2b bytes and the snapshot. Primary 447/447, independent 263/263, hostile 10/10, N2a successor 23/23 and integrated 20/20 pass. Auxiliary `HOLD_FOR_EVIDENCE`: snapshot-time owner absence is provenance only; source authorization, N2a--N2d, ordered semigroup convergence and physical layers remain open. |
+| [R-527](#r-527) | PAH-OMC-020 source link-root multiplicity underdetermination | On the existing PAH-OMC-004 closed triangular witness at `K=2`, the immutable PAH-001 text leaves coincident `zeta_K`/`zeta_K^(-1)` root multiplicity unspecified. The unchanged Wilson term gives `Delta F=4`, mobility `1/2` and `Delta f=2`; labelled two-channel and deduplicated one-channel completions give `L_A f=2 exp(-2)` and `L_B f=exp(-2)`. Primary 38/38, independent 35/35, hostile 17/17 with 6/6 mutations rejected, integrated 33/33 and Lean pass. Auxiliary `HOLD_FOR_EVIDENCE`: this is a source-definition underdetermination witness, not a universal no-go; N2a--N2d, temporal, continuum and physical layers remain open. |
+| [R-526](#r-526) | PAH-OMC-020 deterministic owner-packet inventory and replay-stability repair | Bounded provenance audit replaces workspace-dependent `git fsck` output with a sorted reachable-history path inventory (772 paths, SHA-256 `7ffdbc413f58f0270efda3afabd3e6b205f0e7de3c807aa3af18ce75019a3333`). Primary 14/14, independent 12/12, hostile 8/8 and integrated 22/22 pass; all authorized/complete owner-marker lists remain empty. Auxiliary `HOLD_FOR_EVIDENCE`: source authorization, PAH-specific energy intertwining, N2b--N2d and stationary semigroup convergence remain open. |
+| [R-525](#r-525) | PAH-OMC-020 non-coordinate maximal-prefix coupling candidate | Researcher-owned non-coordinate comparison candidate: maximal overlap of exact prefix marginals followed by conditional expectation is a positive unital `L2` contraction, and a diagonal prefix index gives bounded-cylinder recovery from the R-510 modulus. Primary 42/42, independent 25/25, hostile 16/16, integrated 31/31 and six Lean declarations pass. Conditional auxiliary `HOLD_FOR_EVIDENCE`; source authorization, energy intertwining, N2b, N2c/N4, N2d and stationary semigroup convergence remain open. |
+| [R-524](#r-524) | PAH-OMC-020 coordinate-preserving terminal-fibre obstruction | Exact route-local obstruction for the unchanged PAH-001 terminal fibre: `B_square=0`, `B_triangle(+1)=A^2/2`, `B_triangle(-1)=A^2/2+4`, so `rho_split/rho_square=(1+exp(-4))*exp(-A^2/2)` and the reciprocal coordinate-preserving recovery multiplier is unbounded on `A>=0`. Primary 39/39, independent 43/43, hostile 15/15 and integrated 22/22 pass; auxiliary `HOLD_FOR_EVIDENCE` only. Non-coordinate maps, N2b--N2d, anchored-n semigroup convergence and physical layers remain open. |
+| [R-523](#r-523) | PAH-OMC-020 C2-to-pathspace owner-contract audit | Repository-scoped fail-closed audit: R-522's static Gibbs-weighted `C2(A)<=60|A|` input has no source-authorized path-space/martingale law, predictable compensator or Lyapunov non-explosion/uniqueness proof, unconditional `N2c/N4` evolved-vector estimate, or R-512 minimal-form identification. Primary 24/24, independent 21/21, hostile 15/15, integrated 32/32 and three Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; absence is not a universal no-go and no physical promotion is made. |
+| [R-522](#r-522) | PAH-OMC-020 source-owned local second-rate moment | Exact Gibbs-square transport for the unchanged PAH-001 midpoint rate gives a per-root `sum pi*c^2 <= 1` because every registered mobility satisfies `m<=1`; R-490's `N_geom=60` then yields `C2(A)<=60|A|` for every finite local support and the induced local `L2` generator estimate. Primary 40/40, independent 31/31, hostile 17/17, integrated 25/25 and six Lean declarations pass. Auxiliary support only; non-explosion, N2b/N2c/N4, R-512 identification, anchored-n semigroup convergence and physical layers remain open. |
+| [R-521](#r-521) | PAH-OMC-020 C_sw first-moment sufficiency boundary | Exact route-level sufficiency audit: R-490's normalized first conductance moment `C_sw=540` coexists with a reversible two-state family whose bounded test has Dirichlet energy `<4` but generator `L2` norm squared `4M -> infinity`. Primary 46/46, independent 27/27, hostile 13/13, integrated 26/26 and nine Lean declarations pass. This is auxiliary `HOLD_FOR_EVIDENCE`, not an exact PAH counterexample or universal no-go; a source-owned second-rate-moment or pathwise Lyapunov estimate remains required. |
+| [R-520](#r-520) | PAH-OMC-020 U_n-free projective path-space bridge contract | Conditional auxiliary scalar bridge: R-510 state error + R-493 local stabilization + R-517 boundary tail + explicit process/minimal-form defect. Primary 41/41, independent 33/33, hostile 20/20, integrated 36/36 and eleven finite Lean declarations pass. Process construction, non-explosion/uniqueness, N2c/N4 and R-512 identification remain HOLD_FOR_EVIDENCE; no common U_n or physical promotion. |
+| [R-519](#r-519) | PAH-OMC-020 projective local-correlation word envelope | Conditional auxiliary finite-word scalar n-Cauchy envelope for one non-radial grade-blind local cylinder: R-493 exact retained terms, R-510 local state, R-516 b=144 and R-517 b_eff=288 factorial tail; primary 50/50, independent 35/35, hostile 31/31, integrated 23/23 and eleven finite Lean declarations. Common U_n, minimal form, anchored n and physical layers remain open. |
+| [R-518](#r-518) | PAH-OMC-020 amplitude-only radial-sector ordered correlation | Conditional auxiliary theorem for bounded amplitude-only cylinders: R-511's radial residual and finite stationary contraction give a compact-time `j->infinity` correlation error `<= 2 T ||f||_infinity H_g L_g h_j`; R-510 local state passage and R-512 radial zero-form kernel identify the stationary radial target. Primary 31/31, independent 23/23, hostile 21/21, integrated 19/19 and seven finite Lean declarations pass. Mixed observables, common `U_n`, N2b--N2d, anchored `n`, and all physical/continuum conclusions remain open. |
+| [R-512](#r-512) | PAH-OMC-019 minimal form closure and radial nullspace | Exact R-511 pre-form is closable on R-510 H; dense minimal closure retains all amplitude-only H_rad at zero energy and positive aperture energy. Universal Hilbert Lean bridge and independent/hostile checks; auxiliary_support, no temporal convergence or host promotion. |
+| [R-514](#r-514) | PAH-OMC-020 fixed-n stationary semigroup passage | For every fixed n>=2, the unchanged PAH stationary correlations converge uniformly on finite time intervals as j->infinity, then K->infinity, to the exact PH/LK/AP fibre semigroup Q_n. Compact modulus, source inverse-pair Duhamel bound, endpoint-inclusive cell epsilon-net and stationary tails are verified; anchored n, U_n/N2b-N2d and physical layers remain open. |
+| [R-515](#r-515) | PAH-OMC-020 exact path-word transport envelope | Every prescribed non-radial PAH root word obeys the exact Gibbs square-transport telescoping identity, giving integrated L2 word mass at most one; a connected-word count then yields a conditional factorial boundary tail. Source overlap/distance data and word-to-Duhamel attribution remain open; auxiliary_support only. |
+| [R-516](#r-516) | PAH-OMC-020 exact root-footprint overlap bound | The unchanged OMC-004 PH/LK/AP dependency footprint has radius at most 2 columns and a source-derived conservative overlap branching bound b=144 (enumerated maxima 56/70); this supplies the R-515 locality input but not connected-word-to-Duhamel attribution, N2c/N4 or anchored-n convergence. Auxiliary_support only. |
+| [R-517](#r-517) | PAH-OMC-020 source-local Duhamel/coupling attribution | Conditional finite-fibre basic coupling turns connected PH/LK/AP words into an N4 boundary envelope; the explicit two-copy factor gives b_eff=288 from the exact R-516 b=144, while common U_n, minimal-form selection and anchored-n convergence remain open. Auxiliary_support only. |
+| [R-513](#r-513) | PAH-OMC-020 conditional fixed-n temporal implication | Under inherited endpoint-cell/tail hypotheses F7, F8 and F9 imply F10 for fixed n with j→∞ then K→∞; exact finite-fibre algebra and primary/independent/hostile replay pass. Conditional auxiliary support only; common-H U_n, N2b–N2d, anchored n and physical limits remain open. |
 | [R-511](#r-511) | PAH-OMC-018 original-generator cutoff limit and stationary local pre-form | Sampled Gibbs-L2 residual at most 2 H_f L_f h_j; ordered stationary symmetric local pre-form, with zero radial action and nonzero aperture form. Primary 178, independent 72, hostile 39, integrated 48 and eleven Lean declarations; auxiliary only, no closed form, temporal process or host promotion. |
 | [R-509](#r-509) | PAH-OMC-016 radial tightness and uniform matter nondegeneracy | Fixed-n all-j tightness and radial weak limit; lim_j mu(b_v^2)>=(11/80)exp(-1550/3)>0 for both declared witnesses uniformly in n>=2. Analytic local-moment/conditional proof; primary 30, independent 23, hostile 17, integrated 29 and ten Lean theorems pass. Scoped PASS only; T-054 and host tier unchanged. |
 | [R-510](#r-510) | PAH-OMC-017 common local Gibbs state on the fixed strip | Exact spatial transfer with the terminal square retained; local cylinder Cauchy bound 4 norm(f) D_m q^(n-m) and an explicit analytic threshold. Primary 50, independent 70, hostile 23, integrated 28 and nine Lean declarations; auxiliary static-state input only, no limiting dynamics or host tier change. |
@@ -18275,6 +18332,1954 @@ No closed form, infinite-volume process, semigroup convergence, physical
 Pre-A, spacetime, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap
 or TOE result. PAH-OMC-014 and T-054's active gate remain unresolved.
 
+### R-512 -- PAH-OMC-019 minimal form closure and radial nullspace
+
+**Scoped statement.** `auxiliary_support`, ANALYTIC/EXACT/EXECUTED with
+abstract Hilbert Lean consequences and explicit inherited R-510/R-511 inputs.
+On the exact R-511 dense bounded invariant amplitude-Lipschitz cylinder
+domain D in R-510 H, `E(f,g)=-<f,Ag>` is closable. Its form-norm completion
+embeds injectively in H and defines the dense-domain minimal closed
+nonnegative extension Ebar. The H closure H_rad of ALL amplitude-only
+cylinders is contained in Dom(Ebar), with Ebar(h,h)=Ebar(h,u)=0 for every
+h in H_rad and u in Dom(Ebar). The original aperture cylinder retains its
+strictly positive energy. Full kernel and maximal jump-domain equality are
+not asserted. The host C6 T1 and active T-054 gate remain unchanged.
+
+**Exact scope and assumptions.** Original PAH functional, PH/LK/AP root
+labels/rates/partial domains, all-Q weights Z_Q/Z, two-row G_n with 2(n+2)
+vertices and retained frontier square. The OMC-016 parameter point and
+h_j=2^-j, R_j=2^j, M_j=2^(2j), j-before-n order are unchanged. Closure is on
+the fixed limiting state, not a new regulator limit or time acceleration.
+The inherited dense D, H-valued Ag bound, symmetric nonnegative E and
+radial annihilation are explicit hypotheses. Quotient well-definedness is
+proved before treating -A as a Hilbert-space operator.
+
+**Proof and reuse.** The energy-completion argument pairs every H-null
+energy-Cauchy sequence against fixed Sg=-Ag; density excludes a nonzero
+completion vector above zero. No fixed-support restriction or uniform
+operator norm is assumed. The independent direct epsilon proof fixes m
+before sending n to infinity. Form completion proves closedness and the
+minimal-extension containment property. Zero-energy differences extend
+radial retention to the entire H_rad, not only selected witnesses.
+Standard Friedrichs-form analysis (Teschl, second edition, section 2.3) is
+reused; this is a model-applicability result, not a new general theorem.
+Publication target: a bounded analytic component of a PAH synthesis after
+external review, not a physical-origin paper.
+
+**Evidence and reproduction.** Source pins and exact proof coverage:
+`strategy/pa-hyp/PAH-OMC-019-result-v1.json`; preregistration SHA-256
+`4337e21a140206956ea52ee10e20d04358af868969e3edb9f055e5ea64b055b7`.
+Proof: `strategy/pa-hyp/PAH-OMC-019-closure-certificate.md`.
+Run `python -X utf8 verification/scripts/pah_omc019_verify.py --check`;
+an isolated worktree may select an existing read-only locked package cache
+with `--lean-cache E:/Dev/TECT/verification/lean/.lake/packages`.
+Primary/independent/hostile algebra checks are 11/9/14; nine Lean declarations
+cover the universal Hilbert consequences, not the inherited model measure
+theorems. R-511's three exact runs and Lean source are freshly replayed.
+The one three-page synthesis PDF is visually reviewed with zero overfull
+boxes. Internal independent checks are not an external signed referee report.
+
+**Next question and non-claims.** Do the original finite stationary semigroups
+converge to the minimal-form selection in the fixed j-before-n comparison?
+Preregister the maps/topology under a separately activated bounded contract.
+REVIEW_REQUIRED after the one DCTRL-000012 attempt. Reopen for any inherited
+state, density, symmetry, quotient, representer or closure defect. No new
+rates, conditional averaging, carrier or time scaling. No temporal process,
+finite-semigroup convergence, graph-core uniqueness, physical Pre-A,
+spacetime, QFT, gravity, continuum, Yang-Mills, causal cone, mass gap or TOE
+conclusion. PAH-OMC-014 remains unresolved; Q3LOCK is not imported.
+
+### R-513 -- PAH-OMC-020 conditional fixed-n temporal implication
+
+**Classification and scope.** `auxiliary_support`, conditional
+ANALYTIC/EXACT/EXECUTED result with `temporal_verdict=IN_PROGRESS`. This
+component keeps the exact PAH-001 functional, original directed PH/LK/AP/TR
+rates, labelled stationary state, external Markov time and `j`-before-`n`
+order. It stops before any anchored `n` passage.
+
+**Statement.** For fixed `n>=2`, bounded finite-prefix cylinders `f,g` and a
+compact time interval `[0,T]`, the F7--F9 decomposition in the pinned
+PAH-OMC-020 work note implies the F10 uniform-in-time correlation limit,
+provided three inherited analytic hypotheses are discharged at their exact
+scopes: the R-509/OMC-016 endpoint-inclusive cell/tail theorem for the
+time-equicontinuous fibre family, the R-511 radial residual estimate for the
+compact-cutoff propagated test, and the finite-fibre compact amplitude modulus
+from variation of constants. The result records this implication only; it
+does not claim those hypotheses have become unconditional here.
+
+**Evidence.** The primary verifier checks source pins, F7--F10 quantifier
+structure, stationary L1 tail use, endpoint retention, finite reversible-fibre
+algebra and exact rational diagnostic bounds. The independent verifier
+rebuilds the fibre and error algebra with non-importing tuple/Fraction code.
+The hostile verifier rejects pointwise-tail replacement, reversed order,
+full-exponent mutation and physical promotion. Existing `PahOmc020.lean`
+compiles in the primary lane; its scope remains finite algebra only. Run:
+
+    python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_verify.py --check
+
+The certificate is
+`strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-certificate.md`; the four
+run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fixedn-conditional/`.
+
+**Remaining obligations.** An unconditional fixed-`n` temporal result still
+requires the three analytic hypotheses above. N2a common-Hilbert `U_n`, N2b
+weak-liminf/recovery, N2c/N4 boundary escape, N2d identification with the
+R-512 minimal form, and the anchored `n` semigroup limit remain open. No
+active T-054 gate or claim tier changes.
+
+There is no physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap,
+Yang--Mills or TOE conclusion. External Markov time remains stochastic.
+
+### R-514 -- PAH-OMC-020 fixed-n stationary semigroup passage
+
+**Classification and scope.** `auxiliary_support`, ANALYTIC/EXACT/EXECUTED
+fixed-`n` result for the unchanged PAH-001 functional and original directed
+PH/LK/AP/TR rates. For every finite strip `G_n`, `n>=2`, the statement is
+uniform on each finite external Markov-time interval `[0,T]`, with the
+declared order `j->infinity` first and amplitude cutoff `K->infinity` second.
+It stops before the anchored `n` passage.
+
+**Statement.** For every bounded globally amplitude-l1-Lipschitz
+finite-prefix cylinder pair `f,g`, the original stationary correlation
+
+    <S_(n,j)f, P_(n,j)(t)S_(n,j)g>_(mu_(n,j))
+
+converges uniformly for `0<=t<=T`, as `j` tends to infinity followed by
+cutoff removal, to the correlation with the exact finite-label PH/LK/AP fibre
+semigroup `Q_n(t)` in the R-509 limiting state `nu_n`.
+
+**Proof.** The finite source root and label sets give continuous locally
+Lipschitz rates on every compact amplitude box; source polynomial incidence
+shows every nonradial increment has amplitude degree at most two. Finite-
+dimensional variation of constants supplies the compact time/amplitude
+modulus. R-511's inverse-pair square transport identity and the radial
+displacement `2h_j` give the compact-cutoff Duhamel bound
+`2 H_(n,K,g)L_(n,K,T,g)h_j`. The exact endpoint-inclusive R-509/OMC-016
+cell convergence is upgraded to the family `f Q_n(t)g_K` by compact
+equicontinuity and a finite sup-norm epsilon-net. The all-`j` stationary tail
+bound then removes `g_K` without using a pointwise global-rate envelope.
+
+**Evidence.** The certificate is
+`strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md`. The primary,
+non-importing independent and hostile scripts and the integrated runner are:
+
+    python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_proof.py --check
+    python -X utf8 codes/foundations/pah_omc020_fixedn_temporal_proof_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_fixedn_temporal_proof_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_proof_verify.py --check
+
+All four lanes pass. The existing `PahOmc020.lean` compilation passes for its
+finite algebraic declarations; the analytic epsilon-net and measure passage
+are not claimed to be fully formalized in Lean. The replay JSON files are in
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fixedn-temporal/`.
+
+**Remaining obligations.** A source-authorized varying-space `U_n` and
+common-Hilbert realization, arbitrary-sequence N2b liminf/recovery, N2c/N4
+boundary escape for the unbounded original rates, N2d identification with
+the R-512 minimal closure, and the anchored `n` semigroup limit remain open.
+No active T-054 gate or claim tier changes.
+
+There is no physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap,
+Yang--Mills or TOE conclusion. External Markov time remains stochastic.
+
+### R-515 -- PAH-OMC-020 exact path-word transport envelope
+
+**Classification and scope.** `auxiliary_support`, conditional
+ANALYTIC/EXACT/EXECUTED result for the unchanged PAH-001 non-radial PH/LK/AP
+root generator after the registered R-511 `j` limit. The statement is for
+prescribed admissible root words on each finite OMC-004 strip `G_n`, `n>=2`;
+it does not change the state, rates, carrier, projection, regulator, time or
+limit order.
+
+**Statement.** Multiplying the R-511 identity
+`nu_n(x)c_r(x)^2=m_r(x)^2 nu_n(T_r x)` along a partial-bijection word gives
+`nu_n(x)C_omega(x)^2 <= nu_n(T_omega x)` because the source mobility is in
+`[0,1]`. After the exact partial-bijection change of variables,
+`integral C_omega^2 d nu_n <= 1` and hence `integral C_omega d nu_n <= 1`.
+At fixed amplitudes the finite-label jump simplex contributes `T^k/k!` for a
+word of length `k`. If a future source locality packet proves
+`N_k<=a*b^(k-1)` for words reaching boundary distance `d`, the resulting tail
+is bounded by
+`[a*b^(d-1)*T^d/d!] / [1-b*T/(d+1)]` when `b*T<d+1`.
+
+**Verification.** Primary 45/45, non-importing independent 25/25, hostile
+13/13 and Lean 4.32.1 (four declarations) pass. The exact source pins,
+reproduction commands and run hashes are recorded in
+`strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json` and the certificate
+`strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md`.
+
+**Boundary.** The path-word transport removes the need for a global
+pointwise-rate supremum in this prescribed-word calculation. It does **not**
+provide an `n`-uniform OMC-004 overlap constant, a connected-word-to-Duhamel
+or coupling theorem for `A_n^(out,m)Q_n(s)g`, a common `U_n`, N2b liminf/
+recovery, N2d minimal-form identification, or anchored-`n` semigroup
+convergence. Therefore N2c/N4 and the PAH-OMC-020 objective remain open.
+
+No active T-054 gate or claim tier changes. There is no physical Pre-A,
+spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion;
+Markov time remains external stochastic time.
+
+### R-516 -- PAH-OMC-020 exact root-footprint overlap bound
+
+**Classification and scope.** `auxiliary_support`, conditional
+ANALYTIC/EXACT/EXECUTED result for the unchanged PAH-001 non-radial PH/LK/AP
+root generator after the registered R-511 `j` limit. The dependency footprint
+is reconstructed from the exact OMC-004 two-row strip `G_n`, `n>=2`, with the
+terminal unsplit square; no root, carrier, rate, state, regulator, counterterm
+or time convention is changed.
+
+**Statement.** OMC-004's degree and face-incidence bounds give at most four
+edge slots per base column, sixteen PH/AP/LK roots per base column and a
+footprint radius of at most two columns. Hence the conservative overlap
+branching bound is
+`b=16*(4*2+1)=144`, and a two-column local support has first-root bound
+`a=16*(2+2*2+1)=112`. Exact reconstruction at `n=2,3,4,6,10,20` gives maximum
+overlap degree including self `56` for `n=2` and `70` for every tested `n>=3`,
+all below 144. The R-515 factorial word envelope can therefore use this
+source-derived `b` whenever a source-valid connected-word attribution is
+provided.
+
+**Verification.** Primary 45/45, non-importing independent 18/18, hostile
+13/13 and integrated 13/13 pass. Lean 4.32.1 compiles the two finite
+declarations `overlap_branching_bound` and `connected_word_count_bound`.
+Exact source pins, run hashes and commands are recorded in
+`strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json`; the proof narrative
+is in `strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md`.
+
+**Boundary.** The bound is a proof dependency set, not a new interaction or a
+rate envelope. It does not prove the source-valid coupling/Duhamel identity
+that turns connected words into `A_n^(out,m)Q_n(s)g`; N2c/N4, common `U_n`,
+N2b liminf/recovery, N2d minimal-form identification and anchored-`n`
+semigroup convergence remain open. No active T-054 gate or claim tier changes.
+There is no physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap,
+Yang--Mills or TOE conclusion; Markov time remains external stochastic time.
+
+### R-517 -- PAH-OMC-020 source-local Duhamel and coupling attribution
+
+**Classification and scope.** `auxiliary_support`, conditional
+ANALYTIC/EXACT/EXECUTED result for the unchanged PAH-001 PH/LK/AP finite-fibre
+generator after the registered R-511 `j` limit. The exact OMC-004 strip and
+R-516 dependency footprint are retained; no rate, state, carrier, regulator,
+counterterm, projection or time scale is changed.
+
+**Statement.** At fixed amplitude the finite label chain admits a basic
+two-copy coupling using common clocks when local rates agree. A disagreement
+can propagate only through overlapping R-516 footprints. The R-515 Gibbs
+square-transport identity bounds each word coefficient in `L2(nu_n)` by one.
+Reverse overlap counting gives `b=144` and a support-width first-root bound
+`a_w=16*(w+2*2+1)`. The rate-difference triangle contributes an explicit
+two-copy factor, so the honest tail uses `b_eff=2*b=288`. For graph distance
+`d` and `b_eff*T<d+1`,
+`integral_0^T ||A_n^(out,m)Q_n(t)g||_2 <= 4||g||_infinity E_d(a_w,b_eff,T)`
+with the exact R-515 factorial envelope `E_d`. The distance grows with the
+prefix boundary, giving a conditional finite-fibre N4 boundary estimate.
+
+**Verification.** Primary 61/61, non-importing independent 25/25, hostile
+18/18 and integrated 18/18 pass. Lean 4.32.1 compiles five finite arithmetic
+declarations covering the two-copy term, simplex factor, ratio condition,
+effective branching and connected-count scaling. Exact hashes and commands
+are recorded in
+`strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json`; the proof
+narrative is in
+`strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md`.
+
+**Boundary.** This is a conditional source-local finite-fibre attribution,
+not a varying-Hilbert-space result. Common `U_n`, terminal-square-compatible
+comparison, N2a, N2b, N2d and anchored-`n` semigroup convergence remain open.
+No active T-054 gate or claim tier changes. There is no physical Pre-A,
+spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion;
+Markov time remains external stochastic time.
+
+### R-518 -- PAH-OMC-020 amplitude-only radial-sector ordered correlation
+
+**Classification and scope.** `auxiliary_support`, conditional
+ANALYTIC/EXACT/EXECUTED result for the unchanged PAH-001 functional, original
+directed PH/LK/AP/TR rates, labelled stationary state and external stochastic
+Markov time. The observables are bounded globally amplitude-Lipschitz
+finite-prefix cylinders in the amplitude-only invariant sector `D_rad`.
+At fixed anchored strip index `n>=2`, the order is `j->infinity` with
+`h_j=2^(-j)`, followed by the existing R-510 local-state passage; no new
+carrier, projection, rate, state, regulator or time scale is introduced.
+
+**Statement.** For `f,g in D_rad` and `0<=t<=T`, all non-TR roots leave the
+amplitude-only test unchanged and R-511 gives
+`||L_TR,nj S_nj g||_2 <= 2 H_g L_g h_j`. Finite stationary `L2` contraction
+and variation of constants therefore give the uniform compact-time scalar
+correlation error
+`|<S_nj f,P_nj(t)S_nj g> - <S_nj f,S_nj g>| <=
+2 T ||f||_infinity H_g L_g h_j`.
+Since `h_j=2^(-j)`, this tends to zero. R-510 sends the static sampled inner
+product to the local limiting state, while R-512 places `D_rad` in the
+zero-form kernel of the minimal closed form, so the radial target semigroup is
+stationary. The ordered scalar correlation convergence is thus established
+conditionally on this sector only.
+
+**Verification.** Primary 31/31, non-importing independent 23/23, hostile
+21/21 and integrated 19/19 pass. Lean 4.32.1 compiles seven finite rational
+declarations (residual coefficient, compact-time error, mesh halving,
+positivity/decay and two exact fixtures); it does not formalize the measure
+passage or the semigroup representation. Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_radial_sector.py --check
+    python -X utf8 codes/foundations/pah_omc020_radial_sector_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_radial_sector_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_radial_sector_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+
+Run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-radial-sector/`;
+the source certificate is
+`strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md` and the result
+card is `strategy/pa-hyp/PAH-OMC-020-radial-sector-result-v1.json`.
+
+**Boundary and remaining obligations.** The result is not a varying-Hilbert
+operator limit and does not provide a common `U_n`, terminal-square-compatible
+map, arbitrary-sequence N2b liminf/recovery, N2c/N4 boundary escape for
+general evolved cylinders, or N2d minimal-form selection beyond `H_rad`.
+The full anchored-`n` PAH-OMC-020 semigroup theorem remains open. No active
+T-054 gate or claim tier changes. There is no physical Pre-A, spacetime, QFT,
+gravity, continuum, Yang--Mills, mass-gap or TOE conclusion; external Markov
+time is not quantum real time, proper time or Lorentzian time.
+
+### R-528 -- PAH-OMC-020 fixed owner-search snapshot successor
+
+**Classification and scope.** `auxiliary_support`, conditional
+`HOLD_FOR_EVIDENCE` for a provenance repair supporting PAH-OMC-020.  The
+PAH-001 functional, original directed rates, labelled Gibbs state, external
+Markov time and `j`-before-`n` order are unchanged.  No comparison map,
+process, carrier or physical interpretation is constructed.
+
+**Exact finding.** The dynamic R-526/N2a audits became non-replayable when
+later proof files changed their current-worktree inventories.  R-528 freezes
+84 marker-bearing `strategy/pa-hyp` files and every byte hash in
+`PAH-OMC-020-owner-search-snapshot-v1.json`.  Its manifest digest is
+`cc3ffdd7f91e2a312c65447a9cf395b8ebfeddb237fc72a643d1f2f7c2f72b36`, with no
+authorized or complete owner markers.  The N2a v1.1 successor pins the current
+N2b result bytes and the snapshot while retaining all nine owner-payload
+requirements.  `--check` replays only the frozen manifest; `--detect-new` is an
+explicit reopen scan for later candidates.
+
+**Verification.** Primary 447/447, non-importing independent 263/263,
+hostile 10/10, N2a successor 23/23 and integrated 20/20 pass.  Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot.py --check
+    python -X utf8 codes/foundations/pah_omc020_owner_packet_snapshot_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_owner_packet_snapshot_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_n2a_owner_packet_successor_check.py --check
+    python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot_verify.py --check
+
+The run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot/`;
+the certificate is
+`strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md`; the
+exploration is `EXP-001647`.
+
+**Decision and boundary.** This is a replay-stability and snapshot-time
+provenance result, not a source-owner authorization.  The packet remains
+absent, so N2a local recovery, N2b liminf/recovery, N2c/N4 boundary escape,
+N2d minimal-form identification and ordered stationary semigroup convergence
+remain `HOLD_FOR_EVIDENCE`.  Hashing-only provenance has no meaningful Lean
+proposition; the integrated record states
+`NOT_APPLICABLE_PROVENANCE_HASHING_ONLY`.  No active T-054 gate or claim tier
+changes.  No physical Pre-A, spacetime, event-horizon, QFT, gravity,
+continuum, Yang--Mills, mass-gap or TOE conclusion follows.
+
+### R-527 -- PAH-OMC-020 source link-root multiplicity underdetermination
+
+**Classification and scope.** `auxiliary_support`, conditional
+`HOLD_FOR_EVIDENCE` for a source-definition audit supporting PAH-OMC-020 under
+the immutable PAH-001 functional, original midpoint rates, labelled Gibbs
+state, external stochastic Markov time and `j`-before-`n` order.  The audit
+does not add a move, carrier, coupling, counterterm, projection or limit.
+
+**Exact finding.** PAH-001 displays the link move as one link multiplied by
+`zeta_K` or `zeta_K^(-1)` and sums over roots, but supplies no root
+multiplicity, duplicate-transition, invalid-move or root-measure convention.
+On the already hashed PAH-OMC-004 fine incidence witness, the closed face
+`[0,1,4]` has `K=2`, so the two signs have the same state map.  At the neutral
+finite state with `epsilon=1/2`, `beta=nu=1` and unit `kappa_g`, the displayed
+functional gives
+
+    J_e=J_p=2,  Delta F=4,  m=1/2,  Delta(1-Re U_p)=2,
+    c=(1/2) exp(-2).
+
+The gauge-invariant closed-face observable `f=1-Re(U_p)` therefore receives
+`L_A f=2 exp(-2)` when the two sign labels are counted separately, but
+`L_B f=exp(-2)` when their coincident involution is deduplicated.  The exact
+gap is `L_A f-L_B f=exp(-2)>0`.  Both completions preserve the same state map,
+functional, mobility, midpoint rate and inverse-pair requirement; only the
+unstated multiplicity differs.
+
+**Verification.** Primary 38/38, non-importing independent 35/35, hostile
+17/17 with 6/6 mutations rejected, integrated 33/33, and Lean 4.32.1 with 13
+registered declarations pass.  Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_source_multiplicity_underdetermination.py --check
+    python -X utf8 codes/foundations/pah_omc020_source_multiplicity_underdetermination_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_source_multiplicity_underdetermination_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_source_multiplicity_underdetermination_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages
+
+The run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-multiplicity/`;
+the certificate is
+`strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md`;
+the exploration is `EXP-001645`; and the changelog event is
+`20260908-r-527-pah-omc-020-source-link-multiplicity-2026`.
+
+**Decision and boundary.** This is a precise underdetermination witness, not a
+universal no-go: a source owner may fix one convention in a new hash-pinned
+packet.  Until then the PAH-OMC-020 N2a common-space map, energy
+intertwining, N2b/N2c/N4/N2d and ordered stationary semigroup convergence
+remain `HOLD_FOR_EVIDENCE`.  No active T-054 gate or claim tier changes.  No
+physical Pre-A, spacetime, event-horizon, QFT, gravity, continuum,
+Yang--Mills, mass-gap or TOE conclusion follows; Markov time is not quantum
+real time.
+
+### R-526 -- PAH-OMC-020 deterministic owner-packet inventory and replay-stability repair
+
+**Classification and scope.** `auxiliary_support`, conditional
+`HOLD_FOR_EVIDENCE` for a bounded provenance audit supporting PAH-OMC-020 under
+the unchanged PAH-001 functional, original labelled rates, Gibbs state,
+external Markov time and `j`-before-`n` order.  This result does not alter the
+model or add a coupling, projection, counterterm, state or limit.
+
+**Finding.** The earlier owner-history replay mismatch is operational: the
+recorded `git fsck --unreachable` listing depends on the current dirty
+worktree's dangling objects.  The repaired audit uses only a sorted,
+hash-pinned inventory of paths reachable from repository refs.  The current
+inventory contains 772 reachable paths with SHA-256
+`7ffdbc413f58f0270efda3afabd3e6b205f0e7de3c807aa3af18ce75019a3333`; the
+authorized-owner and complete-owner marker lists are both empty.  The exact
+PAH-001, PAH-OMC-020 preregistration, N2a intake and R-525 candidate hashes are
+replayed byte-for-byte.
+
+**Verification.** Primary 14/14, non-importing independent 12/12, hostile
+mutation 8/8 and integrated 22/22 checks pass.  The integrated lane also
+rechecks the R-525 finite Lean cross-check as an inherited finite declaration;
+R-526 makes no new analytic Lean theorem.  Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_owner_packet_inventory_stable.py --check
+    python -X utf8 codes/foundations/pah_omc020_owner_packet_inventory_stable_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_owner_packet_inventory_stable_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_owner_packet_inventory_stable_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages
+
+Run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-inventory-stable/`;
+the synthesis certificate is
+`strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md` and the
+result card is `strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json`.
+The exploration is `EXP-001644` and the changelog event is
+`20260908-r-526-pah-omc-020-deterministic-owner-packet-in`.
+
+**Boundary and next evidence.** Replay stability is provenance evidence, not
+source authorization and not a universal nonexistence theorem.  The next
+single question is whether a source owner can authorize the exact R-525
+maximal-prefix `U_n` and supply PAH-specific energy-form intertwining for N2b,
+N2c/N4 and N2d without changing PAH-001.  Until then, source ownership,
+measure-compatible common-space realization, energy estimates, minimal-form
+identification and stationary semigroup correlation convergence remain
+`HOLD_FOR_EVIDENCE`; no active T-054 gate or claim tier changes.
+
+There is no physical Pre-A, spacetime, event-horizon, QFT, gravity, continuum,
+mass-gap, Yang--Mills or TOE conclusion.  External Markov time is not quantum
+real time, proper time or Lorentzian time.
+
+### R-525 -- PAH-OMC-020 non-coordinate maximal-prefix coupling candidate
+
+**Classification and scope.** `auxiliary_support`, conditional
+`HOLD_FOR_EVIDENCE` for a researcher-owned comparison candidate under the
+unchanged PAH-001 functional, original directed rates, labelled Gibbs states,
+external unaccelerated Markov time and `j`-before-`n` order.  The candidate is
+not source-authorized and does not change the finite model, carrier,
+regulator, state or limit order.  It is distinct from the R-524
+coordinate-preserving terminal-fibre density-ratio route.
+
+**Candidate.**  For each prefix `Lambda_m`, let `p_(n,m)` and `p_(infty,m)` be
+the exact finite and limiting marginal densities.  Use R-510's bounded-
+measurable prefix modulus
+
+    delta_(n,m) = min(1, 4 D_m q^(n-m))
+
+and choose before any form estimate
+
+    m_n = max {0 <= m < n: delta_(n,m) <= 1/(m+1)^2}.
+
+Couple the two `Lambda_(m_n)` marginals by maximal overlap, extend their tails
+through regular conditional laws, and define `U_n f` as conditional
+expectation of the finite observable into `H=L2(X_infty,nu_infty)`.  Conditional
+Jensen makes `U_n` a positive unital contraction.  The mismatch probability is
+the prefix total-variation distance, so every bounded cylinder supported in
+`Lambda_k` with `k<=m_n` obeys
+
+    ||U_n f-f||_2^2 <= 4 ||f||_infinity^2 TV_(n,m_n)
+                       <= 2 ||f||_infinity^2/(m_n+1)^2.
+
+The diagonal construction escapes every fixed prefix because the R-510
+exponential factor tends to zero at fixed `m`.  This is a local N1 recovery
+candidate only; it is not yet a full common-space owner packet.
+
+**Verification.** The exact two-point fixture uses limiting prefix law
+`(3/5,2/5)`, finite law `(1/2,1/2)`, and coupling matrix
+
+    [[1/2, 1/10], [0, 2/5]],
+
+with overlap `9/10` and mismatch/total variation `1/10`.  Primary 42/42,
+non-importing independent 25/25, hostile 16/16 and integrated 31/31 checks
+pass.  Lean 4.32.1 compiles the six registered finite declarations for the
+overlap, marginals, conditional contraction and recovery inequality.  Run:
+
+    python -X utf8 verification/scripts/pah_omc020_noncoordinate_coupling_candidate.py --check
+    python -X utf8 codes/foundations/pah_omc020_noncoordinate_coupling_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_noncoordinate_coupling_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_noncoordinate_coupling_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+
+Run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-noncoordinate-coupling/`;
+the candidate contract is
+`strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json`, the
+certificate is
+`strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-certificate.md`, and the
+result card is
+`strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json`.
+The exploration is `EXP-001643` and the changelog event is
+`20260908-r-525-pah-omc-020-non-coordinate-maximal-prefix`.
+
+**Boundary and next evidence.** Source-owner authorization is absent.  No
+PAH-specific energy-form intertwining has been established, so the candidate
+does not prove arbitrary-sequence N2b liminf/recovery, N2c/N4 boundary escape,
+N2d identification with the R-512 minimal closure, or stationary semigroup
+correlation convergence.  The next single question is whether the source
+owner can authorize this exact `U_n` and supply the missing energy estimate
+without changing PAH-001.  T-063 and the parent PAH-OMC-020 objective remain
+`HOLD_FOR_EVIDENCE`; no active T-054 gate or claim tier changes.
+
+There is no physical Pre-A, spacetime, event-horizon, QFT, gravity,
+continuum, mass-gap, Yang--Mills or TOE conclusion.  External Markov time is
+not quantum real time, proper time or Lorentzian time.
+
+### R-524 -- PAH-OMC-020 coordinate-preserving terminal-fibre obstruction
+
+**Classification and scope.** `auxiliary_support`, `HOLD_FOR_EVIDENCE` for one
+route-local comparison map under the unchanged PAH-001 functional, original
+Gibbs weighting and OMC-004 terminal-fibre formulas.  The retained witness
+has old labels `h0=h1=vx=vy=+1`, apertures `s=1`, phases `+1`, coordinates
+`x0=y0=0`, `x1=y1=A` with `A>=0`, and both diagonal labels `d=+1,-1`.
+External stochastic Markov time and the preregistered `j`-before-`n` order
+are bookkeeping only; no rate, state, carrier, regulator, projection or
+time interpretation is changed.
+
+**Statement.** Direct substitution into the source edge-stiffness and
+plaquette-boundary-average formulas gives
+
+    B_square = 0,
+    B_triangle(d=+1) = A^2/2,
+    B_triangle(d=-1) = A^2/2 + 4,
+
+and therefore the exact split-to-square fibre ratio
+
+    rho_split(A)/rho_square(A) = (1+exp(-4))*exp(-A^2/2).
+
+The reciprocal multiplier required by this coordinate-preserving terminal
+fibre lift grows exponentially with `A`; hence no uniformly bounded full-space
+density-ratio lift of this named form can recover the finite square law from
+the split marginal.  This closes only the named coordinate-preserving N2a
+route.  It is not a universal comparison-map no-go and is not a counterexample
+to local temporal-correlation convergence.
+
+**Verification.** Primary 39/39, non-importing independent 43/43, hostile
+15/15 and integrated 22/22 checks pass.  Lean 4.32.1 compiles the registered
+finite declaration `split_fibre_ratio_strict_decay`; no infinite-volume or
+semigroup theorem is formalized.  Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_boundary_kernel_obstruction.py --check
+    python -X utf8 codes/foundations/pah_omc020_boundary_kernel_obstruction_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_boundary_kernel_obstruction_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_boundary_kernel_obstruction_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+
+Run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-boundary-kernel-obstruction/`;
+the certificate is
+`strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md` and
+the result card is
+`strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json`.
+The source hashes and event are pinned in that card; the exploration is
+`EXP-001642` and the changelog event is
+`20260908-r-524-pah-omc-020-coordinate-preserving-termina`.
+
+**Boundary and next evidence.** The result does not close PAH-OMC-020.  The
+remaining single evidence target is a source-authorized non-coordinate,
+bounded-energy `U_n`/common-space realization that preserves the same local
+cylinders and can satisfy N2b, N2c/N4 and N2d.  Until that owner packet is
+hash-pinned, the parent route remains `HOLD_FOR_EVIDENCE` and T-063 remains
+active.  There is no physical Pre-A, spacetime, event-horizon, QFT, gravity,
+continuum, Yang--Mills, mass-gap or TOE conclusion; external Markov time is
+not quantum real time, proper time or Lorentzian time.
+
+### R-523 -- PAH-OMC-020 C2-to-pathspace owner-contract audit
+
+**Classification and scope.** `auxiliary_support`, conditional
+`HOLD_FOR_EVIDENCE` for the unchanged PAH-001 functional, original directed
+rates and labelled Gibbs state on the OMC-004/OMC-010 path.  The registered
+`j`-before-anchored-`n` order and external stochastic Markov time are retained;
+no rate, state, carrier, counterterm, projection, regulator or time
+interpretation is changed.
+
+**Statement.** R-522 supplies the static local Gibbs-weighted second-rate
+moment
+
+    C2(A) <= 60 |A|
+
+and the induced local `L2` generator estimate.  The temporal target is a
+different evolved quantity,
+
+    sup_(n>=N(f,g)) integral_0^T ||A_n^(out,m) Q_n(s)g||_2 ds -> 0
+    as m -> infinity.                                      (N4)
+
+The source-record inventory and strict owner predicate find no
+source-authorized PAH-OMC-020 packet containing a path-space or
+martingale-problem law, filtration and unchanged cylinder generator,
+predictable compensator/Lyapunov estimate, compact-time non-explosion and
+uniqueness, unconditional N2c/N4 boundary escape, and R-512 minimal-form
+identification with reproducible verification manifests.  The N2a intake
+explicitly has `source_authorized_packet_present=false`, and R-520/R-522 keep
+the process inputs open.
+
+The exact missing contract is therefore: provide one versioned, hash-pinned
+owner packet with those fields, then test it once under the unchanged PAH
+quantifiers.  The Lean companion proves only that a supplied pathwise budget
+`B` with `eta^2 <= C2*B` yields a squared budget at most `T^2*C2*B`; it does
+not construct `B` or a process.
+
+**Verification.** Primary 24/24, non-importing independent 21/21, hostile
+15/15 and integrated 32/32 checks pass.  Lean 4.32.1 compiles three
+conditional rational declarations.  Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_n2c_owner_audit.py --check
+    python -X utf8 codes/foundations/pah_omc020_n2c_owner_audit_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_n2c_owner_audit_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_n2c_owner_audit_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+
+Run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2c-owner-audit/`.
+The certificate is
+`strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-certificate.md`, the result card
+is `strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-result-v1.json`, and the
+exploration is `EXP-001641`.
+
+**Boundary and next evidence.** This audit does not prove or refute a PAH
+process.  Repository absence is not a universal no-go.  The active T-054 gate
+and the full PAH-OMC-020 semigroup route remain `HOLD_FOR_EVIDENCE`; N2a/N2b,
+N2c/N4, N2d and anchored-`n` convergence are open.  There is no physical
+Pre-A, spacetime, event-horizon, QFT, gravity, Yang--Mills, continuum,
+mass-gap or TOE conclusion; external Markov time remains stochastic
+bookkeeping.
+
+### R-522 -- PAH-OMC-020 source-owned local second-rate moment
+
+**Classification and scope.** `auxiliary_support`, conditional `PASS` for the
+unchanged PAH-001 functional, directed midpoint rates, labelled Gibbs state,
+OMC-010 regulator path and PAH-OMC-020 `j`-before-anchored-`n` order.  No
+counterterm, rate fit, carrier, averaging map or physical interpretation is
+introduced.
+
+**Statement.** For a directed root `r`, squaring the exact PAH midpoint rate
+gives
+
+    pi(x)c_r(x)^2 = Z^(-1) m_r(x)^2 exp(-beta F(r x)).
+
+Every source mobility obeys `m_r<=1` on the registered OMC-010 path.  The
+inverse-root map is injective, so the root-domain sum is bounded by the
+normalized Gibbs partition sum:
+
+    sum_(x in dom(r)) pi(x)c_r(x)^2 <= 1.
+
+R-490's source-derived per-vertex support-incidence constant is
+`N_geom=60`.  Therefore, for every finite local support `A`,
+
+    C2(A) = sup_(n,R) sum_(r:supp(r) intersects A) sum_x pi(x)c_r(x)^2
+           <= 60 |A|.
+
+Pointwise Cauchy--Schwarz gives the local consequence
+
+    ||L f||_2^2 <= C2(A) sum_(r:supp(r) intersects A) ||f(r dot)-f||_infinity^2
+
+for bounded local cylinders `f` supported in `A`.  This is the PAH-specific
+second-rate-moment input absent from the R-521 first-moment sufficiency test;
+R-489's unweighted rate divergence remains a distinct norm result.
+
+**Verification.** Primary 40/40, non-importing independent 31/31, hostile
+17/17 and integrated 25/25 checks pass.  Lean 4.32.1 compiles six finite
+rational declarations.  Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_c2_moment.py --check
+    python -X utf8 codes/foundations/pah_omc020_c2_moment_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_c2_moment_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_c2_moment_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+
+The run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-c2-moment/`.
+The certificate is `strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md`, the
+result card is `strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json`, and the
+exploration is `EXP-001640`.
+
+**Boundary and next evidence.** The local C2 estimate does not construct the
+source-authorized path-space process, prove non-explosion or uniqueness,
+discharge N2b/N2c/N4, identify the R-512 minimal form, or establish the
+anchored-`n` semigroup limit.  The active T-054 gate and the full PAH-OMC-020
+route therefore remain `HOLD_FOR_EVIDENCE`; no physical Pre-A, spacetime,
+QFT, gravity, Yang--Mills, continuum, mass-gap or TOE conclusion follows.
+External Markov time remains stochastic bookkeeping.
+
+### R-521 -- PAH-OMC-020 C_sw first-moment sufficiency boundary
+
+**Classification and scope.** `auxiliary_support`, conditional
+`HOLD_FOR_EVIDENCE` route boundary for the unchanged PAH-001 functional,
+R-490 state-weighted envelope and PAH-OMC-020 `j`-before-`n` order.  The
+two-state construction below is an abstract sufficiency diagnostic only; it
+is not inserted into the PAH carrier or rate law.
+
+**Statement.** R-490 derives `S_geom=8`, `N_geom=60` and
+`C_sw=540` from a normalized first conductance moment.  For every integer
+`M>=1`, the reversible family
+
+    c(0,1)=M, c(1,0)=1,
+    pi(0)=1/(M+1), pi(1)=M/(M+1), f=(1,-1)
+
+satisfies detailed balance, `sum pi*c=2M/(M+1)<2`, and
+`E(f,f)=4M/(M+1)<4`, but
+`||L f||_(L2(pi))^2=4M`.  Therefore the first-moment envelope alone cannot
+be promoted to a uniform `L2` generator estimate or an N2c/N4 boundary
+escape theorem.  This blocks only that inference; a PAH-specific second
+moment or pathwise estimate may still exist.
+
+**Verification.** Primary 46/46, non-importing independent 27/27, hostile
+13/13 and integrated 26/26 checks pass.  Lean 4.32.1 compiles nine finite
+rational declarations.  Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_csw_sufficiency_audit.py --check
+    python -X utf8 codes/foundations/pah_omc020_csw_sufficiency_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_csw_sufficiency_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_csw_sufficiency_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+
+The run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-csw-sufficiency/`.
+The certificate is
+`strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md`, the result card
+is `strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json`, and the
+exploration is `EXP-001639`.
+
+**Boundary and next evidence.** A source-owned local second-rate-moment
+bound `C2(A)`, or an equivalent conditional/pathwise Lyapunov and
+non-explosion estimate, is required before N2c/N4 and R-512 process
+identification can be tested.  The active T-054 gate is unchanged.  No
+exact PAH counterexample, universal no-go, semigroup convergence, physical
+Pre-A, spacetime, QFT, gravity, Yang--Mills, continuum, mass-gap or TOE
+conclusion follows; external Markov time remains stochastic bookkeeping.
+
+### R-520 -- PAH-OMC-020 U_n-free projective path-space bridge contract
+
+**Classification and scope.** `auxiliary_support`, conditional
+HOLD_FOR_EVIDENCE result for the unchanged PAH-001 functional, the registered
+PAH-OMC-020 comparison, and the original external stochastic Markov time. The
+route tests a scalar projective path-space or martingale-problem bridge and
+does not synthesize a common `U_n`, alter a rate, add a carrier, or change the
+`j`-before-anchored-`n` order.
+
+**Statement.** The finite comparison budget separates the R-510 local-state
+error, R-493 local-generator stabilization, the explicit R-517 connected-word
+boundary tail, and a target-process/minimal-form defect. From the R-516 source
+footprint, `b=144` and the R-517 two-copy factor gives `b_eff=288`; the primary
+width-two fixture has first-root bound 112 and the independent width-three
+fixture has first-root bound 128. Exact Fraction tails decrease at the listed
+finite distances in both fixtures. The target-process defect is not set to
+zero.
+
+**Verification.** Primary 41/41, non-importing independent 33/33, hostile
+20/20 and integrated 36/36 checks pass. Lean 4.32.1 compiles eleven finite
+rational declarations (with one non-fatal unused-parameter linter warning).
+Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_pathspace_bridge.py --check
+    python -X utf8 codes/foundations/pah_omc020_pathspace_bridge_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_pathspace_bridge_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_pathspace_bridge_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+    lean verification/lean/Tect/PahOmc020Pathspace.lean
+
+The run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-pathspace-bridge/`.
+The certificate is
+`strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-certificate.md`, the result card
+is `strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json`, and the
+exploration is `EXP-001638`.
+
+**Boundary and remaining obligations.** The source does not yet provide a
+path-space process construction, non-explosion or uniqueness for the
+unbounded R-512 cylinder generator, an unconditional N2c/N4 boundary-escape
+estimate, or equality with the R-512 minimal closed form. Therefore the full
+PAH-OMC-020 ordered semigroup objective remains `HOLD_FOR_EVIDENCE`, the
+active T-054 gate is unchanged, and this result is not claim-bearing. There
+is no common `U_n`, infinite-volume or continuum theorem, physical Pre-A,
+spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion; external
+Markov time is not quantum real time, proper time or Lorentzian time.
+
+### R-519 -- PAH-OMC-020 projective local-correlation word envelope
+
+**Classification and scope.** `auxiliary_support`, conditional
+ANALYTIC/EXACT/EXECUTED result for the unchanged PAH-001 functional, original
+grade-blind OMC-013 cylinder and external stochastic Markov time. One bounded
+non-radial local cylinder is compared after a fixed word cutoff `m=6`; the
+finite order is first `j->infinity` at fixed `n`, then the existing `n`-level
+comparison. No rate, state, carrier, projection, counterterm or limit order is
+changed.
+
+**Statement.** R-493 identifies every retained word after the support-dependent
+stabilization `N(f)=3`. R-510 supplies the local Gibbs-state passage for the
+product cylinder. The R-516 footprint gives 16 roots per base column, 4 edge
+slots and radius 2, hence `b=144`; the two-copy Duhamel comparison in R-517
+requires `b_eff=2b=288`. With support width two, `a_w=112`, and the fixture
+horizon `T=1/4`, the conditional scalar envelope is
+
+    |C_(n+1)^(m)(f,g;t)-C_n^(m)(f,g;t)|
+      <= e_state(n)+e_state(n+1)
+         + 8 ||f||_infinity ||g||_infinity E_d(a_w,b_eff,T),
+
+for `m=6` and the checked distances `d=128,192,256`. The exact Fraction
+fixtures decrease with `n` and with the boundary distance; the omitted word
+mass remains an explicit factorial remainder rather than being discarded.
+
+**Verification.** Primary 50/50, non-importing independent 35/35, hostile
+31/31 and integrated 23/23 checks pass. Lean 4.32.1 compiles eleven finite
+rational declarations covering the overlap formula, two-copy factor, word
+cutoff order, tail positivity and state-pair fixtures. Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_projective_correlation.py --check
+    python -X utf8 codes/foundations/pah_omc020_projective_correlation_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_projective_correlation_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_projective_correlation_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+
+The run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-projective-correlation/`.
+The certificate is
+`strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md`, the
+result card is `strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json`,
+and the exploration is `EXP-001637`.
+
+**Boundary and remaining obligations.** The estimate is conditional on the
+finite-word split, R-493 eventual intertwining, R-510 state control and
+R-517 finite-fibre attribution. It does not supply a source-authorized common
+`U_n`, a completed common Hilbert realization, N2b arbitrary-sequence
+liminf/recovery, N2d identification with the R-512 minimal form, weak
+Gibbs-`L2` convergence, or an all-cylinder anchored-`n` semigroup theorem.
+The active T-054 gate and claim tiers are unchanged. There is no physical
+Pre-A, spacetime, QFT, gravity, continuum, Yang--Mills, mass-gap or TOE
+conclusion; external Markov time has no quantum, proper-time or Lorentzian
+interpretation.
+
+### R-529 -- PAH-OMC-020 root-wise energy-intertwining input contract
+
+**Classification and scope.** `auxiliary_support`, conditional
+`HOLD_FOR_EVIDENCE` checkpoint for the unchanged PAH-001 functional, original
+PH/LK/AP/TR rates, R-510/R-511 state/form chain and R-512 minimal-form target.
+The R-525 maximal-prefix conditional-expectation map is used only as a static
+candidate.  No source-authorized owner packet, new carrier, rate, state,
+counterterm, regulator or time variable is introduced.
+
+**Statement.** A root-wise relation
+`Delta_infty,r(U_n f)=kappa_(n,r)Delta_n,r(f)` together with
+`w_infty,r*kappa_(n,r)^2<=w_n,r` implies the directed-half target root energy
+is no larger than the source root energy.  A uniformly summable residual gives
+the corresponding recovery-side defect.  R-525 supplies only static `L2`
+contraction and local N1 recovery, while R-528's fixed snapshot contains no
+source-authorized or complete owner packet.  An abstract two-state oracle with
+stationary marginal `(1/2,1/2)`, identity coupling, source rate `1` and target
+rate `2` has equal `L2` norms but energies `1/2` and `1`; static contraction is
+therefore insufficient.  The oracle is not a PAH carrier or PAH counterexample.
+
+**Verification.** Primary 37/37, non-importing independent 28/28, hostile
+19/19 and integrated 30/30 checks pass.  Lean 4.32.1 compiles six finite
+rational declarations.  Reproduce with:
+
+    python -X utf8 verification/scripts/pah_omc020_energy_intertwining_contract.py --check
+    python -X utf8 codes/foundations/pah_omc020_energy_intertwining_independent.py --check
+    python -X utf8 codes/foundations/pah_omc020_energy_intertwining_hostile.py --check
+    python -X utf8 verification/scripts/pah_omc020_energy_intertwining_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+    lean verification/lean/Tect/PahOmc020Energy.lean
+
+The run JSON files are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-energy-intertwining/`.
+The contract and certificate are
+`strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json` and
+`strategy/pa-hyp/PAH-OMC-020-energy-intertwining-certificate.md`; the result
+card is the matching `PAH-OMC-020-energy-intertwining-result-v1.json`.
+
+**Boundary and next evidence.** The exact PAH root correspondence, dynamic
+form defect/conductance comparison, uniform anchored-`n` bound and
+terminal-square treatment remain missing.  The result is not claim-bearing,
+does not change the active T-054 gate, and leaves N2b, N2c/N4, N2d and the
+ordered semigroup objective open.  There is no physical Pre-A, spacetime,
+QFT, gravity, Yang--Mills, continuum, mass-gap or TOE conclusion; external
+Markov time remains stochastic bookkeeping.
+
+### R-530 -- PAH-OMC-020 R-512 minimal-form Dirichlet/Markov structure
+
+**Question.** Does the exact minimal closed form selected by R-512 inherit the
+normal-contraction inequality needed for a Markov target, without being
+confused with the still-open finite-to-anchored-`n` limit?
+
+**Answer (conditional scoped PASS).** On the unchanged R-511 cylinder domain,
+
+`E(f,f) = (1/2) sum_r nu_infty[c_r (f(T_r x)-f(x))^2]`.
+
+For every normal contraction `eta` with `eta(0)=0` and unit Lipschitz constant,
+each root square decreases.  Domain stability under composition and the
+R-512 form-norm completion pass this inequality to `Ebar`.  The constant one
+is in the domain and has zero energy.  Thus the standard closed-Dirichlet-form
+implication gives positivity preservation, `L-infinity` contraction and
+conservativity of `T_min(t)=exp(-t K_min)`.
+
+The result is auxiliary support only.  It does not construct an infinite-
+volume jump process, prove non-explosion or uniqueness, identify the finite
+`P_nj` with `T_min`, or discharge N2a, N2b, N2c/N4 or N2d.  External Markov time
+remains stochastic bookkeeping; no physical, continuum, Pre-A, QFT, gravity,
+Yang--Mills, mass-gap or TOE conclusion is made.
+
+Primary, independent and hostile exact replay plus Lean 4.32.1 finite scalar
+and weighted-sum declarations are recorded in the result card and run JSONs.
+The next single question is whether a source-authorized comparison/process
+packet can establish N2b liminf, N2c/N4 boundary escape and N2d equality with
+this now-Markov target without changing PAH-001.
+
+### R-532 -- PAH-OMC-020 refreshed owner-search snapshot for T-075
+
+R-532 refreshes the owner-packet provenance after R-530 and R-531 changed the proof workspace. The previous 84-record snapshot reported a changed `temporal-work.md` byte and later candidate additions, so a new timestamped manifest was created at `2026-09-08T00:00:00Z`. It contains 101 marker-bearing records with manifest SHA-256 `e22141fd4c4691ff0021c2bf11c48b19d98cdd87f34ef1fce72640d5c7c5b77d`, zero authorized paths and zero complete paths. Primary replay passes 532/532, an independent non-importing implementation passes 415/415, hostile mutation controls pass 10/10 and the integrated verifier passes 20/20. This is auxiliary `HOLD_FOR_EVIDENCE`: no source-authorized path law, filtration, stopped compensator, eta-to-hitting-event attribution, non-explosion theorem, N2b/N2c/N4/N2d comparison or semigroup convergence is supplied. The empty snapshot is not a universal impossibility theorem; a later owner packet requires a new versioned snapshot. No PAH-001 functional, rate, state, carrier, regulator, Markov-time or limit-order change occurs, and no physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion follows.
+
+### R-531 -- PAH-OMC-020 conditional exponential-Lyapunov bridge to N2c/N4
+
+R-531 fixes a conditional source-to-boundary implication for the unchanged PAH-001 process. If a future source-authorized stopped path law supplies `E[V(Z_(T intersect tau_d))] <= M_T b^w` with `V(z)=b^z`, `b>1`, then `P(tau_d<=T)<=M_T b^w/b^d`. If the same packet supplies `eta_(m,T)^2<=C2(A)P(tau_(d_m)<=T)`, R-522 gives `eta_(m,T)^2<=C2(A)M_T b^w/b^(d_m)->0`. This is an implication contract, not a process/non-explosion proof or owner authorization. Exact rational fixtures use M_T=3,b=2,w=2,C2=120 and d=8,12,16; primary 37/37, independent 23/23, hostile 14/14, integrated 12/12 and four Lean declarations pass. The result is auxiliary conditional PASS and does not close PAH-OMC-020, N2b/N2d, or any physical layer. No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE claim follows; external Markov time is bookkeeping only.
+
+### R-533 -- PAH-OMC-020 N2c/N4 owner-audit replay aligned to current bytes
+
+R-533 is the current-byte successor replay of R-523. It updates only the
+temporal-work and N2a-intake parent hashes, preserving the immutable PAH-001
+functional, original directed PH/LK/AP/TR rates, labelled Gibbs state,
+external stochastic Markov time, OMC-010 path and j-before-anchored-n order.
+R-522 C2(A)<=60|A| remains a static local second-rate-moment input.
+
+The strict owner predicate still admits no packet containing a source-authorized
+path-space or martingale-problem law with filtration, a stopped predictable
+Lyapunov compensator, compact-time non-explosion/uniqueness, an unconditional
+A_n^(out,m) Q_n(s) g N2c/N4 attribution and identification with the R-512
+minimal closed form. The current temporal-work SHA-256 is
+2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab; the
+superseding N2a intake SHA-256 is
+14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c.
+
+Primary 24/24, non-importing independent 21/21, hostile 15/15 and integrated
+32/32 checks pass. Lean 4.32.1 compiles the three conditional declarations in
+verification/lean/Tect/PahOmc020N2c.lean. The fresh runs are under
+claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2c-owner-audit-v1.1/;
+the certificate, exploration and result card are
+strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-certificate.md,
+strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-exploration.json and
+strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-result-v1.json.
+The exploration is EXP-001653, and the result is auxiliary HOLD_FOR_EVIDENCE.
+
+This replay repairs the stale R-523 provenance pin; it does not prove a
+pathwise process, non-explosion, N2c/N4, N2b, N2d or PAH-OMC-020 semigroup
+convergence. The empty inventory is not a universal no-go. No PAH-001 source
+definition or limit order changed, and no physical Pre-A, spacetime, QFT,
+gravity, Yang--Mills, continuum, mass-gap or TOE conclusion follows.
+External Markov time remains nonphysical bookkeeping.
+
+### R-534 -- PAH-OMC-020 sequential compact-time gluing lemma
+
+R-534 proves a reusable conditional reduction for the unchanged PAH-OMC-020
+comparison.  For every bounded local cylinder pair for which the registered
+inputs are instantiated, define `J_(n,j)` as the compact-time fixed-`n`
+finite-`j` error, `K_(n,m)` as the known state/local-stabilization/boundary
+truncation budget, and `D_n` as the target-process/R-512 minimal-form defect.
+The exact compact-time triangle is
+
+```text
+sup_(0<=t<=T)|C_(n,j)(t)-c_star(t)|
+    <= J_(n,j) + K_(n,m) + D_n.
+```
+
+If `J_(n,j)->0` at fixed `n`,
+`lim_(m->infinity) limsup_(n->infinity) K_(n,m)=0`, and `D_n->0`, the
+registered `j`-then-`n` local-correlation limit follows by choosing `m`, then
+`n`, then `j`.  The primary 31/31, non-importing independent 25/25, hostile
+19/19 and integrated 22/22 checks pass; Lean 4.32.1 compiles eight finite
+rational budget declarations.
+
+R-514 supplies only the fixed-`n` term.  R-533 confirms that no
+source-authorized all-cylinder uniform `K` bound or target-process/R-512
+defect `D_n` is present, so the scientific verdict remains auxiliary
+`HOLD_FOR_EVIDENCE`.  The arithmetic sequences in the runs are test oracles,
+not PAH constants.  Hostile controls reject dropping either term, reversing
+the limit order, or promoting the conditional implication to a physical
+statement.  No PAH-001 functional, rate, state, carrier, regulator, external
+Markov time or limit order changes, and no physical Pre-A, spacetime, QFT,
+gravity, continuum, mass-gap, Yang--Mills or TOE conclusion follows.
+
+The contract, certificate, run JSONs, scripts and Lean source are recorded in
+`strategy/pa-hyp/PAH-OMC-020-sequential-gluing-contract-v1.json`,
+`strategy/pa-hyp/PAH-OMC-020-sequential-gluing-certificate.md` and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-sequential-gluing/`.
+The exploration ledger entry is EXP-001654 and the changelog event is
+`20260908-r-534-pah-omc-020-sequential-compact-time-gluin`.  Reopen only when
+one source-authorized owner packet instantiates both `K_(n,m)` and `D_n`, or
+an exact PAH-specific contradiction to either hypothesis is found.
+
+### R-535 -- PAH-OMC-020 K/D term-level coverage ledger
+
+R-535 is a source crosswalk for the exact sequential-gluing budget rather than
+a new dynamics construction.  It assigns the registered records to the terms
+they actually support: R-514 supplies the fixed-`n` compact-time `J_(n,j)`
+passage; R-510 supplies a local stationary-state modulus; R-493 supplies
+support-dependent finite eventual generator equality; and R-517 supplies a
+conditional finite-fibre boundary envelope.  The common comparison, an
+all-cylinder compact-time `K_(n,m)` bound with
+`lim_(m->infinity) limsup_(n->infinity) K_(n,m)=0`, and the R-512
+target-process defect `D_n` are not present.
+
+The eight-field admission conjunction is therefore false on the current
+hash-pinned snapshot.  Primary 50/50, non-importing independent 45/45,
+hostile 22/22 and integrated 23/23 checks pass; Lean 4.32.1 compiles seven
+finite Boolean admission declarations.  The result is auxiliary
+`HOLD_FOR_EVIDENCE`, with no claim-bearing or active-gate change.  The ledger
+does not rescan owner history and does not synthesize `U_n`, a path process or
+any missing estimate.
+
+The contract, certificate, scripts, Lean source and run JSONs are recorded in
+`strategy/pa-hyp/PAH-OMC-020-kd-term-ledger-contract-v1.json`,
+`strategy/pa-hyp/PAH-OMC-020-kd-term-ledger-certificate.md` and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-kd-term-ledger/`.
+The exploration ledger entry is EXP-001655 and the changelog event is
+`20260908-r-535-pah-omc-020-k-d-term-level-coverage-ledge`.  Reopen only
+when a versioned source-authorized packet or an exact PAH-specific
+contradiction changes one required field.
+
+<a id="r-568"></a>
+### R-568 -- PAH-OMC-029 fixed-generator Markov uniqueness
+
+**Statement.** On exactly R-510's real invariant H, every symmetric
+strongly continuous Markov contraction semigroup whose generator extends
+R-511 A on its entire cylinder domain D equals the R-512/R-567 minimal
+extension. Verdict: PROVED under those named pinned realization hypotheses;
+classification: auxiliary_support. No minimal form-domain equality, graph
+core or path-space realization is assumed for the competing extensions.
+
+**Proof and reuse.** Every extension fixes the full radial subspace and
+commutes with radial indicators. The exact nonsymmetric spatial-transfer
+envelope gives uniform-column sextic tails. On increasing radial events,
+the unchanged label-rate quadratic increment gives subpolynomial spatial
+rate growth. Compact radial cutoffs put finite-root backward tests in every
+generator domain. A factorial boundary remainder vanishes with growing
+support; all extensions share that comparison. An independent finite-matrix
+commutator proof gives the same bound without a graphical construction.
+Remove localization in the original H to conclude equality. This does not
+identify any original finite-volume PAH semigroup limit.
+
+**Evidence.** Exact sources and scope are in
+`strategy/pa-hyp/PAH-OMC-029-prereg-v1.json` and
+`strategy/pa-hyp/PAH-OMC-029-result-v1.json`; proof and analytic audit are
+`PAH-OMC-029-certificate.md` and `PAH-OMC-029-independent-audit.md` in that
+directory. Reproduce with
+`python -X utf8 verification/scripts/pah_omc029_verify.py --check`.
+Primary, non-importing independent and hostile checks pass; six Lean
+theorems compile. Full probability, domain and asymptotic arguments remain
+analytic rather than completely formalized. Internal alternative
+derivations are not an external referee report. The four-page synthesis is
+`claims/C6-SPACETIME-SIGNATURE/notes/pah-omc029-uniqueness-260909-v1.0.pdf`.
+Publication target: an independently reviewable fixed-model functional
+analysis note, not a physical foundation theorem.
+
+**Boundary.** T-054 and C6 T1 are unchanged. PAH-OMC-020 source realization
+and original ordered temporal convergence remain unresolved. No new model,
+rate, state, time, counterterm or physical projection is introduced. No
+physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap or TOE follows.
+After this one attempt, review only the next question: can an authorized
+finite-to-common-space realization supply a limit extending this same A on
+D? Do not repeat unchanged owner scans or infer existence from uniqueness.
+
+<a id="r-567"></a>
+### R-567 -- PAH-OMC-028 nonlinear closure proof repair
+
+**Statement.** For every normal contraction eta and every u in the full
+R-512 minimal form domain V, eta(u) belongs to V and
+Ebar(eta(u))<=Ebar(u). Under the unchanged R-510 probability-state,
+R-511 dense root-square core and R-512 closed-form/spectral hypotheses,
+the same target semigroup preserves positivity, the bounded norm and one.
+
+**Correction and proof.** R-530's direct inference from single-vector
+contraction to form-Cauchy images is unjustified by that estimate. The
+paired inequality is false: clipping f=(1,2), g=(0,1) to [0,1] changes
+the diagnostic difference energy from 0 to 1 and its squared form norm
+from 1 to 3/2. This does not refute the conclusion or exhibit a non-Cauchy
+image sequence. The closed-energy-epigraph proof supplies domain membership
+and the energy inequality; weak compactness and Mazur convex approximants
+independently give the same conclusion. Historical R-530 bytes are retained.
+
+**Evidence and reuse.** Full analytic certificate and exact source pins:
+`strategy/pa-hyp/PAH-OMC-028-certificate.md` and
+`strategy/pa-hyp/PAH-OMC-028-result-v1.json`. Reproduce with
+`python -X utf8 verification/scripts/pah_omc028_verify.py --check`.
+Primary exact root sums, non-importing independent generator matrices,
+hostile missing-premise controls and five Lean theorems pass. The universal
+closed-epigraph transfer is formalized; weak compactness, the model's measure
+construction and spectral representation remain analytic. One synthesis
+PDF is `claims/C6-SPACETIME-SIGNATURE/notes/pah-omc028-closure-260909-v1.0.pdf`.
+This reuses standard Dirichlet-form theory and claims no novel general theorem.
+The final synthesis-source/PDF hashes after the pre-release footer-label
+repair are in `strategy/pa-hyp/PAH-OMC-028-release-addendum-v1.json`;
+that provenance-only addendum overrides only those two publication hashes
+in the immutable result snapshot, not its mathematics or input pins.
+
+**Boundary and next question.** Classification: auxiliary_support and
+conditional proof repair. The negative audit is
+`AUDIT-2026-09-09-PAH-OMC-028-NONLINEAR-CLOSURE`. Neither T-054 nor
+PAH-OMC-020 closes. The next separately contracted question is uniqueness
+of the Markov extension of the same R-511 operator on the same H, not
+automatic finite-to-target identification. No physical Pre-A, spacetime,
+QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion follows.
+
+### R-566 -- PAH-OMC-026 cut-set to owner-packet sufficiency crosswalk
+
+**Statement.** The ten R-557 source-owner fields strictly refine the R-565
+coarse route frontier: `authority` and `root_semantics` fill `S0`,
+`common_realization`, `n1_recovery`, `n2b_form`, `n2c_n4_boundary` and
+`n2d_target` fill `S1`, `full_domain_J` and `anchored_D` fill `S2`, and
+`verification` is cross-cut. A complete source-authorized packet plus the
+unchanged nonnegative `J+D` budget and the registered ordered limits implies
+the nested compact-time local-correlation conclusion conditionally.
+
+**Scope and evidence.** The coarse cuts alone are not treated as a source
+packet: they do not encode authority, provenance, field-level analytic content
+or verification. No source-authorized packet or PAH-specific `J/D` estimates
+are present, so the actual route remains `HOLD_FOR_EVIDENCE`. Primary replay is
+`21/21`, independent `15/15`, hostile `8/8`, integrated `17/17`, and fourteen
+finite Lean declarations compile under Lean 4.32.1. The certificate is
+`strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-certificate.md`; the
+result card is
+`strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-result-v1.json`.
+
+**Re-entry condition.** Re-open only when one versioned, source-authorized,
+hash-pinned packet fills all ten R-557 fields and supplies the model-specific
+`J/D` estimates without changing PAH-001 or its declared order. No physical
+Pre-A, spacetime, QFT, gravity, Yang--Mills, continuum, mass-gap, or TOE
+conclusion is made.
+
+### R-565 -- PAH-OMC-025 route-independent minimal owner cut-set
+
+**Statement.** For the unchanged PAH-001 model and the registered PAH-OMC-020
+`j`-before-anchored-`n` order, every admissible route must jointly instantiate
+`S0` source semantics and finite-generator identity, one complete `S1` form or
+path comparison/target-identification route, and `S2` full-domain temporal
+control. The current records instantiate none of these cuts, so the actual
+route remains `HOLD_FOR_EVIDENCE`.
+
+**Scope and evidence.** This is an auxiliary route-dependency result, not a
+PAH convergence theorem or a universal no-go for an owner-fixed successor.
+The audit uses only the hash-pinned contract and `R-534`, `R-536`, `R-542`,
+`R-557`, `R-559`, and `R-564`; it introduces no new carrier, finite model,
+counterterm, rate fit, or abstract oracle. Primary replay is `42/42`,
+independent `25/25`, hostile `11/11`, integrated `16/16`, and the eight finite
+Lean declarations compile under Lean 4.32.1. The certificate is
+`strategy/pa-hyp/PAH-OMC-025-route-frontier-certificate.md`; the result card is
+`strategy/pa-hyp/PAH-OMC-025-route-frontier-result-v1.json`; replay artefacts
+are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc025-route-frontier/`.
+
+**Re-entry condition.** Re-open only when one source-authorized, hash-pinned
+packet fills `S0`, one complete `S1` alternative, and `S2` without changing
+PAH-001 or its declared order. No physical Pre-A, spacetime, QFT, gravity,
+Yang--Mills, continuum, mass-gap, or TOE conclusion is made; Markov time
+remains external stochastic bookkeeping.
+
+### R-564 -- PAH-OMC-024 anchored-n persistence audit
+
+R-564 isolates the exact logical gap between the finite source-multiplicity
+derivative separation in R-552 and the anchored-n compact-time question.
+The unchanged PAH source is not altered. An abstract reversible two-state
+oracle with pi=(1/2,1/2), f=(0,1),
+r_A(n)=2^(-n) and r_B(n)=2^(-(n+1)) has
+|C'_A(0)-C'_B(0)|=2^(-(n+2))>0 at every finite n, while
+sup_(0<=t<=T)|C_r(t)-C_0(t)|<=T*r/2. Both families therefore converge
+uniformly on every fixed compact interval to the same identity target.
+
+The oracle proves only that the R-552 finite gap does not logically imply an
+anchored-n negative. It is not a PAH carrier, rate choice, state choice or
+counterexample. A source-specific n-uniform local Gibbs lower bound and a
+uniform derivative/remainder estimate remain missing.
+
+The primary lane passes 52/52, the independently rebuilt rational oracle
+61/61, hostile scope mutations 10/10, integrated replay 25/25 and the Lean
+4.32.1 replay with six declarations. This is auxiliary HOLD_FOR_EVIDENCE;
+no source-owner admission, R-512 convergence, claim-tier change or physical
+promotion follows.
+
+- Contract: strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-contract-v1.json
+- Certificate: strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-certificate.md
+- Primary replay: claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/primary.json
+- Integrated replay: claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/integrated.json
+
+### R-563 -- PAH-OMC-020 diagonal obstruction to fixed-volume all-power locality
+
+R-563 records an exact route-local obstruction following R-562.  The frozen
+OMC-013 root radius is two and R-562 uses N_k(f)=max(2,s_f+2k+1).  For every
+nonconstant finite-support cylinder s_f>=0 and every finite n, the diagonal
+witness k=n+1 gives n<N_k(f).  Hence no fixed finite n is beyond the R-562
+locality frontier for all generator powers, and the fixed-k identities cannot
+alone be inserted termwise into an exponential at one fixed volume.
+
+The primary lane passes 9/9, the independently rebuilt geometry 7/7, hostile
+scope controls 8/8, integrated replay 4/4 and the Lean 4.32.1 replay.  This is
+a scoped NEGATIVE_RESULT for that upgrade route only.  A uniform word/factorial
+tail, cancellation estimate, common path-space construction or form/resolvent
+route remains admissible, so PAH-OMC-020 itself remains open.  PAH-001's
+functional, rates, state, normalization, carrier and external stochastic Markov
+time are unchanged; no physical Pre-A, spacetime, QFT, gravity, continuum,
+mass-gap, Yang--Mills or TOE conclusion follows.
+
+- Contract: strategy/pa-hyp/PAH-OMC-020-diagonal-locality-contract-v1.json
+- Certificate: strategy/pa-hyp/PAH-OMC-020-diagonal-locality-certificate.md
+- Primary replay: claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-diagonal-locality/primary.json
+- Integrated replay: claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-diagonal-locality/integrated.json
+
+### R-562 -- PAH-OMC-020 universal finite-cylinder locality envelope
+
+R-562 extends the R-561 fixed-power locality envelope from the ell_(0,0)
+witness to arbitrary finite-support cylinders.  With the unchanged PAH-001 and
+PAH-OMC-013 definitions, the frozen root catalog has core-to-support column
+radius two.  If s_f is the largest support column, recursive closure after k
+generator applications is bounded by s_f+2k, so N_k(f)=max(2,s_f+2k+1)
+separates the envelope from the successor frontier.  The statement is
+conditional on the R-493 one-step identity on every recursively enlarged
+finite-support cylinder.
+
+The primary lane passes 14/14, the independently rebuilt strip 8/8, hostile
+scope controls 8/8, integrated replay 4/4 and the Lean 4.32.1 replay.  This is
+auxiliary PASS_CONDITIONAL only: the threshold grows with k, so no uniform
+factorial/word tail, exponential semigroup summation, common U_n/path space,
+N2b/N2c/N4/N2d, R-512 target identification or ordered stationary-correlation
+convergence is proved.  PAH-001's functional, rates, Gibbs state,
+normalization, carrier and external stochastic Markov time are unchanged, and
+no physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills
+or TOE conclusion follows.
+
+- Contract: strategy/pa-hyp/PAH-OMC-020-universal-locality-contract-v1.json
+- Certificate: strategy/pa-hyp/PAH-OMC-020-universal-locality-certificate.md
+- Primary replay: claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-universal-locality/primary.json
+- Integrated replay: claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-universal-locality/integrated.json
+
+### R-561 -- PAH-OMC-020 fixed-power local generator-intertwining bridge
+
+R-561 records a conditional finite locality bridge for the unchanged PAH-001 and PAH-OMC-013 definitions. The frozen root catalog has core-to-support column radius two. Starting from the ell_(0,0) cylinder, recursive closure reaches maximum column 2k after k applications, so the sufficient threshold is N_k=max(2,2k+1). Under the R-493 one-step identity on every recursively enlarged finite-support cylinder, induction gives L_(n+1)^k I_(n,n+1) f = I_(n,n+1) L_n^k f for fixed k and n >= N_k(f).
+
+The existing R-551 n=3 second-order defect is below N_2=5 and remains route-local; the same frozen sample is zero at n=5. Primary 13/13, independent 8/8, hostile 8/8, integrated 4/4 and the existing Lean finite-semigroup file compile. This is auxiliary PASS_CONDITIONAL only. It supplies no uniform-in-k factorial tail, common U_n/path comparison, N2b/N2c/N4/N2d estimate, full semigroup sum, ordered convergence or physical promotion.
+
+- Contract: strategy/pa-hyp/PAH-OMC-020-iterate-locality-contract-v1.json
+- Certificate: strategy/pa-hyp/PAH-OMC-020-iterate-locality-certificate.md
+- Primary replay: claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-iterate-locality/primary.json
+- Integrated replay: claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-iterate-locality/integrated.json
+### R-560 -- PAH-OMC-023 canonical owner-admission replay boundary
+
+R-560 records the current-environment intake for the frozen R-554 owner-search
+snapshot and its 192-record candidate manifest. The historical v1.4 integrated
+replay discrepancy is isolated to absolute interpreter and output paths stored
+in replay command metadata; all frozen child artifacts return success when
+replayed through stable repository-relative command descriptions. The primary
+intake passes 29/29, the independently recomputed manifest lane passes 783/783,
+the hostile mutation lane passes 11/11, and the integrated verifier passes
+24/24. The pinned manifest still has `authorized_paths=[]`,
+`complete_paths=[]`, and `source_authorized_packet_present=false`, so no owner
+packet is admitted and the T-090 gate remains `HOLD_FOR_EVIDENCE`. This result
+is auxiliary provenance/replay support only: it does not prove or refute the
+PAH-OMC-020 ordered stationary-semigroup convergence, and it makes no physical
+Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap, continuum, or TOE claim.
+
+### R-559 -- PAH-OMC-022 source-level stationary-semigroup well-posedness boundary
+
+R-559 is a scoped source-level negative for the immutable PAH-001 bytes. R-552
+provides two source-compatible finite root-multiplicity completions with exact
+stationary-semigroup derivatives `2 exp(-2)` and `exp(-2)` on the same
+gauge-invariant cylinder. R-553 propagates the derivative gap to positive-time
+separation of the finite external-Markov-time correlation orbits. R-558 audits
+the available finite successor as `SOURCE_OWNER_INELIGIBLE`, so it cannot silently
+select the original source semigroup. The original source-level proposition is
+therefore not one uniquely well-posed theorem under its current bytes.
+
+The primary verifier passes 15/15, the non-importing independent verifier 12/12,
+the hostile verifier 9/9, the integrated verifier 22/22, and Lean 4.32.1
+compiles four declarations. Reproduce with
+`python -X utf8 verification/scripts/pah_omc022_source_level_semigroup_wellposedness_verify.py --check`.
+This result does not refute every explicitly owner-fixed successor and does not
+close the R-512 limit or PAH-OMC-020 ordered convergence.
+
+No new PAH function, rate, state, carrier, comparison map, counterterm or limit
+order is introduced. No physical Pre-A, spacetime, QFT, gravity, continuum,
+Yang--Mills, mass-gap or TOE conclusion follows. Reopen only after a parent hash
+changes or an owner-authorized successor is admitted under a new name.
+
+### R-558 -- PAH-OMC-021 composite owner-packet transfer audit
+
+R-558 performs a field-level transfer audit from the separately versioned PAH-OMC-001 finite successor into the ten-field R-557 owner packet. The composite contract has exact PH/TR/LK/AP root labels, invalid and duplicate-channel conventions, a finite invariant core, the finite generator and directed-root Hilbert realization, and R-479 verifies that finite scope. Its provenance is explicitly a constructed researcher hypothesis with no external or physical authority, so it cannot be retroactively attributed to immutable PAH-001. N1 recovery, N2b liminf/recovery, N2c/N4 boundary escape, N2d R-512 identification, full-domain J and anchored D are absent. Primary 30/30, independent 23/23, hostile 10/10, integrated 22/22 and Lean 4.32.1 pass. This is auxiliary `HOLD_FOR_EVIDENCE`; it closes only the field classification and does not prove ordered stationary semigroup convergence or any physical, continuum, QFT, gravity, Yang--Mills, mass-gap or TOE claim.
+
+### R-557 -- PAH-OMC-020 owner-packet sufficiency bridge
+
+R-557 formalizes the exact conditional bridge from the complete source-authorized
+owner packet to the registered PAH-OMC-020 ordered local-correlation conclusion.
+The packet has ten fields: owner authority; root multiplicity and root measure;
+a measure-compatible common realization; N1 local recovery; N2b liminf and
+recovery; N2c/N4 boundary escape; N2d R-512 target identification; full-domain
+fixed-`n` `J`; anchored `D`; and verification manifests.
+
+If those fields are admitted without changing PAH-001 and the full error obeys
+`0 <= err_(n,j) <= J_(n,j)+D_n` with the declared ordered epsilon controls,
+the nested compact-time conclusion follows.  Every single missing field rejects
+admission.  The actual source corpus still has no packet, so this remains
+auxiliary `HOLD_FOR_EVIDENCE` and does not close the active gate.
+
+The primary verifier passes 19/19, the non-importing independent replay 17/17,
+hostile controls 10/10, the integrated verifier 22/22, and Lean 4.32.1 compiles
+four theorems.  Reproduce with
+`python -X utf8 verification/scripts/pah_omc020_owner_packet_sufficiency_verify.py --check`.
+The exploration ledger entry is `EXP-001685` and the changelog event is
+`20260908-r-557-pah-omc-020-owner-packet-sufficiency-brid`.
+
+No full PAH-OMC-020 convergence, infinite-volume process, continuum, physical
+Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.
+
+### R-556 -- PAH-OMC-020 minimal ordered-convergence dependency audit
+
+R-556 freezes the dependency ledger for the unchanged PAH-OMC-020 route.  R-555
+proves the exact nested `j`-before-anchored-`n` epsilon implication once a
+two-term error bound has fixed-`n` `J` and anchored-`n` `D` controls.  R-514
+reaches the finite labelled `Q_n(t)` target at fixed `n`; R-548 reaches the
+R-512 minimal target only on the amplitude-only `D_rad` sector.
+
+The full-domain route remains `HOLD_FOR_EVIDENCE` for three separate reasons:
+R-552 leaves root multiplicity, duplicate-transition and root-measure ownership
+open; R-539 contains no source-authorized common `U_n`/Hilbert or equivalent
+path packet; and R-536 has no full-domain target identification making `D_n`
+vanish.  The primary verifier passes 24/24 checks, the non-importing
+independent verifier 15/15, the hostile verifier 9/9, the integrated verifier
+22/22, and Lean 4.32.1 compiles six logical declarations.  The result is
+auxiliary and claim-bearing false; it does not enlarge the radial scope or
+change the active gate.
+
+Reproduce with
+`python -X utf8 verification/scripts/pah_omc020_minimal_dependency_audit_verify.py --check`.
+The exploration ledger entry is `EXP-001681` and the changelog event is
+`20260908-r-556-pah-omc-020-minimal-dependency-audit-2026`.  The next single
+question is whether one source-authorized packet can fix root multiplicity and
+supply the common map/form plus full-domain `J` and `D` estimates without
+changing PAH-001.
+
+No full PAH-OMC-020 semigroup convergence, infinite-volume process, continuum,
+physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE
+conclusion follows; external Markov time remains stochastic bookkeeping.
+
+### R-555 -- PAH-OMC-020 exact ordered-epsilon bridge
+
+R-555 formalizes the exact logical bridge needed by the registered direct route.
+For the unchanged PAH-001 source, assume the same post-`j` correlation obeys
+`err_(n,j) <= J_(n,j)+D_n`, with fixed-`n` `J_(n,j)` and anchored-`n` `D_n`
+each below half of an arbitrary epsilon.  The conclusion is the strict nested
+order: choose `N` first, then for every `n >= N` choose `J(n)`, and take every
+`j >= J(n)`.  No diagonal, reversed or joint limit is used.
+
+The primary verifier passes 13/13 checks, the non-importing independent replay
+passes 13/13 on a different exact-rational fixture, hostile controls reject
+five mutations, the integrated verifier passes 22/22, and Lean 4.32.1 compiles
+`ordered_epsilon_bridge`, `ordered_epsilon_bridge_requires_both_terms` and
+`split_fixture`.  This is an auxiliary `PASS_CONDITIONAL` implication only:
+the PAH-specific `J` and `D` estimates, common-space/path-space owner packet
+and full semigroup convergence remain absent, so the overall route remains
+`HOLD_FOR_EVIDENCE` with no active-gate change.
+
+Reproduce with
+`python -X utf8 verification/scripts/pah_omc020_ordered_epsilon_bridge_verify.py --check`.
+The exploration ledger entry is `EXP-001680` and the changelog event is
+`20260908-r-555-pah-omc-020-ordered-epsilon-bridge-2026-0`.  The next single
+question is whether one source-authorized packet supplies both PAH-specific
+antecedents under the unchanged common space.
+
+No PAH-OMC-020 full convergence, infinite-volume dynamics, continuum,
+physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE
+conclusion follows; external Markov time remains stochastic bookkeeping.
+
+### R-554 -- PAH-OMC-020 fresh current-byte owner-search snapshot v1.4
+
+R-554 reopens the owner-intake provenance checkpoint after `--detect-new`
+reported the later R-553 and related PAH-OMC-020 records against the v1.3
+frozen manifest.  The v1.4 snapshot at `2026-09-08T08:20:00Z` contains 192
+marker-bearing UTF-8 JSON/Markdown candidates, manifest SHA-256
+`caabc7d52c45a24e15d0d973fb494be7f43bd4df0575f341688edbaed1b97b26`, and
+snapshot SHA-256
+`47b0879ff4c55fe3d60a11cd744d6920a3e3eb18bf923cdd4782fa7e7674b4e9`.
+Both authorization and completion sets are empty.
+
+The primary replay passes 987/987, the non-importing independent replay
+passes 779/779, the hostile mutation controls pass 10/10, and the integrated
+v1.4 verifier passes 29/29.  This is a provenance-only checkpoint and remains
+auxiliary `HOLD_FOR_EVIDENCE`; it neither constructs the source-authorized
+common `H/U_n` packet nor proves a path-space or stationary semigroup limit.
+The exact PAH-001 functional, rates, Gibbs state, external Markov time and
+`j`-before-anchored-`n` order are unchanged.
+
+Reproduce with
+`python -X utf8 verification/scripts/pah_omc020_owner_snapshot_v14_verify.py --check`.
+The exploration ledger entry is `EXP-001678` and the changelog event is
+`20260908-r-554-pah-omc-020-owner-snapshot-v1-4-2026-09-0`.  The remaining
+single question is whether a source owner supplies a versioned, hash-pinned
+packet containing the common `H/U_n` comparison, anchored N2b liminf/recovery,
+N2c/N4 boundary escape and exact R-512 minimal-form identification.
+
+No universal impossibility theorem, owner-fixed anchored-n convergence,
+R-512 identification, path-space process, continuum, physical Pre-A,
+spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows.
+
+### R-553 -- PAH-OMC-020 positive-time separation from source multiplicity
+
+R-553 strengthens R-552 without changing any PAH source field.  The same
+closed-face cylinder has the same initial value in the two currently
+source-compatible completions, while the generator derivatives are
+`u_A'(0)=2 exp(-2)` and `u_B'(0)=exp(-2)`.  The exact gap `exp(-2)>0`, together
+with the ordinary first-order derivative remainder bound, gives an existential
+`delta>0` such that `u_A(t)>u_B(t)` for every `0<t<delta`.
+
+The interval length is deliberately not made numeric: no source-owned finite
+generator norm or remainder constant is available.  Primary/independent/
+hostile/integrated checks are 23/23, 13/13, 8/8 and 16/16; three Lean 4.32.1
+declarations compile.  Reproduce with
+`python -X utf8 verification/scripts/pah_omc020_positive_time_separation_verify.py --check`.
+The exploration ledger entry is `EXP-001677` and the changelog event is
+`20260908-r-553-pah-omc-020-positive-time-separation-2026`.  The result remains
+`HOLD_FOR_EVIDENCE` and claim-non-bearing.  No owner-fixed anchored-n,
+R-512, path-space, continuum, physical Pre-A, spacetime, QFT, gravity,
+Yang--Mills, mass-gap or TOE conclusion follows.
+
+### R-552 -- PAH-OMC-020 finite semigroup well-posedness under source root multiplicity
+
+R-552 extends the exact R-527 source-definition witness to the finite
+semigroup level.  The existing OMC-004 closed-face cylinder
+`f=1-Re(U_p)` has one-channel contribution `exp(-2)` at the neutral witness
+state.  Counting coincident `sigma=+1` and `sigma=-1` labels separately gives
+`L_A f=2 exp(-2)`, while deduplicating their identical state map gives
+`L_B f=exp(-2)`.  Both completions retain the displayed PAH functional,
+midpoint rate, state map, external Markov time and finite geometry; only the
+source-unspecified multiplicity changes.
+
+For a finite generator, the derivative at zero of `exp(tL)f` is `Lf`.  Hence
+the two semigroup orbits cannot agree on a neighbourhood of zero because the
+exact derivative gap is `exp(-2)>0`.  This closes only the definition-level
+uniqueness question.  It does not decide convergence after an owner fixes one
+completion.
+
+Primary/independent/hostile/integrated checks are 21/21, 9/9, 8/8 and 14/14;
+five Lean 4.32.1 declarations compile.  Reproduce with
+`python -X utf8 verification/scripts/pah_omc020_semigroup_wellposedness_verify.py --check`.
+The exploration ledger entry is `EXP-001676`.  The result remains
+`HOLD_FOR_EVIDENCE` and claim-non-bearing.  No anchored-n, R-512 minimal-form,
+path-space, continuum, physical Pre-A, spacetime, QFT, gravity, Yang--Mills,
+mass-gap or TOE conclusion follows.
+
+### R-551 -- PAH-OMC-020 exact finite second-order semigroup defect
+
+R-551 tests the exact fixed-pair semigroup implication at the first place
+where R-550's missing iterate closure can fail.  Keep every PAH-001 field and
+the R-493 neutral projection unchanged.  At coarse `n=3`, fine `n+1=4`,
+`R_max=1`, `f=ell_(0,0)`, and `sample_state(4,3)`, R-493's support rule gives
+`m_f=2` and `N(f)=3`, so the witness is at the declared stabilization
+threshold.  The first-order defect is exactly zero, while the second-order
+defect is
+
+`1/2 [exp(-67/24)+exp(-59/24)-exp(-25/8)-exp(-17/8)]`
+
+`= -1/2 exp(-25/8)(exp(1/3)-1)^2(exp(1/3)+1) < 0`.
+
+The primary exact `Q(sqrt(2))` exponential-polynomial replay, direct-energy
+independent replay, hostile mutation replay and integrated verifier pass
+`11/11`, `8/8`, `6/6` and `7/7`.  Lean 4.32.1 compiles the factorization,
+strict sign and non-promotion declarations.  This is a route-local
+`NEGATIVE_RESULT`: the unchanged R-493 projection cannot be promoted to the
+fixed-pair finite semigroup intertwining for this exact witness.
+
+The contract, certificate, scripts, Lean source and run JSONs are recorded in
+`strategy/pa-hyp/PAH-OMC-020-second-order-defect-contract-v1.json`,
+`strategy/pa-hyp/PAH-OMC-020-second-order-defect-certificate.md` and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-second-order-defect/`.
+The exploration entry is EXP-001675 and the changelog event is
+`20260908-r-551-pah-omc-020-second-order-defect-2026-09-0`.  An alternate
+source-authorized refinement map or all-function/invariant-core packet remains
+open.  No anchored-n, path-space, continuum, physical Pre-A, spacetime, QFT,
+gravity, Yang--Mills, mass-gap or TOE conclusion follows.
+
+### R-550 -- PAH-OMC-020 finite semigroup lift audit
+
+R-550 separates the exact finite algebra needed to exponentiate R-493 from the
+local statement actually registered there.  For one finite successor pair,
+write `A=L_(n+1)`, `B=L_n` and `I=I_(n,n+1)`.  If `A I=I B` holds on the
+entire finite coarse function space, induction gives `A^k I=I B^k` for every
+`k`, and the finite exponential series gives `exp(tA)I=I exp(tB)`.  On a
+proper local subspace, closure under every coarse generator iterate is also
+required.
+
+R-493 supplies only the support-dependent pointwise identity with
+`N(f)=max(2,m_f+1)`.  It does not hash-pin an invariant finite subspace, an
+all-iterate identity or an all-function operator identity.  The R-484
+hidden-diagonal defect `16/9` remains retained; first-order locality is not
+iteration closure.  The primary exact rational replay, independent replay,
+hostile shortcut audit and integrated verifier pass `11/11`, `10/10`, `7/7`
+and `18/18`; Lean 4.32.1 compiles five registered declarations.
+
+The result is auxiliary `HOLD_FOR_EVIDENCE`, not `NEGATIVE_RESULT`: the finite
+bridge is proved conditionally, but its PAH premise is absent.  The contract,
+certificate, scripts, Lean source and run JSONs are recorded in
+`strategy/pa-hyp/PAH-OMC-020-finite-semigroup-lift-contract-v1.json`,
+`strategy/pa-hyp/PAH-OMC-020-finite-semigroup-lift-certificate.md` and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/`.
+The final-byte exploration correction is EXP-001674 (superseding the initial
+EXP-001673 record), and the changelog event is
+`20260908-r-550-pah-omc-020-finite-semigroup-lift-2026-09`.  Reopen only when
+one source-authorized invariant/iterate packet or all-function operator
+identity is hash-pinned, or an exact unchanged-PAH second-order defect is
+found.  No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap,
+Yang--Mills or TOE conclusion follows.
+
+### R-549 -- PAH-OMC-020 generator factorization bridge
+
+R-549 isolates the missing dynamic input between the researcher-owned R-525
+maximal-prefix conditional expectation and the R-537 common-core Duhamel
+residual.  On the declared finite form core write the unchanged generators as
+
+`K_n=B_n^*W_nB_n` and `K_infty=B_infty^*W_inftyB_infty`.
+
+For a future source-authorized root transfer `C_n`, define
+
+`G_n=B_infty U_n-C_nB_n` and
+`D_n=B_infty^*W_inftyC_n-U_nB_n^*W_n`.
+
+Direct expansion gives the exact identity
+
+`K_infty U_n-U_nK_n=D_nB_n+B_infty^*W_inftyG_n`.
+
+The primary exact rational matrix replay, non-importing independent replay,
+hostile mutation lane and Lean 4.32.1 source all pass (`21/21`, `12/12`,
+`13/13`, `29/29`; seven finite declarations).  The fixture is an algebra
+oracle only.  Both defects are necessary in the fixture, so R-529's static
+root-energy implication does not itself provide the operator-domain residual
+needed by R-537.
+
+The result remains auxiliary `HOLD_FOR_EVIDENCE`: the exact R-525 `U_n`, the
+root transfer `C_n`, hash-pinned incidence/weight data, unbounded-rate domain
+estimates, common core, correlation identity and temporal integrability are
+not source-authorized.  No anchored-n semigroup convergence or physical
+promotion follows.  The contract, certificate, scripts, Lean source and run
+JSONs are recorded in
+`strategy/pa-hyp/PAH-OMC-020-generator-factorization-contract-v1.json`,
+`strategy/pa-hyp/PAH-OMC-020-generator-factorization-certificate.md` and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-generator-factorization/`.
+The exploration ledger entry is EXP-001672 and the changelog event is
+`20260908-r-549-pah-omc-020-generator-factorization-bridg`.  Reopen only when
+one source owner supplies `C_n`, both defects and their domain/terminal-square
+conventions, or when an exact PAH-specific domain contradiction is found.
+
+### R-548 -- PAH-OMC-020 restricted radial semigroup consistency
+
+R-548 closes one restricted temporal sector without changing PAH-001.  For a
+bounded gauge- and anchor-invariant cylinder depending only on finitely many
+matter-amplitude coordinates, PH/LK/AP roots have zero increment and every TR
+root changes the amplitude `l1` coordinate by at most `2 h_j`.  R-511's
+inverse-pair estimate gives
+
+`||L_TR,nj S_nj f||_2 <= 2 H_f L_f h_j`,
+
+where `H_f` is support-dependent and independent of stabilized `n`.  Stationary
+`L2` contraction of the complete finite reversible semigroup then gives the
+compact-time bound
+
+`sup_(0<=t<=T)||P_nj(t)S_nj f-S_nj f||_2 <= 2 T H_f L_f h_j`.
+
+R-512 places the amplitude-only subspace in zero energy of its minimal closed
+form, so its spectral semigroup is the identity there.  The restricted
+amplitude-only two-point correlations therefore converge uniformly on every
+finite external-time interval in the registered `j`-before-anchored-`n`
+order.  Primary 21/21, independent 14/14, hostile 11/11 and integrated 29/29
+pass; seven finite rational Lean declarations compile.
+
+This is auxiliary `PASS_RESTRICTED`, not the full PAH-OMC-020 result.  The
+non-radial PH/LK/AP comparison, source-authorized common `U_n` or path space,
+N2b/N2c/N4/N2d and full anchored-`n` convergence remain open.  Reproduce with:
+
+```text
+python -X utf8 verification/scripts/pah_omc020_radial_semigroup_consistency.py --check
+python -X utf8 codes/foundations/pah_omc020_radial_semigroup_consistency_independent.py --check
+python -X utf8 codes/foundations/pah_omc020_radial_semigroup_consistency_hostile.py --check
+python -X utf8 verification/scripts/pah_omc020_radial_semigroup_consistency_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+```
+
+### R-547 -- PAH-OMC-020 fresh current-byte owner-search snapshot v1.3
+
+R-547 records the current-byte successor owner-search after the R-545 and
+R-546 conditional checkpoints.  Snapshot
+`PAH-OMC-020-OWNER-SEARCH-SNAPSHOT-003` contains 164 marker-bearing candidate
+files with manifest SHA-256
+`ee56276cb87bd1c95f3230ab581b38151c94b92e85f5897b328612a5a6c3ed30` and
+snapshot-file SHA-256
+`f2bea35647f54f305ac1fa3a3bc5bdf7e7078acb682cccb79da4e0eecd7d1638`.
+`authorized_paths=[]`, `complete_paths=[]`, and
+`source_authorized_packet_present=false`.  Primary 847/847, independent
+667/667, hostile 10/10 and integrated 21/21 pass.
+
+This is auxiliary `HOLD_FOR_EVIDENCE` provenance only.  It does not prove a
+source-authorized common `H/U_n` space, path law, N2b/N2c/N4/N2d estimate,
+ordered stationary semigroup convergence or any physical layer.  The next
+question is whether one source owner supplies a versioned, hash-pinned packet
+containing the common comparison, anchored N2b liminf/recovery, N2c/N4
+boundary escape and exact R-512 minimal-form identification.  Reopen only on
+that packet or a pinned parent-byte change; do not repeat finite carrier or
+physical calculations.
+
+Reproduce with:
+
+```text
+python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot.py --snapshot strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.3.json --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.3/primary.json --check
+python -X utf8 codes/foundations/pah_omc020_owner_snapshot_v11_independent.py --snapshot strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.3.json --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.3/independent.json --check
+python -X utf8 codes/foundations/pah_omc020_owner_snapshot_v11_hostile.py --snapshot strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.3.json --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.3/hostile.json --check
+python -X utf8 verification/scripts/pah_omc020_owner_snapshot_v13_verify.py --check
+```
+
+### R-546 -- PAH-OMC-020 direct two-term route
+
+R-546 records the exact scope-compatible specialization of the registered
+sequential comparison.  R-514 supplies the fixed-`n` compact-time error
+`J_(n,j)(T)=sup_t|C_(n,j)-c_n|`; R-536 defines the anchored target defect
+`D_n(T)=sup_t|c_n-<f,T_min(t)g>|` using the same post-`j` correlation `c_n`.
+Therefore, once one complete source-authorized R-536 form or path route is
+admitted, the direct triangle is
+
+`sup_t|C_(n,j)-c_star| <= J_(n,j)(T) + D_n(T)`
+
+in the registered `j`-before-anchored-`n` order.  This makes a separate
+`K_(n,m)` intermediate unnecessary only after `D_n` is directly established;
+the current owner route is absent.  Primary 22/22, independent 14/14,
+hostile 14/14, integrated 32/32 and four finite rational Lean declarations
+pass.  This is auxiliary `PASS`, not full convergence.
+
+**Scope and replay.**  The functional, rates, labelled state, normalization,
+external stochastic Markov time and limit order are unchanged.  Reproduce with:
+
+```text
+python -X utf8 verification/scripts/pah_omc020_two_term_route.py --check
+python -X utf8 codes/foundations/pah_omc020_two_term_route_independent.py --check
+python -X utf8 codes/foundations/pah_omc020_two_term_route_hostile.py --check
+python -X utf8 verification/scripts/pah_omc020_two_term_route_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+```
+
+**Next question.**  Can a source-authorized, hash-pinned complete R-536 form or
+path route prove `D_n(T)->0` for every declared local pair while preserving
+R-514's `c_n` and the original PAH-001 order?
+
+### R-545 -- PAH-OMC-020 scalar mesh-to-uniform transfer
+
+R-545 isolates a reusable scalar transfer for one stabilized local PAH
+correlation pair.  With the unchanged R-543 modulus
+`|C_(n,j)(t)-C_(n,j)(s)| <= M_fg |t-s|`, a finite mesh of covering radius
+`delta`, and the R-530 continuity modulus `omega_inf` of the fixed R-512
+target, the triangle inequality gives
+
+`sup_t|C_(n,j)(t)-C_inf(t)| <= max_q|C_(n,j)(q)-C_inf(q)| + M_fg delta + omega_inf(delta)`.
+
+The registered `j`-before-anchored-`n` order is retained, but the mesh-pointwise
+convergence premise is not proved.  Primary 27/27, independent 16/16,
+hostile 15/15, integrated 30/30 and four finite rational Lean declarations
+pass.  This is auxiliary `PASS` only: no source-authorized common-space or
+path-space packet, R-512 finite-to-target identification, ordered semigroup
+convergence, infinite-volume dynamics or physical Pre-A, spacetime, QFT,
+gravity, continuum, Yang--Mills, mass-gap or TOE conclusion follows.
+
+**Scope and replay.**  The proof uses only the unchanged PAH-001 finite
+functional, labelled Gibbs state, external stochastic Markov time and fixed
+local cylinder pair.  Reproduce with:
+
+```text
+python -X utf8 verification/scripts/pah_omc020_mesh_uniform.py --check
+python -X utf8 codes/foundations/pah_omc020_mesh_uniform_independent.py --check
+python -X utf8 codes/foundations/pah_omc020_mesh_uniform_hostile.py --check
+python -X utf8 verification/scripts/pah_omc020_mesh_uniform_verify.py --check --lean-cache E:\Dev\TECT\verification\lean\.lake\packages
+```
+
+**Next question.**  Can a source-authorized common-space or path-space packet
+prove the ordered PAH correlation convergence at every finite time-mesh point
+for the unchanged PAH-001 dynamics?
+
+### R-544 -- PAH-OMC-020 fresh current-byte owner-search snapshot v1.2
+
+R-544 refreshes the PAH-OMC-020 owner-packet provenance after the R-543
+checkpoint and the later conditional R-536--R-543 records made the prior v1.1
+manifest stale.  The new snapshot
+`strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.2.json` was created at
+`2026-09-08T04:30:00Z` with 151 marker-bearing candidate files and manifest
+SHA-256
+`a42d10db5dde60d87088ea379a409ad253e0fa15851315df81d3164037996ebe`.
+Its `authorized_paths`, `complete_paths` and
+`source_authorized_packet_present` fields are empty/false.
+
+The primary replay passes 782/782, the non-importing independent replay
+passes 615/615, hostile mutation controls pass 10/10 and the integrated v1.2
+verifier passes 40/40.  The current conditional records are researcher-owned
+contracts and do not satisfy the source-authorization predicate.  This is
+auxiliary `HOLD_FOR_EVIDENCE` provenance only; no U_n/common-Hilbert map,
+path-space law, N2b/N2c/N4/N2d closure, R-512 identification or ordered
+stationary semigroup convergence is supplied.
+
+The contract, certificate, result and runs are
+`strategy/pa-hyp/PAH-OMC-020-owner-search-v1.2-contract.json`,
+`strategy/pa-hyp/PAH-OMC-020-owner-search-v1.2-certificate.md`,
+`strategy/pa-hyp/PAH-OMC-020-owner-search-v1.2-result-v1.json` and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.2/`.
+The exploration entry is EXP-001667 and the changelog event is
+`20260908-r-544-pah-omc-020-owner-snapshot-v1-2-2026-09-0`.  The next single
+question is whether a source owner supplies one versioned packet containing
+the common H/U_n comparison, anchored N2b liminf/recovery, N2c/N4 boundary
+escape and exact R-512 minimal-form identification.  No physical Pre-A,
+spacetime, QFT, gravity, continuum, Yang--Mills, mass-gap or TOE conclusion
+follows.
+
+### R-543 -- PAH-OMC-020 deterministic correlation modulus
+
+R-543 is a finite deterministic-time compact-equicontinuity input for the
+unchanged PAH-001 process.  Retaining the R-511 sampled local observables and
+the original labelled Gibbs reversible form, define
+`B_f=2D_fM_f^2+2H_fL_f^2`, where `D_f` and `H_f` are the source root-count
+bounds and `M_f`, `L_f` are the declared supremum and amplitude-l1 Lipschitz
+constants.  Finite spectral calculus for `K_(n,j)=-L_(n,j)` then gives
+`|C_(n,j)(f,g;t)-C_(n,j)(f,g;s)| <= |t-s| sqrt(B_f B_g)` for deterministic
+external Markov times, uniformly in each retained finite `n,j` after local
+support stabilization.
+
+The primary 27/27, non-importing independent 20/20, hostile 12/12 and
+integrated 28/28 checks pass.  Lean 4.32.1 compiles five finite rational
+declarations.  The result is auxiliary `PASS`: it supplies a deterministic
+compact-time modulus only.  R-542's stopping-time boundary is unchanged, and
+there is no path-space construction, common-space comparison, anchored-`n`
+passage, R-512 target identification, ordered semigroup convergence or
+physical promotion.
+
+The contract, certificate, result and replay run directory are
+`strategy/pa-hyp/PAH-OMC-020-correlation-modulus-contract-v1.json`,
+`strategy/pa-hyp/PAH-OMC-020-correlation-modulus-certificate.md`,
+`strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json` and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-correlation-modulus/`.
+The exploration ledger entry is EXP-001663 and the changelog event is
+`20260908-r-543-pah-omc-020-correlation-modulus-2026-09-0`.  The next
+single question is whether a source-authorized common-space or path-space
+packet identifies the anchored-`n` limit of these equicontinuous correlations
+with the R-512 minimal-form semigroup.  No physical Pre-A, spacetime, QFT,
+gravity, continuum, Yang--Mills, mass-gap or TOE conclusion follows.
+
+### R-542 -- PAH-OMC-020 stationary-modulus promotion-boundary correction
+
+R-542 is a successor correction to the stopping-time wording in R-541.  The
+unchanged PAH-001 finite martingale/drift decomposition and the pinned R-490
+`C_sw=540` plus R-522 `C2(A)<=60|A|` inputs do give the exact deterministic-time
+stationary bound
+`E|f(X_(t+delta))-f(X_t)|^2 <= 2 delta K_Gamma(f)+2 delta^2 K_L(f)`.  The two
+source constants, however, are `pi`-weighted stationary averages.  They do not
+provide the conditional predictable-compensator or pointwise local-rate bound
+needed when `t` is replaced by an arbitrary bounded stopping time.
+
+An abstract reversible two-state chain with rates `0->1=1/M^2` and
+`1->0=M` has a decreasing stationary weighted carré-du-champ, while after the
+rare state is hit a `log(2)/M` interval has jump probability `1/2`.  This is a
+logical implication diagnostic only, not an exact PAH counterexample or a new
+carrier.  The primary 21/21, independent 18/18, hostile 11/11 and integrated
+27/27 checks pass; Lean 4.32.1 compiles five finite rational declarations.
+
+The correction is auxiliary `HOLD_FOR_EVIDENCE` and does not alter PAH-001,
+the external Markov time, or the j-before-anchored-n order.  The one next
+input is a source-authorized pointwise/conditional compensator estimate; only
+then can an Aldous path-tightness claim be considered.  The contract,
+certificate and run directory are
+`strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-contract-v1.json`,
+`strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-certificate.md` and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-stationary-modulus-correction/`.
+The exploration entry is EXP-001662.  No physical Pre-A, spacetime, QFT,
+gravity, continuum, mass-gap, Yang--Mills or TOE conclusion follows.
+
+### R-541 -- PAH-OMC-020 finite local path tightness envelope
+
+R-541 records a finite path-compactness input for the unchanged PAH-001
+process.  R-490 supplies the Gibbs conductance incidence bound `C_sw=540` and
+R-522 supplies the separate squared-rate bound `C2(A)<=60|A|`.  For a bounded
+local cylinder with root increments `d_r`, the finite generator martingale
+and integrated drift satisfy the exact two-square envelope
+`E|f(X_(tau+delta))-f(X_tau)|^2 <= 2 delta K_Gamma(f)+2 delta^2 K_L(f)`, with
+`K_Gamma=540|A|max_r d_r^2` and `K_L=60|A| sum_r d_r^2`.  Its Markov quotient
+vanishes with `delta`, uniformly over the finite level, radial cutoff and
+stopping time on compact external-time intervals.
+
+The primary 25/25, non-importing independent 20/20, hostile 9/9 and
+integrated 27/27 checks pass.  Lean 4.32.1 compiles six finite rational
+declarations for the two-square inequality, envelope positivity and monotonic
+delta consequences.  This closes only a conditional finite local path-
+tightness subgate and remains auxiliary `HOLD_FOR_EVIDENCE`; no limiting path,
+martingale problem, non-explosion, uniqueness, N2b/N2c/N4, R-512 selection or
+ordered semigroup convergence is established.
+
+The contract and synthesis certificate are
+`strategy/pa-hyp/PAH-OMC-020-local-path-tightness-contract-v1.json` and
+`strategy/pa-hyp/PAH-OMC-020-local-path-tightness-certificate.md`.  The replay
+scripts and run JSONs are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-local-path-tightness/`.
+The exploration ledger entry is EXP-001661.  Reopen only when a
+source-authorized path-space/martingale-problem packet supplies non-explosion,
+uniqueness and R-512 minimal-form identification, or an exact PAH-specific
+failure of the finite envelope assumptions appears.  No physical Pre-A,
+spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion
+follows; external Markov time is not physical time.
+
+### R-540 -- PAH-OMC-020 N2b byte-replay determinism correction
+
+R-540 is a narrow successor correction for R-539.  Once the v1.1 contract,
+certificate and result artifacts were present, the independent replay's
+case-sensitive self-artifact exclusion saw the uppercase `N2B` filenames and
+the stored inventory no longer matched a fresh computation.  Lower-casing the
+filename before applying the same exclusion restores byte-stable replay; no
+PAH-001 input, rate, state, finite carrier, order, owner predicate or
+scientific conclusion changed.
+
+The primary 22/22, non-importing independent 16/16, hostile 12/12 and
+integrated 22/22 checks pass, with Lean 4.32.1 compiling six finite
+declarations.  The strict source-authorized owner-packet inventory remains
+empty, so this is auxiliary `HOLD_FOR_EVIDENCE` and not a common-space,
+N2b, semigroup or physical result.  The correction certificate, successor
+result and regenerated runs are under the PAH-OMC-020 N2B v1.1 replay-
+correction paths; the exploration ledger entry is EXP-001660.
+
+R-539 and EXP-001659 remain immutable historical records.  Reopen only when
+a complete source-authorized packet or an exact PAH-specific contradiction is
+hash-pinned.  No physical Pre-A, spacetime, QFT, gravity, continuum,
+mass-gap, Yang--Mills or TOE conclusion follows.
+
+### R-539 -- PAH-OMC-020 N2b current-byte successor audit
+
+R-539 is the current-byte successor of the original T-064 N2b common-space
+audit.  The old replay was not a mathematical failure: it pinned an earlier
+`PAH-OMC-020-temporal-work.md` byte and an earlier N-Mosco diagnostic.  The
+v1.1 contract records those two superseded values and pins the current bytes,
+leaving PAH-001, the original rates and states, the finite carrier, the
+normalization, the external stochastic time and the j-before-anchored-n order
+unchanged.
+
+The repaired primary 22/22, non-importing independent 16/16, hostile 12/12
+and integrated 22/22 checks pass; Lean 4.32.1 compiles six finite declarations.
+The strict source-authorized owner-packet inventory remains empty.  In
+particular, no varying-space `U_n`/common-Hilbert realization, arbitrary-
+sequence N2b liminf, all-local recovery, N2c/N4 boundary escape or R-512
+minimal identification is supplied.  The result is auxiliary
+`HOLD_FOR_EVIDENCE`, not a universal no-go theorem and not a new finite
+physical calculation.
+
+The contract and certificate are
+`strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-contract.json` and
+`strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-certificate.md`.
+The replay scripts and run JSONs are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/`.
+The exploration ledger entry is EXP-001659.  Reopen only when a complete
+source-authorized packet is versioned and hash-pinned, or an exact PAH-specific
+counterexample is supplied.  No physical Pre-A, spacetime, QFT, gravity,
+continuum, mass-gap, Yang--Mills or TOE conclusion follows.
+
+### R-538 -- PAH-OMC-020 Mosco variational resolvent bridge
+
+R-538 records a conditional variational bridge for the unchanged PAH-OMC-020
+comparison.  For fixed `lambda>0`, the finite objectives are
+`J_n(u)=E_n(u)+lambda||u-U_n f_n||^2` and the target is
+`J(u)=E_min(u)+lambda||u-f||^2`, with `E_min` exactly the R-512 minimal closed
+nonnegative form.  A source-authorized common `H/U_n`, equicoercivity,
+arbitrary-sequence anchored liminf, all-local recovery, strong data recovery
+and a norm-upgrade give the energy sandwich and force every weak cluster
+point to the unique strictly convex target minimizer.  The semigroup and
+compact-time correlation bridge remains separate.
+
+The primary 47/47, non-importing independent 33/33, hostile 25/25 and
+integrated 23/23 checks pass; Lean 4.32.1 compiles six finite declarations.
+The result is auxiliary `HOLD_FOR_EVIDENCE`: only the inherited exact target
+uniqueness marker is present in the pinned corpus, while the common-space,
+liminf, recovery, data-recovery, norm-upgrade and semigroup owner fields are
+absent.  The scalar quadratic oracle is test arithmetic, not a PAH estimate.
+No PAH-001 functional, rate, state, carrier, regulator, normalization,
+external Markov time or limit-order change occurs, and no physical Pre-A,
+spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion
+follows.
+
+The contract, certificate, scripts, Lean source and run JSONs are recorded in
+`strategy/pa-hyp/PAH-OMC-020-mosco-resolvent-contract-v1.json`,
+`strategy/pa-hyp/PAH-OMC-020-mosco-resolvent-certificate.md` and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mosco-resolvent/`.
+The exploration ledger entry is EXP-001658.  Reopen only when one
+source-authorized N2b/form packet versions and hash-pins the missing fields or
+an exact PAH-specific liminf/recovery contradiction is supplied.
+
+### R-537 -- PAH-OMC-020 common-core Duhamel correlation transfer contract
+
+R-537 fixes a reusable conditional transfer for the unchanged PAH-OMC-020
+comparison.  If a source-authorized common Hilbert space, invariant cylinder
+core, initial recovery `I_n` and integrable target-generator residual `R_n`
+exist, contraction and variation of constants give the compact-time bound
+`sup_t||u_n^g(t)-T_min(t)g|| <= I_n(g)+R_n(g;T)` and the stationary correlation
+budget recorded in its authority.  The current corpus supplies none of those
+dynamic owner fields, so the bound is not a convergence theorem.
+
+The primary 51/51, independent 33/33, hostile 19/19 and integrated 22/22
+checks pass; Lean 4.32.1 compiles eight finite declarations.  This is
+auxiliary `HOLD_FOR_EVIDENCE`, not a source-process construction or a physical
+claim.  PAH-001, its rates, state, normalization, external Markov time and
+limit order are unchanged; no Pre-A, spacetime, QFT, gravity, continuum,
+mass-gap, Yang--Mills or TOE conclusion follows.
+
+The contract, certificate, scripts, Lean source and run JSONs are recorded in
+`strategy/pa-hyp/PAH-OMC-020-core-duhamel-contract-v1.json`,
+`strategy/pa-hyp/PAH-OMC-020-core-duhamel-certificate.md` and
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-core-duhamel/`.
+Reopen only when the source-authorized common core, initial recovery and
+vanishing residual packet is versioned and hash-pinned or an exact
+PAH-specific residual contradiction is found.
+
+### R-536 -- PAH-OMC-020 target-process and R-512 identification contract
+
+R-536 isolates the remaining `D_n` term in the unchanged PAH-OMC-020
+sequential-gluing budget.  The exact R-512 minimal closed form is already a
+registered target, but finite-to-target identification requires one complete
+route: either a source-authorized common-Hilbert comparison with form liminf,
+recovery, exact minimal-form selection and compact-time correlation transfer,
+or a source-authorized common path space with tightness, generator/form
+equality, target uniqueness and correlation transfer.  Naming the target,
+static Gibbs-state convergence, local generator stabilization or a Dirichlet
+property alone is explicitly insufficient.
+
+The current pinned corpus has neither route.  Primary 42/42, non-importing
+independent 33/33, hostile 21/21 and integrated 23/23 checks pass; Lean
+4.32.1 compiles eight finite Boolean route obligations.  The result is
+auxiliary `HOLD_FOR_EVIDENCE`; `D_n` and the anchored-n semigroup theorem
+remain open.  No PAH-001 functional, rate, state, carrier, regulator,
+normalisation, external Markov time or limit order changes.  No physical
+Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE
+conclusion follows.
+
+The contract and certificate are
+`strategy/pa-hyp/PAH-OMC-020-target-identification-contract-v1.json` and
+`strategy/pa-hyp/PAH-OMC-020-target-identification-certificate.md`; run JSONs
+are under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-target-identification/`.
+Reopen only when one source-authorized packet completes a route with the
+declared compact-time/anchored-n quantifiers, or an exact PAH-specific target
+correlation contradiction is supplied.
+
 ## Notes on status
 
 - Tiers above are the results' tiers WITHIN the matched second-cumulant B5
@@ -18285,3 +20290,4 @@ or TOE result. PAH-OMC-014 and T-054's active gate remain unresolved.
   the strongest standalone candidates (sharp constants, self-contained).
 - This ledger does not duplicate the claim ledger (`CLAIMS.md`): a row here is
   a *reusable artefact extracted from* a claim, pointing back to its proof.
+\n

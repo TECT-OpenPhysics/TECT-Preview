@@ -1,0 +1,191 @@
+{
+  "assumptions": [
+    "Finite-state semigroup evaluations are differentiable at t=0 with generator derivative.",
+    "The two source-compatible completions share the R-552 initial observable value.",
+    "The standard first-order derivative remainder bound is used only existentially."
+  ],
+  "audit_id": "PAH-TEMPORAL-SEPARATION-001",
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "hash:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "expected": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "name": "hash:strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "hash:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+      "expected": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+      "name": "hash:strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-001",
+      "expected": "PAH-001",
+      "name": "PAH identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-OMC-004",
+      "expected": "PAH-OMC-004",
+      "name": "geometry identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-OMC-020",
+      "expected": "PAH-OMC-020",
+      "name": "temporal contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-552",
+      "expected": "R-552",
+      "name": "R-552 source witness",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "R-552 finite-only verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "f=1-Re(U_p), a gauge-invariant closed-face cylinder.",
+      "expected": "R-552 gauge-invariant closed-face cylinder",
+      "name": "same cylinder",
+      "status": "PASS"
+    },
+    {
+      "actual": "same finite observable at t=0",
+      "expected": "R-552 unchanged cylinder",
+      "name": "same initial value premise",
+      "status": "PASS"
+    },
+    {
+      "actual": "external Markov time",
+      "expected": "unchanged",
+      "name": "external time retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "No j, n, volume, continuum, beta or observation limit is taken.",
+      "expected": "No j, n, volume, continuum, beta or observation limit is taken.",
+      "name": "no limit taken",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "labelled multiplicity replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "name": "deduplicated multiplicity replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2706705664732254",
+      "expected": "2*exp(-2) numeric replay",
+      "name": "derivative A",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1353352832366127",
+      "expected": "exp(-2) numeric replay",
+      "name": "derivative B",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1353352832366127",
+      "expected": "exp(-2)>0",
+      "name": "positive derivative gap",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "exists delta>0 with u_A(t)>u_B(t) for 0<t<delta",
+      "name": "common-initial first-order implication",
+      "status": "PASS"
+    },
+    {
+      "actual": null,
+      "expected": "no explicit delta without full finite generator norm",
+      "name": "delta is existential only",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "no owner convention selected",
+      "status": "PASS"
+    },
+    {
+      "actual": "auxiliary_support",
+      "expected": "auxiliary_support",
+      "name": "no universal no-go",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "no physical promotion",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 23,
+  "classification": "auxiliary_support",
+  "exploration_id": "EXP-001677",
+  "missing_assumptions": [
+    "Source-owner root multiplicity, invalid-move behavior and root measure.",
+    "A full finite generator norm/remainder bound for any explicit delta.",
+    "Common U_n/Hilbert realization, N2b/N2c/N4 estimates and R-512 minimal identification."
+  ],
+  "non_claims": [
+    "No universal no-go for an owner-fixed completion.",
+    "No anchored-n convergence or R-512 minimal-form identification.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion."
+  ],
+  "result_id": "R-553",
+  "run_kind": "primary",
+  "schema": "tect/pah-omc020-positive-time-separation-primary/1.0",
+  "scope": {
+    "dimension": "one finite PAH-OMC-004 witness and finite-time semigroup evaluations",
+    "limit": "none; only an existential punctured right-time interval",
+    "model": "unchanged PAH-001 functional, displayed rates, labelled Gibbs state and external Markov time",
+    "normalization": "the R-552 finite counting-measure witness; no new normalization",
+    "regulator": "R-552 K=2, epsilon=1/2, beta=nu=1 witness",
+    "volume": "existing closed face [0,1,4]; no new carrier"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS",
+  "task_id": "T-085",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "witness": {
+    "delta_status": "existential; no explicit numeric delta without a full finite generator remainder bound",
+    "derivative_A": "2*exp(-2)",
+    "derivative_B": "exp(-2)",
+    "derivative_gap": "exp(-2)>0",
+    "multiplicity_A": 2,
+    "multiplicity_B": 1,
+    "observable": "f=1-Re(U_p), a gauge-invariant closed-face cylinder.",
+    "positive_time_statement": "There exists delta>0 such that for every 0<t<delta, u_A(t)>u_B(t)."
+  }
+}

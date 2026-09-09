@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "pinned source unchanged:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "expected": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "name": "pinned source unchanged:strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+      "expected": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+      "name": "pinned source unchanged:strategy/pa-hyp/PAH-OMC-018-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+      "expected": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+      "name": "pinned source unchanged:strategy/pa-hyp/PAH-OMC-018-generator-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "pinned source unchanged:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/128",
+      "expected": "3/128",
+      "name": "exact midpoint ratio is required",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/128",
+      "expected": "!= 3/128",
+      "name": "squared density-ratio mutation is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/6",
+      "expected": "not in [0,1]",
+      "name": "mobility-above-one is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "b*T >= d+1",
+      "expected": "ValueError",
+      "name": "tail bound rejects ratio >= one",
+      "status": "PASS"
+    },
+    {
+      "actual": "Exact non-radial path words only; no anchored-n conclusion.",
+      "expected": "explicitly absent",
+      "name": "anchored-n promotion rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "Exact non-radial path words only; no anchored-n conclusion.",
+      "expected": "physical absent",
+      "name": "physical promotion rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "NOT_PROVED",
+      "expected": "NOT_PROVED",
+      "name": "Duhamel attribution remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "source rate replacement absent",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "conditional": true,
+  "non_claims": [
+    "No N2c/N4 closure, common U_n, anchored-n semigroup, minimal form or physical result.",
+    "No Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "rejected_shortcuts": [
+    "squared density-ratio mutation",
+    "mobility greater than one",
+    "geometric tail without ratio condition",
+    "calling the connected-word envelope an anchored-n proof",
+    "promoting Markov-time algebra to physical dynamics"
+  ],
+  "remaining": [
+    "source-certified root-overlap constant and distance count",
+    "connected-word coupling/Duhamel attribution for the exact Q_n"
+  ],
+  "schema": "tect/pah-omc020-pathword-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_HOSTILE_PATHWORD",
+  "verdict": "AUXILIARY_SUPPORT"
+}

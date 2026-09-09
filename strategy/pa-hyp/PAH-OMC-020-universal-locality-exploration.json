@@ -1,0 +1,57 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001692",
+  "recorded_at": "2026-09-08T12:06:57Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "provenance": "contemporaneous",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "task_id": "T-086",
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "title": "PAH-OMC-020 universal finite-cylinder locality envelope",
+  "question": "Does the frozen OMC-013 radius-two catalog give an explicit fixed-power stabilization threshold for every finite-support cylinder?",
+  "finding": "Yes conditionally for fixed finite k. For support maximum s_f, the recursively enlarged envelope is bounded by s_f+2k and N_k(f)=max(2,s_f+2k+1) separates it from the successor frontier. Primary 14/14, independent 8/8, hostile 8/8, integrated 4/4 and Lean replay pass.",
+  "verdict": "advanced",
+  "decision_reason": "This is a reusable finite locality extension beyond R-561 and recovers its ell_(0,0) threshold at s_f=0. The power-dependent threshold exposes, rather than closes, the missing uniform summability needed by the ordered semigroup objective.",
+  "boundary": "PAH-001, PAH-OMC-013, OMC-004, the original comparison map, Gibbs/rate normalization and external stochastic Markov time are unchanged. The statement is conditional on the R-493 one-step identity throughout the enlarged cylinders and is finite fixed-k only.",
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-013 and R-561.",
+    "Re-derive the OMC-013 root radius at finite levels 2 through 9.",
+    "Enumerate representative finite-support families and compute s_f, s_f+2k and N_k(f) for k=0,...,5.",
+    "Check strict separation from the successor frontier and recover the R-561 ell_(0,0) row.",
+    "Run independent geometry reconstruction, hostile non-promotion controls, integrated replay and Lean arithmetic/induction checks."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-universal-locality-contract-v1.json#conditional_statement",
+    "strategy/pa-hyp/PAH-OMC-020-universal-locality-certificate.md#Conditional conclusion",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-universal-locality/integrated.json#checks"
+  ],
+  "related": [{"id": "EXP-001691", "relation": "continues"}],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "strategy/pa-hyp/PAH-OMC-020-iterate-locality-result-v1.json": "f9cef0e147be1c9fc084392e34a02c41a1be1ae78ad31ec641123e719e0a9d8e",
+    "strategy/pa-hyp/PAH-OMC-020-universal-locality-contract-v1.json": "dbf1ae881e380dcacba53763956e80de6b4046efa87cfacc6daa65f44fde9ff6"
+  },
+  "formal_refs": {
+    "results": ["R-493", "R-561", "R-562"],
+    "negatives": [],
+    "events": ["20260908-r-562-pah-omc-020-universal-locality-bridge-2-2"]
+  },
+  "next_action": "Obtain one source-authorized common realization and prove a uniform connected-word or factorial tail so that fixed-power identities can be summed without exchanging k and n.",
+  "revisit_condition": "Reopen when a source-authorized common realization/uniform tail or a parent PAH/OMC-013 byte changes; do not repeat the same finite support table without new input.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_universal_locality.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_universal_locality_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_universal_locality_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_universal_locality_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc020UniversalLocality.lean"
+  },
+  "verification_summary": "PASS_CONDITIONAL finite locality: primary 14/14, independent 8/8, hostile 8/8, integrated 4/4 including Lean.",
+  "non_claims": [
+    "No uniform N(f) works for every power; N_k grows with k.",
+    "No full exponential semigroup intertwining, j-before-n or anchored-n convergence, common infinite-volume process or R-512 selection.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion.",
+    "Markov time remains external stochastic time only."
+  ]
+}

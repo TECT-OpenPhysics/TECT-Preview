@@ -1,0 +1,44 @@
+{
+  "schema": "tect/pah-omc020-form-route-input-audit/1.0",
+  "status": "PASS_FORM_ROUTE_INPUT_GAP",
+  "recorded_at": "2026-09-08T14:58:22Z",
+  "checks": {
+    "candidate_is_researcher_only": true,
+    "candidate_authorization_absent": true,
+    "candidate_energy_missing": true,
+    "factorization_requires_root_transfer": true,
+    "factorization_has_two_defects": true,
+    "factorization_terminal_square_missing": true,
+    "energy_dynamic_root_missing": true,
+    "energy_uniform_control_missing": true,
+    "mosco_common_space_missing": true,
+    "mosco_semigroup_bridge_missing": true
+  },
+  "source_hashes": {
+    "strategy\\pa-hyp\\PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+    "strategy\\pa-hyp\\PAH-OMC-020-generator-factorization-result-v1.json": "f09aa79de777db335ddffc4f9cc30c5704619180a97940ac9f7b61267f9ef00f",
+    "strategy\\pa-hyp\\PAH-OMC-020-energy-intertwining-result-v1.json": "0e0268925eee2dd4b74ed5b279f4a56fb66637f86cb9faa608df1edbb99c7299",
+    "strategy\\pa-hyp\\PAH-OMC-020-mosco-resolvent-result-v1.json": "2abd831e224b0aef9e449c64ce50e7173cb4093f2ba4fabcd7c88ac6acdb8c6e"
+  },
+  "finding": {
+    "r525_static_candidate": true,
+    "source_authorized_u_n": false,
+    "root_transfer_c_n": false,
+    "gradient_defect_bound": false,
+    "divergence_defect_bound": false,
+    "terminal_square_correspondence": false,
+    "form_route_admissible": false
+  },
+  "required_owner_payload": [
+    "source authorization and hash-pinned R-525 U_n",
+    "root-space transfer C_n with multiplicity and partial-domain conventions",
+    "gradient defect G_n and divergence defect D_n estimates",
+    "uniform anchored-n conductance/defect control on the declared form domain",
+    "terminal-square correspondence and Mosco liminf/recovery inputs"
+  ],
+  "non_claims": [
+    "This does not prove or refute PAH-OMC-020 ordered semigroup convergence.",
+    "The static L2 coupling candidate is not an energy or generator intertwining theorem.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang--Mills, mass-gap or TOE conclusion."
+  ]
+}

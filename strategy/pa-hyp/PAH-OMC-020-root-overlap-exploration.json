@@ -1,0 +1,77 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-020 exact OMC-004 root-footprint overlap bound",
+  "question": "Does the unchanged OMC-004 PH/LK/AP dependency footprint supply one n-uniform overlap branching constant that can instantiate the R-515 connected-word envelope without changing the PAH model?",
+  "finding": "Yes for the declared proof footprint: OMC-004 gives at most four edge slots per column, sixteen PH/AP/LK roots per column and radius at most two, so the conservative overlap branching bound is b=144 and a two-column support has first-root bound a=112. Exact reconstruction at n=2,3,4,6,10,20 gives maxima 56 and 70, below 144. Primary, non-importing independent, hostile and Lean lanes pass. The connected-word-to-Duhamel/coupling attribution remains unproved, so N2c/N4 and anchored-n convergence remain open.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This closes a previously missing source-derived combinatorial input for R-515 rather than repeating a finite carrier calculation. The bound follows from the exact OMC-004 degree/incidence rules, and adversarial controls reject diagonal omission, an under-radius mutation and an invalid factorial ratio. No generator, rate, state, carrier, regulator, time or limit order is modified.",
+  "boundary": "Exact PAH-001 PH/LK/AP dependency footprints on OMC-004 G_n after the registered R-511 j-limit; the bound is a locality input only. No connected-word-to-Duhamel theorem, common-space map, anchored-n limit or physical interpretation is included.",
+  "next_action": "Find or refute one source-authorized coupling/Duhamel construction that bounds the exact A_n^(out,m)Q_n(s)g term by connected root words counted with b=144; do not add rates, carriers, projections or physical time.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "task_id": "T-067",
+  "method": [
+    "Hash-pin PAH-001, OMC-001, OMC-004, OMC-018, OMC-020 and the R-515 path-word certificate.",
+    "Reconstruct the exact two-row strip, PH/LK/AP dependency sets, root counts, column radius and overlap graph.",
+    "Derive b=144 and a=112 from the source degree/incidence inequalities, then compare with exact enumerations at six n values.",
+    "Replay independent non-importing arithmetic and hostile mutation controls, and compile the finite Lean declarations.",
+    "Keep the word-to-Duhamel/coupling attribution as a named missing input rather than promoting the combinatorial bound to N2c/N4."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json#conclusion",
+    "strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md#Dependency-footprint",
+    "verification/scripts/pah_omc020_root_overlap_bound.py#compute",
+    "codes/foundations/pah_omc020_root_overlap_bound_independent.py#compute",
+    "codes/foundations/pah_omc020_root_overlap_bound_hostile.py#compute",
+    "verification/scripts/pah_omc020_root_overlap_bound_verify.py#run",
+    "verification/lean/Tect/PahOmc020Overlap.lean#overlap_branching_bound",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/integrated.json#checks"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-515",
+      "R-516"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "verification_summary": "Primary 45/45, non-importing independent 18/18, hostile 13/13 and integrated 13/13 pass; Lean 4.32.1 compiles two finite declarations. All lanes remain auxiliary and claim-nonbearing.",
+  "assumptions": [
+    "The OMC-004 degree and face-incidence bounds apply uniformly to the declared strip family for every n>=2.",
+    "The R-511 j-limit scope leaves the PH/LK/AP source labels and partial-root domains unchanged.",
+    "A future source-authorized locality construction may use the dependency footprint to count connected words; that construction is not assumed here."
+  ],
+  "missing_assumptions": [
+    "Source-valid coupling/Duhamel attribution from connected root words to A_n^(out,m)Q_n(s)g.",
+    "N2a common U_n/Hilbert realization, N2b liminf/recovery and N2d R-512 minimal-form identification.",
+    "Anchored-n semigroup convergence and any infinite-volume process construction."
+  ],
+  "related": [
+    {
+      "id": "EXP-001633",
+      "relation": "continues"
+    }
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json": "114699a4554e45260a6a6632f44a32e9c0494a9274c27b561c676e93c5d247d9",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-overlap/integrated.json": "2b3469deccd01436eb77c7c8646b55dfaaabf2aca4c3a798d5227bfdd8423410"
+  },
+  "provenance": "contemporaneous",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-07",
+  "non_claims": [
+    "No N2c/N4 boundary-escape theorem, anchored-n semigroup convergence, common U_n or R-512 minimal-form selection.",
+    "No infinite-volume, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion.",
+    "External stochastic Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

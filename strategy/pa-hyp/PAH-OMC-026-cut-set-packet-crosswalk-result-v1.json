@@ -1,0 +1,141 @@
+{
+  "schema": "tect/pah-omc026-cut-set-packet-crosswalk-result/1.0",
+  "result_id": "R-566",
+  "contract_id": "PAH-OMC-026-CUT-SET-PACKET-CROSSWALK",
+  "date": "2026-09-08",
+  "task_id": "T-093",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "HASH_PINNED",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "0775b22a9e567c1ac426cc8ce29bea7b6bc55a78",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-contract-v1.json": "49ed29ea3590b6e7849bc6fc992cd7a769da3c98ce89a04c50d41575fb9ca3db",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-contract-v1.json": "2171ae18d545ff26bfad9d5cb475d75c31280679fa41609a44ad143d9d7a9dd4",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-result-v1.json": "ed6707cebdeb758ab9218b8a61ddb7ad4fd11548df84d0ae6fa9706955130cfb"
+  },
+  "exact_scope": {
+    "model": "Exactly PAH-001 and its original finite stationary PH/LK/AP/TR dynamics.",
+    "state": "The original labelled Gibbs state and normalization only.",
+    "time": "External stochastic Markov time on compact finite intervals [0,T].",
+    "order": "j tends to infinity at fixed n first, then anchored n.",
+    "target": "The R-512 minimal closed-form semigroup at the declared scope.",
+    "consequence": "The complete R-557 ten-field packet refines every R-565 cut. With the full-domain J/D estimates and the registered nonnegative error bound, the nested ordered-error conclusion follows conditionally."
+  },
+  "cut_crosswalk": {
+    "S0_source_semantics": [
+      "authority",
+      "root_semantics"
+    ],
+    "S1_complete_comparison": [
+      "common_realization",
+      "n1_recovery",
+      "n2b_form",
+      "n2c_n4_boundary",
+      "n2d_target"
+    ],
+    "S2_temporal_control": [
+      "full_domain_J",
+      "anchored_D"
+    ],
+    "cross_cut_verification": [
+      "verification"
+    ]
+  },
+  "finding": "The R-557 field-level owner packet is a strict refinement of the R-565 coarse cut-set: a complete packet implies S0, S1 and S2, while the coarse cuts alone do not encode authority, provenance, field-level analytic content or verification. Under the unchanged error budget, fixed-n J-zero and anchored-n D-zero imply the registered nested compact-time ordered-error conclusion. No source-authorized packet or model-specific J/D estimates are present, so PAH-OMC-020 remains HOLD_FOR_EVIDENCE.",
+  "assumptions": [
+    "The R-557 packet fields retain their pinned definitions and are interpreted only as source-authorized antecedents when a packet is supplied.",
+    "The exact PAH-001 functional, rates, state, carrier, external stochastic time and j-before-anchored-n order remain unchanged.",
+    "The error bound is nonnegative and valid on the declared local-cylinder domain when the source packet supplies it.",
+    "Lean formalizes only the finite logical implication and not the missing analytic estimates."
+  ],
+  "missing_assumptions": [
+    "No source-authorized packet currently supplies the ten R-557 fields.",
+    "No PAH-specific full-domain J_(n,j) and anchored D_n estimates are present."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The R-565 coarse cuts themselves are a complete source packet.",
+      "disposition": "REJECTED: authority, field provenance, analytic content and verification remain separate R-557 requirements."
+    },
+    {
+      "objection": "A status flag source_authorized_packet_present=true admits the packet.",
+      "disposition": "REJECTED: hostile mutation requires the ten fields and their source evidence, not a label."
+    },
+    {
+      "objection": "Radial or stationary-average evidence supplies S1/S2.",
+      "disposition": "REJECTED: full-domain common comparison and J/D quantifiers remain required."
+    },
+    {
+      "objection": "The logical theorem is already PAH-OMC-020 convergence.",
+      "disposition": "REJECTED: the antecedent is absent and Lean does not prove model-specific estimates."
+    },
+    {
+      "objection": "The crosswalk promotes the active gate.",
+      "disposition": "REJECTED: active_gate_change=false and the actual route remains HOLD_FOR_EVIDENCE."
+    }
+  ],
+  "formal_refs": {
+    "results": [
+      "R-557",
+      "R-565",
+      "R-566"
+    ],
+    "negatives": [],
+    "events": [
+      "20260908-pah-omc-026-cut-set-packet-crosswalk-2026-09-08"
+    ]
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc026-cut-set-packet-crosswalk/primary.json": "4f44a6300f3be362a0eaffcb20f50d4104ef1a766b38c871678991226b62d3fb",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc026-cut-set-packet-crosswalk/independent.json": "18ea831f9c109e3ce9c2984c81c0caae90097bbac7d3868cc7ff86eb00ed6a88",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc026-cut-set-packet-crosswalk/hostile.json": "89e8433399c3f52276be95eef61798232854ed08086b7417473e5384745523cc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc026-cut-set-packet-crosswalk/integrated.json": "a9306f728e389006df90b058ba36e541a1e9ed7c870c0d6d5dc227c330f29dcf",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc026-cut-set-packet-crosswalk/lean.json": "3d0aef3c45c0c9a253f41bc637938960f2b489efa989c2ebb0dda4d37f100d5f"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc026_cut_set_packet_crosswalk.py": "5abfe9b19048038fd3eb1977178c19277b893fda106de5c4f853663d856a4c05",
+    "codes/foundations/pah_omc026_cut_set_packet_crosswalk_independent.py": "df554c1e7903ee8a1f1ac24104d52ed8c261f453e0df94cb6f3fbb50f772fe33",
+    "codes/foundations/pah_omc026_cut_set_packet_crosswalk_hostile.py": "48f4a7c79049fc9b99c8a8ce5a921d1e1f69522a893bb4a12864bc7254cc1027",
+    "verification/scripts/pah_omc026_cut_set_packet_crosswalk_verify.py": "19ecf8bbcb3c45dfa8a1b7fe5c0155e204d507395910482102564173872fff66",
+    "verification/lean/Tect/PahOmc026CutSetPacketCrosswalk.lean": "5f3e0ab0cd889ed9b0695a7a11f8ec7f5b33dff8d410826238ec0302c9bdb100",
+    "verification/lean/registry.json": "4f6027f2c5026f664aaffa9f5544d6aaa2e88e48c9d6cb7e52e106364243d72a"
+  },
+  "verification": {
+    "primary": "PASS 21/21",
+    "independent": "PASS 15/15",
+    "hostile": "PASS 8/8",
+    "integrated": "PASS 17/17",
+    "lean": "PASS under Lean 4.32.1; fourteen finite declarations"
+  },
+  "closed_scoped_gate": "The R-565 coarse cut-set is formally covered by the R-557 packet-field refinement; analytic sufficiency remains conditional on the source packet and J/D estimates.",
+  "remaining_gates": [
+    "Source-authorized root semantics and root measure",
+    "Source-authorized common realization with N1/N2b/N2c/N4/N2d evidence",
+    "Full-domain J_(n,j) and anchored D_n estimates",
+    "Actual full PAH-OMC-020 ordered stationary-semigroup convergence"
+  ],
+  "next_single_question": "Can a versioned source-authorized packet fill all ten R-557 fields and supply the model-specific J/D estimates without changing PAH-001 or its j-before-anchored-n order?",
+  "revisit_condition": "Reopen when such a packet is versioned and hash-pinned, or when an exact unchanged-source contradiction invalidates the crosswalk; do not repeat finite or radial diagnostics.",
+  "non_claims": [
+    "This is a conditional logical crosswalk, not full PAH-OMC-020 convergence.",
+    "No common Hilbert space, U_n, path law, N2b/N2c/N4 estimate, compensator, generator, carrier, rate, state, regulator or limit is constructed.",
+    "No infinite-volume, continuum or physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-certificate.md"
+}

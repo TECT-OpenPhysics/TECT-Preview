@@ -1,0 +1,71 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-020 fixed-n stationary correlation passage",
+  "question": "Can the three fixed-n hypotheses in the R-513 conditional implication be discharged from the exact PAH source and the registered R-509/R-511 results, without changing the model or taking the anchored n limit?",
+  "finding": "Yes at the declared fixed-n correlation scope. Finite source incidence and polynomial cancellation give a compact locally Lipschitz modulus for the PH/LK/AP fibre rates; the R-511 inverse-pair square identity gives the compact-cutoff radial Duhamel bound; and the R-509/OMC-016 endpoint-inclusive weak cell theorem upgrades to uniform time by compact equicontinuity and a finite sup-norm epsilon-net. The all-j stationary tail then removes the cutoff in the order j then K. The anchored n realization and minimal-form selection remain open.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This is a fixed-n analytic advance that discharges the three hypotheses named by R-513 using the unchanged source and registered predecessor theorems. It is not a new finite carrier or a repeated diagnostic table, and it does not assert an anchored-n or physical result.",
+  "boundary": "Exactly PAH-001, OMC-004 G_n for fixed n>=2, OMC-016 parameters K=2, M_s=1, epsilon=1/2, beta=nu=1, original labelled stationary state, external Markov time, h_j=2^(-j), R_j=2^j, M_psi,j=2^(2j), and j-before-K order. No n limit, common U_n, R-512 selection or physical interpretation.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "task_id": "T-065",
+  "method": [
+    "Pin PAH-001, R-509/OMC-016, R-511, the OMC-020 preregistration and the fixed-n certificate.",
+    "Reconstruct the finite two-row strip incidence for symbolic n and verify the finite root set and nonradial energy degree bound.",
+    "Use finite-dimensional variation of constants on compact amplitude boxes to obtain an explicit source-dependent modulus and combine it with the inverse-pair c_r^2 transport identity for the radial Duhamel estimate.",
+    "Apply the endpoint-inclusive R-509 cell convergence to a finite sup-norm epsilon-net of the uniformly equicontinuous family f Q_n(t) g_K, then remove the amplitude cutoff with the inherited all-j stationary tail.",
+    "Run separate primary, non-importing independent and hostile verifiers plus the existing PahOmc020 Lean finite-algebra compilation."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md#Proof-of-the-fixed-n-passage",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json#conclusion",
+    "verification/scripts/pah_omc020_fixedn_temporal_proof.py#run",
+    "codes/foundations/pah_omc020_fixedn_temporal_proof_independent.py#run",
+    "codes/foundations/pah_omc020_fixedn_temporal_proof_hostile.py#run",
+    "verification/scripts/pah_omc020_fixedn_temporal_proof_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fixedn-temporal/integrated.json#checks",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-result-v1.json#R-513"
+  ],
+  "assumptions": [
+    "The exact registered R-509/OMC-016 fixed-n endpoint-inclusive cell convergence and all-j stationary tail theorem.",
+    "The exact registered R-511 inverse-pair radial residual estimate and labelled stationary state.",
+    "Finite-dimensional variation of constants, compactness, and the elementary finite epsilon-net argument.",
+    "No PAH functional, rate, state, carrier, regulator, time or limit order is changed."
+  ],
+  "missing_assumptions": [
+    "A source-authorized common-Hilbert U_n for the varying n spaces.",
+    "N2b arbitrary-sequence weak liminf/recovery, N2c/N4 boundary escape and N2d R-512 minimal-form identification.",
+    "Anchored n semigroup convergence and an infinite-volume process."
+  ],
+  "formal_refs": {
+    "results": ["R-509", "R-510", "R-511", "R-512", "R-513", "R-514"],
+    "negatives": [],
+    "events": []
+  },
+  "verification_summary": "Primary, independent, hostile and integrated fixed-n proof checks pass. Lean passes for the existing finite algebraic declarations only; the measure-theoretic epsilon-net step remains an analytic proof in the certificate.",
+  "next_action": "Obtain one source-authorized non-coordinate U_n/common-Hilbert owner packet and test N2a, N2b and N2c/N4 against the already established fixed-n Q_n(t) limit; do not repeat finite carrier calculations.",
+  "next_single_question": "Can a source-authorized U_n/common-Hilbert packet preserve the fixed local cylinders while satisfying the arbitrary-sequence liminf, recovery and boundary-escape estimates?",
+  "revisit_condition": "Reopen if a parent hash, endpoint normalization, source radial residual, compact-modulus derivation, Duhamel domain or stationary-tail premise changes, or when the owner packet is supplied.",
+  "non_claims": [
+    "No common-Hilbert U_n, Mosco theorem, N2b/N2c/N2d closure or anchored n convergence.",
+    "No infinite-volume dynamics, physical Pre-A, spacetime, quantum real time, QFT, gravity, continuum, mass gap, Yang--Mills or TOE conclusion.",
+    "No Q3LOCK or TECT-YM import and no time acceleration."
+  ],
+  "provenance": "contemporaneous",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-07",
+  "related": [{"id": "EXP-001631", "relation": "continues"}],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+    "verification/scripts/pah_omc020_fixedn_temporal_proof.py": "cff3de00fa21e55bf169c0b76c58a0bb7f16eab95d64164d7623f98a67e09c03",
+    "codes/foundations/pah_omc020_fixedn_temporal_proof_independent.py": "d0fa4c8806b4fb9427081d998697f8d76d90c6a67914b825d2297118d9f55186",
+    "codes/foundations/pah_omc020_fixedn_temporal_proof_hostile.py": "3a31219ff4c16ac72c9c2663ce9f3aee689857e539b227e39fe533de7cac442f",
+    "verification/scripts/pah_omc020_fixedn_temporal_proof_verify.py": "c29a73f82542653a1612cc5ef14247d2dfeb39d2b12bf63994db9600589edd4a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fixedn-temporal/integrated.json": "06cc35588871e42bb54c65a7e201d363427e14d061bbc70e7eab66b2642d07b5"
+  }
+}

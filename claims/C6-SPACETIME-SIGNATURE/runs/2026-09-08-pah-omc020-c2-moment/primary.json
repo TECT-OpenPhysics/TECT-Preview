@@ -1,0 +1,343 @@
+{
+  "active_gate_change": false,
+  "algebra": {
+    "bounds": [
+      {
+        "C2_bound": 0,
+        "root_count_bound": 0,
+        "support_size": 0
+      },
+      {
+        "C2_bound": 60,
+        "root_count_bound": 60,
+        "support_size": 1
+      },
+      {
+        "C2_bound": 120,
+        "root_count_bound": 120,
+        "support_size": 2
+      },
+      {
+        "C2_bound": 240,
+        "root_count_bound": 240,
+        "support_size": 4
+      },
+      {
+        "C2_bound": 480,
+        "root_count_bound": 480,
+        "support_size": 8
+      }
+    ],
+    "formulae": {
+      "geometry": "#R(A) <= N_geom |A| = 60 |A|",
+      "local_C2": "C2(A) <= 60 |A|",
+      "local_generator": "||L f||_2^2 <= C2(A) sum_{r:supp(r) intersects A} ||f(r\u00b7)-f||_infinity^2",
+      "per_root": "sum_{x in dom(r)} pi(x)c_r(x)^2 <= 1",
+      "transport": "pi(x)c_r(x)^2=Z^-1 m_r(x)^2 exp(-beta F(r x))"
+    },
+    "per_root_bound": 1,
+    "support_sizes": [
+      0,
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source hash:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+      "expected": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+      "name": "source hash:strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+      "expected": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+      "name": "source hash:strategy/pa-hyp/R490-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source hash:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de",
+      "expected": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de",
+      "name": "source hash:strategy/pa-hyp/PAH-OMC-009-uniform-envelope-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+      "expected": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+      "name": "source hash:strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+      "expected": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+      "name": "source hash:strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "TECT_RESEARCH_PROGRAM",
+      "expected": "TECT_RESEARCH_PROGRAM",
+      "name": "PAH definition owner is source-owned",
+      "status": "PASS"
+    },
+    {
+      "actual": "m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2]",
+      "expected": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "name": "unchanged midpoint rate is displayed",
+      "status": "PASS"
+    },
+    {
+      "actual": "pi_(rho,Q)(x)=Z_(rho,Q)^(-1) exp[-beta F_rho(x)]",
+      "expected": "pi_(rho,Q)(x)=Z_(rho,Q)^(-1) exp[-beta F_rho(x)]",
+      "name": "Gibbs state is normalized exponential",
+      "status": "PASS"
+    },
+    {
+      "actual": "m_r(x)=s_v^nu",
+      "expected": "m_r(x)=s_v^nu",
+      "name": "mobility rule retained:matter_phase",
+      "status": "PASS"
+    },
+    {
+      "actual": "m_r(x)=(s_v s_w)^(nu/2)",
+      "expected": "m_r(x)=(s_v s_w)^(nu/2)",
+      "name": "mobility rule retained:matter_transfer_or_link",
+      "status": "PASS"
+    },
+    {
+      "actual": "m_r(x)=(s_v(before)s_v(after))^(nu/2)",
+      "expected": "m_r(x)=(s_v(before)s_v(after))^(nu/2)",
+      "name": "mobility rule retained:aperture",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-OMC-010",
+      "expected": "PAH-OMC-010",
+      "name": "OMC-010 is the unchanged Gibbs path",
+      "status": "PASS"
+    },
+    {
+      "actual": "The displayed PAH-001 finite configuration space Omega_(rho,Q) with Q=1, K=2, M_s=M_psi=1, epsilon=1/2, and all five displayed couplings and beta=nu=1 fixed to one; R_max=R ranges over positive integers and tends to infinity.",
+      "expected": "beta=nu=1",
+      "name": "OMC-010 fixes beta=nu=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "j before anchored n",
+      "name": "OMC-020 keeps j before anchored n",
+      "status": "PASS"
+    },
+    {
+      "actual": "NEGATIVE_RESULT_RMAX_DIVERGENCE",
+      "expected": "NEGATIVE_RESULT_RMAX_DIVERGENCE",
+      "name": "R-489 remains only an unweighted predecessor",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-520 still leaves non-explosion open",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8,
+        60
+      ],
+      "expected": [
+        8,
+        60
+      ],
+      "name": "R-490 geometry constants",
+      "status": "PASS"
+    },
+    {
+      "actual": 540,
+      "expected": 540,
+      "name": "R-490 C_sw factors",
+      "status": "PASS"
+    },
+    {
+      "actual": "pi(x)c_r(x)^2 = Z^-1 m_r(x)^2 exp(-beta F(r x))",
+      "expected": "source midpoint square",
+      "name": "Gibbs-square transport identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "r^-1 maps image(r) back to dom(r)",
+      "expected": "inverse-pair rule",
+      "name": "root map is a partial bijection",
+      "status": "PASS"
+    },
+    {
+      "actual": "sum_{image(r)} exp(-beta F) <= Z",
+      "expected": "normalized Gibbs partition",
+      "name": "partition subset inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4",
+      "expected": "<=1",
+      "name": "mobility square <=1:phase(s=1/2)",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4",
+      "expected": "<=1",
+      "name": "mobility square <=1:transfer(s=t=1/2)",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "<=1",
+      "name": "mobility square <=1:aperture(s_before=1/2,s_after=1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "<=1",
+      "name": "mobility square <=1:maximal mobility",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "name": "all source mobility squares are bounded",
+      "status": "PASS"
+    },
+    {
+      "actual": "sum pi*c_r^2 <= 1",
+      "expected": 1,
+      "name": "per-root C2 bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "C2(A) bound |A|=0",
+      "status": "PASS"
+    },
+    {
+      "actual": 60,
+      "expected": 60,
+      "name": "C2(A) bound |A|=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 120,
+      "expected": 120,
+      "name": "C2(A) bound |A|=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 240,
+      "expected": 240,
+      "name": "C2(A) bound |A|=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 480,
+      "expected": 480,
+      "name": "C2(A) bound |A|=8",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "C2(A) is finite for every finite A",
+      "status": "PASS"
+    },
+    {
+      "actual": "#roots with x in supp(r) <= N_geom",
+      "expected": "N_geom=60",
+      "name": "R-490 N_geom is per-vertex incidence, not volume",
+      "status": "PASS"
+    },
+    {
+      "actual": "||L f||_2^2 <= C2(A) sum_{r:supp(r) intersects A} ||f(r\u00b7)-f||_infinity^2",
+      "expected": "||L f||_2^2 <= C2(A) sum_{r:supp(r) intersects A} ||f(r\u00b7)-f||_infinity^2",
+      "name": "local L2 generator estimate is the C2 consequence",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "C2 is not itself a process construction",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "active T-054 gate remains unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "physical promotion remains forbidden",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 40,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "exact_scope": {
+    "functional": "Exactly PAH-001 F_rho; no new term, counterterm, carrier, state, rate or time.",
+    "moment": "C2(A)=sup_(n,R) sum_(r:supp(r) intersects A) sum_(omega in dom(r)) pi_(n,R)(omega)c_r(omega)^2.",
+    "path": "PAH-OMC-010: K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, unit couplings, n>=2 and R_max=R>=1.",
+    "time_order": "Original j-before-anchored-n order; external stochastic Markov time only."
+  },
+  "non_claims": [
+    "The estimate is a local Gibbs-weighted L2 input, not an exact PAH process construction or non-explosion theorem.",
+    "It does not prove N2b liminf/recovery, N2c/N4 boundary escape, R-512 minimal-form identification, anchored-n semigroup convergence or an infinite-volume dynamics.",
+    "R-489's unweighted root-rate divergence is not retroactively repaired; it is a different norm target.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion; external Markov time is not physical time."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 verification/scripts/pah_omc020_c2_moment.py --check",
+  "route": {
+    "active_gate_change": false,
+    "claim_bearing": false,
+    "classification": "auxiliary_support",
+    "decision": "Source-owned local C2(A) bound established on the registered OMC-010 path; temporal closure remains HOLD_FOR_EVIDENCE.",
+    "missing_contract": [
+      "source-authorized non-explosion/path-space construction for the unbounded PAH rates",
+      "N2b arbitrary-sequence liminf and recovery plus N2c/N4 boundary escape",
+      "N2d identification of the resulting process with the R-512 minimal closed form",
+      "anchored-n semigroup convergence for all local cylinder observables"
+    ],
+    "physical_promotion": false,
+    "verdict": "PASS"
+  },
+  "schema": "tect/pah-omc020-c2-moment-primary/1.0",
+  "source_constants": {
+    "c_sw": 540,
+    "n_geom": 60,
+    "s_geom": 8
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-009-uniform-envelope-v1.json": "1c57e9c46e65c950104fdf6310ef82da4369c35c5617bcacabd6c41767dff6de",
+    "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+  },
+  "status": "PASS_SOURCE_OWNED_C2_LOCAL_BOUND",
+  "verdict": "PASS"
+}

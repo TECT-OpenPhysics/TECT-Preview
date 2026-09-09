@@ -1,0 +1,170 @@
+{
+  "audit_id": "PAH-OMC-020-OWNER-PACKET-SUFFICIENCY-INDEPENDENT-001",
+  "checks": [
+    {
+      "actual": "PAH-OMC-020-OWNER-PACKET-SUFFICIENCY",
+      "expected": "PAH-OMC-020-OWNER-PACKET-SUFFICIENCY",
+      "name": "contract id",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+        "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json": "75c162935a432da4c170c5157f1022c30a97b617ab18b657e57cb02ff91e95d0",
+        "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+        "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+        "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json": "75c162935a432da4c170c5157f1022c30a97b617ab18b657e57cb02ff91e95d0",
+        "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+        "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+      },
+      "name": "source bytes",
+      "status": "PASS"
+    },
+    {
+      "actual": "External stochastic Markov time on each finite interval [0,T].",
+      "expected": true,
+      "name": "fixed external time",
+      "status": "PASS"
+    },
+    {
+      "actual": "j tends to infinity at fixed n first, then anchored n.",
+      "expected": true,
+      "name": "fixed order",
+      "status": "PASS"
+    },
+    {
+      "actual": "The R-512 minimal closed-form semigroup at the declared scope.",
+      "expected": true,
+      "name": "target unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "anchored_D",
+        "authority",
+        "common_realization",
+        "full_domain_J",
+        "n1_recovery",
+        "n2b_form",
+        "n2c_n4_boundary",
+        "n2d_target",
+        "root_semantics",
+        "verification"
+      ],
+      "expected": [
+        "anchored_D",
+        "authority",
+        "common_realization",
+        "full_domain_J",
+        "n1_recovery",
+        "n2b_form",
+        "n2c_n4_boundary",
+        "n2d_target",
+        "root_semantics",
+        "verification"
+      ],
+      "name": "complete field set",
+      "status": "PASS"
+    },
+    {
+      "actual": 10,
+      "expected": 10,
+      "name": "no duplicate fields",
+      "status": "PASS"
+    },
+    {
+      "actual": "For every declared local f,g and T, 0<=err(n,j;f,g,T)<=J(n,j;f,g,T)+D(n;f,g,T).",
+      "expected": "err/J/D",
+      "name": "error decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "For every epsilon>0 there is N such that each n>=N has a J(n) with err(n,j)<epsilon for all j>=J(n), uniformly on [0,T].",
+      "expected": "nested epsilon",
+      "name": "ordered conclusion",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_CONDITIONAL",
+      "expected": "PASS_CONDITIONAL",
+      "name": "parent bridge retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "parent ledger retained",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "all fields admit",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "root omission rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "common-map omission rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "boundary omission rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": "NO_SOURCE_AUTHORIZED_PACKET_PRESENT",
+      "expected": "NO_SOURCE_AUTHORIZED_PACKET_PRESENT",
+      "name": "packet absence is current",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "physical firewall",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 17,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "c70086faa68710ddb29ada137e9e425ec220e522a01e3fda74f33cccdbfe2e3c",
+  "finding": "Independent replay confirms that every required packet field is jointly necessary for admission, while current source records contain no source-authorized packet.",
+  "next_single_question": "Can a versioned source-authorized packet satisfy all ten fields simultaneously while preserving the exact PAH-001 source bytes and j-before-n order?",
+  "non_claims": [
+    "This contract does not supply the owner packet or prove any PAH-specific J/D estimate.",
+    "It does not prove full semigroup convergence, an infinite-volume process or a continuum limit until the packet is admitted.",
+    "It makes no physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE claim.",
+    "External Markov time remains stochastic bookkeeping and is not quantum, proper or Lorentzian time."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_owner_packet_sufficiency_independent.py --check",
+  "result_id": "R-557",
+  "schema": "tect/pah-omc020-owner-packet-sufficiency-independent/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json": "75c162935a432da4c170c5157f1022c30a97b617ab18b657e57cb02ff91e95d0",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+  },
+  "status": "PASS_CONDITIONAL_PACKET_SUFFICIENCY_HOLD_FOR_EVIDENCE",
+  "task_id": "T-087",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

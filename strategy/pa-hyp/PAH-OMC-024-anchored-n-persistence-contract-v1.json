@@ -1,0 +1,57 @@
+{
+  "schema": "tect/pah-omc024-anchored-n-persistence-contract/1.0",
+  "contract_id": "PAH-OMC-024",
+  "version": "1.0.0",
+  "title": "Anchored-n persistence audit for the source-multiplicity gap",
+  "date": "2026-09-08",
+  "task_id": "T-091",
+  "reserved_result_id": "R-564",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "question": "Can the finite source-compatible root-multiplicity derivative gap in R-552 be promoted to an anchored-n compact-time correlation gap using the current PAH evidence, or is a source-specific n-uniform lower bound and derivative/remainder estimate missing?",
+  "parent_immutable": true,
+  "fixed_scope": {
+    "parent": "PAH-001-v1.json remains the sole PAH functional, rate, Gibbs-state, carrier, regulator and external Markov-time source.",
+    "predecessor": "R-552 and PAH-OMC-020 temporal preregistration are read-only evidence; their finite root-multiplicity witness is not redefined.",
+    "order": "The registered j-before-anchored-n order is preserved. No diagonal, reversed or joint limit is introduced.",
+    "diagnostic": "An abstract reversible two-state oracle is used only to test logical implication from a finite derivative gap to anchored-n convergence. It is not a PAH model, carrier or counterexample."
+  },
+  "oracle": {
+    "state": "pi=(1/2,1/2)",
+    "observable": "f=(0,1)",
+    "rates": "r_A(n)=2^(-n), r_B(n)=2^(-(n+1))",
+    "correlation": "C_r(t)=1/4+1/4 exp(-2 r t)",
+    "derivative_gap": "|C'_A(0)-C'_B(0)|=(r_A-r_B)/2=2^(-(n+2))",
+    "target": "identity semigroup at r=0",
+    "compact_time_bound": "sup_{0<=t<=T}|C_r(t)-C_0(t)| <= T*r/2, from 1-exp(-x)<=x",
+    "time_firewall": "T is a diagnostic compact interval for an abstract oracle; it is not quantum real time, proper time, Lorentzian time or a PAH parameter change."
+  },
+  "required_evidence": [
+    "Hash-pinned PAH-001, PAH-OMC-020 preregistration and R-552 source result.",
+    "Exact rational replay of the oracle derivative gap and compact-time envelope.",
+    "Independent non-importing reconstruction and hostile mutation firewall.",
+    "Lean 4.32.1 verification of positivity, dyadic halving and the finite rational threshold.",
+    "A source-specific n-uniform local correlation lower bound or uniform derivative/remainder estimate is required for any future anchored-n separation claim."
+  ],
+  "decision_rule": {
+    "current": "HOLD_FOR_EVIDENCE",
+    "mainline_advance": "Permitted only if a source-authorized PAH packet supplies a uniform-in-n lower bound/remainder and the primary, independent, hostile and Lean lanes agree.",
+    "negative_result": "Permitted only for an exact PAH source contradiction; the abstract oracle alone cannot trigger it.",
+    "hold": "Use when the finite gap is compatible with decay or the source-specific uniform estimate is absent."
+  },
+  "default_verdict": "HOLD_FOR_EVIDENCE",
+  "physical_promotion": false,
+  "oracle_is_pah_carrier": false,
+  "missing_assumptions": [
+    "Source-authorized root multiplicity, duplicate-transition and root-measure rules.",
+    "A uniform-in-n positive local correlation gap for the exact PAH completions, or an equivalent lower-bound mechanism.",
+    "A uniform-in-n derivative/remainder estimate converting a finite derivative gap into a fixed compact-time separation.",
+    "The common-space, boundary and R-512 target fields already listed by R-557."
+  ],
+  "non_claims": [
+    "No PAH-001 function, rate, state, carrier, regulator or j-before-n order is changed.",
+    "No universal no-go for an owner-fixed PAH completion.",
+    "No R-512 convergence, infinite-volume, continuum, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion."
+  ],
+  "next_single_question": "Can a source-authorized packet prove an n-uniform positive local correlation gap, or a uniform remainder that prevents the R-552 gap from collapsing, while preserving PAH-001 and the original all-Q Gibbs state?",
+  "revisit_condition": "Reopen only when a source-authorized root/measure packet or an exact PAH-specific uniform estimate is hash-pinned; do not repeat the abstract oracle unchanged."
+}

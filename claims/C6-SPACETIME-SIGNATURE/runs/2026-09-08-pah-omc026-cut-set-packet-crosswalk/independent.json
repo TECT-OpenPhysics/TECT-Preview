@@ -1,0 +1,155 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-026-CUT-SET-PACKET-CROSSWALK-INDEPENDENT-001",
+  "checks": [
+    {
+      "actual": {
+        "anchored_D": "S2",
+        "authority": "S0",
+        "common_realization": "S1",
+        "full_domain_J": "S2",
+        "n1_recovery": "S1",
+        "n2b_form": "S1",
+        "n2c_n4_boundary": "S1",
+        "n2d_target": "S1",
+        "root_semantics": "S0",
+        "verification": "CROSS_CUT"
+      },
+      "expected": {
+        "anchored_D": "S2",
+        "authority": "S0",
+        "common_realization": "S1",
+        "full_domain_J": "S2",
+        "n1_recovery": "S1",
+        "n2b_form": "S1",
+        "n2c_n4_boundary": "S1",
+        "n2d_target": "S1",
+        "root_semantics": "S0",
+        "verification": "CROSS_CUT"
+      },
+      "name": "field-to-cut reconstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "S0 count",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "expected": 5,
+      "name": "S1 count",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "S2 count",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "name": "cross-cut count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "anchored_D",
+        "authority",
+        "common_realization",
+        "full_domain_J",
+        "n1_recovery",
+        "n2b_form",
+        "n2c_n4_boundary",
+        "n2d_target",
+        "root_semantics",
+        "verification"
+      ],
+      "expected": [
+        "anchored_D",
+        "authority",
+        "common_realization",
+        "full_domain_J",
+        "n1_recovery",
+        "n2b_form",
+        "n2c_n4_boundary",
+        "n2d_target",
+        "root_semantics",
+        "verification"
+      ],
+      "name": "all ten fields are covered",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "packet implies every coarse cut",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "coarse cuts do not imply authority",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "authority remains a separate field",
+      "status": "PASS"
+    },
+    {
+      "actual": "CROSS_CUT",
+      "expected": "CROSS_CUT",
+      "name": "verification remains cross-cut",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "current route",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "packet absent",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no model change",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "nested fixed-n consequence",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "nested anchored-n consequence",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 15,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "finding": "Independent reconstruction agrees that R-557 field-level completeness refines, but is not replaced by, the coarse R-565 cut-set.",
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc026_cut_set_packet_crosswalk_independent.py --check",
+  "result_id": "R-566",
+  "schema": "tect/pah-omc026-cut-set-packet-crosswalk-independent/1.0",
+  "source_hashes": {
+    "contract": "cf6f9eee617765b8e0b7ca231741a8c029937b0f19f4e35a3a098806b44a4339",
+    "script": "df554c1e7903ee8a1f1ac24104d52ed8c261f453e0df94cb6f3fbb50f772fe33"
+  },
+  "status": "PASS_AUXILIARY_HOLD",
+  "task_id": "T-093",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

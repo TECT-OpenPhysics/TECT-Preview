@@ -1,0 +1,89 @@
+{
+  "schema": "tect/pah-omc020-local-path-tightness-contract/1.0",
+  "contract_id": "PAH-OMC-020-LOCAL-PATH-TIGHTNESS",
+  "result_id": "R-541",
+  "task_id": "T-064",
+  "title": "Uniform stationary Aldous tightness for local PAH observables",
+  "question": "Do the unchanged finite stationary PAH processes give a uniform compact-time Aldous modulus for every bounded local cylinder observable, using only the registered C_sw and C2 bounds?",
+  "purpose": "Close the path-compactness subgate without constructing a new process, comparison map, carrier or rate. The result is an input to a later martingale-problem and target-identification proof, not that proof itself.",
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-010": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+    },
+    "R-522": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+      "sha256": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379"
+    },
+    "R-520": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+      "sha256": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730"
+    },
+    "PAH-OMC-020": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    }
+  },
+  "preservation_firewall": {
+    "functional_unchanged": true,
+    "rates_unchanged": true,
+    "state_unchanged": true,
+    "carrier_unchanged": true,
+    "time_unchanged": true,
+    "order_unchanged": true,
+    "no_new_process": true,
+    "no_new_comparison_map": true,
+    "no_counterterm": true,
+    "no_rate_fitting": true,
+    "no_physical_promotion": true
+  },
+  "exact_scope": {
+    "finite_processes": "For every finite PAH-OMC-004 strip level n>=2 and positive radial cutoff R, use the original finite continuous-time Markov chain with generator L_(n,R), labelled Gibbs stationary law pi_(n,R), and no terminal conditioning.",
+    "observable": "A fixed bounded gauge- and anchor-automorphism-invariant local cylinder f with finite root support A and root increment suprema d_r=||f(r dot)-f||_infinity.",
+    "constants": "Use the source-owned R-490 C_sw=540 interaction envelope and R-522 C2(A)<=60|A| squared-rate bound only as domination inputs.",
+    "decomposition": "For a stopping time tau<=T and 0<=delta, write f(X_(tau+delta))-f(X_tau)=M_(tau,delta)+D_(tau,delta), where M is the generator martingale increment and D is the time-integrated drift.",
+    "target_bound": "E|f(X_(tau+delta))-f(X_tau)|^2 <= 2 delta K_Gamma(f)+2 delta^2 K_L(f), uniformly in n,R and tau<=T.",
+    "derived_constants": "K_Gamma(f)=540 |A| max_r d_r^2 and K_L(f)=60 |A| sum_r d_r^2 are conservative source-derived bounds; any finite support with zero increments gives zero constants.",
+    "tightness": "The Markov inequality bound [2 delta K_Gamma(f)+2 delta^2 K_L(f)]/epsilon^2 tends to zero as delta->0, giving Aldous tightness of the real-valued local-observable paths in D([0,T],R). Finite vectors follow componentwise.",
+    "boundary": "This is finite-process path compactness only. It does not identify a subsequential limit, a martingale problem, a common Hilbert space, an infinite-volume process or the R-512 semigroup."
+  },
+  "proof_obligations": [
+    "Revalidate the exact PAH-001, C_sw, C2, pathspace and preregistration hashes.",
+    "Derive the carré-du-champ bound from the weighted conductance envelope and the finite local root support.",
+    "Derive the drift L2 bound from the registered C2(A) estimate and the same root increments.",
+    "Apply the martingale decomposition, optional stopping and the two-square inequality to obtain the compact-time increment envelope.",
+    "Show the envelope is uniform in n,R and vanishes with delta, while preserving the external stochastic-time firewall.",
+    "Keep martingale-problem identification, uniqueness, N2b/N2c/N4 and R-512 minimal-form selection explicitly open."
+  ],
+  "acceptance": {
+    "primary": "Exact rational derivation of K_Gamma, K_L and the two-square compact-time envelope for arbitrary support size and increment list, with source hashes and self-tests.",
+    "independent": "Non-importing reconstruction of the conductance, squared-rate, stopping-time and Markov bounds with a different rational fixture.",
+    "hostile": "Reject missing martingale term, missing factor 2, delta-independent bounds, C_sw-as-C2 substitution, fixed-n-only promotion, physical-time relabelling and claims of semigroup convergence.",
+    "lean": "Compile finite algebraic declarations for the two-square inequality, nonnegative envelope, Markov bound and delta decrease; no stochastic-process theorem is formalized."
+  },
+  "status": {
+    "uniform_local_path_tightness": false,
+    "martingale_problem_identification": false,
+    "process_uniqueness": false,
+    "n2b_n2c_n4": false,
+    "r512_identification": false,
+    "semigroup_convergence": false,
+    "physical_promotion": false
+  },
+  "outcomes": {
+    "MAINLINE_ADVANCE": "Only if the uniform path bound, a source-authorized limit process and the remaining target-identification fields are all independently proved; this contract alone cannot produce that verdict.",
+    "NEGATIVE_RESULT": "An exact PAH finite family violates the derived uniform path envelope or its source assumptions, with the failure separated from target semigroup convergence.",
+    "HOLD_FOR_EVIDENCE": "Use when the local path envelope is verified but process identification, uniqueness, N2b/N2c/N4 or R-512 selection remains absent."
+  },
+  "single_next_question": "Can a source-authorized martingale-problem construction identify every subsequential local path limit from this tight family with the R-512 minimal-form semigroup, without changing PAH-001?",
+  "non_claims": [
+    "No new finite carrier, functional, rate, state, regulator, normalization, time convention or limit order.",
+    "No construction or uniqueness of an infinite-volume process, no martingale-problem identification, and no semigroup convergence.",
+    "No common H/U_n, N2b liminf/recovery, N2c/N4 boundary escape or R-512 minimal-form selection.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ]
+}
