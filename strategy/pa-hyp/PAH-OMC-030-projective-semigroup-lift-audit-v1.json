@@ -1,0 +1,65 @@
+{
+  "schema": "tect/pah-omc030-projective-semigroup-lift-audit/1.0",
+  "title": "PAH-OMC-030 projective lift and semigroup-closure audit",
+  "date": "2026-09-09",
+  "task_id": "T-097",
+  "question": "Can the existing researcher-owned eventual generator intertwining and finite-fibre boundary estimate be promoted, without changing PAH-001, to a common cylinder semigroup that supplies the missing PAH-OMC-030 finite-strip-to-T_min bridge?",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "exact_scope": {
+    "model": "Exactly PAH-001, the two-row OMC-004 strip, the labelled R-510 states, the R-511 cylinder domain and the R-512/R-568 minimal target.",
+    "time": "Original external unaccelerated stochastic Markov time only.",
+    "order": "j tends to infinity at fixed n, followed by amplitude removal and anchored n exhaustion.",
+    "boundary": "Original terminal unsplit square and frontier terms are retained.",
+    "attempt": "Use R-493 eventual grade-blind first-order intertwining, R-517 finite-fibre connected-word boundary control and R-550's exponentiation audit; no new map, rate, state, carrier, projection or limit order is introduced."
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-030-prereg-v1.json": "14a3a24ee51f29be80fe7b441e8edda8c3ebe583c728bc73c7d275c647baaced",
+    "strategy/pa-hyp/PAH-OMC-030-result-v1.json": "327878ec159014991bc06491de467e21f2fde28fecf4ec5f1e33818fdf4491a6",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json": "67825022b3db1078387534baacb818fdf60778ce19f4fe81514484a25cf7cb5d",
+    "strategy/pa-hyp/PAH-OMC-020-finite-semigroup-lift-result-v1.json": "a3e24dc96e3ca6fb01f991ab7d1062da06af82b3252100148f365c094b03c35c",
+    "strategy/pa-hyp/PAH-OMC-029-result-v1.json": "8ce90838a3daba1277cfeb2987643eb27c90d6eac2148c9e81c110bcd1c8fc81"
+  },
+  "attempt": {
+    "step_1": "R-493 supplies an exact eventual identity for each declared grade-blind cylinder only after an observable-dependent N(f); it does not state an all-function finite operator identity.",
+    "step_2": "Exponentiating that identity requires closure under every coarse generator iterate L_n^k f, or an equivalent invariant finite subspace. R-550's exact finite algebra replay confirms that this iterate-closure/all-function premise is not present; a first-order identity alone is insufficient.",
+    "step_3": "R-517 supplies a conditional finite-fibre connected-word/Duhamel boundary envelope with b=144 and b_eff=288, but it assumes the finite coupling and does not construct a source-authorized common H, path law, or anchored-n process.",
+    "step_4": "R-568/R-029 uniqueness identifies a same-H Markov extension only after such a semigroup already exists and extends the R-511 generator. It cannot supply existence, projective consistency, non-explosion, or the finite-to-H comparison.",
+    "finding": "The attempted projective lift therefore stops before a common cylinder semigroup is defined. No exact PAH observable violating the requested limit was found, but the missing source-authorized closure and comparison fields remain logically necessary."
+  },
+  "single_missing_statement": "A source-authorized packet must either prove all-iterate finite cylinder intertwining plus a non-explosive projective process, or provide a common-space U_n/path-space realization with the terminal-square convention and n-uniform boundary/amplitude estimates; it must then identify the resulting semigroup with the R-512 minimal closure.",
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc030_verify.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/primary.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc030_independent.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/independent.json",
+    "hostile": "python -X utf8 codes/foundations/pah_omc030_hostile.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/hostile.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc030_integrated.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/integrated.json",
+    "finite_lift_replay": "python -X utf8 verification/scripts/pah_omc020_finite_semigroup_lift_verify.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/integrated.json",
+    "result": "PAH-OMC-030 primary, independent, hostile and integrated audits pass with HOLD_FOR_EVIDENCE; finite semigroup-lift replay passes 18/18 with Lean PASS."
+  },
+  "run_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/primary.json": "51449b9a727a9d6659909b03f9330ad24a890f668cb353d0c933f8a8b7c399a4",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/independent.json": "4e43d00ce651ccd8dad56e65b6302cf906f9265fc8bcddea06c2bcee8d286618",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/hostile.json": "1acf4eb2c9bcd32afe3f6e6f09102a094a5c63196f5d903fa2364f67c7bea5a1",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/integrated.json": "d4af38af2a122f94b1ba32663ab881bf7945536e298bdbad207e456ff6368691",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/integrated.json": "f9786165ceccf3ef08224c93bf4b69c2d24b36a52f754bb6dde5edb1ac59a2a3"
+  },
+  "formal_refs": {
+    "results": ["R-493", "R-517", "R-550", "R-568", "R-569"],
+    "events": ["20260909-r-569-pah-omc-030-finite-strip-to-minimal-marko"],
+    "explorations": ["EXP-001721", "EXP-001724"]
+  },
+  "next_single_question": "Can a source-authorized owner packet prove all-iterate cylinder consistency or instantiate a common U_n/path space with n-uniform residual and terminal-square estimates, without changing PAH-001?",
+  "revisit_condition": "Reopen only when that packet or an exact unchanged-PAH counterexample changes a pinned input hash; do not repeat unchanged owner scans, finite tables or uniqueness replays.",
+  "non_claims": [
+    "This is a bounded HOLD_FOR_EVIDENCE audit, not PAH-OMC-030 convergence.",
+    "No source-authorized common U_n, projective path process, N2b/N2c/N4/N2d closure or R-512 finite-to-target identification was constructed.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion.",
+    "External Markov time remains stochastic bookkeeping only."
+  ]
+}
