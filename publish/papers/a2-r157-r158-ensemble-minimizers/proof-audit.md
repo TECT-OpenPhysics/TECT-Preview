@@ -1,10 +1,17 @@
 # Proof-audit record — A2/R-157/R-158
 
-Status: `INTERNAL-AUDIT-DRAFT` (2026-09-04).  This document is a structured
+Status: `INTERNAL-AUDIT-DRAFT` (2026-09-09).  This document is a structured
 adversarial checklist for an eventual independent mathematician.  It is not
 an external referee report, an operator sign-off, or a claim-tier promotion.
 
 ## Audit scope
+
+The current v0.1.41 re-review is `rereview-2026-09-09.md`. Its P-01--P-15
+matrix records actual proof-text reasoning, five repairs and the limitations
+of executable token checks. It does not fill the independent review form.
+The uniform midpoint-tail estimate, explicit Fourier basis, strict local
+`H^2` bound and rational spectral appendix are additional current anchors.
+The remaining paragraphs retain the preceding review history.
 
 The audit covers the explicitly declared side-16 periodic three-torus,
 six-real-component field, positive density floor, pinned coefficients, and

@@ -1,7 +1,7 @@
 # Specialist novelty-review form — A2/R-157/R-158
 
-Status: `BLANK / NO NOVELTY DISPOSITION RECORDED` (manuscript v0.1.40,
-2026-09-04).
+Status: `BLANK / NO NOVELTY DISPOSITION RECORDED` (manuscript v0.1.41,
+2026-09-09).
 
 This form requests a specialist literature and publishability opinion.  It is
 not a priority claim, a proof audit, or evidence that a specialist has already
@@ -10,9 +10,9 @@ reviewed the paper.
 ## Frozen review object and residual proposition
 
 - Manuscript SHA-256:
-  `2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768`
+  `9e52ff285acf2643168e2b1846df214830f2aa9a560af143c13a8ece8cbfa1c3`
 - PDF SHA-256:
-  `2edfb63ea7f884ff0faaaed9d3057e4baa2c4cff62ba038ffed146f4673f9b64`
+  `e44469909cd51d08622aed2ca4f64a993f339db5077bb5672f557ba673d6de45`
 - Detailed bounded crosswalk: `literature-crosswalk.md`
 
 The only proposed residual contribution is the model-specific conjunction,
@@ -100,7 +100,7 @@ independence_statement: <relationship to author and project>
 search_dates: <YYYY-MM-DD through YYYY-MM-DD>
 databases_and_indexes: <complete list>
 queries_and_citation_chains: <reproducible list or attached record>
-manuscript_sha256_checked: 2a607a6d10cfb4deb0b32eab79d863105762e50861ffee0a9fafc7e54aa7f768
+manuscript_sha256_checked: 9e52ff285acf2643168e2b1846df214830f2aa9a560af143c13a8ece8cbfa1c3
 decisions_completed: D-01,...,D-07
 global_disposition: PUBLISHABLY-DISTINCT | REPAIR-AND-REREVIEW | SUBSUMED | INCONCLUSIVE
 required_repairs: <exact list, or NONE>

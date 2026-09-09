@@ -1,6 +1,24 @@
 # A2/R-157/R-158 ensemble-minimizers paper
 
-Lifecycle: `draft` (version `0.1.40`, 2026-09-04).
+Lifecycle: `draft` (version `0.1.41`, 2026-09-09).
+
+## Current re-review
+
+Version 0.1.41 incorporates the internal re-review in
+`rereview-2026-09-09.md`: explicit orthonormal Fourier normalization,
+a uniform spectral-tail proof of midpoint continuity, separate scalar-energy
+and vector-field notation, an `H^2` strict-local-minimum estimate, and a
+directly checkable rational spectral appendix. The three theorem conclusions
+and pinned parameters are unchanged. External mathematical and specialist
+novelty acceptance remain OPEN. The review forms identify the current source
+and PDF hashes and remain blank; no outgoing contact or submission occurred.
+
+The supplemental exact/structural check is `verification/rereview_audit.py`.
+Current hashes are in `verification/runs/reproduction-manifest.json`.
+The dated source-clean and finite-replay records below must not be confused
+with an external mathematical sign-off.
+
+## Earlier draft history and retained scope
 
 This folder is the self-contained draft lane for the paper
 “Global Well-Posedness, Neutral-State Rejection, and Ensemble-Induced Shell

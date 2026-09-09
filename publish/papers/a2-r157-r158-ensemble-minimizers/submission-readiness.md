@@ -1,11 +1,15 @@
 # Submission-readiness matrix — A2/R-157/R-158
 
-Status: `DRAFT / NOT SUBMISSION-AUTHORIZED` (v0.1.40, 2026-09-04).
+Status: `DRAFT / NOT SUBMISSION-AUTHORIZED` (v0.1.41, 2026-09-09).
 This matrix is a decision aid for the finite side-16 classical paper and its
 reproduction package.  It is not a referee report, a novelty certificate, a
 source-owner response, an operator approval, or a publication record.
 
 ## Declared scope
+
+The internal re-review `rereview-2026-09-09.md` and refreshed PDF supplement
+this matrix. They do not close any signed external review or actual journal
+submission gate. Earlier replay dates below remain historical dispositions.
 
 The handoff covers only the explicitly printed three-component complex field,
 realified as six components, on the periodic torus `T^3_16`, with the pinned

@@ -1,7 +1,13 @@
 # Theorem-applicability audit — A2/R-157/R-158
 
 Status: `INTERNAL-APPLICABILITY-AUDIT / NOT EXTERNAL-REVIEWED` (manuscript
-v0.1.40, 2026-09-04).
+v0.1.41, 2026-09-09).
+
+The re-review in `rereview-2026-09-09.md` adds a direct uniform spectral-tail
+proof of the midpoint continuity statement, proves the stated strict local
+minimum in `H^2`, and provides the rational spectral appendix. These are
+expansions of existing proof steps, not new imported theorems. The current
+Fourier coefficients use the orthonormal basis in `eq:fourier-normalization`.
 
 This record identifies every general analytic result used in the paper, fixes
 its spaces and hypotheses, and distinguishes a direct paper proof from a

@@ -1,11 +1,22 @@
 # STATUS — A2/R-157/R-158 ensemble-minimizers
 
 Lifecycle: `draft`
-Version: `0.1.40`
-Date: `2026-09-04`
+Version: `0.1.41`
+Date: `2026-09-09`
 Owner: TECT publication lane
 
 ## Current state
+
+The v0.1.41 internal re-review and its five bounded repairs are recorded in
+`rereview-2026-09-09.md`. It supplies normalization, midpoint-continuity,
+notation, local-minimum, and exact spectral-certificate details without
+changing the three theorem conclusions or claim tiers. The new finite audit
+is `verification/rereview_audit.py`; its dated claim-run JSON is non-bearing.
+External proof and novelty forms remain blank. Current PDF/source identities
+are pinned in those forms and the reproduction manifest. Historical PASS
+statements below describe their named checkpoints, not new external approval.
+
+## Retained checkpoint history
 
 The folder contains a manual integrated manuscript draft, its cited-claim
 list, a literature-first crosswalk, a reproduction protocol, and an explicit

@@ -234,7 +234,7 @@ def audit() -> dict[str, Any]:
         "hilbert_scale_continuity_and_quadratic_chain_are_explicit",
         "eq:hilbert-scale-chain" in manuscript
         and "C([0,T];D(L^{1/2}))" in manuscript
-        and "weak midpoint continuity" in manuscript
+        and "eq:midpoint-uniform-tail" in manuscript
         and "preserves" in manuscript
         and "$u(0)=u_0$" in manuscript,
         "spectral midpoint continuity and quadratic energy identity through s=0",
@@ -346,7 +346,7 @@ def audit() -> dict[str, Any]:
             for token in (
                 "eq:temporal-bootstrap-map",
                 "eq:temporal-derivative-bound",
-                "\\mathcal F:H^{r+4}\\longrightarrow H^r",
+                "\\mathcal G:H^{r+4}\\longrightarrow H^r",
                 "D^jN",
                 "even $m$",
                 "interpolation between adjacent even levels",

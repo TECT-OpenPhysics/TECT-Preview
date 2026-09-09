@@ -39,6 +39,7 @@ PACKAGE_FILES = (
     "manuscript.tex",
     "manuscript.pdf",
     "proof-audit.md",
+    "rereview-2026-09-09.md",
     "verification/README.md",
     "verification/exact_coercivity_audit.py",
     "verification/classii_sign_audit.py",
@@ -47,6 +48,11 @@ PACKAGE_FILES = (
     "verification/review_packet_audit.py",
     "verification/clean_snapshot_replay.py",
     "verification/reproduction_manifest.py",
+    "verification/rereview_audit.py",
+    "verification/pdf_review.py",
+    "verification/runs/rereview.json",
+    "verification/runs/pdf-qa.json",
+    "verification/runs/render-review.json",
     "verification/runs/exact-coercivity.json",
     "verification/runs/classii-sign.json",
     "verification/runs/ensemble-identity.json",
@@ -56,6 +62,7 @@ PACKAGE_FILES = (
 )
 
 EXPECTED_AUDITS = {
+    "rereview": {"verdict": "PASS", "passed": 34, "total": 34},
     "exact-coercivity": {"verdict": "PAPER-EXACT-COERCIVITY-AUDIT-PASS", "passed": 13, "total": 13},
     "classii-sign": {"verdict": "PAPER-CLASSII-SIGN-AUDIT-PASS", "passed": 8, "total": 8},
     "ensemble-identity": {"verdict": "PAPER-ENSEMBLE-IDENTITY-AUDIT-PASS", "passed": 24, "total": 24},

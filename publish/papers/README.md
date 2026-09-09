@@ -9,15 +9,18 @@ cited claim set (rule M2); no paper may cite a claim above its registered tier
 
 ## Current draft registration
 
-- `a2-r157-r158-ensemble-minimizers/` — Draft v0.1.39.  This is the
+- `a2-r157-r158-ensemble-minimizers/` — Draft v0.1.41.  This is the
   self-contained fixed-side-16 classical A2/R-157/R-158 manuscript and its
   reproducibility package.  It cites `A2-FULL-PRODUCTION-WELLPOSED`, `R-157`,
   and `R-158`; `R-472` is assurance-only.  Its lifecycle remains `draft` and
-  it is not a submission, upload, tag, or publication record.  Version 0.1.39
-  classifies the unresolved canonical Laplacian shorthand as a TECT/P1
-  transfer-only gate and passes the complete finite replay, `20/20` review
-  packet, manifest, and 16-page PDF review at `EXP-001452`; governed
-  regeneration and repository release PASS are recorded at `EXP-001453`.  See the folder's
+  it is not a submission, upload, tag, or publication record. Version 0.1.41
+  adds the internal re-review at `EXP-001686`: Fourier normalization,
+  uniform midpoint continuity, distinct evolution-map notation, strict
+  `H^2` local minimality, and a rational spectral appendix. The refreshed
+  PDF has 18 visually inspected pages; theorem statements and coefficients
+  are unchanged. `rereview-2026-09-09.md` records the findings and the exact
+  finite/structural checks. The canonical Laplacian shorthand remains a
+  TECT/P1 transfer-only gate. See the folder's
   `STATUS.md` and `proof-audit.md` for the still-open independent mathematical,
   novelty, operator, and capstone gates; canonical source reconciliation is
   additionally required only for TECT/P1 transfer.

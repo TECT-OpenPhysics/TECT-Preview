@@ -1,0 +1,227 @@
+{
+  "archive_sha256": "f83ff3414680cb4f27ea465b00b6c97cfc5bb11c0de4f4f284ef0c756dccd807",
+  "assertions": {
+    "passed": 12,
+    "results": [
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 codes/foundations/a2_full_production_verify.py",
+        "expected_tokens": [
+          "ASSERTS: 61/61",
+          "A2-FULL-PRODUCTION-VERIFY-PASS"
+        ],
+        "output_tail": "PASS: a2_full_production_wellposedness_checks (20/20)\nPASS: a2_full_production_nonlinear_mapping_audit (14/14)\nPASS: a2_full_production_energy_continuation_audit (12/12)\nPASS: a2_full_production_smoothing_audit (15/15)\nASSERTS: 61/61\nA2-FULL-PRODUCTION-VERIFY-PASS",
+        "returncode": 0,
+        "script": "codes/foundations/a2_full_production_verify.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "f6b34cbf66c2ebb91762656d8e5fd1dec0a2cd55ce8d30c239d5451fd6040b05"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer.py",
+        "expected_tokens": [
+          "26/26 PASS"
+        ],
+        "output_tail": "A2-PINNED-FUNCTIONAL-UNIQUE-ZERO-GLOBAL-MINIMIZER: 26/26 PASS; g=719818750025582338837/5400000000000000000000 (0.133299768523)",
+        "returncode": 0,
+        "script": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "d1ea80c39bd038f1216c593f49880281c4d377c66afb9f7ba7f75961831c1dd0"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_independent.py",
+        "expected_tokens": [
+          "24/24 PASS"
+        ],
+        "output_tail": "A2-PINNED-FUNCTIONAL-UNIQUE-ZERO-GLOBAL-MINIMIZER independent: 24/24 PASS; g=719818750025582338837/5400000000000000000000",
+        "returncode": 0,
+        "script": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_independent.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "228131cb926f9a2575a716adcf64536bc86d7246833218e16eeec92484d1ed84"
+      },
+      {
+        "all_expected_tokens_present": false,
+        "command": "python -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+        "expected_tokens": [
+          "144/144 PASS",
+          "legacy A2 61/61 PASS"
+        ],
+        "output_tail": "Traceback (most recent call last):\n  File \"E:\\Dev\\TECT\\internal\\lane-workspaces\\paper\\tmp\\a2-clean-snapshot-3duvr82z\\snapshot\\codes\\foundations\\a2_pinned_functional_unique_zero_global_minimizer_verify.py\", line 369, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"E:\\Dev\\TECT\\internal\\lane-workspaces\\paper\\tmp\\a2-clean-snapshot-3duvr82z\\snapshot\\codes\\foundations\\a2_pinned_functional_unique_zero_global_minimizer_verify.py\", line 342, in main\n    raise AssertionError(json.dumps(failures, indent=2, ensure_ascii=True))\nAssertionError: [\n  {\n    \"group\": \"pdf\",\n    \"name\": \"deterministic rebuild\",\n    \"status\": \"FAIL\",\n    \"actual\": \"85e3a202033d6b84d01d2a7a482b493fc661ff7b4f0c8c96b3200932569743a9\",\n    \"expected\": \"e6f0f0738ca1830af9348f76a23eaeb45db40a14034a70e32001393440bfa20d\"\n  },\n  {\n    \"group\": \"pdf\",\n    \"name\": \"size pinned\",\n    \"status\": \"FAIL\",\n    \"actual\": \"302629\",\n    \"expected\": \"68102\"\n  }\n]",
+        "returncode": 1,
+        "script": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+        "status": "FAIL",
+        "stderr_sha256": "bea64edebc664a8760db4d593b7e4929c3d1879376b0b9ee9234a1629e296ec1",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition.py",
+        "expected_tokens": [
+          "35/35 PASS"
+        ],
+        "output_tail": "A2-CHARGE-ENSEMBLE-FIRST-ORDER-SHELL-TRANSITION: 35/35 PASS; mu_t in (0.266715709382, 0.266715709382)",
+        "returncode": 0,
+        "script": "codes/foundations/a2_charge_ensemble_first_order_shell_transition.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "3c8414c15a5761b922c862dc687c08af3ef2ed92b4d42d04d039cc14b4e03cfa"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_independent.py",
+        "expected_tokens": [
+          "24/24 PASS"
+        ],
+        "output_tail": "A2-CHARGE-ENSEMBLE-FIRST-ORDER-SHELL-TRANSITION-INDEPENDENT: 24/24 PASS; Q_star=11008/27",
+        "returncode": 0,
+        "script": "codes/foundations/a2_charge_ensemble_first_order_shell_transition_independent.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "aecfd751dba2d743243f565f54939be88c63baa8e294863b563d5cc51e52bbd0"
+      },
+      {
+        "all_expected_tokens_present": false,
+        "command": "python -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
+        "expected_tokens": [
+          "155/155 PASS",
+          "R-157/A2 regression PASS"
+        ],
+        "output_tail": "Traceback (most recent call last):\n  File \"E:\\Dev\\TECT\\internal\\lane-workspaces\\paper\\tmp\\a2-clean-snapshot-3duvr82z\\snapshot\\codes\\foundations\\a2_charge_ensemble_first_order_shell_transition_verify.py\", line 358, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"E:\\Dev\\TECT\\internal\\lane-workspaces\\paper\\tmp\\a2-clean-snapshot-3duvr82z\\snapshot\\codes\\foundations\\a2_charge_ensemble_first_order_shell_transition_verify.py\", line 331, in main\n    raise AssertionError(json.dumps(failures, indent=2, ensure_ascii=True))\nAssertionError: [\n  {\n    \"group\": \"regression\",\n    \"name\": \"R-157 verifier exits zero\",\n    \"status\": \"FAIL\",\n    \"actual\": \"1\",\n    \"expected\": \"0\"\n  },\n  {\n    \"group\": \"regression\",\n    \"name\": \"R-157 and legacy A2 retained\",\n    \"status\": \"FAIL\",\n    \"actual\": \"\",\n    \"expected\": \"R-157 integrated and legacy A2 61/61\"\n  },\n  {\n    \"group\": \"pdf\",\n    \"name\": \"deterministic rebuild\",\n    \"status\": \"FAIL\",\n    \"actual\": \"81ea81555a34c3b140b8d3bc2c7c731a0f66a4919635bfd10dd7871ef3d3c7c4\",\n    \"expected\": \"236e8ae25d6a1ab465a06eebaac85c0e6c2c581749a0cb0ca6d743c7fbebc6a2\"\n  },\n  {\n    \"group\": \"pdf\",\n    \"name\": \"size pinned\",\n    \"status\": \"FAIL\",\n    \"actual\": \"312797\",\n    \"expected\": \"72444\"\n  }\n]",
+        "returncode": 1,
+        "script": "codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
+        "status": "FAIL",
+        "stderr_sha256": "87c49d615d49b0fc0cdd91ae79105245f3048bd7dd9f790b3cc2987f627db0d9",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 verification/scripts/a2_r472_lean_crosscheck_verify.py --output tmp/r472-integrated.json",
+        "expected_tokens": [
+          "R-472 INTEGRATED PASS 22/22",
+          "Lean=PASS"
+        ],
+        "output_tail": "R-472 INTEGRATED PASS 22/22; Lean=PASS; methods unchanged",
+        "returncode": 0,
+        "script": "verification/scripts/a2_r472_lean_crosscheck_verify.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "bd8df9f9a676d4c7adcefc137ca0cef7b079a36deaf638e2638f3fb69726b9aa"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/exact_coercivity_audit.py",
+        "expected_tokens": [
+          "PAPER-EXACT-COERCIVITY-AUDIT-PASS: 13/13"
+        ],
+        "output_tail": "PAPER-EXACT-COERCIVITY-AUDIT-PASS: 13/13\nartifact: E:\\Dev\\TECT\\internal\\lane-workspaces\\paper\\tmp\\a2-clean-snapshot-3duvr82z\\snapshot\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\exact-coercivity.json",
+        "returncode": 0,
+        "script": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/exact_coercivity_audit.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "993a019c18d8f1644ab678b0f7ab50508911fd8d7dfdfb0a037bb69acb71cc5e"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/classii_sign_audit.py",
+        "expected_tokens": [
+          "PAPER-CLASSII-SIGN-AUDIT-PASS: 8/8"
+        ],
+        "output_tail": "PAPER-CLASSII-SIGN-AUDIT-PASS: 8/8\nartifact: E:\\Dev\\TECT\\internal\\lane-workspaces\\paper\\tmp\\a2-clean-snapshot-3duvr82z\\snapshot\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\classii-sign.json",
+        "returncode": 0,
+        "script": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/classii_sign_audit.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "3a29a39688e755c18e5b45286475f0ae98fc894b8702e2aa092bd57ffe989400"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/ensemble_identity_audit.py",
+        "expected_tokens": [
+          "PAPER-ENSEMBLE-IDENTITY-AUDIT-PASS: 24/24"
+        ],
+        "output_tail": "PAPER-ENSEMBLE-IDENTITY-AUDIT-PASS: 24/24\nartifact: E:\\Dev\\TECT\\internal\\lane-workspaces\\paper\\tmp\\a2-clean-snapshot-3duvr82z\\snapshot\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\ensemble-identity.json",
+        "returncode": 0,
+        "script": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/ensemble_identity_audit.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "9e4afc2c724b1f6bd49351e7f43faf68aac3d6564e4061f5ce7abf2f595fbf28"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/analytic_dependency_audit.py",
+        "expected_tokens": [
+          "PAPER-ANALYTIC-DEPENDENCY-AUDIT-PASS: 50/50"
+        ],
+        "output_tail": "PAPER-ANALYTIC-DEPENDENCY-AUDIT-PASS: 50/50\nartifact: E:\\Dev\\TECT\\internal\\lane-workspaces\\paper\\tmp\\a2-clean-snapshot-3duvr82z\\snapshot\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\analytic-dependency.json",
+        "returncode": 0,
+        "script": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/analytic_dependency_audit.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "29a079479545dcd322d749127bb3f0f3d55121809b6c5ac11d0111909c4c0d53"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py --self-test",
+        "expected_tokens": [
+          "PAPER-REVIEW-PACKET-AUDIT-PASS: 22/22"
+        ],
+        "output_tail": "PAPER-REVIEW-PACKET-AUDIT-PASS: 22/22\nartifact: E:\\Dev\\TECT\\internal\\lane-workspaces\\paper\\tmp\\a2-clean-snapshot-3duvr82z\\snapshot\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\review-packet.json",
+        "returncode": 0,
+        "script": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/review_packet_audit.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "282a5873373699e37204b613ba0de7f1f2423ef0beed6552edf2c1c5f61cccf3"
+      },
+      {
+        "all_expected_tokens_present": true,
+        "command": "python -X utf8 publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py --self-test",
+        "expected_tokens": [
+          "PAPER-REPRODUCTION-MANIFEST-PASS"
+        ],
+        "output_tail": "PAPER-REPRODUCTION-MANIFEST-PASS\nartifact: E:\\Dev\\TECT\\internal\\lane-workspaces\\paper\\tmp\\a2-clean-snapshot-3duvr82z\\snapshot\\publish\\papers\\a2-r157-r158-ensemble-minimizers\\verification\\runs\\reproduction-manifest.json",
+        "returncode": 0,
+        "script": "publish/papers/a2-r157-r158-ensemble-minimizers/verification/reproduction_manifest.py",
+        "status": "PASS",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "2288a890e2d3e9448eb9632805aedc746bb226ea04a61ed10561529ab960e64a"
+      }
+    ],
+    "total": 14
+  },
+  "fatal_error": "",
+  "generated_at": "2026-09-09T00:48:17Z",
+  "interpreter": {
+    "executable": "E:\\Dev\\TECT.venv\\Scripts\\python.exe",
+    "python": "3.12.9",
+    "sympy": "1.14.0"
+  },
+  "lean_environment": {
+    "cache_link_type": "junction",
+    "cache_path": "E:\\Dev\\TECT\\verification\\lean\\.lake",
+    "lake_manifest_sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+    "non_bearing": true,
+    "registry_sha256": "c6341bab6c512699743c5263ca96b197c57dc03e871ef05514c8a70f073fd0d7"
+  },
+  "non_claims": [
+    "This is a clean tracked-source replay, not a fresh operating-system or network bootstrap.",
+    "The external Python environment and pre-resolved Lean dependency cache are recorded inputs.",
+    "The non-bearing R-472 Lean sidecar does not promote the A2/R-157/R-158 theorem claims.",
+    "Passing executable checks does not replace analytic or specialist external review."
+  ],
+  "paper_id": "a2-r157-r158-ensemble-minimizers",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "requirements_sha256": "a142ca8b90c21fc3eacbf25c73e567e9ab1fc01b1517489eaff05d3cbd1735c8",
+  "resolved_commit": "",
+  "resolved_object_type": "tree",
+  "resolved_tree": "6afde438e08da5453f0a86b4993796b799f9fe6e",
+  "schema": "tect/paper-clean-snapshot-replay/1.0",
+  "snapshot_manifest_sha256": "952954fea78b1af5dba62d17fe76e4805726dc4be64f5078e882b62405877616",
+  "source_worktree_clean_before_replay": false,
+  "tracked_file_count": 9650,
+  "treeish": "6afde438e08da5453f0a86b4993796b799f9fe6e",
+  "verdict": "PAPER-CLEAN-SNAPSHOT-REPLAY-FAIL"
+}

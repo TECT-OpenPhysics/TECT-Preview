@@ -211,6 +211,37 @@ def interpreter_record(python: Path) -> dict[str, Any]:
     return json.loads(probe.stdout)
 
 
+def tex_environment(environment: dict[str, str], tectonic: Path | None):
+    """Pin the historical Tectonic rebuild without changing the pinned builder.
+
+    The inherited builder prefers pdflatex whenever it is on PATH. Its
+    historical exact-byte PDF contract was produced by Tectonic, so an
+    explicit pin removes only competing TeX-engine PATH entries in this
+    child process. No installation, global PATH edit or source-hash change.
+    """
+    result = dict(environment)
+    if tectonic is not None:
+        engine = tectonic.resolve(strict=True)
+        if not engine.is_file() or engine.stem.lower() != "tectonic":
+            raise ValueError("--tectonic must identify a Tectonic executable")
+        retained = []
+        for entry in result.get("PATH", "").split(os.pathsep):
+            if not entry:
+                continue
+            folder = Path(entry)
+            if any((folder/name).is_file() for name in
+                   ("pdflatex", "pdflatex.exe", "pdflatex.cmd", "pdflatex.bat")):
+                continue
+            retained.append(entry)
+        result["PATH"] = os.pathsep.join([str(engine.parent), *retained])
+        selected = shutil.which("tectonic", path=result["PATH"])
+        if selected is None or Path(selected).resolve() != engine:
+            raise RuntimeError("Tectonic pin did not resolve to the requested executable")
+        if shutil.which("pdflatex", path=result["PATH"]):
+            raise RuntimeError("Competing pdflatex remains in the child environment")
+    return result
+
+
 def self_test() -> None:
     assert command_script("python -X utf8 a.py") == "a.py"
     try:
@@ -226,6 +257,15 @@ def self_test() -> None:
         + [{"command": f"python -X utf8 {SELF_RELATIVE}"}]
     }
     assert len(nested_commands(fake)) == 14
+    source_environment = {"PATH": "", "A2_TEST": "retained"}
+    assert tex_environment(source_environment, None) == source_environment
+    assert tex_environment(source_environment, None) is not source_environment
+    try:
+        tex_environment(source_environment, Path(__file__))
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("non-Tectonic executable was accepted")
 
 
 def replay(
@@ -235,6 +275,7 @@ def replay(
     lean_cache: Path,
     output: Path,
     keep_workdir: bool,
+    tectonic: Path | None = None,
 ) -> int:
     commands: list[dict[str, Any]] = []
     interpreter: dict[str, Any] = {}
@@ -254,6 +295,7 @@ def replay(
     cache_link_type = "not-linked"
     rows: list[dict[str, Any]] = []
     fatal_error = ""
+    tex_record: dict[str, Any] = {}
     try:
         interpreter = interpreter_record(python)
         resolved_object = git("rev-parse", treeish)
@@ -302,7 +344,18 @@ def replay(
                 f"snapshot file count mismatch: {snapshot_files} != {tracked_files}"
             )
 
-        environment = os.environ.copy()
+        environment = tex_environment(os.environ.copy(), tectonic)
+        selected_tex = shutil.which("tectonic", path=environment.get("PATH", ""))
+        sibling_tex = python.resolve().parent / "tectonic.exe"
+        if selected_tex is None and sibling_tex.is_file():
+            selected_tex = str(sibling_tex)
+        tex_record = {
+            "explicit_tectonic": str(tectonic.resolve()) if tectonic else None,
+            "pdflatex_on_child_path": shutil.which("pdflatex", path=environment.get("PATH", "")),
+            "tectonic": selected_tex,
+            "tectonic_sha256": sha256(Path(selected_tex)) if selected_tex else None,
+            "selection_rule": "inherited note builder prefers pdflatex unless explicitly excluded by --tectonic",
+        }
         environment["PYTHONUTF8"] = "1"
         environment["TECT_PYTHON"] = str(python)
         for item in commands:
@@ -374,6 +427,7 @@ def replay(
         "interpreter": interpreter,
         "requirements_sha256": sha256(REPO_ROOT / "requirements.txt"),
         "platform": platform.platform(),
+        "tex_environment": tex_record,
         "lean_environment": {
             "non_bearing": True,
             "cache_path": str(lean_cache.resolve()),
@@ -415,6 +469,8 @@ def main() -> int:
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--keep-workdir", action="store_true")
     parser.add_argument("--self-test", action="store_true")
+    parser.add_argument("--tectonic", type=Path,
+                        help="pin historical Tectonic PDF rebuilding; exclude competing pdflatex only in child PATH")
     args = parser.parse_args()
     if args.self_test:
         self_test()
@@ -424,6 +480,7 @@ def main() -> int:
         lean_cache=args.lean_cache.resolve(),
         output=args.output.resolve(),
         keep_workdir=args.keep_workdir,
+        tectonic=args.tectonic,
     )
 
 
