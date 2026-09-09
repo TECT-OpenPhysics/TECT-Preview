@@ -1670,6 +1670,80 @@
       "title": "PAH-OMC-030 finite-strip to minimal Markov bridge",
       "verdict": "inconclusive",
       "verification_summary": "Primary, independent, hostile and integrated outputs all PASS with verdict HOLD_FOR_EVIDENCE. Lean is partial only; inherited R-514 replay timeout is a tooling boundary, not a mathematical counterexample."
+    },
+    {
+      "boundary": "Only the unchanged PAH-001 model, R-510/R-511/R-512 scope, original external Markov time and j-before-anchored-n order are considered. Snapshot scanning is provenance-only and does not construct a map, process, form limit or physical interpretation.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "classification": "auxiliary_support",
+      "decision_reason": "This is a genuine current-byte provenance advance, not a universal nonexistence result: the prior snapshot could no longer be reused, so the fresh manifest and replay are now the authoritative re-entry boundary. Existing R-539/R-533/R-569 holds remain unchanged; the next required change is an owner-authorized packet or an exact PAH counterexample.",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.5.json#source_authorized_packet_present",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc020-owner-snapshot-v1.5/primary.json#finding",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json#current_finding",
+        "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json#finding",
+        "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-result-v1.json#missing_assumptions",
+        "strategy/pa-hyp/PAH-OMC-030-result-v1.json#missing_bridge"
+      ],
+      "finding": "The fixed v1.4 owner snapshot was stale after R-569: detect-new reported 284 current marker-bearing candidates, changed temporal-work bytes and added researcher-owned records. A new current-byte snapshot v1.5 was created and replayed in 1447/1447 checks. It has 284 candidates, authorized_paths=[], complete_paths=[] and source_authorized_packet_present=false. Remote refs remain codex/tect=eb9a5de5483246276bbafd9898f222598f3f6916 and main=9885cad4aa25635f05e9f5dadf391f4c3aac751f. No source-authorized U_n or N2b/N2c/N4/N2d packet was found.",
+      "formal_refs": {
+        "events": [
+          "20260909-r-569-pah-omc-030-finite-strip-to-minimal-marko"
+        ],
+        "negatives": [],
+        "results": [
+          "R-539",
+          "R-533",
+          "R-569"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001722",
+      "method": [
+        "Run the prior v1.4 snapshot detector after the R-569 checkpoint and record changed/added candidates.",
+        "Create a new byte-frozen current snapshot over strategy/pa-hyp marker files with source authorization parsed from JSON provenance, not marker prose.",
+        "Replay the new manifest and all pinned parents; require empty authorized and complete sets.",
+        "Cross-check the canonical E:/Dev/TECT workspace and remote refs without modifying them, then preserve the exact owner re-entry condition."
+      ],
+      "next_action": "REVIEW_REQUIRED for source input. Obtain a versioned owner declaration and all ten R-557 fields (authority, root semantics, common realization/U_n, N1, N2b form liminf/recovery, N2c/N4 boundary escape, N2d target, full-domain J, anchored D and verification manifests). Do not repeat unchanged owner scans until a parent/candidate hash changes.",
+      "non_claims": [
+        "No source-authorized U_n/common-Hilbert packet was found or constructed",
+        "No n-uniform N2b, N2c/N4, N2d, full-domain J or anchored-D theorem follows",
+        "No finite-to-target convergence and no physical Pre-A, Sector-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion"
+      ],
+      "provenance": "contemporaneous",
+      "question": "After the R-569 checkpoint and current remote/canonical workspace state, does any current PAH-OMC-020 candidate supply a source-authorized common-space U_n packet and the five required n-uniform comparison fields?",
+      "recorded_at": "2026-09-09T10:26:11Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001721",
+          "relation": "continues"
+        }
+      ],
+      "reproduction": {
+        "create": "python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot.py --create --created-at 2026-09-09T10:23:15Z --snapshot strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.5.json",
+        "detect_new": "python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot.py --detect-new",
+        "replay": "python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot.py --check --snapshot strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.5.json --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc020-owner-snapshot-v1.5/primary.json"
+      },
+      "reviewed_on": "2026-09-09",
+      "revisit_condition": "Reopen only when a new source-authorized packet or candidate-byte/parent-hash change appears. Until then, do not repeat the same snapshot or infer U_n, N2b, N2c/N4, N2d or semigroup convergence from absence.",
+      "schema": "tect/proof-exploration/1.0",
+      "source_hashes": {
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc020-owner-snapshot-v1.5/primary.json": "94b4998b832e5eb7533cfcd6e8fcab0d38dcb10dc449655a03b6cd6c499c2cf3",
+        "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+        "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-result-v1.json": "9013fe5337965478c2e91c84fa693eacf3dbd0d948a3b2cafb900332d8b9dd19",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.5.json": "bcf800acd7ea353d5081c2038544422e63a7b0bf7a3c63dd5a80647b2cd39ae5",
+        "strategy/pa-hyp/PAH-OMC-030-result-v1.json": "327878ec159014991bc06491de467e21f2fde28fecf4ec5f1e33818fdf4491a6"
+      },
+      "task_id": "T-097",
+      "title": "PAH-OMC-030 fresh owner-packet snapshot after R-569",
+      "verdict": "inconclusive",
+      "verification_summary": "Current snapshot replay PASS 1447/1447; source_authorized_packet_present=false; authorized_paths=[]; complete_paths=[]. No mathematical counterexample or physical promotion."
     }
   ],
   "kind": "proof_explorations",
