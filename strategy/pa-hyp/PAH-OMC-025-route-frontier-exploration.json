@@ -1,0 +1,83 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001695",
+  "recorded_at": "2026-09-08T13:43:50Z",
+  "reviewed_on": "2026-09-08",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-092",
+  "title": "PAH-OMC-025 route-independent minimal owner cut-set",
+  "question": "Do the existing PAH-OMC-020 records reduce every admissible route to a common minimal cut-set of source semantics, comparison/target identification, and full-domain temporal control, without adding a new model or repeating a finite diagnostic?",
+  "method": [
+    "Hash-pin PAH-001, the PAH-OMC-020 temporal preregistration, the PAH-OMC-025 contract and the six parent route records R-534, R-536, R-542, R-557, R-559 and R-564.",
+    "Audit S0 source semantics, the disjoint FORM_ROUTE and PATH_ROUTE alternatives for S1, and S2 full-domain temporal control against the exact parent scopes.",
+    "Reject partial routes, radial-only evidence, source-level nonuniqueness over-promotion and stationary-average-to-stopping-time promotion.",
+    "Run primary, independent, hostile and integrated replays and compile the finite Boolean cut-set theorem under the pinned Lean 4.32.1 toolchain."
+  ],
+  "verdict": "advanced",
+  "finding": "The existing route contracts admit one route-independent minimal cut-set: S0 source semantics and finite-generator identity, one complete S1 form or path comparison/target-identification route, and S2 full-domain temporal control in the original j-before-anchored-n quantifiers. The cut-set is explicit, but current records instantiate none of its three cuts; the actual PAH-OMC-020 route remains HOLD_FOR_EVIDENCE.",
+  "decision_reason": "This is a reusable auxiliary route-control advance that prevents repeating the same owner search, finite carrier calculations or abstract diagnostics. It does not advance the mainline because no source-authorized packet fills the cut-set.",
+  "boundary": "PAH-001 functional, rates, state, carrier, external stochastic Markov time and j-before-anchored-n order are unchanged. No new carrier, counterterm, rate fitting, abstract oracle, physical projection or finite model is introduced. R-559 remains source-level only and R-564 remains a logical non-implication diagnostic.",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-contract-v1.json#cut_set",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-result-v1.json#exact_scope",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-certificate.md#Cut-set audit",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc025-route-frontier/integrated.json#checks"
+  ],
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-534",
+      "R-536",
+      "R-542",
+      "R-557",
+      "R-559",
+      "R-564",
+      "R-565"
+    ],
+    "negatives": [],
+    "events": [
+      "20260908-pah-omc-025-route-independent-owner-cut-set-202"
+    ]
+  },
+  "related": [
+    {
+      "id": "EXP-001694",
+      "relation": "continues"
+    }
+  ],
+  "verification_summary": "Primary 42/42, independent 25/25, hostile 11/11, integrated 16/16, and Lean PASS under Lean 4.32.1 with eight finite declarations.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc025_route_frontier.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc025_route_frontier_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc025_route_frontier_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc025_route_frontier_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc025RouteFrontier.lean"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-contract-v1.json": "2171ae18d545ff26bfad9d5cb475d75c31280679fa41609a44ad143d9d7a9dd4",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-result-v1.json": "6e628f6e60f15da4c7585b88ef284b18847117c3db2fc8ceef784c1f24baaf63",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-certificate.md": "2cf533562d41dd0fce5feb5309155046d7a088cbade01f3db6c811618f83282a",
+    "verification/scripts/pah_omc025_route_frontier.py": "ef3590d3fd4be12b97cf34f49acf1b19c7707f98c0e0d0caaa9aea5981aa6ef2",
+    "codes/foundations/pah_omc025_route_frontier_independent.py": "eef999291d0477f35d2a811f2b9104434bc705e0b03b501e9e3df091a7e7d46a",
+    "codes/foundations/pah_omc025_route_frontier_hostile.py": "b82f3be25b8cd0824476838f513166806c348af7be2e90b88fcc1817d0507736",
+    "verification/scripts/pah_omc025_route_frontier_verify.py": "5fc52652655dd45bb04ce61d75e3d8c8194df9f90aa134bc2b0fad6d37770b24",
+    "verification/lean/Tect/PahOmc025RouteFrontier.lean": "e225055792c36e8c6d8f903547bf398b4ceb19bd45870a43d4b6fc10023f7907",
+    "verification/lean/registry.json": "96c92aa43aa76d02ef1f963a30085144cb55d8959ebdfb6842eb32686264b75b",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc025-route-frontier/integrated.json": "f56bcc0654d0ae994d43537d292fe34272dc66a78d2b0098b4dd0338919a50f3"
+  },
+  "next_action": "Obtain one source-authorized, hash-pinned packet that instantiates S0 plus either complete S1 route and S2 without changing PAH-001 or its j-before-anchored-n order; do not repeat existing finite or abstract diagnostics.",
+  "revisit_condition": "Reopen only when that owner packet is present or an exact unchanged-source contradiction to the route rule is found.",
+  "non_claims": [
+    "This route-frontier synthesis is not PAH-OMC-020 convergence and is not a universal no-go for owner-fixed successors.",
+    "No common Hilbert space, path law, compensator, generator, carrier, rate, state, regulator or limit is constructed.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, continuum, mass-gap or TOE conclusion; external Markov time remains stochastic bookkeeping."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001713",
+  "recorded_at": "2026-09-08T17:06:44Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-09",
+  "provenance": "contemporaneous",
+  "task_id": "T-094",
+  "title": "PAH-OMC-020 anchored-n route completeness and current-byte audit",
+  "question": "After the fixed-n and provenance re-entry, do the current PAH-OMC-020 source bytes supply either complete R-536 form/path route, or does the ordered-correlation objective remain at the same anchored-n owner-packet cut-set?",
+  "method": [
+    "Run the current PAH-OMC-020 owner-delta check against the registered Contents cutoff without changing PAH-001 or the j-before-anchored-n order.",
+    "Replay R-536 target identification and inspect every five-field form/path route flag, including the exact D_n target and its compact-time quantifiers.",
+    "Replay the R-539 N2b primary and hostile lanes; recompute the non-importing independent lane to a temporary output and compare its stored inventory against the current source tree.",
+    "Replay R-557 owner-packet sufficiency and keep its ten-field theorem conditional; do not construct a common Hilbert map, path law, rate, state, carrier or physical interpretation."
+  ],
+  "finding": "The owner delta remains PASS_NO_NEW_INPUT (total=7503; fresh_after_cutoff=0). R-536 integrated replay passes 23/23: the exact R-512 target form is present, but form common-Hilbert map, liminf, recovery and correlation transfer are false, while all five path-route fields are false. R-557 integrated replay passes 22/22 and still finds no source-authorized ten-field packet. R-539 primary and hostile replays pass 22/22 and 12/12; its independent computation passes 16/16 to a temporary output, but the stored independent artifact is stale because its inventory has 201 paths while the current tree has 203, with the two added paths strategy/pa-hyp/PAH-OMC-020-N2B-owner-provenance-false-positive-correction-exploration.json and strategy/pa-hyp/PAH-OMC-020-source-level-lean-revalidation-exploration.json. The integrated R-539 --check therefore refuses on provenance drift, not on a mathematical contradiction. No complete source-authorized route or anchored D_n estimate is present.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This checkpoint makes the remaining cut-set and a new replay-stability boundary explicit. The only change detected since the prior provenance correction is the current inventory growth that invalidates the old R-539 stored independent artifact; the semantic independent checks still pass and no PAH source or analytic conclusion changed. The mainline remains HOLD_FOR_EVIDENCE rather than MAINLINE_ADVANCE or NEGATIVE_RESULT.",
+  "boundary": "PAH-001, PAH-OMC-018/020, the original functional, transition rates, labelled Gibbs state, external stochastic Markov time, normalization, finite carrier and j-before-anchored-n order remain fixed. No source-authorized comparison map, common realization, counterterm, direct sum, averaging or physical interpretation is introduced.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-536",
+      "R-539",
+      "R-557"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json#route_status",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-target-identification/integrated.json#checks",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json#missing_assumptions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/integrated.json#checks",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json#required_packet_fields",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/integrated.json#checks",
+    "verification/scripts/pah_omc020_owner_delta_after_r566.py#main",
+    "explorations/log.jsonl#EXP-001712"
+  ],
+  "formal_refs_detail": {
+    "owner_delta": "PASS_NO_NEW_INPUT",
+    "r536": "integrated 23/23, HOLD_FOR_EVIDENCE",
+    "r539_primary": "22/22",
+    "r539_hostile": "12/12",
+    "r539_independent_recompute": "16/16 to temporary output; stored artifact mismatch only",
+    "r557": "integrated 22/22, HOLD_FOR_EVIDENCE"
+  },
+  "requirement_matrix": {
+    "form_route": {
+      "common_hilbert_map": false,
+      "form_liminf": false,
+      "form_recovery": false,
+      "target_form_exact": true,
+      "form_correlation_transfer": false,
+      "status": "MISSING"
+    },
+    "path_route": {
+      "common_path_space": false,
+      "path_tightness": false,
+      "path_generator_equality": false,
+      "path_uniqueness": false,
+      "path_correlation_transfer": false,
+      "status": "MISSING"
+    },
+    "owner_packet": {
+      "required_fields": 10,
+      "source_authorized_packet_present": false,
+      "status": "MISSING"
+    },
+    "verification": {
+      "r536": "PASS_FOR_BOUNDARY_ONLY",
+      "r539": "SEMANTIC_LANES_PASS_STORAGE_DRIFT",
+      "r557": "PASS_FOR_CONDITIONAL_SUFFICIENCY_ONLY"
+    }
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93bd369ce9478af1df1e7c6633acf5285db87432de137542daa4",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-target-identification/integrated.json": "d468128a121ab72abc2dfb98136fa9356efa7e5b1b4a7ad9de05ec5f4234e62e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/integrated.json": "6f526547a827c3824416fb5759de30acd89230227dfaaad894ac4c208a793e44",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/integrated.json": "b90e62ac6f21be561a17275473db1d96382197fffb6162748e1af3bafbb127d3",
+    "verification/scripts/pah_omc020_target_identification_verify.py": "3490802431176c90fcebe82cb1a8e52b2fd830c76a74ee1399741e41db1d31c9",
+    "verification/scripts/pah_omc020_n2b_common_space_audit_v11_verify.py": "4ccaca3af252becaab965594b38de2670e6afceec83de8ee0e4f12c31548e5e5",
+    "verification/scripts/pah_omc020_owner_packet_sufficiency_verify.py": "2a8bd798d4e2ac935fadabbe6183d03f66b67fd5d62ececb3b2b9bb6ffce639d",
+    "verification/scripts/pah_omc020_owner_delta_after_r566.py": "1aa2bfa518f094f6d1efb80d7d4fbc06b83522ab665bda13846f12bbdf49c811",
+    "verification/lean/registry.json": "d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4"
+  },
+  "reproduction": {
+    "owner_delta": "python -X utf8 verification/scripts/pah_omc020_owner_delta_after_r566.py --check",
+    "r536": "python -X utf8 verification/scripts/pah_omc020_target_identification_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "r539_primary": "python -X utf8 verification/scripts/pah_omc020_n2b_common_space_audit_v11.py --check",
+    "r539_independent": "python -X utf8 codes/foundations/pah_omc020_n2b_common_space_audit_v11_independent.py --check",
+    "r539_hostile": "python -X utf8 codes/foundations/pah_omc020_n2b_common_space_audit_v11_hostile.py --check",
+    "r557": "python -X utf8 verification/scripts/pah_omc020_owner_packet_sufficiency_verify.py --check"
+  },
+  "next_action": "Wait for one versioned source-authorized packet satisfying all ten R-557 fields, or an exact unchanged-PAH contradiction to a registered target correlation; then rerun the unchanged admission predicates and repair only the stale R-539 storage pin.",
+  "revisit_condition": "Reopen when a source-authorized hash-pinned packet appears, a genuine PAH parent byte changes, or an exact unchanged-source contradiction is supplied. Do not repeat finite carriers, static coupling fixtures, physical-empty, BCC or Reading-H calculations while these inputs remain absent.",
+  "verification_summary": "Owner delta PASS_NO_NEW_INPUT; R-536 integrated 23/23; R-539 primary 22/22 and hostile 12/12 with independent semantic recomputation 16/16 but stored inventory drift 201-to-203; R-557 integrated 22/22. All conclusions remain conditional or auxiliary and no active gate changes.",
+  "related": [
+    {
+      "id": "EXP-001712",
+      "relation": "continues"
+    }
+  ],
+  "non_claims": [
+    "This audit does not prove anchored-n D_n convergence, R-512 minimal-form identification or full PAH-OMC-020 stationary-semigroup convergence.",
+    "The R-539 stored-artifact mismatch is provenance drift, not a mathematical counterexample and not a universal no-go for an owner-fixed successor.",
+    "No PAH functional, rate, state, carrier, regulator, normalization, external Markov time or limit-order change is made.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion is made."
+  ]
+}

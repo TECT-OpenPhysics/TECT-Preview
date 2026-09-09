@@ -1,0 +1,64 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001678",
+  "title": "PAH-OMC-020 fresh current-byte owner-search snapshot v1.4",
+  "task_id": "T-064",
+  "question": "After the R-553 positive-time checkpoint and the v1.3 detect-new reopen trigger, does the repository contain a source-authorized and complete common-space/path-space owner packet for the anchored-n comparison?",
+  "finding": "No qualifying owner packet is present. The fresh v1.4 manifest has 192 marker-bearing candidates, manifest SHA-256 caabc7d52c45a24e15d0d973fb494be7f43bd4df0575f341688edbaed1b97b26, snapshot SHA-256 47b0879ff4c55fe3d60a11cd744d6920a3e3eb18bf923cdd4782fa7e7674b4e9, zero authorized paths and zero complete paths. Primary 987/987, non-importing independent 779/779, hostile 10/10 and integrated 29/29 agree. This is current repository provenance, not a universal impossibility theorem or analytic counterexample.",
+  "decision_reason": "The v1.3 fixed snapshot correctly reported its earlier byte state, but --detect-new found later R-553 and related PAH-OMC-020 records. This successor reopens the provenance checkpoint without editing v1.3 or treating researcher-owned records as source authorization. Because no owner fields are supplied, the anchored comparison remains HOLD_FOR_EVIDENCE and no finite carrier or physical reinterpretation is repeated.",
+  "boundary": "PAH-001, PAH-OMC-020 preregistration, original labelled rates, Gibbs state, external Markov time and j-before-anchored-n order remain unchanged. No U_n, common Hilbert space, path process, N2b/N2c/N4/N2d limit, new carrier, rate, counterterm, averaging or physical interpretation is constructed.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "verdict": "inconclusive",
+  "recorded_at": "2026-09-08T08:20:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "related": [{"id": "EXP-001677", "relation": "continues"}],
+  "method": [
+    "Run --detect-new against the v1.3 fixed owner snapshot and preserve the reopen trigger rather than rewriting its manifest.",
+    "Create a fresh byte-frozen v1.4 snapshot at 2026-09-08T08:20:00Z with 192 marker-bearing candidates and zero authorization/completion paths.",
+    "Replay the snapshot with the primary verifier, a non-importing independent implementation and hostile mutation controls.",
+    "Run the integrated v1.4 verifier and preserve the owner-field boundary: common H/U_n, anchored N2b liminf/recovery, N2c/N4 escape and R-512 minimal identification remain absent."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.4.json#candidate_records",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-contract.json#acceptance",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json#conclusion",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-certificate.md#Finding-and-decision",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.4/integrated.json#checks"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.4.json": "47b0879ff4c55fe3d60a11cd744d6920a3e3eb18bf923cdd4782fa7e7674b4e9",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-contract.json": "7c96f6ce2eb432512a48f0e74650121b3e0f331058c5587f34e31a8d67b2586c",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-certificate.md": "eeeefc201c021c2c5227d6e546a1c0a598dfd6f9e93f489d7381bdd7ec681b07",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json": "54329df2a6d3ca766f6ca24fbcc628263e6c7e8c2c0e8c8eba545f3508d75df7",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.4/primary.json": "9699032a9cb72250d9055256cfb3edc76cc1049cbbbf0e649d7aae26258aac53",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.4/independent.json": "a04ded2b96140363808bf87442157f6c3e6733e2989c971e1cb7eba841e1ba4a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.4/hostile.json": "6b658c7dbac410dc5e5c22d26a69009d754ca51842b3b56e75a0b1280659084f",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.4/integrated.json": "83cc8b8483d1460768f19d5d9c6b38710e95d2e51639c8de9f92560a1e785fd2"
+  },
+  "formal_refs": {
+    "events": ["20260908-r-554-pah-omc-020-owner-snapshot-v1-4-2026-09-0"],
+    "negatives": [],
+    "results": ["R-547", "R-552", "R-553", "R-554"]
+  },
+  "next_action": "Require exactly one source-authorized, versioned packet with the common H/U_n comparison, invariant cylinder core, anchored N2b liminf/recovery, N2c/N4 boundary escape and R-512 minimal-form identification; do not repeat finite carrier or physical calculations.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot.py --snapshot strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.4.json --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.4/primary.json --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_owner_snapshot_v11_independent.py --snapshot strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.4.json --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.4/independent.json --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_owner_snapshot_v11_hostile.py --snapshot strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.4.json --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot-v1.4/hostile.json --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_owner_snapshot_v14_verify.py --check"
+  },
+  "revisit_condition": "Reopen when a new candidate contains all required owner fields and a signer or source authority, or when a pinned parent byte changes. Otherwise keep the anchored semigroup route HOLD_FOR_EVIDENCE.",
+  "non_claims": [
+    "No source-authorized U_n/common-Hilbert map, path-space law, non-explosion/uniqueness theorem, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal-form identification or PAH-OMC-020 semigroup convergence.",
+    "No universal impossibility theorem follows from the empty current snapshot.",
+    "No PAH-001 functional, rate, state, carrier, regulator, normalization, external Markov time or limit-order change.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "verification_summary": "Primary 987/987, independent 779/779, hostile 10/10, integrated 29/29 pass. Verdict is HOLD_FOR_EVIDENCE; no active gate or claim tier changes."
+}

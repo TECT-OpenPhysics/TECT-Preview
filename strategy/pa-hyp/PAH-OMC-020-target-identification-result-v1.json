@@ -1,0 +1,140 @@
+{
+  "schema": "tect/pah-omc020-target-identification-result/1.0",
+  "result_id": "R-536",
+  "contract_id": "PAH-OMC-020-TARGET-IDENTIFICATION",
+  "date": "2026-09-08",
+  "task_id": "T-078",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXACT_SOURCE_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-target-identification-contract-v1.json",
+  "exploration_id": "EXP-001656",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-result-v1.json": "a96b95f704ca9f7289bdc4767cd46a90f4bf3567ab1c3f2fae2b813840a11adc",
+    "strategy/pa-hyp/PAH-OMC-020-kd-term-ledger-result-v1.json": "d30ae9b327a67216dfa7c242dc29c77ffca5bb3a052c721025f98f520bc554f2",
+    "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-result-v1.json": "9013fe5337965478c2e91c84fa693eacf3dbd0d948a3b2cafb900332d8b9dd19",
+    "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json": "0e0268925eee2dd4b74ed5b279f4a56fb66637f86cb9faa608df1edbb99c7299"
+  },
+  "exact_scope": {
+    "model": "Exactly unchanged PAH-001 and its original directed PH/LK/AP/TR rates, labelled Gibbs state and OMC-004 strip.",
+    "observable": "Every bounded local cylinder pair in the declared PAH-OMC-020 domain, at a finite compact external Markov-time horizon T.",
+    "defect": "D_n(f,g;T)=sup_{0<=t<=T}|c_n(f,g;t)-<f,T_min(t)g>_(nu_infty)|.",
+    "order": "j tends to infinity at fixed n first, followed by the anchored n exhaustion; no diagonal or reversed order.",
+    "target": "R-512 minimal closed-form spectral semigroup only; no maximal-extension or phasewise direct-sum substitution.",
+    "normalization": "Original labelled Gibbs normalization; R-490 C_sw remains domination-only.",
+    "time": "External stochastic Markov time only; no quantum, proper or Lorentzian interpretation."
+  },
+  "conditional_statement": "If one complete source-authorized form route or path route is supplied with its declared quantifiers, then target convergence and uniqueness imply D_n(f,g;T)->0 for every registered local pair; this is precisely the missing D term in R-534.",
+  "route_status": {
+    "form_route": {
+      "complete": false,
+      "fields": {
+        "common_hilbert_map": false,
+        "form_liminf": false,
+        "form_recovery": false,
+        "target_form_exact": true,
+        "form_correlation_transfer": false
+      }
+    },
+    "path_route": {
+      "complete": false,
+      "fields": {
+        "common_path_space": false,
+        "path_tightness": false,
+        "path_generator_equality": false,
+        "path_uniqueness": false,
+        "path_correlation_transfer": false
+      }
+    }
+  },
+  "finding": "The exact R-512 target form is present, but the pinned corpus contains neither a complete common-Hilbert Mosco/resolvent identification route nor a complete common-path martingale route. D_n remains absent.",
+  "assumptions": [
+    "R-512/R-530 fixed target form and spectral semigroup are inherited at their registered conditional scope.",
+    "A future source-authorized route will preserve the original PAH-001 function, rates, state, normalisation, time and limit order.",
+    "The R-534 triangle remains the exact sequential comparison once its K and D inputs are instantiated."
+  ],
+  "missing_assumptions": [
+    "One source-authorized common-Hilbert U_n packet with cylinder recovery, norm compatibility, form liminf, recovery and compact-time correlation transfer; or an equivalent complete path packet.",
+    "Target-process/form equality and uniqueness for the exact R-512 minimal form, not merely a named target or static Gibbs convergence.",
+    "Anchored-n compact-time and terminal-square quantifiers with the original normalization."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The closed R-512 Dirichlet form already identifies the finite process.",
+      "disposition": "UPHELD AGAINST PROMOTION: R-530 explicitly leaves finite-to-target identification and path construction open."
+    },
+    {
+      "objection": "A local cylinder map or static L2 contraction is enough for D_n.",
+      "disposition": "UPHELD AGAINST PROMOTION: R-529's abstract oracle separates static norm contraction from dynamic energy compatibility."
+    },
+    {
+      "objection": "The conditional triangle in R-534 itself proves D_n->0.",
+      "disposition": "UPHELD AGAINST PROMOTION: the triangle is an implication with D_n as an independent hypothesis."
+    },
+    {
+      "objection": "An empty owner audit is a universal no-go theorem.",
+      "disposition": "REJECTED: R-533 is a current-byte repository audit; a later versioned owner packet remains admissible."
+    },
+    {
+      "objection": "External Markov time can be read as physical time.",
+      "disposition": "REJECTED: the time firewall is retained in the contract and every run."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-512", "R-529", "R-530", "R-533", "R-534", "R-535"],
+    "negatives": [],
+    "events": []
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_target_identification.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_target_identification_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_target_identification_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_target_identification_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020Target.lean",
+    "result": "Primary 42/42, independent 33/33, hostile 21/21, integrated 23/23; eight finite Lean declarations compile."
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-target-identification/primary.json": "3a5b0e2c4001d6d8ea31691f387903d0411b2c60f2fd3ce9977acc40d040680c",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-target-identification/independent.json": "c930c0285780e2a3b1f1d7c5c41d79ae3c29e267a689d1d9827857f2cd67a0dc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-target-identification/hostile.json": "d2067b1946c8db6e75f6d650fd139817b76a0ed2d128148b12b5c8463c07c45d",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-target-identification/integrated.json": "bdbfeaec897865e84c2cd427a0123f3fe86ddb72dd7d0b5248137af292a10d47"
+  },
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-contract-v1.json": "a606dfc3fcdbab0cfae5dd64b98e7ec1f2ee369ea7f76bc24405e8aadbb5a078",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-certificate.md": "5850d2fde08efa71b524ea92df03eeeacb3e4e3f48b3963aacc3dde2028ec189",
+    "verification/scripts/pah_omc020_target_identification.py": "092d5b1421023c79ac29b0e1d7cb5aaeeeaa78790564a36959720f518443ff87",
+    "codes/foundations/pah_omc020_target_identification_independent.py": "c73e7ef875bbe01e3e8835de48f8294ac4802a516ac09951a54ec85b2efe7b24",
+    "codes/foundations/pah_omc020_target_identification_hostile.py": "bd90ab0200072496a5f8a0d283c6331853f6a52e1f2767610d666b2a47ca0f98",
+    "verification/scripts/pah_omc020_target_identification_verify.py": "3490802431176c90fcebe82cb1a8e52b2fd830c76a74ee1399741e41db1d31c9",
+    "verification/lean/Tect/PahOmc020Target.lean": "3f3e79568025013b783d6b0a0e89f29543b7f3c5f59a641e7e72e1e66a6000fb",
+    "verification/lean/registry.json": "3f8591874c553ca002dad28d16d2314d9f296167347714c0ea4643c3cf8143da"
+  },
+  "next_single_question": "Can one source-authorized packet complete either the five-field form route or the five-field path route with the declared anchored-n compact-time quantifiers?",
+  "revisit_condition": "Reopen only when such a packet is versioned and hash-pinned or an exact PAH-specific contradiction to a registered local target correlation is found; do not repeat finite carriers, static coupling fixtures, physical-empty, BCC or Reading-H calculations.",
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-target-identification-certificate.md",
+  "non_claims": [
+    "No PAH-OMC-020 D_n limit or anchored-n stationary semigroup convergence.",
+    "No source process, U_n, common Hilbert space, path law, rate, state, carrier, regulator, counterterm or limit-order change.",
+    "No minimal/maximal domain equality, spectral gap, ergodicity or infinite-volume jump-process theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

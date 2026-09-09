@@ -1,0 +1,89 @@
+{
+  "schema": "tect/pah-omc020-stationary-modulus-correction-contract/1.0",
+  "contract_id": "PAH-OMC-020-STATIONARY-MODULUS-CORRECTION",
+  "result_id": "R-542",
+  "task_id": "T-064",
+  "title": "Stationary deterministic-time modulus versus stopping-time Aldous promotion",
+  "question": "What temporal modulus follows exactly from the pinned PAH-OMC-010 C_sw and R-522 C2 bounds, and do those pi-weighted bounds alone justify the stopping-time clause used in the R-541 path-tightness wording?",
+  "purpose": "Correct the promotion boundary without mutating R-541: retain the finite deterministic-time stationary L2 increment estimate, isolate the missing conditional/pointwise domination needed for Aldous stopping-time tightness, and give an abstract reversible two-state diagnostic showing why the implication is not automatic.",
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-010": {
+      "path": "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json",
+      "sha256": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69"
+    },
+    "R-490": {
+      "path": "strategy/pa-hyp/R490-certificate.md",
+      "sha256": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+    },
+    "R-522": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+      "sha256": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379"
+    },
+    "R-541": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-result-v1.json",
+      "sha256": "90cf191edc5df6c05a7e7facaaa179e075c87129891d22456dfd36186994d27"
+    },
+    "PAH-OMC-020": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    }
+  },
+  "preservation_firewall": {
+    "functional_unchanged": true,
+    "rates_unchanged": true,
+    "state_unchanged": true,
+    "carrier_unchanged": true,
+    "time_unchanged": true,
+    "order_unchanged": true,
+    "no_new_process": true,
+    "no_new_pa_h_counterexample": true,
+    "no_counterterm": true,
+    "no_rate_fitting": true,
+    "no_physical_promotion": true
+  },
+  "exact_scope": {
+    "finite_processes": "Exactly the original finite PAH-001 stationary chains and labelled Gibbs laws at the registered finite levels and radial cutoffs.",
+    "source_inputs": "R-490 C_sw=540 and R-522 C2(A)<=60|A| remain pi-weighted domination inputs; neither is reinterpreted as a pointwise-in-state rate bound.",
+    "deterministic_modulus": "For every deterministic t and delta>=0, stationarity plus the finite martingale/drift decomposition gives E|f(X_(t+delta))-f(X_t)|^2 <= 2 delta K_Gamma(f)+2 delta^2 K_L(f).",
+    "stopping_time_boundary": "Aldous requires the analogous estimate uniformly for bounded stopping times tau. The source inputs alone do not supply the conditional predictable-compensator or pointwise bound needed for that step.",
+    "diagnostic": "An abstract reversible two-state continuous-time chain with rare high-rate state is used only to disprove the logical implication from a stationary weighted average to a stopping-time bound; it is not a PAH counterexample or a new PAH carrier.",
+    "order_and_time": "The registered j-before-anchored-n order and external stochastic Markov time are unchanged."
+  },
+  "proof_obligations": [
+    "Revalidate all parent source hashes and distinguish R-490/R-522 stationary averages from pointwise conditional estimates.",
+    "Derive the deterministic-time stationary two-square envelope with the unchanged K_Gamma and K_L formulas.",
+    "Show by an exact reversible two-state rare-state diagnostic that a bounded stopping time can select a high-rate state while the stationary weighted average tends to zero.",
+    "State the one missing owner assumption: a source-authorized uniform conditional compensator or pointwise local rate bound for every bounded stopping time.",
+    "Keep the correction nonphysical and do not call the abstract diagnostic an exact PAH negative result."
+  ],
+  "acceptance": {
+    "primary": "Exact rational source replay, deterministic-time envelope and rare-state scaling diagnostic with no mutation of PAH-001.",
+    "independent": "Non-importing reconstruction of the stationary average and the stopping-time gap using a distinct set of rational M values.",
+    "hostile": "Reject pointwise substitution of C_sw/C2, promotion of deterministic increments to Aldous tightness, and any PAH/physical counterexample claim.",
+    "lean": "Compile finite rational declarations for the two-state stationary weighted rate identity, the rare-state scaling fixture and the deterministic envelope algebra."
+  },
+  "status": {
+    "deterministic_stationary_modulus": false,
+    "stopping_time_aldous_from_current_inputs": false,
+    "pointwise_or_conditional_owner": false,
+    "pa_h_negative_result": false,
+    "infinite_volume_process": false,
+    "physical_promotion": false
+  },
+  "outcomes": {
+    "MAINLINE_ADVANCE": "Only if a source-authorized conditional compensator/pointwise rate packet is supplied and the stopping-time estimate is independently proved; this correction contract alone cannot produce that verdict.",
+    "NEGATIVE_RESULT": "Reserved for an exact PAH-specific failure of the deterministic stationary envelope or its source assumptions. The abstract rare-state diagnostic is not such a failure.",
+    "HOLD_FOR_EVIDENCE": "The deterministic stationary modulus is verified, but stopping-time Aldous promotion remains unproved until the one conditional owner input is supplied."
+  },
+  "single_next_question": "Can the unchanged PAH-001 source owner provide a uniform conditional predictable-compensator or pointwise local-rate estimate that upgrades the deterministic stationary modulus to the bounded-stopping-time Aldous condition?",
+  "non_claims": [
+    "No alteration to PAH-001 functional, rates, state, carrier, regulator, normalization, time or limit order.",
+    "No claim that the abstract rare-state diagnostic is a PAH counterexample; it only blocks an implication from stationary weighted averages to stopping-time control.",
+    "No Aldous tightness, path-space construction, non-explosion, martingale-problem identification, R-512 semigroup convergence or infinite-volume process.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ]
+}

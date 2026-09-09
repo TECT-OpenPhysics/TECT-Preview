@@ -1,0 +1,96 @@
+{
+  "certificate_sha256": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+      "expected": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+      "name": "pin:strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "expected": "source midpoint",
+      "name": "midpoint rate cannot be replaced",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "present",
+      "name": "certificate contains compact-only qualifier",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "present",
+      "name": "certificate contains endpoint retention",
+      "status": "PASS"
+    },
+    {
+      "actual": "j then cutoff",
+      "expected": "present",
+      "name": "certificate contains ordered limits",
+      "status": "PASS"
+    },
+    {
+      "actual": "# PAH-OMC-020 fixed-n stationary semigroup passage\n\nThis certificate records one bounded proof checkpoint for the unchanged\nPAH-001 model. It is a fixed-n, j-to-infinity result only. The anchored\nn passage, R-512 minimal-form selection, and every physical interpretation\nremain separate open questions.\n\n## Frozen source and scope\n\nThe source functional, directed move labels, midpoint rates, labelled Gibbs\nstate, terminal-square convention, and external Markov time are exactly those\nof PAH-001 and the OMC-016/OMC-018 records. The regulator path is\nh_j=2^{-j}, R_j=2^j, M_j=2^{2j}; the j limit is taken at fixed\nn. No rate, mobility, state, carrier, counterterm, time scale, or limit\norder is introduced here.\n\nPinned parent hashes:\n\n* `strategy/pa-hyp/PAH-001-v1.json`\n  `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`\n* `strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json`\n  `6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97`\n* `strategy/pa-hyp/PAH-OMC-018-result-v1.json`\n  `d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65`\n* `strategy/pa-hyp/PAH-OMC-018-generator-certificate.md`\n  `18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264`\n* `strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json`\n  `906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3`\n\nFor fixed `n>=2`, let `D` be the bounded globally amplitude-l1-Lipschitz\nfinite-prefix cylinder domain in the preregistration. Let `P_(n,j)(t)` be\nthe original finite semigroup, and let `Q_n(t)` be the finite-label fibre\nsemigroup obtained by retaining precisely the source PH/LK/AP summands of\nthe same generator at continuous amplitudes. For every `f,g in D` and finite\n`T`, the target statement is\n\n    lim_(K->infinity) lim_(j->infinity)\n      sup_(0<=t<=T) |\n        <S_(n,j) f, P_(n,j)(t) S_(n,j) g>_(mu_(n,j))\n        - <f, Q_n(t) g>_(nu_n) | = 0.\n\nThe order is literal: first fix an amplitude cutoff `K`, take `j` to\ninfinity, then remove the cutoff. No diagonal sequence is used.\n\n## Proof of the fixed-n passage\n\n### 1. Compact fibre modulus\n\nAt fixed `n`, the PH/LK/AP root set and the label set are finite. A source\nrate on a compact amplitude box is\n\n    c_a(r,z)=m_a(z) exp(-(F_n(r,a z)-F_n(r,z))/2).\n\nThe mobility is independent of the amplitudes. The displayed PAH functional\nis a polynomial in the amplitudes for fixed apertures and labels, with\npositive denominators independent of the amplitudes. Hence each `c_a` is\ncontinuous and locally Lipschitz. On `B_(K+1)`, define the source-derived\nfinite maxima\n\n    ell_(n,K)=max_(a,z,r in B_(K+1)) ||gradient_r c_a(r,z)||_1,\n    Lambda_(n,K)=2 |R_n^nr| ell_(n,K).\n\nFor the row-sum matrix `A_n(r)` of the fibre generator,\n\n    ||A_n(r)-A_n(r')||_(infinity->infinity)\n       <= Lambda_(n,K) ||r-r'||_1.\n\nVariation of constants and the Markov contraction therefore give, for a\nbounded `L_g`-Lipschitz vector-valued test `g` and `0<=t<=T`,\n\n    ||Q_n(t,r)g(r)-Q_n(t,r')g(r')||_infinity\n      <= (L_g + T Lambda_(n,K)||g||_infinity)||r-r'||_1.       (A1)\n\nThe same bound holds for the floor-sampled fibre matrices on the enlarged\nbox. This is a finite-label compact estimate; its constant may depend on\n`n`, `K`, `T`, and `g`, and no global rate bound is asserted.\n\n### 2. Compact-cutoff Duhamel estimate\n\nChoose a bounded Lipschitz cutoff `chi_K` equal to one on `B_K` and zero\noutside `B_(K+1)`, and put `g_K=chi_K g`. The fibre semigroup changes only\nlabels, so (A1) makes every original radial increment of\n`Q_(n,j)(t)S_(n,j)g_K` at most `2 L_(n,K,T,g) h_j`. The R-511 inverse-pair\nidentity gives, for each directed radial root,\n\n    sum_x mu_(n,j)(x) c_r(x)^2 <= 1.\n\nThe finite number `H_(n,K,g)` of roots that can affect the cutoff test and\nCauchy-Schwarz consequently give\n\n    ||R_(n,j) Q_(n,j)(t) S_(n,j)g_K||_2\n       <= 2 H_(n,K,g) L_(n,K,T,g) h_j.                 (A2)\n\nAt fixed `j` all matrices are finite and reversible. The exact Duhamel\nidentity and `L2(mu_(n,j))` contraction yield\n\n    sup_(0<=t<=T) ||P_(n,j)(t)S_(n,j)g_K\n       -Q_(n,j)(t)S_(n,j)g_K||_2\n       <= 2T H_(n,K,g)L_(n,K,T,g)h_j -> 0.             (A3)\n\nNo fitted rate, time acceleration, or pointwise infinite-volume estimate is\nused.\n\n### 3. Uniform cell passage on the compact cutoff\n\nThe exact half-open cell identity, including the retained upper endpoint,\nidentifies the sampled fibre term with\n\n    Q_n(t,a_j(r))g_K(a_j(r),z)\n\non every product cell. Equation (A1) makes the family\n\n    Phi_T={f(r,z) Q_n(t,r)g_K(r,z): 0<=t<=T}\n\nuniformly bounded and equicontinuous on the compact box `B_(K+1)`.\nThe R-509/OMC-016 theorem supplies endpoint-inclusive step-density weak\nconvergence and the stationary tail bound for the full labelled measure. To\nmake the time quantifier explicit, cover the compact family `Phi_T` by a\nfinite sup-norm epsilon-net. Apply the fixed-test weak convergence to the\nfinite net, then use equicontinuity to bound the remainder uniformly in `t`.\nThe cell replacement error from `a_j(r)` to `r` is bounded by (A1) times\n`|V_n|h_j`. Thus, for fixed `n`, `K`, `f`, `g`, and `T`,\n\n    sup_(0<=t<=T) |\n      <S_(n,j)f,Q_(n,j)(t)S_(n,j)g_K>_(mu_(n,j))\n      - <f,Q_n(t)g_K>_(nu_n)| -> 0.                 (A4)\n\nThis is a compact equicontinuity argument, not an unproved pointwise-rate\nenvelope and not a diagonal `j,n` limit.\n\n### 4. Removal of the amplitude cutoff\n\nR-509/OMC-016 supplies a fixed-`n`, all-`j` stationary tail estimate. Since\nboth the original finite semigroup and the fibre semigroup are stationary\nMarkov contractions, replacing `g` by `g_K` in either correlation costs at\nmost\n\n    2 ||f||_infinity ||g||_infinity\n      sup_j mu_(n,j)(B_K^c),\n\nand the corresponding `nu_n` tail. These quantities vanish as `K` tends to\ninfinity. Combining this estimate with (A3) and (A4), in the order\n`j -> infinity` followed by `K -> infinity`, proves the displayed target.\n\n## Verification boundary\n\nThe primary, non-importing independent, and hostile verifiers reconstruct\nthe finite reversible algebra, source root incidence, compact-modulus\nquantifiers, half-open endpoint condition, stationary-tail contraction,\nDuhamel order, and the exact source hashes. The existing `PahOmc020.lean`\nfile checks only finite algebraic consequences; it does not pretend to\nformalize the measure-theoretic epsilon-net argument.\n\nThis checkpoint proves only the fixed-`n` stationary local-correlation\npassage. It does not prove a common completed Hilbert-space map `U_n`, a\nvarying-space liminf/recovery theorem, boundary escape, R-512 minimal-form\nselection, the anchored `n` semigroup limit, or an infinite-volume process.\nThere is no physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap,\nYang--Mills, or TOE conclusion. Markov time remains external stochastic time.\n",
+      "expected": "excluded",
+      "name": "anchored n is explicitly excluded",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "No change to T-054 active gate, C6 T1 or PAH-OMC-014 merely from this auxiliary temporal result.",
+        "No full kernel classification, unique physical vacuum, Reading-H comparison, spectral gap, mixing or ergodicity claim.",
+        "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap or TOE conclusion."
+      ],
+      "expected": "present",
+      "name": "physical non-claims remain in preregistration",
+      "status": "PASS"
+    },
+    {
+      "actual": "9e50b01efc811ea26d0bd5668a6a8d54973a924b5bb18d299460a11afd343f22",
+      "expected": "different",
+      "name": "diagonal shortcut changes certificate hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "# PAH-OMC-020 fixed-n stationary semigroup passage\n\nThis certificate records one bounded proof checkpoint for the unchanged\nPAH-001 model. It is a fixed-n, j-to-infinity result only. The anchored\nn passage, R-512 minimal-form selection, and every physical interpretation\nremain separate open questions.\n\n## Frozen source and scope\n\nThe source functional, directed move labels, midpoint rates, labelled Gibbs\nstate, terminal-square convention, and external Markov time are exactly those\nof PAH-001 and the OMC-016/OMC-018 records. The regulator path is\nh_j=2^{-j}, R_j=2^j, M_j=2^{2j}; the j limit is taken at fixed\nn. No rate, mobility, state, carrier, counterterm, time scale, or limit\norder is introduced here.\n\nPinned parent hashes:\n\n* `strategy/pa-hyp/PAH-001-v1.json`\n  `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`\n* `strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json`\n  `6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97`\n* `strategy/pa-hyp/PAH-OMC-018-result-v1.json`\n  `d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65`\n* `strategy/pa-hyp/PAH-OMC-018-generator-certificate.md`\n  `18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264`\n* `strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json`\n  `906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3`\n\nFor fixed `n>=2`, let `D` be the bounded globally amplitude-l1-Lipschitz\nfinite-prefix cylinder domain in the preregistration. Let `P_(n,j)(t)` be\nthe original finite semigroup, and let `Q_n(t)` be the finite-label fibre\nsemigroup obtained by retaining precisely the source PH/LK/AP summands of\nthe same generator at continuous amplitudes. For every `f,g in D` and finite\n`T`, the target statement is\n\n    lim_(K->infinity) lim_(j->infinity)\n      sup_(0<=t<=T) |\n        <S_(n,j) f, P_(n,j)(t) S_(n,j) g>_(mu_(n,j))\n        - <f, Q_n(t) g>_(nu_n) | = 0.\n\nThe order is literal: first fix an amplitude cutoff `K`, take `j` to\ninfinity, then remove the cutoff. No diagonal sequence is used.\n\n## Proof of the fixed-n passage\n\n### 1. Compact fibre modulus\n\nAt fixed `n`, the PH/LK/AP root set and the label set are finite. A source\nrate on a compact amplitude box is\n\n    c_a(r,z)=m_a(z) exp(-(F_n(r,a z)-F_n(r,z))/2).\n\nThe mobility is independent of the amplitudes. The displayed PAH functional\nis a polynomial in the amplitudes for fixed apertures and labels, with\npositive denominators independent of the amplitudes. Hence each `c_a` is\ncontinuous and locally Lipschitz. On `B_(K+1)`, define the source-derived\nfinite maxima\n\n    ell_(n,K)=max_(a,z,r in B_(K+1)) ||gradient_r c_a(r,z)||_1,\n    Lambda_(n,K)=2 |R_n^nr| ell_(n,K).\n\nFor the row-sum matrix `A_n(r)` of the fibre generator,\n\n    ||A_n(r)-A_n(r')||_(infinity->infinity)\n       <= Lambda_(n,K) ||r-r'||_1.\n\nVariation of constants and the Markov contraction therefore give, for a\nbounded `L_g`-Lipschitz vector-valued test `g` and `0<=t<=T`,\n\n    ||Q_n(t,r)g(r)-Q_n(t,r')g(r')||_infinity\n      <= (L_g + T Lambda_(n,K)||g||_infinity)||r-r'||_1.       (A1)\n\nThe same bound holds for the floor-sampled fibre matrices on the enlarged\nbox. This is a finite-label compact estimate; its constant may depend on\n`n`, `K`, `T`, and `g`, and no global rate bound is asserted.\n\n### 2. Compact-cutoff Duhamel estimate\n\nChoose a bounded Lipschitz cutoff `chi_K` equal to one on `B_K` and zero\noutside `B_(K+1)`, and put `g_K=chi_K g`. The fibre semigroup changes only\nlabels, so (A1) makes every original radial increment of\n`Q_(n,j)(t)S_(n,j)g_K` at most `2 L_(n,K,T,g) h_j`. The R-511 inverse-pair\nidentity gives, for each directed radial root,\n\n    sum_x mu_(n,j)(x) c_r(x)^2 <= 1.\n\nThe finite number `H_(n,K,g)` of roots that can affect the cutoff test and\nCauchy-Schwarz consequently give\n\n    ||R_(n,j) Q_(n,j)(t) S_(n,j)g_K||_2\n       <= 2 H_(n,K,g) L_(n,K,T,g) h_j.                 (A2)\n\nAt fixed `j` all matrices are finite and reversible. The exact Duhamel\nidentity and `L2(mu_(n,j))` contraction yield\n\n    sup_(0<=t<=T) ||P_(n,j)(t)S_(n,j)g_K\n       -Q_(n,j)(t)S_(n,j)g_K||_2\n       <= 2T H_(n,K,g)L_(n,K,T,g)h_j -> 0.             (A3)\n\nNo fitted rate, time acceleration, or pointwise infinite-volume estimate is\nused.\n\n### 3. Uniform cell passage on the compact cutoff\n\nThe exact half-open cell identity, including the endpoint omitted,\nidentifies the sampled fibre term with\n\n    Q_n(t,a_j(r))g_K(a_j(r),z)\n\non every product cell. Equation (A1) makes the family\n\n    Phi_T={f(r,z) Q_n(t,r)g_K(r,z): 0<=t<=T}\n\nuniformly bounded and equicontinuous on the compact box `B_(K+1)`.\nThe R-509/OMC-016 theorem supplies endpoint-inclusive step-density weak\nconvergence and the stationary tail bound for the full labelled measure. To\nmake the time quantifier explicit, cover the compact family `Phi_T` by a\nfinite sup-norm epsilon-net. Apply the fixed-test weak convergence to the\nfinite net, then use equicontinuity to bound the remainder uniformly in `t`.\nThe cell replacement error from `a_j(r)` to `r` is bounded by (A1) times\n`|V_n|h_j`. Thus, for fixed `n`, `K`, `f`, `g`, and `T`,\n\n    sup_(0<=t<=T) |\n      <S_(n,j)f,Q_(n,j)(t)S_(n,j)g_K>_(mu_(n,j))\n      - <f,Q_n(t)g_K>_(nu_n)| -> 0.                 (A4)\n\nThis is a compact equicontinuity argument, not an unproved pointwise-rate\nenvelope and not a diagonal `j,n` limit.\n\n### 4. Removal of the amplitude cutoff\n\nR-509/OMC-016 supplies a fixed-`n`, all-`j` stationary tail estimate. Since\nboth the original finite semigroup and the fibre semigroup are stationary\nMarkov contractions, replacing `g` by `g_K` in either correlation costs at\nmost\n\n    2 ||f||_infinity ||g||_infinity\n      sup_j mu_(n,j)(B_K^c),\n\nand the corresponding `nu_n` tail. These quantities vanish as `K` tends to\ninfinity. Combining this estimate with (A3) and (A4), in the order\n`j -> infinity` followed by `K -> infinity`, proves the displayed target.\n\n## Verification boundary\n\nThe primary, non-importing independent, and hostile verifiers reconstruct\nthe finite reversible algebra, source root incidence, compact-modulus\nquantifiers, half-open endpoint condition, stationary-tail contraction,\nDuhamel order, and the exact source hashes. The existing `PahOmc020.lean`\nfile checks only finite algebraic consequences; it does not pretend to\nformalize the measure-theoretic epsilon-net argument.\n\nThis checkpoint proves only the fixed-`n` stationary local-correlation\npassage. It does not prove a common completed Hilbert-space map `U_n`, a\nvarying-space liminf/recovery theorem, boundary escape, R-512 minimal-form\nselection, the anchored `n` semigroup limit, or an infinite-volume process.\nThere is no physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap,\nYang--Mills, or TOE conclusion. Markov time remains external stochastic time.\n",
+      "expected": "omitted",
+      "name": "endpoint omission is detected",
+      "status": "PASS"
+    },
+    {
+      "actual": "22836a2726cef23a52dc5c4a8ec3c3e2e6c56ccaaf2be20f88dbc3a56473461a",
+      "expected": "different",
+      "name": "physical promotion mutation changes hash",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "code_sha256": "3a31219ff4c16ac72c9c2663ce9f3aee689857e539b227e39fe533de7cac442f",
+  "non_claims": [
+    "Hostile controls do not prove the fixed-n theorem independently; they reject scope-changing shortcuts.",
+    "No anchored n convergence, common U_n, R-512 minimal selection or physical conclusion."
+  ],
+  "rejected_mutations": [
+    "diagonal j,n limit",
+    "upper endpoint omission",
+    "physical Pre-A promotion",
+    "midpoint-rate replacement",
+    "global unbounded-rate shortcut"
+  ],
+  "reproduction": {
+    "check": "python -X utf8 codes/foundations/pah_omc020_fixedn_temporal_proof_hostile.py --check",
+    "run": "python -X utf8 codes/foundations/pah_omc020_fixedn_temporal_proof_hostile.py"
+  },
+  "schema": "tect/pah-omc020-fixedn-temporal-hostile/1.0",
+  "status": "PASS_HOSTILE_FIXED_N_TEMPORAL",
+  "temporal_verdict": "FIXED_N_PASS_ANCHORED_N_OPEN",
+  "verdict": "AUXILIARY_SUPPORT"
+}

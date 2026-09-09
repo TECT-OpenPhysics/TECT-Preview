@@ -1,0 +1,108 @@
+{
+  "schema": "tect/pah-omc020-owner-packet-sufficiency-result/1.0",
+  "result_id": "R-557",
+  "contract_id": "PAH-OMC-020-OWNER-PACKET-SUFFICIENCY",
+  "date": "2026-09-08",
+  "task_id": "T-087",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["ANALYTIC_CONDITIONAL", "HASH_PINNED", "EXECUTED", "INDEPENDENT", "HOSTILE", "LEAN_FINITE_SCOPE"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json": "75c162935a432da4c170c5157f1022c30a97b617ab18b657e57cb02ff91e95d0",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-result-v1.json": "cf5fc3c8639ce359529b05eaa22dd9b259f301d479e9e153c377cda291515f9a",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+  },
+  "exact_scope": {
+    "model": "Exactly PAH-001 and its original finite stationary PH/LK/AP/TR dynamics.",
+    "state": "Original labelled Gibbs state and normalization only.",
+    "time": "External stochastic Markov time on compact finite intervals [0,T].",
+    "order": "j tends to infinity at fixed n first, then anchored n.",
+    "target": "R-512 minimal closed-form semigroup at the declared scope.",
+    "consequence": "A complete ten-field source-authorized packet plus the explicit J/D bounds is sufficient for the exact nested compact-time local-correlation conclusion."
+  },
+  "required_packet_fields": [
+    "authority",
+    "root_semantics",
+    "common_realization",
+    "n1_recovery",
+    "n2b_form",
+    "n2c_n4_boundary",
+    "n2d_target",
+    "full_domain_J",
+    "anchored_D",
+    "verification"
+  ],
+  "finding": "The conditional theorem is now explicit: if all ten packet fields are source-authorized, hash-pinned and compatible with the unchanged PAH-001 model, and if the full-domain error satisfies err_(n,j)<=J_(n,j)+D_n with the registered two ordered limits, then the requested compact-time local-correlation conclusion follows. Every single missing field rejects packet admission. The current source corpus has no such packet, so the actual PAH route remains HOLD_FOR_EVIDENCE.",
+  "assumptions": [
+    "The source-authorized packet, if supplied later, uses the exact PAH-001 functional, rates, state, external Markov time and limit order.",
+    "The packet's N1/N2b/N2c/N4/N2d fields actually establish the common comparison and target defect rather than merely naming them.",
+    "The full-domain J and D estimates have the exact quantifiers recorded in the contract.",
+    "The error decomposition is nonnegative and valid uniformly on each declared compact time interval."
+  ],
+  "missing_assumptions": [
+    "No source-authorized packet currently fixes root semantics and root measure.",
+    "No source-authorized common realization with N1/N2b/N2c/N4/N2d evidence is present.",
+    "No full-domain PAH-specific J_(n,j) and anchored D_n estimates are present."
+  ],
+  "adversarial_review": [
+    {"objection": "A complete conditional packet theorem is already a PAH convergence proof.", "disposition": "UPHELD AGAINST PROMOTION: the packet is an antecedent and the current corpus records no source-authorized instance."},
+    {"objection": "The amplitude-only R-548 result supplies the ten fields.", "disposition": "REJECTED: R-548 is explicitly restricted to D_rad and does not provide non-radial common-space or anchored target fields."},
+    {"objection": "A status label or researcher-owned candidate can replace authority fields.", "disposition": "REJECTED: hostile replay rejects status-only and partial-packet mutations."},
+    {"objection": "The packet theorem changes PAH-001 by adding a common map.", "disposition": "REJECTED: the common map is a required source-owned antecedent; no map is constructed or inserted by this result."},
+    {"objection": "The Lean declarations formalize the analytic owner packet.", "disposition": "UPHELD AGAINST PROMOTION: Lean covers the logical implication and field admission only; analytic estimates remain absent."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-536", "R-539", "R-548", "R-555", "R-556", "R-557"],
+    "negatives": [],
+    "events": ["20260908-r-557-pah-omc-020-owner-packet-sufficiency-brid"]
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/primary.json": "fed09f724251ec32a887216f1b59237d24decdd68effc8302d06ace06ab39ddc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/independent.json": "c74ef7ba4c2ecf977203b39508ae7319d3141451374b8dd24757c1c45d66fc4a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/hostile.json": "be7c29bdc456c975386517bfb57b70ebf9d38e75c699cdb3e41762b13d9ff539",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/integrated.json": "b90e62ac6f21be561a17275473db1d96382197fffb6162748e1af3bafbb127d3"
+  },
+  "tooling_files": {
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-contract-v1.json": "49ed29ea3590b6e7849bc6fc992cd7a769da3c98ce89a04c50d41575fb9ca3db",
+    "verification/scripts/pah_omc020_owner_packet_sufficiency.py": "d85bd83bfd3f471dbf78c8a37c7f6a33403e6406b5cf94b335609c53601861cd",
+    "codes/foundations/pah_omc020_owner_packet_sufficiency_independent.py": "c70086faa68710ddb29ada137e9e425ec220e522a01e3fda74f33cccdbfe2e3c",
+    "codes/foundations/pah_omc020_owner_packet_sufficiency_hostile.py": "fc11627d422dae571971e4a6de94bee7be1d500669d4862b03397cfa34fe1473",
+    "verification/scripts/pah_omc020_owner_packet_sufficiency_verify.py": "2a8bd798d4e2ac935fadabbe6183d03f66b67fd5d62ececb3b2b9bb6ffce639d",
+    "verification/lean/Tect/PahOmc020OwnerPacketSufficiency.lean": "c15e876122b7e48ea3212158571f62c6c95f05e022d35717379b6038fc5443a7",
+    "verification/lean/registry.json": "151cb1eb063bb9554c538c4d209a47a311c7738e8e25224ecd340f713f92226c"
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_owner_packet_sufficiency.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_owner_packet_sufficiency_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_owner_packet_sufficiency_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_owner_packet_sufficiency_verify.py --check",
+    "lean": "lake env lean Tect/PahOmc020OwnerPacketSufficiency.lean",
+    "result": "Primary 19/19, independent 17/17, hostile 10/10, integrated 22/22; four Lean theorems compile."
+  },
+  "closed_scoped_gate": "Conditional logical sufficiency of the complete ten-field source-owner packet for the registered ordered-correlation conclusion.",
+  "remaining_gates": [
+    "Source-authorized root semantics and root measure",
+    "Source-authorized common realization with N1/N2b/N2c/N4/N2d evidence",
+    "Full-domain J_(n,j) and anchored D_n estimates",
+    "Actual full PAH-OMC-020 semigroup convergence"
+  ],
+  "next_single_question": "Can a versioned source-authorized packet satisfy all ten fields simultaneously while preserving the exact PAH-001 source bytes and j-before-n order?",
+  "revisit_condition": "Reopen when such a packet is versioned and hash-pinned, or when an exact unchanged-source contradiction invalidates the conditional implication; do not repeat radial or finite-carrier calculations.",
+  "non_claims": [
+    "This is a conditional admission theorem, not the full PAH-OMC-020 convergence theorem.",
+    "No common Hilbert space, U_n, path law, N2b/N2c/N4 estimate or R-512 identification is constructed.",
+    "No infinite-volume process or continuum limit is claimed.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-certificate.md"
+}

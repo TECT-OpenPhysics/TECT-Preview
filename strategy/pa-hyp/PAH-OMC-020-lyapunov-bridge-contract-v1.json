@@ -1,0 +1,68 @@
+{
+  "schema": "tect/pah-omc020-lyapunov-bridge-contract/1.0",
+  "contract_id": "PAH-OMC-020-LYAPUNOV-TO-N2C-BRIDGE",
+  "version": "1.0.0",
+  "date": "2026-09-08",
+  "status": "RESEARCHER_OWNED_CONDITIONAL_CONTRACT",
+  "title": "Exponential Lyapunov bridge from a source compensator to N2c/N4",
+  "purpose": "Isolate the exact pathwise estimate that would turn the source-owned static C2(A) bound into compact-time boundary escape and non-explosion. This is an implication contract; it does not invent a PAH process, rate, carrier, or comparison map.",
+  "provenance": {
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "source_authorized_packet_present": false,
+    "constructed_hypothesis": true,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false
+  },
+  "parents": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-020-prereg": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "R-522-C2": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+    "R-523-owner-audit": "1649077b5a522819b2153c13ef799b48cc3774f5adaf2256e4467e522d2a5d95",
+    "R-530-minimal-target": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2"
+  },
+  "frozen_scope": {
+    "model": "Exactly PAH-001 F_rho, original directed PH/LK/AP/TR rates, labelled Gibbs state, OMC-010 path, and j-before-anchored-n order.",
+    "observable": "A fixed bounded local cylinder with finite initial influence size w and boundary overlap distance d_m.",
+    "time": "External stochastic Markov time on a compact interval [0,T]; no quantum, proper, or Lorentzian interpretation.",
+    "comparison": "No U_n, conditional generator averaging, direct sum, new carrier, counterterm, rate fitting, or state replacement is introduced.",
+    "input": "R-522 C2(A)<=60|A| is used only as a static coefficient in the final N4 budget."
+  },
+  "required_owner_packet": {
+    "predictable_lyapunov": "For b>1 and V(z)=b^z, a source-authorized path law must provide a predictable compensator or stopped supermartingale estimate E[V(Z_(t intersect tau_d))] <= M_T V(Z_0), uniformly in n and the retained regulators.",
+    "boundary_hitting": "The influence process must have tau_d=inf{t: Z_t>=d} and the non-explosion exhaustion tau_infty=lim_(d->infinity) tau_d on the same filtration.",
+    "N4_attribution": "The source packet must prove eta_(m,T)^2 <= C2(A) P(tau_(d_m)<=T) for the actual A_n^(out,m) Q_n(s)g term, without replacing the original rates.",
+    "minimal_form": "The resulting process/form must still be identified with the R-512 minimal closed form; this bridge does not supply that identification."
+  },
+  "conditional_theorem": {
+    "probability": "If E[V(Z_(T intersect tau_d))] <= M_T b^w and V>=b^d on {tau_d<=T}, then P(tau_d<=T) <= M_T*b^w/b^d.",
+    "non_explosion": "If tau_d increases to tau_infty, the bound tends to zero for b>1, so P(tau_infty<=T)=0 under the supplied path-law hypotheses.",
+    "boundary": "If eta_(m,T)^2 <= C2(A)P(tau_(d_m)<=T), then eta_(m,T)^2 <= C2(A)M_T*b^w/b^(d_m), which vanishes as d_m->infinity.",
+    "constant": "For the registered PAH support, C2(A) may be instantiated by the source bound 60|A|; no claim is made for a random or growing support without the owner packet."
+  },
+  "finite_fixture": {
+    "inputs": {
+      "M_T": 3,
+      "b": 2,
+      "w": 2,
+      "support_vertices": 2,
+      "N_geom": 60,
+      "distances": [8, 12, 16]
+    },
+    "role": "Exact rational test inputs only; they are not PAH constants or an infinite-volume estimate.",
+    "bounds": ["3/64", "3/1024", "3/16384"]
+  },
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "Only after a source-authorized compensator/path law, N4 attribution, N2b/N2d comparison, and independent verification are all supplied.",
+    "NEGATIVE_RESULT": "Only an exact PAH-specific contradiction to the required pathwise estimate qualifies; an absent repository packet is not a universal no-go.",
+    "HOLD_FOR_EVIDENCE": "The present contract remains conditional while the owner packet and the actual eta-to-hitting-event attribution are missing."
+  },
+  "single_next_question": "Can a source owner provide the stopped exponential-Lyapunov compensator and the exact eta_(m,T)^2-to-hitting-event attribution for the unchanged PAH-001 process?",
+  "revisit_condition": "Reopen only when every required owner field is versioned and hash-pinned, or when an exact PAH-specific contradiction to the conditional theorem is found. Do not repeat finite carrier or physical-empty calculations.",
+  "non_claims": [
+    "No source-authorized path-space law, non-explosion theorem, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal-form identification, or PAH-OMC-020 semigroup convergence.",
+    "No universal impossibility follows from the missing owner packet or from the rational fixtures.",
+    "No PAH-001 functional, rate, state, carrier, regulator, normalization, external Markov time, or limit order is changed.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, mass-gap, or TOE conclusion."
+  ]
+}

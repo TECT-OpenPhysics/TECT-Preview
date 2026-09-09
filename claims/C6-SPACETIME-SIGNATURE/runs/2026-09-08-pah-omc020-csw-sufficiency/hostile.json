@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "hash:strategy\\pa-hyp\\PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+      "expected": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+      "name": "hash:strategy\\pa-hyp\\R490-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "hash:strategy\\pa-hyp\\PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "C_sw factors are source text",
+      "status": "PASS"
+    },
+    {
+      "actual": "49/8",
+      "expected": "1/8",
+      "name": "hostile reversed weights fail detailed balance",
+      "status": "PASS"
+    },
+    {
+      "actual": "404",
+      "expected": ">4*101",
+      "name": "hostile omission of high-rate state loses obstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": "101/51",
+      "expected": "2*101/(101+1)",
+      "name": "first moment is not a squared-rate moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "202/51",
+      "expected": "<4",
+      "name": "energy remains finite in witness",
+      "status": "PASS"
+    },
+    {
+      "actual": "404",
+      "expected": "202/51",
+      "name": "generator L2 is larger than energy",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, r_j=2^j, m_j=2^(2j), j>=0. first j at every fixed n, then the original anchored n exhaustion. no diagonal, reversed, joint or other regulator limit.",
+      "expected": "j then anchored n",
+      "name": "hostile diagonal/reversed order remains forbidden",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "physical promotion remains forbidden",
+      "status": "PASS"
+    },
+    {
+      "actual": "diagnostic only",
+      "expected": "not PAH carrier",
+      "name": "abstract witness not relabeled as PAH",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "HOLD rather than negative PAH result",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 13,
+  "non_claims": [
+    "No exact PAH counterexample or universal no-go is asserted.",
+    "No PAH definition or regulator order is changed.",
+    "No Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE result."
+  ],
+  "rejected_shortcuts": [
+    "reversed Gibbs weights or detailed-balance failure",
+    "dropping the rare high-rate state",
+    "confusing sum pi*c with sum pi*c^2",
+    "using C_sw as a global pointwise rate bound",
+    "calling an abstract witness an exact PAH counterexample",
+    "promoting the obstruction to semigroup, physical or continuum evidence"
+  ],
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_csw_sufficiency_hostile.py --check",
+  "schema": "tect/pah-omc020-csw-sufficiency-hostile/1.0",
+  "source_hashes": {
+    "strategy\\pa-hyp\\PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy\\pa-hyp\\PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy\\pa-hyp\\R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+  },
+  "status": "PASS_HOSTILE_CSW_SCOPE_CONTROLS",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

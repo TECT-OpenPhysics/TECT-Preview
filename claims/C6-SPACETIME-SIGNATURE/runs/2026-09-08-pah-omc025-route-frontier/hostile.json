@@ -1,0 +1,103 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-025-ROUTE-FRONTIER-HOSTILE-001",
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "name": "primary non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "source firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no new oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "no physical promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "partial form route rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "comparison-only shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "scoped negative remains non-universal",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "abstract diagnostic cannot fill temporal cut",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "stationary average shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "external-time firewall",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 11,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "contract_id": "PAH-OMC-025",
+  "mutations_rejected": [
+    "partial form route",
+    "comparison-only shortcut",
+    "source-level negative relabelled as universal no-go",
+    "abstract anchored-n diagnostic used as temporal owner input",
+    "stationary weighted average relabelled as stopping-time control",
+    "external stochastic time relabelled as physical time"
+  ],
+  "non_claims": [
+    "This contract does not prove PAH-OMC-020 convergence or refute every owner-fixed successor.",
+    "It does not construct a common Hilbert space, path law, compensator, generator, carrier, rate, state, regulator or limit.",
+    "It does not promote R-559 source-level nonuniqueness or R-564 abstract persistence to an anchored-n universal no-go.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion; external Markov time remains stochastic bookkeeping."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc025_route_frontier_hostile.py --check",
+  "result_id": "R-565",
+  "schema": "tect/pah-omc025-route-frontier-hostile/1.0",
+  "source_hashes": {
+    "codes/foundations/pah_omc025_route_frontier_independent.py": "eef999291d0477f35d2a811f2b9104434bc705e0b03b501e9e3df091a7e7d46a",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-contract-v1.json": "2171ae18d545ff26bfad9d5cb475d75c31280679fa41609a44ad143d9d7a9dd4",
+    "verification/scripts/pah_omc025_route_frontier.py": "ef3590d3fd4be12b97cf34f49acf1b19c7707f98c0e0d0caaa9aea5981aa6ef2"
+  },
+  "status": "PASS_HOSTILE_CUTSET",
+  "task_id": "T-092",
+  "tooling_hash": "b82f3be25b8cd0824476838f513166806c348af7be2e90b88fcc1817d0507736",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

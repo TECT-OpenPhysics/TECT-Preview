@@ -1,0 +1,100 @@
+{
+  "schema": "tect/pah-omc020-owner-search-snapshot-result/1.0",
+  "result_id": "R-528",
+  "contract_id": "PAH-OMC-020-OWNER-SEARCH-SNAPSHOT",
+  "date": "2026-09-07",
+  "task_id": "T-063",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["EXECUTED", "PROVENANCE", "FIXED_MANIFEST", "INDEPENDENT", "HOSTILE", "REPLAY_STABLE"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json": "b87a2d8d7b0009c9f5bd30695823cb442376939ff18c1d48f1d890ae430fe8c7",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+    "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json": "cfe872fac4517f468061cd5d644cf931e6a7e7294d66ca6a8b2faa6977d37325",
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json": "86246c253273f5dc1fc630c37c70e7b7b2e3aefcf1fc3d81ae5ad2b0f56cdc35",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c"
+  },
+  "exact_scope": {
+    "question": "Can a fixed candidate manifest replay the PAH-OMC-020 owner-packet absence without the dynamic-worktree drift that invalidated the earlier N2a/R-526 replay?",
+    "snapshot": "The strategy/pa-hyp JSON/Markdown marker set is frozen at 84 candidate files, manifest SHA-256 cc3ffdd7f91e2a312c65447a9cf395b8ebfeddb237fc72a643d1f2f7c2f72b36, with zero authorized and zero complete owner markers.",
+    "successor": "N2a intake v1.1 pins the current N2b bytes and the fixed snapshot while retaining all nine owner-payload requirements.",
+    "model": "PAH-001 functional, original directed rates, labelled Gibbs state, external Markov time and j-before-n order are unchanged.",
+    "limits": "No temporal, volume, continuum or physical limit is taken by this provenance checkpoint."
+  },
+  "finding": "A fixed 84-file candidate manifest, parent hash set and N2a v1.1 successor replay without dynamic rescanning. Primary 447/447, independent 263/263, hostile 10/10, N2a successor 23/23 and integrated 20/20 pass. No source-authorized owner packet is present in the snapshot.",
+  "assumptions": [
+    "An owner packet intended for this contract is represented by a marker-bearing strategy/pa-hyp JSON or Markdown file at snapshot time.",
+    "Snapshot-time absence is reopened when --detect-new reports a candidate addition or when any pinned parent changes.",
+    "The fixed manifest is provenance evidence and is not a mathematical realization of U_n."
+  ],
+  "missing_assumptions": [
+    "Source-owner authority and signer for an exact U_n/common-space packet.",
+    "N2a local recovery, N2b arbitrary-sequence liminf/recovery, N2c/N4 boundary escape and N2d R-512 minimal identification.",
+    "The ordered stationary semigroup correlation convergence theorem."
+  ],
+  "adversarial_review": [
+    {"objection": "The fixed snapshot proves that no owner packet can ever exist.", "disposition": "REJECTED: it is snapshot-time repository evidence only; future or external packets require a new snapshot."},
+    {"objection": "Adding R-528 files makes the snapshot immediately invalid.", "disposition": "DISMISSED: --check intentionally replays only the frozen manifest; --detect-new separately reports later additions for reopening."},
+    {"objection": "The N2a successor silently changes PAH-001 by changing a parent hash.", "disposition": "REJECTED: PAH-001 remains byte-identical; only the current N2b evidence pointer and replay scope are successor-pinned."},
+    {"objection": "A provenance PASS is a common-Hilbert or semigroup theorem.", "disposition": "REJECTED: no U_n, form estimate, process, limit or semigroup is constructed."},
+    {"objection": "Lean should prove the hash and filesystem statements.", "disposition": "DISMISSED: this checkpoint contains no analytic proposition suitable for Lean; the integrated record states NOT_APPLICABLE_PROVENANCE_HASHING_ONLY."}
+  ],
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot/primary.json": "0b773a22f2ac18db9cfcd172af593d75ea8c905d5801094166589e6c125f302e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot/independent.json": "495495231c3960895ea1136b0e4af97def0687589217e9eb063e8b68b7382346",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot/hostile.json": "6ee37a8467076f65d9a3f9f631b71943da821f1e33b0977bd548199c2216c7cc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot/n2a-successor.json": "8f562e6803ad0bc286f52ad498f86f2bf8f3152168b871cc92fb60ff6034b0bc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot/integrated.json": "3ed0ea8dad675ef5a012778f3754a630e1d1adae1e54f58193edadd998040253"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_owner_packet_snapshot.py": "f8cb8e8555117d00de1c474c3be51abfe3f82bb972cf559bdbac02deaa3a00e7",
+    "codes/foundations/pah_omc020_owner_packet_snapshot_independent.py": "6e68385d773c22e847fb44e01a673ff3df2e7de3efe557ee6637e955f177b275",
+    "codes/foundations/pah_omc020_owner_packet_snapshot_hostile.py": "7d9cc1e7609dd2f1976312460373309d5e0d13e2d179ab031c7073c6416083a1",
+    "verification/scripts/pah_omc020_owner_packet_snapshot_verify.py": "18b1a119f8ef7b6ef613c8ec545450feb88f0bc99dd0b48e7cfb8b7664e8d1c0",
+    "verification/scripts/pah_omc020_n2a_owner_packet_successor_check.py": "4540064eb8cb8b5761431e12c773b770c260463e3a89ba9113b58bca4f2979a9"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json": "86246c253273f5dc1fc630c37c70e7b7b2e3aefcf1fc3d81ae5ad2b0f56cdc35",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md": "17b122ae891b7c1e9f183ed22066542e1c1ae6bd881212c08eedb840dbc7c0b0",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-exploration.json": "0f74ffc993c0781e08913bcfc33b9384fafc511a62ec5eaeddb04a4195a3d640"
+  },
+  "formal_refs": {"results": ["R-526", "R-527"], "negatives": [], "events": ["20260908-pah-omc-020-fixed-owner-search-snapshot-success"]},
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_owner_packet_snapshot_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_owner_packet_snapshot_hostile.py --check",
+    "successor": "python -X utf8 verification/scripts/pah_omc020_n2a_owner_packet_successor_check.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_owner_packet_snapshot_verify.py --check",
+    "result": "Primary 447/447, independent 263/263, hostile 10/10, N2a successor 23/23 and integrated 20/20 pass; Lean is not applicable to this hashing-only checkpoint."
+  },
+  "closed_scoped_gate": "Replay-stable snapshot-time owner-packet absence and N2a successor intake boundary.",
+  "remaining_gates": [
+    "Source-authorized U_n/common-space packet",
+    "N2a local recovery and N2b weak-liminf/recovery",
+    "N2c/N4 compact-time boundary escape",
+    "N2d identification with the R-512 minimal closed form",
+    "Ordered stationary semigroup correlation convergence"
+  ],
+  "next_single_question": "Can a source owner provide a versioned packet satisfying all nine N2a--N2d fields, or does --detect-new identify a candidate requiring a successor snapshot?",
+  "revisit_condition": "Reopen when a source-authorized packet appears, --detect-new reports a new candidate, or any pinned parent byte changes. Do not rewrite R-526, N2a v1.0 or R-527.",
+  "non_claims": [
+    "No PAH-OMC-020 semigroup convergence, Mosco theorem, common process or R-512 minimal-form selection.",
+    "No universal comparison-map impossibility theorem; snapshot absence is not nonexistence.",
+    "No PAH-001 functional, rate, state, carrier, regulator, time or limit-order change.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md"
+}

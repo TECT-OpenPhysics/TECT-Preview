@@ -1,0 +1,48 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-020 fixed owner-search snapshot successor",
+  "question": "Can the dynamic R-526/N2a owner-packet absence audit be replaced by a fixed manifest that remains byte-replayable after later proof files are added?",
+  "finding": "Yes as a provenance repair. An 84-file marker manifest and its parent hashes replay without rescanning the changing worktree; the N2a v1.1 successor pins the current N2b bytes and the snapshot. Both snapshot-time authorization and completion sets are empty. This remains an evidence hold because no source-authorized U_n/common-space packet is supplied.",
+  "decision_reason": "The successor removes a reproducibility defect without editing R-526, the v1.0 N2a contract or R-527. It turns the next owner search into a versioned snapshot/reopen protocol, so a later candidate is detected explicitly rather than silently changing a prior PASS.",
+  "boundary": "PAH-001, PAH-OMC-020, original functional/rates/state, external Markov time and j-before-n order are frozen. The snapshot is repository provenance only; no U_n, semigroup, process or physical interpretation is constructed.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "task_id": "T-063",
+  "verdict": "advanced",
+  "recorded_at": "2026-09-07T20:09:51Z",
+  "recorded_by": "Codex",
+  "related": [{"id": "EXP-001646", "relation": "continues"}],
+  "method": [
+    "Freeze the marker-bearing strategy/pa-hyp candidate manifest and each byte SHA-256 in PAH-OMC-020-owner-search-snapshot-v1.json.",
+    "Pin the current PAH-001, preregistration, N2a v1, N2b result, R-525, R-526 and R-527 parent hashes.",
+    "Create the N2a v1.1 intake successor with the nine unchanged owner-payload requirements and the fixed snapshot hash.",
+    "Replay primary, non-importing independent, hostile and integrated checks; keep hashing-only provenance separate from analytic Lean claims."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json#candidate_records",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json#acceptance_conditions",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-result-v1.json#verification",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md#Verification",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-snapshot/integrated.json#checks"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json": "86246c253273f5dc1fc630c37c70e7b7b2e3aefcf1fc3d81ae5ad2b0f56cdc35",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "verification/scripts/pah_omc020_owner_packet_snapshot.py": "f8cb8e8555117d00de1c474c3be51abfe3f82bb972cf559bdbac02deaa3a00e7",
+    "verification/scripts/pah_omc020_owner_packet_snapshot_verify.py": "18b1a119f8ef7b6ef613c8ec545450feb88f0bc99dd0b48e7cfb8b7664e8d1c0"
+  },
+  "formal_refs": {"events": [], "negatives": [], "results": ["R-526", "R-527", "R-528"]},
+  "next_action": "Use --detect-new on the frozen snapshot at the next owner-input checkpoint; if a source-authorized packet appears, hash-pin it and test N2a--N2d once under the unchanged PAH-OMC-020 quantifiers.",
+  "revisit_condition": "Reopen on a source-authorized owner packet, any new candidate reported by --detect-new, or any parent-byte change. Do not rewrite prior snapshot or result records.",
+  "non_claims": [
+    "No PAH-OMC-020 semigroup convergence, common-space theorem, Mosco result or R-512 minimal-form identification.",
+    "No universal impossibility follows from the empty snapshot marker set.",
+    "No PAH-001 functional, rate, state, carrier, regulator, time or limit-order change.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "verification_summary": "Primary 447/447, independent 263/263, hostile 10/10, N2a successor 23/23 and integrated 20/20 pass. Lean is not applicable to this provenance-hashing checkpoint."
+}

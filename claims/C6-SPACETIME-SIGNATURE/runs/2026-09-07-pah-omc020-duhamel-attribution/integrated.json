@@ -1,0 +1,216 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "PASS_DUHAMEL_ATTRIBUTION_BOUND",
+      "expected": "PASS_DUHAMEL_ATTRIBUTION_BOUND",
+      "name": "primary status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_INDEPENDENT_DUHAMEL_ATTRIBUTION",
+      "expected": "PASS_INDEPENDENT_DUHAMEL_ATTRIBUTION",
+      "name": "independent status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_HOSTILE_DUHAMEL_ATTRIBUTION",
+      "expected": "PASS_HOSTILE_DUHAMEL_ATTRIBUTION",
+      "name": "hostile status",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT"
+      ],
+      "expected": "AUXILIARY_SUPPORT",
+      "name": "all lanes auxiliary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes claim-nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "name": "conditional status retained",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "physical promotion blocked",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_CONDITIONAL as m->infinity for each fixed local cylinder",
+      "expected": "PASS_CONDITIONAL",
+      "name": "primary N4 conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": "NOT_DISCHARGED",
+      "expected": "NOT_DISCHARGED",
+      "name": "primary anchored-n open",
+      "status": "PASS"
+    },
+    {
+      "actual": 144,
+      "expected": 144,
+      "name": "connectivity input",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "two-copy input",
+      "status": "PASS"
+    },
+    {
+      "actual": 288,
+      "expected": 288,
+      "name": "effective coupling input",
+      "status": "PASS"
+    },
+    {
+      "actual": 288,
+      "expected": 288,
+      "name": "independent effective input",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "__future__",
+        "fractions",
+        "pathlib",
+        "argparse",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "tempfile"
+      ],
+      "expected": "no primary import",
+      "name": "independent non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": "525985611d487103050983a2f2659e148e17d5b2d7211417fa4186fee9945778",
+      "expected": "525985611d487103050983a2f2659e148e17d5b2d7211417fa4186fee9945778",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "two_copy_connected_term",
+        "simplex_time_integral",
+        "tail_ratio_lt_one",
+        "effective_branching",
+        "connected_count_with_two_copies"
+      ],
+      "expected": [
+        "two_copy_connected_term",
+        "simplex_time_integral",
+        "tail_ratio_lt_one",
+        "effective_branching",
+        "connected_count_with_two_copies"
+      ],
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": "clean",
+      "expected": "clean",
+      "name": "Lean policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)",
+      "expected": "Lean 4.32.1",
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "conditional": true,
+  "derived_constants": {
+    "effective_coupling_branching": 288,
+    "overlap_branching": 144,
+    "two_copy_rate_factor": 2
+  },
+  "lane_counts": {
+    "hostile": 18,
+    "independent": 25,
+    "primary": 61
+  },
+  "next_single_question": "Can this finite-fibre attribution be lifted through a source-authorized common U_n/Hilbert realization and terminal-square-compatible comparison map?",
+  "non_claims": [
+    "No N2a common U_n, N2b liminf/recovery or N2d minimal-form identification.",
+    "No anchored-n, infinite-volume, continuum or physical Pre-A/spacetime/QFT/gravity/Yang-Mills/mass-gap/TOE conclusion.",
+    "External stochastic Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "physical_promotion": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_duhamel_attribution_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/hostile.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_duhamel_attribution_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/independent.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_duhamel_attribution_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_duhamel_attribution.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-duhamel-attribution/primary.json"
+  },
+  "run_hashes": {
+    "hostile": "ef3ac0995783197051c63008f2c79b76851b679ff2314755e3eb85e4f7f00162",
+    "independent": "39c6098ff999f675657ae9a057c7fffaab97cd2706150522e0491c4f9163e8dd",
+    "primary": "b658703e8488baebb3f4dec8363adc1bd027987057248f3b5e4e8e78b9e9b8f5"
+  },
+  "schema": "tect/pah-omc020-duhamel-attribution-integrated/1.0",
+  "scope": "Conditional source-local finite-fibre Duhamel/coupling attribution for the exact PAH-OMC-004 PH/LK/AP generator after the R-511 j-limit; anchored-n passage remains open.",
+  "scripts": {
+    "hostile": {
+      "path": "codes/foundations/pah_omc020_duhamel_attribution_hostile.py",
+      "sha256": "63d4de975a4f5c02bebbaadf141afcfbeb52150bd9d2151582afe3c33c97dd2f"
+    },
+    "independent": {
+      "path": "codes/foundations/pah_omc020_duhamel_attribution_independent.py",
+      "sha256": "8bc1d1a8745bb76c4b0c178390d44666e03990f340250512b28aef5f66985c25"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/PahOmc020Duhamel.lean",
+      "sha256": "525985611d487103050983a2f2659e148e17d5b2d7211417fa4186fee9945778",
+      "version": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)"
+    },
+    "primary": {
+      "path": "verification/scripts/pah_omc020_duhamel_attribution.py",
+      "sha256": "024216f651e63d68cbcf45b00b22751526d7015b50a5aaa74eb4bb6a719a4401"
+    }
+  },
+  "status": "PASS_DUHAMEL_ATTRIBUTION_INTEGRATED",
+  "verdict": "AUXILIARY_SUPPORT"
+}

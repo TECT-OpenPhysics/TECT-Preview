@@ -1,0 +1,244 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 22,
+  "audit_id": "PAH-OMC-020-N2B-COMMON-SPACE-AUDIT-001-V1.1-INTEGRATED",
+  "checks": [
+    {
+      "actual": "tect/pah-omc020-n2a-owner-packet-intake/1.1",
+      "expected": "tect/pah-omc020-n2a-owner-packet-intake/1.1",
+      "name": "intake contract schema",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "intake still false",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "no gate or physical promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "primary firewalls",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "independent firewalls",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "expected": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "physical_promotion": false
+      },
+      "name": "hostile firewalls",
+      "status": "PASS"
+    },
+    {
+      "actual": "The original T-064 replay pinned stale temporal-work and n-mosco bytes; this current-byte successor preserves its predicate and updates only those parent hashes.",
+      "expected": "stale pins repaired",
+      "name": "primary successor marker",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "independent empty candidates",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "name": "hostile mutation coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean LF",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "admit": false,
+        "axiom": false,
+        "sorry": false,
+        "unsafe": false
+      },
+      "expected": {
+        "admit": false,
+        "axiom": false,
+        "sorry": false,
+        "unsafe": false
+      },
+      "name": "Lean forbidden tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean registry entry",
+      "status": "PASS"
+    },
+    {
+      "actual": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c",
+      "expected": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "finite_sum_abs_bound",
+        "finite_sum_square_bound",
+        "inverse_pair_form",
+        "radial_form_coefficient",
+        "split_boundary_gap",
+        "split_fibre_ratio_strict_decay"
+      ],
+      "expected": [
+        "finite_sum_abs_bound",
+        "finite_sum_square_bound",
+        "inverse_pair_form",
+        "radial_form_coefficient",
+        "split_boundary_gap",
+        "split_fibre_ratio_strict_decay"
+      ],
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean compiler available",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "failed": 0,
+  "finding": "Integrated current-byte replay confirms the original T-064 stale pins are repaired while the source-authorized N2b common-space owner packet remains absent.",
+  "lean": {
+    "command": [
+      "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lean.exe",
+      "C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\lean\\Tect\\PahOmc020.lean"
+    ],
+    "output": "",
+    "returncode": 0
+  },
+  "next_single_question": "Can one source-authorized owner provide the complete nine-field common-space packet, including arbitrary-sequence liminf, recovery, N2c/N4 boundary escape and R-512 minimal identification, without changing PAH-001?",
+  "non_claims": [
+    "No PAH-OMC-020 semigroup convergence, Mosco theorem or universal impossibility theorem.",
+    "No PAH functional, rate, state, carrier, regulator, normalization, time or limit-order change.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "passed": 22,
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 verification/scripts/pah_omc020_n2b_common_space_audit_v11_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+  "schema": "tect/pah-omc020-n2b-common-space-audit-integrated/1.1",
+  "source_hashes": {
+    "codes/foundations/pah_omc020_n2b_common_space_audit_v11_hostile.py": "048b6eec8355bec85a70eb726200c986404292c5b7c6ee85f1f28df38156c6bf",
+    "codes/foundations/pah_omc020_n2b_common_space_audit_v11_independent.py": "ea8475e6f26bb468f58b49d781b0b2e88b3202144909938f1067489ee8a859a7",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "verification/lean/Tect/PahOmc020.lean": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c",
+    "verification/lean/registry.json": "d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4",
+    "verification/scripts/pah_omc020_n2b_common_space_audit_v11.py": "7204207c6d4616ff2d2f513dca9ab3ae8812ad0514e2b8d4f67cf6367892ef71",
+    "verification/scripts/pah_omc020_n2b_common_space_audit_v11_verify.py": "4ccaca3af252becaab965594b38de2670e6afceec83de8ee0e4f12c31548e5e5"
+  },
+  "status": "PASS_INTEGRATED_N2B_CURRENT_BYTE_HOLD",
+  "subprocesses": {
+    "hostile": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-020 N2B HOSTILE V1.1: PASS 12/12; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "independent": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-020 N2B INDEPENDENT V1.1: PASS 16/16; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "primary": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-020 N2B COMMON-SPACE AUDIT V1.1: PASS 22/22; verdict=HOLD_FOR_EVIDENCE"
+    }
+  },
+  "task_id": "T-064",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

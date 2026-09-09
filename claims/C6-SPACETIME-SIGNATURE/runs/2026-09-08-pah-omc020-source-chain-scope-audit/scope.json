@@ -1,0 +1,48 @@
+{
+  "schema": "tect/pah-omc020-source-chain-scope-audit/1.0",
+  "status": "PASS_SCOPE_RECONCILIATION",
+  "recorded_at": "2026-09-08T14:42:11Z",
+  "checks": {
+    "temporal_uses_omc018_result": true,
+    "temporal_uses_omc018_prereg": true,
+    "omc018_uses_omc001": true,
+    "omc001_parent_is_pah001": true,
+    "omc001_is_successor_contract": true,
+    "omc001_marks_nonretroactive": true,
+    "omc001_retains_k2_channels": true,
+    "r552_is_parent_scope": true,
+    "r557_requires_source_owner_fields": true,
+    "r557_requires_common_realization": true,
+    "r566_still_missing_packet": true,
+    "r566_still_open_jd": true
+  },
+  "source_hashes": {
+    "strategy\\pa-hyp\\PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy\\pa-hyp\\PAH-OMC-018-generator-prereg-v1.json": "92a4fa92cb8c0384812220acd2e9929539a10a114fe348ea3f8aa7676f98aa05",
+    "strategy\\pa-hyp\\PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "strategy\\pa-hyp\\PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+    "strategy\\pa-hyp\\PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+    "strategy\\pa-hyp\\PAH-OMC-026-cut-set-packet-crosswalk-result-v1.json": "d6394f9e4bca3ae477821063d8b2ebf29fc09c362e080acd7f48ec4700d98e7e"
+  },
+  "finding": {
+    "composite_model_root_semantics": true,
+    "composite_model_authority": "researcher-owned OMC-001/OMC-018 successor contract",
+    "r552_parent_only_scope": true,
+    "r552_alone_refutes_omc020": false,
+    "owner_packet_admitted": false,
+    "anchored_n_comparison_open": true
+  },
+  "remaining_fields": [
+    "source-authorized common realization U_n/H",
+    "N1 local recovery",
+    "arbitrary-sequence N2b liminf and recovery",
+    "N2c/N4 boundary escape",
+    "N2d R-512 minimal-form identification",
+    "full-domain J_(n,j) and anchored D_n estimates"
+  ],
+  "non_claims": [
+    "This does not prove or refute PAH-OMC-020 ordered semigroup convergence.",
+    "The researcher-owned OMC-001/OMC-018 successor is not a source-authorized owner packet.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang--Mills, mass-gap or TOE conclusion."
+  ]
+}

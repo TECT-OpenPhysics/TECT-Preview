@@ -1,0 +1,168 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 21,
+  "audit_id": "PAH-OMC-020-TARGET-IDENTIFICATION-HOSTILE-001",
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "name": "form route all fields with owner",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "path route all fields with owner",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "form drop common_hilbert_map rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "form drop form_liminf rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "form drop form_recovery rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "form drop target_form_exact rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "form drop form_correlation_transfer rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "path drop common_path_space rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "path drop path_tightness rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "path drop path_generator_equality rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "path drop path_uniqueness rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "path drop path_correlation_transfer rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "conditional route rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "unowned route rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "closed target alone does not complete form",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "static map without liminf/recovery rejects",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "current form route is false",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "current path route is false",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "current D limit is false",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "external time retained",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "failed": 0,
+  "finding": "Hostile mutations show that dropping any route field, using a conditional or unowned packet, or naming only the target form cannot create D_n identification.",
+  "next_single_question": "Can a source-authorized packet supply every field of one route with the declared quantifiers?",
+  "non_claims": [
+    "No PAH-OMC-020 D_n limit or anchored-n stationary semigroup convergence is claimed.",
+    "No source process, U_n, common Hilbert space, path law, rate, state, carrier, regulator, counterterm or limit order is invented or changed.",
+    "No minimal-versus-maximal domain equality, spectral gap, ergodicity or infinite-volume jump-process theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "passed": 21,
+  "physical_promotion": false,
+  "required_routes": {
+    "form": [
+      "common_hilbert_map",
+      "form_liminf",
+      "form_recovery",
+      "target_form_exact",
+      "form_correlation_transfer"
+    ],
+    "path": [
+      "common_path_space",
+      "path_tightness",
+      "path_generator_equality",
+      "path_uniqueness",
+      "path_correlation_transfer"
+    ]
+  },
+  "schema": "tect/pah-omc020-target-identification-hostile/1.0",
+  "status": "PASS_HOSTILE_TARGET_FAIL_CLOSED",
+  "task_id": "T-078",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

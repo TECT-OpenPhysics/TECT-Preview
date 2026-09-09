@@ -1,0 +1,106 @@
+{
+  "schema": "tect/pah-omc020-owner-inventory-stable-result/1.0",
+  "result_id": "R-526",
+  "contract_id": "PAH-OMC-020-OWNER-INVENTORY-STABLE",
+  "date": "2026-09-08",
+  "task_id": "T-063",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["EXECUTED", "PROVENANCE", "INDEPENDENT", "HOSTILE", "REPLAY_STABLE"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2"
+  },
+  "inventory": {
+    "current_search_roots": ["strategy/pa-hyp", "verification/scripts", "verification/lean"],
+    "reachable_history_path_count": 772,
+    "reachable_history_sha256": "7ffdbc413f58f0270efda3afabd3e6b205f0e7de3c807aa3af18ce75019a3333",
+    "authorized_json_paths": [],
+    "complete_owner_status_paths": [],
+    "dynamic_fsck_output_recorded": false
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-inventory-stable/result.json": "e4ed74bed72b1b30a13ea059e51fab87af540ce85bc45515da6384b0e2a2ecf2",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-inventory-stable/independent.json": "80e5d84f0cd24116e3a4bdb840e2bed2a1bbf383d9560c8ee9e9dc04b73c26ff",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-inventory-stable/hostile.json": "6f94a3e775a7f42295742a9c9cd06c5a1e9f351fb4d1892e86623518ade85857",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-inventory-stable/integrated.json": "11e8c9637001e701d6f72b86b7100b458634462504c754607b641bbff08db772",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json": "b87a2d8d7b0009c9f5bd30695823cb442376939ff18c1d48f1d890ae430fe8c7"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_owner_packet_inventory_stable.py": "ac2b5d846a354418b3bc2f9bf64689bc9f2bc9f5c96585397c5f928a623a42fb",
+    "codes/foundations/pah_omc020_owner_packet_inventory_stable_independent.py": "efcc816dee78a15bd2863e46edcb48dd9862e6b8e257d104fdb8870bb8e58188",
+    "codes/foundations/pah_omc020_owner_packet_inventory_stable_hostile.py": "b66bcd468bbab4a3db1f0e7f539c7443108a0413f2f54ef08583dfa8db966d7d",
+    "verification/scripts/pah_omc020_owner_packet_inventory_stable_verify.py": "92e9fb0c0a739dc666e23d7807cefa95212c407ad280ce696a97987076425e44",
+    "verification/scripts/pah_omc020_n2b_common_space_audit.py": "fe3ddc8302244ea6e58903721891a6d3beee6839dcee5b57edf8b1ac5357013b"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md": "a4dff82d5c2baf31672d194a961755f52ec31482c14775540d22ff76687a8893",
+    "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-exploration.json": "bcd12aba4172906a8f4e772fc5a49521bacc14dc1fc3009f2837c87a75d077e0",
+    "explorations/log.jsonl#EXP-001644": "554ae7038a08c3686aa7dd4057a3811a021cae964c1f4c92632789bb1f76cc95",
+    "changelog/log.jsonl#20260908-r-526-pah-omc-020-deterministic-owner-packet-in": "cd7d88c93bf509e7075184895f2ae8378e83a8bdd3b85bae8089038a8d88fda2"
+  },
+  "exact_scope": {
+    "model": "The unchanged PAH-001 functional, original labelled rates, Gibbs state, external Markov time and j-before-n order.",
+    "audit": "A deterministic bounded inventory of current and reachable PAH-OMC-020 owner-packet markers; dynamic dangling-object output is excluded.",
+    "result": "No source-authorized owner packet is present in the bounded inventory. R-525 remains a researcher-owned local coupling candidate.",
+    "not_a_theorem": "The inventory is provenance evidence only and does not prove nonexistence of an abstract or future realization."
+  },
+  "conclusion": {
+    "finding": "The previous owner-history replay defect is isolated to workspace-dependent git fsck output. The stable audit reproduces the frozen source hashes and finds no source-authorized or complete PAH-OMC-020 owner packet.",
+    "scientific_status": "HOLD_FOR_EVIDENCE: source authorization, PAH-specific energy intertwining, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal-form identification and full semigroup convergence remain open."
+  },
+  "assumptions": [
+    "Current and reachable repository paths are the declared bounded provenance inventory.",
+    "The N2a intake and R-525 candidate provenance fields faithfully state that source authorization is absent.",
+    "Excluding dynamic dangling-object listings does not remove any scientific source or model definition."
+  ],
+  "missing_assumptions": [
+    "Versioned source-owner authorization and signer approval for the exact R-525 U_n.",
+    "Measure-compatible common Hilbert-space realization and local-cylinder recovery as a full-space map.",
+    "PAH-specific energy-form intertwining, N2b weak-liminf/recovery, N2c/N4 boundary escape and N2d minimal-form identification.",
+    "Stationary semigroup correlation convergence after those obligations close."
+  ],
+  "adversarial_review": [
+    {"objection": "A stable inventory is a universal proof that no owner packet exists.", "disposition": "REJECTED: the scope is explicitly current and reachable repository paths only; future or external owner input is not inspected."},
+    {"objection": "Removing git fsck output hides a recoverable source object.", "disposition": "DISMISSED: fsck output is a mutable workspace diagnostic; reachable source paths remain enumerated and hash-pinned."},
+    {"objection": "R-525 can be promoted because the inventory is replay-stable.", "disposition": "REJECTED: replay stability is provenance evidence, not source authorization or energy compatibility."},
+    {"objection": "The audit changes the PAH model by changing the history tool.", "disposition": "DISMISSED: PAH-001, rates, state, carrier, time and limit order are byte-identical to their pins."},
+    {"objection": "The empty marker lists prove N2b or semigroup convergence.", "disposition": "REJECTED: all temporal and form obligations remain explicit missing assumptions."}
+  ],
+  "formal_refs": {"results": ["R-525"], "negatives": [], "events": ["20260908-r-526-pah-omc-020-deterministic-owner-packet-in"]},
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_owner_packet_inventory_stable.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_owner_packet_inventory_stable_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_owner_packet_inventory_stable_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_owner_packet_inventory_stable_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "n2b_consumer": "python -X utf8 verification/scripts/pah_omc020_n2b_common_space_audit.py --check",
+    "result": "Primary 14/14, independent 12/12, hostile 8/8, integrated 22/22 and the migrated N2b consumer 22/22 pass. The R-525 finite Lean cross-check remains PASS; no new analytic Lean theorem is asserted."
+  },
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md",
+  "closed_scoped_gate": "Deterministic bounded owner-packet provenance inventory and replay-stability repair.",
+  "remaining_gates": [
+    "Source authorization for the exact R-525 U_n",
+    "Energy-form intertwining",
+    "N2b weak-liminf and recovery",
+    "N2c/N4 compact-time boundary escape",
+    "N2d identification with the R-512 minimal closed form",
+    "Full PAH-OMC-020 stationary semigroup correlation convergence"
+  ],
+  "next_single_question": "Can a source owner authorize the exact R-525 maximal-prefix U_n and provide PAH-specific energy intertwining for N2b, N2c/N4 and N2d without changing PAH-001?",
+  "revisit_condition": "Reopen when a versioned owner packet with signer, SHA-256, map, measure, energy, boundary and minimal-form fields is supplied or when a frozen parent hash changes.",
+  "non_claims": [
+    "No source-authorized U_n packet, Mosco theorem, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal-form identification or PAH-OMC-020 semigroup convergence.",
+    "No universal comparison-map no-go; this is a bounded provenance inventory only.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ]
+}

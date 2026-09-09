@@ -1,0 +1,113 @@
+{
+  "schema": "tect/pah-omc025-route-frontier-contract/1.0",
+  "contract_id": "PAH-OMC-025",
+  "result_id": "R-565",
+  "task_id": "T-092",
+  "date": "2026-09-08",
+  "title": "Route-independent minimal owner cut-set for PAH-OMC-020",
+  "question": "Do the existing PAH-OMC-020 records reduce every admissible route to a common minimal cut-set of source semantics, comparison/target identification, and full-domain temporal control, without adding a new model or repeating a finite diagnostic?",
+  "purpose": "Freeze a single re-entry test after the fixed-n, radial, path-word, target-identification, source-wellposedness and anchored-n persistence checkpoints. This is a dependency theorem about the registered proof routes, not a replacement for the missing owner packet.",
+  "provenance": {
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "constructed_contract": true,
+    "source_authorized_packet_present": false,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-020-prereg": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    },
+    "R-534": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-result-v1.json",
+      "sha256": "a96b95f704ca9f7289bdc4767cd46a90f4bf3567ab1c3f2fae2b813840a11adc"
+    },
+    "R-536": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json",
+      "sha256": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+    },
+    "R-542": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json",
+      "sha256": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0"
+    },
+    "R-557": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json",
+      "sha256": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4"
+    },
+    "R-559": {
+      "path": "strategy/pa-hyp/PAH-OMC-022-source-level-semigroup-wellposedness-result-v1.json",
+      "sha256": "e9582ffa26d04dfd11d7951fe3e8fb62aa8981d4f436477ddbbf1a9d6f482bf0"
+    },
+    "R-564": {
+      "path": "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-result-v1.json",
+      "sha256": "ddf325e36c8941c5ca1b7bf5b45b84c363e7d5082d9af95c61b623eb798534c1"
+    }
+  },
+  "preservation_firewall": {
+    "functional_unchanged": true,
+    "rates_unchanged": true,
+    "state_unchanged": true,
+    "carrier_unchanged": true,
+    "time_unchanged": true,
+    "limit_order_unchanged": true,
+    "no_new_finite_carrier": true,
+    "no_new_abstract_oracle": true,
+    "no_counterterm": true,
+    "no_rate_fitting": true,
+    "no_physical_promotion": true
+  },
+  "cut_set": {
+    "S0_source_semantics": {
+      "meaning": "The exact finite object is selected: root labels, multiplicities, duplicate/invalid moves, root counting measure, finite generator and stationary normalization are fixed by source authority or an explicitly named successor.",
+      "evidence": "R-559 shows immutable PAH-001 is not uniquely selected by current bytes; R-560 reports no owner-authorized successor packet.",
+      "required": true,
+      "current": false
+    },
+    "S1_comparison_target": {
+      "meaning": "At least one complete comparison route is supplied for the unchanged model: form route with common realization, N1, liminf/recovery, boundary control, exact R-512 target and correlation transfer, or path route with common path law, tightness, generator/form equality, uniqueness and correlation transfer.",
+      "evidence": "R-536 marks both form and path route field sets incomplete; R-557 lists the corresponding owner fields.",
+      "required": true,
+      "current": false,
+      "alternatives": ["FORM_ROUTE", "PATH_ROUTE"]
+    },
+    "S2_temporal_control": {
+      "meaning": "The declared j-before-anchored-n compact-time quantifiers are controlled on the full local-cylinder domain: fixed-n J plus anchored D, or an equivalent source-authorized conditional path/N4 estimate that yields the same error budget.",
+      "evidence": "R-534 leaves J/K/D inputs conditional; R-542 blocks promotion from stationary averages to stopping-time control; R-564 blocks promotion of a finite derivative gap to an anchored-n result.",
+      "required": true,
+      "current": false,
+      "alternatives": ["J_PLUS_D", "PATH_CONDITIONAL_N4_AND_IDENTIFICATION"]
+    }
+  },
+  "route_rule": {
+    "admissible": "S0_source_semantics AND S1_comparison_target AND S2_temporal_control, with one complete S1 alternative and all original j-before-n quantifiers.",
+    "mainline_advance": "Only an owner-authorized, hash-pinned packet instantiating all three cuts may advance PAH-OMC-020.",
+    "hold_for_evidence": "Any missing cut keeps the actual route HOLD_FOR_EVIDENCE; absence is not a universal no-go for a future owner-fixed successor.",
+    "negative_result": "Reserved for an exact unchanged-source contradiction to one required cut, not for a missing packet or a researcher-owned conditional theorem."
+  },
+  "replay_obligations": [
+    "Verify every parent SHA-256 and the unchanged PAH-OMC-020 order.",
+    "Check that R-559 is source-level only and R-564 is a logical non-implication, so neither is over-promoted.",
+    "Evaluate FORM_ROUTE and PATH_ROUTE as disjoint Boolean alternatives; reject partial packets and radial-only evidence.",
+    "Show that S0, S1 and S2 are all required by the current route contracts, while no new finite calculation is used.",
+    "Compile the finite Boolean cut-set theorem in Lean and run independent and hostile mutation checks."
+  ],
+  "current_status": {
+    "S0_source_semantics": "MISSING",
+    "S1_form_or_path_comparison": "MISSING",
+    "S2_full_domain_temporal_control": "MISSING",
+    "actual_pa_h_omc020": "HOLD_FOR_EVIDENCE"
+  },
+  "single_next_question": "Can one source-authorized, hash-pinned packet instantiate S0 plus either complete comparison route and the full-domain temporal control S2 without changing PAH-001 or its j-before-anchored-n order?",
+  "non_claims": [
+    "This contract does not prove PAH-OMC-020 convergence or refute every owner-fixed successor.",
+    "It does not construct a common Hilbert space, path law, compensator, generator, carrier, rate, state, regulator or limit.",
+    "It does not promote R-559 source-level nonuniqueness or R-564 abstract persistence to an anchored-n universal no-go.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion; external Markov time remains stochastic bookkeeping."
+  ]
+}

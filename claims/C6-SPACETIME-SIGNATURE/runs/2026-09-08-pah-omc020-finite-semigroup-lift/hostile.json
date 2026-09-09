@@ -1,0 +1,130 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-FINITE-SEMIGROUP-LIFT-HOSTILE-001",
+  "checks": [
+    {
+      "detail": {
+        "declared_fields": [
+          "acceptance",
+          "boundary_and_uniformity",
+          "contract_id",
+          "eventual_intertwining_proof",
+          "exact_scope",
+          "exploration_id",
+          "falsifiers",
+          "full_q_charge_cases",
+          "known_boundaries",
+          "missing_assumptions",
+          "non_claims",
+          "parents",
+          "preservation_firewall",
+          "proposed_at",
+          "proposed_by",
+          "provenance",
+          "reproduction",
+          "revisit_condition",
+          "root_support_contract",
+          "schema",
+          "single_next_question",
+          "status",
+          "title",
+          "version"
+        ],
+        "required": [
+          "all_iterates",
+          "invariant_subspace",
+          "operator_identity"
+        ]
+      },
+      "mutation": "generator-only-to-semigroup shortcut",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "registered_input": "R-493 proves A I f=I B f for each declared cylinder f after its support-dependent N(f), and retains the R-484 hidden-diagonal defect 16/9. It does not register an invariant finite subspace or an all-function operator identity.",
+        "support_rule": "R-493 sets N(f)=max(2,m_f+1) and only asserts the identity at the support-dependent threshold."
+      },
+      "mutation": "fixed-N-after-iteration shortcut",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "domain": "A_cyl^gr is the algebraic union of bounded functions of finitely many retained integer occupations ell_v and finitely many closed-face holonomy characters, invariant under the declared gauge action and anchor-preserving automorphisms. It cannot inspect the disjoint-union grade, aperture, open links or phases. R-488 ell_a, ell_d, H_0 and H_1 are included.",
+        "sufficient": "If I is a linear map on the entire finite coarse function space and A I=I B on that entire space, then A^k I=I B^k for every k>=0 and the finite matrix-exponential semigroups satisfy exp(tA)I=I exp(tB) for every real t."
+      },
+      "mutation": "local-cylinder-as-full-function-space shortcut",
+      "rejected": true
+    },
+    {
+      "detail": "Read the exact R-484 boundary witness (coarse 1/8, fine-even 1/4, fine-odd -55/36, hidden diagonal 16/9) and retain it as a nonzero boundary datum.",
+      "mutation": "boundary-defect-erasure",
+      "rejected": true
+    },
+    {
+      "detail": [
+        "R-550 does not prove the PAH-OMC-020 ordered j-before-anchored-n semigroup convergence.",
+        "The conditional finite bridge does not construct a common infinite-volume process, a path law, or a closed operator from the PAH source.",
+        "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+        "Markov time remains the external stochastic time declared in PAH-001 and is not quantum real time, proper time or Lorentzian time.",
+        "The finite matrix regression fixtures are algebraic checks and are not replacement PAH carriers, counterterms, rates or state mixtures."
+      ],
+      "mutation": "anchored-n-promotion",
+      "rejected": true
+    },
+    {
+      "detail": [
+        "R-550 does not prove the PAH-OMC-020 ordered j-before-anchored-n semigroup convergence.",
+        "The conditional finite bridge does not construct a common infinite-volume process, a path law, or a closed operator from the PAH source.",
+        "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+        "Markov time remains the external stochastic time declared in PAH-001 and is not quantum real time, proper time or Lorentzian time.",
+        "The finite matrix regression fixtures are algebraic checks and are not replacement PAH carriers, counterterms, rates or state mixtures."
+      ],
+      "mutation": "physical-promotion",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "delete-non-claims": false,
+        "pretend-gate-change": false,
+        "pretend-strong-hypothesis": false
+      },
+      "mutation": "mutation simulations all rejected",
+      "rejected": true
+    }
+  ],
+  "checks_failed": 0,
+  "checks_passed": 7,
+  "claim_bearing": false,
+  "classification": "HOSTILE_FIREWALL_REJECTS_SEMIGROUP_OVERCLAIM",
+  "code_sha256": "278088be4bbd299967752a5e97386c5e1a0e9ce363987daf0efc21d2d0f7d783",
+  "missing_assumptions": [
+    "A source-authorized invariant finite common subspace containing the iterates of every target cylinder at the fixed successor pair, or an exact all-function operator identity A I=I B.",
+    "A source-authorized definition of the transition-kernel/projective consistency if the semigroup is to be used pathwise instead of through finite matrix exponentials.",
+    "The separate common-space/path-space, N2b/N2c/N4/N2d and R-512 minimal-form identification inputs required for anchored-n convergence."
+  ],
+  "non_claims": [
+    "R-550 does not prove the PAH-OMC-020 ordered j-before-anchored-n semigroup convergence.",
+    "The conditional finite bridge does not construct a common infinite-volume process, a path law, or a closed operator from the PAH source.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains the external stochastic time declared in PAH-001 and is not quantum real time, proper time or Lorentzian time.",
+    "The finite matrix regression fixtures are algebraic checks and are not replacement PAH carriers, counterterms, rates or state mixtures."
+  ],
+  "physical_promotion": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_finite_semigroup_lift_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/hostile.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_finite_semigroup_lift_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/independent.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_finite_semigroup_lift_verify.py",
+    "lean": "Set-Location verification/lean; lean Tect/PahOmc020FiniteSemigroup.lean",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_finite_semigroup_lift.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-finite-semigroup-lift/primary.json"
+  },
+  "result_id": "R-550",
+  "schema": "tect/pah-omc020-finite-semigroup-lift-hostile/1.0",
+  "single_next_question": "Can a source-authorized packet prove that the R-493 grade-blind cylinder is invariant under every finite coarse generator iterate, or provide the stronger all-function finite operator intertwining needed to exponentiate the lift?",
+  "source_hashes": {
+    "R493": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "contract": "b09fb65163b28c68a5cd1e7274ab620387e9102ac4d56a36fb1752f817e7426f"
+  },
+  "task_id": "T-082",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

@@ -1,0 +1,117 @@
+{
+  "schema": "tect/pah-omc020-mesh-uniform-result/1.0",
+  "result_id": "R-545",
+  "contract_id": "PAH-OMC-020-MESH-UNIFORM-TRANSFER",
+  "date": "2026-09-08",
+  "task_id": "T-065",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "FINITE_SCALAR_TRANSFER",
+    "DETERMINISTIC_TIME_MODULUS_INPUT",
+    "R512_TARGET_CONTINUITY_INPUT",
+    "EXACT_SOURCE_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-mesh-uniform-contract-v1.json",
+  "certificate": "strategy/pa-hyp/PAH-OMC-020-mesh-uniform-certificate.md",
+  "exploration_id": "EXP-001668",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json": "4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2"
+  },
+  "exact_scope": {
+    "model": "Exactly the immutable PAH-001 finite functional, original directed rates, labelled Gibbs state and P_(n,j)(t)=exp(tL_(n,j)); no new carrier, rate, counterterm or projection.",
+    "observable": "One fixed local cylinder pair f,g after support stabilization.",
+    "time": "External stochastic Markov time t on a fixed compact interval [0,T] only.",
+    "finite_input": "R-543 supplies |C_(n,j)(t)-C_(n,j)(s)| <= M_fg |t-s| uniformly over retained finite n,j.",
+    "target_input": "R-530 supplies continuity of the fixed R-512 minimal-form target correlation C_inf(t)=<f,T_min(t)g>; finite-to-target identification is not inferred.",
+    "transfer": "For a mesh G_delta of covering radius delta, sup_t|C_(n,j)(t)-C_inf(t)| <= max_q|C_(n,j)(q)-C_inf(q)| + M_fg*delta + omega_inf(delta).",
+    "order": "The only conditional conclusion uses the preregistered j->infinity at fixed n followed by anchored n order; no limit is actually taken here.",
+    "normalization": "Original labelled Gibbs normalization and unchanged finite correlation convention."
+  },
+  "finding": "The scalar mesh inequality and its conditional ordered implication are exact. Compact-time uniform convergence is reduced to ordered convergence at every finite time-mesh point, but that mesh-pointwise dynamic input remains unproved.",
+  "assumptions": [
+    "R-543's finite modulus is valid for the same unchanged local correlations.",
+    "The fixed R-512 target correlation is uniformly continuous on each compact time interval as supplied by R-530's spectral semigroup.",
+    "For each fixed mesh, ordered j-before-anchored-n convergence holds at every mesh point. This is a missing hypothesis, not an achieved result.",
+    "A finite mesh with the stated covering radius exists for each delta>0."
+  ],
+  "missing_assumptions": [
+    "Source-authorized proof of ordered PAH mesh-pointwise convergence for every finite time mesh.",
+    "A common-space or path-space packet identifying the anchored-n limit with the exact R-512 target.",
+    "N2b/N2c/N4/N2d closure, non-explosion and any infinite-volume semigroup construction."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "A finite mesh estimate silently proves all-time convergence.",
+      "disposition": "REJECTED: the finite modulus and target continuity only transfer a separately assumed mesh-pointwise limit; that premise remains open."
+    },
+    {
+      "objection": "R-543's finite modulus identifies the R-512 target.",
+      "disposition": "UPHELD AGAINST PROMOTION: no common space, path law or finite-to-target identification is imported."
+    },
+    {
+      "objection": "The mesh may be chosen after the limit or after fitting data.",
+      "disposition": "REJECTED: delta, the covering mesh and the registered order are fixed before the finite mesh error is taken."
+    },
+    {
+      "objection": "Target continuity is a PAH finite conclusion.",
+      "disposition": "UPHELD AGAINST PROMOTION: target continuity is an input from the fixed R-512 spectral target, not a PAH identification."
+    },
+    {
+      "objection": "External Markov time has become physical time.",
+      "disposition": "REJECTED: the time variable remains stochastic bookkeeping only."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-530", "R-543"],
+    "negatives": [],
+    "events": ["20260908-r-545-pah-omc-020-mesh-uniform-transfer-2026-09"]
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_mesh_uniform.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_mesh_uniform_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_mesh_uniform_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_mesh_uniform_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020MeshUniform.lean",
+    "result": "Primary 27/27, independent 16/16, hostile 15/15, integrated 30/30; four finite rational Lean declarations compile."
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mesh-uniform/primary.json": "c6d57ed1ef8267056c3e9462d30bf8d8610697c0e2db2af5e6a51438e0d0fa9a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mesh-uniform/independent.json": "a0b0445be9f06a29845a13d70cf54ca845a2a9c5d5f8dc86d5e13b060e992b74",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mesh-uniform/hostile.json": "af1875ef010127f2f80740022d005581eb6c4213245572a63d01f626e14e2538",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mesh-uniform/integrated.json": "d14ee51e55481e0f9e18829b614919703f620e1d1077c7d9f245f7ce4f6304e0"
+  },
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-mesh-uniform-contract-v1.json": "16282f2367d613d3dfd6fa5c828bd351cdf5c77dc32c70abf0ee70ecb61950ba",
+    "strategy/pa-hyp/PAH-OMC-020-mesh-uniform-certificate.md": "c3ccface3dac672ab7691a44da51c82b2940a788cbca4954c415ac27f0baa388",
+    "verification/scripts/pah_omc020_mesh_uniform.py": "8a7eecd9d787c7e2074450faf454affbe550556eb59bfb8a6bacbc95bd98f14d",
+    "codes/foundations/pah_omc020_mesh_uniform_independent.py": "9c35900edc39e2af423a8e93c03c1d08cbb5a39ea80a2fdacbfa16693092defd",
+    "codes/foundations/pah_omc020_mesh_uniform_hostile.py": "dd2195f748c85346605ff7e4fa9dd99decc8c1a8f10cfa6d0413c86329d674e1",
+    "verification/scripts/pah_omc020_mesh_uniform_verify.py": "eb422780d310fb045e4dfac5b61cc04701fff19528ddc49f7e606b3c89f2c7dd",
+    "verification/lean/Tect/PahOmc020MeshUniform.lean": "dd17aec06e148c616fe26c51e27dfcd6727714c9c1c19c5566ad7cde02a5fd26",
+    "verification/lean/registry.json": "475185da1b512afd63961a1855e77fd0829bd8c7e17da0aa30654a303af38d5c"
+  },
+  "closed_scoped_gate": "The scalar compact-time mesh-to-uniform transfer under the R-543 finite modulus and R-530 target continuity inputs.",
+  "next_single_question": "Can a source-authorized common-space or path-space packet prove ordered PAH correlation convergence at every finite time-mesh point for the unchanged PAH-001 dynamics?",
+  "revisit_condition": "Reopen only if PAH-001, the registered time/limit order, R-543 modulus, R-530 target or the scalar correlation definition changes; do not repeat finite carrier or physical reinterpretation calculations.",
+  "non_claims": [
+    "No PAH mesh-pointwise convergence is assumed as an achieved result; it is the remaining dynamic input.",
+    "No source-authorized common-space/path-space packet, N2b/N2c/N4/N2d closure, non-explosion theorem, R-512 finite-to-target identification or ordered semigroup convergence.",
+    "No change to PAH-001 functional, rates, state, carrier, regulator, normalization, external Markov time or j-before-anchored-n order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ]
+}

@@ -1,0 +1,629 @@
+{
+  "cell_partition": [
+    {
+      "M": 1,
+      "R": 1.0,
+      "Z_cell": 0.002134617594864269,
+      "h": 1.0,
+      "j": 0,
+      "upper_mass": "0.000221954965531"
+    },
+    {
+      "M": 4,
+      "R": 2.0,
+      "Z_cell": 0.0016764879267799327,
+      "h": 0.5,
+      "j": 1,
+      "upper_mass": "3.8781131945e-13"
+    },
+    {
+      "M": 16,
+      "R": 4.0,
+      "Z_cell": 0.0014373778636981413,
+      "h": 0.25,
+      "j": 2,
+      "upper_mass": "1.83566514269e-340"
+    },
+    {
+      "M": 64,
+      "R": 8.0,
+      "Z_cell": 0.0013178364274252757,
+      "h": 0.125,
+      "j": 3,
+      "upper_mass": "1.27536544751e-19472"
+    },
+    {
+      "M": 256,
+      "R": 16.0,
+      "Z_cell": 0.001258065720258596,
+      "h": 0.0625,
+      "j": 4,
+      "upper_mass": "1.06445031235e-1221692"
+    }
+  ],
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+      "expected": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-016-resolved-radial-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+      "expected": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+      "expected": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-018-generator-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "expected": "half exponent",
+      "name": "original midpoint generator",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "K": 2,
+        "M_s": 1,
+        "beta": 1,
+        "epsilon": "1/2",
+        "eta_6": 1,
+        "g": 1,
+        "kappa_D": 1,
+        "kappa_g": 1,
+        "kappa_s": 1,
+        "lambda_4": 1,
+        "lambda_s": 1,
+        "m2": 0,
+        "nu": 1,
+        "theta": 0
+      },
+      "expected": "K=2,M_s=1,epsilon=1/2,beta=nu=1",
+      "name": "fixed PAH parameters",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "M_psi": "2^(2j)",
+        "R_max": "2^j",
+        "base": 2,
+        "index": "j is an integer >=0",
+        "radial_mesh": "2^(-j)"
+      },
+      "expected": "R=2^j,M=2^(2j),h=2^(-j)",
+      "name": "dyadic path",
+      "status": "PASS"
+    },
+    {
+      "actual": "labelled counting; endpoint-inclusive",
+      "expected": "present",
+      "name": "labelled state and endpoint contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "Do the original finite stationary semigroups converge, first in radial cutoff j at fixed n and then in the specified anchored volume n, to the R-512 minimal-form semigroup in local two-point correlations uniformly on every compact nonnegative time interval?",
+      "expected": "fixed-n then anchored n",
+      "name": "temporal comparison is fixed-n first",
+      "status": "PASS"
+    },
+    {
+      "actual": "not a temporal path-law construction",
+      "expected": "present",
+      "name": "source certificate keeps temporal law separate",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1*1",
+      "name": "cell length identity j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "name": "half-open domain length j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1,
+        1
+      ],
+      "expected": 1,
+      "name": "upper endpoint retained j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "first cell anchored j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1.0,
+      "name": "labelled cell normalization j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "upper_mass": "0.000221954965531",
+        "z": "0.00213461759486"
+      },
+      "expected": "upper mass included",
+      "name": "upper cell has positive mass j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "4*1/2",
+      "name": "cell length identity j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/2",
+      "expected": "5/2",
+      "name": "half-open domain length j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4,
+        4
+      ],
+      "expected": 4,
+      "name": "upper endpoint retained j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "first cell anchored j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9999999999999999,
+      "expected": 1.0,
+      "name": "labelled cell normalization j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "upper_mass": "3.8781131945e-13",
+        "z": "0.00167648792678"
+      },
+      "expected": "upper mass included",
+      "name": "upper cell has positive mass j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "16*1/4",
+      "name": "cell length identity j=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/4",
+      "expected": "17/4",
+      "name": "half-open domain length j=2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        16,
+        16
+      ],
+      "expected": 16,
+      "name": "upper endpoint retained j=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "first cell anchored j=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1.0,
+      "name": "labelled cell normalization j=2",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "upper_mass": "1.83566514269e-340",
+        "z": "0.0014373778637"
+      },
+      "expected": "upper mass included",
+      "name": "upper cell has positive mass j=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "8",
+      "expected": "64*1/8",
+      "name": "cell length identity j=3",
+      "status": "PASS"
+    },
+    {
+      "actual": "65/8",
+      "expected": "65/8",
+      "name": "half-open domain length j=3",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        64,
+        64
+      ],
+      "expected": 64,
+      "name": "upper endpoint retained j=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "first cell anchored j=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1.0,
+      "name": "labelled cell normalization j=3",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "upper_mass": "1.27536544751e-19472",
+        "z": "0.00131783642743"
+      },
+      "expected": "upper mass included",
+      "name": "upper cell has positive mass j=3",
+      "status": "PASS"
+    },
+    {
+      "actual": "16",
+      "expected": "256*1/16",
+      "name": "cell length identity j=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "257/16",
+      "expected": "257/16",
+      "name": "half-open domain length j=4",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        256,
+        256
+      ],
+      "expected": 256,
+      "name": "upper endpoint retained j=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "first cell anchored j=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0000000000000007,
+      "expected": 1.0,
+      "name": "labelled cell normalization j=4",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "upper_mass": "1.06445031235e-1221692",
+        "z": "0.00125806572026"
+      },
+      "expected": "upper mass included",
+      "name": "upper cell has positive mass j=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0011982950130919176,
+      "expected": ">0 and finite",
+      "name": "continuous slice has finite normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.22055256950132887,
+      "expected": "finite",
+      "name": "continuous slice second moment is finite",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.3056549387123839,
+        0.1403851138852563,
+        0.07316323792824422,
+        0.037758801360721184,
+        0.01922755607288236
+      ],
+      "expected": "last error < first error",
+      "name": "sampled correlation improves on the coarse cell rule",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "Z_cell": 0.0021346175948642686,
+          "correlation": 0.9203778228632933,
+          "error": 0.3056549387123839,
+          "j": 0,
+          "tail_at_K": 0.10397879510810273
+        },
+        {
+          "Z_cell": 0.0016764879267799325,
+          "correlation": 0.7551079980361657,
+          "error": 0.1403851138852563,
+          "j": 1,
+          "tail_at_K": 0.06667890079516381
+        },
+        {
+          "Z_cell": 0.001437377863698141,
+          "correlation": 0.6878861220791536,
+          "error": 0.07316323792824422,
+          "j": 2,
+          "tail_at_K": 0.045220784971787865
+        },
+        {
+          "Z_cell": 0.0013178364274252755,
+          "correlation": 0.6524816855116305,
+          "error": 0.037758801360721184,
+          "j": 3,
+          "tail_at_K": 0.035194694272722434
+        },
+        {
+          "Z_cell": 0.0012580657202585965,
+          "correlation": 0.6339504402237918,
+          "error": 0.01922755607288236,
+          "j": 4,
+          "tail_at_K": 0.030410091676976742
+        }
+      ],
+      "expected": "finite",
+      "name": "sampled correlation is finite at every audited level",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.10397879510810273,
+      "expected": "<=0.10397879510810273",
+      "name": "stationary Markov tail bound j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.017237402575639434,
+      "expected": "<=0.2695130369202023",
+      "name": "cutoff correlation bound j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.06667890079516381,
+      "expected": "<=0.15800295386989516",
+      "name": "stationary Markov tail bound j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.011000979278172325,
+      "expected": "<=0.17283171086106458",
+      "name": "cutoff correlation bound j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.045220784971787865,
+      "expected": "<=0.18386756559497552",
+      "name": "stationary Markov tail bound j=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.007026650115730757,
+      "expected": "<=0.11721227464687416",
+      "name": "cutoff correlation bound j=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.035194694272722434,
+      "expected": "<=0.2005461669278652",
+      "name": "stationary Markov tail bound j=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.005115791067340534,
+      "expected": "<=0.09122464755489654",
+      "name": "cutoff correlation bound j=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.030410091676976742,
+      "expected": "<=0.21007411608332077",
+      "name": "stationary Markov tail bound j=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.004228787236668689,
+      "expected": "<=0.07882295762672371",
+      "name": "cutoff correlation bound j=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 15,
+      "expected": "16 (upper cell index)",
+      "name": "hostile upper-cell exclusion rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "full exponent",
+      "expected": "source midpoint exponent",
+      "name": "hostile full exponent rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "f8b97fce59bab2574262573b9a656dd76f80060cc3fa754095f03873d9589804",
+      "expected": "different from source pin",
+      "name": "hostile source mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        -1,
+        1
+      ],
+      "expected": [
+        -1,
+        1
+      ],
+      "name": "continuous and sampled fibre use the same two phases",
+      "status": "PASS"
+    }
+  ],
+  "code_sha256": "6bf85310ee40c1717bd37cc3ae2e596f42fb41f166e588abcca3bd7084bd64e2",
+  "correlation": {
+    "errors": [
+      0.3056549387123839,
+      0.1403851138852563,
+      0.07316323792824422,
+      0.037758801360721184,
+      0.01922755607288236
+    ],
+    "grid": [
+      {
+        "Z_cell": 0.0021346175948642686,
+        "correlation": 0.9203778228632933,
+        "error": 0.3056549387123839,
+        "j": 0,
+        "tail_at_K": 0.10397879510810273
+      },
+      {
+        "Z_cell": 0.0016764879267799325,
+        "correlation": 0.7551079980361657,
+        "error": 0.1403851138852563,
+        "j": 1,
+        "tail_at_K": 0.06667890079516381
+      },
+      {
+        "Z_cell": 0.001437377863698141,
+        "correlation": 0.6878861220791536,
+        "error": 0.07316323792824422,
+        "j": 2,
+        "tail_at_K": 0.045220784971787865
+      },
+      {
+        "Z_cell": 0.0013178364274252755,
+        "correlation": 0.6524816855116305,
+        "error": 0.037758801360721184,
+        "j": 3,
+        "tail_at_K": 0.035194694272722434
+      },
+      {
+        "Z_cell": 0.0012580657202585965,
+        "correlation": 0.6339504402237918,
+        "error": 0.01922755607288236,
+        "j": 4,
+        "tail_at_K": 0.030410091676976742
+      }
+    ],
+    "target": 0.6147228841509094,
+    "target_second_moment": 0.22055256950132887
+  },
+  "fixture": {
+    "carrier": "OMC-004 n=2 two-row strip; one active amplitude and one fixed 1/4 background amplitude",
+    "labels": [
+      -1,
+      1
+    ],
+    "role": "source-derived finite audit oracle, not a new carrier or dynamics",
+    "test_time": 0.7
+  },
+  "non_claims": [
+    "This finite slice and its numerical quadrature are not a PAH temporal convergence theorem or a result-card admission.",
+    "No strong operator convergence, common infinite-volume process, R-512 minimal/maximal closure equality or ordered limit is claimed.",
+    "No physical Pre-A, spacetime, quantum real time, QFT, gravity, continuum, mass gap or TOE conclusion; no Q3LOCK or TECT-YM import."
+  ],
+  "open_obligations": [
+    "turn the cell identity and tail estimate into an all-test common-space analytic theorem",
+    "admit or refute the fixed-n j-limit for the actual PAH stationary L2 spaces",
+    "take the anchored n limit and identify the R-512 minimal-form semigroup"
+  ],
+  "proved_scope": [
+    "exact half-open dyadic cell index and retained upper endpoint on j=0..4 fixtures",
+    "full labelled cell-density normalization with the common mesh factor",
+    "same finite source-derived fibre matrix in sampled and continuous correlation expressions",
+    "finite sampled correlation diagnostic, stationary Markov tail inequality and bounded cutoff estimate",
+    "hostile endpoint/full-exponent/source mutations rejected and PahOmc020 Lean compilation PASS"
+  ],
+  "schema": "tect/pah-omc020-cell-correlation/1.0",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-016-resolved-radial-prereg-v1.json": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_COMMON_SPACE_CELL_AUDIT",
+  "tail_cutoff": {
+    "K": 1.0,
+    "reports": [
+      {
+        "cutoff_bound": 0.2695130369202023,
+        "cutoff_difference": 0.017237402575639434,
+        "j": 0,
+        "markov_bound": 0.10397879510810273,
+        "second_moment": 0.10397879510810273,
+        "tail": 0.10397879510810273
+      },
+      {
+        "cutoff_bound": 0.17283171086106458,
+        "cutoff_difference": 0.011000979278172325,
+        "j": 1,
+        "markov_bound": 0.15800295386989516,
+        "second_moment": 0.15800295386989516,
+        "tail": 0.06667890079516381
+      },
+      {
+        "cutoff_bound": 0.11721227464687416,
+        "cutoff_difference": 0.007026650115730757,
+        "j": 2,
+        "markov_bound": 0.18386756559497552,
+        "second_moment": 0.18386756559497552,
+        "tail": 0.045220784971787865
+      },
+      {
+        "cutoff_bound": 0.09122464755489654,
+        "cutoff_difference": 0.005115791067340534,
+        "j": 3,
+        "markov_bound": 0.2005461669278652,
+        "second_moment": 0.2005461669278652,
+        "tail": 0.035194694272722434
+      },
+      {
+        "cutoff_bound": 0.07882295762672371,
+        "cutoff_difference": 0.004228787236668689,
+        "j": 4,
+        "markov_bound": 0.21007411608332077,
+        "second_moment": 0.21007411608332077,
+        "tail": 0.030410091676976742
+      }
+    ]
+  },
+  "temporal_verdict": "IN_PROGRESS"
+}

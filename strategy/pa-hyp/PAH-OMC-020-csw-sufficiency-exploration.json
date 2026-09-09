@@ -1,0 +1,38 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-020 C_sw first-moment sufficiency boundary",
+  "question": "Does the existing R-490 Gibbs-state-weighted first-moment bound C_sw=540 by itself imply the L2 generator or N2c/N4 compact-time boundary control needed for the anchored-n temporal passage?",
+  "finding": "No. An exact reversible two-state family has stationary conductance 2M/(M+1)<2 and Dirichlet energy 4M/(M+1)<4 for a bounded test, while its L2 generator norm squared is 4M and is unbounded. The result is a sufficiency obstruction for the proposed inference from C_sw alone, not an exact PAH counterexample or universal no-go.",
+  "decision_reason": "This is a bounded route advance because it separates the first-rate Gibbs envelope from the squared-rate or pathwise input actually needed for an L2/Duhamel boundary argument. It preserves every PAH definition and converts the next proof obligation into one source-owned second-moment or Lyapunov contract rather than another finite carrier calculation.",
+  "boundary": "The PAH-001 functional, original directed rates, labelled Gibbs state, OMC-004 strips, R-490 normalization, external Markov time and j-before-n order remain frozen. The two-state family is an abstract hostile diagnostic only.",
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-010, R-490 and the PAH-OMC-020 temporal preregistration.",
+    "Recompute S_geom=8, N_geom=60 and C_sw=540 from the R-490 certificate.",
+    "For every integer M>=1, verify detailed balance for pi(0)=1/(M+1), pi(1)=M/(M+1), c(0,1)=M and c(1,0)=1.",
+    "Compute the first conductance moment, Dirichlet energy and L2 generator norm for f=(1,-1), and prove the last quantity is unbounded while the first two remain bounded.",
+    "Run independent, hostile and Lean checks, then keep N2c/N4 and R-512 process identification on HOLD_FOR_EVIDENCE."
+  ],
+  "next_action": "Obtain a source-owned PAH estimate of a local second-rate moment C2(A), or an equivalent conditional/pathwise Lyapunov non-explosion bound, and connect it to N2b, N2c/N4 and R-512 minimal-form identification.",
+  "revisit_condition": "Reopen only when such an estimate is supplied with exact PAH domains and parent hashes, or when an exact PAH-specific contradiction to the required estimate is found. Do not relabel this abstract witness as a PAH no-go.",
+  "non_claims": [
+    "No PAH functional, rate, state, carrier, regulator, time or limit order is changed.",
+    "No exact PAH counterexample, universal impossibility theorem or semigroup convergence result is claimed.",
+    "No common process, N2b/N2c/N4 closure, R-512 minimal-form selection, infinite-volume dynamics, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion.",
+    "External Markov time remains stochastic bookkeeping and is not physical time."
+  ],
+  "provenance": "contemporaneous",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "task_id": "T-072",
+  "formal_refs": {"events": [], "negatives": [], "results": ["R-490", "R-520"]},
+  "evidence_refs": [
+    "strategy/pa-hyp/R490-certificate.md#C_sw",
+    "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md#Exact sufficiency witness",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-csw-sufficiency/integrated.json#finding",
+    "verification/lean/Tect/PahOmc020Csw.lean#generator_l2_unbounded"
+  ],
+  "related": [{"id": "EXP-001638", "relation": "continues"}],
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "verification_summary": "Primary 46/46, non-importing independent 27/27, hostile 13/13 and integrated 26/26 checks pass; Lean 4.32.1 compiles the nine rational declarations. The route remains HOLD_FOR_EVIDENCE."
+}

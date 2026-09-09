@@ -1,0 +1,41 @@
+{
+  "schema": "tect/pah-omc020-mesh-uniform-contract/1.0",
+  "contract_id": "PAH-OMC-020-MESH-UNIFORM-TRANSFER",
+  "result_id": "R-545",
+  "task_id": "T-065",
+  "date": "2026-09-08",
+  "question": "Can compact-time uniform convergence of the unchanged PAH finite stationary correlations to the R-512 minimal-form correlation be reduced to convergence on finite time meshes plus the R-543 finite modulus and target continuity?",
+  "scope": {
+    "finite_family": "C_(n,j)(f,g;t) from unchanged PAH-001 after the registered j-before-anchored-n order.",
+    "target": "C_inf(f,g;t)=<f,T_min(t)g> for the exact R-512 minimal closed-form spectral semigroup from R-530.",
+    "observable": "One fixed local cylinder pair f,g after support stabilization.",
+    "time": "External stochastic Markov time t in a fixed compact interval [0,T] only.",
+    "comparison": "Scalar correlation comparison only; no new U_n, carrier, conditional averaging or path process is introduced."
+  },
+  "hypotheses": {
+    "finite_modulus": "There is M_fg independent of retained finite n,j such that |C_(n,j)(t)-C_(n,j)(s)| <= M_fg |t-s|; R-543 supplies M_fg=sqrt(B_f B_g) under its finite form-energy hypotheses.",
+    "target_continuity": "The fixed R-512 target correlation C_inf is uniformly continuous on [0,T]; R-530's spectral semigroup supplies continuity for each fixed Hilbert-space pair, but no finite-to-target identification is inferred.",
+    "mesh_cover": "For every delta>0, a finite mesh G_delta subset of [0,T] has covering radius at most delta.",
+    "mesh_pointwise": "For every fixed delta and every mesh point q in G_delta, the ordered j-before-anchored-n correlation error tends to zero. This is the remaining dynamic input, not proved by this contract."
+  },
+  "bound": "sup_(0<=t<=T)|C_(n,j)(t)-C_inf(t)| <= max_(q in G_delta)|C_(n,j)(q)-C_inf(q)| + M_fg*delta + omega_inf(delta), where omega_inf(delta)=sup_{|t-s|<=delta}|C_inf(t)-C_inf(s)|.",
+  "ordered_conclusion": "If the mesh-pointwise hypothesis holds for every delta and the ordered limit is taken j->infinity at fixed n followed by anchored n, then the compact-time supremum tends to zero by first choosing delta with M_fg*delta+omega_inf(delta) small and then taking the ordered limit on the finite mesh.",
+  "verification_requirements": [
+    "Primary exact-rational mesh inequality and ordered-limit bookkeeping.",
+    "Independent non-importing mesh fixtures with a different target modulus.",
+    "Hostile checks rejecting omission of target continuity, coverage radius, finite modulus or the registered order.",
+    "Lean finite rational inequality for the mesh transfer; no infinite-volume theorem is formalized."
+  ],
+  "acceptance": {
+    "PASS": "The scalar mesh inequality and conditional ordered implication replay identically in all finite verification lanes.",
+    "HOLD_FOR_EVIDENCE": "The actual PAH mesh-pointwise convergence, common-space/path-space packet and R-512 identification remain absent.",
+    "NEGATIVE_RESULT": "Only an exact failure of the scalar mesh inequality under its stated hypotheses would be negative; no such failure is expected."
+  },
+  "single_next_question": "Can a source-authorized common-space or path-space packet prove the ordered correlation convergence at every finite time mesh point for the unchanged PAH-001 dynamics?",
+  "non_claims": [
+    "No PAH mesh-pointwise convergence is assumed as an achieved result; it remains the missing dynamic input.",
+    "No common U_n, path law, non-explosion theorem, N2b/N2c/N4/N2d closure or R-512 finite-to-target identification.",
+    "No replacement of PAH-001 functional, rates, Gibbs state, external Markov time or j-before-anchored-n order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001660",
+  "title": "PAH-OMC-020 N2b byte-replay determinism correction",
+  "task_id": "T-064",
+  "question": "After the v1.1 successor artifacts are present, does the independent N2b audit still reproduce exactly without treating its own files as source-owner candidates?",
+  "finding": "A case-sensitive self-artifact exclusion caused one stale independent JSON after uppercase N2B successor files were added. Lower-casing only the filename for the existing exclusion restores exact replay: primary 22/22, independent 16/16, hostile 12/12, integrated 22/22 and six finite Lean declarations pass. The strict source-authorized owner-packet inventory remains empty.",
+  "decision_reason": "This is a reproducibility correction, not a change to PAH-001, the OMC chain, the owner predicate or the finite model. R-539 and EXP-001659 remain immutable historical records; R-540 and this entry pin the corrected verifier and regenerated integrated run.",
+  "boundary": "Exactly unchanged PAH-001 F_rho, original PH/LK/AP/TR rates, labelled Gibbs state, external stochastic Markov time and j-before-anchored-n order. No common H, U_n, liminf, recovery, process, carrier, rate, state, counterterm or physical interpretation is constructed.",
+  "method": [
+    "Compare the stored independent payload with a fresh computation and isolate the inventory-only difference.",
+    "Apply a case-insensitive exclusion to the successor's own N2B audit artifacts, leaving all source pins and checks unchanged.",
+    "Regenerate the independent and integrated run JSONs, then replay primary, independent, hostile and Lean checks.",
+    "Register the correction as a successor result rather than mutating R-539 or its append-only exploration record."
+  ],
+  "next_action": "Obtain one source-authorized owner packet satisfying the complete common H/U_n, arbitrary-sequence liminf, recovery, boundary and R-512 minimal-identification fields, then test it once under the unchanged PAH-OMC-020 contract.",
+  "revisit_condition": "Reopen only when a versioned owner packet or exact PAH-specific contradiction is hash-pinned; otherwise do not repeat finite carrier, physical-empty, BCC or Reading-H calculations.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-09-08T02:10:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "formal_refs": {"results": ["R-512", "R-520", "R-522", "R-538", "R-539", "R-540"], "negatives": [], "events": []},
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-replay-correction-result-v1.json#finding",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-replay-correction-certificate.md#Correction",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/integrated.json#checks"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-contract.json": "f17fe9fa277a5b4c5fba06c23672cc806b7710e9ff9cb728ea7d5b542ed9d5c3",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-replay-correction-certificate.md": "45ec778f957c87a86f008ec079e293680f9d9f00fbdb290f89902525c0560476",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-replay-correction-result-v1.json": "59fea18b92a42a36472a6d9a1ca2d18f8c402b05974775b618a0d70adbe417ff",
+    "verification/scripts/pah_omc020_n2b_common_space_audit_v11.py": "7204207c6d4616ff2d2f513dca9ab3ae8812ad0514e2b8d4f67cf6367892ef71",
+    "codes/foundations/pah_omc020_n2b_common_space_audit_v11_independent.py": "521d5f4bf7efa0993be63c7c6bbdc105ee6fcce540393b4b386fe89528ac9e82",
+    "codes/foundations/pah_omc020_n2b_common_space_audit_v11_hostile.py": "048b6eec8355bec85a70eb726200c986404292c5b7c6ee85f1f28df38156c6bf",
+    "verification/scripts/pah_omc020_n2b_common_space_audit_v11_verify.py": "4ccaca3af252becaab965594b38de2670e6afceec83de8ee0e4f12c31548e5e5",
+    "verification/lean/Tect/PahOmc020.lean": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c",
+    "verification/lean/registry.json": "dad08d9e44597716d67c8b0a6057b8f549e1625e8db60c64208ab1dbbef5ecc2",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/result.json": "317332d02ccb76fbf781a6917c0999b013ad97b4386fce6298bb63140adf35b6",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/independent.json": "1fe577ef986e68503c9c8a034fc36cc3544eaa049cc7ac5b98d71c6846ff0ef8",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/hostile.json": "92c64e2e29104b3736a5092f34a8adc3d274286ba293bcfe72e998e21c0cec3c",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/integrated.json": "a094bb4448c5e94e3856b0efa881cc170b106123c5af3787afde349b970815ee"
+  },
+  "non_claims": [
+    "No PAH-OMC-020 semigroup convergence, Mosco theorem, common-space theorem or universal impossibility theorem.",
+    "No PAH functional, rate, state, carrier, regulator, normalization, time or limit-order change.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "related": [{"id": "EXP-001659", "relation": "corrects"}]
+}

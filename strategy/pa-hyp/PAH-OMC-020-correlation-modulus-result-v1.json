@@ -1,0 +1,114 @@
+{
+  "schema": "tect/pah-omc020-correlation-modulus-result/1.0",
+  "result_id": "R-543",
+  "contract_id": "PAH-OMC-020-CORRELATION-MODULUS",
+  "date": "2026-09-08",
+  "task_id": "T-064",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "FINITE_FORM_ENERGY",
+    "DETERMINISTIC_TIME_MODULUS",
+    "EXACT_SOURCE_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-contract-v1.json",
+  "certificate": "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-certificate.md",
+  "exploration_id": "EXP-001663",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0"
+  },
+  "exact_scope": {
+    "model": "Exactly the immutable PAH-001 finite functional, original directed rates, labelled Gibbs state and P_(n,j)(t)=exp(tL_(n,j)).",
+    "observable": "Every fixed local f,g in the declared bounded gauge-invariant globally amplitude-l1-Lipschitz cylinder domain after support stabilization.",
+    "modulus": "|C_(n,j)(f,g;t)-C_(n,j)(f,g;s)| <= |t-s| sqrt(B_f B_g), B_f=2D_fM_f^2+2H_fL_f^2.",
+    "uniformity": "Uniform in retained finite n,j for each fixed local pair; deterministic s,t on compact external Markov-time intervals.",
+    "order": "No j or anchored-n limit is taken by this result; the preregistered j-before-n order is preserved.",
+    "normalization": "Original labelled Gibbs normalization and directed-half reversible form."
+  },
+  "finding": "R-511's source-derived form-energy bound and finite reversible spectral calculus imply the deterministic-time correlation modulus uniformly over the retained finite indices. This is a compact-time equicontinuity input only.",
+  "assumptions": [
+    "R-511 energy bounds hold for the same unchanged sampled local observables.",
+    "The finite PAH semigroup is reversible with K=-L nonnegative in the registered directed-half form convention.",
+    "Finite spectral calculus supplies form contraction and the deterministic-time derivative identity."
+  ],
+  "missing_assumptions": [
+    "A source-authorized conditional predictable-compensator or pointwise rate bound for bounded stopping times.",
+    "A common path-space or common-Hilbert comparison for the anchored n passage.",
+    "N2b liminf/recovery, N2c/N4 boundary escape, N2d R-512 minimal-form identification and ordered semigroup convergence."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The form-energy estimate is a pointwise total-rate bound.",
+      "disposition": "REJECTED: only the stationary reversible quadratic form is used; no exit-rate supremum is introduced."
+    },
+    {
+      "objection": "The deterministic derivative estimate applies to arbitrary stopping times.",
+      "disposition": "UPHELD AGAINST PROMOTION: R-542's conditional owner field remains required."
+    },
+    {
+      "objection": "Equicontinuity identifies the R-512 target semigroup.",
+      "disposition": "UPHELD AGAINST PROMOTION: common-space/path comparison and target identification remain open."
+    },
+    {
+      "objection": "Finite-index uniformity is an anchored-n theorem.",
+      "disposition": "UPHELD AGAINST PROMOTION: no n limit is taken and no infinite-volume process is constructed."
+    },
+    {
+      "objection": "External Markov time is physical time.",
+      "disposition": "REJECTED: the time variable remains stochastic bookkeeping."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-511", "R-512", "R-542"],
+    "negatives": [],
+    "events": ["20260908-r-543-pah-omc-020-correlation-modulus-2026-09-0"]
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_correlation_modulus.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_correlation_modulus_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_correlation_modulus_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_correlation_modulus_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020CorrelationModulus.lean",
+    "result": "Primary 27/27, independent 20/20, hostile 12/12, integrated 28/28; five finite rational Lean declarations compile."
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-correlation-modulus/primary.json": "13357770cd82f634ad17f6c27555f35d4801d87b791da128675eb934bbea08a2",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-correlation-modulus/independent.json": "957f11e21175895a3567bc9a7ea78bea211646f003a1cc32d956cc62616a170e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-correlation-modulus/hostile.json": "895da52c6c772ae9230f100298d916756afa2e8cd7c9908d40143430900454a3",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-correlation-modulus/integrated.json": "e1a21ee4fd0e2c97db6e660cded0c35c656f53f8bcffba6b159cf2d059085851"
+  },
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-contract-v1.json": "c1f5f816280b07cb11fab46855a96c98dfe4948ff103355920ddc84b85a81fbf",
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-certificate.md": "8f09ba971b8bd8d3813c889869b3f3a313db5609c84c80160df59cf25b364a57",
+    "verification/scripts/pah_omc020_correlation_modulus.py": "b4dab0cebb152ca13730bc6a64b16f3a34f4152234659318bd8eb8555ec5068e",
+    "codes/foundations/pah_omc020_correlation_modulus_independent.py": "83582012857969e046ac0c5515cabdcca3a811c3c3fe83c6471ef6158c1079bd",
+    "codes/foundations/pah_omc020_correlation_modulus_hostile.py": "2b81c1afb283a57f70504df2da526142a8772bd811541f313cf0a9c07e449f33",
+    "verification/scripts/pah_omc020_correlation_modulus_verify.py": "a0d9496619fb4505ec9cd3f6b9abbb1026655e52992dc1f904ff9a0a052a0eed",
+    "verification/lean/Tect/PahOmc020CorrelationModulus.lean": "56fe55678fef3323ae95f8892b4785ad0ad255d727c0be64abd8ca69e7b4744a",
+    "verification/lean/registry.json": "cafc0aafd675db2e124ea2bf19ab4195cc49bcd7e575e22c967d9579b92fd188"
+  },
+  "closed_scoped_gate": "Deterministic compact-time equicontinuity of the finite local correlations under the pinned R-511 form-energy bounds.",
+  "next_single_question": "Can a source-authorized common-space or path-space packet identify the anchored-n limit of these equicontinuous correlations with the R-512 minimal-form semigroup?",
+  "revisit_condition": "Reopen only if a parent hash, R-511 energy bound, deterministic-time convention or sampled correlation definition changes.",
+  "non_claims": [
+    "No bounded-stopping-time Aldous estimate, path-space construction, non-explosion theorem or semigroup convergence.",
+    "No N2a-N2d closure, R-512 process identification, infinite-volume dynamics, continuum or physical result.",
+    "No change to PAH-001 function, rates, state, carrier, regulator, normalization, external Markov time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ]
+}

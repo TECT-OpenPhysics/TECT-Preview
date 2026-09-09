@@ -1,0 +1,189 @@
+{
+  "active_gate_change": false,
+  "assumptions": [
+    "R-511's exact finite radial L2 residual estimate and inverse-pair stationary bound hold at their pinned scope.",
+    "Each P_nj(t) is the complete stationary reversible finite PAH semigroup and is L2-contracting.",
+    "R-512's minimal closed form is the declared target and its zero-energy radial subspace gives the displayed spectral identity.",
+    "The amplitude-only cylinder is stabilized for n >= N(f) and retains the original labelled state and order."
+  ],
+  "audit_id": "PAH-OMC-020-RADIAL-SEMIGROUP-CONSISTENCY-PRIMARY-001",
+  "checks": [
+    {
+      "actual": "tect/pah-omc020-radial-semigroup-consistency-contract/1.0",
+      "expected": "tect/pah-omc020-radial-semigroup-consistency-contract/1.0",
+      "name": "contract schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "('R-548', 'T-065')",
+      "expected": "('R-548', 'T-065')",
+      "name": "contract identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'strategy/pa-hyp/PAH-001-v1.json': '03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37', 'strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json': '906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3', 'strategy/pa-hyp/PAH-OMC-018-result-v1.json': 'd34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65', 'strategy/pa-hyp/PAH-OMC-019-result-v1.json': '82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd', 'strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json': 'cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801'}",
+      "expected": "{'strategy/pa-hyp/PAH-001-v1.json': '03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37', 'strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json': '906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3', 'strategy/pa-hyp/PAH-OMC-018-result-v1.json': 'd34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65', 'strategy/pa-hyp/PAH-OMC-019-result-v1.json': '82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd', 'strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json': 'cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801'}",
+      "name": "parent hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-001",
+      "expected": "PAH-001",
+      "name": "PAH packet unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "external stochastic time",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "j-before-n order",
+      "status": "PASS"
+    },
+    {
+      "actual": "('R-511', 'PASS', 'ZERO_IN_DERIVED_LOCAL_OPERATOR')",
+      "expected": "('R-511', 'PASS', 'ZERO_IN_DERIVED_LOCAL_OPERATOR')",
+      "name": "R-511 local pre-form",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "R-512 radial kernel input",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "R-514 fixed-n input",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "no anchored-n claim in R-514",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/128",
+      "expected": "1/128",
+      "name": "radial jump bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "30",
+      "expected": "30",
+      "name": "finite root count",
+      "status": "PASS"
+    },
+    {
+      "actual": "15/128",
+      "expected": "15/128",
+      "name": "generator residual bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "15/64",
+      "expected": "15/64",
+      "name": "compact-time Duhamel bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/64",
+      "expected": "9/64",
+      "name": "correlation bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "epsilon fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "strict j decay",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "anchored-n uniformity input",
+      "status": "PASS"
+    },
+    {
+      "actual": "SPECTRAL_CONSEQUENCE_OF_R512_ZERO_ENERGY",
+      "expected": "SPECTRAL_CONSEQUENCE_OF_R512_ZERO_ENERGY",
+      "name": "target radial identity input",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "full-route firewall",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 21,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "3bb034418dc4ae0e7da6393227f6997d0bf6fc8684f693da2bd4521d82589d19",
+  "conditional": true,
+  "finding": "For bounded amplitude-only local cylinders, non-radial PAH moves have zero increment and the original radial generator has L2 residual at most 2 H_f L_f h_j. Stationary L2 contraction gives a compact-time semigroup error at most 2 T H_f L_f h_j, and R-512 zero energy gives identity action of the minimal target semigroup on H_rad. Thus the restricted amplitude-only correlations converge uniformly in t on every finite interval, first in j and then in anchored n.",
+  "fixture": {
+    "compact_time_bound": "15/64",
+    "correlation_bound": "9/64",
+    "epsilon": "1/4",
+    "generator_bound": "15/128",
+    "h": "1/256",
+    "inputs": {
+      "degree_bound": 5,
+      "j": 8,
+      "lipschitz_constant": "1/2",
+      "sup_norm_f": "3/5",
+      "support_column": 2,
+      "support_vertices": 3,
+      "time_horizon": "2"
+    },
+    "jump_l1": "1/128",
+    "next_bound": "15/128",
+    "root_count": 30
+  },
+  "missing_assumptions": [
+    "A source-authorized comparison map for non-radial cylinders across the anchored n spaces.",
+    "N2b arbitrary-sequence liminf/recovery, N2c/N4 boundary escape, N2d minimal identification beyond the already-selected target, and the non-radial compact-time correlation transfer.",
+    "No claim that the restricted radial result supplies the full PAH-OMC-020 semigroup convergence."
+  ],
+  "next_single_question": "Can one source-authorized common-space or path-space packet transfer the non-radial PH/LK/AP correlations to the same R-512 minimal semigroup while preserving the radial identity just proved?",
+  "non_claims": [
+    "This is a restricted amplitude-only auxiliary result, not the full PAH-OMC-020 convergence theorem.",
+    "No non-radial PH/LK/AP anchored-n convergence, source-authorized common U_n, path law, N2b/N2c/N4/N2d closure or full semigroup identification.",
+    "No change to PAH-001 function, rates, state, mobility, carrier, regulator, normalization, external time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 verification/scripts/pah_omc020_radial_semigroup_consistency.py --check",
+  "result_id": "R-548",
+  "schema": "tect/pah-omc020-radial-semigroup-consistency-primary/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_RESTRICTED_RADIAL_SUBSPACE",
+  "task_id": "T-065",
+  "verdict": "PASS"
+}

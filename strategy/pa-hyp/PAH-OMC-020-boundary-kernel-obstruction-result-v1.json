@@ -1,0 +1,124 @@
+{
+  "schema": "tect/pah-omc020-boundary-kernel-obstruction-result/1.0",
+  "result_id": "R-524",
+  "contract_id": "PAH-OMC-020-BOUNDARY-KERNEL-OBSTRUCTION",
+  "date": "2026-09-08",
+  "task_id": "T-063",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": false,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "EXACT_ROUTE_LOCAL_OBSTRUCTION",
+    "ANALYTIC_EXPONENTIAL_RAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-boundary-kernel-obstruction/primary.json": "ec980b0b299361189ad6d5c6a18b33efe45b2a17fc18fbb6a1d1aab1c8090173",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-boundary-kernel-obstruction/independent.json": "7eaa20d9e95ff2618138426a11bf42195f717cd9a4f151a1bfae1da81a61bf05",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-boundary-kernel-obstruction/hostile.json": "199bac95be69ca572f7c7486228bba14708baf85067720932d7a32b4acb28711",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-boundary-kernel-obstruction/integrated.json": "a1fec839cf7e63b186a65aa408f32b7fa660dab25d44b0d535baaf2f810ccc15"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_boundary_kernel_obstruction.py": "8672f9a6a0862e986e5df955c73411e07da1fb9a2ca9c760a5c2a4782b5971c6",
+    "codes/foundations/pah_omc020_boundary_kernel_obstruction_independent.py": "ecf68978edd1c271ab67bd47c950158a1d6bac339c64234b30757a00ca598286",
+    "codes/foundations/pah_omc020_boundary_kernel_obstruction_hostile.py": "bf0f32399fca8fd4774e44073df1f0d0be067a29b4b23bab7914b9e75079a028",
+    "verification/scripts/pah_omc020_boundary_kernel_obstruction_verify.py": "f47f5bb486e8e7f2c66c13eedfed4e5914dc1ff4024c918950e9bc0b8130a77c",
+    "verification/lean/Tect/PahOmc020.lean": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c",
+    "verification/lean/registry.json": "adc0fff457b4ead10cbfd9468cfe2df56390a9123ae9a957750bddd5e45a6011"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md": "15b385655ce7e989d0bfccb7df126083dfeee604810d735d7fc2ee529a82fa19",
+    "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-exploration.json": "0207fb5c739a433da8be4b1ea480e7a5301a490ce71dbabaeaf81f75843a8bee",
+    "explorations/log.jsonl#EXP-001642": "2f83443a79bae5f7e82117045ca6d1ce1a490f09dead798dd046696fd7a691a9",
+    "changelog/log.jsonl#20260908-r-524-pah-omc-020-coordinate-preserving-termina": "1159cd10bbc2b042ba501b85cfcc6a02ab3c928e474a734268df03be7d5e7a81"
+  },
+  "exact_scope": {
+    "model": "Exactly PAH-001 with its displayed F_rho, labelled Gibbs state and original rates; no new dynamics.",
+    "geometry": "The OMC-004 terminal unsplit square compared with its source split-cell fibre, using the retained old labels h0=h1=vx=vy=+1.",
+    "witness": "All apertures s=1, phases +1, x0=y0=0, x1=y1=A with A>=0; diagonal labels d=+1 and d=-1 are both retained.",
+    "normalization": "Source edge stiffness J_e=2/(s_v+s_w), source plaquette boundary average, and the original Gibbs weight exp(-F).",
+    "comparison": "Coordinate-preserving terminal-fibre density-ratio lift only; no claim about arbitrary non-coordinate U_n.",
+    "time_and_order": "External stochastic Markov time and the preregistered j-before-n order are unchanged; no limit is taken in this obstruction."
+  },
+  "conclusion": {
+    "source_energies": "B_square=0, B_triangle(d=+1)=A^2/2, B_triangle(d=-1)=A^2/2+4.",
+    "ratio": "rho_split(A)/rho_square(A)=(1+exp(-4))*exp(-A^2/2).",
+    "obstruction": "The reciprocal coordinate-preserving recovery multiplier is unbounded as A tends to infinity, so no uniformly bounded full-space density-ratio lift of this named form can recover the finite square law from the split marginal.",
+    "route_scope": "This is an exact route-local N2a obstruction, not a universal comparison-map no-go and not a counterexample to local temporal correlation convergence."
+  },
+  "assumptions": [
+    "The PAH-001 edge-stiffness and plaquette boundary-average formulas are used exactly on the allowed witness fibre.",
+    "The R-510 transfer certificate's terminal square/split-cell formulas retain both diagonal labels and all old boundary labels.",
+    "The amplitude ray A>=0 is part of the declared continuous source domain; no finite-grid extrapolation is used for the unbounded conclusion."
+  ],
+  "missing_assumptions": [
+    "A source-authorized non-coordinate bounded-energy U_n/common-space realization that avoids the obstructed coordinate lift.",
+    "N2b arbitrary-sequence liminf and recovery, N2c/N4 boundary escape and N2d identification with the R-512 minimal closure.",
+    "Anchored-n semigroup convergence for all local cylinder observables."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The decaying split/square ratio is being confused with the recovery multiplier.",
+      "disposition": "DISMISSED: the certificate explicitly uses the reciprocal, which grows exponentially."
+    },
+    {
+      "objection": "The face penalty 4 comes from an altered one-third normalization.",
+      "disposition": "DISMISSED: both triangle face terms use the source boundary average at unit edge stiffness; the hostile lane rejects the one-third mutation."
+    },
+    {
+      "objection": "Finite samples alone establish unboundedness.",
+      "disposition": "DISMISSED: the closed symbolic exponential formula and challenge-dependent amplitudes establish the arbitrary-C argument."
+    },
+    {
+      "objection": "The route-local obstruction is a universal U_n no-go.",
+      "disposition": "UPHELD AGAINST PROMOTION: non-coordinate bounded-energy maps remain open."
+    },
+    {
+      "objection": "The fibre calculation has physical or temporal meaning.",
+      "disposition": "REJECTED: only the external stochastic Markov-time bookkeeping is retained."
+    }
+  ],
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": ["20260908-r-524-pah-omc-020-coordinate-preserving-termina"]
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_boundary_kernel_obstruction.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_boundary_kernel_obstruction_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_boundary_kernel_obstruction_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_boundary_kernel_obstruction_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020.lean",
+    "result": "Primary 39/39, independent 43/43, hostile 15/15, integrated 22/22 and the registered Lean declaration split_fibre_ratio_strict_decay compile."
+  },
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md",
+  "closed_scoped_gate": "Exact obstruction to the uniformly bounded coordinate-preserving terminal-fibre density-ratio lift.",
+  "remaining_gates": [
+    "Source-authorized non-coordinate U_n/common-space realization",
+    "N2b arbitrary-sequence liminf and recovery",
+    "N2c/N4 boundary escape for the unchanged rates",
+    "N2d R-512 minimal-form identification",
+    "Anchored-n semigroup convergence and the full PAH-OMC-020 objective"
+  ],
+  "next_single_question": "Can a source-authorized non-coordinate bounded-energy U_n/common-space realization preserve the same local cylinders and satisfy N2b, N2c/N4 and N2d despite this coordinate-preserving obstruction?",
+  "revisit_condition": "Reopen when such a non-coordinate owner packet is hash-pinned or when a defect is found in the source stiffness, boundary-average normalization, retained diagonal labels or exponential derivation.",
+  "non_claims": [
+    "No full PAH-OMC-020 semigroup negative result, Mosco-liminf failure or universal comparison-map impossibility.",
+    "No change to PAH-001 functional, rates, state, carrier, regulator order or external Markov time.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass gap, Yang--Mills or TOE conclusion."
+  ]
+}

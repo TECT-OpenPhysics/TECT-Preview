@@ -1,0 +1,49 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001705",
+  "title": "PAH-OMC-020 N2b parsed-owner-provenance false-positive correction",
+  "task_id": "T-064",
+  "question": "Does the current-byte N2b independent audit identify an admitted owner packet from parsed provenance fields rather than authorization prose inside contract documents?",
+  "method": [
+    "Run the current N2b independent replay against the exact worktree inventory and isolate the three owner-search contract paths reported as strict candidates.",
+    "Inspect the candidate JSON and confirm that source_authorized_packet_present=true occurred only in marker-policy prose, while the actual snapshot value is false.",
+    "Change only the independent candidate predicate to parse JSON booleans in the packet/provenance/snapshot/current_status sections; do not change PAH-001, the owner predicate, the finite model or the scientific scope.",
+    "Regenerate and replay the primary, non-importing independent, hostile and integrated N2b lanes with the canonical pinned Lean package cache."
+  ],
+  "finding": "The previous independent failure was a verifier false-positive, not evidence of an owner packet: contract prose containing the literal marker source_authorized_packet_present=true was mistaken for a true provenance field. After parsed-boolean admission, the strict candidate set is empty and primary 22/22, independent 16/16, hostile 12/12, integrated 22/22 and six finite Lean declarations pass.",
+  "decision_reason": "This is an append-only reproducibility correction. It restores the intended owner-admission predicate and leaves the scientific result at HOLD_FOR_EVIDENCE; no source-authorized U_n/common-space packet is admitted.",
+  "boundary": "Immutable PAH-001, original OMC-013/017/018/019 chain, labelled Gibbs state, original rates, external stochastic Markov time and j-before-anchored-n order are unchanged. No comparison map, carrier, rate, state, counterterm, limit or physical interpretation is added.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-09-08T15:57:22Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-09",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "formal_refs": {"results": ["R-512", "R-538", "R-539", "R-540", "R-566"], "negatives": [], "events": []},
+  "evidence_refs": [
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/independent.json#checks",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/integrated.json#checks",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-replay-correction-result-v1.json#missing_assumptions"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-contract.json": "f17fe9fa277a5b4c5fba06c23672cc806b7710e9ff9cb728ea7d5b542ed9d5c3",
+    "codes/foundations/pah_omc020_n2b_common_space_audit_v11_independent.py": "ea8475e6f26bb468f58b49d781b0b2e88b3202144909938f1067489ee8a859a7",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/independent.json": "df553c72aba94b83ca4d4780d86f6c09e6d7998df65e42d0a6aa847d5f70c0e0",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-n2b-common-space-audit-v1.1/integrated.json": "6f526547a827c3824416fb5759de30acd89230227dfaaad894ac4c208a793e44"
+  },
+  "reproduction": {
+    "independent": "python -X utf8 codes/foundations/pah_omc020_n2b_common_space_audit_v11_independent.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_n2b_common_space_audit_v11_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages"
+  },
+  "next_action": "Require one versioned source-authorized packet with explicit parsed provenance and complete common-space/N2b/N2c/N2d fields; then run the unchanged admission predicate once.",
+  "revisit_condition": "Reopen only when a new packet or parent hash is supplied, or when the verifier's parsed provenance predicate changes; do not repeat finite carrier, physical-empty, BCC or Reading-H calculations.",
+  "non_claims": [
+    "No source-authorized U_n/common-Hilbert realization, Mosco theorem, path-space theorem or PAH-OMC-020 semigroup convergence is proved.",
+    "The correction is not a universal impossibility theorem and does not refute an owner-fixed successor.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion; external Markov time remains bookkeeping."
+  ],
+  "related": [{"id": "EXP-001660", "relation": "continues"}]
+}

@@ -378,7 +378,7 @@ def master_index():
 def atomic_write(path: Path, content: str):
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(dir=str(path.parent), suffix=".tmp")
-    with os.fdopen(fd, "w", encoding="utf-8") as f:
+    with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as f:
         f.write(content)
     os.replace(tmp, str(path))
 

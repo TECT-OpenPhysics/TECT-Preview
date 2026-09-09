@@ -1,0 +1,61 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "task_id": "T-094",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-09",
+  "provenance": "contemporaneous",
+  "title": "PAH-OMC-025 registry drift re-entry correction for the next owner-packet stage",
+  "question": "Does the fresh PAH-OMC-025 replay mismatch change the PAH-OMC-020 route, or is it only post-result Lean-registry provenance drift, and does the T-094 owner-packet re-entry remain parked?",
+  "method": [
+    "Run the unchanged PAH-OMC-020 owner-delta check against E:/Dev/Contents at the registered cutoff.",
+    "Replay the PAH-OMC-025 primary, non-importing independent and hostile lanes without changing PAH-001, the route cut-set or the j-before-anchored-n order.",
+    "Run the integrated PAH-OMC-025 replay in the current environment, compare its stored registry hash and entrypoint count with the current verification/lean/registry.json, and preserve the mismatch as provenance-only.",
+    "Check the current canonical pinned Lean package path and retain the scoped HOLD_FOR_EVIDENCE verdict."
+  ],
+  "finding": "The owner delta remains PASS_NO_NEW_INPUT (total=7503; fresh_after_cutoff=0). PAH-OMC-025 primary, independent and hostile replays pass 42/42, 25/25 and 11/11, and a fresh integrated replay passes 16/16 with Lean PASS. The stored integrated artifact is stale only because it pins registry hash 96c92aa43aa76d02ef1f963a30085144cb55d8959ebdfb6842eb32686264b75b with 381 entrypoints, while the current registry is d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4 with 382 entrypoints. No PAH source, functional, rate, state, time, carrier, comparison route, cut-set field or scientific conclusion changed.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This is an append-only reproducibility correction for the next-stage re-entry audit. The registry drift is a later Lean-registration provenance change, not a route contradiction or owner-authorized packet. T-094 therefore remains parked at HOLD_FOR_EVIDENCE.",
+  "boundary": "PAH-001, PAH-OMC-020, PAH-OMC-025, the original functions, rates, labelled Gibbs state, external stochastic Markov time, finite carrier and j-before-anchored-n order remain fixed. No new carrier, comparison map, counterterm, rate, state, limit or physical interpretation is introduced.",
+  "evidence_refs": [
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc025-route-frontier/integrated.json#source_hashes",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-correction.json#reproduction",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-result-v1.json#verification",
+    "strategy/pa-hyp/PAH-OMC-020-owner-delta-after-r566-exploration.json#finding",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {
+    "results": ["R-565", "R-566"],
+    "negatives": [],
+    "events": ["20260908-pah-omc-025-route-independent-owner-cut-set-202"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "related": [
+    {"id": "EXP-001708", "relation": "continues"},
+    {"id": "EXP-001696", "relation": "corrects"}
+  ],
+  "verification_summary": "Owner delta PASS_NO_NEW_INPUT; PAH-OMC-025 primary 42/42, independent 25/25, hostile 11/11; fresh integrated replay 16/16; Lean PASS under the canonical pinned package set. The only failed check is the old integrated replay's stale registry pin.",
+  "reproduction": {
+    "owner_delta": "python -X utf8 verification/scripts/pah_omc020_owner_delta_after_r566.py --check",
+    "primary": "python -X utf8 verification/scripts/pah_omc025_route_frontier.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc025_route_frontier_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc025_route_frontier_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc025_route_frontier_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc025RouteFrontier.lean"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "verification/scripts/pah_omc025_route_frontier_verify.py": "5fc52652655dd45bb04ce61d75e3d8c8194df9f90aa134bc2b0fad6d37770b24",
+    "verification/lean/registry.json": "d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc025-route-frontier/integrated.json": "f56bcc0654d0ae994d43537d292fe34272dc66a78d2b0098b4dd0338919a50f3"
+  },
+  "next_action": "Keep the PAH-OMC-020 goal active and parked. Reopen the unchanged admission verifier only when one source-authorized, hash-pinned packet supplies the S0/S1/S2 cut-set fields or a genuine PAH parent-byte change appears; repair the stale integrated provenance pin during integration without treating it as scientific progress.",
+  "revisit_condition": "Reopen on a source-authorized packet, a genuine PAH parent hash change, or an exact PAH-specific contradiction. Do not repeat the same source delta or route replay while the input set is unchanged.",
+  "non_claims": [
+    "This correction does not prove or refute PAH-OMC-020 ordered stationary-semigroup local-correlation convergence.",
+    "It does not admit an owner packet, establish an R-512 minimal form, or provide a universal no-go for an owner-fixed successor.",
+    "The registry mismatch is not a mathematical counterexample and does not promote any finite or conditional result.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion is made; external Markov time remains stochastic bookkeeping."
+  ]
+}

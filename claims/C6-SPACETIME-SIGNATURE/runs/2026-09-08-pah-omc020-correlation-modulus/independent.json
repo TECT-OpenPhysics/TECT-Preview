@@ -1,0 +1,186 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-CORRELATION-MODULUS-INDEPENDENT-001",
+  "checks": [
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+        "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+        "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+        "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+        "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "name": "all parent bytes",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-543",
+      "expected": "R-543",
+      "name": "contract result",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "R-511",
+        "PASS"
+      ],
+      "expected": [
+        "R-511",
+        "PASS"
+      ],
+      "name": "source result",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "target remains minimal",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "correction stays held",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "name": "ordered route",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "source D formula",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "source H formula",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "expected": 5,
+      "name": "source d_max",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "name": "independent f D",
+      "status": "PASS"
+    },
+    {
+      "actual": "30",
+      "expected": "30",
+      "name": "independent f H",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "name": "independent g D",
+      "status": "PASS"
+    },
+    {
+      "actual": "20",
+      "expected": "20",
+      "name": "independent g H",
+      "status": "PASS"
+    },
+    {
+      "actual": "294",
+      "expected": "294",
+      "name": "budget f recomputes",
+      "status": "PASS"
+    },
+    {
+      "actual": "34",
+      "expected": "34",
+      "name": "budget g recomputes",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "budget positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "square modulus finite",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "time-gap monotonicity",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "form spectral step retained",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no stopping-time claim",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 20,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "83582012857969e046ac0c5515cabdcca3a811c3c3fe83c6471ef6158c1079bd",
+  "conditional": true,
+  "finding": "Independent reconstruction agrees that the pinned R-511 form-energy budgets imply only a deterministic-time finite correlation modulus; no stopping-time or limit promotion is made.",
+  "fixture": {
+    "B_f": "294",
+    "B_g": "34",
+    "delta": "1/120",
+    "f_D": "12",
+    "f_H": "30",
+    "g_D": "12",
+    "g_H": "20",
+    "squared_modulus": "833/1200"
+  },
+  "non_claims": [
+    "No bounded-stopping-time Aldous estimate, path-space construction, non-explosion theorem or semigroup convergence.",
+    "No N2a-N2d closure, R-512 process identification, infinite-volume dynamics, continuum or physical result.",
+    "No change to PAH-001 function, rates, state, carrier, regulator, normalization, external Markov time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_correlation_modulus_independent.py --check",
+  "result_id": "R-543",
+  "schema": "tect/pah-omc020-correlation-modulus-independent/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-stationary-modulus-correction-result-v1.json": "58e563515b2a3a9d46085facffd4a9664c5518fed236e14f6a40aeee209443c0",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_DETERMINISTIC_CORRELATION_MODULUS",
+  "task_id": "T-064",
+  "verdict": "PASS"
+}

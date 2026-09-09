@@ -1,0 +1,118 @@
+{
+  "schema": "tect/pah-omc020-core-duhamel-contract/1.0",
+  "contract_id": "PAH-OMC-020-CORE-DUHAMEL",
+  "version": "1.0.0",
+  "date": "2026-09-08",
+  "task_id": "T-079",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "status": "RESEARCHER_OWNED_CONDITIONAL_CONTRACT",
+  "title": "Common-core evolution residual transfer to local correlations",
+  "question": "What exact source-authorized common-core residual estimate is sufficient to turn the anchored PAH-OMC-020 finite correlation family into the R-512 minimal-form correlation on compact external Markov-time intervals?",
+  "purpose": "Provide a stricter alternative certificate for the missing D_n term. The certificate is a conditional Duhamel implication; it does not construct a comparison map, alter PAH-001, or identify a physical time evolution.",
+  "provenance": {
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "source_authorized_packet_present": false,
+    "constructed_hypothesis": true,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_CONDITIONAL_TEMPORAL_TRANSFER"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-020-prereg": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    },
+    "R-512": {
+      "path": "strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "sha256": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd"
+    },
+    "R-534": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-result-v1.json",
+      "sha256": "a96b95f704ca9f7289bdc4767cd46a90f4bf3567ab1c3f2fae2b813840a11adc"
+    },
+    "R-536": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json",
+      "sha256": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29"
+    },
+    "R-530": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json",
+      "sha256": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2"
+    }
+  },
+  "fixed_scope": {
+    "model": "Exactly PAH-001 F_rho, original directed PH/LK/AP/TR rates, labelled Gibbs state, OMC-010 regulator path and OMC-004 relational strip.",
+    "finite_limit": "The j-to-infinity fixed-n stationary correlation c_n is used only at the registered R-514 scope; the contract addresses the subsequent anchored-n comparison.",
+    "target": "T_min(t)=exp(-t K_min), where K_min is the exact R-512 minimal closed nonnegative form. No maximal extension, phasewise direct sum or unnamed target is admitted.",
+    "time": "External unaccelerated stochastic Markov time t on a compact interval [0,T]; no quantum, proper or Lorentzian interpretation.",
+    "order": "The preregistered j-to-infinity passage at fixed n precedes the anchored n exhaustion. No diagonal or reversed limit is allowed.",
+    "normalization": "Original labelled stationary normalization; R-490 C_sw remains a domination input only."
+  },
+  "objects": {
+    "local_core": "A single dense cylinder core D_loc contained in the target generator domain, containing the local test vectors and invariant under T_min(s) for 0<=s<=T.",
+    "comparison": "A source-authorized family U_n on the fixed-n limiting correlation vectors v_n(f), with U_n v_n(f) in the common Hilbert space H and a uniform norm bound N_f on each local f.",
+    "finite_evolution": "u_n^g(s)=U_n P_n^infty(s)v_n(g), defined by the original PAH-001 finite stationary semigroup after the registered j limit; no new process is defined by this contract.",
+    "target_evolution": "u^g(s)=T_min(s)g in H."
+  },
+  "required_owner_packet": {
+    "common_space_and_core": "One source-authorized H, U_n, D_loc and target K_min domain, with all local f,g represented and U_n v_n(f) uniformly bounded.",
+    "correlation_identity": "For every local f,g and n, c_n(f,g;s)=<U_n v_n(f),u_n^g(s)>_H with the original stationary normalization.",
+    "initial_recovery": "I_n(f)=||U_n v_n(f)-f||_H tends to zero for every local f in the anchored n order.",
+    "residual_domain": "For every local g, u_n^g is absolutely continuous on [0,T], lies in Dom(K_min) almost everywhere, and r_n^g(s)=d/ds u_n^g(s)+K_min u_n^g(s) is Bochner integrable.",
+    "uniform_residual": "R_n(g;T)=integral_0^T ||r_n^g(s)||_H ds tends to zero in the anchored n limit, with the same terminal-square and boundary convention.",
+    "target_contraction": "The R-512 minimal-form semigroup is a contraction on H, and its variation-of-constants identity applies on D_loc."
+  },
+  "conditional_theorem": {
+    "variation_of_constants": "u_n^g(t)-T_min(t)g=T_min(t)(U_n v_n(g)-g)+integral_0^t T_min(t-s)r_n^g(s) ds.",
+    "state_vector_bound": "If T_min is contractive, then sup_0<=t<=T ||u_n^g(t)-T_min(t)g|| <= I_n(g)+R_n(g;T).",
+    "correlation_bound": "If N_f=sup_n ||U_n v_n(f)|| is finite, then D_n(f,g;T) <= N_f[I_n(g)+R_n(g;T)] + I_n(f)||g||_H.",
+    "consequence": "The displayed initial-recovery and residual limits imply D_n(f,g;T)->0 for every local pair and finite T, supplying the D term in R-534 without a diagonal limit.",
+    "status": "Implication only. None of the six owner fields is supplied by the current hash-pinned source corpus."
+  },
+  "diagnostic_fixture": {
+    "description": "A scalar contract oracle evaluates the bound with nonnegative rational defects; it checks the algebra and monotonicity only and is not a PAH process or an estimate.",
+    "inputs": {
+      "N_f": "3/2",
+      "I_f": "1/64",
+      "I_g": "1/32",
+      "R_g": "1/128",
+      "norm_g": "2"
+    },
+    "derived_bound": "23/256",
+    "role": "Exact test oracle; no PAH constant, carrier, rate or infinite-volume assertion."
+  },
+  "current_status": {
+    "common_space_and_core": false,
+    "correlation_identity": false,
+    "initial_recovery": false,
+    "residual_domain": false,
+    "uniform_residual": false,
+    "target_contraction": true,
+    "D_limit": false
+  },
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "Only when a source-authorized packet instantiates all six owner fields and primary, independent, hostile and Lean checks agree.",
+    "NEGATIVE_RESULT": "Only an exact PAH-specific contradiction to the residual or initial-recovery requirements qualifies; an absent packet is not a universal no-go.",
+    "HOLD_FOR_EVIDENCE": "Use while any owner field is absent; retain the explicit bound as a reusable evidence contract."
+  },
+  "single_next_question": "Can a source-authorized packet provide U_n, a common invariant cylinder core, the original correlation identity, and a vanishing anchored-n residual R_n(g;T) for the exact PAH-001 semigroup?",
+  "revisit_condition": "Reopen only when all six fields are versioned and hash-pinned or an exact PAH-specific residual contradiction is found; do not repeat finite carriers, physical-empty, BCC or Reading-H calculations.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_core_duhamel.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_core_duhamel_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_core_duhamel_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_core_duhamel_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020CoreDuhamel.lean"
+  },
+  "non_claims": [
+    "No source-authorized U_n, common-core theorem, residual estimate, N2b/N2c/N4/N2d closure or PAH-OMC-020 semigroup convergence.",
+    "No new PAH-001 function, rate, state, carrier, regulator, normalization, external time or limit order.",
+    "The scalar rational fixture is not a PAH counterexample and does not prove a universal impossibility theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "tect/pah-omc026-cut-set-packet-crosswalk-contract/1.0",
+  "contract_id": "PAH-OMC-026-CUT-SET-PACKET-CROSSWALK",
+  "result_id": "R-566",
+  "task_id": "T-093",
+  "date": "2026-09-08",
+  "question": "Does a complete R-557 ten-field source-owner packet, together with the registered full-domain J/D estimates, instantiate every R-565 cut while preserving the exact PAH-001 model and j-before-anchored-n order?",
+  "purpose": "Make the re-entry condition exact without repeating an owner search or constructing a new comparison map. The R-565 cuts are a coarse admission frontier; this contract tests their coverage by the R-557 field-level packet and preserves the distinction between necessary cuts and sufficient analytic estimates.",
+  "fixed_scope": {
+    "model": "Exactly PAH-001 and its original finite stationary PH/LK/AP/TR dynamics.",
+    "state": "The original labelled Gibbs state and normalization only.",
+    "time": "External stochastic Markov time on compact finite intervals [0,T].",
+    "order": "j tends to infinity at fixed n first, then anchored n.",
+    "target": "The R-512 minimal closed-form semigroup at the declared scope.",
+    "forbidden": "No function, rate, state, carrier, regulator, counterterm, direct sum, physical-time interpretation or limit-order change."
+  },
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-contract-v1.json": "49ed29ea3590b6e7849bc6fc992cd7a769da3c98ce89a04c50d41575fb9ca3db",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-contract-v1.json": "2171ae18d545ff26bfad9d5cb475d75c31280679fa41609a44ad143d9d7a9dd4",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-result-v1.json": "ed6707cebdeb758ab9218b8a61ddb7ad4fd11548df84d0ae6fa9706955130cfb"
+  },
+  "packet_fields": [
+    {"id": "authority", "cut": "S0", "meaning": "Versioned signer, provenance, SHA-256 and non-post-hoc owner authority."},
+    {"id": "root_semantics", "cut": "S0", "meaning": "Root labels, multiplicities, duplicate-transition and invalid-move/root-measure convention."},
+    {"id": "common_realization", "cut": "S1", "meaning": "Finite measurable spaces, target H, domain and measure-compatible U_n or equivalent path map."},
+    {"id": "n1_recovery", "cut": "S1", "meaning": "Local-cylinder stabilization and norm/inner-product recovery with explicit N(f)."},
+    {"id": "n2b_form", "cut": "S1", "meaning": "Weak liminf and compatible limsup/recovery for target-form vectors."},
+    {"id": "n2c_n4_boundary", "cut": "S1", "meaning": "Compact-time boundary escape/non-explosion control for the unchanged unbounded generator."},
+    {"id": "n2d_target", "cut": "S1", "meaning": "Identification with the R-512 minimal closed form."},
+    {"id": "full_domain_J", "cut": "S2", "meaning": "Fixed-n j-to-infinity residual estimate for every declared local cylinder pair."},
+    {"id": "anchored_D", "cut": "S2", "meaning": "Anchored-n target defect D_n tending to zero on the same declared domain."},
+    {"id": "verification", "cut": "CROSS_CUT", "meaning": "Primary, independent, hostile and Lean manifests for the model-specific packet."}
+  ],
+  "cut_set": {
+    "S0_source_semantics": ["authority", "root_semantics"],
+    "S1_complete_comparison": ["common_realization", "n1_recovery", "n2b_form", "n2c_n4_boundary", "n2d_target"],
+    "S2_temporal_control": ["full_domain_J", "anchored_D"],
+    "cross_cut_verification": ["verification"]
+  },
+  "admission_predicates": {
+    "complete_packet": "All ten R-557 fields are source-authorized, hash-pinned and jointly compatible with unchanged PAH-001.",
+    "minimal_cut_set": "S0_source_semantics AND S1_complete_comparison AND S2_temporal_control.",
+    "refinement": "complete_packet implies minimal_cut_set; minimal_cut_set alone is not sufficient because it does not encode authority, field provenance or verification.",
+    "analytic_consequence": "complete_packet AND full-domain J-zero AND anchored D-zero AND nonnegative J+D error bound implies the registered nested ordered-error conclusion."
+  },
+  "formal_consequence": {
+    "error_budget": "For every declared local f,g and T, 0<=err(n,j;f,g,T)<=J(n,j;f,g,T)+D(n;f,g,T).",
+    "fixed_n": "For each n and epsilon>0, J(n,j)<epsilon/2 eventually as j increases.",
+    "anchored_n": "For each epsilon>0, D(n)<epsilon/2 eventually as n increases.",
+    "conclusion": "For every epsilon>0 there is N such that each n>=N has a J(n) with err(n,j)<epsilon for all j>=J(n), uniformly on [0,T]."
+  },
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "Only a concrete source-authorized packet satisfying all ten fields and all analytic estimates may advance PAH-OMC-020.",
+    "HOLD_FOR_EVIDENCE": "The crosswalk is auxiliary when the packet is absent; the minimal cuts remain missing and the actual route stays HOLD_FOR_EVIDENCE.",
+    "NEGATIVE_RESULT": "Reserved for an exact unchanged-source contradiction in the crosswalk or formal consequence, not for packet absence."
+  },
+  "current_status": {
+    "source_authorized_packet_present": false,
+    "S0_source_semantics": "MISSING",
+    "S1_complete_comparison": "MISSING",
+    "S2_temporal_control": "MISSING",
+    "PAH_OMC_020": "HOLD_FOR_EVIDENCE"
+  },
+  "next_single_question": "Can a versioned source-authorized packet fill all ten R-557 fields and supply the model-specific J/D estimates without changing PAH-001 or its j-before-anchored-n order?",
+  "non_claims": [
+    "The coarse R-565 cut-set alone is not treated as a source packet or an analytic convergence proof.",
+    "No common Hilbert space, U_n, path law, generator, compensator, carrier, rate, state, regulator or limit is constructed.",
+    "No infinite-volume, continuum or physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion is made.",
+    "External Markov time remains stochastic bookkeeping and is not quantum, proper or Lorentzian time."
+  ]
+}

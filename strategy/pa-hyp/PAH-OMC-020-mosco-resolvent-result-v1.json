@@ -1,0 +1,126 @@
+{
+  "schema": "tect/pah-omc020-mosco-resolvent-result/1.0",
+  "result_id": "R-538",
+  "contract_id": "PAH-OMC-020-MOSCO-RESOLVENT",
+  "date": "2026-09-08",
+  "task_id": "T-080",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXACT_SOURCE_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-mosco-resolvent-contract-v1.json",
+  "exploration_id": "EXP-001658",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-result-v1.json": "4062188d9419a42d74b0350d35a62950c987e5d7b5f38d329bb7f09d09844d01",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "exact_scope": {
+    "model": "Exactly unchanged PAH-001 F_rho, its original directed PH/LK/AP/TR rates, labelled Gibbs state and OMC-004 strip.",
+    "forms": "E_n are the unchanged anchored finite reversible forms after the registered j limit; E_min is exactly the R-512 minimal closed nonnegative form.",
+    "comparison": "U_n and the common Hilbert space H are source-authorized antecedents only. No conditional averaging, direct sum or replacement carrier is introduced.",
+    "parameter": "For each fixed lambda>0, use J_n(u)=E_n(u)+lambda||u-U_n f_n||^2 and J(u)=E_min(u)+lambda||u-f||^2.",
+    "order": "The registered j-to-infinity passage at fixed n precedes anchored n; no diagonal, reversed or joint limit.",
+    "time": "This checkpoint is static in the resolvent parameter lambda and does not reinterpret external stochastic Markov time.",
+    "normalization": "Original labelled stationary normalization; R-490 C_sw remains domination-only."
+  },
+  "conditional_statement": "If a source-authorized common H and U_n provide equicoercivity, the arbitrary-sequence anchored liminf inequality, all-local recovery, strong data recovery and a norm-upgrade, then every weak cluster point of a minimizer of J_n minimizes the exact R-512 target J. Strict convexity for lambda>0 identifies it with the unique R_min^lambda f and the norm-upgrade gives strong resolvent convergence. A separate source-authorized resolvent-to-compact-time-correlation bridge is still required.",
+  "finding": "The conditional variational selection implication and its scalar diagnostic are exact and independently replayed. The current hash-pinned corpus still lacks the common-space/equicoercivity, arbitrary-sequence liminf, all-local recovery, data-recovery, norm-upgrade and semigroup-bridge owner inputs, so the PAH resolvent limit and PAH-OMC-020 D_n convergence remain unproved.",
+  "assumptions": [
+    "R-512/R-530 supply the exact minimal target form and its conditional contraction property.",
+    "The original PAH-001 function, rates, labelled state, normalization, external time and j-before-anchored-n order remain unchanged.",
+    "A future owner packet, if supplied, will define U_n on one common space and preserve the terminal-square convention."
+  ],
+  "missing_assumptions": [
+    "Source-authorized common Hilbert space H/U_n with equicoercive source-resolvent minimizers and local norm compatibility.",
+    "Arbitrary-sequence anchored N2b liminf and a recovery sequence for every local target vector.",
+    "Strong data recovery through U_n preserving the original stationary normalization.",
+    "A source-authorized weak-to-strong norm-upgrade for local resolvents.",
+    "A separate resolvent-to-compact-time-correlation bridge, in addition to the R-537 initial/residual terms."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "A generic Mosco theorem can be imported without matching the PAH domains.",
+      "disposition": "UPHELD AGAINST PROMOTION: the contract requires the common space, arbitrary-sequence liminf, recovery and data conventions explicitly; no unmatched theorem is imported."
+    },
+    {
+      "objection": "A liminf inequality alone identifies the resolvent.",
+      "disposition": "UPHELD AGAINST PROMOTION: recovery and equicoercivity are needed to obtain the energy sandwich and to control clusters."
+    },
+    {
+      "objection": "Weak resolvent convergence is enough for the stationary correlation limit.",
+      "disposition": "UPHELD AGAINST PROMOTION: the norm-upgrade and a separate correlation/semigroup bridge remain explicit owner fields."
+    },
+    {
+      "objection": "The scalar quadratic oracle proves the PAH resolvent limit.",
+      "disposition": "REJECTED: it is finite test arithmetic with no PAH carrier, rate, source map or infinite-volume estimate."
+    },
+    {
+      "objection": "The inherited R-512 target can be treated as the source process.",
+      "disposition": "UPHELD AGAINST PROMOTION: target-form uniqueness is retained, but target-process identification and R-537 dynamic transfer are separate."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-512", "R-530", "R-536", "R-537"],
+    "negatives": [],
+    "events": []
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_mosco_resolvent.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_mosco_resolvent_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_mosco_resolvent_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_mosco_resolvent_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020MoscoResolvent.lean",
+    "result": "Primary 47/47, independent 33/33, hostile 25/25, integrated 23/23; six finite Lean declarations compile."
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mosco-resolvent/primary.json": "12fe0b595d8414b3606f4c53fb05316f7415cbfa4b11d24dbf4780fcd7c00dda",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mosco-resolvent/independent.json": "efc35fe44914c6260ac4c994f74d00f3e30d7a7ac5cebfd659aab9cacbfa2dc1",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mosco-resolvent/hostile.json": "c8e7690964d9804a582cc40ea313bfb440fce4c53c9f31906fcc73c5d31632c4",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-mosco-resolvent/integrated.json": "c377469e2dcb529ca61c456311208820c78c9f01283b2adc9859664aaccec576"
+  },
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-mosco-resolvent-contract-v1.json": "5ea877b4982b7373144e8d0e9461a94f7f13923b5580ae21787f7bbdb663d697",
+    "strategy/pa-hyp/PAH-OMC-020-mosco-resolvent-certificate.md": "7926a208544ff43c608a12d28664c8934c6b81a68c00d3c9a1891c3919a26848",
+    "verification/scripts/pah_omc020_mosco_resolvent.py": "3a274b24e13ffbd42416a792d2e2aa9afe3e6f2841cc50e6c2e02b864d47bb24",
+    "codes/foundations/pah_omc020_mosco_resolvent_independent.py": "84fc8b671d11bad3014aed506de1f01b1e00bbd45afeb5f531ed97634a81d9a7",
+    "codes/foundations/pah_omc020_mosco_resolvent_hostile.py": "66bf2a8f8f165ae46eb10efda2aced2bbd0ec9c3520fa0059bcb7cf14a6d48f7",
+    "verification/scripts/pah_omc020_mosco_resolvent_verify.py": "271b19cc764ff2f02e6352d053983b12483fd0a4718442a304bfc5f7808d3212",
+    "verification/lean/Tect/PahOmc020MoscoResolvent.lean": "fe1d38f892d02bf523d888554c590c5b29f47b7c450699ead38ff3de28bd0d2d",
+    "verification/lean/registry.json": "dad08d9e44597716d67c8b0a6057b8f549e1625e8db60c64208ab1dbbef5ecc2"
+  },
+  "closed_scoped_gate": "Conditional Mosco variational resolvent selection with exact target strict convexity and explicit owner obligations.",
+  "remaining_gates": [
+    "Source-authorized common H/U_n and equicoercive minimizer bounds",
+    "Arbitrary-sequence N2b liminf and all-local recovery/data recovery",
+    "Weak-to-strong resolvent norm upgrade",
+    "R-537 initial/residual common-core transfer and separate semigroup bridge",
+    "Ordered PAH-OMC-020 stationary semigroup correlation convergence"
+  ],
+  "next_single_question": "Can a source-authorized N2b packet supply the common U_n/Hilbert space, arbitrary-sequence liminf, all-local recovery and norm upgrade needed to identify the R-512 resolvent, without changing PAH-001?",
+  "revisit_condition": "Reopen only when the missing owner fields are versioned and hash-pinned or an exact PAH-specific liminf/recovery contradiction is found; do not repeat finite carrier or physical-empty, BCC or Reading-H calculations.",
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-mosco-resolvent-certificate.md",
+  "non_claims": [
+    "No source-authorized common H/U_n, arbitrary-sequence liminf, all-local recovery, norm upgrade, PAH resolvent identification or PAH-OMC-020 semigroup convergence.",
+    "No import of a generic Mosco theorem with unmatched hypotheses and no change to PAH-001 function, rates, state, carrier, regulator, normalization or order.",
+    "The scalar quadratic oracle is not a PAH counterexample and does not prove a universal impossibility theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

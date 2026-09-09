@@ -1,0 +1,90 @@
+{
+  "schema": "tect/pah-omc024-anchored-n-persistence-result/1.0",
+  "result_id": "R-564",
+  "contract_id": "PAH-OMC-024",
+  "date": "2026-09-08",
+  "task_id": "T-091",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["EXACT_FINITE_DIAGNOSTIC", "EXECUTED", "INDEPENDENT", "HOSTILE", "LEAN_FINITE_SCOPE", "HOLD_FOR_EVIDENCE"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+    "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-contract-v1.json": "c82d2679f1357861cb25cf9fdfc86ce6d8da61dc95a1b5f70ae079f9936a7819"
+  },
+  "exact_scope": {
+    "question": "Does the R-552 finite source-compatible derivative gap force an anchored-n compact-time correlation gap under the existing PAH evidence?",
+    "finite_input": "R-552 records two source-compatible finite derivatives 2 exp(-2) and exp(-2), with finite gap exp(-2)>0 and no anchored-n limit.",
+    "oracle": "pi=(1/2,1/2), f=(0,1), r_A(n)=2^(-n), r_B(n)=2^(-(n+1)), C_r(t)=1/4+1/4 exp(-2rt).",
+    "derivative_gap": "|C'_A(0)-C'_B(0)|=(r_A-r_B)/2=2^(-(n+2))>0 for every finite n.",
+    "compact_time_bound": "For 0<=t<=T, 0<=C_0(t)-C_r(t)<=T*r/2; hence both oracle families converge uniformly to the same identity target as n grows.",
+    "scope": "The oracle is a logical non-implication witness only; it is not a PAH carrier, PAH rate choice or PAH counterexample."
+  },
+  "finding": "The finite R-552 derivative gap alone does not imply an anchored-n negative. It can shrink geometrically while compact-time correlations converge uniformly to a common target. The current PAH evidence therefore lacks a source-specific n-uniform local Gibbs lower bound and a uniform derivative/remainder estimate needed to promote finite separation.",
+  "assumptions": [
+    "The three parent source bytes remain at their pinned hashes.",
+    "The abstract two-state oracle is evaluated only as a reversible logical diagnostic with external diagnostic time.",
+    "The compact-time envelope uses the elementary inequality 1-exp(-x)<=x for x>=0."
+  ],
+  "missing_assumptions": [
+    "Source-owner root multiplicity, duplicate-transition behavior and root counting measure.",
+    "A source-authorized n-uniform positive local correlation gap or a lower-bound mechanism preventing gap collapse.",
+    "A source-authorized uniform derivative/remainder estimate that yields a fixed compact-time separation.",
+    "R-557 common realization, N1, N2b, N2c/N4, N2d, full-domain J and anchored D fields."
+  ],
+  "adversarial_review": [
+    {"objection": "A positive derivative gap at each finite n is already an anchored-n no-go.", "disposition": "REJECTED: the exact oracle has a positive gap for every n but the gap tends to zero."},
+    {"objection": "The oracle silently changes PAH time or rates.", "disposition": "REJECTED: it is explicitly abstract diagnostic data and the PAH definitions remain hash-pinned and untouched."},
+    {"objection": "Uniform convergence of the oracle is evidence for the PAH target.", "disposition": "REJECTED: the oracle target is an identity semigroup and is not identified with R-512 or a PAH carrier."},
+    {"objection": "The result proves a universal PAH no-go.", "disposition": "REJECTED: it establishes only a logical non-implication; an owner-fixed source may still supply a uniform gap."}
+  ],
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/primary.json": "4df71cc3ce029637a08dcde30580657f24aa099f5d4d1a834dc1c996477fffbc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/independent.json": "72f9cf5b27f0ac4c7287918421237c91c17a6575ba306053ac54d9e1daded3a1",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/hostile.json": "a92cfcc980b4a0b4920f3e411ad79fd061760bf2dffcaa79177526adb582a8ec",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/integrated.json": "c0625fb8d026acade5d62975381b920906670658d42fc32b0816187bd8314090",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/lean.json": "505e6018334ce7882dbaf780c27aa9f9572ba016db4d5097a181cd04b5246f6b"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc024_anchored_n_persistence.py": "63ad849849054c4eb81f4bb819e748779664db00f0fbafe7d020b1440cb3a046",
+    "codes/foundations/pah_omc024_anchored_n_persistence_independent.py": "987ae2f0369bb488425166248be78f400d2b89f6031ba88cffafba4762ee9795",
+    "codes/foundations/pah_omc024_anchored_n_persistence_hostile.py": "ed1e8c0383174e06665291818faa49e1399c406c50d189a77f0940ca9181ce8c",
+    "verification/scripts/pah_omc024_anchored_n_persistence_verify.py": "b12a8be1162036eea94cabf09dc5e0d76f3a2c7d93808dce76cee0add74970b6",
+    "verification/lean/Tect/PahOmc024Persistence.lean": "8bde7a64447dbf49c6cc052b93feb8487956ec573cc95099e3be76b65ee91799",
+    "verification/lean/registry.json": "0621fbfd67fbe4f9465c96e0cfdb8afe212c13a71900e38f7f187a6f4789aad7"
+  },
+  "formal_refs": {
+    "results": ["R-552", "R-553", "R-563"],
+    "negatives": [],
+    "events": ["20260908-r-564-pah-omc-024-anchored-n-persistence-2026-0"]
+  },
+  "verification": {
+    "primary": "PASS 52/52",
+    "independent": "PASS 61/61",
+    "hostile": "PASS 10/10",
+    "integrated": "PASS 25/25",
+    "lean": "PASS under Lean 4.32.1; six declarations"
+  },
+  "closed_scoped_gate": "The finite R-552 derivative gap is insufficient by itself to establish an anchored-n compact-time gap; the exact missing uniform inputs are now isolated.",
+  "remaining_gates": [
+    "Source-owner root multiplicity, duplicate-transition and root-measure packet",
+    "Source-specific n-uniform local correlation lower bound or non-collapsing remainder estimate",
+    "R-557 common realization, boundary and R-512 target fields",
+    "Full PAH-OMC-020 ordered stationary-semigroup local-correlation convergence"
+  ],
+  "next_single_question": "Can a source-authorized packet prove an n-uniform positive local correlation gap, or a uniform remainder that prevents the R-552 gap from collapsing, while preserving PAH-001 and the original all-Q Gibbs state?",
+  "revisit_condition": "Reopen only when a source-authorized root/measure packet or an exact PAH-specific uniform estimate is hash-pinned; do not repeat the unchanged abstract oracle.",
+  "non_claims": [
+    "No PAH-001 function, rate, state, carrier, regulator or j-before-n order is changed.",
+    "No universal no-go for an owner-fixed PAH completion.",
+    "No R-512 convergence, infinite-volume, continuum, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-certificate.md"
+}

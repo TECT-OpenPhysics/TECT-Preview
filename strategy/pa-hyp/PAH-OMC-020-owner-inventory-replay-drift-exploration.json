@@ -1,0 +1,51 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-020 owner-inventory replay drift after R-527",
+  "question": "After the R-527 source-multiplicity checkpoint added new proof files, do the earlier N2a owner-intake and R-526 stable-inventory checks still replay byte-for-byte?",
+  "finding": "No. The N2a contract check aborts at its pinned N2b parent: expected SHA-256 034f5fc35a88a4431ee1594c8a25e0d7bcf6c75b055ec2b21bbf30daf636dc7f but the current N2b result is b87a2d8d7b0009c9f5bd30695823cb442376939ff18c1d48f1d890ae430fe8c7. The R-526 dynamic inventory check also reports replay mismatch because its current-file and reachable-history counts changed after the R-527 files were added. The scoped R-527 integrated verifier and the N2b self-check remain independent and passing.",
+  "decision_reason": "This is a provenance/replay-stability defect in older dynamic audits, not a mathematical counterexample and not evidence that the PAH temporal target fails. Historical hash-pinned artifacts are left untouched; the defect is recorded so a successor frozen snapshot can be supplied rather than silently rewriting old evidence or reporting a stale PASS.",
+  "boundary": "PAH-001, PAH-OMC-020 preregistration, R-510/R-511/R-512 target, original labelled rates, Gibbs state, external Markov time and j-before-n order remain unchanged. Only current-worktree replay behavior of the earlier owner-inventory and intake audits is examined.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "task_id": "T-063",
+  "verdict": "inconclusive",
+  "recorded_at": "2026-09-07T19:53:36Z",
+  "recorded_by": "Codex",
+  "related": [{"id": "EXP-001645", "relation": "continues"}],
+  "method": [
+    "Run the pinned N2a owner-packet contract replay without a packet and retain the exact first failing parent hash comparison.",
+    "Run the R-526 stable owner-inventory replay and compare its stored path count and digest with the current dynamic inventory without overwriting the historical output.",
+    "Run the N2b scoped self-check and the R-527 integrated verifier to separate the replay defect from the current finite source-multiplicity evidence.",
+    "Keep the old R-526 and N2a hashes immutable and define a successor frozen-snapshot requirement instead of editing history."
+  ],
+  "evidence_refs": [
+    "verification/scripts/pah_omc020_n2a_owner_packet_contract_check.py#compute",
+    "verification/scripts/pah_omc020_owner_packet_inventory_stable.py#compute",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json#source_hashes",
+    "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json#run_files",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-multiplicity/integrated.json#checks"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+    "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json": "cfe872fac4517f468061cd5d644cf931e6a7e7294d66ca6a8b2faa6977d37325",
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77"
+  },
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": ["R-526", "R-527"]
+  },
+  "next_action": "Create a versioned fixed-snapshot owner-inventory successor and a matching N2a intake successor that pins the current N2b bytes; rerun the owner checks only against that immutable snapshot, then resume the temporal obligations if a source-authorized packet appears.",
+  "revisit_condition": "Reopen the replay audit when a clean fixed checkpoint or a versioned source-owner packet is available. Do not rewrite R-526, the v1.0 N2a contract, or the R-527 result to conceal the observed drift.",
+  "non_claims": [
+    "No PAH-OMC-020 semigroup convergence, N2a/N2b/N2c/N4/N2d theorem or negative result is claimed.",
+    "No universal impossibility follows from a stale dynamic inventory or parent-hash mismatch.",
+    "No PAH-001 functional, rate, state, carrier, regulator, time or limit-order change.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "verification_summary": "Current probes: N2a owner-intake --check FAILS at the stale N2b parent hash; R-526 owner-inventory --check FAILS on dynamic replay drift; N2b common-space --check passes 22/22; R-527 integrated verifier passes 33/33 with Lean. This record is an evidence-integrity correction, not a mathematical closure."
+}

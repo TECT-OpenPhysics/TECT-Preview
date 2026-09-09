@@ -1,0 +1,131 @@
+{
+  "schema": "tect/pah-omc020-target-identification-contract/1.0",
+  "contract_id": "PAH-OMC-020-TARGET-IDENTIFICATION",
+  "version": "1.0.0",
+  "date": "2026-09-08",
+  "task_id": "T-078",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Can the anchored finite PAH-OMC-020 correlations be identified with the exact R-512 minimal-form semigroup so that D_n tends to zero, without changing PAH-001?",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "fixed_scope": {
+    "model": "Exactly immutable PAH-001, its original directed PH/LK/AP/TR rates, labelled Gibbs state and OMC-004 strip.",
+    "order": "j tends to infinity at fixed n first, followed by the declared anchored n exhaustion; no diagonal or reversed order.",
+    "time": "External stochastic Markov time on compact intervals only; no quantum, proper or Lorentzian interpretation.",
+    "target": "The exact R-512 minimal closed form and its spectral semigroup T_min(t), already recorded by R-512/R-530 and not replaced by another extension.",
+    "comparison": "D_n(f,g;T)=sup_{0<=t<=T}|c_n(f,g;t)-<f,T_min(t)g>| for each bounded local cylinder pair. No new U_n, process, rate, state, carrier, regulator or limit order is introduced.",
+    "normalization": "Original labelled Gibbs normalization; R-490 C_sw remains a domination input only."
+  },
+  "definitions": {
+    "D_n": "The anchored-n target-process defect in the frozen PAH-OMC-020 sequential-gluing contract.",
+    "target_form": "R-512/R-530 minimal closed form Ebar and T_min(t)=exp(-t K_min).",
+    "form_route": "A common-Hilbert comparison plus Mosco-type liminf, recovery and local correlation transfer to the exact R-512 form.",
+    "path_route": "A common path space with tight finite laws, generator/form convergence, uniqueness of the R-512 martingale problem and uniform-integrability transfer of local correlations."
+  },
+  "routes": {
+    "form": {
+      "required_fields": [
+        "common_hilbert_map",
+        "form_liminf",
+        "form_recovery",
+        "target_form_exact",
+        "form_correlation_transfer"
+      ],
+      "field_contract": {
+        "common_hilbert_map": "A source-authorized measurable or bounded comparison U_n from every finite local domain into one fixed R-510/R-512 Hilbert space, with cylinder recovery and norm compatibility.",
+        "form_liminf": "For every bounded-energy u_n converging weakly through U_n, Ebar(u,u) <= liminf_n E_n(u_n,u_n) with the declared anchored quantifier.",
+        "form_recovery": "For every local u in the R-512 form domain, a source-authorized u_n converges strongly through U_n and satisfies limsup_n E_n(u_n,u_n) <= Ebar(u,u).",
+        "target_form_exact": "The limiting form is exactly the R-512 minimal closed form, not an unspecified maximal extension or a phasewise direct sum.",
+        "form_correlation_transfer": "The admitted form convergence yields D_n(f,g;T)->0 for every declared local pair and compact T, with the same normalization."
+      },
+      "admission": "All five fields must be source-authorized, hash-pinned and independently verified; finite pointwise generator equality alone is insufficient."
+    },
+    "path": {
+      "required_fields": [
+        "common_path_space",
+        "path_tightness",
+        "path_generator_equality",
+        "path_uniqueness",
+        "path_correlation_transfer"
+      ],
+      "field_contract": {
+        "common_path_space": "One source-authorized path space, filtration and finite laws for the unchanged PAH process, with cylinder restriction compatibility.",
+        "path_tightness": "Compact-time tightness and uniform integrability for the local cylinder observables under the anchored n family.",
+        "path_generator_equality": "The limiting martingale problem or form has exactly the R-512 minimal generator/form, including the terminal-square convention.",
+        "path_uniqueness": "Uniqueness of the declared target martingale problem or equivalent semigroup on the local cylinder core.",
+        "path_correlation_transfer": "The path convergence transfers the anchored stationary two-point correlations to T_min uniformly on each compact time interval."
+      },
+      "admission": "All five fields must be source-authorized, hash-pinned and independently verified; static Gibbs-state convergence or a target Dirichlet property alone is insufficient."
+    }
+  },
+  "admission_predicate": {
+    "statement": "D_n may be admitted only when the complete form route or the complete path route is present. A named R-512 target, a closed target form, local state convergence, or a static energy comparison does not supply the missing identification.",
+    "route_disjunction": "form_route_complete OR path_route_complete",
+    "current_expected": {
+      "target_form_closed": true,
+      "form_common_hilbert_map": false,
+      "form_liminf": false,
+      "form_recovery": false,
+      "target_form_exact": true,
+      "form_correlation_transfer": false,
+      "path_common_space": false,
+      "path_tightness": false,
+      "path_generator_equality": false,
+      "path_uniqueness": false,
+      "path_correlation_transfer": false,
+      "form_route_complete": false,
+      "path_route_complete": false,
+      "D_limit": false
+    },
+    "verdict_rule": {
+      "MAINLINE_ADVANCE": "One complete route and all primary, independent, hostile and Lean checks pass, with source authorization and declared quantifiers.",
+      "NEGATIVE_RESULT": "An exact contradiction inside unchanged PAH-001 violates the target identification for a registered local observable or compact time horizon.",
+      "HOLD_FOR_EVIDENCE": "Any route field is absent, conditional without source authorization, or missing its common-space/compact-time quantifier."
+    }
+  },
+  "conditional_theorem": {
+    "statement": "If either complete route is supplied, then the route's form/path convergence and target uniqueness imply D_n(f,g;T)->0 for every declared bounded local pair and finite T; this is the missing D term in the R-534 triangle.",
+    "not_a_construction": "The implication does not construct U_n, a path law, a martingale problem, or a uniform estimate from the existing records."
+  },
+  "current_evidence": {
+    "R-512": "PASS for the fixed minimal closed form and its remaining finite-semigroup identification gate.",
+    "R-530": "Conditional Dirichlet/Markov structure of the already-selected target; explicitly leaves U_n, N2b, N2d and path construction open.",
+    "R-534": "Conditional sequential triangle with D_n named but not instantiated.",
+    "R-535": "Term ledger marks target-process identification and D_limit absent.",
+    "R-533": "Current-byte owner audit finds no source-authorized path law, non-explosion/uniqueness or R-512 process identification.",
+    "R-529": "Static L2 coupling is insufficient for dynamic form compatibility; its two-state oracle is not a PAH counterexample."
+  },
+  "current_status": "The target form itself is recorded, but neither complete identification route is source-authorized. Therefore D_limit is false and the scientific verdict is HOLD_FOR_EVIDENCE.",
+  "missing_assumptions": [
+    "One versioned source-authorized common-Hilbert U_n packet with cylinder recovery, norm compatibility, form liminf and recovery.",
+    "Or one versioned source-authorized path-space packet with filtration, tightness, generator/form equality to R-512, target uniqueness and correlation transfer.",
+    "The declared compact-time and anchored-n quantifiers for the selected route, including terminal-square and normalization correspondence."
+  ],
+  "non_claims": [
+    "No PAH-OMC-020 D_n limit or anchored-n stationary semigroup convergence is claimed.",
+    "No source process, U_n, common Hilbert space, path law, rate, state, carrier, regulator, counterterm or limit order is invented or changed.",
+    "No minimal-versus-maximal domain equality, spectral gap, ergodicity or infinite-volume jump-process theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-result-v1.json": "a96b95f704ca9f7289bdc4767cd46a90f4bf3567ab1c3f2fae2b813840a11adc",
+    "strategy/pa-hyp/PAH-OMC-020-kd-term-ledger-result-v1.json": "d30ae9b327a67216dfa7c242dc29c77ffca5bb3a052c721025f98f520bc554f2",
+    "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-result-v1.json": "9013fe5337965478c2e91c84fa693eacf3dbd0d948a3b2cafb900332d8b9dd19",
+    "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json": "0e0268925eee2dd4b74ed5b279f4a56fb66637f86cb9faa608df1edbb99c7299"
+  },
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_target_identification.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_target_identification_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_target_identification_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_target_identification_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020Target.lean"
+  }
+}

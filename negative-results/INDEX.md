@@ -5,12 +5,15 @@
 
 Authorities: `negative-results/registry.md`.
 
-**385 registered records** · audit: 64 · fired_falsifier: 6 · no_go: 310 · retraction: 5
+**388 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 312 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`AUDIT-2026-09-09-PAH-OMC-028-NONLINEAR-CLOSURE`](registry.md#audit-2026-09-09-pah-omc-028-nonlinear-closure) | audit | R-530 single-vector contraction to nonlinear form-Cauchy inference |
+| [`NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS`](registry.md#ng-2026-09-08-pah-omc-022-source-level-semigroup-wellposedness) | no_go | original immutable PAH-001 stationary-semigroup proposition |
+| [`NG-2026-09-08-PAH-OMC-020-FINITE-SECOND-ORDER-SEMIGROUP-DEFECT`](registry.md#ng-2026-09-08-pah-omc-020-finite-second-order-semigroup-defect) | no_go | exponentiate the R-493 support-dependent first-order identity into the fixed-pair finite semigroup lift |
 | [`NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE`](registry.md#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace) | no_go | infer surviving radial kinetics from the resolved counting state's static nondegeneracy at unchanged time scale |
 | [`NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY`](registry.md#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy) | no_go | require all four R-488 squared norms to survive the full-Q counting ensemble's restricted cutoff-before-volume limit |
 | [`AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION`](registry.md#audit-2026-09-05-q3lock-tangent-beta-and-weight-direction) | audit | reuse later source-tangent normalization and weighted diagonal displays |
@@ -33,9 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-exact-target-generator-and-separation-automatic-target-groundness) | no_go | infer target groundness from `h_n->0`, an exact target generator and fixed parity/order separation without controlling the combined source residual |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-automatic-zero-source-quotient-factorization) | no_go | infer zero-source quotient factorization of source-family weak-star clusters merely from `h_n->0` |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-defect-automatic-n-dependent-two-phase-radius-entry) | no_go | infer eventual two-phase theorem entry from defect `theta_N->0` and positive radius `r_N>0` separately at each `N` |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-UNIFORM-RELATIVE-FORM-AND-OPERATOR-BLOCK-BOUNDS-AUTOMATIC-M-UNIFORM-DFFR-HILBERT-SCHMIDT-ENTRY`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-uniform-relative-form-and-operator-block-bounds-automatic-m-uniform-dffr-hilbert-schmidt-entry) | no_go | infer simultaneous cutoff-uniform DFFR entry from uniform relative-form decay and a uniformly bounded high-high operator block |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-SELECTOR-ADD-SUBTRACT-AUTOMATIC-ZERO-SOURCE-TRANSFER`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-selector-add-subtract-automatic-zero-source-transfer) | no_go | remove the bounded selector by putting it in the reference and subtracting it as a small perturbation |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-RITZ-CORNER-UCP-AUTOMATIC-ASYMPTOTIC-MULTIPLICATIVITY-AND-DYNAMICS-INTERTWINING`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-ritz-corner-ucp-automatic-asymptotic-multiplicativity-and-dynamics-intertwining) | no_go | infer norm-asymptotic multiplication and generator intertwining from strong convergence of Ritz projections and the corner UCP state pullback |
 
 Search without loading the full registry:
 

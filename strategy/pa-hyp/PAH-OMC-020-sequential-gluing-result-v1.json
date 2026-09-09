@@ -1,0 +1,125 @@
+{
+  "schema": "tect/pah-omc020-sequential-gluing-result/1.0",
+  "result_id": "R-534",
+  "contract_id": "PAH-OMC-020-SEQUENTIAL-GLUING",
+  "date": "2026-09-08",
+  "task_id": "T-076",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXACT_SOURCE_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-contract-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json": "67825022b3db1078387534baacb818fdf60778ce19f4fe81514484a25cf7cb5d",
+    "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-result-v1.json": "9013fe5337965478c2e91c84fa693eacf3dbd0d948a3b2cafb900332d8b9dd19"
+  },
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-contract-v1.json": "486b86853638bdd953e95ed2501446bb0780c8f0eb768c9c9fd1e18062c53984",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-certificate.md": "c72f1879b3989324840b15a43774a0bef54dd5b576f3891fddae80dab157d427",
+    "verification/scripts/pah_omc020_sequential_gluing.py": "6a15cd22e41f124af67dfab6b1cdca87767e5c62cbcb6cf9686159a44145015f",
+    "codes/foundations/pah_omc020_sequential_gluing_independent.py": "a85870f025b1f061b3fcd8759845b207f396d16011c41b04362aca2aa843901c",
+    "codes/foundations/pah_omc020_sequential_gluing_hostile.py": "77c5dc9e615fe0598c549ce549a88835784e7938145dbe6d870c808a15fdb202",
+    "verification/scripts/pah_omc020_sequential_gluing_verify.py": "a51c0af6a61809f67941c5899c5f0e0655d2333852a898dc64899d3a7fbea565",
+    "verification/lean/Tect/PahOmc020Gluing.lean": "1d80453c65e97626af1a06f8a48c1d7e0316e7ae2876ea6980ca1b5025ec71a9",
+    "verification/lean/registry.json": "6d8d479305c913c40d5a376495cc21e477e1a3ca92c44dc958f059c81e0b5914"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-sequential-gluing/primary.json": "f545186f7b127db619b7d20d2176356982993af31a21cb64b3940a908ff90bc6",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-sequential-gluing/independent.json": "234102ba36a120d457f1ac79190fcec9585c1db4cdb037c65c7308e8d6609121",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-sequential-gluing/hostile.json": "1f3a5bdb7b44850288279bbb78aac474616c787ae4788aae8fdb0a8e3407b00c",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-sequential-gluing/integrated.json": "101a0fc406ec2e676c3cd3c233c23449589d79f438f93632db4eb58b86c2a32d"
+  },
+  "exact_scope": {
+    "model": "Exactly unchanged PAH-001 and its original rates, labelled Gibbs state and OMC-004 comparison.",
+    "observables": "Every bounded local cylinder pair for which H-J, H-K and H-D are explicitly instantiated.",
+    "time": "Compact intervals of external stochastic Markov time only.",
+    "order": "j tends to infinity at fixed n first, then anchored n; no diagonal or reversed order.",
+    "normalization": "Original labelled Gibbs normalization; R-490 C_sw remains domination-only.",
+    "volume": "No new carrier or volume; only the existing finite-to-anchored comparison symbols are used."
+  },
+  "conditional_statement": "If J_(n,j)->0 at fixed n, lim_m limsup_n K_(n,m)=0 and D_n->0, then sup_(0<=t<=T)|C_(n,j)(t)-c_star(t)| is bounded by J_(n,j)+K_(n,m)+D_n and the registered sequential local-correlation limit follows.",
+  "proof_content": {
+    "triangle": "C_(n,j) -> c_n -> an m-truncated comparison -> c_star; compact-time supremum preserves the nonnegative sum.",
+    "quantifiers": "Choose m from the K limsup, n from K and D, then j at that fixed n from R-514.",
+    "necessity": "Hostile exact rational fixtures show that omitting K or D leaves a positive error even when the other terms vanish.",
+    "scope": "This is a reusable conditional reduction, not a source process construction or semigroup theorem."
+  },
+  "assumptions": [
+    "R-514 fixed-n compact-time j passage applies to the chosen local pair.",
+    "A source-authorized all-cylinder compact-time K_(n,m) bound can be derived from R-510, R-493 and R-517.",
+    "A source-authorized path-space or common-Hilbert realization supplies D_n and identifies the target with the R-512 minimal form."
+  ],
+  "missing_assumptions": [
+    "No source-authorized uniform K_(n,m) truncation bound is present for all local cylinders and compact horizons.",
+    "No source-authorized target-process/R-512 minimal-form defect D_n tending to zero is present.",
+    "No common path-space or common-Hilbert realization instantiates the intermediate comparison."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "Test-oracle decay is a PAH uniform estimate.",
+      "disposition": "DISMISSED: primary and independent manifests label every oracle as arithmetic fixture only."
+    },
+    {
+      "objection": "R-514 alone identifies the anchored R-512 target.",
+      "disposition": "UPHELD AGAINST PROMOTION: K_(n,m) and D_n remain separate hypotheses."
+    },
+    {
+      "objection": "R-517's conditional tail supplies K_(n,m) unconditionally.",
+      "disposition": "UPHELD AGAINST PROMOTION: source authorization and compact-time all-cylinder uniformity are absent."
+    },
+    {
+      "objection": "The triangle constructs a path law or common U_n.",
+      "disposition": "DISMISSED: the proof is an implication conditional on those objects."
+    },
+    {
+      "objection": "External Markov time gives a physical-time result.",
+      "disposition": "DISMISSED: the non-claim firewall is retained in every lane."
+    }
+  ],
+  "proof_coverage": {
+    "primary": "31/31 exact source, scope, quantifier and rational budget checks.",
+    "independent": "25/25 non-importing checks using a distinct oracle sequence.",
+    "hostile": "19/19 mutation controls reject dropped terms, reversed order and physical promotion.",
+    "integrated": "22/22 checks replay all lanes, source hashes and registry; Lean compiles eight finite declarations.",
+    "lean": "Lean 4.32.1 formalizes the nonnegative three-term budget and finite necessity fixtures only."
+  },
+  "formal_refs": {
+    "results": ["R-493", "R-510", "R-512", "R-514", "R-517", "R-533"],
+    "negatives": [],
+    "events": []
+  },
+  "closed_scoped_gate": "Conditional sequential compact-time gluing lemma and explicit separation of the two remaining owner inputs.",
+  "remaining_gates": [
+    "Source-authorized uniform K_(n,m) truncation bound",
+    "Source-authorized D_n target-process/R-512 minimal-form identification",
+    "Common path-space or common-Hilbert realization",
+    "Anchored-n PAH-OMC-020 semigroup convergence"
+  ],
+  "next_single_question": "Can one source-authorized owner packet instantiate both K_(n,m) and D_n under the unchanged PAH-001 model?",
+  "revisit_condition": "Reopen only when that packet is versioned and hash-pinned, or an exact PAH-specific contradiction to H-K or H-D is found; do not repeat finite carriers, word fixtures or physical-empty calculations.",
+  "non_claims": [
+    "No PAH-OMC-020 anchored-n semigroup convergence theorem.",
+    "No source path process, common U_n, N2b/N2c/N4/N2d closure or infinite-volume process.",
+    "No PAH-001 functional, rate, state, carrier, regulator, normalization, external time or limit-order change.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

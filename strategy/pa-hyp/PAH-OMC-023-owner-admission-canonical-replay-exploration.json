@@ -1,0 +1,74 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001690",
+  "recorded_at": "2026-09-08T11:03:46Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "provenance": "contemporaneous",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "task_id": "T-090",
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "PAH-OMC-023 canonical owner-admission replay boundary",
+  "question": "Does canonicalizing non-scientific replay paths reconcile the R-554 current-environment mismatch while preserving the frozen manifest and child evidence?",
+  "finding": "Yes for replay provenance, but not for packet admission. The historical v1.4 mismatch came from absolute interpreter/output paths in replay.command. A new canonical intake replay passes primary 29/29, independent 783/783, hostile 11/11 and integrated 24/24; the pinned 192-record manifest still has authorized_paths=[] and complete_paths=[], so T-090 remains HOLD_FOR_EVIDENCE.",
+  "verdict": "advanced",
+  "decision_reason": "This is a genuine evidence-quality advance: it separates an environment-dependent byte mismatch from the mathematical owner-packet question without rewriting the historical artifact or inventing a successor. The remaining blocker is now exactly the absent owner-authorized packet.",
+  "boundary": "PAH-001 functional, rates, Gibbs state, carrier, external stochastic Markov time and j-before-n order remain unchanged. The historical R-554 run files are preserved; only a new canonical-path intake package is added. No physical or continuum interpretation is used.",
+  "method": [
+    "Pin the R-554 snapshot, result and PAH-OMC-023 contract by SHA-256.",
+    "Re-run the three frozen child checks in the current environment while storing only stable relative command descriptions.",
+    "Independently recompute every candidate path hash and empty authorization/completion set.",
+    "Apply hostile mutations to authorization, completion, provenance, manifest, candidate byte hashes and ordering.",
+    "Classify the replay mismatch as provenance-only and retain HOLD_FOR_EVIDENCE for packet admission."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json#decision_rule",
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-result-v1.json#finding",
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-certificate.md#Replay evidence",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc023-owner-admission-intake/integrated.json#checks"
+  ],
+  "related": [
+    {
+      "id": "EXP-001689",
+      "relation": "continues"
+    }
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.4.json": "47b0879ff4c55fe3d60a11cd744d6920a3e3eb18bf923cdd4782fa7e7674b4e9",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json": "54329df2a6d3ca766f6ca24fbcc628263e6c7e8c2c0e8c8eba545f3508d75df7",
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json": "a21e6235bc68f7760c83ffa98657a787258d906b39e482c79a1646b2b6da107a",
+    "verification/scripts/pah_omc023_owner_admission_verify.py": "230de0863ee79baaca1020f91b11adc37fa85ddeeee23ae8db277a727aeabd9c"
+  },
+  "formal_refs": {
+    "results": [
+      "R-554",
+      "R-559",
+      "R-560"
+    ],
+    "negatives": [
+      "NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS"
+    ],
+    "events": [
+      "20260908-r-560-pah-omc-023-canonical-owner-admission-rep"
+    ]
+  },
+  "next_action": "Seek one owner-authorized, hash-pinned packet satisfying every R-557 field; do not repeat the now-reconciled manifest replay.",
+  "revisit_condition": "Reopen only when a concrete packet or a parent PAH hash changes; the old v1.4 integrated mismatch is retired as a path-provenance issue.",
+  "reproduction": {
+    "integrated": "python -X utf8 verification/scripts/pah_omc023_owner_admission_verify.py --check",
+    "primary": "python -X utf8 verification/scripts/pah_omc023_owner_admission_intake.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc023_owner_admission_intake_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc023_owner_admission_intake_hostile.py --check"
+  },
+  "verification_summary": "Canonical replay PASS: primary 29/29, independent 783/783, hostile 11/11, integrated 24/24. Admission remains HOLD_FOR_EVIDENCE because the authorized and complete sets are empty.",
+  "non_claims": [
+    "No successor packet is admitted.",
+    "No R-512 convergence, ordered semigroup theorem, infinite-volume or continuum result.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion."
+  ]
+}

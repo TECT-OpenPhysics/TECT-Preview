@@ -1,0 +1,66 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-OWNER-INVENTORY-STABLE-HOSTILE-001",
+  "checks": [
+    {
+      "actual": false,
+      "expected": false,
+      "name": "baseline intake is not complete",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "baseline candidate is not complete",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "authorization mutation is detected",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "status mutation is detected",
+      "status": "PASS"
+    },
+    {
+      "actual": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+      "expected": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+      "name": "candidate source hash is unchanged by audit",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "dynamic fsck output is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "direct-sum shortcut is not introduced",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "model inputs remain frozen",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "finding": "Hostile mutations that assert owner authorization or completed status are detected; the stable inventory does not accept dynamic fsck output or alter PAH model inputs.",
+  "non_claims": [
+    "No PAH temporal convergence, common-space theorem or universal owner absence theorem.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "schema": "tect/pah-omc020-owner-inventory-stable-hostile/1.0",
+  "status": "PASS_HOSTILE_STABLE_OWNER_INVENTORY_CONTROLS",
+  "task_id": "T-063",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

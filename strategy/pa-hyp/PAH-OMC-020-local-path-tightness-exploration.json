@@ -1,0 +1,64 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001661",
+  "title": "PAH-OMC-020 finite local path-tightness envelope",
+  "task_id": "T-064",
+  "question": "Do the unchanged finite stationary PAH processes admit a uniform compact-time Aldous modulus for every bounded local cylinder, using only the source-owned R-490 conductance and R-522 squared-rate bounds?",
+  "finding": "The primary 25/25, non-importing independent 20/20, hostile 9/9 and integrated 27/27 lanes agree. For finite local support A and increments d_r, the exact finite martingale/drift decomposition gives E|f(X_(tau+delta))-f(X_tau)|^2 <= 2 delta K_Gamma(f)+2 delta^2 K_L(f), with K_Gamma=540|A|max_r d_r^2 and K_L=60|A| sum_r d_r^2. The Markov quotient vanishes with delta uniformly over finite levels, radial cutoffs and stopping times on compact external-time intervals. The result remains a conditional finite path-tightness input; no limiting process is identified.",
+  "decision_reason": "This is a bounded temporal substep that consumes already hash-pinned C_sw and C2 inputs and does not repeat a finite carrier or physical calculation. The two source constants are kept separate, the finite path martingale is not promoted to an infinite process, and the missing path-space, non-explosion, uniqueness and R-512 identification fields remain explicit.",
+  "boundary": "Exactly unchanged PAH-001 functional, original directed rates, labelled Gibbs stationary law, OMC-004 strip, external stochastic Markov time and preregistered j-before-anchored-n order. No new functional, rate, state, carrier, regulator, normalization, comparison map or physical interpretation is constructed.",
+  "method": [
+    "Revalidate the exact PAH-001, PAH-OMC-010, R-490, R-522, R-520 and temporal-preregistration hashes.",
+    "Use R-490 C_sw=540 to bound the finite local carré-du-champ term and R-522 C2(A)<=60|A| to bound the integrated generator drift in L2.",
+    "Apply the finite generator-martingale plus drift decomposition, optional stopping and |a+b|^2<=2a^2+2b^2 to obtain the two-square envelope.",
+    "Replay a primary rational fixture, an independent fixture with distinct support and increments, hostile underbounds and physical-promotion mutations, and six finite Lean consequences."
+  ],
+  "next_action": "Obtain a source-authorized martingale-problem/path-space packet with non-explosion and uniqueness, then identify every subsequential local path limit with the R-512 minimal-form semigroup before attempting ordered semigroup convergence.",
+  "revisit_condition": "Reopen only when that owner packet is versioned and hash-pinned or an exact PAH-specific failure of the finite envelope assumptions is supplied; do not repeat finite tables or physical reinterpretations.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-09-08T02:20:17Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "formal_refs": {
+    "results": ["R-490", "R-520", "R-522", "R-537", "R-538", "R-539", "R-540", "R-541"],
+    "negatives": [],
+    "events": []
+  },
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-contract-v1.json#target_bound",
+    "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-result-v1.json#finding",
+    "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-certificate.md#Decision",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-local-path-tightness/integrated.json#checks"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+    "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-contract-v1.json": "0a73f0090be12e1b3fe4662f2b2ab2aa85331893234ef1610d0ce1dbefbe1834",
+    "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-result-v1.json": "90cf191edc5df6c05a7e7facaaa179e075c87129891d22456dfd36186994d27",
+    "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-certificate.md": "d0be6e31663089be23d1c7b44c87ea15e9e88339ba8cf2688d862a82fd0d77ad",
+    "verification/scripts/pah_omc020_local_path_tightness.py": "992a7ccab7ee5ab1f047d68058c7633539e6384eb82b7e37219293947822ca30",
+    "codes/foundations/pah_omc020_local_path_tightness_independent.py": "43c4c80f2b03ae1e707af2db6f0214c6bcab7e4e61d614272ef22fc707aea058",
+    "codes/foundations/pah_omc020_local_path_tightness_hostile.py": "343bd5d5092da1df50105d10515a5bc3da9bd8c308aec059255ff18d7b6f1835",
+    "verification/scripts/pah_omc020_local_path_tightness_verify.py": "2d526ad6ecf8e184aeebe8010e9f7fe672b3b5c592144eff69f09b7ae29cd432",
+    "verification/lean/Tect/PahOmc020PathTightness.lean": "6a1bd86d5c5ea87acb0fc735de67c5a4030542ca6733290f7171e2e3aa5496eb",
+    "verification/lean/registry.json": "70825043392c7f64078ea2d71bd170c886116a3b4eb444ea9f6b2214654c6052",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-local-path-tightness/primary.json": "df7ac3fa59a2ccae55ac6081c0a1447cf120b7a4ad688c3bdd63001fdadb9b80",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-local-path-tightness/independent.json": "254c0e7c9fc45adcb1143c24ced9096e9b6cb3f994f8d1f2663f94d37d174cc5",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-local-path-tightness/hostile.json": "ea5e612151b680837edef6058991de77826ec7dcc6ff933173cb05073364824f",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-local-path-tightness/integrated.json": "e852fcae6aca223e2db5e6391d55f6a18b7a0ed4433c3442097361dac4bc1a6d"
+  },
+  "non_claims": [
+    "No source-authorized infinite-volume process, semigroup convergence, martingale-problem identification, non-explosion, uniqueness, N2b/N2c/N4 closure or R-512 selection.",
+    "No change to PAH-001 functional, rates, state, carrier, regulator, normalization, external time or limit order.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "related": [{"id": "EXP-001660", "relation": "continues"}]
+}

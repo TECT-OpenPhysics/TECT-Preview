@@ -272,11 +272,12 @@ def _sync(path, content, check, label):
     if check:
         old = path.read_text(encoding="utf-8") if path.exists() else ""
         if strip(old) != strip(content):
-            print(f"RENDER-CHECK: FAIL — {label} out of sync; run --render and commit")
+            print(f"RENDER-CHECK: FAIL - {label} out of sync; run --render and commit")
             return False
-        print(f"RENDER-CHECK: PASS — {label} in sync")
+        print(f"RENDER-CHECK: PASS - {label} in sync")
         return True
-    path.write_text(content, encoding="utf-8")
+    with path.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(content)
     print(f"RENDERED: {path}")
     return True
 

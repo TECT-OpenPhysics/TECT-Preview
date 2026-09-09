@@ -1,0 +1,116 @@
+{
+  "schema": "tect/pah-omc020-fixedn-temporal-result/1.0",
+  "result_id": "R-514",
+  "contract_id": "PAH-OMC-020-FIXEDN-TEMPORAL",
+  "date": "2026-09-07",
+  "task_id": "T-065",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": false,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["ANALYTIC", "EXACT_FINITE_ALGEBRA", "EXECUTED", "INDEPENDENT", "HOSTILE", "LEAN_FINITE_SCOPE"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+    "verification/scripts/pah_omc020_fixedn_temporal_proof.py": "cff3de00fa21e55bf169c0b76c58a0bb7f16eab95d64164d7623f98a67e09c03",
+    "codes/foundations/pah_omc020_fixedn_temporal_proof_independent.py": "d0fa4c8806b4fb9427081d998697f8d76d90c6a67914b825d2297118d9f55186",
+    "codes/foundations/pah_omc020_fixedn_temporal_proof_hostile.py": "3a31219ff4c16ac72c9c2663ce9f3aee689857e539b227e39fe533de7cac442f",
+    "verification/scripts/pah_omc020_fixedn_temporal_proof_verify.py": "c29a73f82542653a1612cc5ef14247d2dfeb39d2b12bf63994db9600589edd4a"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fixedn-temporal/primary.json": "db5db1b436164306e142546c2a03d207be30344fcc58a8c9b0c3f2143bbe22fd",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fixedn-temporal/independent.json": "bf6166aa05e10483cc38e5e4db6b2c9f6b2fc4b4f3137acf2cfc36fa93b7994d",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fixedn-temporal/hostile.json": "0bf85052d595f87ffe1a5d7d9857197d323e3cb35b146d2f976251981f535114",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fixedn-temporal/integrated.json": "06cc35588871e42bb54c65a7e201d363427e14d061bbc70e7eab66b2642d07b5"
+  },
+  "exact_scope": {
+    "model": "Exactly PAH-001 with the original directed PH/LK/AP/TR rates and labelled stationary state.",
+    "geometry": "OMC-004 two-row relational strip G_n for every fixed n>=2, including the unsplit terminal square.",
+    "parameters": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0 and all remaining OMC-016 couplings one.",
+    "regulator": "h_j=2^(-j), R_j=2^j, M_psi,j=2^(2j), endpoint-inclusive half-open cells.",
+    "observables": "Bounded globally amplitude-l1-Lipschitz finite-prefix cylinder observables f,g in the preregistered domain.",
+    "time": "Original external stochastic Markov time, uniformly for every finite interval [0,T].",
+    "order": "At fixed n, j->infinity first; amplitude cutoff K->infinity second. No anchored n limit.",
+    "target": "The exact finite-label PH/LK/AP fibre semigroup Q_n(t) in stationary local correlations."
+  },
+  "conclusion": "For every fixed n>=2, f,g in the preregistered domain and finite T, the original stationary correlations converge uniformly on [0,T] as j->infinity, followed by removal of the bounded amplitude cutoff, to the exact PH/LK/AP fibre semigroup Q_n(t).",
+  "proof_coverage": {
+    "compact_modulus": "Finite source root and label sets plus polynomial degree at most two for every nonradial increment give continuous locally Lipschitz rates on each compact amplitude box; finite-dimensional variation of constants gives a uniform-in-time modulus.",
+    "radial_Duhamel": "R-511 inverse-pair square transport and the bounded radial displacement 2h_j give an L2 residual 2 H_(n,K,g) L_(n,K,T,g) h_j; exact finite-matrix Duhamel and stationary L2 contraction give the j-limit on g_K.",
+    "cell_passage": "R-509/OMC-016 endpoint-inclusive weak cell convergence is upgraded from fixed tests to the family f Q_n(t)g_K by compact equicontinuity and a finite sup-norm epsilon-net; the same Q_n occurs on both sides.",
+    "tail_removal": "The inherited all-j stationary tail estimate and Markov contraction remove g_K after the j-limit without a pointwise global-rate envelope.",
+    "formal_scope": "Lean compilation covers the existing finite reversible algebra and coefficient identities; the analytic epsilon-net and measure passage are written proofs, not claimed to be fully formalized in Lean.",
+    "independence": "Primary, non-importing independent and hostile scripts rebuild separate incidence, modulus, Duhamel, endpoint, tail and shortcut checks."
+  },
+  "assumptions": [
+    "The registered R-509/OMC-016 fixed-n endpoint-inclusive cell convergence and all-j stationary-tail theorem at its exact scope.",
+    "The registered R-511 inverse-pair radial residual estimate for bounded globally Lipschitz cylinder tests.",
+    "Finite-dimensional matrix variation of constants, compact equicontinuity and the elementary finite epsilon-net argument.",
+    "The PAH-001 midpoint rate, state, labelled measure, terminal-square convention and external Markov time remain unchanged."
+  ],
+  "missing_assumptions": [
+    "A source-authorized bounded-energy U_n/common-Hilbert realization for the varying n spaces.",
+    "N2b arbitrary-sequence liminf and recovery, N2c/N4 boundary escape, and N2d identification with the R-512 minimal closure.",
+    "Anchored n semigroup convergence and any infinite-volume process construction."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "A compact finite-label modulus is being used as a global unbounded-rate estimate.",
+      "disposition": "DISMISSED: every modulus constant is explicitly restricted to fixed n and a compact amplitude box; the stationary tail is handled separately."
+    },
+    {
+      "objection": "Weak convergence for each fixed test is silently promoted to uniform time convergence.",
+      "disposition": "DISMISSED: the certificate supplies bounded equicontinuity on a compact box and a finite sup-norm epsilon-net before applying the fixed-test theorem."
+    },
+    {
+      "objection": "The radial term is removed by a fitted or pointwise rate bound.",
+      "disposition": "DISMISSED: the proof uses the source inverse-pair c_r^2 transport identity and the 2h_j displacement only."
+    },
+    {
+      "objection": "Fixed-n convergence closes the anchored n or R-512 minimal-form selection.",
+      "disposition": "UPHELD against that promotion: U_n, liminf/recovery, boundary escape, minimal identification and anchored n remain explicitly open."
+    },
+    {
+      "objection": "Lean compilation formalizes the measure-theoretic semigroup theorem.",
+      "disposition": "UPHELD against that overclaim: Lean is reported only for finite algebraic consequences."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-509", "R-510", "R-511", "R-512", "R-513"],
+    "negatives": [],
+    "events": []
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_proof.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_fixedn_temporal_proof_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_fixedn_temporal_proof_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_proof_verify.py --check",
+    "result": "All four lanes pass; each retains anchored-n-open and physical_promotion=false."
+  },
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+  "closed_scoped_gate": "Fixed-n j-to-infinity stationary local-correlation convergence to Q_n(t), with the declared j-before-K order.",
+  "remaining_gates": [
+    "Source-authorized common-Hilbert U_n and N2a",
+    "N2b arbitrary-sequence liminf and recovery",
+    "N2c/N4 boundary escape for the unbounded original rates",
+    "N2d identification with the R-512 minimal closed form",
+    "Anchored n semigroup convergence and the full PAH-OMC-020 objective"
+  ],
+  "next_single_question": "Can one source-authorized, non-coordinate U_n/common-Hilbert owner packet satisfy N2a, N2b and N2c/N4 while preserving the fixed-n Q_n(t) limit just proved?",
+  "revisit_condition": "Reopen after an owner packet is hash-pinned, or if an exact defect is found in the R-509 cell theorem, R-511 residual, compact modulus, endpoint normalization or Duhamel domain.",
+  "non_claims": [
+    "This is an auxiliary fixed-n theorem only; it is not the anchored n or full PAH-OMC-020 result.",
+    "No common completed Hilbert-space U_n, Mosco liminf, boundary escape, R-512 minimal-form semigroup selection or infinite-volume process.",
+    "No physical Pre-A, spacetime, quantum real time, QFT, gravity, continuum, mass gap, Yang--Mills or TOE conclusion."
+  ]
+}

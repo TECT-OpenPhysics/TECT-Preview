@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "actual": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+      "expected": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+      "name": "R-552 hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-552",
+      "expected": "R-552",
+      "name": "R-552 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "finite HOLD boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "source multiplicity A",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "name": "source multiplicity B",
+      "status": "PASS"
+    },
+    {
+      "actual": -2,
+      "expected": -2,
+      "name": "midpoint exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2706705664732254",
+      "expected": "positive gap",
+      "name": "A derivative exceeds B",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1353352832366127",
+      "expected": "positive",
+      "name": "B derivative positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1353352832366127",
+      "expected": "exp(-2)>0",
+      "name": "strict gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "gap>0 plus common initial value",
+      "expected": "exists punctured interval",
+      "name": "right-time consequence",
+      "status": "PASS"
+    },
+    {
+      "actual": null,
+      "expected": "not supplied by derivative data alone",
+      "name": "no explicit interval length",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "owner-independent scope",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "physical boundary",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 13,
+  "classification": "auxiliary_support",
+  "finding": "The frozen source-multiplicity gap separates the two finite-time orbits on some punctured right interval, but the interval length and owner-fixed continuation remain unspecified.",
+  "non_claims": [
+    "No universal owner-fixed convergence no-go.",
+    "No anchored-n or R-512 minimal-form result.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE result."
+  ],
+  "run_kind": "independent",
+  "schema": "tect/pah-omc020-positive-time-separation-independent/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee"
+  },
+  "status": "PASS",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

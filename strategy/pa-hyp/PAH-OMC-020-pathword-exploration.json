@@ -1,0 +1,82 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-020 exact path-word transport envelope for N2c/N4",
+  "question": "Can the unchanged PAH-001 non-radial detailed-balance rates supply a uniform-in-word L2 transport bound and a factorial connected-word tail without assuming a global pointwise rate envelope?",
+  "finding": "Yes for the prescribed root-word algebra: multiplying the R-511 inverse-square identity along any admissible partial-bijection word telescopes the Gibbs density, and source mobility 0<=m<=1 gives integrated squared word mass at most one. A finite-fibre jump simplex then contributes T^k/k!. Under a separately supplied overlap count N_k<=a*b^(k-1), the connected boundary-word tail has the exact geometric-ratio bound [a*b^(d-1)*T^d/d!] / [1-b*T/(d+1)]. The source overlap constant and the connected-word-to-Duhamel attribution are not yet supplied, so N2c/N4 remains open.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This is a new unbounded-rate analytic input, not a repeated finite carrier calculation. It removes the pointwise-rate obstruction at the prescribed-word level while preserving the exact PAH state, rates, partial domains and external Markov time. The two source-level locality inputs needed for N2c/N4 are explicitly left conditional.",
+  "boundary": "Exact PAH-001 PH/LK/AP root words on OMC-004 G_n after the registered R-511 j-limit; no new dynamics, rate, state, carrier, counterterm, projection, common-space map, anchored-n limit or physical interpretation.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "task_id": "T-066",
+  "method": [
+    "Hash-pin PAH-001, OMC-004, R-511 and the PAH-OMC-020 temporal contract.",
+    "Define an admissible root word and multiply the exact R-511 Gibbs square-transport identity along its partial-bijection composition.",
+    "Use stationary Cauchy-Schwarz and the finite-fibre jump simplex, retaining survival factors no larger than one and avoiding an absolute diagonal generator-power series.",
+    "Count connected words conditionally by an overlap branching constant and derive the exact geometric-ratio factorial tail.",
+    "Run independent and hostile arithmetic lanes and compile the Lean algebraic declarations; keep the source overlap/Duhamel attribution as missing."
+  ],
+  "assumptions": [
+    "R-511 inverse-square transport and inverse partial-bijection measure change hold at the registered finite-n scope.",
+    "At fixed amplitudes the non-radial label fibre is finite and has the ordinary continuous-time jump expansion.",
+    "A future source-valid connected-word attribution may be supplied; it is not assumed in the current N2c/N4 verdict."
+  ],
+  "missing_assumptions": [
+    "An n-uniform overlap branching constant and boundary-distance count for all OMC-004 PH/LK/AP roots.",
+    "A source-valid coupling or Duhamel theorem converting connected-word influence into A_n^(out,m)Q_n(s)g.",
+    "N2a common U_n, N2b liminf/recovery and N2d R-512 minimal-form identification."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md#Exact-path-word-identity",
+    "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json#conclusion",
+    "verification/scripts/pah_omc020_pathword_transport.py#compute",
+    "codes/foundations/pah_omc020_pathword_transport_independent.py#compute",
+    "codes/foundations/pah_omc020_pathword_transport_hostile.py#compute",
+    "verification/scripts/pah_omc020_pathword_transport_verify.py#run",
+    "verification/lean/Tect/PahOmc020Pathword.lean#two_step_square_transport",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/integrated.json#checks"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-509",
+      "R-510",
+      "R-511",
+      "R-512",
+    "R-514",
+      "R-515"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "verification_summary": "Primary 45/45, non-importing independent 25/25, hostile 13/13 and Lean 4.32.1 (four declarations) pass. The integrated status is PASS_PATHWORD_INTEGRATED with verdict AUXILIARY_SUPPORT; N2c/N4 attribution remains NOT_DISCHARGED.",
+  "next_action": "Use the exact OMC-004 incidence data to derive and hash-pin one n-uniform root-overlap constant and a coupling/Duhamel attribution, or record a precise route-local obstruction if either fails.",
+  "next_single_question": "Can the exact OMC-004 root-incidence data provide an n-uniform overlap constant and a source-valid coupling/Duhamel lemma that turns this connected-word envelope into N2c/N4?",
+  "revisit_condition": "Reopen the anchored-n semigroup route only after both locality inputs are source-authorized and independently verified; otherwise retain this path-word lemma as auxiliary support.",
+  "non_claims": [
+    "No anchored-n semigroup convergence, N2a/N2b/N2c/N4 closure or N2d minimal-form selection.",
+    "No infinite-volume process, continuum or physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion.",
+    "External stochastic Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "provenance": "contemporaneous",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-07",
+  "related": [
+    {
+      "id": "EXP-001632",
+      "relation": "continues"
+    }
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json": "114699a4554e45260a6a6632f44a32e9c0494a9274c27b561c676e93c5d247d9",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/integrated.json": "c25823c8b2b60d7cb62d5dfed0d0650865fd544bb4d6b82923b17615d27a1c57"
+  }
+}

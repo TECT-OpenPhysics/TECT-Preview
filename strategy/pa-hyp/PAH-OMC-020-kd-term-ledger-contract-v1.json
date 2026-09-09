@@ -1,0 +1,124 @@
+{
+  "schema": "tect/pah-omc020-kd-term-ledger-contract/1.0",
+  "contract_id": "PAH-OMC-020-KD-TERM-LEDGER",
+  "version": "1.0.0",
+  "date": "2026-09-08",
+  "task_id": "T-077",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Which already registered source results actually instantiate each term in the PAH-OMC-020 K_(n,m) and D_n budget, with the required quantifiers and common-space authority?",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "fixed_scope": {
+    "model": "Exactly immutable PAH-001, original directed rates, labelled Gibbs state and OMC-004 strip.",
+    "order": "j tends to infinity at fixed n first, followed by the declared anchored n exhaustion; no diagonal or reversed order.",
+    "target": "R-512 minimal closed-form semigroup is a named target only until process/form identification is supplied.",
+    "time": "External stochastic Markov time on compact intervals; no quantum, proper or Lorentzian interpretation.",
+    "comparison": "Use only the symbols J_(n,j), K_(n,m), D_n and the comparison required by the frozen PAH-OMC-020 contract; do not construct a new map or process."
+  },
+  "term_definitions": {
+    "J_fixed_n": {
+      "meaning": "Compact-time stationary finite-j error at fixed n.",
+      "required": ["fixed-n j passage", "uniformity on every compact [0,T]"],
+      "source": "R-514"
+    },
+    "K_state": {
+      "meaning": "State-passage contribution in the anchored comparison.",
+      "required": ["local cylinder scope", "explicit error modulus", "anchored-n quantifier"],
+      "source": "R-510"
+    },
+    "K_stabilization": {
+      "meaning": "Eventual local-generator stabilization contribution.",
+      "required": ["support-dependent N(f)", "same generator and cylinder", "transfer to compact-time correlation bound"],
+      "source": "R-493"
+    },
+    "K_boundary": {
+      "meaning": "Outside-root boundary contribution in the anchored comparison.",
+      "required": ["all local cylinders", "compact-time bound", "unbounded-rate attribution", "varying-n/common-space map"],
+      "source": "R-517"
+    },
+    "K_uniform": {
+      "meaning": "One nonnegative K_(n,m) satisfying lim_(m->infinity) limsup_(n->infinity) K_(n,m)=0.",
+      "required": ["all previous K terms in one common comparison", "uniform n and compact-time quantifiers", "source authorization"],
+      "source": "R-534 contract"
+    },
+    "D_target": {
+      "meaning": "Anchored finite correlation versus the semigroup selected by the R-512 minimal form.",
+      "required": ["common process or Hilbert realization", "minimal-form identification", "D_n tends to zero"],
+      "source": "R-512 and source-authorized owner packet"
+    }
+  },
+  "admission_predicate": {
+    "statement": "The PAH-OMC-020 semigroup objective may advance only if J_fixed_n, K_state, K_stabilization, K_boundary, K_uniform and D_target all have their required source and quantifier fields. Registered finite or conditional evidence is not itself owner authorization.",
+    "required_full_fields": ["fixed_n_passage", "state_formula", "stabilization_formula", "boundary_formula", "common_comparison", "uniform_K_limit", "target_process_identification", "D_limit"],
+    "current_expected": {
+      "fixed_n_passage": true,
+      "state_formula": true,
+      "stabilization_formula": true,
+      "boundary_formula": true,
+      "common_comparison": false,
+      "uniform_K_limit": false,
+      "target_process_identification": false,
+      "D_limit": false
+    },
+    "verdict_rule": {
+      "MAINLINE_ADVANCE": "All required_full_fields are true and primary, independent, hostile and Lean checks agree.",
+      "NEGATIVE_RESULT": "Only an exact contradiction inside unchanged PAH-001 may use this branch.",
+      "HOLD_FOR_EVIDENCE": "Any required field is absent, conditional without source authorization, or lacks the declared quantifier."
+    }
+  },
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json": "67825022b3db1078387534baacb818fdf60778ce19f4fe81514484a25cf7cb5d",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-contract-v1.json": "486b86853638bdd953e95ed2501446bb0780c8f0eb768c9c9fd1e18062c53984",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-result-v1.json": "a96b95f704ca9f7289bdc4767cd46a90f4bf3567ab1c3f2fae2b813840a11adc",
+    "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-result-v1.json": "9013fe5337965478c2e91c84fa693eacf3dbd0d948a3b2cafb900332d8b9dd19"
+  },
+  "source_roles": {
+    "R-514": "supplies fixed-n J term only",
+    "R-510": "supplies a local stationary-state modulus, not a common path or target process",
+    "R-493": "supplies finite eventual generator equality, not the anchored compact-time K limit",
+    "R-517": "supplies a conditional finite-fibre word tail, not source-authorized varying-space boundary escape",
+    "R-512": "supplies fixed-H minimal form closure, not finite-process identification",
+    "R-534": "proves the conditional triangle implication while leaving K and D open",
+    "R-533": "records the current fail-closed absence of the path/common-space owner packet"
+  },
+  "current_coverage": {
+    "fixed_n_passage": "PASS_REGISTERED_R514",
+    "state_formula": "PARTIAL_LOCAL_R510",
+    "stabilization_formula": "PARTIAL_EVENTUAL_R493",
+    "boundary_formula": "CONDITIONAL_FINITE_R517",
+    "common_comparison": "ABSENT_OWNER_PACKET",
+    "uniform_K_limit": "ABSENT_ALL_TERM_BOUND",
+    "target_process_identification": "ABSENT_R512_PROCESS_LINK",
+    "D_limit": "ABSENT"
+  },
+  "forbidden_shortcuts": [
+    "Do not treat the R-510 local-state modulus as a path-space or semigroup bound.",
+    "Do not turn R-493 pointwise stabilization into compact-time convergence without a comparison estimate.",
+    "Do not remove R-517's conditional/source-authority and varying-space requirements.",
+    "Do not identify R-512 minimal form with the finite stationary process by naming alone.",
+    "Do not use a new carrier, conditional averaging, rate fitting, counterterm, or physical-time interpretation."
+  ],
+  "non_claims": [
+    "No PAH-OMC-020 anchored-n semigroup convergence theorem.",
+    "No source path process, common U_n, N2b/N2c/N4/N2d closure or universal impossibility theorem.",
+    "No PAH-001 functional, rate, state, carrier, regulator, normalization, external time or limit-order change.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_kd_term_ledger.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_kd_term_ledger_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_kd_term_ledger_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_kd_term_ledger_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020KD.lean"
+  },
+  "next_single_question": "Can one source-authorized packet provide a common comparison, one all-cylinder compact-time K_(n,m) limit and the R-512 target-process defect D_n without changing PAH-001?"
+}

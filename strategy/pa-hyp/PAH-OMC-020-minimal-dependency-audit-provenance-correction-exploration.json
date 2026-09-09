@@ -1,0 +1,49 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001684",
+  "title": "PAH-OMC-020 R-556 tooling-hash provenance correction",
+  "task_id": "T-086",
+  "question": "After the Lean registry and integrated verifier were finalized, do the R-556 tooling and integrated-run hashes match the final bytes?",
+  "finding": "R-556 now pins the final integrated run, integrated verifier and Lean registry bytes: dcfa1c993c5623c9445f7cb8e4f365e7054e9d8dfd7e75cbedd7f7353e76ef4a, ec7cd4a591f1b60edf6ff1e236a074fd0e499b9ba2c9f294c60d1b3791c8fe1c and 45797af43a1eba11bec59ed7e9c4633bb2f5f13a4895db8bb316bc24f565327b. The scientific HOLD_FOR_EVIDENCE verdict and dependency ledger are unchanged.",
+  "decision_reason": "The correction keeps the result byte-level provenance exact after the Lean declaration-marker repair; no mathematical or scope change occurred.",
+  "boundary": "PAH-001, rates, state, time, order, dependency statuses and non-claims remain unchanged. This is an append-only provenance correction.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "verdict": "inconclusive",
+  "recorded_at": "2026-09-08T09:24:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "related": [{"id": "EXP-001683", "relation": "corrects"}],
+  "method": [
+    "Recompute the final SHA-256 values of the integrated run, integrated verifier and Lean registry.",
+    "Update only the R-556 tooling and run hash fields.",
+    "Rerun the dedicated verifier and release gate."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json#tooling_files",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-minimal-dependency-audit/integrated.json#source_hashes",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json": "75c162935a432da4c170c5157f1022c30a97b617ab18b657e57cb02ff91e95d0",
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-json-correction-exploration.json": "5f9e8a9bbbd230ff6a0cc09586ed55febc40b4fa3e7cdfece072bbcb2fd6eac5"
+  },
+  "formal_refs": {
+    "events": ["20260908-r-556-pah-omc-020-minimal-dependency-audit-2026"],
+    "negatives": [],
+    "results": ["R-556"]
+  },
+  "next_action": "Keep R-556 on HOLD_FOR_EVIDENCE and wait for the single source-authorized owner packet; do not repeat finite or radial calculations.",
+  "reproduction": {
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_minimal_dependency_audit_verify.py --check",
+    "release": "python -X utf8 verification/scripts/release_check.py"
+  },
+  "revisit_condition": "Reopen only if the final bytes change again or a source-authorized packet appears.",
+  "non_claims": [
+    "No scientific verdict, active gate, claim tier or PAH source field changed.",
+    "No full PAH-OMC-020 convergence or physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "verification_summary": "Final tooling and run hashes are synchronized; this successor is provenance-only."
+}

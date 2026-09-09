@@ -1,0 +1,61 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001701",
+  "recorded_at": "2026-09-08T14:46:42Z",
+  "reviewed_on": "2026-09-08",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-086",
+  "title": "PAH-OMC-020 source-chain scope audit run-hash correction",
+  "question": "Does the source-chain scope audit retain a byte-stable run artifact and correct source hashes after its first execution?",
+  "method": [
+    "Preserve EXP-001700 as the historical scope finding and do not edit its append-only record.",
+    "Make the audit preserve an existing recorded_at value on replay so --check does not mutate the run artifact.",
+    "Re-run the same twelve assertions and hash the corrected script and stable run JSON."
+  ],
+  "verdict": "advanced",
+  "finding": "The scope finding is unchanged. The audit now preserves the first run timestamp on replay, making the scope JSON byte-stable; the corrected source hashes are recorded here for reproducibility.",
+  "decision_reason": "This is provenance-only correction. It does not alter the composite-model scope result, the missing owner packet, or the PAH-OMC-020 mathematical status.",
+  "boundary": "No PAH function, rate, state, carrier, time, comparison map, limit order or scientific conclusion changes.",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-source-chain-scope-reconciliation-exploration.json#source_hashes",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-chain-scope-audit/scope.json#status",
+    "verification/scripts/pah_omc020_source_chain_scope_audit.py#main"
+  ],
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-511",
+      "R-552",
+      "R-557",
+      "R-566"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "related": [
+    {
+      "id": "EXP-001700",
+      "relation": "corrects"
+    }
+  ],
+  "verification_summary": "Source-chain scope assertions PASS; replay preserves recorded_at and leaves the run JSON hash stable.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_source_chain_scope_audit.py --check"
+  },
+  "source_hashes": {
+    "verification/scripts/pah_omc020_source_chain_scope_audit.py": "2508a2ddc381a29d188aecbada8f715de42a0b391b8743404b25e2af92b8a7d8",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-chain-scope-audit/scope.json": "8354fe0296b260353ed4d280df9bb1166248e8f41ca070255dd8d45bec951922"
+  },
+  "next_action": "Continue with the anchored-n owner-packet requirement; do not repeat the parent-only R-552 ambiguity audit.",
+  "revisit_condition": "Reopen if the source chain or owner-packet status changes; otherwise retain the corrected stable artifact.",
+  "non_claims": [
+    "No full PAH-OMC-020 ordered semigroup convergence or R-512 minimal-form identification is proved.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang--Mills, mass-gap or TOE conclusion."
+  ]
+}

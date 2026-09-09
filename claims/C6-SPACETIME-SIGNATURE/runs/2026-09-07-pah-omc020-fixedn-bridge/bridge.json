@@ -1,0 +1,183 @@
+{
+  "checks": [
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "OMC-020 preregistration pin",
+      "status": "PASS"
+    },
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+      "expected": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+      "expected": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-018-generator-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "P_nj(t)=exp(t L_nj), where L_nj is the SAME finite original reversible generator. No truncation of its root set or fitted rates.",
+      "expected": "P_nj=exp(t L_nj)",
+      "name": "fixed-n comparison is declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "j then anchored n",
+      "name": "j-before-n order is declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "Original external unaccelerated Markov time t>=0 with finite stationary initial law and no terminal conditioning. No infinite-time, quantum-real-time, proper-time or Lorentzian interpretation.",
+      "expected": "external unaccelerated Markov time",
+      "name": "same external time is declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0; all other displayed couplings one.",
+      "expected": "OMC-016 fixed parameters",
+      "name": "source parameter crosswalk",
+      "status": "PASS"
+    },
+    {
+      "actual": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "expected": "original midpoint Gibbs rate",
+      "name": "PAH generator remains original",
+      "status": "PASS"
+    },
+    {
+      "actual": "(2)",
+      "expected": "present",
+      "name": "OMC-018 bridge marker:(2)",
+      "status": "PASS"
+    },
+    {
+      "actual": "(3)",
+      "expected": "present",
+      "name": "OMC-018 bridge marker:(3)",
+      "status": "PASS"
+    },
+    {
+      "actual": "(4)",
+      "expected": "present",
+      "name": "OMC-018 bridge marker:(4)",
+      "status": "PASS"
+    },
+    {
+      "actual": "(5)",
+      "expected": "present",
+      "name": "OMC-018 bridge marker:(5)",
+      "status": "PASS"
+    },
+    {
+      "actual": "not a temporal path-law construction",
+      "expected": "present",
+      "name": "OMC-018 bridge marker:not a temporal path-law construction",
+      "status": "PASS"
+    },
+    {
+      "actual": "pi_x c_xy^2",
+      "expected": "mobility^2 exp(-fy)/normalizer",
+      "name": "square-weight transport",
+      "status": "PASS"
+    },
+    {
+      "actual": "pi_x c_xy",
+      "expected": "pi_y c_yx",
+      "name": "directed conductance balance",
+      "status": "PASS"
+    },
+    {
+      "actual": "-<f,Lg> pair",
+      "expected": "conductance*(ft-f)*(gt-g)",
+      "name": "inverse-pair form sign",
+      "status": "PASS"
+    },
+    {
+      "actual": "H*(2 L h)^2/2",
+      "expected": "2 H L^2 h^2",
+      "name": "radial half-form coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(t L) 1",
+      "expected": "1",
+      "name": "independent fibre conservativity",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(t L)",
+      "expected": "transpose",
+      "name": "independent fibre reversibility",
+      "status": "PASS"
+    },
+    {
+      "actual": "-v^T L v",
+      "expected": "(a-b)^2",
+      "name": "independent fibre nonnegative form",
+      "status": "PASS"
+    },
+    {
+      "actual": "80ea1ea152155d4c422dc66a919f1dde1ceba62ec82eada932daa18fcfce94cb",
+      "expected": "different from pinned hash",
+      "name": "hostile preregistration mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "full exponent square",
+      "expected": "not source midpoint identity",
+      "name": "hostile missing half exponent rejected",
+      "status": "PASS"
+    }
+  ],
+  "code_sha256": "4fe6da9a612b1e7e0704272192f1e7be4df0677e2082d023fa66808224f1e6a6",
+  "conditional_bridge": [
+    "compact amplitude rate Lipschitzness plus finite-fibre semigroup stability",
+    "Duhamel control of the radial residual after compact truncation",
+    "common-space form Mosco or equivalent strong-resolvent identification"
+  ],
+  "lean": {
+    "command": "lean verification/lean/Tect/PahOmc020.lean",
+    "compiler": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lean.exe",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "missing_for_temporal_completion": [
+    "a PAH-specific proof of the compact semigroup Lipschitz propagation constant",
+    "a PAH-specific common-space weak-liminf/recovery or equivalent theorem",
+    "identification of the anchored n limit with R-512 minimal closure"
+  ],
+  "non_claims": [
+    "This is not a finite-semigroup convergence theorem or a full PAH result.",
+    "No graph-core, operator-core, minimal/maximal-domain equality or infinite-volume process is claimed.",
+    "No physical Pre-A, spacetime, quantum real time, QFT, gravity, continuum, mass gap or TOE conclusion."
+  ],
+  "preregistration_sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+  "proved_scope": [
+    "source midpoint Gibbs square and detailed-balance algebra",
+    "inverse-pair form sign and radial half-form coefficient",
+    "generic finite reversible fibre oracle and hostile mutation rejection",
+    "provenance and fixed-n/j-before-n contract pins"
+  ],
+  "schema": "tect/pah-omc020-fixedn-bridge/1.0",
+  "scope": {
+    "geometry": "Original OMC-004 two-row relational G_n, n>=2, 2(n+2) vertices; terminal unsplit square and label-only anchors retained. No physical dimension, length or volume assignment.",
+    "model": "Exact PAH-001 functional and original directed PH/LK/AP/TR rates and partial domains through the pinned OMC-018 source chain. No Hamiltonian, generator, state or carrier change.",
+    "parameters": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0, all other displayed OMC-016 couplings one.",
+    "regulator_order": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+    "state": "Full labelled all-Q counting Gibbs mu_nj with w_Q=Z_Q/Z; fixed-n radial limit nu_n and specified anchored R-510 nu_infty. No quotient, prior, Jacobian or conditional state selection.",
+    "time": "Original external unaccelerated Markov time t>=0 with finite stationary initial law and no terminal conditioning. No infinite-time, quantum-real-time, proper-time or Lorentzian interpretation."
+  },
+  "status": "PASS_SCOPED_BRIDGE_AUDIT",
+  "temporal_verdict": "IN_PROGRESS"
+}

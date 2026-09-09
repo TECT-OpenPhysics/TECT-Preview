@@ -1,0 +1,145 @@
+{
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+      "expected": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+      "expected": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-016-resolved-radial-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "phase/link/aperture",
+      "expected": "declared",
+      "name": "PH/LK/AP roots are declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "matter_transfer",
+      "expected": "declared",
+      "name": "TR is separate from fibre",
+      "status": "PASS"
+    },
+    {
+      "actual": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "expected": "midpoint rate",
+      "name": "same original generator",
+      "status": "PASS"
+    },
+    {
+      "actual": "Do the original finite stationary semigroups converge, first in radial cutoff j at fixed n and then in the specified anchored volume n, to the R-512 minimal-form semigroup in local two-point correlations uniformly on every compact nonnegative time interval?",
+      "expected": "fixed-n target",
+      "name": "temporal contract fixed-n target",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": "<=2",
+      "name": "nonradial increment degree n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": "<=2",
+      "name": "nonradial increment degree n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": "A 1",
+      "expected": "0",
+      "name": "fibre row-sum",
+      "status": "PASS"
+    },
+    {
+      "actual": "A",
+      "expected": "A.T",
+      "name": "fibre symmetry",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*a0**2 - 2*a0*a1 - 2*a0*a2 + 2*a1**2 - 2*a1*a2 + 2*a2**2",
+      "expected": "2*a0**2 - 2*a0*a1 - 2*a0*a2 + 2*a1**2 - 2*a1*a2 + 2*a2**2",
+      "name": "fibre nonnegative form",
+      "status": "PASS"
+    },
+    {
+      "actual": "-<f,Lg> pair",
+      "expected": "conductance*(f1-f0)*(g1-g0)",
+      "name": "pair form sign",
+      "status": "PASS"
+    },
+    {
+      "actual": "f8b97fce59bab2574262573b9a656dd76f80060cc3fa754095f03873d9589804",
+      "expected": "different from source pin",
+      "name": "hostile source mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "full exponent",
+      "expected": "source half exponent",
+      "name": "hostile full exponent rejected",
+      "status": "PASS"
+    }
+  ],
+  "code_sha256": "92911c6828c1fc1525c440b233df6e26326d611bf49c18499f3a26914f13ebcb",
+  "fixture_reports": [
+    {
+      "cases": 48,
+      "max_total_degree": 2,
+      "n": 2
+    },
+    {
+      "cases": 62,
+      "max_total_degree": 2,
+      "n": 3
+    }
+  ],
+  "lean": {
+    "command": "lean verification/lean/Tect/PahOmc020.lean",
+    "compiler": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lean.exe",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "non_claims": [
+    "The finite fixtures and generic fibre oracle are not a semigroup convergence theorem.",
+    "No global common core, strong resolvent/Mosco theorem, infinite-volume process or ordered limit is claimed.",
+    "No physical Pre-A, spacetime, quantum real time, QFT, gravity, continuum, mass gap or TOE conclusion."
+  ],
+  "open_obligations": [
+    "write the all-n compact rate modulus with explicit maxima and finite-label quantifiers",
+    "prove cutoff/Duhamel removal in the actual stationary PAH L2 spaces",
+    "establish common-space correlation convergence and then anchored-n minimal-closure selection"
+  ],
+  "proved_scope": [
+    "independent reconstruction of the original finite strip energy and PH/LK/AP root actions",
+    "exact fixture audit that every tested nonradial energy increment has amplitude degree at most two",
+    "finite reversible fibre row-sum, symmetry and form-sign algebra",
+    "hostile source mutation and full-exponent rejection plus Lean compilation"
+  ],
+  "schema": "tect/pah-omc020-fibre-modulus/1.0",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "strategy/pa-hyp/PAH-OMC-016-resolved-radial-prereg-v1.json": "1cebe3acff477175125c7abf2ebdfa2cd5b65089530ae3581bbaa69b23c161b7",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_FIBRE_MODULUS_STRUCTURAL_AUDIT",
+  "temporal_verdict": "IN_PROGRESS"
+}

@@ -1,0 +1,3448 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-OWNER-SEARCH-SNAPSHOT-CHECK-001",
+  "authorized_paths": [],
+  "candidate_path_count": 101,
+  "checks": [
+    {
+      "actual": "tect/pah-omc020-owner-search-snapshot/1.0",
+      "expected": "tect/pah-omc020-owner-search-snapshot/1.0",
+      "name": "snapshot schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "FIXED_SEARCH_SNAPSHOT",
+      "expected": "FIXED_SEARCH_SNAPSHOT",
+      "name": "snapshot status",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "snapshot source authorization false",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json": "b87a2d8d7b0009c9f5bd30695823cb442376939ff18c1d48f1d890ae430fe8c7",
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+        "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json": "cfe872fac4517f468061cd5d644cf931e6a7e7294d66ca6a8b2faa6977d37325",
+        "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "expected": {
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json": "b87a2d8d7b0009c9f5bd30695823cb442376939ff18c1d48f1d890ae430fe8c7",
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+        "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json": "cfe872fac4517f468061cd5d644cf931e6a7e7294d66ca6a8b2faa6977d37325",
+        "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "name": "parent pin set",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "list",
+      "name": "candidate records are a list",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "strategy/pa-hyp/PAH-OMC-003-cell-colour-refinement-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-004-generator-replay-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+        "strategy/pa-hyp/PAH-OMC-004-geometric-incidence-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-004-v1.json",
+        "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+        "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json",
+        "strategy/pa-hyp/PAH-OMC-007-joint-holonomy-cylinder-v1.json",
+        "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+        "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+        "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+        "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+        "strategy/pa-hyp/PAH-OMC-014-composed-cauchy-lean-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+        "strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json",
+        "strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-manifest.json",
+        "strategy/pa-hyp/PAH-OMC-014-reentry-scope-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-014-reentry-scope-review-260905.md",
+        "strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-intake-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-inventory-replay-drift-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-pathword-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-projective-correlation-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-radial-sector-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-root-overlap-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+        "strategy/pa-hyp/R483-certificate.md",
+        "strategy/pa-hyp/R484-certificate.md",
+        "strategy/pa-hyp/R485-certificate.md",
+        "strategy/pa-hyp/R486-certificate.md",
+        "strategy/pa-hyp/R487-certificate.md",
+        "strategy/pa-hyp/R488-certificate.md",
+        "strategy/pa-hyp/R491-certificate.md"
+      ],
+      "expected": [
+        "strategy/pa-hyp/PAH-OMC-003-cell-colour-refinement-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-004-generator-replay-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+        "strategy/pa-hyp/PAH-OMC-004-geometric-incidence-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-004-v1.json",
+        "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+        "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json",
+        "strategy/pa-hyp/PAH-OMC-007-joint-holonomy-cylinder-v1.json",
+        "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+        "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+        "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+        "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+        "strategy/pa-hyp/PAH-OMC-014-composed-cauchy-lean-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+        "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+        "strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json",
+        "strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-manifest.json",
+        "strategy/pa-hyp/PAH-OMC-014-reentry-scope-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-014-reentry-scope-review-260905.md",
+        "strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-intake-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-inventory-replay-drift-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-pathword-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-projective-correlation-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-radial-sector-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-root-overlap-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md",
+        "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-exploration.json",
+        "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+        "strategy/pa-hyp/R483-certificate.md",
+        "strategy/pa-hyp/R484-certificate.md",
+        "strategy/pa-hyp/R485-certificate.md",
+        "strategy/pa-hyp/R486-certificate.md",
+        "strategy/pa-hyp/R487-certificate.md",
+        "strategy/pa-hyp/R488-certificate.md",
+        "strategy/pa-hyp/R491-certificate.md"
+      ],
+      "name": "candidate paths sorted and unique",
+      "status": "PASS"
+    },
+    {
+      "actual": 101,
+      "expected": 101,
+      "name": "candidate count",
+      "status": "PASS"
+    },
+    {
+      "actual": "e22141fd4c4691ff0021c2bf11c48b19d98cdd87f34ef1fce72640d5c7c5b77d",
+      "expected": "e22141fd4c4691ff0021c2bf11c48b19d98cdd87f34ef1fce72640d5c7c5b77d",
+      "name": "manifest digest",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-001-v1.json",
+      "name": "parent present: strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "parent hash: strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "name": "parent present: strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "parent hash: strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+      "name": "parent present: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+      "expected": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+      "name": "parent hash: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json",
+      "name": "parent present: claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "b87a2d8d7b0009c9f5bd30695823cb442376939ff18c1d48f1d890ae430fe8c7",
+      "expected": "b87a2d8d7b0009c9f5bd30695823cb442376939ff18c1d48f1d890ae430fe8c7",
+      "name": "parent hash: claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "name": "parent present: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+      "expected": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+      "name": "parent hash: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "name": "parent present: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+      "expected": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+      "name": "parent hash: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+      "name": "parent present: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "cfe872fac4517f468061cd5d644cf931e6a7e7294d66ca6a8b2faa6977d37325",
+      "expected": "cfe872fac4517f468061cd5d644cf931e6a7e7294d66ca6a8b2faa6977d37325",
+      "name": "parent hash: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "name": "parent present: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+      "expected": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+      "name": "parent hash: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-003-cell-colour-refinement-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-003-cell-colour-refinement-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "bef9255fcb5ce656e38474a3011af21a4bc93779e4e88ca9d43886b4ba49f354",
+      "expected": "bef9255fcb5ce656e38474a3011af21a4bc93779e4e88ca9d43886b4ba49f354",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-003-cell-colour-refinement-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-003-cell-colour-refinement-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-003-cell-colour-refinement-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-003-cell-colour-refinement-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-004-generator-replay-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-004-generator-replay-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "f38a23c6dfca950c63f03f8bd5fbbf0804089ed387640a7558349daa0ed9b174",
+      "expected": "f38a23c6dfca950c63f03f8bd5fbbf0804089ed387640a7558349daa0ed9b174",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-004-generator-replay-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-004-generator-replay-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-004-generator-replay-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-004-generator-replay-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+      "expected": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-004-geometric-incidence-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-004-geometric-incidence-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "37408d30ae3f671cf523da33ce71b36a68160a4b99b1c6755691f58d2b3e8110",
+      "expected": "37408d30ae3f671cf523da33ce71b36a68160a4b99b1c6755691f58d2b3e8110",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-004-geometric-incidence-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-004-geometric-incidence-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-004-geometric-incidence-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-004-geometric-incidence-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "expected": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5",
+      "expected": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-006-matter-cylinder-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "b214ad32b2940c311a94b1c0ad87c94341a2accc31d90c1ccf9b966534ef4ad8",
+      "expected": "b214ad32b2940c311a94b1c0ad87c94341a2accc31d90c1ccf9b966534ef4ad8",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-006-matter-cylinder-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-006-matter-cylinder-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-006-matter-cylinder-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-006-matter-cylinder-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "cb1c84e320d2bd24b430ec2b8f19ef9467e3564e1f2a3cd820487730946ddad5",
+      "expected": "cb1c84e320d2bd24b430ec2b8f19ef9467e3564e1f2a3cd820487730946ddad5",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-007-joint-holonomy-cylinder-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-007-joint-holonomy-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "7e4621abecb577855f740b52c14c83bbfd43eb6b0b30b0b9197e7baa9503280a",
+      "expected": "7e4621abecb577855f740b52c14c83bbfd43eb6b0b30b0b9197e7baa9503280a",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-007-joint-holonomy-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-007-joint-holonomy-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-007-joint-holonomy-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-007-joint-holonomy-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+      "expected": "b103665b9361c6a4b52b791280ce2503e5aeddbffe67a78d08c4c2a45fc8228a",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-008-multi-cylinder-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "1ab7f5b39ce57db8f41b628d467a3af68c19961d77b46b624591c322186e7687",
+      "expected": "1ab7f5b39ce57db8f41b628d467a3af68c19961d77b46b624591c322186e7687",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+      "expected": "244a300c470fa551dc006a7a2d9ba2a7a5d773d2d5cafbe9b777f9266df50020",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-011-eventual-intertwining-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "237e54978c13ffde806b842252100d23927d3eca81c0663f763d740d54fdab77",
+      "expected": "237e54978c13ffde806b842252100d23927d3eca81c0663f763d740d54fdab77",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+      "expected": "180228b83e44f46406b302c97ff6caab023240eeaa19997618012074930f3e72",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-012-full-Q-graded-domain-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+      "expected": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-composed-cauchy-lean-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-composed-cauchy-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "d99fe75aaf67eb56b2b522d4fd287ab406bf2fe30fb566e6d0f38683adf6cfd2",
+      "expected": "d99fe75aaf67eb56b2b522d4fd287ab406bf2fe30fb566e6d0f38683adf6cfd2",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-composed-cauchy-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-composed-cauchy-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-composed-cauchy-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-composed-cauchy-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+      "expected": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "expected": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+      "expected": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "1ef79e5a354e2a7abf32cbe92a98501a206cb5feacfef4a246d49453ab45d497",
+      "expected": "1ef79e5a354e2a7abf32cbe92a98501a206cb5feacfef4a246d49453ab45d497",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-identifiability-lean-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "8cdbdf0ec4cb79752f942063bf1954dd9c42059712dbfba1fa53895ac02775fb",
+      "expected": "8cdbdf0ec4cb79752f942063bf1954dd9c42059712dbfba1fa53895ac02775fb",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-mixture-cauchy-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "6f4b66ad96e3567c20c8be83d647bc7a9b74a7387c66566f404dec6fee90425c",
+      "expected": "6f4b66ad96e3567c20c8be83d647bc7a9b74a7387c66566f404dec6fee90425c",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-manifest.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "a98d38646bb7c1f7edeab49b9cefa706c95f364297e61bb941ab807db6f2eeb0",
+      "expected": "a98d38646bb7c1f7edeab49b9cefa706c95f364297e61bb941ab807db6f2eeb0",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-nonzero-weight-lean-manifest.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-reentry-scope-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-reentry-scope-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "72b3f7f59684b4a7b0363c8267dc6aff74a481a5da42a328bc4385c54940eb8f",
+      "expected": "72b3f7f59684b4a7b0363c8267dc6aff74a481a5da42a328bc4385c54940eb8f",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-reentry-scope-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-reentry-scope-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-reentry-scope-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-reentry-scope-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-reentry-scope-review-260905.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-reentry-scope-review-260905.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "0d154c4119d5bc5354af0f901afeee53ed229ba2f640e05a651e6239385b35eb",
+      "expected": "0d154c4119d5bc5354af0f901afeee53ed229ba2f640e05a651e6239385b35eb",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-reentry-scope-review-260905.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-reentry-scope-review-260905.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-reentry-scope-review-260905.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-reentry-scope-review-260905.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "32f48723960ca28c8d9fc3a0e05d09eacf359d5075823d7390b6bdf8b0b18fa6",
+      "expected": "32f48723960ca28c8d9fc3a0e05d09eacf359d5075823d7390b6bdf8b0b18fa6",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-014-tail-bound-lean-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "92a4fa92cb8c0384812220acd2e9929539a10a114fe348ea3f8aa7676f98aa05",
+      "expected": "92a4fa92cb8c0384812220acd2e9929539a10a114fe348ea3f8aa7676f98aa05",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-018-generator-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-N2a-owner-intake-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-N2a-owner-intake-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "a267fa42f627b9719329083c0226e4175cc7b9024068b5a66bc33a787300807c",
+      "expected": "a267fa42f627b9719329083c0226e4175cc7b9024068b5a66bc33a787300807c",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-N2a-owner-intake-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-N2a-owner-intake-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-N2a-owner-intake-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-N2a-owner-intake-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+      "expected": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+      "expected": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "15b385655ce7e989d0bfccb7df126083dfeee604810d735d7fc2ee529a82fa19",
+      "expected": "15b385655ce7e989d0bfccb7df126083dfeee604810d735d7fc2ee529a82fa19",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "0207fb5c739a433da8be4b1ea480e7a5301a490ce71dbabaeaf81f75843a8bee",
+      "expected": "0207fb5c739a433da8be4b1ea480e7a5301a490ce71dbabaeaf81f75843a8bee",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "3497fb5b0e6ea99add8fd4b0f6cbef124eaadf1d33ec7cadc9b5c798a316748b",
+      "expected": "3497fb5b0e6ea99add8fd4b0f6cbef124eaadf1d33ec7cadc9b5c798a316748b",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "61284627c3a74df7d30e346365df983bba2781138639877196f4fbf90229887c",
+      "expected": "61284627c3a74df7d30e346365df983bba2781138639877196f4fbf90229887c",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-c2-moment-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-c2-moment-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-c2-moment-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "87a1fef5facf0ac6e198d3a4f1acd98c8fe1ba3a6be279baf2b5a1e31401c628",
+      "expected": "87a1fef5facf0ac6e198d3a4f1acd98c8fe1ba3a6be279baf2b5a1e31401c628",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-c2-moment-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-c2-moment-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-c2-moment-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-c2-moment-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+      "expected": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "e5b1253bfa7f63109bc1ff1c787b605939e3e91290acbdc7eac20777e4bcc057",
+      "expected": "e5b1253bfa7f63109bc1ff1c787b605939e3e91290acbdc7eac20777e4bcc057",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "7de269cecb52fa0f5babf6f52fdfe9c24353ab44ad4314072281d75f1529c084",
+      "expected": "7de269cecb52fa0f5babf6f52fdfe9c24353ab44ad4314072281d75f1529c084",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "698d7fc17d206b6c5d32bf14d7e575af7cee64e4a196b59f544bdb9a990d29a5",
+      "expected": "698d7fc17d206b6c5d32bf14d7e575af7cee64e4a196b59f544bdb9a990d29a5",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "ba00d4b5b96f63568d06caf885bcbcc7a3c7ce4faed72e28195d5bc86ac76583",
+      "expected": "ba00d4b5b96f63568d06caf885bcbcc7a3c7ce4faed72e28195d5bc86ac76583",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "f0c4d37dc399e3c1996f7314f3644ebf17c432adb72606ffe04a752498624504",
+      "expected": "f0c4d37dc399e3c1996f7314f3644ebf17c432adb72606ffe04a752498624504",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "c67f1eea6b736599c0b36728a5e6b81256007a5cd6e8c891cc216bbd016e2678",
+      "expected": "c67f1eea6b736599c0b36728a5e6b81256007a5cd6e8c891cc216bbd016e2678",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+      "expected": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "6693dd4beb708ea2b5650d95a4b7b462853fa25e787c3c9838370e868f15f793",
+      "expected": "6693dd4beb708ea2b5650d95a4b7b462853fa25e787c3c9838370e868f15f793",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "fd0b909d32f2855f72bf6f0bab921a1f41da8896f50fe5969ccfcdf35bb8e631",
+      "expected": "fd0b909d32f2855f72bf6f0bab921a1f41da8896f50fe5969ccfcdf35bb8e631",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "67825022b3db1078387534baacb818fdf60778ce19f4fe81514484a25cf7cb5d",
+      "expected": "67825022b3db1078387534baacb818fdf60778ce19f4fe81514484a25cf7cb5d",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "0ca0b15c789ec5d93bbd2c65e8300ca084564f555e22167b7dd3cb3bbb15f51a",
+      "expected": "0ca0b15c789ec5d93bbd2c65e8300ca084564f555e22167b7dd3cb3bbb15f51a",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "37ffd8a1f82ac83b9dabb955f62a8e5b9bdb68ba5588ac9f30fdf154127883d1",
+      "expected": "37ffd8a1f82ac83b9dabb955f62a8e5b9bdb68ba5588ac9f30fdf154127883d1",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "0d5cfb459d340a7747b16006651a75ec510095c38b771e96ecf6155e0cc7a418",
+      "expected": "0d5cfb459d340a7747b16006651a75ec510095c38b771e96ecf6155e0cc7a418",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "0e0268925eee2dd4b74ed5b279f4a56fb66637f86cb9faa608df1edbb99c7299",
+      "expected": "0e0268925eee2dd4b74ed5b279f4a56fb66637f86cb9faa608df1edbb99c7299",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "42d9da41c51b518a449b3a4b8bad5602d531bf016491750db9f86c8ed9cc1897",
+      "expected": "42d9da41c51b518a449b3a4b8bad5602d531bf016491750db9f86c8ed9cc1897",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "82f650f980c7f3752646d7cdb832fe765c35e4ce71a2eb938c012c1c670cc76c",
+      "expected": "82f650f980c7f3752646d7cdb832fe765c35e4ce71a2eb938c012c1c670cc76c",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "41ffcacc8d85d624486f68dd61f92a85c346cf566fbe0dc3439e80fb634e644d",
+      "expected": "41ffcacc8d85d624486f68dd61f92a85c346cf566fbe0dc3439e80fb634e644d",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-fixedn-conditional-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+      "expected": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "8e0d787087998d85eb62926b10e719c0ca4ce26a76ce59eee7a90088e9bb9bf5",
+      "expected": "8e0d787087998d85eb62926b10e719c0ca4ce26a76ce59eee7a90088e9bb9bf5",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+      "expected": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "e33d6cef9c75536e0ea4aaea13521bb272a2e671a81ad6a250e864acb1b61d90",
+      "expected": "e33d6cef9c75536e0ea4aaea13521bb272a2e671a81ad6a250e864acb1b61d90",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "beaad87cde95e8e721ddfe94d196de10d0550a942f18895918733f2f3567d84f",
+      "expected": "beaad87cde95e8e721ddfe94d196de10d0550a942f18895918733f2f3567d84f",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-contract-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "841c06e6fb1faf9e3ad3444eca4c1846e2ab7f4822e6ebd885b1462644f89568",
+      "expected": "841c06e6fb1faf9e3ad3444eca4c1846e2ab7f4822e6ebd885b1462644f89568",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "59203de7d1908f68695c48f1f7e7ba1aacfd58882bea7c9abe2c4babed07ba30",
+      "expected": "59203de7d1908f68695c48f1f7e7ba1aacfd58882bea7c9abe2c4babed07ba30",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-lyapunov-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "f978089216712d0253a33ead495f1bd3fdfef6b0b3a57566dec1b1b77155f60e",
+      "expected": "f978089216712d0253a33ead495f1bd3fdfef6b0b3a57566dec1b1b77155f60e",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "d1fd29805e09743a0cd8c959d23a3484f03a82e8bf2899e9cae61541463d6f01",
+      "expected": "d1fd29805e09743a0cd8c959d23a3484f03a82e8bf2899e9cae61541463d6f01",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "1649077b5a522819b2153c13ef799b48cc3774f5adaf2256e4467e522d2a5d95",
+      "expected": "1649077b5a522819b2153c13ef799b48cc3774f5adaf2256e4467e522d2a5d95",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+      "expected": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "d9d20e91bfd584a1a00d105a9a4e816c8907248f91f2d4b7aba0c9d48b9fdac2",
+      "expected": "d9d20e91bfd584a1a00d105a9a4e816c8907248f91f2d4b7aba0c9d48b9fdac2",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "25617dc68648b87de3109ba0396e2d7a5d073b9fcf6bc371abe6106b1ff445c8",
+      "expected": "25617dc68648b87de3109ba0396e2d7a5d073b9fcf6bc371abe6106b1ff445c8",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+      "expected": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-owner-inventory-replay-drift-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-owner-inventory-replay-drift-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "0f165c7bf8b0e01af78ce58e16954d5499baad633d3fd3dde884cafc65742133",
+      "expected": "0f165c7bf8b0e01af78ce58e16954d5499baad633d3fd3dde884cafc65742133",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-owner-inventory-replay-drift-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-owner-inventory-replay-drift-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-owner-inventory-replay-drift-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-owner-inventory-replay-drift-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "a4dff82d5c2baf31672d194a961755f52ec31482c14775540d22ff76687a8893",
+      "expected": "a4dff82d5c2baf31672d194a961755f52ec31482c14775540d22ff76687a8893",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "bcd12aba4172906a8f4e772fc5a49521bacc14dc1fc3009f2837c87a75d077e0",
+      "expected": "bcd12aba4172906a8f4e772fc5a49521bacc14dc1fc3009f2837c87a75d077e0",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "cfe872fac4517f468061cd5d644cf931e6a7e7294d66ca6a8b2faa6977d37325",
+      "expected": "cfe872fac4517f468061cd5d644cf931e6a7e7294d66ca6a8b2faa6977d37325",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "17b122ae891b7c1e9f183ed22066542e1c1ae6bd881212c08eedb840dbc7c0b0",
+      "expected": "17b122ae891b7c1e9f183ed22066542e1c1ae6bd881212c08eedb840dbc7c0b0",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "0f74ffc993c0781e08913bcfc33b9384fafc511a62ec5eaeddb04a4195a3d640",
+      "expected": "0f74ffc993c0781e08913bcfc33b9384fafc511a62ec5eaeddb04a4195a3d640",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "ef0307e7e60ae923eed42a5c4f6c015aef2d2cbaf12e7d1d9873f312d999664a",
+      "expected": "ef0307e7e60ae923eed42a5c4f6c015aef2d2cbaf12e7d1d9873f312d999664a",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "86246c253273f5dc1fc630c37c70e7b7b2e3aefcf1fc3d81ae5ad2b0f56cdc35",
+      "expected": "86246c253273f5dc1fc630c37c70e7b7b2e3aefcf1fc3d81ae5ad2b0f56cdc35",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "8e51cdf0effdc8f956b344d8dd01d6710f122de2b1ead3c0428d790b5e172e5b",
+      "expected": "8e51cdf0effdc8f956b344d8dd01d6710f122de2b1ead3c0428d790b5e172e5b",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "73f490a4398231f5367413a0569073ded8bfd4977be557dc00de250f318dc6b8",
+      "expected": "73f490a4398231f5367413a0569073ded8bfd4977be557dc00de250f318dc6b8",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+      "expected": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "05abbf6379da1ad8fdd562da9198bc3a961d19ba929dda201b160d2728fe3845",
+      "expected": "05abbf6379da1ad8fdd562da9198bc3a961d19ba929dda201b160d2728fe3845",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-pathword-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-pathword-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-pathword-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "c85ecf2bfe3deeb81e61309657556877c3398a543d4c4da66a131df21eff1028",
+      "expected": "c85ecf2bfe3deeb81e61309657556877c3398a543d4c4da66a131df21eff1028",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-pathword-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-pathword-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-pathword-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-pathword-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "114699a4554e45260a6a6632f44a32e9c0494a9274c27b561c676e93c5d247d9",
+      "expected": "114699a4554e45260a6a6632f44a32e9c0494a9274c27b561c676e93c5d247d9",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "e7c09977fa0961abf42385214c3a4285d5cc50b947aebf70172aa7bc7f130447",
+      "expected": "e7c09977fa0961abf42385214c3a4285d5cc50b947aebf70172aa7bc7f130447",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-projective-correlation-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-projective-correlation-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "0044f0f728569e021cd6ffb2b0f61443c1ef081f577234c234b98df6b495d411",
+      "expected": "0044f0f728569e021cd6ffb2b0f61443c1ef081f577234c234b98df6b495d411",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-projective-correlation-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-projective-correlation-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-projective-correlation-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-projective-correlation-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "2bfc217bfa7785726d7342ce5ec80d1adab5be030c561d4e6681d49f64cf3248",
+      "expected": "2bfc217bfa7785726d7342ce5ec80d1adab5be030c561d4e6681d49f64cf3248",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-projective-correlation-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "18356a8256a699ebfdd7520742f2f56d187a65a7b540d48bb339a25839bc2aab",
+      "expected": "18356a8256a699ebfdd7520742f2f56d187a65a7b540d48bb339a25839bc2aab",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-radial-sector-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-radial-sector-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-radial-sector-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "a1472e0bf132ea1c48171217f3487efd478f8ae76f108c8a343cb52f9dd3f619",
+      "expected": "a1472e0bf132ea1c48171217f3487efd478f8ae76f108c8a343cb52f9dd3f619",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-radial-sector-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-radial-sector-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-radial-sector-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-radial-sector-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "9d65626b670ca0d4936f06ca404436b9a9ef1ae12a79c167d8b04fa6a402ec41",
+      "expected": "9d65626b670ca0d4936f06ca404436b9a9ef1ae12a79c167d8b04fa6a402ec41",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-root-overlap-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-root-overlap-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-root-overlap-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "44de3e48d4a22664f06fb4a4d5af4eac1cabb654c2520363630fb37c020d3750",
+      "expected": "44de3e48d4a22664f06fb4a4d5af4eac1cabb654c2520363630fb37c020d3750",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-root-overlap-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-root-overlap-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-root-overlap-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-root-overlap-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "9e357158eb6de66bb776b2d674964ddf9fb16547409ac36f8dd254154082bc11",
+      "expected": "9e357158eb6de66bb776b2d674964ddf9fb16547409ac36f8dd254154082bc11",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "f3c94ec6615f1a66d9efd7241c4dacf75a667b8fe4a41e5b68045321109f5f6e",
+      "expected": "f3c94ec6615f1a66d9efd7241c4dacf75a667b8fe4a41e5b68045321109f5f6e",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-exploration.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "bd316eea6b0c16038512ee76c1010a38cbb61cde8a48723bf8978fd70dc8b0fc",
+      "expected": "bd316eea6b0c16038512ee76c1010a38cbb61cde8a48723bf8978fd70dc8b0fc",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-exploration.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+      "expected": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+      "name": "candidate present: strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab",
+      "expected": "2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab",
+      "name": "candidate hash: strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/PAH-OMC-020-temporal-work.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/R483-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/R483-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "c699ec04c073ffc6f62b9a41eaf50a38310213491603f9e10184ea104ca01fbf",
+      "expected": "c699ec04c073ffc6f62b9a41eaf50a38310213491603f9e10184ea104ca01fbf",
+      "name": "candidate hash: strategy/pa-hyp/R483-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/R483-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/R483-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/R483-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/R484-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/R484-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "a2e132bcf1c44f339cd8faf7b675796e3a680629c03bdb7adc1bd2bd9ed4bf29",
+      "expected": "a2e132bcf1c44f339cd8faf7b675796e3a680629c03bdb7adc1bd2bd9ed4bf29",
+      "name": "candidate hash: strategy/pa-hyp/R484-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/R484-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/R484-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/R484-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/R485-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/R485-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "e132996a634fc769bc0962cd2902bc3d38423079cd8482c17c06b48157cb679e",
+      "expected": "e132996a634fc769bc0962cd2902bc3d38423079cd8482c17c06b48157cb679e",
+      "name": "candidate hash: strategy/pa-hyp/R485-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/R485-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/R485-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/R485-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/R486-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/R486-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "a3e63975e2d8f9efb069759c99c862277e5166b4dfff6d1412be078758ddbe3b",
+      "expected": "a3e63975e2d8f9efb069759c99c862277e5166b4dfff6d1412be078758ddbe3b",
+      "name": "candidate hash: strategy/pa-hyp/R486-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/R486-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/R486-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/R486-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/R487-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/R487-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "e7c2e01742899e277f5fd648fbb5576780142356e3ce053e1e6d320f7b059be9",
+      "expected": "e7c2e01742899e277f5fd648fbb5576780142356e3ce053e1e6d320f7b059be9",
+      "name": "candidate hash: strategy/pa-hyp/R487-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/R487-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/R487-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/R487-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/R488-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/R488-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "95af523293779dcd8b3ecdd676e7eb57d33eed53c0903676853a09e885cdbcb6",
+      "expected": "95af523293779dcd8b3ecdd676e7eb57d33eed53c0903676853a09e885cdbcb6",
+      "name": "candidate hash: strategy/pa-hyp/R488-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/R488-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/R488-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/R488-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "strategy/pa-hyp/R491-certificate.md",
+      "name": "candidate present: strategy/pa-hyp/R491-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "fcb700b1e09655c9d7f74bb70da6d6baedc5f187d048c05f5d9c14b7b7b982c5",
+      "expected": "fcb700b1e09655c9d7f74bb70da6d6baedc5f187d048c05f5d9c14b7b7b982c5",
+      "name": "candidate hash: strategy/pa-hyp/R491-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "candidate marker retained: strategy/pa-hyp/R491-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate authorization flag: strategy/pa-hyp/R491-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate completion flag: strategy/pa-hyp/R491-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "no authorized candidate",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "no complete candidate",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "parent output is not dynamic fsck",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "complete_paths": [],
+  "finding": "The fixed candidate manifest and all pinned parent bytes replay exactly, and no snapshot candidate declares source authorization or completion. This is snapshot-time provenance evidence only.",
+  "manifest_sha256": "e22141fd4c4691ff0021c2bf11c48b19d98cdd87f34ef1fce72640d5c7c5b77d",
+  "next_single_question": "Can a source owner supply a versioned packet with all N2a--N2d fields, or does --detect-new identify a later candidate requiring a new snapshot?",
+  "non_claims": [
+    "Snapshot-time repository absence is not a universal impossibility theorem.",
+    "No U_n/common-Hilbert map, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal identification or semigroup convergence.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "schema": "tect/pah-omc020-owner-search-snapshot-check/1.0",
+  "snapshot_id": "PAH-OMC-020-OWNER-SEARCH-SNAPSHOT-001",
+  "source_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json": "b87a2d8d7b0009c9f5bd30695823cb442376939ff18c1d48f1d890ae430fe8c7",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+    "strategy/pa-hyp/PAH-OMC-020-owner-inventory-stable-result-v1.json": "cfe872fac4517f468061cd5d644cf931e6a7e7294d66ca6a8b2faa6977d37325",
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_FIXED_OWNER_SNAPSHOT",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

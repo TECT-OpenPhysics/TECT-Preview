@@ -1,0 +1,107 @@
+{
+  "schema": "tect/pah-omc020-noncoordinate-coupling-candidate/1.0",
+  "contract_id": "PAH-OMC-020-NONCOORDINATE-COUPLING-CANDIDATE",
+  "version": "0.1.0",
+  "date": "2026-09-08",
+  "status": "RESEARCHER_OWNED_CANDIDATE_ONLY",
+  "title": "Maximal-prefix coupling conditional-expectation candidate for PAH-OMC-020",
+  "purpose": "Give the missing N2a comparison a concrete non-coordinate candidate without changing PAH-001.  The candidate is deliberately admitted only for finite coupling algebra and local-cylinder recovery; it is not a source-authorized owner packet and does not assert the PAH temporal theorem.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_HYPOTHETICAL_COMPARISON_MAP",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "owner_authority": "TECT_RESEARCH_PROGRAM (candidate declaration; source-owner sign-off still required)",
+    "source_authorized_packet_present": false,
+    "model_change": false,
+    "post_hoc_parameter_fitting": false,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_CONDITIONAL_COMMON_SPACE_CANDIDATE"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-020-PREREG": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    },
+    "PAH-OMC-017-TRANSFER": {
+      "path": "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md",
+      "sha256": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf"
+    },
+    "PAH-OMC-019-R512": {
+      "path": "strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "sha256": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd"
+    },
+    "N2A-INTAKE": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.json",
+      "sha256": "638379f3ecafdab8d11aa63ef4ad0ab6346640226ffa6c93825ec5a1f04d489a"
+    },
+    "N2B-AUDIT": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json",
+      "sha256": "034f5fc35a88a4431ee1594c8a25e0d7bcf6c75b055ec2b21bbf30daf636dc7f"
+    },
+    "R-524-BOUNDARY": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-boundary-kernel-obstruction-result-v1.json",
+      "sha256": "3497fb5b0e6ea99add8fd4b0f6cbef124eaadf1d33ec7cadc9b5c798a316748b"
+    }
+  },
+  "fixed_scope": {
+    "model_firewall": "No functional, rate, state, carrier, regulator, counterterm or time change; retain the original external unaccelerated Markov time and j-before-n order.",
+    "finite_spaces": "X_n is the original labelled PAH finite state space with nu_n; X_infty is the R-510 compatible local-state realization with nu_infty. No phasewise or cross-Q direct sum is used.",
+    "target": "H=L2(X_infty,nu_infty) with the R-512 minimal closed form as the eventual target, not as an input to the coupling algebra.",
+    "local_algebra": "A bounded continuous gauge-invariant cylinder f supported in Lambda_k is evaluated on the common prefix whenever the coupled prefixes agree.",
+    "limit_order": "The preregistered j->infinity passage at fixed n precedes the n comparison; this candidate does not alter either order."
+  },
+  "map": {
+    "kind": "maximal-prefix-coupling-conditional-expectation",
+    "prefix_density_reference": "For each m, p_(n,m) and p_(infty,m) are the exact Lambda_m marginal densities relative to their common Lebesgue-times-labelled-counting reference.",
+    "modulus": "delta_(n,m)=min(1,4*D_m*q^(n-m)) from the R-510 bounded-measurable prefix estimate.",
+    "diagonal_index": "m_n=max{0<=m<n: delta_(n,m)<=1/(m+1)^2}; the set contains m=0 because delta is capped at one, and m_n tends to infinity by the fixed-m exponential bound.",
+    "coupling": "Use the maximal-overlap coupling of the two Lambda_(m_n) marginals, then conditionally extend the finite and infinite tails by regular conditional laws. The common-prefix mass is 1-TV_(n,m_n).",
+    "operator": "For f in L2(nu_n), (U_n f)(x)=E[f(Y_n)|X_infty=x] under that coupling. This is a non-coordinate positive unital linear contraction by conditional Jensen.",
+    "local_error": "If f is supported in Lambda_k and k<=m_n, ||U_n f-f||_(L2(nu_infty))^2 <= 4||f||_infinity^2 TV_(n,m_n) <= 2||f||_infinity^2/(m_n+1)^2.",
+    "inner_product_error": "For fixed f,g in Lambda_k, combine the preceding coupling error with |nu_n(fg)-nu_infty(fg)|<=4||f||_infinity||g||_infinity D_k q^(n-k); this is an N1 local recovery bound only."
+  },
+  "assumptions": [
+    "The R-510 prefix estimate applies to the bounded measurable Lambda_m unit ball, not only a finite diagnostic grid.",
+    "The finite-dimensional labelled prefix spaces are standard Borel and admit regular conditional probabilities for the finite and limiting Gibbs laws.",
+    "The maximal-overlap coupling is chosen from the exact prefix marginal densities before any energy estimate; no fitted weight is introduced.",
+    "The common target H and R-512 form are retained exactly at their pinned scope."
+  ],
+  "proved_scope": [
+    "The coupling is genuinely non-coordinate and avoids assuming a bounded terminal density-ratio pullback.",
+    "Conditional expectation is a positive unital L2 contraction for the declared coupling.",
+    "The mismatch probability equals the prefix total-variation distance and gives an explicit bounded-cylinder recovery inequality.",
+    "The diagonal threshold construction has m_n tending to infinity in the symbolic fixed-m sense, so every fixed cylinder is eventually covered by the coupling prefix."
+  ],
+  "open_obligations": [
+    "Source authorization and signer approval for this candidate as an owner packet.",
+    "Energy-form compatibility/intertwining for U_n on the unbounded PAH rates.",
+    "N2b arbitrary-sequence weak-liminf and compatible limsup/recovery for E_n.",
+    "N2c/N4 boundary escape for evolved local cylinders on compact time intervals.",
+    "N2d identification with the R-512 minimal closure rather than another extension.",
+    "A full stationary semigroup correlation convergence theorem after all preceding obligations close."
+  ],
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "Only after source authorization, energy compatibility, N2b, N2c/N4, N2d and independent/hostile/Lean verification are all supplied.",
+    "NEGATIVE_RESULT": "Only if the unchanged PAH definitions give an exact contradiction for this coupling candidate; do not promote the coordinate obstruction to this route.",
+    "HOLD_FOR_EVIDENCE": "The present candidate remains here because the map has no source-owner authorization and the energy, boundary and minimal-form obligations are open."
+  },
+  "single_next_question": "Can the source owner authorize this maximal-prefix coupling and supply a PAH-specific energy intertwining that upgrades its local recovery bound to N2b, N2c/N4 and N2d without changing PAH-001?",
+  "revisit_condition": "Reopen only when source authorization and a hash-pinned form-energy estimate for this exact U_n are supplied, or when the R-510 prefix modulus/disintegration assumptions fail.",
+  "non_claims": [
+    "No source-authorized full U_n owner packet, Mosco theorem, N2b liminf, N2c/N4 boundary escape, N2d minimal-form identification or PAH-OMC-020 semigroup convergence is claimed.",
+    "No universal comparison-map no-go follows from R-524; this candidate is distinct from the obstructed coordinate-preserving density-ratio route.",
+    "No change to PAH-001 functional, rates, state, carrier, regulator, counterterm, external Markov time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion."
+  ],
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_noncoordinate_coupling_candidate.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_noncoordinate_coupling_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_noncoordinate_coupling_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_noncoordinate_coupling_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages"
+  }
+}

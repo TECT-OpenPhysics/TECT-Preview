@@ -1,0 +1,115 @@
+{
+  "schema": "tect/pah-omc020-dirichlet-minimal-contract/1.0",
+  "contract_id": "PAH-OMC-020-DIRICHLET-MINIMAL-CONTRACTION",
+  "version": "1.0.0",
+  "date": "2026-09-08",
+  "status": "RESEARCHER_OWNED_CONDITIONAL_RESULT",
+  "title": "R-512 minimal-form normal-contraction and conservativity contract",
+  "purpose": "Test the Markov/Dirichlet property of the exact R-512 minimal closed form. This is a target-semigroup structural result, not the missing finite-to-anchored-n convergence theorem.",
+  "provenance": {
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "source_authorized_packet_present": false,
+    "model_change": false,
+    "post_hoc_parameter_fitting": false,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_CONDITIONAL_CLOSED_FORM_STRUCTURE"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-020-PREREG": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    },
+    "PAH-OMC-018": {
+      "path": "strategy/pa-hyp/PAH-OMC-018-result-v1.json",
+      "sha256": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65"
+    },
+    "PAH-OMC-019-CLOSURE-PREREG": {
+      "path": "strategy/pa-hyp/PAH-OMC-019-closure-prereg-v1.json",
+      "sha256": "4337e21a140206956ea52ee10e20d04358af868969e3edb9f055e5ea64b055b7"
+    },
+    "PAH-OMC-019-CERTIFICATE": {
+      "path": "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md",
+      "sha256": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af"
+    },
+    "R-512": {
+      "path": "strategy/pa-hyp/PAH-OMC-019-result-v1.json",
+      "sha256": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd"
+    }
+  },
+  "fixed_scope": {
+    "functional_and_rates": "Exactly the PAH-001 functional and the original directed PH/LK/AP rates inherited by R-511; no new move, rate, counterterm or averaging.",
+    "state": "The R-510 local-state Hilbert completion and the R-512 minimal closed form Ebar obtained from the exact R-511 pre-form.",
+    "domain": "R-511's bounded gauge-invariant globally amplitude-l1-Lipschitz finite-prefix cylinder domain D, with constants included; its form closure is the R-512 domain.",
+    "form_identity": "E(f,f)=(1/2) sum_r nu_infty[c_r (f composed with T_r - f)^2] on D, with finite local sums and nonnegative conductances.",
+    "normal_contractions": "A map eta:R->R with eta(0)=0 and |eta(a)-eta(b)|<=|a-b|. The canonical Markov truncation is eta_01(a)=min(1,max(0,a)).",
+    "time": "The associated R-512 spectral semigroup T_min(t)=exp(-t K_min) uses only the original external stochastic Markov parameter; no physical-time interpretation.",
+    "limit_order": "No j or n limit is taken in this contract. The result concerns only the already-constructed R-512 minimal closed form and its associated semigroup."
+  },
+  "question": "Does the exact R-512 minimal closed form inherit the normal-contraction inequality and therefore define a conservative Markov semigroup, without supplying the missing finite-to-anchored-n identification?",
+  "derivation": {
+    "pointwise": "For every root r and f in D, |eta(f composed with T_r)-eta(f)|<=|f composed with T_r-f|, hence each weighted square in E(eta composed with f,eta composed with f) is no larger than the corresponding square in E(f,f).",
+    "domain_stability": "D is stable under eta composed with a cylinder: boundedness, finite-prefix dependence, gauge invariance and the global amplitude-l1 Lipschitz constant are preserved.",
+    "closure_passage": "If f_k is form-norm Cauchy in D, the same pointwise inequality makes eta composed with f_k form-norm Cauchy; the R-512 minimal completion therefore contains eta composed with every closure vector and preserves the inequality.",
+    "conservativity": "The constant one belongs to D, has zero exact form energy, and the closed-form Markov theorem gives T_min(t)1=1 together with positivity and L-infinity contraction. This identifies structural properties of the target semigroup only."
+  },
+  "closed_scoped_claim": "Conditional on the exact inherited R-511 form identity, D stability and the R-512 minimal form construction, Ebar is a Dirichlet form: every normal contraction is form-contracting, and T_min is positivity preserving, L-infinity contractive and conservative.",
+  "assumptions": [
+    "The source-pinned R-511 weighted-root form identity and nonnegative finite local conductance sums hold at their registered scopes.",
+    "The bounded gauge-invariant finite-prefix cylinder domain is stable under the displayed normal contractions.",
+    "The R-512 form completion and its associated nonnegative self-adjoint operator are the exact target already fixed by PAH-OMC-019.",
+    "The standard closed-Dirichlet-form implication from normal contractions and 1 in the form domain is used only after these PAH-specific hypotheses are checked."
+  ],
+  "missing_assumptions": [
+    "No source-authorized U_n/common-Hilbert realization for the varying finite spaces.",
+    "No N2b weak-liminf/recovery theorem, N2c/N4 boundary-escape estimate or N2d finite-to-R-512 identification.",
+    "No construction or uniqueness theorem for an infinite-volume jump process beyond the spectral semigroup associated with Ebar.",
+    "The measure-theoretic construction of the R-510 state and full closed-form theorem remain inherited analytic inputs, not formalized by Lean."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "A finite root-square inequality is being promoted to the full closed form without checking the domain.",
+      "disposition": "DISMISSED under the pinned D-stability premise; the contraction is first proved on D and then passed through the form norm, while the inherited measure/form identity remains explicitly conditional."
+    },
+    {
+      "objection": "Dirichlet form structure proves finite-to-anchored-n semigroup convergence.",
+      "disposition": "UPHELD AGAINST PROMOTION: normal contraction and conservativity concern the already-selected R-512 target only; N2a-N2d and the ordered temporal limit remain open."
+    },
+    {
+      "objection": "Conservativity of T_min constructs a unique infinite-volume jump process.",
+      "disposition": "UPHELD AGAINST PROMOTION: the result is spectral closed-form structure and does not prove path-space existence, non-explosion uniqueness or equality with a maximal jump process."
+    },
+    {
+      "objection": "eta(0)=0 is unnecessary or the Lipschitz constant can exceed one.",
+      "disposition": "REJECTED: eta(0)=0 is part of the normal-contraction convention for Markov forms, and the hostile lane rejects a 2-Lipschitz mutation by an exact energy increase."
+    },
+    {
+      "objection": "Markov time can be read as physical or Lorentzian time.",
+      "disposition": "REJECTED: only the preregistered external stochastic parameter is retained."
+    }
+  ],
+  "single_next_question": "Can a source-authorized comparison/process packet establish N2b liminf, N2c/N4 boundary escape and N2d equality with this now-Markov R-512 target without changing PAH-001?",
+  "non_claims": [
+    "No finite-j or anchored-n semigroup convergence, common U_n, Mosco liminf/recovery or minimal-form identification from finite spaces.",
+    "No path-space existence, non-explosion, uniqueness, maximal jump-domain equality, spectral gap or ergodicity theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time; no Q3LOCK or TECT-YM import."
+  ],
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_dirichlet_minimal.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_dirichlet_minimal_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_dirichlet_minimal_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_dirichlet_minimal_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020Dirichlet.lean"
+  },
+  "lean": {
+    "path": "verification/lean/Tect/PahOmc020Dirichlet.lean",
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "scope": "Real scalar normal-contraction, truncation and finite weighted-edge form inequalities; no PAH measure construction or temporal limit."
+  }
+}

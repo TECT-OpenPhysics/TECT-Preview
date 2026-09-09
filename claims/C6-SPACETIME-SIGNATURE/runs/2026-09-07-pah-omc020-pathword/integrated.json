@@ -1,0 +1,173 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "PASS_PATHWORD_TRANSPORT",
+      "expected": "PASS_PATHWORD_TRANSPORT",
+      "name": "primary lane",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_INDEPENDENT_PATHWORD",
+      "expected": "PASS_INDEPENDENT_PATHWORD",
+      "name": "independent lane",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_HOSTILE_PATHWORD",
+      "expected": "PASS_HOSTILE_PATHWORD",
+      "name": "hostile lane",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT"
+      ],
+      "expected": "AUXILIARY_SUPPORT",
+      "name": "all lanes auxiliary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes claim-nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "NOT_DISCHARGED",
+      "expected": "NOT_DISCHARGED",
+      "name": "source-status leaves N2c open",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "__future__",
+        "fractions",
+        "pathlib",
+        "argparse",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "tempfile"
+      ],
+      "expected": "no primary import",
+      "name": "independent does not import primary",
+      "status": "PASS"
+    },
+    {
+      "actual": "7d9a413835c84fffa3d09d6c659ebde99aef73232e311ba61c69ba88b5bd2032",
+      "expected": "7d9a413835c84fffa3d09d6c659ebde99aef73232e311ba61c69ba88b5bd2032",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "two_step_square_transport",
+        "two_step_mobility_product_le_one",
+        "two_step_stationary_mass_le_terminal",
+        "word_term_succ_ratio"
+      ],
+      "expected": [
+        "two_step_square_transport",
+        "two_step_mobility_product_le_one",
+        "two_step_stationary_mass_le_terminal",
+        "word_term_succ_ratio"
+      ],
+      "name": "Lean declarations registry",
+      "status": "PASS"
+    },
+    {
+      "actual": "clean",
+      "expected": "clean",
+      "name": "Lean policy tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)",
+      "expected": "Lean 4.32.1",
+      "name": "Lean fresh compile",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "conditional": true,
+  "lane_counts": {
+    "hostile": 13,
+    "independent": 25,
+    "primary": 45
+  },
+  "lean": {
+    "declarations": [
+      "two_step_square_transport",
+      "two_step_mobility_product_le_one",
+      "two_step_stationary_mass_le_terminal",
+      "word_term_succ_ratio"
+    ],
+    "libraries": 8
+  },
+  "next_single_question": "Can source OMC-004 incidence certify an n-uniform overlap constant and a coupling/Duhamel lemma from connected words to the actual boundary term?",
+  "non_claims": [
+    "No anchored-n semigroup convergence, N2a/N2b/N2c/N4, N2d or R-512 selection.",
+    "No infinite-volume process, continuum or physical Pre-A/spacetime/QFT/gravity/Yang-Mills/mass-gap/TOE result."
+  ],
+  "physical_promotion": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_pathword_transport_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/hostile.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_pathword_transport_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/independent.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_pathword_transport_verify.py --check",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_pathword_transport.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-pathword/primary.json"
+  },
+  "run_hashes": {
+    "hostile": "0394358630395478bc9283b7bf40649479189407afb0045ab678c21cad32fa8c",
+    "independent": "4344bbdfa89538198a73652c48b04c5dbd500764e7a4249e15f9d53c1d4cd90d",
+    "primary": "62747886fe3eb6a40df4a64b9e9fa8693c0af1f151c6441b262b781aa7cdc0d7"
+  },
+  "schema": "tect/pah-omc020-pathword-integrated/1.0",
+  "scope": "Exact non-radial PAH path-word transport and conditional connected-word factorial envelope; N2c/N4 attribution is not proved.",
+  "scripts": {
+    "hostile": {
+      "path": "codes/foundations/pah_omc020_pathword_transport_hostile.py",
+      "sha256": "3fa95e5306ff819eb1a924ea073323b19bcf2f7c6e81788054c7615b7df1e9f4"
+    },
+    "independent": {
+      "path": "codes/foundations/pah_omc020_pathword_transport_independent.py",
+      "sha256": "7f03339f00e975b4a75493b01f42f920644f1648b6200d3f16135805114e02d4"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/PahOmc020Pathword.lean",
+      "sha256": "7d9a413835c84fffa3d09d6c659ebde99aef73232e311ba61c69ba88b5bd2032",
+      "version": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)"
+    },
+    "primary": {
+      "path": "verification/scripts/pah_omc020_pathword_transport.py",
+      "sha256": "56623de212a27c2e3ce0206720ce31b838489f0b68c4cfd97df16b2a1fb3414e"
+    }
+  },
+  "status": "PASS_PATHWORD_INTEGRATED",
+  "verdict": "AUXILIARY_SUPPORT"
+}

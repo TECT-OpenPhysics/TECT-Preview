@@ -1,0 +1,361 @@
+{
+  "active_gate_change": false,
+  "arithmetic": {
+    "amplitude_grid": [
+      {
+        "A": 0.0,
+        "B_square": 0.0,
+        "B_triangle_d_minus": 4.0,
+        "B_triangle_d_plus": 0.0,
+        "split_over_square": 1.0183156388887342
+      },
+      {
+        "A": 1.0,
+        "B_square": 0.0,
+        "B_triangle_d_minus": 4.5,
+        "B_triangle_d_plus": 0.5,
+        "split_over_square": 0.6176396562508757
+      },
+      {
+        "A": 2.0,
+        "B_square": 0.0,
+        "B_triangle_d_minus": 6.0,
+        "B_triangle_d_plus": 2.0,
+        "split_over_square": 0.13781403541327905
+      },
+      {
+        "A": 4.0,
+        "B_square": 0.0,
+        "B_triangle_d_minus": 12.0,
+        "B_triangle_d_plus": 8.0,
+        "split_over_square": 0.00034160684025584005
+      },
+      {
+        "A": 8.0,
+        "B_square": 0.0,
+        "B_triangle_d_minus": 36.0,
+        "B_triangle_d_plus": 32.0,
+        "split_over_square": 1.2896117832118532e-14
+      }
+    ],
+    "fixed_old_labels": {
+      "h0": 1,
+      "h1": 1,
+      "vx": 1,
+      "vy": 1
+    },
+    "inverse_ratio_witnesses": [
+      {
+        "A": 1.6651092223153954,
+        "challenge": 1.0,
+        "inverse_ratio": 3.928055160151633
+      },
+      {
+        "A": 2.716203031481239,
+        "challenge": 10.0,
+        "inverse_ratio": 39.280551601516336
+      },
+      {
+        "A": 3.4616367652045708,
+        "challenge": 100.0,
+        "inverse_ratio": 392.8055160151637
+      }
+    ],
+    "ratio_formula": "(1+exp(-4))*exp(-A^2/2)",
+    "scope": "coordinate-preserving terminal fibre only"
+  },
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+      "expected": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "J_e(s)=2/(s_v+s_w) for e=(v,w)",
+      "expected": "J_e(s)=2/(s_v+s_w) for e=(v,w)",
+      "name": "source edge stiffness rule",
+      "status": "PASS"
+    },
+    {
+      "actual": "J_p(s)=|boundary p|^(-1) sum_(e in boundary p) J_e(s)",
+      "expected": "J_p(s)=|boundary p|^(-1) sum_(e in boundary p) J_e(s)",
+      "name": "source plaquette average rule",
+      "status": "PASS"
+    },
+    {
+      "actual": "B_triangle",
+      "expected": "B_triangle",
+      "name": "source transfer marker:B_triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "B_square",
+      "expected": "B_square",
+      "name": "source transfer marker:B_square",
+      "status": "PASS"
+    },
+    {
+      "actual": "(J_h0+J_vy+J_d)/3",
+      "expected": "(J_h0+J_vy+J_d)/3",
+      "name": "source transfer marker:(J_h0+J_vy+J_d)/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "(J_d+J_h1+J_vx)/3",
+      "expected": "(J_d+J_h1+J_vx)/3",
+      "name": "source transfer marker:(J_d+J_h1+J_vx)/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "There is no diagonal in this",
+      "expected": "There is no diagonal in this",
+      "name": "source transfer marker:There is no diagonal in this",
+      "status": "PASS"
+    },
+    {
+      "actual": "does not drop a boundary interaction",
+      "expected": "does not drop a boundary interaction",
+      "name": "source transfer marker:does not drop a boundary interaction",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "j before anchored n",
+      "name": "temporal contract keeps j-before-n",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "square independent equality A=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "square independent equality d=-1 A=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "triangle plus A=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "4",
+      "name": "triangle minus A=0.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "square independent equality A=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "square independent equality d=-1 A=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "name": "triangle plus A=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/2",
+      "expected": "9/2",
+      "name": "triangle minus A=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "square independent equality A=2.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "square independent equality d=-1 A=2.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "name": "triangle plus A=2.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "6",
+      "expected": "6",
+      "name": "triangle minus A=2.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "square independent equality A=4.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "square independent equality d=-1 A=4.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "8",
+      "expected": "8",
+      "name": "triangle plus A=4.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "name": "triangle minus A=4.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "square independent equality A=8.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "square independent equality d=-1 A=8.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "32",
+      "expected": "32",
+      "name": "triangle plus A=8.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "36",
+      "expected": "36",
+      "name": "triangle minus A=8.0",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0183156388887342,
+        0.6176396562508757,
+        0.13781403541327905,
+        0.00034160684025584005,
+        1.2896117832118532e-14
+      ],
+      "expected": "(1+exp(-4))*exp(-A^2/2)",
+      "name": "closed split/square ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.6176396562508757,
+        0.13781403541327905,
+        0.00034160684025584005,
+        1.2896117832118532e-14
+      ],
+      "expected": [
+        1.0183156388887342,
+        0.6176396562508757,
+        0.13781403541327905,
+        0.00034160684025584005
+      ],
+      "name": "strict decay after positive amplitudes",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.2896117832118532e-14,
+      "expected": ">0",
+      "name": "ratio remains positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.928055160151633,
+      "expected": ">1.0",
+      "name": "inverse exceeds challenge 1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 39.280551601516336,
+      "expected": ">10.0",
+      "name": "inverse exceeds challenge 10.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 392.8055160151637,
+      "expected": ">100.0",
+      "name": "inverse exceeds challenge 100.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "No physical Pre-A",
+      "expected": "present",
+      "name": "physical firewall retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "semigroup convergence",
+      "expected": "not asserted",
+      "name": "no semigroup promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0183156388887342,
+      "expected": 0.6176396562508757,
+      "name": "diagonal omission changes A=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0183156388887342,
+      "expected": 0.13781403541327905,
+      "name": "diagonal omission changes A=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0183156388887342,
+      "expected": 0.00034160684025584005,
+      "name": "diagonal omission changes A=4",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 43,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "finding": "The independently derived split/square ratio is (1+exp(-4))*exp(-A^2/2); its inverse is unbounded along the allowed amplitude ray.",
+  "non_claims": [
+    "No full PAH semigroup negative result or universal comparison-map impossibility.",
+    "No PAH functional, rate, state, carrier, regulator order or external Markov time change.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass gap, Yang-Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "schema": "tect/pah-omc020-boundary-kernel-obstruction-independent/1.0",
+  "scope": "This rejects only a uniformly bounded coordinate-preserving terminal-fibre density-ratio lift. It is not a no-go theorem for arbitrary U_n or local temporal convergence.",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_INDEPENDENT_COORDINATE_BOUNDARY_OBSTRUCTION"
+}

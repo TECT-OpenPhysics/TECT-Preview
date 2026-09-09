@@ -1,0 +1,652 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-SECOND-ORDER-DEFECT-PRIMARY-001",
+  "checks": [
+    {
+      "detail": {
+        "actual": {
+          "OMC013-code": "bda0c7bd7ed5f8b3871fd7590b600458589c4b5feba0a147219e94cdae0526a0",
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+          "R493-Lean": "c350035719b939c429a9e09d163015d34a471c3e6ea7c4678d4a88049060bc88"
+        },
+        "expected": {
+          "OMC013-code": "bda0c7bd7ed5f8b3871fd7590b600458589c4b5feba0a147219e94cdae0526a0",
+          "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+          "R493-Lean": "c350035719b939c429a9e09d163015d34a471c3e6ea7c4678d4a88049060bc88"
+        }
+      },
+      "name": "parent hashes",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "contract_id": "PAH-OMC-020-SECOND-ORDER-DEFECT",
+        "result_id": "R-551",
+        "task_id": "T-083"
+      },
+      "name": "contract identity",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "carrier_unchanged": true,
+        "external_markov_time_only": true,
+        "functional_unchanged": true,
+        "mobility_unchanged": true,
+        "no_charge_deletion": true,
+        "no_conditional_averaging": true,
+        "no_counterterm": true,
+        "no_cross_q_mixture": true,
+        "no_fixed_rmax_bypass": true,
+        "no_new_root": true,
+        "no_physical_promotion": true,
+        "no_rate_fitting": true,
+        "projection_unchanged": true,
+        "rates_unchanged": true,
+        "state_unchanged": true
+      },
+      "name": "unchanged model firewall",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "first_order": "The same witness satisfies L_4 I f - I L_3 f=0 exactly, so the defect is not a first-order mismatch.",
+        "model": "The exact finite strip/root implementation used by PAH-OMC-013, with PAH-001 F_rho, all declared directed roots, midpoint rate exp(-Delta F/2), beta=nu=1 and external stochastic Markov time.",
+        "operator": "D_(2)=L_4^2 I_(3,4)f - I_(3,4)L_3^2 f, evaluated pointwise at the preregistered fine state.",
+        "pair": "coarse n=3 and fine n+1=4, with R_max=1 and the source sample_state(4,3); the R-493 cylinder is f=ell_(0,0).",
+        "scope_boundary": "This is one exact finite-state counterexample to promoting the support-dependent R-493 first-order identity to a fixed-pair finite semigroup identity. It is not a universal no-go for every separately authorized refinement map or every observable.",
+        "time": "The generator time is the external stochastic Markov time declared in PAH-001; it is not quantum real time, proper time or Lorentzian time."
+      },
+      "name": "finite external-time scope",
+      "status": "PASS"
+    },
+    {
+      "detail": {},
+      "name": "R-493 first-order witness is zero",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "actual": {
+          "-17/8": "-1/2+(0)sqrt2",
+          "-25/8": "-1/2+(0)sqrt2",
+          "-59/24": "1/2+(0)sqrt2",
+          "-67/24": "1/2+(0)sqrt2"
+        },
+        "expected": {
+          "-17/8": "-1/2+(0)sqrt2",
+          "-25/8": "-1/2+(0)sqrt2",
+          "-59/24": "1/2+(0)sqrt2",
+          "-67/24": "1/2+(0)sqrt2"
+        }
+      },
+      "name": "exact second-order residual matches oracle",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "-17/8": "-1/2+(0)sqrt2",
+        "-25/8": "-1/2+(0)sqrt2",
+        "-59/24": "1/2+(0)sqrt2",
+        "-67/24": "1/2+(0)sqrt2"
+      },
+      "name": "residual is nonzero",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "-17/8": "-1/2+(0)sqrt2",
+        "-25/8": "-1/2+(0)sqrt2",
+        "-59/24": "1/2+(0)sqrt2",
+        "-67/24": "1/2+(0)sqrt2"
+      },
+      "name": "factorized sign certificate",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "failures": 0,
+        "transitions": 92
+      },
+      "name": "affected-term delta equals full frozen energy",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "N_f": 3,
+        "R493_threshold": "N(f)=max(2,m_f+1)=3",
+        "R_max": 1,
+        "coarse_level": 3,
+        "fine_level": 4,
+        "observable": "ell_a with a=(0,0)",
+        "sample_variant": 3,
+        "state_definition": "PAH-OMC-013 sample_state(4,3), followed by the unchanged neutral coordinate projection to level 3"
+      },
+      "name": "threshold is the R-493 threshold",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "negative_result",
+        "physical_promotion": false,
+        "scope": "route-local finite second-order semigroup obstruction",
+        "verdict": "NEGATIVE_RESULT"
+      },
+      "name": "no physical promotion",
+      "status": "PASS"
+    }
+  ],
+  "checks_failed": 0,
+  "checks_passed": 11,
+  "claim_bearing": false,
+  "classification": "negative_result",
+  "coarse_second_order": {
+    "-1": "-1/2+(0)sqrt2",
+    "-1/3": "1/2+(0)sqrt2",
+    "-103/36": "1/2+(0)sqrt2",
+    "-109/36": "-1/2+(0)sqrt2",
+    "-11/6": "-1/2+(0)sqrt2",
+    "-115/48": "0+(1)sqrt2",
+    "-13/6": "1+(0)sqrt2",
+    "-131/48": "0+(2)sqrt2",
+    "-161/72": "1/2+(0)sqrt2",
+    "-163/48": "0+(1/2)sqrt2",
+    "-17/6": "-1/2+(0)sqrt2",
+    "-17/8": "1/2+(0)sqrt2",
+    "-2": "1+(0)sqrt2",
+    "-217/144": "-1+(0)sqrt2",
+    "-227/48": "0+(-1/2)sqrt2",
+    "-25/144": "3/2+(0)sqrt2",
+    "-265/144": "0+(1/2)sqrt2",
+    "-33/16": "0+(1/2)sqrt2",
+    "-35/48": "0+(-1/4)sqrt2",
+    "-361/144": "-1/2+(-1/4)sqrt2",
+    "-385/144": "1/2+(0)sqrt2",
+    "-47/24": "-1+(0)sqrt2",
+    "-49/24": "1/2+(0)sqrt2",
+    "-5/6": "1/2+(0)sqrt2",
+    "-59/24": "1/2+(0)sqrt2",
+    "-65/16": "0+(-1)sqrt2",
+    "-67/48": "0+(-3/4)sqrt2",
+    "-7/3": "3+(0)sqrt2",
+    "-7/6": "-1/2+(0)sqrt2",
+    "-73/36": "-1/2+(0)sqrt2",
+    "-79/48": "0+(1/2)sqrt2",
+    "-85/48": "0+(1/2)sqrt2",
+    "0": "3/2+(0)sqrt2",
+    "1/3": "-4+(0)sqrt2",
+    "1/72": "1/2+(0)sqrt2",
+    "14/9": "0+(-1)sqrt2",
+    "16/9": "0+(-1)sqrt2",
+    "199/144": "-1+(0)sqrt2",
+    "2/3": "1/2+(0)sqrt2",
+    "2/9": "0+(3/2)sqrt2",
+    "247/144": "0+(1/2)sqrt2",
+    "29/48": "0+(-1/2)sqrt2",
+    "4/9": "0+(1)sqrt2",
+    "47/144": "0+(-1)sqrt2",
+    "5/9": "0+(-1/2)sqrt2",
+    "535/144": "0+(-1/2)sqrt2",
+    "59/144": "-1/2+(1/2)sqrt2",
+    "7/144": "1+(0)sqrt2",
+    "9/16": "0+(1/2)sqrt2"
+  },
+  "code_sha256": "553e8151aecb6871e2f2ed14bfcd46b213474833248658c6d2fbfa8fc23da006",
+  "factorization": "D = -1/2 exp(-25/8) (exp(1/3)-1)^2 (exp(1/3)+1) < 0",
+  "finding": "The exact unchanged PAH witness has zero first-order R-493 defect at n=N(f), but a strictly negative second-order residual. Therefore R-493's support-dependent pointwise identity cannot be exponentiated into the asserted fixed-pair semigroup intertwining on this grade-blind cylinder.",
+  "fine_second_order": {
+    "-1": "-1/2+(0)sqrt2",
+    "-1/3": "1/2+(0)sqrt2",
+    "-103/36": "1/2+(0)sqrt2",
+    "-109/36": "-1/2+(0)sqrt2",
+    "-11/6": "-1/2+(0)sqrt2",
+    "-115/48": "0+(1)sqrt2",
+    "-13/6": "1+(0)sqrt2",
+    "-131/48": "0+(2)sqrt2",
+    "-161/72": "1/2+(0)sqrt2",
+    "-163/48": "0+(1/2)sqrt2",
+    "-17/6": "-1/2+(0)sqrt2",
+    "-2": "1+(0)sqrt2",
+    "-217/144": "-1+(0)sqrt2",
+    "-227/48": "0+(-1/2)sqrt2",
+    "-25/144": "3/2+(0)sqrt2",
+    "-25/8": "-1/2+(0)sqrt2",
+    "-265/144": "0+(1/2)sqrt2",
+    "-33/16": "0+(1/2)sqrt2",
+    "-35/48": "0+(-1/4)sqrt2",
+    "-361/144": "-1/2+(-1/4)sqrt2",
+    "-385/144": "1/2+(0)sqrt2",
+    "-47/24": "-1+(0)sqrt2",
+    "-49/24": "1/2+(0)sqrt2",
+    "-5/6": "1/2+(0)sqrt2",
+    "-59/24": "1+(0)sqrt2",
+    "-65/16": "0+(-1)sqrt2",
+    "-67/24": "1/2+(0)sqrt2",
+    "-67/48": "0+(-3/4)sqrt2",
+    "-7/3": "3+(0)sqrt2",
+    "-7/6": "-1/2+(0)sqrt2",
+    "-73/36": "-1/2+(0)sqrt2",
+    "-79/48": "0+(1/2)sqrt2",
+    "-85/48": "0+(1/2)sqrt2",
+    "0": "3/2+(0)sqrt2",
+    "1/3": "-4+(0)sqrt2",
+    "1/72": "1/2+(0)sqrt2",
+    "14/9": "0+(-1)sqrt2",
+    "16/9": "0+(-1)sqrt2",
+    "199/144": "-1+(0)sqrt2",
+    "2/3": "1/2+(0)sqrt2",
+    "2/9": "0+(3/2)sqrt2",
+    "247/144": "0+(1/2)sqrt2",
+    "29/48": "0+(-1/2)sqrt2",
+    "4/9": "0+(1)sqrt2",
+    "47/144": "0+(-1)sqrt2",
+    "5/9": "0+(-1/2)sqrt2",
+    "535/144": "0+(-1/2)sqrt2",
+    "59/144": "-1/2+(1/2)sqrt2",
+    "7/144": "1+(0)sqrt2",
+    "9/16": "0+(1/2)sqrt2"
+  },
+  "first_order_residual": {},
+  "missing_assumptions": [
+    "A separately source-authorized invariant subspace or all-function operator identity could still support a different finite semigroup route; this witness does not supply or refute such a successor map.",
+    "The ordered j-before-anchored-n common-space, path-space, R-512 identification and uniform-limit inputs remain absent."
+  ],
+  "non_claims": [
+    "No PAH-OMC-020 ordered j-before-anchored-n semigroup convergence is proved or universally refuted.",
+    "No common infinite-volume process, path law, closable operator, continuum limit or R-512 identification follows.",
+    "No physical Pre-A, spacetime, event-horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains the external stochastic time declared by PAH-001 and is not quantum real time, proper time or Lorentzian time."
+  ],
+  "physical_promotion": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_second_order_defect_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-second-order-defect/hostile.json",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_second_order_defect_independent.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-second-order-defect/independent.json",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_second_order_defect_verify.py",
+    "lean": "Set-Location verification/lean; lean Tect/PahOmc020SecondOrderDefect.lean",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_second_order_defect.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-second-order-defect/primary.json"
+  },
+  "result_id": "R-551",
+  "schema": "tect/pah-omc020-second-order-defect-primary/1.0",
+  "scope_boundary": "This is one exact finite-state counterexample to promoting the support-dependent R-493 first-order identity to a fixed-pair finite semigroup identity. It is not a universal no-go for every separately authorized refinement map or every observable.",
+  "second_order_numeric": -0.008236755063623244,
+  "second_order_residual": {
+    "-17/8": "-1/2+(0)sqrt2",
+    "-25/8": "-1/2+(0)sqrt2",
+    "-59/24": "1/2+(0)sqrt2",
+    "-67/24": "1/2+(0)sqrt2"
+  },
+  "source_hashes": {
+    "OMC013-code": "bda0c7bd7ed5f8b3871fd7590b600458589c4b5feba0a147219e94cdae0526a0",
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-013": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "R493-Lean": "c350035719b939c429a9e09d163015d34a471c3e6ea7c4678d4a88049060bc88"
+  },
+  "task_id": "T-083",
+  "verdict": "NEGATIVE_RESULT",
+  "verification": "PASS",
+  "witness": {
+    "N_f": 3,
+    "R_max": 1,
+    "coarse_level": 3,
+    "fine_state": [
+      [
+        "aperture",
+        [
+          [
+            [
+              0,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              3,
+              0
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              4,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              5,
+              0
+            ],
+            0
+          ],
+          [
+            [
+              5,
+              1
+            ],
+            0
+          ]
+        ]
+      ],
+      [
+        "ell",
+        [
+          [
+            [
+              0,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              0
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              4,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              5,
+              0
+            ],
+            0
+          ],
+          [
+            [
+              5,
+              1
+            ],
+            1
+          ]
+        ]
+      ],
+      [
+        "link",
+        [
+          [
+            "d0",
+            1
+          ],
+          [
+            "d1",
+            0
+          ],
+          [
+            "d2",
+            1
+          ],
+          [
+            "d3",
+            0
+          ],
+          [
+            "h00",
+            0
+          ],
+          [
+            "h01",
+            1
+          ],
+          [
+            "h10",
+            0
+          ],
+          [
+            "h11",
+            1
+          ],
+          [
+            "h20",
+            0
+          ],
+          [
+            "h21",
+            1
+          ],
+          [
+            "h30",
+            0
+          ],
+          [
+            "h31",
+            1
+          ],
+          [
+            "h40",
+            0
+          ],
+          [
+            "h41",
+            1
+          ],
+          [
+            "v0",
+            1
+          ],
+          [
+            "v1",
+            0
+          ],
+          [
+            "v2",
+            1
+          ],
+          [
+            "v3",
+            0
+          ],
+          [
+            "v4",
+            1
+          ],
+          [
+            "v5",
+            0
+          ]
+        ]
+      ],
+      [
+        "phase",
+        [
+          [
+            [
+              0,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              3,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              4,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              5,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              5,
+              1
+            ],
+            0
+          ]
+        ]
+      ]
+    ],
+    "observable": "ell_a",
+    "sample_variant": 3
+  }
+}

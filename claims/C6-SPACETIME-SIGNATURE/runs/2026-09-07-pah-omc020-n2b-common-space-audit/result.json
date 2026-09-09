@@ -1,0 +1,258 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 22,
+  "audit_id": "PAH-OMC-020-N2B-COMMON-SPACE-AUDIT-001",
+  "checks": [
+    {
+      "actual": {
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n-mosco-contract/n-mosco.json": "f70a3ad6b6f476377dfc355506f82124507ffbed1a5e4848d92cec1116729869",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-inventory-stable/result.json": "e4ed74bed72b1b30a13ea059e51fab87af540ce85bc45515da6384b0e2a2ecf2",
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+        "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+        "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+        "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+        "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b",
+        "verification/lean/Tect/PahOmc020.lean": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c"
+      },
+      "expected": {
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n-mosco-contract/n-mosco.json": "f70a3ad6b6f476377dfc355506f82124507ffbed1a5e4848d92cec1116729869",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-inventory-stable/result.json": "e4ed74bed72b1b30a13ea059e51fab87af540ce85bc45515da6384b0e2a2ecf2",
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+        "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+        "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+        "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+        "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b",
+        "verification/lean/Tect/PahOmc020.lean": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c"
+      },
+      "name": "all source pins",
+      "pass": true
+    },
+    {
+      "actual": "PAH-001",
+      "expected": "PAH-001",
+      "name": "PAH identity",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "MAINLINE_ADVANCE_FULL_Q_EVENTUAL_INTERTWINING_ALGEBRAIC",
+        "exact_scope_closed": true,
+        "infinite_volume": "NOT_PROVED",
+        "stage2_status": "HOLD_FOR_EVIDENCE_CLOSABILITY_AND_SEMIGROUP",
+        "verdict": "MAINLINE_ADVANCE",
+        "weak_gibbs_l2": "NOT_PROVED"
+      },
+      "expected": "finite result with stage2 hold",
+      "name": "OMC-013 finite identity",
+      "pass": true
+    },
+    {
+      "actual": [
+        "R-510",
+        "R-511",
+        "R-512"
+      ],
+      "expected": [
+        "R-510",
+        "R-511",
+        "R-512"
+      ],
+      "name": "R-510/R-511/R-512 chain",
+      "pass": true
+    },
+    {
+      "actual": "The exact R-511 form is closable for every H-null energy-Cauchy sequence, with no fixed-support restriction. Its form-norm completion embeds injectively into H and defines the dense-domain minimal closed nonnegative extension Ebar. Every vector in the H-closure H_rad of amplitude-only cylinders belongs to Dom(Ebar), has zero energy and zero cross-energy against Dom(Ebar). The original aperture cylinder retains strictly positive energy.",
+      "expected": "fixed state-H minimal closure",
+      "name": "R-512 fixed-H closure",
+      "pass": true
+    },
+    {
+      "actual": "Exactly the R-511 gauge-invariant bounded globally amplitude-l1-Lipschitz finite-prefix cylinder domain D. It is dense in H, not asserted an operator graph core or A-invariant.",
+      "expected": "no U_n claim",
+      "name": "R-512 does not provide varying-space map",
+      "pass": true
+    },
+    {
+      "actual": "Direct same-observable evaluation f(r,z) at r=h_j ell on G_n, retaining every original read label and old-coordinate formula. This linear map is defined only on cylinder representatives in D and is not claimed an isometry or a bounded map on completed H.",
+      "expected": "source S_nj definition",
+      "name": "OMC-020 keeps direct finite evaluation",
+      "pass": true
+    },
+    {
+      "actual": "Direct same-observable evaluation f(r,z) at r=h_j ell on G_n, retaining every original read label and old-coordinate formula. This linear map is defined only on cylinder representatives in D and is not claimed an isometry or a bounded map on completed H.",
+      "expected": "no completed-H boundedness shortcut",
+      "name": "S_nj completion boundedness is not assumed",
+      "pass": true
+    },
+    {
+      "actual": "(N2a) U_n",
+      "expected": "required",
+      "name": "N2a is explicit",
+      "pass": true
+    },
+    {
+      "actual": "(N2b) weak liminf",
+      "expected": "required",
+      "name": "N2b is explicit",
+      "pass": true
+    },
+    {
+      "actual": "(N2d) minimal selection",
+      "expected": "separate obligation",
+      "name": "N2d is separate",
+      "pass": true
+    },
+    {
+      "actual": "N1/local recovery only",
+      "expected": "explicit separation",
+      "name": "N1 is not arbitrary-sequence liminf",
+      "pass": true
+    },
+    {
+      "actual": "R-512 limitation",
+      "expected": "present",
+      "name": "R-512 is not silently promoted",
+      "pass": true
+    },
+    {
+      "actual": "J_n local candidate",
+      "expected": "full map not admitted",
+      "name": "local pullback is not full U_n",
+      "pass": true
+    },
+    {
+      "actual": "The deterministic bounded inventory finds no source-authorized PAH-OMC-020 owner packet. R-525 remains a researcher-owned non-coordinate local coupling candidate; the earlier replay failure is isolated to dynamic fsck output and is not used here.",
+      "expected": "owner packet absent in bounded inventory",
+      "name": "owner audit remains evidence hold",
+      "pass": true
+    },
+    {
+      "actual": [
+        "construct and hash-pin a measure-compatible realization U_n for the varying finite Hilbert spaces",
+        "prove the arbitrary-sequence Mosco liminf and unbounded-rate boundary escape on [0,T]",
+        "identify the limiting closed form with the R-512 minimal closure and derive correlation semigroup convergence"
+      ],
+      "expected": "N2b/N2c/N2d open",
+      "name": "Mosco contract remains open",
+      "pass": true
+    },
+    {
+      "actual": [
+        "one common Hilbert space H and its measurable/probability realization",
+        "explicit U_n or equivalent maps with local norm and inner-product convergence",
+        "weak topology and bounded-energy quantifiers for every sequence U_n u_n",
+        "PAH-specific liminf proof E_infty(u,u) <= liminf E_n(u_n,u_n)",
+        "recovery/limsup construction compatible with the same maps",
+        "N4 unbounded-rate boundary escape and compact-time control",
+        "identification of the selected closed form with the R-512 minimal closure",
+        "independent, hostile and Lean verification of the model-specific estimates"
+      ],
+      "expected": "eight explicit N2b inputs",
+      "name": "missing-input contract is nonempty",
+      "pass": true
+    },
+    {
+      "actual": [
+        "mosco_liminf",
+        "recovery_sequence",
+        "common_space_embedding",
+        "liminf_form"
+      ],
+      "expected": "none in PahOmc020.lean",
+      "name": "Lean N2b theorem is not registered",
+      "pass": true
+    },
+    {
+      "actual": "finite algebraic Lean scope",
+      "expected": "explicit",
+      "name": "Lean file states finite scope",
+      "pass": true
+    },
+    {
+      "actual": [
+        "No rate/functional/mobility/finite-part/state/time change, counterterm, time acceleration, conditional generator averaging, fixed-R_max bypass or new finite carrier.",
+        "No inference of semigroup selection from closability, form-core density, pointwise generator consistency or static Gibbs convergence alone.",
+        "No assumption that a form core is an operator graph core, or that the minimal closed form equals the maximal jump form.",
+        "No Q3LOCK or TECT-YM result imported as a PAH premise; no phasewise or source-dependent direct-sum rescue."
+      ],
+      "expected": "cross-Q/direct-sum shortcut rejected",
+      "name": "hostile cross-Q rescue rejected",
+      "pass": true
+    },
+    {
+      "actual": [
+        "No rate/functional/mobility/finite-part/state/time change, counterterm, time acceleration, conditional generator averaging, fixed-R_max bypass or new finite carrier.",
+        "No inference of semigroup selection from closability, form-core density, pointwise generator consistency or static Gibbs convergence alone.",
+        "No assumption that a form core is an operator graph core, or that the minimal closed form equals the maximal jump form.",
+        "No Q3LOCK or TECT-YM result imported as a PAH premise; no phasewise or source-dependent direct-sum rescue."
+      ],
+      "expected": "form/operator core distinction",
+      "name": "hostile form-core substitution rejected",
+      "pass": true
+    },
+    {
+      "actual": [
+        "No active T-054 gate or C6 T1 promotion; no repair of PAH-OMC-014; classification auxiliary_support.",
+        "No full kernel classification, maximal jump-domain equality, essential self-adjointness, operator graph core or uniqueness of all extensions.",
+        "No finite-semigroup convergence, temporal path law, physical infinite-volume dynamics, ergodicity, spectral gap or quantum real-time automorphism.",
+        "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap or TOE conclusion; no Q3LOCK import."
+      ],
+      "expected": "temporal convergence remains separate",
+      "name": "R-512 keeps temporal construction separate",
+      "pass": true
+    }
+  ],
+  "claim_bearing": false,
+  "code_sha256": "fe3ddc8302244ea6e58903721891a6d3beee6839dcee5b57edf8b1ac5357013b",
+  "failed": 0,
+  "finding": "The fixed-space R-512 closure and finite OMC-013 intertwining are internally pinned, but the current source does not supply the varying-space U_n/common-Hilbert realization or the PAH-specific arbitrary-sequence N2b liminf estimate. The existing coordinate pullback is explicitly only a local-core candidate, and the bounded owner-history inventory contains no source-authorized non-coordinate packet.",
+  "fixed_form_scope": "R-512 closes the R-511 form on the anchored R-510 limit Hilbert space under inherited fixed-space hypotheses.",
+  "missing_assumptions": [
+    "one common Hilbert space H and its measurable/probability realization",
+    "explicit U_n or equivalent maps with local norm and inner-product convergence",
+    "weak topology and bounded-energy quantifiers for every sequence U_n u_n",
+    "PAH-specific liminf proof E_infty(u,u) <= liminf E_n(u_n,u_n)",
+    "recovery/limsup construction compatible with the same maps",
+    "N4 unbounded-rate boundary escape and compact-time control",
+    "identification of the selected closed form with the R-512 minimal closure",
+    "independent, hostile and Lean verification of the model-specific estimates"
+  ],
+  "n2b_scope": "PAH-OMC-020 requires a varying finite-space realization, arbitrary-sequence weak liminf, recovery compatibility, boundary escape and minimal-form identification in the fixed j-before-n order.",
+  "next_question": "Can one source-authorized U_n packet satisfy the eight listed common-space, weak-liminf, recovery, boundary and verification fields without changing PAH-001?",
+  "non_claims": [
+    "No PAH-OMC-020 semigroup convergence, Mosco theorem, N2a/N2b/N2c/N2d/N4 completion or R-512 selection theorem.",
+    "No claim that every abstract common-space realization is impossible; external or future owner input is not inspected.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion."
+  ],
+  "passed": 22,
+  "physical_promotion": false,
+  "reproduction": {
+    "check": "python -X utf8 verification/scripts/pah_omc020_n2b_common_space_audit.py --check",
+    "command": "python -X utf8 verification/scripts/pah_omc020_n2b_common_space_audit.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n2b-common-space-audit/result.json"
+  },
+  "schema": "tect/pah-omc020-n2b-common-space-audit/1.0",
+  "source_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-n-mosco-contract/n-mosco.json": "f70a3ad6b6f476377dfc355506f82124507ffbed1a5e4848d92cec1116729869",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-inventory-stable/result.json": "e4ed74bed72b1b30a13ea059e51fab87af540ce85bc45515da6384b0e2a2ecf2",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b",
+    "verification/lean/Tect/PahOmc020.lean": "f269428a0732204cf37cdec2dd9e87ea094329a7150fdfba6b08ffb762ad9b3c"
+  },
+  "status": "PASS_SCOPED_N2B_AUDIT",
+  "task_id": "T-064",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

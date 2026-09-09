@@ -1,0 +1,218 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "PASS_RADIAL_SECTOR_ORDERED_CORRELATION",
+      "expected": "PASS_RADIAL_SECTOR_ORDERED_CORRELATION",
+      "name": "primary status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_INDEPENDENT_RADIAL_SECTOR",
+      "expected": "PASS_INDEPENDENT_RADIAL_SECTOR",
+      "name": "independent status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_HOSTILE_RADIAL_SECTOR",
+      "expected": "PASS_HOSTILE_RADIAL_SECTOR",
+      "name": "hostile status",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT"
+      ],
+      "expected": [
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT",
+        "AUXILIARY_SUPPORT"
+      ],
+      "name": "all lanes auxiliary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "name": "all lanes conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes non-bearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "physical promotion blocked",
+      "status": "PASS"
+    },
+    {
+      "actual": 31,
+      "expected": 31,
+      "name": "primary checks",
+      "status": "PASS"
+    },
+    {
+      "actual": 23,
+      "expected": 23,
+      "name": "independent checks",
+      "status": "PASS"
+    },
+    {
+      "actual": 21,
+      "expected": 21,
+      "name": "hostile checks",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "5",
+      "name": "residual factor",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "target sector is D_rad",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "anchored-n remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no physical promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent does not import primary",
+      "status": "PASS"
+    },
+    {
+      "actual": "4853227eca26da71d07dc996b7d8d0f090e758a7d69bad228795d2765b3cbdb7",
+      "expected": "4853227eca26da71d07dc996b7d8d0f090e758a7d69bad228795d2765b3cbdb7",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "residual_coefficient",
+        "compact_time_error",
+        "mesh_half_step",
+        "mesh_positive",
+        "mesh_strict_decay",
+        "radial_fixture_small",
+        "independent_fixture_small"
+      ],
+      "expected": [
+        "residual_coefficient",
+        "compact_time_error",
+        "mesh_half_step",
+        "mesh_positive",
+        "mesh_strict_decay",
+        "radial_fixture_small",
+        "independent_fixture_small"
+      ],
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean policy",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)",
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "conditional": true,
+  "derived": {
+    "finite_time_error": "2*T*||f||_infinity*H_g*L_g*h_j",
+    "radial_factor": "2"
+  },
+  "lane_counts": {
+    "hostile": 21,
+    "independent": 23,
+    "primary": 31
+  },
+  "non_claims": [
+    "No common U_n/Hilbert realization for mixed observables, no N2b/N2c/N2d full closure and no infinite-volume process.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "physical_promotion": false,
+  "reproduction": {
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_radial_sector_hostile.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_radial_sector_independent.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_radial_sector_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "primary": "python -X utf8 verification/scripts/pah_omc020_radial_sector.py --check"
+  },
+  "run_hashes": {
+    "hostile": "52d23fd454792987c4e2a9f2b3f63a654470065543ca3f023b4760f5ff33e8e8",
+    "independent": "134d9468e2c289182b110e455f0b5ab35d7fc5f12683417af02932423d6d8df6",
+    "primary": "b9f5e74329aeb118b3f210e220fb4ab0bf9becc46f7bbd4224af4af7ad1c2d63"
+  },
+  "schema": "tect/pah-omc020-radial-sector-integrated/1.0",
+  "scope": "Conditional ordered compact-time correlation convergence on the amplitude-only D_rad sector; mixed observables and full anchored-n convergence remain open.",
+  "scripts": {
+    "hostile": {
+      "path": "codes/foundations/pah_omc020_radial_sector_hostile.py",
+      "sha256": "3760ddc3500fe736d636c1853d1eb617bf8854bd425d151c90980569fcbe0c66"
+    },
+    "independent": {
+      "path": "codes/foundations/pah_omc020_radial_sector_independent.py",
+      "sha256": "2ab680fb2d04ea23f095f58f8270551128f5b646e00f6b089f9a2632861d7e8d"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/PahOmc020Radial.lean",
+      "sha256": "4853227eca26da71d07dc996b7d8d0f090e758a7d69bad228795d2765b3cbdb7",
+      "version": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)"
+    },
+    "primary": {
+      "path": "verification/scripts/pah_omc020_radial_sector.py",
+      "sha256": "8848ecd230bd72f0f23c16e4eb8ecbdb107380c8c7ce4fdf2251968140f4fa7d"
+    }
+  },
+  "status": "PASS_INTEGRATED_RADIAL_SECTOR",
+  "verdict": "AUXILIARY_SUPPORT"
+}

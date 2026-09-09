@@ -1,0 +1,142 @@
+{
+  "active_gate_change": false,
+  "all_mutations_rejected": true,
+  "audit_id": "PAH-LINK-MULTIPLICITY-001",
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "hash:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "expected": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "name": "hash:strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "hash:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "one link multiplied by zeta_K or zeta_K^(-1)",
+      "expected": "same source phrase",
+      "name": "source move remains unmodified",
+      "status": "PASS"
+    },
+    {
+      "actual": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "expected": "midpoint exponent",
+      "name": "source midpoint remains unmodified",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "source has no duplicate convention",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0,
+        1,
+        4
+      ],
+      "expected": [
+        0,
+        1,
+        4
+      ],
+      "name": "witness stays closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "4",
+      "name": "derived Wilson delta remains four",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "name": "derived one-root coefficient remains one",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 2,
+      "name": "hostile mutation rejected:collapse-labelled-sign-channels",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "2",
+      "name": "hostile mutation rejected:change-face-normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": true,
+      "name": "hostile mutation rejected:promote-open-link-coordinate",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-beta*DeltaF)",
+      "expected": "exp[-beta(F_rho(r x)-F_rho(x))/2]",
+      "name": "hostile mutation rejected:fit-non-midpoint-rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "0000000000000000000000000000000000000000000000000000000000000000",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "hostile mutation rejected:change-pinned-parent",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": false,
+      "name": "hostile mutation rejected:physical-promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-OMC-020",
+      "expected": "PAH-OMC-020",
+      "name": "temporal parent remains OMC-020",
+      "status": "PASS"
+    },
+    {
+      "actual": "two completions remain possible",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "hostile lane cannot turn ambiguity into no-go",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 17,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "exploration_id": "EXP-001645",
+  "finding": "Hostile controls reject channel collapse, altered normalization, open-link promotion, fitted rates, parent drift and physical promotion; the surviving conclusion is the bounded source-definition ambiguity only.",
+  "mutations_attempted": 6,
+  "mutations_rejected": 6,
+  "non_claims": [
+    "No universal no-go and no source-owner packet is inferred from the hostile controls.",
+    "No PAH-OMC-020 temporal convergence or physical conclusion."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_source_multiplicity_underdetermination_hostile.py --check",
+  "result_id": "R-527",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc020-source-multiplicity-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_HOSTILE_SOURCE_MULTIPLICITY_CONTROLS",
+  "task_id": "T-063",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

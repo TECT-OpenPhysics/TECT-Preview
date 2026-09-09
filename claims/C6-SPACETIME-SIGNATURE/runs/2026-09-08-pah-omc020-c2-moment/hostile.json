@@ -1,0 +1,132 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "hash:strategy\\pa-hyp\\PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+      "expected": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+      "name": "hash:strategy\\pa-hyp\\PAH-OMC-010-state-weighted-envelope-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+      "expected": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+      "name": "hash:strategy\\pa-hyp\\R490-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "hash:strategy\\pa-hyp\\PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "<=1",
+      "name": "hostile rate mutation is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "source requires m>0",
+      "name": "hostile signed mobility is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "sum pi*c",
+      "expected": "distinct from sum pi*c^2",
+      "name": "first moment is not silently squared",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(-F(x)) exp(-(F(rx)-F(x)))",
+      "expected": "exp(-F(rx))",
+      "name": "source midpoint square keeps target Gibbs weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "sum_image <= Z",
+      "expected": "partial bijection",
+      "name": "root sum uses image subset, not volume equality",
+      "status": "PASS"
+    },
+    {
+      "actual": "N_geom=60",
+      "expected": "source incidence constant",
+      "name": "N_geom is a per-vertex incidence count",
+      "status": "PASS"
+    },
+    {
+      "actual": "A finite",
+      "expected": "C2(A) local",
+      "name": "a fixed finite support is required",
+      "status": "PASS"
+    },
+    {
+      "actual": "60|A|",
+      "expected": "independent of n for fixed A",
+      "name": "unbounded volume is not hidden in N_geom",
+      "status": "PASS"
+    },
+    {
+      "actual": "unchanged PAH-001",
+      "expected": "PAH-OMC-010",
+      "name": "OMC-010 rate and state remain source definitions",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "registered order",
+      "name": "j-before-n order is not bypassed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "C2 does not imply non-explosion",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "C2 does not imply semigroup convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "NOT_CLAIMED",
+      "expected": "NOT_CLAIMED",
+      "name": "physical promotion remains forbidden",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 17,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "non_claims": [
+    "No PAH functional, rate, state, carrier, regulator, time or limit order is changed.",
+    "No N2b/N2c/N4 closure, R-512 process identification, infinite-volume dynamics, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "rejected_shortcuts": [
+    "using a mobility larger than one or changing the source rate",
+    "confusing the first conductance moment with the squared-rate moment",
+    "replacing the inverse-image subset by the full partition sum as an equality",
+    "using N_geom as a volume-independent global root count for nonlocal observables",
+    "promoting the local C2 estimate to non-explosion, semigroup convergence or physics"
+  ],
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_c2_moment_hostile.py --check",
+  "schema": "tect/pah-omc020-c2-moment-hostile/1.0",
+  "source_hashes": {
+    "strategy\\pa-hyp\\PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy\\pa-hyp\\PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy\\pa-hyp\\PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy\\pa-hyp\\R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+  },
+  "status": "PASS_HOSTILE_C2_SCOPE_CONTROLS",
+  "verdict": "PASS"
+}

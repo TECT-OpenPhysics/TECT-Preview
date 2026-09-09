@@ -1,0 +1,117 @@
+{
+  "schema": "tect/pah-omc020-sequential-gluing-contract/1.0",
+  "contract_id": "PAH-OMC-020-SEQUENTIAL-GLUING",
+  "version": "1.0",
+  "task_id": "T-076",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Can the fixed-n j-to-infinity passage and the anchored-n comparison be composed into one compact-time local-correlation budget without changing PAH-001?",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "fixed_inputs": {
+    "model": "Exactly the immutable PAH-001 functional, original labelled Gibbs state and original stochastic rates.",
+    "preregistration": "PAH-OMC-020 with the explicit j-before-anchored-n order and no diagonal shortcut.",
+    "target": "The R-512 minimal closed-form semigroup T_min(t), used only as a named target until process identification is proved.",
+    "time": "Compact intervals of external stochastic Markov time; no quantum, proper or Lorentzian interpretation.",
+    "normalization": "Original labelled Gibbs normalization; R-490 C_sw remains a domination input only.",
+    "observables": "Every bounded local cylinder pair for which the registered fixed-n and local-tail hypotheses are instantiated."
+  },
+  "symbols": {
+    "C_nj": "sup_{0<=t<=T} stationary finite-j correlation error at level (n,j)",
+    "c_n": "fixed-n stationary correlation after the registered j limit",
+    "c_star": "R-512 target correlation <f,T_min(t)g>_(nu_infty)",
+    "J_nj": "sup_t |C_nj(f,g;t)-c_n(f,g;t)|",
+    "K_nm": "known truncation budget collecting R-510 state passage, R-493 stabilization and R-517 boundary terms",
+    "D_n": "target-process/R-512 minimal-form identification defect sup_t |c_n-c_star|"
+  },
+  "hypotheses": [
+    {
+      "id": "H-J",
+      "statement": "For each fixed n and admissible bounded local f,g, J_nj tends to zero as j tends to infinity uniformly on [0,T].",
+      "source": "R-514",
+      "status": "source-result-at-registered-fixed-n-scope"
+    },
+    {
+      "id": "H-K",
+      "statement": "For every local f,g and truncation m, the anchored comparison has a nonnegative known budget K_nm whose limsup in n tends to zero as m tends to infinity; R-510/R-493/R-517 must instantiate it without an unproved uniformity step.",
+      "source": "R-510, R-493, R-517",
+      "status": "not-instantiated"
+    },
+    {
+      "id": "H-D",
+      "statement": "The target-process/R-512 minimal-form defect D_n is nonnegative and tends to zero in the anchored n limit.",
+      "source": "source-authorized owner packet required",
+      "status": "absent"
+    }
+  ],
+  "exact_budget": {
+    "inequality": "sup_{0<=t<=T}|C_(n,j)(t)-c_star(t)| <= J_nj + K_nm + D_n",
+    "proof": "Apply the triangle C_(n,j) -> c_n -> intermediate truncated target -> c_star and take the compact-time supremum; all three terms are retained.",
+    "ordered_consequence": "H-J plus lim_m limsup_n K_nm=0 and D_n->0 imply lim_n lim_j sup_t |C_(n,j)-c_star|=0 in the preregistered order.",
+    "necessity": "Dropping K or D is unsound: exact rational hostile fixtures leave a positive correlation error while the retained terms are zero."
+  },
+  "known_inputs": {
+    "R-510": "Projective local-state Cauchy modulus and transfer normalization.",
+    "R-493": "Eventual finite grade-blind local generator stabilization.",
+    "R-517": "Conditional connected-word boundary attribution with b_eff=288.",
+    "R-514": "Fixed-n uniform compact-time j passage to Q_n(t).",
+    "R-512": "Minimal closed form is the named target but does not supply temporal selection."
+  },
+  "missing_assumptions": [
+    "Source-authorized uniform K_nm truncation bound for every bounded local cylinder and compact external-time horizon.",
+    "Source-authorized path-space or common-Hilbert construction needed to define the K_nm intermediate and the R-512 target process.",
+    "Source-authorized D_n defect tending to zero, including N2b/N2c/N4/N2d obligations."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The rational decay fixtures are numerical PAH uniform estimates.",
+      "disposition": "REJECTED: they are explicitly test oracles and never replace H-K or H-D."
+    },
+    {
+      "objection": "R-514 fixed-n convergence automatically identifies the anchored R-512 target.",
+      "disposition": "UPHELD AGAINST PROMOTION: H-D is a separate target-process/minimal-form field."
+    },
+    {
+      "objection": "R-517's conditional boundary tail is already the required uniform K_nm.",
+      "disposition": "UPHELD AGAINST PROMOTION: source authorization and the all-cylinder compact-time uniformity are absent."
+    },
+    {
+      "objection": "A triangle inequality constructs a path-space process.",
+      "disposition": "REJECTED: the result proves only an implication conditional on H-K and H-D."
+    },
+    {
+      "objection": "Markov-time compactness is a physical-time prediction.",
+      "disposition": "REJECTED: the external stochastic time firewall remains explicit."
+    }
+  ],
+  "result_policy": {
+    "formal_verdict": "PASS_CONDITIONAL_GLUE",
+    "scientific_verdict": "HOLD_FOR_EVIDENCE",
+    "promotion_rule": "Do not change the parent gate or claim tier unless H-K and H-D are source-authorized and independently verified.",
+    "revisit_condition": "Reopen only when one versioned owner packet instantiates both H-K and H-D, or an exact PAH-specific contradiction to one hypothesis is found."
+  },
+  "non_claims": [
+    "No PAH-OMC-020 anchored-n semigroup convergence theorem is asserted.",
+    "No source process, U_n, common Hilbert space, rate, state, carrier, regulator, time interpretation or limit order is changed.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json": "67825022b3db1078387534baacb818fdf60778ce19f4fe81514484a25cf7cb5d",
+    "strategy/pa-hyp/PAH-OMC-020-n2c-owner-audit-v1.1-result-v1.json": "9013fe5337965478c2e91c84fa693eacf3dbd0d948a3b2cafb900332d8b9dd19"
+  },
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_sequential_gluing.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_sequential_gluing_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_sequential_gluing_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_sequential_gluing_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020Gluing.lean"
+  }
+}

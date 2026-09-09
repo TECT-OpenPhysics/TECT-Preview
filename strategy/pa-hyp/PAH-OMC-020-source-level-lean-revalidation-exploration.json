@@ -1,0 +1,64 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "task_id": "T-094",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-09",
+  "provenance": "contemporaneous",
+  "title": "PAH-OMC-020 source-level witness and positive-time Lean revalidation",
+  "question": "After the later Lean registrations and registry drift, do the existing R-527 source-multiplicity witness, R-553 positive-time separation and R-559 source-level firewall still pass their independent and Lean checks without changing PAH-001?",
+  "method": [
+    "Replay the frozen R-527 source-multiplicity primary, independent and hostile lanes with the canonical pinned package cache at E:/Dev/TECT/verification/lean/.lake/packages.",
+    "Replay the frozen R-553 positive-time primary, independent, hostile and Lean lanes on current bytes.",
+    "Replay the R-559 source-level primary, non-importing independent, hostile and integrated firewall.",
+    "Compare the current Lean source and registry hashes and classify the missing default worktree package cache as an environment-only limitation."
+  ],
+  "finding": "R-527 passes 33/33 integrated with Lean PASS when the canonical pinned Mathlib cache is supplied; R-553 passes 16/16 integrated with Lean PASS; R-559 passes 22/22 integrated with its source-level NEGATIVE_RESULT. The default R-527 command fails only because the lane-local verification/lean/.lake/packages directory is absent, while the canonical pinned cache compiles the same Lean source. Current PAH-001 and the finite witness bytes are unchanged, and no anchored-n successor or R-512 convergence statement is supplied.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This is a replay and Lean-environment correction that strengthens the provenance of the already registered source-level boundary. It does not create a new finite carrier or promote the source-level negative to a universal successor no-go.",
+  "boundary": "PAH-001, the original functional, rates, labelled Gibbs state, external stochastic Markov time and the j-before-anchored-n objective remain fixed. No comparison map, carrier, counterterm, rate, state, regulator, limit or physical interpretation is introduced.",
+  "evidence_refs": [
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-multiplicity/integrated.json#verification",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-positive-time-separation/integrated.json#lanes",
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json#verification",
+    "strategy/pa-hyp/PAH-OMC-020-positive-time-separation-result-v1.json#verification",
+    "strategy/pa-hyp/PAH-OMC-022-source-level-semigroup-wellposedness-result-v1.json#verification",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {
+    "results": ["R-527", "R-553", "R-559"],
+    "negatives": ["NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS"],
+    "events": ["20260908-r-527-pah-omc-020-source-link-multiplicity-2026", "20260908-r-553-pah-omc-020-positive-time-separation-2026"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "related": [
+    {"id": "EXP-001709", "relation": "continues"},
+    {"id": "EXP-001707", "relation": "continues"}
+  ],
+  "verification_summary": "R-527 integrated 33/33 with canonical Lean cache; R-553 integrated 16/16; R-559 integrated 22/22. The only failed invocation is the default R-527 lane-local cache path, which is unavailable in this worktree; the canonical pinned package path passes.",
+  "reproduction": {
+    "r527": "python -X utf8 verification/scripts/pah_omc020_source_multiplicity_underdetermination_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "r553": "python -X utf8 verification/scripts/pah_omc020_positive_time_separation_verify.py --check",
+    "r559": "python -X utf8 verification/scripts/pah_omc022_source_level_semigroup_wellposedness_verify.py --check"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+    "strategy/pa-hyp/PAH-OMC-020-positive-time-separation-result-v1.json": "381869f9637341dd6f55514f87ca1849831e9ca910a27cf4e601882cd5de9fc8",
+    "strategy/pa-hyp/PAH-OMC-022-source-level-semigroup-wellposedness-result-v1.json": "e9582ffa26d04dfd11d7951fe3e8fb62aa8981d4f436477ddbbf1a9d6f482bf0",
+    "verification/lean/Tect/PahOmc020Multiplicity.lean": "3da441592573ce5162a070b274fc849fee6ee3e6ce7b36a41fbdd1414ed906d3",
+    "verification/lean/Tect/PahOmc020PositiveTimeSeparation.lean": "dba8055a47fd5e4c16f23c4874ec38e799910cee08d9b641f415bd5ee3b17389",
+    "verification/lean/registry.json": "d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-source-multiplicity/integrated.json": "7a26f711e744a015b0c20e68a43fe8ba0065658261ce2f3f915c4d48432db5e5",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-positive-time-separation/integrated.json": "6018ceeab174b706cd859f22bd7e111d9d3bb4613826305889b9dc4b2a54d63e"
+  },
+  "next_action": "Keep the full PAH-OMC-020 objective active. Use this Lean-verified source-level boundary only as an input to the owner-packet cut-set; do not repeat the finite witness. Reopen the ordered-convergence route only on a source-authorized S0/S1/S2 packet, a parent-byte change or an exact unchanged-source contradiction.",
+  "revisit_condition": "Reopen on a new owner-authorized hash-pinned packet or a genuine PAH parent hash change; the missing lane-local Mathlib cache is an integration/environment issue and does not justify a scientific verdict.",
+  "non_claims": [
+    "This revalidation does not prove or refute ordered PAH-OMC-020 convergence for an owner-fixed successor.",
+    "It does not establish R-512 minimal-form identification, N2a/N2b/N2c/N4 closure or an anchored-n universal no-go.",
+    "The default lane-local Lean failure is not mathematical evidence against the PAH model.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion is made; external Markov time remains stochastic bookkeeping."
+  ]
+}

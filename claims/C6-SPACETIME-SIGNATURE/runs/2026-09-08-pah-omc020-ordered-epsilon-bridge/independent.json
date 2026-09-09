@@ -1,0 +1,121 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-ORDERED-EPSILON-BRIDGE-INDEPENDENT-001",
+  "checks": [
+    {
+      "actual": "4848e28eed1c72b5db8cecd364678ccd3b7ca59ac59baa33604a272418e7233a",
+      "expected": "4848e28eed1c72b5db8cecd364678ccd3b7ca59ac59baa33604a272418e7233a",
+      "name": "contract hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-555",
+      "expected": "R-555",
+      "name": "result identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "Exactly PAH-001-v1.json.",
+      "expected": "Exactly PAH-001-v1.json.",
+      "name": "unchanged functional",
+      "status": "PASS"
+    },
+    {
+      "actual": "j tends to infinity at fixed n first, then anchored n.",
+      "expected": "j tends to infinity at fixed n first, then anchored n.",
+      "name": "strict j-before-n wording",
+      "status": "PASS"
+    },
+    {
+      "actual": "err_(n,j) <= J_(n,j) + D_n.",
+      "expected": "err_(n,j) <= J_(n,j) + D_n.",
+      "name": "two-term bound names J and D",
+      "status": "PASS"
+    },
+    {
+      "actual": "For every epsilon>0, some N works for all n>=N, and each such n has a J(n) after which err_(n,j)<epsilon.",
+      "expected": "For every epsilon>0, some N works for all n>=N, and each such n has a J(n) after which err_(n,j)<epsilon.",
+      "name": "conclusion quantifier is nested",
+      "status": "PASS"
+    },
+    {
+      "actual": "[\"this bridge does not prove the pah-specific j_(n,j) limit or d_n limit.\", \"it does not construct u_n, a common hilbert space, a path-space law, an n2c/n4 boundary estimate or r-512 identification.\", \"it does not prove full pah-omc-020 semigroup convergence, infinite-volume dynamics, continuum, physical pre-a, spacetime, qft, gravity, yang-mills, mass-gap or toe conclusions.\", \"external markov time remains stochastic bookkeeping and is not physical time.\"]",
+      "expected": "[\"this bridge does not prove the pah-specific j_(n,j) limit or d_n limit.\", \"it does not construct u_n, a common hilbert space, a path-space law, an n2c/n4 boundary estimate or r-512 identification.\", \"it does not prove full pah-omc-020 semigroup convergence, infinite-volume dynamics, continuum, physical pre-a, spacetime, qft, gravity, yang-mills, mass-gap or toe conclusions.\", \"external markov time remains stochastic bookkeeping and is not physical time.\"]",
+      "name": "physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "Can one source-authorized owner packet supply the PAH-specific fixed-n J estimate and anchored-n D estimate under the unchanged common space, so that this bridge can be instantiated rather than merely assumed?",
+      "expected": "Can one source-authorized owner packet supply the PAH-specific fixed-n J estimate and anchored-n D estimate under the unchanged common space, so that this bridge can be instantiated rather than merely assumed?",
+      "name": "owner packet is still an input",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "name": "fixture nonnegativity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/8",
+        "1/10"
+      ],
+      "expected": [
+        "1/8",
+        "1/10"
+      ],
+      "name": "fixture strict halves",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/40",
+      "expected": "9/40",
+      "name": "fixture summed bound",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "fixture ordered conclusion",
+      "status": "PASS"
+    },
+    {
+      "actual": "for n>=N, exists J(n), all j>=J(n)",
+      "expected": "nested quantifier",
+      "name": "error implication uses no diagonal",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 13,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "c0352084b6fd4c663ffe6fbe0881ddd29f86be2ac680997c4d4c8cd7c034e0a9",
+  "contract_sha256": "4848e28eed1c72b5db8cecd364678ccd3b7ca59ac59baa33604a272418e7233a",
+  "finding": "An independent exact-rational replay confirms the nested j-before-n epsilon implication without importing the primary verifier. The PAH-specific hypotheses remain uninstantiated.",
+  "fixture": {
+    "D": "1/10",
+    "J": "1/8",
+    "J_plus_D": "9/40",
+    "epsilon": "1/2"
+  },
+  "non_claims": [
+    "This bridge does not prove the PAH-specific J_(n,j) limit or D_n limit.",
+    "It does not construct U_n, a common Hilbert space, a path-space law, an N2c/N4 boundary estimate or R-512 identification.",
+    "It does not prove full PAH-OMC-020 semigroup convergence, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusions.",
+    "External Markov time remains stochastic bookkeeping and is not physical time."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_ordered_epsilon_bridge_independent.py --check",
+  "result_id": "R-555",
+  "schema": "tect/pah-omc020-ordered-epsilon-bridge-independent/1.0",
+  "status": "PASS_INDEPENDENT_CONDITIONAL_BRIDGE",
+  "task_id": "T-064",
+  "verdict": "PASS_CONDITIONAL"
+}

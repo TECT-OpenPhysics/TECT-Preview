@@ -1,0 +1,101 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-023-OWNER-ADMISSION-HOSTILE-001",
+  "checks": [
+    {
+      "actual": true,
+      "expected": true,
+      "name": "baseline valid",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "authorized mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "complete mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "authorization flag mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "manifest mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "candidate byte mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "manifest order mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "dynamic fsck mutation detected",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json": "54329df2a6d3ca766f6ca24fbcc628263e6c7e8c2c0e8c8eba545f3508d75df7"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json": "54329df2a6d3ca766f6ca24fbcc628263e6c7e8c2c0e8c8eba545f3508d75df7"
+      },
+      "name": "parent hashes frozen",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "R-554 remains hold",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-560",
+      "expected": "R-560",
+      "name": "contract reserved result",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 11,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "finding": "Hostile mutations of authorization, completion, provenance, manifest digest, candidate bytes and order are rejected. The current empty manifest cannot be promoted by status-only edits.",
+  "next_single_question": "Can one owner-authorized, hash-pinned packet satisfy every required field without changing immutable PAH-001?",
+  "non_claims": [
+    "No new function, rate, state, carrier, comparison map, counterterm or limit order is introduced.",
+    "No finite witness is repeated as a substitute for the packet.",
+    "No R-512 convergence, infinite-volume, continuum, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion is made."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc023_owner_admission_intake_hostile.py --check",
+  "result_id": "R-560",
+  "schema": "tect/pah-omc023-owner-admission-hostile/1.0",
+  "source_hashes": {
+    "codes\\foundations\\pah_omc023_owner_admission_intake_hostile.py": "13e41f2ccf82c3fbbe4eb1a5e21cbef6b813f834d9c324b1793a026a28745b3b",
+    "strategy\\pa-hyp\\PAH-OMC-020-owner-search-snapshot-v1.4.json": "47b0879ff4c55fe3d60a11cd744d6920a3e3eb18bf923cdd4782fa7e7674b4e9",
+    "strategy\\pa-hyp\\PAH-OMC-020-owner-search-v1.4-result-v1.json": "54329df2a6d3ca766f6ca24fbcc628263e6c7e8c2c0e8c8eba545f3508d75df7",
+    "strategy\\pa-hyp\\PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json": "a21e6235bc68f7760c83ffa98657a787258d906b39e482c79a1646b2b6da107a"
+  },
+  "status": "PASS_HOSTILE_ADMISSION_FIREWALL",
+  "task_id": "T-090",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

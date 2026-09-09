@@ -1,0 +1,65 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "task_id": "T-094",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-09",
+  "provenance": "contemporaneous",
+  "title": "PAH-OMC-020 fixed-n and two-term provenance re-entry correction",
+  "question": "Do the current R-514 fixed-n proof and R-546 two-term reduction still replay, and are the observed wrapper failures mathematical defects or only stale parent-byte pins?",
+  "method": [
+    "Run the current R-514 fixed-n temporal proof integrated verifier, retaining its exact j-first fixed-n scope and anchored-n-open firewall.",
+    "Run the R-514 conditional wrapper and inspect any source-pin mismatch against the current temporal-work byte.",
+    "Run a fresh R-546 two-term integrated replay and compare its stored source hashes with the current Lean registry and parent result bytes.",
+    "Keep PAH-001, the original rates/state/time, the post-j correlation c_n and the j-before-anchored-n order unchanged."
+  ],
+  "finding": "The R-514 fixed-n proof integrated verifier passes and retains the exact auxiliary conclusion: for every fixed n, the original stationary correlations converge uniformly in j to Q_n(t), with anchored-n and R-512 identification still open. The older conditional wrapper fails only because it pins PAH-OMC-020-temporal-work.md at 45fc8e90e5ee960414d6a3f868647c85fcd0fe1f0b17e7e1b677b5647e78d16b, while the current byte is 2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab. A fresh R-546 replay passes 32/32; its stored integrated artifact differs only in the Lean registry pin 68debd5579b3ce0980428f4aab6490a5b534f378b659741b01d0ef8c840113af versus current d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4. No PAH source or analytic conclusion changed.",
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "decision_reason": "This correction separates two historical provenance drifts from the mathematical route. The fixed-n theorem and the exact two-term reduction remain usable inputs; the missing anchored-n D_n route and owner packet remain the genuine frontier.",
+  "boundary": "PAH-001, PAH-OMC-018/020, the original functions, rates, labelled Gibbs state, external stochastic Markov time, finite carrier, post-j correlation c_n and j-before-anchored-n order remain fixed. No new comparison map, carrier, counterterm, state, rate, regulator or physical interpretation is introduced.",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json#exact_scope",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fixedn-temporal/integrated.json#checks",
+    "strategy/pa-hyp/PAH-OMC-020-two-term-route-result-v1.json#exact_scope",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-two-term-route/integrated.json#source_hashes",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json#missing_assumptions",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {
+    "results": ["R-514", "R-546", "R-536"],
+    "negatives": [],
+    "events": ["20260908-r-546-pah-omc-020-direct-two-term-route-2026-09"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "related": [
+    {"id": "EXP-001711", "relation": "continues"},
+    {"id": "EXP-001709", "relation": "continues"}
+  ],
+  "verification_summary": "R-514 fixed-n proof integrated PASS; R-546 fresh two-term integrated replay PASS 32/32. The two failing historical wrapper checks are isolated to temporal-work and Lean-registry hash drift, not to the fixed-n theorem or the two-term inequality.",
+  "reproduction": {
+    "r514_proof": "python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_proof_verify.py --check",
+    "r514_wrapper": "python -X utf8 verification/scripts/pah_omc020_fixedn_temporal_verify.py --check",
+    "r546": "python -X utf8 verification/scripts/pah_omc020_two_term_route_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-020-two-term-route-result-v1.json": "b53a93220c6877cdf19e7d60b7784e33c8503c4725fde01892ed0d2a4e0c8c51",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-work.md": "2eeaa12411cba9525bfb6672fdae73d47a113349236639e0c3aa2e9ed8fbd9ab",
+    "verification/scripts/pah_omc020_fixedn_temporal_verify.py": "942fd4abd3ca7d4f5dc7abd7b9cde8d6a84638102382d4013ed5d3d365f0ac5a",
+    "verification/scripts/pah_omc020_fixedn_temporal_proof_verify.py": "c29a73f82542653a1612cc5ef14247d2dfeb39d2b12bf63994db9600589edd4a",
+    "verification/scripts/pah_omc020_two_term_route_verify.py": "d9f8b2bcd9da90e3705427735961895f02ca64f138721da5a60cf1c4e0b7e3d7",
+    "verification/lean/registry.json": "d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fixedn-temporal/integrated.json": "06cc35588871e42bb54c65a7e201d363427e14d061bbc70e7eab66b2642d07b5",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-two-term-route/integrated.json": "94dcbc353b88fca78f1abdbdf7c0923eeb85a813c95a62b6141d35fc030bbd35"
+  },
+  "next_action": "Use R-514 and R-546 only as fixed-n and logical reduction inputs. Keep the full goal active and reopen the anchored-n proof only when a complete source-authorized R-536 form/path packet supplies D_n(T)->0 and the common-space/target fields.",
+  "revisit_condition": "Reopen on a complete owner packet, a genuine PAH parent-byte change or an exact contradiction in the fixed-n proof, c_n compatibility or two-term inequality; repair historical hash pins during integration without treating drift as science.",
+  "non_claims": [
+    "This correction does not prove anchored-n convergence, R-512 minimal-form identification or the full PAH-OMC-020 objective.",
+    "It does not establish a universal no-go for owner-fixed successors.",
+    "The wrapper failures are provenance/environment issues, not mathematical counterexamples.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion is made; external Markov time remains stochastic bookkeeping."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "title": "PAH-OMC-020 source-owned C2(A) second-rate-moment contract",
+  "question": "Do the unchanged PAH-001 midpoint rates and normalized Gibbs state imply a family-uniform local second-rate-moment bound C2(A) on the registered OMC-010 path?",
+  "finding": "Yes at the exact local-form level. Squaring the unchanged midpoint rate moves the Gibbs factor to the inverse-root image: pi(x)c_r(x)^2=Z^-1 m_r(x)^2 exp(-beta F(r x)). Since every declared PAH mobility obeys m_r<=1 and the inverse root is injective, each directed root contributes at most one. R-490's N_geom=60 per-vertex support-incidence bound then gives C2(A)<=60|A| for every finite cylinder support A, uniformly in n>=2 and R_max>=1 on the OMC-010 path.",
+  "decision_reason": "This closes the precise second-rate-moment input requested by R-521 without changing PAH-001 or inventing a carrier. It distinguishes the PAH-specific mobility cap from the abstract two-state sufficiency witness, whose effective mobility exceeds one. The induced Cauchy-Schwarz estimate controls Lf in local Gibbs L2 but does not construct the temporal process.",
+  "boundary": "PAH-001 functional, directed move families, rates, labelled Gibbs state, OMC-004 strip, OMC-010 regulator path, external Markov time and j-before-anchored-n order remain frozen. No counterterm, averaging, rate fitting, new state, carrier or physical interpretation is introduced.",
+  "method": [
+    "Hash-pin PAH-001, PAH-OMC-010, R-490 and the PAH-OMC-020 temporal preregistration.",
+    "Parse the source midpoint rate and Gibbs state, and verify the exact Gibbs-square transport identity.",
+    "Check the phase, transfer/link and aperture mobility squares on the registered nu=1 path; each is at most one.",
+    "Use inverse-root injectivity and the partition subset inequality to prove the per-root second moment is at most one.",
+    "Combine the source R-490 per-vertex incidence constant N_geom=60 with a finite support A to derive C2(A)<=60|A| and the local generator L2 Cauchy-Schwarz estimate.",
+    "Run non-importing independent, hostile and Lean finite-algebra checks; leave non-explosion and anchored-n convergence open."
+  ],
+  "next_action": "Use C2(A)<=60|A| as one domination input in a source-authorized path-space/non-explosion and N2c/N4 boundary argument, then prove N2b recovery and N2d identification with the R-512 minimal closed form.",
+  "revisit_condition": "Reopen if a parent source hash, mobility cap, inverse-root domain, R-490 incidence constant or OMC-010 regulator path changes, or if an exact PAH-specific counterexample to the Gibbs-square transport inequality is found. Do not repeat the abstract R-521 witness.",
+  "non_claims": [
+    "No PAH functional, rate, state, carrier, regulator, time or limit order is changed.",
+    "No source-grounded path-space construction, non-explosion theorem, N2b liminf/recovery, N2c/N4 boundary escape, R-512 minimal-form selection or anchored-n semigroup convergence is claimed.",
+    "No infinite-volume dynamics, physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion; external Markov time remains stochastic bookkeeping."
+  ],
+  "provenance": "contemporaneous",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "task_id": "T-073",
+  "formal_refs": {"events": [], "negatives": [], "results": ["R-489", "R-490", "R-521"]},
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-001-v1.json#dynamics",
+    "strategy/pa-hyp/R490-certificate.md#Exact proposition",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-c2-moment/integrated.json#finding",
+    "verification/lean/Tect/PahOmc020C2.lean#transported_mass_le_target"
+  ],
+  "related": [{"id": "EXP-001639", "relation": "continues"}],
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "verification_summary": "Primary 40/40, non-importing independent 31/31, hostile 17/17 and integrated 25/25 checks pass; Lean 4.32.1 compiles six finite declarations. The local C2 contract passes, while PAH-OMC-020 temporal closure remains HOLD_FOR_EVIDENCE."
+}

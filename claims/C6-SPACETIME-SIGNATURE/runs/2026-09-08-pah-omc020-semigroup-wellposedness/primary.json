@@ -1,0 +1,173 @@
+{
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "LF-only",
+      "name": "LF:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "expected": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "name": "source:strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "LF-only",
+      "name": "LF:strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "LF-only",
+      "name": "LF:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+      "expected": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+      "name": "source:strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "LF-only",
+      "name": "LF:strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-527",
+      "expected": "R-527",
+      "name": "R-527 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "None; this is one finite source-definition witness and does not take j, n, volume, continuum, beta or observation limits.",
+      "expected": "no limits",
+      "name": "R-527 witness is finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "f=1-Re(U_p) on the closed triangular face; gauge invariant by face incidence and anchor invariant under the declared identity automorphism group.",
+      "expected": "closed-face gauge invariant cylinder",
+      "name": "gauge-invariant witness",
+      "status": "PASS"
+    },
+    {
+      "actual": "t is external stochastic time; local clock accumulation is d tau_v=s_v^nu dt",
+      "expected": "external Markov time",
+      "name": "source keeps external time",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "First j, then anchored n",
+      "name": "j-before-n is frozen",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          4,
+          2,
+          3
+        ]
+      ],
+      "expected": "two fine faces",
+      "name": "existing OMC-004 witness",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "name": "witness exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "labelled completion multiplicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "name": "deduplicated completion multiplicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.2706705664732254,
+      "expected": "2*exp(-2)",
+      "name": "finite semigroup derivative A",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.1353352832366127,
+      "expected": "exp(-2)",
+      "name": "finite semigroup derivative B",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.1353352832366127,
+      "expected": "exp(-2)>0",
+      "name": "nonzero derivative gap",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.1353352832366127,
+      "expected": "nonzero",
+      "name": "identical semigroup derivative contradiction",
+      "status": "PASS"
+    }
+  ],
+  "classification": "auxiliary_support",
+  "non_claims": [
+    "This is not a universal no-go for every owner-fixed completion.",
+    "It does not prove or disprove anchored-n convergence to the R-512 minimal closure after a source owner fixes the missing convention.",
+    "It does not alter PAH-001 functions, rates, state, carrier, regulator, external Markov time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion follows."
+  ],
+  "scope": {
+    "answer": "No unique source-defined semigroup is selected until root multiplicity and root measure are owner-fixed.",
+    "comparison": "Two source-compatible finite completions have different derivatives at t=0 on the same invariant cylinder.",
+    "limits": "No j, n, volume, continuum, beta or observation limit is taken.",
+    "question": "Does the current PAH source determine one finite stationary semigroup before the R-512 comparison?"
+  },
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "witness": {
+    "beta": "1",
+    "deduplicated_multiplicity": 1,
+    "delta_F": "4",
+    "derivative_A": "2*exp(-2)",
+    "derivative_B": "exp(-2)",
+    "derivative_gap": "exp(-2)>0",
+    "labelled_multiplicity": 2,
+    "numeric_gap": 0.1353352832366127,
+    "observable": "f=1-Re(U_p) on closed face [0,1,4]"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "actual": true,
+      "expected": "frozen R-552 bytes",
+      "name": "R-552 byte pin",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "source-definition boundary only",
+      "name": "positive gap is not a universal no-go",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "existential interval only",
+      "name": "no explicit delta is invented",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "external time frozen",
+      "name": "no time rescaling",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "owner choice can eliminate this witness",
+      "name": "same multiplicity removes witness",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "punctured right interval",
+      "name": "zero time is excluded",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "anchored-n remains open",
+      "name": "no anchored limit",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "physical_promotion=false",
+      "name": "no physical promotion",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 8,
+  "classification": "auxiliary_support",
+  "mutations_rejected": [
+    "universal owner-fixed no-go",
+    "invented explicit delta",
+    "Markov-time rescaling",
+    "anchored-n or physical promotion"
+  ],
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc020-positive-time-separation-hostile/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee"
+  },
+  "status": "PASS",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001702",
+  "recorded_at": "2026-09-08T14:52:24Z",
+  "reviewed_on": "2026-09-08",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-087",
+  "title": "PAH-OMC-020 comparison-map status audit",
+  "question": "Does the current PAH-OMC-020 contract already define the comparison map required for the anchored-n R-512 semigroup identification?",
+  "method": [
+    "Inspect the exact S_nj and n-comparison clauses in the temporal preregistration.",
+    "Inspect the form/path route fields and admission predicate in the R-536 target-identification contract and the current-byte N2b audit.",
+    "Inspect the OMC-001 natural free-vertex restriction obstruction and preserve its route-local scope; do not introduce another block map or finite carrier."
+  ],
+  "verdict": "advanced",
+  "finding": "S_nj is explicitly a direct same-observable sampling map for the fixed-n j-limit and is not a map into a completed common Hilbert space. The anchored-n contract contains no admitted U_n and no admitted common path space: both complete routes remain false. The OMC-001 free-vertex restriction/pullback has an exact generator-intertwining failure, but its own scope says this is route-local and not a no-go for every possible comparison map.",
+  "decision_reason": "The comparison-map requirement is now typed precisely. The full objective cannot be evaluated at anchored n until one source-authorized common-Hilbert or path-space map is supplied; fixed-n sampling and local generator stabilization cannot substitute for it.",
+  "boundary": "This is a structural contract audit only. PAH-001, the OMC-018 composite functional/rates/state, finite carrier, external stochastic time and j-before-anchored-n order are unchanged. No temporal numerical table, new rate, state, carrier, comparison map or physical interpretation is introduced.",
+  "evidence_refs": [
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-comparison-map-audit/map.json#checks",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json#objects_and_comparison",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-contract-v1.json#routes",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-contract.json#current_status",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json#tested_nontrivial_candidate"
+  ],
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-536",
+      "R-539",
+      "R-550",
+      "R-561",
+      "R-563"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "related": [
+    {
+      "id": "EXP-001700",
+      "relation": "continues"
+    }
+  ],
+  "verification_summary": "Primary structural audit PASS: ten comparison-map and route-status assertions hold; anchored-n map remains unadmitted.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_comparison_map_audit.py --check"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-contract-v1.json": "a606dfc3fcdbab0cfae5dd64b98e7ec1f2ee369ea7f76bc24405e8aadbb5a078",
+    "strategy/pa-hyp/PAH-OMC-020-N2B-common-space-audit-v1.1-contract.json": "f17fe9fa277a5b4c5fba06c23672cc806b7710e9ff9cb728ea7d5b542ed9d5c3",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "verification/scripts/pah_omc020_comparison_map_audit.py": "cc1a46029f80fd888973c0e1cfa61382ef55556920399ecd109e0d0a272f5ae6",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-comparison-map-audit/map.json": "b276efe678059c14fd4dd79814bbd6557d159eaf784137061a50ac5897f69a17"
+  },
+  "next_action": "Obtain or admit one versioned source-authorized U_n/common-Hilbert map or one source-authorized common path space, then test the unchanged N2b/N2c/N4/N2d and compact-time correlation-transfer fields.",
+  "revisit_condition": "Reopen when such a map is supplied, a parent hash changes, or an exact unchanged PAH target-correlation contradiction is identified. Do not repeat the fixed-n S_nj audit.",
+  "non_claims": [
+    "No full PAH-OMC-020 ordered semigroup convergence or R-512 minimal-form identification is proved or refuted.",
+    "The natural restriction failure is not a global no-go for all comparison maps.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang--Mills, mass-gap or TOE conclusion; external Markov time remains stochastic bookkeeping."
+  ]
+}

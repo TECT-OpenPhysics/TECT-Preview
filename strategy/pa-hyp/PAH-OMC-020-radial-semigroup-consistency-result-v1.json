@@ -1,0 +1,103 @@
+{
+  "schema": "tect/pah-omc020-radial-semigroup-consistency-result/1.0",
+  "result_id": "R-548",
+  "contract_id": "PAH-OMC-020-RADIAL-SEMIGROUP-CONSISTENCY",
+  "date": "2026-09-08",
+  "task_id": "T-065",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS_RESTRICTED",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["ANALYTIC_CONDITIONAL", "EXECUTED", "INDEPENDENT", "HOSTILE", "LEAN_FINITE_SCOPE"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-radial-semigroup-consistency-contract-v1.json",
+  "certificate": "strategy/pa-hyp/PAH-OMC-020-radial-semigroup-consistency-certificate.md",
+  "exploration_id": "EXP-001671",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801"
+  },
+  "exact_scope": {
+    "model": "Exactly unchanged PAH-001 and its original directed PH/LK/AP/TR rates, labelled Gibbs state and OMC-004 strip.",
+    "observable": "Bounded gauge- and anchor-invariant finite-prefix cylinders depending only on matter-amplitude coordinates, with finite l1 Lipschitz constant.",
+    "finite_bound": "For n>=N(f), ||L_TR,nj S_nj f||_2 <= 2 H_f L_f h_j and sup_(0<=t<=T)||P_nj(t)S_nj f-S_nj f||_2 <= 2 T H_f L_f h_j.",
+    "target": "R-512 minimal closed-form spectral semigroup; amplitude-only H_rad has zero energy and hence identity spectral action.",
+    "time": "External stochastic Markov time on compact intervals [0,T] only.",
+    "order": "j tends to infinity at fixed n first, followed by the original anchored n exhaustion.",
+    "normalization": "Original labelled stationary normalization; no quotient, conditional averaging, direct sum or reweighting."
+  },
+  "finding": "The restricted amplitude-only correlation sector converges uniformly on every finite time interval: the original finite radial generator residual is O(h_j), stationary L2 contraction integrates it to O(T h_j), and the R-512 minimal target acts identically on H_rad. The bound is support-dependent and uniform over stabilized n.",
+  "conclusion": {
+    "route_decision": "PASS_RESTRICTED / auxiliary_support; no active gate or claim tier change",
+    "radial_sector": "Closed at the registered finite compact-time correlation scope.",
+    "full_objective": "Open: non-radial common-space/path-space comparison and anchored-n convergence are not supplied."
+  },
+  "assumptions": [
+    "R-511 exact finite radial L2 residual estimate and inverse-pair stationary bound.",
+    "Complete finite PAH stationary reversible semigroup is L2-contracting.",
+    "R-512 minimal closed form and its zero-energy radial subspace are inherited at their registered scope.",
+    "Amplitude-only cylinders stabilize for n>=N(f) in the original labelled state and order."
+  ],
+  "missing_assumptions": [
+    "Source-authorized comparison map for non-radial cylinders across anchored n spaces.",
+    "N2b arbitrary-sequence liminf/recovery, N2c/N4 boundary escape, N2d target identification beyond the selected R-512 form and non-radial compact-time correlation transfer.",
+    "Full PAH-OMC-020 stationary semigroup convergence."
+  ],
+  "adversarial_review": [
+    {"objection": "The radial estimate uses a global rate bound.", "disposition": "REJECTED: it uses R-511 inverse-pair weighted L2 control and a support-dependent root count, not a pointwise global exit-rate envelope."},
+    {"objection": "Non-radial moves contribute to an amplitude-only cylinder.", "disposition": "REJECTED: PH/LK/AP preserve matter amplitudes and their observable increments are exactly zero."},
+    {"objection": "The integrated estimate already proves non-radial anchored-n convergence.", "disposition": "UPHELD AGAINST PROMOTION: no common U_n/path map, N2b/N2c/N4 or non-radial transfer is constructed."},
+    {"objection": "Zero energy in R-512 is a physical vacuum or spacetime statement.", "disposition": "REJECTED: it is a spectral property of the registered minimal form only."},
+    {"objection": "Lean compilation formalizes the measure and semigroup theorem.", "disposition": "UPHELD AGAINST PROMOTION: Lean covers finite rational inequalities only; analytic model inputs remain explicit."}
+  ],
+  "formal_refs": {
+    "results": ["R-511", "R-512", "R-514", "R-548"],
+    "negatives": [],
+    "events": ["20260908-r-548-pah-omc-020-restricted-radial-semigroup-c"]
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-radial-semigroup-consistency/primary.json": "4cc2cc43f58099e948628fdebb839498d1858674aa041fd307b0b9fb17fc0940",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-radial-semigroup-consistency/independent.json": "a91d2e050c94c8baeb5b54edf28d3dc9e1e4ff627b828f738cac14f24136199e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-radial-semigroup-consistency/hostile.json": "1a4ca6200609b80bfeb7817ec10b686712b53d82dbeeef31059c8f6016cc87ba",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-radial-semigroup-consistency/integrated.json": "90ce31f9d8cec1fbdee89be5c9d0498d73f6203e95a3ab5a6517527e58bd3d51"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_radial_semigroup_consistency.py": "3bb034418dc4ae0e7da6393227f6997d0bf6fc8684f693da2bd4521d82589d19",
+    "codes/foundations/pah_omc020_radial_semigroup_consistency_independent.py": "f0f2c24ea8d824fd39da7f81ae6ff34a8363c263268d3df5520448a9e2e96afa",
+    "codes/foundations/pah_omc020_radial_semigroup_consistency_hostile.py": "8b7494921c7b859a2911eecd2bed355347ac16cdcf5f884716c392a57c5b8171",
+    "verification/scripts/pah_omc020_radial_semigroup_consistency_verify.py": "cc5d45ebb166317058376423d7a5d51521022e3cf760373c48e411e62a3a7550",
+    "verification/lean/Tect/PahOmc020RadialSemigroup.lean": "ada1d9fe2548677c39d3115e256b6f0293812640c58ba8e184d9aeccf8195234",
+    "verification/lean/registry.json": "d1f60bef236663b8ac512f736e6b0c77d5c32a21e24849ee28c4b2e3930ea72c"
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_radial_semigroup_consistency.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_radial_semigroup_consistency_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_radial_semigroup_consistency_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_radial_semigroup_consistency_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020RadialSemigroup.lean",
+    "result": "Primary 21/21, independent 14/14, hostile 11/11, integrated 29/29; seven finite Lean declarations compile."
+  },
+  "closed_scoped_gate": "Amplitude-only local-cylinder compact-time semigroup consistency with the R-512 minimal target identity, in the original j-before-anchored-n order.",
+  "remaining_gates": [
+    "Source-authorized common U_n or common path-space comparison for non-radial cylinders",
+    "N2b arbitrary-sequence liminf and recovery",
+    "N2c/N4 boundary escape and N2d target identification",
+    "Non-radial compact-time correlation transfer and full PAH-OMC-020 convergence"
+  ],
+  "next_single_question": "Can one source-authorized common-space or path-space packet transfer the non-radial PH/LK/AP correlations to the same R-512 minimal semigroup while preserving the radial identity just proved?",
+  "revisit_condition": "Reopen when such a packet is versioned and hash-pinned or an exact PAH-specific defect appears in the radial residual, stationary contraction or R-512 zero-energy identity; do not repeat physical-empty, BCC or Reading-H calculations.",
+  "non_claims": [
+    "This is a restricted amplitude-only auxiliary result, not the full PAH-OMC-020 convergence theorem.",
+    "No non-radial PH/LK/AP anchored-n convergence, source-authorized common U_n, path law, N2b/N2c/N4/N2d closure or full semigroup identification.",
+    "No change to PAH-001 function, rates, state, mobility, carrier, regulator, normalization, external time or limit order.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-radial-semigroup-consistency-certificate.md"
+}

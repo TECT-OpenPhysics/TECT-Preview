@@ -1,0 +1,229 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-026-CUT-SET-PACKET-CROSSWALK-PRIMARY-001",
+  "checks": [
+    {
+      "actual": "PAH-OMC-026-CUT-SET-PACKET-CROSSWALK",
+      "expected": "PAH-OMC-026-CUT-SET-PACKET-CROSSWALK",
+      "name": "contract identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-566",
+      "expected": "R-566",
+      "name": "result identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 10,
+      "expected": 10,
+      "name": "field ids unique",
+      "status": "PASS"
+    },
+    {
+      "actual": 10,
+      "expected": 10,
+      "name": "ten declared packet fields",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "cut partition disjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "authority",
+        "root_semantics"
+      ],
+      "expected": [
+        "authority",
+        "root_semantics"
+      ],
+      "name": "S0 mapping",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "common_realization",
+        "n1_recovery",
+        "n2b_form",
+        "n2c_n4_boundary",
+        "n2d_target"
+      ],
+      "expected": [
+        "common_realization",
+        "n1_recovery",
+        "n2b_form",
+        "n2c_n4_boundary",
+        "n2d_target"
+      ],
+      "name": "S1 mapping",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "anchored_D",
+        "full_domain_J"
+      ],
+      "expected": [
+        "anchored_D",
+        "full_domain_J"
+      ],
+      "name": "S2 mapping",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "verification"
+      ],
+      "expected": [
+        "verification"
+      ],
+      "name": "verification cross-cut",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "anchored_D",
+        "authority",
+        "common_realization",
+        "full_domain_J",
+        "n1_recovery",
+        "n2b_form",
+        "n2c_n4_boundary",
+        "n2d_target",
+        "root_semantics",
+        "verification"
+      ],
+      "expected": [
+        "anchored_D",
+        "authority",
+        "common_realization",
+        "full_domain_J",
+        "n1_recovery",
+        "n2b_form",
+        "n2c_n4_boundary",
+        "n2d_target",
+        "root_semantics",
+        "verification"
+      ],
+      "name": "mapping covers fields",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "complete packet implies S0",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "complete packet implies S1",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "complete packet implies S2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "name": "all fields satisfy cut refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false
+      ],
+      "name": "coarse cut is not a packet shortcut",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "error budget present",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "nested order present",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "source packet absent",
+      "status": "PASS"
+    },
+    {
+      "actual": "No function, rate, state, carrier, regulator, counterterm, direct sum, physical-time interpretation or limit-order change.",
+      "expected": "No function, rate, state, carrier, regulator, counterterm, direct sum, physical-time interpretation or limit-order change.",
+      "name": "forbidden model changes",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "parent pin format",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 21,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "cut_set": {
+    "S0": [
+      "authority",
+      "root_semantics"
+    ],
+    "S1": [
+      "common_realization",
+      "n1_recovery",
+      "n2b_form",
+      "n2c_n4_boundary",
+      "n2d_target"
+    ],
+    "S2": [
+      "anchored_D",
+      "full_domain_J"
+    ],
+    "cross_cut": [
+      "verification"
+    ]
+  },
+  "finding": "The ten R-557 packet fields refine and cover every R-565 cut; the coarse cut-set alone does not encode authority or verification and is not a convergence proof.",
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 verification/scripts/pah_omc026_cut_set_packet_crosswalk.py --check",
+  "result_id": "R-566",
+  "schema": "tect/pah-omc026-cut-set-packet-crosswalk-primary/1.0",
+  "source_hashes": {
+    "contract": "cf6f9eee617765b8e0b7ca231741a8c029937b0f19f4e35a3a098806b44a4339",
+    "script": "5abfe9b19048038fd3eb1977178c19277b893fda106de5c4f853663d856a4c05"
+  },
+  "status": "PASS_AUXILIARY_HOLD",
+  "task_id": "T-093",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

@@ -1,0 +1,212 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-STATIONARY-MODULUS-CORRECTION-PRIMARY-001",
+  "checks": [
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+        "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-result-v1.json": "90cf191edc5df6c05a7e7facaaa179e075c87129891d22456dfd36186994d27c",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+        "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+        "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-result-v1.json": "90cf191edc5df6c05a7e7facaaa179e075c87129891d22456dfd36186994d27c",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+        "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+      },
+      "name": "parent source hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH-001",
+      "expected": "PAH-001",
+      "name": "PAH packet retained",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-490 is pi-weighted",
+      "status": "PASS"
+    },
+    {
+      "actual": 540,
+      "expected": 540,
+      "name": "R-490 constant",
+      "status": "PASS"
+    },
+    {
+      "actual": 60,
+      "expected": 60,
+      "name": "R-522 constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "R-541 remains conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "R-541 not claim bearing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "registered order retained",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "external Markov time retained",
+      "status": "PASS"
+    },
+    {
+      "actual": 120,
+      "expected": 120,
+      "name": "increment list has one entry per root",
+      "status": "PASS"
+    },
+    {
+      "actual": "135/2",
+      "expected": "135/2",
+      "name": "K_Gamma exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "900",
+      "expected": "900",
+      "name": "K_L exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "171/1250",
+      "expected": "171/1250",
+      "name": "deterministic envelope exact",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "deterministic envelope is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "rare-state weighted average decreases M=8",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "rare-state weighted average decreases M=16",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "rare-state weighted average decreases M=32",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "rare-state weighted averages decrease",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "rare-state deterministic scales decrease",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5,
+      "expected": 0.5,
+      "name": "rare-state conditional jump floor",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "stopping-time upgrade is not source-implied",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 21,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "deterministic_fixture": {
+    "K_Gamma": "135/2",
+    "K_L": "900",
+    "delta": "1/1000",
+    "envelope": "171/1250",
+    "increment_count": 120,
+    "max_increment": "1/4",
+    "sum_increment_squares": "15/2",
+    "support_size": 2
+  },
+  "finding": "The pinned pi-weighted C_sw and C2 inputs give an exact deterministic-time stationary L2 modulus. They do not by themselves give the conditional predictable-compensator or pointwise rate bound required for a bounded-stopping-time Aldous estimate; the rare-state reversible chain demonstrates this logical gap without modifying or refuting PAH-001.",
+  "missing_assumptions": [
+    "A source-authorized pointwise local rate bound or uniform conditional predictable-compensator estimate for every bounded stopping time.",
+    "A source-authorized path-space construction with non-explosion and a martingale-problem identification.",
+    "Uniqueness and equality with the R-512 minimal-form semigroup in the frozen j-before-anchored-n order."
+  ],
+  "non_claims": [
+    "No exact PAH counterexample is claimed; the rare-state chain is only a logical implication diagnostic.",
+    "No new PAH functional, rate, state, carrier, regulator, normalization, time convention or limit order.",
+    "No Aldous path tightness, infinite-volume process, semigroup convergence, physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "proof_boundary": "The correction narrows the temporal promotion boundary. It preserves the deterministic stationary estimate but leaves path-space construction, Aldous tightness, non-explosion, martingale-problem identification, uniqueness and R-512 semigroup convergence open.",
+  "rare_state_diagnostic": {
+    "M_values": [
+      8,
+      16,
+      32
+    ],
+    "conditional_jump_probability": "1/2",
+    "deterministic_scale_values": [
+      "2/513",
+      "2/4097",
+      "2/32769"
+    ],
+    "interpretation": "abstract implication diagnostic only; not an exact PAH counterexample",
+    "rates": "0->1: epsilon=1/M^2; 1->0: M",
+    "stationary_weighted_gamma": "2*M*epsilon/(M+epsilon)",
+    "stopping_increment": "delta=log(2)/M after hitting state 1",
+    "weighted_gamma_values": [
+      "16/513",
+      "32/4097",
+      "64/32769"
+    ]
+  },
+  "reproduction": "python -X utf8 verification/scripts/pah_omc020_stationary_modulus_correction.py --check",
+  "result_id": "R-542",
+  "schema": "tect/pah-omc020-stationary-modulus-correction-primary/1.0",
+  "source_constants": {
+    "C2_per_site": 60,
+    "C_sw": 540
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy/pa-hyp/PAH-OMC-020-c2-moment-result-v1.json": "87dd9a7225203cdfa84456e446983c573cabc6c50a902a85ea12e28ccbc5b379",
+    "strategy/pa-hyp/PAH-OMC-020-local-path-tightness-result-v1.json": "90cf191edc5df6c05a7e7facaaa179e075c87129891d22456dfd36186994d27c",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a"
+  },
+  "status": "PASS_STATIONARY_MODULUS_CORRECTION_HOLD",
+  "task_id": "T-064",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

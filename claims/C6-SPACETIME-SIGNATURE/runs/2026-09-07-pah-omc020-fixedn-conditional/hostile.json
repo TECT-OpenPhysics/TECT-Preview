@@ -1,0 +1,57 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "5fcb5d81788e0d6a84ba3a271b97b60327d8d5dbc033564c714ab7c22616151d",
+      "expected": "different from source",
+      "name": "tail shortcut is detected",
+      "status": "PASS"
+    },
+    {
+      "actual": "a891e3a28e9cd38a65c64bb42fe1165681738fd1093e3c9ae726182cb6af795e",
+      "expected": "different from source",
+      "name": "reversed order mutation is detected",
+      "status": "PASS"
+    },
+    {
+      "actual": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "expected": "midpoint exponent present",
+      "name": "full exponent mutation is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "j then anchored n",
+      "name": "source order remains j-before-n",
+      "status": "PASS"
+    },
+    {
+      "actual": "conditional/not yet",
+      "expected": "present",
+      "name": "conditional implication is not read as completion",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "No change to T-054 active gate, C6 T1 or PAH-OMC-014 merely from this auxiliary temporal result.",
+        "No full kernel classification, unique physical vacuum, Reading-H comparison, spectral gap, mixing or ergodicity claim.",
+        "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap or TOE conclusion."
+      ],
+      "expected": "physical non-claims",
+      "name": "physical promotion is fenced",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "code_sha256": "b416dcb9d77688c46b3f40d11806d96f7f078defe7cf39c451edd5951975d678",
+  "non_claims": [
+    "No negative result for PAH-OMC-020; the controls only reject invalid proof shortcuts.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass gap, Yang--Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "schema": "tect/pah-omc020-fixedn-conditional-hostile/1.0",
+  "scope": "Shortcut and overclaim rejection for the conditional fixed-n implication only.",
+  "status": "PASS_HOSTILE_CONDITIONAL_AUDIT",
+  "temporal_verdict": "IN_PROGRESS",
+  "verdict": "AUXILIARY_SUPPORT"
+}

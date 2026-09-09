@@ -1,0 +1,210 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 22,
+  "audit_id": "PAH-OMC-020-OWNER-PACKET-SUFFICIENCY-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-557",
+      "expected": "R-557",
+      "name": "contract result",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "primary hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "primary physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "primary checks pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "independent hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "independent physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent checks pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "hostile hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "hostile physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile checks pass",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile non-importing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean registry entry",
+      "status": "PASS"
+    },
+    {
+      "actual": "c15e876122b7e48ea3212158571f62c6c95f05e022d35717379b6038fc5443a7",
+      "expected": "c15e876122b7e48ea3212158571f62c6c95f05e022d35717379b6038fc5443a7",
+      "name": "Lean source hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "complete_packet_has_full_domain_terms",
+        "missing_root_field_rejects",
+        "ordered_error_from_complete_packet",
+        "radial_partial_packet_rejects"
+      ],
+      "expected": [
+        "complete_packet_has_full_domain_terms",
+        "missing_root_field_rejects",
+        "ordered_error_from_complete_packet",
+        "radial_partial_packet_rejects"
+      ],
+      "name": "Lean declaration set",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "failed": 0,
+  "finding": "All four verification lanes agree that a complete ten-field owner packet is logically sufficient for the registered ordered-correlation conclusion, but the current corpus has no source-authorized packet and therefore remains HOLD_FOR_EVIDENCE.",
+  "lean": {
+    "command": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe env lean C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\lean\\Tect\\PahOmc020OwnerPacketSufficiency.lean",
+    "cwd": "E:\\Dev\\TECT\\verification\\lean",
+    "returncode": 0,
+    "status": "PASS",
+    "stderr": "",
+    "stdout": "C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\lean\\Tect\\PahOmc020OwnerPacketSufficiency.lean:34:5: warning: Variable name `hpacket` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`"
+  },
+  "next_single_question": "Can a versioned source-authorized packet satisfy all ten fields simultaneously while preserving the exact PAH-001 source bytes and j-before-n order?",
+  "non_claims": [
+    "This contract does not supply the owner packet or prove any PAH-specific J/D estimate.",
+    "It does not prove full semigroup convergence, an infinite-volume process or a continuum limit until the packet is admitted.",
+    "It makes no physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE claim.",
+    "External Markov time remains stochastic bookkeeping and is not quantum, proper or Lorentzian time."
+  ],
+  "passed": 22,
+  "physical_promotion": false,
+  "replay": {
+    "hostile": {
+      "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -X utf8 C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\codes\\foundations\\pah_omc020_owner_packet_sufficiency_hostile.py --check",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-020 OWNER PACKET SUFFICIENCY HOSTILE: PASS 10/10; verdict remains HOLD_FOR_EVIDENCE"
+    },
+    "independent": {
+      "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -X utf8 C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\codes\\foundations\\pah_omc020_owner_packet_sufficiency_independent.py --check",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-020 OWNER PACKET SUFFICIENCY INDEPENDENT: PASS 17/17; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "primary": {
+      "command": "C:\\Users\\NaEun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -X utf8 C:\\Users\\NaEun\\.codex\\worktrees\\b73d\\TECT\\verification\\scripts\\pah_omc020_owner_packet_sufficiency.py --check",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PAH-OMC-020 OWNER PACKET SUFFICIENCY PRIMARY: PASS 19/19; verdict=HOLD_FOR_EVIDENCE"
+    }
+  },
+  "reproduction": "python -X utf8 verification/scripts/pah_omc020_owner_packet_sufficiency_verify.py --check",
+  "result_id": "R-557",
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/hostile.json": "be7c29bdc456c975386517bfb57b70ebf9d38e75c699cdb3e41762b13d9ff539",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/independent.json": "c74ef7ba4c2ecf977203b39508ae7319d3141451374b8dd24757c1c45d66fc4a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/primary.json": "fed09f724251ec32a887216f1b59237d24decdd68effc8302d06ace06ab39ddc"
+  },
+  "schema": "tect/pah-omc020-owner-packet-sufficiency-integrated/1.0",
+  "source_hashes": {
+    "codes\\foundations\\pah_omc020_owner_packet_sufficiency_hostile.py": "fc11627d422dae571971e4a6de94bee7be1d500669d4862b03397cfa34fe1473",
+    "codes\\foundations\\pah_omc020_owner_packet_sufficiency_independent.py": "c70086faa68710ddb29ada137e9e425ec220e522a01e3fda74f33cccdbfe2e3c",
+    "strategy\\pa-hyp\\PAH-OMC-020-owner-packet-sufficiency-contract-v1.json": "49ed29ea3590b6e7849bc6fc992cd7a769da3c98ce89a04c50d41575fb9ca3db",
+    "verification\\lean\\Tect\\PahOmc020OwnerPacketSufficiency.lean": "c15e876122b7e48ea3212158571f62c6c95f05e022d35717379b6038fc5443a7",
+    "verification\\scripts\\pah_omc020_owner_packet_sufficiency.py": "d85bd83bfd3f471dbf78c8a37c7f6a33403e6406b5cf94b335609c53601861cd",
+    "verification\\scripts\\pah_omc020_owner_packet_sufficiency_verify.py": "2a8bd798d4e2ac935fadabbe6183d03f66b67fd5d62ececb3b2b9bb6ffce639d"
+  },
+  "status": "PASS_CONDITIONAL_PACKET_SUFFICIENCY_HOLD_FOR_EVIDENCE",
+  "task_id": "T-087",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

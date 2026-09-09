@@ -1,0 +1,130 @@
+{
+  "schema": "tect/pah-omc020-generator-factorization-result/1.0",
+  "result_id": "R-549",
+  "contract_id": "PAH-OMC-020-GENERATOR-FACTORIZATION",
+  "date": "2026-09-08",
+  "task_id": "T-081",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "CONDITIONAL_GENERATOR_FACTORISATION",
+    "EXACT_RATIONAL_MATRIX_FIXTURE",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-generator-factorization-contract-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2",
+    "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e",
+    "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json": "0e0268925eee2dd4b74ed5b279f4a56fb66637f86cb9faa608df1edbb99c7299",
+    "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json": "37ffd8a1f82ac83b9dabb955f62a8e5b9bdb68ba5588ac9f30fdf154127883d1",
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-result-v1.json": "4062188d9419a42d74b0350d35a62950c987e5d7b5f38d329bb7f09d09844d01",
+    "strategy/pa-hyp/PAH-OMC-020-core-duhamel-contract-v1.json": "1a56da4afc45c15357f9e2aee9e35216ca515aa618a6af6077f53444a3d73dcf"
+  },
+  "mathematical_statement": {
+    "source_generator": "K_n=B_n^*W_nB_n",
+    "target_generator": "K_infty=B_infty^*W_inftyB_infty",
+    "gradient_defect": "G_n=B_infty U_n-C_nB_n",
+    "divergence_defect": "D_n=B_infty^*W_inftyC_n-U_nB_n^*W_n",
+    "identity": "K_inftyU_n-U_nK_n=D_nB_n+B_infty^*W_inftyG_n",
+    "temporal_use": "The two defect norms, if source-authorized and integrable along the unchanged finite stationary evolution, form the R-537 residual envelope."
+  },
+  "exact_scope": {
+    "model": "Exactly unchanged PAH-001 functional, original PH/LK/AP/TR rates, labelled Gibbs laws, OMC-004 strip and external stochastic Markov time.",
+    "comparison": "R-525 maximal-prefix conditional expectation is a researcher-owned candidate only; C_n is an unprovided source-owner root transfer.",
+    "normalization": "Original labelled stationary normalization; C_sw is domination-only.",
+    "order": "j-to-infinity at fixed n first, then anchored n; no diagonal or reversed limit.",
+    "fixture": "The rational matrix fixture has no PAH carrier or physical interpretation."
+  },
+  "conclusion": {
+    "finding": "The exact finite weighted-incidence factorization separates the generator residual into a divergence defect and a weighted gradient defect. The primary, independent and hostile replays show both terms are necessary: static root-energy compatibility alone does not provide the needed generator-domain bound.",
+    "status": "The factorization is a reusable conditional admission contract, not a source-authorized owner packet. PAH-OMC-020 remains HOLD_FOR_EVIDENCE.",
+    "next_single_question": "Can the source owner hash-pin C_n and both gradient/divergence defect estimates for the exact R-525 U_n on the unchanged PAH-001 core, including terminal-square and unbounded-rate domains?"
+  },
+  "assumptions": [
+    "The unchanged PAH finite generators admit the declared weighted-incidence factorization on a common finite core.",
+    "A future source owner can define C_n on the corresponding root spaces without changing PAH-001.",
+    "The R-537 variation-of-constants contract is used only after its common-space, correlation and initial-recovery fields are supplied."
+  ],
+  "missing_assumptions": [
+    "Source authorization of the exact R-525 U_n.",
+    "Hash-pinned B_n/B_infty, W_n/W_infty and root transfer C_n with multiplicity and terminal-square conventions.",
+    "Uniform anchored-n estimates for both G_n and D_n on the unbounded-rate domain.",
+    "R-537 common core, correlation identity, initial recovery and integrable temporal residual."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "R-529's weighted energy inequality already implies the generator residual.",
+      "disposition": "UPHELD AGAINST PROMOTION: the factorization exhibits two operator defects, neither supplied by a scalar form inequality."
+    },
+    {
+      "objection": "The matrix fixture is an exact PAH counterexample.",
+      "disposition": "REJECTED: it is a rational algebra oracle with no PAH carrier, rate or owner data."
+    },
+    {
+      "objection": "Choosing C_n in the contract creates the missing comparison map.",
+      "disposition": "REJECTED: C_n is explicitly an unprovided source-owner field; the contract does not define a production map."
+    },
+    {
+      "objection": "A finite factorization closes N2b/N2c/N4/N2d or semigroup convergence.",
+      "disposition": "UPHELD AGAINST PROMOTION: common-core, arbitrary-sequence, boundary, minimal-form and time-uniform inputs remain open."
+    },
+    {
+      "objection": "External Markov time is physical time.",
+      "disposition": "REJECTED: the time firewall is unchanged and explicit."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-525", "R-529", "R-537"],
+    "negatives": [],
+    "events": ["20260908-r-549-pah-omc-020-generator-factorization-bridg"]
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-generator-factorization/primary.json": "e70accb1ff690c2548a0e6cea2194023db906d7b1ae1b1f013453d47bdf7a142",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-generator-factorization/independent.json": "a6524a6d6e28dc6829984b2f9a2ce7f895e11e384eddad848cd774293bc76447",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-generator-factorization/hostile.json": "9f6eccac888d4ba82a422fb88b73f434c9b2d7e3fafad1ef781c1076f0e59142",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-generator-factorization/integrated.json": "26bc1d28e2d35ee8e1d0a39463580c1a5cdc4492084a4012236fbba77105bfef"
+  },
+  "tooling_files": {
+    "strategy/pa-hyp/PAH-OMC-020-generator-factorization-contract-v1.json": "747f681bb175d76f9ef380f72110d8505f6478ea470743770c59718aad1d3fc7",
+    "strategy/pa-hyp/PAH-OMC-020-generator-factorization-certificate.md": "229ec2e9116b2e879542bcf6ef910a71063a00567df88765d6f95a4b9b538ad8",
+    "verification/scripts/pah_omc020_generator_factorization.py": "14faa7caababeadba43b0deb414e6d05ff1f1eb4616d8488d7ef2c06f4820b22",
+    "codes/foundations/pah_omc020_generator_factorization_independent.py": "2b318273a1a7dbe2f8ed3a6ef8085561bf6492d70b9f6239b4407c814f4d4035",
+    "codes/foundations/pah_omc020_generator_factorization_hostile.py": "3ed3b98271c78e31131f348efc9d0c594dcfef6b906c31dad60ca565d4d6fa76",
+    "verification/scripts/pah_omc020_generator_factorization_verify.py": "ba5cef80782113d3bcdf2960480378599ceef71d63873b1ed33bf7080b008c08",
+    "verification/lean/Tect/PahOmc020Generator.lean": "90fad059c90201f1366fcb5e3d716d6fbf73127bd2ca887b545712b81f5e7b1c",
+    "verification/lean/registry.json": "9649a21696ee093e57b69dbfff270d3298c93a5c4fb6c1c7d778353f241c588d"
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_generator_factorization.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_generator_factorization_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_generator_factorization_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_generator_factorization_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "result": "Primary 21/21, independent 12/12, hostile 13/13, integrated 29/29; Lean 4.32.1 compiles seven finite declarations."
+  },
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-generator-factorization-certificate.md",
+  "closed_scoped_gate": "Conditional weighted-incidence decomposition of the exact generator residual into gradient and divergence defects.",
+  "remaining_gates": [
+    "Source authorization of R-525 U_n and root transfer C_n",
+    "Uniform unbounded-rate estimates for G_n and D_n",
+    "R-537 common-core, correlation and initial-recovery fields",
+    "N2b/N2c/N4/N2d and ordered PAH-OMC-020 semigroup convergence"
+  ],
+  "non_claims": [
+    "No source-authorized U_n or C_n, common core, generator intertwining, Mosco/resolvent theorem, N2b/N2c/N4/N2d closure or PAH-OMC-020 semigroup convergence.",
+    "The rational matrix fixture is not a PAH counterexample, a PAH estimate or a universal no-go theorem.",
+    "No change to PAH-001 functional, transition rates, state, carrier, regulator, normalization, external Markov time or limit order.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion."
+  ]
+}

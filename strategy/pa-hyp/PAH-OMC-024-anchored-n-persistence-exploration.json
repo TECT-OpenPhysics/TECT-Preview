@@ -1,0 +1,62 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001694",
+  "recorded_at": "2026-09-08T13:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "provenance": "contemporaneous",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "task_id": "T-091",
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "title": "PAH-OMC-024 anchored-n persistence audit for the R-552 root-multiplicity gap",
+  "question": "Can the finite R-552 source-compatible root-multiplicity derivative gap be promoted to an anchored-n compact-time correlation gap using the current PAH evidence?",
+  "method": [
+    "Hash-pin immutable PAH-001, PAH-OMC-020 temporal preregistration and R-552.",
+    "Rebuild an abstract reversible two-state oracle with stationary pi=(1/2,1/2), f=(0,1), r_A(n)=2^(-n) and r_B(n)=2^(-(n+1)).",
+    "Verify the exact derivative gap 2^(-(n+2)) and the compact-time identity-target bound T*r/2 with an independent rational implementation.",
+    "Run hostile mutations that replace the decaying gap by a constant, relabel the identity target as PAH, import the oracle as a carrier, or promote the result beyond its scope.",
+    "Compile six finite Lean declarations under the pinned Lean 4.32.1 toolchain and record the integrated replay."
+  ],
+  "finding": "The finite R-552 gap alone does not imply an anchored-n negative. The oracle keeps a positive derivative gap at every finite n while the gap decays geometrically and both compact-time correlation families converge uniformly to the same identity target.",
+  "verdict": "inconclusive",
+  "decision_reason": "The route isolates the missing source-specific n-uniform local Gibbs lower bound and uniform derivative/remainder estimate without changing PAH-001. It is auxiliary support for HOLD_FOR_EVIDENCE, not a PAH counterexample or universal no-go.",
+  "boundary": "PAH-001 functional, rates, all-Q Gibbs state, carrier, external stochastic Markov time and j-before-anchored-n order remain unchanged. The oracle is abstract diagnostic data only; no R-512, infinite-volume, continuum or physical interpretation is imported.",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-contract-v1.json#oracle",
+    "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-result-v1.json#exact_scope",
+    "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-certificate.md#Exact diagnostic",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/integrated.json#checks"
+  ],
+  "related": [
+    {"id": "EXP-001693", "relation": "continues"}
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-semigroup-wellposedness-result-v1.json": "44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee",
+    "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-contract-v1.json": "c82d2679f1357861cb25cf9fdfc86ce6d8da61dc95a1b5f70ae079f9936a7819",
+    "strategy/pa-hyp/PAH-OMC-024-anchored-n-persistence-result-v1.json": "ddf325e36c8941c5ca1b7bf5b45b84c363e7d5082d9af95c61b623eb798534c1",
+    "verification/lean/Tect/PahOmc024Persistence.lean": "8bde7a64447dbf49c6cc052b93feb8487956ec573cc95099e3be76b65ee91799",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc024-anchored-n-persistence/integrated.json": "c0625fb8d026acade5d62975381b920906670658d42fc32b0816187bd8314090"
+  },
+  "formal_refs": {
+    "results": ["R-552", "R-553", "R-563", "R-564"],
+    "negatives": [],
+    "events": ["20260908-r-564-pah-omc-024-anchored-n-persistence-2026-0"]
+  },
+  "next_action": "Obtain one source-authorized root/measure packet or a PAH-specific n-uniform local correlation lower bound/derivative remainder estimate; do not repeat the unchanged abstract oracle.",
+  "revisit_condition": "Reopen when the source-authorized packet or uniform estimate is hash-pinned, or when a defect in the R-552 finite gap or the oracle inequality is found.",
+  "verification_summary": "Primary 52/52, independent 61/61, hostile 10/10, integrated 25/25, Lean PASS under Lean 4.32.1 with six declarations.",
+  "non_claims": [
+    "No PAH-001 function, rate, state, carrier, regulator or j-before-n order is changed.",
+    "No universal no-go for an owner-fixed PAH completion.",
+    "No R-512 convergence, infinite-volume, continuum, physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion."
+  ],
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc024_anchored_n_persistence.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc024_anchored_n_persistence_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc024_anchored_n_persistence_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc024_anchored_n_persistence_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc024Persistence.lean"
+  }
+}

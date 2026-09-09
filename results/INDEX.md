@@ -5,35 +5,35 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**337 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**393 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
-| [`R-512`](../RESULTS-LEDGER.md#r-512) | PAH-OMC-019 minimal form closure and radial nullspace | See authority |
-| [`R-511`](../RESULTS-LEDGER.md#r-511) | PAH-OMC-018 original-generator cutoff limit and stationary local pre-form | See authority |
-| [`R-510`](../RESULTS-LEDGER.md#r-510) | PAH-OMC-017 common local Gibbs state on the fixed strip | See authority |
-| [`R-509`](../RESULTS-LEDGER.md#r-509) | PAH-OMC-016 radial tightness and uniform matter nondegeneracy | See authority |
-| [`R-508`](../RESULTS-LEDGER.md#r-508) | PAH-OMC-015 counting-ensemble cutoff nondegeneracy obstruction | See authority |
-| [`R-501`](../RESULTS-LEDGER.md#r-501) | EXP-001586 Q3LOCK P-06 quantitative Gaussian weak-limit audit | T0 |
-| [`R-500`](../RESULTS-LEDGER.md#r-500) | EXP-001584 Q3LOCK P-06 Gaussian Fourier covariance audit | T0 |
-| [`R-499`](../RESULTS-LEDGER.md#r-499) | EXP-001583 Q3LOCK FKG mixed-derivative and interpolation audit | T0 |
-| [`R-498`](../RESULTS-LEDGER.md#r-498) | EXP-001580 Q3LOCK periodic/open pressure seam and min--max audit | T0 |
-| [`R-497`](../RESULTS-LEDGER.md#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | T0 |
-| [`R-494`](../RESULTS-LEDGER.md#r-494) | PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit | T0 |
-| [`R-493`](../RESULTS-LEDGER.md#r-493) | PAH-OMC-013 full-Q eventual generator intertwining on the grade-blind cylinder | T0 |
-| [`R-492`](../RESULTS-LEDGER.md#r-492) | PAH-OMC-012 full-Q charge-graded common domain and neutral refinement map | T0 |
-| [`R-491`](../RESULTS-LEDGER.md#r-491) | PAH-OMC-011 Gibbs-state-weighted common-core eventual intertwining | T0 |
-| [`R-490`](../RESULTS-LEDGER.md#r-490) | PAH-OMC-010 Gibbs-state-weighted local interaction envelope | T0 |
-| [`R-489`](../RESULTS-LEDGER.md#r-489) | PAH-OMC-009 uniform interaction-envelope obstruction | T0 |
-| [`R-488`](../RESULTS-LEDGER.md#r-488) | PAH-OMC-008 two-matter/two-holonomy joint-cylinder compatibility | T0 |
-| [`R-487`](../RESULTS-LEDGER.md#r-487) | PAH-OMC-007 nonzero-Q matter and closed-face holonomy joint-cylinder compatibility | T0 |
-| [`R-486`](../RESULTS-LEDGER.md#r-486) | PAH-OMC-006 nonzero-Q matter-density cylinder compatibility | T0 |
-| [`R-485`](../RESULTS-LEDGER.md#r-485) | PAH-OMC-005 nonzero-Q anchor generator compatibility | T0 |
-| [`R-484`](../RESULTS-LEDGER.md#r-484) | PAH-OMC-004 explicit anchor generator-row replay | T0 |
-| [`R-483`](../RESULTS-LEDGER.md#r-483) | PAH-OMC-004 geometric incidence local common-core control | See authority |
-| [`R-482`](../RESULTS-LEDGER.md#r-482) | PAH-OMC-003 exact cell-colour block refinement | See authority |
-| [`R-480`](../RESULTS-LEDGER.md#r-480) | PAH-OMC-002 conditional-Gibbs projected-intertwining route-local defect | See authority |
-| [`R-479`](../RESULTS-LEDGER.md#r-479) | PAH-OMC-001 finite common dynamics and refinement-boundary theorem | T5 finite exact theorem for a hash-pinned composite T0 candidate; claim-nonbearing and no active canonical gate change. |
+| [`R-568`](../RESULTS-LEDGER.md#r-568) | PAH-OMC-029 fixed-generator Markov uniqueness | See authority |
+| [`R-567`](../RESULTS-LEDGER.md#r-567) | PAH-OMC-028 nonlinear closure proof repair | See authority |
+| [`R-566`](../RESULTS-LEDGER.md#r-566) | PAH-OMC-026 cut-set to owner-packet sufficiency crosswalk | See authority |
+| [`R-565`](../RESULTS-LEDGER.md#r-565) | PAH-OMC-025 route-independent minimal owner cut-set | See authority |
+| [`R-564`](../RESULTS-LEDGER.md#r-564) | PAH-OMC-024 anchored-n persistence audit | See authority |
+| [`R-563`](../RESULTS-LEDGER.md#r-563) | PAH-OMC-020 diagonal obstruction to fixed-volume all-power locality | See authority |
+| [`R-562`](../RESULTS-LEDGER.md#r-562) | PAH-OMC-020 universal finite-cylinder locality envelope | See authority |
+| [`R-561`](../RESULTS-LEDGER.md#r-561) | PAH-OMC-020 fixed-power local generator-intertwining bridge | See authority |
+| [`R-560`](../RESULTS-LEDGER.md#r-560) | PAH-OMC-023 canonical owner-admission replay boundary | See authority |
+| [`R-559`](../RESULTS-LEDGER.md#r-559) | PAH-OMC-022 source-level stationary-semigroup well-posedness boundary | See authority |
+| [`R-558`](../RESULTS-LEDGER.md#r-558) | PAH-OMC-021 composite owner-packet transfer audit | See authority |
+| [`R-557`](../RESULTS-LEDGER.md#r-557) | PAH-OMC-020 owner-packet sufficiency bridge | See authority |
+| [`R-556`](../RESULTS-LEDGER.md#r-556) | PAH-OMC-020 minimal ordered-convergence dependency audit | See authority |
+| [`R-555`](../RESULTS-LEDGER.md#r-555) | PAH-OMC-020 exact ordered-epsilon bridge | See authority |
+| [`R-554`](../RESULTS-LEDGER.md#r-554) | PAH-OMC-020 fresh current-byte owner-search snapshot v1.4 | See authority |
+| [`R-553`](../RESULTS-LEDGER.md#r-553) | PAH-OMC-020 positive-time separation from source multiplicity | See authority |
+| [`R-552`](../RESULTS-LEDGER.md#r-552) | PAH-OMC-020 finite semigroup well-posedness under source root multiplicity | See authority |
+| [`R-551`](../RESULTS-LEDGER.md#r-551) | PAH-OMC-020 exact finite second-order semigroup defect | See authority |
+| [`R-550`](../RESULTS-LEDGER.md#r-550) | PAH-OMC-020 finite semigroup lift audit | See authority |
+| [`R-549`](../RESULTS-LEDGER.md#r-549) | PAH-OMC-020 generator factorization bridge | See authority |
+| [`R-548`](../RESULTS-LEDGER.md#r-548) | PAH-OMC-020 restricted radial semigroup consistency | See authority |
+| [`R-547`](../RESULTS-LEDGER.md#r-547) | PAH-OMC-020 fresh current-byte owner-search snapshot v1.3 | See authority |
+| [`R-546`](../RESULTS-LEDGER.md#r-546) | PAH-OMC-020 direct two-term route | See authority |
+| [`R-545`](../RESULTS-LEDGER.md#r-545) | PAH-OMC-020 scalar mesh-to-uniform transfer | See authority |
+| [`R-544`](../RESULTS-LEDGER.md#r-544) | PAH-OMC-020 fresh current-byte owner-search snapshot v1.2 | See authority |
 
 Search without loading the full ledger:
 

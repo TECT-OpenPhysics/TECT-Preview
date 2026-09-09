@@ -1,0 +1,64 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001696",
+  "recorded_at": "2026-09-08T13:50:00Z",
+  "reviewed_on": "2026-09-08",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-092",
+  "title": "PAH-OMC-025 R-565 tooling-hash correction",
+  "question": "Does the R-565 result card record the final integrated-verifier source hash after removing the self-referential result-card hash?",
+  "method": [
+    "Compare the R-565 result card tooling_files entry with the current SHA-256 of verification/scripts/pah_omc025_route_frontier_verify.py.",
+    "Replay the primary, independent, hostile and integrated checks and confirm that the scientific verdict, cut-set and non-claims are unchanged."
+  ],
+  "verdict": "advanced",
+  "finding": "The R-565 result card now records the final integrated-verifier hash 5fc52652655dd45bb04ce61d75e3d8c8194df9f90aa134bc2b0fad6d37770b24. All replay roles remain PASS and the verdict remains HOLD_FOR_EVIDENCE.",
+  "decision_reason": "This append-only correction repairs provenance metadata only. It does not alter the route-frontier statement, cut-set, active gate, or physical non-claims.",
+  "boundary": "PAH-001, PAH-OMC-020, the R-565 contract, all route records, the external stochastic time and the j-before-anchored-n order remain unchanged. No new carrier, estimate, oracle or physical interpretation is introduced.",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-result-v1.json#tooling_files",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc025-route-frontier/integrated.json#source_hashes",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-certificate.md#Reproducible verification"
+  ],
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-565"
+    ],
+    "negatives": [],
+    "events": [
+      "20260908-pah-omc-025-route-independent-owner-cut-set-202"
+    ]
+  },
+  "related": [
+    {
+      "id": "EXP-001695",
+      "relation": "corrects"
+    }
+  ],
+  "verification_summary": "Primary 42/42, independent 25/25, hostile 11/11, integrated 16/16 and Lean PASS; metadata correction only.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc025_route_frontier.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc025_route_frontier_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc025_route_frontier_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc025_route_frontier_verify.py --check",
+    "lean": "Set-Location verification/lean; lake env lean Tect/PahOmc025RouteFrontier.lean"
+  },
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-result-v1.json": "ed6707cebdeb758ab9218b8a61ddb7ad4fd11548df84d0ae6fa9706955130cfb",
+    "verification/scripts/pah_omc025_route_frontier_verify.py": "5fc52652655dd45bb04ce61d75e3d8c8194df9f90aa134bc2b0fad6d37770b24",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc025-route-frontier/integrated.json": "f56bcc0654d0ae994d43537d292fe34272dc66a78d2b0098b4dd0338919a50f3"
+  },
+  "next_action": "Use the existing R-565 route re-entry condition: obtain one source-authorized packet filling S0, one complete S1 alternative and S2; do not repeat current diagnostics.",
+  "revisit_condition": "Reopen only if the current source hashes or the integrated replay changes.",
+  "non_claims": [
+    "This correction does not promote R-565 to PAH-OMC-020 convergence.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, continuum, mass-gap or TOE conclusion is made."
+  ]
+}

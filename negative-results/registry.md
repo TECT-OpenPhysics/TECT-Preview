@@ -8,6 +8,8 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [AUDIT-2026-09-09-PAH-OMC-028-NONLINEAR-CLOSURE](#audit-2026-09-09-pah-omc-028-nonlinear-closure) | R-530 single-vector contraction to nonlinear form-Cauchy inference | the paired-energy and form-distance contraction estimates fail exactly; closed-epigraph and weak-compactness arguments repair the same conditional conclusion without changing PAH sources |
+| [NG-2026-09-08-PAH-OMC-020-FINITE-SECOND-ORDER-SEMIGROUP-DEFECT](#ng-2026-09-08-pah-omc-020-finite-second-order-semigroup-defect) | exponentiate the R-493 support-dependent first-order identity into the fixed-pair finite semigroup lift | at n=N(ell_(0,0))=3, R_max=1 and an exact unchanged PAH sample state, the first defect is zero but L_4^2 I f-I L_3^2 f = -1/2 exp(-25/8)(exp(1/3)-1)^2(exp(1/3)+1)<0; this retires only the registered projection route, not every alternate source-authorized map |
 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace) | infer surviving radial kinetics from the resolved counting state's static nondegeneracy at unchanged time scale | R-511 proves a nonconstant positive-variance amplitude cylinder has zero limiting generator action and form energy; sampled Gibbs-L2 convergence and nonzero aperture activity still hold |
 | [NG-2026-09-05-PAH-OMC-015-COUNTING-CUTOFF-DEGENERACY](#ng-2026-09-05-pah-omc-015-counting-cutoff-degeneracy) | require all four R-488 squared norms to survive the full-Q counting ensemble's restricted cutoff-before-volume limit | exact suppression exp(-R^2/8-R^4/4-R^6/6) makes both radial limits zero, while both holonomy squares stay one; rejects this ensemble's nondegeneracy requirement only |
 | [AUDIT-2026-09-05-Q3LOCK-TANGENT-BETA-AND-WEIGHT-DIRECTION](#audit-2026-09-05-q3lock-tangent-beta-and-weight-direction) | reuse later source-tangent normalization and weighted diagonal displays | X already integrates imaginary time, so p'=E X/V; compactness requires a smaller-alpha input for a larger-alpha target, not the reverse |
@@ -20,6 +22,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION](#ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction) | use centered global total-energy contexts as a volume-uniform local transfer | in an exact tensor-product Gibbs family, subtracting the full Gibbs mean removes the quadratic remote mean but leaves a positive linear remote variance for every local transition leg; retain local or modular Q3 weights |
 | [NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION](#ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization) | use a local quartic A^(-3/4) operator factorization for the cutoff bond-tail times force | on the exact q>=2L cutoff sector, W_L F=c^2 q^3/2+3c lambda q^5/4+lambda^2 q^7/4; translated packets leave a ratio growing as q^4 for lambda>0; retain state-weighted, product-level or direct D,delta-D routes |
 |---|---|---|
+| [NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS](#ng-2026-09-08-pah-omc-022-source-level-semigroup-wellposedness) | original immutable PAH-001 stationary-semigroup proposition | R-552 gives two source-compatible finite semigroup derivatives, R-553 separates their positive-time orbits, and R-558 marks the available successor source-owner-ineligible; the original source-level proposition is therefore not one well-posed theorem, without refuting owner-fixed successors |
 | [NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE](#ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence) | require a cutoff-independent PAH-001 root-rate interaction envelope along R_max->infinity | the exact cofinal-strip aperture root at b=(1,0) has Delta F=-(7/24)R^2-5/8 and midpoint exponent 7R^2/48+5/16, so any positive support weight diverges; this retires only the declared envelope target and leaves generator intertwining and all physical/continuum claims open |
 | [NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE](#ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance) | require a positive-strip L1 Weyl-Fourier coefficient carrier to remain invariant under the exact quartic onsite subflow | the quartic translation phase has a nonzero cubic coefficient and grows like exp((51/70)x^2) on a sign-chosen strip, contradicting bounded strip extension; this retires only the named carrier |
 | [NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION](#ng-2026-08-14-pre-a-t055-isotropic-gaussian-covariance-automatic-nonzero-bcc-mean-field-extraction) | deterministically and translation-equivariantly extract a nonzero BCC mean field from the stationary isotropic Gaussian-Hartree covariance alone | a translation-fixed covariance input must map under any deterministic equivariant section to a translation-fixed, hence constant, output; preserving centering or nonzero-shell support forces that output to zero |
@@ -10777,3 +10780,100 @@ scaling would be a separately authorized contract, not a silent repair.
 Next test closability and radial-nullspace preservation of the frozen
 pre-form. T-054, C6 T1, PAH-OMC-014 and all physical/continuum gates stay
 unchanged; no physical Pre-A, spacetime, QFT, gravity or TOE conclusion.
+
+<a id="ng-2026-09-08-pah-omc-020-finite-second-order-semigroup-defect"></a>
+### NG-2026-09-08-PAH-OMC-020-FINITE-SECOND-ORDER-SEMIGROUP-DEFECT -- fixed-pair finite second-order semigroup lift
+
+**Failure mode.** Exponentiate the R-493 support-dependent first-order
+identity into the fixed-pair finite semigroup intertwining for the unchanged
+PAH-001 refinement projection.  The test is route-local: it does not change
+the functional, directed roots, rates, state, carrier, projection or external
+Markov time.
+
+**Evidence.** PAH-001 SHA-256
+`03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`,
+PAH-OMC-013 SHA-256
+`e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc`, and
+the frozen R-493 implementation SHA-256
+`bda0c7bd7ed5f8b3871fd7590b600458589c4b5feba0a147219e94cdae0526a0` are
+pinned.  At coarse `n=3`, fine `n+1=4`, `R_max=1`,
+`f=ell_(0,0)`, and `sample_state(4,3)`, R-493 gives `m_f=2` and
+`N(f)=3`.  The exact first-order defect is zero.  The second-order defect is
+
+```text
+1/2 [ exp(-67/24) + exp(-59/24) - exp(-25/8) - exp(-17/8) ]
+= -1/2 exp(-25/8) (exp(1/3)-1)^2 (exp(1/3)+1) < 0.
+```
+
+The primary affected-term replay is `11/11`; its local deltas agree with the
+full frozen energy on every admissible witness transition.  The independent
+direct-energy replay is `8/8`, the hostile mutation replay `6/6`, and the
+integrated checker `7/7`.  Lean 4.32.1 compiles the exact factorization and
+strict-sign declarations.  Evidence is R-551 / EXP-001675.
+
+**Consequence.** Retire only the claim that the unchanged R-493 projection
+already supplies a fixed-pair finite semigroup lift.  This is not a universal
+no-go for a separately source-authorized alternate refinement map or an
+all-function/invariant-core packet.  It does not decide the ordered
+`j`-before-anchored-`n` limit, common path space, R-512 identification,
+continuum, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or
+TOE questions.  Markov time remains external stochastic time.  Reopen only
+after a hash-pinned alternate map or invariant/all-function packet is supplied.
+### NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS -- source-level stationary-semigroup well-posedness
+
+**Failure mode.** Treat immutable `PAH-001-v1.json` as selecting one finite
+stationary semigroup when its displayed source leaves root multiplicity and
+root-measure conventions open. This is a source-definition boundary, not a
+new dynamical model and not a universal no-go for owner-fixed successors.
+
+**Evidence.** PAH-001 SHA-256
+`03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37` is
+hash-pinned. R-552 SHA-256
+`44a5f7aefb4da95e7ae0fd8c690da33132b645bfbf8b528b7a01688585cb89ee`
+records exact finite derivatives `2 exp(-2)` and `exp(-2)` for two
+source-compatible completions on one gauge-invariant cylinder. R-553 SHA-256
+`381869f9637341dd6f55514f87ca1849831e9ca910a27cf4e601882cd5de9fc8`
+shows positive-time separation of those finite correlation orbits. R-558
+SHA-256 `12d80d1a9acde9c73971109ad49776a628c0c3b31e00e419382f15d05146c804`
+classifies the available finite successor as `SOURCE_OWNER_INELIGIBLE`; it
+cannot silently choose the original PAH source. The R-559 primary, independent,
+hostile and integrated checks pass `15/15`, `12/12`, `9/9` and `22/22`, with
+Lean 4.32.1 compilation pass.
+
+**Consequence.** Retire only the source-level uniqueness formulation for the
+current immutable PAH-001 bytes. An explicitly owner-authorized, hash-pinned
+successor may still be studied as a separately named model, subject to the
+R-557 common-realization and N1/N2b/N2c/N4/N2d/J/D obligations. This entry does
+not decide the R-512 limit, ordered semigroup convergence, continuum, physical
+Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or TOE questions. Reopen
+only after a parent hash changes or a successor is explicitly admitted.
+
+<a id="audit-2026-09-09-pah-omc-028-nonlinear-closure"></a>
+### AUDIT-2026-09-09-PAH-OMC-028-NONLINEAR-CLOSURE -- nonlinear closure shortcut
+
+**Failure mode.** R-530 certificate section `Domain and closure passage`
+passes directly from single-vector E(eta(f))<=E(f) to a form-Cauchy
+image sequence. This bound alone supplies boundedness, not a difference
+estimate. The paired energy/form-distance contraction that would justify
+that shortcut is false.
+
+**Evidence.** With f=(1,2), g=(0,1), clipping to [0,1], probability
+weights (1/2,1/2) and both directed rates two, the exact directed-half
+energy is q(h)=(h_0-h_1)^2. Thus q(f-g)=0 while
+q(eta(f)-eta(g))=1; the corresponding squared form norms are 1 and 3/2.
+This is an abstract diagnostic of the universal inequality, not a new PAH
+carrier. Source pins, independent generator-matrix replay and Lean proofs
+are in `strategy/pa-hyp/PAH-OMC-028-result-v1.json` (R-567).
+Reproduce: `python -X utf8 verification/scripts/pah_omc028_verify.py --check`.
+
+**Consequence.** Retain the original source bytes. Replace only
+the unsupported closure inference using the closed energy epigraph or
+weak compactness and Mazur convex approximants, as proved in
+`strategy/pa-hyp/PAH-OMC-028-certificate.md`. The counterexample does not
+show a Cauchy sequence with a non-Cauchy image and does not refute R-530's
+conclusion. Conditional on the exact R-510/R-511/R-512 inputs, R-567
+recovers domain preservation, energy contraction and target conservation.
+PAH-OMC-020 finite-to-target convergence remains HOLD_FOR_EVIDENCE.
+Re-review on failure of inherited probability-state, root positivity,
+core stability, closability or inclusion hypotheses. No physical Pre-A,
+spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion.

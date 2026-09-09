@@ -5,30 +5,30 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**8726 artefacts** · **49 live claim cards** ·
+**9504 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
 
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
-| Claim cards (registry layer) (`claim-card`) | 604 | 5,146,744 |
-| Working proof notes (on claim cards) (`proof-note`) | 1000 | 108,452,246 |
+| Claim cards (registry layer) (`claim-card`) | 604 | 5,152,427 |
+| Working proof notes (on claim cards) (`proof-note`) | 1004 | 108,608,520 |
 | Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,747,022 |
 | Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
 | Migrated legacy scripts (runnable) (`archive-script`) | 22 | 319,000 |
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 2264 | 275,811,525 |
-| Domain codes (`code`) | 1807 | 28,523,258 |
-| Verification harness (`verification`) | 805 | 21,218,041 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 2506 | 279,799,710 |
+| Domain codes (`code`) | 1910 | 29,266,236 |
+| Verification harness (`verification`) | 983 | 23,832,526 |
 | Papers (publication layer) (`paper`) | 43 | 709,989 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,601,167 |
+| Registries and ledgers (`registry`) | 42 | 1,609,229 |
 | Governance policies (`policy`) | 25 | 236,063 |
-| Root documents (`root-doc`) | 14 | 2,236,554 |
-| Other tracked files (`other`) | 1502 | 28,515,162 |
+| Root documents (`root-doc`) | 14 | 2,400,874 |
+| Other tracked files (`other`) | 1753 | 31,512,954 |
 
 ## Use
 

@@ -1,0 +1,169 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-026-CUT-SET-PACKET-CROSSWALK-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-566",
+      "expected": "R-566",
+      "name": "result identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "result hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "result claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "result physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "primary checks",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent checks",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile checks",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "contract source packet absent",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "contract route hold",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Lean registry entry",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 17,
+  "child_run_hashes": {
+    "hostile": "89e8433399c3f52276be95eef61798232854ed08086b7417473e5384745523cc",
+    "independent": "18ea831f9c109e3ce9c2984c81c0caae90097bbac7d3868cc7ff86eb00ed6a88",
+    "primary": "4f44a6300f3be362a0eaffcb20f50d4104ef1a766b38c871678991226b62d3fb"
+  },
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "contract_id": "PAH-OMC-026-CUT-SET-PACKET-CROSSWALK",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "registry_entrypoints": 382
+  },
+  "finding": "All replay roles agree that R-557 field completeness refines the R-565 cuts, while the coarse cuts alone do not admit a source packet or convergence.",
+  "lean": {
+    "dependency_scope": "read-only-canonical-pinned-packages",
+    "returncode": 0,
+    "schema": "tect/pah-omc026-lean-run/1.0",
+    "source_hash": "5f3e0ab0cd889ed9b0695a7a11f8ec7f5b33dff8d410826238ec0302c9bdb100",
+    "status": "PASS",
+    "toolchain": "leanprover/lean4:v4.32.1"
+  },
+  "lean_run_hash": "3d0aef3c45c0c9a253f41bc637938960f2b489efa989c2ebb0dda4d37f100d5f",
+  "next_single_question": "Can a versioned source-authorized packet fill all ten R-557 fields and supply the model-specific J/D estimates without changing PAH-001 or its j-before-anchored-n order?",
+  "non_claims": [
+    "The coarse R-565 cut-set alone is not treated as a source packet or an analytic convergence proof.",
+    "No common Hilbert space, U_n, path law, generator, compensator, carrier, rate, state, regulator or limit is constructed.",
+    "No infinite-volume, continuum or physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion is made.",
+    "External Markov time remains stochastic bookkeeping and is not quantum, proper or Lorentzian time."
+  ],
+  "physical_promotion": false,
+  "replay": {
+    "hostile": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-026 HOSTILE: PASS 8/8; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "independent": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-026 INDEPENDENT: PASS 15/15; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "primary": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-026 PRIMARY: PASS 21/21; verdict=HOLD_FOR_EVIDENCE"
+    }
+  },
+  "reproduction": "python -X utf8 verification/scripts/pah_omc026_cut_set_packet_crosswalk_verify.py --check",
+  "result_id": "R-566",
+  "schema": "tect/pah-omc026-cut-set-packet-crosswalk-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pah_omc026_cut_set_packet_crosswalk_hostile.py": "48f4a7c79049fc9b99c8a8ce5a921d1e1f69522a893bb4a12864bc7254cc1027",
+    "codes/foundations/pah_omc026_cut_set_packet_crosswalk_independent.py": "df554c1e7903ee8a1f1ac24104d52ed8c261f453e0df94cb6f3fbb50f772fe33",
+    "strategy/pa-hyp/PAH-OMC-026-cut-set-packet-crosswalk-contract-v1.json": "cf6f9eee617765b8e0b7ca231741a8c029937b0f19f4e35a3a098806b44a4339",
+    "verification/lean/Tect/PahOmc026CutSetPacketCrosswalk.lean": "5f3e0ab0cd889ed9b0695a7a11f8ec7f5b33dff8d410826238ec0302c9bdb100",
+    "verification/lean/registry.json": "d2ec6c2a75e373bd369ce9478af1df1e7c6633acf5285db87432de137542daa4",
+    "verification/scripts/pah_omc026_cut_set_packet_crosswalk.py": "5abfe9b19048038fd3eb1977178c19277b893fda106de5c4f853663d856a4c05",
+    "verification/scripts/pah_omc026_cut_set_packet_crosswalk_verify.py": "19ecf8bbcb3c45dfa8a1b7fe5c0155e204d507395910482102564173872fff66"
+  },
+  "status": "PASS_INTEGRATED_HOLD",
+  "task_id": "T-093",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

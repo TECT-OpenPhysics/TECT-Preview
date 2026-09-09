@@ -1,0 +1,676 @@
+{
+  "cell_net": {
+    "dimension": 12,
+    "errors": [
+      "17",
+      "17/2",
+      "17/4",
+      "17/8",
+      "17/16",
+      "17/32",
+      "17/64",
+      "17/128",
+      "17/256"
+    ],
+    "modulus": "17/3"
+  },
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+      "expected": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+      "expected": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-018-result-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+      "expected": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "bf5409afc112c54b1596cce3272c193ff79517db6af593daf7011d85a898e911",
+      "expected": "bf5409afc112c54b1596cce3272c193ff79517db6af593daf7011d85a898e911",
+      "name": "source pin:claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fibre-modulus/fibre.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "d607dcac1bfa6e061a0b783f7ee9b339ba2d808cd237cb69f2a348d6a4557dd5",
+      "expected": "d607dcac1bfa6e061a0b783f7ee9b339ba2d808cd237cb69f2a348d6a4557dd5",
+      "name": "source pin:claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-cell-correlation/cell-correlation.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+      "expected": "present",
+      "name": "midpoint source rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0; all other displayed couplings one.",
+      "expected": "K=2,M_s=1,epsilon=1/2,beta=nu=1",
+      "name": "frozen parameter tuple",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "constant_role": "DERIVED conservative strict-positive proof bound; not a fit, measured value or estimate of actual expectation.",
+        "exact_question": "Are fixed-n amplitude laws tight in j, and is liminf_j mu_(n,j)(b_v^2)>=c>0 for v=a,d with one c for every n>=2?",
+        "fixed_n": "Uniform-in-j tightness and weak convergence to nu_n proportional to exp(-F(r,z)) dr with labelled background counting.",
+        "local_moment": "nu_n(r_v^2)<=4 at every vertex, uniformly in n, from X^3<=1+10X for X=max_v nu_n(r_v^2).",
+        "tail": "For L>=4, sup_j mu_(n,j)(max_v r_v>=L)<=exp(C_n) N 5^(N-1) exp(-L); C_n=25N/24+33E/8+4P.",
+        "uniform_witness": "lim_j mu_(n,j)(b_v^2)=nu_n(b_v^2)>=(11/80)exp(-1550/3)>0 for every n>=2 and v=a,d (indeed all vertices)."
+      },
+      "expected": "weak plus tail",
+      "name": "source static law converges at fixed n",
+      "status": "PASS"
+    },
+    {
+      "actual": "The sampled unaccelerated generator has the derived nonradial local limit A: ||L_nj S_nj f-S_nj A_n f||_L2(mu_nj)<=2 H_f L_f h_j uniformly for n>=N(f)=max(2,m(f)+2), and radial form energy <=2 H_f L_f^2 h_j^2. Original PH/LK/AP terms agree exactly on the grid. Weighted inverse transport, sextic fixed-n dominated convergence and volume-uniform local second-moment tails justify the j-before-n stationary symmetric nonnegative pre-form E_infty(f,g)=-nu_infty(f A g). This is a local operator/pre-form result, not closed-form or temporal process construction.",
+      "expected": "present",
+      "name": "source radial residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "fixed-n and anchored n boundary",
+      "expected": "present",
+      "name": "certificate is fixed n only",
+      "status": "PASS"
+    },
+    {
+      "actual": "h_j=2^-j, R_j=2^j, M_j=2^(2j), j>=0. First j at every fixed n, then the original anchored n exhaustion. No diagonal, reversed, joint or other regulator limit.",
+      "expected": "j-before-n",
+      "name": "ordered regulator path",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "cell": "IN_PROGRESS",
+        "fibre": "IN_PROGRESS"
+      },
+      "expected": "IN_PROGRESS",
+      "name": "diagnostic children remain non-admission",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "name": "finite strip count n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "name": "edge count n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "expected": 5,
+      "name": "face count n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 56,
+      "expected": ">0",
+      "name": "finite root set n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 10,
+      "expected": 10,
+      "name": "finite strip count n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "name": "edge count n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 7,
+      "expected": 7,
+      "name": "face count n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 72,
+      "expected": ">0",
+      "name": "finite root set n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "name": "finite strip count n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 20,
+      "expected": 20,
+      "name": "edge count n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 9,
+      "expected": 9,
+      "name": "face count n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 88,
+      "expected": ">0",
+      "name": "finite root set n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 14,
+      "expected": 14,
+      "name": "finite strip count n=5",
+      "status": "PASS"
+    },
+    {
+      "actual": 24,
+      "expected": 24,
+      "name": "edge count n=5",
+      "status": "PASS"
+    },
+    {
+      "actual": 11,
+      "expected": 11,
+      "name": "face count n=5",
+      "status": "PASS"
+    },
+    {
+      "actual": 104,
+      "expected": ">0",
+      "name": "finite root set n=5",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "name": "finite strip count n=6",
+      "status": "PASS"
+    },
+    {
+      "actual": 28,
+      "expected": 28,
+      "name": "edge count n=6",
+      "status": "PASS"
+    },
+    {
+      "actual": 13,
+      "expected": 13,
+      "name": "face count n=6",
+      "status": "PASS"
+    },
+    {
+      "actual": 120,
+      "expected": ">0",
+      "name": "finite root set n=6",
+      "status": "PASS"
+    },
+    {
+      "actual": 18,
+      "expected": 18,
+      "name": "finite strip count n=7",
+      "status": "PASS"
+    },
+    {
+      "actual": 32,
+      "expected": 32,
+      "name": "edge count n=7",
+      "status": "PASS"
+    },
+    {
+      "actual": 15,
+      "expected": 15,
+      "name": "face count n=7",
+      "status": "PASS"
+    },
+    {
+      "actual": 136,
+      "expected": ">0",
+      "name": "finite root set n=7",
+      "status": "PASS"
+    },
+    {
+      "actual": 20,
+      "expected": 20,
+      "name": "finite strip count n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 36,
+      "expected": 36,
+      "name": "edge count n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 17,
+      "expected": 17,
+      "name": "face count n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 152,
+      "expected": ">0",
+      "name": "finite root set n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": 22,
+      "expected": 22,
+      "name": "finite strip count n=9",
+      "status": "PASS"
+    },
+    {
+      "actual": 40,
+      "expected": 40,
+      "name": "edge count n=9",
+      "status": "PASS"
+    },
+    {
+      "actual": 19,
+      "expected": 19,
+      "name": "face count n=9",
+      "status": "PASS"
+    },
+    {
+      "actual": 168,
+      "expected": ">0",
+      "name": "finite root set n=9",
+      "status": "PASS"
+    },
+    {
+      "actual": 24,
+      "expected": 24,
+      "name": "finite strip count n=10",
+      "status": "PASS"
+    },
+    {
+      "actual": 44,
+      "expected": 44,
+      "name": "edge count n=10",
+      "status": "PASS"
+    },
+    {
+      "actual": 21,
+      "expected": 21,
+      "name": "face count n=10",
+      "status": "PASS"
+    },
+    {
+      "actual": 184,
+      "expected": ">0",
+      "name": "finite root set n=10",
+      "status": "PASS"
+    },
+    {
+      "actual": 26,
+      "expected": 26,
+      "name": "finite strip count n=11",
+      "status": "PASS"
+    },
+    {
+      "actual": 48,
+      "expected": 48,
+      "name": "edge count n=11",
+      "status": "PASS"
+    },
+    {
+      "actual": 23,
+      "expected": 23,
+      "name": "face count n=11",
+      "status": "PASS"
+    },
+    {
+      "actual": 200,
+      "expected": ">0",
+      "name": "finite root set n=11",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "5/3",
+        "7/3",
+        "3",
+        "11/3",
+        "13/3",
+        "5",
+        "17/3"
+      ],
+      "expected": ">=1",
+      "name": "compact derivative maxima exist",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "5/3",
+        "7/3",
+        "3",
+        "11/3",
+        "13/3",
+        "5",
+        "17/3"
+      ],
+      "expected": "finite",
+      "name": "compact modulus is finite at every box",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "34",
+        "17",
+        "17/2",
+        "17/4",
+        "17/8",
+        "17/16",
+        "17/32",
+        "17/64",
+        "17/128"
+      ],
+      "expected": "strictly decreasing",
+      "name": "compact replacement error decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "7/13",
+        "6/13"
+      ],
+      "expected": "sum=1",
+      "name": "stationary weights sum to one",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/65",
+      "expected": "21/65",
+      "name": "detailed balance",
+      "status": "PASS"
+    },
+    {
+      "actual": "847/3120",
+      "expected": "847/3120",
+      "name": "Dirichlet form sign/factor",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "17",
+        "17/2",
+        "17/4",
+        "17/8",
+        "17/16",
+        "17/32",
+        "17/64",
+        "17/128",
+        "17/256"
+      ],
+      "expected": "nonnegative",
+      "name": "cell-net error is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "17",
+        "17/2",
+        "17/4",
+        "17/8",
+        "17/16",
+        "17/32",
+        "17/64",
+        "17/128",
+        "17/256"
+      ],
+      "expected": "strictly decreasing",
+      "name": "cell-net error tends down",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "last": "17/256",
+        "levels": 9
+      },
+      "expected": "vanishing mesh",
+      "name": "finite-net reduction is available",
+      "status": "PASS"
+    },
+    {
+      "actual": "For L>=4, sup_j mu_(n,j)(max_v r_v>=L)<=exp(C_n) N 5^(N-1) exp(-L); C_n=25N/24+33E/8+4P.",
+      "expected": "sup_j",
+      "name": "source tail is all-j",
+      "status": "PASS"
+    },
+    {
+      "actual": "For L>=4, sup_j mu_(n,j)(max_v r_v>=L)<=exp(C_n) N 5^(N-1) exp(-L); C_n=25N/24+33E/8+4P.",
+      "expected": "exp(-L)",
+      "name": "source tail has exponential decay",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'measure_normalization': 'Certificate: exact h_j^N endpoint-inclusive step-cell identity; no added Jacobian.', 'fixed_n_tightness_and_weak_passage': 'Certificate: product sextic majorant, positive unit-cube denominator, dominated convergence; independent finite-box/Riemann plus tail reconstruction.', 'boundary_and_domain': 'Certificate: r_v exp(-F) vanishes at 0 and infinity; absolute polynomial-times-sextic domination justifies Fubini and integration by parts.', 'volume_uniformity': 'Certificate local maximum moment argument; Lean cubic_moment_barrier, independently derived moment/degree constants.', 'local_probability': 'Certificate conditional dr density with A in [1/4,11] and |H|<=80 on the good-neighbor event; Lean tail and positive-bound algebra.', 'encoded_not_full_formalization': 'Lean checks ten named algebraic/inequality propositions. The measure construction and analytic source crosswalk are not fully formalized.', 'no_finite_table_promotion': 'Executable local-star and endpoint probes audit implementation; universal n,j statements follow from the explicit analytic proof.'}",
+      "expected": "endpoint",
+      "name": "source density keeps endpoint cells",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1",
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/16",
+        "1/32",
+        "1/64",
+        "1/128",
+        "1/256",
+        "1/512"
+      ],
+      "expected": "strictly decreasing",
+      "name": "tail oracle decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": "b68c507789b1c8cb73664dbe61342abc4aab68ff1bb0078ea4ec0814e3ae8dc5",
+      "expected": "different",
+      "name": "hostile diagonal mutation changes certificate",
+      "status": "PASS"
+    },
+    {
+      "actual": "# PAH-OMC-020 fixed-n stationary semigroup passage\n\nThis certificate records one bounded proof checkpoint for the unchanged\nPAH-001 model. It is a fixed-n, j-to-infinity result only. The anchored\nn passage, R-512 minimal-form selection, and every physical interpretation\nremain separate open questions.\n\n## Frozen source and scope\n\nThe source functional, directed move labels, midpoint rates, labelled Gibbs\nstate, terminal-square convention, and external Markov time are exactly those\nof PAH-001 and the OMC-016/OMC-018 records. The regulator path is\nh_j=2^{-j}, R_j=2^j, M_j=2^{2j}; the j limit is taken at fixed\nn. No rate, mobility, state, carrier, counterterm, time scale, or limit\norder is introduced here.\n\nPinned parent hashes:\n\n* `strategy/pa-hyp/PAH-001-v1.json`\n  `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`\n* `strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json`\n  `6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97`\n* `strategy/pa-hyp/PAH-OMC-018-result-v1.json`\n  `d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65`\n* `strategy/pa-hyp/PAH-OMC-018-generator-certificate.md`\n  `18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264`\n* `strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json`\n  `906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3`\n\nFor fixed `n>=2`, let `D` be the bounded globally amplitude-l1-Lipschitz\nfinite-prefix cylinder domain in the preregistration. Let `P_(n,j)(t)` be\nthe original finite semigroup, and let `Q_n(t)` be the finite-label fibre\nsemigroup obtained by retaining precisely the source PH/LK/AP summands of\nthe same generator at continuous amplitudes. For every `f,g in D` and finite\n`T`, the target statement is\n\n    lim_(K->infinity) lim_(j->infinity)\n      sup_(0<=t<=T) |\n        <S_(n,j) f, P_(n,j)(t) S_(n,j) g>_(mu_(n,j))\n        - <f, Q_n(t) g>_(nu_n) | = 0.\n\nThe order is literal: first fix an amplitude cutoff `K`, take `j` to\ninfinity, then remove the cutoff. No diagonal sequence is used.\n\n## Proof of the fixed-n passage\n\n### 1. Compact fibre modulus\n\nAt fixed `n`, the PH/LK/AP root set and the label set are finite. A source\nrate on a compact amplitude box is\n\n    c_a(r,z)=m_a(z) exp(-(F_n(r,a z)-F_n(r,z))/2).\n\nThe mobility is independent of the amplitudes. The displayed PAH functional\nis a polynomial in the amplitudes for fixed apertures and labels, with\npositive denominators independent of the amplitudes. Hence each `c_a` is\ncontinuous and locally Lipschitz. On `B_(K+1)`, define the source-derived\nfinite maxima\n\n    ell_(n,K)=max_(a,z,r in B_(K+1)) ||gradient_r c_a(r,z)||_1,\n    Lambda_(n,K)=2 |R_n^nr| ell_(n,K).\n\nFor the row-sum matrix `A_n(r)` of the fibre generator,\n\n    ||A_n(r)-A_n(r')||_(infinity->infinity)\n       <= Lambda_(n,K) ||r-r'||_1.\n\nVariation of constants and the Markov contraction therefore give, for a\nbounded `L_g`-Lipschitz vector-valued test `g` and `0<=t<=T`,\n\n    ||Q_n(t,r)g(r)-Q_n(t,r')g(r')||_infinity\n      <= (L_g + T Lambda_(n,K)||g||_infinity)||r-r'||_1.       (A1)\n\nThe same bound holds for the floor-sampled fibre matrices on the enlarged\nbox. This is a finite-label compact estimate; its constant may depend on\n`n`, `K`, `T`, and `g`, and no global rate bound is asserted.\n\n### 2. Compact-cutoff Duhamel estimate\n\nChoose a bounded Lipschitz cutoff `chi_K` equal to one on `B_K` and zero\noutside `B_(K+1)`, and put `g_K=chi_K g`. The fibre semigroup changes only\nlabels, so (A1) makes every original radial increment of\n`Q_(n,j)(t)S_(n,j)g_K` at most `2 L_(n,K,T,g) h_j`. The R-511 inverse-pair\nidentity gives, for each directed radial root,\n\n    sum_x mu_(n,j)(x) c_r(x)^2 <= 1.\n\nThe finite number `H_(n,K,g)` of roots that can affect the cutoff test and\nCauchy-Schwarz consequently give\n\n    ||R_(n,j) Q_(n,j)(t) S_(n,j)g_K||_2\n       <= 2 H_(n,K,g) L_(n,K,T,g) h_j.                 (A2)\n\nAt fixed `j` all matrices are finite and reversible. The exact Duhamel\nidentity and `L2(mu_(n,j))` contraction yield\n\n    sup_(0<=t<=T) ||P_(n,j)(t)S_(n,j)g_K\n       -Q_(n,j)(t)S_(n,j)g_K||_2\n       <= 2T H_(n,K,g)L_(n,K,T,g)h_j -> 0.             (A3)\n\nNo fitted rate, time acceleration, or pointwise infinite-volume estimate is\nused.\n\n### 3. Uniform cell passage on the compact cutoff\n\nThe exact half-open cell identity, including the retained upper endpoint,\nidentifies the sampled fibre term with\n\n    Q_n(t,a_j(r))g_K(a_j(r),z)\n\non every product cell. Equation (A1) makes the family\n\n    Phi_T={f(r,z) Q_n(t,r)g_K(r,z): 0<=t<=T}\n\nuniformly bounded and equicontinuous on the compact box `B_(K+1)`.\nThe R-509/OMC-016 theorem supplies endpoint-inclusive step-density weak\nconvergence and the stationary tail bound for the full labelled measure. To\nmake the time quantifier explicit, cover the compact family `Phi_T` by a\nfinite sup-norm epsilon-net. Apply the fixed-test weak convergence to the\nfinite net, then use equicontinuity to bound the remainder uniformly in `t`.\nThe cell replacement error from `a_j(r)` to `r` is bounded by (A1) times\n`|V_n|h_j`. Thus, for fixed `n`, `K`, `f`, `g`, and `T`,\n\n    sup_(0<=t<=T) |\n      <S_(n,j)f,Q_(n,j)(t)S_(n,j)g_K>_(mu_(n,j))\n      - <f,Q_n(t)g_K>_(nu_n)| -> 0.                 (A4)\n\nThis is a compact equicontinuity argument, not an unproved pointwise-rate\nenvelope and not a diagonal `j,n` limit.\n\n### 4. Removal of the amplitude cutoff\n\nR-509/OMC-016 supplies a fixed-`n`, all-`j` stationary tail estimate. Since\nboth the original finite semigroup and the fibre semigroup are stationary\nMarkov contractions, replacing `g` by `g_K` in either correlation costs at\nmost\n\n    2 ||f||_infinity ||g||_infinity\n      sup_j mu_(n,j)(B_K^c),\n\nand the corresponding `nu_n` tail. These quantities vanish as `K` tends to\ninfinity. Combining this estimate with (A3) and (A4), in the order\n`j -> infinity` followed by `K -> infinity`, proves the displayed target.\n\n## Verification boundary\n\nThe primary, non-importing independent, and hostile verifiers reconstruct\nthe finite reversible algebra, source root incidence, compact-modulus\nquantifiers, half-open endpoint condition, stationary-tail contraction,\nDuhamel order, and the exact source hashes. The existing `PahOmc020.lean`\nfile checks only finite algebraic consequences; it does not pretend to\nformalize the measure-theoretic epsilon-net argument.\n\nThis checkpoint proves only the fixed-`n` stationary local-correlation\npassage. It does not prove a common completed Hilbert-space map `U_n`, a\nvarying-space liminf/recovery theorem, boundary escape, R-512 minimal-form\nselection, the anchored `n` semigroup limit, or an infinite-volume process.\nThere is no physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap,\nYang--Mills, or TOE conclusion. Markov time remains external stochastic time.\n",
+      "expected": "compact-only bound",
+      "name": "hostile global-rate shortcut is fenced",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "No change to T-054 active gate, C6 T1 or PAH-OMC-014 merely from this auxiliary temporal result.",
+        "No full kernel classification, unique physical vacuum, Reading-H comparison, spectral gap, mixing or ergodicity claim.",
+        "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap or TOE conclusion."
+      ],
+      "expected": "fenced",
+      "name": "physical promotion is fenced",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "code_sha256": "d0fa4c8806b4fb9427081d998697f8d76d90c6a67914b825d2297118d9f55186",
+  "compact_modulus": {
+    "boxes": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "derivative_bounds": [
+      "5/3",
+      "7/3",
+      "3",
+      "11/3",
+      "13/3",
+      "5",
+      "17/3"
+    ],
+    "replacement": [
+      "34",
+      "17",
+      "17/2",
+      "17/4",
+      "17/8",
+      "17/16",
+      "17/32",
+      "17/64",
+      "17/128"
+    ]
+  },
+  "incidence": [
+    {
+      "edges": 12,
+      "faces": 5,
+      "n": 2,
+      "nonradial_root_bound": 56,
+      "vertices": 8
+    },
+    {
+      "edges": 16,
+      "faces": 7,
+      "n": 3,
+      "nonradial_root_bound": 72,
+      "vertices": 10
+    },
+    {
+      "edges": 20,
+      "faces": 9,
+      "n": 4,
+      "nonradial_root_bound": 88,
+      "vertices": 12
+    },
+    {
+      "edges": 24,
+      "faces": 11,
+      "n": 5,
+      "nonradial_root_bound": 104,
+      "vertices": 14
+    },
+    {
+      "edges": 28,
+      "faces": 13,
+      "n": 6,
+      "nonradial_root_bound": 120,
+      "vertices": 16
+    },
+    {
+      "edges": 32,
+      "faces": 15,
+      "n": 7,
+      "nonradial_root_bound": 136,
+      "vertices": 18
+    },
+    {
+      "edges": 36,
+      "faces": 17,
+      "n": 8,
+      "nonradial_root_bound": 152,
+      "vertices": 20
+    },
+    {
+      "edges": 40,
+      "faces": 19,
+      "n": 9,
+      "nonradial_root_bound": 168,
+      "vertices": 22
+    },
+    {
+      "edges": 44,
+      "faces": 21,
+      "n": 10,
+      "nonradial_root_bound": 184,
+      "vertices": 24
+    },
+    {
+      "edges": 48,
+      "faces": 23,
+      "n": 11,
+      "nonradial_root_bound": 200,
+      "vertices": 26
+    }
+  ],
+  "independent_scope": "Non-importing reconstruction of the source strip counts, finite reversible form, compact equicontinuity net, endpoint/tail order and fixed-n conclusion.",
+  "lean": {
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "non_claims": [
+    "No infinite-volume process, anchored n semigroup convergence or minimal-extension uniqueness.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion."
+  ],
+  "remaining_gates": [
+    "source-authorized U_n/common-Hilbert realization",
+    "N2b liminf/recovery and N2c/N4 boundary escape",
+    "N2d R-512 minimal-form identification and anchored n limit"
+  ],
+  "reproduction": {
+    "check": "python -X utf8 codes/foundations/pah_omc020_fixedn_temporal_proof_independent.py --check",
+    "run": "python -X utf8 codes/foundations/pah_omc020_fixedn_temporal_proof_independent.py"
+  },
+  "reversible_fibre": {
+    "conductance": "21/65",
+    "form": "847/3120",
+    "weights": [
+      "7/13",
+      "6/13"
+    ]
+  },
+  "schema": "tect/pah-omc020-fixedn-temporal-independent/1.0",
+  "source_pins": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-cell-correlation/cell-correlation.json": "d607dcac1bfa6e061a0b783f7ee9b339ba2d808cd237cb69f2a348d6a4557dd5",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-fibre-modulus/fibre.json": "bf5409afc112c54b1596cce3272c193ff79517db6af593daf7011d85a898e911",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-016-uniform-result-v1.json": "6ba124f6b102022c0e4995c005d9275ce51aaa51a52a6f274ef73254d444bf97",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_INDEPENDENT_FIXED_N_TEMPORAL",
+  "tail": {
+    "majorant": [
+      "1",
+      "1/2",
+      "1/4",
+      "1/8",
+      "1/16",
+      "1/32",
+      "1/64",
+      "1/128",
+      "1/256",
+      "1/512"
+    ],
+    "source_tail": "For L>=4, sup_j mu_(n,j)(max_v r_v>=L)<=exp(C_n) N 5^(N-1) exp(-L); C_n=25N/24+33E/8+4P."
+  },
+  "temporal_verdict": "FIXED_N_PASS_ANCHORED_N_OPEN",
+  "verdict": "AUXILIARY_SUPPORT"
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001685",
+  "title": "PAH-OMC-020 owner-packet sufficiency bridge",
+  "task_id": "T-087",
+  "question": "If all ten source-authorized owner-packet fields are admitted without changing PAH-001, do they supply the exact antecedents needed for full compact-time local-correlation convergence in the j-before-n order?",
+  "finding": "Yes conditionally: the ten-field packet plus the explicit full-domain J/D error bounds implies the exact nested ordered-correlation conclusion. Every single missing field rejects admission. No source-authorized packet is present, so the actual PAH route remains HOLD_FOR_EVIDENCE.",
+  "decision_reason": "This is a logical sufficiency checkpoint that closes the packet-to-conclusion bridge and turns the remaining work into one source-owned admission question. It does not repeat a finite carrier or radial calculation and does not construct the absent map or estimates.",
+  "boundary": "PAH-001 functional, original rates, labelled Gibbs state, external stochastic Markov time and j-before-anchored-n order remain unchanged. No U_n, common Hilbert space, path law, new rate, carrier, counterterm or physical interpretation is constructed.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "verdict": "inconclusive",
+  "recorded_at": "2026-09-08T09:35:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "related": [{"id": "EXP-001684", "relation": "continues"}],
+  "method": [
+    "Freeze PAH-001, R-555, R-556 and the T-063/T-064 owner-intake definitions by SHA-256.",
+    "Define the ten required packet fields and the exact error decomposition err<=J+D with the registered ordered quantifiers.",
+    "Verify that a complete synthetic field fixture admits the conditional theorem while every single omission and radial-only fixture is rejected.",
+    "Replay primary, non-importing independent and hostile lanes and compile the Lean packet theorem and rejection lemmas.",
+    "Keep the actual route on HOLD_FOR_EVIDENCE because no source-authorized packet is present."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-contract-v1.json#required_packet_fields",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json#finding",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-certificate.md#Conditional-theorem",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/integrated.json#checks"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-result-v1.json": "8112976260e8e3fca422fc5f8cc14ba871b2774289b50980a6ab0543ed7c32d4",
+    "strategy/pa-hyp/PAH-OMC-020-minimal-dependency-audit-result-v1.json": "75c162935a432da4c170c5157f1022c30a97b617ab18b657e57cb02ff91e95d0",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-contract-v1.json": "49ed29ea3590b6e7849bc6fc992cd7a769da3c98ce89a04c50d41575fb9ca3db",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-result-v1.json": "7ecc3eba404b93ce1fe9927327a50ebcddfb61e47f030bd9ecf800ef1657afc4",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-certificate.md": "8a9dfa37d6e71d16f1e0fb96ddadfd5aade2b0c35c358e6d03ffdc19d3cc5af1",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/primary.json": "fed09f724251ec32a887216f1b59237d24decdd68effc8302d06ace06ab39ddc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/independent.json": "c74ef7ba4c2ecf977203b39508ae7319d3141451374b8dd24757c1c45d66fc4a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/hostile.json": "be7c29bdc456c975386517bfb57b70ebf9d38e75c699cdb3e41762b13d9ff539",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-owner-packet-sufficiency/integrated.json": "b90e62ac6f21be561a17275473db1d96382197fffb6162748e1af3bafbb127d3",
+    "verification/scripts/pah_omc020_owner_packet_sufficiency.py": "d85bd83bfd3f471dbf78c8a37c7f6a33403e6406b5cf94b335609c53601861cd",
+    "codes/foundations/pah_omc020_owner_packet_sufficiency_independent.py": "c70086faa68710ddb29ada137e9e425ec220e522a01e3fda74f33cccdbfe2e3c",
+    "codes/foundations/pah_omc020_owner_packet_sufficiency_hostile.py": "fc11627d422dae571971e4a6de94bee7be1d500669d4862b03397cfa34fe1473",
+    "verification/scripts/pah_omc020_owner_packet_sufficiency_verify.py": "2a8bd798d4e2ac935fadabbe6183d03f66b67fd5d62ececb3b2b9bb6ffce639d",
+    "verification/lean/Tect/PahOmc020OwnerPacketSufficiency.lean": "c15e876122b7e48ea3212158571f62c6c95f05e022d35717379b6038fc5443a7",
+    "verification/lean/registry.json": "151cb1eb063bb9554c538c4d209a47a311c7738e8e25224ecd340f713f92226c"
+  },
+  "formal_refs": {
+    "events": ["20260908-r-557-pah-omc-020-owner-packet-sufficiency-brid"],
+    "negatives": [],
+    "results": ["R-536", "R-539", "R-548", "R-555", "R-556", "R-557"]
+  },
+  "next_action": "Require one versioned source-authorized packet satisfying all ten fields; on admission, instantiate the packet theorem with the actual J/D estimates and rerun the full proof gate.",
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_owner_packet_sufficiency.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_owner_packet_sufficiency_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_owner_packet_sufficiency_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_owner_packet_sufficiency_verify.py --check",
+    "lean": "lake env lean Tect/PahOmc020OwnerPacketSufficiency.lean"
+  },
+  "revisit_condition": "Reopen when the ten-field source-authorized packet is hash-pinned or when an exact unchanged-source contradiction to the conditional bridge is found; do not repeat radial or finite-carrier calculations.",
+  "non_claims": [
+    "This is a conditional owner-packet sufficiency result, not the full PAH-OMC-020 convergence theorem.",
+    "No common map, path law, N2b/N2c/N4 estimate, R-512 identification or full-domain J/D estimate is constructed.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion; external Markov time is not physical time."
+  ],
+  "verification_summary": "PASS_CONDITIONAL packet bridge with actual route HOLD_FOR_EVIDENCE: primary 19/19, independent 17/17, hostile 10/10, integrated 22/22, Lean compile PASS."
+}

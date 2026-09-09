@@ -1,0 +1,146 @@
+{
+  "schema": "tect/pah-omc020-dirichlet-minimal-result/1.0",
+  "result_id": "R-530",
+  "contract_id": "PAH-OMC-020-DIRICHLET-MINIMAL-CONTRACTION",
+  "date": "2026-09-08",
+  "task_id": "T-064",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXACT_SOURCE_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-closure-prereg-v1.json": "4337e21a140206956ea52ee10e20d04358af868969e3edb9f055e5ea64b055b7",
+    "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json": "f0c4d37dc399e3c1996f7314f3644ebf17c432adb72606ffe04a752498624504"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-dirichlet-minimal/primary.json": "33e360b42e32a7049d6dd9f9405984e121ee358c5280161e67493756d1dc5563",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-dirichlet-minimal/independent.json": "026da056b28d50a5f7582462c1ecd03899ee95298c6dcb031212247c5e45cffb",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-dirichlet-minimal/hostile.json": "77e4cabb51df01243bce88bea4c2595774e8e42c21c313ce913f553d50c7589a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-dirichlet-minimal/integrated.json": "771e50f80c450ee6c40093c774996f1f59edd5f151a42018bff7a34206187793"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_dirichlet_minimal.py": "a0172951020ae449dbd91a6eda4206c505c612386ee2177acb8eec149430df7b",
+    "codes/foundations/pah_omc020_dirichlet_minimal_independent.py": "1f590ae3990ad89c80ed83d58f5341ffb2d7f760a9c53dbbd11ddf11d8a55273",
+    "codes/foundations/pah_omc020_dirichlet_minimal_hostile.py": "a881280251636704ab29421bcae7c3c19f4f143fb1ce1805330afb798a14b989",
+    "verification/scripts/pah_omc020_dirichlet_minimal_verify.py": "8616b0ce1c56a6afde339b9bf8e1a7d6dc47d101b33c00609a3daa1adae76426",
+    "verification/lean/Tect/PahOmc020Dirichlet.lean": "1821f9d3b147bb4849e35e5e7afa1057c064732804df38f677870b414e361fd5",
+    "verification/lean/registry.json": "af62f8438da8396a91f8a84861c4a56c957834a3c66d620867964349414b4c26"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-contract-v1.json": "f0c4d37dc399e3c1996f7314f3644ebf17c432adb72606ffe04a752498624504",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md": "ba00d4b5b96f63568d06caf885bcbcc7a3c7ce4faed72e28195d5bc86ac76583",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-exploration.json": "c67f1eea6b736599c0b36728a5e6b81256007a5cd6e8c891cc216bbd016e2678",
+    "explorations/log.jsonl#EXP-001649": "86ce2ef67e15c0d68b48f4db155b40d04b85f661ca2b16a76c19f56dab5b99da",
+    "changelog/log.jsonl#20260908-pah-omc-020-r-512-minimal-form-dirichlet-struct": "6bfc968f5b0fc538b9037c9469cbf4312c659d54ce5f7317dff6b6b8f719659c"
+  },
+  "exact_scope": {
+    "model": "Exactly the PAH-001 functional and original directed PH/LK/AP rates inherited by R-511; no new move, rate, counterterm or averaging.",
+    "state": "R-510 local-state Hilbert completion and the R-512 minimal closed nonnegative form Ebar.",
+    "domain": "R-511 bounded gauge-invariant globally amplitude-l1-Lipschitz finite-prefix cylinders, with the R-512 form-norm completion.",
+    "form": "E(f,f)=(1/2) sum_r nu_infty[c_r (f composed with T_r-f)^2] on the exact local root set; conductances are nonnegative.",
+    "normal_contraction": "eta(0)=0 and |eta(a)-eta(b)|<=|a-b|; canonical eta is min(1,max(0,a)).",
+    "time": "Associated spectral semigroup T_min(t)=exp(-t K_min) uses only the original external stochastic Markov parameter.",
+    "limits": "No j or n limit is taken in this structural checkpoint."
+  },
+  "conclusion": {
+    "statement": "Conditional on the inherited R-511 root-square form identity, D stability and R-512 minimal completion, every normal contraction is form-contracting. Since one belongs to D and has zero energy, the associated target spectral semigroup is positivity preserving, L-infinity contractive and conservative.",
+    "scope_boundary": "This is a structural property of the already-selected R-512 target. It does not identify the target with the finite PAH semigroups or provide a path-space process."
+  },
+  "assumptions": [
+    "R-511's exact weighted-root form and nonnegative local conductances at its registered scope.",
+    "Stability of the declared cylinder domain under normal contractions.",
+    "R-512's form completion and self-adjoint spectral representation are inherited exactly.",
+    "Standard closed-Dirichlet-form semigroup implications are applied only after the preceding PAH-specific inputs."
+  ],
+  "missing_assumptions": [
+    "A source-authorized U_n/common-Hilbert realization for varying finite spaces.",
+    "N2b weak-liminf/recovery, N2c/N4 boundary escape and N2d finite-to-R-512 identification.",
+    "Path-space existence, non-explosion and uniqueness for an infinite-volume jump process.",
+    "Full measure-theoretic construction remains an inherited analytic input, not a Lean formalization."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "Finite edge fixtures alone prove the closed-form Markov property.",
+      "disposition": "REJECTED: the certificate states the root-wise inequality for every normal contraction and uses fixtures only for exact replay; the measure/form identity stays conditional."
+    },
+    {
+      "objection": "Dirichlet structure closes N2a-N2d and the ordered semigroup limit.",
+      "disposition": "UPHELD AGAINST PROMOTION: comparison maps, arbitrary-sequence liminf, boundary escape and minimal-form identification from finite spaces remain open."
+    },
+    {
+      "objection": "Conservative target semigroup implies a unique infinite-volume jump process.",
+      "disposition": "UPHELD AGAINST PROMOTION: no path-space construction, non-explosion or uniqueness is claimed."
+    },
+    {
+      "objection": "A slope larger than one or an omitted zero anchor is harmless.",
+      "disposition": "REJECTED: hostile exact fixtures reject a 2-Lipschitz mutation and retain the normal-contraction convention."
+    },
+    {
+      "objection": "External Markov time can be reinterpreted as physical time.",
+      "disposition": "REJECTED: only the original external stochastic parameter is retained."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-512", "R-529", "R-530"],
+    "negatives": [],
+    "events": ["20260908-pah-omc-020-dirichlet-minimal-contraction"]
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_dirichlet_minimal.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_dirichlet_minimal_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_dirichlet_minimal_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_dirichlet_minimal_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "result": "Primary 32/32, independent 24/24, hostile 19/19, integrated 29/29; Lean 4.32.1 compiles eight finite declarations."
+  },
+  "lean": {
+    "path": "verification/lean/Tect/PahOmc020Dirichlet.lean",
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "declarations": [
+      "sq_le_sq_of_abs_le",
+      "normal_trunc_zero",
+      "normal_trunc_one",
+      "normal_trunc_lipschitz",
+      "weighted_form_contraction",
+      "weighted_form_contraction_canonical",
+      "constant_one_weighted_energy_zero",
+      "normal_trunc_l2_contraction"
+    ]
+  },
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md",
+  "closed_scoped_gate": "Conditional Dirichlet/Markov structure and conservativity of the R-512 minimal target.",
+  "remaining_gates": [
+    "Source-authorized U_n/common-space realization",
+    "N2b weak-liminf and compatible recovery",
+    "N2c/N4 compact-time boundary escape",
+    "N2d identification with the R-512 minimal form from finite spaces",
+    "Ordered PAH-OMC-020 stationary semigroup correlation convergence"
+  ],
+  "next_single_question": "Can a source-authorized comparison or process packet establish N2b liminf, N2c/N4 boundary escape and N2d equality with this now-Markov R-512 target without changing PAH-001?",
+  "revisit_condition": "Reopen when an owner packet supplies the comparison/process fields, or when the inherited R-511 form/domain hashes change; do not repeat the normal-contraction fixtures.",
+  "non_claims": [
+    "No finite-j or anchored-n semigroup convergence, common U_n, Mosco theorem or finite-to-R-512 identification.",
+    "No path-space existence, non-explosion, uniqueness, maximal jump-domain equality, spectral gap or ergodicity theorem.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time; no Q3LOCK or TECT-YM import."
+  ]
+}

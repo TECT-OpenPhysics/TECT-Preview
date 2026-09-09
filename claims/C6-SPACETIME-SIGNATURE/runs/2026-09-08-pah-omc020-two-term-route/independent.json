@@ -1,0 +1,140 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-TWO-TERM-ROUTE-INDEPENDENT-001",
+  "checks": [
+    {
+      "actual": "PAH-OMC-020-TWO-TERM-ROUTE",
+      "expected": "PAH-OMC-020-TWO-TERM-ROUTE",
+      "name": "contract id",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+        "strategy/pa-hyp/PAH-OMC-020-mesh-uniform-result-v1.json": "b959de7b0163fa776e7eae8b46aa4c86356b305ffe61692a0893561e05d2a2d9",
+        "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-contract-v1.json": "486b86853638bdd953e95ed2501446bb0780c8f0eb768c9c9fd1e18062c53984",
+        "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "expected": {
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+        "strategy/pa-hyp/PAH-OMC-020-mesh-uniform-result-v1.json": "b959de7b0163fa776e7eae8b46aa4c86356b305ffe61692a0893561e05d2a2d9",
+        "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-contract-v1.json": "486b86853638bdd953e95ed2501446bb0780c8f0eb768c9c9fd1e18062c53984",
+        "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+        "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+      },
+      "name": "parent pins",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-514 fixed-n theorem",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-514 no anchored claim",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-536 D definition",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "R-536 route gate",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "same intermediate is required",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "D route is source-authorized prerequisite",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/20",
+      "expected": "3/20",
+      "name": "independent two-term bound",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent epsilon split",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/60",
+      "expected": "11/60",
+      "name": "independent mesh envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "registered order only",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no full convergence promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "no physical promotion",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 14,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "code_sha256": "a42bd9d7eefb8b49fe6aa13933381d4470d754e49b2278ee38e43a9d03290079",
+  "conditional": true,
+  "finding": "Independent reconstruction confirms the direct J+D sequential implication while retaining the missing source-authorized D route.",
+  "next_single_question": "Can one source-authorized, hash-pinned complete R-536 form or path route prove D_n(T)->0 for every declared local pair while preserving R-514's c_n and the original PAH-001 order?",
+  "non_claims": [
+    "No source-authorized form/path owner route or D_n limit is present in this contract.",
+    "No new U_n, common Hilbert space, path law, rate, state, carrier, counterterm, averaging or limit order is introduced.",
+    "No claim that R-534's H-K is source-authorized; the two-term route is admitted only after a complete direct D_n route.",
+    "No PAH-OMC-020 full convergence, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc020_two_term_route_independent.py --check",
+  "result_id": "R-546",
+  "schema": "tect/pah-omc020-two-term-route-independent/1.0",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-020-mesh-uniform-result-v1.json": "b959de7b0163fa776e7eae8b46aa4c86356b305ffe61692a0893561e05d2a2d9",
+    "strategy/pa-hyp/PAH-OMC-020-sequential-gluing-contract-v1.json": "486b86853638bdd953e95ed2501446bb0780c8f0eb768c9c9fd1e18062c53984",
+    "strategy/pa-hyp/PAH-OMC-020-target-identification-result-v1.json": "ab0aa7ee63bad61c982f841546669ae15ab5e570e732d211015b767bf8449d29",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_INDEPENDENT_TWO_TERM_ROUTE",
+  "task_id": "T-065",
+  "test_fixture": {
+    "D": "1/15",
+    "J": "1/12",
+    "bound": "3/20",
+    "epsilon": "1/4",
+    "mesh_bound": "11/60",
+    "radius": "1/8"
+  },
+  "verdict": "PASS"
+}

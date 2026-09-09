@@ -6,7 +6,7 @@
 Authorities: `claims/*/status.json`, `todo/todo.json`, `ROADMAP.md`, `RESULTS-LEDGER.md`, `negative-results/registry.md`, `claims/GATES.md`.
 
 **49 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 8 · T5: 10 · T6: 15 · T7: 3
-**337 reusable results** · **385 negative/audit records** · **208 registered gates/hypotheses**
+**393 reusable results** · **388 negative/audit records** · **208 registered gates/hypotheses**
 
 ## Live work
 
@@ -17,6 +17,13 @@ Authorities: `claims/*/status.json`, `todo/todo.json`, `ROADMAP.md`, `RESULTS-LE
 | `T-057` | in_progress | C6-SPACETIME-SIGNATURE | LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION | Selective legacy preservation, retrieval, and gate-by-gate revalidation |
 | `T-059` | in_progress | — | PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE | Pre-A observation-first inverse constraint and prediction lane |
 | `T-061` | in_progress | — | PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE | Dynamic-owner and observation-map identifiability intake |
+| `T-063` | in_progress | — | — | PAH-OMC-020 N2a source-authorized non-coordinate bounded-energy realization audit |
+| `T-064` | in_progress | — | — | PAH-OMC-020 N2b closability and common-space form realization audit |
+| `T-086` | in_progress | C6-SPACETIME-SIGNATURE | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | PAH-OMC-020 minimal ordered-convergence dependency audit |
+| `T-087` | in_progress | C6-SPACETIME-SIGNATURE | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | PAH-OMC-020 owner-packet sufficiency bridge for full ordered correlations |
+| `T-090` | in_progress | C6-SPACETIME-SIGNATURE | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | PAH-OMC-023 owner-authorized successor admission gate |
+| `T-091` | in_progress | C6-SPACETIME-SIGNATURE | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | PAH-OMC-024 anchored-n persistence audit for the R-552 root-multiplicity gap |
+| `T-094` | in_progress | C6-SPACETIME-SIGNATURE | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | PAH-OMC-027 source-authorized dynamic form-route packet admission |
 | `T-032` | blocked | A1-PRODUCTION-KERNEL-MANIFEST | — | Operator-independent certification and main-proof-line decision for the canonical N-001 scalar-slice manifest before any T5 package |
 | `T-048` | blocked | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE | A11: prove the true-increment stabilised relative log-Laplace bound |
 

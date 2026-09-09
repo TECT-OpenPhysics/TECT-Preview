@@ -1,0 +1,48 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001664",
+  "title": "PAH-OMC-020 R-543 result hash correction",
+  "task_id": "T-064",
+  "question": "Does the EXP-001663 source manifest remain byte-aligned after the changelog event locator was corrected to the actual append-only event id?",
+  "finding": "The R-543 result card was updated only to point at the actual generated changelog event id; its current SHA-256 is 4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3. EXP-001663 recorded the pre-locator-correction result hash, so this successor records the corrected hash and does not change the mathematical result or scope.",
+  "decision_reason": "Append-only ledger policy forbids editing EXP-001663. The correction is provenance-only: it reconciles the source hash after the formal event reference was made exact and leaves R-543's finite deterministic-time conclusion unchanged.",
+  "boundary": "No PAH-001 functional, directed rate, state, carrier, regulator, normalization, external Markov time, finite bound, verifier result, limit order or physical interpretation changes.",
+  "method": [
+    "Recompute the SHA-256 of the current R-543 result card after replacing the generated event locator.",
+    "Compare the current result card, contract, certificate, replay scripts and run hashes with the EXP-001663 manifest.",
+    "Record the corrected hash as a provenance successor without rerunning or promoting the mathematical result."
+  ],
+  "next_action": "Use the corrected R-543 result hash in generated surfaces and the integration checkpoint; keep the anchored-n/common-space question as the next scientific gate.",
+  "revisit_condition": "Reopen only if the R-543 result contents, source pins or append-only event id change again.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "verdict": "advanced",
+  "classification": "auxiliary_support",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-09-08T03:05:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "formal_refs": {
+    "results": ["R-543"],
+    "negatives": [],
+    "events": ["20260908-r-543-pah-omc-020-correlation-modulus-2026-09-0"]
+  },
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json#artifact_hashes",
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-exploration.json#source_hashes",
+    "changelog/log.jsonl#20260908-r-543-pah-omc-020-correlation-modulus-2026-09-0"
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-result-v1.json": "4c67216762c59077a30cfde7c02517017cc0e8e2826ad7eeef0bcccfd6e938d3",
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-contract-v1.json": "c1f5f816280b07cb11fab46855a96c98dfe4948ff103355920ddc84b85a81fbf",
+    "strategy/pa-hyp/PAH-OMC-020-correlation-modulus-certificate.md": "8f09ba971b8bd8d3813c889869b3f3a313db5609c84c80160df59cf25b364a57",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-correlation-modulus/integrated.json": "e1a21ee4fd0e2c97db6e660cded0c35c656f53f8bcffba6b159cf2d059085851"
+  },
+  "non_claims": [
+    "No new proof, counterexample, path-space estimate, anchored-n convergence or R-512 identification is claimed.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "related": [
+    {"id": "EXP-001663", "relation": "corrects"}
+  ]
+}

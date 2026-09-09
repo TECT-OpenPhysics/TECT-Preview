@@ -1,0 +1,208 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-020-OWNER-SEARCH-SNAPSHOT-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": [
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE"
+      ],
+      "expected": [
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE",
+        "HOLD_FOR_EVIDENCE"
+      ],
+      "name": "all lanes hold",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "auxiliary_support",
+        "auxiliary_support",
+        "auxiliary_support",
+        "auxiliary_support"
+      ],
+      "expected": [
+        "auxiliary_support",
+        "auxiliary_support",
+        "auxiliary_support",
+        "auxiliary_support"
+      ],
+      "name": "all lanes auxiliary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes non-bearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "name": "all lanes physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_FIXED_OWNER_SNAPSHOT",
+      "expected": "PASS_FIXED_OWNER_SNAPSHOT",
+      "name": "primary status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_INDEPENDENT_FIXED_OWNER_SNAPSHOT",
+      "expected": "PASS_INDEPENDENT_FIXED_OWNER_SNAPSHOT",
+      "name": "independent status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_HOSTILE_FIXED_OWNER_SNAPSHOT_CONTROLS",
+      "expected": "PASS_HOSTILE_FIXED_OWNER_SNAPSHOT_CONTROLS",
+      "name": "hostile status",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS_FIXED_SNAPSHOT_INTAKE",
+      "expected": "PASS_FIXED_SNAPSHOT_INTAKE",
+      "name": "successor status",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "no authorized paths",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "no complete paths",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "cc3ffdd7f91e2a312c65447a9cf395b8ebfeddb237fc72a643d1f2f7c2f72b36",
+        "cc3ffdd7f91e2a312c65447a9cf395b8ebfeddb237fc72a643d1f2f7c2f72b36"
+      ],
+      "expected": [
+        "cc3ffdd7f91e2a312c65447a9cf395b8ebfeddb237fc72a643d1f2f7c2f72b36",
+        "cc3ffdd7f91e2a312c65447a9cf395b8ebfeddb237fc72a643d1f2f7c2f72b36"
+      ],
+      "name": "fixed manifest agrees",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        84,
+        84
+      ],
+      "expected": [
+        84,
+        84
+      ],
+      "name": "primary and independent candidate counts",
+      "status": "PASS"
+    },
+    {
+      "actual": "86246c253273f5dc1fc630c37c70e7b7b2e3aefcf1fc3d81ae5ad2b0f56cdc35",
+      "expected": "86246c253273f5dc1fc630c37c70e7b7b2e3aefcf1fc3d81ae5ad2b0f56cdc35",
+      "name": "snapshot hash agrees with successor",
+      "status": "PASS"
+    },
+    {
+      "actual": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+      "expected": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+      "name": "successor contract hash agrees",
+      "status": "PASS"
+    },
+    {
+      "actual": 10,
+      "expected": 10,
+      "name": "hostile mutations present",
+      "status": "PASS"
+    },
+    {
+      "actual": 9,
+      "expected": 9,
+      "name": "successor has nine fields",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent does not import primary",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile does not import primary",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "no physical promotion in contract",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "snapshot contains no fsck field",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "finding": "The fixed owner-search snapshot, its independent and hostile lanes, and the N2a successor intake replay exactly with no authorized owner packet. Hash-pinning is now stable against later additions outside the frozen manifest.",
+  "lane_counts": {
+    "hostile": 10,
+    "independent": 263,
+    "primary": 447,
+    "successor": 23
+  },
+  "lean_applicability": "NOT_APPLICABLE_PROVENANCE_HASHING_ONLY",
+  "next_single_question": "Can a source-authorized packet with all nine N2a--N2d fields be supplied, or does the explicit --detect-new scan identify a new candidate requiring a successor snapshot?",
+  "non_claims": [
+    "Snapshot-time repository absence is not a universal impossibility theorem.",
+    "No U_n/common-Hilbert map, N2b liminf/recovery, N2c/N4 boundary escape, N2d minimal identification or semigroup convergence.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang-Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "result_id": "R-528",
+  "schema": "tect/pah-omc020-owner-search-snapshot-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pah_omc020_owner_packet_snapshot_hostile.py": "7d9cc1e7609dd2f1976312460373309d5e0d13e2d179ab031c7073c6416083a1",
+    "codes/foundations/pah_omc020_owner_packet_snapshot_independent.py": "6e68385d773c22e847fb44e01a673ff3df2e7de3efe557ee6637e955f177b275",
+    "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.json": "86246c253273f5dc1fc630c37c70e7b7b2e3aefcf1fc3d81ae5ad2b0f56cdc35",
+    "verification/scripts/pah_omc020_n2a_owner_packet_successor_check.py": "4540064eb8cb8b5761431e12c773b770c260463e3a89ba9113b58bca4f2979a9",
+    "verification/scripts/pah_omc020_owner_packet_snapshot.py": "f8cb8e8555117d00de1c474c3be51abfe3f82bb972cf559bdbac02deaa3a00e7"
+  },
+  "status": "PASS_INTEGRATED_FIXED_OWNER_SNAPSHOT",
+  "task_id": "T-063",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

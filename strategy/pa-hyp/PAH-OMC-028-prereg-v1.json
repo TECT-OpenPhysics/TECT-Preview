@@ -1,0 +1,48 @@
+{
+  "schema": "tect/pah-omc028-prereg/1.0",
+  "contract_id": "PAH-OMC-028",
+  "task_id": "T-095",
+  "date": "2026-09-09",
+  "owner": "Codex, user-authorized next bounded proof",
+  "question": "Does the R-512 minimal closed form preserve every scalar normal contraction on its entire form domain, and does its existing spectral semigroup preserve one, after auditing the nonlinear Cauchy shortcut in R-530?",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-019-closure-certificate.md": "593785ba86d0bf1b36541e62879a966062282c55cfbb990a805539b27955b8af",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-certificate.md": "ba00d4b5b96f63568d06caf885bcbcc7a3c7ce4faed72e28195d5bc86ac76583",
+    "strategy/pa-hyp/PAH-OMC-020-dirichlet-minimal-result-v1.json": "9b19a3b5d56a0c89e7ebb426805b224f23a6e5fb8e458cee91636913096640b2"
+  },
+  "fixed_objects": {
+    "H": "R-510 real gauge-invariant state-L2 completion on its original probability state",
+    "D": "R-511 bounded gauge-invariant globally amplitude-l1-Lipschitz finite-prefix cylinders",
+    "form": "E(f,g)=(1/2) sum_r nu[c_r Delta_r f Delta_r g], with R-511 inherited conventions",
+    "closure": "Exactly R-512 form-norm completion V and its injective continuous inclusion into H",
+    "normal_contraction": "Any eta:R->R with eta(0)=0 and |eta(a)-eta(b)|<=|a-b|",
+    "scope": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0, other OMC-016 couplings one; original two-row strips, labelled all-Q state and j-before-anchored-n construction are inherited; this proof takes no new regulator limit",
+    "time": "Existing external stochastic Markov parameter t>=0"
+  },
+  "test_inputs": {
+    "purpose": "An abstract diagnostic of a universal four-value inequality; not a new PAH carrier or candidate",
+    "f": [1, 2],
+    "g": [0, 1],
+    "state_weights": ["1/2", "1/2"],
+    "directed_rates": [2, 2],
+    "eta": "max(0,min(1,x))"
+  },
+  "completion_requirements": [
+    "Compute the paired-energy shortcut test exactly, without treating its failure as a counterexample to the whole R-530 conclusion",
+    "Prove closed epigraph / lower semicontinuity of the R-512 energy, including domain membership",
+    "Prove eta(Dbar) subset Dbar and Ebar(eta(f))<=Ebar(f) for every f in Dbar",
+    "Check the same conclusion by weak compactness and convex combinations, with growing-support recovery sequences allowed",
+    "Deduce positivity, L-infinity contraction and preservation of one from the same closed form and probability-state hypotheses",
+    "Supply exact primary, non-importing independent, hostile and Lean checks with their coverage limits"
+  ],
+  "budget": "One analytic repair and one integrated verification package; no owner rescan or parameter sweep",
+  "revisit_condition": "Re-review if R-511 root-square positivity/domain stability, R-512 closedness/inclusion, or the probability-state realization fails; preserve the OMC-020 hold",
+  "non_claims": [
+    "No new model, rates, state, time scaling, root convention, common comparison map or limit order",
+    "No proof of PAH-OMC-020 ordered convergence, Markov uniqueness, maximal-domain equality or finite-to-R-512 identification",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion"
+  ]
+}

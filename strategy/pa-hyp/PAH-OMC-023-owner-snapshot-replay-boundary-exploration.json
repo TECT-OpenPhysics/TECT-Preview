@@ -1,0 +1,67 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001689",
+  "recorded_at": "2026-09-08T10:50:48Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-08",
+  "provenance": "contemporaneous",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "task_id": "T-090",
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "PAH-OMC-023 historical owner-snapshot replay boundary",
+  "question": "Can the pinned R-554 v1.4 owner-snapshot integrated artifact be replayed byte-for-byte in the current verification environment before it is reused for successor admission?",
+  "finding": "The current `pah_omc020_owner_snapshot_v14_verify.py --check` invocation returns `owner snapshot v1.4 integrated replay mismatch`. The pinned R-554 result still states authorized_paths=[] and complete_paths=[], but the mismatch prevents treating this historical artifact as a fresh admission verifier until its environment/provenance is reconciled.",
+  "verdict": "inconclusive",
+  "decision_reason": "The mismatch is a revalidation boundary, not a source-authorized contradiction and not evidence that a successor packet exists or cannot exist. Do not regenerate the historical artifact in place; preserve R-554 and require a separately hash-pinned replay environment or a new owner packet.",
+  "boundary": "No PAH-001 function, rate, state, carrier, external Markov time, limit order or finite witness changes. No historical run artifact is overwritten and no physical interpretation is added.",
+  "method": [
+    "Run the existing v1.4 integrated verifier in check mode against its pinned snapshot and recorded run files.",
+    "Record the exact nonzero replay outcome without treating it as a scientific negative.",
+    "Retain the hash-pinned R-554 empty authorization/completion sets as prior provenance only.",
+    "Require an explicit environment-reconciled replay or a new owner-authorized packet before T-090 admission classification."
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json#decision_rule",
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json#snapshot",
+    "verification/scripts/pah_omc020_owner_snapshot_v14_verify.py#main"
+  ],
+  "related": [
+    {
+      "id": "EXP-001688",
+      "relation": "continues"
+    }
+  ],
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-OMC-020-owner-search-v1.4-result-v1.json": "54329df2a6d3ca766f6ca24fbcc628263e6c7e8c2c0e8c8eba545f3508d75df7",
+    "verification/scripts/pah_omc020_owner_snapshot_v14_verify.py": "6371db443282ca884366bedb259cad8bce214c461e982d4beaaf1d2ccc9e7058",
+    "strategy/pa-hyp/PAH-OMC-023-owner-authorized-successor-admission-contract-v1.json": "a21e6235bc68f7760c83ffa98657a787258d906b39e482c79a1646b2b6da107a"
+  },
+  "formal_refs": {
+    "results": [
+      "R-554",
+      "R-559"
+    ],
+    "negatives": [
+      "NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS"
+    ],
+    "events": [
+      "20260908-r-559-pah-omc-022-source-level-stationary-semig"
+    ]
+  },
+  "next_action": "Do not overwrite R-554. Reconcile the historical replay environment or wait for one concrete owner-authorized packet, then run a fresh admission verifier with independent, hostile and Lean lanes.",
+  "revisit_condition": "Reopen only after the R-554 replay bytes are reconciled under a documented environment or a new owner packet is hash-pinned.",
+  "reproduction": {
+    "command": "python -X utf8 verification/scripts/pah_omc020_owner_snapshot_v14_verify.py --check",
+    "observed": "owner snapshot v1.4 integrated replay mismatch"
+  },
+  "verification_summary": "Historical revalidation is inconclusive; no packet admission and no source-level or physical negative is claimed.",
+  "non_claims": [
+    "No successor packet is admitted or rejected by this replay mismatch.",
+    "No universal no-go, R-512 convergence, ordered semigroup theorem, infinite-volume or continuum result.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion."
+  ]
+}

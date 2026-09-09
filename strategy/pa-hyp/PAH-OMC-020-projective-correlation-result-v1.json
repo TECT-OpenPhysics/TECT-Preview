@@ -1,0 +1,165 @@
+{
+  "schema": "tect/pah-omc020-projective-correlation-result/1.0",
+  "result_id": "R-519",
+  "contract_id": "PAH-OMC-020-PROJECTIVE-CORRELATION",
+  "date": "2026-09-07",
+  "task_id": "T-070",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "PASS",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "EXACT_SOURCE_REPLAY",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc013-full-q-eventual-intertwining/integrated.json": "8d005bea7ee33111712f58a32046cdb254f77bc8c17d8eb1a470abcc2adbbbc7",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-020-pathword-result-v1.json": "114699a4554e45260a6a6632f44a32e9c0494a9274c27b561c676e93c5d247d9",
+    "strategy/pa-hyp/PAH-OMC-020-root-overlap-result-v1.json": "9e357158eb6de66bb776b2d674964ddf9fb16547409ac36f8dd254154082bc11",
+    "strategy/pa-hyp/PAH-OMC-020-duhamel-attribution-result-v1.json": "67825022b3db1078387534baacb818fdf60778ce19f4fe81514484a25cf7cb5d",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-projective-correlation/primary.json": "75a3f0b3cca594f23504ba6f2467aa03ff6a4a9dea21401a01f6d3975475c0a1",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-projective-correlation/independent.json": "2b30a618741c7ba5c2a04c6b0f07061c786014780336aee1b3c1eb453bb9e6c5",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-projective-correlation/hostile.json": "a70fda943bc6158092c0efbf16197b02b5a8988f0b833c1fcc4a501601f8a892",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-07-pah-omc020-projective-correlation/integrated.json": "c789edc393d13662be0c3c5c496475d9d8a028ee021cb57e534e2100e7649c7d"
+  },
+  "tooling_files": {
+    "strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md": "e7c09977fa0961abf42385214c3a4285d5cc50b947aebf70172aa7bc7f130447",
+    "strategy/pa-hyp/PAH-OMC-020-projective-correlation-exploration.json": "0044f0f728569e021cd6ffb2b0f61443c1ef081f577234c234b98df6b495d411",
+    "verification/scripts/pah_omc020_projective_correlation.py": "99f7ffaf736c627142adc88e2f00d2ef62aabe933213ac59a80cfa7afebb62ee",
+    "codes/foundations/pah_omc020_projective_correlation_independent.py": "0f35491df61e4599919c34a8978ed86bec13df85b0a53017c489114919b28a7b",
+    "codes/foundations/pah_omc020_projective_correlation_hostile.py": "61c7646cb8146d193279c2325fc6dae8cba52adbe7f27235f2f5ab80e2c9b378",
+    "verification/scripts/pah_omc020_projective_correlation_verify.py": "38ba7088e42f90f370e7048444d0be2df6bdef92c78ad32389d6361c07c85a90",
+    "verification/lean/Tect/PahOmc020Projective.lean": "6738dd586073095132701adac1967f79d06ef6390a1be3f3970f0e994becbf02"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-projective-correlation-certificate.md": "e7c09977fa0961abf42385214c3a4285d5cc50b947aebf70172aa7bc7f130447",
+    "strategy/pa-hyp/PAH-OMC-020-projective-correlation-exploration.json": "0044f0f728569e021cd6ffb2b0f61443c1ef081f577234c234b98df6b495d411",
+    "explorations/log.jsonl#EXP-001637": "d6681017974c32255ae95cdc96eb66e5ecda326aa9a11f2f37164a6cc0f1e874"
+  },
+  "exact_scope": {
+    "observable": "One fixed grade-blind, gauge-invariant, non-radial local cylinder pair of support width two; the cylinder cannot inspect the disjoint-union grade.",
+    "model": "Exactly PAH-001 with the OMC-013 graded extension and the unchanged PH/LK/AP finite-fibre generator after the registered j-limit.",
+    "cutoff": "A finite jump-word cutoff m=6 is fixed before the n comparison; words crossing the prefix boundary remain in the R-517 tail.",
+    "order": "At fixed finite word cutoff and compact external Markov horizon, use R-493 eventual intertwining, R-510 local-state passage for truncated terms, then the conditional R-517 boundary tail.",
+    "normalization": "R-510 local Gibbs normalization and R-515 Gibbs square transport are unchanged; R-490 C_sw=540 is domination-only.",
+    "volume": "Finite OMC-004 strips G_n at and above the support stabilization stage; no infinite-volume or physical volume is assigned.",
+    "time": "External stochastic Markov time on the arithmetic fixture horizon T=1/4 only."
+  },
+  "conclusion": {
+    "truncated_terms": "For every word of length at most m=6, R-493 gives exact grade-blind generator intertwining after N(f)=3, so the retained finite-word correlation terms agree at successive n levels.",
+    "state_passage": "R-510 gives the local-state Cauchy modulus for f*g. The pair comparison uses the triangle sum of the errors at n and n+1.",
+    "boundary_tail": "R-516 derives b=144 and R-517 supplies the explicit two-copy b_eff=288. The conditional omitted-word term is bounded by 8||f||_infinity||g||_infinity E_d(a_w,b_eff,T), with a_w=112 for width two.",
+    "envelope": "The primary exact-arithmetic fixture is positive and decreases in n at d=256; the factorial tail decreases as d grows through 128, 192 and 256.",
+    "answer": "A conditional scalar n-Cauchy envelope is established for the finite-word-truncated, non-radial local cylinder. The full anchored-n semigroup comparison is not established."
+  },
+  "derived_inputs": {
+    "roots_per_column": 16,
+    "edge_slots": 4,
+    "footprint_radius": 2,
+    "overlap_branching": 144,
+    "effective_branching": 288,
+    "support_width": 2,
+    "first_root_bound": 112,
+    "word_cutoff": 6,
+    "stabilization_stage": 3,
+    "tail_distances": [
+      128,
+      192,
+      256
+    ],
+    "note": "The complete exact tail and correlation fixture arrays are stored in the primary run JSON; no numeric value is promoted as a physical constant."
+  },
+  "proof_coverage": {
+    "primary": "50 exact source and Fraction checks derive the footprint, finite cutoff, R-510 state pair and R-517 factorial envelope.",
+    "independent": "35 non-importing checks use a separate width-three and T=1/6 fixture and reconstruct the same source-derived branching.",
+    "hostile": "31 checks reject one-copy tails, unsafe ratios, infinite-series promotion, grade inspection, C_sw equality, fixed-R shortcuts and physical time.",
+    "integrated": "23 checks replay all three lanes, compare shared source hashes, verify non-importing independence, validate the Lean registry and compile Lean 4.32.1.",
+    "lean": "Eleven finite rational declarations compile; measure convergence, coupling existence, common Hilbert spaces and anchored semigroups are outside the formal scope."
+  },
+  "assumptions": [
+    "R-493 finite grade-blind eventual intertwining applies term-by-term to all words below the fixed cutoff.",
+    "R-510 local-state Cauchy control applies to the bounded product cylinder f*g.",
+    "R-517 finite-fibre word-to-Duhamel attribution applies with the exact R-516 footprint and two-copy factor.",
+    "The finite word expansion may be split at m before comparing n; the omitted words are retained as a conditional remainder."
+  ],
+  "missing_assumptions": [
+    "A source-authorized common U_n or completed Hilbert-space realization for the varying n spaces.",
+    "An arbitrary-sequence liminf/recovery theorem and identification with the R-512 minimal closed form.",
+    "A non-conditional all-cylinder anchored-n semigroup convergence theorem."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "Use b=144 after the two-copy comparison.",
+      "disposition": "REJECTED: the explicit rate-difference triangle requires b_eff=2b=288."
+    },
+    {
+      "objection": "A finite cutoff proves the complete jump-series equality.",
+      "disposition": "REJECTED: only the retained word terms intertwine; the factorial remainder is kept conditional."
+    },
+    {
+      "objection": "R-510 local convergence supplies a common U_n.",
+      "disposition": "UPHELD AGAINST PROMOTION: R-510 is a fixed-prefix state estimate, not a completed varying-space realization."
+    },
+    {
+      "objection": "R-517 closes minimal-form selection or N2b.",
+      "disposition": "UPHELD AGAINST PROMOTION: N2b, N2d and the R-512 minimal comparison remain open."
+    },
+    {
+      "objection": "The Markov-time fixture is a physical prediction.",
+      "disposition": "REJECTED: it is external stochastic time and carries no physical interpretation."
+    }
+  ],
+  "formal_refs": {
+    "results": [
+      "R-493",
+      "R-510",
+      "R-515",
+      "R-516",
+      "R-517"
+    ],
+    "negatives": [],
+    "events": [
+      "20260907-pah-omc-020-r-519-projective-local-correlation"
+    ]
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_projective_correlation.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_projective_correlation_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_projective_correlation_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_projective_correlation_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020Projective.lean (Lean 4.32.1 with the registered package path)",
+    "result": "Primary 50/50, non-importing independent 35/35, hostile 31/31 and integrated 23/23 pass; Lean 4.32.1 compiles eleven finite declarations."
+  },
+  "closed_scoped_gate": "Conditional finite-word scalar n-Cauchy envelope for one non-radial grade-blind local cylinder.",
+  "remaining_gates": [
+    "Common U_n/Hilbert realization and terminal-square-compatible comparison",
+    "N2b arbitrary-sequence liminf/recovery",
+    "N2d identification with the R-512 minimal closed form",
+    "All-cylinder anchored-n semigroup convergence"
+  ],
+  "next_single_question": "Can a source-authorized common U_n and minimal-form comparison identify the fixed-cutoff projective envelope with the anchored R-512 semigroup for all local cylinders?",
+  "revisit_condition": "Reopen only when a source-authorized common-space packet, terminal-square-compatible map or exact comparison counterexample is supplied; do not repeat radial or finite word fixtures.",
+  "non_claims": [
+    "This is a conditional auxiliary finite-word scalar result, not completion of PAH-OMC-020.",
+    "No common U_n, weak Gibbs-L2 convergence, R-512 minimal-form selection, infinite-volume process or full anchored-n semigroup theorem.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion.",
+    "External Markov time is not quantum real time, proper time or Lorentzian time."
+  ]
+}

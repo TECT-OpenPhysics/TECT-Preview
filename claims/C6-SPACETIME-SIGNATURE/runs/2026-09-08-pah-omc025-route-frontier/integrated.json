@@ -1,0 +1,163 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-025-ROUTE-FRONTIER-INTEGRATED-001",
+  "checks": [
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent replay",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile replay",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-565",
+      "expected": "R-565",
+      "name": "result identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "result hold verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "result claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "result physical firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "primary checks",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "independent checks",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOLD_FOR_EVIDENCE",
+      "expected": "HOLD_FOR_EVIDENCE",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "hostile checks",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "registry entry",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-565",
+      "expected": "R-565",
+      "name": "contract result match",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 16,
+  "child_run_hashes": {
+    "hostile": "c811b1f587aebd1fb0ce9036e1f6e0bf98949554ac4744b685d78dc95933daa4",
+    "independent": "22c232996bab083cd347f3b7c4f07c3338430ee06a5b5ec8580ca23685fc9792",
+    "primary": "498b5ee9dca6cc970d66a0404b5698c2ff7e8cbdf85ee4a8526caa68f0313c3d"
+  },
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "contract_id": "PAH-OMC-025",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "registry_entrypoints": 381
+  },
+  "finding": "All replay roles agree that the three route cuts are required and currently uninstantiated.",
+  "lean": {
+    "dependency_scope": "read-only-canonical-pinned-packages",
+    "returncode": 0,
+    "schema": "tect/pah-omc025-lean-run/1.0",
+    "source_hash": "e225055792c36e8c6d8f903547bf398b4ceb19bd45870a43d4b6fc10023f7907",
+    "status": "PASS",
+    "toolchain": "leanprover/lean4:v4.32.1"
+  },
+  "lean_run_hash": "ffd649ed5708e12f4ecf7296916fdc4faaf19bacad604abf6414a8f4875edcb8",
+  "next_single_question": "Can one source-authorized, hash-pinned packet instantiate S0 plus either complete comparison route and the full-domain temporal control S2 without changing PAH-001 or its j-before-anchored-n order?",
+  "non_claims": [
+    "This contract does not prove PAH-OMC-020 convergence or refute every owner-fixed successor.",
+    "It does not construct a common Hilbert space, path law, compensator, generator, carrier, rate, state, regulator or limit.",
+    "It does not promote R-559 source-level nonuniqueness or R-564 abstract persistence to an anchored-n universal no-go.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion; external Markov time remains stochastic bookkeeping."
+  ],
+  "physical_promotion": false,
+  "replay": {
+    "hostile": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-025 HOSTILE: PASS 11/11; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "independent": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-025 INDEPENDENT: PASS 25/25; verdict=HOLD_FOR_EVIDENCE"
+    },
+    "primary": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-025 PRIMARY: PASS 42/42; verdict=HOLD_FOR_EVIDENCE"
+    }
+  },
+  "reproduction": "python -X utf8 verification/scripts/pah_omc025_route_frontier_verify.py --check",
+  "result_id": "R-565",
+  "schema": "tect/pah-omc025-route-frontier-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pah_omc025_route_frontier_hostile.py": "b82f3be25b8cd0824476838f513166806c348af7be2e90b88fcc1817d0507736",
+    "codes/foundations/pah_omc025_route_frontier_independent.py": "eef999291d0477f35d2a811f2b9104434bc705e0b03b501e9e3df091a7e7d46a",
+    "strategy/pa-hyp/PAH-OMC-025-route-frontier-contract-v1.json": "2171ae18d545ff26bfad9d5cb475d75c31280679fa41609a44ad143d9d7a9dd4",
+    "verification/lean/Tect/PahOmc025RouteFrontier.lean": "e225055792c36e8c6d8f903547bf398b4ceb19bd45870a43d4b6fc10023f7907",
+    "verification/lean/registry.json": "96c92aa43aa76d02ef1f963a30085144cb55d8959ebdfb6842eb32686264b75b",
+    "verification/scripts/pah_omc025_route_frontier.py": "ef3590d3fd4be12b97cf34f49acf1b19c7707f98c0e0d0caaa9aea5981aa6ef2",
+    "verification/scripts/pah_omc025_route_frontier_verify.py": "5fc52652655dd45bb04ce61d75e3d8c8194df9f90aa134bc2b0fad6d37770b24"
+  },
+  "status": "PASS_INTEGRATED_HOLD",
+  "task_id": "T-092",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

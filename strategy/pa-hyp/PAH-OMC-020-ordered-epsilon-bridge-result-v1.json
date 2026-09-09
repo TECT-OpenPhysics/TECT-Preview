@@ -1,0 +1,95 @@
+{
+  "schema": "tect/pah-omc020-ordered-epsilon-bridge-result/1.0",
+  "result_id": "R-555",
+  "contract_id": "PAH-OMC-020-ORDERED-EPSILON-BRIDGE",
+  "date": "2026-09-08",
+  "task_id": "T-064",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PASS_CONDITIONAL",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": ["ORDERED_EPSILON_IMPLICATION", "EXECUTED", "INDEPENDENT", "HOSTILE", "LEAN", "REPLAY_STABLE"],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-contract-v1.json",
+  "certificate": "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-certificate.md",
+  "exploration_id": "EXP-001680",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-020-two-term-route-result-v1.json": "b53a93220c6877cdf19e7d60b7784e33c8503c4725fde01892ed0d2a4e0c8c51",
+    "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-contract-v1.json": "4848e28eed1c72b5db8cecd364678ccd3b7ca59ac59baa33604a272418e7233a"
+  },
+  "exact_scope": {
+    "question": "Does fixed-n J_(n,j) control plus anchored-n D_n control imply the exact j-before-n ordered epsilon bound for the unchanged PAH route?",
+    "model": "Exactly PAH-001 functional, original directed rates, labelled Gibbs state, normalization and external stochastic Markov time; no source term, rate, state or carrier is changed.",
+    "bound": "err_(n,j) <= J_(n,j) + D_n with J_(n,j)>=0 and D_n>=0.",
+    "quantifier": "For every epsilon>0, anchored-n control gives N; for every n>=N, fixed-n control gives J(n); every j>=J(n) then has err_(n,j)<epsilon. No diagonal, reversed or joint order is used.",
+    "fixture": "Primary exact fixture J=3/100, D=1/20, epsilon=1/5; independent exact fixture J=1/8, D=1/10, epsilon=1/2. Both satisfy the strict half-epsilon tests.",
+    "boundary": "This is an abstract implication only. It does not provide PAH-specific J or D estimates, a common space, a path law or a semigroup limit."
+  },
+  "finding": "The two-term error inequality has an exact nested j-before-n epsilon consequence. Primary 13/13, non-importing independent 13/13, hostile 5/5, integrated 22/22 and Lean declarations ordered_epsilon_bridge, ordered_epsilon_bridge_requires_both_terms and split_fixture all replay successfully. The PAH-specific antecedents remain absent, so PAH-OMC-020 itself remains HOLD_FOR_EVIDENCE.",
+  "assumptions": [
+    "For every epsilon>0, fixed-n J_(n,j) tends below epsilon/2 after a finite J(n).",
+    "For every epsilon>0, anchored D_n tends below epsilon/2 after a finite N.",
+    "The same post-j correlation and external Markov-time convention are used in both terms.",
+    "The error is nonnegative and obeys the registered two-term inequality."
+  ],
+  "missing_assumptions": [
+    "A source-authorized PAH fixed-n J_(n,j) estimate for every declared local pair and compact time interval.",
+    "A source-authorized anchored-n D_n estimate identifying the exact R-512 minimal target.",
+    "The common-space/path-space owner packet needed to instantiate those estimates."
+  ],
+  "adversarial_review": [
+    {"objection": "The abstract epsilon bridge proves PAH-OMC-020 convergence.", "disposition": "REJECTED: the proof assumes the PAH-specific J and D limits and supplies neither one."},
+    {"objection": "A diagonal j(n) sequence is equivalent to the registered order.", "disposition": "REJECTED: the theorem keeps N first and a separate J(n) for each anchored n; no diagonal conclusion is used."},
+    {"objection": "The two terms can be fitted independently after the fact.", "disposition": "REJECTED: the contract fixes the same post-j correlation and unchanged source normalization; fitting is not evidence."},
+    {"objection": "Lean verifies the missing source-owner estimates.", "disposition": "REJECTED: Lean verifies only the abstract implication and rational fixture."},
+    {"objection": "A conditional bridge licenses physical interpretation.", "disposition": "REJECTED: claim_bearing and physical_promotion remain false, and all physical layers are explicit non-claims."}
+  ],
+  "formal_refs": {
+    "results": ["R-546", "R-554", "R-555"],
+    "negatives": [],
+    "events": ["20260908-r-555-pah-omc-020-ordered-epsilon-bridge-2026-0"]
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-ordered-epsilon-bridge/primary.json": "f88c6a16db3e7d8450cb589d65b2e74a5b40d7dc612b865d7ea0ea298b96fcc7",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-ordered-epsilon-bridge/independent.json": "827f11072dbedb96712d7634af249fc55e9fd646c6f378061672d705df2b8eef",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-ordered-epsilon-bridge/hostile.json": "b39243454eae49c202db4b400d9d28581d9eb9f6e2b950a76e450c97580f0e28",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-ordered-epsilon-bridge/integrated.json": "a2be8e391d569d926140cc3d8b97d8e611e88b8ee93df23d0844d10f9d5f5e60"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_ordered_epsilon_bridge.py": "c1b5c27b1666ffa93771e805947566cb80454f249a69e7d6cfd775bf787e69e9",
+    "codes/foundations/pah_omc020_ordered_epsilon_bridge_independent.py": "c0352084b6fd4c663ffe6fbe0881ddd29f86be2ac680997c4d4c8cd7c034e0a9",
+    "codes/foundations/pah_omc020_ordered_epsilon_bridge_hostile.py": "5f48bc34c412e49cbc461e8ffcb8a00970506f8dfe36bcb4b38bee41a46358c9",
+    "verification/scripts/pah_omc020_ordered_epsilon_bridge_verify.py": "65e65e563243d98b3f6f486253fe6747221b72c2326dcc8697dce38adf008a1b",
+    "verification/lean/Tect/PahOmc020OrderedEpsilon.lean": "f5dec183a5207ca47149d7d72962d625a0f9ebacb02f8b7a0742f586cde64b1a",
+    "verification/lean/registry.json": "e9c4716759fbcfe2c0a3494c2efd0ac5fd8314890c41b2ea125d9456f5a736d5"
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_ordered_epsilon_bridge.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_ordered_epsilon_bridge_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_ordered_epsilon_bridge_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_ordered_epsilon_bridge_verify.py --check",
+    "lean": "lake env lean Tect/PahOmc020OrderedEpsilon.lean from E:\\Dev\\TECT\\verification\\lean",
+    "result": "Primary 13/13, independent 13/13, hostile 5/5, integrated 22/22 and Lean 4.32.1 compile pass."
+  },
+  "closed_scoped_gate": "The abstract two-term ordered-epsilon implication is formalized and independently replayed.",
+  "remaining_gates": [
+    "Source-authorized fixed-n J_(n,j) estimate on the unchanged PAH route",
+    "Source-authorized anchored-n D_n estimate and exact R-512 minimal-form identification",
+    "Common-space/path-space owner packet and resulting PAH-OMC-020 semigroup convergence"
+  ],
+  "next_single_question": "Can one source-authorized owner packet supply the PAH-specific fixed-n J estimate and anchored-n D estimate under the unchanged common space, so that this bridge can be instantiated rather than merely assumed?",
+  "revisit_condition": "Reopen when a source-authorized, hash-pinned packet supplies both J and D antecedents, or when an unchanged-source exact counterexample to the two-term inequality is found; do not repeat finite carrier or physical calculations.",
+  "non_claims": [
+    "This bridge does not prove the PAH-specific J_(n,j) limit or D_n limit.",
+    "It does not construct U_n, a common Hilbert space, a path-space law, an N2c/N4 boundary estimate or R-512 identification.",
+    "It does not prove full PAH-OMC-020 semigroup convergence, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusions.",
+    "External Markov time remains stochastic bookkeeping and is not physical time."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-ordered-epsilon-bridge-certificate.md"
+}

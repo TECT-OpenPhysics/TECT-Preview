@@ -1,0 +1,126 @@
+{
+  "active_gate_change": false,
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "expected": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+      "expected": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+      "name": "source pin:strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "J_e(s)=2/(s_v+s_w) for e=(v,w)",
+      "expected": "J_e(s)=2/(s_v+s_w) for e=(v,w)",
+      "name": "edge rule immutable",
+      "status": "PASS"
+    },
+    {
+      "actual": "J_p(s)=|boundary p|^(-1) sum_(e in boundary p) J_e(s)",
+      "expected": "J_p(s)=|boundary p|^(-1) sum_(e in boundary p) J_e(s)",
+      "name": "face rule immutable",
+      "status": "PASS"
+    },
+    {
+      "actual": "frontier-square",
+      "expected": "present",
+      "name": "terminal square remains in source scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "Original external unaccelerated Markov time t>=0 with finite stationary initial law and no terminal conditioning. No infinite-time, quantum-real-time, proper-time or Lorentzian interpretation.",
+      "expected": "external Markov time",
+      "name": "temporal question remains external",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0183156388887342,
+      "expected": 0.6176396562508758,
+      "name": "diagonal omission rejected A=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0183156388887342,
+      "expected": 0.13781403541327908,
+      "name": "diagonal omission rejected A=2.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0183156388887342,
+      "expected": 0.00034160684025584005,
+      "name": "diagonal omission rejected A=4.0",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.5808627523618215,
+      "expected": 1.0183156388887342,
+      "name": "one-third face-average mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "inverse grows",
+      "expected": "split/square decays",
+      "name": "ratio direction is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": "Local stationary two-point correlation convergence, compact-time uniform. Not assumed strong operator convergence between different Hilbert spaces, multi-time path-law convergence, a Feller process, a common real-time automorphism or a physical limit.",
+      "expected": "local correlation convergence",
+      "name": "finite-fibre scope retained",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "No change to T-054 active gate, C6 T1 or PAH-OMC-014 merely from this auxiliary temporal result.",
+        "No full kernel classification, unique physical vacuum, Reading-H comparison, spectral gap, mixing or ergodicity claim.",
+        "No physical Pre-A, spacetime, horizon, QFT, gravity, Yang-Mills, causal cone, continuum, mass gap or TOE conclusion."
+      ],
+      "expected": "no physical promotion",
+      "name": "physical firewall retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "universal impossibility",
+      "expected": "not asserted",
+      "name": "universal U_n no-go not claimed",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 15,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "controls": {
+    "mutations_rejected": [
+      "diagonal omission",
+      "one-third face-average",
+      "split/square direction reversal",
+      "finite-fibre to universal U_n promotion",
+      "physical-time promotion"
+    ],
+    "scope": "coordinate-preserving terminal fibre only"
+  },
+  "finding": "Hostile mutations are rejected: the exact obstruction depends on retaining the diagonal and the source boundary-average normalization, and is not promoted beyond the coordinate-preserving terminal fibre.",
+  "non_claims": [
+    "No full PAH semigroup negative result or universal impossibility theorem.",
+    "No PAH definition, rate, state, carrier, regulator order or external Markov time change.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass gap, Yang-Mills or TOE conclusion."
+  ],
+  "physical_promotion": false,
+  "schema": "tect/pah-omc020-boundary-kernel-obstruction-hostile/1.0",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+  },
+  "status": "PASS_HOSTILE_COORDINATE_BOUNDARY_CONTROLS"
+}

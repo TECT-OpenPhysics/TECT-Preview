@@ -1,0 +1,124 @@
+{
+  "schema": "tect/pah-omc020-generator-factorization-contract/1.0",
+  "contract_id": "PAH-OMC-020-GENERATOR-FACTORIZATION",
+  "version": "1.0.0",
+  "date": "2026-09-08",
+  "task_id": "T-081",
+  "result_id": "R-549",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "status": "RESEARCHER_OWNED_CONDITIONAL_CONTRACT",
+  "title": "Weighted-incidence generator defect bridge for the exact R-525 comparison",
+  "question": "For the unchanged PAH-001 generator and the exact R-525 maximal-prefix comparison candidate, what source-authorized root-level fields are sufficient to turn R-529 energy compatibility into the R-537 generator residual required for compact-time correlations?",
+  "purpose": "Separate the missing dynamic input into a gradient defect and an adjoint-divergence defect. The identity is a finite operator factorization; it does not construct a source-owned comparison map or claim PAH-OMC-020 convergence.",
+  "provenance": {
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "source_authorized_packet_present": false,
+    "constructed_hypothesis": true,
+    "claim_bearing": false,
+    "active_gate_change": false,
+    "physical_promotion": false,
+    "epistemic_layer": "L2_CONDITIONAL_GENERATOR_DEFECT_DECOMPOSITION"
+  },
+  "parents": {
+    "PAH-001": {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "PAH-OMC-020-prereg": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+      "sha256": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3"
+    },
+    "R-525-result": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-result-v1.json",
+      "sha256": "0e40aeba3c6ab41b65842550163b26fc709e9aee8137258a7d630c54da8341d2"
+    },
+    "R-525-candidate": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-noncoordinate-coupling-candidate-v1.json",
+      "sha256": "dcee1aba3cb53607e6902829d28a0b79878f27a5de2eee79c131d6ab36dd393e"
+    },
+    "R-529-result": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-result-v1.json",
+      "sha256": "0e0268925eee2dd4b74ed5b279f4a56fb66637f86cb9faa608df1edbb99c7299"
+    },
+    "R-529-contract": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-energy-intertwining-contract-v1.json",
+      "sha256": "37ffd8a1f82ac83b9dabb955f62a8e5b9bdb68ba5588ac9f30fdf154127883d1"
+    },
+    "R-537-result": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-core-duhamel-result-v1.json",
+      "sha256": "4062188d9419a42d74b0350d35a62950c987e5d7b5f38d329bb7f09d09844d01"
+    },
+    "R-537-contract": {
+      "path": "strategy/pa-hyp/PAH-OMC-020-core-duhamel-contract-v1.json",
+      "sha256": "1a56da4afc45c15357f9e2aee9e35216ca515aa618a6af6077f53444a3d73dcf"
+    }
+  },
+  "fixed_scope": {
+    "model": "Exactly PAH-001 F_rho, its original PH/LK/AP/TR rates, labelled Gibbs laws, OMC-004 strip and external unaccelerated Markov time.",
+    "comparison": "Use only the R-525 maximal-prefix conditional-expectation candidate as a researcher-owned map; no source authorization is inferred.",
+    "order": "The preregistered j-to-infinity stationary passage at fixed n precedes the anchored n comparison; no diagonal or reversed limit is introduced.",
+    "target": "The exact R-512 minimal closed form and the R-537 common-core Duhamel transfer remain the target contracts, not established inputs.",
+    "normalization": "Original labelled stationary normalization; R-490 C_sw remains a domination input only."
+  },
+  "factorization": {
+    "source": "Let B_n be the exact source root-incidence/gradient operator on its declared finite form core, W_n its original diagonal conductance weight, and K_n=B_n^* W_n B_n.",
+    "target": "Let B_infty and W_infty denote the corresponding target objects on the R-512 common space, with K_infty=B_infty^* W_infty B_infty.",
+    "comparison": "Let U_n be the R-525 conditional-expectation map and C_n a root-space transfer supplied only by a future source-owner packet.",
+    "gradient_defect": "G_n=B_infty U_n-C_n B_n.",
+    "divergence_defect": "D_n=B_infty^* W_infty C_n-U_n B_n^* W_n.",
+    "exact_identity": "K_infty U_n-U_n K_n=D_n B_n+B_infty^* W_infty G_n on the common finite core.",
+    "residual_bound": "If the two displayed defect terms are defined on the evolved local core and their L2 norms are integrable, then ||(K_infty U_n-U_n K_n)f|| is bounded by ||D_n B_n f||+||B_infty^* W_infty G_n f||."
+  },
+  "conditional_transfer": {
+    "temporal_input": "For u_n^g(s)=U_n S_n(s)v_n(g), define r_n^g(s)=(d/ds)u_n^g(s)+K_infty u_n^g(s) using the unchanged finite stationary semigroup after the registered j limit.",
+    "defect_envelope": "A source-authorized C_n plus integrable bounds for D_n B_n S_n(s)v_n(g) and B_infty^*W_infty G_n S_n(s)v_n(g) yield R_n(g;T)=integral_0^T ||r_n^g(s)|| ds.",
+    "duhamel_consequence": "R-537 then gives the compact-time correlation bound N_f[I_n(g)+R_n(g;T)]+I_n(f)||g||, provided its common-space, core, correlation identity and initial recovery fields also hold.",
+    "scope": "This is an implication only; none of C_n, G_n, D_n, the common core, the correlation identity or their uniform n estimates is source-authorized in the current corpus."
+  },
+  "required_owner_packet": [
+    "Source-owner authorization of the exact R-525 U_n with its domain and target measure.",
+    "Hash-pinned source and target root-incidence operators B_n/B_infty and original conductance weights W_n/W_infty.",
+    "A root transfer C_n with exact multiplicity, partial-domain and terminal-square conventions.",
+    "A uniform local-core estimate for the gradient defect G_n and the divergence defect D_n, including the unbounded-rate domain.",
+    "An integrable anchored-n bound for both defect terms along the unchanged finite stationary evolution, plus R-537 initial recovery and correlation identity fields."
+  ],
+  "diagnostic_fixture": {
+    "role": "Exact rational matrix fixture for the algebra and for detecting omission of either defect; it is not a PAH carrier or estimate.",
+    "source_B": [["1", "-1"], ["0", "1"]],
+    "target_B": [["2", "-1"], ["1", "1"]],
+    "source_W": ["2", "3"],
+    "target_W": ["3", "4"],
+    "U": [["1", "1/2"], ["0", "1"]],
+    "C": [["1", "0"], ["1/2", "1"]],
+    "test_vector": ["1/2", "-1/3"]
+  },
+  "current_status": {
+    "finite_factorization_identity": true,
+    "source_authorized_U_n": false,
+    "source_authorized_C_n": false,
+    "gradient_defect_bound": false,
+    "divergence_defect_bound": false,
+    "common_core_and_correlation_identity": false,
+    "ordered_semigroup_convergence": false
+  },
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "Only after a source-authorized packet supplies U_n, C_n, B/W data, both defect bounds, the common core and R-537 temporal fields, with primary, independent, hostile and Lean agreement.",
+    "NEGATIVE_RESULT": "Only an exact unchanged-PAH contradiction to the factorization inputs qualifies; a missing owner packet or the finite fixture is not a no-go.",
+    "HOLD_FOR_EVIDENCE": "Use while any owner field is absent; retain the factorization identity as a reusable admission contract."
+  },
+  "single_next_question": "Can the source owner hash-pin C_n and both gradient/divergence defect estimates for the exact R-525 U_n on the unchanged PAH-001 form core, including terminal-square and unbounded-rate domains?",
+  "revisit_condition": "Reopen only when those owner fields are supplied or an exact PAH-specific failure of the factorization domain is found; do not repeat static L2 fixtures or construct a new carrier.",
+  "non_claims": [
+    "No source-authorized U_n or C_n, common core, generator intertwining, Mosco/resolvent theorem, N2b/N2c/N4/N2d closure or PAH-OMC-020 semigroup convergence.",
+    "The rational matrix fixture is not a PAH counterexample, a PAH estimate or a universal no-go theorem.",
+    "No change to PAH-001 functional, transition rates, state, carrier, regulator, normalization, external Markov time or limit order.",
+    "No physical Pre-A, spacetime, event horizon, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion."
+  ],
+  "reproduction": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_generator_factorization.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_generator_factorization_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_generator_factorization_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_generator_factorization_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "lean verification/lean/Tect/PahOmc020Generator.lean"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "schema": "tect/pah-omc020-second-order-defect-result/1.0",
+  "result_id": "R-551",
+  "contract_id": "PAH-OMC-020-SECOND-ORDER-DEFECT",
+  "date": "2026-09-08",
+  "task_id": "T-083",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "NEGATIVE_RESULT",
+  "classification": "negative_result",
+  "conditional": false,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "EXACT_FINITE",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "contract": "strategy/pa-hyp/PAH-OMC-020-second-order-defect-contract-v1.json",
+  "certificate": "strategy/pa-hyp/PAH-OMC-020-second-order-defect-certificate.md",
+  "exploration_id": "EXP-001675",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "codes/foundations/pah_omc013_full_q_eventual_intertwining.py": "bda0c7bd7ed5f8b3871fd7590b600458589c4b5feba0a147219e94cdae0526a0",
+    "verification/lean/Tect/R493.lean": "c350035719b939c429a9e09d163015d34a471c3e6ea7c4678d4a88049060bc88"
+  },
+  "witness": {
+    "coarse_level": 3,
+    "fine_level": 4,
+    "R_max": 1,
+    "observable": "ell_(0,0)",
+    "sample_variant": 3,
+    "N_f": 3,
+    "first_order_residual": "0"
+  },
+  "exact_scope": {
+    "question": "Does the unchanged PAH-001 first-order generator identity at R-493's N(f) threshold exponentiate to a fixed-pair finite semigroup identity?",
+    "answer": "No for the registered witness: the second generator residual is strictly negative.",
+    "residual": "(1/2)(exp(-67/24)+exp(-59/24)-exp(-25/8)-exp(-17/8))",
+    "factorization": "-(1/2)exp(-25/8)(exp(1/3)-1)^2(exp(1/3)+1)<0",
+    "numeric_check": -0.008236755063623244,
+    "interpretation": "A support-dependent first-order identity is not closed under one further coarse generator application at the same finite pair; the finite semigroup lift route is therefore refuted for this cylinder/state witness."
+  },
+  "finding": "R-493's first-order pointwise equality holds exactly for f=ell_(0,0) at n=N(f)=3 on the preregistered sample state, but L_4^2 I f-I L_3^2 f is the displayed strictly negative exponential polynomial. This is an exact route-local finite obstruction to the claimed fixed-pair semigroup intertwining.",
+  "assumptions": [
+    "The PAH-001 functional, all directed roots, midpoint rate, finite counting state, beta=nu=1, R_max=1 and external Markov time are unchanged.",
+    "The R-493 neutral projection is used exactly as declared.",
+    "The PAH-OMC-013 strip/root implementation is the pinned finite implementation for the replay."
+  ],
+  "missing_assumptions": [
+    "A separately source-authorized alternate refinement map or an all-function/invariant-core packet could define a different finite bridge; this witness does not analyze such a successor.",
+    "The common-space/path-space, N2b/N2c/N4, R-512 identification and ordered j-before-anchored-n inputs remain absent."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The witness is below the stabilization threshold.",
+      "disposition": "DISMISSED: n=3 equals the preregistered R-493 N(f)=max(2,m_f+1)=3 for ell_(0,0)."
+    },
+    {
+      "objection": "The residual was created by a fitted or altered rate.",
+      "disposition": "DISMISSED: primary affected-term deltas agree with the full frozen PAH-OMC-013 energy on every admissible witness transition, and the independent replay uses direct source energy."
+    },
+    {
+      "objection": "A first-order derivative equality should imply the semigroup equality.",
+      "disposition": "UPHELD AGAINST PROMOTION: the exact second-order residual is nonzero, so all-iterate/invariant closure is genuinely missing."
+    },
+    {
+      "objection": "This is a universal no-go for all PAH refinements.",
+      "disposition": "REJECTED: the result is limited to the unchanged R-493 projection and registered finite witness; a source-authorized alternate map remains open."
+    },
+    {
+      "objection": "The finite obstruction proves a physical or continuum failure.",
+      "disposition": "REJECTED: no anchored-n, path-space, continuum, QFT, gravity or physical conclusion is claimed."
+    }
+  ],
+  "formal_refs": {
+    "results": [
+      "R-493",
+      "R-550",
+      "R-551"
+    ],
+    "negatives": [
+      "NG-2026-09-08-PAH-OMC-020-FINITE-SECOND-ORDER-SEMIGROUP-DEFECT"
+    ],
+    "events": [
+      "20260908-r-551-pah-omc-020-second-order-defect-2026-09-0"
+    ]
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-second-order-defect/primary.json": "91f1868671c405e04aa413543256fe52385f329f3f55bb7bb22e2883e16bc5f",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-second-order-defect/independent.json": "52dfa6743ed5604a8d9e0273aef8be27bcf568a45af39256de269524a98f9a8a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-second-order-defect/hostile.json": "227204a676ab81f3bba3cf55e889738bbf275c495e06f24befd96f67965674c7",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-second-order-defect/integrated.json": "cb3cd0e39181989a66578e40378f7fabd303112b767455122ca012c74ab56f78",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-second-order-defect/lean.json": "338ac04eb2508f87fabc3535dcd8209da6093e27b4fc0534daeefe946ae3ce92"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_second_order_defect.py": "553e8151aecb6871e2f2ed14bfcd46b213474833248658c6d2fbfa8fc23da006",
+    "codes/foundations/pah_omc020_second_order_defect_independent.py": "62ac7d24c7487c3089b89bbc56ba19b93f88e5bf25b56ca15770b5aae89fd184",
+    "codes/foundations/pah_omc020_second_order_defect_hostile.py": "fc5e261d6570de165047667c90cef7a70f41636b5e6161f689cfe08a4329c7c3",
+    "verification/scripts/pah_omc020_second_order_defect_verify.py": "df0efb71993524bf03c5568c17f24cbef66786b0f57e0d169f3124498be2d57f",
+    "verification/lean/Tect/PahOmc020SecondOrderDefect.lean": "a12ffbc3b80288846cb94229c608129f3bb1465687e9ee8935a8b393d065fb16",
+    "verification/lean/registry.json": "381b016f79c17422d8fd49a8a52a9da13ef45e36cbe733f3287e2f1c3f1e8305"
+  },
+  "verification": {
+    "primary": "PASS 11/11",
+    "independent": "PASS 8/8",
+    "hostile": "PASS 6/6",
+    "integrated": "PASS 7/7",
+    "lean": "PASS_MANUAL_REPLAY under Lean 4.32.1; four declarations registered and compiled"
+  },
+  "closed_scoped_gate": "The unchanged R-493 grade-blind projection does not yield the fixed-pair finite semigroup intertwining for the registered witness at second order.",
+  "remaining_gates": [
+    "Source-authorized alternate refinement map or invariant/all-function finite bridge",
+    "Common-space/path-space and N2b/N2c/N4 comparison inputs",
+    "R-512 minimal-form identification and ordered anchored-n convergence"
+  ],
+  "next_single_question": "Can a separately source-authorized refinement map avoid this exact second-order defect while preserving every PAH-001 functional, rate, state and external-time field?",
+  "revisit_condition": "Reopen only after that alternate map or a stronger all-function/invariant-core packet is hash-pinned.",
+  "non_claims": [
+    "No PAH-OMC-020 ordered j-before-anchored-n semigroup convergence is proved or universally refuted.",
+    "No common infinite-volume process, path law, closed operator, continuum limit or R-512 identification follows.",
+    "No physical Pre-A, spacetime, event-horizon, gravity, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "Markov time remains external stochastic time only."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-second-order-defect-certificate.md"
+}

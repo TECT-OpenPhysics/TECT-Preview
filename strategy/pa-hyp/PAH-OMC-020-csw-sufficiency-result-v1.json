@@ -1,0 +1,141 @@
+{
+  "schema": "tect/pah-omc020-csw-sufficiency-result/1.0",
+  "result_id": "R-521",
+  "contract_id": "PAH-OMC-020-CSW-SUFFICIENCY",
+  "date": "2026-09-08",
+  "task_id": "T-072",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "ANALYTIC_SCOPE_BOUNDARY",
+    "EXACT_RATIONAL_WITNESS",
+    "EXECUTED",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_FINITE_SCOPE"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "preregistration": "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-010-state-weighted-envelope-v1.json": "8386a70a445af90eca9a5f678e9f6c910369a56dca6544f653ac388894850f69",
+    "strategy/pa-hyp/R490-certificate.md": "80563e82f7f592dbbb6c00ff27fdd5270031e8426d4d1520546bf846c6a6d10a",
+    "strategy/pa-hyp/PAH-OMC-020-temporal-prereg-v1.json": "906e3175d915c46d0323f29bf0e0b363095ec8ff31f4f868fcc0e868283cabc3",
+    "strategy/pa-hyp/PAH-OMC-019-result-v1.json": "82c35e7d96b618d0b8d8a7eed906fafef2e29559af158e40b47501e9210dd4cd",
+    "strategy/pa-hyp/PAH-OMC-020-pathspace-bridge-result-v1.json": "12eda207fe03441deb47df02a206b8a4cac1accce5aa5eb016b861b53c8af730"
+  },
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-csw-sufficiency/primary.json": "8be22eef8831cd3af73e7953920b7a5419f63de2eb847b654e7c15ea4242600f",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-csw-sufficiency/independent.json": "74cb065d4c731803ce4f699622b3e134a5047fd2429191031e688bce7ce33b63",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-csw-sufficiency/hostile.json": "087304084d2103dfd8031c2113c941ccf7b138f656d064c0989432d362838adb",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-csw-sufficiency/integrated.json": "7dd5cdccb3722170d2b3f47b49ed96c01633de3736b911fdbf985b99d9d7626e"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_csw_sufficiency_audit.py": "b7c720cfeb178d3759227041f807b0a355bcaecfa2db40df5e9e5843312e62ac",
+    "codes/foundations/pah_omc020_csw_sufficiency_independent.py": "aa7b86a5d55fc2ebbba53128bc624198057e3dbc0a70351003ada25d53fc0107",
+    "codes/foundations/pah_omc020_csw_sufficiency_hostile.py": "8a0c692d260b5bba236a77a2510c72b8edf01e505a9e2bf42a104aa2dc961a57",
+    "verification/scripts/pah_omc020_csw_sufficiency_verify.py": "c1be76ceec44c6b20661aa63dfd955cdb6d7259500c48030732c9dc634ed710a",
+    "verification/lean/Tect/PahOmc020Csw.lean": "0201b2ac3c48c4fb368fb39e4096b6eb415ef426e3e5a3c3971179f401cac13e",
+    "verification/lean/registry.json": "935787fd8b081d8732fb5cc5499d94ac5e0d474ba8aaf3c1949afa31c0fffe49",
+    "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-certificate.md": "e5b1253bfa7f63109bc1ff1c787b605939e3e91290acbdc7eac20777e4bcc057"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-csw-sufficiency-exploration.json": "7de269cecb52fa0f5babf6f52fdfe9c24353ab44ad4314072281d75f1529c084",
+    "explorations/log.jsonl#EXP-001639": "5c6856d5907235bf98ccb1cf2814251f7ecf3780d7359743320813964383e0b9",
+    "changelog/log.jsonl#20260908-pah-omc-020-r-521-c-sw-first-moment-sufficiency": "d88e4d34a73706f23531ea113f0351e847935539a64b96ce8e013dfbb4b5778e"
+  },
+  "exact_scope": {
+    "model": "Exactly the unchanged PAH-001 definitions and R-490 Gibbs-state-weighted interaction input; no new PAH functional, rate, state, carrier, regulator, time or limit order.",
+    "question": "Whether C_sw=540, as a first stationary Gibbs conductance moment, alone yields a uniform L2 generator estimate or N2c/N4 compact-time boundary-escape estimate.",
+    "diagnostic_family": "Abstract reversible two-state family Omega={0,1} with c(0,1)=M, c(1,0)=1 and pi(0)=1/(M+1), pi(1)=M/(M+1); used only to test logical sufficiency of the input.",
+    "test_function": "Bounded f(0)=1, f(1)=-1.",
+    "time": "No temporal PAH calculation; the PAH external unaccelerated Markov-time convention remains frozen and no physical-time interpretation is used.",
+    "scope_boundary": "The witness is not inserted into PAH-001 or OMC-004 and is not an exact PAH counterexample."
+  },
+  "conclusion": {
+    "source_constant": "R-490 recomputes S_geom=8, N_geom=60 and C_sw=540.",
+    "exact_formulae": [
+      "pi_M(0) M = pi_M(1), so detailed balance holds",
+      "sum_x pi_M(x)c_M(x) = 2M/(M+1) < 2 <= C_sw",
+      "E_M(f,f) = 4M/(M+1) < 4",
+      "||L_M f||_(L2(pi_M))^2 = 4M, which is unbounded as M grows"
+    ],
+    "route_finding": "The first-moment C_sw bound is insufficient by itself for a uniform L2 generator or N2c/N4 boundary estimate.",
+    "decision": "HOLD_FOR_EVIDENCE: this blocks only the inference from R-490 alone; it neither proves nor refutes PAH-OMC-020 temporal convergence.",
+    "required_next_input": "A source-owned local second-rate-moment bound C2(A), or an equivalent conditional/pathwise Lyapunov non-explosion estimate, followed by common-process and R-512 minimal-form identification."
+  },
+  "proof_coverage": {
+    "primary": "46 exact checks pin the PAH/R-490 sources, derive C_sw, and verify detailed balance, first moment, Dirichlet energy and the 4M generator-L2 identity.",
+    "independent": "27 non-importing rational checks reconstruct the same family and formulas.",
+    "hostile": "13 checks reject reversed weights, omission of the high-rate state, first/second-moment conflation, pointwise-rate promotion and physical relabeling.",
+    "integrated": "26 checks replay all lanes, compare source hashes, verify the Lean registry and compile Lean 4.32.1.",
+    "lean": "Nine finite rational declarations compile; no analytic PAH process, boundary estimate, common Hilbert space or physical theorem is formalized."
+  },
+  "assumptions": [
+    "The four pinned source files retain their registered bytes and R-490 really supplies only a first conductance moment.",
+    "The abstract two-state arithmetic is interpreted as a logical sufficiency test, not as a PAH model.",
+    "Ordinary finite reversible-chain algebra and rational field identities."
+  ],
+  "missing_assumptions": [
+    "A source-owned second-rate-moment estimate C2(A) for every local support, or an equivalent conditional/pathwise Lyapunov bound.",
+    "A source-grounded non-explosive common process and N2c/N4 boundary-escape proof for the unchanged PAH rates.",
+    "N2b liminf/recovery and identification of the resulting process/form with the R-512 minimal closure."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The two-state witness changes PAH-001 or supplies a PAH counterexample.",
+      "disposition": "REJECTED: it is explicitly an abstract sufficiency diagnostic and no PAH definition is modified."
+    },
+    {
+      "objection": "C_sw is a squared-rate or pointwise rate bound.",
+      "disposition": "REJECTED: R-490 is a normalized sum of pi*c; the witness separates it from sum pi*c^2 and from a pointwise supremum."
+    },
+    {
+      "objection": "Bounded form energy implies a bounded generator graph norm.",
+      "disposition": "UPHELD against promotion: the exact witness has energy below 4 and generator L2 square 4M."
+    },
+    {
+      "objection": "The obstruction proves that the PAH temporal limit cannot exist.",
+      "disposition": "UPHELD against that stronger claim: only the C_sw-only inference is blocked; a PAH-specific second-moment or pathwise estimate may still exist."
+    },
+    {
+      "objection": "The result has physical or quantum time content.",
+      "disposition": "REJECTED: no PAH time evolution is evaluated and all physical promotions remain false."
+    }
+  ],
+  "formal_refs": {
+    "results": ["R-490", "R-512", "R-520"],
+    "negatives": [],
+    "events": ["20260908-pah-omc-020-r-521-c-sw-first-moment-sufficiency"]
+  },
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_csw_sufficiency_audit.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_csw_sufficiency_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_csw_sufficiency_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_csw_sufficiency_verify.py --check --lean-cache E:\\Dev\\TECT\\verification\\lean\\.lake\\packages",
+    "lean": "Lean 4.32.1 verification/lean/Tect/PahOmc020Csw.lean with the pinned package cache",
+    "result": "Primary 46/46, independent 27/27, hostile 13/13 and integrated 26/26 pass; Lean compiles nine declarations."
+  },
+  "closed_scoped_gate": "R-490 first-moment C_sw-only inference is formally insufficient for an L2 generator-bound route; this is a route-level evidence boundary.",
+  "remaining_gates": [
+    "Source-owned local second-moment or pathwise Lyapunov/non-explosion estimate",
+    "N2b arbitrary-sequence liminf/recovery and N2c/N4 boundary escape",
+    "R-512 minimal-form process identification",
+    "Full anchored-n PAH-OMC-020 semigroup convergence"
+  ],
+  "next_single_question": "Can a source-owned estimate for the unchanged PAH rates control either the local second-rate moment C2(A) or the corresponding pathwise Lyapunov boundary term uniformly in n and R?",
+  "revisit_condition": "Reopen only when that source-owned estimate is hash-pinned, or when an exact PAH-specific contradiction to the proposed estimate is found. Do not repeat abstract two-state arithmetic or finite carrier tables.",
+  "non_claims": [
+    "This is an auxiliary conditional route boundary, not an exact PAH negative result and not a universal impossibility theorem.",
+    "No PAH functional, rate, state, carrier, regulator, time or limit order is changed.",
+    "No common process, N2b/N2c/N4 closure, R-512 minimal-form selection, semigroup convergence, infinite-volume dynamics, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, continuum, mass-gap or TOE conclusion.",
+    "External Markov time remains stochastic bookkeeping and is not quantum real, proper or Lorentzian time."
+  ]
+}

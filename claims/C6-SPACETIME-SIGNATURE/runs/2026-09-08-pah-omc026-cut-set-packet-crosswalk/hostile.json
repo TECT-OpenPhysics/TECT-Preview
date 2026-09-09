@@ -1,0 +1,87 @@
+{
+  "active_gate_change": false,
+  "audit_id": "PAH-OMC-026-CUT-SET-PACKET-CROSSWALK-HOSTILE-001",
+  "checks": [
+    {
+      "expected_rejected": true,
+      "mutation": {
+        "removed": "authority"
+      },
+      "name": "missing authority field",
+      "status": "PASS"
+    },
+    {
+      "expected_rejected": true,
+      "mutation": {
+        "source_authorized_packet_present": true
+      },
+      "name": "status-only packet spoof",
+      "status": "PASS"
+    },
+    {
+      "expected_rejected": true,
+      "mutation": {
+        "S2_temporal_control": [
+          "anchored_D"
+        ]
+      },
+      "name": "partial S2 shortcut",
+      "status": "PASS"
+    },
+    {
+      "expected_rejected": true,
+      "mutation": {
+        "removed_cut": "S1"
+      },
+      "name": "radial-only partial packet",
+      "status": "PASS"
+    },
+    {
+      "expected_rejected": true,
+      "mutation": {
+        "error_budget": "stationary average only"
+      },
+      "name": "stationary-average substitution",
+      "status": "PASS"
+    },
+    {
+      "expected_rejected": true,
+      "mutation": {
+        "non_claims": []
+      },
+      "name": "physical promotion mutation",
+      "status": "PASS"
+    },
+    {
+      "expected_rejected": true,
+      "mutation": {
+        "removed": "verification"
+      },
+      "name": "missing cross-cut verification",
+      "status": "PASS"
+    },
+    {
+      "expected_rejected": true,
+      "mutation": {
+        "mutation_count": 7
+      },
+      "name": "original contract untouched in replay",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 8,
+  "claim_bearing": false,
+  "classification": "auxiliary_support",
+  "finding": "Hostile mutations cannot turn the coarse cut-set into a source packet, replace full-domain fields with radial or stationary-average evidence, or remove the physical firewall.",
+  "physical_promotion": false,
+  "reproduction": "python -X utf8 codes/foundations/pah_omc026_cut_set_packet_crosswalk_hostile.py --check",
+  "result_id": "R-566",
+  "schema": "tect/pah-omc026-cut-set-packet-crosswalk-hostile/1.0",
+  "source_hashes": {
+    "contract": "cf6f9eee617765b8e0b7ca231741a8c029937b0f19f4e35a3a098806b44a4339",
+    "script": "48f4a7c79049fc9b99c8a8ce5a921d1e1f69522a893bb4a12864bc7254cc1027"
+  },
+  "status": "PASS_AUXILIARY_HOLD",
+  "task_id": "T-093",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

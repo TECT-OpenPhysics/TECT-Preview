@@ -1,0 +1,133 @@
+{
+  "schema": "tect/pah-omc020-iterate-locality-result/1.0",
+  "result_id": "R-561",
+  "contract_id": "PAH-OMC-020-ITERATE-LOCALITY",
+  "date": "2026-09-08",
+  "task_id": "T-086",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "PASS_CONDITIONAL",
+  "classification": "auxiliary_support",
+  "conditional": true,
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "evidence_level": [
+    "EXECUTED",
+    "EXACT_SCOPE",
+    "INDEPENDENT",
+    "HOSTILE",
+    "LEAN_REPLAY",
+    "PASS_CONDITIONAL"
+  ],
+  "base_commit": "f066262326f294e017f832595231aa7aa77a8f9f",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-013-full-q-eventual-intertwining-v1.json": "e2d2aa4beeb67c535ab19bbed48fb51253e9b08d407d67e96e12978ecf7170bc",
+    "strategy/pa-hyp/PAH-OMC-020-finite-semigroup-lift-result-v1.json": "a3e24dc96e3ca6fb01f991ab7d1062da06af82b3252100148f365c094b03c35c",
+    "strategy/pa-hyp/PAH-OMC-020-second-order-defect-result-v1.json": "c0bb72f9cbb409c4474d3adc3b0754f10cc0825378443f9a61ad162a7febe134",
+    "strategy/pa-hyp/PAH-OMC-020-iterate-locality-contract-v1.json": "ade11a512c37ef22d011e4b4a07db646e44a3f97df32a422f71b8b50b5b6c316"
+  },
+  "exact_scope": {
+    "question": "Does the unchanged PAH-OMC-013 one-step local-generator identity extend to every fixed generator power after a support-dependent stabilization threshold N_k(f)?",
+    "model": "Exactly PAH-001 with the PAH-OMC-013/OMC-004 two-row strip root catalog; no new carrier, rate, state, projection, counterterm or time interpretation.",
+    "dimension": "Finite two-row strip with vertices (column,row), row in {0,1}; levels n >= 2; the tested cylinder is ell_(0,0).",
+    "functional_and_rates": "The displayed PAH-001 functional, Gibbs weighting, mobility and backward generator are unchanged.",
+    "normalization": "The original finite Gibbs and generator normalization is retained; no rate fitting or factor change is used.",
+    "comparison": "The original pointwise pullback I_(n,n+1) and the same finite backward generators used by R-493.",
+    "root_locality": "The frozen root catalog has core-to-support column radius 2 and one-step closure is applied recursively.",
+    "threshold": "For the ell_(0,0) support, the conservative closure has maximum column 2k and N_k(f)=max(2,2k+1).",
+    "limit_range": "Fixed finite k only. No k/n exchange, j or n limit, common target process, exponential summation or ordered convergence is evaluated.",
+    "time": "The external stochastic Markov time declared by PAH-001 remains unchanged."
+  },
+  "conditional_statement": "If the R-493 one-step identity holds for every finite-support function in the recursively enlarged cylinder class, then for each fixed k and n >= N_k(f), L_(n+1)^k I_(n,n+1) f = I_(n,n+1) L_n^k f.",
+  "finding": "The frozen root geometry and frontier audit pass for k=0,...,5 with N_k=max(2,2k+1). The R-551 n=3 second-order defect is below N_2=5 and is therefore route-local; the same frozen sample has zero second-order defect at n=5. This establishes only the conditional fixed-power locality bridge.",
+  "assumptions": [
+    "The R-493 one-step identity is valid for every finite-support function in each recursively enlarged cylinder class.",
+    "The OMC-013 root support and core incidence are exactly those pinned in the parent record.",
+    "The finite PAH generator is applied on the stated cylinder domain and the original Gibbs/rate normalization is retained.",
+    "The existing Lean declarations formalize the algebraic induction and finite exponential partial-sum implication, without supplying the missing uniform estimates."
+  ],
+  "missing_assumptions": [
+    "A source-authorized common invariant cylinder or common path-space realization for all powers.",
+    "A uniform-in-k connected-word or factorial tail controlling the unbounded generator expansion.",
+    "Source-authorized N2b liminf/recovery, N2c/N4 boundary escape and N2d R-512 minimal-form identification.",
+    "A proof that fixed-power identities can be summed in the original unaccelerated Markov time without an unbounded-rate shortcut.",
+    "A common U_n or equivalent non-coordinate comparison map compatible with the required local correlations."
+  ],
+  "adversarial_review": [
+    {
+      "objection": "The table through k=5 proves one threshold works for every generator power.",
+      "disposition": "UPHELD as a non-claim: N_k grows with k, so the finite table is not a uniform-in-k bound."
+    },
+    {
+      "objection": "The R-551 n=3 defect disproves every possible fixed-power bridge.",
+      "disposition": "REJECTED: the witness lies below the independently derived N_2=5 threshold and is retained as a boundary diagnostic only."
+    },
+    {
+      "objection": "Fixed-power induction automatically proves the full exponential semigroup.",
+      "disposition": "REJECTED: no factorial tail, common domain, or sum/interchange estimate is supplied."
+    },
+    {
+      "objection": "The n=5 zero diagnostic is a universal theorem.",
+      "disposition": "REJECTED: it is one frozen sample replay at a sufficient geometric threshold, not an all-function or all-state proof."
+    },
+    {
+      "objection": "Finite locality can be promoted to an anchored-n, continuum or physical result.",
+      "disposition": "REJECTED by the claim-bearing, active-gate and physical-promotion firewalls."
+    }
+  ],
+  "run_files": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-iterate-locality/primary.json": "7159f6ad74fd31574e41fecc86b196e99fbbafd0e4a76f56fcb7998b3f690952",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-pah-omc020-iterate-locality/integrated.json": "3b5f3e6aded7209769857e47141a3199699a0f004ee48b6ab8567639b667687c"
+  },
+  "tooling_files": {
+    "verification/scripts/pah_omc020_iterate_locality.py": "8e4a9a100f9ee271fe1e85145587e5a62031de640e560436fe72d635354b04e2",
+    "codes/foundations/pah_omc020_iterate_locality_independent.py": "f3071a857bfe9b2570f94fe1366a50039c150042dec5948c2d03585667e032fa",
+    "codes/foundations/pah_omc020_iterate_locality_hostile.py": "c208f7260ccdd16e5d31fbc6111157caa54dad944549edc13a0016a89e0df993",
+    "verification/scripts/pah_omc020_iterate_locality_verify.py": "309f53b3d8da18b0fd7672cf6bbf46b97dc59bca0a7a573f3ff8653ea95caad2",
+    "verification/lean/Tect/PahOmc020FiniteSemigroup.lean": "77d0ff2180f9c6a6543dc3307cba35eca05e0ac175aaf854c8e63c750d0c0c0c"
+  },
+  "record_files": {
+    "strategy/pa-hyp/PAH-OMC-020-iterate-locality-contract-v1.json": "ade11a512c37ef22d011e4b4a07db646e44a3f97df32a422f71b8b50b5b6c316",
+    "strategy/pa-hyp/PAH-OMC-020-iterate-locality-certificate.md": "473e4a915cd790ad6d1cd1aff227b353df93252c3743cba7f502ff43eac56c97",
+    "strategy/pa-hyp/PAH-OMC-020-iterate-locality-exploration.json": "fc981eb24ff2f64dd284a7d685c7f7593f0496935236bf7e08d7707808620bcf",
+    "explorations/log.jsonl#EXP-001691": "7394ed3766837c2aab7dc88a72a276d1cf2cec5f571a9189d31d917a6dc9708d",
+    "changelog/log.jsonl#20260908-r-561-pah-omc-020-fixed-power-locality-bridge-2": "6d407ddeb9fd0a83f2a87abaacf4cdf68f216761f8db62433f64652ae7adc890"
+  },
+  "formal_refs": {
+    "results": [
+      "R-493",
+      "R-550",
+      "R-551"
+    ],
+    "negatives": [],
+    "events": [
+      "20260908-r-561-pah-omc-020-fixed-power-locality-bridge-2"
+    ]
+  },
+  "verification": {
+    "primary": "PASS 13/13",
+    "independent": "PASS 8/8",
+    "hostile": "PASS 8/8",
+    "integrated": "PASS 4/4",
+    "lean": "PASS: existing Lean 4.32.1 declarations compile in the pinned dependency environment"
+  },
+  "closed_scoped_gate": "The fixed-k finite locality bridge is reproducibly established conditionally on the R-493 one-step premise, with an explicit growing threshold for the frozen ell_(0,0) support.",
+  "remaining_gates": [
+    "Uniform-in-k tail and summability in the original Markov time",
+    "Source-authorized common U_n or path-space realization",
+    "N2b liminf/recovery, N2c/N4 boundary escape and N2d R-512 minimal-form identification",
+    "PAH-OMC-020 ordered stationary-semigroup local-correlation convergence"
+  ],
+  "next_single_question": "Can a source-authorized common realization supply a uniform factorial tail and compatible U_n or path comparison so that the fixed-power identities can be summed without exchanging k and n?",
+  "revisit_condition": "Reopen only when a source-authorized common realization or a parent PAH/OMC-013 byte changes; do not repeat the same fixed-power table without new input.",
+  "non_claims": [
+    "No single N(f) works for all powers; N_k grows with k.",
+    "No full exponential semigroup intertwining, anchored-n or j-before-n convergence, common infinite-volume process, path law or R-512 selection is proved.",
+    "No universal comparison-map no-go is proved.",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap, Yang--Mills or TOE conclusion follows."
+  ],
+  "synthesis_note": "strategy/pa-hyp/PAH-OMC-020-iterate-locality-certificate.md"
+}

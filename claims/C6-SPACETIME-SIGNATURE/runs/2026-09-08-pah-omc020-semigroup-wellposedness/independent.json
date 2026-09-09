@@ -1,0 +1,74 @@
+{
+  "boundary": "Derivative non-uniqueness is source-definition evidence only; no anchored-n or physical conclusion.",
+  "checks": [
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "pin:strategy/pa-hyp/PAH-001-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "expected": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+      "name": "pin:strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-527",
+      "expected": "R-527 / closed-face cylinder",
+      "name": "R-527 exact witness",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": 2,
+      "name": "exponent from source witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.2706705664732254,
+      "expected": "2*exp(-2)",
+      "name": "labelled derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.1353352832366127,
+      "expected": "exp(-2)",
+      "name": "deduplicated derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.1353352832366127,
+      "expected": "exp(-2)>0",
+      "name": "strict positive derivative gap",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.1353352832366127,
+      "expected": "nonzero",
+      "name": "same semigroup would force same derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "external Markov time",
+      "expected": "external",
+      "name": "external time retained",
+      "status": "PASS"
+    }
+  ],
+  "classification": "auxiliary_support",
+  "independent_reconstruction": {
+    "beta": "1",
+    "deduplicated_multiplicity": 1,
+    "delta_F": "4",
+    "gap": "exp(-2)>0",
+    "labelled_multiplicity": 2,
+    "numeric_gap": 0.1353352832366127
+  },
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+  },
+  "status": "PASS",
+  "verdict": "HOLD_FOR_EVIDENCE"
+}

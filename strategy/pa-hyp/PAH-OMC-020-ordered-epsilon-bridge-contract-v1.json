@@ -1,0 +1,49 @@
+{
+  "schema": "tect/pah-omc020-ordered-epsilon-bridge-contract/1.0",
+  "contract_id": "PAH-OMC-020-ORDERED-EPSILON-BRIDGE",
+  "result_id": "R-555",
+  "task_id": "T-064",
+  "date": "2026-09-08",
+  "question": "Does the registered two-term error bound imply the exact j-before-n ordered epsilon quantifier, without supplying the missing PAH owner estimates?",
+  "fixed_source": {
+    "functional": "Exactly PAH-001-v1.json.",
+    "rates": "Original directed PH/LK/AP/TR rates only.",
+    "state": "Original labelled Gibbs state and normalization.",
+    "time": "External stochastic Markov time only.",
+    "order": "j tends to infinity at fixed n first, then anchored n."
+  },
+  "symbols": {
+    "err_nj": "The nonnegative compact-time correlation error after both terms are combined.",
+    "J_nj": "The fixed-n j-to-infinity error from the stationary finite route.",
+    "D_n": "The anchored-n defect to the R-512 minimal target.",
+    "bound": "err_(n,j) <= J_(n,j) + D_n.",
+    "fixed_n": "For every n and epsilon>0, eventually J_(n,j)<epsilon/2 as j increases.",
+    "anchored_n": "For every epsilon>0, eventually D_n<epsilon/2 as n increases.",
+    "conclusion": "For every epsilon>0, some N works for all n>=N, and each such n has a J(n) after which err_(n,j)<epsilon."
+  },
+  "acceptance_conditions": [
+    "The formal theorem uses the exact j-before-n quantifier and no diagonal sequence.",
+    "The proof uses only nonnegativity, the two-term inequality, fixed-n J control and anchored-n D control.",
+    "Primary, non-importing independent, hostile and Lean replay agree.",
+    "The contract records that the PAH-specific J and D hypotheses remain unproved until the owner packet is supplied."
+  ],
+  "verification": {
+    "primary": "python -X utf8 verification/scripts/pah_omc020_ordered_epsilon_bridge.py --check",
+    "independent": "python -X utf8 codes/foundations/pah_omc020_ordered_epsilon_bridge_independent.py --check",
+    "hostile": "python -X utf8 codes/foundations/pah_omc020_ordered_epsilon_bridge_hostile.py --check",
+    "integrated": "python -X utf8 verification/scripts/pah_omc020_ordered_epsilon_bridge_verify.py --check",
+    "lean": "lake env lean Tect/PahOmc020OrderedEpsilon.lean"
+  },
+  "decision_rule": {
+    "PASS_CONDITIONAL": "The abstract ordered epsilon implication is exactly verified, while its PAH-specific hypotheses remain explicit assumptions.",
+    "HOLD_FOR_EVIDENCE": "Use for the PAH route because the source-authorized J and D estimates are absent.",
+    "NEGATIVE_RESULT": "Not triggered by this abstract bridge; an exact PAH-specific contradiction would require a separate unchanged-source witness."
+  },
+  "next_single_question": "Can one source-authorized owner packet supply the PAH-specific fixed-n J estimate and anchored-n D estimate under the unchanged common space, so that this bridge can be instantiated rather than merely assumed?",
+  "non_claims": [
+    "This bridge does not prove the PAH-specific J_(n,j) limit or D_n limit.",
+    "It does not construct U_n, a common Hilbert space, a path-space law, an N2c/N4 boundary estimate or R-512 identification.",
+    "It does not prove full PAH-OMC-020 semigroup convergence, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusions.",
+    "External Markov time remains stochastic bookkeeping and is not physical time."
+  ]
+}
