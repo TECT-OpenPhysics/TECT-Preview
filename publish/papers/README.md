@@ -9,7 +9,20 @@ cited claim set (rule M2); no paper may cite a claim above its registered tier
 
 ## Current draft registration
 
-- `a2-r157-r158-ensemble-minimizers/` — Draft v0.1.41.  This is the
+- `a2-r157-r158-ensemble-minimizers/` — Submission-preparation distribution
+  v0.1.42-s1 is registered at `publish/submission-packages/a2/v0142-s1/`
+  with the adjacent ZIP. Begin with `DELIVERY-README.md`; the paper folder's
+  `submission-distribution.txt` distinguishes its immutable source checkpoint
+  from the adjacent v0.1.41 research snapshot. The distribution includes the
+  18-page manuscript, two-page submission notes, unsent cover letter, blank
+  external review forms, scientific supplements, archive inventory and fresh
+  14-command extracted-source replay. The large full-source companion is
+  identified separately by its exact hash and regeneration contract.
+  External mathematics and specialist novelty reviews are NOT PERFORMED;
+  their absence is disclosed and is not a packaging prerequisite. Author
+  declarations, venue selection and actual transmission remain separate.
+  No source branch merge, canonical integration, actual submission or claim
+  promotion is inferred. The retained draft v0.1.41 below is the
   self-contained fixed-side-16 classical A2/R-157/R-158 manuscript and its
   reproducibility package.  It cites `A2-FULL-PRODUCTION-WELLPOSED`, `R-157`,
   and `R-158`; `R-472` is assurance-only.  Its lifecycle remains `draft` and
