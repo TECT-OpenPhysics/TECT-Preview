@@ -1,0 +1,60 @@
+{
+  "archive_members": 349,
+  "archive_sha256": "0eec7d2e09f4ae6bf96f11a969fa5cbdaf2da4f56fb9467c42f45b778425a3ac",
+  "boundary": "Package integrity, finite/provenance replay and layout receipts only; no analytic, novelty, external-review, journal or sector acceptance. No transmission.",
+  "claim_bearing": false,
+  "extracted_integrated_replay": {
+    "command": "python -X utf8 verification/scripts/q3lock_manuscript_integrated_replay.py --check",
+    "returncode": 0,
+    "status": "PASS",
+    "stdout": "Q3LOCK INTEGRATED REPLAY: PASS; manuscript groups 7 ; canonical groups 7 ; independent child 306 / 306 ; historical records 90\nresearch-snapshot\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-09-08-q3lock-paper-integrated-replay-source-review-v1\\result.json"
+  },
+  "extracted_integrity": "PASS 348 file hashes; external review NOT PERFORMED",
+  "hostile_verifier_checks": {
+    "changed_bytes": {
+      "message": "FAIL changed member: changed.txt",
+      "rejected": true
+    },
+    "false_external_signature": {
+      "message": "FAIL: declared scientific/review scope changed",
+      "rejected": true
+    },
+    "missing_member": {
+      "message": "FAIL missing/unsafe member: missing.txt",
+      "rejected": true
+    },
+    "path_escape": {
+      "message": "FAIL unsafe member: ../escape",
+      "rejected": true
+    }
+  },
+  "optimized_python_rejected": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "result_id": "R-497",
+  "schema": "tect/q3lock-submission-package-audit/1.0",
+  "scientific_body_comparison": {
+    "bibliography_sha256": "fa2df1e5579a358e507af5627c513da8225359200ac3cf0888fb391e58948fa3",
+    "bibliography_unchanged": true,
+    "comparison": "Exact Unicode equality after newline normalization; no field filtering",
+    "scientific_body_sha256": "35b2016ee38299e957eab2908946b797b8cb50d264297540af0d2e710d1ee0a6",
+    "scientific_body_unchanged": true
+  },
+  "scope": {
+    "actual_submission": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "claim_bearing": false,
+    "external_review_required_for_packaging": false,
+    "literature_review": "NOT_PERFORMED",
+    "mathematics_review": "NOT_PERFORMED",
+    "result_id": "R-497",
+    "tier": "T0"
+  },
+  "source_hashes": {
+    "publish/submission-packages/q3lock/submission-v0138-s1/MANIFEST.json": "cca7522bc565018573c2c915b96984a309f461bbe73555935baed1d73499a029",
+    "publish/submission-packages/q3lock/submission-v0138-s1/build-report.json": "c189f68d130912669129352b57fb67eefad359343d5bf44ae6933a9aba35300a",
+    "publish/submission-packages/q3lock/submission-v0138-s1/render-review.json": "94465f4f4f15d8cc87c25fe5698d1e678d99adbd42cc844815720d42383fc4e5",
+    "verification/scripts/build_q3lock_submission.py": "cbc8296387d89ef5a74d88145494288e59a41692b9aa29c8c05e8bd8babbb8da",
+    "verification/scripts/q3lock_submission_package_audit.py": "4aa1b4999127f2bf99ca09657d27a22d449958854afeeeac02c59934f6b315ef"
+  },
+  "status": "PASS",
+  "verified_file_hashes": 348
+}

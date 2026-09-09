@@ -1,0 +1,2496 @@
+% Draft manuscript source for the Q3LOCK phase-coexistence paper.
+% Derived submission-preparation edition authorized on 2026-09-09.
+% Original scientific source and pre-distribution audit bytes are preserved.
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\emergencystretch=2em
+\allowdisplaybreaks[2]
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\T}{\mathbb T}
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\eps}{\varepsilon}
+
+\title{Phase Coexistence in an Eight-Component Q3-Locked Quantum Anharmonic Crystal}
+\author{Jusang Lee}
+\date{Submission-preparation edition v0.1.38-s1 -- 2026-09-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We formulate a fixed-spacing three-dimensional quantum anharmonic crystal
+with eight real components per lattice site, a ferromagnetic spatial coupling,
+and a non-radial quartic locking interaction on the internal cube graph
+$Q_3$.  The source is coupled to the normalized collective direction
+$u=8^{-1/2}(1,\ldots,1)$.  This manuscript assembles a conditional theorem
+package, with every imported hypothesis displayed, for the following chain:
+finite-volume heat traces and Euclidean loop measures; open-box and periodic
+thermodynamic pressure; compact tempered DLR states; continuous-loop FKG
+association; spatial reflection positivity and a three-dimensional infrared
+bound; a volume-uniform collective Duhamel lower bound; and, in an explicit
+low-temperature sufficient regime, a strict source cusp and two distinct
+parity-related zero-source DLR states.  The proof uses the general-vector
+existence results of Kozitsky--Pasurek, the finite-dimensional infrared
+inequality of Froehlich--Simon--Spencer through an explicit hypothesis
+crosswalk.  The needed Griffiths endpoint specialization and finite spectral
+Falk--Bruch inequality are proved directly.  No scalar or
+radial phase theorem is imported.  This submission-preparation edition retains the conditional theorem and
+its explicit analytic hypotheses. Internal argument review and finite
+diagnostic replay are not independent external mathematical or specialist
+novelty review; neither external review has been obtained. No claim is made
+about a ground-state gap, real-time KMS dynamics, a continuum limit, a
+physical vacuum, cosmology, or closure of a broader physical theory.
+\end{abstract}
+
+\section{Scope, status, and contributions}
+
+This paper concerns one explicitly defined mathematical model.  It is not a
+claim that the model is the microscopic law of nature.  The research record
+for the assembled content is EXP-000780--EXP-000782 and R-497.  R-497 is
+registered as \texttt{T0}, \texttt{claim\_bearing=false}, and
+\texttt{INTERNAL\_REVIEW\_ONLY}.  The statements below are therefore written
+as a conditional composition. The model-specific arguments and source
+applicability have undergone internal AI-assisted review; independent
+external mathematical and specialist novelty reviews have not been obtained.
+The author has requested preparation for submission without making those
+external reviews prerequisites for producing the package.
+
+The paper has seven proof blocks.
+\begin{enumerate}[label=\textup{(B\arabic*)},leftmargin=2.3em]
+\item finite-volume Hamiltonians, heat-trace finiteness, and the exact
+      harmonic-reference/path-integral normalization;
+\item open-box pressure, periodic pressure, and locally uniform source
+      convergence;
+\item tempered Euclidean DLR existence, compactness, and source-tangent
+      limits;
+\item continuous-loop FKG association and the collective covariance
+      inequalities;
+\item spatial reflection positivity, finite-mesh FSS Gaussian domination,
+      and the nonzero-mode infrared sum in dimension three;
+\item a collective translation, form-domain, and Falk--Bruch lower bound;
+\item strict cusp and construction of a parity-related DLR pair under an
+      explicit sufficient condition.
+\end{enumerate}
+
+The novelty boundary is intentionally narrow.  The standard ingredients are
+the cited Gibbs/DLR, FKG, infrared, and Griffiths tools.  The model-specific
+content is their typed composition for a non-radial eight-component $Q_3$
+interaction, including the exact source normalization and the collective
+lower bound.  No priority or world-first assertion is made.
+
+The following conclusions are explicitly outside the paper:
+\begin{itemize}[leftmargin=2.3em]
+\item no all-parameter phase theorem, and no phase-absence theorem outside
+      the sufficient regime below;
+\item no assertion that the two states are extremal, pure, clustering,
+      unique, or the complete DLR simplex;
+\item no common infinite-volume real-time dynamics, algebraic KMS statement,
+      ground-state phase, or spectral gap;
+\item no spatial lattice-spacing removal, continuum renormalization, physical-vacuum
+      ordering, cosmological interpretation, or Yang--Mills conclusion;
+\item no closure of TECT sectors A, C, CP1, Pre-A, or the master theorem;
+\item no submission, upload, or release tag is authorized by this
+      review PDF; see Section~\ref{sec:readiness}.
+\end{itemize}
+
+\section{The exact Q3LOCK model and conventions}
+\label{sec:model}
+
+Let $\Lambda_L=(\Z/L\Z)^3$, $V=L^3$, and take even $L\geq4$ in the
+thermodynamic sequence.  Positive-direction nearest-neighbour bonds are
+counted once for $L\geq4$; the finite-volume source record also specifies the
+parallel-bond multiplicity convention at $L=2$.  A site variable is
+$q_y=(q_{y,e})_{e\in\{0,1\}^3}\in\R^8$.  The internal graph $Q_3$ has an
+edge between two binary triples that differ in one coordinate.  Write
+\[
+ u=8^{-1/2}(1,\ldots,1),\qquad Q_y=(u,q_y),\qquad S_y=|q_y|^2,
+\]
+and
+\[
+ D_y^{\mathrm{int}}=\sum_{\{e,f\}\in E(Q_3)}(q_{y,e}-q_{y,f})^2.
+\]
+The superscript distinguishes this internal graph quantity from the Duhamel
+matrix introduced later.
+
+For $m=\chi/\hbar^2>0$, $c,g,\lambda>0$, $r\in\R$, and real collective
+source $h$, define
+\begin{align}
+ U_{L,h}(q)
+ &=\sum_{y\in\Lambda_L}\left[
+       \frac r2S_y+\frac g4\sum_e q_{y,e}^4
+       +\frac\lambda4\sum_{\{e,f\}\in E(Q_3)}
+          (q_{y,e}-q_{y,f})^2(q_{y,e}^2+q_{y,f}^2)
+       -hQ_y\right]\nonumber\\
+ &\qquad+\frac c2\sum_{\langle y,z\rangle}|q_y-q_z|^2. \label{eq:potential}
+\end{align}
+No radial or $O(8)$ symmetry is assumed.  The Hamiltonian on
+$L^2(\R^{8V},\dd q)$ is
+\begin{equation}
+ H_{L}(h)=-\frac1{2m}\sum_{y,e}\partial_{q_{y,e}}^2+U_{L,h}(q).
+ \label{eq:hamiltonian}
+\end{equation}
+The phase application uses $r<0$, but the finite-pressure statements allow
+arbitrary real $r$.
+
+Put
+\begin{equation}
+ w(q)=\sum_{y\in\Lambda_L}|q_y|^4,
+ \qquad
+ \mathsf Q_L=H^1(\R^{8V})\cap L^2(\R^{8V},w(q)\dd q).
+ \label{eq:form-domain}
+\end{equation}
+The following finite-dimensional lemma records the form and truncation facts
+used below.  It is included to distinguish the closed-form argument from the
+later spatial and thermodynamic limits.
+
+\begin{lemma}[Finite-volume form and residual truncation]
+\label{lem:finite-form-truncation}
+For $|h|\leq h_0$ the potential in \eqref{eq:potential} obeys
+\begin{align}
+ U_{L,h}(q)&\geq \frac{g}{128}w(q)-VC_{\rm phys},
+ \label{eq:physical-form-lower}\\
+ |U_{L,h}(q)|&\leq C_{\rm abs}+K_{\rm abs}w(q),
+ \label{eq:physical-form-upper}
+\end{align}
+where one may take
+\begin{align}
+ C_{\rm phys}&=\frac{4r^2}{g}
+   +\frac34h_0^{4/3}(32/g)^{1/3},\nonumber\\
+ C_{\rm abs}&=V\left(|r|/2+h_0+6c\right),\qquad
+ K_{\rm abs}=g/4+3\lambda+|r|/8+h_0/4+3c/2,\nonumber\\
+ C_{\rm res}(a)&=\frac{4(r-a)^2}{g}
+   +\frac34h_0^{4/3}(32/g)^{1/3}.
+ \label{eq:form-envelope-constants}
+\end{align}
+Consequently the form of $H_L(h)$ with domain $\mathsf Q_L$ is closed,
+semibounded, and has compact embedding into $L^2(\R^{8V})$.  If $a>0$, write
+$\mathsf Q_a=H^1(\R^{8V})\cap L^2(\R^{8V},|q|^2\dd q)$ for the harmonic
+form domain.  For $R=R_{a,h}$ and $R_M=\min(R,M)$ with
+$M\geq-VC_{\rm res}(a)$, the forms
+\[
+ \mathfrak q_M[\psi]=\mathfrak q_a[\psi]
+       +\int R_M|\psi|^2\dd q
+\]
+are closed on the harmonic form domain, increase to the physical form on
+$\mathsf Q_L$, and their resolvents converge strongly to the operator
+associated with $H_L(h)$.  The last statement is a finite-volume variational
+limit; it does not assert a spatial or continuum form limit.
+\end{lemma}
+
+\begin{proof}
+For a single site, Cauchy--Schwarz gives
+$\sum_e q_{y,e}^4\geq |q_y|^4/8$.  The locking and spatial difference terms
+are nonnegative.  With $t=|q_y|$, the two scalar maximisations
+\[
+ bt^2-\frac{g}{64}t^4\leq\frac{16b^2}{g},\qquad
+ h_0t-\frac{g}{128}t^4
+ \leq\frac34h_0^{4/3}(32/g)^{1/3}
+\]
+hold for every $b,t\geq0$.  Taking $b=|r|/2$ gives
+\eqref{eq:physical-form-lower}; taking $b=|r-a|/2$ gives the residual bound
+used in \eqref{eq:residual-lower}.
+
+For the upper envelope use
+$(x-y)^2(x^2+y^2)\leq4(x^4+y^4)$,
+$t^2\leq1+t^4/4$, and $t\leq1+t^4/4$.  Every Q3 vertex has degree three,
+and every periodic spatial site has six endpoint incidences.  Hence the
+locking term contributes at most $3\lambda w$, the spatial term contributes
+at most $6cV+(3c/2)w$, and the quadratic and source terms give the remaining
+parts of \eqref{eq:form-envelope-constants}.  This proves
+\eqref{eq:physical-form-upper}.
+
+Choose $C_0$ so that $U_{L,h}+C_0\geq1+(g/256)w$.  The form norm of
+$\mathfrak q_h+C_0\norm{\cdot}_2^2$ is then equivalent, by the two displayed
+envelopes, to
+\[
+ \norm{\nabla\psi}_2^2+\norm{\psi}_2^2+
+ \norm{w^{1/2}\psi}_2^2.
+\]
+The intersection defining $\mathsf Q_L$ is therefore complete.  For a form-
+bounded sequence, Rellich compactness on a ball gives an $L^2$-convergent
+subsequence there, while
+\[
+ \int_{|q|>R}|\psi(q)|^2\dd q
+ \leq VR^{-4}\int w(q)|\psi(q)|^2\dd q
+\]
+controls the tail uniformly.  Thus the embedding $\mathsf Q_L\hookrightarrow
+L^2$ is compact.
+
+The residual lower bound gives $H_L(h)\geq H_a-VC_{\rm res}(a)$ as a form inequality,
+with $C_{\rm res}(a)$ from \eqref{eq:residual-lower}.  For
+$M\geq-VC_{\rm res}(a)$, all forms have the harmonic form domain, $R_M$ is
+continuous and bounded, and $R_M\uparrow R$.  Monotone convergence of the
+positive part of $R_M$ and the common lower bound show
+$\mathfrak q_M[\psi]\uparrow\mathfrak q_h[\psi]$
+for $\psi\in\mathsf Q_L$.  To see the associated resolvent limit directly, fix $\alpha>VC_{\rm res}(a)$ and let $u_M$ minimize
+\[
+ \mathfrak q_M[u]+\alpha\norm{u}_2^2-2\Re\ip{f}{u}.
+\]
+The inequality $\mathfrak q_M\geq\mathfrak q_a-VC_{\rm res}(a)\norm{\cdot}_2^2$ and the
+minimizing inequality give a uniform bound in the harmonic form norm
+\[
+ \mathfrak q_a[u_M]+(\alpha-VC_{\rm res}(a))\norm{u_M}_2^2.
+\]
+This is deliberately only a harmonic-form bound: the upper truncation does not
+provide a uniform quartic bound.  The harmonic form embedding is compact in
+finite dimension, so every subsequence has a further subsequence converging
+weakly in $\mathsf Q_a$ and strongly in $L^2$ to some $u$.  For each fixed
+$k\geq-VC_{\rm res}(a)$ and all $M\geq k$, monotonicity gives
+$\mathfrak q_k[u_M]\leq\mathfrak q_M[u_M]$.  Since $\mathfrak q_k$ is closed and
+boundedly equivalent to the harmonic form norm, weak lower semicontinuity gives
+\[
+ \mathfrak q_k[u]+\alpha\norm{u}_2^2\leq
+ \liminf_{M\rightarrow\infty}\bigl(\mathfrak q_k[u_M]+\alpha\norm{u_M}_2^2\bigr).
+\]
+The uniform bound and monotone convergence in $k$ imply
+$\mathfrak q_h[u]<\infty$, so $u\in\mathsf Q_L$.  For
+$F_M(v)=\mathfrak q_M[v]+\alpha\norm{v}_2^2-2\Re\ip{f}{v}$ and any $v\in\mathsf Q_L$,
+minimality gives $F_M(u_M)\leq F_M(v)$.  Taking the limsup on the right gives
+$F_h(v)$.  On the other hand, for every fixed $k$ the lower bound
+$F_M(u_M)\geq\mathfrak q_k[u_M]+\alpha\norm{u_M}_2^2-2\Re\ip{f}{u_M}$ and the preceding lower-semicontinuity estimate give, after $k\rightarrow\infty$,
+$F_h(u)\leq\liminf_MF_M(u_M)$.  Hence $u$ minimizes $F_h$ on $\mathsf Q_L$.
+The minimizer is unique, and compactness of the harmonic embedding then upgrades
+subsequential convergence to strong $L^2$ convergence of the full resolvent
+sequence.  This proves the stated resolvent convergence without assuming an
+operator-monotonicity property of the exponential or a false uniform quartic
+bound for the upper-truncated forms.
+\end{proof}
+
+The lemma supplies only finite-volume operator control.  In particular, its
+compact embedding is not the tempered spatial compactness used in the DLR
+construction, and the resolvent argument does not by itself identify the
+unbounded Feynman--Kac kernel; that identification is carried out next by the
+bounded truncations and Simon's cited bridge theorem.
+
+\begin{remark}[Source and units]
+The parameter $h$ is an energy coefficient in $H_L(h)=H_L(0)-h\sum_yQ_y$.
+It is not $\beta h$.  This convention is responsible for every factor of
+$\beta$ in the pressure and Duhamel identities below.
+\end{remark}
+
+\section{Finite volume: trace, loops, and harmonic split}
+\label{sec:finite}
+
+Choose an auxiliary $a>0$, set $\omega_a=\sqrt{a/m}$, and write
+\begin{equation}
+ H_a=-\frac1{2m}\Delta+\frac a2\sum_y|q_y|^2,\qquad
+ R_{a,h}=U_{L,h}-\frac a2\sum_y|q_y|^2.
+ \label{eq:harmonic-split}
+\end{equation}
+For $|h|\leq h_0$, put $b_a=|r-a|/2$ and
+\begin{equation}
+ A=\frac g{128},\qquad
+ C=\frac{16b_a^2}{g}+\frac34 h_0^{4/3}(32/g)^{1/3},\qquad
+ R_{a,h}(q)\geq A\sum_y|q_y|^4-VC.
+ \label{eq:residual-lower}
+\end{equation}
+Indeed $\sum_e q_e^4\geq|q|^4/8$, the locking and spatial differences are
+nonnegative, and
+$b_at^2\leq gt^4/64+16b_a^2/g$ and
+$h_0t\leq gt^4/128+(3/4)h_0^{4/3}(32/g)^{1/3}$ for $t\geq0$.
+Min--max comparison with the
+harmonic oscillator therefore yields
+\begin{equation}
+ 0<Z_L(h):=\Tr e^{-\beta H_L(h)}
+ \leq e^{\beta VC}\,[2\sinh(\beta\omega_a/2)]^{-8V}<\infty.
+ \label{eq:trace-bound}
+\end{equation}
+This is an eigenvalue comparison, not an appeal to operator monotonicity of
+the exponential.
+
+For an even time mesh $N\geq4$, $\eps=\beta/N$, and cyclic variables
+$x_{y,k}$, the Gaussian reference action is
+\begin{equation}
+ S_{a,N}(x)=\frac12\sum_{y,k}\left[
+ \frac m\eps|x_{y,k+1}-x_{y,k}|^2+a\eps|x_{y,k}|^2\right].
+ \label{eq:mesh-action}
+\end{equation}
+Let $n_L=8V$, and define the absolute Gaussian prefactor and probability law by
+\[
+ c_N=(m/(2\pi\eps))^{n_LN/2},\qquad
+ Z_{a,N}=c_N\int e^{-S_{a,N}}\dd x,\qquad
+ \gamma_{a,N,L}(\dd x)=\frac{c_N}{Z_{a,N}}e^{-S_{a,N}(x)}\dd x.
+\]
+The factor $c_N$ is the product of free heat-kernel normalizations.  For one
+coordinate, Gaussian integration cancels it against the precision factor
+$(m/\eps)^{N/2}$ and leaves the inverse square root of the cyclic determinant
+with diagonal $2+t$, off-diagonal $-1$, and $t=\eps^2a/m$.
+The exact cyclic determinant is
+\begin{equation}
+ Z_{a,N}=\left[2\sinh\left(N\operatorname{arsinh}
+       \frac{\beta\omega_a}{2N}\right)\right]^{-8V},
+ \qquad Z_{a,N}\longrightarrow [2\sinh(\beta\omega_a/2)]^{-8V}.
+ \label{eq:cyclic-det}
+\end{equation}
+To see this, put $z+z^{-1}=2+t$, $z>1$.  Each Fourier eigenvalue is
+$(z-\zeta)(z-\zeta^{-1})/z$, with $\zeta^N=1$. Their product is
+$z^N+z^{-N}-2=4\sinh^2(N\log z/2)$ and
+$\log z=2\operatorname{arsinh}(\sqrt t/2)$, proving \eqref{eq:cyclic-det}.
+The independent recurrence is
+$T_0=2$, $T_1=2+t$, $T_j=(2+t)T_{j-1}-T_{j-2}$, with determinant $T_N-2$.
+
+\subsection{Gaussian convergence in the finite-volume loop space}
+\label{sec:gaussian-loop}
+
+All limits in this subsection keep $L,\beta,m,a$ fixed.  Write
+$\mathsf E_L=C_{\rm per}([0,\beta];\R^{n_L})$, with its sup norm, and let
+$\mathcal I_N$ be periodic linear interpolation.  For one scalar coordinate,
+unitary discrete Fourier inversion gives the grid covariance
+\begin{align}
+ G_N(j)&=\frac1\beta\sum_{n\in\mathcal J_N}
+       \frac{e^{2\pi i n j/N}}{D_N(n)},\qquad
+ \mathcal J_N=\{-N/2+1,\ldots,N/2\},\nonumber\\
+ D_N(n)&=a+\frac{4m}{\eps^2}\sin^2(\pi n/N),\qquad
+ D(n)=a+\frac{4\pi^2mn^2}{\beta^2},\nonumber\\
+ G(t)&=\frac1\beta\sum_{n\in\Z}\frac{e^{2\pi int/\beta}}{D(n)}.
+ \label{eq:gaussian-covariances}
+\end{align}
+The continuum series is absolutely summable. It is positive definite and
+defines the finite-dimensional distributions of a centered periodic Gaussian.
+The increment estimate below provides a continuous version.  Both diagonal
+covariances are bounded by
+\begin{equation}
+ G_N(0),G(0)\leq K_a:=\frac1{\beta a}+\frac\beta{12m}.
+ \label{eq:gaussian-diagonal-bound}
+\end{equation}
+For the discrete bound, keep the zero Fourier mode and remove $a$ only from
+the remaining denominators.  The cycle Laplacian pseudoinverse has diagonal
+$(N^2-1)/(12N)$: its effective resistance at separation $j$ is
+$j(N-j)/N$, whose sum is twice $N$ times that diagonal.  Multiplication by
+$\eps/m$ gives the bound.  In the continuum, sum the nonzero comparison
+coefficients $\beta/(4\pi^2mn^2)$ to obtain the same upper bound.
+
+For $0<|n|\leq N/2$, the inequalities
+$\sin x\geq2x/\pi$ and $0\leq x^2-\sin^2x\leq x^4/3$ on
+$[0,\pi/2]$ imply
+\[
+ 0\leq D_N(n)^{-1}-D(n)^{-1}
+ \leq\frac{\pi^2\beta^2}{48mN^2}.
+\]
+The omitted modes obey $\sum_{n\notin\mathcal J_N}n^{-2}\leq6/N$;
+one may sum the two decreasing tails by integrals and retain the missing
+negative Nyquist mode separately. Consequently
+\begin{equation}
+ \sup_j|G_N(j)-G(\eps j)|
+ \leq B_N:=\frac\beta{mN}
+            \left(\frac{\pi^2}{48}+\frac{3}{2\pi^2}\right).
+ \label{eq:gaussian-grid-error}
+\end{equation}
+
+Let $d$ denote circular distance between two times. The continuum
+massless comparison, summing the Fourier series for the periodic bridge
+increment, gives
+$\E|X(t)-X(s)|^2\leq d(\beta-d)/(m\beta)\leq d/m$.
+Cauchy--Schwarz then gives
+$|G(t)-G(s)|\leq\sqrt{K_a d/m}$.
+The interpolated covariance is a convex combination of four grid
+covariances, and the corresponding time differences are within $2\eps$
+of $t-s$.  Therefore
+\begin{equation}
+ \sup_{s,t}|\operatorname{Cov}(\mathcal I_NX(t),\mathcal I_NX(s))-G(t-s)|
+ \leq B_N+\sqrt{\frac{2K_a\beta}{mN}}\longrightarrow0.
+ \label{eq:gaussian-interpolated-error}
+\end{equation}
+This proves convergence of every finite Gaussian evaluation vector.
+
+Tightness requires an estimate at arbitrary times, not just grid vertices.
+For a grid increment at shortest separation $j$, comparison on the
+zero-sum subspace with the massless cycle gives
+$\E|x_k-x_l|^2\leq\eps j/m$.
+If $d\leq\eps$, the interpolated increment crosses at most two partial
+edges; the $L^2$ triangle inequality bounds its variance by
+$d^2/(m\eps)\leq d/m$. If $d>\eps$, insert neighboring vertices at
+both ends. The two end increments have $L^2$ norms at most
+$\sqrt{\eps/m}$, and the intervening grid increment has norm at most
+$\sqrt{(d+2\eps)/m}$. It follows that
+\begin{align}
+ \E|\mathcal I_NX(t)-\mathcal I_NX(s)|^2&\leq14d/m,\nonumber\\
+ \E\|\mathcal I_NX(t)-\mathcal I_NX(s)\|^4
+ &\leq n_L(n_L+2)14^2d^2/m^2.
+ \label{eq:gaussian-tightness}
+\end{align}
+Here $(2+\sqrt3)^2<14$, and the second line uses independence of the
+$n_L$ coordinates and the exact fourth moment of a centered Gaussian.
+Kolmogorov's tightness criterion, with fourth-moment exponent $2>1$ and
+the tight one-time marginals from \eqref{eq:gaussian-diagonal-bound},
+applies on the time interval. Periodicity is a closed condition. Tightness
+and \eqref{eq:gaussian-interpolated-error} thus prove
+\begin{equation}
+ \nu_N:=(\mathcal I_N)_*\gamma_{a,N,L}
+       \ \Longrightarrow\ \gamma_{a,L}\quad\hbox{on }\mathsf E_L.
+ \label{eq:gaussian-weak-limit}
+\end{equation}
+Every subsequential limit has the same Gaussian finite-dimensional laws,
+which determine a measure on this continuous-path space.  This proves
+convergence of the whole sequence.  No spatial weighted topology or
+uniformity as $L\to\infty$ has been used.
+
+\subsection{Interacting weights, normalizers and source moments}
+\label{sec:weighted-loop}
+
+The full mesh action is independent of $a$ after cancellation:
+\begin{equation}
+ S_{a,N}(x)+\eps\sum_kR_{a,h}(x_k)
+ =\frac m{2\eps}\sum_{y,k}|x_{y,k+1}-x_{y,k}|^2
+   +\eps\sum_kU_{L,h}(x_k). \label{eq:split-cancellation}
+\end{equation}
+Define on all of $\mathsf E_L$
+\[
+ \mathcal R_{N,h}(\omega)=\eps\sum_kR_{a,h}(\omega(k\eps)),\qquad
+ \mathcal R_h(\omega)=\int_0^\beta R_{a,h}(\omega(t))\dd t,
+ \qquad w_{N,h}=e^{-\mathcal R_{N,h}},\quad w_h=e^{-\mathcal R_h}.
+\]
+These expressions agree with the mesh residual on polygonal paths.
+Equation~\eqref{eq:residual-lower} bounds both weights above by
+$M_L=e^{\beta VC}$.  Under either Gaussian reference, Wick averaging
+gives the uniform upper bound $\E\mathcal R_{N,h},\E\mathcal R_h
+\leq\beta V C_J^{\rm mesh}$, where
+\[
+ C_J^{\rm mesh}=4|r-a|K_a+24cK_a+(6g+24\lambda)K_a^2.
+\]
+Indeed a scalar fourth moment is $3s^2$, an internal edge polynomial
+has mean $8s^2$, there are twelve internal edges and at most three spatial
+bonds per site, and $s\leq K_a$. The source has zero Gaussian mean.
+Jensen's inequality consequently gives
+\begin{equation}
+ \mathfrak z_{N,h}:=\int w_{N,h}\dd\nu_N\geq e^{-\beta VC_J^{\rm mesh}},
+ \qquad \mathfrak z_h:=\int w_h\dd\gamma_{a,L}
+                         \geq e^{-\beta VC_J^{\rm mesh}}.
+ \label{eq:mesh-normalizer-lower}
+\end{equation}
+The constants are uniform in $N$ and $|h|\leq h_0$ at this fixed volume.
+
+Let $\mathcal K\subset\mathsf E_L$ be compact. Its paths have bounded
+range and a common modulus of continuity $\eta_{\mathcal K}$ tending to
+zero. The finite-dimensional polynomial $R_{a,h}$ has a common Lipschitz
+constant $L_{\mathcal K}$ on that range for $|h|\leq h_0$. Thus
+\begin{equation}
+ \sup_{\omega\in\mathcal K,\ |h|\leq h_0}
+ |\mathcal R_{N,h}(\omega)-\mathcal R_h(\omega)|
+ \leq\beta L_{\mathcal K}\eta_{\mathcal K}(\eps)\longrightarrow0.
+ \label{eq:compact-riemann-residual}
+\end{equation}
+The kinetic action is already included in $\nu_N$; it is not evaluated as
+a Riemann sum of a derivative of a typical Gaussian path.
+
+For any bounded continuous $F$, choose a common compact set carrying all
+but probability $\eta$ of every $\nu_N$, using
+\eqref{eq:gaussian-weak-limit}. On this set the weights converge uniformly
+by \eqref{eq:compact-riemann-residual}; on its complement,
+$|F(w_{N,h}-w_h)|\leq2\|F\|_\infty M_L$.  Finally $Fw_h$ is bounded
+continuous, so ordinary weak convergence applies to it. Taking $N\to\infty$
+and then $\eta\downarrow0$ proves
+\begin{equation}
+ \int Fw_{N,h}\dd\nu_N\longrightarrow
+       \int Fw_h\dd\gamma_{a,L},\qquad
+ \mathfrak z_{N,h}\longrightarrow\mathfrak z_h>0,
+ \qquad
+ \mu_{N,L,h}:=\frac{w_{N,h}\nu_N}{\mathfrak z_{N,h}}
+       \Longrightarrow\mu_{L,h}:=\frac{w_h\gamma_{a,L}}{\mathfrak z_h}.
+ \label{eq:weighted-loop-limit}
+\end{equation}
+This is weak convergence on $\mathsf E_L$, not total-variation convergence.
+The absolute mesh partition function is $Z_{N,L}(h)=Z_{a,N}\mathfrak z_{N,h}$,
+so it converges to $Z_a\mathfrak z_h$.  The full finite-mesh action
+\eqref{eq:split-cancellation} and its prefactor $c_N$ do not depend on $a$.
+Repeating the limit for any other fixed positive split therefore proves
+independence of both this absolute limit and the normalized loop law from
+the chosen split.
+
+\subsection{Identification with the heat trace}
+\label{sec:fk-identification}
+
+The precise external input is Simon \cite[Theorem 1.1, (1.1)--(1.3),
+page 2]{Simon-FK}: the Brownian-bridge formula for a continuous potential
+bounded below on a finite-dimensional Euclidean space. Its kinetic
+operator is $-\Delta/2$. With $D=8|\Lambda_L|$ and $z=\sqrt m\,q$,
+the unitary map $\psi(q)\mapsto m^{-D/4}\psi(z/\sqrt m)$ sends our
+operator to $-\Delta_z/2+U_{L,h}(z/\sqrt m)$. The polynomial $U_{L,h}$ is
+continuous and bounded below at every fixed $L,h$, by the retained quartic
+bound. In the original coordinates the free bridge has covariance
+$m^{-1}(\min(s,t)-st/\beta)$, and its kernel prefactor is
+$(m/(2\pi\beta))^{D/2}$. No mass-one convention is silently imposed.
+The stronger unbounded-semigroup Theorem 1.2 of that source is not used. Its weaker growth condition (1.4) is therefore not being substituted for the bounded-below hypothesis in this finite-volume application.
+
+The harmonic-reference version follows from this free-bridge input by defining
+\begin{equation}
+ \dd\mathbb P^a_{q,q'}=
+ \frac{\exp[-\int_0^\beta a|\omega(t)|^2/2\,\dd t]}
+ {\E^0_{q,q'}\exp[-\int_0^\beta a|\omega(t)|^2/2\,\dd t]}
+ \dd\mathbb P^0_{q,q'}.
+ \label{eq:fk-harmonic-bridge-density}
+\end{equation}
+The denominator is strictly positive. Applying the free formula to the
+harmonic potential alone identifies it with $K_a/K_0$. Applying the same
+formula to $U_{L,h}=a|q|^2/2+R_{a,h}$ gives the following identity.
+For the positive harmonic operator $H_a$, a continuous real multiplication
+potential $R$ bounded below, and $H=H_a+R$ defined by its semibounded form,
+its kernel is
+\[
+ K_H(\beta;q,q')=K_a(\beta;q,q')
+       \E^a_{q,q'}\exp\left[-\int_0^\beta R(\omega(t))\dd t\right].
+\]
+Here $\E^a_{q,q'}$ denotes the normalized harmonic bridge. The bounded
+potential formula extends to $R$ by truncating $R$ above and passing by
+monotone form convergence; the bridge factors are dominated by
+$e^{-\beta\inf R}$. The kernels are continuous by local endpoint dominated
+convergence in the bridge formula. Their semigroup property and symmetry give
+$\int K_H(\beta;q,q)\dd q=\|e^{-\beta H/2}\|_{\rm HS}^2
+=\Tr e^{-\beta H}$ by Tonelli; finiteness follows also from the
+integrable majorant $e^{-\beta\inf R}K_a(\beta;q,q)$.
+Mixing the diagonal bridges with $K_a(\beta;q,q)\dd q/Z_a$ gives
+the centered periodic Gaussian with covariance
+$(-m\partial_t^2+a)^{-1}$ in \eqref{eq:gaussian-covariances}.
+Applying this formula with $R=R_{a,h}$ gives
+\begin{equation}
+ Z_L(h)=Z_a\,\E_{\gamma_{a,L}}
+ \exp\left[-\int_0^\beta R_{a,h}(\omega(\tau))\dd\tau\right],
+ \label{eq:fk}
+\end{equation}
+The parameter and form hypotheses are verified in
+\eqref{eq:form-domain} and \eqref{eq:residual-lower}.  The source-specific
+normalized Feynman--Kac formulas being compared are KP~\cite{KP},
+Section 2.3, equations (2.28)--(2.32). Their $Z_\Lambda$ in (2.32) is
+the residual normalizer $\mathfrak z_h$; the absolute heat trace here includes
+$Z_a$. This identifies the weak limit above with the operator loop law and
+supplies the absolute normalization without inferring it from a normalized
+correlation identity. Simon's free-bridge theorem is the external analytic
+input; the mass scaling, harmonic reweighting and trace normalization above
+are its finite-volume application, not additional infinite-volume imports.
+
+\subsection{Unbounded sources and pressure derivatives}
+\label{sec:source-moments}
+
+For a fixed real site field $f$, define
+\[
+ Y_f(\omega)=\int_0^\beta\sum_yf_y(u,\omega_y(t))\dd t,\qquad
+ Y_{N,f}(\omega)=\eps\sum_{y,k}f_y(u,\omega_y(k\eps)),\qquad
+ \mathcal Q_N(\omega)=\eps\sum_{y,k}|\omega_y(k\eps)|^4.
+\]
+On polygonal paths $Y_f=Y_{N,f}$ exactly: the integral of each affine
+segment is the average of its endpoints, and cyclic summation counts each
+endpoint twice. Holder's inequality gives
+$|Y_{N,f}|\leq B_f\mathcal Q_N^{1/4}$, where
+$B_f=(\beta\sum_y|f_y|^{4/3})^{3/4}$.
+For $b,\delta>0$, maximization over $z\geq0$ gives
+\[
+ bz-\delta z^4\leq C_Y(b,\delta)
+ :=\frac{3b^{4/3}}{4(4\delta)^{1/3}}.
+\]
+Using \eqref{eq:residual-lower} and \eqref{eq:mesh-normalizer-lower},
+for every $T>0$, $p>1$ and $0<\delta<A$, we obtain
+\begin{equation}
+ \sup_{N,\ |h|\leq h_0}\E_{\mu_{N,L,h}}e^{pT|Y_{N,f}|}
+ \leq\exp\{\beta V(C+C_J^{\rm mesh})+C_Y(pTB_f,\delta)\}.
+ \label{eq:mesh-source-ui}
+\end{equation}
+The analogous continuous estimate follows by integral Holder and the same
+Young inequality. A slightly larger $T$ absorbs any fixed power of
+$|Y_{N,f}|$. Truncation and \eqref{eq:weighted-loop-limit} therefore pass
+the source exponential and its first two derivatives to the limit.
+
+Point evaluations use a different bound. The density relative to the
+Gaussian reference is at most $e^{\beta V(C+C_J^{\rm mesh})}$, and a
+polygonal Gaussian evaluation has variance at most $K_a$. Hence
+\begin{equation}
+ \sup_{N,\ |h|\leq h_0,t,y,e}
+ \E_{\mu_{N,L,h}}|\omega_{y,e}(t)|^4
+ \leq3K_a^2 e^{\beta V(C+C_J^{\rm mesh})}.
+ \label{eq:fixed-volume-evaluation-moment}
+\end{equation}
+The same bound holds for $\mu_{L,h}$. It is not a spatially uniform
+bound; the later DLR passage needs its own estimate. In particular an
+integrated quartic norm has not been used to bound a point evaluation
+deterministically.
+
+Define
+\begin{equation}
+ p_{\beta,L}(h)=\frac1V\log Z_L(h),\qquad
+ P_{\beta,L}(h)=\frac{p_{\beta,L}(h)}{8\beta},\qquad
+ X_L=\int_0^\beta\sum_yQ_y(\tau)\dd\tau.
+ \label{eq:pressure-def}
+\end{equation}
+Quartic domination implies $\E_{L,0}e^{T|X_L|}<\infty$ for every finite
+$T$.  Indeed, if $\mathcal Q=\int_0^\beta\sum_y|\omega_y|^4\dd\tau$,
+then $|X_L|\leq(\beta V)^{3/4}\mathcal Q^{1/4}$, and the retained positive
+quartic term absorbs $T|X_L|$ by Young's inequality.  Thus
+$Z_L(z)=Z_L(0)\E_{L,0}e^{zX_L}$ extends to an entire function of the
+complex source $z$: on $|z|\leq T$, the integrand and each of its fixed-order
+derivatives have a common integrable exponential majorant.  Since
+$Z_L(h)>0$ for every real $h$, it has a nonvanishing complex neighborhood
+of each such point, on which a holomorphic logarithm exists.  It follows
+that $p_{\beta,L}$ is real analytic on $\R$.  An entire continuation of
+$\log Z_L$ would require exclusion of complex zeros and is not asserted.
+For real $h$,
+\begin{align}
+ p_{\beta,L}'(h)&=\frac{\E_{L,h}X_L}{V}=\beta\,\E_{L,h}Q_0(0),
+ &P_{\beta,L}'(h)&=\frac{\E_{L,h}Q_0(0)}8,\label{eq:source-derivatives}\\
+ p_{\beta,L}''(h)&=\frac{\Var_{L,h}(X_L)}V\geq0. \nonumber
+\end{align}
+At $h=0$, parity $q\mapsto-q$ gives $p_{\beta,L}'(0)=0$.  A cusp can
+therefore occur only after the spatial limit.
+
+\section{Thermodynamic pressure}
+\label{sec:pressure}
+
+Let $\Lambda\subset\Z^3$ be an even rectangle.  The open Hamiltonian keeps
+only bonds with both endpoints in $\Lambda$; the periodic Hamiltonian on an
+even cube keeps the full positive-direction bond multiset.  The same onsite
+polynomial and source are used in both cases.
+
+Here are the uniform estimates needed for the limit; a finite upper bound
+alone would not exclude a limit of minus infinity.  Put $r_-=\max(-r,0)$.
+For $|h|\leq H$, scalar Young inequalities give, as quadratic forms,
+\begin{equation}
+ H_\Lambda^{\mathrm{op}}(h)\geq Q_\Lambda-b(H)|\Lambda|,\qquad
+ Q_\Lambda=\frac g8\sum_{y,e}q_{y,e}^4,\qquad
+ b(H)=\frac{8r_-^2}{g}+\frac32(4/g)^{1/3}H^{4/3}.
+ \label{eq:retained-quartic}
+\end{equation}
+To verify the constants, retain $gx^4/8$ from each scalar quartic and use
+$gx^4/16-r_-x^2/2\geq-r_-^2/g$ and
+$gx^4/16-|J_e||x|\geq-(3/4)(4/g)^{1/3}|J_e|^{4/3}$, where
+$J_e=h/\sqrt8$ and $\sum_e|J_e|^{4/3}=2|h|^{4/3}$.
+
+For $\beta\in[b_0,b_1]\subset(0,\infty)$, the variance of one harmonic
+reference coordinate is
+\[
+ k_a(\beta)=\frac{1}{2m\omega_a}\coth(\beta\omega_a/2)
+ \leq K:=\frac{1}{b_0a}+\frac{b_1}{12m}.
+\]
+The inequality follows from
+$\coth x\leq x^{-1}+x/3$ for $x>0$; for example the partial-fraction
+expansion of $\coth$ bounds the remainder by
+$2x\sum_{n\geq1}(\pi n)^{-2}=x/3$.
+The scalar quartic and each internal edge have Gaussian means
+$3k_a^2$ and $8k_a^2$, respectively.  There are eight coordinates and
+twelve internal edges per site, and at most three spatial bonds per site.
+The centered source has mean zero.  Consequently, for either boundary
+condition,
+\begin{align}
+ C_J&=4|r-a|K+24cK+(6g+24\lambda)K^2,\nonumber\\
+ C&=\frac{4(r-a)^2}{g}
+             +\frac34(32/g)^{1/3}H^{4/3},\nonumber\\
+ -8\log[2\sinh(\beta\omega_a/2)]-\beta C_J
+ &\leq |\Lambda|^{-1}\log Z_\Lambda(\beta,h)
+ \leq-8\log[2\sinh(\beta\omega_a/2)]+\beta C.
+ \label{eq:two-sided-pressure}
+\end{align}
+The lower bound is Jensen's inequality in \eqref{eq:fk}; the upper bound
+uses $R_{a,h}\geq-C|\Lambda|$, obtained by reserving half the quartic
+term and absorbing the quadratic and source terms in the other half.
+All constants are independent of $\Lambda$.  In particular the absolute
+value of every normalized log trace is bounded by some $M<\infty$ on the
+displayed compact parameter rectangle.
+
+\begin{proposition}[Open-box pressure from the finite-volume representation]
+For fixed $\beta>0$ and $h\in\R$, the limit
+\begin{equation}
+ p_\beta^{\mathrm{op}}(h)=\lim_{\Lambda\nearrow\Z^3}
+ |\Lambda|^{-1}\log Z_\Lambda^{\mathrm{op}}(h)
+ \label{eq:open-pressure}
+\end{equation}
+exists along arbitrary even rectangular exhaustions and equals the infimum
+of the normalized open-box values.  It is finite, even, and convex in $h$.
+\end{proposition}
+
+\begin{proof}
+Cutting a rectangle into two rectangles deletes nonnegative crossing bonds.
+Min--max comparison and tensor-product trace factorization give
+$F(\Lambda)=\log Z_\Lambda^{\mathrm{op}}\leq
+F(\Lambda_1)+F(\Lambda_2)$.  Fix an even block $B$ with side lengths $b_i$
+and tile a rectangle with even side lengths $l_i$ by copies of $B$ and
+even remainder rectangles.  If $v_{\rm rem}$ is the remainder volume, then
+\[
+ \frac{v_{\rm rem}}{|\Lambda|}
+ =1-\prod_{i=1}^3\left(1-\frac{l_i\bmod b_i}{l_i}\right)
+ \leq\sum_{i=1}^3\frac{l_i\bmod b_i}{l_i}\longrightarrow0.
+\]
+Subadditivity and \eqref{eq:two-sided-pressure} bound $F(\Lambda)/|\Lambda|$
+above by
+$(1-v_{\rm rem}/|\Lambda|)F(B)/|B|+Mv_{\rm rem}/|\Lambda|$.
+Therefore its limsup is at most $F(B)/|B|$ for every $B$.  Every term is
+at least $\inf_B F(B)/|B|$, which is finite by the lower bound in
+\eqref{eq:two-sided-pressure}.  This proves the asserted limit and infimum
+formula.  Convexity and evenness pass from finite volume to this finite limit.
+\end{proof}
+
+For a periodic cube, write $B_L^{\rm seam}=H_L^{\rm per}(h)-H_L^{\rm op}(h)$
+for the multiplication form given by the added seam bonds.  It is distinct
+from the collective displacement Hessian $B_L$ in Section~\ref{sec:collective}.
+The seam contains $3L^2$ bonds and $48L^2$ scalar
+endpoint occurrences.  The endpoint Young estimate, with an arbitrary
+$\eta>0$, gives the corrected bound
+\begin{equation}
+ 0\leq B_L^{\rm seam}\leq \eta Q_L+\frac{288c^2L^2}{\eta g},\qquad
+ Q_L=\frac g8\sum_{y,e}q_{y,e}^4. \label{eq:seam}
+\end{equation}
+For clarity, there are at most three seam endpoint occurrences at any
+scalar coordinate, and
+$cx^2\leq(\eta g/24)x^4+6c^2/(\eta g)$.
+Thus the coefficient in \eqref{eq:seam} is $48\times6=288$.
+Combining this bound with \eqref{eq:retained-quartic} on the common form
+domain gives
+\begin{align}
+ H_L^{\rm op}&\leq H_L^{\rm per}
+       \leq(1+\eta)H_L^{\rm op}+D_L^{\rm seam},\nonumber\\
+ D_L^{\rm seam}&=\eta b(H)L^3+\frac{288c^2L^2}{\eta g},\nonumber\\
+ e^{-\beta D_L^{\rm seam}}Z_L^{\rm op}(\beta(1+\eta),h)
+ &\leq Z_L^{\rm per}(\beta,h)\leq Z_L^{\rm op}(\beta,h).
+ \label{eq:seam-trace-sandwich}
+\end{align}
+The last line follows from min--max eigenvalue comparison and summation.
+
+Write $f_L(\beta,h)=L^{-3}\log Z_L^{\rm op}(\beta,h)$.
+On $[\beta_0/2,2\beta_1]\times[-H-1,H+1]$, choose the uniform absolute
+bound $M$ supplied by \eqref{eq:two-sided-pressure}.  For fixed $h$,
+$f_L$ is convex in $\beta$ (its second derivative is the Gibbs energy
+variance per site).  Endpoint secants therefore bound its slopes on
+$[\beta_0,3\beta_1/2]$ by $4M/\beta_0$ in absolute value.
+For $0<\eta\leq1/2$ and $\beta\in[\beta_0,\beta_1]$ this gives
+\[
+ |f_L(\beta(1+\eta),h)-f_L(\beta,h)|
+ \leq(4M\beta_1/\beta_0)\eta.
+\]
+Taking $\eta=L^{-1/2}$ in \eqref{eq:seam-trace-sandwich} yields
+\begin{equation}
+ 0\leq f_L(\beta,h)-p_{\beta,L}^{\rm per}(h)
+ \leq\left(\frac{4M\beta_1}{\beta_0}+\beta_1b(H)
+                    +\frac{288\beta_1c^2}{g}\right)L^{-1/2}.
+ \label{eq:pressure-seam-rate}
+\end{equation}
+Endpoint secants in $h$ also give a uniform slope bound on $[-H,H]$.
+Comparing two parameter points one coordinate at a time proves common
+local Lipschitz bounds.  A finite net upgrades the pointwise open-box
+limit to local uniform convergence; \eqref{eq:pressure-seam-rate} transfers
+it to periodic cubes.  Separate convexity suffices; joint convexity in
+$(\beta,h)$ is not needed.  Thus
+\begin{equation}
+ p_\beta(h)=\lim_{L\to\infty,\ L\ {\rm even}}p_{\beta,L}^{\rm per}(h)
+                  =p_\beta^{\rm op}(h). \label{eq:pressure-limit}
+\end{equation}
+The limit is locally uniform in $(\beta,h)$, finite, even, and convex in $h$.
+At every differentiability point of $P_\beta(h)=p_\beta(h)/(8\beta)$,
+\begin{equation}
+ P_{\beta,L}'(h)\longrightarrow P_\beta'(h).
+\label{eq:derivative-limit}
+\end{equation}
+Indeed, at fixed $\beta$ and any sufficiently small $a_1>0$, convexity gives
+\[
+ \frac{P_{\beta,L}(h)-P_{\beta,L}(h-a_1)}{a_1}
+ \leq P_{\beta,L}'(h)
+ \leq\frac{P_{\beta,L}(h+a_1)-P_{\beta,L}(h)}{a_1}.
+\]
+First take the volume limit in the two secants, then let $a_1\downarrow0$.
+Differentiability of the limiting pressure at this fixed $h$ squeezes both
+bounds to the same derivative.  No differentiability at $h=0$ is assumed.
+
+\section{Tempered DLR states and source tangents}
+\label{sec:dlr}
+
+Let $C_\beta=C_{\rm per}([0,\beta];\R^8)$ and
+$\Omega=\prod_{y\in\Z^3}C_\beta$.  For $\alpha>0$ use
+\begin{equation}
+ \norm{\omega}_\alpha^2=\sum_y e^{-\alpha|y|}\norm{\omega_y}_{L^2}^2,
+ \qquad \Omega_t=\bigcap_{\alpha>0}\{\norm{\omega}_\alpha<\infty\},
+ \label{eq:tempered-space}
+\end{equation}
+where $|y|$ is Euclidean distance.  Put $\alpha_k=1/k$ and enumerate the
+sites as $(y_j)_{j\geq1}$.  The topology used throughout this section is
+metrized by
+\begin{equation}
+ d_t(\omega,\eta)=\sum_{k\geq1}2^{-k}
+ (1\wedge\norm{\omega-\eta}_{\alpha_k})
+ +\sum_{j\geq1}2^{-j}(1\wedge\norm{\omega_{y_j}-\eta_{y_j}}_\infty).
+ \label{eq:tempered-metric}
+\end{equation}
+The sequence $\alpha_k\downarrow0$ is cofinal for
+\eqref{eq:tempered-space}.  This is a Polish space: a Cauchy sequence has
+compatible limits in every weighted $L^2$ space and in every local continuous
+loop space, and these limits define an element of $\Omega_t$.  Finite-support
+loops with rational polygonal values at rational fractions of $\beta$ form
+a countable dense set.  Weighted norms are measurable in the product
+sigma-field by their finite partial sums; local sup norms are measurable by
+countable time evaluations.  Thus the Borel sigma-field of this topology is
+the trace of the product sigma-field.  Write $W_t$ for weak convergence of
+probability measures for this topology.  Fix $0<\sigma<1/2$ and use the
+periodic $C^\sigma$ norm, including the sup norm, for compactness estimates.
+
+\subsection{Specification and the general-vector input}
+\label{sec:dlr-specification}
+
+Choose $a>0$ and the normalized oscillator Gaussian $\chi_a$.  The allocated
+one-site potential and pair interaction are
+\begin{align}
+ V_h(q)&=\frac{r+6c-a}{2}|q|^2+\frac g4\sum_e q_e^4
+ +\frac\lambda4\sum_{\{e,f\}\in E(Q_3)}(q_e-q_f)^2(q_e^2+q_f^2)-h(u,q),\\
+ J_{yz}&=c\,1_{\{|y-z|=1\}},\qquad J_0=6c.
+\end{align}
+For a finite $\Delta$ and boundary loop $\xi$, the specification is
+\begin{align}
+ I_\Delta^h(\omega\mid\xi)
+ &=\sum_{y\in\Delta}\int_0^\beta V_h(\omega_y)\dd\tau
+ -\frac12\sum_{y,z\in\Delta}J_{yz}(\omega_y,\omega_z)_{L^2}\nonumber\\
+ &\quad-\sum_{y\in\Delta,z\notin\Delta}J_{yz}(\omega_y,\xi_z)_{L^2},\\
+ \pi_\Delta^h(f\mid\xi)&=Z_\Delta(h,\xi)^{-1}
+ \int f(\omega_\Delta\xi_{\Delta^c})e^{-I_\Delta^h(\omega\mid\xi)}
+ \prod_{y\in\Delta}\chi_a(\dd\omega_y).
+ \label{eq:specification}
+\end{align}
+Only the negative pair interaction accompanies $V_h$; a second positive spatial
+diagonal would double-count the bond energy.
+
+Fix a source window $|h|\leq h_0$ and set
+\begin{align}
+ b&=\tfrac12|r+6c-a|,\qquad A=g/128,\nonumber\\
+ C_0&=16b^2/g+\tfrac34 h_0^{4/3}(32/g)^{1/3},\nonumber\\
+ V^+(q)&=(g/4+3\lambda)\sum_e q_e^4+b|q|^2+h_0|q|.
+ \label{eq:dlr-envelope-constants}
+\end{align}
+Then, uniformly on this window,
+\begin{equation}
+ A|q|^4-C_0\leq V_h(q)\leq V^+(q).
+ \label{eq:dlr-potential-envelope}
+\end{equation}
+Indeed, $\sum_e q_e^4\geq |q|^4/8$; absorb $b|q|^2$ against
+$g|q|^4/64$ and $h_0|q|$ against $g|q|^4/128$.  The respective scalar
+maxima are the two terms in $C_0$, leaving $A|q|^4$.  For the upper
+bound, $(x-y)^2(x^2+y^2)\leq4(x^4+y^4)$ and the degree of $Q_3$ is
+three.  All envelopes are continuous and $V_h(0)=V^+(0)=0$.
+
+Here is the precise general-vector use of Kozitsky--Pasurek (KP)
+\cite{KP}.  In their Assumption (A), (2.5), take dimension $\nu=8$,
+growth exponent $r_{\rm KP}=2$, lower constants $A_V=A$, $B_V=-C_0$,
+and upper envelope $V^+$.  Positive $m,a$ specify the oscillator reference.
+Their interaction condition (2.6) holds with symmetric zero-diagonal $J$
+and row sum $J_0=6c$; the onsite locking is not part of $J$.  Lattice
+regularity (2.1) follows from
+$\sum_{y\in\Z^3}(1+|y|)^{-3-\varepsilon}<\infty$ for every
+$\varepsilon>0$.  For Assumption (B), use the exponential weights of
+(2.42)--(2.43): $J_\alpha=6ce^\alpha<\infty$,
+$J_\alpha-J_0\to0$, and the logarithmically weighted sum in (2.39) is
+finite.  Their Theorem 3.1 therefore supplies a nonempty $W_t$-compact set
+$\cG_t(h)$ at each fixed source.  Theorem 3.2 gives a moment bound for
+this fixed-model set, not automatically for a source window or finite tori.
+The topology agrees with KP (2.47)--(2.49): both require all weighted
+$L^2$ norms and all local sup norms.  Replacing positive summable local
+weights or $s/(1+s)$ by $1\wedge s$ leaves that topology unchanged;
+$\alpha_k\downarrow0$ gives a countable cofinal family of weighted norms.
+No scalar or rotation-invariant phase theorem is used.  We prove the needed
+periodic and varying-source statements directly below.
+
+\subsection{A source-window bound uniform in periodic volume}
+\label{sec:dlr-periodic-moment}
+
+For the oscillator Gaussian choose $\ell_\sigma>0$ so that
+$F_\sigma:=\int e^{\ell_\sigma\norm{\omega}_{C^\sigma}^2}
+\chi_a(\dd\omega)<\infty$ (KP Proposition 2.2, (2.27)).
+Fix $\kappa,\theta>0$ and define
+\begin{align}
+ Y_-&=\int\exp\left[-\frac{J_0}{2\theta}\norm{\omega}_{L^2}^2
+                   -\int_0^\beta V^+(\omega)\dd\tau\right]
+                   \chi_a(\dd\omega),\nonumber\\
+ D&=\kappa+J_0/(2\theta),\qquad
+ C_1=\max\{0,\log F_\sigma+\beta C_0+\beta D^2/(4A)-\log Y_-\},
+ \nonumber\\
+ f_y(\omega)&=\ell_\sigma\norm{\omega_y}_{C^\sigma}^2
+                         +\kappa\norm{\omega_y}_{L^2}^2.
+ \label{eq:one-site-constants}
+\end{align}
+The integrand defining $Y_-$ is positive and at most one, so
+$0<Y_-\leq1$.  Bilinear Young bounds give, for every neighbor boundary,
+\begin{align*}
+ Z_{\{y\}}(h,\xi)&\geq
+ Y_-\exp\left[-\frac\theta2\sum_zJ_{yz}\norm{\xi_z}_{L^2}^2\right],\\
+ \int e^{f_y-I_{\{y\}}^h}\dd\chi_a&\leq
+ F_\sigma e^{\beta C_0+\beta D^2/(4A)}
+ \exp\left[\frac\theta2\sum_zJ_{yz}\norm{\xi_z}_{L^2}^2\right].
+\end{align*}
+The second inequality uses $D s^2-A s^4\leq D^2/(4A)$ pointwise
+in time.  Division, with the positive lower bound already established, yields
+\begin{equation}
+ \pi_{\{y\}}^h(e^{f_y}\mid\xi)
+ \leq\exp\left[C_1+\theta\sum_zJ_{yz}\norm{\xi_z}_{L^2}^2\right].
+ \label{eq:one-site-exponential}
+\end{equation}
+This is the finite-range, source-window version of the mechanism in KP
+Lemma 4.1.  Its constants do not depend on the site or torus size.
+
+Let $L\geq4$ be even.  Under the periodic law, translation symmetry makes
+$M=\E_{L,h}e^{f_y}$ independent of $y$.  First $M<\infty$: in the
+finite product Gaussian integral, \eqref{eq:dlr-potential-envelope} and
+$|\sum_{\{y,z\}}c(\omega_y,\omega_z)_{L^2}|
+\leq (J_0/2)\sum_y\norm{\omega_y}_{L^2}^2$ leave a positive quartic
+at every site.  It absorbs all quadratic terms, including
+$\kappa\norm{\omega_y}_{L^2}^2$; the remaining
+$e^{\ell_\sigma\norm{\omega_y}_{C^\sigma}^2}$ is Gaussian integrable.
+The finite normalization is positive.  This proves finiteness before any
+use of a power of $M$.
+
+Set $t=\theta J_0/\kappa<1$.  Conditional expectation,
+\eqref{eq:one-site-exponential}, generalized Holder with weights
+$J_{yz}/J_0$, and concavity of $x^t$ imply
+\begin{align}
+ M&\leq e^{C_1}\E_{L,h}
+          \exp\left(\theta\sum_zJ_{yz}\norm{\omega_z}_{L^2}^2\right)
+ \nonumber\\
+ &\leq e^{C_1}\prod_{z:J_{yz}>0}
+       (\E_{L,h}e^{tf_z})^{J_{yz}/J_0}
+ =e^{C_1}\E_{L,h}e^{tf_y}\leq e^{C_1}M^t.
+ \label{eq:periodic-holder-closure}
+\end{align}
+Choose $\theta=\kappa/(2J_0)$ and evaluate $C_1$ at this choice.
+Since $M$ is finite and positive, $M\leq e^{2C_1}=:C_{\rm per}$.
+In particular
+\begin{equation}
+ \sup_{L\geq4,\ |h|\leq h_0,y}\E_{L,h}
+ \exp\left(\ell_\sigma\norm{\omega_y}_{C^\sigma}^2
+                   +\kappa\norm{\omega_y}_{L^2}^2\right)
+ \leq C_{\rm per}. \label{eq:periodic-moment}
+\end{equation}
+Extend the law by zero outside the centered cube
+$[-L/2,L/2)^3\cap\Z^3$, denoting it by $\widehat\mu_{L,h}$.
+Since $C_{\rm per}\geq1$, the estimate holds also at exterior sites.
+In particular $\widehat\mu_{L,h}(\norm{\omega_y}_{C^\sigma}^2)
+\leq C_{\rm per}/\ell_\sigma$.
+
+\subsection{Weighted compactness with the correct tail direction}
+\label{sec:dlr-weighted-compactness}
+
+Put $\norm{\omega}_{\alpha,\sigma}^2
+=\sum_y e^{-\alpha|y|}\norm{\omega_y}_{C^\sigma}^2$ and
+$S(\alpha)=\sum_y e^{-\alpha|y|}<\infty$.
+For a given $\varepsilon>0$, choose positive $\varepsilon_k$ with
+$\sum_k\varepsilon_k\leq\varepsilon$, and radii satisfying
+$R_k^2\geq C_{\rm per}S(\alpha_k)/(\ell_\sigma\varepsilon_k)$.
+Markov's inequality and a union bound show that
+\begin{equation}
+ K_\varepsilon=\{\omega\in\Omega_t:
+                  \norm{\omega}_{\alpha_k,\sigma}\leq R_k\text{ for all }k\},
+ \qquad
+ \inf_{L,h}\widehat\mu_{L,h}(K_\varepsilon)\geq1-\varepsilon.
+ \label{eq:dlr-compact-set}
+\end{equation}
+This set is compact in $d_t$.  To see this, its bounds give equibounded and
+equicontinuous loops at each site, hence a diagonal locally uniform subsequence
+by Arzela--Ascoli.  For the weighted $L^2$ norm at $\alpha_k$, use the
+\emph{stronger} bound at $\alpha_{k+1}<\alpha_k$:
+\begin{equation}
+ \sum_{|y|>R}e^{-\alpha_k|y|}\norm{\omega_y}_{L^2}^2
+ \leq\beta e^{-(\alpha_k-\alpha_{k+1})R}R_{k+1}^2.
+ \label{eq:weighted-tail-direction}
+\end{equation}
+This tends to zero uniformly on $K_\varepsilon$.  Finite-site convergence
+therefore implies convergence in every weighted norm (apply the same tail
+bound to both terms of a difference).  Lower semicontinuity of the Holder
+norm under uniform convergence and Fatou's lemma put the limit back in
+$K_\varepsilon$.  This proves compactness and, by Prokhorov, common
+$W_t$ tightness on the entire source window.  The reverse weight direction
+does not work: at $\beta=1$ a constant loop with squared amplitude $4^n$
+at site $(n,0,0)$ has squared $\log4$-weighted norm one but squared
+$\log2$-weighted norm $2^n$.  No spatial tightness is inferred from a
+fixed-volume Gaussian bound.
+
+\subsection{Positive finite normalizers and continuous DLR kernels}
+\label{sec:dlr-kernel-continuity}
+
+For a nonempty finite $\Delta$ of size $n$ and a compact $K\subset\Omega_t$,
+write
+\begin{align*}
+ Q_\Delta(\omega)&=\sum_{y\in\Delta}\int_0^\beta|\omega_y|^4\dd\tau,\\
+ B_K&=\tfrac12\sup_{\xi\in K}
+           \sum_{y\in\Delta,z\notin\Delta}J_{yz}\norm{\xi_z}_{L^2}^2,\\
+ C_{\Delta,K}&=\beta n(C_0+J_0^2/(8A))+B_K.
+\end{align*}
+Only finitely many boundary sites enter, so $B_K<\infty$.
+The internal and exterior bilinear Young bounds allocate in total at most
+$J_0/2$ to the quadratic norm of each interior loop.  Consequently
+\begin{align}
+ I_\Delta^h&\geq A Q_\Delta-\beta n C_0
+                 -\tfrac{J_0}{2}\sum_{y\in\Delta}\norm{\omega_y}_{L^2}^2-B_K
+ \nonumber\\
+ &\geq\tfrac A2 Q_\Delta-C_{\Delta,K},
+ \qquad |h|\leq h_0,\ \xi\in K,
+ \label{eq:boundary-coercivity}
+\end{align}
+where the time-volume factor is tracked as follows.  Put
+$S_y=\norm{\omega_y}_{L^2}^2$.  Cauchy--Schwarz gives
+$S_y^2\leq\beta\int_0^\beta|\omega_y(\tau)|^4\dd\tau$.  Hence
+\[
+ \frac A2\int_0^\beta|\omega_y|^4\dd\tau
+ \, + \, \frac{\beta J_0^2}{8A}
+ \geq \frac{A}{2\beta}S_y^2
+ \, + \, \frac{\beta J_0^2}{8A}
+ \geq \frac{J_0}{2}S_y,
+\]
+which, after summing over $y$, gives the displayed
+$C_{\Delta,K}=\beta n(C_0+J_0^2/(8A))+B_K$.  This explicit
+normalization is the only place where the imaginary-time length enters this
+coercivity estimate.
+
+For a noncircular lower bound on $Z_\Delta$, set
+$R_F^2=\log(2F_\sigma)/\ell_\sigma$.  Gaussian Markov gives
+$\chi_a(\norm{\omega}_\infty\leq R_F)\geq1/2$.  Define
+\begin{align*}
+ T_K&=\sup_{\xi\in K}\sum_{y\in\Delta,z\notin\Delta}
+                       J_{yz}\norm{\xi_z}_{L^2},\\
+ U_{\Delta,K}&=\beta n\{(g/4+3\lambda)R_F^4
+                       +(b+J_0/2)R_F^2+h_0R_F\}
+                         +\sqrt\beta R_F T_K.
+\end{align*}
+On the product event $\norm{\omega_y}_\infty\leq R_F$ at every interior
+site, $I_\Delta^h\leq U_{\Delta,K}$, by \eqref{eq:dlr-potential-envelope}
+and Cauchy--Schwarz on the boundary terms.  This event has Gaussian probability
+at least $2^{-n}$.  Hence
+\begin{equation}
+ \inf_{|h|\leq h_0,\xi\in K}Z_\Delta(h,\xi)
+ \geq z_{\Delta,K}:=2^{-n}e^{-U_{\Delta,K}}>0.
+ \label{eq:dlr-normalizer-lower}
+\end{equation}
+Finiteness follows separately from \eqref{eq:boundary-coercivity}.
+
+The same bounds give a useful quantitative source estimate.  Let
+$X_\Delta=\sum_{y\in\Delta}\int_0^\beta(u,\omega_y)\dd\tau$.
+Holder's inequality gives $|X_\Delta|\leq(\beta n)^{3/4}Q_\Delta^{1/4}$.
+Because $I_\Delta^h=I_\Delta^0-hX_\Delta$, the mean value theorem and
+\eqref{eq:boundary-coercivity} bound the difference of two unnormalized
+weights by
+\[
+ |h-h'|e^{C_{\Delta,K}}(\beta n)^{3/4}
+          Q_\Delta^{1/4}e^{-A Q_\Delta/2}
+ \leq |h-h'|M_{\Delta,K},\qquad
+ M_{\Delta,K}=e^{C_{\Delta,K}}(\beta n)^{3/4}(2Ae)^{-1/4}.
+\]
+The scalar maximum occurs at $Q_\Delta=1/(2A)$.  The numerator and
+normalizer thus have respective Lipschitz bounds
+$\norm f_\infty M_{\Delta,K}$ and $M_{\Delta,K}$.  Since the absolute
+numerator is at most $\norm f_\infty$ times its own normalizer, division
+gives, for every bounded Borel $f$,
+\begin{equation}
+ \sup_{\xi\in K}|\pi_\Delta^h(f\mid\xi)-\pi_\Delta^{h'}(f\mid\xi)|
+ \leq\frac{2M_{\Delta,K}}{z_{\Delta,K}}\norm f_\infty|h-h'|.
+ \label{eq:kernel-source-lipschitz}
+\end{equation}
+
+If $f\in C_b(\Omega_t)$ and $\xi_j\to\xi$ in $d_t$, replacing finitely
+many interior loops is continuous, and the finite-range boundary pairings
+converge in $L^2$.  The compact set consisting of this sequence and its
+limit admits \eqref{eq:boundary-coercivity} and
+\eqref{eq:dlr-normalizer-lower}.  Dominated convergence of the numerator
+and denominator proves $\pi_\Delta^h f\in C_b(\Omega_t)$.
+The kernels replace only finitely many loops, preserve $\Omega_t$, and
+satisfy specification consistency by conditional integration and Fubini.
+This direct finite-range Feller proof avoids assuming the desired DLR
+limit in order to bound its kernel.  Since bounded continuous functions on
+the Polish space determine probability measures, the equalities
+$\mu(f)=\mu(\pi_\Delta^h f)$ for all such $f$ imply the full Borel DLR
+equation $\mu\pi_\Delta^h=\mu$.
+
+\subsection{Periodic limits and the two source-tangent passages}
+\label{sec:dlr-source-tangents}
+
+Fix $h$.  Once $\Delta$ and all its neighbors lie strictly within the
+centered cube, the conditional law of $\widehat\mu_{L,h}$ on $\Delta$
+equals \eqref{eq:specification}; no periodic seam meets an incident bond.
+Thus $\widehat\mu_{L,h}(f)=\widehat\mu_{L,h}(\pi_\Delta^h f)$.
+Common tightness and the Feller property pass this identity along every
+converging periodic subsequence, first for $C_b(\Omega_t)$ and then for
+Borel sets as above.  Each accumulation point is therefore in $\cG_t(h)$.
+For every fixed local continuous cylinder test, its support and any fixed
+translate eventually lie within the cube; torus symmetry then passes to
+the limit.  Such tests determine the product Borel law, proving spatial
+translation invariance of the limit.  The finite zero extension itself is
+not spatially translation invariant.  Time-shift invariance passes too;
+time shifts are continuous in $d_t$.  By lower semicontinuity and truncation,
+all selected limits inherit \eqref{eq:periodic-moment}.
+
+At a differentiability point $h$ of $P_\beta$, let $\mu_h$ be any such
+accumulation point.  With $Q_0(\omega)=(u,\omega_0(0))$, define
+$\operatorname{clip}_R(s)=\max(-R,\min(s,R))$.  For the periodic laws and
+their selected limits,
+\begin{equation}
+ \E Q_0^2\leq C_{\rm per}/\ell_\sigma,\qquad
+ \E|Q_0-\operatorname{clip}_R(Q_0)|
+ \leq C_{\rm per}/(\ell_\sigma R).
+ \label{eq:dlr-local-clipping}
+\end{equation}
+Abbreviate $p_L=p_{\beta,L}$ and $P_L=p_L/(8\beta)$ at this fixed
+$\beta$.  For finite $L$, spatial and time translation symmetry and the actual
+source $e^{hX_L}$ give
+$p_L'(h)=\E X_L/V=\beta\E Q_0$ and
+$P_L'(h)=\E Q_0/8$.  Section~\ref{sec:pressure} gives
+$P_L'(h)\to P_\beta'(h)$ at differentiability points.  Pass bounded
+clips through weak convergence and then let $R\to\infty$ in
+\eqref{eq:dlr-local-clipping}; this proves
+\begin{equation}
+ \mu_h(Q_0)=8P_\beta'(h). \label{eq:tangent-identity}
+\end{equation}
+There is no extra factor $\beta$ in the normalized tangent identity.
+
+Choose positive differentiability points $h_j\downarrow0$.  A finite convex
+pressure has at most countably many nondifferentiability points.  Monotonicity
+and the secant inequalities imply $P_\beta'(h_j)\to D_+P_\beta(0)$.
+More explicitly, $P_\beta'(h_j)\geq D_+P_\beta(0)$; for fixed $t>0$
+and $h_j<t$, convexity gives
+$P_\beta'(h_j)\leq[P_\beta(t)-P_\beta(h_j)]/(t-h_j)$.
+Take $j\to\infty$, then $t\downarrow0$.  The endpoint derivative is finite
+because zero is interior to the finite-pressure domain.
+The common source-window bound gives a subsequence
+$\mu_{h_j}\Rightarrow\mu_+$ in $W_t$.
+For $f\in C_b(\Omega_t)$, split the difference between the $h_j$ and
+zero kernels over $K_\varepsilon$ and its complement.  Equations
+\eqref{eq:dlr-compact-set} and \eqref{eq:kernel-source-lipschitz} give
+\[
+ |\mu_{h_j}(\pi_\Delta^{h_j}f-\pi_\Delta^0 f)|
+ \leq\frac{2M_{\Delta,K_\varepsilon}}{z_{\Delta,K_\varepsilon}}
+       \norm f_\infty h_j+2\norm f_\infty\varepsilon.
+\]
+The compact-set probability bound holds for these limits because they
+inherit the moment estimate.  For fixed $\varepsilon$, take $j\to\infty$;
+the zero-source Feller property passes the remaining identity.  Then let
+$\varepsilon\downarrow0$.  This proves the full zero-source DLR equation.
+Finally apply \eqref{eq:dlr-local-clipping} once more, now uniformly in
+$j$, to pass the unbounded local expectation.  Together with
+\eqref{eq:tangent-identity} this gives
+\begin{equation}
+ \mu_+\in\cG_t(0),\qquad
+ \mu_+(Q_0)=8D_+P_\beta(0), \label{eq:source-zero-tangent}
+\end{equation}
+without inferring unbounded-moment convergence from weak convergence alone.
+The global parity map $\Theta\omega=-\omega$ preserves $\Omega_t$ and
+intertwines the zero-source specification with itself.  Hence
+$\Theta_*\mu_+\in\cG_t(0)$ with opposite collective expectation.
+Distinctness still requires the strictly positive cusp established later;
+it does not follow merely from this construction.  Neither uniqueness nor
+exhaustion of all tempered DLR states by periodic limits is asserted.  The
+order is the fixed-volume loop limit, spatial accumulation at each fixed
+$h$, then $h_j\downarrow0$; no arbitrary simultaneous $h=h(L)$ or
+$\beta\to\infty$ passage is used.
+
+\section{Continuous-loop FKG and collective covariance}
+\label{sec:fkg}
+
+Order loops coordinatewise in space, component, and imaginary time.  A law is
+associated if $\operatorname{Cov}(F,G)\geq0$ for bounded increasing Borel
+functions $F,G$.  At mesh $N$, the density is $\rho_N\propto e^{-S_N}$, where
+the temporal quadratic bonds, spatial bonds, and internal $Q_3$ terms satisfy
+\begin{equation}
+ \partial_i\partial_j\log\rho_N
+ =-\partial_i\partial_j S_N\geq0\quad(i\neq j),\qquad
+ -\partial_x\partial_y\frac\lambda4(x-y)^2(x^2+y^2)
+ =\frac\lambda4[(x+y)^2+5(x-y)^2]\geq0. \label{eq:log-supermodular}
+\end{equation}
+The first inequality concerns the log density, with the opposite sign to
+the energy Hessian.  Temporal and spatial bonds contribute $m/\eps$ and
+$\eps c$ per occurrence, respectively, and the internal contribution is
+$\eps$ times the displayed polynomial.  Unary terms contribute zero.
+
+Here is the finite-dimensional association argument underlying the FKG
+mechanism \cite{FKG}.  First restrict a positive smooth density $\rho$
+with $\partial_i\partial_j\log\rho\geq0$ to a compact product interval.
+In one dimension, for independent copies $T,T'$,
+\[
+ \operatorname{Cov}(f(T),g(T))
+ =\tfrac12\E[(f(T)-f(T'))(g(T)-g(T'))]\geq0
+\]
+for bounded increasing $f,g$.  Induct on dimension, conditioning on the
+last coordinate $t$.  The conditional laws satisfy the induction
+hypothesis.  For $t_2>t_1$ their unnormalized likelihood ratio
+$R(x)=\rho(x,t_2)/\rho(x,t_1)$ is bounded and increasing, because
+\[
+ \partial_i\log R(x)
+ =\int_{t_1}^{t_2}\partial_i\partial_t\log\rho(x,t)\dd t\geq0.
+\]
+Conditional association implies
+$\E_{t_1}(fR)\geq\E_{t_1}f\,\E_{t_1}R$, hence
+$\E_{t_2}f\geq\E_{t_1}f$.  For increasing $F(x,t)$, increase $t$
+inside $F$ and then increase the conditional law; this shows that
+$m_F(t)=\E_tF(x,t)$ is increasing.  The same applies to $G$, so
+\[
+ \operatorname{Cov}(F,G)
+ =\E\operatorname{Cov}(F,G\mid t)+\operatorname{Cov}(m_F(t),m_G(t))
+ \geq0.
+\]
+Apply the result to $\rho_N$ on growing product cubes.  Its integrability
+and dominated convergence for the three bounded expectations remove the
+cutoff, proving association on the full mesh space.
+
+\subsection{Passage to bounded continuous and Borel loop tests}
+\label{sec:fkg-loop-passage}
+
+Periodic linear interpolation is order preserving.  For bounded continuous
+increasing $F,G$ on $\mathsf E_L$, finite association therefore applies to
+$F\circ\mathcal I_N$ and $G\circ\mathcal I_N$.  Apply the actual interacting
+weak convergence \eqref{eq:weighted-loop-limit} to the three bounded
+continuous functions $F,G,FG$.  Their limiting covariance is nonnegative;
+$FG$ need not be increasing for this weak-convergence step.
+
+Here is the measurable extension used below. We first verify the topological
+hypotheses for the actual tempered space rather than leave them implicit.
+\begin{lemma}[Positive cone in the tempered topology]
+\label{lem:positive-cone-topology}
+With the metric $d_t$ of \eqref{eq:tempered-metric}, the cone
+$\Omega_{t,+}=\{\omega\in\Omega_t:\omega_y(\tau)\geq0\;\text{for all }y,\tau\}$ is closed and $d_t$ is translation invariant. If
+$K\subset\Omega_t$ is compact, then $K+\Omega_{t,+}$ is closed and is an
+upper set.
+\end{lemma}
+\begin{proof}
+If $\omega^{(n)}\to\omega$ in $d_t$, each local sup-norm term in
+\eqref{eq:tempered-metric} tends to zero, so
+$\omega^{(n)}_y\to\omega_y$ uniformly for every fixed site $y$.
+Nonnegativity is therefore preserved in the limit, proving that
+$\Omega_{t,+}$ is closed. Every summand in $d_t$ depends only on a
+difference, so $d_t(\omega+a,\eta+a)=d_t(\omega,\eta)$.
+For closedness of $K+\Omega_{t,+}$, take
+$k_n+e_n\to x$ with $k_n\in K$ and $e_n\in\Omega_{t,+}$. After passing to
+a subsequence, $k_n\to k\in K$. Translation invariance and the triangle
+inequality give
+\[
+d_t(e_n,x-k)\leq d_t(k_n+e_n,x)+d_t(k_n+x-k,x)\longrightarrow0,
+\]
+so $e_n\to x-k$. The cone is closed, hence $x-k\in\Omega_{t,+}$ and
+$x=k+(x-k)\in K+\Omega_{t,+}$. Finally, adding any
+$v\in\Omega_{t,+}$ replaces $e$ by $e+v$, so the sum is upper.
+\end{proof}
+
+With $E_+=\Omega_{t,+}$, the following measurable extension applies in a
+Polish topological vector space with a closed positive cone and a compatible
+translation-invariant metric $d$. Let $C$ be a closed upper set.
+If $x\leq x'$, then
+$z+(x'-x)\in C$ for $z\in C$ and
+$d(x',z+(x'-x))=d(x,z)$. Thus $d(x,C)$ is nonincreasing in $x$.
+The bounded continuous increasing functions
+$f_j(x)=\max(0,1-jd(x,C))$ decrease to $1_C$; use $f_j=0$ if $C$ is empty.
+Bounded convergence transfers positive correlation to pairs of closed upper
+sets.
+
+For upper Borel sets $A,B$, choose compact subsets $K\subset A$ and
+$J\subset B$ whose probabilities approximate theirs from below.  The sets
+$K+E_+$ and $J+E_+$ are closed upper sets contained in $A,B$:
+compactness allows extraction of the compact summand, and closedness of
+the cone then passes the other summand to the limit.  Hence
+\[
+ \mu(A\cap B)\geq\mu((K+E_+)\cap(J+E_+))
+ \geq\mu(K+E_+)\mu(J+E_+)\geq\mu(K)\mu(J).
+\]
+Inner regularity proves positive correlation for $A,B$. Integrating this
+inequality over upper level sets proves association for nonnegative bounded
+increasing Borel functions. Adding constants handles signed functions.
+The finite loop space has all the stated properties with its sup metric
+and pointwise positive cone. This proves continuous-loop association at
+every fixed $L,h$.
+
+For the selected spatial limits of Section~\ref{sec:dlr}, zero extension is
+order preserving. Their weak convergence in the declared weighted topology
+therefore passes association for bounded continuous tests. The same argument
+applies along the subsequent source-tangent sequence; the Borel extension
+uses the closed cone and compatible translation-invariant metric of that
+Polish projective space. It does not show association for arbitrary mixtures
+of DLR states. For example, the equally weighted mixture of point masses at
+$(0,1)$ and $(1,0)$ has coordinate covariance $-1/4$, although each point
+mass is associated.
+
+\subsection{Coordinate products and the collective inequalities}
+\label{sec:fkg-products}
+
+At fixed volume, \eqref{eq:fixed-volume-evaluation-moment} permits clipping
+of coordinate products. Along the spatial/source sequences,
+\eqref{eq:periodic-moment} instead gives a common bound
+$\E|\omega_{y,e}(t)|^4\leq C_4:=2C_{\rm per}/\ell_\sigma^2$, by
+$z^2\leq2e^z$ with $z=\ell_\sigma\|\omega_y\|_{C^\sigma}^2$.
+For two coordinates $Y,Z$ and $\operatorname{clip}_R(t)=\max(-R,\min(t,R))$,
+association applies to their increasing clips. Splitting the error over
+$\{|Y|>R\}$ and $\{|Z|>R\}$, Cauchy--Schwarz and the fourth-moment
+Markov bound give
+\begin{equation}
+ \E|YZ-\operatorname{clip}_R(Y)\operatorname{clip}_R(Z)|
+ \leq 2C_4/R^2.
+ \label{eq:fkg-product-clipping}
+\end{equation}
+Clipped first moments converge as well, for example with error at most
+$C_4/R^3$. This both removes the clips and permits passage of the
+expectations through the stated limits.
+
+For the finite periodic zero-source law and its parity-invariant periodic
+limits, the coordinate means vanish. This parity statement is not imposed
+on symmetry-breaking source-tangent states at zero source. Consequently,
+on the finite zero-source law, for distinct coordinates,
+\begin{equation}
+ \E q_{y,e}(\tau)q_{z,f}(s)\geq0. \label{eq:coordinate-covariance}
+\end{equation}
+At one site, the three-regularity of $Q_3$ gives
+\begin{align}
+ \E D_0^{\mathrm{int}}&=3\E S_0-2\sum_{\{e,f\}\in E(Q_3)}\E(q_{0,e}q_{0,f})
+ \leq3\E S_0,\\
+ \E Q_0^2&=\frac18\left(\E S_0+2\sum_{e<f}\E(q_{0,e}q_{0,f})\right)
+ \geq\frac18\E S_0. \label{eq:fkg-local}
+\end{align}
+These are expectation inequalities, not pointwise inequalities for arbitrary
+vectors.
+
+\section{Reflection positivity and the infrared bound}
+\label{sec:infrared}
+
+\subsection{A bounded positive kernel on the loop Hilbert space}
+\label{sec:hilbert-kernel}
+
+Write $B_h(q)$ for the physical onsite potential in
+\eqref{eq:hamiltonian}, excluding spatial bonds.  With the normalized
+oscillator Gaussian $\chi_a$ of Section~\ref{sec:dlr}, define a local finite
+measure
+\begin{equation}
+ \nu_h(\dd\omega)=\exp\left[-\int_0^\beta
+             \{B_h(\omega(\tau))-a|\omega(\tau)|^2/2\}\dd\tau\right]
+             \chi_a(\dd\omega).
+ \label{eq:rp-local-measure}
+\end{equation}
+Its density is strictly positive and bounded above by a finite constant:
+the scalar quartic bounds the residual polynomial below, and the locking
+term is nonnegative.  This uses the positive-difference spatial convention;
+there is no additional allocated $3c|q|^2$ in this local measure.
+The exact periodic law is proportional to
+$\prod_y\nu_h(\dd\omega_y)\prod_{\{y,z\}\in\mathcal E_L}K(\omega_y,\omega_z)$,
+where $\mathcal E_L$ consists of the nearest-neighbor bonds counted once and
+\begin{equation}
+ K(v,w)=\exp[-(c/2)\norm{v-w}_{\mathsf H}^2],\qquad
+ \mathsf H=L^2([0,\beta];\R^8).
+ \label{eq:crossing-kernel}
+\end{equation}
+Because $0<K\leq1$, the partition integral is finite and positive.
+No infinite-dimensional Lebesgue measure is being used.
+
+To prove positive definiteness, take finite-rank orthogonal projections
+$P_n\to1$ strongly on $\mathsf H$.  On their ranges, of dimension $d_n$,
+the ordinary Gaussian Fourier formula is
+\[
+ K_n(v,w):=e^{-c|P_n(v-w)|^2/2}
+ =\int_{\R^{d_n}}e^{i k\cdot P_nv}
+        \overline{e^{i k\cdot P_nw}}
+        \frac{e^{-|k|^2/(2c)}}{(2\pi c)^{d_n/2}}\dd k.
+\]
+For every finite complex measure $\zeta$ on $\mathsf H$, Fubini therefore
+gives
+\begin{equation}
+ \iint K_n(v,w)\zeta(\dd v)\overline{\zeta(\dd w)}\geq0.
+ \label{eq:hilbert-kernel-positive}
+\end{equation}
+Since $|K_n|\leq1$ and $K_n\to K$ pointwise, dominated convergence for
+$|\zeta|\otimes|\zeta|$ gives the same inequality for $K$.  The argument
+also applies on $\mathsf H^M$ for any finite number $M$ of crossing bonds.
+It does not postulate a Gaussian with identity covariance on an infinite
+Hilbert space or require a positive Fourier transform of the onsite quartic.
+
+\subsection{Direct spatial reflection positivity}
+\label{sec:spatial-reflection}
+
+For even $L\geq4$, use representatives $0,\ldots,L-1$ and reflect by
+$\vartheta(y_1,y_2,y_3)=(L-1-y_1,y_2,y_3)$.
+Let $\Lambda_+=\{y:y_1<L/2\}$ and $\Lambda_-=\vartheta\Lambda_+$.
+The two periodic separating planes lie between sites.  Each crossing bond
+joins $y\in\Lambda_+$ to $\vartheta y$, and there are $M=2L^2$ such
+bonds.  Let $b(v)$ list their plus-side loops in $\mathsf H^M$.
+The finite measure $\alpha_h$ on plus-half configurations is the product
+of their local $\nu_h$ measures times all bonds internal to that half.
+Reflection identifies the minus half with a second copy of the same measure.
+The full unnormalized law is consequently
+\[
+ \alpha_h(\dd v)\alpha_h(\dd w)
+                e^{-c\norm{b(v)-b(w)}_{\mathsf H^M}^2/2}.
+\]
+For a bounded complex Borel function $F$ of the plus half, push the finite
+complex measure $F(v)\alpha_h(\dd v)$ through $b$ and use
+\eqref{eq:hilbert-kernel-positive}.  After division by the positive
+normalizer, this proves
+\begin{equation}
+ \E_{L,h}[F\Theta_{\vartheta}F]\geq0,\qquad
+ \Theta_{\vartheta}F(\omega)=\overline{F(\vartheta\omega)}.
+ \label{eq:spatial-reflection-positive}
+\end{equation}
+The other coordinate directions are identical.  This includes bounded
+measurable tests and any spatially constant real source $h$.  It is spatial
+reflection positivity, not a real-time reconstruction statement.  Gaussian
+domination is invoked through the finite-dimensional theorem below, not
+inferred from reflection positivity in a single unexplained step.
+
+\subsection{The finite-dimensional FSS input and its exact source map}
+\label{sec:fss-crosswalk}
+
+The external input is Froehlich--Simon--Spencer (FSS) \cite{FSS}, Section 2,
+Theorem 2.1, printed page 81, with proof on pages 82--84.  In the notation
+used here, it applies to finite-dimensional vector spins on a periodic
+rectangular nearest-neighbor lattice, with density proportional to
+$e^{J\sum_{\{y,z\}}s_y\cdot s_z}\prod_y\varpi(\dd s_y)$, $J>0$.
+The common finite prior must satisfy
+$\int e^{a_1|s|^2}\varpi(\dd s)<\infty$ for every $a_1>0$; radiality is
+not assumed.  For an edge field $\mathfrak h$ and its adjoint-divergence
+source $B\mathfrak h$, the theorem is
+\begin{equation}
+ \E\exp\left(\sum_y s_y\cdot(B\mathfrak h)_y\right)
+ \leq\exp\left(\frac{\norm{\mathfrak h}^2}{2J}\right).
+ \label{eq:fss-theorem-input}
+\end{equation}
+This is a finite-dimensional input, not an imported loop theorem.  Its
+constant has no dependence on spin dimension or prior moment constants.
+The primary-source recheck recorded in EXP-001652 confirms this exact
+fixed-mesh scope and leaves the mesh-to-loop, thermodynamic, DLR, cusp,
+and parity-state passages as Q3LOCK-local obligations.
+
+At a fixed time mesh $\eps=\beta/N$, set
+$s_y=(\sqrt\eps x_{y,k})_{k=0}^{N-1}\in\R^{8N}$.  The actual
+zero-source action, with the auxiliary harmonic split canceled, is
+\begin{align}
+ S_{N,L,0}(x)&=\sum_y\frac m{2\eps}\sum_k|x_{y,k+1}-x_{y,k}|^2
+       +\eps\sum_{y,k}B_0(x_{y,k})
+       +\frac{c\eps}2\sum_{\{y,z\},k}|x_{y,k}-x_{z,k}|^2
+ \nonumber\\
+ &=\sum_y\mathcal V_N(s_y)-c\sum_{\{y,z\}}s_y\cdot s_z,
+ \label{eq:fss-scaled-action}
+\end{align}
+where $\mathcal V_N$ includes the temporal term and
+$\eps\sum_k\{B_0(x_k)+3c|x_k|^2\}$.  Thus $J=c$ and the same
+prior $e^{-\mathcal V_N(s)}\dd s$ is used at every spatial site.  Its
+normalization cancels in Gibbs expectations.  Nonnegative temporal and
+locking terms and Cauchy--Schwarz on the $8N$ coordinates give
+\begin{equation}
+ \mathcal V_N(s)\geq\frac g{4\eps}\sum_{k,e}s_{k,e}^4
+                    +\frac{r+6c}{2}|s|^2
+ \geq\frac g{32\beta}|s|^4+\frac{r+6c}{2}|s|^2.
+ \label{eq:fss-prior-coercivity}
+\end{equation}
+This proves finiteness and all quadratic exponential moments at every fixed
+$N$.  The dimension and prior integrals may depend on $N$; we need only
+the dimension-free source constant in \eqref{eq:fss-theorem-input}.
+
+Here are explicit operator domains and signs.  On vertex fields define
+$(Gv)(y,j)=v_{y-e_j}-v_y$, and on edge fields define
+$(Ba)_y=\sum_j\{a(y+e_j,j)-a(y,j)\}$.  Summation by parts gives
+$B=G^*$ and $L_{\rm sp}=G^*G=BB^*$.  This realizes the forward
+differences in the FSS divergence and their backward adjoints.  The operators
+act componentwise on $\R^{8N}$.  Restrict $L_{\rm sp}^{-1}$ to the
+zero-sum vertex space $V_0$; its kernel on the full space is the constants.
+For a real spatial field $f$ with $\sum_yf_y=0$, define
+\begin{equation}
+ X_L(f)=\int_0^\beta\sum_y f_yQ_y(\tau)\dd\tau,\qquad
+ K_L(f)=\frac\beta{2c}\ip{f}{L_{\rm sp}^{-1}f}. \label{eq:fss-source}
+\end{equation}
+For real $t$, set
+\begin{align}
+ \eta_y(t)&=t\sqrt\eps(f_yu)_{k=0}^{N-1},\qquad
+ \mathfrak h_t=G L_{\rm sp}^{-1}\eta(t),\nonumber\\
+ B\mathfrak h_t&=\eta(t),\qquad
+ \norm{\mathfrak h_t}^2=\ip{\eta(t)}{L_{\rm sp}^{-1}\eta(t)}
+        =\beta t^2\ip f{L_{\rm sp}^{-1}f}.
+ \label{eq:fss-poisson-energy}
+\end{align}
+The last equality uses $N\eps=\beta$ and $|u|=1$; there is no factor
+eight.  The source pairing is exactly
+$\sum_y s_y\cdot\eta_y(t)=tX_{N,L}(f)$, where
+$X_{N,L}(f)=\eps\sum_{y,k}f_y(u,x_{y,k})$.
+The vertex norm $\norm\eta^2$ cannot replace the edge Poisson norm.
+Equivalently, the spatial square completion is
+\begin{equation}
+ \frac c2\norm{Gs}^2-\ip\eta s
+ =\frac c2\norm{Gs-\mathfrak h_t/c}^2
+                        -\frac1{2c}\norm{\mathfrak h_t}^2.
+ \label{eq:fss-square-shift}
+\end{equation}
+Its bond displacement is $\mathfrak h_t/c$, not $\mathfrak h_t$.
+Applying \eqref{eq:fss-theorem-input} to the exact prior yields
+\begin{equation}
+ \E_{N,L,0}e^{tX_{N,L}(f)}\leq e^{K_L(f)t^2}
+       \quad(t\in\R).
+ \label{eq:fss-mesh-mgf}
+\end{equation}
+
+\subsection{Actual loop passage and source uniform integrability}
+\label{sec:fss-loop-passage}
+
+Periodic polygonal interpolation satisfies the exact cyclic integral identity
+$X_L(f)(\mathcal I_Nx)=X_{N,L}(f)$.  The functional $X_L(f)$ is
+continuous for the finite-volume loop sup norm.  The interacting weak limit
+\eqref{eq:weighted-loop-limit} therefore gives convergence in distribution
+of these scalar variables.  Applying it to
+$\min(e^{tX_L(f)},R)$ and then taking $R\uparrow\infty$ transfers
+\eqref{eq:fss-mesh-mgf} without first assuming convergence of unbounded
+expectations:
+\begin{equation}
+ \E_{L,0}\exp(tX_L(f))\leq\exp(K_L(f)t^2). \label{eq:fss-mgf}
+\end{equation}
+
+In fact the MGFs and the required derivatives converge.  For $T\geq0$,
+the two signs of \eqref{eq:fss-mesh-mgf} give
+\begin{equation}
+ \sup_N\E_{N,L,0}e^{T|X_{N,L}(f)|}\leq2e^{K_L(f)T^2}.
+ \label{eq:fss-source-ui}
+\end{equation}
+Using $T=2|t|$ bounds the squared $L^2$ norm of $e^{tX_{N,L}(f)}$,
+which proves uniform integrability.  More generally, for every integer
+$k\geq0$ and auxiliary $a_2>0$, the exponential series implies
+\[
+ |x|^{2k}e^{2T|x|}\leq(2k)!a_2^{-2k}e^{(2T+a_2)|x|}.
+\]
+Together with \eqref{eq:fss-source-ui} this bounds the $L^2$ norms of
+$|X_{N,L}|^ke^{T|X_{N,L}|}$ uniformly in $N$.  Truncation and weak
+convergence now pass these source moments, in particular
+$\E X_{N,L}^2\to\E X_L^2$.  The parameter $a_2$ has reciprocal source-
+observable units and introduces no physical assumption.  Means vanish at
+zero source by parity.  All these estimates are at fixed $L,\beta,f$;
+they neither control the spatial constant mode nor replace the general-source
+quartic bounds or the volume-uniform DLR argument.
+
+\subsection{Duhamel normalization and the Fourier eigenvalue}
+\label{sec:infrared-duhamel}
+
+Define the time-averaged Duhamel matrix
+\begin{equation}
+ C_L(y,z;\tau)=\E[Q_y(\tau)Q_z(0)],\qquad
+ D_L(y,z)=\frac1\beta\int_0^\beta C_L(y,z;\tau)\dd\tau. \label{eq:duhamel-matrix}
+\end{equation}
+All expectations here are in the exact zero-source periodic loop law.
+Its finite coordinate moments justify Fubini.  With
+$\overline Q_y=\beta^{-1}\int_0^\beta Q_y(\tau)\dd\tau$, time-shift
+invariance and parity give
+\begin{equation}
+ \E\overline Q_y\overline Q_z
+ =\frac1{\beta^2}\int_0^\beta\int_0^\beta
+      C_L(y,z;\tau-\sigma)\dd\tau\dd\sigma
+ =D_L(y,z),\qquad
+ \Var(X_L(f))=\beta^2\ip f{D_Lf}.
+ \label{eq:duhamel-two-time}
+\end{equation}
+Thus $D_L$ is a real symmetric positive-semidefinite covariance matrix.
+The exponential moment bound makes the MGF twice differentiable at zero;
+its value is one and its first derivative is zero.  Subtract one from both
+sides of \eqref{eq:fss-mgf}, divide by $t^2$ and take $t\to0$.  This
+gives $\Var(X_L(f))\leq2K_L(f)$ and hence
+\begin{equation}
+ \ip{f}{D_Lf}\leq\frac1{\beta c}\ip{f}{L_{\rm sp}^{-1}f}. \label{eq:duhamel-poisson}
+\end{equation}
+For $p=2\pi k/L$, set $e_p(y)=V^{-1/2}e^{ip\cdot y}$ and
+$E(p)=\sum_{j=1}^3(1-\cos p_j)$.  Directly from the nearest-neighbor
+Laplacian,
+\[
+ (L_{\rm sp}e_p)(y)
+ =\sum_{j=1}^3\{2-e^{ip_j}-e^{-ip_j}\}e_p(y)=2E(p)e_p(y).
+\]
+Spatial translation invariance diagonalizes $D_L$ in the same basis; denote
+its eigenvalue by $\widehat D_L(p)$.  The real inequality
+\eqref{eq:duhamel-poisson} extends to a complex field $f=a+ib$ by adding
+the real inequalities for $a,b$: symmetry cancels the imaginary cross terms
+in both Hermitian quadratic forms.  Thus there is no doubling of the
+constant.  Applying it to $e_p$ for $p\neq0$ yields
+\begin{equation}
+ 0\leq\widehat D_L(p)\leq\frac1{2\beta cE(p)}. \label{eq:infrared-bound}
+\end{equation}
+No inverse or estimate is applied to the constant mode.  This is a Fourier
+or quadratic-form upper bound, not an entrywise position-space comparison.
+
+\subsection{The singular three-dimensional sum and zero-mode subtraction}
+\label{sec:infrared-singular-sum}
+
+Define
+\begin{equation}
+ I_3=\frac1{(2\pi)^3}\int_{(-\pi,\pi]^3}\frac{\dd^3p}{E(p)},\qquad
+ I_{3,L}=\frac1V\sum_{p\neq0}\frac1{E(p)},\qquad I_{3,L}\to I_3<\infty.
+ \label{eq:i3}
+\end{equation}
+Here is a proof of the asserted convergence.  The elementary concavity
+bound $\sin t\geq2t/\pi$ for $0\leq t\leq\pi/2$ gives
+$1-\cos p_j\geq2p_j^2/\pi^2$, hence
+$E(p)\geq2|p|^2/\pi^2$ on the centered Brillouin cube.  Inclusion of
+$\{\norm p_\infty\leq\delta\}$ in the radius-$\sqrt3\delta$ ball
+therefore gives the continuous tail bound
+\begin{equation}
+ \frac1{(2\pi)^3}\int_{\norm p_\infty\leq\delta}\frac{\dd^3p}{E(p)}
+ \leq\frac{\sqrt3\delta}{4}\qquad(0<\delta<\pi).
+ \label{eq:infrared-continuous-tail}
+\end{equation}
+Choose centered integer representatives $k$ for the discrete momenta.  The
+shell $\norm k_\infty=n$ has at most
+$(2n+1)^3-(2n-1)^3=24n^2+2$ points, and
+$E(2\pi k/L)\geq8|k|^2/L^2$.  With
+$M=\lfloor\delta L/(2\pi)\rfloor$, we obtain
+\begin{align}
+ \frac1V\sum_{0<\norm p_\infty\leq\delta}\frac1{E(p)}
+ &\leq\frac1{8L}\sum_{n=1}^{M}\left(24+\frac2{n^2}\right)
+ \leq\frac{13M}{4L}\leq\frac{13\delta}{8\pi}.
+ \label{eq:infrared-discrete-tail}
+\end{align}
+An empty sum is zero.  Outside the $\delta$ cube the integrand, with its
+cutoff, is bounded and Riemann integrable, so the ordinary grid sums
+converge there.  First let even $L\to\infty$ for fixed $\delta$, then
+let $\delta\downarrow0$ using both tail bounds.  This proves
+\eqref{eq:i3} without numerical quadrature or a decimal approximation.
+The controlling dimension is the spatial dimension three, not eight.
+
+Finally the Fourier trace identity gives
+\begin{equation}
+ \frac{\widehat D_L(0)}V
+ =D_L(0,0)-\frac1V\sum_{p\neq0}\widehat D_L(p)
+ \geq D_L(0,0)-\frac{I_{3,L}}{2\beta c}.
+ \label{eq:infrared-subtraction}
+\end{equation}
+The left side is nonnegative, but this section alone gives no strictly
+positive lower bound.  A separate bound $D_L(0,0)\geq d_\beta$ would
+imply $\liminf_L\widehat D_L(0)/V\geq d_\beta-I_3/(2\beta c)$.
+The collective and Falk--Bruch arguments in the next section must supply
+that input before any cusp or distinct-state conclusion is drawn.
+
+\section{Collective Duhamel lower bound}
+\label{sec:collective}
+
+\subsection{Thermal energy, translated forms and the collective moment}
+
+In this section $L,\beta$ are fixed and the source is zero.  Write
+$H=H_L(0)=-(2m)^{-1}\Delta+U$, with closed form $h$, and let
+$(E_i,\psi_i)$ be an orthonormal eigenbasis.  Such a basis exists because
+the finite heat trace makes the heat operator compact.  Choose a constant $C=C_0$ large enough that, for some $\kappa>0$,
+$U+C\geq1+\kappa\sum_y|q_y|^4$ as a form multiplier; the earlier envelope
+allows $\kappa=g/256$.  Write $h_C=h+C$.  The form domain in
+\eqref{eq:form-domain} is unchanged by this shift.  For $s\geq0$,
+\begin{equation}
+ s e^{-\beta s}\leq\frac{2}{e\beta}e^{-\beta s/2},\qquad
+ \rho_L(H+C)<\infty,\qquad
+ \rho_L\left(\sum_y|q_y|^4\right)<\infty.
+ \label{eq:collective-thermal-energy}
+\end{equation}
+The last two statements follow from the heat trace at $\beta/2$ and the
+form inequality $\kappa\sum_y|q_y|^4\leq H+C$, respectively.
+
+For later use we make the unbounded-integrability statement precise.
+\begin{lemma}[Thermal polynomial integrability]
+\label{lem:collective-polynomial-integrability}
+At fixed $L,\beta$, if $P(q)$ is a multiplication polynomial of degree at most
+four, then the positive form trace
+\begin{equation}
+ {\mathsf T}_{\beta}(P):=\sum_i e^{-\beta E_i}
+       \int_{\mathbb R^{8V}}|P(q)|\,|\psi_i(q)|^2\,\dd q
+ \label{eq:collective-polynomial-trace}
+\end{equation}
+ is finite.  In particular $\rho_L(|P|)<\infty$ and
+ $\sum_i p_i|\langle\psi_i,P\psi_i\rangle|<\infty$.
+\end{lemma}
+\begin{proof}
+In finite dimension, $|P(q)|\leq K_{P,L}(1+w(q))$ for a constant depending
+only on the displayed polynomial and the fixed volume.  The form inequality
+above gives
+\[
+ \int w|\psi_i|^2\dd q\leq\kappa^{-1}(E_i+C)
+\]
+for every normalized eigenvector.  Since $E_i+C\geq1$ and
+$\sum_i e^{-\beta E_i}(E_i+C)<\infty$ by the first inequality in
+\eqref{eq:collective-thermal-energy} and the heat trace at $\beta/2$,
+summing the bound proves \eqref{eq:collective-polynomial-trace}.  The final
+statement follows from $|\langle\psi_i,P\psi_i\rangle|\leq\langle\psi_i,|P|\psi_i\rangle$.  This is a positive form trace defined by the
+spectral sum, not a cyclic trace involving an unbounded product.
+\end{proof}
+
+Smooth compactly supported functions are a form core: radial cutoffs converge
+in $H^1$ and the quartic weighted norm, with their gradient terms supported in
+escaping annuli; mollification then converges on each compact support, where
+the potential is bounded.
+
+Let $v_{y,e}=u_e/\sqrt V$, so that $|v|=1$, and set
+$H(t)=-(2m)^{-1}\Delta+U(q+tv)$ and $\Delta_t=U(q+tv)-U(q)$.
+Translation preserves $H^1$ and the quartic weighted space, using
+$|q_y-tv_y|^4\leq8(|q_y|^4+|tv_y|^4)$.  Thus the translated form has the
+same domain.  The Hamiltonians are unitarily equivalent and $Z(t)=Z$.
+For fixed $t$, $\Delta_t$ has degree at most three in $q$ and is
+absolutely Gibbs integrable.  Put $p_i=e^{-\beta E_i}/Z$ and
+$d_i=\ip{\psi_i}{\Delta_t\psi_i}$, interpreted as a multiplication form.
+Scalar Jensen applied to the spectral probability measure of $H(t)$ in
+$\psi_i$ gives
+\[
+ \ip{\psi_i}{e^{-\beta H(t)}\psi_i}
+ \geq e^{-\beta h_t[\psi_i]}=e^{-\beta(E_i+d_i)}.
+\]
+Only form-domain membership is needed for the spectral first moment.
+Summation and a second scalar Jensen inequality give
+\begin{equation}
+ 1=\frac{Z(t)}Z\geq\sum_i p_i e^{-\beta d_i}
+       \geq\exp\left(-\beta\sum_i p_i d_i\right).
+ \label{eq:collective-jensen-chain}
+\end{equation}
+The first bound also makes the intermediate exponential sum finite;
+$\sum_i p_i|d_i|<\infty$ follows from the polynomial bound.  Consequently
+\begin{equation}
+ \rho_L\big(U(q+tv)-U(q)\big)\geq0. \label{eq:jensen-shift}
+\end{equation}
+The finite polynomial $t\mapsto\rho_L(\Delta_t)$ has a minimum at zero,
+so its second derivative at the minimum satisfies
+\(\left.\partial_t^2\rho_L(\Delta_t)\right|_{t=0}\geq0\).
+No assertion that the second derivative is nonnegative for every $t$ is
+needed (and the negative quadratic coefficient $r<0$ would not justify such
+an assertion).  This differentiates finitely many integrable coefficients,
+not the heat trace under an unbounded cubic perturbation, and uses no operator
+monotonicity of the exponential.
+Spatial differences and internal differences are unchanged by the common
+displacement.  The mass term contributes $r$, the scalar quartic contributes
+$3g\sum_y S_y/(8V)$, and each locking edge contributes
+$\lambda(q_{y,e}-q_{y,f})^2/(8V)$: the second derivative of
+$q_{y,e}^2+q_{y,f}^2$ is $4/(8V)$.  Hence
+\begin{equation}
+ B_L:=\left.\partial_t^2U(q+tv)\right|_{t=0}
+ =r+\frac{3g}{8V}\sum_yS_y
+       +\frac\lambda{8V}\sum_yD_y^{\mathrm{int}},\qquad
+ \rho_L(B_L)\geq0. \label{eq:collective-hessian}
+\end{equation}
+For $\Pi_0=-i\hbar v\cdot\nabla=V^{-1/2}\sum_y(u,p_y)$, direct
+differentiation on the smooth compact core gives
+\begin{equation}
+ [\Pi_0,[H_L(0),\Pi_0]]=\hbar^2B_L. \label{eq:double-commutator}
+\end{equation}
+The right side is a quadratic, form-bounded multiplier and defines the
+continuous form extension of this core identity.  No Gibbs trace of a
+product of three unbounded operators is used: positivity of its expectation
+was established separately in \eqref{eq:collective-jensen-chain}.
+The $\hbar^2$ belongs to the momentum commutator, not the displacement
+Hessian.  In particular, \eqref{eq:collective-hessian} is not pointwise
+positivity of $B_L$.
+
+Spatial translation invariance gives the first inequality below.  At zero
+source parity makes each coordinate mean zero, and the actual loop FKG
+and clipping argument in \eqref{eq:fkg-local} makes all off-diagonal
+coordinate products nonnegative in expectation.  Therefore
+\begin{equation}
+ -r\leq\frac{3g}{8}\rho_L(S_0)+\frac\lambda8\rho_L(D_0^{\mathrm{int}}),
+ \qquad \rho_L(Q_0^2)\geq\frac18\rho_L(S_0). \label{eq:moment-chain}
+\end{equation}
+Indeed, the second inequality follows by expanding the square of
+$Q_0=\sum_e q_{0,e}/\sqrt8$.  The three-regular internal graph gives
+\begin{equation}
+ \rho_L(D_0^{\mathrm{int}})
+ =3\rho_L(S_0)-2\sum_{\{e,f\}\in E(Q_3)}\rho_L(q_{0,e}q_{0,f})
+ \leq3\rho_L(S_0).
+ \label{eq:collective-graph-expectation}
+\end{equation}
+These are Gibbs expectation inequalities, not pointwise graph bounds.
+Together, for $r<0$, they imply
+\begin{equation}
+ \rho_L(Q_0^2)\geq\theta_Q,\qquad
+ \theta_Q=-\frac r{3(g+\lambda)}>0. \label{eq:theta-q}
+\end{equation}
+
+\subsection{A finite spectral proof of the Falk--Bruch inequality}
+\label{sec:finite-falk-bruch}
+
+We give the scalar operator inequality used here explicitly; it is the
+standard Falk--Bruch inequality, not a new model-specific result.  Its
+normalization agrees with \cite[Proposition 3.18, (3.65), (3.68)]{KKK}.
+For a bounded self-adjoint $A$, define
+\begin{align}
+ g(A)&=\sum_{i,j}p_i|A_{ij}|^2
+       =\frac12\sum_{i,j}(p_i+p_j)|A_{ij}|^2,\nonumber\\
+ b(A)&=\sum_{i,j}\mathcal L(p_i,p_j)|A_{ij}|^2,\qquad
+ \mathcal L(a,b)=\int_0^1 a^{1-t}b^t\dd t
+ =\begin{cases}(a-b)/(\log a-\log b),&a\ne b,\\a,&a=b.
+ \end{cases} \label{eq:collective-log-mean}
+\end{align}
+The integral and weighted arithmetic--geometric mean imply
+$0<\mathcal L(a,b)\leq(a+b)/2$.  Thus $0\leq b(A)\leq g(A)$, and
+polarization gives a positive form with Cauchy--Schwarz.  Spectral expansion
+and Tonelli identify
+\begin{equation}
+ b(A)=\frac1{\beta Z}\int_0^\beta
+ \Tr\left(e^{-(\beta-\tau)H}A e^{-\tau H}A\right)\dd\tau.
+ \label{eq:collective-duhamel-spectral}
+\end{equation}
+This trace is the nonnegative spectral sum, equivalently the squared
+Hilbert--Schmidt norm of
+$e^{-\tau H/2}A e^{-(\beta-\tau)H/2}$; it is finite, including at
+the endpoints.  For $0<\tau<\beta$, the elementary bound
+$p_i^{1-\tau/\beta}p_j^{\tau/\beta}\leq
+(1-\tau/\beta)p_i+(\tau/\beta)p_j$ suffices.  No separately defined
+positive-time exponential $e^{+\tau H}$ is needed.  For bounded
+multipliers this is also the finite-volume loop two-time integral.
+
+In a finite-dimensional Gibbs system set
+\begin{equation}
+ c(A)=\beta\sum_{i,j}(E_j-E_i)(p_i-p_j)|A_{ij}|^2
+      =\rho([A,[\beta H,A]])\geq0.
+ \label{eq:finite-spectral-c}
+\end{equation}
+Let $f(0)=1$ and, for $k>0$, let $x>0$ be the unique solution of
+$x\tanh x=k$ and define $f(k)=\tanh x/x$.  The function $x\tanh x$
+increases continuously from zero to infinity, so $f$ is well-defined and
+continuous on $[0,\infty)$.
+
+For completeness, the scalar function
+$\Phi(u)=\sqrt u\coth\sqrt u$, with $\Phi(0)=1$, is increasing and
+concave.  For $x>0$ differentiation gives
+\begin{align}
+ \Phi'(x^2)&=\frac{\sinh x\cosh x-x}{2x\sinh^2x}>0,\nonumber\\
+ \Phi''(x^2)&=\frac{\cosh x}{4x^3\sinh^3x}
+       \left(2x^2-x\tanh x-\sinh^2x\right)<0.
+ \label{eq:falk-phi-concavity}
+\end{align}
+The first numerator starts at zero and has derivative $2\sinh^2x>0$.
+For the second sign, $0\leq\tanh x\leq x$ and
+$(\tanh x-x+x^3/3)'=x^2-\tanh^2x\geq0$ imply
+$\tanh x\geq x-x^3/3$.  Taylor's formula with nonnegative remainder
+gives $\sinh x\geq x+x^3/6$.  Consequently
+$\sinh^2x+x\tanh x\geq2x^2+x^6/36$.  Continuity at zero extends
+the concavity to the closed half-line.
+
+For a nonzero self-adjoint finite matrix $A$, $b=b(A)>0$.  Put
+$x_{ij}=|\log p_i-\log p_j|/2$ and
+$w_{ij}=\mathcal L(p_i,p_j)|A_{ij}|^2/b$.  These weights sum to one,
+including any degenerate-energy pairs with $x_{ij}=0$.  The exact identities
+\begin{equation}
+ \frac{g}{b}=\sum_{i,j}w_{ij}\Phi(x_{ij}^2),\qquad
+ \frac{c}{4b}=\sum_{i,j}w_{ij}x_{ij}^2
+ \label{eq:falk-spectral-weights}
+\end{equation}
+follow from the arithmetic/logarithmic mean ratio $x\coth x$ and
+$\beta(E_j-E_i)=\log p_i-\log p_j$.  Jensen now gives
+$g/b\leq\Phi(c/(4b))$.  If $c=0$, every active pair has zero energy
+gap and $g=b$.  If $c>0$, set $z=\sqrt{c/(4b)}$ to obtain
+$g\leq c/(4z\tanh z)$.  If $x\tanh x=c/(4g)$, monotonicity gives
+$x\geq z$, and hence
+\begin{equation}
+ b(A)\geq g(A)f\left(\frac{c(A)}{4g(A)}\right).
+ \label{eq:finite-falk-bruch}
+\end{equation}
+For $A=0$ interpret the right side as zero.  This proves the precise finite
+inequality needed below without importing a radial moment or phase theorem.
+
+\subsection{Bounded coordinates, energy-weighted sums and cutoff removal}
+
+Return to the fixed finite-volume Schr\"odinger Hamiltonian.  Let
+$A_R=R\tanh(Q_0/R)$ for $R>0$.  At fixed $R$, both $A_R$ and $A_R^2$
+are bounded multipliers with bounded first derivatives and hence preserve
+the closed form domain.  Since $\norm{u}=1$,
+$|\nabla A_R|^2=\operatorname{sech}^4(Q_0/R)\leq1$.
+On the smooth form core, the potential and mixed gradient terms cancel in
+\[
+ h[A_R\psi]-\operatorname{Re}h(\psi,A_R^2\psi)
+ =\frac1{2m}\int |\nabla A_R|^2|\psi|^2\dd q.
+\]
+Form density passes the identity to the domain.  For an eigenvector,
+$A_R^2\psi_i$ is an admissible form test, so the eigenvector form equation
+gives
+\begin{equation}
+ h[A_R\psi_i]-E_i\norm{A_R\psi_i}^2
+ =\frac1{2m}\int \operatorname{sech}^4(Q_0/R)|\psi_i|^2\dd q.
+ \label{eq:form-identity}
+\end{equation}
+Before regrouping any energy-weighted sums, observe that
+$h_C[A_R\psi]\leq C_R(h_C[\psi]+\norm{\psi}^2)$, by the product
+rule, $U+C\geq0$, and the multiplier bounds.  Thus
+\begin{align}
+ \sum_{i,j}p_i(E_j+C)|(A_R)_{ij}|^2
+  &=\sum_i p_i h_C[A_R\psi_i]<\infty,\nonumber\\
+ \sum_{i,j}p_i(E_i+C)|(A_R)_{ij}|^2
+  &\leq R^2\rho_L(H+C)<\infty.
+ \label{eq:collective-absolute-energy-sums}
+\end{align}
+Here self-adjointness allows the row/column interchange for the first
+identity.  Since $E_i+C\geq0$, these bounds control
+$\sum_{i,j}p_i|E_j-E_i||(A_R)_{ij}|^2$; the corresponding $p_j$ sum
+is equal after interchanging indices.  Regrouping is therefore legitimate,
+and \eqref{eq:form-identity} gives the finite scalar
+\begin{align}
+ c_R&:=\beta\sum_{i,j}(E_j-E_i)(p_i-p_j)|(A_R)_{ij}|^2\nonumber\\
+ &=2\beta\sum_i p_i\big(h[A_R\psi_i]-E_i\norm{A_R\psi_i}^2\big)
+ =\frac\beta m\rho_L\big(\operatorname{sech}^4(Q_0/R)\big),
+ \quad 0\leq c_R\leq\frac\beta m.
+ \label{eq:collective-local-c}
+\end{align}
+Every paired spectral summand is nonnegative.  This is the form
+interpretation of $\rho_L([A_R,[\beta H,A_R]])$, not a formal cyclic trace
+calculation.  The scalar $c_R$ is the expectation of the displayed bounded
+multiplier; the two objects are not identified.
+
+To apply \eqref{eq:finite-falk-bruch}, let $P_M$ project onto the first
+$M$ eigenvectors, $H_M=\operatorname{diag}(E_1,\ldots,E_M)$,
+$A_{R,M}=P_M A_R P_M$, $Z_M=\sum_{i\leq M}e^{-\beta E_i}$ and
+$q_M=Z_M/Z$.  The finite Gibbs probabilities are $p_i/q_M$.
+Let $g_{R,M},b_{R,M},c_{R,M}$ be the three finite expressions.  Homogeneity
+of the logarithmic mean gives
+\begin{align}
+ q_M g_{R,M}&=\sum_{i,j\leq M}p_i|(A_R)_{ij}|^2,\nonumber\\
+ q_M b_{R,M}&=\sum_{i,j\leq M}\mathcal L(p_i,p_j)|(A_R)_{ij}|^2,\nonumber\\
+ q_M c_{R,M}&=\beta\sum_{i,j\leq M}(E_j-E_i)(p_i-p_j)|(A_R)_{ij}|^2.
+ \label{eq:collective-spectral-cutoff}
+\end{align}
+The unnormalized right sides increase to $g(A_R),b(A_R),c_R$ and
+$q_M\to1$.  Thus all three normalized quantities converge at fixed
+$R,L,\beta$.  Since $A_R$ is nonzero and the Gibbs state is faithful,
+$g(A_R)>0$ and the finite $g_{R,M}$ are eventually positive.  Continuity
+of $f$ passes \eqref{eq:finite-falk-bruch} to
+\begin{equation}
+ b(A_R)\geq g(A_R)f\left(\frac{c_R}{4g(A_R)}\right).
+ \label{eq:collective-bounded-falk}
+\end{equation}
+We do not assert monotonicity of the normalized finite expressions,
+operator-norm convergence of commutators, or an exact canonical commutation
+relation in a finite matrix algebra.
+
+Only now let $R\to\infty$, still at fixed $L,\beta$.  Since
+$|A_R|\leq|Q_0|$, $A_R\to Q_0$ and $\rho_L(Q_0^2)<\infty$,
+dominated convergence gives
+\begin{equation}
+ g(A_R)\longrightarrow s_L:=\rho_L(Q_0^2),\qquad
+ g(A_R-Q_0)\longrightarrow0,\qquad c_R\longrightarrow\frac\beta m.
+ \label{eq:collective-coordinate-cutoff}
+\end{equation}
+For the last limit use bounded convergence in
+\eqref{eq:collective-local-c}.  The bound $b\leq g$ and Cauchy--Schwarz
+extend $b$ to the thermal $L^2$ completion and give
+$|\sqrt{b(A_R)}-\sqrt{b(Q_0)}|\leq\sqrt{g(A_R-Q_0)}$.
+There is also direct loop identification: time invariance and
+Cauchy--Schwarz bound the difference of the two-time products uniformly in
+$\tau$ by
+\begin{equation}
+ \E_{L,0}|A_R(\tau)A_R(0)-Q_0(\tau)Q_0(0)|
+ \leq\big(\sqrt{g(A_R)}+\sqrt{s_L}\big)\sqrt{g(A_R-Q_0)}.
+ \label{eq:collective-loop-clipping}
+\end{equation}
+Here $A_R(\tau)$ denotes the clipped loop coordinate.  Integration proves
+$b(Q_0)=D_L(0,0)$ without positing an unbounded operator trace.  Parity
+makes both odd means zero, so raw and connected forms agree.  Therefore
+\begin{equation}
+ D_L(0,0)\geq s_L f\left(\frac\beta{4ms_L}\right),\qquad
+ s_L=\rho_L(Q_0^2)\geq\theta_Q>0. \label{eq:duhamel-lower-general}
+\end{equation}
+The local coefficient is $\beta/m=\beta\hbar^2/\chi$: it contains the
+$\beta$ from $\beta H$ and is distinct from the global momentum identity
+\eqref{eq:double-commutator}.  To substitute the moment lower bound, fix
+$k>0$ and write $x_s\tanh x_s=k/s$.  Then
+$s f(k/s)=k/x_s^2$.  Increasing $s$ decreases $x_s$, so this expression
+increases.  Using $k=\beta/(4m)$ yields
+\begin{equation}
+ D_L(0,0)\geq d_\beta:=\theta_Q\frac{\tanh x_\beta}{x_\beta},\qquad
+ x_\beta\tanh x_\beta=\frac\beta{4m\theta_Q}. \label{eq:d-beta}
+\end{equation}
+All domain arguments were at fixed volume: finite spectral cutoff first,
+$M\to\infty$ at fixed $R$, then $R\to\infty$.  The final scalar bound
+has no $V$ and can now be combined with the infrared sum before taking the
+spatial limit.  It constructs no common infinite-volume unbounded operator,
+nor a volume-uniform operator core.
+
+\section{Strict cusp and two DLR states}
+\label{sec:cusp}
+
+\subsection{The two proof branches and their common normalization}
+\label{sec:composition-dictionary}
+
+Fix $m,c,g,\lambda>0$ and $r<0$, and keep one $\beta>0$ throughout
+the spatial and source limits.  The zero-source fluctuation estimate and
+the positive-source DLR construction use the same physical Hamiltonian,
+but different sequences of laws.  Their common dictionary is
+\begin{equation}
+ \frac{Z_L(h)}{Z_L(0)}=\E_{L,0}e^{hX_L},\qquad
+ Y_L:=\frac{X_L}{V},\qquad
+ \E_{L,0}Y_L^2=\beta^2\Pi_L,\qquad
+ P_\beta=\frac{p_\beta}{8\beta}.
+ \label{eq:composition-source-dictionary}
+\end{equation}
+Here $X_L$ already contains the time integral in \eqref{eq:pressure-def}.
+In particular, the source in the exponential is $h$, not $\beta h$.
+The moment estimate below is in $\mu_{L,0}$; the tangent states later are
+limits of $\mu_{L,h_j}$ with $h_j$ held fixed during each volume limit.
+No zero-source periodic accumulation is asserted to be a positive phase.
+
+Time invariance, \eqref{eq:duhamel-two-time}, and the Fourier trace identity
+give
+\begin{align}
+ \Pi_L&:=\E_{L,0}\left[\left(\frac{X_L}{\beta V}\right)^2\right]
+ =\frac1{V^2}\sum_{y,z}D_L(y,z)
+ =\frac{\widehat D_L(0)}V\nonumber\\
+ &=D_L(0,0)-\frac1V\sum_{p\neq0}\widehat D_L(p). \label{eq:zero-mode}
+\end{align}
+Thus the positive local bound is used only after subtracting every
+nonzero mode.  Combining \eqref{eq:infrared-bound}, \eqref{eq:i3}, and
+\eqref{eq:d-beta} first gives
+$\Pi_L\geq d_\beta-I_{3,L}/(2\beta c)$ and then
+\begin{equation}
+ \liminf_{L\to\infty}\Pi_L\geq
+ \delta_\beta:=d_\beta-\frac{I_3}{2\beta c}. \label{eq:delta}
+\end{equation}
+Define
+\begin{equation}
+ A_0=8cm\theta_Q^2. \label{eq:a0}
+\end{equation}
+Because $\beta=4m\theta_Qx_\beta\tanh x_\beta$,
+\begin{equation}
+ 2\beta c\,\delta_\beta=A_0\tanh^2x_\beta-I_3. \label{eq:threshold-algebra}
+\end{equation}
+If $A_0>I_3$, set
+\begin{equation}
+ \rho_*=\sqrt{I_3/A_0},\qquad x_*=\operatorname{artanh}(\rho_*),\qquad
+ \beta_*=4m\theta_Qx_*\rho_*. \label{eq:beta-star}
+\end{equation}
+Then $\beta>\beta_*$ implies $\delta_\beta>0$.  At equality, or when
+$A_0\leq I_3$, the lower bound is nonpositive; this is not a phase-absence
+statement.
+Indeed $x\tanh x$ and $\tanh^2x$ are strictly increasing for $x>0$,
+so for $A_0>I_3$ the condition $\delta_\beta>0$ is equivalent to
+$\beta>\beta_*$.  Also $0<I_3<\infty$: positivity follows from the
+positive integrand away from the origin, and finiteness from
+\eqref{eq:infrared-continuous-tail}.  The sufficient set is nonempty.
+For fixed $c,g,\lambda>0$ and $r<0$, choose
+$m>I_3/(8c\theta_Q^2)$ and then $\beta>\beta_*$.
+This is a choice of finite parameters, not a zero-temperature or infinite-mass
+limit.  The threshold is sufficient and is not identified with the exact
+critical temperature.
+
+\subsection{A squared-tail estimate at a nondifferentiable pressure}
+
+We use the following elementary endpoint lemma rather than differentiating
+finite-volume second moments through the cusp.
+
+\begin{lemma}[Even-pressure squared-tail bound]
+\label{lem:griffiths-endpoint}
+Let $V_n>0$ tend to infinity and let $X_n$ have finite moment generating
+functions on a common interval $(-h_0,h_0)$, $h_0>0$.  Suppose
+\[
+ F_n(h)=V_n^{-1}\log\E e^{hX_n}\longrightarrow F(h)
+\]
+pointwise on that interval, where $F$ is finite, even, and $F(0)=0$.
+Then $F$ is convex, its right derivative $\ell=F'_+(0)$ is finite and
+nonnegative, and
+\begin{equation}
+ \limsup_n\E[(X_n/V_n)^2]\leq\ell^2. \label{eq:griffiths-tail}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Convexity passes from the log MGFs to their finite limit. Evenness makes
+zero a minimum, and finiteness on a two-sided interval bounds the one-sided
+slopes there.  Fix $\eps>0$ and choose a fixed $h\in(0,h_0)$ with
+$F(h)/h\leq\ell+\eps/4$.
+Pointwise convergence and evenness give, for large $n$,
+$\max(F_n(h),F_n(-h))\leq h(\ell+\eps/2)$.  Chernoff's bound for
+$Y_n=X_n/V_n$ gives
+\[
+ \Pr(|Y_n|>z)\leq2e^{-V_nh(z-\ell-\eps/2)}
+ \quad(z\geq\ell+\eps).
+\]
+For $R=\ell+\eps$, the exact layer-cake identity and Tonelli give
+\begin{align}
+ \E[Y_n^2 1_{\{|Y_n|>R\}}]
+ &=R^2\Pr(|Y_n|>R)+\int_R^\infty2z\Pr(|Y_n|>z)\dd z\nonumber\\
+ &\leq2e^{-V_nh\eps/2}\left[R^2+\frac{2R}{V_nh}
+                         +\frac2{(V_nh)^2}\right]\longrightarrow0.
+ \label{eq:griffiths-squared-tail}
+\end{align}
+The central contribution is at most $R^2$.  Take the limsup and then
+$\eps\downarrow0$.
+\end{proof}
+
+This is the needed second-moment specialization of
+\cite[Proposition 3.9, (3.23)--(3.24)]{KKK}, proved here using only a
+neighborhood of zero.  It uses fixed nonzero test sources before taking
+$V_n\to\infty$, and controls a squared tail rather than merely weak
+convergence or tail probabilities.  No derivative at zero is interchanged
+with the volume limit.
+
+Apply the lemma to the scalar pushforward of $\mu_{L,0}$ by $X_L$.
+Equation~\eqref{eq:composition-source-dictionary} gives
+$F_L(h)=p_{\beta,L}(h)-p_{\beta,L}(0)$, which converges to the finite,
+even $F(h)=p_\beta(h)-p_\beta(0)$ by \eqref{eq:pressure-limit}.
+For $\delta_\beta>0$, the two independently justified bounds give
+\begin{equation}
+ \beta^2\delta_\beta
+ \leq\liminf_L\E Y_L^2
+ \leq\limsup_L\E Y_L^2
+ \leq[p_\beta'(0+)]^2.
+ \label{eq:composition-liminf-limsup}
+\end{equation}
+The right slope is nonnegative and finite, so taking its positive square
+root and dividing by $8\beta$ yields
+\begin{equation}
+ p_\beta'(0+)\geq\beta\sqrt{\delta_\beta},\qquad
+ D_+P_\beta(0)=\frac{p_\beta'(0+)}{8\beta}
+ \geq\frac{\sqrt{\delta_\beta}}8>0. \label{eq:cusp}
+\end{equation}
+Evenness gives $D_-P_\beta(0)=-D_+P_\beta(0)$, so the pressure has a strict
+collective-source cusp in the sufficient regime.
+At every finite volume, in contrast,
+$p_{\beta,L}'(0)=0$ by parity.  The derivative convergence
+\eqref{eq:derivative-limit} applies only at differentiability points of
+the limiting pressure and makes no assertion at this cusp.
+
+\subsection{Source-selected DLR states and a bounded witness of distinctness}
+
+Choose positive differentiability points $h_j\downarrow0$.  Equations
+\eqref{eq:source-zero-tangent} and \eqref{eq:cusp} give a zero-source DLR
+state $\mu_+$ with
+\begin{equation}
+ \mu_+(Q_0)=8D_+P_\beta(0)\geq\sqrt{\delta_\beta}>0. \label{eq:mu-plus}
+\end{equation}
+For clarity, this construction uses both passages in
+Section~\ref{sec:dlr-source-tangents}: at each fixed $h_j$, take a spatial
+accumulation and identify its clipped local expectation with
+$8P_\beta'(h_j)$; then take a source-to-zero subsequence using common
+$W_t$ tightness, compact-uniform kernel continuity and the second clipping
+passage.  A cusp by itself would not establish the DLR property.
+
+Global parity $\Theta\omega=-\omega$ is a continuous involution of
+$\Omega_t$.  The Gaussian reference is symmetric and
+$I_\Delta^0(-\omega\mid-\xi)=I_\Delta^0(\omega\mid\xi)$, so change of
+variables in the finite specification gives, for bounded Borel $f$,
+\begin{equation}
+ \pi_\Delta^0(f\mid\Theta\xi)
+ =\pi_\Delta^0(f\circ\Theta\mid\xi).
+ \label{eq:parity-specification-intertwining}
+\end{equation}
+Consequently
+$(\Theta_*\mu_+)\pi_\Delta^0(f)
+=\mu_+\pi_\Delta^0(f\circ\Theta)=\mu_+(f\circ\Theta)$.
+Thus $\mu_-:=\Theta_*\mu_+$ is also a tempered DLR
+state and
+\begin{equation}
+ \mu_-(Q_0)=-\mu_+(Q_0)<0. \label{eq:mu-minus}
+\end{equation}
+They are distinct because their finite local expectations differ.  One can
+also exhibit a bounded continuous cylinder witness.  Let
+$a_\beta=\sqrt{\delta_\beta}$ and $C_2=C_{\rm per}/\ell_\sigma$ from
+\eqref{eq:dlr-local-clipping}.  Parity preserves that second-moment bound.
+For $f_R=\operatorname{clip}_R(Q_0)$, the two clipping errors give
+\begin{equation}
+ \mu_+(f_R)-\mu_-(f_R)
+ \geq2a_\beta-\frac{2C_2}{R}>a_\beta>0
+ \quad\text{whenever } R>\frac{2C_2}{a_\beta}.
+ \label{eq:bounded-phase-witness}
+\end{equation}
+This uses a finite $R$ after the states have been constructed.  They are
+not asserted to be extremal, pure, clustering, or the only phases.
+
+\begin{theorem}[Conditional Q3LOCK phase-coexistence package]
+\label{thm:q3lock-composition}
+Fix the Hamiltonian \eqref{eq:hamiltonian}, with $m,c,g,\lambda>0$ and
+$r\in\R$, on
+even periodic cubes in the fixed lattice $\Z^3$ and use the pressure and
+source normalization \eqref{eq:pressure-def}.
+Assume the finite-volume mesh/loop identification, the KP general-vector
+Feller and compactness hypotheses, the selected-law FKG passage, the finite
+FSS inequality, the collective form/Falk--Bruch passage, and the
+source-window DLR continuity described in Sections~\ref{sec:finite}--\ref{sec:collective},
+with the displayed uniformities and limit orders.  These are upstream
+analytic inputs, not an assumption of a cusp or state multiplicity.
+The pressure limit is finite, even and convex for every real source, and
+the tempered DLR set at each fixed source is nonempty and $W_t$-compact.
+If also $r<0$, $A_0>I_3$, and $\beta>\beta_*$, then the pressure has the
+strict cusp \eqref{eq:cusp}; moreover there are at least two distinct
+parity-related tempered Euclidean DLR states at $h=0$ satisfying
+\eqref{eq:mu-plus}--\eqref{eq:mu-minus}.
+\end{theorem}
+
+\begin{proof}
+The finite loop/trace and source identities are established in
+Section~\ref{sec:finite}.  The two-sided pressure bounds, open-box limit
+and periodic seam estimate in Section~\ref{sec:pressure} yield the common
+finite pressure; the general-vector input in
+Section~\ref{sec:dlr-specification} gives fixed-source DLR existence and
+compactness.  At zero source, actual-loop FKG in Section~\ref{sec:fkg}
+enters the collective moment bound, while Section~\ref{sec:collective}
+turns it into $D_L(0,0)\geq d_\beta$.  The nonzero-mode and singular-sum
+arguments in Section~\ref{sec:infrared} therefore yield
+\eqref{eq:delta}.  The strict threshold algebra and
+Lemma~\ref{lem:griffiths-endpoint}, with the exact scalar source
+pushforward, give \eqref{eq:composition-liminf-limsup} and the cusp.
+The separate source-window DLR/tangent construction supplies $\mu_+$;
+\eqref{eq:parity-specification-intertwining} supplies $\mu_-$, and
+\eqref{eq:bounded-phase-witness} distinguishes them.  Each implication uses
+the same fixed $\beta$ and physical coefficients.  No simultaneous
+$h=h(L)$ limit or information about all DLR mixtures is required.
+\end{proof}
+
+\begin{remark}[Status of the theorem]
+The theorem is the target conditional composition of the registered proof
+blocks. Detailed arguments and a source-to-conclusion composition are now
+present, but their presence and finite diagnostics do not constitute signed
+independent acceptance. The current repository tier is T0 and the theorem must be
+reopened if any source convention, limit order, domain condition, or
+normalization fails independent audit.
+\end{remark}
+
+\section{Proof dependency and literature crosswalk}
+\label{sec:crosswalk}
+
+Table~\ref{tab:crosswalk} separates reused standard machinery from the
+model-specific interfaces.  Exact bibliographic details and source hashes are
+in the companion \texttt{literature-crosswalk.md}.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{p{0.23\textwidth}p{0.31\textwidth}p{0.34\textwidth}}
+\toprule
+Source or input & Role & Boundary in this paper\\
+\midrule
+Simon, arXiv:math-ph/9907022v1 & Free-bridge formula, Theorem 1.1 & Harmonic reweighting and absolute normalization are derived here\\
+Kozitsky--Pasurek, arXiv:math-ph/0609045v1 & General-vector DLR existence/compactness and Gaussian Fernique input & Feller/source-window passages are written here; no scalar phase theorem is imported\\
+Froehlich--Simon--Spencer (1976) & Finite-dimensional Poisson-shift infrared inequality & Applied at fixed time mesh after an explicit $8N$-component source map; loop passage is separate\\
+Fortuin--Kasteleyn--Ginibre (1971) & Finite partially ordered association mechanism & Continuous-loop association is proved by mesh induction and weak-limit passage\\
+Kargol--Kondratiev--Kozitsky, arXiv:0710.2303v1 & Endpoint Griffiths and Falk--Bruch comparators & The endpoint specialization and finite spectral inequality are proved here; no radial theorem is imported\\
+Kozitsky, LMP 51 (2000); CMP 5 (2002)~\cite{Koz-vector,Koz-CMP} & Vector/isotropic quantum-stabilization and normal-fluctuation comparators & Their radial/isotropic bounds do not supply the non-radial Q3LOCK cusp or DLR pair; no result is imported\\
+Schneider--Beck--Stoll~\cite{Schneider-Beck-Stoll} & Radial n-component structural-transition comparison; Eq. (11) is stated for $n=1,2,\infty$ & Comparison-only; the radial model, explicit n-range, and displacive/large-n conclusion do not cover non-radial finite-n=8 Q3LOCK\\
+EXP-001587/588/589 & Corrected residual, finite pressure, and open/periodic pressure limit & Internal model-specific inputs, still awaiting signed audit\\
+EXP-001591/593/595/1598 & DLR tangent, FKG, infrared, and collective lower-bound blocks & Conditional composition; finite diagnostics are not proof certification\\
+Faris--Minlos~\cite{Faris-Minlos} & Multidimensional anharmonic oscillators and a small-coupling ground-state cluster expansion & Zero-temperature ground-state comparison only; no finite-temperature DLR, source cusp, or parity-state result is imported\\
+Froehlich--Lieb~\cite{Frohlich-Lieb} & Anisotropic finite-spin classical/quantum phase-transition methods in two dimensions & Comparison-only; no direct unbounded continuous-loop, three-dimensional DLR, or Q3LOCK cusp theorem is imported\\
+\bottomrule
+\end{tabular}
+\caption{Proof dependency and source boundary.}
+\label{tab:crosswalk}
+\end{table}
+
+The bounded primary supplement~\cite{Faris-Minlos,Frohlich-Lieb} is included to
+make the non-subsumption boundary explicit. Faris--Minlos is a small-coupling
+zero-temperature multidimensional-oscillator comparison, whereas
+Froehlich--Lieb concerns finitely degenerate anisotropic spin systems on a
+two-dimensional lattice. Neither source supplies the finite-temperature
+unbounded-loop/DLR/source-cusp/parity composition proved conditionally here.
+The comparison is not a novelty or priority claim; specialist literature
+review remains open. Schneider--Beck--Stoll~\cite{Schneider-Beck-Stoll} is
+checked directly as a radial n-component structural-transition source. Its
+quantum inequality is stated only for $n=1,2,\infty$, and its conclusions concern
+zero-point suppression and large-n critical behaviour rather than the present
+finite-temperature non-radial n=8 DLR/cusp package. It is therefore a
+comparison-only boundary, not an imported theorem.
+
+FSS Theorem 2.1 already permits nonradial priors: lack of internal rotation
+symmetry is not a new infrared theorem. Likewise the functional form of our
+sufficient condition is standard. With $f(x\tanh x)=\tanh x/x$,
+\begin{equation}
+ d_\beta=\theta_Q f(\beta/(4m\theta_Q)),\qquad
+ 2\beta c\theta_Q f(\beta/(4m\theta_Q))>I_3.
+ \label{eq:standard-threshold-comparison}
+\end{equation}
+This is the same scalar threshold mechanism as KKK \cite{KKK},
+Theorem 3.20, (3.71)--(3.75), after replacing its model-dependent
+lower-bound parameter by $\theta_Q$. This substitution compares formulas;
+it does not validate that parameter for Q3LOCK. That requires
+Section~\ref{sec:collective}.
+The coefficient eight in $A_0$ arises here from the factor two in the
+infrared subtraction and the factor four in the Falk--Bruch argument,
+not from counting the eight internal coordinates.
+
+The precise obstruction to directly importing KKK Theorems 3.20--3.21 is
+their radial-potential assumption, not the spatial lattice. Let $W$ denote
+the quartic part of $B_0$, and let $e_0$ be a coordinate unit vector.
+The vectors $e_0$ and $u$ both have norm one, but
+\begin{equation}
+ W(e_0)=\frac{g+3\lambda}{4},\qquad W(u)=\frac g{32},\qquad
+ W(e_0)-W(u)=\frac{7g}{32}+\frac{3\lambda}{4}>0.
+ \label{eq:nonradial-witness}
+\end{equation}
+Only the three edges incident to $e_0$ contribute in the first evaluation;
+all locking differences vanish in the second. Thus even an orthogonal
+change of coordinates cannot make this potential radial.
+
+Flattening $(y,e)$ into scalar sites does not give the usual scalar model
+with only onsite potentials and bilinear pair couplings. An internal edge
+contains
+\begin{equation}
+ \frac\lambda4(x-y)^2(x^2+y^2)
+ =\frac\lambda4(x^4+y^4-2x^3y+2x^2y^2-2xy^3).
+ \label{eq:nonbilinear-scalar-obstruction}
+\end{equation}
+Its mixed derivative is $\lambda(-3x^2/2+2xy-3y^2/2)$, not a
+constant bilinear coupling. This rules out that direct rewriting, not all
+possible comparison theorems or reductions. Setting $\lambda=0$ instead
+gives eight decoupled scalar crystals and changes the model; restricting
+every $q_y$ to the line spanned by $u$ also changes the finite-volume law.
+
+The scalar asymmetric-potential result \cite[Theorem 1.4]{KK-asym} is an
+established one-component comparator: it permits a polarization discontinuity
+at some, possibly nonzero, source for a scalar crystal in $d\geq3$ when mass
+and interaction are sufficiently large. The 2008 KKK vector theorem instead
+assumes rotation-invariant onsite structure, while its asymmetric results are
+scalar. Neither source supplies the present non-radial $R^8$ Q3LOCK block, the
+positive-$\lambda$ collective lower bound, the zero-source strict cusp, or the
+parity-related tempered DLR pair with the bounded witness. Setting
+$\lambda=0$ or restricting every vector to the collective line changes the
+finite-volume law and is not a reduction. The candidate contribution is
+consequently the exact positive-$\lambda$ collective lower bound and its
+explicit loop/DLR composition, not the standard inequalities or threshold
+shape. This comparison narrows a direct-import shortcut but does not establish
+novelty or publication value; a broader anisotropic theorem and specialist
+assessment remain to be checked.
+\section{Reproducibility and adversarial boundary}
+\label{sec:repro}
+
+The paper is accompanied by the canonical R-497 source manifest and the
+following deterministic finite diagnostics:
+\begin{center}
+\begin{tabular}{p{0.54\textwidth}p{0.25\textwidth}}
+\toprule
+Command & Registered result\\
+\midrule
+\texttt{q3lock\_absolute\_partition\_audit.py} & EXP-001588, exact determinant\\
+\texttt{q3lock\_thermodynamic\_pressure\_audit.py} & EXP-001589, seam/tiling\\
+\texttt{q3lock\_dlr\_tangent\_content\_audit.py} & EXP-001591, 70/70\\
+\texttt{q3lock\_fkg\_content\_audit.py} & EXP-001593, 504/504\\
+\texttt{q3lock\_reflection\_infrared\_content\_audit.py} & EXP-001595, finite graph/source checks\\
+\texttt{q3lock\_collective\_falk\_bruch\_content\_audit.py} & EXP-001598, 40/40\\
+\texttt{q3lock\_strict\_cusp\_tangent\_content\_audit.py} & EXP-001598, 42/42\\
+\bottomrule
+\end{tabular}
+\end{center}
+The exact paths, run hashes, and expected outputs are in
+\texttt{verification/README.md}.  Each diagnostic was replayed twice with
+byte-identical output, but the diagnostics test finite algebra and provenance;
+they do not replace a mathematical proof or an external referee.
+
+The adversarial checks that must be signed are:
+\begin{enumerate}[leftmargin=2.3em]
+\item the corrected seam coefficient $288$ and all source/$\beta$ factors;
+\item form-domain membership of the bounded coordinate and the order of
+      finite spectral cutoff, coordinate cutoff, and spatial limit;
+\item the typed FSS Poisson norm, including the absence of an extra factor of
+      eight and the exclusion of the zero mode;
+\item transfer of FKG association and fourth-moment products through the
+      actual weighted loop limit;
+\item the squared-tail estimate used at the nondifferentiable pressure point;
+\item compact-uniform source continuity and the clipped expectation passage
+      from $h_j\downarrow0$ to a genuine DLR state;
+\item the exact sufficient regime, with no inference at equality or outside
+      it.
+\end{enumerate}
+
+\section{Readiness gates and conclusion}
+\label{sec:readiness}
+
+This edition is a submission-preparation candidate, not a record of submission
+or editorial acceptance. On 9 September 2026 the author requested completion
+of the package without obtaining external reviewers first. That instruction
+changes a packaging prerequisite; it does not establish any analytic
+hypothesis, sign an audit row, or promote R-497 from its research status.
+The conditional main theorem and all nonclaims remain unchanged.
+
+The delivered package identifies the frozen source and output bytes, includes
+an executable bounded research snapshot, and records the actual replay and
+all-page PDF inspection. Its \texttt{build-report.json},
+\texttt{render-review.json}, and \texttt{MANIFEST.json} distinguish these
+mechanical checks from mathematical acceptance. Historical audit documents
+retain their earlier signed-review and PDF-deferral language as provenance;
+the current packaging contract is the accompanying \texttt{README.md}.
+
+Independent mathematical and specialist novelty reviews have not been
+performed. They remain valuable, including during journal refereeing, but are
+not represented as completed and are not prerequisites for preparing this
+edition. An internally checked conditional manuscript may still require
+mathematical correction or be subsumed by prior work.
+
+Before actual transmission the author must choose a journal, check its current
+requirements, confirm author metadata and declarations, approve the exact
+files, and authorize submission. No journal-specific compliance, originality,
+exclusive-submission, funding or competing-interest declaration is inferred.
+The cover letter and author-confirmation checklist accompany the package.
+AI tools assisted drafting, internal checking, diagnostic orchestration and
+typesetting; this assistance is not independent external peer review. Any
+journal-specific responsibility and disclosure statement requires author
+confirmation.
+
+The mathematical source and finite verification material are included for
+evaluation. No experimental dataset is asserted and no new licence is assigned
+by this package. Any subsequent mathematical repair must receive a new
+research checkpoint, replay, PDF inspection and package identity. The present
+work is thus a precisely scoped conditional phase-coexistence manuscript,
+prepared for an author-controlled submission decision, not a certification
+of a physical theory or a guarantee of publication.
+
+\begin{thebibliography}{99}
+\bibitem{Simon-FK}
+B.~Simon,
+\emph{A Feynman--Kac Formula for Unbounded Semigroups},
+arXiv:math-ph/9907022v1 (1999),
+\url{https://arxiv.org/pdf/math-ph/9907022v1}.
+
+\bibitem{KP}
+Y.~Kozitsky and T.~Pasurek,
+\emph{Euclidean Gibbs Measures of Interacting Quantum Anharmonic Oscillators},
+arXiv:math-ph/0609045v1 (2006),
+\url{https://arxiv.org/pdf/math-ph/0609045v1}.
+
+\bibitem{FSS}
+J.~Fr\"ohlich, B.~Simon, and T.~Spencer,
+Infrared bounds, phase transitions and continuous symmetry breaking,
+\emph{Commun. Math. Phys.} \textbf{50} (1976), 79--95,
+\url{https://math.caltech.edu/SimonPapers/65.pdf}.
+
+\bibitem{FKG}
+C.~M.~Fortuin, P.~W.~Kasteleyn, and J.~Ginibre,
+Correlation inequalities on some partially ordered sets,
+\emph{Commun. Math. Phys.} \textbf{22} (1971), 89--103,
+\url{https://math.bme.hu/~balint/oktatas/perkolacio/percolation_papers/fortuin_kasteleyn_ginibre.pdf}.
+
+\bibitem{KKK}
+A.~Kargol, Y.~Kondratiev, and Y.~Kozitsky,
+\emph{Phase Transitions and Quantum Stabilization in Quantum Anharmonic Crystals},
+arXiv:0710.2303v1 (2007),
+\url{https://arxiv.org/pdf/0710.2303v1}.
+
+\bibitem{KK-asym}
+A.~Kargol and Y.~Kozitsky,
+A phase transition in a quantum crystal with asymmetric potentials,
+arXiv:math-ph/0611017 (2006),
+\url{https://web.ma.utexas.edu/mp_arc/c/06/06-321.pdf}.
+
+\bibitem{Koz-vector}
+Y.~Kozitsky,
+\emph{Quantum Effects in a Lattice Model of Anharmonic Vector Oscillators},
+\emph{Letters in Mathematical Physics} \textbf{51} (2000), 71--81,
+doi:10.1023/A:1007675606191,
+\url{https://doi.org/10.1023/A:1007675606191}.
+
+\bibitem{Koz-CMP}
+Y.~Kozitsky,
+\emph{Quantum Effects in an Anharmonic Crystal},
+\emph{Condensed Matter Physics} \textbf{5} (2002), 601--616,
+doi:10.5488/CMP.5.4.601,
+\url{https://icmp.lviv.ua/journal/zbirnyk.32/001/art01.pdf}.
+
+\bibitem{Faris-Minlos}
+W.~G.~Faris and R.~A.~Minlos,
+\emph{A quantum crystal with multidimensional anharmonic oscillators},
+\emph{Journal of Statistical Physics} \textbf{94} (1999), 365--387,
+doi:10.1023/A:1004588002407,
+\url{https://math.arizona.edu/~faris/Crystal.pdf}.
+
+\bibitem{Frohlich-Lieb}
+J.~Fr\"ohlich and E.~H.~Lieb,
+\emph{Phase transitions in anisotropic lattice spin systems},
+\emph{Communications in Mathematical Physics} \textbf{60} (1978), 233--267,
+doi:10.1007/BF01612891,
+\url{https://repo-archives.ihes.fr/FONDS_IHES/I_Prepublications/FROHLICH/1978-1980/P_78_199/P_78_199_web.pdf}.
+
+\bibitem{Schneider-Beck-Stoll}
+T.~Schneider, H.~Beck, and E.~Stoll,
+\emph{Quantum effects in an n-component vector model for structural phase transitions},
+\emph{Physical Review B} \textbf{13} (1976), 1123--1130,
+doi:10.1103/PhysRevB.13.1123,
+\url{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.13.1123}.
+
+\end{thebibliography}
+
+\end{document}

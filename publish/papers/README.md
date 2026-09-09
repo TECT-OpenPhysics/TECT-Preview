@@ -25,15 +25,22 @@ cited claim set (rule M2); no paper may cite a claim above its registered tier
   novelty, operator, and capstone gates; canonical source reconciliation is
   additionally required only for TECT/P1 transfer.
 
-- q3lock-phase-coexistence/ — Draft v0.1.0.  This is the content-first
-  Q3LOCK phase-coexistence manuscript assembled from R-497 / EXP-001598.  It
-  contains a conditional seven-block theorem package, exact source and limit
-  conventions, theorem-applicability and literature crosswalks, adversarial
-  proof and external-review packets, and the canonical replay manifest.  Its
-  result remains T0 and claim-bearing=false; independent mathematical and
-  specialist literature review, clean frozen-tree replay, content/hash freeze,
-  and operator release gates remain open.  PDF generation is explicitly
-  deferred until the content review and final organization are complete.
+- `q3lock-phase-coexistence/` — Submission-preparation
+  edition v0.1.38-s1, authorized on 2026-09-09 without prior external review.
+  Start with `publish/submission-packages/q3lock/submission-v0138-s1/` and
+  its adjacent ZIP (linked by `submission-distribution.txt` in the paper
+  folder). This separate distribution path preserves the original research
+  checker's recursive no-PDF contract. The seven-block Q3LOCK composition,
+  exact source/limit conventions and bibliography retain the v0.1.38 research
+  content. The package includes the hypothesis and literature crosswalks,
+  internal rereview, unsent substantive cover letter, author-confirmation
+  checklist, source hashes and extracted-snapshot diagnostic replay. R-497
+  remains T0 and claim-bearing=false; independent mathematical and specialist
+  novelty reviews are NOT PERFORMED, not silently passed. They are not
+  prerequisites for producing this requested package. Actual transmission,
+  journal choice and author declarations remain author-controlled. The old
+  source and `q3lock-v0138-r1` review distribution remain immutable history;
+  their PDF-deferral notices do not describe this submission-preparation edition.
 
 First target: Packet A — "Reading-H vacuum selection in a corrected
 Brazovskii-TECT model" (10-20 pages).

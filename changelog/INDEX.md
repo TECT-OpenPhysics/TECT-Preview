@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1017 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1019 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-09 | `20260909-r-497-preserve-historical-audit-contracts-while` — [R-497 preserve historical audit contracts while relocating sealed submission package] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260909-r-497-preserve-historical-audit-contracts-while) |
+| 2026-09-09 | `20260909-r-497-q3lock-submission-preparation-edition-wit` — [R-497 Q3LOCK submission-preparation edition without prior external review] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260909-r-497-q3lock-submission-preparation-edition-wit) |
 | 2026-09-09 | `20260909-a2-r-157-r-158-paper-v0-1-41-internal-re-review` — [A2 R-157 R-158 paper v0.1.41 internal re-review and referee-facing proof repairs] - 2026-09-09 | A2-FULL-PRODUCTION-WELLPOSED | [bounded page](pages/000969-001018.md#20260909-a2-r-157-r-158-paper-v0-1-41-internal-re-review) |
 | 2026-09-08 | `20260908-q3lock-r-497-external-review-pdf-distribution-a` — [Q3LOCK R-497 external-review PDF distribution authorized and assembled] - 2026-09-08 | A1-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260908-q3lock-r-497-external-review-pdf-distribution-a) |
 | 2026-09-08 | `20260908-q3lock-r-497-claim-result-lineage-decision-2026` — [Q3LOCK R-497 claim/result lineage decision] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260908-q3lock-r-497-claim-result-lineage-decision-2026) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-07 | `20260907-q3lock-a1-a5-finite-volume-and-pressure-audit-e` — [Q3LOCK A1-A5 finite-volume and pressure audit (EXP-001632)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-a1-a5-finite-volume-and-pressure-audit-e) |
 | 2026-09-07 | `20260907-q3lock-primary-literature-vector-scalar-applica` — [Q3LOCK primary literature vector-scalar applicability audit (EXP-001631)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-primary-literature-vector-scalar-applica) |
 | 2026-09-07 | `20260907-q3lock-temporal-provenance-correction-and-repla` — [Q3LOCK temporal provenance correction and replay r5 (EXP-001630)] - 2026-09-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-temporal-provenance-correction-and-repla) |
-| 2026-09-07 | `20260907-q3lock-regime-reflection-parity-and-scope-audit` — [Q3LOCK regime reflection parity and scope audit (EXP-001629)] - 2026-09-07 | A19-A23, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-regime-reflection-parity-and-scope-audit) |
-| 2026-09-07 | `20260907-q3lock-collective-falk-bruch-and-cusp-interface` — [Q3LOCK collective Falk-Bruch and cusp interface audit (EXP-001628)] - 2026-09-07 | A14-A18, C6-SPACETIME-SIGNATURE | [bounded page](pages/000969-001018.md#20260907-q3lock-collective-falk-bruch-and-cusp-interface) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,8 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 969–1017 | 49 | [000969-001018.md](pages/000969-001018.md) |
+| 1019–1019 | 1 | [001019-001068.md](pages/001019-001068.md) |
+| 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
