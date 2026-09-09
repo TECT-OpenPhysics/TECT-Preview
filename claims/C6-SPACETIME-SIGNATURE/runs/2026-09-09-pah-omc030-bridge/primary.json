@@ -1,0 +1,61 @@
+{
+  "schema": "tect/pah-omc030-primary/1.0",
+  "status": "PASS",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "result_id": "R-569",
+  "exploration_id": "EXP-001721",
+  "event_id": "20260909-pah-omc-030-finite-strip-markov-bridge",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+    "strategy/pa-hyp/PAH-OMC-029-prereg-v1.json": "bd71fc2933ece63307cdc6369c3af9d3279459d1cc60f06a87b0af41c3dcc99a",
+    "strategy/pa-hyp/PAH-OMC-029-result-v1.json": "8ce90838a3daba1277cfeb2987643eb27c90d6eac2148c9e81c110bcd1c8fc81",
+    "strategy/pa-hyp/PAH-OMC-029-certificate.md": "55e2ca3f7ff3d7d8d77763f020ad1d8b97fe5b98e2541e41153a41a48b1a7c0e",
+    "strategy/pa-hyp/PAH-OMC-029-independent-audit.md": "70e10ea3999bb8e72bfd5509b860558d0dddaa4592638fb7af02e3488844c9ab"
+  },
+  "checks": {
+    "source_hashes": true,
+    "same_model_parameters": true,
+    "terminal_square_retained": true,
+    "ordered_regulators": true,
+    "common_domain_matches": true,
+    "r514_fixed_n_only": true,
+    "r568_conditional": true,
+    "r510_local_not_full": true,
+    "missing_un_n_bridge_is_explicit": true,
+    "missing_liminf_bridge_is_explicit": true,
+    "missing_boundary_bridge_is_explicit": true,
+    "missing_minimal_identification_is_explicit": true,
+    "fixed_n_constants_not_uniform": true
+  },
+  "pin_failures": [],
+  "derived_boundary": {
+    "r514_fixed_n_error": "2*T*H_(n,K,g)*L_(n,K,T,g)*h_j",
+    "uniformity_status": "not supplied in R-514; H and L retain n and K dependence",
+    "target_boundary_status": "R-568 controls the already constructed target H, not the finite nu_n family"
+  },
+  "missing_bridge": "A source-authorized U_n compatible with the unsplit terminal square, arbitrary-sequence liminf/recovery, and compact-time N2c/N4 boundary escape for the original unbounded rates.",
+  "lean_scope": {
+    "status": "PARTIAL_ONLY",
+    "available": [
+      "R-514 finite algebra declarations",
+      "R-568 fixed-target uniqueness declarations"
+    ],
+    "not_formalized": [
+      "U_n",
+      "Mosco liminf/recovery",
+      "finite-rate boundary escape",
+      "anchored-n semigroup convergence"
+    ]
+  },
+  "non_claims": [
+    "No PAH finite-to-target convergence theorem",
+    "No new model, rate, state, carrier, time or limit order",
+    "No physical Pre-A, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion"
+  ]
+}

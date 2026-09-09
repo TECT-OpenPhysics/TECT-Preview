@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-569](#r-569) | PAH-OMC-030 finite-strip to minimal Markov bridge | The frozen R-514 fixed-n temporal passage is compatible with the R-510/R-511/R-568 scopes, but the anchored-n correlation limit is not closed: no source-authorized common-space U_n, arbitrary-sequence liminf/recovery, n-uniform compact-time boundary/tail estimate, or minimal-closure identification is present. Primary, non-importing independent, hostile and integrated audits pass with `HOLD_FOR_EVIDENCE`; no finite-to-target or physical promotion. |
 | [R-568](#r-568) | PAH-OMC-029 fixed-generator Markov uniqueness | Every symmetric strongly continuous Markov semigroup on the same R-510 H whose generator extends R-511 A on all D equals the R-512/R-567 minimal extension, conditional on those pinned inputs. Radial localization, a state-derived subpolynomial rate envelope and an all-extension domain bridge give a vanishing factorial boundary remainder. Independent commutator proof and six partial Lean theorems support the result. Auxiliary only; no original finite-semigroup convergence or physical promotion. |
 | [R-567](#r-567) | PAH-OMC-028 nonlinear closure proof repair | On the full R-512 minimal domain, every scalar normal contraction preserves the domain and decreases energy; the same target semigroup is positive, bounded-norm contractive and conservative under the inherited state/core/closedness hypotheses. The paired-energy shortcut behind R-530 is false (exact energies 0 versus 1), but its conclusion is repaired by closed-epigraph and weak-compactness proofs. Primary, non-importing independent, hostile and five Lean theorems pass. Auxiliary only; no PAH-OMC-020 convergence or physical promotion. |
 | [R-566](#r-566) | PAH-OMC-026 cut-set to owner-packet sufficiency crosswalk | The R-557 ten-field source-owner packet strictly refines the R-565 coarse cuts: authority/root semantics fill S0, common realization/N1/N2b/N2c-N4/N2d fill S1, full-domain J and anchored D fill S2, and verification is cross-cut. A complete packet plus the unchanged nonnegative J+D budget and ordered J/D limits implies the registered nested local-correlation conclusion conditionally; coarse cuts alone are not a packet. Primary 21/21, independent 15/15, hostile 8/8, integrated 17/17 and fourteen finite Lean declarations pass. Auxiliary `HOLD_FOR_EVIDENCE`; no packet or PAH-specific J/D estimates are present. |
@@ -19359,6 +19360,57 @@ The exploration ledger entry is EXP-001655 and the changelog event is
 `20260908-r-535-pah-omc-020-k-d-term-level-coverage-ledge`.  Reopen only
 when a versioned source-authorized packet or an exact PAH-specific
 contradiction changes one required field.
+
+<a id="r-569"></a>
+### R-569 -- PAH-OMC-030 finite-strip to minimal Markov bridge
+
+**Statement.** With the original PAH-001 rates, labelled R-510 states, R-511
+cylinder domain D, two-row strip and terminal unsplit square held fixed, the
+R-514 fixed-n temporal passage is source-compatible. The requested
+anchored-n limit
+`sup_(0<=t<=T)|<f,Q_n(t)g>_(nu_n)-<f,T_min(t)g>_(mu)| -> 0` is
+`HOLD_FOR_EVIDENCE`, not proved or disproved.
+
+**Findings.** R-514 supplies only the fixed-n error
+`2*T*H_(n,K,g)*L_(n,K,T,g)*h_j`; its constants retain n and K dependence.
+R-510 gives local state convergence but no source-authorized bounded-energy or
+equivalent map `U_n` into the same `H`. R-511 supplies the pre-generator on
+`D`, while R-568 identifies extensions only after a same-H limiting semigroup
+extending that generator already exists. The target-space factorial boundary
+estimate therefore does not control the finite `nu_n` family. The anchored
+split transfer cells are also not identified with the retained terminal
+unsplit square.
+
+**Missing bridge and re-entry.** A single source-authorized packet must provide
+`U_n` preserving D and the unsplit boundary, arbitrary-sequence liminf and
+recovery, compact-time N2c/N4 boundary escape and amplitude-tail bounds
+uniform in n after local support, and identification with the R-512 minimal
+closure. Reopen only on that hash-pinned packet/estimate or on an exact PAH
+counterexample; do not infer convergence from uniqueness, static state
+convergence or the fixed-n result.
+
+**Evidence and reproduction.** The frozen inputs and scope are in
+`strategy/pa-hyp/PAH-OMC-030-prereg-v1.json` and
+`PAH-OMC-030-certificate.md`; the non-importing reconstruction is in
+`PAH-OMC-030-independent-audit.md`. Run:
+
+```text
+python -X utf8 verification/scripts/pah_omc030_verify.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/primary.json
+python -X utf8 codes/foundations/pah_omc030_independent.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/independent.json
+python -X utf8 codes/foundations/pah_omc030_hostile.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/hostile.json
+python -X utf8 verification/scripts/pah_omc030_integrated.py --check --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-09-pah-omc030-bridge/integrated.json
+```
+
+All four audits return `PASS` with verdict `HOLD_FOR_EVIDENCE`. Lean remains
+partial: algebraic fixed-n and fixed-target uniqueness declarations are
+available, but `U_n`, Mosco liminf/recovery, finite-rate boundary escape and
+anchored-n semigroup convergence are not formalized. An inherited R-514 Lean
+replay timeout is a tooling boundary, not a mathematical counterexample.
+
+**Boundary.** Classification is auxiliary support; no active gate or claim
+tier changes. This result does not assert finite-to-target convergence, a new
+model/rate/state/time/limit order, or any physical Pre-A, Sector-A, spacetime,
+QFT, gravity, continuum, Yang--Mills, mass-gap or TOE conclusion.
 
 <a id="r-568"></a>
 ### R-568 -- PAH-OMC-029 fixed-generator Markov uniqueness

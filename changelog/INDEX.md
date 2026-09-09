@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1048 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1049 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-09 | `20260909-r-569-pah-omc-030-finite-strip-to-minimal-marko` — [R-569 PAH-OMC-030 finite-strip to minimal Markov bridge] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260909-r-569-pah-omc-030-finite-strip-to-minimal-marko) |
 | 2026-09-09 | `20260909-r-568-pah-omc-029-fixed-generator-markov-unique` — [[R-568 PAH-OMC-029 fixed-generator Markov uniqueness] - 2026-09-09] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260909-r-568-pah-omc-029-fixed-generator-markov-unique) |
 | 2026-09-09 | `20260909-r-567-pah-omc-028-nonlinear-closure-proof-repai` — [R-567 PAH-OMC-028 nonlinear closure proof repair] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260909-r-567-pah-omc-028-nonlinear-closure-proof-repai) |
 | 2026-09-08 | `20260908-pah-omc-026-cut-set-packet-crosswalk-2026-09-08` — [PAH-OMC-026 cut-set packet crosswalk] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260908-pah-omc-026-cut-set-packet-crosswalk-2026-09-08) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-08 | `20260908-r-547-pah-omc-020-owner-snapshot-v1-3-2026-09-0` — [R-547 PAH-OMC-020 owner snapshot v1.3] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260908-r-547-pah-omc-020-owner-snapshot-v1-3-2026-09-0) |
 | 2026-09-08 | `20260908-r-546-pah-omc-020-direct-two-term-route-2026-09` — [R-546 PAH-OMC-020 direct two-term route] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260908-r-546-pah-omc-020-direct-two-term-route-2026-09) |
 | 2026-09-08 | `20260908-r-545-pah-omc-020-mesh-uniform-transfer-2026-09` — [R-545 PAH-OMC-020 mesh-uniform transfer] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260908-r-545-pah-omc-020-mesh-uniform-transfer-2026-09) |
-| 2026-09-08 | `20260908-r-544-pah-omc-020-owner-snapshot-v1-2-2026-09-0` — [R-544 PAH-OMC-020 owner snapshot v1.2] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260908-r-544-pah-omc-020-owner-snapshot-v1-2-2026-09-0) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1019–1048 | 30 | [001019-001068.md](pages/001019-001068.md) |
+| 1019–1049 | 31 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |
