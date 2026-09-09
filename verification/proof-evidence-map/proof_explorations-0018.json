@@ -1807,6 +1807,73 @@
       "task_id": "T-097",
       "title": "PAH-OMC-030 canonical Contents owner-packet source check",
       "verdict": "inconclusive"
+    },
+    {
+      "boundary": "No PAH-001 functional, rate, state, carrier, regulator, time interpretation, comparison map or limit order was changed. No finite table, static candidate or physical conclusion was added.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "No historical byte can be admitted as the missing owner input. Reusing a researcher-owned candidate or interpreting a prior commit as authorization would change the epistemic status, so the full objective remains open at the source-owner boundary.",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.5.json#source_authorized_packet_present",
+        "strategy/pa-hyp/PAH-OMC-030-result-v1.json#missing_bridge",
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json#required_owner_payload"
+      ],
+      "finding": "The reachable Git history contains the existing PAH-OMC-020 contracts, candidates, audits and the v1.5 snapshot, but no deleted or superseded source-authorized common-space owner packet. The history therefore provides no recoverable U_n, root-measure convention, terminal-square bridge or n-uniform form/boundary estimate. This is a provenance result, not a universal no-go theorem.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-569",
+          "R-528",
+          "R-557"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "git_commits_checked": [
+        "c82d6df06e6309f8ba45c77fc3e90173a2516f82",
+        "eb9a5de5483246276bbafd9898f222598f3f6916"
+      ],
+      "id": "EXP-001724",
+      "method": [
+        "Inspect every reachable Git object with git rev-list --objects --all for PAH-OMC-020/030, owner-packet and common-space paths.",
+        "Inspect full Git history and deletion records under strategy/pa-hyp for the same markers; do not infer authority from a commit message or generated index.",
+        "Compare the historical path set with the current v1.5 owner snapshot and R-569 missing-bridge record, preserving all PAH-001 definitions and the j-before-anchored-n order."
+      ],
+      "next_action": "Wait for a new hash-pinned source-owner declaration containing root labels/multiplicities, common-space U_n, N1, N2b liminf/recovery, N2c/N4 boundary escape, N2d target identification, terminal-square correspondence and verification manifests; do not repeat history or snapshot scans until a parent/candidate hash changes.",
+      "non_claims": [
+        "No source-authorized common-space U_n packet or five n-uniform estimates were found or constructed.",
+        "No universal impossibility follows from the reachable Git history or current source checkout.",
+        "No finite-strip-to-T_min convergence, Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Did any reachable Git ref previously contain a deleted or superseded source-authorized PAH-OMC-020/030 common-space owner packet that can be recovered without inventing a new model?",
+      "recorded_at": "2026-09-09T10:46:21Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001723",
+          "relation": "continues"
+        }
+      ],
+      "reproduction": {
+        "deleted_paths": "git log --all --full-history --diff-filter=D --name-only --format='' -- strategy/pa-hyp | Select-String -Pattern 'PAH-OMC-020|PAH-OMC-030|owner|common-space'",
+        "path_history": "git log --all --format='%H %cI %s' -- strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.5.json strategy/pa-hyp/PAH-OMC-030-result-v1.json",
+        "reachable_objects": "git rev-list --objects --all | Select-String -Pattern 'PAH-OMC-020|PAH-OMC-030|owner-packet|common-space'"
+      },
+      "reviewed_on": "2026-09-09",
+      "revisit_condition": "Reopen only on a new source-authorized packet, a changed parent/candidate byte, or an exact unchanged-PAH counterexample to the registered finite-strip limit.",
+      "schema": "tect/proof-exploration/1.0",
+      "source_hashes": {
+        "strategy/pa-hyp/PAH-OMC-020-N2a-owner-packet-intake-v1.1.json": "14c7e4da055ccb6104c1952367b0c6615533a5fc50219ef5d7b047cd1552464c",
+        "strategy/pa-hyp/PAH-OMC-020-owner-search-snapshot-v1.5.json": "bcf800acd7ea353d5081c2038544422e63a7b0bf7a3c63dd5a80647b2cd39ae5",
+        "strategy/pa-hyp/PAH-OMC-030-result-v1.json": "327878ec159014991bc06491de467e21f2fde28fecf4ec5f1e33818fdf4491a6"
+      },
+      "task_id": "T-097",
+      "title": "PAH-OMC-020 Git-history owner-packet provenance audit",
+      "verdict": "inconclusive"
     }
   ],
   "kind": "proof_explorations",
