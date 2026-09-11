@@ -1,0 +1,83 @@
+{
+  "schema": "tect/pre-a-prospective-model-draft/1.0",
+  "packet_id": "PAH-001-v2",
+  "version": "0.2.0-draft.1",
+  "title": "Option A finite root interface with state-identity admission pending",
+  "status": "DRAFT_PARTIAL_AWAITING_OWNER_STATE_CHOICE",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "source_authorized": false,
+  "authority_scope": "Option A preparation is explicitly approved; a complete state-space/enumerator model is not yet approved or defined.",
+  "approved_component": "LABELLED_DIRECTED_ROOT_COUNTING_INVALID_OMISSION_PI_ROOT_MEASURE",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/owner-decisions/PAH-root-measure-v0.1.md": "f29a80d4678706d5197c5eb9400095173344e61f67fb7ac578a379f6cd15104e",
+    "strategy/owner-decisions/PAH-root-measure-v0.1-approval-20260911.json": "5420451a6c53c6ed56568115e8bf7d01961b8623de7b56e9b52ab7e25f2aebf9",
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-contract-v1.json": "49ed29ea3590b6e7849bc6fc992cd7a769da3c98ce89a04c50d41575fb9ca3db"
+  },
+  "immutable_parent": {
+    "path": "strategy/pa-hyp/PAH-001-v1.json",
+    "status": "PRESERVED_NOT_SUPERSEDED",
+    "functional_pointer": "/functional_or_action",
+    "per_root_rate_pointer": "/dynamics/generator",
+    "mobility_pointer": "/dynamics/mobility_rule",
+    "nu_and_parameters_pointer": "/finite_regulator/parameter_domain",
+    "state_description_pointer": "/microscopic_degrees_of_freedom",
+    "counting_normalization_pointer": "/finite_regulator/normalization",
+    "time_pointer": "/dynamics/time",
+    "candidate_projection_pointer": "/symmetry_and_constraint/candidate_internal_projection",
+    "limit_order_pointer": "/ordered_limits",
+    "rule": "The parent formulas are incorporated by exact-byte reference, not copied and altered. A new state interpretation is not silently passed off as preservation of the parent counting space."
+  },
+  "approved_root_contract": {
+    "labels": "One primitive label per move type, source geometric cell/vertex/edge and sign/direction. Source edge reversal is not a second copy of the same label.",
+    "families": ["PH(vertex,sign)", "TR(edge,direction)", "LK(edge,sign)", "AP(vertex,sign)"],
+    "duplicates": "Distinct labels are retained, including coincident K=2 signs. No averaging or deduplication.",
+    "invalid": "Given an already defined partial map r, omit (x,r) when rx is undefined or outside the fixed state space; do not evaluate F outside that space.",
+    "identity": "A valid rx=x incidence can be retained as a zero-difference row; it adds no off-diagonal state jump.",
+    "state_rate": "q(x,y)=sum_(r admissible at x,rx=y)c_r(x) for y!=x; no division by label counts.",
+    "B": "(Bf)(x,r)=sqrt(c_r(x)/2)[f(rx)-f(x)].",
+    "root_measure": "mu_R(x,r)=pi(x) for each retained directed label; no additional c_r or inverse-pair half weight.",
+    "adjoint": "B* is the adjoint under L2(pi) and the specified root inner product, once both finite state and incidence sets are fixed.",
+    "balance_caution": "Inversion need not preserve pi(x) times root counting. The future balance proof must use the paired conductance pi(x)c_r(x), not assert invariance of the bare root measure."
+  },
+  "exact_move_enumerator": {
+    "status": "NOT_INSTANTIATED",
+    "implementation_path": null,
+    "implementation_sha256": null,
+    "reason": "Root counting and validity do not determine the partial state maps until the counting-state identity and radial-transfer coordinates are fixed. No all-regulator enumerator has been hash-pinned or used for calculation.",
+    "state_space_identity": "UNRESOLVED_VALUE_STATES_VERSUS_LABELLED_COORDINATE_STATES",
+    "radial_transfer_coordinate_rule": "UNRESOLVED_PENDING_THE_SAME_OWNER_STATE_CONTRACT"
+  },
+  "missing_item": {
+    "id": "COUNTING_STATE_AND_TRANSFER_COORDINATE_CONTRACT",
+    "question": "Are integer coordinate tuples (j_v,ell_v,n_v,u_e), retaining n_v at ell_v=0 and j_v when epsilon=1, with TR changing occupations only and keeping all other coordinates fixed, to be adopted explicitly as the v2 counting-state and transfer convention?",
+    "why_not_already_approved": "Decision v0.1 sections 3 and 4.2 reserve state multiplicity and missing grid/state-map representations. Option A counts root labels, not state labels.",
+    "source_observation": "PAH-001 describes s_v by grid values, psi_v by an amplitude/phase expression and Omega as displayed variables. It does not explicitly state whether coincident parameter labels are distinct counting states. At zero occupation the displayed psi is independent of n; at epsilon=1 the displayed s is independent of the grid index.",
+    "mathematical_impact": "State identification determines counting multiplicities, Z, L2(pi), PH/AP action on null-value labels, and whether occupation transfer retaining phases has a well-defined inverse at a zero-amplitude endpoint. This is a definition choice before the requested finite operator theorem, not an n-uniform estimate.",
+    "reference_only_example": {
+      "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+      "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+      "locators": ["/integer_state_coordinates", "/universal_directed_root_labels/matter_transfer"],
+      "role": "An existing researcher-successor explicitly makes the tuple/phase-retention choice. Neither that choice nor its finite PASS is imported into v2."
+    },
+    "default_selected": false
+  },
+  "verification_disposition": {
+    "inverse_validity": "NOT_RUN_UNFIXED_STATE_AND_ENUMERATOR",
+    "L1_equals_zero": "NOT_RUN_UNFIXED_STATE_AND_ENUMERATOR",
+    "Gibbs_detailed_balance": "NOT_RUN_UNFIXED_STATE_AND_ENUMERATOR",
+    "projection_commutation": "NOT_RUN_UNFIXED_STATE_AND_ENUMERATOR",
+    "B_adjoint_B_equals_minus_L": "NOT_RUN_UNFIXED_STATE_AND_ENUMERATOR",
+    "primary_independent_hostile_mathematics": "NOT_RUN: document/provenance admission checks are not mathematical verifiers of a completed model.",
+    "Lean": "NOT_RUN: no instantiated state/root domain is available; compiling an abstract conditional identity would not discharge the missing input."
+  },
+  "attempt_budget": "One bounded exact-source definition attempt; stop at the owner choice before a new finite calculation or a convergence attempt.",
+  "reentry_condition": "An explicit owner decision on the single state/transfer contract. If approved, freeze a new draft revision with a full enumerator before any calculation, record any state-space completion as such, then perform primary/non-importing independent/hostile verification and possible Lean. Do not mutate this hash-pinned incomplete draft or reclassify older PASS results.",
+  "non_claims": [
+    "No complete v2 finite model or exact move enumerator has been delivered or admitted yet.",
+    "No inverse-validity, L1=0, detailed-balance, projection-commutation or B*B=-L theorem for v2.",
+    "No refinement, infinite-volume, continuum, Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap or TOE conclusion.",
+    "The definition gap is not a counterexample to every possible v2 completion and does not revoke the approved Option A root conventions."
+  ]
+}
