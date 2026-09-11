@@ -1,0 +1,239 @@
+% =============================================================================
+% Title: Labelled finite dynamics: exact balance, projection and root adjoint
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-09-11; this version issued 2026-09-11
+% Status: theorem note (finite model only; no host tier action)
+% Revision history:
+%   v1.0 (2026-09-11) single finite gate-level synthesis for R-570.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note concerns the prospective PAH-001-v2 revision
+\texttt{0.2.0-draft.2}, not an interpretation of the immutable v1 source.
+The new integer counting-state and directed-label conventions were explicitly
+approved and frozen before the checks. The model file is
+\url{strategy/pa-hyp/PAH-001-v2-r2.json}, with SHA-256
+\begin{verbatim}
+2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a
+\end{verbatim}
+Its source pins fix the original functional, per-root rates, mobility, external
+stochastic time and limit order. None is fitted or altered here. R-570 is
+auxiliary to T-054; the host remains T1 with its physical signature gate open.
+
+\section*{2. Statement and setting}
+
+Fix any admissible finite anchored oriented two-cell complex and any declared
+finite regulator. Faces carry nonempty closed oriented boundary words, as
+required for the displayed boundary average $J_p$ to be defined. Automorphisms
+preserve the full cell/attaching and anchor data, not just graph adjacency.
+Set $K\geq2$, $M_s,M_\psi\geq1$ integer and
+$0\leq Q\leq |V|M_\psi$ integer. All real parameters have the source domain,
+in particular $0<\epsilon\leq1$, $\beta,\nu>0$; $m^2,\lambda_4$ may be negative.
+The state space $X$ consists of the distinct integer tuples
+\[
+ j_v\in\{0,\ldots,M_s\},\quad
+ \ell_v\in\{0,\ldots,M_\psi\},\quad n_v,u_e\in\mathbb Z_K,
+ \qquad \sum_v\ell_v=Q.
+\]
+Keep phase labels at $\ell_v=0$ and aperture indices at $\epsilon=1$.
+Displayed fields are
+\[
+ s_v=\epsilon+\frac{j_v(1-\epsilon)}{M_s},\qquad
+ \psi_v=\frac{R_{\max}\ell_v}{M_\psi}\zeta_K^{n_v},\qquad
+ U_e=\zeta_K^{u_e}.
+\]
+The displayed finite functional $F$ is incorporated verbatim by the revision's
+parent hash and pointer. No quotient of counting states is taken.
+
+For each primitive cell/type/sign root retain the incidence $(x,r)$ precisely
+when $rx\in X$. PH and LK add the sign modulo $K$ to $n_v$ and $u_e$;
+AP adds the sign to $j_v$ without wrapping. TR along $e=(v,w)$ adds
+$\sigma(\delta_w-\delta_v)$ to occupations and keeps all other coordinates.
+Different roots remain distinct, including coincident signs at $K=2$.
+Invalid moves are omitted, and identity rows are allowed.
+
+Let $\mathcal R$ be the finite set of valid labelled incidences and write
+\begin{align*}
+ Z&=\sum_{x\in X}e^{-\beta F(x)},&
+ \pi(x)&=Z^{-1}e^{-\beta F(x)},\\
+ c_r(x)&=m_r(x)e^{-\beta(F(rx)-F(x))/2},&
+ Lf(x)&=\sum_{r:(x,r)\in\mathcal R}c_r(x)(f(rx)-f(x)),\\
+ Bf(x,r)&=\sqrt{c_r(x)/2}\,(f(rx)-f(x)).
+\end{align*}
+Use $D=\mathbb C^X=L^2(\pi)$ and the full root space
+$\mathbb C^{\mathcal R}$ with weight $\pi(x)$ on every directed incidence.
+Inner products are conjugate-linear in their first entries.
+
+\begin{theorem}
+For every such finite instance, all retained roots have valid inverses,
+$L1=0$, and $\pi(x)c_r(x)=\pi(rx)c_{r^{-1}}(rx)$.
+The declared gauge/anchor-automorphism group average $P_{\rm cand}$ is
+self-adjoint and idempotent and satisfies $P_{\rm cand}L=LP_{\rm cand}$.
+For the actual adjoint under the displayed pairings, $B^*B=-L$ on all $D$.
+The simultaneous invariant finite subspace is preserved by $L$ and the
+corresponding root lift. No cross-regulator common space is asserted.
+\end{theorem}
+
+\section*{3. Proof: inverse maps and Gibbs balance}
+
+$X$ is finite and nonempty. Positive $s_v$ and nonempty finite face words
+make $F(x)$ finite and real, even with negative mass/quartic coefficients.
+Thus $0<Z<\infty$ and every $\pi(x)>0$. All displayed operators have full
+finite domains; no extension or closability inference is needed.
+
+PH/LK inverses subtract the same residue. AP reverses its integer increment.
+TR subtracts its incidence vector and preserves $Q$; for a loop the vector is
+zero. Since the original tuple lies in $X$, the reverse of any valid move is
+valid. Retained phases prevent information loss at zero occupation. Hence
+$\iota(x,r)=(rx,r^{-1})$ is an involutive bijection of $\mathcal R$.
+
+The mobilities satisfy inverse symmetry by their exact definitions: PH uses
+$s_v^\nu$; TR/LK use $(s_vs_w)^{\nu/2}$ and leave aperture unchanged; AP
+uses the symmetric product of its before/after aperture values. Therefore,
+with $y=rx$ and $m=m_r(x)=m_{r^{-1}}(y)$,
+\[
+ \pi(x)c_r(x)=\frac{m}{Z}
+       e^{-\beta(F(x)+F(y))/2}=\pi(y)c_{r^{-1}}(y).
+\]
+Summing over all labels gives state-level detailed balance, without dividing
+by multiplicity. Also $L1=0$ term by term. Bare root measure $\pi(x)$ need
+not be preserved by $\iota$; only the conductance $\pi(x)c_r(x)$ is paired.
+
+\section*{4. Proof: symmetry and projection}
+
+The gauge action sends $n_v$ to $n_v+g_v$ and $u_{vw}$ to
+$u_{vw}+g_w-g_v$. It is a bijection on tuples, not merely displayed values.
+The edge term transforms by
+\[
+ \psi'_w-U'_{vw}\psi'_v
+   =\zeta_K^{g_w}(\psi_w-U_{vw}\psi_v).
+\]
+Its absolute square is unchanged; onsite and aperture terms are invariant.
+Gauge factors telescope on every closed face word, proving exact $F$ and
+$\pi$ invariance. All four partial moves commute with this action; their
+validity and mobility are unchanged. Thus their rates are equivariant too.
+
+An anchor-preserving cell automorphism permutes vertex coordinates. If it
+sends stored edge $e$ to $e'$ with orientation sign $\tau_e$, it sends
+$u_e$ to $\tau_eu_e$ and TR/LK$(e,\sigma)$ to
+TR/LK$(e',\tau_e\sigma)$. PH/AP signs do not change. This exactly
+intertwines the partial moves and preserves their mobilities. Reversed edge
+energy is unchanged because
+\[
+ |\psi_v-U_e^{-1}\psi_w|^2
+   =|-U_e^{-1}(\psi_w-U_e\psi_v)|^2
+   =|\psi_w-U_e\psi_v|^2.
+\]
+Reversal conjugates a unit face holonomy, preserving its real part; boundary
+averages and multiplicities are permuted. Hence $F,\pi$ and rates are invariant.
+
+For either group, the pullbacks $U_hf(x)=f(h^{-1}x)$ are unitary. Root
+reindexing gives $U_hL=LU_h$. The finite average $P_H$ is self-adjoint by
+inversion and idempotent because each group product occurs $|H|$ times.
+Automorphisms normalize the gauge group by permuting its vertex coordinates;
+therefore $P_{\rm Aut}P_G=P_GP_{\rm Aut}$. Individual gauge and automorphism
+actions need not commute. The product $P_{\rm cand}$ is consequently an
+orthogonal projection commuting with $L$, whose range is invariant.
+
+\section*{5. Proof: the weighted adjoint}
+
+Expand $\langle Bf,h\rangle_{\mathcal R}$ and collect each
+$\overline{f(x)}$. Because all sums are finite and $\pi(x)>0$, the adjoint is
+\begin{align*}
+ B^*h(x)={}&\frac1{\pi(x)}\sum_{(y,r):ry=x}
+        \pi(y)\sqrt{c_r(y)/2}\,h(y,r)\\
+ &-\sum_{r:(x,r)\in\mathcal R}\sqrt{c_r(x)/2}\,h(x,r).
+\end{align*}
+Substitute $h=Bf$. The incoming part equals
+$\tfrac12\sum_r c_r(x)(f(x)-f(rx))$ by the incidence bijection and detailed
+balance. The outgoing part is the same expression, giving $B^*B=-L$.
+Identity rows contribute zero. No extra rate or half weight is put in the
+root measure. Equivalently, pairing directed incidences proves
+\[
+ \frac12\sum_{(x,r)}\pi(x)c_r(x)
+    \overline{f(rx)-f(x)}(g(rx)-g(x))=-\langle f,Lg\rangle_\pi.
+\]
+This is the full sesquilinear identity, not a real-observable sample test.
+The root symmetry pullback is unitary and intertwines $B$ with $U_h$.
+Thus the identity also restricts to the candidate invariant spaces.
+
+\section*{6. Numerical verification and kernel scope}
+
+The preregistration and detailed certificate are
+\url{strategy/pa-hyp/PAH-v2-finite-audit-v1.json} and
+\url{strategy/pa-hyp/PAH-v2-finite-proof-v1.md}. The fixture is an anchored
+triangle with $K=2$, $M_s=M_\psi=1$, $Q=1$, $\epsilon=1/2$, $\nu=2$;
+all remaining exact inputs are in the preregistration. It is an instance of
+the unchanged model, not the universal proof.
+
+Primary verification uses rational coefficients of formal exponential
+monomials and independently assembles the weighted generator and root Gram
+matrices. It checks 1536 states and 26112 valid incidences, with exact
+coefficient equality. A non-importing flattened-state implementation forms the
+full finite matrices and orbit projection independently; the maximum reported
+absolute residual is below $5.0\,10^{-15}$, with tooling tolerances
+\texttt{rtol=1e-11, atol=1e-14}. This floating comparison is corroboration,
+not an exact proof or a uniform error estimate.
+
+Twelve hostile controls detect coefficient, root-measure, label, endpoint,
+gauge-sign, orientation and projection shortcuts. Lean 4.32.1 compiles nine
+parameterized declarations for inverse arithmetic, conservation, Gibbs flux,
+the square-root half factor, complex pair algebra and commuting idempotents.
+The dependency revisions are checked. Lean does not encode the complete
+cell-complex model or the full symmetry/group-average instantiation.
+All scripts were authored in this task; implementation independence is not
+an external-person mathematical audit. External review remains invited.
+
+Run each \texttt{pah\_v2\_finite\_primary.py},
+\texttt{pah\_v2\_finite\_independent.py},
+\texttt{pah\_v2\_finite\_hostile.py}, and
+\texttt{pah\_v2\_finite\_lean.py} under
+\url{verification/scripts/}, with \texttt{python -X utf8} and
+\texttt{--check}. The Lean runner additionally accepts
+\texttt{--lean-cache} pointing to the pinned cached packages.
+Runs are under
+\url{claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-finite/}.
+
+\section*{7. Devil's-advocate and literature}
+
+The finite balance/Dirichlet formalism is standard background: Aldous--Fill,
+\emph{Reversible Markov Chains and Random Walks on Graphs}, section 3.1,
+equation (3.4), and section 3.6.1, equations (3.74)--(3.76), author-hosted at
+\url{https://www.stat.berkeley.edu/~aldous/RWG/book.html}.
+The identities required here are rederived above; irreducibility-dependent
+uniqueness/mixing statements are not imported. R-479's separate successor
+PASS is not reused as proof of this revision.
+
+\begin{enumerate}
+\item Factor/measure objection: two directions might double the form.
+DISMISSED by the explicit two halves in the actual adjoint calculation.
+Bare-root reversal invariance is UPHELD as a false shortcut and not used.
+\item Domain objection: zero-radius or unit-floor values might identify
+states and erase inverses. DISMISSED by retained integer labels. Empty face
+words are a VALID domain warning: an undefined $J_p$ is not certified.
+\item Symmetry objection: static invariance need not imply dynamic symmetry.
+UPHELD in general; exact root/mobility equivariance is separately established.
+Elementwise Aut--gauge commutation is not assumed.
+\item Limit objection: finite identities might imply refinement or a limiting
+semigroup. UPHELD as overclaim. No comparison maps, uniform estimates or
+limits are supplied here.
+\item Independence objection: computer PASS might replace a general proof or
+external review. UPHELD as a scope warning. Universal quantifiers are carried
+by the proof, and same-author executable independence is explicitly limited.
+\end{enumerate}
+
+\section*{8. Result footer}
+\begin{verbatim}
+Result ID:               R-570 / C6-SPACETIME-SIGNATURE
+Precise statement:       Five finite operator identities for pinned v2.
+Scope:                   Every defined admissible finite v2 instance.
+Dependencies:            Frozen v2, immutable parent formulas, approvals.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED; partial Lean.
+Reproduction command:    See section 6; four standalone --check commands.
+Expected output:         PASS at each explicitly declared check scope.
+Falsification gate:      An exact counterexample to one finite identity.
+Tier before / after:     Host C6 T1 / T1; no physical promotion.
+No-overclaim statement:  No refinement, Pre-A, QFT, gravity or limit.
+Next required action:    Separate fixed comparison-map admission.
+\end{verbatim}

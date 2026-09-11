@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-570](#r-570) | PAH-v2 labelled finite operator consistency | For every defined admissible finite instance of frozen PAH-001-v2 revision 0.2.0-draft.2, exact inverse-validity, L1=0, Gibbs balance, orthogonal symmetry-projection commutation and B*B=-L hold on the full finite complex domains. General proof, exact fixture coefficients, non-importing matrix cross-check, twelve hostile controls and nine partial Lean declarations support this prospective model result. Auxiliary only; no v1 repair, T-054 gate closure, refinement, limit or physical promotion. |
 | [R-569](#r-569) | PAH-OMC-030 finite-strip to minimal Markov bridge | The frozen R-514 fixed-n temporal passage is compatible with the R-510/R-511/R-568 scopes, but the anchored-n correlation limit is not closed: no source-authorized common-space U_n, arbitrary-sequence liminf/recovery, n-uniform compact-time boundary/tail estimate, or minimal-closure identification is present. Primary, non-importing independent, hostile and integrated audits pass with `HOLD_FOR_EVIDENCE`; no finite-to-target or physical promotion. |
 | [R-568](#r-568) | PAH-OMC-029 fixed-generator Markov uniqueness | Every symmetric strongly continuous Markov semigroup on the same R-510 H whose generator extends R-511 A on all D equals the R-512/R-567 minimal extension, conditional on those pinned inputs. Radial localization, a state-derived subpolynomial rate envelope and an all-extension domain bridge give a vanishing factorial boundary remainder. Independent commutator proof and six partial Lean theorems support the result. Auxiliary only; no original finite-semigroup convergence or physical promotion. |
 | [R-567](#r-567) | PAH-OMC-028 nonlinear closure proof repair | On the full R-512 minimal domain, every scalar normal contraction preserves the domain and decreases energy; the same target semigroup is positive, bounded-norm contractive and conservative under the inherited state/core/closedness hypotheses. The paired-energy shortcut behind R-530 is false (exact energies 0 versus 1), but its conclusion is repaired by closed-epigraph and weak-compactness proofs. Primary, non-importing independent, hostile and five Lean theorems pass. Auxiliary only; no PAH-OMC-020 convergence or physical promotion. |
@@ -19360,6 +19361,49 @@ The exploration ledger entry is EXP-001655 and the changelog event is
 `20260908-r-535-pah-omc-020-k-d-term-level-coverage-ledge`.  Reopen only
 when a versioned source-authorized packet or an exact PAH-specific
 contradiction changes one required field.
+
+<a id="r-570"></a>
+### R-570 -- PAH-v2 labelled finite operator consistency
+
+**Statement.** Fix PAH-001-v2 revision `0.2.0-draft.2`, SHA-256
+`2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a`.
+For every defined source-admissible finite anchored cell complex and declared
+finite parameter/cutoff/nonempty-Q choice, all retained directed roots have
+valid inverses, `L1=0`, and Gibbs detailed balance holds. The gauge and
+anchor-automorphism average is self-adjoint/idempotent and commutes with L.
+The actual adjoint under the pi-weighted directed-root counting measure
+satisfies `B*B=-L` on the full finite complex domain, including its invariant
+restriction. This is a prospective model theorem, not retroactive v1 authority.
+
+**Proof boundary.** Integer labels remain distinct at zero occupation and
+epsilon=1; K=2 opposite roots are not merged. Mobility inverse symmetry and
+midpoint rates give paired conductance, not bare-root-measure invariance.
+Orientation-aware cell automorphisms normalize the gauge group; their
+averages commute although individual group elements need not. Collecting the
+actual adjoint's incoming/outgoing coefficients gives the two required halves.
+Nonempty closed face words are required for the inherited J_p to be defined.
+No irreducibility, F>=0, unique stationary state or cross-regulator core is used.
+
+**Evidence.** Exact proof and preregistered source crosswalk; primary exact
+coefficient matrices on 1536 states/26112 incidences; a non-importing full
+floating matrix/orbit-projection implementation; twelve hostile controls;
+nine parameterized Lean 4.32.1 declarations with checked dependency revisions;
+fresh integrated replay. All code is same-author: independent implementation,
+not an external-person mathematical review or full-model Lean formalization.
+
+**Authorities.** `strategy/pa-hyp/PAH-v2-finite-result-v1.json`,
+`strategy/pa-hyp/PAH-v2-finite-proof-v1.md`, and the single synthesis note
+`claims/C6-SPACETIME-SIGNATURE/notes/labelled-finite-dynamics-260911-v1.0.tex.txt`.
+Reproduce with `python -X utf8 verification/scripts/pah_v2_finite_verify.py
+--check --lean-cache E:/Dev/TECT/verification/lean/.lake/packages`.
+The cache location is optional when the locally pinned packages exist.
+
+**Non-claims.** T-054 and C6 T1 remain unchanged. No R-557 full-packet or
+original OMC-030 admission, refinement, uniform estimate, infinite-volume
+dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, causal cone,
+Yang-Mills, mass gap or TOE conclusion. A next comparison-map question is
+recorded but not automatically activated. Reopen this finite result for an
+exact counterexample or a source/domain mismatch, never silently edit v2.
 
 <a id="r-569"></a>
 ### R-569 -- PAH-OMC-030 finite-strip to minimal Markov bridge

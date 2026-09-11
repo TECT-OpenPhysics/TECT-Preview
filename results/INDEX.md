@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**394 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**395 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-570`](../RESULTS-LEDGER.md#r-570) | PAH-v2 labelled finite operator consistency | See authority |
 | [`R-569`](../RESULTS-LEDGER.md#r-569) | PAH-OMC-030 finite-strip to minimal Markov bridge | See authority |
 | [`R-568`](../RESULTS-LEDGER.md#r-568) | PAH-OMC-029 fixed-generator Markov uniqueness | See authority |
 | [`R-567`](../RESULTS-LEDGER.md#r-567) | PAH-OMC-028 nonlinear closure proof repair | See authority |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-548`](../RESULTS-LEDGER.md#r-548) | PAH-OMC-020 restricted radial semigroup consistency | See authority |
 | [`R-547`](../RESULTS-LEDGER.md#r-547) | PAH-OMC-020 fresh current-byte owner-search snapshot v1.3 | See authority |
 | [`R-546`](../RESULTS-LEDGER.md#r-546) | PAH-OMC-020 direct two-term route | See authority |
-| [`R-545`](../RESULTS-LEDGER.md#r-545) | PAH-OMC-020 scalar mesh-to-uniform transfer | See authority |
 
 Search without loading the full ledger:
 

@@ -101,4 +101,18 @@ TOE target with no established result.
 
 ## Next required action
 
+### 2026-09-11: separate finite PAH-v2 result (R-570)
+
+The explicitly approved, hash-pinned PAH-001-v2 revision `0.2.0-draft.2`
+has a finite model-consistency theorem: inverse-validity, L1=0, Gibbs detailed
+balance, orthogonal symmetry-projection commutation and B*B=-L on every
+defined admissible finite instance. The general proof is not inferred from
+fixture tests. Source, exact domain, five-item audit, non-importing executable,
+hostile controls and partial Lean scope are in the
+[result card](../../strategy/pa-hyp/PAH-v2-finite-result-v1.json).
+One synthesis note/PDF is available under `notes/labelled-finite-dynamics-260911-v1.0.tex.txt`.
+This is auxiliary model mathematics only. The host remains T1 OPEN, with no
+T-054 gate closure, v1 repair, refinement, continuum or physical signature claim.
+External adversarial review of the source-domain and symmetry crosswalk is invited.
+
 Identify the fluctuation modes whose dispersion fixes the effective signature; relate the BCC reciprocal lattice to the emergent light-cone.

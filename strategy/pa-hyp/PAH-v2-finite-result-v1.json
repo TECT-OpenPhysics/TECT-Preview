@@ -1,0 +1,82 @@
+{
+  "schema": "tect/pah-v2-finite-result/1.0",
+  "result_id": "R-570",
+  "task_id": "T-090",
+  "exploration_id": "EXP-001730",
+  "date": "2026-09-11",
+  "version": "1.0.0",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "PROVED",
+  "verdict_scope": "The five requested identities hold for every defined admissible finite instance of exactly PAH-001-v2 revision 0.2.0-draft.2, on the full displayed finite complex domains. Universal quantifiers are discharged by the exact proof, not by finite test coverage.",
+  "classification": "auxiliary_support",
+  "claim_bearing": true,
+  "host_claim_promoted": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "base_commit": "f15c01d1201ff5bdc153bfa2a027cbef563c8f6e",
+  "question": "Does the frozen labelled-coordinate v2 have inverse-valid roots, L1=0, Gibbs detailed balance, a commuting symmetry projection, and B*B=-L on every admissible finite instance?",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "strategy/owner-decisions/PAH-v2-state-approval-20260911.json": "90f54c1b23f7929f4cf5b886210d037fb63559c7145f3bd1a86a35181f5bffb3",
+    "strategy/owner-decisions/PAH-root-measure-v0.1-approval-20260911.json": "5420451a6c53c6ed56568115e8bf7d01961b8623de7b56e9b52ab7e25f2aebf9"
+  },
+  "evidence_files": {
+    "strategy/pa-hyp/PAH-v2-finite-audit-v1.json": "531697fa28c5f2e7f4177b42bc12ebd8fc1ffb7e9790d07063082e0ec3d6a331",
+    "strategy/pa-hyp/PAH-v2-finite-proof-v1.md": "a5ed079f4a193cb29c1304a7dce2f46037483e739ada5ad114f3e1dde789ed08",
+    "verification/scripts/pah_v2_finite_primary.py": "63f9348e427875e24b4f9096dcf7fe375b2ba7b05b8a9b47bee1de2d51f6f9ca",
+    "verification/scripts/pah_v2_finite_independent.py": "d301bd8794cd456e5d0ca39f6d5f9a31811eaf26522bfc2a975d78f18398a444",
+    "verification/scripts/pah_v2_finite_hostile.py": "73805a23f5cff955b01bf8ac6afe961e65c3ddcc2b580c5f933bff21b13632a0",
+    "verification/scripts/pah_v2_finite_lean.py": "dde99d903e9233fa28fafb655eb0e5b9729e95175000eb267cae6bcec0a1ab2d",
+    "verification/scripts/pah_v2_finite_verify.py": "261e9edad00f13fdc34ad23a9424990d5124ca910c487c2d5868ab950ce0d564",
+    "verification/lean/Tect/PahV2Finite.lean": "43435de4cfa1b9e0996f801ae00c9c1252022ede4db9d7058d53290dafdc5ee0",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-finite/primary.json": "9b8a281e6f37ded42b2de907921a5d7dfb1ce4f175b6dae15f76b960d8bcb9d8",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-finite/independent.json": "57fccb83c53a72d65d6aa2ba1dd1094960bf1aa8cea18c87b5b188119f83058f",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-finite/hostile.json": "0b8831b23eca6748a7d7b25f4a6d8e4de88c92904357f68c4e3c51ab12e12495",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-finite/lean.json": "4e2b0cd2d5d6c42606e7a55fb11da29afd3e30d2a0a637d5112014f6601ecc6f",
+    "claims/C6-SPACETIME-SIGNATURE/notes/labelled-finite-dynamics-260911-v1.0.tex.txt": "f51e9f528b23ee88b1ae443d2b1a68fea660cd3a0f4c58821d90e6524b71e25d",
+    "claims/C6-SPACETIME-SIGNATURE/notes/labelled-finite-dynamics-260911-v1.0.pdf": "9ebf056d1ce1c21c52f20c73f67792e7f246f509827768c82c671986b6b65c99"
+  },
+  "exact_scope": {
+    "dimension_volume": "Every finite source-admissible anchored relational two-cell complex; finite |V|, no physical dimension or volume identification.",
+    "states": "All distinct integer tuples (j,ell,n,u) at every declared finite cutoff and nonempty fixed-Q sector, retaining n at ell=0 and j at epsilon=1.",
+    "parameters": "All finite real parent-domain parameters, not restricted to the fixture. Includes arbitrary positive nu,beta,epsilon and negative m2/lambda_4 where allowed.",
+    "normalization": "pi(x)=exp(-beta F(x))/Z over tuples; root Hilbert weight pi(x) per directed label; B has sqrt(c/2), with no extra c or half in the measure.",
+    "domain": "D=C^X, root domain C^R, both full finite spaces; invariant restrictions use only the declared gauge/anchor-automorphism projection.",
+    "boundary_time": "Original fixed finite incidence and anchor labels; external stochastic time and stationary initial boundary unchanged.",
+    "limits": "No limit, cross-regulator embedding, uniform constant or continuum theorem; original ordered-limit contract remains unproved."
+  },
+  "assumptions": [
+    "Exactly the pinned prospective v2 definitions and two explicit owner approvals, never retrospective v1 authority.",
+    "A defined source-admissible finite functional instance: nonempty closed face-boundary words for the displayed J_p denominator, complete oriented cell/attaching data and source-preserving automorphisms.",
+    "The declared finite integer and real parameter domains and a nonempty fixed-Q tuple space. No irreducibility, unique stationary state, free symmetry action, F>=0 or limiting realization is assumed."
+  ],
+  "missing_assumptions_for_this_finite_theorem": [],
+  "domain_warning": "If a purported carrier has an empty face-boundary word, J_p is undefined; this theorem does not repair it or certify it as a defined instance. If an automorphism preserves only adjacency but not the source's complete cell data, it is not the declared Aut(G;O,C).",
+  "requirement_audit": [
+    {"requirement": "inverse_validity", "disposition": "DISCHARGED_BY_EXACT_FINITE_PROOF", "proof": "Certificate section 4: integer/Z_K inverse updates and valid-incidence involution, including endpoints, loops and duplicate maps", "check": "Primary/independent exhaustive fixture inverse checks; hostile phase-loss and orientation controls; parameterized integer/modular Lean identities"},
+    {"requirement": "L1=0", "disposition": "DISCHARGED_BY_EXACT_FINITE_PROOF", "proof": "Certificate section 5: each summand vanishes separately for constants", "check": "Exact primary row coefficients, independent row sums, Lean generator_constant"},
+    {"requirement": "Gibbs_detailed_balance", "disposition": "DISCHARGED_BY_EXACT_FINITE_PROOF", "proof": "Sections 3 and 5: finite positive pi and all-family mobility inverse symmetry give pi(x)c_r(x)=(m/Z)exp[-beta(F(x)+F(rx))/2]", "check": "Exact flux coefficients, independent weighted matrix symmetry, symbolic wrong-sign control, Lean gibbs_midpoint_flux"},
+    {"requirement": "symmetry_projection_commutes_with_L", "disposition": "DISCHARGED_BY_EXACT_FINITE_PROOF", "proof": "Sections 6-8: exact F and root/rate covariance; unitary finite group averages; Aut normalizes gauge group; P is self-adjoint/idempotent and commutes with L", "check": "Exact fixture covariance, independently assembled orbit projection and PL/LP matrices, symbolic gauge/reversed-edge norm identity, partial commuting-idempotent Lean algebra"},
+    {"requirement": "BstarB=-L", "disposition": "DISCHARGED_BY_EXACT_FINITE_PROOF", "proof": "Section 9: derive actual adjoint by coefficient collection, reindex incoming incidences using balance, add the two halves; alternative complex sesquilinear derivation", "check": "Exact full fixture weighted-generator/root-Gram coefficient comparison, independently assembled weighted Gram, hostile factor/measure controls, complex pair and square-root Lean identities"}
+  ],
+  "evidence_level": ["ANALYTIC", "EXACT", "EXECUTED", "NONIMPORTING_INDEPENDENT_IMPLEMENTATION", "HOSTILE_CONTROLS", "PARTIAL_LEAN"],
+  "verification": {
+    "primary": "PASS: exact full coefficient comparison on the preregistered fixture, 1536 states and 26112 valid incidences; not universal test coverage.",
+    "independent": "PASS: non-importing flattened-state matrices and full group orbit projection; floating corroboration at rtol=1e-11, atol=1e-14, not an analytic error bound.",
+    "hostile": "PASS: twelve wrong-definition/shortcut controls rejected; no model mutation retained.",
+    "Lean": "PASS: nine parameterized declarations compiled with Lean 4.32.1 and every cached dependency revision checked. The full source model and group-average construction are not Lean-encoded.",
+    "independence_boundary": "All new code and prose authored in this task. The independent executable imports neither primary nor enumerator. No independent-person or external mathematical review is claimed.",
+    "reproduction": "python -X utf8 verification/scripts/pah_v2_finite_verify.py --check --lean-cache E:/Dev/TECT/verification/lean/.lake/packages",
+    "portable_cache": "Use the local pinned verification/lean/.lake/packages when available; the explicit shared cache is a local convenience with checked Git revisions.",
+    "PDF": "One four-page synthesis note built with FORM-CHECK PASS and OVERFULL-HBOX 0; all four rendered pages inspected for equations, clipping and layout."
+  },
+  "non_claims": [
+    "No source revision change, old R-479/Q3LOCK/TECT-YM PASS import or retroactive interpretation of PAH-001-v1.",
+    "No T-054 gate closure, C6 T1 promotion, R-557 full packet, original OMC-030 bridge or common cross-regulator core.",
+    "No refinement compatibility, uniform locality estimate, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, causal cone, event horizon, Yang-Mills, mass gap or TOE."
+  ],
+  "next_single_question": "For a separately fixed source-authorized refinement/comparison contract for this v2, does the generator agree on the declared common cylinder algebra or have a controlled boundary defect? No comparison map is selected or theorem activated here.",
+  "revisit_condition": "An explicit counterexample to one of these finite identities or a source/applicability mismatch reopens this result. Cross-regulator work requires new fixed inputs and must not substitute this theorem for the missing comparison contract."
+}

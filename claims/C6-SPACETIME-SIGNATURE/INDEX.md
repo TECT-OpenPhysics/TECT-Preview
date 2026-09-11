@@ -9,10 +9,11 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  25 proof units  ·  tier span T1
+## (all notes)/  ·  26 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `labelled-finite-dynamics` | v1.0 | T1 | Five finite operator identities for pinned v2. | ANALYTIC, EXACT, EXECUTED; partial Lean. | Separate fixed comparison-map admission. |
 | `pah-omc015-cutoff` | v1.0 | T1 | Ordered squared limits are (0,0,1,1). | ANALYTIC, EXACT, EXECUTED; Lean cross-check | Separate owner contract for a new law |
 | `pah-omc016-uniform` | v1.0 | T1* | Fixed-n radial weak convergence/tightness and a common positive lower bound on both declared b_v^2. | ANALYTIC, EXACT, EXECUTED. | A separate bounded-cylinder Cauchy question for the cutoff-limit laws nu_n as n grows. |
 | `pah-omc017-cauchy` | v1.0 | T1* | The frozen nu_n converge on every fixed bounded-amplitude prefix, with the stated Cauchy bound. | ANALYTIC, EXACT, EXECUTED; inherited general … | Separate original-generator j-limit contract on a frozen bounded-amplitude domain. |
