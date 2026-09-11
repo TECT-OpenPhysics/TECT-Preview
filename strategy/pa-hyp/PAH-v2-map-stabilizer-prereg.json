@@ -1,0 +1,43 @@
+{
+  "schema": "tect/pah-v2-map-stabilizer-audit-prereg/1.0",
+  "id": "PAH-V2-MAP-STABILIZER-20260911",
+  "status": "DRAFT_DESIGN_AUDIT_NOT_OPERATIVE_CONTRACT",
+  "question": "On the already pinned triangle, does a total deterministic B state map that commutes with the anchor swap necessarily relocate occupation at the symmetric odd state? Does that also refute the weaker invariant-observable condition?",
+  "authorization": "One bounded full-domain design attempt under DCTRL-000023 and the continued original contract goal. No branch adoption or model change.",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/pa-hyp/PAH-v2-finite-audit-v1.json": "531697fa28c5f2e7f4177b42bc12ebd8fc1ffb7e9790d07063082e0ec3d6a331",
+    "strategy/pa-hyp/PAH-v2-refinement-contract-draft.json": "bd9f85467721a223fbc2e3e951ccbd7f18d421136aa74f5854b62e596c58b1d1",
+    "strategy/pa-hyp/PAH-v2-charge-AB-prereg.json": "33fe50af87c588715b18fed5415cdad5dc5b17f0b9c3d3a25edd6e2874c06457",
+    "strategy/pa-hyp/PAH-v2-charge-AB-decision.json": "31678699900bbe5539a50740e3cbfeea9b4662e454e4fd8661e7d701ce84804a",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2"
+  },
+  "fixed_inputs": "R-570 triangle, O={0}, C={1,2}, oriented face. B first local-cutoff schedule only; all functional/rate/state/time data unchanged. No energy, generator, finite semigroup or limit computation.",
+  "definitions": {
+    "target_map": "A proposed total deterministic p:X_fine(Q=2q)->X_coarse(Q=q). Surjectivity or p J_B=id would be further requirements, not used by this necessary-condition test.",
+    "strict_state_condition": "p(tau y)=tau p(y) for the full source anchor-swap automorphism tau exchanging core vertices, with the exact oriented edge action.",
+    "weaker_original_alternative": "For every invariant coarse f, f composed with p is fine invariant. This is an explicit alternative in the original draft, not permission to quotient counting states or drop a symmetry.",
+    "optional_fidelity_condition": "Preserve the outer-anchor displayed radial amplitude at the test state, or at q=1 preserve zero occupation on O. These are candidate desiderata, NOT source axioms or already approved contract requirements.",
+    "general_witness": "At coarse charge q>=1 and bound M>=q, fine occupations (2q-2,1,1), all aperture/phase/link indices zero. Coarse radial mesh d>0, fine mesh d/2. Specialize q,m,R0 from the pinned fixture for the executed first pair.",
+    "comparison_norm": "Inherited observable supremum norm remains unchanged. Any reported radial-coordinate error is a definition diagnostic, not the generator-defect norm."
+  },
+  "planned_checks": [
+    "Derive the complete anchor-preserving vertex permutation group and verify oriented edge/face transport, not adjacency alone.",
+    "Verify the fine witness is a legal full counting tuple and fixed by tau.",
+    "Enumerate the issued coarse tuples, select tau-fixed tuples and list their occupation vectors.",
+    "Independently solve the necessary equation ell_0+2k=q without importing primary or the enumerator.",
+    "Use the formula ell_0=q-2k to derive the half-integer radial mismatch; do not infer a nonvanishing limiting defect.",
+    "Exhibit why equality on invariant orbit indicators need not imply strict state equivariance; do not claim the example is an admitted full p.",
+    "Detect prohibited label erasure, restricting to the even image, gauge repair of occupations, and claiming an all-map no-go."
+  ],
+  "verification_scope": "Primary full coarse fixture plus source cell-action check; non-importing independent integer-constraint and orbit-indicator control; same-task authorship. Lean not required for unapproved definition audit, NOT_RUN unless an actual pinned kernel run is issued.",
+  "future_defect": "Retain the original draft's complete signed-root Delta=L_fine I-I L_coarse and sup norm, separate Gibbs-L2/state discrepancies, and finite/eventual/limit falsifiers. No defect is evaluated without an actual p.",
+  "acceptance": "A necessary-condition design boundary with exact hypotheses or a counterexample to the argument. Not acceptance of a full contract; all remaining goal requirements must be audited separately.",
+  "non_claims": [
+    "No all-map impossibility or B-model rejection",
+    "No strict state equivariance inferred from invariant-algebra compatibility",
+    "No dynamics convergence, infinite volume, physical Pre-A, QFT, gravity or continuum"
+  ]
+}

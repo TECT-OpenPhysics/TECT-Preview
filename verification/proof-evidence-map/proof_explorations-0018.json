@@ -2609,6 +2609,104 @@
         "independent": "PASS separately implemented full coarse state/root arithmetic and scalar energy slice/witness; same-task authorship",
         "primary": "PASS exact fixture enumeration and rational field energies/rate monomials"
       }
+    },
+    {
+      "active_gate_change": false,
+      "boundary": "Pinned original triangle and first proposed B cutoff stage; written parity identity covers its stated q/M/d domain. Optional outer-fidelity and strict state equivariance are not model axioms. No concrete full p/I, root transport, common cylinder realization, uniform generator estimate or approved contract is produced.",
+      "claim_bearing": false,
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "classification": "auxiliary_support",
+      "decision_reason": "The new stabilizer constraint distinguishes a structural requirement conflict from an implementation bug in simple halving, while a separate orbit control prevents silently strengthening the original goal. It changes the next map-design question without changing v2 or promoting a finite condition.",
+      "evidence_hashes": {
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-map-stabilizer/independent-hostile.json": "171461be9aa070930ddbe89b0ea3cc8c57bee5f2c581f4ea07c2c710a9926a69",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-map-stabilizer/primary.json": "f8e5d610286382021ff90bfcc1220ce05c0c835798f77f39a44f858ebe79b12f",
+        "strategy/pa-hyp/PAH-v2-map-stabilizer-review.md": "3a8e45af03c0da9dbc20e78aae4c8c421946cbce1b058d5adfefee4d6ddd301b",
+        "verification/scripts/pah_v2_map_stabilizer_independent.py": "bdb7944ed331b6bf3a87f45d36373d610657adfde922453f6500cdeec72cdafb",
+        "verification/scripts/pah_v2_map_stabilizer_primary.py": "26d4862150d777adc7a4ee1571fee3ed1cb3758f254bcc59541f3a76ccb46b70"
+      },
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-v2-map-stabilizer-prereg.json#definitions",
+        "strategy/pa-hyp/PAH-v2-map-stabilizer-review.md#3-exact-necessary-condition-on-the-original-fixture",
+        "strategy/pa-hyp/PAH-v2-map-stabilizer-review.md#4-why-this-does-not-refute-the-original-invariant-algebra-alternative",
+        "strategy/pa-hyp/PAH-v2-contract-completion-audit.json#inspected_requirements",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-map-stabilizer/primary.json#fixed_output_occupations",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-map-stabilizer/independent-hostile.json#hostile_controls"
+      ],
+      "exact_scope": {
+        "dynamics": "Not evaluated, not changed",
+        "geometry": "Original R-570 finite anchored triangle, no physical dimension/volume",
+        "limits": "No limit performed; source order unchanged",
+        "norm": "Original sup norm retained; radial coordinate diagnostics are not generator-defect norms",
+        "states": "Original v2 integer tuples at proposed B adjacent regulators; full tuple counting preserved"
+      },
+      "finding": "The symmetric fine B tuple (0,1,1) can map under a strictly anchor-equivariant deterministic state map only to coarse occupation (1,0,0). Thus it must relocate occupation to the empty outer anchor; adding empty-O preservation is incompatible on this witness. This is not an all-map failure: the original full-invariant-observable alternative is strictly weaker and remains open. The full contract objective is not completed by this necessary-condition check.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-570"
+        ]
+      },
+      "full_goal_complete": false,
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001733",
+      "method": [
+        "Read the live immutable v2, R-570, original draft, A/B evidence, source cell symmetry and continuation budget; register the isolated writer.",
+        "Preregister the necessary-condition and hypothesis-strength audit before executing on the original triangle.",
+        "Derive full anchor-preserving cell automorphisms including signed edge and closed-face transport; inspect the symmetric odd fine tuple.",
+        "Enumerate all coarse tuples for the fixed-state condition and independently solve the integer occupation constraints and fixed-coordinate count without imported checker code.",
+        "Separate candidate outer-fidelity from source axioms and state equivariance from full invariant-observable compatibility; review sign, domain and limiting-scope objections.",
+        "Audit every original goal requirement against current files, keeping complete tower/map/root/core/adoption absent; perform no dynamics computation."
+      ],
+      "next_action": "Construct one total v2-only p/full I satisfying the original full invariant-observable condition, explicit off-image rules, all-source symmetry-orbit consistency and finite support transport; then audit against all remaining full-goal requirements.",
+      "non_claims": [
+        "No all-map impossibility or B-model rejection",
+        "No strict state equivariance inferred from invariant-algebra compatibility",
+        "No dynamics convergence, infinite volume, physical Pre-A, QFT, gravity or continuum"
+      ],
+      "physical_promotion": false,
+      "provenance": "contemporaneous",
+      "question": "On the already pinned triangle, does a total deterministic B state map that commutes with the anchor swap necessarily relocate occupation at the symmetric odd state? Does that also refute the weaker invariant-observable condition?",
+      "recorded_at": "2026-09-11T16:25:36Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001732",
+          "relation": "continues"
+        }
+      ],
+      "reproduction": [
+        "python -X utf8 verification/scripts/pah_v2_map_stabilizer_primary.py --check",
+        "python -X utf8 verification/scripts/pah_v2_map_stabilizer_independent.py --check"
+      ],
+      "reviewed_on": "2026-09-11",
+      "revisit_condition": "One genuinely new explicit algorithm or exact obstruction to that original weaker condition. No repeated strict-parity fixture or owner search; no automatic orbit quotient, arbitrary default-state collapse, averaging or rate/time change.",
+      "schema": "tect/proof-exploration/1.0",
+      "source_hashes": {
+        "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+        "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+        "strategy/pa-hyp/PAH-v2-charge-AB-decision.json": "31678699900bbe5539a50740e3cbfeea9b4662e454e4fd8661e7d701ce84804a",
+        "strategy/pa-hyp/PAH-v2-charge-AB-prereg.json": "33fe50af87c588715b18fed5415cdad5dc5b17f0b9c3d3a25edd6e2874c06457",
+        "strategy/pa-hyp/PAH-v2-finite-audit-v1.json": "531697fa28c5f2e7f4177b42bc12ebd8fc1ffb7e9790d07063082e0ec3d6a331",
+        "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+        "strategy/pa-hyp/PAH-v2-map-stabilizer-prereg.json": "bcaf96f3d03c5c8cbaa32aa57ac160ff4e98b09432ff71fe98f4a2f6dc7f4512",
+        "strategy/pa-hyp/PAH-v2-refinement-contract-draft.json": "bd9f85467721a223fbc2e3e951ccbd7f18d421136aa74f5854b62e596c58b1d1"
+      },
+      "task_id": "T-090",
+      "title": "PAH-v2 full-map stabilizer constraint and non-completion audit",
+      "verdict": "inconclusive",
+      "verification": {
+        "Lean": "NOT_RUN; no imported R-570 comparison proof",
+        "external_person": "NOT_PERFORMED",
+        "hostile": "PASS scoped parity controls plus explicit logic/domain/limit objections; not a second whole-model hostile verifier",
+        "independent": "PASS separate integer-constraint/fixed-count derivation, no primary/enumerator imports",
+        "primary": "PASS source triangle full signed automorphism and coarse tuple check"
+      }
     }
   ],
   "kind": "proof_explorations",

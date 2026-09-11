@@ -1,0 +1,115 @@
+{
+  "schema": "tect/pah-v2-contract-completion-audit/1.0",
+  "id": "PAH-V2-CONTRACT-AUDIT-20260911",
+  "date": "2026-09-11",
+  "goal_complete": false,
+  "status": "HOLD_FOR_DEFINITIONS_AND_APPROVAL",
+  "classification": "AUXILIARY_SUPPORT",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "operative_contract": null,
+  "owner_adoption": null,
+  "prior_turn_classification": "progress",
+  "current_turn_classification": "progress",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/pa-hyp/PAH-v2-finite-audit-v1.json": "531697fa28c5f2e7f4177b42bc12ebd8fc1ffb7e9790d07063082e0ec3d6a331",
+    "strategy/pa-hyp/PAH-v2-refinement-contract-draft.json": "bd9f85467721a223fbc2e3e951ccbd7f18d421136aa74f5854b62e596c58b1d1",
+    "strategy/pa-hyp/PAH-v2-charge-AB-prereg.json": "33fe50af87c588715b18fed5415cdad5dc5b17f0b9c3d3a25edd6e2874c06457",
+    "strategy/pa-hyp/PAH-v2-charge-AB-decision.json": "31678699900bbe5539a50740e3cbfeea9b4662e454e4fd8661e7d701ce84804a",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "strategy/pa-hyp/PAH-v2-map-stabilizer-prereg.json": "bcaf96f3d03c5c8cbaa32aa57ac160ff4e98b09432ff71fe98f4a2f6dc7f4512"
+  },
+  "evidence_hashes": {
+    "strategy/pa-hyp/PAH-v2-map-stabilizer-review.md": "3a8e45af03c0da9dbc20e78aae4c8c421946cbce1b058d5adfefee4d6ddd301b",
+    "verification/scripts/pah_v2_map_stabilizer_primary.py": "26d4862150d777adc7a4ee1571fee3ed1cb3758f254bcc59541f3a76ccb46b70",
+    "verification/scripts/pah_v2_map_stabilizer_independent.py": "bdb7944ed331b6bf3a87f45d36373d610657adfde922453f6500cdeec72cdafb",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-map-stabilizer/primary.json": "f8e5d610286382021ff90bfcc1220ce05c0c835798f77f39a44f858ebe79b12f",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-map-stabilizer/independent-hostile.json": "171461be9aa070930ddbe89b0ea3cc8c57bee5f2c581f4ea07c2c710a9926a69"
+  },
+  "inspected_requirements": [
+    {
+      "id": "IMMUTABLE_MODEL",
+      "status": "SATISFIED",
+      "evidence": "source_pins; primary/independent source checks"
+    },
+    {
+      "id": "FULL_TOWER",
+      "status": "INCOMPLETE",
+      "evidence": "PAH-v2-refinement-contract-draft.json#/tower_contract/instantiation is null; A/B adds only local-cutoff proposals"
+    },
+    {
+      "id": "BOUNDARY_TRANSPORT",
+      "status": "PARTIAL",
+      "evidence": "Declared fixed inputs and order, no actual later cellular/anchor/terminal-face maps"
+    },
+    {
+      "id": "TOTAL_P_FULL_I",
+      "status": "INCOMPLETE",
+      "evidence": "comparison_interface/implementation is null; strict-state necessary condition is not a total map"
+    },
+    {
+      "id": "DIRECTED_ROOT_ASSIGNMENT",
+      "status": "INCOMPLETE",
+      "evidence": "root_correspondence/implementation is null; unpaired-label rules are only a specification"
+    },
+    {
+      "id": "COMMON_CYLINDER_SUP_NORM",
+      "status": "INCOMPLETE",
+      "evidence": "Sup norm and full invariant target are explicit; support/composition/representative-independent realization unconstructed"
+    },
+    {
+      "id": "FUTURE_DEFECT_FALSIFIERS",
+      "status": "SATISFIED_AS_PREREGISTRATION",
+      "evidence": "Original draft preregistered_tests includes full root sums and separate sup/Gibbs diagnostics"
+    },
+    {
+      "id": "DRAFT_APPROVAL_SEPARATION",
+      "status": "SATISFIED",
+      "evidence": "No owner adoption or operative contract pin is asserted"
+    },
+    {
+      "id": "APPROVED_CONTRACT_HASH",
+      "status": "MISSING",
+      "evidence": "Original draft approved_contract, approval_record and operative_hash_pin are null"
+    },
+    {
+      "id": "FULL_INDEPENDENT_HOSTILE_ADMISSION",
+      "status": "INCOMPLETE",
+      "evidence": "Only the scoped definition diagnostic has implementation-independent/hostile review; no full approved contract exists"
+    },
+    {
+      "id": "NO_IMPORT_CHANGE_PROMOTION",
+      "status": "SATISFIED",
+      "evidence": "Pinned source checks; no F/rate/state/time mutation, old map import or dynamics computation"
+    }
+  ],
+  "design_finding": {
+    "strict_state_equivariance": "Any total deterministic p commuting with the source anchor reflection sends its fixed fine witness to a fixed coarse tuple.",
+    "q1_witness": "Fine occupations (0,1,1) force coarse occupations (1,0,0) under strict state equivariance.",
+    "extra_condition": "Thus strict equivariance plus preservation of empty O is incompatible at this witness. Empty-O preservation is a candidate condition, NOT an approved model axiom.",
+    "general_identity": "For fine (2q-2,1,1), coarse fixed outputs have (q-2k,k,k); outer radial error d|1-2k|>=d and radial L1 error 2d|1-2k|>=2d.",
+    "scope": "Neither an all-map no-go nor a dynamical/limit estimate. d decreases in the proposed schedule.",
+    "original_alternative": "Full invariant-observable pullback compatibility does not imply strict state equivariance; the original draft allows it explicitly. It remains unresolved, not adopted or refuted."
+  },
+  "verification": {
+    "primary": "PASS source triangle full signed automorphism and coarse tuple check",
+    "independent": "PASS separate integer-constraint/fixed-count derivation, no primary/enumerator imports",
+    "hostile": "PASS scoped parity controls plus explicit logic/domain/limit objections; not a second whole-model hostile verifier",
+    "Lean": "NOT_RUN; no imported R-570 comparison proof",
+    "external_person": "NOT_PERFORMED"
+  },
+  "next_single_question": "Construct one total v2-only p/full I satisfying the original full invariant-observable condition, explicit off-image rules, all-source symmetry-orbit consistency and finite support transport; then audit against all remaining full-goal requirements.",
+  "reentry": "One genuinely new explicit algorithm or exact obstruction to that original weaker condition. No repeated strict-parity fixture or owner search; no automatic orbit quotient, arbitrary default-state collapse, averaging or rate/time change.",
+  "non_claims": [
+    "No all-map impossibility or B-model rejection",
+    "No strict state equivariance inferred from invariant-algebra compatibility",
+    "No dynamics convergence, infinite volume, physical Pre-A, QFT, gravity or continuum"
+  ],
+  "reproduction": [
+    "python -X utf8 verification/scripts/pah_v2_map_stabilizer_primary.py --check",
+    "python -X utf8 verification/scripts/pah_v2_map_stabilizer_independent.py --check"
+  ]
+}
