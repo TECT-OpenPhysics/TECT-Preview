@@ -1,0 +1,107 @@
+{
+  "schema": "tect/pah-v2-refinement-contract-draft/1.0",
+  "draft_id": "PAH-V2-REFINEMENT-DRAFT-20260911",
+  "status": "DRAFT_NOT_APPROVED_NOT_INSTANTIATED",
+  "approved_contract": null,
+  "approval_record": null,
+  "operative_hash_pin": null,
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2"
+  },
+  "authority": {
+    "request_scope": "Prepare one v2-specific refinement/comparison contract, preregister the future defect and criteria, and distinguish proposed definitions from approved inputs.",
+    "definition_owner": "Operator; no new operator approval is inferred from this research request.",
+    "proposal_scope": "A typed deterministic-state-map and observable-pullback interface is proposed below. It is not a selected map or a theorem of its existence.",
+    "integrity_only": "A checksum of this draft or its run identifies reviewed bytes only; it is never an operative source-owned comparison pin.",
+    "r570_role": "Finite source-specific operator identities only. No comparison, common limiting space or limit theorem is imported.",
+    "previous_models": "No old PAH, Q3LOCK or TECT-YM comparison implementation or PASS is imported."
+  },
+  "immutable_model": {
+    "functional": "Evaluate exactly the v1 formula incorporated by the pinned v2; no counterterm or changed finite part.",
+    "rates": "Keep the v2 directed labelled PH/TR/LK/AP roots, per-root mobility exponent nu and rate formula. No aggregation correction, fitting or time acceleration.",
+    "states": "At each rho use exactly X_rho=Omega_v2(rho,Q_rho), with all (j,ell,n,u) labels retained, and pi_rho=exp(-beta F_rho)/Z_rho on tuple counting.",
+    "projection": "Keep the complete finite gauge and anchor-preserving cell-automorphism averages P_rho. Do not reduce the symmetry group to make a map pass.",
+    "time_boundary": "External stochastic t, stationary X_0 distributed as pi_rho, no terminal conditioning.",
+    "common_norm": "The inherited supremum norm, not a substituted Gibbs-L2 norm. Gibbs-L2 is separately reported only as a weaker diagnostic.",
+    "root_pairing": "Root space weighted by pi_rho per valid directed label; sqrt(c/2) occurs in B, not a second time in the measure."
+  },
+  "tower_contract": {
+    "indices": "rho_(j,h,N): j is local-state-cutoff index, h is lattice-refinement index, N is volume/exhaustion index. These are not n_v or a time variable.",
+    "geometry_input": "One executable, intrinsic anchored two-cell-complex family G_(h,N), oriented incidence and nonempty closed face words, explicit O_(h,N), C_(h,N), a uniform degree bound and cellular transport for all adjacent levels. Physical dimension/length/volume is not assigned.",
+    "local_state_input": "At each fixed (h,N), executable cofinal sequences K_j,M_s,j,M_psi,j,R_max,j and an explicit Q_(j,h,N) rule. All four cutoffs must be unbounded. Admissibility is checked at every declared level; no fixed R_max or undeclared diagonal.",
+    "charge_rule": "Every actual comparison must map a valid fine fixed-Q tuple to a valid coarse fixed-Q tuple. Neither copying Q nor rescaling it is inferred. A proposed Q schedule must be separately exposed for owner approval and cannot change the Gibbs formula.",
+    "boundaries": "Finite O,C remain labels, not fixed fields. Specify the transported anchors, all terminal faces, new cells and the boundary shell; no periodic, conditioned or neutral-boundary replacement is implicit.",
+    "couplings": "All inserted couplings, nu and rate scales stay frozen across each comparison. Only explicitly listed regulator components vary.",
+    "lattice_volume_warning": "The parent's fixed physical-volume target is not an identified physical quantity in v2. A combinatorial target and its relation, if any, must be supplied, not silently identified with |V| or a^d|V|.",
+    "instantiation": null
+  },
+  "ordered_limits": {
+    "source": "strategy/pa-hyp/PAH-001-v1.json#/ordered_limits",
+    "order": ["LOCAL_STATE_CUTOFF", "LATTICE_REFINEMENT", "VOLUME_EXHAUSTION", "PHASE_SELECTOR", "APERTURE_COLLAPSE", "GROUND_STATE", "OBSERVATION_TIME"],
+    "meaning": "j tends to infinity at fixed h,N first; only the subsequent objects may be used for h and then N limits. Ground state is conditional on a separate requested ground-state statement. No interchange is registered.",
+    "time_step": "No mathematical time-step regulator; if a numerical splitting is later used its zero-step limit precedes these limits.",
+    "later_stage_boundary": "Phase-selector action and later collapse/ground/time observables are not instantiated here. In particular do not insert a source term to implement the inherited selector placeholder.",
+    "current_scope": "Definitions and readiness checks only. None of the listed limits is executed or certified."
+  },
+  "comparison_interface": {
+    "state_map": "p_(sigma,rho): X_sigma -> X_rho, fine to coarse, total and surjective, independent of f, t and observed verifier outcomes. Its coordinate algorithm is a missing proposed definition, not a forgetful default.",
+    "state_map_direction": "fine_to_coarse",
+    "observable_map": "I_(rho,sigma): A_rho -> A_sigma, A_rho=C^(X_rho), (I f)(x)=f(p_(sigma,rho)(x)); coarse to fine. This is the proposed comparison class, not an admitted implementation.",
+    "observable_map_direction": "coarse_to_fine_pullback",
+    "composition": "p_(rho,rho)=id and p_(tau,rho)=p_(sigma,rho) composed with p_(tau,sigma), including commuting refinement squares. Hence I_(rho,tau)=I_(sigma,tau) I_(rho,sigma), once the state-map identities are established.",
+    "state_pushforward": "p_* pi_sigma is a probability on X_rho. It is a comparison output, not a replacement for pi_rho. Record their discrepancy separately; no Gibbs projectivity is assumed.",
+    "ensemble_identification": "NOT_ASSUMED",
+    "label_fidelity": "Specify the image of every j,ell,n,u coordinate, including ell=0 and epsilon=1. No value-quotient, hidden charge sink or removal of signed K=2 channels.",
+    "symmetry": "Supply actual symmetry transport/equivariance or a direct proof that I maps A_rho^inv into A_sigma^inv. Test the full source automorphism groups, not only adjacency or a convenient subgroup.",
+    "kernel_warning": "If two formulas agree only on X_rho, I must not distinguish them on X_sigma. A lift on syntactic formulas with no quotient check is not a map on A_rho.",
+    "implementation": null
+  },
+  "root_correspondence": {
+    "required_data": "For each fine valid incidence (x,s), a deterministic assignment to one valid coarse directed label r at p(x), or UNPAIRED. Paired endpoints must obey p(sx)=r p(x). Store every unmatched incidence and every unmatched coarse label.",
+    "multiplicity": "Assignments never merge the state-space root labels or alter their rates. Several fine incidences may contribute to a coarse channel only as an explicitly retained sum. No division by preimage size.",
+    "inverse": "For paired incidences check inverse labels and endpoints. Reversed stored edge orientations change TR/LK signs as in v2. Endpoint equality is not equality of roots, rates or root Hilbert measures.",
+    "paths": "A coarse root represented by several fine moves is a path, not one fine generator summand. No compound move or new rate is inserted to repair a mismatch.",
+    "implementation": null
+  },
+  "common_cylinder": {
+    "definition": "After the proposed maps are actually instantiated and their algebra, composition, symmetry and support conditions checked, define D as the algebraic direct limit of the full bounded invariant finite-support observable algebras under I. Until then D is a target definition, not an existing common core.",
+    "support_rule": "The packet must give a computable transported finite support S_sigma(f) and a support-based stabilization index. It must include every local observable admitted by the source, not only constants, radial tests or a hand-picked finite family.",
+    "norm": "||[f]||=||f||_(infinity,X_rho). Surjectivity of p is an obligation making this norm independent of representative; a non-surjective map requires review, not an unannounced quotient norm.",
+    "finite_generator_domains": "D(L_rho)=A_rho=C^(X_rho), with the source invariant restriction. No domain for an infinite operator is claimed.",
+    "limiting_core_status": "NOT_CONSTRUCTED"
+  },
+  "preregistered_tests": {
+    "exact_defect": "Delta_(rho,sigma) f = L_sigma I_(rho,sigma) f - I_(rho,sigma) L_rho f, an element of A_sigma; both terms use the original finite generators.",
+    "expanded_defect": "At x: sum_(s valid at x)c_sigma,s(x)[f(p(sx))-f(px)] - sum_(r valid at px)c_rho,r(px)[f(r px)-f(px)]. Unpaired roots stay in these sums.",
+    "sup_defect": "e_(rho,sigma)(f)=max_(x in X_sigma)|Delta_(rho,sigma)f(x)|, not an expectation or a fitted tolerance.",
+    "gibbs_diagnostic": "e2_(rho,sigma)(f)=(sum_x pi_sigma(x)|Delta f(x)|^2)^(1/2), reported separately. An exact nonzero defect does not alone refute vanishing e2 along a sequence.",
+    "state_defect": "b_(rho,sigma)(f)=|sum_x pi_sigma(x) f(p(x))-sum_y pi_rho(y) f(y)|. No vanishing or Radon-Nikodym bound is assumed.",
+    "eventual_exact_target": "For every finite-support f, supply an explicit stabilization level and prove Delta=0 for all subsequent adjacent comparisons in that stage, respecting the j-before-h-before-N order.",
+    "controlled_target": "A separately named weaker target requires a derived bound e<=b(f;rho,sigma) with ordered vanishing and declared uniformity set. Do not call it eventual exact agreement or upgrade a finite estimate to a limit.",
+    "falsifiers": ["A valid fine tuple has no valid coarse image", "Composition, invariant-algebra or support compatibility fails", "A missing/merged directed channel or a changed rate is used", "A nonzero exact defect at an admitted pair refutes that pair only; eventual failure requires arbitrarily late violations for one fixed f", "An asymptotic lower bound in the specified norm refutes only that norm's convergence target", "A requested generator limit remains unsupported by static state convergence or R-570 alone"],
+    "evaluation_status": "NOT_RUN_NO_INSTANTIATED_CONTRACT"
+  },
+  "readiness": {
+    "status": "HOLD_FOR_DEFINITIONS_AND_OWNER_APPROVAL",
+    "missing": [
+      {"id": "TOWER", "path": "/tower_contract/instantiation", "required": "Concrete cofinal geometry/cutoff/charge algorithms, anchor and boundary transport, nominal lattice-volume scope"},
+      {"id": "MAP", "path": "/comparison_interface/implementation", "required": "Total charge-safe surjective state map and induced full observable pullback, composition, full symmetry and support witnesses"},
+      {"id": "ROOT", "path": "/root_correspondence/implementation", "required": "Complete directed-incidence assignment with retained unmatched channels"},
+      {"id": "APPROVAL", "path": "/approval_record", "required": "Explicit owner decision naming the completed proposed contract; prior tuple/root approvals do not cover it"}
+    ],
+    "reentry": "A completed v2-specific tower/map/root proposal and explicit approval of its exact bytes. Review changed definitions only; do not repeat owner searches or the R-570 finite proof.",
+    "next_single_question": "Which concrete v2-only cofinal tower and total charge-safe state map instantiate this pullback contract while retaining the full invariant cylinder algebra?",
+    "review_budget": "One definition-design checkpoint before operator review. No dynamic comparison run before admission.",
+    "approved_contract_checks": "After approval: primary definition checks, independently authored mathematical/implementation audit, hostile checks and an explicit Lean scope disposition. Passing a schema checker is not such an audit."
+  },
+  "verification_scope": {
+    "draft_check": "Source hashes, unchanged order and norm, complete typed fields, truthful unresolved-input states, and fail-closed rejection of common authority/direction/measure shortcuts.",
+    "independent_mathematical_review": "NOT_RUN_NO_APPROVED_INSTANTIATION",
+    "hostile_mathematical_review": "NOT_RUN_NO_APPROVED_INSTANTIATION; draft author objections are separate",
+    "Lean": "NOT_RUN_NO_APPROVED_INSTANTIATION; R-570 Lean lemmas are not comparison proofs."
+  },
+  "non_claims": ["No approved comparison contract or common-core existence theorem yet", "No change to PAH-001-v1, v2-r2 or R-570", "No T-054 gate or claim-tier change", "No dynamics convergence, infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass gap or TOE"]
+}
