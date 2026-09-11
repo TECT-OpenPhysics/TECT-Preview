@@ -1,0 +1,69 @@
+{
+  "schema": "tect/pah-v2-orbit-prefix-draft/1.0",
+  "id": "PAH-V2-ORBIT-PREFIX-DRAFT-20260911",
+  "status": "UNAPPROVED_RESEARCH_PROPOSAL",
+  "approval_record": null,
+  "operative_contract": null,
+  "question": "Can an explicit B fine-to-coarse state map supply a surjective full-observable pullback preserving the entire invariant algebra, while keeping spatial-support and whole-tower obligations separate?",
+  "authorization": "Continued original contract goal and DCTRL-000025 permit one concrete algorithmic proposal. The following integer coarsening is explicit NEW draft mathematics, not an implicit rounding repair, adopted model rule, or a change to counting states/rates/time.",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/pa-hyp/PAH-v2-finite-audit-v1.json": "531697fa28c5f2e7f4177b42bc12ebd8fc1ffb7e9790d07063082e0ec3d6a331",
+    "strategy/pa-hyp/PAH-v2-refinement-contract-draft.json": "bd9f85467721a223fbc2e3e951ccbd7f18d421136aa74f5854b62e596c58b1d1",
+    "strategy/pa-hyp/PAH-v2-charge-AB-prereg.json": "33fe50af87c588715b18fed5415cdad5dc5b17f0b9c3d3a25edd6e2874c06457",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2"
+  },
+  "fixed_scope": {
+    "carrier": "Fixed admitted finite G with all source cell data, anchors and complete H=Aut(G;O,C). Execution uses the existing R-570 triangle only. No new graph family, physical dimension or volume.",
+    "regulators": "Coarse (K,Ms,M,Q=q,R); fine (2K,2Ms,4M,Q=2q,2R), 1<=q<=M. This includes every adjacent step of the proposed B local-cutoff schedule.",
+    "unchanged": "All real parameters, F, primitive signed roots, rates, mobility, full tuple-counting Gibbs law, projection and external Markov time. No generator or Gibbs sum evaluated."
+  },
+  "map_algorithm": {
+    "direction": "p:X_fine->X_coarse, total deterministic; I f=f composed with p on the full finite function algebra.",
+    "gauge_coordinates": "w_e=(u_e+n_tail-n_head) mod 2K. N(y)=(j,ell,w). This is an intermediate calculation on the full tuple space, not a state quotient or replacement Gibbs measure.",
+    "canonicalization": "Among all h N(y), h in the complete source cell automorphism group H, choose lexicographically least flattened (j,ell,w), breaking ties by the stored h permutation/sign encoding. Let a(y) be that h. Orient edge w coordinates with the source signs.",
+    "canonical_integer_coarsening": "For canonical c=(j,ell,w), set j'_v=floor(j_v/2), w'_e=floor(w_e/2). In the supplied vertex order let S_v=sum_(i<=v)ell_i and S_-1=0, and set ell'_v=floor(S_v/2)-floor(S_(v-1)/2). No randomization, fitted parameters or conditional averages.",
+    "return_frame": "Apply a(y)^(-1) to the resulting (j',ell',w') using coarse modulo K and the same full source cell action.",
+    "retained_phase_rule": "Set n'_v=floor(n_v/2) for every original fine vertex, including ell_v=0; set u'_e=(w'_e-n'_tail+n'_head) mod K. All coordinates, including epsilon=1 aperture labels, have explicit images.",
+    "right_inverse": "The previously proposed J_B doubles j,ell,n,u. Test p J_B=id on the entire coarse tuple space, not just gauge orbits.",
+    "symmetry_target": "I maps the FULL coarse gauge/anchor invariant algebra into the full fine invariant algebra. Strict state equivariance is NOT a requirement or a claimed consequence.",
+    "composition": "For nonadjacent local-cutoff levels define p by ordered composition of the adjacent algorithms, never direct fresh quantization. I is the reverse-order pullback. No lattice/volume commuting square is supplied."
+  },
+  "roots": {
+    "algorithm": "For a valid fine incidence (y,s) let z=s y. Compare lexicographic directed keys (y,family,cell,sign) and (z,family,cell,-sign). In the lesser orientation, enumerate every valid coarse label r at p(y) with r p(y)=p(z). Choose the first in unchanged source root order, or UNPAIRED if none. Give the opposite fine incidence the inverse coarse label. Retain every fine incidence, all multiplicities and all unmatched coarse labels; no new root, rate or factor.",
+    "label_identity": "Root assignment is bookkeeping, not equality of rates or generator intertwining. Unmatched/identity/duplicate labels remain in the complete source root sums."
+  },
+  "algebra_support": {
+    "fixed_G": "If the proposed identities hold, adjacent full finite algebras embed isometrically by p*. The invariant restrictions yield a normed algebraic direct limit at fixed G using the inherited sup norm. No infinite-generator domain is asserted.",
+    "conservative_support": "The only immediately certified support bound is all vertices and edges of this fixed finite G. It is independent of local-cutoff level but is NOT a volume-uniform spatial locality bound.",
+    "full_goal_missing": "Concrete G_(h,N), later boundary/cellular maps and commuting squares, local support transport/stabilization across geometry, complete-contract approval and independent admission still missing."
+  },
+  "preregistered_defect": {
+    "equation": "Delta f(y)=sum_(fine valid s)c_f,s(y)[f(p(sy))-f(py)]-sum_(coarse valid r)c_c,r(py)[f(r py)-f(py)]. Keep every source label and UNPAIRED contribution.",
+    "primary_norm": "max_y |Delta f(y)|; no change from inherited supremum norm.",
+    "separate_diagnostics": "Gibbs-L2 Delta and p_*pi_f-pi_c remain distinct and are not presumed small.",
+    "falsifiers": [
+      "Invalid image or pJ!=id",
+      "Coarse invariant orbit indicators fail fine invariance",
+      "Incomplete or non-involutive paired root assignment",
+      "Spatial support grows with full geometry without the requested stabilization proof",
+      "Missing full tower, owner adoption or whole-contract verifier"
+    ],
+    "status": "NOT_EVALUATED; definition tests only. Finite/eventual/limit falsifiers remain as in the original draft."
+  },
+  "verification_plan": {
+    "primary": "Exact gauge-normal coordinates and all anchored cell automorphisms; exhaust every normal-coordinate triple on the existing first fine fixture and account explicitly for every retained phase fibre; test all coarse J_B images and a declared bounded root-label set.",
+    "independent": "Different implementation using direct reflection/gauge invariants and token pairing instead of prefix differences; compare deterministic output digests and right-inverse/root checks. Same-task authorship.",
+    "hostile": "Test forgetting frames, edge signs, source-phase labels, scalar/default-state collapse, root multiplicity, and treating all-G support or algebraic coherence as dynamics/continuum proof.",
+    "Lean": "NOT_RUN for this unapproved proposal; no imported R-570 kernel claim.",
+    "literature": "Only finite group action/canonical representative and elementary integer-sum algebra; no imported old comparison or external existence theorem."
+  },
+  "non_claims": [
+    "Not the full approved refinement contract",
+    "No new model/state/rate/time rule",
+    "No Gibbs projectivity, exact generator intertwining or spatially uniform support proved",
+    "No dynamics convergence, infinite volume, physical Pre-A, QFT, gravity or continuum"
+  ]
+}
