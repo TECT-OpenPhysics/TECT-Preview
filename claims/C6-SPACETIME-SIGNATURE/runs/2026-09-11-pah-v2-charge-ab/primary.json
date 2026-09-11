@@ -1,0 +1,195 @@
+{
+  "branches": {
+    "A": {
+      "coarse_states": 1536,
+      "displayed_total_coarse": "1",
+      "displayed_total_image": "1/2",
+      "fine_Q": 1,
+      "image_energy_equal_states": 0,
+      "images_distinct": 1536,
+      "root_checks": {
+        "AP": {
+          "one_step_equal": 0,
+          "path_equal": 4608,
+          "valid": 4608
+        },
+        "LK": {
+          "one_step_equal": 0,
+          "path_equal": 9216,
+          "valid": 9216
+        },
+        "PH": {
+          "one_step_equal": 0,
+          "path_equal": 9216,
+          "valid": 9216
+        },
+        "TR": {
+          "one_step_equal": 3072,
+          "path_equal": 3072,
+          "valid": 3072
+        }
+      },
+      "seed_energy_coarse": "23/12",
+      "seed_energy_image": "295/384",
+      "trace_witness": {
+        "coarse_generator_of_trace": "0",
+        "fine_generator_at_image_terms": [
+          {
+            "cell": 0,
+            "coefficient": "3/8",
+            "exponent": "59/1280",
+            "family": "AP",
+            "sign": 1
+          },
+          {
+            "cell": 1,
+            "coefficient": "3/8",
+            "exponent": "13/320",
+            "family": "AP",
+            "sign": 1
+          },
+          {
+            "cell": 2,
+            "coefficient": "3/8",
+            "exponent": "13/320",
+            "family": "AP",
+            "sign": 1
+          }
+        ],
+        "h": "indicator(any aperture index odd)",
+        "strictly_positive": true
+      }
+    },
+    "B": {
+      "coarse_states": 1536,
+      "displayed_total_coarse": "1",
+      "displayed_total_image": "1",
+      "fine_Q": 2,
+      "image_energy_equal_states": 1536,
+      "images_distinct": 1536,
+      "odd_inverse_witness": {
+        "fine_occupation": [
+          1,
+          1,
+          0
+        ],
+        "integer_state_inverse": false,
+        "required_coarse_occupation": [
+          "1/2",
+          "1/2",
+          "0"
+        ]
+      },
+      "root_checks": {
+        "AP": {
+          "one_step_equal": 0,
+          "path_equal": 4608,
+          "valid": 4608
+        },
+        "LK": {
+          "one_step_equal": 0,
+          "path_equal": 9216,
+          "valid": 9216
+        },
+        "PH": {
+          "one_step_equal": 0,
+          "path_equal": 9216,
+          "valid": 9216
+        },
+        "TR": {
+          "one_step_equal": 0,
+          "path_equal": 3072,
+          "valid": 3072
+        }
+      },
+      "seed_energy_coarse": "23/12",
+      "seed_energy_image": "23/12",
+      "trace_witness": {
+        "coarse_generator_of_trace": "0",
+        "fine_generator_at_image_terms": [
+          {
+            "cell": 0,
+            "coefficient": "3/8",
+            "exponent": "11/80",
+            "family": "AP",
+            "sign": 1
+          },
+          {
+            "cell": 1,
+            "coefficient": "3/8",
+            "exponent": "37/320",
+            "family": "AP",
+            "sign": 1
+          },
+          {
+            "cell": 2,
+            "coefficient": "3/8",
+            "exponent": "37/320",
+            "family": "AP",
+            "sign": 1
+          }
+        ],
+        "h": "indicator(any aperture index odd)",
+        "strictly_positive": true
+      }
+    }
+  },
+  "non_claims": "Neither branch adopted; no full p/I, full fine Gibbs sum, eventual intertwining, weak limit, physical or external-person review claim.",
+  "prereg_sha256": "33fe50af87c588715b18fed5415cdad5dc5b17f0b9c3d3a25edd6e2874c06457",
+  "schedule_fixture": [
+    {
+      "A_Q": 1,
+      "A_total": "1",
+      "B_Q": 1,
+      "B_total": "1",
+      "K": 2,
+      "M_psi": 1,
+      "M_s": 1,
+      "R_max": "1",
+      "j": 0
+    },
+    {
+      "A_Q": 1,
+      "A_total": "1/2",
+      "B_Q": 2,
+      "B_total": "1",
+      "K": 4,
+      "M_psi": 4,
+      "M_s": 2,
+      "R_max": "2",
+      "j": 1
+    },
+    {
+      "A_Q": 1,
+      "A_total": "1/4",
+      "B_Q": 4,
+      "B_total": "1",
+      "K": 8,
+      "M_psi": 16,
+      "M_s": 4,
+      "R_max": "4",
+      "j": 2
+    },
+    {
+      "A_Q": 1,
+      "A_total": "1/8",
+      "B_Q": 8,
+      "B_total": "1",
+      "K": 16,
+      "M_psi": 64,
+      "M_s": 8,
+      "R_max": "8",
+      "j": 3
+    }
+  ],
+  "schema": "tect/pah-v2-charge-ab-primary/1.0",
+  "script_sha256": "e2e5e51efe21f4873c4a481fe638ada3aa1400cabb57cb8526d7d3971ca4bc85",
+  "source_pins": {
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-audit-v1.json": "531697fa28c5f2e7f4177b42bc12ebd8fc1ffb7e9790d07063082e0ec3d6a331",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7"
+  },
+  "status": "PASS_SCOPED_COMPARISON_CHECKS"
+}
