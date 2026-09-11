@@ -1,0 +1,101 @@
+{
+  "schema": "tect/pre-a-prospective-model-draft/1.0",
+  "packet_id": "PAH-001-v2",
+  "version": "0.2.0-draft.2",
+  "title": "Prospective labelled-coordinate finite state and directed-root definitions",
+  "status": "OWNER_APPROVED_DEFINITIONS_PENDING_FINITE_AUDIT",
+  "authority_scope": "The two recorded operator decisions authorize the prospective Option A root conventions and integer counting-state completion only. No retrospective v1 authority, mathematical proof or physical admission is inferred.",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2.json": "12b10ebd0f95bfaa4aedf385b5a0d90d656d837a1db42bd9a1a6bd2bed6aa953",
+    "strategy/owner-decisions/PAH-root-measure-v0.1.md": "f29a80d4678706d5197c5eb9400095173344e61f67fb7ac578a379f6cd15104e",
+    "strategy/owner-decisions/PAH-root-measure-v0.1-approval-20260911.json": "5420451a6c53c6ed56568115e8bf7d01961b8623de7b56e9b52ab7e25f2aebf9",
+    "strategy/owner-decisions/PAH-v2-state-approval-20260911.json": "90f54c1b23f7929f4cf5b886210d037fb63559c7145f3bd1a86a35181f5bffb3",
+    "strategy/pa-hyp/PAH-OMC-020-source-multiplicity-underdetermination-result-v1.json": "89e5239a6817c7046de55d4d9ba934a284ada7b1a7850035bbf63b8f14909c77",
+    "strategy/pa-hyp/PAH-OMC-020-owner-packet-sufficiency-contract-v1.json": "49ed29ea3590b6e7849bc6fc992cd7a769da3c98ce89a04c50d41575fb9ca3db"
+  },
+  "version_boundary": {
+    "immutable_parent": "strategy/pa-hyp/PAH-001-v1.json",
+    "preserved_partial_revision": "strategy/pa-hyp/PAH-001-v2.json",
+    "previous_hold": "EXP-001728 remains the correct historical disposition before the additional owner decision. Its missing state/transfer choice is now supplied prospectively; its NOT_RUN mathematics is not relabelled PASS.",
+    "new_definition": "Distinct integer tuples remain distinct counting states even when their displayed field values coincide. This can change counting multiplicities and Gibbs normalization compared with a value-quotient interpretation; it is not a claim that v1 already fixed those multiplicities.",
+    "prior_evidence": "R-479, R-527, R-557 and other PAH/Q3LOCK/TECT-YM PASS records are not imported as proofs of this revision."
+  },
+  "inherited_formula_locators": {
+    "source": "strategy/pa-hyp/PAH-001-v1.json",
+    "functional": "/functional_or_action",
+    "per_root_rate": "/dynamics/generator",
+    "mobility": "/dynamics/mobility_rule",
+    "parameters": "/finite_regulator/parameter_domain",
+    "geometry_and_boundaries": "/finite_regulator",
+    "projection": "/symmetry_and_constraint/candidate_internal_projection",
+    "time": "/dynamics/time",
+    "time_boundary": "/finite_regulator/time_boundary_condition",
+    "limit_order": "/ordered_limits",
+    "rule": "Incorporate the exact parent formulas and parameter domains at these pointers, evaluating displayed fields from the newly approved counting coordinates. Add no functional term, counterterm, rate scale, mobility fit, time rescaling or alternative limit order."
+  },
+  "finite_scope": {
+    "carrier": "The parent's finite connected oriented bounded-degree two-cell complex G=(V,E,P), fixed incidence/closed-face data, and disjoint nonempty anchors O,C remain input data. Choose one stored orientation per geometric edge; the reverse is represented by a sign, not a second copy.",
+    "dimension_and_volume": "Finite relational two-cell complex with finite |V|; no physical dimension, metric or physical volume is identified.",
+    "cutoffs": "Integer K>=2, M_s>=1, M_psi>=1; fixed integer 0<=Q<=|V| M_psi, so the counting state space is nonempty. Parent real parameters and 0<epsilon<=1 are unchanged.",
+    "limits": "No limit or regulator removal is taken in this definition checkpoint. The parent's ordered-limit obligations remain unproved.",
+    "optional_probe": "The optional tagged probe is not part of this untagged finite operator question and is not evaluated. No transfer or horizon estimand is computed."
+  },
+  "integer_counting_space": {
+    "tuple": "x=((j_v)_(v in V),(ell_v)_(v in V),(n_v)_(v in V),(u_e)_(e in E))",
+    "ranges": "j_v in {0,...,M_s}; ell_v in {0,...,M_psi}; n_v,u_e in Z_K represented by {0,...,K-1}; sum_v ell_v=Q.",
+    "identity": "Equality means equality of every integer coordinate. There is no quotient by coincident displayed values, gauge transformations or automorphisms when counting states.",
+    "display": "s_v=epsilon+j_v(1-epsilon)/M_s; psi_v=(R_max ell_v/M_psi) exp(2 pi i n_v/K); U_e=exp(2 pi i u_e/K); U_(bar e)=U_e^(-1).",
+    "zero_radius": "Keep every n_v at ell_v=0 as a separate label. PH may then change the counting state while leaving displayed psi_v=0.",
+    "unit_aperture_floor": "Keep every j_v at epsilon=1 as a separate label. AP may then change the counting state while leaving displayed s_v=1.",
+    "state_pairing": "Z=sum_(x in Omega_v2) exp(-beta F_rho(x)); pi(x)=exp(-beta F_rho(x))/Z; <f,g>_pi=sum_x pi(x) conjugate(f(x))g(x). Counting is over tuples, not distinct displayed fields.",
+    "finite_domain": "D_rho=C^(Omega_v2), the full finite complex observable space. The candidate invariant subspace is the range of the inherited finite group averages, not a newly chosen physical projection."
+  },
+  "root_partial_maps": {
+    "labels": "Exactly one label per (family,cell,sign), with sign in {-1,+1}. PH and AP use vertices; TR and LK use stored oriented edges. Distinct labels remain distinct even if their maps or target states coincide.",
+    "PH": "PH(v,sigma): n_v -> n_v+sigma mod K; all other coordinates fixed.",
+    "TR": "TR(e=(v,w),sigma): ell_z -> ell_z+sigma(1_(z=w)-1_(z=v)) simultaneously for every z; all j,n,u fixed.",
+    "LK": "LK(e,sigma): u_e -> u_e+sigma mod K; all other coordinates fixed.",
+    "AP": "AP(v,sigma): j_v -> j_v+sigma; all other coordinates fixed.",
+    "validity": "Retain (x,r) exactly when the final coordinate tuple lies in Omega_v2. Invalid moves are omitted, not clipped, reflected or evaluated outside the domain.",
+    "inverse_label": "r^(-1) has the same family and cell and opposite sign, including K=2. Reversal closure on valid incidences is a verification target.",
+    "identity_and_incidence": "A valid rx=x incidence is retained as a zero-difference row. If a carried edge is a loop, the simultaneous TR incidence update has net zero; the coordinate implementation does not decide whether that edge belongs to an admissible full source carrier. Parallel carried edges keep distinct cell labels.",
+    "order": "PH,TR,LK,AP; ascending supplied cell index; sign -1 then +1. This is deterministic enumeration, not a new stochastic filtration theorem."
+  },
+  "operators_and_pairings": {
+    "rates": "c_r(x)=m_r(x) exp[-beta(F_rho(rx)-F_rho(x))/2] on valid incidences, with exactly the parent mobility. No rate is evaluated for invalid incidences.",
+    "generator": "(L_rho f)(x)=sum_(r valid at x)c_r(x)[f(rx)-f(x)]. State jump q(x,y), y!=x, is the sum of all such labelled rates with rx=y; no division by multiplicity.",
+    "root_space": "R_rho={(x,r):x in Omega_v2,r valid at x}; H_R=C^(R_rho); <h,k>_R=sum_(x,r in R_rho)pi(x) conjugate(h(x,r))k(x,r).",
+    "B": "(Bf)(x,r)=sqrt(c_r(x)/2)[f(rx)-f(x)] on the full finite domain D_rho.",
+    "adjoint": "B* is the adjoint for the two displayed finite pairings. No additional c_r or inverse-pair half factor belongs in the root measure.",
+    "balance_warning": "The incidence inversion need not preserve bare pi-weighted root counting. Detailed balance must be proved for pi(x)c_r(x), not substituted by bare-measure invariance.",
+    "symmetry_lift": "Gauge g in Z_K^V sends n_v to n_v+g_v and u_(v,w) to u_(v,w)+g_w-g_v modulo K, leaving j,ell fixed. Anchor-preserving cell automorphisms permute vertex coordinates and carried edges, with edge-coordinate sign reversal when the stored orientation reverses. This is the coordinate lift to be audited, not a proved equivariance theorem.",
+    "projection": "P_cand=P_Aut P_G uses the inherited finite gauge and anchor-preserving automorphism averages on the new counting space. Exact gauge invariance, unitary group actions, and commutation with L must be checked before calling it an invariant common-core dynamics.",
+    "time": "Parent external stochastic time and stationary initial-value boundary only. No quantum real-time, proper-time, KMS or Lorentzian identification."
+  },
+  "exact_move_enumerator": {
+    "path": "codes/foundations/pah_v2_root_enumerator.py",
+    "sha256": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "status": "HASH_PINNED_COORDINATE_IMPLEMENTATION",
+    "coverage": "Lazy exact finite coordinate enumeration and partial PH/TR/LK/AP maps without a hidden truncation or value quotient. It validates coordinate ranges and Q, not the full anchored two-cell complex, face data, parameters, functional, rates or projection.",
+    "verification_scope": "Bounded unit fixtures test implementation details only. No fixture, run PASS or literal test input is evidence of the general finite operator theorem.",
+    "generate": "python -X utf8 codes/foundations/pah_v2_root_enumerator.py",
+    "replay": "python -X utf8 codes/foundations/pah_v2_root_enumerator.py --check"
+  },
+  "finite_verification_targets": {
+    "inverse_validity": "PENDING_EXACT_ALL_FINITE_PROOF",
+    "L1_equals_zero": "PENDING_EXACT_ALL_FINITE_PROOF",
+    "Gibbs_detailed_balance": "PENDING_EXACT_ALL_FINITE_PROOF",
+    "projection_commutation_including_functional_gauge_invariance": "PENDING_EXACT_ALL_FINITE_PROOF",
+    "B_adjoint_B_equals_minus_L": "PENDING_EXACT_ALL_FINITE_PROOF",
+    "primary_independent_hostile": "PENDING; implementation unit tests and author self-review do not replace independent mathematical verification.",
+    "Lean": "NOT_RUN; any future formalization must identify the exact scope discharged and remaining analytic/source assumptions."
+  },
+  "next_question": "For this exact hash-pinned revision on every admissible finite source carrier and regulator, do inverse-validity, L1=0, Gibbs detailed balance, invariant projection commutation and B*B=-L hold on the displayed domains?",
+  "reentry_condition": "Use this revision and its two explicit approvals as new definition inputs; attempt that finite theorem with independent and hostile verification. A concrete inconsistency must be recorded against this revision, never silently fixed. Do not repeat the resolved state-choice question unless the owner changes the definition.",
+  "non_claims": [
+    "Approval and enumeration are definitions, not a completed finite proof or T-054 gate closure.",
+    "No R-557 full-packet admission, common refinement realization, N1, N2b, N2c/N4, N2d, full-domain J, anchored D or original PAH-OMC-030 convergence result.",
+    "No infinite-volume dynamics, continuum, physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass-gap, event-horizon or TOE conclusion."
+  ]
+}

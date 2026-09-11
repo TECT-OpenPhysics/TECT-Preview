@@ -1,0 +1,40 @@
+{
+  "schema": "tect/owner-decision-record/1.0",
+  "decision_id": "PAH-V2-INTEGER-STATE-APPROVAL-20260911",
+  "recorded_at": "2026-09-11T02:15:11Z",
+  "approval_message_timestamp_utc": null,
+  "approval_source": {
+    "kind": "EXPLICIT_USER_MESSAGE_IN_CURRENT_TASK",
+    "thread_id": "01a079fb-e627-7c00-ba3a-08749b02a578",
+    "actor": "Current task owner/operator",
+    "statement_english_translation": "I approve, as an additional v2 definition, retaining integer coordinates (j_v,ell_v,n_v,u_e) as separate counting states, preserving phase labels at ell_v=0 and aperture indices at epsilon=1, and letting TR change occupations only while keeping all other coordinates fixed.",
+    "signature_scope": "Recorded operator instruction, not a cryptographic signature or historical source attribution."
+  },
+  "addresses": {
+    "path": "strategy/pa-hyp/PAH-001-v2.json",
+    "version": "0.2.0-draft.1",
+    "sha256": "12b10ebd0f95bfaa4aedf385b5a0d90d656d837a1db42bd9a1a6bd2bed6aa953",
+    "missing_item": "COUNTING_STATE_AND_TRANSFER_COORDINATE_CONTRACT"
+  },
+  "authorized": {
+    "counting_states": "Distinct integer coordinate tuples are distinct states, even when their displayed s or psi values coincide.",
+    "zero_occupation": "Retain n_v in Z_K when ell_v=0.",
+    "collapsed_aperture_grid": "Retain j_v in {0,...,M_s} when epsilon=1.",
+    "TR": "Change occupations only; keep phases, aperture indices and link coordinates fixed.",
+    "prospective_use": "Prepare and separately verify a new v2 revision; preserve PAH-001-v1 and the earlier partial draft."
+  },
+  "prior_A_approval": {
+    "path": "strategy/owner-decisions/PAH-root-measure-v0.1-approval-20260911.json",
+    "sha256": "5420451a6c53c6ed56568115e8bf7d01961b8623de7b56e9b52ab7e25f2aebf9",
+    "rule": "This additional decision supplies the state/transfer choice excluded by the earlier A-only approval; it does not rewrite that earlier record."
+  },
+  "approval_received": true,
+  "mathematical_proof_approved": false,
+  "physical_claim_approved": false,
+  "not_authorized": [
+    "Retroactive evidence that v1 already specified these counting multiplicities.",
+    "A new functional, per-root rate, mobility exponent, physical time or limit order.",
+    "Automatic reuse of R-479 or any earlier finite/conditional PASS as proof of this v2 revision.",
+    "R-557 or PAH-OMC-030 convergence admission, or any physical promotion."
+  ]
+}
