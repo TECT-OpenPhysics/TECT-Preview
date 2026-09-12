@@ -101,6 +101,20 @@ TOE target with no established result.
 
 ## Next required action
 
+### 2026-09-12: separate GD-001 negative result (R-572)
+
+The universal full-invariant-cylinder sup generator Cauchy target is
+DISPROVED at the admitted epsilon=1 boundary of the unchanged PAH-v2 model.
+For one fixed f0=1_{j_O=0} at r0=0 and every s>r>=0, its full-state defect
+norm is exactly one; a fixed-data witness exists beyond every tail threshold.
+This is not a finite-table extrapolation or a Gibbs-L2 verdict. The precise
+all-state band formula, complete root reduction, independent implementation,
+hostile checks and five parameterized Lean declarations are in the
+[result card](../../strategy/pa-hyp/PAH-v2-GD-001-result-v1.json) and its
+single synthesis note. C6 remains T1 OPEN and T-054's gate is unchanged.
+Any replacement observable-domain/topology target needs separate authorization;
+do not silently weaken this target or repeat larger finite tables.
+
 ### 2026-09-11: separate finite PAH-v2 result (R-570)
 
 The explicitly approved, hash-pinned PAH-001-v2 revision `0.2.0-draft.2`

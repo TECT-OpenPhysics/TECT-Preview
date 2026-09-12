@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-572](#r-572) | PAH-v2 full-cylinder sup generator counterexample | At the admitted epsilon=1 boundary, one fixed f0=1_{j_O=0} has exact defect 1_{2^s-2^(s-r)<=j_O<2^s-1} and full-state sup norm one for every s>r>=0. Analytic all-index proof, independent full-root row action, hostile audit and five partial Lean declarations. DISPROVED for GD-001 only; no Gibbs-L2, T-054 gate or physical conclusion. |
 | [R-571](#r-571) | PAH-v2 full comparison-definition admission | On the owner-adopted Morton/CRT anchored grid family, all finite full-state projections are total, surjective and compositional; full invariant pullbacks preserve the sup norm with declared source-box support. All signed roots and unpaired channels remain. Written arbitrary-index proof, independent exact implementation, hostile controls and seventeen partial Lean declarations. Definition scope only: no generator compatibility, T-054 gate, limit or physical promotion. |
 | [R-570](#r-570) | PAH-v2 labelled finite operator consistency | For every defined admissible finite instance of frozen PAH-001-v2 revision 0.2.0-draft.2, exact inverse-validity, L1=0, Gibbs balance, orthogonal symmetry-projection commutation and B*B=-L hold on the full finite complex domains. General proof, exact fixture coefficients, non-importing matrix cross-check, twelve hostile controls and nine partial Lean declarations support this prospective model result. Auxiliary only; no v1 repair, T-054 gate closure, refinement, limit or physical promotion. |
 | [R-569](#r-569) | PAH-OMC-030 finite-strip to minimal Markov bridge | The frozen R-514 fixed-n temporal passage is compatible with the R-510/R-511/R-568 scopes, but the anchored-n correlation limit is not closed: no source-authorized common-space U_n, arbitrary-sequence liminf/recovery, n-uniform compact-time boundary/tail estimate, or minimal-closure identification is present. Primary, non-importing independent, hostile and integrated audits pass with `HOLD_FOR_EVIDENCE`; no finite-to-target or physical promotion. |
@@ -19362,6 +19363,40 @@ The exploration ledger entry is EXP-001655 and the changelog event is
 `20260908-r-535-pah-omc-020-k-d-term-level-coverage-ledge`.  Reopen only
 when a versioned source-authorized packet or an exact PAH-specific
 contradiction changes one required field.
+
+<a id="r-572"></a>
+### R-572 -- PAH-v2 full-cylinder sup generator counterexample
+
+**Exact statement.** On the unchanged adopted h=N=0 carrier at epsilon=1,
+fix r0=0 and f0=1_{j_O=0}. For every s>r>=0 put D=2^(s-r). The complete
+fine-minus-coarse signed generator defect is
+`1_{2^s-D <= j_O < 2^s-1}` on every fine counting tuple. Its sup norm is one.
+At every tail threshold R, r=R, s=r+1, j_O=2^s-2 and all occupation at O
+give a valid exact witness. Thus PAH-V2-GD-001 is DISPROVED, not HOLD.
+
+**Evidence and reuse.** The parent functional has no aperture-label dependence
+at epsilon=1, so every valid AP rate is exactly one; all other root families
+have individually zero increments for this observable. The all-index proof
+is in `claims/C6-SPACETIME-SIGNATURE/notes/aperture-cutoff-defect-260912-v1.0.tex.txt`.
+Primary and non-importing row-action diagnostics agree; hostile checks and
+five parameterized Lean 4.32.1 declarations pass. The source-to-integer bridge
+is explicit and not claimed as a full PAH Lean formalization. Same-task
+independent implementation is not external-person review; external review
+is invited. Reuse scope: an exact counterexample to this full-cylinder
+sup generator route, not every parameter or topology. Scoped exact negative
+result; publication target is a repository verification note, not a physical paper.
+
+**Authority and reproduction.** See
+`strategy/pa-hyp/PAH-v2-GD-001-result-v1.json`, EXP-001739 and
+`NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY`.
+Run `python -X utf8 verification/scripts/pah_v2_gd001_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+--elan-home C:/Users/NaEun/.elan` as one line. No R-570/R-571 retraction,
+C6 T1 change, T-054 gate closure, Gibbs-L2, infinite dynamics, physical
+Pre-A, spacetime, QFT, gravity, continuum or TOE conclusion follows.
+Next: one separately authorized observable-domain/topology question, if any;
+do not silently replace the refuted target. Reopen this result only for an
+exact source/domain/counterexample error.
 
 <a id="r-571"></a>
 ### R-571 -- PAH-v2 full comparison-definition admission
