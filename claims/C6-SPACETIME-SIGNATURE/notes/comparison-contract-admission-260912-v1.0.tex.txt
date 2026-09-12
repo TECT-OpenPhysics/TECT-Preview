@@ -1,0 +1,237 @@
+% Title: Full comparison-contract admission for the labelled PAH-v2 model
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-09-12; this version issued 2026-09-12
+% Status: verification record and finite-definition proof (no tier action)
+% Revision history: v1.0 (2026-09-12) first gate-level synthesis.
+
+\section*{1. Purpose and scope}
+The operator has adopted the complete Morton/CRT comparison bundle for research
+use. This note checks that exact contract, not a replacement model.
+The immutable accepted bundle has SHA-256
+\begin{verbatim}
+1d6fa47f5351d74f05bed3aba5b1e229a827644d4c6ef5d7dd73c117adee95b6
+\end{verbatim}
+Its dated approval and operative reference are
+\url{strategy/owner-decisions/PAH-v2-morton-crt-approval-20260912.json} and
+\url{strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json}.
+Earlier unapproved labels are historical issuance metadata, not rewritten.
+Approval activates definitions, not their mathematical correctness.
+
+All statements concern the full finite counting spaces of fixed PAH-001-v2-r2,
+with R-570 retained as a finite-source reference only. The functional, labelled
+rates, mobility exponent, state normalization, projection and external Markov
+time are unchanged. No generator comparison experiment, limiting generator
+domain or physical claim is made. The admitted algebra is comparison-defined:
+terminal occupation does not mean literal preservation of the same site's value.
+
+\section*{2. Setting and precise finite-definition statement}
+Fix integers $1\le q_0\le m_0$, $R_0>0$ and the parent's real parameters.
+For $\rho=(r,h,N)$, the graph has side $W=2^{h+N+1}$, vertices in
+$\{0,\ldots,W-1\}^2$, every horizontal and vertical nearest-neighbor edge,
+and every unit square face. Stored positive edge orientations determine signs.
+The anchors are $O=(0,0)$ and $C=(2^h,0)$; no fields are clamped.
+Degree is at most four. These are combinatorial, not physical, coordinates.
+
+Let $K_r$ be the product of the first $r+1$ primes and set
+\[
+ M_{s,r}=2^r,\quad M_{\psi,r}=m_0\,4^r,\quad
+ R_{\max,r}=R_0\,2^r,\quad Q_r=q_0\,2^r .
+\]
+All cutoffs are unbounded and $Q_r\le M_{\psi,r}$. Every integer tuple
+$(j,\ell,n,u)$ in the parent's ranges with total occupation $Q_r$ remains a
+state, including hidden labels at $\ell=0$ and $\epsilon=1$.
+Set $A_\rho=\mathbb C^{\Omega_\rho}$ and let $A_\rho^{\rm inv}$ be its full
+gauge/anchor-cell invariant subalgebra.
+
+\begin{theorem}
+On this exact family, the approved maps
+$p_{\sigma,\rho}:\Omega_\sigma\to\Omega_\rho$ are total, surjective and compose
+for every $\rho\le\sigma$ in product order. Their pullbacks are unital
+$*$-algebra embeddings preserving the full invariant subalgebras and inherited
+supremum norm, with the declared finite support bound.
+Directed-root assignments retain unpaired channels and are inverse-coherent
+where paired.
+\end{theorem}
+This is not $L_\sigma I=I L_\rho$, an infinite-dynamics domain theorem, or state
+convergence. The original local-cutoff, lattice, exhaustion, then inherited
+later-limit order is retained; finite composition does not interchange limits.
+
+\section*{3. Independent arbitrary-pair formula and proof}
+For $\rho=(r,h,N)\le\sigma=(s,k,M)$ put
+\[
+ D=2^{s-r},\quad H=2^{k-h},\quad b=H^2,\quad
+ P=K_s/K_r,\quad A=P^{-1}\pmod{K_r}.
+\]
+The primes in $P$ do not divide $K_r$, so the inverse exists.
+In Morton order the representative of coarse $z$ is $bz$ and its descendants
+are the contiguous block $bz,\ldots,b(z+1)-1$. A retained refined box is a
+prefix of the fine box. Put $v=|V_\rho|$, $t=v-1$, and use exclusive prefixes
+$S_a=\sum_{i<a}\ell_i$ of the fine tuple. Then
+\[
+ \ell'_z=\lfloor S_{b(z+1)}/D\rfloor-\lfloor S_{bz}/D\rfloor\ (z<t),
+ \qquad \ell'_t=Q_r-\lfloor S_{bt}/D\rfloor ,
+\]
+\[
+ j'_z=\lfloor j_{bz}/D\rfloor,\qquad n'_z=A n_{bz}\pmod{K_r},
+ \qquad u'_e=A\sum_{a\in\gamma_H(e)}u_a\pmod{K_r}.
+\]
+Here $\gamma_H(e)$ is the signed axial path of length $H$ between representatives.
+These are expressions for the approved compositions, not new definitions.
+
+\paragraph{Totality and surjectivity.}
+Prefix monotonicity gives nonnegative differences. Including the terminal
+complement they sum to $Q_r$, so each is at most $Q_r\le M_{\psi,r}$.
+Since $S_{bt}\le Q_s=DQ_r$, the terminal value is valid. All other ranges hold.
+For any coarse tuple put $D j_z,D\ell_z,Pn_z$ at $bz$, zero at other fine
+vertices, and $P u_e$ on the first edge of $\gamma_H(e)$, zero on its other
+edges. Distinct coarse paths share no fine edge. This is valid because
+$D M_{s,r}=M_{s,s}$, $D M_{\psi,r}\le M_{\psi,s}$, and $DQ_r=Q_s$.
+Substitution gives $pJ={\rm id}$ on every coarse tuple. This injection does
+not condition the actual fine ensemble or replace its Gibbs normalization.
+
+\paragraph{Composition for every comparable triple.}
+Every nonterminal output prefix is the corresponding fine prefix divided
+by $D$ and floored; the complete output prefix is $Q_r$.
+Grouping contiguous blocks telescopes differences. The identity
+$\lfloor\lfloor a/d\rfloor/e\rfloor=\lfloor a/(de)\rfloor$ handles successive
+cutoffs and cutoff/block squares. Terminal complements use the same total
+and the same nonterminal prefix on either route, handling cutoff/exhaustion
+and lattice/exhaustion squares. Representatives multiply their $H$ factors;
+paths concatenate; modular multipliers become the inverse of the product
+prime ratio modulo the final $K_r$. They commute with signed sums. Aperture
+floors commute with sampling. This proves the arbitrary-pair formula, identity
+and composition for all comparable triples, not just the executed sample cube.
+
+\paragraph{Boundary transport is not surjective on faces.}
+Each coarse face maps to four fine faces at an adjacent lattice step, with
+internal signed edges cancelling. The fine graph also contains an outer
+right/top fringe:
+\[
+ (2W-1)^2-4(W-1)^2=4W-3 .
+\]
+All these additional fine faces remain in the source functional and carrier.
+No requirement that the cellular transport be onto faces is imposed.
+Literal exhaustion keeps all old faces. The approved contract does not
+identify a fixed physical-volume target; it is not pure subdivision of an
+identical physical boundary.
+
+\section*{4. Symmetry, algebra, support and roots}
+Gauge transformation adds $g_v$ to $n_v$ and $g_w-g_v$ to $u_{(v,w)}$.
+The coarse label is $A g_{bz}$ modulo $K_r$. Gauge increments telescope along
+each path, giving $p(gx)=g'p(x)$ for every pair. This modular projection is an
+additive group map, not generally a unital ring map or small-angle rounding.
+
+The full anchored graph group on this family is trivial. Four degree-two
+corners are intrinsic. Distances from $O$ identify the opposite corner; the
+two adjacent corners have distinct distances $W-1-2^h$ and $W-1+2^h$ from $C$.
+The pair $(x+y,W-1-x+y)$ then uniquely determines every vertex.
+Thus the actual full cell group is used, not a conveniently chosen subgroup.
+No all-carrier symmetry theorem follows.
+
+For $If=f\circ p$, linearity, unit, products and conjugation follow by evaluation.
+Gauge equivariance preserves all invariant observables. Surjectivity gives
+\[
+ \sup_{x\in\Omega_\sigma}|f(p x)|
+ =\sup_{y\in\Omega_\rho}|f(y)|.
+\]
+The algebraic direct limit of the full invariant algebras has this
+representative-independent norm. Formulas equal on $\Omega_\rho$ cannot be
+distinguished by pullback. No Gibbs norm or reduced observable set is used.
+
+If $f$ is represented at $(r,h,N)$ and the target is $(s,k,M)$, all output
+coordinates depend only on vertices and internal edges of $G_{k,N}$.
+The terminal coordinate is total $Q_s$ minus a retained prefix. This whole
+refined source box is a computable support for all $M\ge N$.
+Use $N_{\rm support}(f)=N$ at fixed target $k$. This need not be minimal support,
+a uniform metric-radius bound, or a generator stabilization index.
+
+The lesser endpoint/root key chooses one orientation of each fine incidence
+and its inverse. Select the first original valid coarse label joining projected
+endpoints, or UNPAIRED. Reversal chooses the same key and reverses that coarse
+label. All fine labels, duplicate $K=2$ inverse labels and unmatched coarse
+labels remain. This is bookkeeping, not a gauge-equivariant root-Hilbert
+intertwiner or rate equality. The measure is still $\pi(x)$ per directed root,
+with $\sqrt{c/2}$ in $B$.
+
+\section*{5. Numerical verification and Lean scope}
+The admission preregistration is
+\url{strategy/pa-hyp/PAH-v2-morton-crt-admission-prereg.json}.
+Primary uses the adopted adjacent-map implementation. Independent code imports
+neither it nor the source root enumerator; coordinate dictionaries and every
+$D$-th charge token implement the direct formula. Shared inputs and same-task
+authorship are explicit: this is internal independence, not an external referee.
+
+The declared fixtures give 24 state cases, 144 axis-order comparisons,
+48 adjacent-word interleaving checks and 265 retained valid root incidences.
+Independent checks include 24 intermediate-index factorizations, gauge
+identities and right inverses, plus 16 exterior-support changes.
+These are bounded integer checks, not full fine-state exhaustion or an
+infinite-family proof from tables. The earlier smallest-coarse enumeration
+is replayed as development evidence only.
+
+Lean 4.32.1 and locked Mathlib check 17 parameterized declarations in
+\url{verification/lean/Tect/PahV2Comparison.lean}: nested floors, scaled right
+inverses, prefix monotonicity/telescopes, terminal complements, signed additive
+phase/path algebra, corner-distance injectivity, and generic pullback
+composition, products, conjugation, injectivity and full sup-bound equivalence.
+The concrete grid, state encoding, primorial construction, formula correspondence,
+root assignment and direct-limit construction are not a complete Lean
+formalization. They require the written argument above and independent checks.
+\begin{verbatim}
+python -X utf8 verification/scripts/pah_v2_comparison_primary.py --check
+python -X utf8 verification/scripts/pah_v2_comparison_independent.py --check
+python -X utf8 verification/scripts/pah_v2_comparison_hostile.py --check
+python -X utf8 verification/scripts/pah_v2_comparison_lean.py --check
+\end{verbatim}
+Lean replay accepts explicit \texttt{--lean-cache} and \texttt{--elan-home}.
+All runs are in
+\url{claims/C6-SPACETIME-SIGNATURE/runs/2026-09-12-pah-v2-comparison/}.
+
+\section*{6. Devil's-advocate review}
+\begin{enumerate}
+\item \textbf{Ordinary phase rounding commutes with sums. DISMISSED.}
+The mutation $K_f=6,K_c=2,u_1=u_2=2$ fails; the additive projection is required.
+\item \textbf{Pointwise floor or literal restriction preserves charge.
+DISMISSED.} Two unit occupations lose charge under separate halving;
+external charge disappears under literal restriction.
+\item \textbf{Terminal occupation is preserved literally. UPHELD as a
+prohibition.} All charge outside gives empty literal terminal site but
+comparison value $Q$. This accepted identification is explicitly different.
+\item \textbf{No new boundary cells are present. UPHELD as a prohibition.}
+The extra fringe is counted and retained. No physical-volume equality follows.
+\item \textbf{Unmatched roots can be dropped. DISMISSED.}
+All labels, unmatched incidences and coarse channels remain; rates are unchanged.
+\item \textbf{Finite support, sup isometry or Lean proves dynamics.
+UPHELD as a prohibition.} None implies generator intertwining, Gibbs
+projectivity or a limiting invariant core. The future defect keeps both
+labelled generator sums; sup, Gibbs-$L^2$ and state discrepancy are separate.
+\item \textbf{Approval is proof or the audit is external review.
+UPHELD as a prohibition.} Authority and verification have separate pins;
+internal independent implementation and kernel checks are accurately scoped.
+\end{enumerate}
+
+\section*{7. Result footer}
+\begin{verbatim}
+Record:                 EXP-001737; definition admission only
+Result ID:              R-571
+Precise statement:      Full finite comparison-definition admission
+Scope:                  Adopted anchored Morton/CRT grid family
+Dependencies:           Fixed PAH-001-v2-r2; R-570 reference only
+Evidence grade:         Analytic, exact checks, partial Lean
+Reproduction command:   python -X utf8
+                        verification/scripts/pah_v2_comparison_verify.py
+Expected output:        PAH-V2-COMPARISON ADMISSION: PASS
+Falsification gate:     Invalid image/composition/symmetry/support
+Tier before / after:    C6 T1 / T1
+No-overclaim statement: No generator, limit or physical result
+Next required action:   Specify one full-label generator-defect target
+Classification:         AUXILIARY_SUPPORT
+Exact target:           Owner-adopted full comparison contract
+Evidence:               Analytic + exact executable + parameterized Lean
+Source model:           PAH-001-v2-r2 and R-570 preserved
+Active T-054 gate:       Unchanged
+Claim tier before/after: C6 T1 / T1
+Future defects:         Preregistered, not evaluated
+Next question:          What precise generator-defect target is authorized?
+No-overclaim:            No dynamics, infinite/continuum or physical result
+\end{verbatim}

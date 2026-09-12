@@ -58,13 +58,13 @@ flowchart LR
 |---|---:|---|
 | Status cards | 49 | 48 active; 1 refuted |
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
-| Reusable result records | 395 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
+| Reusable result records | 396 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 388 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1736 | Route decisions: advanced 1265, failed 259, inconclusive 151, parked 61; non-tier-bearing |
-| Accepted chronological events | 1050 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1737 | Route decisions: advanced 1266, failed 259, inconclusive 151, parked 61; non-tier-bearing |
+| Accepted chronological events | 1051 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 97 | 19 live; 78 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 422 lineage notes / 403 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2319 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 423 lineage notes / 404 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 2323 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -76,7 +76,7 @@ These are visible migration or metadata debts, not silently dropped records.
 | Historical/superseded notes without sibling PDF | 19 | Paths remain in machine inventory; current-note PDF enforcement is unchanged |
 | Grandfathered notes with incomplete standard footer | 118 | Kept visible; notes first issued on/after 2026-07-24 fail the map gate if any mandatory footer label is absent |
 | Claim cards listing a gate whose registered status begins `CLOSED` | 0 | Exposed as reconciliation debt; the map does not silently flip claim cards |
-| Claim-unbound reusable results / negative records | 135 / 15 | Ambiguous family references stay unbound; no claim edge is invented |
+| Claim-unbound reusable results / negative records | 136 / 15 | Ambiguous family references stay unbound; no claim edge is invented |
 | Completed-task references to retired gate identifiers | 5 | Preserved as `historical_gate_reference` nodes anchored to `todo/todo.json`, never mislinked to the current gate registry |
 | Changelog tokens that are not current claim-card IDs | 469 | Preserved in event metadata but never promoted to claim edges; many are historical proof-unit IDs from the legacy extractor |
 | Changelog negative tags absent from the indexed registry | 4 | Preserved as historical event text, rendered without a false registry anchor, and excluded from negative graph edges |
@@ -26474,6 +26474,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** [R-570](../RESULTS-LEDGER.md#r-570)
 - **Located evidence:** [`strategy/pa-hyp/PAH-v2-morton-crt-bundle.json`](../strategy/pa-hyp/PAH-v2-morton-crt-bundle.json) (inspected_requirements); [`strategy/pa-hyp/PAH-v2-morton-crt-review.md`](../strategy/pa-hyp/PAH-v2-morton-crt-review.md) (4-geometry-and-all-three-commuting-squares); [`strategy/pa-hyp/PAH-v2-morton-crt-review.md`](../strategy/pa-hyp/PAH-v2-morton-crt-review.md) (5-full-source-symmetries-observable-algebra-and-support); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-morton-crt/independent.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-morton-crt/independent.json) (hostile_controls)
 
+<a id="exp-001737"></a>
+#### EXP-001737 — PAH-v2 owner-adopted complete comparison-definition admission
+
+- **Review metadata:** reviewed 2026-09-12; recorded 2026-09-12T02:31:48Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-090`.
+- **Question:** Does the exact owner-adopted complete comparison contract define total coherent full-state maps and the full invariant normed cylinder algebra, with explicit root bookkeeping and future defects, while preserving PAH-v2?
+- **Finite checks:** (1) Record explicit owner adoption without rewriting the frozen bundle or parent model. (2) Preregister arbitrary-pair proof and bounded fixtures before post-adoption verification. (3) Derive all-index totality, surjectivity, composition, full gauge/cell invariance, full sup-norm cylinder algebra and source-box support. (4) Replay primary, non-importing independent, hostile and partial Lean implementations; render-review one synthesis PDF.
+- **Finding:** For all admissible parameters and comparable finite indices of the adopted anchored square-cell family, the prescribed full-state projections are total surjections and compose; their pullbacks preserve the full invariant algebras and inherited sup norm with declared source-box support. Root bookkeeping retains all unmatched channels and is inverse-coherent where paired. This is a finite-definition theorem, not generator compatibility.
+- **Decision reason:** Owner authority and complete definition admission are now supplied; R-571 is an auxiliary reusable theorem. They do not change the active T-054 gate or imply generator agreement.
+- **Boundary:** Only the exact adopted anchored square-cell comparison family. Nonliteral terminal occupation, the extra h-refinement fringe and all unmatched roots remain. No generator or state defect computed.
+- **Next / revisit condition:** For this admitted contract, what exact full-label generator-defect statement, quantified observable class, refinement stage and norm should be preregistered as the next single authorized test?
+- **Related explorations:** continues [EXP-001736](#exp-001736)
+- **Formal authorities:** [R-571](../RESULTS-LEDGER.md#r-571), [R-570](../RESULTS-LEDGER.md#r-570), `event:20260912-r-571-pah-v2-owner-adopted-full-comparison-defi`
+- **Located evidence:** [`strategy/pa-hyp/PAH-v2-comparison-admission-v1.json`](../strategy/pa-hyp/PAH-v2-comparison-admission-v1.json) (requirements); [`claims/C6-SPACETIME-SIGNATURE/notes/comparison-contract-admission-260912-v1.0.tex.txt`](../claims/C6-SPACETIME-SIGNATURE/notes/comparison-contract-admission-260912-v1.0.tex.txt) (L78); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-12-pah-v2-comparison/independent.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-12-pah-v2-comparison/independent.json) (counts); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-12-pah-v2-comparison/hostile.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-12-pah-v2-comparison/hostile.json) (explicit_boundaries)
+
 
 ## Claim evidence matrix
 
@@ -26528,7 +26543,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (26 notes; 1578 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [AUDIT-2026-09-09-PAH-OMC-028-NONLINEAR-CLOSURE](../negative-results/registry.md#audit-2026-09-09-pah-omc-028-nonlinear-closure), [NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS](../negative-results/registry.md#ng-2026-09-08-pah-omc-022-source-level-semigroup-wellposedness), +132 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +790 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [R-570 PAH-v2 labelled finite operator consistency] - 2026-09-11 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (27 notes; 1582 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [AUDIT-2026-09-09-PAH-OMC-028-NONLINEAR-CLOSURE](../negative-results/registry.md#audit-2026-09-09-pah-omc-028-nonlinear-closure), [NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS](../negative-results/registry.md#ng-2026-09-08-pah-omc-022-source-level-semigroup-wellposedness), +132 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +791 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [R-571 PAH-v2 owner-adopted full comparison-definition admission] - 2026-09-12 | - |
 
 ### Sector D
 
@@ -26567,6 +26582,7 @@ entries are no-go lemmas, partial reductions, or conditional consolidations.
 
 | Result | Host claim(s) / same-event route history | Core verified content | Honest boundary |
 |---|---|---|---|
+| [R-571](../RESULTS-LEDGER.md#r-571) PAH-v2 full comparison-definition admission | - | On the owner-adopted Morton/CRT anchored grid family, all finite full-state projections are total, surjective and compositional; full invariant pullbacks preserve the sup norm with declared source-box support. All signed roots and unpaired channels remain. Written arbitrary-index proof, independent exact implementation, hostile controls and seventeen partial Lean declarations. Definition scope only: no generator compatibility, T-054 gate, limit or physical promotion. | See the detailed result record. |
 | [R-570](../RESULTS-LEDGER.md#r-570) PAH-v2 labelled finite operator consistency | - | For every defined admissible finite instance of frozen PAH-001-v2 revision 0.2.0-draft.2, exact inverse-validity, L1=0, Gibbs balance, orthogonal symmetry-projection commutation and B*B=-L hold on the full finite complex domains. General proof, exact fixture coefficients, non-importing matrix cross-check, twelve hostile controls and nine partial Lean declarations support this prospective model result. Auxiliary only; no v1 repair, T-054 gate closure, refinement, limit or physical promotion. | See the detailed result record. |
 | [R-569](../RESULTS-LEDGER.md#r-569) PAH-OMC-030 finite-strip to minimal Markov bridge | - | The frozen R-514 fixed-n temporal passage is compatible with the R-510/R-511/R-568 scopes, but the anchored-n correlation limit is not closed: no source-authorized common-space U_n, arbitrary-sequence liminf/recovery, n-uniform compact-time boundary/tail estimate, or minimal-closure identification is present. Primary, non-importing independent, hostile and integrated audits pass with `HOLD_FOR_EVIDENCE`; no finite-to-target or physical promotion. | Classification is auxiliary support; no active gate or claim tier changes. This result does not assert finite-to-target convergence, a new model/rate/state/time/limit order, or any physical Pre-A, Sector-A, spacetime, QFT, gravity, continuum, Yang--Mills, mass-gap or TOE conclusion. |
 | [R-568](../RESULTS-LEDGER.md#r-568) PAH-OMC-029 fixed-generator Markov uniqueness | - | Every symmetric strongly continuous Markov semigroup on the same R-510 H whose generator extends R-511 A on all D equals the R-512/R-567 minimal extension, conditional on those pinned inputs. Radial localization, a state-derived subpolynomial rate envelope and an all-extension domain bridge give a vanishing factorial boundary remainder. Independent commutator proof and six partial Lean theorems support the result. Auxiliary only; no original finite-semigroup convergence or physical promotion. | T-054 and C6 T1 are unchanged. PAH-OMC-020 source realization and original ordered temporal convergence remain unresolved. No new model, rate, state, time, counterterm or physical projection is introduced. No physical Pre-A, spacetime, QFT, gravity, continuum, mass-gap or TOE follows. After this one attempt, review only the next question: can an authorized finite-to-common-space realization supply a limit extending this same A on D? Do not repeat unchanged owner scans or infer existence from uniqueness. |
@@ -27371,6 +27387,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-12 | [R-571 PAH-v2 owner-adopted full comparison-definition admission] - 2026-09-12 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-11 | [R-570 PAH-v2 labelled finite operator consistency] - 2026-09-11 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-09 | [R-569 PAH-OMC-030 finite-strip to minimal Markov bridge] - 2026-09-09 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-09 | [[R-568 PAH-OMC-029 fixed-generator Markov uniqueness] - 2026-09-09] - 2026-09-09 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -27390,7 +27407,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-08 | [R-554 PAH-OMC-020 owner snapshot v1.4] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-08 | [R-553 PAH-OMC-020 positive-time separation] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-08 | [R-552 PAH-OMC-020 finite semigroup well-posedness] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-08 | [R-551 PAH-OMC-020 second-order defect] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-09-08-PAH-OMC-020-FINITE-SECOND-ORDER-SEMIGROUP-DEFECT](../negative-results/registry.md#ng-2026-09-08-pah-omc-020-finite-second-order-semigroup-defect) |
 
 ## Coverage and maintenance contract
 

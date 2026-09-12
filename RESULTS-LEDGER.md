@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-571](#r-571) | PAH-v2 full comparison-definition admission | On the owner-adopted Morton/CRT anchored grid family, all finite full-state projections are total, surjective and compositional; full invariant pullbacks preserve the sup norm with declared source-box support. All signed roots and unpaired channels remain. Written arbitrary-index proof, independent exact implementation, hostile controls and seventeen partial Lean declarations. Definition scope only: no generator compatibility, T-054 gate, limit or physical promotion. |
 | [R-570](#r-570) | PAH-v2 labelled finite operator consistency | For every defined admissible finite instance of frozen PAH-001-v2 revision 0.2.0-draft.2, exact inverse-validity, L1=0, Gibbs balance, orthogonal symmetry-projection commutation and B*B=-L hold on the full finite complex domains. General proof, exact fixture coefficients, non-importing matrix cross-check, twelve hostile controls and nine partial Lean declarations support this prospective model result. Auxiliary only; no v1 repair, T-054 gate closure, refinement, limit or physical promotion. |
 | [R-569](#r-569) | PAH-OMC-030 finite-strip to minimal Markov bridge | The frozen R-514 fixed-n temporal passage is compatible with the R-510/R-511/R-568 scopes, but the anchored-n correlation limit is not closed: no source-authorized common-space U_n, arbitrary-sequence liminf/recovery, n-uniform compact-time boundary/tail estimate, or minimal-closure identification is present. Primary, non-importing independent, hostile and integrated audits pass with `HOLD_FOR_EVIDENCE`; no finite-to-target or physical promotion. |
 | [R-568](#r-568) | PAH-OMC-029 fixed-generator Markov uniqueness | Every symmetric strongly continuous Markov semigroup on the same R-510 H whose generator extends R-511 A on all D equals the R-512/R-567 minimal extension, conditional on those pinned inputs. Radial localization, a state-derived subpolynomial rate envelope and an all-extension domain bridge give a vanishing factorial boundary remainder. Independent commutator proof and six partial Lean theorems support the result. Auxiliary only; no original finite-semigroup convergence or physical promotion. |
@@ -19361,6 +19362,60 @@ The exploration ledger entry is EXP-001655 and the changelog event is
 `20260908-r-535-pah-omc-020-k-d-term-level-coverage-ledge`.  Reopen only
 when a versioned source-authorized packet or an exact PAH-specific
 contradiction changes one required field.
+
+<a id="r-571"></a>
+### R-571 -- PAH-v2 full comparison-definition admission
+
+**Authority and statement.** The operator adopted the complete comparison
+bundle with SHA-256
+`1d6fa47f5351d74f05bed3aba5b1e229a827644d4c6ef5d7dd73c117adee95b6`.
+The dated approval preserves the historical draft bytes. For every admissible
+finite parameter choice and comparable index triple on this exact anchored
+square-cell family, the declared full-state projections are total surjections
+and compose. Their pullbacks embed the full invariant function algebras
+isometrically in the inherited sup norm. A representative at (r,h,N) has
+support within G_(k,N) for all target exhaustions M>=N, at fixed target k.
+All original signed root labels and unpaired channels remain; the endpoint-key
+assignment is inverse-coherent where paired. Verdict: PASS_DEFINITION_ADMISSION.
+
+**Proof boundary.** The arbitrary-pair formula uses nested prefix floors,
+Morton blocks, total-Q terminal complements, concatenated paths and additive
+coprime modular projections. Explicit full-tuple right inverses establish
+surjectivity without conditioning the Gibbs state. Gauge increments telescope;
+corner/anchor distances prove rigidity of the actual full anchored grid group.
+The cylinder algebra is comparison-defined, not literal terminal occupation
+inclusion or a limiting-generator core. An adjacent lattice refinement has
+4W-3 additional fringe faces; every such face remains in the fine functional.
+Root bookkeeping is not a gauge-equivariant root-Hilbert intertwiner.
+
+**Evidence.** The single synthesis note gives the all-index finite-definition
+proof. Primary replay checks 24 full-state cases, 144 axis-order comparisons,
+48 interleavings and 265 original root incidences. A non-importing coordinate,
+charge-token and root implementation reproduces the outputs and checks
+factorization, gauge transport, right inverses and 16 exterior-support changes.
+Hostile controls enforce the stated costs. Seventeen parameterized Lean 4.32.1
+declarations compile with pinned dependencies; the concrete model, graph,
+primorials, root assignment and direct-limit construction are not fully
+formalized. Independent implementation is same-task authorship, not an
+external-person review.
+
+**Authorities and reproduction.** See
+`strategy/pa-hyp/PAH-v2-comparison-admission-v1.json`, EXP-001737, and
+`claims/C6-SPACETIME-SIGNATURE/notes/comparison-contract-admission-260912-v1.0.tex.txt`.
+Run `python -X utf8 verification/scripts/pah_v2_comparison_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+--elan-home C:/Users/NaEun/.elan`; explicit cache paths are optional when local
+pinned dependencies exist.
+
+**Non-claims and next gate.** Auxiliary support only. PAH-001-v1/v2-r2/R-570,
+the T-054 active gate, C6 T1, rates, full counting normalization, external
+Markov time and the r then h then N order are unchanged. No generator defect
+was evaluated. No Gibbs projectivity, eventual intertwining, uniform estimate,
+infinite dynamics, continuum, physical Pre-A, Sector-A, spacetime, QFT,
+gravity, Yang-Mills, mass gap or TOE result follows. The next single question
+is a separately preregistered full-label generator-defect target under this
+admitted contract. Reopen definition admission only for an exact counterexample
+or a pinned source/domain mismatch, not additional sizes of the same checks.
 
 <a id="r-570"></a>
 ### R-570 -- PAH-v2 labelled finite operator consistency
