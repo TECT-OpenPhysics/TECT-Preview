@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-25-a13-rational-pf-five-degree-and-fixed-schur",
+      "branch": "A13 rational Pauli--Fierz endpoint shortcut by deleting the shifted-Hessian pair, asserting positivity, or comparing the defect with a fixed multiple of the rational square",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "consequence": "The five unshifted families are form-absorbable, but their deletion leaves a real signed term. Positivity and any fixed-multiple rational-square Schur shortcut are invalid. The exact remaining target is the coupled form bound for `H_R+(1/2)c^T Bbar(U+a)c`. This is a method no-go, not a form-bound counterexample: along the fixed-Schur path the Cameron--Martin control cost grows quadratically in `C`. It does not falsify complete rational NEAR, controlled-shell one-use, or Nelson synthesis.",
+        "evidence": "On the production real-doublet ray, `B_R(x)=4c1[x-alpha_R x^3/(x^2+e)]^2` satisfies `B_R'''(sqrt(e))=6 alpha_R^2 c1/sqrt(e)=14062.499999996484375...` at `e=10^(-12)`. Hence `K_t=D^2 Bbar(U+ta)-D^2 Bbar(U)` is genuinely nonzero, and the exact rational endpoint contains the signed shifted-Hessian packet `H_R=int_0^1(1-t){(1/2)K_t[a,a]:Q+G^T K_t[a,a]c}dt`. Independently, take `z_0=e_1+e_3`, `z_1=C e_1`, `y=e_3`, `c=0`, and `Sigma=0`. All three linear Pauli--Fierz rows vanish. With `q_22=3/(320P)` and `d_0=2+e`, the rational baseline and first variation obey `F_0=2q_22/d_0^2>0`, `D_R(C)/F_0=-[4C(e+1)-5e-2]/(e+2) -> -infinity`. At `C=2`, `D_R=-3F_0`. Primary symbolic differentiation and an independent high-precision matrix audit reproduce the nonzero shifted Hessian and the unbounded negative ratio.",
+        "failure_mode": "Close the nonlinear rational Pauli--Fierz NEAR row by retaining only the five unshifted degree families, asserting positivity after the three linear rows are recombined, or bounding the remaining first variation below by a cutoff-independent fixed multiple of the baseline rational square."
+      },
+      "detail_title": "the rational shifted-Hessian pair cannot be deleted or paid by a fixed square",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "the production rational Gram has nonzero third derivative, while an exact rational-only path makes the first variation divided by the baseline square tend to negative infinity; the coupled shifted-Hessian pair and retained positive square must remain together",
+      "tag": "NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR"
+    },
+    {
       "anchor": "ng-2026-07-25-a13-rational-eta-mean-spectral-closure",
       "branch": "A13 same-root rational packet closed by eta, centering, covariance matching, or Jensen without the complete heat/forest companion",
       "claim_ref_basis": {

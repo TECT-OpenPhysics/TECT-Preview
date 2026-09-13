@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1052 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1053 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-13 | `20260913-r-573-pah-v2-gd-002-original-fine-gibbs-generat` — [R-573 PAH-v2 GD-002 original fine-Gibbs generator counterexample] - 2026-09-13 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260913-r-573-pah-v2-gd-002-original-fine-gibbs-generat) |
 | 2026-09-12 | `20260912-r-572-pah-v2-gd-001-exact-full-cylinder-sup-cou` — [R-572 PAH-v2 GD-001 exact full-cylinder sup counterexample] - 2026-09-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260912-r-572-pah-v2-gd-001-exact-full-cylinder-sup-cou) |
 | 2026-09-12 | `20260912-r-571-pah-v2-owner-adopted-full-comparison-defi` — [R-571 PAH-v2 owner-adopted full comparison-definition admission] - 2026-09-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260912-r-571-pah-v2-owner-adopted-full-comparison-defi) |
 | 2026-09-11 | `20260911-r-570-pah-v2-labelled-finite-operator-consisten` — [R-570 PAH-v2 labelled finite operator consistency] - 2026-09-11 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260911-r-570-pah-v2-labelled-finite-operator-consisten) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-08 | `20260908-r-551-pah-omc-020-second-order-defect-2026-09-0` — [R-551 PAH-OMC-020 second-order defect] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260908-r-551-pah-omc-020-second-order-defect-2026-09-0) |
 | 2026-09-08 | `20260908-r-550-pah-omc-020-finite-semigroup-lift-2026-09` — [R-550 PAH-OMC-020 finite semigroup lift] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260908-r-550-pah-omc-020-finite-semigroup-lift-2026-09) |
 | 2026-09-08 | `20260908-r-549-pah-omc-020-generator-factorization-bridg` — [R-549 PAH-OMC-020 generator factorization bridge] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260908-r-549-pah-omc-020-generator-factorization-bridg) |
-| 2026-09-08 | `20260908-r-548-pah-omc-020-restricted-radial-semigroup-c` — [R-548 PAH-OMC-020 restricted radial semigroup consistency] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001019-001068.md#20260908-r-548-pah-omc-020-restricted-radial-semigroup-c) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1019–1052 | 34 | [001019-001068.md](pages/001019-001068.md) |
+| 1019–1053 | 35 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
 | 869–918 | 50 | [000869-000918.md](pages/000869-000918.md) |

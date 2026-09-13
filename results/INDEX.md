@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**397 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**398 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-573`](../RESULTS-LEDGER.md#r-573) | PAH-v2 original fine-Gibbs generator counterexample | See authority |
 | [`R-572`](../RESULTS-LEDGER.md#r-572) | PAH-v2 full-cylinder sup generator counterexample | See authority |
 | [`R-571`](../RESULTS-LEDGER.md#r-571) | PAH-v2 full comparison-definition admission | See authority |
 | [`R-570`](../RESULTS-LEDGER.md#r-570) | PAH-v2 labelled finite operator consistency | See authority |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-551`](../RESULTS-LEDGER.md#r-551) | PAH-OMC-020 exact finite second-order semigroup defect | See authority |
 | [`R-550`](../RESULTS-LEDGER.md#r-550) | PAH-OMC-020 finite semigroup lift audit | See authority |
 | [`R-549`](../RESULTS-LEDGER.md#r-549) | PAH-OMC-020 generator factorization bridge | See authority |
-| [`R-548`](../RESULTS-LEDGER.md#r-548) | PAH-OMC-020 restricted radial semigroup consistency | See authority |
 
 Search without loading the full ledger:
 

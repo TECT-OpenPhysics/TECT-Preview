@@ -101,6 +101,31 @@ TOE target with no established result.
 
 ## Next required action
 
+### 2026-09-13: separate original fine-Gibbs negative result (R-573)
+
+The separately authorized GD-002 full-cylinder fine-Gibbs L2 generator
+target is DISPROVED. At fixed epsilon=1, h=N=0 and r0=2, the one original
+gauge/anchor-invariant character f0=exp(2*pi*i*Phi/5) has defect norm at
+least seven at adjacent cutoff pairs beyond every threshold. The bound holds
+at every fine counting state, not merely a rare Gibbs event. Original F,
+rates, time, projection, full algebra and comparison maps are unchanged.
+Its variance and original Dirichlet energy are bounded below separately;
+state projectivity and semigroup comparison are NOT_EVALUATED. R-572 is
+retained as its distinct earlier sup-negative result.
+
+The [result card](../../strategy/pa-hyp/PAH-v2-GD-002-result-v1.1.json) pins
+the exact all-state rate estimate, constructive CRT prime-tail proof,
+primary/independent/hostile runs, five partial Lean declarations and the
+single synthesis note. The seven-objection review is in that note; independent
+implementation is not an external-person audit. Reproduce with
+`python -X utf8 verification/scripts/pah_v2_gd002_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+--elan-home C:/Users/NaEun/.elan` as one line. C6 stays T1 OPEN and T-054's
+gate is unchanged. No physical Pre-A, spacetime, QFT, gravity or continuum
+claim follows. External review is invited. The next separate question is
+whether the same fixed character also obstructs original-time semigroup
+comparison; that question is not answered by the generator result alone.
+
 ### 2026-09-12: separate GD-001 negative result (R-572)
 
 The universal full-invariant-cylinder sup generator Cauchy target is

@@ -1,0 +1,268 @@
+% Title: A fixed-character obstruction to PAH-v2 fine-Gibbs generator convergence
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-09-13; this version issued 2026-09-13
+% Status: Scoped negative result R-573; no host tier or physical promotion
+% Revision history: v1.0 (2026-09-13) single gate-level synthesis.
+
+\section*{1. Purpose and scope: exact question and frozen source}
+PAH-V2-GD-002 asks, for every fixed admissible parameter tuple, fixed $h,N$,
+base $r_0$ and full invariant finite observable $f_0$, whether
+\[
+ \lim_{R\to\infty}\sup_{s>r\ge R}
+ \|L_s I_{r,s}f_r-I_{r,s}L_r f_r\|_{L^2(\pi_s)}=0,
+ \qquad f_r=I_{r_0,r}f_0.                                      \tag{1}
+\]
+The weight is the original full counting Gibbs state
+$\pi_s(x)=e^{-\beta F_s(x)}/\sum_y e^{-\beta F_s(y)}$.
+Neither a selected observable subalgebra nor a different state is used.
+The inherited sup-norm algebra remains unchanged; (1) is a separately
+authorized diagnostic, not a declared limiting-generator domain.
+The preregistration was written and hash-checked before execution:
+\begin{verbatim}
+strategy/pa-hyp/PAH-v2-GD-002-prereg-v1.json
+810ac2d0f787bfdc41a4254c148e327d682cc4eaa0fb4112feaf87064757ce9a
+\end{verbatim}
+The approved comparison bundle is still
+\begin{verbatim}
+1d6fa47f5351d74f05bed3aba5b1e229a827644d4c6ef5d7dd73c117adee95b6
+\end{verbatim}
+The source locators are PAH-001-v1, \texttt{functional\_or\_action} and
+\texttt{dynamics}; PAH-001-v2-r2, \texttt{root\_partial\_maps} and
+\texttt{operators\_and\_pairings}; and the adopted Morton/CRT draft,
+\texttt{regulators}, \texttt{state\_maps}, \texttt{observable\_maps}.
+All exact hashes are in the result certificate. R-570 and R-571 supply only
+their finite operator and comparison definitions. R-572 remains a distinct
+sup-negative result; its Gibbs-$L^2$ field was not evaluated.
+
+Fix the existing $h=N=0$ open square, with four vertices, four stored edges,
+one bounded face, and label-only anchors $O=(0,0)$, $C=(1,0)$.
+Fix $r_0=2$, $q_0=m_0=R_0=1$, and
+\[
+ \epsilon=\beta=\nu=\lambda_s=\eta_6=\kappa_s=\kappa_D=\kappa_g=g=1,
+ \qquad m^2=\lambda_4=0.                                     \tag{2}
+\]
+Every rate scale is unity as an inserted fixed input, not a fitted output.
+The approved schedule is $K_r=\prod_{i=1}^{r+1}p_i$, $M_{s,r}=2^r$,
+$M_{\psi,r}=4^r$, $R_{\max,r}=2^r$, $Q_r=2^r$.
+All integer coordinates, including hidden aperture and zero-amplitude phase
+labels, remain distinct. The time is unchanged external stochastic Markov
+time, with the original stationary initial-value boundary. Only cutoff $r$
+is varied; later lattice $h$, exhaustion $N$, and inherited limits are not taken.
+
+\section*{2. One fixed admitted character}
+Let $\Phi(x)=\sum_{e\in\partial p}\sigma_e u_e$ be the signed integer
+link sum around the sole face, and put
+\[
+ f_0(x)=\exp(2\pi i\Phi(x)/5),\quad
+ a_r=(K_r/K_2)^{-1}\pmod 5,\quad
+ f_r(x)=\exp(2\pi i a_r\Phi(x)/5).                            \tag{3}
+\]
+Since $K_2=30$ and $5\mid K_r$, these are well-defined functions of the
+original modular link coordinates. The signed sum of each gauge coboundary
+vanishes around the closed face; wrap corrections are multiples of $K_r$,
+also invisible modulo five. Thus the functions are gauge invariant.
+The full anchor-preserving cell group of this anchored square is trivial:
+fixing the adjacent labelled vertices fixes their two other neighbours.
+No symmetry subgroup or physical projection is substituted.
+
+The admitted cutoff projection multiplies links by $P^{-1}$ modulo $K_r$,
+where $P=p_{r+2}$. Its reduction modulo five gives exactly
+$a_{r+1}=a_rP^{-1}\pmod5$ and (3). Composition gives every nonadjacent
+pullback. Thus $f_0$, not a cutoff-dependent selection, is fixed once and for
+all, and $|f_r|=1$ on every full counting state.
+
+PH, TR and AP do not change any link coordinate, so their observable
+increments in (3) vanish individually. Their rates are not set to zero and
+their incidences are not removed. Each of the eight signed LK incidences is
+valid, including modular wrap. A unit-rate algebraic leading part therefore is
+\[
+ \lambda(a) =4\{2\cos(2\pi a/5)-2\},\qquad
+ L_r f_r=\lambda(a_r)f_r+e_r.                                \tag{4}
+\]
+Equation (4) is a decomposition of the original generator, not a replacement
+by a unit-rate model. The remainder $e_r$ is bounded next using the actual rates.
+
+\section*{3. Uniform original-rate remainder on all states}
+Write $A_v=2^{-r}\ell_v$. Then $A_v\ge0$ and $\sum_v A_v=1$ on every
+source state. At (2), every aperture is one, every $J_e,J_p$ is one, and all
+mobilities are one. Under one LK incidence the only changing functional terms
+are its matter edge and the one plaquette containing it. With
+$\delta=2\pi/K_r$ and $|e^{i\delta}-1|\le|\delta|$, the matter change has
+absolute value at most $A_vA_w\delta\le\delta$, and the plaquette change
+has absolute value at most $\delta$. Onsite and all other terms are unchanged.
+Hence, uniformly in every occupation, phase, aperture and link label,
+\[
+ |F_r(bx)-F_r(x)|\le4\pi/K_r\le16/K_r.                       \tag{5}
+\]
+The original rate is $c_b=e^{-\Delta F_b/2}$. For $K_r\ge8$, set
+$u=8/K_r\le1$. Convexity gives
+$e^u-1\le(e-1)u\le2u$ on $[0,1]$; thus
+\[
+ |c_b-1|\le16/K_r,\qquad
+ |e_r(x)|\le 8\cdot2\cdot16/K_r=256/K_r.                    \tag{6}
+\]
+The factor eight counts both signs on all four source edges; the factor two
+bounds a unit character difference. There is no generator half factor.
+The half in $B$ belongs only to the Dirichlet form convention.
+For $s=r+1$, exact comparison of (4) gives
+\[
+ \Delta_{r,s}f_r=(\lambda(a_s)-\lambda(a_r))f_s
+                  +e_s-e_r\circ p_{s,r},\qquad
+ |e_s-e_r\circ p_{s,r}|\le512/K_r.                           \tag{7}
+\]
+No Gibbs projectivity or norm comparison between different states was used.
+
+\section*{4. Arbitrarily late CRT flips and the Gibbs lower bound}
+The nonzero residues modulo five split into $\{1,4\}$ and $\{2,3\}$.
+Multiplication by the inverse of a residue in $\{2,3\}$ swaps these two sets.
+The elementary fifth-root cosine values give
+\[
+ \lambda(a)\in\{-10+2\sqrt5,-10-2\sqrt5\}.
+\]
+Whenever $p_{r+2}\equiv2$ or $3\pmod5$,
+\[
+ |\lambda(a_{r+1})-\lambda(a_r)|=4\sqrt5>8.                  \tag{8}
+\]
+An elementary Euclid construction supplies such primes beyond every bound;
+no asymptotic prime-distribution theorem is imported. Given any prime bound
+$B\ge11$, put $P_B=\prod_{p\le B,\,p\ne5}p$ and choose
+$t\in\{1,2,3,4\}$ with $tP_B\equiv1\pmod5$. The integer
+$n_*=1+tP_B$ is $2$ modulo five and $1$ modulo every prime at most $B$
+other than five. All its prime factors exceed $B$. If each factor were
+$1$ or $4$ modulo five, so would their product be, a contradiction.
+Consequently some prime factor is $2$ or $3$ modulo five.
+
+For any tail threshold $R$, choose $B=p_{\max(R,4)+1}$ and such a prime
+$q=p_k>B$. Put $r=k-2$ and $s=r+1$. Then $r\ge\max(R,4)$ and the flip
+condition holds. Moreover $K_r\ge K_4=2310>512$. Equations (7)--(8) imply,
+for \emph{every} original fine state $x$,
+\[
+ |\Delta_{r,r+1}f_r(x)|\ge8-512/K_r\ge7.                    \tag{9}
+\]
+The actual Gibbs weights are positive and sum to one, so
+\[
+ \sum_x\pi_{r+1}(x)|\Delta_{r,r+1}f_r(x)|^2\ge49.           \tag{10}
+\]
+This proves the exact fixed-data negation of (1), with $\eta_0=7$ and
+arbitrarily late adjacent pairs. Adjacent pairs are used as witnesses to a
+universal all-pair claim, not as sufficient evidence of Cauchy convergence.
+In particular this obstruction does not live only on a Gibbs-negligible set.
+All constants in (5)--(10) are derived conservative bounds, not fitted values.
+
+\section*{5. State consistency and nontriviality, separately}
+State projectivity, a common limiting pairing and semigroup convergence are
+not proved or disproved by (10); the argument does not require them.
+For nontriviality only, let $\gamma_r$ denote normalized uniform counting on
+the same original finite set. This auxiliary measure is used in a domination
+inequality, never substituted for $\pi_r$ in (1) or (10).
+The displayed functional at (2) is nonnegative and satisfies
+\[
+ 0\le F_r\le\frac16+\frac12+\frac42+2=\frac{14}{3}.         \tag{11}
+\]
+Indeed $\sum A_v^6\le1$, $\sum A_v^2\le1$, each matter edge contributes
+at most $(A_v+A_w)^2/2\le1/2$, and the plaquette contributes at most two.
+Thus $\pi_r(x)\ge e^{-14/3}\gamma_r(x)$ uniformly. Independent uniform
+link counting makes $\Phi\bmod5$ uniform, so
+$\mathbb E_{\gamma_r}f_r=0$ and
+\[
+ \operatorname{Var}_{\pi_r}(f_r)
+ =\inf_{z\in\mathbb C}\mathbb E_{\pi_r}|f_r-z|^2
+ \ge e^{-14/3}>0.                                           \tag{12}
+\]
+For $K_r\ge8$, (5) also gives $c_b\ge e^{-1}$ on every LK incidence.
+With the original root half convention,
+\[
+ \mathcal E_r(f_r,f_r)
+ =\frac12\sum_{x,b}\pi_r(x)c_b(x)|f_r(bx)-f_r(x)|^2
+ \ge4e^{-1}>0,                                               \tag{13}
+\]
+since $2(1-\cos(2\pi a_r/5))>1$ and there are eight LK incidences.
+The fixed character therefore does not collapse to a constant or a null-energy
+observable along this sequence. This is not a construction of a limiting
+physical state or nontrivial limiting semigroup.
+
+\section*{6. Independent formulation and Devil's-advocate review}
+The independent implementation reconstructs the square, full anchored
+automorphism group, integer tuples and all signed partial maps without importing
+the primary evaluator or source backends. It evaluates the original finite
+functional and rates with directed Arb bounds, including nonzero links,
+nonzero phases, split occupation and aperture endpoints. An alternative
+analytic derivation diagonalizes the two translation operators on the
+five-residue character: each edge contributes $z^a+z^{-a}-2$. The all-state
+triangle bound (6) then proves (7) without numerical rate fitting.
+The primary implementation uses the original source enumerator and exact
+cyclotomic polynomial reduction; neither finite fixture proves an infinite tail.
+
+\begin{enumerate}
+\item \textbf{Gauge or anchor failure? DISMISSED.} Closed-face telescoping,
+modular wrap divisibility and the full trivial anchored cell group establish
+admission of the fixed observable. It is not an open-link character.
+\item \textbf{Dropped roots or replaced rates? DISMISSED.} PH/TR/AP have
+individual zero increments. Both LK signs remain. Equations (5)--(7) bound
+the original exponential rates; unit rates are a leading decomposition only.
+\item \textbf{Small Gibbs mass? DISMISSED.} Equation (9) holds at every fine
+state. Equation (10) uses only the original normalized Gibbs weights.
+\item \textbf{Finite or moving-observable counterexample? DISMISSED.}
+Equation (3) is a single fixed-base pullback; the Euclid construction gives
+pairs beyond each threshold, not a finite table or a new observable per pair.
+\item \textbf{Time/factor mismatch? DISMISSED.} No time rescaling, volume
+normalization or generator half factor is used. The Dirichlet half is retained.
+\item \textbf{State or dynamics overclaim? UPHELD as a boundary.} Projectivity,
+a limiting generator domain, semigroup convergence and all alternative
+topologies remain unsettled. R-570/R-571 and physical claims are not refuted.
+\item \textbf{External/Lean overstatement? UPHELD as a boundary.} The two
+implementations and hostile review have same-task authorship. Five Lean
+declarations check parameterized residue/gap/perturbation/weight/arithmetic
+bridges; the concrete PAH analytic and prime-existence bridges are not fully
+encoded. External independent review is invited.
+\end{enumerate}
+
+The literature-first bounded search considered Kuwae--Shioya,
+\emph{Communications in Analysis and Geometry} 11 (2003), 599--673,
+doi:10.4310/cag.2003.v11.n4.a1, as background on varying Hilbert spaces.
+Applicability to a PAH limiting realization is NOT-YET-ASSESSED and no theorem
+is imported. The present proof instead derives the finite source formulas,
+uniform remainder and elementary residue/prime argument directly.
+There is no novelty claim and no Q3LOCK/TECT-YM evidence import.
+
+\section*{7. Result footer and reproducibility}
+\par\noindent
+Result ID: R-573; exploration EXP-001741.
+\par\noindent
+Precise statement: The fixed character (3) has fine-Gibbs defect norm at least
+seven at adjacent pairs beyond every cutoff threshold; GD-002 is DISPROVED.
+\par\noindent
+Scope: Exact PAH-v2 and approved square/CRT comparison at (2); full counting
+states; original Markov time; cutoff-first stage only.
+\par\noindent
+Dependencies: Hash-pinned PAH-v1/v2-r2 and admitted comparison R-571;
+finite operator conventions R-570; no imported limit theorem.
+\par\noindent
+Evidence grade: ANALYTIC, EXACT, EXECUTED; partial parameterized Lean.
+\par\noindent
+Reproduction command: One line assembled from the displayed command below.
+\par\noindent
+Expected output: Primary, independent, hostile and partial Lean replay PASS;
+the mathematical target is DISPROVED, not passed by those checks.
+\par\noindent
+Falsification gate: An invalid fixed character, omitted root, failed uniform
+rate bound, invalid CRT coefficient or prime-tail construction refutes this
+negative proof and requires an append-only correction.
+\par\noindent
+Tier before / after: C6 remains T1; T-054's active gate is unchanged.
+\par\noindent
+No-overclaim statement: No universal all-domain dynamics no-go, new physical
+projection, common Hilbert state, semigroup, lattice/volume or continuum result;
+no physical Pre-A, Sector-A, spacetime, QFT, gravity, Yang--Mills, mass gap or TOE.
+\par\noindent
+Next required action: Does the same fixed character obstruct original-time
+semigroup comparison, or only generator-value comparison? This is a distinct
+future question requiring a separate target; it is not evaluated here.
+\begin{verbatim}
+python -X utf8 verification/scripts/pah_v2_gd002_verify.py
+  --lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+  --elan-home C:/Users/NaEun/.elan
+\end{verbatim}
+Reenter GD-002 only on an exact source/definition/inequality/tail error,
+not by repeating larger finite tables. One synthesis note is issued for this
+checkpoint; no intermediate-lemma PDF is required.

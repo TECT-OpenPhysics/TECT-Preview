@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-573](#r-573) | PAH-v2 original fine-Gibbs generator counterexample | One fixed invariant plaquette character has all-state defect at least seven at adjacent pairs beyond every cutoff threshold, hence original fine-Gibbs L2 norm at least seven. Exact original-rate remainder and constructive CRT prime tail; independent, hostile and partial Lean checks. GD-002 DISPROVED only; no common-state, semigroup, T-054 gate or physical conclusion. |
 | [R-572](#r-572) | PAH-v2 full-cylinder sup generator counterexample | At the admitted epsilon=1 boundary, one fixed f0=1_{j_O=0} has exact defect 1_{2^s-2^(s-r)<=j_O<2^s-1} and full-state sup norm one for every s>r>=0. Analytic all-index proof, independent full-root row action, hostile audit and five partial Lean declarations. DISPROVED for GD-001 only; no Gibbs-L2, T-054 gate or physical conclusion. |
 | [R-571](#r-571) | PAH-v2 full comparison-definition admission | On the owner-adopted Morton/CRT anchored grid family, all finite full-state projections are total, surjective and compositional; full invariant pullbacks preserve the sup norm with declared source-box support. All signed roots and unpaired channels remain. Written arbitrary-index proof, independent exact implementation, hostile controls and seventeen partial Lean declarations. Definition scope only: no generator compatibility, T-054 gate, limit or physical promotion. |
 | [R-570](#r-570) | PAH-v2 labelled finite operator consistency | For every defined admissible finite instance of frozen PAH-001-v2 revision 0.2.0-draft.2, exact inverse-validity, L1=0, Gibbs balance, orthogonal symmetry-projection commutation and B*B=-L hold on the full finite complex domains. General proof, exact fixture coefficients, non-importing matrix cross-check, twelve hostile controls and nine partial Lean declarations support this prospective model result. Auxiliary only; no v1 repair, T-054 gate closure, refinement, limit or physical promotion. |
@@ -19365,6 +19366,41 @@ when a versioned source-authorized packet or an exact PAH-specific
 contradiction changes one required field.
 
 <a id="r-572"></a>
+### R-573 -- PAH-v2 original fine-Gibbs generator counterexample
+
+At the unchanged fixed epsilon=1, h=N=0 PAH-v2 tuple and the approved CRT
+comparison, the single invariant f0=exp(2*pi*i*Phi/5), r0=2, has
+`||Delta_(r,r+1)f_r||_(L2(pi_(r+1))) >= 7` beyond every tail threshold.
+The exact all-state original-rate estimate is
+`|L_r f_r-lambda(a_r)f_r| <= 256/K_r`, where a_r is the approved inverse
+prime-product coefficient modulo five. An elementary Euclid argument supplies
+arbitrarily late primes 2 or 3 modulo five; these swap the two character
+eigenvalue classes by 4*sqrt(5). The resulting pointwise bound holds on ALL
+fine counting states, so no rare-state or state-projectivity assumption is
+needed. Parameters and Markov time are fixed; no root, rate or state is changed.
+
+The nontriviality audit separately gives variance >=exp(-14/3) and original
+Dirichlet energy >=4/exp(1) for this character. State consistency, semigroup
+comparison, alternative generator domains and ordered h/N dynamics remain
+unsettled. This is an exact scoped negative, not a universal dynamics no-go.
+R-570/R-571 and the earlier distinct R-572 are preserved; C6 T1 and T-054's
+gate are unchanged. No physical Pre-A, Sector-A, spacetime, QFT, gravity,
+continuum, Yang-Mills, mass gap or TOE conclusion.
+
+Certificate: `strategy/pa-hyp/PAH-v2-GD-002-result-v1.1.json`.
+EXP-001742 preserves the pre-release v1 sources/runs and corrects only the
+JSON-list replay packaging; every mathematical value and the PDF are unchanged.
+Proof: `claims/C6-SPACETIME-SIGNATURE/notes/crt-gibbs-defect-260913-v1.0.tex.txt`.
+Primary and independent each pass 8 check groups; hostile passes 55 controls;
+five parameterized Lean declarations compile. Same-task authorship and the
+unencoded PAH analytic/prime bridges are explicit. Reproduce
+`python -X utf8 verification/scripts/pah_v2_gd002_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+--elan-home C:/Users/NaEun/.elan` as one line. Reenter only for an exact
+source, root, inequality, character or prime-tail error. A separately approved
+same-character original-time semigroup question is the next evidence target,
+not another table or an automatic inference from generator failure.
+
 ### R-572 -- PAH-v2 full-cylinder sup generator counterexample
 
 **Exact statement.** On the unchanged adopted h=N=0 carrier at epsilon=1,

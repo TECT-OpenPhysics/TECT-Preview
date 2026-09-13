@@ -91,3 +91,40 @@ not further finite root tables. The method is standard reuse, while the
 pinned PAH applicability and whole radial-subspace retention are the
 programme-specific result. See the hash-pinned PAH-OMC-019 certificate and
 result card for complete scope and the next separately activated contract.
+
+## 10 PAH-v2 GD-002 source-specific negative addendum (2026-09-13)
+
+Target: the full-cylinder original fine-Gibbs L2 generator all-tail Cauchy
+statement in PAH-v2-GD-002-prereg-v1.json. This is a separate operator-approved
+diagnostic and does not replace the inherited sup algebra or R-572.
+Source pins and exact field locators are in the preregistration/result card.
+R-570 finite root/generator conventions and R-571 full-state CRT pullbacks
+are SATISFIED at the fixed admitted square scope only. The displayed PAH-v1
+functional and PAH-v2-r2 full counting coordinates, all roots, normalization,
+fixed parameters and unchanged time are rechecked directly. R-572 is only
+a negative control, not a Gibbs-L2 premise.
+
+Bounded external query: Kuwae Shioya convergence spectral structures varying
+Hilbert spaces 2003 publisher; Chinese remainder theorem finite cyclic random
+walk characters eigenvalues generator. Kuwae--Shioya, Communications in
+Analysis and Geometry 11 (2003), 599-673, doi:10.4310/cag.2003.v11.n4.a1
+was identified as background, but its PAH limiting-Hilbert hypotheses are
+UNASSESSED and no convergence theorem is imported. Disposition for such an
+import: NOT-YET-ASSESSED. No legacy, Q3LOCK or TECT-YM premise is used.
+
+The actual residual proposition is derived directly: a fixed fifth-residue
+plaquette character, the original-rate all-state error <=256/K, the elementary
+Euclid construction of arbitrarily late nonresidue primes modulo five, and
+the fine-Gibbs norm lower bound. The source-to-formula crosswalk is in
+crt-gibbs-defect-260913-v1.0.tex.txt, sections 1-5. It requires no Dirichlet
+prime-distribution theorem or imported common-core result.
+
+Independent disposition: non-importing coordinate/rate reconstruction,
+directed Arb diagnostics, alternative character diagonalization and exact
+mutation controls. The five Lean statements are parameterized bridges only;
+the concrete analytic/model/prime proof is not fully encoded. Same-task
+authorship is disclosed; external review is invited. Sign/half/multiplicity,
+full invariant domain/hidden labels and fixed-observable all-tail quantifiers
+are explicitly challenged in section 6. The result is a scoped negative
+for GD-002, not a physical promotion, alternate-domain no-go or semigroup
+verdict; state consistency and nontriviality are recorded separately.
