@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1100 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1102 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-14 | `20260914-tect-clk-001-v1-1-metadata-correction-and-mainl` — [TECT-CLK-001 v1.1 metadata correction and mainline-managed integration] - 2026-09-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260914-tect-clk-001-v1-1-metadata-correction-and-mainl) |
+| 2026-09-14 | `20260914-tect-clk-001-clock-observable-admission-boundar` — [TECT-CLK-001 clock-observable admission boundary] - 2026-09-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260914-tect-clk-001-clock-observable-admission-boundar) |
 | 2026-09-14 | `20260914-c6-r-569-through-r-574-fixed-follow-up-proof-in` — [C6 R-569 through R-574 fixed follow-up proof integration provenance] - 2026-09-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260914-c6-r-569-through-r-574-fixed-follow-up-proof-in) |
 | 2026-09-14 | `20260914-r-574-pah-v2-sg-001-fixed-time-semigroup-counte` — [R-574 PAH-v2 SG-001 fixed-time semigroup counterexample] - 2026-09-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260914-r-574-pah-v2-sg-001-fixed-time-semigroup-counte) |
 | 2026-09-13 | `20260913-r-573-pah-v2-gd-002-original-fine-gibbs-generat` — [R-573 PAH-v2 GD-002 original fine-Gibbs generator counterexample] - 2026-09-13 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260913-r-573-pah-v2-gd-002-original-fine-gibbs-generat) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-08 | `20260908-r-556-pah-omc-020-minimal-dependency-audit-2026` — [R-556 PAH-OMC-020 minimal dependency audit] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-556-pah-omc-020-minimal-dependency-audit-2026) |
 | 2026-09-08 | `20260908-r-555-pah-omc-020-ordered-epsilon-bridge-2026-0` — [R-555 PAH-OMC-020 ordered-epsilon bridge] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-555-pah-omc-020-ordered-epsilon-bridge-2026-0) |
 | 2026-09-08 | `20260908-r-554-pah-omc-020-owner-snapshot-v1-4-2026-09-0` — [R-554 PAH-OMC-020 owner snapshot v1.4] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-554-pah-omc-020-owner-snapshot-v1-4-2026-09-0) |
-| 2026-09-08 | `20260908-r-553-pah-omc-020-positive-time-separation-2026` — [R-553 PAH-OMC-020 positive-time separation] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-553-pah-omc-020-positive-time-separation-2026) |
-| 2026-09-08 | `20260908-r-552-pah-omc-020-finite-semigroup-well-posedne` — [R-552 PAH-OMC-020 finite semigroup well-posedness] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-552-pah-omc-020-finite-semigroup-well-posedne) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1069–1100 | 32 | [001069-001118.md](pages/001069-001118.md) |
+| 1069–1102 | 34 | [001069-001118.md](pages/001069-001118.md) |
 | 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |

@@ -87,6 +87,19 @@ can compute continuously; only its brief checkpoint commit must serialize its
 own writes. Mathematical conflicts need a scoped owner review. Isolation avoids
 shared-index races; it cannot automatically resolve contradictory mathematics.
 
+### Mainline-managed integration (operator clarification, 2026-09-15)
+
+The active mainline managing task owns completion of an authorized checkpoint's
+integration and non-force push; it must not rely on a separate task eventually
+waking up. It may act as the integration controller after confirming the prior
+controller is inactive, announcing the handoff and recording the current owner
+in runtime state. Proof editing stays in its registered isolated lane. Central
+writes still use fixed-commit prepare/promote, the existing OS-held locks,
+release/fresh-PDF checks, clean-base rechecks and verified remote HEAD. An active
+controller, unresolved conflict or failed check is a real blocker; an idle
+paper task or an untriggered heartbeat alone is not. This clarification grants
+no force push, hidden source-hash replacement or scientific promotion.
+
 ## Commands
 
 `python verification/scripts/lane_control.py register --lane <slug> --thread <id>

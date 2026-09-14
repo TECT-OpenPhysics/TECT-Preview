@@ -1,0 +1,93 @@
+{
+  "schema": "tect/clock-observable-prereg/1.0",
+  "id": "TECT-CLK-001",
+  "version": "1.0.0",
+  "recorded_at": "2026-09-14T14:30:56Z",
+  "status": "ROLES_AND_TARGET_FIXED_BEFORE_NUMERICAL_EXTRACTION",
+  "task_id": "T-054",
+  "supporting_tasks": ["T-059", "T-061"],
+  "active_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "authority": "Operator requested a meaningful successor after the fixed R-574 checkpoint. The active TECT-CLK-001 goal authorizes one bounded physical-observable connection audit, not a new microscopic model or automatic proof chain.",
+  "base_commit": "f902ce068c143411af39cc7ac9964a871aad39f3",
+  "prerequisite": {
+    "source_checkpoint": "f5443ef1c489a445d648dabebcdb2b05c6dfc799",
+    "integration_and_live_remote_head": "f902ce068c143411af39cc7ac9964a871aad39f3",
+    "remote": "tect",
+    "remote_ref": "refs/heads/main",
+    "source_result": "R-574",
+    "source_exploration": "EXP-001743",
+    "canonical_replay_exploration": "EXP-001820",
+    "verified": "Controller receipt plus independent live ls-remote, source-result hash, clean source and fast-forward ancestry checks. Proof branch now uses the integrated base."
+  },
+  "source_hashes": {
+    "claims/A2-PDE-WELLPOSED/claim.md": "7c8baaf31ca17d8276afadaa4e64ce85b845a0a99c87f84a020d7895e71ae568",
+    "claims/A2-PDE-WELLPOSED/status.json": "d20a1a7211f496ac08080275807b6c8e659e3e4ecd2b1ffe8143545ed234c89f",
+    "claims/A2-PDE-WELLPOSED/notes/a2-local-global-wellposedness-260623-260623-v1.2.tex.txt": "1320fe9073775ebd5b6488e49d844e6084f229402fbf75cd985807d0cdd4b683",
+    "strategy/pre-a-evidence-first-model-selection-charter-260802.md": "732183c1f6376916fdcebccff788cd20e380a0871dd1e568d3e83df95a7ab754",
+    "strategy/pre-a-c0-dynamical-completion-underdetermination-certificate-260803.md": "ef23caaf61adef38f83d2bc86eb92538e001d76ebc26add628c2631d51d41aec",
+    "strategy/pre-a-qft-dynamics-candidate-screen-260823.md": "b305029c4faa5ef8f2d4d95d3fd7b202f99dd4cbaa08395cb9fa069e583186a5",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-SG-001-result-v1.json": "5a7521c657ff2d528596fca0cad4c5be8f7530653203a0c9023768402bf77928"
+  },
+  "question": "Do frozen clock-frequency observations impose a discriminator between one common clock-rate factor and system-specific relaxation changes, and can the already-declared scalar Brazovskii response be evaluated on that discriminator without adding physical inputs?",
+  "data_roles": {
+    "discovery": {
+      "id": "CLK-D-BOTHWELL-2022",
+      "doi": "10.1038/s41586-021-04349-7",
+      "title": "Resolving the gravitational redshift across a millimetre-scale atomic sample",
+      "role": "RETROSPECTIVE_DISCOVERY",
+      "purpose": "Define the measured frequency-gradient observable, reported uncertainty and corrections. Use primary publication and its own supplementary information as one dependence group, not independent replications.",
+      "prior_exposure": "The title, abstract, broad experimental conclusion and abstract-level frequency-precision figure were inspected during goal selection. This is not blind data."
+    },
+    "validation": {
+      "id": "CLK-V-CHOU-2010",
+      "doi": "10.1126/science.1192720",
+      "title": "Optical Clocks and Relativity",
+      "role": "RETROSPECTIVE_INDEPENDENT_VALIDATION_NOT_USED_FOR_DESIGN_OR_TUNING",
+      "purpose": "An independently performed elevation/clock-frequency comparison; confirm primary metadata before extracting numerical observations. No parameter, observable, scorer or uncertainty rule may be changed after validation disclosure.",
+      "prior_exposure": "The paper and its broad conclusion are established background knowledge. No blinding, prospective experiment, new TECT prediction or statistical independence beyond the actual disclosed lineage is claimed."
+    },
+    "prospective_holdout": "EMPTY: these published experiments cannot count as a prospective TECT prediction.",
+    "raw_data_rule": "If only published aggregates are available, label AGGREGATE_ONLY. Do not reconstruct unpublished samples, assume an unavailable covariance is zero, fit a covariance, or treat digitized points as raw observations.",
+    "source_capture": "Hash exact primary PDF bytes and retain retrieval URL/date and page/figure locators. Keep full third-party documents in ignored local evidence cache unless redistribution rights are verified; public manifest and reproducible retrieval references retain provenance."
+  },
+  "observable_contract": {
+    "symbol": "omega[i,a] > 0",
+    "definition": "Clock transition frequency for species/mechanism i and comparison condition a, transported to one declared readout convention with stated kinematic, field, instrumental and gravitational-model corrections. This is not a Markov spectral decay rate.",
+    "ratios": "R[i;a,b]=omega[i,a]/omega[i,b]; D[i,j;a,b]=R[i;a,b]/R[j;a,b].",
+    "analytic_target": "Characterize, for a finite complete positive frequency table, when omega[i,a]=k[i]*N[a] for positive factors. Separate arbitrary factor normalization, incomplete observation graphs, covariance propagation and finite uncertainty from exact algebraic identities.",
+    "falsifier": "A demonstrably non-unit double ratio under the declared common comparison and uncertainty convention rejects exact common factorization for that table. It does not by itself identify a gravity theory or reject all microscopic models.",
+    "non_identifiability_test": "Determine whether common factorization, even if supported, distinguishes a metric lapse from an otherwise unspecified universal environmental multiplier. Do not choose one equivalent explanation by naming it gravity.",
+    "data_applicability": "Single-species frequency gradients do not supply a complete multi-species table. Independent experiments at different potentials or readout conditions cannot be silently combined into one exact double ratio."
+  },
+  "candidate_contract": {
+    "id": "EXISTING-A2-SCALAR-BRAZOVSKII-REFERENCE",
+    "not_a_new_model": true,
+    "functional_and_time": "Exactly the existing A2 scalar real-field L2 gradient flow: partial_t phi=-K(-i nabla)phi-lambda phi^3-gamma phi^5, K(q)=mu^2+Y(q^2-q0^2)^2. No new noise, inertia, transfer, counterterm, quantization or time conversion.",
+    "scope": "Fixed periodic T^3, Y>0, mu^2>0, gamma>0, 3/2<s<=2, inherited source assumptions. No continuum, thermodynamic or condensate limit is attempted.",
+    "observable_map_test": "Check only declared source fields for a map from the existing response to a measured clock transition and common readout time. An absent map is NOT_ADMITTED, not a numerical failure or all-Brazovskii no-go.",
+    "legacy_boundary": "Other Brazovskii/Langevin/Model A-star names remain reference-only proposals; no new completion is adopted. The earlier dynamical-underdetermination result is background, not a new proof to repeat.",
+    "pah_boundary": "Keep PAH-v1, PAH-v2, original external Markov time and R-574 comparison unchanged. No PAH recalculation or weakened successor."
+  },
+  "one_attempt": {
+    "budget": "One source/observable freeze and one exact algebraic plus candidate-applicability audit; one integrated primary/independent/hostile verification package and partial Lean if feasible. No parameter search or finite carrier sweep.",
+    "completion": "Versioned evidence/validation manifest with exact hashes and located inputs; observation/candidate crosswalk; precise conditional algebra and non-identifiability boundary; reproducible checks; one bounded terminal assessment; exploration and appropriate existing authorities; one checkpoint synthesis only if warranted.",
+    "terminal_assessment": ["DISCRIMINATING_WITHIN_DECLARED_SCOPE", "NON_IDENTIFIABLE", "NOT_ADMITTED_DEFINITION_MISSING"],
+    "separate_fields": "Record the algebraic result, empirical identifiability and candidate-map admission independently. A candidate-map absence does not erase valid diagnostic algebra, and diagnostic algebra does not promote the candidate.",
+    "stop_rule": "If the physical map is missing, name the single missing packet and exact reentry condition. Do not repeatedly search unchanged owners, fill it by analogy, or start an automatic successor."
+  },
+  "verification_plan": [
+    "Primary: exact ratio/factorization identities and transparent source-value/units checks.",
+    "Independent: non-importing cross-product or logarithmic-rank derivation; independent extraction of primary page values.",
+    "Hostile: sign, units, uncertainty-versus-redshift precision, covariance, dependence-group leakage, incomplete-table, rate/frequency substitution, common-factor non-identifiability and candidate-scope mutations.",
+    "Lean: only parameterized finite algebra if feasible; never empirical truth, data provenance, GR, candidate identity or a new physical time."
+  ],
+  "non_claims": [
+    "No mainline gate closure follows from preregistration or diagnostic algebra.",
+    "No physical Pre-A, spacetime, QFT, gravity, horizon, causal cone, continuum, Yang-Mills, mass gap or TOE conclusion.",
+    "Rindler/Unruh is theoretical context, not direct experimental data in this packet.",
+    "No single clock establishes universality and no retrospective agreement is a new prediction.",
+    "No claim that static functional or dissipative time uniquely determines microscopic physical dynamics."
+  ]
+}
