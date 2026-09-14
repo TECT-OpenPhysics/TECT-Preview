@@ -8,6 +8,9 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](#ng-2026-09-14-pah-v2-sg001-fixed-time) | original-time semigroup convergence for the unchanged R-573 fixed character | R-574 gives original fine-Gibbs norm at least 1/5 at fixed time 1/10 beyond every cutoff threshold; no automatic weakened successor |
+| [NG-2026-09-13-PAH-V2-GD002-GIBBS-L2](#ng-2026-09-13-pah-v2-gd002-gibbs-l2) | full-cylinder original fine-Gibbs generator Cauchy under the adopted PAH-v2 comparison | R-573 gives one fixed invariant character with all-state defect at least seven beyond every cutoff threshold; state consistency and semigroup comparison remain separate |
+| [NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY](#ng-2026-09-12-pah-v2-gd001-sup-cauchy) | full-cylinder sup generator Cauchy under the adopted PAH-v2 comparison | R-572 gives a fixed epsilon=1 indicator with exact defect norm one at every cutoff pair; no Gibbs-L2 or physical no-go follows |
 | [AUDIT-2026-09-09-PAH-OMC-028-NONLINEAR-CLOSURE](#audit-2026-09-09-pah-omc-028-nonlinear-closure) | R-530 single-vector contraction to nonlinear form-Cauchy inference | the paired-energy and form-distance contraction estimates fail exactly; closed-epigraph and weak-compactness arguments repair the same conditional conclusion without changing PAH sources |
 | [NG-2026-09-08-PAH-OMC-020-FINITE-SECOND-ORDER-SEMIGROUP-DEFECT](#ng-2026-09-08-pah-omc-020-finite-second-order-semigroup-defect) | exponentiate the R-493 support-dependent first-order identity into the fixed-pair finite semigroup lift | at n=N(ell_(0,0))=3, R_max=1 and an exact unchanged PAH sample state, the first defect is zero but L_4^2 I f-I L_3^2 f = -1/2 exp(-25/8)(exp(1/3)-1)^2(exp(1/3)+1)<0; this retires only the registered projection route, not every alternate source-authorized map |
 | [NG-2026-09-06-PAH-OMC-018-UNACCELERATED-RADIAL-NULLSPACE](#ng-2026-09-06-pah-omc-018-unaccelerated-radial-nullspace) | infer surviving radial kinetics from the resolved counting state's static nondegeneracy at unchanged time scale | R-511 proves a nonconstant positive-variance amplitude cylinder has zero limiting generator action and form energy; sampled Gibbs-L2 convergence and nonzero aperture activity still hold |
@@ -10877,3 +10880,104 @@ PAH-OMC-020 finite-to-target convergence remains HOLD_FOR_EVIDENCE.
 Re-review on failure of inherited probability-state, root positivity,
 core stability, closability or inclusion hypotheses. No physical Pre-A,
 spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion.
+
+### NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY -- full-cylinder sup generator Cauchy
+
+**Branch / claim.** Require the unchanged PAH-v2 full invariant cylinder
+generator values to be Cauchy in the inherited full-counting-state sup norm
+under the owner-adopted Morton/CRT comparison, for every admitted fixed
+parameter tuple and base observable (PAH-V2-GD-001).
+
+**Failure mode.** The admitted epsilon=1 boundary retains all aperture
+counting labels although the displayed apertures coincide. Every AP rate is
+one, and every other root's increment for f0=1_{j_O=0} is zero. At fixed
+h=N=r0=0, for arbitrary s>r>=0, the complete fine-minus-coarse defect equals
+`1_{2^s-2^(s-r)<=j_O<2^s-1}` and has sup norm one. A fixed-parameter,
+fixed-observable witness exists beyond every tail threshold; this is not a
+nonzero finite-pair inference or a changing-observable operator-norm test.
+
+**Evidence.** R-572 / EXP-001739; source pins, all-index proof, exact
+counterexample, independent full-root row-action implementation, 31 hostile
+checks and five parameterized Lean declarations are in
+`strategy/pa-hyp/PAH-v2-GD-001-result-v1.json` and its one synthesis note.
+Reproduce `python -X utf8 verification/scripts/pah_v2_gd001_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+--elan-home C:/Users/NaEun/.elan` as one line. All source definitions and the
+original target/preregistration remain byte-for-byte unchanged.
+
+**Consequence.** DISPROVED for this universal full-cylinder sup route.
+Do not alter the model, omit labels or replace the norm to relabel it PASS.
+R-570 and R-571 remain at their own finite scopes. Gibbs-L2, weak convergence,
+other domains, h/N limits and physical conclusions were NOT_EVALUATED.
+Next question: what separately source-authorized observable-domain/topology
+target, if any, should follow while preserving model and time? Reopen this
+negative result only for an exact source/domain/witness/floor-identity error.
+No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass gap
+or TOE claim follows; T-054's gate and C6 T1 are unchanged.
+
+### NG-2026-09-14-PAH-V2-SG001-FIXED-TIME -- original-time semigroup comparison
+
+**Branch / claim.** SG-001, the unchanged R-573 fixed observable, PAH-v2
+tuple, full invariant counting algebra, original Gibbs weights, Markov time
+and adopted comparison maps. No physical-time interpretation is inserted.
+
+**Failure mode.** Full finite Markov contraction and the exact Duhamel
+identity propagate the all-state generator remainder to <=256*t/K.
+At fixed original t=1/10, arbitrarily late inverse-prime CRT flips separate
+the two exponential character factors by at least 4/15; both errors total
+at most 1/15. Thus the original fine-Gibbs norm is at least 1/5 at adjacent
+pairs beyond every cutoff threshold. The bound is pointwise on every state,
+not a rare-event or moving-time argument. All evolved roots remain present.
+
+**Evidence.** R-574 / EXP-001743; exact sources, full analytic proof,
+independent maximum principle, 81 hostile checks and five partial Lean
+bridges in `strategy/pa-hyp/PAH-v2-SG-001-result-v1.json` and one four-page
+render-reviewed synthesis. Reproduce `python -X utf8
+verification/scripts/pah_v2_sg001_verify.py --lean-cache
+E:/Dev/TECT/verification/lean/.lake/packages --elan-home C:/Users/NaEun/.elan`
+as one line. External review is invited; no independent-person audit is claimed.
+
+**Consequence.** DISPROVED for SG-001. Park the unchanged full-cylinder
+original-time comparison route. No automatic weakened objective or follow-on
+proof chain. Reenter on an exact source/analytic falsifier or a separately
+authorized input that actually resolves a core assumption or supplies a
+physically motivated observable map. Preserve all earlier finite and
+generator results. No state-projectivity or all-model verdict; no T-054
+gate/C6 tier change or physical Pre-A, spacetime, QFT, gravity, continuum,
+Yang-Mills, mass-gap or TOE conclusion. Brazovskii remains unadopted.
+
+### NG-2026-09-13-PAH-V2-GD002-GIBBS-L2 -- original fine-Gibbs generator Cauchy
+
+**Branch / claim.** The separately authorized PAH-V2-GD-002 universal
+full-invariant-cylinder all-tail generator Cauchy target under original
+fine counting Gibbs weights, with unchanged PAH-v2, comparison and time.
+
+**Failure mode.** One fixed gauge/anchor-invariant plaquette character at
+r0=2 is transported by the approved inverse-prime CRT coefficients. At the
+fixed epsilon=1, h=N=0 tuple, original generator values equal the two
+character eigenvalue classes plus a uniform remainder <=256/K. Arbitrarily
+late primes 2 or 3 modulo five swap those classes. The complete defect is
+at least seven at every fine state along adjacent pairs beyond every tail
+threshold. Therefore its ORIGINAL fine-Gibbs L2 norm is at least seven;
+this is not a negligible-set sup witness or a finite-pair extrapolation.
+
+**Evidence.** R-573 / EXP-001741; exact source pins, full signed-root audit,
+all-state rate bound, elementary prime-tail proof, separate nontriviality
+bounds, independent implementation, 55 hostile checks, five partial Lean
+declarations and one five-page synthesis in
+`strategy/pa-hyp/PAH-v2-GD-002-result-v1.1.json`. EXP-001742 records the
+source-recoverable JSON-list replay correction only, not a new proof. Reproduce
+`python -X utf8 verification/scripts/pah_v2_gd002_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+--elan-home C:/Users/NaEun/.elan` as one line. External independent review
+is invited; the independent implementation has same-task authorship.
+
+**Consequence.** GD-002 DISPROVED. Preserve all original definitions and the
+distinct R-572 record. State consistency and semigroup comparison are not
+settled by this generator result. The fixed character has uniformly positive
+variance and Dirichlet energy, so null-observable collapse is not its cause.
+Reopen only for an exact source, invariant-domain, root, rate-bound, CRT or
+prime-tail error. Next separate question: does the same fixed character also
+obstruct original-time semigroup comparison? No new target is executed here.
+No T-054/C6 gate promotion, alternate-domain universal no-go, continuum,
+physical Pre-A, Sector-A, spacetime, QFT, gravity, Yang-Mills, mass gap or TOE.

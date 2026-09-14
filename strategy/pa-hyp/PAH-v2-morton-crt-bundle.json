@@ -1,0 +1,124 @@
+{
+  "schema": "tect/pah-v2-comparison-proposed-bundle/1.0",
+  "id": "PAH-V2-MORTON-CRT-BUNDLE-20260911",
+  "version": "0.1.0",
+  "status": "UNAPPROVED_COMPLETE_DRAFT",
+  "classification": "AUXILIARY_SUPPORT",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "counts_as_mainline": false,
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "strategy/pa-hyp/PAH-v2-spatial-frame-prereg.json": "07d67b69ec742dc3c7981d2b73e102a88c5bc376a97009f53e125cde57c72997"
+  },
+  "evidence_hashes": {
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7",
+    "strategy/pa-hyp/PAH-v2-morton-crt-review.md": "4403f0bb17030a84203cd3da966cdb7c898c077881cd6042623a28c2ae56d0b0",
+    "codes/foundations/pah_v2_morton_crt.py": "3adbb34a8c7adbe1e59805bf380552362909f38342fe14ba8df7269d8ee36c1f",
+    "verification/scripts/pah_v2_morton_crt_primary.py": "1a85aba41ebcd6ea66e07c432a96ade59851a220554a8e26ac438fd138a185e8",
+    "verification/scripts/pah_v2_morton_crt_independent.py": "ddcb37c211161831c2e38141f965571e461e92180bba4f1f38d45655000de4ec",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-morton-crt/primary.json": "7251f570ec00c14ef0c3fc6b75322b4a3a0010b1534118963014478e7c527e43",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-morton-crt/independent.json": "42e95ead23b81266b6385d2bad60a8465f49f92f10b3cc2a55f311c6fbee0182"
+  },
+  "approval_record": null,
+  "operative_contract": null,
+  "goal_complete": false,
+  "scope": "Complete proposed definition contract on the specified finite anchored square-cell family. Written all-index algebraic arguments and bounded development checks; not approved-contract admission.",
+  "choices_requiring_adoption": [
+    "NEW geometry selection: a full two-index anchored square-cell family inside the parent finite two-cell class. This is not all admissible geometries, a physical spatial dimension, or a replacement of v2's carrier class.",
+    "NEW phase cutoff schedule: successive coprime prime factors rather than the prior unapproved doubling proposal. Primitive v2 roots/rates and the integer counting definitions do not change.",
+    "NEW explicit volume comparison: all outside occupation is represented in the final retained Morton vertex. This is a comparison map, not an absorbing boundary, extra reservoir state or conditioned Gibbs law.",
+    "Full gauge and actual full anchor-cell automorphism groups are retained. The chosen anchored graphs have trivial cell group by a graph-rigidity argument; no subgroup is imposed on a symmetric graph.",
+    "All finite source observables remain, not only a passing subalgebra. Spatial support can expand to the source box; no bounded propagation radius or production locality estimate is claimed."
+  ],
+  "important_cost": "Volume comparison is not literal preservation of terminal site occupation: exterior charge can make comparison occupation Q when that actual retained site is empty. The cylinder algebra uses the explicit comparison identifications.",
+  "inspected_requirements": [
+    {
+      "id": "IMMUTABLE_V2_AND_R570",
+      "status": "PRESERVED"
+    },
+    {
+      "id": "FULL_THREE_INDEX_FAMILY_BOUNDARY_LIMIT_ORDER",
+      "status": "DRAFT_INSTANTIATED",
+      "evidence": "Contract geometry, indices, regulators and ordered_limits"
+    },
+    {
+      "id": "TOTAL_SURJECTIVE_STATE_MAPS_AND_COMPOSITION",
+      "status": "DRAFT_ARGUMENT_AND_DEVELOPMENT_TESTS",
+      "evidence": "Review sections 3-4; primary/independent JSON"
+    },
+    {
+      "id": "FULL_GAUGE_AND_ACTUAL_CELL_SYMMETRY",
+      "status": "DRAFT_ARGUMENT_AND_DEVELOPMENT_TESTS",
+      "evidence": "Review section 5; full group trivial on selected anchored family"
+    },
+    {
+      "id": "FULL_INVARIANT_CYLINDER_SUP_NORM_AND_SUPPORT",
+      "status": "DRAFT_ARGUMENT_NOT_LIMITING_GENERATOR_DOMAIN",
+      "evidence": "Review section 5; full comparison-defined invariant algebra; explicit whole-source-box support; no literal occupation identification"
+    },
+    {
+      "id": "ALL_SIGNED_ROOTS_AND_UNMATCHED_CHANNELS",
+      "status": "DRAFT_ALGORITHM_AND_BOUNDED_CHECK",
+      "evidence": "Review section 6; 224 sampled-state valid incidences independently reproduced"
+    },
+    {
+      "id": "GENERATOR_DEFECT_AND_FALSIFIERS",
+      "status": "PREREGISTERED_NOT_EVALUATED"
+    },
+    {
+      "id": "OWNER_APPROVAL_AND_OPERATIVE_PIN",
+      "status": "MISSING"
+    },
+    {
+      "id": "APPROVED_CONTRACT_FULL_INDEPENDENT_HOSTILE_ADMISSION",
+      "status": "NOT_YET_PERFORMED"
+    }
+  ],
+  "verification": {
+    "primary": "PASS_DEVELOPMENT_ONLY; 16384 exhaustive coarse states, 48 adjacent map/gauge samples, 24 squares, 15 injection samples, 8 support cases",
+    "independent": "PASS_DEVELOPMENT_ONLY; separate coordinate/token/suffix/root implementation, same author and shared declared inputs, 224 root incidences",
+    "hostile": "Mutation controls reject ordinary phase rounding, pointwise occupation floor, plain volume restriction and literal terminal preservation; historical EXP-001735 replay PASS",
+    "analytic": "Written all-index finite-definition arguments; no claim of independent machine proof",
+    "Lean": "NOT_RUN",
+    "external_person": "NOT_PERFORMED"
+  },
+  "exact_scope": {
+    "dimension": "Two-dimensional combinatorial address family only; not physical dimension",
+    "normalization": "Original full counting Gibbs normalization, no conditioning/pushforward substitution",
+    "parameters": {
+      "phase": "Let p_i be the i-th prime, p_1=2. K_r=product_(i=1,...,r+1) p_i. For an adjacent cutoff step write P=p_(r+2), K_f=P*K_c and A=P^(-1) modulo K_c.",
+      "other_cutoffs": "M_s,r=2^r, M_psi,r=m0*4^r, Rmax,r=R0*2^r, Q_r=q0*2^r, independent of h,N. Thus every cutoff is unbounded, Q_r<=M_psi,r and displayed amplitude sum (Rmax/Mpsi)*Q=(R0/m0)q0 stays fixed.",
+      "frozen": "epsilon,beta,nu,theta,all rate scales and other real parameters stay in the exact parent domains and remain identical across comparisons. No density/thermodynamic nondegeneracy conclusion from fixed total Q at each r."
+    },
+    "volume_boundary": "Open anchored W by W boxes; comparison aggregation is not a boundary action",
+    "limits": "r then h then N, then inherited placeholders; none executed",
+    "time": "Unchanged external Markov time; no dynamics evaluated"
+  },
+  "formal_ids": {
+    "exploration": "EXP-001736",
+    "new_results": [],
+    "new_negatives": [],
+    "new_changelog_events": [],
+    "reference_results": [
+      "R-570"
+    ]
+  },
+  "next_single_question": "Does the owner explicitly adopt this exact complete bundle, including the selected anchored grid, coprime phase cutoff schedule and comparison-only terminal occupation aggregation, for subsequent full-contract admission?",
+  "reentry": "Explicit approval of the exact bundle digest permits one complete independent/hostile admission check; otherwise record one rejected requirement or hold for the owner choice. No new carrier, repeated sizes, rate fitting or generator experiment before admission.",
+  "non_claims": [
+    "No operative owner-approved refinement contract yet",
+    "No change to PAH-001-v1/v2-r2/R-570",
+    "No all-carrier or physical geometry claim",
+    "No generator agreement, dynamics convergence, Gibbs projectivity, continuum, Pre-A, QFT, GR, Yang-Mills, mass gap or TOE"
+  ],
+  "reproduction": [
+    "python -X utf8 verification/scripts/pah_v2_morton_crt_primary.py --check",
+    "python -X utf8 verification/scripts/pah_v2_morton_crt_independent.py --check",
+    "python -X utf8 verification/scripts/pah_v2_spatial_frame_primary.py --check",
+    "python -X utf8 verification/scripts/pah_v2_spatial_frame_independent.py --check"
+  ]
+}

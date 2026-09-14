@@ -1,0 +1,129 @@
+{
+  "schema": "tect/pah-v2-semigroup-result/1.0",
+  "id": "PAH-V2-SG-001-RESULT-v1",
+  "result_id": "R-574",
+  "version": "1.0.0",
+  "issued_on": "2026-09-14",
+  "task_id": "T-090",
+  "exploration_id": "EXP-001743",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "DISPROVED",
+  "classification": "negative_result",
+  "claim_bearing": true,
+  "active_gate_change": false,
+  "host_claim_promoted": false,
+  "physical_promotion": false,
+  "question": "For every finite T>=0, lim_(R->infinity) sup_(s>r>=R) sup_(0<=t<=T) ||D_(r,s)(t)||_(L2(pi_s))=0.",
+  "statement": "For the unchanged R-573 fixed observable, tuple, model, maps and original time, every cutoff threshold admits an adjacent pair with ||S_s(1/10) I_(r,s) f_r-I_(r,s) S_r(1/10) f_r||_(L2(pi_s)) >= 1/5. The pointwise lower bound holds on every original fine state. This disproves SG-001 already at T=1/10.",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/pa-hyp/PAH-v2-comparison-admission-v1.json": "3bb86cf1d4ff11a4f55272908bc34f56b4289555fbf9f64917b32203c6a64d2f",
+    "strategy/pa-hyp/PAH-v2-morton-crt-bundle.json": "1d6fa47f5351d74f05bed3aba5b1e229a827644d4c6ef5d7dd73c117adee95b6",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7",
+    "strategy/pa-hyp/PAH-v2-GD-002-execution-v1.json": "76c88dbf7a2f2f8a32743073db95d77590bbe76fc2f8b15215ff739ada1b78b2",
+    "strategy/pa-hyp/PAH-v2-GD-002-result-v1.1.json": "fa79748f985cd6a6d9daaaa470308b5c86f5feca48dac7f4a34896e33c89ab26",
+    "claims/C6-SPACETIME-SIGNATURE/notes/crt-gibbs-defect-260913-v1.0.tex.txt": "b2ae201414038f38f4819a1dbef35cf3241aca54ab5f1e80f5903453e3ae9725",
+    "codes/foundations/pah_v2_morton_crt.py": "3adbb34a8c7adbe1e59805bf380552362909f38342fe14ba8df7269d8ee36c1f",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2"
+  },
+  "evidence_hashes": {
+    "strategy/pa-hyp/PAH-v2-SG-001-prereg-v1.json": "177e36c3ea7370f2377c9a53b385396e7b6de1a28399c3b306880c92ce672646",
+    "verification/lean/Tect/PahV2SemigroupDefect.lean": "4f9da511adeb01e3b414eafcaeed46aa3f321dabfd1c217a5df333749c411690",
+    "claims/C6-SPACETIME-SIGNATURE/notes/crt-semigroup-defect-260914-v1.0.tex.txt": "7fc43b624168c4fb66fb7d45812156fd5fea3af08f05662878dd382468a7830f",
+    "claims/C6-SPACETIME-SIGNATURE/notes/crt-semigroup-defect-260914-v1.0.pdf": "8c740410e401e7d79d7d311e0a4c82014cd1c193cae4926e6e294d8b02a576f0",
+    "verification/scripts/pah_v2_sg001_hostile.py": "5325c25ed6dd8f90320df1ccc32faac262712a68092ec944afd921cc0588e4fc",
+    "verification/scripts/pah_v2_sg001_independent.py": "b126feb9d6bf232333038bdb5fe5f2ea0540cc06d921833e63a0ca871fde6c57",
+    "verification/scripts/pah_v2_sg001_lean.py": "b5c9328d3baeea4e3435a3d9595e6cf6d9697c67d04dfa5c2991ff5a9b5b2466",
+    "verification/scripts/pah_v2_sg001_primary.py": "b8a37b7dc366f5fe683f2e7f565e1996dd83595155cd095a4b1a20dc3459943d",
+    "verification/scripts/pah_v2_sg001_verify.py": "4df3503cec9806cca339daf357a60b6db085790649b1064faa5924a1e645e0e5",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-14-pah-v2-sg001/hostile.json": "7cc49b4521986357dbc5c7fc2101d124c807a787320833a89e9b7b38f101533f",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-14-pah-v2-sg001/independent.json": "75ce36ffb80233fcf55e06cda5da79e700a2d2ab7c12ee710abe07438a16a583",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-14-pah-v2-sg001/lean.json": "7cb3a8729b1ef8436032b59d004dfb30ac350592c1d54d506d26d6ae8bec0d16",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-14-pah-v2-sg001/primary.json": "d3732b62f26bf6358aa105c2ec797a1f4958df4141010754cbbe5f427c5b1a17"
+  },
+  "exact_scope": {
+    "dimension": "Two-dimensional combinatorial addresses only; no physical dimension.",
+    "carrier": "Existing h=N=0 anchored open side-two square, 4 vertices, 4 stored edges, 1 face. O=(0,0), C=(1,0) are labels.",
+    "model": "Immutable PAH-001-v2-r2 with the displayed PAH-v1 functional, signed roots and original rates.",
+    "parameters": "epsilon=beta=nu=lambda_s=eta_6=kappa_s=kappa_D=kappa_g=g=q0=m0=R0=all_rate_scales=1; m2=lambda_4=0.",
+    "normalization": "Original full integer-tuple counting Gibbs state; no conditioning or replacement state.",
+    "domain": "Full invariant finite complex algebras and approved algebraic cylinder pullbacks. No limiting-generator domain declared.",
+    "regulator": "K_r=primorial(r+1); M_s=2^r; M_psi=4^r; Rmax=2^r; Q=2^r.",
+    "limits": "Arbitrary local-state-cutoff tail thresholds at fixed h=N=0; later lattice then volume then inherited stages unexecuted.",
+    "time": "Unchanged external stochastic Markov time, stationary initial-value boundary."
+  },
+  "counterexample": {
+    "fixed_base": "r0=2, K_2=30; f0=exp(2*pi*i*Phi/5); Phi is the unique signed plaquette link sum.",
+    "pullback": "a_r=(K_r/K_2)^(-1) mod5; f_r=exp(2*pi*i*a_r*Phi/5).",
+    "source_decomposition": "L_r f_r=lambda_r f_r+e_r, lambda_r in {-10-2 sqrt(5),-10+2 sqrt(5)}, sup |e_r|<=256/K_r. Full original rates and roots retained.",
+    "full_dynamics": "D(L_r)=C^(Omega_r). Finite row-generator Poisson expansion establishes sup contraction for all original PH/TR/LK/AP roots; no eigenfunction-span invariance.",
+    "uniform_time_estimate": "||S_r(t)f_r-exp(lambda_r*t)f_r||_infinity<=256*t/K_r for every t>=0, by the exact finite-vector Duhamel identity.",
+    "time": "1/10",
+    "norm_lower": "1/5",
+    "norm_squared_lower": "1/25",
+    "pair_bound": "For a flip pair, pointwise defect at t=1/10 >= 2 exp(-1) sinh(sqrt(5)/5) - (256/10)(1/K_r+1/K_s) >= 4/15-1/15=1/5 if K_s>=K_r>=768.",
+    "tail_construction": "Given R, let m=max(R,4), B=p_(m+1), P=product_(p<=B,p!=5)p, t=P^(-1) mod5 in {1,2,3,4}. Every prime factor of 1+tP exceeds B; at least one q=p_k is 2 or 3 mod5. Choose r=k-2>=m and s=r+1.",
+    "quantifier": "For every R choose r>=max(R,4), s=r+1 by the elementary prime-tail argument; K_r>=2310>768. Thus the supremum in the original target is >=1/5 for every R and every T>=1/10."
+  },
+  "assumptions": [
+    "Exact pinned PAH-v2 finite source definitions and original R-573 parameter tuple.",
+    "Approved R-571 fixed-base cutoff pullbacks and original full counting Gibbs normalization.",
+    "Finite matrix exponential identities and elementary prime/exponential inequalities derived in the note."
+  ],
+  "missing_assumptions": [],
+  "verification": {
+    "primary": "PASS: 8 groups, exact symbolic coefficient derivation and 96/192-bit directed arithmetic.",
+    "independent": "PASS: 8 groups, non-importing coefficient reconstruction, positive odd-series separation and independent forced maximum-principle proof.",
+    "hostile": "PASS: 81 exact mutation/arithmetic checks; eight written objections; same-task authorship.",
+    "Lean": "PASS: 5 parameterized declarations under pinned Lean 4.32.1 and mathlib revisions. Source, finite Markov, vector Duhamel and prime existence are not fully encoded.",
+    "pdf": "PASS: one four-page synthesis, FORM-CHECK, zero overfull boxes; all four pages rendered and visually reviewed.",
+    "external_person": "NOT_PERFORMED; external review is invited. Independent code/formulation is not independent-person certification."
+  },
+  "separate_diagnostics": {
+    "state_consistency": "NOT_ESTABLISHED_OR_REFUTED",
+    "nontriviality": "R-573's fixed-character variance and Dirichlet lower bounds remain unchanged; not a limiting-state theorem.",
+    "parent_results": "R-570, R-571, R-572 and R-573 remain immutable and at their original scopes.",
+    "infinite_volume": "NOT_CONSTRUCTED; the counterexample occurs at the first local-state-cutoff stage."
+  },
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED",
+    "INHERITED"
+  ],
+  "literature_applicability": {
+    "external_background": {
+      "searched": "Finite Markov Q-matrix exponentials/uniformization and the bounded finite variation-of-constants identity; internal R-570/R-571/R-573 scopes.",
+      "primary_locator": "Norris, Markov Chains, chapter 2, Continuous-time Markov chains I, publisher DOI 10.1017/CBO9780511810633.004; section 2.1 Q-matrices and matrix exponentials (chapter access only, no inaccessible theorem imported).",
+      "url": "https://www.cambridge.org/core/books/abs/markov-chains/continuoustime-markov-chains-i/00C95FC76647CF9B2E6276DC8DA89707",
+      "disposition": "Finite Markov background only; exact contraction and variation-of-constants identities will be derived in the synthesis. No infinite-dimensional convergence or novelty import.",
+      "residual_question": "Does the R-573 all-state approximate-character remainder give a nonvanishing finite-time comparison defect on the original fine Gibbs space?"
+    },
+    "internal_imports": "R-570 finite generator/domain, R-571 original comparison and R-573 sections 2-4 character/rate/prime scope: APPLIES, hypotheses SATISFIED at exactly the frozen tuple. Full inherited verifier included in reproduction.",
+    "new_proposition": "Uniform finite-time propagation of the original generator remainder, then pointwise and original fine-Gibbs semigroup separation.",
+    "adversarial_crosswalk": "Sign/half factors; full finite domain/all roots; fixed t and all-tail order all checked in synthesis sections 2-5."
+  },
+  "follow_on": {
+    "route": "PARK_OR_BLOCK",
+    "automatic_successor": false,
+    "continuation_budget": "Zero new mathematical attempts; verification and checkpoint packaging only.",
+    "next_single_question": "Does exact source/analytic evidence invalidate the fixed-time lower bound (8), or does a separately authorized physical-observable/assumption-resolving input justify a distinct research question?",
+    "reentry": "Exact source/rate/character/contraction/Duhamel/pullback/prime-tail error, or separately approved evidence discharging a load-bearing assumption or providing a physically motivated observable connection. No unchanged reruns, norm weakening or automatic goal chain."
+  },
+  "non_claims": [
+    "No retraction of finite R-570 or algebraic R-571",
+    "No state-projectivity verdict or all-model no-go",
+    "No Pre-A, Sector-A closure, spacetime, QFT, gravity, continuum, Yang-Mills, mass gap or TOE",
+    "Brazovskii remains a separate unadopted proposal",
+    "No modification of the model, norm, fixed observable, state, time or approved comparison.",
+    "No automatic weaker successor; horizon ideas remain unadopted. No general all-model dynamics no-go."
+  ],
+  "reproduction": [
+    "python -X utf8 verification/scripts/pah_v2_sg001_verify.py --lean-cache E:/Dev/TECT/verification/lean/.lake/packages --elan-home C:/Users/NaEun/.elan"
+  ]
+}

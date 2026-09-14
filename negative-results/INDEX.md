@@ -5,12 +5,15 @@
 
 Authorities: `negative-results/registry.md`.
 
-**388 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 312 · retraction: 5
+**391 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 315 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-09-14-PAH-V2-SG001-FIXED-TIME`](registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time) | no_go | original-time semigroup convergence for the unchanged R-573 fixed character |
+| [`NG-2026-09-13-PAH-V2-GD002-GIBBS-L2`](registry.md#ng-2026-09-13-pah-v2-gd002-gibbs-l2) | no_go | full-cylinder original fine-Gibbs generator Cauchy under the adopted PAH-v2 comparison |
+| [`NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY`](registry.md#ng-2026-09-12-pah-v2-gd001-sup-cauchy) | no_go | full-cylinder sup generator Cauchy under the adopted PAH-v2 comparison |
 | [`AUDIT-2026-09-09-PAH-OMC-028-NONLINEAR-CLOSURE`](registry.md#audit-2026-09-09-pah-omc-028-nonlinear-closure) | audit | R-530 single-vector contraction to nonlinear form-Cauchy inference |
 | [`NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS`](registry.md#ng-2026-09-08-pah-omc-022-source-level-semigroup-wellposedness) | no_go | original immutable PAH-001 stationary-semigroup proposition |
 | [`NG-2026-09-08-PAH-OMC-020-FINITE-SECOND-ORDER-SEMIGROUP-DEFECT`](registry.md#ng-2026-09-08-pah-omc-020-finite-second-order-semigroup-defect) | no_go | exponentiate the R-493 support-dependent first-order identity into the fixed-pair finite semigroup lift |
@@ -33,9 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION`](registry.md#ng-2026-08-14-pre-a-t055-isotropic-gaussian-covariance-automatic-nonzero-bcc-mean-field-extraction) | no_go | deterministically and translation-equivariantly extract a nonzero BCC mean field from the stationary isotropic Gaussian-Hartree covariance alone |
 | [`NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`](registry.md#ng-2026-08-14-pre-a-t055-common-counterterm-basis-unfixed-finite-parts-automatic-empty-reference-sign) | no_go | infer a scheme-independent candidate/reference sign from a common counterterm basis whose nonconstant finite parts remain free |
 | [`NG-2026-08-14-PRE-A-ST8-Q3LOCK-MESOSCOPIC-SOURCE-FULL-FINITE-GAP-AUTOMATIC-UNIFORM-POINCARE-TRANSFER`](registry.md#ng-2026-08-14-pre-a-st8-q3lock-mesoscopic-source-full-finite-gap-automatic-uniform-poincare-transfer) | no_go | use the unique mesoscopic-source full finite-volume gaps as a positive uniform Poincare input for the categorical phase limit |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-EXACT-TARGET-GENERATOR-AND-SEPARATION-AUTOMATIC-TARGET-GROUNDNESS`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-exact-target-generator-and-separation-automatic-target-groundness) | no_go | infer target groundness from `h_n->0`, an exact target generator and fixed parity/order separation without controlling the combined source residual |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-SOURCE-AUTOMATIC-ZERO-SOURCE-QUOTIENT-FACTORIZATION`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-source-automatic-zero-source-quotient-factorization) | no_go | infer zero-source quotient factorization of source-family weak-star clusters merely from `h_n->0` |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-VANISHING-DEFECT-AUTOMATIC-N-DEPENDENT-TWO-PHASE-RADIUS-ENTRY`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-vanishing-defect-automatic-n-dependent-two-phase-radius-entry) | no_go | infer eventual two-phase theorem entry from defect `theta_N->0` and positive radius `r_N>0` separately at each `N` |
 
 Search without loading the full registry:
 

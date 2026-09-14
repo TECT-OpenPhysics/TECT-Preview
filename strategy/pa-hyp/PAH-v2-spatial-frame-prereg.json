@@ -1,0 +1,58 @@
+{
+  "schema": "tect/pah-v2-spatial-frame-prereg/1.0",
+  "id": "PAH-V2-SPATIAL-FRAME-20260911",
+  "status": "UNAPPROVED_COMPARISON_EXTENSION_TEST_NOT_PRODUCTION_TOWER",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-v2-refinement-contract-draft.json": "bd9f85467721a223fbc2e3e951ccbd7f18d421136aa74f5854b62e596c58b1d1",
+    "strategy/pa-hyp/PAH-v2-charge-AB-prereg.json": "33fe50af87c588715b18fed5415cdad5dc5b17f0b9c3d3a25edd6e2874c06457",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-orbit-prefix-draft.json": "0f1aaa35c6729c2c3a8a484e8a60ae3e5de3941736a78e6fdd90c92a328314cd",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "verification/scripts/pah_v2_orbit_prefix_primary.py": "aefabde12a7998081194f06bab853fad33b7d9c7c608198d95bdd042f3e5195d",
+    "strategy/pa-hyp/PAH-v2-finite-audit-v1.json": "531697fa28c5f2e7f4177b42bc12ebd8fc1ffb7e9790d07063082e0ec3d6a331"
+  },
+  "question": "Does the unchanged orbit-prefix map applied to a source-admissible nested anchored geometry family transport one fixed invariant observable with volume-independent finite support?",
+  "authorization": "DCTRL-000027 permits one support/extension design or exact obstruction. This is a new explicit test family inside the parent's finite carrier class, not adoption as G_(h,N), a substitute finite dynamics, or a physical geometry.",
+  "family": {
+    "parameter": "integer d>=1",
+    "vertices": "0,1,2 and L_k=2k+1,R_k=2k+2 for 1<=k<=d; ordered by these integer labels",
+    "edges": "Stored (0,1),(1,2),(2,0), and (L_(k-1),L_k),(R_(k-1),R_k) for 1<=k<=d, with L_0=1,R_0=2",
+    "faces": "One unchanged oriented closed triangle [(0,+1),(1,+1),(2,+1)] in stored edge indices",
+    "anchors": "O={0}, C={1,2} at every d, labels only",
+    "boundary": "Open arm endpoints; no fixed fields, extra face, periodic closure, or terminal conditioning",
+    "inclusions": "Literal inclusions G_d into G_(d+1), preserving O,C and the triangle. No state comparison across d is assumed.",
+    "source_admissibility": "Connected finite oriented two-cell complex, nonempty closed face, distinct oriented geometric edges, maximum degree 3 uniformly in d; no physical metric/volume",
+    "symmetry": "Complete H has identity and simultaneous arm/triangle reflection tau: 1<->2,L_k<->R_k; base edge (1,2) reverses sign. Gauge group unchanged."
+  },
+  "regulators": {
+    "coarse": "The existing first B pair: K=2,Ms=Mpsi=Q=1; Rmax>0 and all real parameters fixed.",
+    "fine": "K=4,Ms=2,Mpsi=4,Q=2; Rmax doubled as in B, not evaluated.",
+    "order": "No limit taken. The quantified graph-size statement at this fixed cutoff is not a reversal of source local-cutoff-before-geometry limit order."
+  },
+  "fixed_observable": "f=(-1)^(u_(1,2)+n_1-n_2 mod 2) on the same coarse base edge at every d. Full gauge/anchor invariant, support S={vertices 1,2;edge (1,2)}.",
+  "two_states": {
+    "common": "Fine ell_0=2; all other ell and all n zero; u_(1,2)=1, all other u zero. All aperture indices zero except one remote terminal index.",
+    "A": "j_(L_d)=1,j_(R_d)=0",
+    "B": "j_(L_d)=0,j_(R_d)=1",
+    "claim_to_test": "For arbitrary d, the two states agree within every ball of combinatorial radius R<d around S but the actual orbit-prefix pullback takes opposite +/-1 values."
+  },
+  "preregistered_tests": {
+    "algorithm": "Apply the exact pinned map, including whole-G canonicalization, signed inverse frame and original phase rule. Do not replace it with an improved quantizer.",
+    "fixed_support": "Prove using the arbitrary-d family, not a table extrapolation, that no one finite subset of the infinite two-arm graph determines all these pullbacks for sufficiently large d.",
+    "sup_norm": "For any local approximation h_d determined by a fixed finite support, test the two-point bound ||If-h_d||_infinity>=|If(A)-If(B)|/2 at sufficiently large d. No Gibbs probability estimate.",
+    "smoke_depth": 3,
+    "smoke_role": "One executable instance validates indexing and exact map application; arbitrary-d conclusion comes from the written proof. No state-space enumeration or scale sweep.",
+    "independent": "No primary/map/enumerator imports; reconstruct reflection from degree/distance classes and use direct integer reflection/coarsening. Same-task authorship.",
+    "hostile": "Retain all signed edges and hidden aperture labels; ensure f is fixed and fully invariant; never infer all-family impossibility, generator failure, Gibbs-L2 failure or ordered-limit failure."
+  },
+  "approval_record": null,
+  "operative_contract": null,
+  "non_claims": [
+    "No new model, root, rate, state normalization, projection or time rule",
+    "No all-map or all-geometry-family no-go",
+    "No Gibbs-L2, generator or ordered-limit conclusion",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum or TOE"
+  ]
+}

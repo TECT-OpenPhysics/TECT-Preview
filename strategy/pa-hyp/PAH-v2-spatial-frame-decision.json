@@ -1,0 +1,115 @@
+{
+  "schema": "tect/pah-v2-spatial-frame-decision/1.0",
+  "id": "PAH-V2-SPATIAL-FRAME-20260911",
+  "date": "2026-09-11",
+  "classification": "NEGATIVE_RESULT",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "counts_as_mainline": false,
+  "goal_complete": false,
+  "goal_status": "HOLD_FOR_REVISED_FULL_CONTRACT_AND_APPROVAL",
+  "candidate_extension_status": "FAILED_ON_PREREGISTERED_ADMISSIBLE_FAMILY",
+  "approval_record": null,
+  "operative_contract": null,
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-v2-refinement-contract-draft.json": "bd9f85467721a223fbc2e3e951ccbd7f18d421136aa74f5854b62e596c58b1d1",
+    "strategy/pa-hyp/PAH-v2-charge-AB-prereg.json": "33fe50af87c588715b18fed5415cdad5dc5b17f0b9c3d3a25edd6e2874c06457",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-orbit-prefix-draft.json": "0f1aaa35c6729c2c3a8a484e8a60ae3e5de3941736a78e6fdd90c92a328314cd",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "verification/scripts/pah_v2_orbit_prefix_primary.py": "aefabde12a7998081194f06bab853fad33b7d9c7c608198d95bdd042f3e5195d",
+    "strategy/pa-hyp/PAH-v2-finite-audit-v1.json": "531697fa28c5f2e7f4177b42bc12ebd8fc1ffb7e9790d07063082e0ec3d6a331",
+    "strategy/pa-hyp/PAH-v2-spatial-frame-prereg.json": "07d67b69ec742dc3c7981d2b73e102a88c5bc376a97009f53e125cde57c72997"
+  },
+  "evidence_hashes": {
+    "verification/scripts/pah_v2_spatial_frame_primary.py": "85406b6ee0b75c88bce1d99d6c7eed32f5902fe44527109793f5742873ae1e7a",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-spatial-frame/independent-hostile.json": "434be0744da27ac44b361c51f987c0c53eb460dc8238f1337f2ddc600b6a5634",
+    "strategy/pa-hyp/PAH-v2-spatial-frame-prereg.json": "07d67b69ec742dc3c7981d2b73e102a88c5bc376a97009f53e125cde57c72997",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-spatial-frame/primary.json": "dc387f53c1ae1036a735c73438253e8bca9f8667f13c7a0910902b2a35e6da61",
+    "verification/scripts/pah_v2_spatial_frame_independent.py": "66b2e7f300c5b521f4d755598f4ff77909a057b261db875e9ae48cb4d92975ae",
+    "strategy/pa-hyp/PAH-v2-spatial-frame-review.md": "dfa467a471fce980ceb51017946fc3901b14ffd057eeb7b1fc2ff181c1f58544"
+  },
+  "previous_audit": {
+    "path": "strategy/pa-hyp/PAH-v2-orbit-prefix-decision.json",
+    "sha256": "b77e3e729ef726420fec4f688b03ef062b233657584badaf3dd24f0839fb423b",
+    "relation": "Preserved historical fixed-G success; this addendum adds a spatial-extension obstruction."
+  },
+  "exact_statement": "For the pinned orbit-prefix map on the named G_d and the same base-edge invariant f, no fixed finite support determines I_d f for all sufficiently large d. At the fixed first B cutoff pair, any such local approximation has supremum error at least 1.",
+  "assumptions": "Exact lexicographic global frame, full source cell symmetries, named vertex ordering, unchanged counting tuple state and B first cutoff pair, literal base-edge observable retained across G_d.",
+  "failed_assumption": "Volume-independent finite-support transport for this algorithm on this family.",
+  "inspected_requirements": [
+    {
+      "id": "SOURCE_MODEL_AND_R570",
+      "status": "PRESERVED",
+      "evidence": "Both scripts verify all immutable source hashes."
+    },
+    {
+      "id": "FIXED_G_TOTAL_P_FULL_I",
+      "status": "RETAINED_DRAFT_ONLY",
+      "evidence": "EXP-001734 finite algebra identities are not contradicted."
+    },
+    {
+      "id": "SPATIAL_SUPPORT_ON_THIS_EXTENSION",
+      "status": "FAILED",
+      "evidence": "For the same base observable and every finite support, sufficiently long source-admissible two-arm graphs have equal local inputs but opposite pullbacks; sup local-approximation error >=1 at the fixed cutoff pair."
+    },
+    {
+      "id": "FULL_TOWER_AND_BOUNDARY_SQUARES",
+      "status": "MISSING",
+      "evidence": "The diagnostic G_d is not an adopted two-index G_(h,N) or a complete comparison family."
+    },
+    {
+      "id": "ROOT_CORRESPONDENCE",
+      "status": "PARTIAL_FIXED_G_ONLY",
+      "evidence": "EXP-001734 algorithm retained; no new root computation or geometry correspondence is admitted."
+    },
+    {
+      "id": "COMMON_CYLINDER_AND_SUP_NORM",
+      "status": "NOT_ADMITTED_FULL_TOWER",
+      "evidence": "Original norm retained; the proposed global-frame extension fails the required volume-independent support on this family."
+    },
+    {
+      "id": "SOURCE_ORDER",
+      "status": "PRESERVED_NOT_EXECUTED",
+      "evidence": "Local cutoff before geometry order unchanged; quantified finite fixed-cutoff statement only."
+    },
+    {
+      "id": "GENERATOR_DEFECT_FALSIFIERS",
+      "status": "PREREGISTERED_NOT_EVALUATED",
+      "evidence": "Original full labelled-root Delta and sup/Gibbs diagnostics retained."
+    },
+    {
+      "id": "APPROVAL_AND_OPERATIVE_HASH",
+      "status": "MISSING",
+      "evidence": "All new definition records remain unapproved; integrity hashes are not approval."
+    },
+    {
+      "id": "COMPLETE_INDEPENDENT_HOSTILE_ADMISSION",
+      "status": "INCOMPLETE",
+      "evidence": "Separate implementation and scoped analytic review do not admit a complete approved contract."
+    }
+  ],
+  "verification": {
+    "primary": "PASS exact pinned algorithm at one preregistered depth d=3, both full witness states and complete fixture symmetry group",
+    "independent": "PASS non-importing named-graph/distance-class/token-pair implementation; identical states/images/group/values; same-task authorship",
+    "analytic": "Written all-d symmetry/lexicographic/support proof and exact two-point sup-norm lower bound; not inferred from finite enumeration",
+    "hostile": "PASS frame/sign and fixed-invariant-observable controls; explicit source/geometry, fixed-cutoff and no-Gibbs-L2 scope objections",
+    "Lean": "NOT_RUN",
+    "external_person": "NOT_PERFORMED"
+  },
+  "next_single_question": "Can a v2-specific replacement comparison contract avoid global state-dependent frame selection while retaining full counting states, gauge/anchor invariance, charge-safe surjectivity, the full invariant cylinder algebra and the original sup norm on an explicitly justified tower?",
+  "reentry": "One genuinely changed draft algorithm and geometry/support contract, tested against this fixed-observable falsifier before admission. No more sizes of the same witness, smaller observable subalgebra, hidden symmetry restriction, state exclusion, old owner search or automatic adoption.",
+  "non_claims": [
+    "No source model, state normalization, root, rate, projection or Markov time change",
+    "No all-map or all-geometry-family impossibility",
+    "No refutation of the fixed-G right inverse/invariant pullback",
+    "No generator, Gibbs-L2, cutoff-first ordered-limit or physical conclusion",
+    "No Pre-A, Sector-A, QFT, gravity, continuum or TOE promotion"
+  ],
+  "reproduction": [
+    "python -X utf8 verification/scripts/pah_v2_spatial_frame_primary.py --check",
+    "python -X utf8 verification/scripts/pah_v2_spatial_frame_independent.py --check"
+  ]
+}

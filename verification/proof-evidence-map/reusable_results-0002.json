@@ -2,6 +2,215 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260831-r-465-finite-partition-comparison-envelope-2026",
+        "20260831-r-466-finite-positive-mass-tube-lower-bound-int"
+      ],
+      "anchor": "r-465",
+      "claim_ref_basis": {
+        "A6-CLASSII-UV-POWER-COUNTING": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "A6-CLASSII-UV-POWER-COUNTING"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary_and_non_claims": "The radial expression is an upper envelope from the R-464 lower bound, not the actual correlated full-field partition function. Its pressure term is not an entropy density or a no-go theorem, and finite rows do not supply cutoff-uniformity. R-465 does not estimate a branch tube probability, entropy/Jacobian, tightness, floor removal, ordered limit, continuum, physical branch, Pre-A, Sector A, QFT, Yang--Mills, gravity, or mass gap. No claim tier changes, negative result, or intermediate PDF is issued; the existing methods and owner order are unchanged.",
+        "evidence": "The primary audit passes 146/146 assertions, the non-importing independent audit passes 175/175, eight hostile mutations are rejected, the integrated verifier passes 56/56, and Lean `R465.lean` compiles. The primary, independent and hostile sources are separate implementations; the integrated lane checks their identities, exact coefficient rows, finite envelope rows, scope firewall and Lean declarations.",
+        "exact_comparison_envelope": "For each declared `beta>0`, the finite radial comparison is ```text Z_N(beta) <= exp(beta*K) * pi^(d/2)*Gamma(d/6)/(3*Gamma(d/2)) * (beta*a_N)^(-d/6). ``` The audit uses the fixed fixtures `N=[1,2,3,4,5,6,8,10,12,16,20]` and `beta=[1/2,1,2]`. Exact arithmetic verifies `a_N*m^3=gamma*V/12`, and therefore strict coefficient decrease over these cutoffs. The reported term `P_N(beta)=-(d/6)*log(beta*a_N)` is a norm-volume pressure diagnostic for this comparison.",
+        "next_action": "Obtain the source-owned positive-mass active-branch tube and its correlated-Gibbs probability/entropy estimate. Use R-465 only as a finite boundary diagnostic while continuing unchanged T-054 Q3LOCK and T-059/T-061 observation locks; if no uniform compensator appears, record that obstruction instead of changing the research method or promoting the tier.",
+        "proven_in": "[R-465 certificate](strategy/a6-classii-partition-envelope-certificate-260831.md), [machine manifest](strategy/a6-classii-partition-envelope-manifest.json), [primary script](verification/scripts/a6_classii_partition_envelope.py), [independent script](codes/foundations/a6_classii_partition_envelope_independent.py), [hostile script](codes/foundations/a6_classii_partition_envelope_hostile.py), [integrated verifier](verification/scripts/a6_classii_partition_envelope_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-partition-envelope/integrated.json), [Lean kernel](verification/lean/Tect/R465.lean), and [exploration record](strategy/a6-classii-partition-envelope-exploration.json).",
+        "result_id": "`A6-CLASSII-PARTITION-ENVELOPE-v1` (R-465).",
+        "version_and_exact_scope": "R-465 v1.0 is a T0, claim-nonbearing additive diagnostic for the existing A6/A7 fixed-floor Class-II route. It reuses the hash-pinned A1 functional and the R-464 lower comparison without changing the T-054 forward owner order or the T-059/T-061 observation-first lane. At a finite spectral cutoff with `m=(2N+1)^3` sites and `d=6*m` real coordinates, R-464 gives `F_N(z)>=a_N||z||^6-K` with `a_N=gamma*V/(12*m^3)`."
+      },
+      "detail_title": "Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic",
+      "family_refs": [],
+      "id": "R-465",
+      "normalized_detail": {
+        "boundary": "",
+        "proof_anchor": "[R-465 certificate](strategy/a6-classii-partition-envelope-certificate-260831.md), [machine manifest](strategy/a6-classii-partition-envelope-manifest.json), [primary script](verification/scripts/a6_classii_partition_envelope.py), [independent script](codes/foundations/a6_classii_partition_envelope_independent.py), [hostile script](codes/foundations/a6_classii_partition_envelope_hostile.py), [integrated verifier](verification/scripts/a6_classii_partition_envelope_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-partition-envelope/integrated.json), [Lean kernel](verification/lean/Tect/R465.lean), and [exploration record](strategy/a6-classii-partition-envelope-exploration.json).",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-465 v1.0 is a T0 claim-nonbearing additive A6/A7 diagnostic derived from the unchanged R-464 sextic comparison. The finite radial upper envelope is evaluated for cutoffs [1,2,3,4,5,6,8,10,12,16,20] and beta [1/2,1,2]; exact `a_N*m^3=gamma*V/12` scaling and strict coefficient decrease are independently checked. Primary 146/146, independent 175/175, hostile 8/8, integrated 56/56 and Lean R465 pass. The pressure term is comparison-only: no actual partition asymptotic, entropy density, branch probability, cutoff-uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged",
+      "title": "Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic"
+    },
+    {
+      "accepted_event_ids": [
+        "20260831-r-464-finite-gibbs-integrability-and-branch-con",
+        "20260831-r-465-finite-partition-comparison-envelope-2026",
+        "20260831-r-466-finite-positive-mass-tube-lower-bound-int"
+      ],
+      "anchor": "r-464",
+      "claim_ref_basis": {
+        "A6-CLASSII-UV-POWER-COUNTING": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "A6-CLASSII-UV-POWER-COUNTING"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary_and_non_claims": "R-464 does not estimate a correlated-Gibbs branch or tube probability, entropy density, phase/singlet Jacobian, partition asymptotic, cutoff/volume-uniform bound, tightness, floor removal, ordered continuum limit, source-owned Q3LOCK dynamics, physical-empty selection, Pre-A, Sector A, QFT, Yang--Mills, or mass gap. It does not replace or alter any established forward or inverse method.",
+        "branch_conditioning_rule": "The exact pure-singlet branch sets the first two complex components to zero at every site. It has real codimension `4*m` in `R^(6*m)` and hence zero Lebesgue Gibbs mass; conditioning by division on that set is undefined. A branch event must instead be a measurable tube `B` with `mu(B)>0`, and only then is `mu(A intersect B)/mu(B)` a valid conditional probability. The active-branch mass is not classified here.",
+        "evidence": "The primary audit passes 24/24 assertions, the non-importing independent audit passes 134/134, eight hostile mutations are rejected, the integrated verifier passes 49/49, and the Lean kernel `R464.lean` compiles with no forbidden declarations.",
+        "exact_fixed_cutoff_result": "Parse the A1 decimals as exact rationals. With `mu2=26000000000947494031/100000000000000000000 > 0`, `ell=-lambda=43/100`, `gamma=81/50`, `T=3*ell/gamma=43/54`, and `C=ell*T^2/4=79507/1166400`, the scalar comparison ```text p(t)=mu2*t/2 - ell*t^2/4 + gamma*t^3/6 p(t) >= gamma*t^3/12 - C (t >= 0) ``` holds by the two exact threshold branches. Since `sum_i rho_i^3 >= (sum_i rho_i)^3/m^2`, the full finite functional is bounded below by a positive multiple of `||z||^6` minus a finite constant. The standard finite-dimensional radial integral therefore gives a finite Lebesgue Gibbs normalizer for each fixed cutoff and every `beta>0`. The coercive norm coefficient is cutoff-dependent (it decays as `m^-3`), so this is not a uniform estimate.",
+        "next_action": "Obtain a source-owned positive-mass branch tube and its correlated-Gibbs probability estimate. Only then apply the R-463 active metric; keep exact zero-mass branches unconditioned and continue T-054 Q3LOCK plus T-059/T-061 observation locks in parallel.",
+        "proven_in": "[R-464 certificate](strategy/a6-classii-finite-gibbs-conditioning-certificate-260831.md), [machine manifest](strategy/a6-classii-finite-gibbs-conditioning-manifest.json), [primary script](verification/scripts/a6_classii_finite_gibbs_conditioning.py), [independent script](codes/foundations/a6_classii_finite_gibbs_conditioning_independent.py), [hostile script](codes/foundations/a6_classii_finite_gibbs_conditioning_hostile.py), [integrated verifier](verification/scripts/a6_classii_finite_gibbs_conditioning_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-finite-gibbs-conditioning/integrated.json), [Lean kernel](verification/lean/Tect/R464.lean), and [exploration record](strategy/a6-classii-finite-gibbs-conditioning-exploration.json).",
+        "result_id": "`A6-CLASSII-FINITE-GIBBS-CONDITIONING-v1` (R-464).",
+        "version_and_exact_scope": "R-464 v1.0 is a T0, claim-nonbearing additive prerequisite for the existing A6/A7 fixed-floor Class-II route. It uses the hash-pinned A1 reference functional, the unchanged T-054 forward owner order, and the T-059/T-061 observation-first locks. For the finite spectral cutoff with `m=(2N+1)^3` sites, the real coordinate space has dimension `6*m`."
+      },
+      "detail_title": "Finite-cutoff Gibbs integrability and positive-mass branch conditioning",
+      "family_refs": [],
+      "id": "R-464",
+      "normalized_detail": {
+        "boundary": "",
+        "proof_anchor": "[R-464 certificate](strategy/a6-classii-finite-gibbs-conditioning-certificate-260831.md), [machine manifest](strategy/a6-classii-finite-gibbs-conditioning-manifest.json), [primary script](verification/scripts/a6_classii_finite_gibbs_conditioning.py), [independent script](codes/foundations/a6_classii_finite_gibbs_conditioning_independent.py), [hostile script](codes/foundations/a6_classii_finite_gibbs_conditioning_hostile.py), [integrated verifier](verification/scripts/a6_classii_finite_gibbs_conditioning_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-finite-gibbs-conditioning/integrated.json), [Lean kernel](verification/lean/Tect/R464.lean), and [exploration record](strategy/a6-classii-finite-gibbs-conditioning-exploration.json).",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-464 v1.0 is a T0 claim-nonbearing additive A6/A7 prerequisite under the unchanged fixed-floor Class-II functional. Exact A1 coefficient arithmetic gives a degree-six coercive lower comparison and finite-dimensional Gibbs integrability at every fixed cutoff; the pure-singlet branch has codimension 4*m and zero Lebesgue mass, so only positive-mass measurable tubes may be conditioned. Primary 24/24, independent 134/134, hostile 8/8, integrated 49/49 and Lean R464 pass. No branch probability, entropy, cutoff-uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged",
+      "title": "Finite-cutoff Gibbs integrability and positive-mass branch conditioning"
+    },
+    {
+      "accepted_event_ids": [
+        "20260831-r-463-active-branch-tube-metric-2026-08-31",
+        "20260831-r-464-finite-gibbs-integrability-and-branch-con"
+      ],
+      "anchor": "r-463",
+      "claim_ref_basis": {
+        "A6-CLASSII-UV-POWER-COUNTING": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "A6-CLASSII-UV-POWER-COUNTING"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "The bounded grid is not the correlated finite-cutoff field law. This result does not provide a branch-conditioned Gibbs probability, entropy density, partition bound, cutoff-uniform estimate, tightness, floor removal, ordered continuum limit, physical-empty selection, Q3LOCK dynamics, QFT, Yang--Mills, or mass-gap bridge. The flat-direction zero barrier is an explicit open obligation, not a failure of the active local identity. Existing A6/A7, T-054, T-059 and T-061 methods, owner order and promotion firewalls are unchanged.",
+        "exact_result": "The identity `(a+c)*(q_Q-lambda_r*(x^2+y^2))=(a*x+b*y)^2+(b*x+c*y)^2` proves `E2>=T_active^2` for the A1-derived positive coefficients. The separate flat proxy has `T_flat^2=|f|^2` and `E_flat=0`, so its outside-tube barrier is exactly zero.",
+        "finite_diagnostic_and_evidence": "The primary audit enumerates the declared `{-1,0,1}^5` active grid and the independent audit repeats the calculation on a denser `{-2,-1,0,1,2}^5` grid. For each declared threshold and inverse temperature, the exact outside count and minimum energy are converted to the finite proxy `N*exp(-beta*E2_min/2)` using only the unit lower bound `Z>=1`. Primary 44/44, independent 6270/6270, hostile 8/8, integrated 48/48, and Lean R463 all pass.",
+        "next_action": "Admit a source-owned branch-conditioned finite-cutoff estimate before using this metric; retain flat-direction entropy, Q3LOCK owner intake, and T-059/T-061 observation locks as separate parallel obligations.",
+        "proven_in": "[R-463 certificate](strategy/a6-classii-active-branch-tube-metric-certificate-260831.md), [machine manifest](strategy/a6-classii-active-branch-tube-metric-manifest.json), [primary script](verification/scripts/a6_classii_active_branch_tube_metric.py), [independent script](codes/foundations/a6_classii_active_branch_tube_metric_independent.py), [hostile script](codes/foundations/a6_classii_active_branch_tube_metric_hostile.py), [integrated verifier](verification/scripts/a6_classii_active_branch_tube_metric_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-active-branch-tube-metric/integrated.json), [Lean kernel](verification/lean/Tect/R463.lean), and [exploration record](strategy/a6-classii-active-branch-tube-metric-exploration.json).",
+        "result_id": "`A6-CLASSII-ACTIVE-BRANCH-TUBE-METRIC-v1` (R-463).",
+        "version_and_exact_scope": "R-463 v1.0 is a T0, claim-nonbearing additive interface for the existing A6/A7 fixed-floor Class-II functional. With `Q=[[a,b],[b,c]]`, `Delta=a*c-b^2`, `lambda_r=Delta/(a+c)`, and `kappa=a+2*b+c`, the active variables are `x=d_s`, `y=delta`, and `u=s*grad(n)`. The active energy is `E2=2*e_II=q_Q(x,y)+kappa*|u|^2` and the metric is `T_active^2=lambda_r*(x^2+y^2)+kappa*|u|^2`."
+      },
+      "detail_title": "Fixed-floor active-branch tube metric and finite entropy stress test",
+      "family_refs": [],
+      "id": "R-463",
+      "normalized_detail": {
+        "boundary": "The bounded grid is not the correlated finite-cutoff field law. This result does not provide a branch-conditioned Gibbs probability, entropy density, partition bound, cutoff-uniform estimate, tightness, floor removal, ordered continuum limit, physical-empty selection, Q3LOCK dynamics, QFT, Yang--Mills, or mass-gap bridge. The flat-direction zero barrier is an explicit open obligation, not a failure of the active local identity. Existing A6/A7, T-054, T-059 and T-061 methods, owner order and promotion firewalls are unchanged.",
+        "proof_anchor": "[R-463 certificate](strategy/a6-classii-active-branch-tube-metric-certificate-260831.md), [machine manifest](strategy/a6-classii-active-branch-tube-metric-manifest.json), [primary script](verification/scripts/a6_classii_active_branch_tube_metric.py), [independent script](codes/foundations/a6_classii_active_branch_tube_metric_independent.py), [hostile script](codes/foundations/a6_classii_active_branch_tube_metric_hostile.py), [integrated verifier](verification/scripts/a6_classii_active_branch_tube_metric_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-active-branch-tube-metric/integrated.json), [Lean kernel](verification/lean/Tect/R463.lean), and [exploration record](strategy/a6-classii-active-branch-tube-metric-exploration.json).",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-463 v1.0 is a T0 claim-nonbearing additive A6/A7 interface under the unchanged fixed-floor Class-II functional. The exact radial sum-of-squares gap defines an active metric dominated by 2*e_II; bounded local-grid proxies are reported with primary 44/44, independent 6270/6270, hostile 8/8, integrated 48/48 and Lean R463 pass. A separate flat proxy has zero energy barrier. No correlated Gibbs, entropy density, partition, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged",
+      "title": "Fixed-floor active-branch tube metric and finite entropy stress test"
+    },
+    {
+      "accepted_event_ids": [
+        "20260831-r-462-active-branch-normal-form-2026-08-31",
+        "20260831-r-463-active-branch-tube-metric-2026-08-31"
+      ],
+      "anchor": "r-462",
+      "claim_ref_basis": {
+        "A6-CLASSII-UV-POWER-COUNTING": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "A6-CLASSII-UV-POWER-COUNTING"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "This identity supplies a branch-aware normal coordinate for the next A6 tube/entropy step. It does not estimate Gibbs probabilities or entropy, control the spatially correlated partition function, prove tightness, remove the floor, take a continuum or thermodynamic limit, select a physical branch, admit a Q3LOCK source owner, or close A6, A7, Pre-A, Sector A, QFT, Yang--Mills, gravity or mass gap. The established T-054 forward method, T-059/T-061 inverse method, owner order and promotion firewalls are unchanged.",
+        "evidence": "The hash-pinned A1 coefficients are used with exact rational arithmetic. The primary audit checks six rational frames, active amplitudes, singlet densities, spatial jets, tangent coordinates, radial positivity and null/non-null controls (46 recorded assertions and 27,000 decomposition checks). A non-importing independent implementation passes 209 assertions; eight hostile mutations are rejected; the integrated verifier passes 44/44 and compiles `verification/lean/Tect/R462.lean`.",
+        "next_action": "Use the radial/angular split to define branch-specific tube metrics and test their entropy budget under the unchanged finite-cutoff Gibbs law; retain pure-singlet flat directions as a separate obligation.",
+        "proven_in": "[R-462 certificate](strategy/a6-classii-active-branch-normal-form-certificate-260831.md), [machine manifest](strategy/a6-classii-active-branch-normal-form-manifest.json), [primary script](verification/scripts/a6_classii_active_branch_normal_form.py), [independent script](codes/foundations/a6_classii_active_branch_normal_form_independent.py), [hostile script](codes/foundations/a6_classii_active_branch_normal_form_hostile.py), [integrated verifier](verification/scripts/a6_classii_active_branch_normal_form_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-active-branch-normal-form/integrated.json), [Lean kernel](verification/lean/Tect/R462.lean), and [exploration record](strategy/a6-classii-active-branch-normal-form-exploration.json).",
+        "result_id": "`A6-CLASSII-ACTIVE-BRANCH-NORMAL-FORM-v1` (R-462).",
+        "version_and_exact_scope": "R-462 v1.0 is a T0, claim-nonbearing additive local lemma for the existing A6/A7 fixed-floor Class-II functional. At an active point, write the Bloch vector as `m=s*n`, with `s>0`, `n dot n=1`, and let `t=grad(n)` satisfy `n dot t=0`. For `d_s=grad(s)`, `d_rho=grad(rho)`, `D=rho+epsilon_rho`, and `delta=d_s-s*d_rho/D`, the unchanged currents are `J=d_s*n+s*t` and `K=delta*n+s*t`. Exact algebra gives ```text 2 e_II = a*d_s^2 + 2*b*d_s*delta + c*delta^2 + (a+2*b+c)*s^2*(t dot t). ``` The radial form is positive definite, and `a+2*b+c=((a+b)^2+(a*c-b^2))/a>0`. Thus a zero active local jet has `t=0`, `d_s=0`, and `d_rho=0`; common phases and singlet directions are not controlled by this current."
+      },
+      "detail_title": "Fixed-floor active-branch normal-form coercivity",
+      "family_refs": [],
+      "id": "R-462",
+      "normalized_detail": {
+        "boundary": "This identity supplies a branch-aware normal coordinate for the next A6 tube/entropy step. It does not estimate Gibbs probabilities or entropy, control the spatially correlated partition function, prove tightness, remove the floor, take a continuum or thermodynamic limit, select a physical branch, admit a Q3LOCK source owner, or close A6, A7, Pre-A, Sector A, QFT, Yang--Mills, gravity or mass gap. The established T-054 forward method, T-059/T-061 inverse method, owner order and promotion firewalls are unchanged.",
+        "proof_anchor": "[R-462 certificate](strategy/a6-classii-active-branch-normal-form-certificate-260831.md), [machine manifest](strategy/a6-classii-active-branch-normal-form-manifest.json), [primary script](verification/scripts/a6_classii_active_branch_normal_form.py), [independent script](codes/foundations/a6_classii_active_branch_normal_form_independent.py), [hostile script](codes/foundations/a6_classii_active_branch_normal_form_hostile.py), [integrated verifier](verification/scripts/a6_classii_active_branch_normal_form_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-active-branch-normal-form/integrated.json), [Lean kernel](verification/lean/Tect/R462.lean), and [exploration record](strategy/a6-classii-active-branch-normal-form-exploration.json).",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-462 v1.0 is a T0 claim-nonbearing additive A6/A7 local jet lemma under the unchanged fixed-floor Class-II functional. On an active Bloch branch `m=s*n` with `s>0` and `n dot t=0`, the exact identity `2 e_II = a*d_s^2+2b*d_s*delta+c*delta^2+(a+2b+c)*s^2|t|^2` separates radial and angular normal directions; primary 46/46, independent 209/209, hostile 8/8, integrated 44/44 and Lean R462 pass. Phase/singlet-flat directions, tube/entropy, partition, tightness, continuum, physical, QFT, Yang--Mills and mass-gap conclusions remain open; existing methods and owner order are unchanged",
+      "title": "Fixed-floor active-branch normal-form coercivity"
+    },
+    {
+      "accepted_event_ids": [
+        "20260831-r-461-fixed-floor-smooth-class-ii-null-branch-d"
+      ],
+      "anchor": "r-461",
+      "claim_ref_basis": {
+        "A6-CLASSII-UV-POWER-COUNTING": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "A6-CLASSII-UV-POWER-COUNTING"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "assumptions_and_boundary": "The zero-gradient and connected-domain steps are analytic assumptions; Lean checks the exact rational algebraic core. This result does not classify the Gibbs law, supply tube or entropy probabilities, prove partition convergence or tightness, remove the rho floor, select a physical branch, admit a source-owned dynamic, or establish continuum, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap status. No claim tier, gate status, or PDF is changed.",
+        "finding_and_proof_core": "Positive-form completion gives zero density if and only if every `J_A` and `K_A` vanishes. The exact identity `m_1^2+m_2^2+m_3^2=s^2` makes a zero Bloch vector equivalent to `z=0`. On a connected domain, the smooth pathwise null set therefore splits into a pure singlet branch (`z=0`, arbitrary singlet) and an active branch with a nonzero constant Bloch vector, constant total `rho`, and constant rank-one doublet projector; only common doublet and singlet phases may vary. The primary 1310/1310, non-importing independent 677/677, hostile 8/8, integrated 46/46 and Lean R461 checks pass. An active common-phase plane wave has zero pathwise Class-II energy but positive registered `W_epsilon`, so the conditional contraction zero set cannot replace the pathwise null set.",
+        "next_action": "Use this dichotomy as the input partition for a branch-aware cutoff-uniform tube/entropy and tightness audit. Until that estimate exists, do not infer concentration or physical selection from R-461. Continue the unchanged T-054 source-owner intake and T-059/T-061 observation-source locks.",
+        "proven_in": "[certificate](strategy/a6-classii-null-branch-dichotomy-certificate-260831.md), [machine manifest](strategy/a6-classii-null-branch-dichotomy-manifest.json), [primary script](verification/scripts/a6_classii_null_branch_dichotomy.py), [independent script](codes/foundations/a6_classii_null_branch_dichotomy_independent.py), [hostile script](codes/foundations/a6_classii_null_branch_dichotomy_hostile.py), [integrated verifier](verification/scripts/a6_classii_null_branch_dichotomy_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-null-branch-dichotomy/integrated.json), [exploration record](strategy/a6-classii-null-branch-dichotomy-exploration.json), and [Lean R461](verification/lean/Tect/R461.lean).",
+        "result_id": "`A6-CLASSII-NULL-BRANCH-DICHOTOMY-v1` (R-461).",
+        "version_and_exact_scope": "R-461 v1.0 is a T0, claim-nonbearing additive lemma for the existing A6/A7 fixed-floor Class-II functional on a connected C1 domain, with the intended application the fixed periodic three-torus. It uses the first-two-component embedded Pauli currents `m_A=z^dagger sigma_A z`, `q_A=m_A/(rho+epsilon_rho)`, `J_A=grad m_A`, and `K_A=J_A-q_A grad rho`, with the positive coefficient matrix derived from the hash-pinned A1 production functional manifest. The A6/A7 functional, T-054 forward method, T-059/T-061 inverse lane and owner order are unchanged."
+      },
+      "detail_title": "Fixed-floor smooth Class-II null-branch dichotomy",
+      "family_refs": [],
+      "id": "R-461",
+      "normalized_detail": {
+        "boundary": "",
+        "proof_anchor": "[certificate](strategy/a6-classii-null-branch-dichotomy-certificate-260831.md), [machine manifest](strategy/a6-classii-null-branch-dichotomy-manifest.json), [primary script](verification/scripts/a6_classii_null_branch_dichotomy.py), [independent script](codes/foundations/a6_classii_null_branch_dichotomy_independent.py), [hostile script](codes/foundations/a6_classii_null_branch_dichotomy_hostile.py), [integrated verifier](verification/scripts/a6_classii_null_branch_dichotomy_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-null-branch-dichotomy/integrated.json), [exploration record](strategy/a6-classii-null-branch-dichotomy-exploration.json), and [Lean R461](verification/lean/Tect/R461.lean).",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-461 v1.0 is a T0 claim-nonbearing additive A6/A7 pathwise lemma under the existing fixed-floor Class-II functional. Positive-form completion, the exact Bloch identity and an exhaustive `[-2,2]^4` rational grid classify smooth null fields into a pure-singlet branch or an active constant-Bloch/constant-rho phase branch; primary 1310/1310, independent 677/677, hostile 8/8, integrated 46/46 and Lean R461 pass. An active common-phase plane wave has zero pathwise Class-II energy but positive `W_epsilon`, so the conditional contraction zero set cannot replace the pathwise null set. This does not prove Gibbs concentration, entropy/tube bounds, partition convergence, tightness, floor removal, continuum, physical branch selection, QFT, Yang--Mills or mass gap; existing A6/A7, T-054, T-059 and T-061 methods and owner order are unchanged",
+      "title": "Fixed-floor smooth Class-II null-branch dichotomy"
+    },
+    {
+      "accepted_event_ids": [
+        "20260831-r-460-contents-remaining-scope-owner-audit-2026"
+      ],
+      "anchor": "r-460",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "assumptions_and_missing_assumptions": "The configured `Contents` root is treated as the maintained canonical source, the five groups are a bounded alias set rather than a replacement owner specification, R-459 subtrees are excluded for complementarity, replacement decoding is search-only, and future sources may use other terminology. Missing are a hash-pinned production generator and mobility, root-labelled filtration and conditional replicas, raw-current spatial intertwiner, once-owned production q-ledger, common state/projection/boundary/normalization, regulator/volume/limit order, an admitted Q3 common domain with uniform majorant, and the downstream OS/KMS/GNS or physical-sector bridge.",
+        "boundary": "R-460 does not supply a generator, heat semigroup, filtration, current map, q-ledger, candidate, observation map, score, physical identity, continuum, QFT/Yang--Mills, Pre-A, Sector-A, cosmic-origin, theory-of-everything or mass-gap result. It does not alter the established research methods, owner order or promotion firewalls, and emits no negative result or tier change.",
+        "finding_and_evidence": "The complementary scan covers 284 paths, 273 unique content hashes and 11 duplicate paths. It finds zero complete semantic paths, zero standalone owner candidates and zero exact R-192 owner-token paths. Three partial rows contain at least three groups; no loose-q control row is present. The primary and non-importing independent summaries agree; the integrated verifier passes 17/17 assertions; and the hostile lane rejects 8/8 mutations. The bounded verdict is `PASS_BOUNDED_NO_STANDALONE_OWNER`, not a universal source-absence theorem.",
+        "next_action": "Keep the forward owner branch parked under the existing R-192 fingerprint and treat R-459 and R-460 as complementary bounded source audits. Reopen only if a new standalone, hash-pinned source supplies the complete owner fields. Continue the unchanged T-054 Q3LOCK owner intake and T-059/T-061 observation-source lock in the active P1 packet; do not create another finite mobility, physical-empty or geometry table for this source boundary.",
+        "proven_in": "[R-460 certificate](strategy/pre-a-contents-remaining-scope-owner-audit-certificate-260831.md), [machine manifest](strategy/pre-a-contents-remaining-scope-owner-audit-manifest.json), [primary script](verification/scripts/pre_a_contents_remaining_scope_owner_audit.py), [independent script](codes/foundations/pre_a_contents_remaining_scope_owner_audit_independent.py), [hostile script](codes/foundations/pre_a_contents_remaining_scope_owner_audit_hostile.py), [integrated verifier](verification/scripts/pre_a_contents_remaining_scope_owner_audit_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_contents_remaining_scope_owner_audit/integrated.json), and [exploration record](strategy/pre-a-contents-remaining-scope-owner-audit-exploration.json).",
+        "result_id": "`PA-CONTENTS-REMAINING-SCOPE-OWNER-AUDIT-v0` (R-460).",
+        "strict_applicability_contract": "A complete row must contain all five bounded aliases for the existing owner slots: generator/transfer or Markov semigroup; heat-root/heat-kernel or heat-semigroup; filtration/conditional replica or replica; raw-current/current spatial or spatial intertwiner; and a strict q-ledger phrase (`q-ledger`, `q_k ledger`, `one-use q` or `nonnegative q ledger`). Exact R-192 tokens are checked separately. A broad `one uses ... q` phrase is a false-positive control only, and a merged bundle cannot be an owner because it has no single source edition, field boundary or authority identity.",
+        "version_and_exact_scope": "R-460 v1.0 is a T0, claim-nonbearing additive T-054 source-applicability audit over the operator-configured canonical `Contents` root. It scans the residual areas `Backup`, `Codes`, `Runs`, `Website`, and the remaining `Docs`/`Github` paths, while explicitly excluding `Docs/math`, `Github/note`, `Docs/status` and `Github/status` already covered by R-459. Only `.txt`, `.md` and `.tex` text files are searched; binaries and unsupported extensions are excluded. Path counts and raw-content SHA-256 unique counts are reported separately so mirrored paths are not independent authorities. The existing T-054 forward method, additive T-059/T-061 inverse lane, R-192 owner order and every promotion firewall are unchanged."
+      },
+      "detail_title": "Canonical Contents remaining-scope production-owner applicability audit",
+      "family_refs": [],
+      "id": "R-460",
+      "normalized_detail": {
+        "boundary": "R-460 does not supply a generator, heat semigroup, filtration, current map, q-ledger, candidate, observation map, score, physical identity, continuum, QFT/Yang--Mills, Pre-A, Sector-A, cosmic-origin, theory-of-everything or mass-gap result. It does not alter the established research methods, owner order or promotion firewalls, and emits no negative result or tier change.",
+        "proof_anchor": "[R-460 certificate](strategy/pre-a-contents-remaining-scope-owner-audit-certificate-260831.md), [machine manifest](strategy/pre-a-contents-remaining-scope-owner-audit-manifest.json), [primary script](verification/scripts/pre_a_contents_remaining_scope_owner_audit.py), [independent script](codes/foundations/pre_a_contents_remaining_scope_owner_audit_independent.py), [hostile script](codes/foundations/pre_a_contents_remaining_scope_owner_audit_hostile.py), [integrated verifier](verification/scripts/pre_a_contents_remaining_scope_owner_audit_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_contents_remaining_scope_owner_audit/integrated.json), and [exploration record](strategy/pre-a-contents-remaining-scope-owner-audit-exploration.json).",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-460 v1.0 is a T0 claim-nonbearing additive T-054 residual source-applicability audit. The unchanged strict alias contract scans 284 paths, 273 unique content hashes and 11 duplicate paths outside R-459's explicit subtrees; it finds zero complete semantic paths, zero standalone owner candidates, zero exact R-192 owner-token paths, three partial rows and zero loose-q control rows. Primary and independent summaries agree, integrated assertions pass 17/17 and hostile mutations are rejected 8/8. No source-owned dynamics, candidate, observation, physical, continuum, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged",
+      "title": "Canonical Contents remaining-scope production-owner applicability audit"
+    },
+    {
+      "accepted_event_ids": [
         "20260831-r-459-contents-alt-terminology-owner-audit-2026",
         "20260831-r-460-contents-remaining-scope-owner-audit-2026"
       ],
@@ -3087,190 +3296,6 @@
       },
       "summary": "R-366 v1.0 is a T0 claim-nonbearing finite interpolation result under EXP-001208. The exact spectral phase envelope gives a fractional `|ad_B|^theta` finite-time bound and density-trace corollary, with a primary/independent/Lean Q3 pilot. A local modular/Dirichlet comparison, source/cutoff/volume/history uniformity, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
       "title": "Finite fractional Liouvillian square-function shell bound"
-    },
-    {
-      "accepted_event_ids": [
-        "20260827-r-365-finite-spectral-gap-commutator-and-duhame"
-      ],
-      "anchor": "r-365",
-      "claim_ref_basis": {},
-      "claim_refs": [],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "boundary": "R-365 closes only the finite unweighted spectral-gap inequality and finite density-trace corollary. It does not control the commutator norm uniformly in source, cutoff, volume, prefix or exhaustion shape, and it does not prove a finite-time local collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-365 PDF is issued.",
-        "proven_in": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-gap-dyson-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R365.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_verify.py), and stored run artefacts.",
-        "result_id": "R-365 is a T0, claim-nonbearing finite exact result under EXP-001207.",
-        "statement": "Let `B` be a finite Hermitian bond generator, `U_t=exp(-i t B)`, and `B=sum_a lambda_a P_a`. Then ```text ||U_t^* X U_t-X||_HS^2 = sum_(a,b) |exp(i t(lambda_a-lambda_b))-1|^2 ||P_a X P_b||_HS^2 <= t^2 ||[B,X]||_HS^2. ``` For a density matrix `omega`, Hilbert--Schmidt Cauchy gives ```text |Tr(omega(U_t^* X U_t-X))| <= ||omega||_HS |t| ||[B,X]||_HS <= |t| ||[B,X]||_HS. ``` The R-364 spectral commutant pinching can be applied first because its blocks have zero commutator. No commutation between `omega` and `B` is assumed.",
-        "verification": "Primary and independent lanes check the R-362 `V=2`, cutoff `3,4` fixture over both split orientations, time signs, every prefix, history adjoints, beta values and local sites. Primary passes `777/777`, independent `776/776`, both cover `256` contexts, integrated passes `49/49`, and Lean R365 compiles. The maximum spectral coefficient error is `1.505e-13`, maximum phase identity error `6.178e-14`, maximum Duhamel violation `7.006e-14`, and maximum state-trace violation `-3.206e-17`. The largest finite-time/bound ratio is `0.999422`; the maximum change is `0.267414` against bound `0.267991`."
-      },
-      "detail_title": "Finite spectral-gap commutator and Duhamel shell bound",
-      "family_refs": [],
-      "id": "R-365",
-      "normalized_detail": {
-        "boundary": "R-365 closes only the finite unweighted spectral-gap inequality and finite density-trace corollary. It does not control the commutator norm uniformly in source, cutoff, volume, prefix or exhaustion shape, and it does not prove a finite-time local collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-365 PDF is issued.",
-        "proof_anchor": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-gap-dyson-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R365.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_verify.py), and stored run artefacts.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": "Let `B` be a finite Hermitian bond generator, `U_t=exp(-i t B)`, and `B=sum_a lambda_a P_a`. Then ```text ||U_t^* X U_t-X||_HS^2 = sum_(a,b) |exp(i t(lambda_a-lambda_b))-1|^2 ||P_a X P_b||_HS^2 <= t^2 ||[B,X]||_HS^2. ``` For a density matrix `omega`, Hilbert--Schmidt Cauchy gives ```text |Tr(omega(U_t^* X U_t-X))| <= ||omega||_HS |t| ||[B,X]||_HS <= |t| ||[B,X]||_HS. ``` The R-364 spectral commutant pinching can be applied first because its blocks have zero commutator. No commutation between `omega` and `B` is assumed."
-      },
-      "summary": "R-365 v1.0 is a T0 claim-nonbearing finite exact result under EXP-001207. Spectral-gap coefficients give a constant-one finite-time Duhamel bound and a density-state trace corollary after R-364 commutant pinching. The commutator norm's source/cutoff/volume/prefix/shape uniformity, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
-      "title": "Finite spectral-gap commutator and Duhamel shell bound"
-    },
-    {
-      "accepted_event_ids": [
-        "20260827-r-364-finite-bond-spectral-pinching-and-commuta",
-        "20260827-r-365-finite-spectral-gap-commutator-and-duhame"
-      ],
-      "anchor": "r-364",
-      "claim_ref_basis": {},
-      "claim_refs": [],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "boundary": "R-364 closes only the finite spectral-commutant reduction and its state-weighted inequality. It does not establish weighted-norm monotonicity, source/cutoff/volume/prefix/shape uniformity, a finite-time collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-364 PDF is issued.",
-        "proven_in": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-commutant-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R364.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_verify.py), and stored run artefacts.",
-        "result_id": "R-364 is a T0, claim-nonbearing finite exact refinement under EXP-001206.",
-        "statement": "Let a finite Hermitian bond generator have spectral resolution `B=sum_lambda lambda P_lambda`. Define the spectral pinching `E_B(X)=sum_lambda P_lambda X P_lambda`. For `X_0=X-Tr(omega X)I` and `X_perp=X_0-E_B(X_0)`, the block part commutes with `B`, so ```text [B,X] = [B,X_perp]. ``` The two-sided weighted Hilbert--Schmidt Cauchy inequality is ```text |Tr(omega [B,X])| <= ||B||_omega (||omega^(1/2) X_perp||_HS + ||X_perp omega^(1/2)||_HS), ``` with constant one and without assuming `[omega,B]=0`. If coordinate pinching is also B-commuting, spectral pinching is the Hilbert--Schmidt orthogonal projection onto a larger block algebra, hence its unweighted residual is no larger up to numerical tolerance.",
-        "verification": "Primary checks the R-362 `V=2`, cutoff `3,4` fixture over both split orientations, time signs, every prefix, history adjoints, beta values and local sites; independent reconstructs all finite objects without importing the primary. Primary passes `777/777`, independent `776/776`, both cover `256` contexts, integrated passes `51/51`, and Lean R364 compiles. The maximum spectral reduction error is `1.713e-13`, maximum residual commutator is `1.715e-13`, maximum bound violation is `-1.069e-14`, and the largest spectral-to-coordinate weighted residual ratio is `0.999917`. The spectral residual remains nonzero with minimum Frobenius norm `0.503109`."
-      },
-      "detail_title": "Finite bond-spectral pinching and commutant shell reduction",
-      "family_refs": [],
-      "id": "R-364",
-      "normalized_detail": {
-        "boundary": "R-364 closes only the finite spectral-commutant reduction and its state-weighted inequality. It does not establish weighted-norm monotonicity, source/cutoff/volume/prefix/shape uniformity, a finite-time collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-364 PDF is issued.",
-        "proof_anchor": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-commutant-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R364.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_verify.py), and stored run artefacts.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": "Let a finite Hermitian bond generator have spectral resolution `B=sum_lambda lambda P_lambda`. Define the spectral pinching `E_B(X)=sum_lambda P_lambda X P_lambda`. For `X_0=X-Tr(omega X)I` and `X_perp=X_0-E_B(X_0)`, the block part commutes with `B`, so ```text [B,X] = [B,X_perp]. ``` The two-sided weighted Hilbert--Schmidt Cauchy inequality is ```text |Tr(omega [B,X])| <= ||B||_omega (||omega^(1/2) X_perp||_HS + ||X_perp omega^(1/2)||_HS), ``` with constant one and without assuming `[omega,B]=0`. If coordinate pinching is also B-commuting, spectral pinching is the Hilbert--Schmidt orthogonal projection onto a larger block algebra, hence its unweighted residual is no larger up to numerical tolerance."
-      },
-      "summary": "R-364 v1.0 is a T0 claim-nonbearing finite exact refinement under EXP-001206. Spectral pinching removes every B-commuting bond-energy block, retains the exact state-weighted Cauchy commutator bound with constant one, and improves the finite unweighted residual comparison. Weighted uniformity, finite-time collar, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
-      "title": "Finite bond-spectral pinching and commutant shell reduction"
-    },
-    {
-      "accepted_event_ids": [
-        "20260827-r-363-finite-pinching-and-state-weighted-shell"
-      ],
-      "anchor": "r-363",
-      "claim_ref_basis": {},
-      "claim_refs": [],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "boundary": "R-363 closes only the finite conditional-expectation reduction and state-weighted commutator inequality. It does not bound the off-diagonal weighted norms uniformly in source, cutoff, volume, prefix or exhaustion shape, and it does not prove a finite-time collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-363 PDF is issued.",
-        "proven_in": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-pinching-commutator-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R363.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_verify.py), and stored run artefacts.",
-        "result_id": "R-363 is a T0, claim-nonbearing finite exact reduction under EXP-001205.",
-        "statement": "On a finite doubled Hilbert space, let `omega` be a faithful reference state, `D` the pinching conditional expectation in the joint coordinate basis, and `B` a Hermitian coordinate-diagonal bond generator. For any moved witness `X`, set `X_0=X-Tr(omega X)I` and `X_perp=X_0-D(X_0)`. Then ```text [B,X] = [B,X_perp]. ``` With `||Y||_(omega,L)^2=Tr(Y* omega Y)`, `||Y||_(omega,R)^2=Tr(omega Y*Y)`, and `||B||_omega^2=Tr(omega B^2)`, two Hilbert--Schmidt Cauchy inequalities give ```text |Tr(omega [B,X])| <= ||B||_omega (||X_perp||_(omega,L) + ||X_perp||_(omega,R)). ``` The finite Cauchy constant is exactly one; no commutation between `omega` and `B` is assumed.",
-        "verification": "The primary lane checks all 256 combinations of the R-362 `V=2`, cutoff `3,4` fixture: both split orientations, both time signs, every prefix, both history adjoints, both beta values and both local sites. The independent lane reconstructs the oscillator, Hamiltonian, Gibbs state, PVM, witness, prefix products and pinching without importing the primary. Primary passes `778/778`, independent `519/519`, and the integrated verifier passes `46/46` with Lean R363. The maximum pinching reduction error is `8.489e-14`, the maximum diagonal commutator is `8.487e-14`, the maximum bound violation is `-3.897e-15`, and the minimum nonzero off-diagonal Frobenius norm is `0.565970`."
-      },
-      "detail_title": "Finite pinching reduction and state-weighted shell commutator",
-      "family_refs": [],
-      "id": "R-363",
-      "normalized_detail": {
-        "boundary": "R-363 closes only the finite conditional-expectation reduction and state-weighted commutator inequality. It does not bound the off-diagonal weighted norms uniformly in source, cutoff, volume, prefix or exhaustion shape, and it does not prove a finite-time collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-363 PDF is issued.",
-        "proof_anchor": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-pinching-commutator-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R363.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_verify.py), and stored run artefacts.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": "On a finite doubled Hilbert space, let `omega` be a faithful reference state, `D` the pinching conditional expectation in the joint coordinate basis, and `B` a Hermitian coordinate-diagonal bond generator. For any moved witness `X`, set `X_0=X-Tr(omega X)I` and `X_perp=X_0-D(X_0)`. Then ```text [B,X] = [B,X_perp]. ``` With `||Y||_(omega,L)^2=Tr(Y* omega Y)`, `||Y||_(omega,R)^2=Tr(omega Y*Y)`, and `||B||_omega^2=Tr(omega B^2)`, two Hilbert--Schmidt Cauchy inequalities give ```text |Tr(omega [B,X])| <= ||B||_omega (||X_perp||_(omega,L) + ||X_perp||_(omega,R)). ``` The finite Cauchy constant is exactly one; no commutation between `omega` and `B` is assumed."
-      },
-      "summary": "R-363 v1.0 is a T0 claim-nonbearing finite exact reduction under EXP-001205. Coordinate pinching removes the bond-invisible diagonal part of a centered doubled collision witness, and a two-sided state-weighted Cauchy bound controls the remaining commutator with constant one. The required source/cutoff/volume/prefix/shape-uniform collar, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
-      "title": "Finite pinching reduction and state-weighted shell commutator"
-    },
-    {
-      "accepted_event_ids": [
-        "20260827-r-362-finite-local-q2-positive-replica-folding",
-        "20260827-r-366-finite-fractional-liouvillian-square-func"
-      ],
-      "anchor": "r-362",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "boundary": "R-362 closes only FI-2a, positive finite operator folding. It does not construct a positive Euclidean path measure, bound the evolved witness on a local collar, prove phase-weight preservation or influence contraction, remove cutoff/volume/history dependence, construct a common core or common alpha, identify OS/KMS/GNS dynamics or a gap, remove the continuum regulator, or close C6, Sector-A, or Pre-A. No R-362 PDF is issued.",
-        "proven_in": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-certificate-260827.md), [host note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-replica-folding-boundary-260827.md), [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-manifest.json), [primary](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding.py), [independent](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_verify.py), [Lean R362](verification/lean/Tect/R362.lean), and the saved C6 run artefacts.",
-        "result_id": "R-362 is a T0, claim-nonbearing exact finite reduction under EXP-001204.",
-        "statement": "For a faithful finite-dimensional reference state `rho`, an output state `sigma`, and a finite local PVM `{E_j}`, let `p_j=Tr(E_j rho)>0`, `q_j=Tr(E_j sigma)`, and `K=sum_j p_j^(-1) E_j tensor E_j`. Then `K>=0` and ```text Q2(q||p)=sum_j q_j^2/p_j=Tr[K(sigma tensor sigma)]. ``` If `sigma=UW rho W*U*`, cyclicity gives the corresponding exact two-copy Heisenberg expectation in `rho tensor rho`. The folding constant is exactly one; no dimension, volume, history-length, or path-count prefactor is created. For common nonnegative two-phase weights, the pointwise convexity gap is the nonnegative square ```text w1*w2*(p2*q1-p1*q2)^2/[p1*p2*(w1*p1+w2*p2)]. ``` An outermost coordinate-diagonal unitary peels exactly. It does not follow that every bond inside an onsite-interspersed history disappears: the actual Q3 finite fixture has a strictly nonzero bond commutator with the onsite-conjugated doubled witness.",
-        "verification": "The actual V=2 Q3 primary lane passes 2069/2069 assertions over 512 history contexts and 1024 local rows; a non-importing independent reconstruction passes 2067/2067; the integrated source/hash/matrix comparison passes 48/48 with maximum compared-field difference `1.554e-15`; Lean R362 proves the finite-sum collision identity, reference normalization, exact two-phase gap, convexity, and equality-constant-one fixture."
-      },
-      "detail_title": "Finite local-Q2 positive replica folding and mixture convexity",
-      "family_refs": [],
-      "id": "R-362",
-      "normalized_detail": {
-        "boundary": "R-362 closes only FI-2a, positive finite operator folding. It does not construct a positive Euclidean path measure, bound the evolved witness on a local collar, prove phase-weight preservation or influence contraction, remove cutoff/volume/history dependence, construct a common core or common alpha, identify OS/KMS/GNS dynamics or a gap, remove the continuum regulator, or close C6, Sector-A, or Pre-A. No R-362 PDF is issued.",
-        "proof_anchor": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-certificate-260827.md), [host note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-replica-folding-boundary-260827.md), [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-manifest.json), [primary](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding.py), [independent](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_verify.py), [Lean R362](verification/lean/Tect/R362.lean), and the saved C6 run artefacts.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": "For a faithful finite-dimensional reference state `rho`, an output state `sigma`, and a finite local PVM `{E_j}`, let `p_j=Tr(E_j rho)>0`, `q_j=Tr(E_j sigma)`, and `K=sum_j p_j^(-1) E_j tensor E_j`. Then `K>=0` and ```text Q2(q||p)=sum_j q_j^2/p_j=Tr[K(sigma tensor sigma)]. ``` If `sigma=UW rho W*U*`, cyclicity gives the corresponding exact two-copy Heisenberg expectation in `rho tensor rho`. The folding constant is exactly one; no dimension, volume, history-length, or path-count prefactor is created. For common nonnegative two-phase weights, the pointwise convexity gap is the nonnegative square ```text w1*w2*(p2*q1-p1*q2)^2/[p1*p2*(w1*p1+w2*p2)]. ``` An outermost coordinate-diagonal unitary peels exactly. It does not follow that every bond inside an onsite-interspersed history disappears: the actual Q3 finite fixture has a strictly nonzero bond commutator with the onsite-conjugated doubled witness."
-      },
-      "summary": "R-362 v1.0 is a T0 claim-nonbearing exact finite reduction under EXP-001204. For every faithful finite reference and local PVM, measured Q2 is the expectation of the positive collision witness `sum_j p_j^(-1) E_j tensor E_j` in two output replicas, with equality constant one; common-weight phase mixtures obey an exact nonnegative square gap and outermost coordinate-diagonal layers peel. The evolved-witness collar estimate, phase weights, all uniformities, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
-      "title": "Finite local-Q2 positive replica folding and common-weight mixture convexity"
-    },
-    {
-      "accepted_event_ids": [
-        "20260822-r-195-spatial-constant-field-lift-of-a6-running"
-      ],
-      "anchor": "r-195",
-      "claim_ref_basis": {
-        "A6-CLASSII-K-COMPOSITE-DEFINITION": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "A6-CLASSII-K-COMPOSITE-DEFINITION"
-      ],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "boundary": "This is a constant-field subspace result only. It does not prove a full renormalised Class-II energy, a spatially correlated partition or tightness estimate, full-field bare concentration, rho-floor removal, an infinite-volume limit, A7 self-coupling, A13, Sector-A, Pre-A, physical-empty comparison, or any gate closure. R-194's existing negative is reused and no new negative is registered. No R-195 PDF is issued.",
-        "exact_bound": "Lean proves that when `b,c>=0`, `eps>0`, and `r>=s+2*eps`, `D(h_min;s,r)/s <= 6*s*(b+c)/r`. Choosing `r=s+2*eps+6*s*(b+c)/kappa+1` makes this ratio strictly below every `kappa>0`. The spatial volume cancels and cannot repair the escape.",
-        "proven_in": "[R-195 certificate](strategy/pre-a6-spatial-constant-field-lift-boundary-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R195.lean), [primary script](verification/scripts/lean_a6_spatial_constant_field_lift.py), [independent script](codes/foundations/lean_a6_spatial_constant_field_lift_independent.py), [integrated verifier](codes/foundations/lean_a6_spatial_constant_field_lift_verify.py), [scope note](claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-spatial-constant-field-lift-boundary-260822.md), and the saved run artefacts. No R-195 PDF is issued.",
-        "result_id": "R-195 is a T0, claim-nonbearing Lean and independent exact field-space boundary established by EXP-000933.",
-        "scope": "On the hash-pinned finite torus with volume `V=Lx*Ly*Lz`, the constant field `Psi_(s,r)(x)=sqrt(s)e1+sqrt(r)e3` has `|Psi_1|^2+|Psi_2|^2=s` and `|Psi_3|^2=r`. The integrated R-194 endpoint correction is exactly `V*D(h_min;s,r)`, and for `V>0`, `s>0` its ratio to `V*s` equals the local ratio.",
-        "verification": "The pinned Lean entrypoint, primary Fraction lane, and non-importing independent Fraction lane agree on the exact volume, integrated identity, ratio, explicit witness, and bound. The integrated verifier checks source hashes, Lean escape absence, child agreement, hostile mutations, and the local-versus-full-field boundary."
-      },
-      "detail_title": "Spatial constant-field lift of the A6 running-mass escape",
-      "family_refs": [],
-      "id": "R-195",
-      "normalized_detail": {
-        "boundary": "This is a constant-field subspace result only. It does not prove a full renormalised Class-II energy, a spatially correlated partition or tightness estimate, full-field bare concentration, rho-floor removal, an infinite-volume limit, A7 self-coupling, A13, Sector-A, Pre-A, physical-empty comparison, or any gate closure. R-194's existing negative is reused and no new negative is registered. No R-195 PDF is issued.",
-        "proof_anchor": "[R-195 certificate](strategy/pre-a6-spatial-constant-field-lift-boundary-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R195.lean), [primary script](verification/scripts/lean_a6_spatial_constant_field_lift.py), [independent script](codes/foundations/lean_a6_spatial_constant_field_lift_independent.py), [integrated verifier](codes/foundations/lean_a6_spatial_constant_field_lift_verify.py), [scope note](claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-spatial-constant-field-lift-boundary-260822.md), and the saved run artefacts. No R-195 PDF is issued.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": ""
-      },
-      "summary": "R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open",
-      "title": "Spatial constant-field lift of the A6 running-mass escape"
-    },
-    {
-      "accepted_event_ids": [
-        "20260822-r-194-sharp-running-mass-counterterm-boundary-2",
-        "20260822-r-195-spatial-constant-field-lift-of-a6-running"
-      ],
-      "anchor": "r-194",
-      "claim_ref_basis": {
-        "A6-CLASSII-K-COMPOSITE-DEFINITION": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "A6-CLASSII-K-COMPOSITE-DEFINITION"
-      ],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "boundary": "This is a local algebraic threshold only. It does not prove a full renormalised Class-II energy, spatially correlated partition or tightness estimate, a full-field measure, rho-floor removal, an infinite-volume limit, a physical-empty comparison, BCC, Sector-A, Pre-A or counterterm gate closure. The existing fixed-subtraction negative is reused and no new negative result is registered. No R-194 PDF is issued.",
-        "proven_in": "[R-194 certificate](strategy/pre-a6-sharp-running-mass-counterterm-boundary-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R194.lean), [primary script](verification/scripts/lean_a6_sharp_running_mass.py), [independent script](codes/foundations/lean_a6_sharp_running_mass_independent.py), [integrated verifier](codes/foundations/lean_a6_sharp_running_mass_verify.py), and [scope note](claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-sharp-running-mass-counterterm-boundary-260822.md). No R-194 PDF is issued.",
-        "result_id": "R-194 is a T0, claim-nonbearing Lean and independent exact boundary under EXP-000932.",
-        "statement": "For the pinned A6 leading contraction with `s=|Psi_1|^2+|Psi_2|^2`, `rho=s+|Psi_3|^2`, and `b,c>0`, the sharp local running coefficient is `h_min=9*(a+2*b+c)`. At `h=h_min`, the exact difference is `6*b*s^2/(rho+eps) + 3*c*s^2*(rho+2*eps)/(rho+eps)^2`, hence is nonnegative. A registered subsharp witness gives a negative difference for `h=h_min-1/1000`. Along fixed `s>0` and `|Psi_3|^2` tending to infinity, the endpoint ratio tends to zero.",
-        "verification": "The hash-pinned Lean entrypoint compiles without escape axioms; the primary Fraction lane and non-importing independent lane agree on the exact coefficient, endpoint identities, witness and decreasing escape ratios. The integrated verifier passes its hostile-mutation and source-hash checks."
-      },
-      "detail_title": "Sharp running-mass counterterm boundary",
-      "family_refs": [],
-      "id": "R-194",
-      "normalized_detail": {
-        "boundary": "This is a local algebraic threshold only. It does not prove a full renormalised Class-II energy, spatially correlated partition or tightness estimate, a full-field measure, rho-floor removal, an infinite-volume limit, a physical-empty comparison, BCC, Sector-A, Pre-A or counterterm gate closure. The existing fixed-subtraction negative is reused and no new negative result is registered. No R-194 PDF is issued.",
-        "proof_anchor": "[R-194 certificate](strategy/pre-a6-sharp-running-mass-counterterm-boundary-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R194.lean), [primary script](verification/scripts/lean_a6_sharp_running_mass.py), [independent script](codes/foundations/lean_a6_sharp_running_mass_independent.py), [integrated verifier](codes/foundations/lean_a6_sharp_running_mass_verify.py), and [scope note](claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-sharp-running-mass-counterterm-boundary-260822.md). No R-194 PDF is issued.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": "For the pinned A6 leading contraction with `s=|Psi_1|^2+|Psi_2|^2`, `rho=s+|Psi_3|^2`, and `b,c>0`, the sharp local running coefficient is `h_min=9*(a+2*b+c)`. At `h=h_min`, the exact difference is `6*b*s^2/(rho+eps) + 3*c*s^2*(rho+2*eps)/(rho+eps)^2`, hence is nonnegative. A registered subsharp witness gives a negative difference for `h=h_min-1/1000`. Along fixed `s>0` and `|Psi_3|^2` tending to infinity, the endpoint ratio tends to zero."
-      },
-      "summary": "R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open",
-      "title": "Sharp running-mass counterterm boundary"
     }
   ],
   "kind": "reusable_results",

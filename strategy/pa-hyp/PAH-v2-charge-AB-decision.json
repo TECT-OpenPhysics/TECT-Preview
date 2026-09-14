@@ -1,0 +1,84 @@
+{
+  "schema": "tect/pah-v2-charge-comparison-decision/1.0",
+  "id": "PAH-V2-CHARGE-AB-20260911",
+  "date": "2026-09-11",
+  "classification": "AUXILIARY_SUPPORT",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "operative_branch": null,
+  "question": "What do the two explicit Q-transport proposals preserve, and do their state injections already define a full common comparison?",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/pa-hyp/PAH-v2-charge-AB-prereg.json": "33fe50af87c588715b18fed5415cdad5dc5b17f0b9c3d3a25edd6e2874c06457"
+  },
+  "evidence_hashes": {
+    "strategy/pa-hyp/PAH-v2-charge-AB-comparison.md": "fe9ec8f10c46eadf025b3f2c4631b02336291dd870c220edd89dbba23585e42a",
+    "verification/scripts/pah_v2_charge_ab_primary.py": "e2e5e51efe21f4873c4a481fe638ada3aa1400cabb57cb8526d7d3971ca4bc85",
+    "verification/scripts/pah_v2_charge_ab_independent.py": "70d71fd84c9ea199744cbc8ba99b86a73e9b64cd4c63eb061bf1c93ae8e29268",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-charge-ab/primary.json": "ba5fb030ba86e6dcdb5b8825b15729a5d1a13f2d954d7662b98b3b3f2d9ca6d3",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-11-pah-v2-charge-ab/independent-hostile.json": "5e7104c7dce233d7d8b3e860c2dac2d384211da4f79506a671ddf713ebc40c43"
+  },
+  "scope": {
+    "stage": "Proposed first local-cutoff diagonal only, no limit performed; later source order unchanged.",
+    "geometry": "Unchanged admitted finite anchored two-cell complex; execution uses only frozen R-570 triangle. No physical dimension or volume.",
+    "state": "Original full integer counting spaces and Gibbs normalization. Q fixed within each finite evolution. No image conditioning.",
+    "dynamics": "Unchanged functional, signed PH/TR/LK/AP roots, mobility and external Markov time.",
+    "maps": "Two coarse-to-fine injections J_A/J_B and reverse traces J*. No total fine-to-coarse p or forward I supplied."
+  },
+  "branches": {
+    "A": {
+      "adopted": false,
+      "role": "Fixed-integer control on this schedule",
+      "pass": [
+        "Integer Q and occupation labels",
+        "Injective coordinate mapping",
+        "Displayed aperture and phases/links"
+      ],
+      "not_preserved": [
+        "Displayed psi scales by one half per proposed step",
+        "Image F is not an identity",
+        "Single-root matching except TR",
+        "Exact trace intertwining"
+      ],
+      "full_contract": "NOT_SUPPLIED"
+    },
+    "B": {
+      "adopted": false,
+      "role": "Preferred next field-preserving design candidate, not a physical preference",
+      "pass": [
+        "Injective coordinate mapping",
+        "All displayed s/psi/U on image",
+        "Displayed F on image",
+        "Displayed amplitude sum d_r Q_r"
+      ],
+      "not_preserved": [
+        "Integer Q between regulators",
+        "Full normalized Gibbs weights on image",
+        "Single fine root versus coarse root",
+        "Exact trace intertwining"
+      ],
+      "full_contract": "NOT_SUPPLIED; naive full amplitude-preserving inverse fails integrality on odd occupations"
+    }
+  },
+  "verification": {
+    "primary": "PASS exact fixture enumeration and rational field energies/rate monomials",
+    "independent": "PASS separately implemented full coarse state/root arithmetic and scalar energy slice/witness; same-task authorship",
+    "hostile": "PASS eight mathematical shortcut controls; four additional documentary scope guards",
+    "Lean": "NOT_RUN; no imported R-570 Lean proof of comparison",
+    "external_person": "NOT_PERFORMED"
+  },
+  "remaining_single_question": "Can B be extended to a total gauge/anchor-compatible fine-to-coarse p and full observable I=p* retaining every odd/invisible counting state, with full labelled-root discrepancy in the unchanged sup norm, without image restriction, conditioning, rounding or rate/time changes?",
+  "reentry": "One bounded new full-domain design attempt or exact obstruction to its stated requirements. No repeat of A/B fixture tables or unchanged owner scans. Later contract adoption is separate.",
+  "non_claims": [
+    "No mainline gate or C6 tier change",
+    "No all-map no-go or full refinement contract completion",
+    "No eventual intertwining or Gibbs-L2/semigroup convergence result",
+    "No physical Pre-A, spacetime, QFT, gravity, continuum, infinite-volume dynamics, Yang-Mills, mass gap, horizon or TOE"
+  ],
+  "reproduction": [
+    "python -X utf8 verification/scripts/pah_v2_charge_ab_primary.py --check",
+    "python -X utf8 verification/scripts/pah_v2_charge_ab_independent.py --check"
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "schema": "tect/pah-v2-morton-crt-contract-draft/1.0",
+  "id": "PAH-V2-MORTON-CRT-DRAFT-20260911",
+  "status": "UNAPPROVED_RESEARCH_CONTRACT",
+  "approval_record": null,
+  "operative_hash_pin": null,
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "strategy/pa-hyp/PAH-v2-spatial-frame-prereg.json": "07d67b69ec742dc3c7981d2b73e102a88c5bc376a97009f53e125cde57c72997"
+  },
+  "purpose": "One complete proposed three-index comparison contract, not an adopted model owner or a dynamics theorem. It replaces the failed orbit-prefix proposal, not the immutable v2 model.",
+  "authority_and_costs": [
+    "NEW geometry selection: a full two-index anchored square-cell family inside the parent finite two-cell class. This is not all admissible geometries, a physical spatial dimension, or a replacement of v2's carrier class.",
+    "NEW phase cutoff schedule: successive coprime prime factors rather than the prior unapproved doubling proposal. Primitive v2 roots/rates and the integer counting definitions do not change.",
+    "NEW explicit volume comparison: all outside occupation is represented in the final retained Morton vertex. This is a comparison map, not an absorbing boundary, extra reservoir state or conditioned Gibbs law.",
+    "Full gauge and actual full anchor-cell automorphism groups are retained. The chosen anchored graphs have trivial cell group by a graph-rigidity argument; no subgroup is imposed on a symmetric graph.",
+    "All finite source observables remain, not only a passing subalgebra. Spatial support can expand to the source box; no bounded propagation radius or production locality estimate is claimed."
+  ],
+  "indices": {
+    "domain": "r,h,N in nonnegative integers. r is local-state cutoff, h lattice refinement, N nested combinatorial exhaustion. q0,m0 are fixed integers with 1<=q0<=m0; R0>0.",
+    "order": "Product partial order for algebraic comparison identities; source limit order remains r then h then N, never justified to interchange by commuting finite maps."
+  },
+  "geometry": {
+    "width": "W_(h,N)=2^(h+N+1)",
+    "vertices": "Pairs of integer cell addresses (x,y), 0<=x,y<W. These are construction labels, not physical embedding coordinates.",
+    "vertex_order": "Morton index z=sum_b[(x_b+2*y_b)*4^b], so V indices are 0,...,W^2-1. Each dyadic 2x2 child block is one contiguous interval [4z,4z+3].",
+    "edges": "One stored positive horizontal edge (x,y)->(x+1,y) when x+1<W and one positive vertical edge (x,y)->(x,y+1) when y+1<W. Enumerate by tail Morton index, then horizontal before vertical. Reverse orientations are signed, not duplicate edges.",
+    "faces": "For every lower-left (x,y) with x+1,y+1<W, the closed four-edge word right,+up,-right,-up around that plaquette. All bounded faces are included.",
+    "anchors": "O={(0,0)}, C={(2^h,0)}. Both are labels, never clamped field values.",
+    "degree_and_boundaries": "Connected oriented finite two-cell complex with maximum degree <=4; all outer perimeter vertices/edges are the open combinatorial boundary, no periodic closure or added boundary term.",
+    "h_transport": "Each old vertex v=(x,y) has representative (2x,2y) and four children (2x+b_x,2y+b_y). Each old edge is the two-edge axial path between its representatives. Each old face corresponds to the union of four fine plaquettes; signs are inherited. O,C map to fine O,C.",
+    "N_transport": "Literal inclusion of the lower-left W by W subcomplex in the 2W by 2W graph; it is a Morton prefix and preserves O,C and all existing closed faces.",
+    "nominal_lattice_label": "a_h=a0*2^(-h), a0>0, only the parent's refinement label. At fixed N, the named combinatorial box is refined. No physical-volume equality or metric identification is supplied or needed for this nonphysical definition contract."
+  },
+  "regulators": {
+    "phase": "Let p_i be the i-th prime, p_1=2. K_r=product_(i=1,...,r+1) p_i. For an adjacent cutoff step write P=p_(r+2), K_f=P*K_c and A=P^(-1) modulo K_c.",
+    "other_cutoffs": "M_s,r=2^r, M_psi,r=m0*4^r, Rmax,r=R0*2^r, Q_r=q0*2^r, independent of h,N. Thus every cutoff is unbounded, Q_r<=M_psi,r and displayed amplitude sum (Rmax/Mpsi)*Q=(R0/m0)q0 stays fixed.",
+    "frozen": "epsilon,beta,nu,theta,all rate scales and other real parameters stay in the exact parent domains and remain identical across comparisons. No density/thermodynamic nondegeneracy conclusion from fixed total Q at each r."
+  },
+  "model_and_domains": {
+    "states": "Exactly Omega_v2(r,h,N,Q_r) with every j,ell,n,u integer label retained; no state quotient or omitted off-image state.",
+    "functional_rates": "Exactly the parent F and mobility/rate formulas incorporated by the pinned v2; all primitive signed PH/TR/LK/AP incidences and duplicate K=2 labels remain.",
+    "state_normalization": "pi_rho=exp(-beta F_rho)/sum_(all full tuples) exp(-beta F_rho). No conditioning or replacement by a comparison pushforward.",
+    "domains": "A_rho=C^(Omega_rho), D(L_rho)=A_rho. A_rho^inv is the FULL source gauge/anchor invariant subalgebra. No domain of a limiting generator is declared.",
+    "time": "Unchanged external stochastic time; stationary initial-value law and no terminal conditioning."
+  },
+  "state_maps": {
+    "direction": "p_(sigma,rho):Omega_sigma -> Omega_rho, fine to coarse, total and independent of f,t and results.",
+    "cutoff": "At the same G: j'_v=floor(j_v/2); S_i=sum_(v<=i)ell_v in Morton order; ell'_i=floor(S_i/2)-floor(S_(i-1)/2), S_-1=0; n'_v=A*n_v modulo K_c; u'_e=A*u_e modulo K_c. All operations include hidden labels.",
+    "lattice": "At the same r,N: ell'_z=sum_(b=0,...,3)ell_(4z+b); j'_z=j_(4z); n'_z=n_(4z); u'_e is the oriented sum modulo K_r of u along the two-edge representative path of e.",
+    "volume": "At the same r,h let n_c=W_c^2 and t=n_c-1. For z<t, ell'_z=ell_z; ell'_t=Q_r-sum_(z<t)ell_z. This equals the sum over the whole fine suffix z>=t. j',n' restrict to retained vertices; u' restricts to retained edges via actual cell lookup.",
+    "general": "p_(rho,rho)=id. For arbitrary comparable indices coarsen N, then h, then r by adjacent operations. Every pair of adjacent directions must commute; identities, same-direction composition and elementary squares then give path independence.",
+    "comparison_only_warning": "Volume aggregation may move occupation in the comparison output and phase projection is not small-angle rounding. Neither changes finite source dynamics. Neither implies F preservation off image, Gibbs projectivity, low defect or physical fidelity."
+  },
+  "right_inverses": {
+    "cutoff": "J: double j and ell, multiply n,u by the new prime P. This is a full-tuple injection and preserves displayed s,psi,U on its image; pJ=id is required.",
+    "lattice": "Put each coarse ell,j,n at its representative vertex; put zero ell,j,n at other children. Put each coarse u on the first edge of its disjoint two-edge representative path, zero on the second and all unused edges. No Gibbs identification is claimed.",
+    "volume": "Copy coarse tuples on the included cells and set all new integer coordinates to zero. Total occupation stays Q. No neutral boundary is imposed on the actual full fine ensemble.",
+    "role": "These right inverses prove surjectivity of p only. They are not new allowed generator moves or invariant fine subsets."
+  },
+  "symmetry": {
+    "gauge": "Cutoff transports gauge labels g by A*g modulo K_c. Lattice restricts g to representatives. Volume restricts g to retained vertices. The u path sums telescope, so require exact p(gx)=g' p(x).",
+    "cell": "Prove the chosen anchored grids have full Aut(G;O,C)={id}. Corner distances and the marked bottom-edge C distinguish the two coordinate directions. No all-geometry equivariance conclusion."
+  },
+  "observable_maps": {
+    "direction": "I_(rho,sigma):A_rho -> A_sigma, coarse to fine, If=f composed with p.",
+    "algebra": "Require linear, unital, multiplicative and conjugation-preserving maps on the FULL finite algebras; they restrict to the full source invariant algebras by symmetry.",
+    "norm": "Inherited ||f||_infinity over the full source finite state space; p surjective makes I an isometry. No Gibbs-L2 substitution or syntactic quotient mismatch.",
+    "support": "For f represented at (r,h,N), and target (s,k,M), M>=N, a valid support bound is all refined vertices and internal edges of the source box G_(k,N), independent of M. Use ell'_terminal=Q-minus-retained-prefix to remove dependence on the external suffix. This bound covers every finite observable, not only a selected family.",
+    "stabilization": "N_support(f)=N of the chosen finite representative, at fixed target k. For M>=N the same refined source-box coordinates suffice. This is SUPPORT stabilization only, not eventual generator intertwining or a bounded-radius locality theorem.",
+    "common_cylinder": "After exact identities are admitted, D is the algebraic direct limit of all A_(r,h,N)^inv under I, with representative-independent inherited sup norm. All finite-support source observables are included. This is an algebraic core candidate, not an invariant domain for an infinite dynamics."
+  },
+  "roots": {
+    "assignment": "For each valid fine incidence (x,s), y=sx, choose the lesser of directed keys (x,family,cell,sign) and (y,family,cell,-sign). In that orientation choose the first ORIGINAL valid coarse label taking p(x) to p(y), or UNPAIRED. Assign the inverse to the reverse fine incidence.",
+    "retention": "Keep all fine labels, all unmatched coarse labels and all multiplicities. Assignment is bookkeeping, never rate matching, label identification, averaging or division by preimage size.",
+    "measure": "Original pi(x) per directed root in the root Hilbert measure and sqrt(c/2) in B are unchanged."
+  },
+  "ordered_limits": {
+    "order": [
+      "LOCAL_STATE_CUTOFF",
+      "LATTICE_REFINEMENT",
+      "VOLUME_EXHAUSTION",
+      "PHASE_SELECTOR",
+      "APERTURE_COLLAPSE",
+      "GROUND_STATE",
+      "OBSERVATION_TIME"
+    ],
+    "meaning": "r->infinity at fixed h,N, then h, then N; later source placeholders and their unresolved analytic/physical assumptions remain exactly inherited. No selector term, time rescaling or limit interchange. Ground state only for a separately requested claim.",
+    "not_in_scope": "No convergence, limiting state, limiting generator, empirical identification or physical-volume proof."
+  },
+  "future_defects": {
+    "generator": "Delta_(rho,sigma) f(x)=sum_(fine valid s)c_sigma,s(x)[f(p(sx))-f(px)] - sum_(coarse valid r)c_rho,r(px)[f(r px)-f(px)]. Retain all unpaired channels.",
+    "primary": "max_x |Delta f(x)| on the full fine state space.",
+    "separate": "Gibbs-L2 Delta and p_*pi_sigma-pi_rho are separate diagnostics, not assumed small.",
+    "eventual": "For a future exact claim, supply a fixed f and a generator-stabilization index and prove Delta=0 at all subsequent pairs in the declared ordered stage. SUPPORT stabilization is not that proof.",
+    "falsifiers": [
+      "Invalid image or failed pJ",
+      "Noncommuting r/h/N square or failed composition",
+      "Incorrect full gauge/cell symmetry or omitted invariant observable",
+      "Spatial support still depends on arbitrarily far target-volume coordinates",
+      "Missing/merged signed incidence or altered rate/state/time",
+      "Nonzero finite Delta refutes that exact pair only; eventual or limit failure requires the appropriate quantified witness"
+    ],
+    "status": "NOT_EVALUATED_NO_APPROVED_CONTRACT"
+  },
+  "preapproval_checks": {
+    "role": "Development-only exact definition checks and mathematical review. Not the independent admission of an approved contract.",
+    "base_inputs": {
+      "q0": 1,
+      "m0": 1
+    },
+    "sample_indices": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "deterministic_samples_per_index": 8,
+    "exhaustive_coarse_right_inverse": "Original model's full state formula on the smallest new graph at (0,0,0) only; no full fine-state enumeration claim.",
+    "tests": [
+      "Source pins; valid ranges and signed geometry",
+      "Surjective right inverses, all three elementary squares, gauge transport",
+      "Complete actual cell-group proof",
+      "Inverse-coherent root assignment and retained unmatched labels on the declared sample only",
+      "Full-box support dependency identity using fixed total Q",
+      "Replay EXP-001735 as a negative control; new phase-component analogue uses K=2 to6, not falsely the old K=2 to4 input. The complete new contract is not claimed on its two-arm family."
+    ],
+    "postapproval": "Explicit owner approval of the completed byte-pinned bundle, then independent/hostile full-contract admission with declared Lean scope. No such approval is inferred now."
+  },
+  "non_claims": [
+    "No operative owner-approved refinement contract yet",
+    "No change to PAH-001-v1/v2-r2/R-570",
+    "No all-carrier or physical geometry claim",
+    "No generator agreement, dynamics convergence, Gibbs projectivity, continuum, Pre-A, QFT, GR, Yang-Mills, mass gap or TOE"
+  ]
+}

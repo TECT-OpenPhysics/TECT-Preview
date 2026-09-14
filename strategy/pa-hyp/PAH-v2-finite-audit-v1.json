@@ -1,0 +1,53 @@
+{
+  "schema": "tect/pah-v2-finite-audit-preregistration/1.0",
+  "version": "0.1.0",
+  "date": "2026-09-11",
+  "status": "PREREGISTERED_NO_VERDICT",
+  "task_id": "T-090",
+  "objective": "For every admissible finite regulator of the frozen v2 revision prove inverse-validity, L1=0, Gibbs detailed balance, symmetry projection commutation and B*B=-L, or give an exact counterexample.",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "strategy/owner-decisions/PAH-v2-state-approval-20260911.json": "90f54c1b23f7929f4cf5b886210d037fb63559c7145f3bd1a86a35181f5bffb3"
+  },
+  "universal_scope": "Every finite source-admissible anchored oriented two-cell complex, nonempty fixed-Q tuple state space, all declared integer cutoffs and finite real parameters in the parent domain, including negative m2/lambda_4, epsilon=1, K=2, and zero occupations. No irreducibility, free gauge action, continuum, uniformity, or uniqueness assumption.",
+  "carrier_admissibility": "The displayed functional must be defined: supplied faces have finite nonempty closed oriented boundary walks and automorphisms preserve the complete attaching/incidence data, up to orientation reversal and cyclic basepoint. This states the domain of the inherited J_p formula, not an extra interaction or replacement carrier. Any claim that the source instead admits a zero-length face denominator must be recorded as an applicability objection.",
+  "immutable_rules": ["No state-value quotient", "No deduplication or channel averaging", "No changes to F, mobility, per-root rates, projection, time or ordered limits", "No reuse of an old finite PASS as new-model verification"],
+  "proof_route": ["Exact coordinate inverse maps", "Positive finite Gibbs normalization and symmetric mobility", "Paired-conductance balance", "Gauge and orientation-aware automorphism covariance", "Finite unitary group averaging", "Direct adjoint coefficients plus independent Dirichlet-form formulation"],
+  "verification_plan": {
+    "generality": "A written all-finite proof carries the universal quantifiers. Bounded executable checks cannot replace it.",
+    "primary": "Exact rational K=2 displayed functional and exponential-monomial conductance coefficients; exhaustive states/roots on the preregistered finite fixture; compare weighted generator and root Gram coefficient maps.",
+    "independent": "Separate non-importing implementation using a different state encoding and direct summation/weighted adjoint formulation; verify source applicability independently. Same author must be disclosed; this is implementation independence, not an external human audit.",
+    "hostile": "Attack factor two, bare root measure, root deduplication, phase erasure, gauge-link sign, orientation reversal, invalid moves, projection normalization and generality overclaim; mutations are controls, never altered production definitions.",
+    "Lean": "Compile parameterized exact identities with the repository-pinned toolchain. Record which source-to-model obligations are proved in prose rather than encoded in Lean."
+  },
+  "primary_fixture_inputs": {
+    "role": "Software verification of an instance of the unchanged model class, not a replacement model or generality proof",
+    "vertices": 3,
+    "edges": [[0,1],[1,2],[2,0]],
+    "faces": [[[0,1],[1,1],[2,1]]],
+    "outer_anchor": [0],
+    "core_anchor": [1,2],
+    "K": 2,
+    "M_s": 1,
+    "M_psi": 1,
+    "Q": 1,
+    "epsilon": "1/2",
+    "R_max": "1",
+    "beta": "1",
+    "nu": "2",
+    "lambda_s": "1",
+    "m2": "-1",
+    "lambda_4": "-1",
+    "eta_6": "1",
+    "g": "1",
+    "kappa_s": "1",
+    "kappa_D": "1",
+    "kappa_g": "1"
+  },
+  "acceptance": "All five universal statements have an exact source-specific proof, reproduced primary/non-importing independent and hostile checks, a declared Lean bridge, and a final requirement-by-requirement audit. A green finite fixture alone is not acceptance.",
+  "failure": "Record an exact violation against the frozen revision, or name the one unresolved definition/proof obligation. Do not silently narrow the universal scope or patch source hashes.",
+  "next_if_accepted": "Record finite model consistency only. Any refinement or finite-to-common-space theorem requires a separately fixed comparison contract; do not reopen original OMC-030 by retrospective import.",
+  "non_claims": "No T-054 mainline gate, physical Pre-A, spacetime, QFT, gravity, causal cone, continuum, Yang-Mills, mass-gap or TOE conclusion."
+}

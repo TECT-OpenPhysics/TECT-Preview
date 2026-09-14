@@ -101,4 +101,86 @@ TOE target with no established result.
 
 ## Next required action
 
+### 2026-09-14: fixed-time semigroup comparison negative result (R-574)
+
+SG-001 is DISPROVED for the same R-573 fixed character, parameters, full
+counting Gibbs state, original Markov time and approved maps. For every R
+there is an adjacent pair s=r+1>r>=R with fine-Gibbs semigroup defect norm
+at least 1/5 at the fixed time 1/10. The proof derives the full finite
+Markov contraction and the uniform error
+`||S_r(t)f_r-exp(lambda_r*t)f_r||_infinity <=256*t/K_r`.
+It retains PH/TR/LK/AP in the evolved generator and does not assume that
+the initial character spans an invariant subspace. The R-573 prime-tail
+argument then gives a pointwise lower bound on every original fine state.
+
+The [result card](../../strategy/pa-hyp/PAH-v2-SG-001-result-v1.json) pins
+all original sources, the one four-page synthesis, primary/independent
+checks, 81 hostile controls and five partial Lean declarations. The separate
+maximum-principle proof and eight objections are in the synthesis.
+Independent implementation has same-task authorship; external review is invited.
+Reproduce `python -X utf8 verification/scripts/pah_v2_sg001_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+--elan-home C:/Users/NaEun/.elan` as one line. This also replays inherited R-573.
+
+C6 stays T1 and the T-054 gate is unchanged. The unchanged comparison route
+is parked without an automatic weaker successor. Reenter only on an exact
+source/analytic falsifier or separately approved evidence resolving a
+load-bearing assumption or providing a physically motivated observable map.
+No state-projectivity or all-model no-go, physical Pre-A, spacetime, QFT,
+gravity, infinite-volume construction or continuum claim. Brazovskii and
+horizon ideas remain unadopted. Earlier records keep their historical scopes.
+
+### 2026-09-13: separate original fine-Gibbs negative result (R-573)
+
+The separately authorized GD-002 full-cylinder fine-Gibbs L2 generator
+target is DISPROVED. At fixed epsilon=1, h=N=0 and r0=2, the one original
+gauge/anchor-invariant character f0=exp(2*pi*i*Phi/5) has defect norm at
+least seven at adjacent cutoff pairs beyond every threshold. The bound holds
+at every fine counting state, not merely a rare Gibbs event. Original F,
+rates, time, projection, full algebra and comparison maps are unchanged.
+Its variance and original Dirichlet energy are bounded below separately;
+state projectivity and semigroup comparison are NOT_EVALUATED. R-572 is
+retained as its distinct earlier sup-negative result.
+
+The [result card](../../strategy/pa-hyp/PAH-v2-GD-002-result-v1.1.json) pins
+the exact all-state rate estimate, constructive CRT prime-tail proof,
+primary/independent/hostile runs, five partial Lean declarations and the
+single synthesis note. The seven-objection review is in that note; independent
+implementation is not an external-person audit. Reproduce with
+`python -X utf8 verification/scripts/pah_v2_gd002_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+--elan-home C:/Users/NaEun/.elan` as one line. C6 stays T1 OPEN and T-054's
+gate is unchanged. No physical Pre-A, spacetime, QFT, gravity or continuum
+claim follows. External review is invited. The next separate question is
+whether the same fixed character also obstructs original-time semigroup
+comparison; that question is not answered by the generator result alone.
+
+### 2026-09-12: separate GD-001 negative result (R-572)
+
+The universal full-invariant-cylinder sup generator Cauchy target is
+DISPROVED at the admitted epsilon=1 boundary of the unchanged PAH-v2 model.
+For one fixed f0=1_{j_O=0} at r0=0 and every s>r>=0, its full-state defect
+norm is exactly one; a fixed-data witness exists beyond every tail threshold.
+This is not a finite-table extrapolation or a Gibbs-L2 verdict. The precise
+all-state band formula, complete root reduction, independent implementation,
+hostile checks and five parameterized Lean declarations are in the
+[result card](../../strategy/pa-hyp/PAH-v2-GD-001-result-v1.json) and its
+single synthesis note. C6 remains T1 OPEN and T-054's gate is unchanged.
+Any replacement observable-domain/topology target needs separate authorization;
+do not silently weaken this target or repeat larger finite tables.
+
+### 2026-09-11: separate finite PAH-v2 result (R-570)
+
+The explicitly approved, hash-pinned PAH-001-v2 revision `0.2.0-draft.2`
+has a finite model-consistency theorem: inverse-validity, L1=0, Gibbs detailed
+balance, orthogonal symmetry-projection commutation and B*B=-L on every
+defined admissible finite instance. The general proof is not inferred from
+fixture tests. Source, exact domain, five-item audit, non-importing executable,
+hostile controls and partial Lean scope are in the
+[result card](../../strategy/pa-hyp/PAH-v2-finite-result-v1.json).
+One synthesis note/PDF is available under `notes/labelled-finite-dynamics-260911-v1.0.tex.txt`.
+This is auxiliary model mathematics only. The host remains T1 OPEN, with no
+T-054 gate closure, v1 repair, refinement, continuum or physical signature claim.
+External adversarial review of the source-domain and symmetry crosswalk is invited.
+
 Identify the fluctuation modes whose dispersion fixes the effective signature; relate the BCC reciprocal lattice to the emergent light-cone.

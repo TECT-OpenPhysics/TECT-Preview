@@ -1,0 +1,239 @@
+% Title: A fixed-time obstruction to PAH-v2 semigroup comparison
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-09-14; this version issued 2026-09-14
+% Status: Scoped negative result R-574; no host tier or physical promotion
+% Revision history: v1.0 (2026-09-14) single bounded-attempt synthesis.
+
+\section*{1. Purpose and scope: the unchanged target}
+Put $f_r=I_{r_0,r}f_0$ and $S_r(t)=\exp(tL_r)$, where $L_r$ is the full
+original PAH-v2 finite row generator on $\mathbb C^{\Omega_r}$, restricted
+to the invariant algebra when appropriate. PAH-V2-SG-001 asks whether
+\[
+ \forall T<\infty,\quad
+ \lim_{R\to\infty}\sup_{s>r\ge R}\sup_{0\le t\le T}
+ \|D_{r,s}(t)\|_{L^2(\pi_s)}=0,\qquad
+ D_{r,s}(t)=S_s(t)I_{r,s}f_r-I_{r,s}S_r(t)f_r.                 \tag{1}
+\]
+All states, parameters, maps and time units are those of R-573. Its generator
+counterexample alone did not settle (1). Here we supply the missing uniform
+finite-time estimate; no infinite semigroup is presumed to exist.
+
+The immutable preregistration, including $t_*=1/10$ before computation, is
+\begin{verbatim}
+strategy/pa-hyp/PAH-v2-SG-001-prereg-v1.json
+177e36c3ea7370f2377c9a53b385396e7b6de1a28399c3b306880c92ce672646
+\end{verbatim}
+It pins PAH-001-v1 (functional/action and dynamics), PAH-001-v2-r2
+(root partial maps and operators/pairings), R-570 finite operators, R-571
+comparison admission, the Morton/CRT bundle and R-573's execution and proof.
+The adopted comparison-bundle hash remains
+\begin{verbatim}
+1d6fa47f5351d74f05bed3aba5b1e229a827644d4c6ef5d7dd73c117adee95b6
+\end{verbatim}
+The result certificate lists all source and evidence hashes.
+
+The carrier is the existing $h=N=0$ anchored open square: four vertices,
+four stored edges and one bounded face; $O=(0,0)$ and $C=(1,0)$ are labels.
+These are two-dimensional combinatorial addresses, not physical dimensions.
+Fix $r_0=2$, $q_0=m_0=R_0=1$, all original rate scales equal to one, and
+\[
+ \epsilon=\beta=\nu=\lambda_s=\eta_6=\kappa_s=\kappa_D=\kappa_g=g=1,
+ \qquad m^2=\lambda_4=0.                                    \tag{2}
+\]
+The original schedule is $K_r=\prod_{i=1}^{r+1}p_i$, $M_{s,r}=2^r$,
+$M_{\psi,r}=4^r$, $R_{\max,r}=2^r$, $Q_r=2^r$. All full counting labels
+remain distinct. The original weight is
+$\pi_r(x)=e^{-F_r(x)}/\sum_{y\in\Omega_r}e^{-F_r(y)}$.
+Only the local-state cutoff tends to infinity; later lattice $h$, volume $N$
+and inherited limit stages are unchanged and unexecuted. Time remains the
+original external stochastic Markov time and stationary initial-value boundary.
+
+\section*{2. Exact source-to-character crosswalk}
+For the signed face sum $\Phi=\sum_{e\in\partial p}\sigma_eu_e$, set
+\[
+ f_0=e^{2\pi i\Phi/5},\qquad
+ a_r=(K_r/K_2)^{-1}\pmod5,\qquad f_r=e^{2\pi i a_r\Phi/5}.    \tag{3}
+\]
+Closed-face gauge coboundaries telescope, and modular wrap is invisible
+since $5\mid K_r$. The full cell-automorphism group fixing the two adjacent
+labelled anchors is trivial. Thus (3) is in the unchanged full invariant
+algebra. R-571's original inverse-prime projection gives exactly these
+pullbacks, $I_{r,s}f_r=f_s$, and $|f_r|=1$ on every original state.
+The finite domain is the entire function space; R-570's symmetry commutation
+preserves its invariant part. No new physical projection is used.
+
+R-573, sections 2--4, establishes for the same full generator
+\[
+ L_rf_r=\lambda_rf_r+e_r,\quad
+ \lambda_r\in\{-10-2\sqrt5,-10+2\sqrt5\},\quad
+ \|e_r\|_\infty\le256/K_r.                                  \tag{4}
+\]
+For completeness, the changing energy under a signed LK move is at most
+$4\pi/K_r\le16/K_r$: one matter edge and its sole face change, while
+$A_v=2^{-r}\ell_v\ge0$ and $\sum_v A_v=1$. The original rate is
+$e^{-\Delta F/2}$, so for $K_r\ge8$ its difference from one is at most
+$16/K_r$, using $e^u-1\le2u$ for $0\le u\le1$. Eight signed incidences
+times the character increment bound two give $256/K_r$.
+The PH/TR/AP increments of the initial character vanish individually, and
+the unit-rate LK leading term is $4(2\cos(2\pi a_r/5)-2)$.
+This is a decomposition, not replacement rates. PH/TR/AP are retained in
+the full evolved semigroup; no invariant one-character span is asserted.
+
+\section*{3. Full finite Markov contraction and the time-error estimate}
+At each finite $r$ the original off-diagonal rates are nonnegative and finite,
+and the row sum is zero. Let $M_r=1+\max_x\sum_{y\ne x}q_r(x,y)$.
+The matrix $P_r=1+L_r/M_r$ is stochastic. The exact matrix exponential is
+\[
+ S_r(t)=e^{-M_rt}\sum_{n=0}^{\infty}\frac{(M_rt)^n}{n!}P_r^n.
+\]
+The coefficients sum to one. Triangle inequalities in each row therefore give
+$\|S_r(t)v\|_\infty\le\|v\|_\infty$ for complex $v$ and all $t\ge0$.
+$M_r$ need not be uniform: it is an algebraic proof device, not a changed
+rate or time scale. This proves contraction for all original roots at once.
+
+Differentiate $S_r(t-u)e^{\lambda_ru}f_r$ for $0\le u\le t$ in the finite
+function space. Using (4), its derivative is
+$-e^{\lambda_ru}S_r(t-u)e_r$. Integrating gives
+\[
+ u_r(t):=S_r(t)f_r-e^{\lambda_rt}f_r
+       =\int_0^t e^{\lambda_ru}S_r(t-u)e_r\,du,
+ \qquad \|u_r(t)\|_\infty\le\frac{256t}{K_r}.                \tag{5}
+\]
+The sign and absence of any factor $1/2$ follow from the displayed original
+generator. The last inequality uses $\lambda_r<0$, contraction, and (4).
+It is uniform in the full finite state and every $t$ in a fixed compact
+interval. No common Hilbert realization, Gibbs projectivity, or limiting
+generator-domain theorem was used.
+
+Independently, $u_r'=L_ru_r+e^{\lambda_rt}e_r$ and $u_r(0)=0$.
+For any fixed angle $\theta$, put $v_\theta=\operatorname{Re}(e^{-i\theta}u_r)$.
+At a maximum over the finite state space, $L_rv_\theta\le0$; the forcing
+is at most $256/K_r$. The finite comparison principle, or its upper-right
+Dini-derivative version at a change of maximizer, gives
+$v_\theta(x,t)\le256t/K_r$. Taking the supremum over all $\theta$ gives
+(5), without a spurious $\sqrt2$ loss. This is an alternative full-operator
+derivation, not a numerical enumeration or an exact-eigenfunction assumption.
+
+\section*{4. One fixed positive time and arbitrarily late pairs}
+Pullback does not increase the supremum norm. Consequently, on every fine state,
+\[
+ D_{r,s}(t)=(e^{\lambda_st}-e^{\lambda_rt})f_s
+                +u_s(t)-I_{r,s}u_r(t),
+\]
+\[
+ |D_{r,s}(t)(x)|\ge |e^{\lambda_st}-e^{\lambda_rt}|
+                  -256t(K_s^{-1}+K_r^{-1}).                 \tag{6}
+\]
+If $p_{r+2}\equiv2$ or $3\pmod5$, inverse multiplication swaps the residue
+classes $\{1,4\}$ and $\{2,3\}$, hence swaps the two values in (4).
+At the preregistered original time $t_*=1/10$, their exponential gap is
+\[
+ 2e^{-1}\sinh(\sqrt5/5)\ge\frac4{15},                       \tag{7}
+\]
+because $e<3$, $\sqrt5\ge2$ and $\sinh x\ge x$ for $x\ge0$.
+When $K_s\ge K_r\ge768$, the error in (6) is at most $1/15$.
+Thus every such flipping pair satisfies $|D_{r,s}(t_*)(x)|\ge1/5$ everywhere.
+
+The required pairs occur beyond every threshold by the following elementary
+argument, reproduced from R-573. For $B\ge11$, let
+$P_B=\prod_{p\le B,\,p\ne5}p$, and choose $j\in\{1,2,3,4\}$ with
+$jP_B\equiv1\pmod5$. Then $1+jP_B$ is two modulo five and one modulo every
+other prime at most $B$. All its prime factors exceed $B$, and at least one
+is two or three modulo five: products of residues one and four alone cannot
+give two. Given $R$, take $B=p_{\max(R,4)+1}$ and one such prime $p_k>B$;
+$r=k-2$, $s=r+1$ satisfy $r\ge\max(R,4)$ and the flip condition.
+Also $K_r\ge K_4=2310>768$. No finite prime table proves this quantifier.
+
+Since the original fine Gibbs weights sum to one, (6)--(7) give
+\[
+ \forall R\ \exists s=r+1>r\ge R:\quad
+ \|D_{r,s}(1/10)\|_{L^2(\pi_s)}^2\ge\frac1{25}.             \tag{8}
+\]
+Thus (1) is DISPROVED, already at $T=1/10$ (and every larger $T$), with one
+fixed observable and $\delta=1/5$. The obstruction is not confined to a
+Gibbs-negligible set. At $t=0$ the defect is zero; a derivative mismatch
+was not substituted for a finite-time lower bound.
+
+\section*{5. Applicability and Devil's-advocate review}
+The preregistered literature search used Norris, \emph{Markov Chains},
+chapter 2, section 2.1, Q-matrices and matrix exponentials,
+doi:10.1017/CBO9780511810633.004. This is finite background only; no
+inaccessible theorem or infinite-dimensional convergence result is imported.
+Contraction and variation of constants are derived above.
+R-570 applies to the exact finite generator/domain, R-571 to the unchanged
+pullback, and R-573 sections 2--4 to (3)--(4) and the prime argument.
+Their functional, regulator, state and time hypotheses are SATISFIED by
+the pinned tuple (2). Their executable independent/hostile/Lean evidence is
+replayed, but script PASS alone is not the analytic crosswalk. No Q3LOCK,
+TECT-YM, physical-time or external limit theorem is a premise. No novelty
+claim is made. The only new proposition is the passage from (4) to (8).
+
+\begin{enumerate}
+\item \textbf{Generator failure alone? DISMISSED.} Equation (5) supplies the
+uniform finite-time error; (7) is evaluated at a fixed positive time.
+\item \textbf{Missing evolved roots? DISMISSED.} The Poisson expansion and
+independent maximum principle use the full $L_r$. Only initial increments
+vanish; the evolved character need not stay in a one-dimensional span.
+\item \textbf{Sign, half factor, or time rescaling? DISMISSED.} Both
+eigenvalues are negative. The original generator has no half; $1/10$ is a
+single original-time test value, not a cutoff-dependent clock.
+\item \textbf{Fine/coarse error or measure mismatch? DISMISSED.} Both
+remainders occur in (6). Pullback uses only its supremum contraction; (8)
+uses the original normalized fine weights, not an isometric state transport.
+\item \textbf{Finite table or moving observable? DISMISSED.} Equation (3)
+is one fixed-base observable; the Euclid argument supplies every tail.
+Non-flipping residues and zero time are negative controls, not witnesses.
+\item \textbf{Hardcoded or approximate constants? DISMISSED.} The scripts
+recompute the edge count, rate remainder, exact fifth-root values, rational
+slack and threshold from pinned inputs. The constants $\pi<4$ and $e<3$
+are analytic bounds; two directed Arb precisions are arithmetic controls.
+\item \textbf{Full Lean or external referee? UPHELD as a boundary.} Five
+Lean theorems verify exponential/slack/triangle/weight/tail bridges only.
+The concrete finite Markov, vector integral, source and prime arguments
+remain analytic. Independent code and hostile review have same-task
+authorship; external review is invited.
+\item \textbf{Whole PAH or physical no-go? UPHELD as a boundary.} This
+refutes the unchanged comparison's universal original-time full-cylinder
+convergence route. It does not refute R-570, R-571, every PAH model, state
+projectivity, or an independently authorized physical interpretation.
+\end{enumerate}
+
+\section*{6. Result footer and reproducibility}
+\par\noindent
+Result ID: R-574; exploration EXP-001743.
+\par\noindent
+Precise statement: Equation (8) refutes SG-001 at unchanged time $1/10$,
+with original fine-Gibbs norm at least $1/5$ beyond every cutoff threshold.
+\par\noindent
+Scope: Exact R-573 PAH-v2 tuple, anchored square, full invariant counting
+algebra and original maps; local-state cutoff only.
+\par\noindent
+Dependencies: Exact R-570 finite operators, R-571 comparison and R-573
+character/remainder/prime proof; no imported infinite-limit theorem.
+\par\noindent
+Evidence grade: ANALYTIC, EXACT, EXECUTED, INHERITED; partial Lean.
+\par\noindent
+Reproduction command: Assemble the following displayed command on one line.
+\par\noindent
+Expected output: Inherited R-573 and SG-001 primary, independent, hostile
+and partial Lean PASS; mathematical target DISPROVED.
+\par\noindent
+Falsification gate: An exact source/rate/character, Markov contraction,
+vector integral, pullback or prime-tail error invalidates this negative proof.
+\par\noindent
+Tier before / after: C6 stays T1; the T-054 active gate does not change.
+\par\noindent
+No-overclaim statement: No new model, state, time, domain or comparison;
+no state-projectivity verdict, infinite-volume dynamics, continuum,
+physical Pre-A, Sector-A closure, spacetime, QFT, gravity, mass gap or TOE.
+\par\noindent
+Next required action: Park this comparison route. Reenter only on an exact
+proof falsifier, or separately authorized evidence resolving a load-bearing
+assumption or supplying a physically motivated observable connection.
+\begin{verbatim}
+python -X utf8 verification/scripts/pah_v2_sg001_verify.py
+  --lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+  --elan-home C:/Users/NaEun/.elan
+\end{verbatim}
+No automatic weakened target or successor is queued. Brazovskii and horizon
+ideas remain separate, unadopted suggestions. One synthesis PDF is issued.

@@ -1,0 +1,32 @@
+{
+  "schema": "tect/pah-omc030-integrated/1.0",
+  "status": "PASS",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "commands": {
+    "primary": "python -X utf8 verification\\scripts\\pah_omc030_verify.py --check",
+    "independent": "python -X utf8 codes\\foundations\\pah_omc030_independent.py --check",
+    "hostile": "python -X utf8 codes\\foundations\\pah_omc030_hostile.py --check"
+  },
+  "runs": {
+    "primary": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-030 PRIMARY: PASS; verdict=HOLD_FOR_EVIDENCE; missing common-space temporal bridge",
+      "stderr": ""
+    },
+    "independent": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-030 INDEPENDENT: PASS; verdict=HOLD_FOR_EVIDENCE",
+      "stderr": ""
+    },
+    "hostile": {
+      "returncode": 0,
+      "stdout": "PAH-OMC-030 HOSTILE: PASS; verdict=HOLD_FOR_EVIDENCE",
+      "stderr": ""
+    }
+  },
+  "failures": [],
+  "non_claims": [
+    "No finite-to-target convergence",
+    "No physical Pre-A/QFT/gravity/continuum/Yang-Mills/mass-gap/TOE conclusion"
+  ]
+}

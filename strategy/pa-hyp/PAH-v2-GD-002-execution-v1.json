@@ -1,0 +1,39 @@
+{
+  "schema": "tect/pah-v2-gibbs-generator-execution/1.0",
+  "id": "PAH-V2-GD-002-CRT-PROBE",
+  "preregistration": {
+    "path": "strategy/pa-hyp/PAH-v2-GD-002-prereg-v1.json",
+    "sha256": "810ac2d0f787bfdc41a4254c148e327d682cc4eaa0fb4112feaf87064757ce9a"
+  },
+  "frozen_probe": {
+    "h": 0,
+    "N": 0,
+    "r0": 2,
+    "epsilon": 1,
+    "beta": 1,
+    "nu": 1,
+    "lambda_s": 1,
+    "eta_6": 1,
+    "kappa_s": 1,
+    "kappa_D": 1,
+    "kappa_g": 1,
+    "g": 1,
+    "q0": 1,
+    "m0": 1,
+    "R0": 1,
+    "m2": 0,
+    "lambda_4": 0,
+    "all_rate_scales": 1,
+    "observable_modulus": 5,
+    "observable": "f0(x)=exp(2*pi*i*Phi(x)/5), where Phi is the signed sum of original link integers around the unique face at h=N=0. K_(r0)=30. Gauge and full anchor-cell invariance must be verified.",
+    "transport": "Only the approved cutoff pullback; coefficient a_r=(K_r/K_r0)^(-1) modulo 5, so f_r=exp(2*pi*i*a_r*Phi/5). No selection depending on r or Gibbs samples.",
+    "diagnostic_plan": "Test the full generator using every original root; analyze actual rate errors relative to their unit-mobility leading term without replacing the rates. A uniform all-state lower bound would also control the exact original fine-Gibbs norm."
+  },
+  "bounded_fixtures": {
+    "root_cutoffs": [2, 3],
+    "all_four_nonzero_mod5_characters": true,
+    "purpose": "Coordinate/root and algebra crosschecks only; the tail claim requires a separate all-index proof and a prime-existence construction, never a table extrapolation."
+  },
+  "state_and_nontriviality": "Audit original Gibbs normalization and observable variance/Dirichlet energy separately. Auxiliary uniform counting bounds, if derived, are domination inequalities only, never a replacement ensemble.",
+  "not_authorized": "No change of source, aperture floor outside this fixed admissible tuple, mobility, full domain, comparison map, physical projection, Markov time or ordered limits."
+}

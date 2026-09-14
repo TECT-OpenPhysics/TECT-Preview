@@ -1,0 +1,58 @@
+{
+  "schema": "tect/pah-v2-charge-comparison-prereg/1.0",
+  "id": "PAH-V2-CHARGE-AB-20260911",
+  "status": "COMPARATIVE_RESEARCH_ONLY_NEITHER_BRANCH_ADOPTED",
+  "authorization": "The operator asked to try both choices rather than select one first. This authorizes bounded comparison of new proposed regulator/coordinate maps, not adoption of either as the canonical refinement contract or approval of a mathematical result.",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/pa-hyp/PAH-v2-finite-audit-v1.json": "531697fa28c5f2e7f4177b42bc12ebd8fc1ffb7e9790d07063082e0ec3d6a331",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2"
+  },
+  "question": "At the first local-state-cutoff stage, what do fixed integer Q and fixed displayed amplitude sum actually preserve, and do their explicit state injections supply the requested full comparison map?",
+  "common_schedule": {
+    "input_domain": "j>=0 integer; fixed nonempty admitted finite anchored complex G; integers q>=1 and m>=q; R0>0. Nontrivial q is not replaced by q=0.",
+    "K": "2*2^j",
+    "M_s": "2^j",
+    "M_psi": "m*4^j",
+    "R_max": "R0*2^j",
+    "radial_mesh": "d_j=R_max,j/M_psi,j=(R0/m)*2^(-j)",
+    "fixed_data": "G, O, C, all oriented edges/closed face data, epsilon, a, beta, nu, couplings, per-root rate scales, external Markov time and stationary initial law formula. All four local-state cutoffs grow; no rate acceleration or counterterm.",
+    "later_order": "This is only the first stage of the unchanged local-cutoff -> lattice -> volume/exhaustion -> selector -> collapse -> optional ground -> observation-time order. No later lattice/volume map is selected or limit proved."
+  },
+  "branches": {
+    "A": {"name": "fixed integer occupation", "Q": "q", "state_injection": "J_A: X_(j,A) -> X_(j+1,A); (j_v,ell_v,n_v,u_e) -> (2j_v,ell_v,2n_v,2u_e)", "intended_preservation": "Integer Q, occupation coordinates, displayed aperture and phase/link values; not an assertion about displayed radial amplitude", "adopted": false},
+    "B": {"name": "fixed displayed amplitude sum", "Q": "q*2^j", "state_injection": "J_B: X_(j,B) -> X_(j+1,B); (j_v,ell_v,n_v,u_e) -> (2j_v,2ell_v,2n_v,2u_e)", "intended_preservation": "Displayed aperture, complex matter and links on the injection image, with d_j Q_j fixed. This sum is not physical mass, electric charge, energy or integrated |psi|^2.", "adopted": false}
+  },
+  "directions": {
+    "state_injections": "coarse_to_fine",
+    "induced_observable_trace": "J^*: A_fine -> A_coarse, J^*h=h composed with J",
+    "requested_map_still_distinct": "The earlier draft seeks p: X_fine -> X_coarse and I=p^*: A_coarse -> A_fine. An injection J does not define p on off-image fine states. No inversion, conditional expectation, rounding or quotient is implicit."
+  },
+  "tests_before_adoption": [
+    "Check the finite integer ranges, charge sector, injectivity and retained zero-radius/epsilon=1 labels for both branches",
+    "Compare sum |psi|=d_j Q_j and displayed fields under J for both branches, without interpreting it physically",
+    "Use exactly the inherited functional to check image energy equality or a discrepancy; no energy ordering between different ensembles is inferred",
+    "For every valid coarse labelled root on the issued fixture, compare a single fine root with the injected coarse endpoint and separately record the exact minimal repeated-root path. Never turn a path into a new rate",
+    "Test whether the injection image is invariant under the original fine moves; test J^* L_fine h - L_coarse J^*h on an explicit invariant full-fine observable h",
+    "Inspect integrality of an amplitude-preserving inverse of J_B on a fine tuple with odd occupations",
+    "Separate partition normalization and image conditioning from equality of displayed F; do not replace either full Gibbs state"
+  ],
+  "witness_design": {
+    "geometry_and_parameters": "Use primary_fixture_inputs in the pinned R-570 audit, including its triangle, anchors and unmodified real parameters. No new geometry model or production inference from a table.",
+    "seed_state": "All aperture, phase and link indices zero; all coarse q at the first vertex. q,m,R0 come from the issued fixture for execution.",
+    "fine_observable": "h(x)=1 if any fine aperture index is odd, otherwise 0. This is invariant under gauge and every cell automorphism. Its trace on either doubling injection is zero.",
+    "off_image_B": "Put fine occupations 1 and 2q-1 at two distinct carried vertices and zero elsewhere. At the first fine level this is in the declared B sector and includes odd occupation labels.",
+    "coverage": "Exhaust the issued coarse fixture for state/root embedding checks, but do not enumerate a larger fine Gibbs ensemble or run a finite semigroup. General conclusions require the coordinate argument in the decision note."
+  },
+  "evidence_plan": {
+    "primary": "Use the frozen v2 coordinate enumerator and exact rational displayed-field functional evaluation at the issued K=2 fixture and its K=4 image. Store exact rate coefficients and exponents for the witness.",
+    "independent": "A non-importing rational/SymPy implementation checks the schedule, field/radial relations, root arithmetic and witness energies/rate coefficients. Same-task authorship will be disclosed.",
+    "hostile": "Reject automatic inverse, zero-radius label erasure, step-count rate substitution, cross-ensemble energy ranking, and finite-pair-to-eventual or weak-limit promotion.",
+    "Lean": "Not required for draft comparison; no new kernel proof is claimed. If promoted later, formalize only the explicit finite coordinate facts with source assumptions.",
+    "literature_role": "No external theorem is a premise. The fixed-sector/variable-sector distinction is standard background, but particle-number or thermodynamic interpretations are not imported into Q. The work uses only the displayed v2 definitions and elementary integer/finite-sum identities."
+  },
+  "verdict_boundary": "This comparison can reject these particular injections as complete common-core/dynamics contracts, not all Q schedules or all comparison architectures. The old draft remains a historical uninstantiated checkpoint. No branch adoption, full p/I construction, ordered dynamics convergence or gate promotion.",
+  "non_claims": ["No physical Pre-A, spacetime, QFT, gravity, Yang-Mills, mass gap, continuum or TOE", "No replacement of v1/v2 states, rates, functional or time", "No assertion that changing Q at different regulators makes Q nonconserved within any finite evolution"]
+}

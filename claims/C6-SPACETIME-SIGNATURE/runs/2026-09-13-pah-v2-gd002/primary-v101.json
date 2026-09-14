@@ -1,0 +1,198 @@
+{
+  "all_residue_flips": [
+    {
+      "a": 1,
+      "b": 3,
+      "gap_squared": "80",
+      "prime_residue": 2
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "gap_squared": "80",
+      "prime_residue": 3
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "gap_squared": "80",
+      "prime_residue": 2
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "gap_squared": "80",
+      "prime_residue": 3
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "gap_squared": "80",
+      "prime_residue": 2
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "gap_squared": "80",
+      "prime_residue": 3
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "gap_squared": "80",
+      "prime_residue": 2
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "gap_squared": "80",
+      "prime_residue": 3
+    }
+  ],
+  "checks": [
+    {
+      "name": "source_pins",
+      "pass": true
+    },
+    {
+      "name": "complete_signed_roots",
+      "pass": true
+    },
+    {
+      "name": "gauge_telescoping",
+      "pass": true
+    },
+    {
+      "name": "fixed_character_pullbacks",
+      "pass": true
+    },
+    {
+      "name": "cyclotomic_gap_all_residues",
+      "pass": true
+    },
+    {
+      "name": "analytic_constant_arithmetic",
+      "pass": true
+    },
+    {
+      "name": "directed_pi_and_exp_bounds",
+      "pass": true
+    },
+    {
+      "name": "constructive_prime_fixture",
+      "pass": true
+    }
+  ],
+  "cyclotomic_eigenvalues": {
+    "1": "-10 + 2*sqrt(5)",
+    "2": "-10 - 2*sqrt(5)",
+    "3": "-10 - 2*sqrt(5)",
+    "4": "-10 + 2*sqrt(5)"
+  },
+  "derived": {
+    "Fupper": "14/3",
+    "deltaF_coeff": "16",
+    "energy_lower_factor": "4",
+    "eta": "7",
+    "gap_lower": "8",
+    "pair_coeff": "512",
+    "residual_coeff": "256",
+    "safe_cutoff": "4"
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9",
+    "sympy": "1.14.0"
+  },
+  "euclid_fixture": {
+    "factors": {
+      "19": 1,
+      "73": 1
+    },
+    "integer": 1387,
+    "new_nonresidue_primes": [
+      73
+    ],
+    "product": 462,
+    "t": 3,
+    "threshold_prime": 11
+  },
+  "evidence_boundary": "Fixtures check implementation only. General rate, tail, Gibbs and nontriviality inequalities require the written all-state proof. No Gibbs replacement or simulation extrapolation.",
+  "execution_sha256": "76c88dbf7a2f2f8a32743073db95d77590bbe76fc2f8b15215ff739ada1b78b2",
+  "fixtures": [
+    {
+      "K": 30,
+      "a": 1,
+      "leading_polynomial": "-4*X**3 - 4*X**2 - 12",
+      "r": 2
+    },
+    {
+      "K": 210,
+      "a": 3,
+      "leading_polynomial": "4*X**3 + 4*X**2 - 8",
+      "r": 3
+    }
+  ],
+  "geometry": {
+    "W": 2,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "face": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        -1
+      ],
+      [
+        1,
+        -1
+      ]
+    ]
+  },
+  "preregistration_sha256": "810ac2d0f787bfdc41a4254c148e327d682cc4eaa0fb4112feaf87064757ce9a",
+  "root_counts": {
+    "AP": 14,
+    "LK": 16,
+    "PH": 16,
+    "TR": 4
+  },
+  "schema": "tect/pah-v2-gd002-primary/1.0",
+  "script_sha256": "4fa963f5cfcbf27b8aa5ac39b33ca5912ac141146123949f5cc1df97f9e16893",
+  "script_version": "1.0.1",
+  "source_hashes": {
+    "codes/foundations/pah_v2_morton_crt.py": "3adbb34a8c7adbe1e59805bf380552362909f38342fe14ba8df7269d8ee36c1f",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-GD-001-result-v1.json": "c06ac27f5f43e38962c44151fe7669fe97963017ae8bda6e3bd44c7afdc2537e",
+    "strategy/pa-hyp/PAH-v2-comparison-admission-v1.json": "3bb86cf1d4ff11a4f55272908bc34f56b4289555fbf9f64917b32203c6a64d2f",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/pa-hyp/PAH-v2-morton-crt-bundle.json": "1d6fa47f5351d74f05bed3aba5b1e229a827644d4c6ef5d7dd73c117adee95b6",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7"
+  },
+  "status": "PASS"
+}

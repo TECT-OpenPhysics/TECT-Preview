@@ -91,3 +91,68 @@ not further finite root tables. The method is standard reuse, while the
 pinned PAH applicability and whole radial-subspace retention are the
 programme-specific result. See the hash-pinned PAH-OMC-019 certificate and
 result card for complete scope and the next separately activated contract.
+
+## 11 PAH-v2 SG-001 fixed-time source crosswalk (2026-09-14)
+
+Target: the exact original-time, original fine-Gibbs semigroup all-tail
+compact-time convergence statement in PAH-v2-SG-001-prereg-v1.json, for the
+unchanged R-573 fixed character. Source and definition hashes are in the
+preregistration and PAH-v2-SG-001-result-v1.json. R-570's finite row generator
+and symmetry domain, R-571's original CRT pullback, and R-573 sections 2-4
+character/rate/prime lemmas are APPLIES at this exact tuple: every source
+functional, regulator, full counting normalization, original time and map
+hypothesis is SATISFIED. R-573 did not itself settle semigroup convergence.
+
+The bounded literature search was finite Markov Q-matrix exponentials,
+uniformization and finite variation of constants. Norris, Markov Chains,
+chapter 2 section 2.1, DOI 10.1017/CBO9780511810633.004, is background only;
+no inaccessible statement or infinite-dimensional limit theorem is imported.
+The complete finite Poisson expansion and vector integral identity are
+derived in the synthesis, followed by an independent forced maximum-principle
+argument. No new common Hilbert space or Gibbs projectivity is assumed.
+
+New residual proposition: the all-state error <=256/K propagates to a
+uniform original-time error <=256*t/K. Exponential separation at fixed
+t=1/10 and the exact arbitrary-prime-tail argument yield norm >=1/5 under
+the original fine weights. The reproduction command replays both R-573
+and the four SG-001 verifiers. Sign/half factors, retained evolved roots,
+both fine/coarse errors, unchanged domain and all-tail quantifiers are
+challenged in synthesis section 5. Five Lean bridges are partial; independent
+implementation is not external-person review. No novelty or physical claim.
+
+## 10 PAH-v2 GD-002 source-specific negative addendum (2026-09-13)
+
+Target: the full-cylinder original fine-Gibbs L2 generator all-tail Cauchy
+statement in PAH-v2-GD-002-prereg-v1.json. This is a separate operator-approved
+diagnostic and does not replace the inherited sup algebra or R-572.
+Source pins and exact field locators are in the preregistration/result card.
+R-570 finite root/generator conventions and R-571 full-state CRT pullbacks
+are SATISFIED at the fixed admitted square scope only. The displayed PAH-v1
+functional and PAH-v2-r2 full counting coordinates, all roots, normalization,
+fixed parameters and unchanged time are rechecked directly. R-572 is only
+a negative control, not a Gibbs-L2 premise.
+
+Bounded external query: Kuwae Shioya convergence spectral structures varying
+Hilbert spaces 2003 publisher; Chinese remainder theorem finite cyclic random
+walk characters eigenvalues generator. Kuwae--Shioya, Communications in
+Analysis and Geometry 11 (2003), 599-673, doi:10.4310/cag.2003.v11.n4.a1
+was identified as background, but its PAH limiting-Hilbert hypotheses are
+UNASSESSED and no convergence theorem is imported. Disposition for such an
+import: NOT-YET-ASSESSED. No legacy, Q3LOCK or TECT-YM premise is used.
+
+The actual residual proposition is derived directly: a fixed fifth-residue
+plaquette character, the original-rate all-state error <=256/K, the elementary
+Euclid construction of arbitrarily late nonresidue primes modulo five, and
+the fine-Gibbs norm lower bound. The source-to-formula crosswalk is in
+crt-gibbs-defect-260913-v1.0.tex.txt, sections 1-5. It requires no Dirichlet
+prime-distribution theorem or imported common-core result.
+
+Independent disposition: non-importing coordinate/rate reconstruction,
+directed Arb diagnostics, alternative character diagonalization and exact
+mutation controls. The five Lean statements are parameterized bridges only;
+the concrete analytic/model/prime proof is not fully encoded. Same-task
+authorship is disclosed; external review is invited. Sign/half/multiplicity,
+full invariant domain/hidden labels and fixed-observable all-tail quantifiers
+are explicitly challenged in section 6. The result is a scoped negative
+for GD-002, not a physical promotion, alternate-domain no-go or semigroup
+verdict; state consistency and nontriviality are recorded separately.

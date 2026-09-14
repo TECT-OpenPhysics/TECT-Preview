@@ -1,0 +1,55 @@
+{
+  "schema": "tect/pah-v2-gibbs-generator-defect-prereg/1.0",
+  "id": "PAH-V2-GD-002",
+  "version": "1.0.0",
+  "issued_on": "2026-09-13",
+  "status": "PREREGISTERED_BEFORE_EXECUTION",
+  "task_id": "T-090",
+  "authority": "Current explicit operator instruction authorizes one bounded proof or fixed-observable disproof of full-cylinder fine-Gibbs L2 all-tail generator convergence. It changes no model, state, comparison map, time or earlier result.",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/pa-hyp/PAH-v2-morton-crt-bundle.json": "1d6fa47f5351d74f05bed3aba5b1e229a827644d4c6ef5d7dd73c117adee95b6",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7",
+    "strategy/pa-hyp/PAH-v2-comparison-admission-v1.json": "3bb86cf1d4ff11a4f55272908bc34f56b4289555fbf9f64917b32203c6a64d2f",
+    "strategy/pa-hyp/PAH-v2-GD-001-result-v1.json": "c06ac27f5f43e38962c44151fe7669fe97963017ae8bda6e3bd44c7afdc2537e",
+    "codes/foundations/pah_v2_morton_crt.py": "3adbb34a8c7adbe1e59805bf380552362909f38342fe14ba8df7269d8ee36c1f",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2"
+  },
+  "question": "For every fixed admissible parameter tuple, h,N,r0 and full invariant finite observable f0, do all tail-pair fine-Gibbs L2 generator defects tend to zero at the original local-state-cutoff-first stage?",
+  "test_domain": "D_test^(h,N)=algebraic direct limit over r of the FULL A_(r,h,N)^inv under the approved I. Retain its inherited sup-norm algebra definition. This L2 defect is a separate diagnostic, not a new asserted limiting-generator domain or Hilbert isometry.",
+  "finite_domain": "D(L_r)=C^(Omega_r). All signed PH/TR/LK/AP incidences, inverse duplicates, hidden labels, null rows and unmatched channels remain. L has no factor 1/2.",
+  "observable": "Fix r0 and f0 with sup norm <=1 before all tail indices; f_r=I_(r0,r)f0. Homogeneous normalization covers every full finite complex invariant observable; no smoothness, energy or selected-observable restriction.",
+  "state": "pi_s(x)=exp(-beta F_s(x))/sum_(all full counting tuples y)exp(-beta F_s(y)). No conditioning, comparison-pushforward replacement, rate fitting, counterterm or time rescaling.",
+  "defect": "Delta_(r,s)f_r=L_s I_(r,s)f_r-I_(r,s)L_r f_r; d2_(r,s)^2=sum_x pi_s(x)|Delta_(r,s)f_r(x)|^2.",
+  "target": "For every fixed admissible parameter tuple,h,N,r0,f0 and eta>0, there exists R>=r0 such that for ALL integers s>r>=R, d2_(r,s)<eta. Equivalently lim_R sup_(s>r>=R)d2_(r,s)=0.",
+  "falsifier": "One fixed admissible tuple,h,N,r0,f0 and eta0>0 such that for every R there exist s>r>=max(R,r0) with d2_(r,s)>=eta0. A single-state witness is insufficient without Gibbs-weight control; a single finite pair is insufficient without an arbitrary-tail construction.",
+  "ordered_scope": "Vary local-state cutoff only: K_r=primorial(r+1), M_s=2^r, M_psi=m0*4^r, Rmax=R0*2^r, Q=q0*2^r. All parameters,h,N are fixed. Later h, then N, then inherited stages remain unexecuted and unchanged.",
+  "time": "Original external stochastic Markov time and stationary initial-value boundary, no terminal conditioning.",
+  "separate_diagnostics": {
+    "state_consistency": "Measure discrepancy and existence of a representative-independent limiting pairing are separate questions; do not assume projectivity or a common L2 space.",
+    "nontriviality": "Track variance and original Dirichlet energy for any claimed surviving observable; zero-norm or zero-energy collapse is not nontrivial limiting dynamics. Constants and genuine kernel elements are not required to have positive energy."
+  },
+  "bounded_attempt": {
+    "analytic": "One source-to-formula proof/counterexample pass, including aperture boundary and phase/link CRT channels; no carrier/parameter sweep.",
+    "independent": "Separate direct formulation without importing the primary evaluator; disclose same-task authorship.",
+    "hostile": "Test state weights, full labels, gauge/anchor invariance, all roots, sign/factor, fixed data and arbitrary tails, and distinguish state/nontriviality/physics.",
+    "Lean": "Kernel-check a relevant exact algebra/inequality when feasible; explicitly retain all unencoded PAH source bridges.",
+    "exit": "PROVED, DISPROVED or HOLD_FOR_EVIDENCE. HOLD leaves exactly one missing bound/identity and a reentry condition. No repeated unchanged finite sweep."
+  },
+  "literature_intake": {
+    "internal": "R-570 supplies finite operators and R-571 finite comparisons only. R-572 is an immutable sup-negative control and explicitly did not evaluate Gibbs L2.",
+    "bounded_search": "Kuwae Shioya convergence spectral structures varying Hilbert spaces 2003 publisher; Chinese remainder theorem finite cyclic random walk characters eigenvalues generator.",
+    "external_candidate": "Kuwae and Shioya, Communications in Analysis and Geometry 11 (2003), 599-673, doi:10.4310/cag.2003.v11.n4.a1.",
+    "disposition": "NOT-YET-ASSESSED for a PAH convergence import; no imported limiting Hilbert realization or form theorem. Source-specific finite coordinate and root identities must be derived directly. No novelty claim."
+  },
+  "non_claims": [
+    "No replacement or erasure of R-572 or the inherited sup-norm algebra",
+    "No new model, physical projection, state, comparison map or time",
+    "No common closed generator, semigroup or lattice/volume-uniform theorem from defect convergence alone",
+    "No T-054 gate or C6 tier promotion",
+    "No physical Pre-A, Sector-A, spacetime, continuum, QFT, GR, Yang-Mills, mass gap or TOE"
+  ]
+}

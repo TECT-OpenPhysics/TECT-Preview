@@ -1,0 +1,50 @@
+{
+  "schema": "tect/pah-omc030-prereg/1.0",
+  "contract_id": "PAH-OMC-030",
+  "date": "2026-09-09",
+  "task_id": "T-097",
+  "status_at_registration": "PREREGISTERED_BEFORE_BRIDGE_AUDIT",
+  "question": "Do the original finite-strip fibre semigroups Q_n(t) in the R-514 stationary state converge on every declared cylinder pair to the R-568/R-512 minimal Markov semigroup in the R-510 Hilbert space, uniformly on compact external Markov-time intervals, with j before the anchored n limit?",
+  "source_files": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-OMC-017-result-v1.json": "4e2884d43a15846069a3ead9682d35e8321674a5d2ca3be727a1d411aae831fb",
+    "strategy/pa-hyp/PAH-OMC-017-transfer-certificate.md": "49d0bc5299df9e5f583b009121ee2b1e53fc04f4460e5eedb779f9759113dddf",
+    "strategy/pa-hyp/PAH-OMC-018-result-v1.json": "d34d08c5dda4acf6edb3749c5d18ddd3d98f13a4d52e6049cb373dc055729a65",
+    "strategy/pa-hyp/PAH-OMC-018-generator-certificate.md": "18dc782cafff8cf8a516fd8366ec7e1f8727a24c9553dba0656a6b4bc84de264",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-result-v1.json": "cfb65eb769cc95fb4b5148fe2914c5b4405748c3b8d253a0ca938369914d8801",
+    "strategy/pa-hyp/PAH-OMC-020-fixedn-temporal-certificate.md": "6f3bbb18fb94db189a6d7d9249cf86ba636643946d0a5340ebe900c92f515820",
+    "strategy/pa-hyp/PAH-OMC-029-prereg-v1.json": "bd71fc2933ece63307cdc6369c3af9d3279459d1cc60f06a87b0af41c3dcc99a",
+    "strategy/pa-hyp/PAH-OMC-029-result-v1.json": "8ce90838a3daba1277cfeb2987643eb27c90d6eac2148c9e81c110bcd1c8fc81",
+    "strategy/pa-hyp/PAH-OMC-029-certificate.md": "55e2ca3f7ff3d7d8d77763f020ad1d8b97fe5b98e2541e41153a41a48b1a7c0e",
+    "strategy/pa-hyp/PAH-OMC-029-independent-audit.md": "70e10ea3999bb8e72bfd5509b860558d0dddaa4592638fb7af02e3488844c9ab"
+  },
+  "exact_scope": {
+    "model": "Exactly PAH-001 with the original directed PH/LK/AP/TR rates, labelled all-Q Gibbs law and two-row OMC-004 strip.",
+    "parameters": "K=2, M_s=1, epsilon=1/2, beta=nu=1, m2=theta=0 and all remaining displayed OMC-016 couplings one.",
+    "boundary": "The terminal unsplit square and all original frontier terms are retained; no split-cell replacement or conditional boundary average is allowed.",
+    "states": "nu_n is the R-510 fixed-n labelled stationary state and mu is the R-510 anchored local state, obtained with j->infinity first at each fixed n.",
+    "domain": "D is exactly the R-511 bounded gauge-invariant globally amplitude-l1-Lipschitz finite-prefix cylinder algebra, including constants.",
+    "time": "The original external unaccelerated Markov time t>=0; no quantum, proper or Lorentzian interpretation.",
+    "order": "First j->infinity at fixed n, then amplitude cutoff removal, then anchored n->infinity. No diagonal or reversed limit.",
+    "target": "T_min is the R-512/R-567 minimal conservative Markov extension on H=L2(mu), with R-568 uniqueness conditional on a semigroup already existing on that same H and extending R-511 A."
+  },
+  "required_bridges": {
+    "N2a": "A source-authorized bounded-energy or equivalent U_n from the finite nu_n space into the same H, preserving local cylinders and the unsplit terminal square.",
+    "N2b": "Arbitrary-sequence form liminf and recovery after the U_n identification.",
+    "N2c_N4": "A compact-time boundary-escape or generator-residual estimate for the original unbounded finite-strip rates, uniform in n after local support is fixed.",
+    "N2d": "Identification of the resulting limit with the R-512 minimal closure rather than only an arbitrary Markov extension.",
+    "tails": "A source-derived amplitude-tail estimate compatible with the same n-uniform comparison, not only fixed-n tails or the target mu tail."
+  },
+  "acceptance": [
+    "PROVED only if all required bridges yield the displayed correlation limit for every f,g in D and finite T, with primary, independent and hostile evidence.",
+    "DISPROVED only if an exact PAH source observable or source-authorized family violates the displayed limit or the R-512 minimal identification.",
+    "HOLD_FOR_EVIDENCE if the objects are source-compatible but one required bridge remains unproved; record the single missing statement and re-entry condition.",
+    "Lean may formalize algebraic error decompositions and implication lemmas, but may not treat an assumed U_n or Mosco theorem as proved."
+  ],
+  "prohibited": [
+    "No new Hamiltonian, carrier, rates, mobility, state, projection, counterterm, time scale, boundary condition or limit order.",
+    "No inference from R-568 uniqueness, R-510 static convergence or R-514 fixed-n passage alone.",
+    "No Q3LOCK, TECT-YM, physical Pre-A, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE conclusion."
+  ],
+  "bounded_attempt": "One source/domain compatibility and ordered-limit bridge attempt. Do not repeat owner scans or finite tables; after this attempt enter REVIEW_REQUIRED with the exact missing bridge if the limit does not close."
+}
