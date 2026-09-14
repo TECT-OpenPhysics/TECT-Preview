@@ -1,0 +1,67 @@
+{
+  "analytic_formulation": "For each theta, apply the finite row-generator maximum principle to Re(exp(-i theta)u), u=S(t)f-exp(lambda t)f; the forcing is bounded by C/K since lambda<=0. Sup over theta yields |u|<=Ct/K without a sqrt(2) loss.",
+  "checks": [
+    {
+      "name": "source_pins",
+      "pass": true
+    },
+    {
+      "name": "independent_edge_count",
+      "pass": true
+    },
+    {
+      "name": "original_rate_coefficient",
+      "pass": true
+    },
+    {
+      "name": "positive_odd_Taylor_bound",
+      "pass": true
+    },
+    {
+      "name": "independent_cutoff_threshold",
+      "pass": true
+    },
+    {
+      "name": "two_precision_time_gap",
+      "pass": true
+    },
+    {
+      "name": "negative_spectrum_contraction_sign",
+      "pass": true
+    },
+    {
+      "name": "zero_time_control",
+      "pass": true
+    }
+  ],
+  "derived": {
+    "delta": "1/5",
+    "leading_lower": "4/15",
+    "norm_squared_lower": "1/25",
+    "required_K": "768",
+    "residual_coeff": "256",
+    "safe_K": "2310",
+    "safe_cutoff": "4",
+    "time": "1/10"
+  },
+  "directed_intervals": [
+    {
+      "fast": "[0.2352248072542087689633291449 +/- 6.54e-29]",
+      "gap": "[0.3401196252331142708276732947 +/- 9.61e-29]",
+      "precision": 96,
+      "slow": "[0.5753444324873230397910024397 +/- 3.39e-29]"
+    },
+    {
+      "fast": "[0.235224807254208768963329144942585077595711407116564953139 +/- 6.19e-58]",
+      "gap": "[0.34011962523311427082767329475208932132593728288150959666 +/- 2.94e-57]",
+      "precision": 192,
+      "slow": "[0.575344432487323039791002439694674398921648689998074549796 +/- 6.46e-58]"
+    }
+  ],
+  "independence_boundary": "Same-task authorship, independently written formulation and code; not an external referee. Analytic all-state/tail bridges are in the synthesis.",
+  "preregistration_sha256": "177e36c3ea7370f2377c9a53b385396e7b6de1a28399c3b306880c92ce672646",
+  "schema": "tect/pah-v2-sg001-independent/1.0",
+  "script_sha256": "b126feb9d6bf232333038bdb5fe5f2ea0540cc06d921833e63a0ca871fde6c57",
+  "status": "PASS",
+  "version": "1.0.0"
+}

@@ -9,13 +9,14 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  29 proof units  ·  tier span T1
+## (all notes)/  ·  30 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `aperture-cutoff-defect` | v1.0 | T1 | Equations (4)--(5) on the allowed $\epsilon=1$ | ANALYTIC, EXACT, EXECUTED; partial parameteri… | Before any replacement convergence target, ask |
 | `comparison-contract-admission` | v1.0 | T1 | Full finite comparison-definition admission | Analytic, exact checks, partial Lean | Specify one full-label generator-defect target |
 | `crt-gibbs-defect` | v1.0 | T1* | The fixed character (3) has fine-Gibbs defect norm at least | ANALYTIC, EXACT, EXECUTED; partial parameteri… | Does the same fixed character obstruct original-time |
+| `crt-semigroup-defect` | v1.0 | T1 | Equation (8) refutes SG-001 at unchanged time $1/10$, | ANALYTIC, EXACT, EXECUTED, INHERITED; partial… | Park this comparison route. Reenter only on an exact |
 | `labelled-finite-dynamics` | v1.0 | T1 | Five finite operator identities for pinned v2. | ANALYTIC, EXACT, EXECUTED; partial Lean. | Separate fixed comparison-map admission. |
 | `pah-omc015-cutoff` | v1.0 | T1 | Ordered squared limits are (0,0,1,1). | ANALYTIC, EXACT, EXECUTED; Lean cross-check | Separate owner contract for a new law |
 | `pah-omc016-uniform` | v1.0 | T1* | Fixed-n radial weak convergence/tightness and a common positive lower bound on both declared b_v^2. | ANALYTIC, EXACT, EXECUTED. | A separate bounded-cylinder Cauchy question for the cutoff-limit laws nu_n as n grows. |

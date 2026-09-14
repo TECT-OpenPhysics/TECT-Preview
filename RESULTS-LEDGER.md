@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-574](#r-574) | PAH-v2 fixed-time original-Gibbs semigroup counterexample | The unchanged R-573 fixed character has norm at least 1/5 at original time 1/10 for adjacent pairs beyond every cutoff threshold. Full-generator time-error proof, independent maximum principle, hostile and partial Lean checks. SG-001 DISPROVED; no automatic successor or physical promotion. |
 | [R-573](#r-573) | PAH-v2 original fine-Gibbs generator counterexample | One fixed invariant plaquette character has all-state defect at least seven at adjacent pairs beyond every cutoff threshold, hence original fine-Gibbs L2 norm at least seven. Exact original-rate remainder and constructive CRT prime tail; independent, hostile and partial Lean checks. GD-002 DISPROVED only; no common-state, semigroup, T-054 gate or physical conclusion. |
 | [R-572](#r-572) | PAH-v2 full-cylinder sup generator counterexample | At the admitted epsilon=1 boundary, one fixed f0=1_{j_O=0} has exact defect 1_{2^s-2^(s-r)<=j_O<2^s-1} and full-state sup norm one for every s>r>=0. Analytic all-index proof, independent full-root row action, hostile audit and five partial Lean declarations. DISPROVED for GD-001 only; no Gibbs-L2, T-054 gate or physical conclusion. |
 | [R-571](#r-571) | PAH-v2 full comparison-definition admission | On the owner-adopted Morton/CRT anchored grid family, all finite full-state projections are total, surjective and compositional; full invariant pullbacks preserve the sup norm with declared source-box support. All signed roots and unpaired channels remain. Written arbitrary-index proof, independent exact implementation, hostile controls and seventeen partial Lean declarations. Definition scope only: no generator compatibility, T-054 gate, limit or physical promotion. |
@@ -19364,6 +19365,44 @@ The exploration ledger entry is EXP-001655 and the changelog event is
 `20260908-r-535-pah-omc-020-k-d-term-level-coverage-ledge`.  Reopen only
 when a versioned source-authorized packet or an exact PAH-specific
 contradiction changes one required field.
+
+<a id="r-574"></a>
+### R-574 -- PAH-v2 fixed-time original-Gibbs semigroup counterexample
+
+At the exact unchanged R-573 tuple, fixed f0 and original time t=1/10,
+every cutoff threshold has an adjacent pair s=r+1>r>=R such that
+`||S_s(t) I_(r,s) f_r-I_(r,s) S_r(t) f_r||_(L2(pi_s)) >=1/5`.
+The full original finite generator is a sup contraction by its stochastic
+matrix exponential. Its exact Duhamel identity gives
+`||S_r(t)f_r-exp(lambda_r*t)f_r||_infinity <=256*t/K_r`.
+Both negative character eigenvalues, all original roots and both remainder
+terms are retained. At prime-residue flips the leading exponential separation
+is at least 4/15 and the error at most 1/15. R-573's elementary prime argument
+provides flipping pairs beyond every cutoff threshold. The bound holds at
+every original fine state, hence under the original normalized Gibbs weights.
+
+SG-001 is DISPROVED, not inferred from generator failure or finite tables.
+R-570/R-571/R-572/R-573, all model/source hashes, the full cylinder algebra,
+states, original time and comparison remain unchanged. State projectivity,
+lattice/volume limits and other models are not settled; C6 stays T1 and the
+T-054 active gate does not change. No physical Pre-A, Sector-A closure,
+spacetime, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE claim.
+
+Certificate: `strategy/pa-hyp/PAH-v2-SG-001-result-v1.json`.
+Exploration: EXP-001743. Proof: the four-page synthesis
+`claims/C6-SPACETIME-SIGNATURE/notes/crt-semigroup-defect-260914-v1.0.tex.txt`.
+Primary and independent each pass 8 groups; hostile passes 81 controls;
+five partial Lean declarations compile. The independent forced maximum-principle
+proof and eight objections are written; same-task authorship is disclosed.
+Reproduce `python -X utf8 verification/scripts/pah_v2_sg001_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+--elan-home C:/Users/NaEun/.elan` as one line, including inherited R-573 replay.
+
+Park this unchanged comparison route, with no automatic weaker successor.
+Reenter only on an exact source/rate/character/contraction/integral/pullback/
+prime-tail error, or separately authorized evidence resolving a load-bearing
+assumption or giving a physically motivated observable connection. External
+adversarial review is invited. Brazovskii and horizon suggestions are not adopted.
 
 <a id="r-572"></a>
 ### R-573 -- PAH-v2 original fine-Gibbs generator counterexample

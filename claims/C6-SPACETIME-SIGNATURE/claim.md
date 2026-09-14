@@ -101,6 +101,35 @@ TOE target with no established result.
 
 ## Next required action
 
+### 2026-09-14: fixed-time semigroup comparison negative result (R-574)
+
+SG-001 is DISPROVED for the same R-573 fixed character, parameters, full
+counting Gibbs state, original Markov time and approved maps. For every R
+there is an adjacent pair s=r+1>r>=R with fine-Gibbs semigroup defect norm
+at least 1/5 at the fixed time 1/10. The proof derives the full finite
+Markov contraction and the uniform error
+`||S_r(t)f_r-exp(lambda_r*t)f_r||_infinity <=256*t/K_r`.
+It retains PH/TR/LK/AP in the evolved generator and does not assume that
+the initial character spans an invariant subspace. The R-573 prime-tail
+argument then gives a pointwise lower bound on every original fine state.
+
+The [result card](../../strategy/pa-hyp/PAH-v2-SG-001-result-v1.json) pins
+all original sources, the one four-page synthesis, primary/independent
+checks, 81 hostile controls and five partial Lean declarations. The separate
+maximum-principle proof and eight objections are in the synthesis.
+Independent implementation has same-task authorship; external review is invited.
+Reproduce `python -X utf8 verification/scripts/pah_v2_sg001_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+--elan-home C:/Users/NaEun/.elan` as one line. This also replays inherited R-573.
+
+C6 stays T1 and the T-054 gate is unchanged. The unchanged comparison route
+is parked without an automatic weaker successor. Reenter only on an exact
+source/analytic falsifier or separately approved evidence resolving a
+load-bearing assumption or providing a physically motivated observable map.
+No state-projectivity or all-model no-go, physical Pre-A, spacetime, QFT,
+gravity, infinite-volume construction or continuum claim. Brazovskii and
+horizon ideas remain unadopted. Earlier records keep their historical scopes.
+
 ### 2026-09-13: separate original fine-Gibbs negative result (R-573)
 
 The separately authorized GD-002 full-cylinder fine-Gibbs L2 generator

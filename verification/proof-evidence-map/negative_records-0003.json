@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-31-a13-covariance-envelope-rebate-erasure",
+      "branch": "lower-bound the R-134 scalar surrogate `Forest_063-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2` by source and sextic budgets after replacing the exact conditional variance",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Use the valid R-134 inequality `2 sum_o E P_comp,o >= F-Q_e`, where `Q_e=(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2`, and then prove a cutoff-uniform lower bound for `F-Q_e` from source energy and one terminal sextic alone.",
+        "consequence": "R-134 equation (4.3) remains a valid lower surrogate, but its former equation (11.4) is too strong as the canonical successor. The live theorem must retain the actual conditional variance, its covariance with the floor remainder, and the complete-low/stationary owner, preferably in the R-123 aggregate trace-excess coordinate. This is a method no-go, not a counterexample to the complete production action, `OVERLAP_src`, or Nelson.",
+        "evidence": "R-125 Theorem 3.1, equations (4.5) and (5.1)--(5.5); R-134 equations (2.2), (4.1)--(4.4), and (11.4); the R-135 proof note and two independent executable scaled-fixture checks.",
+        "failure_mode": "Scale the exact one-owner, one-exhaustive-cluster R-125 fixture by `nu>0`: `W=e_1`, `V=nu eta e_2`, and `Gamma=nu^2 e_2 e_2^T`. Then `Phi=0`, `Theta=Var_f(X)=beta_op nu^2`, and the expected adapted R-063 forest is zero. Moreover `A^2=nu^2` and `B_e^2=e nu^2`, so `F-Q_e=-nu^2(sqrt(339/(2000P))+sqrt(3e/(320P)))^2`, which tends to minus infinity. The failure already occurs with one owner and one cluster; it is not a multiplicity defect."
+      },
+      "detail_title": "a scalar norm envelope destroys the future-variance rebate",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "the scaled one-owner R-125 Pauli fixture has zero expected forest but `Q_e=nu^2(sqrt(339/(2000P))+sqrt(3e/(320P)))^2`, so the surrogate tends to minus infinity although the exact owner retains the compensating future-variance coordinate",
+      "tag": "NG-2026-07-31-A13-COVARIANCE-ENVELOPE-REBATE-ERASURE"
+    },
+    {
       "anchor": "ng-2026-07-31-a13-complete-low-square-strict-gap-refinement",
       "branch": "infer a strict augmented low gap or childwise refinement invariance solely from a complete positive Gram square",
       "claim_ref_basis": {
@@ -2219,28 +2242,6 @@
       "kind": "no_go",
       "summary": "the quadratic Taylor Gram is exactly negative on a production scalar ray, a two-coordinate endpoint kernel leaves a nonzero affine cross remainder, and heat lifts that kernel only by `O(sigma^2)`; the coefficient-dominant packet must retain its square, Wick trace, heat packet, and control energy",
       "tag": "NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-SEPARATION-AND-HEAT-SCHUR"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-rational-standalone-eta-debt-and-k-heat",
-      "branch": "A13 payment of the rational eta trace debt after deleting its retained square, or separate backward-heat transport of `K_eta=L A_eta^(-1)L`",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "Keep the endpoint square, transformed Wick term, trace, backward-heat transport, and complete lower-chaos forest in one causal packet. The fixtures are method no-gos, not counterexamples to a production coupled form bound. The coefficient-dominant same-root rational packet remains open.",
-        "evidence": "With `Q=GG^T-Gamma`, `G^T K_eta G/2-K_eta:Q/2-D_eta=0` pointwise. For `B_1=0`, `L=ell I_6`, `c=0`, and centered covariance-matched `G` with `Gamma_N=rho_N I_6`, the original packet has mean zero while `D_(eta,N)=ell^2 Tr(Gamma_N)/(4eta)=6 rho_N ell^2/(4eta)`; the retained-square variance is exactly the same quantity. Thus standalone payment manufactures an unbounded loss as the fixed-target covariance scale grows. If the coefficient and carrier share a root, the scalar alignment `L=2eta`, `c=-G`, `Gamma=1` gives `P+eta c^2=-eta` pathwise. For an averaging operator `P`, `P(L A^(-1)L)-(PL)(PA)^(-1)(PL)` is a PSD matrix-fractional Jensen defect, but its contraction with `Q=GG^T-Gamma` has either sign. Hence `K_eta:Q` does not inherit a separately favorable native heat telescope.",
-        "failure_mode": "Complete the rational square, discard the retained positive square, pay `D_eta=Tr(L A_eta^(-1)L Gamma)/2` as an independent loss, and transport `K_eta=L A_eta^(-1)L` by the native linear backward-heat identity."
-      },
-      "detail_title": "the eta debt and nonlinear heat coefficient cannot be separated from their packet",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "at fixed target dimension the debt grows with the covariance trace while the original centered covariance-matched packet has zero mean; the exact cancellation is a three-term K-square--Wick--debt identity, and the PSD matrix-fractional Jensen defect has a signed Wick contraction, so square, trace, native heat, and lower-chaos forest must remain coupled",
-      "tag": "NG-2026-07-25-A13-RATIONAL-STANDALONE-ETA-DEBT-AND-K-HEAT"
     }
   ],
   "kind": "negative_records",

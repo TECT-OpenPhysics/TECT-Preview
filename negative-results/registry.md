@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](#ng-2026-09-14-pah-v2-sg001-fixed-time) | original-time semigroup convergence for the unchanged R-573 fixed character | R-574 gives original fine-Gibbs norm at least 1/5 at fixed time 1/10 beyond every cutoff threshold; no automatic weakened successor |
 | [NG-2026-09-13-PAH-V2-GD002-GIBBS-L2](#ng-2026-09-13-pah-v2-gd002-gibbs-l2) | full-cylinder original fine-Gibbs generator Cauchy under the adopted PAH-v2 comparison | R-573 gives one fixed invariant character with all-state defect at least seven beyond every cutoff threshold; state consistency and semigroup comparison remain separate |
 | [NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY](#ng-2026-09-12-pah-v2-gd001-sup-cauchy) | full-cylinder sup generator Cauchy under the adopted PAH-v2 comparison | R-572 gives a fixed epsilon=1 indicator with exact defect norm one at every cutoff pair; no Gibbs-L2 or physical no-go follows |
 | [AUDIT-2026-09-09-PAH-OMC-028-NONLINEAR-CLOSURE](#audit-2026-09-09-pah-omc-028-nonlinear-closure) | R-530 single-vector contraction to nonlinear form-Cauchy inference | the paired-energy and form-distance contraction estimates fail exactly; closed-epigraph and weak-compactness arguments repair the same conditional conclusion without changing PAH sources |
@@ -10913,6 +10914,37 @@ target, if any, should follow while preserving model and time? Reopen this
 negative result only for an exact source/domain/witness/floor-identity error.
 No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass gap
 or TOE claim follows; T-054's gate and C6 T1 are unchanged.
+
+### NG-2026-09-14-PAH-V2-SG001-FIXED-TIME -- original-time semigroup comparison
+
+**Branch / claim.** SG-001, the unchanged R-573 fixed observable, PAH-v2
+tuple, full invariant counting algebra, original Gibbs weights, Markov time
+and adopted comparison maps. No physical-time interpretation is inserted.
+
+**Failure mode.** Full finite Markov contraction and the exact Duhamel
+identity propagate the all-state generator remainder to <=256*t/K.
+At fixed original t=1/10, arbitrarily late inverse-prime CRT flips separate
+the two exponential character factors by at least 4/15; both errors total
+at most 1/15. Thus the original fine-Gibbs norm is at least 1/5 at adjacent
+pairs beyond every cutoff threshold. The bound is pointwise on every state,
+not a rare-event or moving-time argument. All evolved roots remain present.
+
+**Evidence.** R-574 / EXP-001743; exact sources, full analytic proof,
+independent maximum principle, 81 hostile checks and five partial Lean
+bridges in `strategy/pa-hyp/PAH-v2-SG-001-result-v1.json` and one four-page
+render-reviewed synthesis. Reproduce `python -X utf8
+verification/scripts/pah_v2_sg001_verify.py --lean-cache
+E:/Dev/TECT/verification/lean/.lake/packages --elan-home C:/Users/NaEun/.elan`
+as one line. External review is invited; no independent-person audit is claimed.
+
+**Consequence.** DISPROVED for SG-001. Park the unchanged full-cylinder
+original-time comparison route. No automatic weakened objective or follow-on
+proof chain. Reenter on an exact source/analytic falsifier or a separately
+authorized input that actually resolves a core assumption or supplies a
+physically motivated observable map. Preserve all earlier finite and
+generator results. No state-projectivity or all-model verdict; no T-054
+gate/C6 tier change or physical Pre-A, spacetime, QFT, gravity, continuum,
+Yang-Mills, mass-gap or TOE conclusion. Brazovskii remains unadopted.
 
 ### NG-2026-09-13-PAH-V2-GD002-GIBBS-L2 -- original fine-Gibbs generator Cauchy
 
