@@ -60,11 +60,11 @@ flowchart LR
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
 | Reusable result records | 399 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 391 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1822 | Route decisions: advanced 1337, failed 262, inconclusive 162, parked 61; non-tier-bearing |
-| Accepted chronological events | 1102 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1823 | Route decisions: advanced 1338, failed 262, inconclusive 162, parked 61; non-tier-bearing |
+| Accepted chronological events | 1103 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 97 | 19 live; 78 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 426 lineage notes / 407 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 3103 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 426 lineage notes / 407 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 3107 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -27775,6 +27775,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** -
 - **Located evidence:** [`strategy/clock/TECT-CLK-001-evidence-v1.json`](../strategy/clock/TECT-CLK-001-evidence-v1.json) (status); [`strategy/clock/TECT-CLK-001-evidence-v1.1.json`](../strategy/clock/TECT-CLK-001-evidence-v1.1.json) (metadata_revision); [`strategy/clock/TECT-CLK-001-assessment-v1.1.json`](../strategy/clock/TECT-CLK-001-assessment-v1.1.json) (metadata_revision); [`strategy/clock/TECT-CLK-001-prepublication-scripts-v1.json`](../strategy/clock/TECT-CLK-001-prepublication-scripts-v1.json) (files); [`strategy/clock/TECT-CLK-001-certificate-v1.1.md`](../strategy/clock/TECT-CLK-001-certificate-v1.1.md) (7-prepublication-metadata-correction)
 
+<a id="exp-001823"></a>
+#### EXP-001823 — TECT-CLK-002 source-calibrated joint clock/free-fall response admission
+
+- **Review metadata:** reviewed 2026-09-28; recorded 2026-09-28T05:44:06Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Can one explicitly hypothetical EM-only scalar comparison candidate yield a coherent same-source clock/free-fall map and a falsifiable constraint without independent species fitting?
+- **Finite checks:** (1) Pin the operator-authorized one-candidate preregistration and primary PDF bytes before executable calculations; preserve PAH/A2/CLK001. (2) Crosswalk the DD/Hees weak-field action and response assumptions; retain full source charge, the Eotvos denominator and the same actual mean-acceleration normalization. (3) Derive the conditional response and inverse image symbolically, independently reconstruct exact rational TEST_ONLY force/clock fixtures, attack conventions and empirical inference, and compile seven parameterized Lean declarations. (4) Obtain separate source and hostile agent reviews; correct derivative-sign wording and distinguish an analytic finite-field counterexample from an output-remainder fixture.
+- **Finding:** The explicitly conditional Newtonian first-response benchmark is ADMISSIBLE_FOR_TEST: z=-K*C and eta=DeltaQ*C with C=qS*d^2/(1+qbar*qS*d^2), hence DeltaQ*z+K*eta=0. For pinned positive qS and nonnegative qbar, admissible C identifies d^2 but not its sign; a null alone is insufficient without the inverse-image condition. This is an external effective target, not an A2/PAH-derived readout. Empirical admission remains HOLD_FOR_EVIDENCE and microscopic TECT remains NOT_ADMITTED.
+- **Decision reason:** The new supplied action/response hypothesis permits a cross-probe conditional map, unlike the unchanged-owner search. Exact operational calibration and inverse-image restrictions prevent a clock-only common-factor fit from being presented as geometry. No T-054 scientific gate changes.
+- **Boundary:** 3+1 metric/proper time and SM response assumed; massless static unscreened weak source, Newtonian first response at fixed d, no controlled finite-field or PN remainder, no numerical fit, no matched empirical pair or prospective validation. No physical Pre-A, A/B, vacuum, QFT, gravity, horizon, continuum, mass gap or TOE conclusion. No new R-result or claim-card promotion.
+- **Next / revisit condition:** Checkpoint this single bounded audit and stop. Reenter only on a matched same-source observation/calibration/error packet for z, eta and total sensitivities including finite-response errors and withheld-data roles, or an exact audit error.
+- **Related explorations:** alternative_to [EXP-001821](#exp-001821)
+- **Formal authorities:** -
+- **Located evidence:** [`strategy/clock/TECT-CLK-002-prereg-v1.json`](../strategy/clock/TECT-CLK-002-prereg-v1.json) (candidate); [`strategy/clock/TECT-CLK-002-certificate-v1.md`](../strategy/clock/TECT-CLK-002-certificate-v1.md) (2-operational-normalization-and-the-conditional-joint-identity); [`strategy/clock/TECT-CLK-002-assessment-v1.json`](../strategy/clock/TECT-CLK-002-assessment-v1.json) (terminal_scope); [`strategy/clock/TECT-CLK-002-final-review-v1.json`](../strategy/clock/TECT-CLK-002-final-review-v1.json) (verdict); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk002/lean.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk002/lean.json) (declarations)
+
 
 ## Claim evidence matrix
 
@@ -27829,7 +27844,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (30 notes; 2357 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](../negative-results/registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time), [NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY](../negative-results/registry.md#ng-2026-09-12-pah-v2-gd001-sup-cauchy), +134 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +873 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [TECT-CLK-001 v1.1 metadata correction and mainline-managed integration] - 2026-09-14 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (30 notes; 2361 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](../negative-results/registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time), [NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY](../negative-results/registry.md#ng-2026-09-12-pah-v2-gd001-sup-cauchy), +134 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +874 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [C6 TECT-CLK-002 conditional joint clock and free-fall response] - 2026-09-28 | - |
 
 ### Sector D
 
@@ -28679,6 +28694,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-28 | [C6 TECT-CLK-002 conditional joint clock and free-fall response] - 2026-09-28 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-14 | [TECT-CLK-001 v1.1 metadata correction and mainline-managed integration] - 2026-09-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-14 | [TECT-CLK-001 clock-observable admission boundary] - 2026-09-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-14 | [C6 R-569 through R-574 fixed follow-up proof integration provenance] - 2026-09-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -28698,7 +28714,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-08 | [R-562 PAH-OMC-020 universal locality bridge 2] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-08 | [R-561 PAH-OMC-020 fixed-power locality bridge] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-08 | [R-560 PAH-OMC-023 canonical owner-admission replay boundary] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-08 | [R-559 PAH-OMC-022 source-level stationary-semigroup well-posedness boundary] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-09-08-PAH-OMC-022-SOURCE-LEVEL-SEMIGROUP-WELLPOSEDNESS](../negative-results/registry.md#ng-2026-09-08-pah-omc-022-source-level-semigroup-wellposedness) |
 
 ## Coverage and maintenance contract
 

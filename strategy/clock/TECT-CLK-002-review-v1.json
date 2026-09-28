@@ -1,0 +1,34 @@
+{
+  "schema": "tect/clock-independent-review/1.0",
+  "id": "TECT-CLK-002-REVIEW-v1",
+  "date": "2026-09-28",
+  "reviewer_type": "Two separately prompted read-only agents plus a non-importing implementation; not independent-person or external community certification",
+  "prereg_sha256": "eed93e6aa01b4bacc780bba0a24f53ccf7c6b7f6daab394ae20e54afa270c92f",
+  "reviewed_draft_certificate_sha256": "747c24dcc3e9446b7dc8f3501e989578a82b3babee905b5318ecb544d092b4f8",
+  "corrected_certificate_sha256": "2066cc5cc4b929f136165cd4c7f3b89fb96711d925b64d05ddd651734cc56fde",
+  "source_audit": {
+    "reviewer": "clk002_literature",
+    "disposition": "Conditional source reduction supported; minor sign wording correction required and applied",
+    "checks": ["action/scalar normalization", "full versus primed charge", "total clock sensitivity and nuclear-g caveat", "common mean acceleration", "proper-time and coordinate-distance boundary", "Sun/Earth and retrospective/holdout separation", "benchmark versus A/B admission"]
+  },
+  "hostile_audit": {
+    "reviewer": "clk002_hostile_design",
+    "mathematical_contradiction_found": false,
+    "executed_independently": ["primary --check: 15 identities", "independent --check: four exact rational TEST_ONLY cases plus image checks", "hostile --check: 25 fixtures"],
+    "analytic_checks": ["gradient sign and mean factor", "inverse image and sign ambiguity", "fixed-charge stability bound", "deterministic residual envelope"],
+    "issues": [
+      {"issue": "The derivative was called positive although d can be negative.", "disposition": "CORRECTED: a plus sign in the expression is not positivity."},
+      {"issue": "The hostile output-remainder fixture does not itself differentiate a quadratic clock response.", "disposition": "CORRECTED: the certificate now separately derives the quadratic example and limits the executable fixture's scope."},
+      {"issue": "Keeping D could be mistaken for an all-orders resummation.", "disposition": "CLARIFIED: weak-potential expansion at fixed d; ratio of retained accelerations only."},
+      {"issue": "Unknown finite-response, atomic/nuclear and calibration errors.", "disposition": "UPHELD_FOR_EMPIRICAL_ADMISSION; no observational exclusion or fitting."},
+      {"issue": "No action-to-observable identity with PAH/A2 or vacuum functional.", "disposition": "UPHELD_FOR_TECT_ADMISSION; no A/B claim change."}
+    ]
+  },
+  "lean": {
+    "scope": "Seven parameterized real-algebra declarations; source reduction and physical validity not formalized",
+    "development": "Initial broad Mathlib import timed out; a narrower import and explicit nonzero-denominator normal forms compiled. No theorem statement or physical assumption was changed to obtain compilation.",
+    "independent_agent_compilation": "NOT_PERFORMED; kernel replay by the main task is stored separately"
+  },
+  "recommended_disposition": "ADMISSIBLE_FOR_TEST only as the declared conditional response benchmark; empirical HOLD_FOR_EVIDENCE; microscopic TECT NOT_ADMITTED; auxiliary_support relative to T-054",
+  "external_review": "Invited, especially the common calibration and material/finite-response uncertainty contract"
+}

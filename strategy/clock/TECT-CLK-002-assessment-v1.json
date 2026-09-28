@@ -1,0 +1,93 @@
+{
+  "active_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "active_gate_change": false,
+  "assumptions": [
+    "EM-only coupling restriction",
+    "massless unscreened static scalar",
+    "the external weak-field matter-response reduction",
+    "differentiable atomic readout with fixed external sensitivities",
+    "Imported metric and proper time",
+    "same source, observer and operational calibration",
+    "external total sensitivities with a valid weak-field neighborhood"
+  ],
+  "classification": "auxiliary_support",
+  "cross_probe_constraint": "DeltaQ*z+K*eta=0; necessary, not sufficient without the inverse-image and validity conditions",
+  "empirical_admission": "HOLD_FOR_EVIDENCE",
+  "evidence_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk002/hostile.json": "2e78be8c66cad45bd036368c7b30cec6aa80ca2315d560bf7f9f55f4a4b9c066",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk002/independent.json": "a33e2d4b64a935dcbae8538806a7925b89574b3d3228ccfc069e91693ac266c0",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk002/lean.json": "40738dbc6042f0a83ac243493512a771016532148a9fae587227e9cf2bb3bc5f",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk002/primary.json": "48d542c9e63865397dc391f312ce69d2a674467709332900c82b3f2ecdaacee1",
+    "strategy/clock/TECT-CLK-002-certificate-v1.md": "2066cc5cc4b929f136165cd4c7f3b89fb96711d925b64d05ddd651734cc56fde",
+    "strategy/clock/TECT-CLK-002-prereg-v1.json": "eed93e6aa01b4bacc780bba0a24f53ccf7c6b7f6daab394ae20e54afa270c92f",
+    "strategy/clock/TECT-CLK-002-review-v1.json": "7045bc7fd5d7f1dd13d2f9f93b41756a542c9a155844c231b989ecc95d2de2f1",
+    "verification/lean/Tect/ClockFreeFall.lean": "057059c7270415f0171085d800c479ab3fae1bd92e0679b3fa519da97d9e2b33",
+    "verification/scripts/tect_clk002_hostile.py": "accffb00dcd4320951c3aba35e7693743179c73d8e6f9cedbec2a43f5c9045e4",
+    "verification/scripts/tect_clk002_independent.py": "1f151bf62df459c607a145453cc3f9603055963c4e2e4bf3f15a92aedf17a846",
+    "verification/scripts/tect_clk002_lean.py": "b8ea91d4bf67c5cd37dc21b1b0564d1e8b80de0bb03ca18e54940b5a7bacdc68",
+    "verification/scripts/tect_clk002_primary.py": "e333aaef9d1a91329c4090bdeee819c10711a47517059d4b646f0bbaf5526783",
+    "verification/scripts/tect_clk002_verify.py": "56ea0a6ddd331699615754fbb76ead908b4d72281480b1df144abea7ee61d088"
+  },
+  "evidence_level": [
+    "ANALYTIC_CONDITIONAL",
+    "INHERITED_RESPONSE_INPUTS",
+    "EXECUTED",
+    "LEAN_PARTIAL"
+  ],
+  "follow_on": {
+    "additional_attempt_budget": 0,
+    "automatic_successor": false,
+    "reentry": "The specified matched packet, or an exact error in this source/calibration/algebra audit. A new candidate or TECT model adoption requires separate authorization."
+  },
+  "formal_result_id": null,
+  "geometry_identification": "NOT_IDENTIFIED",
+  "id": "TECT-CLK-002-ASSESSMENT-v1",
+  "identifiability": "For pinned qS>0,qbar>=0 and a nonzero contrast, recover d^2 from admissible C; sign remains unidentified. Unknown source sensitivity or vanishing contrasts add non-identifiability.",
+  "joint_response": "z=-K*C; eta=DeltaQ*C; C=qS*d^2/(1+qbar*qS*d^2)",
+  "microscopic_tect_admission": "NOT_ADMITTED",
+  "model": "CLK002-EM-SCALAR-EFT-v1",
+  "no_new_claim_card": true,
+  "non_claims": [
+    "No TECT A2/PAH-derived physical readout",
+    "No microscopic inverse reconstruction",
+    "No A/B gate closure or physical-empty sign",
+    "No spacetime, QFT, gravity, horizon, common causal cone, continuum, mass gap or TOE derivation",
+    "No empirical detection or exclusion without controlled same-source data and finite-response errors",
+    "No novel theorem claim for standard scalar EFT or rational algebra"
+  ],
+  "physical_promotion": false,
+  "primary_pdf_hashes": {
+    "DD2010": "4159cd5c6bbac301acd3bffd06e47e659709e3545a5b68302f34150a11a46e28",
+    "GUENA2012": "a3ef150ba19ccba39a00d6f39ef8ad3d078bf52a350316e6b7c0f2780091ab78",
+    "HEES2018": "c12eb99188d55ad462f07ff38bcd487bf75b57d57fa32963655787f1d4bcbfd5"
+  },
+  "reproduction": "python -X utf8 verification/scripts/tect_clk002_verify.py --check --lean-cache E:/Dev/TECT/verification/lean/.lake/packages --elan-home C:/Users/NaEun/.elan",
+  "schema": "tect/clock-joint-assessment/1.0",
+  "scope": {
+    "boundary": "asymptotically zero massless unscreened scalar; no incoming/DM oscillation",
+    "dimension": "3+1 assumed",
+    "normalization": "same actual mean of A/B inward accelerations, exact Newtonian denominator",
+    "regulator_volume_limit": "no lattice or TECT continuum/volume limit; first weak-potential response at fixed coupling only",
+    "source": "one static spherical weak source, fixed outward radial convention",
+    "time": "external metric proper time for atomic phases; no Markov conversion"
+  },
+  "single_missing_input": "Matched same-source observation/calibration/error packet for z, eta and total clock/mass sensitivities, including finite-response remainder and withheld-data roles.",
+  "source_hashes": {
+    "claims/A2-PDE-WELLPOSED/status.json": "d20a1a7211f496ac08080275807b6c8e659e3e4ecd2b1ffe8143545ed234c89f",
+    "strategy/clock/TECT-CLK-001-assessment-v1.1.json": "f70a0f8408c76fb32bf96df604952e168ebf2130fed9242bb9797a92ccc296d8",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-SG-001-result-v1.json": "5a7521c657ff2d528596fca0cad4c5be8f7530653203a0c9023768402bf77928"
+  },
+  "stability": "Fixed-charge inverse bound only away from zero source/contrast and denominator margins; material and finite-response errors remain missing.",
+  "task_id": "T-054",
+  "terminal_assessment": "ADMISSIBLE_FOR_TEST",
+  "terminal_scope": "Conditional Newtonian first-response benchmark only; not full-action well-posedness or finite-experiment admission",
+  "verification": {
+    "hostile_fixtures": 25,
+    "independent_review": "Two read-only agents plus non-importing implementation; not independent-person certification",
+    "independent_test_only_cases": 4,
+    "lean_declarations": 7,
+    "primary_symbolic_identities": 15
+  }
+}

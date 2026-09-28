@@ -1,0 +1,83 @@
+{
+  "schema": "tect/clock-joint-prereg/1.0",
+  "id": "TECT-CLK-002",
+  "version": "1.0.0",
+  "recorded_on": "2026-09-28",
+  "base_commit": "b78f75e8756ee19458a7539b83048425f42db6fa",
+  "task_id": "T-054",
+  "supporting_tasks": ["T-059", "T-061"],
+  "active_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "authority": "The operator explicitly requested that the concretized joint atomic-clock/free-fall objective be set and pursued. This authorizes one separately labelled hypothetical comparison candidate, not a modification or scientific adoption of PAH, A2, A/B, or CLK-001.",
+  "question": "Does one source-fixed electromagnetic scalar coupling give a coherent, falsifiable joint clock/free-fall response, and which coupling information is identifiable after operational gravitational normalization?",
+  "change_from_clk001": "A new external action-to-matter-response hypothesis is explicitly supplied for review. This is not another search for an absent A2 owner, clock rank-one table, PAH carrier, or physical-empty computation.",
+  "protected_sources": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-SG-001-result-v1.json": "5a7521c657ff2d528596fca0cad4c5be8f7530653203a0c9023768402bf77928",
+    "claims/A2-PDE-WELLPOSED/status.json": "d20a1a7211f496ac08080275807b6c8e659e3e4ecd2b1ffe8143545ed234c89f",
+    "strategy/clock/TECT-CLK-001-assessment-v1.1.json": "f70a0f8408c76fb32bf96df604952e168ebf2130fed9242bb9797a92ccc296d8"
+  },
+  "sources": {
+    "DD2010": {
+      "url": "https://arxiv.org/pdf/1007.2792v2",
+      "filename": "damour-donoghue-2010v2.pdf",
+      "sha256": "4159cd5c6bbac301acd3bffd06e47e659709e3545a5b68302f34150a11a46e28",
+      "locators": "Equations (2)-(8), (71)-(76); full electromagnetic charge, not a primed composition-only charge.",
+      "role": "PRIMARY_THEORY_INPUT; conditional weak-field effective description"
+    },
+    "HEES2018": {
+      "url": "https://arxiv.org/pdf/1807.04512v3",
+      "filename": "hees-2018v3.pdf",
+      "sha256": "c12eb99188d55ad462f07ff38bcd487bf75b57d57fa32963655787f1d4bcbfd5",
+      "locators": "Equations (1), (2a), (7)-(8), (14)-(18), (29)-(31), (36)-(40).",
+      "role": "PRIMARY_THEORY_INPUT; action, mass sensitivity, clock ratio and acceleration crosswalk"
+    },
+    "GUENA2012": {
+      "url": "https://arxiv.org/pdf/1205.4235",
+      "filename": "guena-2012.pdf",
+      "sha256": "a3ef150ba19ccba39a00d6f39ef8ad3d078bf52a350316e6b7c0f2780091ab78",
+      "locators": "Equations (2)-(4), Table I: 87Rb/133Cs hyperfine ratio and annual solar modulation.",
+      "role": "RETROSPECTIVE_OBSERVABLE_DESIGN_ONLY; not a same-Earth-source validation pair"
+    }
+  },
+  "candidate": {
+    "id": "CLK002-EM-SCALAR-EFT-v1",
+    "kind": "HYPOTHETICAL_EXTERNAL_COMPARISON_BENCHMARK",
+    "tect_microscopic_admission": "NOT_ADMITTED",
+    "dimension": "3+1 dimensional Einstein-frame effective spacetime is INSERTED, not reconstructed.",
+    "action": "Hees Eq(1), V=0, with only its linear interaction L_int=d*varphi*F_munu*F^munu/(4*mu0). All d_g,d_me,d_mhat,d_deltam are zero. d is one real global coupling. Signature (-,+,+,+); kappa_H=8*pi*G_star/c^4. Do not confuse this kappa with DD's sqrt(4*pi*G_star) in natural units.",
+    "normalization": "Dimensionless varphi, scalar kinetic term -2*(partial varphi)^2 in the numerator of Hees Eq(1); constant bare G_star. phi at infinity is zero. Units c restored in operational readouts.",
+    "state_and_domain": "Static weak-field exterior of one isolated spherical nonrelativistic source, r>R_source; test bodies in stationary internal states. Atomic readout uses two stationary hyperfine transitions with differentiable nonzero gaps at varphi=0, supplied by external atomic physics. No existence theorem for the complete Standard Model Hamiltonian is asserted.",
+    "dynamics_and_time": "Variational scalar/metric equations of the imported action; point-body action -c^2 integral m_A(varphi) d tau. Local atomic phase follows the imported transition energy in metric proper time tau. Co-located frequency ratios cancel the common lapse. No PAH Markov-time or A2 relaxation-time conversion.",
+    "boundary": "Static solution, varphi(infinity)=0, no incoming radiation or oscillatory dark-matter background; no screening; scalar mass zero.",
+    "volume_and_regulator": "Weak-field exterior effective description on an asymptotically flat background; no lattice, no TECT UV regulator removal, no thermodynamic or continuum limit.",
+    "order": "Newtonian first-response coefficients at the asymptotic background only. Keep the Newtonian Eotvos normalization denominator exactly. Higher-order potential, nonlinear material-response, finite-size and post-Newtonian errors are NOT bounded by this packet; no finite-experiment exclusion may follow without those inputs.",
+    "single_coupling": "alpha_A = d*Q_A, where Q_A is the FULL external electromagnetic mass sensitivity. Clock ratio derivative at zero: partial_varphi ln(nu_I/nu_J) = (K_I-K_J)*d. K and Q are distinct external derivatives, not fitted species parameters.",
+    "atomic_choice": "87Rb/133Cs hyperfine ratio; literature electromagnetic sensitivity contrast approximately -0.49. Do not treat this rounded imported coefficient or omitted atomic uncertainty as an exact measured number.",
+    "test_body_choice": "Ti/Pt composition contrast as an intended experimental target. Actual isotope/alloy weights and full Q uncertainties are required for empirical admission, not inferred from element names.",
+    "geometry_choice": "One and the same source and outward radial direction for clock response and free fall. Sun-annual and Earth-orbital observations cannot be silently pooled.",
+    "new_assumptions": ["EM-only coupling restriction", "massless unscreened static scalar", "the external weak-field matter-response reduction", "differentiable atomic readout with fixed external sensitivities"]
+  },
+  "observable_contract": {
+    "symbols": "qA,qB,qS are full mass sensitivities; K=K_I-K_J; qbar=(qA+qB)/2; DeltaQ=qA-qB. g_star=G_star*M_S/r^2 is positive.",
+    "primitive_maps": "varphi=-d*qS*G_star*M_S/(r*c^2); a_A=g_star*(1+d^2*qA*qS), a_B=g_star*(1+d^2*qB*qS); partial_r ln(nu_I/nu_J)=K*d*partial_r varphi.",
+    "normalization": "gbar=(a_A+a_B)/2, D=gbar/g_star>0. z=-c^2*partial_r ln(nu_I/nu_J)/gbar and eta=(a_A-a_B)/gbar. Both use the SAME measured mean acceleration. This z is not the usual bare-potential coefficient or a one-species redshift.",
+    "target": "Derive the joint map, test the cross-multiplied same-source null relation, characterize inverse fibers and zero-contrast/blind-source cases, and state the conditioning as a sensitivity approaches zero or a denominator degenerates.",
+    "falsifier": "A nonzero cross-probe residual outside propagated observational, source-sensitivity and approximation errors under the SAME frozen comparison rejects this benchmark's stated response. It does not reject TECT in general.",
+    "forbidden": ["per-species rate fitting", "retuning after data disclosure", "dropping the Eotvos denominator", "using primed charge as full source charge", "identifying mass sensitivity with clock sensitivity", "substituting a Sun source for an Earth source", "calling a finite-field measurement an exact first-response coefficient without a remainder bound"]
+  },
+  "data_roles": {
+    "calibration": "EMPTY; no parameter is numerically fitted in this bounded attempt.",
+    "retrospective": "Guena2012 and previously exposed MICROSCOPE2022/CLK001 observations are context and prospective-input design, not blind validation; no combined likelihood is constructed.",
+    "prospective_holdout": "EMPTY. A later compatible same-source differential clock or free-fall observation must be withheld before calibration. This packet makes no successful observational prediction.",
+    "uncertainty": "Unknown atomic/nuclear coefficient errors, isotope/alloy/source composition and joint covariance remain missing; never set them to zero. Sensitivities are symbolic parameters in the exact algebra. Numerical fixtures are labelled TEST_ONLY."
+  },
+  "acceptance": {
+    "ADMISSIBLE_FOR_TEST": "Action/response definitions and operational normalization are consistent within the declared conditional first-response scope, the joint non-tautological cross-probe constraint is derived and independently checked, and identifiability/uncertainty/non-claims are explicit. This does not admit a microscopic TECT candidate or finite empirical test.",
+    "REJECTED": "A contradiction within the frozen response definitions, or a controlled same-source observational counterexample. No post-hoc model repair.",
+    "HOLD_FOR_EVIDENCE": "Even the conditional joint map is undefined or inconsistent with its cited source reduction, or a necessary mathematical definition remains missing.",
+    "separate_assessments": "Always separate benchmark definition admission, empirical admission, microscopic A/B applicability, and geometry identifiability. No automatic promotion between these fields."
+  },
+  "budget": "One candidate, one source crosswalk, one primary/independent/hostile audit and partial Lean if feasible; no model tournament or parameter sweep. Stop after the checkpoint.",
+  "non_claims": ["No TECT A2/PAH-derived physical readout", "No microscopic inverse reconstruction", "No A/B gate closure or physical-empty sign", "No spacetime, QFT, gravity, horizon, common causal cone, continuum, mass gap or TOE derivation", "No empirical detection or exclusion without controlled same-source data and finite-response errors", "No novel theorem claim for standard scalar EFT or rational algebra"]
+}

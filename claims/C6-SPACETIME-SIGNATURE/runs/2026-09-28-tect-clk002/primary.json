@@ -1,0 +1,46 @@
+{
+  "check_count": 15,
+  "checks": {
+    "clock_pair_swap": true,
+    "clock_readout": true,
+    "eotvos_with_denominator": true,
+    "forward_derivative": true,
+    "forward_recovers_response": true,
+    "inverse_derivative": true,
+    "inverse_difference": true,
+    "inverse_recovers_square": true,
+    "outward_clock_gradient": true,
+    "same_mean_acceleration": true,
+    "same_source_null": true,
+    "sign_ambiguity_clock": true,
+    "sign_ambiguity_freefall": true,
+    "test_body_swap": true,
+    "uncertainty_expansion": true
+  },
+  "conditioning": "For S>=s0>0 and 1-Q*C_i>=epsilon>0, |Delta u|<=|Delta C|/(s0*epsilon^2), for fixed charges only.",
+  "derived": {
+    "C": "2*d**2*qS/(d**2*qA*qS + d**2*qB*qS + 2)",
+    "eta": "2*d**2*qS*(qA - qB)/(d**2*qA*qS + d**2*qB*qS + 2)",
+    "inverse_derivative": "C*Q/(S*(-C*Q + 1)**2) + 1/(S*(-C*Q + 1))",
+    "inverse_square": "C/(S*(-C*Q + 1))",
+    "z": "-2*K*d**2*qS/(d**2*qA*qS + d**2*qB*qS + 2)"
+  },
+  "domains": {
+    "finite_response": "NOT_CERTIFIED; no post-Newtonian or atomic remainder bound",
+    "inverse": "S > 0, Q >= 0, C >= 0, 1-Q*C > 0; u=d^2",
+    "normalization": "D > 0; same measured mean acceleration",
+    "r_c_GM": "strictly positive"
+  },
+  "non_claims": "No empirical fit, detection, finite-field exclusion, microscopic TECT, A/B, geometry, QFT or gravity derivation.",
+  "prereg_sha256": "eed93e6aa01b4bacc780bba0a24f53ccf7c6b7f6daab394ae20e54afa270c92f",
+  "schema": "tect/clk002-primary/1.0",
+  "script_sha256": "e333aaef9d1a91329c4090bdeee819c10711a47517059d4b646f0bbaf5526783",
+  "source_bytes_rule": "--source-cache verifies exact PDFs; public replay verifies pinned manifest and protected local sources",
+  "source_hashes": {
+    "DD2010": "4159cd5c6bbac301acd3bffd06e47e659709e3545a5b68302f34150a11a46e28",
+    "GUENA2012": "a3ef150ba19ccba39a00d6f39ef8ad3d078bf52a350316e6b7c0f2780091ab78",
+    "HEES2018": "c12eb99188d55ad462f07ff38bcd487bf75b57d57fa32963655787f1d4bcbfd5"
+  },
+  "status": "PASS_CONDITIONAL_FIRST_RESPONSE",
+  "uncertainty": "|Q0|ez+|z0|eQ+eQ*ez+|K0|eeta+|eta0|eK+eK*eeta+emodel. Missing errors cannot be zeroed."
+}
