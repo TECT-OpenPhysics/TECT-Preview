@@ -118,3 +118,12 @@ At this cutover, 18 tracked code readers consume the complete proof-map JSON;
 17 are issued proof-package verifiers. A later schema-v2 thinning must preserve
 their referenced-ID/evidence tokens, update the field-level map test, and rerun
 all 17 packages before any rich authority projection is removed.
+
+### 2026-09-28 bounded-kind enforcement
+
+Growing kinds are split deterministically by serialized UTF-8 byte size, keeping
+the existing 512 KiB per-shard budget. The schema-2 manifest may repeat a kind
+across parts; consumers already concatenate all matching descriptors. Entry
+order, coverage and hashes remain checked. An oversized single entry is an
+error, not permission to relax the limit. Frozen compatibility volumes and
+all underlying scientific sources are unchanged.

@@ -12,7 +12,7 @@ Usage:
     python verification/scripts/build_proof_evidence_map.py --self-test
 """
 
-__version__ = "1.4.0"
+__version__ = "1.4.1"
 
 import argparse
 import hashlib
@@ -318,7 +318,7 @@ def parse_sections(text: str, identifier_pattern: str) -> dict[str, dict[str, ob
         re.MULTILINE,
     )
     matches = list(heading.finditer(text))
-    boundary = re.compile(r"^(?:<a\s+id=[^>]+></a>\s*$|#{1,3}\s+)", re.MULTILINE | re.IGNORECASE)
+    boundary = re.compile(r"(?:<a\s+id=[^>]+></a>\s*$|^#{1,3}\s+)", re.MULTILINE | re.IGNORECASE)
     sections: dict[str, dict[str, object]] = {}
     for match in matches:
         next_boundary = boundary.search(text, match.end())

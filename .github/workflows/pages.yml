@@ -24,6 +24,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Restore hash-pinned historical evidence
+        run: python -X utf8 verification/scripts/portable_evidence.py --restore
       - name: Verify tracked publication snapshot
         id: release-check
         shell: bash

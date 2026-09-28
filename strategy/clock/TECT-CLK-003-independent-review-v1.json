@@ -1,0 +1,19 @@
+{
+  "schema":"tect/clock-source-review/1.0",
+  "id":"TECT-CLK-003-INDEPENDENT",
+  "reviewer":"clk003_final_audit, separately prompted read-only AI agent",
+  "verdict":"PASS_WITH_HOLD",
+  "reviewed_hashes":{
+    "strategy/clock/TECT-CLK-003-intake-v1.json":"08c42bca606a60cc29d7c6a0a2ac2b6ecf683a9e2aba42e61773ad39c969e945",
+    "strategy/clock/TECT-CLK-003-certificate-v1.md":"61542d37529dd1cc2827578e2433b4bc33105f20ef916e3b4f77fc7298901ae9",
+    "verification/scripts/tect_clk003_verify.py":"23a793ecc34275b34aad226e7241b0e1a07a36da2e83e998939a599389343de3",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk003/intake.json":"3d9b83747aed77a1b91cc3a09f4f2f97cca010480f73680eb828360117c09a8e"
+  },
+  "executed":"python -X utf8 verification/scripts/tect_clk003_verify.py --check --source-cache <local-acquisition-root>",
+  "checks":["All seven acquired file byte counts and SHA256 values independently reproduced","Fifteen role mutations rejected; protected CLK002 hashes and receipt reproduced","Guena p3, fountain p10, NAVEX p106, MICRO2022 p4, MICRO2019 p7 and systematics p12 visually reviewed","Published numerical inputs and normalization conversions correctly transcribed","MECM source listing and synthetic working example independently inspected","Final certificate differs from earlier reviewed text only by the scoped CI-bootstrap paragraph","CI workflow restoration precedes evidence consumers; bootstrap-order unit test passed"],
+  "scope_caveat":"The mutation suite is an integrity/role check, not a general equation or PDF-transcription validator. Numerical transcription and normalization were separately reviewed manually. No external-person certification or independent experimental replication.",
+  "empirical_admission":"HOLD_FOR_EVIDENCE",
+  "deployment_verified_by_this_review":false,
+  "tracked_writes_by_reviewer":false,
+  "non_claims":"No TECT, A/B or physical gate closure. Missing normalization, covariance, sensitivity, remainder and holdout inputs remain missing."
+}

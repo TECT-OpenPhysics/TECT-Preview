@@ -1,0 +1,56 @@
+{
+  "schema": "tect/clock-source-intake/1.0",
+  "id": "TECT-CLK-003",
+  "date_utc": "2026-09-28",
+  "purpose": "Close a bounded public-source intake and preserve its missing-input contract while repairing the operational checkpoint. No new model or fit.",
+  "protected_sources": {
+    "strategy/clock/TECT-CLK-002-prereg-v1.json": "eed93e6aa01b4bacc780bba0a24f53ccf7c6b7f6daab394ae20e54afa270c92f",
+    "strategy/clock/TECT-CLK-002-assessment-v1.json": "55304051bc0033700e34236cbc8f7a07623313db1f177b6d58e4573d19491290"
+  },
+  "frozen_target": {
+    "model": "CLK002-EM-SCALAR-EFT-v1, external hypothetical benchmark, not TECT-derived",
+    "clock_species": ["87Rb", "133Cs"],
+    "bodies": ["TiAlV", "PtRh"],
+    "source": "Earth",
+    "time": "Imported metric proper time, not PAH Markov time",
+    "dimension_domain": "3+1 inserted weak-field exterior; outward radial coordinate; no lattice or UV/volume limit",
+    "normalization": "z=-c^2*d_r ln(nu_Rb/nu_Cs)/gbar; eta=(a_Ti-a_Pt)/gbar; gbar=(a_Ti+a_Pt)/2 at the same comparison location",
+    "scope": "Earth is the chosen acquisition target, not an authorization to pool Earth and Sun or change CLK002. Different experimental positions/epochs need a declared transport and source model."
+  },
+  "sources": {
+    "GUENA2012": {"url":"https://arxiv.org/pdf/1205.4235v2","cache_group":"sources","filename":"guena-2012v2.pdf","bytes":262540,"sha256":"a3ef150ba19ccba39a00d6f39ef8ad3d078bf52a350316e6b7c0f2780091ab78","locator":"PDF page 3, Eq(4)-(5), Fig3","role":"RETROSPECTIVE_SOLAR_COMPARATOR_NOT_EARTH_PAIR"},
+    "FOUNTAIN2012": {"url":"https://arxiv.org/pdf/1204.3621v1","cache_group":"sources","filename":"fountain-2012v1.pdf","bytes":1191394,"sha256":"74a1d3a92334cf7c85c4d0a7b85eb0912cee4047438818153edf7d463349b12e","locator":"PDF pages 9-10, Table III","role":"CALIBRATION_CONTEXT_NOT_EPOCH_COVARIANCE"},
+    "NAVEX1987": {"url":"https://www.eftf.org/fileadmin/documents/eftf/documents/Proceedings/proceedingsEFTF1987.pdf","cache_group":"sources","filename":"eftf-1987-proceedings.pdf","bytes":31406912,"sha256":"6eb84d4a9062b3bd9c734306787349d8d106ffb76704501e85fc96d4587ada49","locator":"Hammesfahr, Systematic Performance of the Space Clocks in the NAVEX Experiment; printed pages 71-78, PDF pages 102-109 (one-based); direct RFS-CFS discussion printed75/PDF106","role":"RETROSPECTIVE_EARTH_CLOCK_LEAD_NOT_CALIBRATED_Z"},
+    "MICRO2022": {"url":"https://elib.dlr.de/193667/2/Touboul_2022_Class._Quantum_Grav._39_204009.pdf","cache_group":"freefall-sources","filename":"microscope-results-2022-dlr.pdf","bytes":2561100,"sha256":"eecb383e1b7899838f55407505cb46ef15a6e2895d3d9862878727538bc6f9dd","locator":"PDF4 Eq(1)-(2); PDF20 Table7; PDF26 Table11; section6 Eq(13)-(19); PDF29 data availability","role":"RETROSPECTIVE_EARTH_FREEFALL_AGGREGATES"},
+    "MICRO2019": {"url":"https://arxiv.org/pdf/1909.10598","cache_group":"freefall-sources","filename":"microscope-first-results-2019.pdf","bytes":4290769,"sha256":"08f194db3e66670b0c4e7a09cfbf9c9308eeb0743aa46901e4be125a72732d55","locator":"PDF7 section2.2.2/Table1","role":"FLIGHT_ALLOY_AND_PT_ASSAY_CONTEXT"},
+    "MICRO_SYS2021": {"url":"https://arxiv.org/pdf/2112.10559","cache_group":"freefall-sources","filename":"microscope-systematics-2021.pdf","bytes":5195082,"sha256":"61c9f2e6fc32d83a173c96656afbc23b6546fa95d53c17c345798209676abe17","locator":"PDF12 Table4","role":"CALIBRATED_MEANS_AND_BOUNDS_NOT_FULL_COVARIANCE"},
+    "MECM010": {"url":"https://files.pythonhosted.org/packages/a5/0f/f36f13001ef3d4d16dda8c95cff563538e53016922ea5d98502fee077c1c/mecm-0.1.0.tar.gz","cache_group":"sources","filename":"mecm-0.1.0.tar.gz","bytes":37784,"sha256":"752fae6d40d82ead7cbfa4901c5dbe1df762263e2f497e8c8fd0a10f64d1d004","locator":"Author source distribution; synthetic example, not mission data","role":"METHOD_SOURCE_ONLY"}
+  },
+  "published_inputs": {
+    "solar_clock": {"source_id":"GUENA2012","quantity":"b_sun=c^2*d ln(Rb/Cs)/dU_sun; U=+GM/r","central":"0.11e-6","standard_error":"1.04e-6","conversion":"z=b_sun*g_U/gbar, g_U=-d_r U_sun; ratio g_U/gbar is not set to one","source":"Sun"},
+    "earth_clock": {"source_id":"NAVEX1987","quantity":"Flight RFS-CFS phase comparison during about 5.5 days","z":null,"reason":"Temperature correction incomplete; baseplate rather than internal temperature, thermal lag and unexplained attitude/orbit residuals. No calibrated radial log-frequency-ratio estimator or joint nuisance covariance in inspected paper."},
+    "earth_freefall": {"source_id":"MICRO2022","reported_quantity":"eta(Ti,Pt) approximated by fitted delta against modeled Earth gravity","central":"-1.5e-15","statistical_standard_error":"2.3e-15","systematic_budget":"1.5e-15","systematic_kind":"SEPARATELY_EVALUATED_BUDGET_NOT_ASSUMED_GAUSSIAN","exact_conversion":"eta=delta/((r_Ti+r_Pt)/2), r_A=m_gA/m_iA; common-mode denominator needs justification","source":"Earth"},
+    "fountain_corrections": {"source_id":"FOUNTAIN2012","unit":"1e-16 fractional frequency","FO2_Cs":{"total":"-1637.5","uncertainty":"2.1"},"FO2_Rb":{"total":"-3341.0","uncertainty":"3.3"},"scope":"Table III then-current values, not a universal correction across all epochs or NAVEX"},
+    "flight_material": {"source_id":"MICRO2019","mass_fractions":{"PtRh":{"Pt":"0.90","Rh":"0.10"},"TiAlV":{"Ti":"0.90","Al":"0.06","V":"0.04"}},"Pt_assay_entries":{"190":"0.000117","192":"0.00782","194":"0.32863","195":"0.33776","196":"0.25210","198":"0.07357"},"printed_assay_header":"Mol per mol of PtRh10","assay_convention":"UNRESOLVED_HEADER_VERSUS_SUM; preserve entries, no silent renormalization","assay_covariance":null},
+    "instrument_calibration": {"source_id":"MICRO_SYS2021","SUEP_ad11":{"mean":"0.0085","std_across_estimations":"0.0002"},"SUEP_ad12_rad":{"mean":"-0.000256","std_across_estimations":"0.000005"},"SUEP_ad13_rad":{"mean":"0.000136","std_across_estimations":"0.000009"},"SUEP_K2d_m_inv_s2":{"mean":"-1037","std_across_estimations":"4800"},"covariance":null,"scope":"Published parameter means/std and upper-bound temperature sensitivities do not specify full nuisance covariance"}
+  },
+  "pair_audit": [
+    {"clock":"GUENA2012","freefall":"MICRO2022","same_source":false,"admission":"REJECT_PAIR_SOURCE_MISMATCH"},
+    {"clock":"NAVEX1987","freefall":"MICRO2022","same_source":true,"admission":"HOLD_FOR_EVIDENCE","reason":"Same named source is necessary, not sufficient: spatial/epoch transport, z extraction, common normalization and errors remain missing"}
+  ],
+  "required_inputs": {
+    "earth_clock_z":{"status":"MISSING","value":null,"owner":"Clock data and calibration owner","need":"Time-tagged Rb/Cs frequency-ratio data, position/potential variation, validated estimator, masks, thermal/magnetic/transfer corrections and their uncertainties"},
+    "freefall_raw_and_mask":{"status":"ACCESS_TIMEOUT","value":null,"owner":"MICROSCOPE data owner","need":"Public flight product schema, samples, flags, design matrix, noise PSD and calibrated residuals; portal release reported but raw schema not inspected"},
+    "same_source_transport":{"status":"MISSING","value":null,"owner":"Joint comparison source owner","need":"Earth multipoles, spatial/radial transport, epochs, external-body subtraction and gbar calibration at the declared comparison location"},
+    "total_material_sensitivities":{"status":"MISSING","value":null,"owner":"Atomic/nuclear response and material assay owners","need":"Total K including nuclear-g EM derivative, full unprimed Q_TiAlV,Q_PtRh,Q_Earth with joint uncertainties, isotope convention and mass weights"},
+    "joint_covariance":{"status":"MISSING","value":null,"owner":"Joint calibration/statistical owner","need":"Clock/freefall nuisance blocks, within-series correlation and cross-probe shared calibration law; zero off-diagonal blocks require justification"},
+    "finite_response_remainder":{"status":"MISSING","value":null,"owner":"Comparison theory owner","need":"Uniform bound for scalar nonlinear response, finite-size/multipole effects, denominator calibration and post-Newtonian terms on an explicit coupling/domain range"},
+    "prospective_holdout":{"status":"EMPTY","value":null,"owner":"Data custodian before disclosure","need":"New undisclosed batch IDs, exposure timestamps, calibration/validation partition and no post-disclosure retuning"}
+  },
+  "portal": {"url":"https://cmsm-ds.onera.fr/user/microscope/modules/7","status":"PUBLIC_RELEASE_REPORTED_ACCESS_TIMEOUT_RAW_SCHEMA_NOT_INSPECTED","non_inference":"Access failure is not evidence of data nonexistence. No credentials bypass or synthetic substitute."},
+  "data_roles": {"calibration_fit":[],"retrospective":"All sources in this intake are exposed, published evidence. No likelihood or parameter fit is performed.","prospective_holdout":[],"SUREF":"Instrument null/control, not automatically Ti/Pt theoretical holdout","excluded_substitution":"Earth Sr clock processed data cannot replace the frozen co-located Rb/Cs ratio"},
+  "outcome": {"classification":"auxiliary_support","empirical_admission":"HOLD_FOR_EVIDENCE","mainline_gate_changed":false,"tect_admission":"NOT_ADMITTED","automatic_successor":false},
+  "next_single_question": "Can an observation owner supply an Earth-sourced Rb/Cs radial ratio-response packet, with its calibration, covariance and comparison-domain error bounds, that can be transported to the TiAlV/PtRh mean-acceleration normalization without altering CLK002?",
+  "reentry": "Only actual new owner data/uncertainty bytes or an exact source-audit correction; no unchanged-source rescan or automatic successor proof.",
+  "non_claims": "No physical Pre-A, spacetime, gravity, QFT, continuum, mass gap, TOE, empirical detection/exclusion, or microscopic geometry reconstruction. Completeness of the intake record is not completeness of the empirical evidence."
+}

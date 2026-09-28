@@ -43,9 +43,9 @@ Changelog:
   1.5.1 (2026-08-14) replace the duplicate raw-object layer with readable,
         selectively preserved reference copies and compact source metadata.
 """
-__version__ = "1.5.1"
+__version__ = "1.5.2"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-08-14"
+__version_issued__ = "2026-09-28"
 
 import argparse
 import datetime as _dt
@@ -68,6 +68,7 @@ CATALOG_INDEX = REPO / "catalog" / "INDEX.md"
 CATALOG_SUMMARY = REPO / "verification" / "catalog-summary.json"
 CATALOG_MANIFEST = REPO / "verification" / "catalog" / "index.json"
 CATALOG_SHARDS = REPO / "verification" / "catalog" / "kinds"
+CATALOG_SHARD_MAX_BYTES = 512 * 1024  # Existing aggregate tooling budget, not theory data.
 CUTOVER_COMMIT = "4db22f4ea94bb1a936d1a2e4b416aa2d6d1960d4"
 CUTOVER_CANONICAL_SHA256 = "121625b81a42e3650eb46327bee84f0dfd9ed821f7d71ecc85077c606ea97d47"
 CUTOVER_JSON_CANONICAL_SHA256 = "5e09e38b81b8ea34b3349c423a626cc9ae6d8e062134a2e14c8c6d41104c91bc"
@@ -409,7 +410,7 @@ def render_index(summary):
         "",
         "New code should consume `catalog-summary.json` when it only needs counts or",
         "top-level claim paths. Current inventory clients load only the required",
-        "kind shard from the manifest.",
+        "bounded shards for the selected kind from the manifest.",
         "",
     ])
     return "\n".join(lines)
@@ -429,6 +430,20 @@ def _legacy_json_ok():
     return digest == CUTOVER_JSON_CANONICAL_SHA256
 
 
+def _kind_parts(kind, entries, max_bytes=CATALOG_SHARD_MAX_BYTES):
+    """Deterministic, lossless byte-bounded parts; reject an oversized singleton."""
+    payload = {"schema": "tect/catalog-kind/1.0", "kind": kind,
+               "count": len(entries), "entries": entries}
+    text = json.dumps(payload, indent=1, ensure_ascii=False) + "\n"
+    if len(text.encode("utf-8")) <= max_bytes:
+        return [(len(entries), text)]
+    if len(entries) <= 1:
+        raise ValueError("Catalog entry exceeds shard byte budget: " + kind)
+    middle = len(entries) // 2
+    return (_kind_parts(kind, entries[:middle], max_bytes)
+            + _kind_parts(kind, entries[middle:], max_bytes))
+
+
 def _catalog_outputs(entries):
     groups = {}
     for entry in entries:
@@ -436,22 +451,18 @@ def _catalog_outputs(entries):
     outputs = {}
     descriptors = []
     for kind in sorted(groups, key=lambda value: KIND_ORDER.get(value, 99)):
-        payload = {
-            "schema": "tect/catalog-kind/1.0",
-            "kind": kind,
-            "count": len(groups[kind]),
-            "entries": groups[kind],
-        }
-        text = json.dumps(payload, indent=1, ensure_ascii=False) + "\n"
-        path = CATALOG_SHARDS / f"{kind}.json"
-        outputs[path] = text
-        descriptors.append({
-            "kind": kind,
-            "path": path.relative_to(REPO).as_posix(),
-            "count": len(groups[kind]),
-            "bytes": len(text.encode("utf-8")),
-            "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
-        })
+        parts = _kind_parts(kind, groups[kind])
+        for number, (count, text) in enumerate(parts, 1):
+            suffix = "" if len(parts) == 1 else f"-{number:04d}"
+            path = CATALOG_SHARDS / f"{kind}{suffix}.json"
+            outputs[path] = text
+            descriptors.append({
+                "kind": kind,
+                "path": path.relative_to(REPO).as_posix(),
+                "count": count,
+                "bytes": len(text.encode("utf-8")),
+                "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
+            })
     manifest = {
         "schema": "tect/catalog-manifest/2.0",
         "authority": "tracked files + claims/*/status.json + git history",

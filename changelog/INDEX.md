@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1104 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1106 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-28 | `20260928-publication-reader-regression-repairs-without-r` — [Publication reader regression repairs without research-source changes] - 2026-09-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260928-publication-reader-regression-repairs-without-r) |
+| 2026-09-28 | `20260928-c6-clk-003-source-intake-and-strict-continuity` — [C6 CLK-003 source intake and strict continuity publication recovery] - 2026-09-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260928-c6-clk-003-source-intake-and-strict-continuity) |
 | 2026-09-28 | `20260928-c6-clk-002-portable-lean-replay-correction-with` — [C6 CLK-002 portable Lean replay correction without evidence rewrite] - 2026-09-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260928-c6-clk-002-portable-lean-replay-correction-with) |
 | 2026-09-28 | `20260928-c6-tect-clk-002-conditional-joint-clock-and-fre` — [C6 TECT-CLK-002 conditional joint clock and free-fall response] - 2026-09-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260928-c6-tect-clk-002-conditional-joint-clock-and-fre) |
 | 2026-09-14 | `20260914-tect-clk-001-v1-1-metadata-correction-and-mainl` — [TECT-CLK-001 v1.1 metadata correction and mainline-managed integration] - 2026-09-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260914-tect-clk-001-v1-1-metadata-correction-and-mainl) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-08 | `20260908-r-560-pah-omc-023-canonical-owner-admission-rep` — [R-560 PAH-OMC-023 canonical owner-admission replay boundary] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-560-pah-omc-023-canonical-owner-admission-rep) |
 | 2026-09-08 | `20260908-r-559-pah-omc-022-source-level-stationary-semig` — [R-559 PAH-OMC-022 source-level stationary-semigroup well-posedness boundary] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-559-pah-omc-022-source-level-stationary-semig) |
 | 2026-09-08 | `20260908-r-558-pah-omc-021-composite-owner-packet-transf` — [R-558 PAH-OMC-021 composite owner-packet transfer audit] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-558-pah-omc-021-composite-owner-packet-transf) |
-| 2026-09-08 | `20260908-r-557-pah-omc-020-owner-packet-sufficiency-brid` — [R-557 PAH-OMC-020 owner-packet sufficiency bridge] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-557-pah-omc-020-owner-packet-sufficiency-brid) |
-| 2026-09-08 | `20260908-r-556-pah-omc-020-minimal-dependency-audit-2026` — [R-556 PAH-OMC-020 minimal dependency audit] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-556-pah-omc-020-minimal-dependency-audit-2026) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1069–1104 | 36 | [001069-001118.md](pages/001069-001118.md) |
+| 1069–1106 | 38 | [001069-001118.md](pages/001069-001118.md) |
 | 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |

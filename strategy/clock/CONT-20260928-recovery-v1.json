@@ -1,0 +1,41 @@
+{
+  "schema": "tect/continuity-recovery/1.0",
+  "id": "CONT-20260928",
+  "scope": "Operational checkpoint and stale queue reconciliation only; no scientific authority or validator relaxation",
+  "baseline_commit": "b1aace18a866f73a124e716400b463b721687b6c",
+  "original_program_sha256": "196e8f33f08931017131fa34868c18e3b2caa3fe564751f5c11a6275af838489",
+  "original_checkpoint_semantic_sha256": "84b48ff3f473a44859ef9de1b1542928736a16c34469c8ea272358302b4fde77",
+  "program_path": "strategy/main-proof-program-v1.json",
+  "ancestry": ["b761ff0ad72e7e5d35f25d9716f1a13c56037a60", "47c9e279c6ffbd578007bc29ec7333e93890fc3a", "cfca9f789759bc613fdf807058f6f361b485cd82", "b1aace18a866f73a124e716400b463b721687b6c"],
+  "integration_request": "41a5625557cda084062b26b0",
+  "queue_disposition": "SATISFIED_BY_ANCESTOR",
+  "watcher_drained_exact_request_bytes": false,
+  "queue_location_role": "Operator-side ignored root commit queue; filenames and hashes below, not public source pointers",
+  "requests": [
+    {"filename": "20260907-170500-q3lock-exp001659-algebra-refresh.json", "sha256": "7155dd6cc2aebd83a73ab2cdd80ff3d134f92c01a684ffd1a6f3f4a154451954", "explorations": ["EXP-001659", "EXP-001660", "EXP-001661"], "support_path": "strategy/q3lock-nonimporting-algebra-refresh-260908.md", "support_sha256": "8d7d37fb382bb051f0869b8eb867f48ebc9d85afd8b05eb1e961802763f784b5"},
+    {"filename": "20260908-q3lock-targeted-literature-recheck-deferred-pdf-v058.json", "sha256": "f30ac86a82894f59ad1688467c98deb255cf1998f7a1c7b131c7eb3000086753", "explorations": ["EXP-001681"], "support_path": "strategy/q3lock-targeted-literature-recheck-260908.md", "support_sha256": "074eef4ff7b0b24cdcfde51652af0350429e8f32b84967fb7141d52a8965c4df"},
+    {"filename": "20260908-q3lock-simon-capture-deferred-pdf-v059.json", "sha256": "077b3e34fa964cc445ecae64ac98d653312fefc461d67610c6d8fc20026e382c", "explorations": ["EXP-001682"], "support_path": "strategy/q3lock-simon-source-capture-260908.md", "support_sha256": "6e826b27b7cb81b86563672d826679ff55a20d3b67de0706d2313ae2530d862e"},
+    {"filename": "20260908-q3lock-schneider-beck-stoll-deferred-pdf-v060.json", "sha256": "0bc2d2ea008c63506f7d0b9b7acbfc077cb1bd099c2f6080a82d0856f9cfd1f3", "explorations": ["EXP-001683"], "support_path": "strategy/q3lock-schneider-beck-stoll-source-audit-260908.md", "support_sha256": "787f499e6ccd9226e9a66c6e3d1ba6f5d84afad38d7d46c3b34f3f46dd3d1394"},
+    {"filename": "20260908-q3lock-package-sync-deferred-pdf-v061.json", "sha256": "8072b53fd7b5968962c49d599157b285cfa5f2e94376c3d00cef910595301d64", "explorations": ["EXP-001683"], "support_path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-independent-replay-collective-jensen-v057-readme-sync/result.json", "support_sha256": "5658cd05da33fec15c7ab243b7cd1121d14f90810e21b883a9e7439b089218a6"}
+  ],
+  "line_hash_convention": "SHA256 of complete UTF-8 JSONL line excluding line-ending bytes; compare source, accepted checkpoint, integration and audited baseline",
+  "exploration_line_hashes": {
+    "EXP-001659": "e6378fdf60c7b355ee09c1cfd2f1e7c97e81b22a23a37668a7c427e7a41da323",
+    "EXP-001660": "f6a564f008a160877dab9e668d18642898daff76bdcc981790d1c27bf503460a",
+    "EXP-001661": "30d9fb1ca9f13a165c2c0e14fd27fdb510445ad345817e696f7e7f52c06433e3",
+    "EXP-001681": "dceaf7422081237fb7cd1b08cfc66f99691624cb87563b5e3cf1ecc11ebc1e22",
+    "EXP-001682": "543d91066322ea6381feb4d3cf45d215cacf20b286d951a694c2898ff8307afa",
+    "EXP-001683": "ee332c2922236b9c9acf76942cd7ee48571dfc750c400c4dd37f66482007ddbe"
+  },
+  "package_artifacts": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-manuscript-fresh-audit-collective-jensen-v115-final/result.json": "01cc1da1440d1f45ddeeae5def7ff02450873035abe5e02c7e072c9c4bd78296",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-paper-integrated-replay-collective-jensen-v110-final/result.json": "9ffeff00d15fce31848d5fc3b1be0841a60ff6e5e8f370dc917a6ac466a44d7c",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-review-locator-audit-collective-jensen-v054-r71-final/result.json": "d549dbb224be8c43866771f0118997a6bdea18602c7fa2b830335e602a10642b",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-08-q3lock-completion-gate-audit-collective-jensen-v104-final/result.json": "a635fdb78504251e7704ab17a27637c9488296d424362b88922d519a99a50926"
+  },
+  "namespace_firewall": {"path": "archive/lane-replay/260909-proof-e8a284f6/crosswalk.json", "sha256": "c93fda5a57ede92bb53877687e9adfb38d7c32551d8e7c81fc94514f9188ae44", "note": "Canonical Q3LOCK IDs are not the collided PAH source IDs remapped to EXP-001736..001738 and EXP-001758..001760."},
+  "repair_policy": "Only completion_checkpoint live metadata may change. Preserve all other programme content semantically, prior evidence prefix and requirements. Derive the new count snapshot after final ledger appends. Do not weaken strict_observation_errors or its queue, clean, count, doctor, release and remote tests.",
+  "archive_policy": "Recheck exact hashes and committed evidence under operator-side locks; move only these five requests into a dated done directory without overwriting, deleting or calling the watcher. Verify destination hashes. Preserve a runtime receipt and permit restoration.",
+  "independent_review": "Read-only inverse_physics_review agent independently checked ancestry, complete lines and support bytes before archive authorization; no files changed by reviewer.",
+  "non_claims": "No new Q3LOCK proof, PDF freeze, external-review admission, claim tier or TECT physical conclusion."
+}

@@ -338,7 +338,13 @@ def test_exploration_projection_and_historical_boundary_are_visible():
         .splitlines()
         if line.strip()
     ]
-    assert records == canonical_records
+    builder = load_module(BUILDER, "proof_map_public_projection_test")
+    expected = [builder.redact_internal_file_references(record) for record in canonical_records]
+    assert records == expected
+    assert [record['id'] for record in records] == [record['id'] for record in canonical_records]
+    for raw, public in zip(canonical_records, records):
+        assert public['verdict'] == raw['verdict']
+        assert public['claim_ids'] == raw['claim_ids']
     canonical_bytes = (REPO / "explorations" / "log.jsonl").read_bytes()
     expected_hash = hashlib.sha256(
         canonical_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
