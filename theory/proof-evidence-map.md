@@ -60,11 +60,11 @@ flowchart LR
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
 | Reusable result records | 399 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 391 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1824 | Route decisions: advanced 1338, failed 262, inconclusive 163, parked 61; non-tier-bearing |
-| Accepted chronological events | 1106 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1825 | Route decisions: advanced 1339, failed 262, inconclusive 163, parked 61; non-tier-bearing |
+| Accepted chronological events | 1107 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 97 | 19 live; 78 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 426 lineage notes / 407 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 3110 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 426 lineage notes / 407 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 3111 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -27806,6 +27806,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** -
 - **Located evidence:** [`strategy/clock/TECT-CLK-003-intake-v1.json`](../strategy/clock/TECT-CLK-003-intake-v1.json) (required_inputs); [`strategy/clock/TECT-CLK-003-certificate-v1.md`](../strategy/clock/TECT-CLK-003-certificate-v1.md) (decision-and-scope); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk003/intake.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk003/intake.json) (findings); [`strategy/clock/CONT-20260928-recovery-v1.json`](../strategy/clock/CONT-20260928-recovery-v1.json) (ancestry)
 
+<a id="exp-001825"></a>
+#### EXP-001825 — TECT-CLK-004 active owner-source discovery and calibrated comparison audit
+
+- **Review metadata:** reviewed 2026-09-28; recorded 2026-09-28T16:45:08Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Can new owner sources resolve a named clock/freefall input, or yield a materially new calibrated acquisition/comparison route without replacing the frozen model or silently changing the same-source contract?
+- **Finite checks:** (1) Preregister one bounded three-route search, acquire and hash new owner sources, and preserve the three protected CLK002/003 authorities. (2) Render primary formula/table pages and independently compare nineteen segments; preserve source disagreements rather than rewriting published values. (3) Derive a necessary cross-source identity retaining gamma calibration and inverse-image boundaries; assess conservative marginal-set coverage without inventing an error law or adopting a new observation contract. (4) Run exact rational and symbolic audit, seventeen hostile mutations and three separately prompted read-only reviews. Record one checkpoint, not a record for every query.
+- **Finding:** Ten new acquired sources identify NTS-3 as a direct Earth Rb/Cs owner lead and a newer owner solar aggregate as a separate alternative. Nineteen-row independent crosswalk finds secondary218 value and212/358/438 analysed-window discrepancies, preserving both printed versions and quarantining unqualified drop-in reuse. Product half-difference/control-sign and calibration factors are explicit. A gamma-aware solar/Earth identity and covariance-free coverage-set design are proposals only; empirical admission remains HOLD_FOR_EVIDENCE.
+- **Decision reason:** The operator requested active discovery instead of waiting-only operation. New source bytes, exact applicability findings and product/calibration contracts improve input quality without claiming a T-054 gate closure, empirical fit or model derivation.
+- **Boundary:** Fixed hypothetical CLK002 effective action, species and time are unchanged; weak/static/first-response assumptions retained. No new regulator, volume or limit calculation. Retrospective aggregate evidence only; no raw flight fit, calibrated coverage sets, prospective holdout, global paper refutation or physical Pre-A/A/B/spacetime/QFT/GR/continuum/mass-gap/TOE promotion.
+- **Next / revisit condition:** One bounded calibration/coverage feasibility audit of the not-adopted solar/Earth alternative using owner-defined potential/time and error conventions; derive a usable contract or identify one specific missing input. No fit, adoption or old owner-absence replay.
+- **Related explorations:** continues [EXP-001824](#exp-001824)
+- **Formal authorities:** -
+- **Located evidence:** [`strategy/clock/TECT-CLK-004-prereg-v1.json`](../strategy/clock/TECT-CLK-004-prereg-v1.json) (routes); [`strategy/clock/TECT-CLK-004-assessment-v1.json`](../strategy/clock/TECT-CLK-004-assessment-v1.json) (sources); [`strategy/clock/TECT-CLK-004-certificate-v1.md`](../strategy/clock/TECT-CLK-004-certificate-v1.md) (exact-published-table-audit); [`strategy/clock/TECT-CLK-004-review-v1.json`](../strategy/clock/TECT-CLK-004-review-v1.json) (checks); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk004/audit.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk004/audit.json) (table_audit)
+
 
 ## Claim evidence matrix
 
@@ -27860,7 +27875,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (30 notes; 2364 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](../negative-results/registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time), [NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY](../negative-results/registry.md#ng-2026-09-12-pah-v2-gd001-sup-cauchy), +134 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +875 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [Publication reader regression repairs without research-source changes] - 2026-09-28 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (30 notes; 2365 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](../negative-results/registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time), [NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY](../negative-results/registry.md#ng-2026-09-12-pah-v2-gd001-sup-cauchy), +134 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +876 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [C6 CLK-004 active source discovery and calibrated comparison audit] - 2026-09-28 | - |
 
 ### Sector D
 
@@ -28710,6 +28725,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-28 | [C6 CLK-004 active source discovery and calibrated comparison audit] - 2026-09-28 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-28 | [Publication reader regression repairs without research-source changes] - 2026-09-28 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-28 | [C6 CLK-003 source intake and strict continuity publication recovery] - 2026-09-28 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-28 | [C6 CLK-002 portable Lean replay correction without evidence rewrite] - 2026-09-28 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -28729,7 +28745,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-08 | [PAH-OMC-026 cut-set packet crosswalk] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-08 | [PAH-OMC-025 route-independent owner cut-set] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-08 | [R-564 PAH-OMC-024 anchored-n persistence] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-08 | [R-563 PAH-OMC-020 diagonal locality obstruction] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 

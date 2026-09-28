@@ -1,0 +1,77 @@
+{
+  "schema":"tect/clock-discovery-assessment/1.0",
+  "id":"TECT-CLK-004",
+  "classification":"auxiliary_support",
+  "empirical_admission":"HOLD_FOR_EVIDENCE",
+  "mainline_gate_changed":false,
+  "protected_sources":{
+    "strategy/clock/TECT-CLK-002-prereg-v1.json":"eed93e6aa01b4bacc780bba0a24f53ccf7c6b7f6daab394ae20e54afa270c92f",
+    "strategy/clock/TECT-CLK-002-assessment-v1.json":"55304051bc0033700e34236cbc8f7a07623313db1f177b6d58e4573d19491290",
+    "strategy/clock/TECT-CLK-003-intake-v1.json":"08c42bca606a60cc29d7c6a0a2ac2b6ecf683a9e2aba42e61773ad39c969e945"
+  },
+  "sources":{
+    "NTS3_2026":{"filename":"nts3-2026.html","url":"https://www.ion.org/jnc/abstracts.cfm?paperID=16616","sha256":"738e4fc6547404e8dc83c29fe74b22c27ef56ea050443b0b22605a868601657c","role":"OWNER_ABSTRACT_NEW_EARTH_CLOCK_LEAD_NOT_DATA","locator":"JNC2026 session A6, Martin et al.; public-release AFRL-2026-0283","need":"Exact isotopes, simultaneous unsteered ratio/readout, clock selection/ensemble weights, altitude/thermal/magnetic/attitude/transfer telemetry and error law. Two onboard clocks do not establish a supplied co-located ratio."},
+    "NAVEX1989":{"filename":"navex-1989.html","url":"https://elib.dlr.de/8451/","sha256":"bccb4094298a9fb93cd468fca4a833cb101b826d0c4e833fa785da95551ecde7","role":"OWNER_CATALOG_NO_FULLTEXT","locator":"DLR-FB89-43, 57 pages"},
+    "NAVEX1990":{"filename":"navex-1990.html","url":"https://elib.dlr.de/32500/","sha256":"de1e38a5194080d0c4ac075408c08e176d5d99b1197c9d000f2ae137d63c281a","role":"OWNER_CATALOG_NO_FULLTEXT","locator":"Final Data Evaluation and Results report, 177 pages"},
+    "NAVEX1991":{"filename":"navex-1991.html","url":"https://elib.dlr.de/8619/","sha256":"99b790cb26a071130591f8d7b7f1ede54a44098080a238090afd6ad1aa5eaccf","role":"TRANSLATION_NOT_INDEPENDENT_DATA","locator":"ESA-TT1209, English translation of 1989 report, 69 pages"},
+    "NAVEX_PTTI":{"filename":"navex-ptti.html","url":"https://www.ion.org/publications/abstract.cfm?articleID=15479","sha256":"54052af81441d8ebb7209034dae3c3746ba050c8f584306e668c3784a1d04b37","role":"OWNER_ABSTRACT_PAYWALLED_BODY_NOT_ACQUIRED","locator":"Hammesfahr/Nau/Starker, pp325-336; inconsistent 1989 page header versus 1987 recommended citation retained, not resolved"},
+    "MICRO_PROCESS":{"filename":"micro-process-2022.pdf","url":"https://arxiv.org/pdf/2201.10841","sha256":"2a52cfd1b5e93b81274c66d0bddb9b1054061b53c76c41a799233ec683c5e3e7","role":"OWNER_PRODUCT_AND_MASK_DEFINITION","locator":"PDF14 section5.1; PDF15 Table5; PDF16 section5.2.3; no raw mission samples"},
+    "MICRO_REUSE":{"filename":"micro-reuse-2025.pdf","url":"https://arxiv.org/pdf/2504.00720v1","sha256":"c4148b9de16d385520deba289fa68b60b18a6c32277b3f0cfb5ec6cd175719e6","role":"RETROSPECTIVE_SECONDARY_SUMMARY_QUARANTINED","locator":"PDF12 statistical assumptions and orbit duration; PDF13 TableII. Its QCD axion model is not imported."},
+    "SOURCE_CHARGE":{"filename":"source-charge-2025.pdf","url":"https://arxiv.org/pdf/2408.16816v2","sha256":"4220ee55549373a9ad9e95501b283b41c912ffe31cb60c6d60586c2129c9172a","role":"COMPOSITION_MODEL_LEAD_NOT_ERROR_CERTIFIED","locator":"AppendixA Table1; no charge numbers admitted by this packet"},
+    "GPS_RB":{"filename":"gps-rb-2023.xml","url":"https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9898677/fullTextXML","sha256":"dc9bb28b3e0aec6dfa55ba99d2964db49790f1d1a889d4e460b66dfad3b15070","role":"SINGLE_SPECIES_METHOD_NOT_RBCS_OBSERVABLE","locator":"Section2 and Table2: three active Rb clocks, not simultaneous Rb/Cs ratio"},
+    "SYRTE2015":{"filename":"syrte-2015.pdf","url":"https://comptes-rendus.academie-sciences.fr/physique/item/10.1016/j.crhy.2015.03.010.pdf","sha256":"32bf25df99e0d387136ce0cf4083c942ac3180fe4c525920756d7183f06870d9","role":"NEW_TO_PACKET_OWNER_SOLAR_AGGREGATE_NOT_EARTH_Z","locator":"Abgrall et al. section5, PDF6/printed466"}
+  },
+  "primary_freefall_source":{"relative_cache":"freefall-sources/microscope-results-2022-dlr.pdf","url":"https://elib.dlr.de/193667/2/Touboul_2022_Class._Quantum_Grav._39_204009.pdf","sha256":"eecb383e1b7899838f55407505cb46ef15a6e2895d3d9862878727538bc6f9dd","locators":"PDF14/Table5 analysed segments, PDF20/Table7 ADAM values, PDF26/Table11 systematics"},
+  "solar_update":{"source":"SYRTE2015","observable":"c^2*d ln(nu_Rb/nu_Cs)/dU_sun_used","central":"7.4e-7","quoted_uncertainty":"6.5e-7","raw_series":null,"calibrated_coverage_sets":null,"role":"RETROSPECTIVE_SOLAR_AGGREGATE","warning":"Not an independent replicate of overlapping 2012 data; no averaging, Earth substitution or empirical fit"},
+  "freefall_table_inputs":{
+    "input_role":"Transcribed published inputs, not derived constants or raw flight data. Units for estimates/uncertainties are 1e-15.",
+    "columns":["segment","primary_adam","secondary_measurement","primary_stat","secondary_stat","primary_sys","secondary_sys","primary_analysis_orbits","secondary_duration_s"],
+    "orbit_seconds_input":"5946",
+    "orbit_seconds_locator":"MICRO_REUSE PDF12, attributed to primary2022; duration crosswalk uses this stated convention, not a precise new orbital estimate",
+    "rows":[
+      ["210","-29.2","-29.2","13.1","13.1","1.8","1.8","50","297300"],
+      ["212","9.5","9.5","11.9","11.9","1.0","1.0","60","452490.6"],
+      ["218","6.7","6.0","8.1","8.1","1.1","1.1","120","713520"],
+      ["234","5.9","5.9","8.3","8.3","1.0","1.0","92","547032"],
+      ["236","2.6","2.6","6.6","6.6","1.2","1.2","120","713520"],
+      ["238","5.8","5.8","6.4","6.4","1.2","1.2","120","713520"],
+      ["252","-14.9","-14.9","7.3","7.3","1.1","1.1","106","630276"],
+      ["254","-14.1","-14.1","7.0","7.0","1.5","1.5","120","713520"],
+      ["256","-5.3","-5.3","7.4","7.4","1.1","1.1","120","713520"],
+      ["326-1","-16.3","-16.3","9.6","9.6","1.6","1.6","66","392436"],
+      ["326-2","-10.4","-10.4","13.5","13.5","1.6","1.6","34","202164"],
+      ["358","15.8","15.8","10.9","10.9","1.1","1.1","92","551788.8"],
+      ["402","28.4","28.4","43.6","43.6","7.3","7.3","18","107028"],
+      ["404","4.7","4.7","6.7","6.7","1.0","1.0","120","713520"],
+      ["406","5.9","5.9","14.9","14.9","3.2","3.2","20","118920"],
+      ["438","-23.4","-23.4","24.6","24.6","5.5","5.5","32","237840"],
+      ["442","-1.5","-1.5","19.1","19.1","7.3","7.3","40","237840"],
+      ["748","-23.4","-23.4","24.6","24.6","7.3","7.3","24","142704"],
+      ["750","66.9","66.9","38.4","38.4","7.3","7.3","8","47568"]
+    ],
+    "interpretation":"Preserve both printed versions. The secondary218 estimate differs; three duration fields do not match the primary analysed windows. Repeated438/748 estimates also occur in primaryTable7, so do not silently correct them or claim a secondary copying error there. No reanalysis of either paper's scientific conclusions."
+  },
+  "product_contract":{
+    "N2a":"(Gamma_1-Gamma_2)/2; inner1=PtRh, outer2=TiAlV in SUEP",
+    "published_differential":"Gamma_d=Gamma_1-Gamma_2=2*N2a, electrostatic control acceleration, not freefall itself",
+    "physical_sign":"Primary2022 PDF10 Eq4 uses delta(2,1) in measured control difference because control acceleration is opposite to gravity acceleration. Do not apply a second sign flip to the fitted coefficient.",
+    "fitted_readout":"delta_x=ac11*delta(2,1); eta_TiPt=delta_x/(ac11*mbar), mbar=(mG2/mI2+mG1/mI1)/2; ac11 and mbar require calibration",
+    "mask":{"excluded":0,"retained":1},
+    "minimum_product_unit":"One accepted SUEP segment with N0c ancillary orbit/attitude/housekeeping, N2a/calibrated output, mask, calibration matrix and noise/uncertainty products",
+    "raw_archive":"NOT_ACQUIRED; official portal timeout is not proof of absence"
+  },
+  "alternative_contract_proposal":{
+    "adopted":false,
+    "same_source_contract_changed":false,
+    "status":"PROPOSED_ONLY_SAME_ACTION_DIFFERENT_OBSERVATION_CONTRACT",
+    "symbols":"x=d^2, Delta=qTiAlV-qPtRh, qbar=(qTiAlV+qPtRh)/2, qE/qS full Earth/Sun mass sensitivities; gamma=dU_sun_bare/dU_sun_used",
+    "maps":["b_obs=-gamma*K*qS*x","etaE=Delta*qE*x/(1+qbar*qE*x)"],
+    "necessary_residual":"b_obs*(Delta-qbar*etaE)+gamma*K*(qS/qE)*etaE=0",
+    "domain":"x>=0, qE!=0, D=1+qbar*qE*x>0; gamma may depend on x and requires its own ephemeris calibration law; no free fitting of gamma",
+    "inverse_boundary":"Residual is necessary only. Zero source/contrast and singular denominators do not establish feasible inverse images. Full atomic K and source charges with error bounds remain missing.",
+    "covariance_alternative":"Separately justified marginal sets with coverage 1-alpha_i imply simultaneous coverage at least 1-sum(alpha_i) by the union bound without independence. This avoids demanding cross-probe covariance for conservative set consistency only; within-probe calibration, systematic and theory-error coverage are still mandatory.",
+    "empirical_test_performed":false
+  },
+  "next_action":"Prioritize NTS-3 public unsteered simultaneous Rb/Cs ratio/telemetry product or legally supplied NAVEX final report; in parallel assess only a separately authorized gamma-calibrated cross-source confidence-set contract. No automatic old-source retry or fitted exclusion.",
+  "non_claims":"No empirical detection, exclusion, independent holdout, global paper refutation, TECT, Pre-A, A/B, spacetime, QFT, gravity, continuum, mass gap or TOE conclusion. New source acquisition and exact table crosswalk are auxiliary progress only."
+}
