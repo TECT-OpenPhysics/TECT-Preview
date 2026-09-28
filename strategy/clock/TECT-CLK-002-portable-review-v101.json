@@ -1,0 +1,20 @@
+{
+  "schema": "tect/clock-portable-independent-review/1.0",
+  "review_id": "CLK002-PORTABLE-REPLAY-INDEPENDENT-AUDIT",
+  "reviewer": "clk002_hostile_design, separately prompted read-only agent",
+  "verdict": "PASS_TOOLING_CORRECTION_ONLY",
+  "script_sha256_verified": "70ec07df0a90ff02195c85a3d2d94ffa0b01ac85f988c2943b2c023949597f05",
+  "portable_run_sha256_verified": "34643de9258fc396596e533ef9c8e274914e238d70444f9eb6ad5213e3168a55",
+  "original_evidence_hashes_verified": 13,
+  "fresh_replay": {"exit_code": 0, "primary_identities": 15, "independent_fixtures": 4, "scientific_hostile_fixtures": 25, "lean_declarations": 7, "tooling_mutations": 11},
+  "additional_independent_mutations": {"count": 5, "result": "PASS", "changes_rejected": ["Diagnostic column", "Removed warning line", "Added whitespace", "Toolchain hash", "Additional same-named source at another path"]},
+  "normalization_review": {"scope": "Only the exact identified old/current ClockFreeFall.lean pathname in stdout/stderr", "unexpected_actual_source_path": "Fails assertion", "multiple_diagnostic_source_paths": "Fails assertion", "source_exit_compiler_packages_declarations_warnings": "Remain comparison-significant", "original_assessment_and_raw_run": "Preserved and hash-verified", "fallback_to_success": false},
+  "outstanding_corrections": [],
+  "scientific_disposition_changed": false,
+  "benchmark_admission": "ADMISSIBLE_FOR_TEST_CONDITIONAL_FIRST_RESPONSE_ONLY",
+  "empirical_admission": "HOLD_FOR_EVIDENCE",
+  "microscopic_tect_admission": "NOT_ADMITTED",
+  "tracked_writes_performed_by_reviewer": false,
+  "independent_person_certification": false,
+  "reproduction": "python -B -X utf8 verification/scripts/tect_clk002_portable.py --check --lean-cache E:/Dev/TECT/verification/lean/.lake/packages --elan-home C:/Users/NaEun/.elan"
+}

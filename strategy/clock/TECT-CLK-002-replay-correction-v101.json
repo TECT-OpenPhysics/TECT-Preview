@@ -1,0 +1,31 @@
+{
+  "schema": "tect/clock-replay-correction/1.0",
+  "id": "TECT-CLK-002-REPLAY-CORRECTION-v1.0.1",
+  "corrects": "The reproduction command in TECT-CLK-002-ASSESSMENT-v1 and EXP-001823 is workspace-dependent because compiler stdout contains an absolute source pathname.",
+  "scientific_disposition_changed": false,
+  "prereg_sha256": "eed93e6aa01b4bacc780bba0a24f53ccf7c6b7f6daab394ae20e54afa270c92f",
+  "original_assessment_sha256": "55304051bc0033700e34236cbc8f7a07623313db1f177b6d58e4573d19491290",
+  "original_raw_lean_run_sha256": "40738dbc6042f0a83ac243493512a771016532148a9fae587227e9cf2bb3bc5f",
+  "preservation": "All 13 original assessment evidence hashes, protected PAH/A2 sources, Lean statements, toolchain and raw execution evidence remain unchanged. The original run is not overwritten or silently rehashed.",
+  "diagnosis": "The original command passed in its issuance workspace but its full JSON equality check failed in the detached validation workspace. Lean compilation itself exited zero; path-only diagnostic normalization restored exact runtime-field equality.",
+  "replacement_command": "python -X utf8 verification/scripts/tect_clk002_portable.py --check --lean-cache E:/Dev/TECT/verification/lean/.lake/packages --elan-home C:/Users/NaEun/.elan",
+  "replacement_scope": "Portable between Windows workspaces using the same pinned toolchain and packages, not a cross-platform compiler-equivalence claim.",
+  "comparison": "The source path alone is canonicalized in stdout/stderr. Warning text, line and column, other output, exit code, declarations, source hash, compiler, toolchain and package revisions remain significant. Human scope labels and all v1 wrapper bytes are independently hash-verified.",
+  "evidence": {
+    "verification/scripts/tect_clk002_portable.py": "70ec07df0a90ff02195c85a3d2d94ffa0b01ac85f988c2943b2c023949597f05",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-28-tect-clk002/portable-v101.json": "34643de9258fc396596e533ef9c8e274914e238d70444f9eb6ad5213e3168a55"
+  },
+  "checks": {
+    "original_primary_independent_hostile": "PASS, unchanged outputs",
+    "same_workspace_replay": "PASS",
+    "detached_source_workspace_replay": "PASS with explicit test-only root redirection before issuing a replacement checkpoint",
+    "lean": "PASS, unchanged seven declarations",
+    "tooling_mutations": "PASS, eleven cases computed by the verifier"
+  },
+  "scientific_terminal": "ADMISSIBLE_FOR_TEST only for the conditional external Newtonian first-response benchmark",
+  "empirical_admission": "HOLD_FOR_EVIDENCE",
+  "microscopic_tect_admission": "NOT_ADMITTED",
+  "direction_record": "DCTRL-000042",
+  "automatic_successor": false,
+  "non_claims": "No mainline gate change, new mathematical result, physical Pre-A, A/B, QFT, spacetime, gravity or empirical conclusion. This is a tooling repair only."
+}

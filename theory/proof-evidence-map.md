@@ -61,10 +61,10 @@ flowchart LR
 | Reusable result records | 399 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 391 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
 | Proof explorations | 1823 | Route decisions: advanced 1338, failed 262, inconclusive 162, parked 61; non-tier-bearing |
-| Accepted chronological events | 1103 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Accepted chronological events | 1104 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 97 | 19 live; 78 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 426 lineage notes / 407 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 3107 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 426 lineage notes / 407 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 3108 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -27844,7 +27844,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (30 notes; 2361 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](../negative-results/registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time), [NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY](../negative-results/registry.md#ng-2026-09-12-pah-v2-gd001-sup-cauchy), +134 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +874 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [C6 TECT-CLK-002 conditional joint clock and free-fall response] - 2026-09-28 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (30 notes; 2362 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](../negative-results/registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time), [NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY](../negative-results/registry.md#ng-2026-09-12-pah-v2-gd001-sup-cauchy), +134 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +874 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [C6 CLK-002 portable Lean replay correction without evidence rewrite] - 2026-09-28 | - |
 
 ### Sector D
 
@@ -28694,6 +28694,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-28 | [C6 CLK-002 portable Lean replay correction without evidence rewrite] - 2026-09-28 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-28 | [C6 TECT-CLK-002 conditional joint clock and free-fall response] - 2026-09-28 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-14 | [TECT-CLK-001 v1.1 metadata correction and mainline-managed integration] - 2026-09-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-14 | [TECT-CLK-001 clock-observable admission boundary] - 2026-09-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -28713,7 +28714,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-08 | [R-563 PAH-OMC-020 diagonal locality obstruction] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-08 | [R-562 PAH-OMC-020 universal locality bridge 2] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-08 | [R-561 PAH-OMC-020 fixed-power locality bridge] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-09-08 | [R-560 PAH-OMC-023 canonical owner-admission replay boundary] - 2026-09-08 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 
