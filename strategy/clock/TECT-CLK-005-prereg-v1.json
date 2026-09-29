@@ -1,0 +1,26 @@
+{
+  "schema":"tect/clock-calibration-feasibility/1.0",
+  "id":"TECT-CLK-005",
+  "date_utc":"2026-09-29",
+  "base_commit":"675f34aa7be1984115bc2b9a4ea08c90f15c2e42",
+  "authority":"The operator explicitly requested the single calibration/coverage feasibility audit admitted by DCTRL-000045. This is not adoption of a cross-source comparison or a new model.",
+  "question":"Under the unchanged CLK002 model, can primary owner sources establish an operational solar-potential calibration law and coverage-qualified error sets adequate for a solar Rb/Cs versus Earth TiAlV/PtRh comparison?",
+  "protected_sources":{
+    "strategy/clock/TECT-CLK-002-prereg-v1.json":"eed93e6aa01b4bacc780bba0a24f53ccf7c6b7f6daab394ae20e54afa270c92f",
+    "strategy/clock/TECT-CLK-002-assessment-v1.json":"55304051bc0033700e34236cbc8f7a07623313db1f177b6d58e4573d19491290",
+    "strategy/clock/TECT-CLK-003-intake-v1.json":"08c42bca606a60cc29d7c6a0a2ac2b6ecf683a9e2aba42e61773ad39c969e945",
+    "strategy/clock/TECT-CLK-004-assessment-v1.json":"c026f446323c05afa20cf3353fcd9c898aa46500721071842ff9380e56828251"
+  },
+  "preserved":"CLK002 EM-only massless unscreened static first-response action, Rb87/Cs133 hyperfine ratio, actual SUEP alloy pair, imported metric proper time, no Markov reinterpretation, no lattice/volume/continuum limit. Original same-source contract remains unchanged; the cross-source alternative stays not adopted.",
+  "workstreams":[
+    "Primary theory and ephemeris: distinguish bare, pair-effective, nominal and fitted GM; preserve source sign, observer/test-body composition and coordinate-time scaling.",
+    "Clock owner: identify signed potential template, phase, time standard, estimator and statistical/systematic uncertainty meaning; no overlapping-data averaging.",
+    "Freefall owner: identify fitted quantity, calibration, statistical/systematic combination and coverage meaning; no raw-data portal replay.",
+    "Hostile synthesis: test whether union-bound or moment-bound uncertainty propagation is justified by the actual supplied inputs rather than asserted Gaussianity or zero remainder."
+  ],
+  "acceptance":"A usable operational calibration map plus source-qualified marginal coverage sets, including calibration/material/theory errors. Otherwise identify the precise unresolved input and preserve conditional/empirical distinctions. Source uncertainty statements need not be deterministic hard bounds, but their confidence meaning and assumptions must be explicit.",
+  "falsifier":"An exact source-sign/normalization contradiction invalidates that import, not the unchanged model; lack of an error certificate is not an observational exclusion or a proof that no data exist.",
+  "budget":{"attempts":1,"targeted_primary_queries_per_stream":"5-8 plus direct cited-source follow-up","empirical_fits":0,"parameter_sweeps":0,"new_models":0,"external_messages":0},
+  "exit":"One synthesis record and independently checked source/calibration audit. No automatic successor; review the spent budget and state one evidence-based reentry condition.",
+  "non_claims":"No empirical detection/exclusion or independent holdout, no TECT microscopic admission, no Pre-A/A/B/spacetime/QFT/GR/horizon/continuum/mass-gap/TOE conclusion. No replacement of pinned hashes or post-hoc contract adoption."
+}

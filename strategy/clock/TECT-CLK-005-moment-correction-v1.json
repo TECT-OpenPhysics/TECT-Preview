@@ -1,0 +1,15 @@
+{
+  "schema":"tect/clock-audit-correction/1.0",
+  "id":"TECT-CLK-005-MOMENT-CORRECTION",
+  "corrects":"TECT-CLK-005-calibration-contract-v1.json#/coverage_contract/moment_alternative",
+  "original_sha256":"da8cfda072cae9768b79f0302617fdbae3e8aefa35652a3a1638ad9f4ecc28a6",
+  "original_bytes_preserved":true,
+  "reason":"Independent hostile review found that the original non-strict tail inequality fails at V=0: e=0 almost surely, but P(|e|>=0)=1. The error is in the audit's conditional probability wording, not in a source experiment or the fixed model.",
+  "replacement":"For certified E[e]=0 and E[e^2]<=V, V>=0 and 0<alpha<1, P(|e|>sqrt(V/alpha))<=alpha. For V>0 this follows from the usual Chebyshev bound; for V=0, e=0 almost surely and the strict-tail event is empty up to a null set. Add an independently certified bias/remainder bound. A quoted plug-in sigma is not automatically such a V.",
+  "tail_comparator":">",
+  "variance_domain":"V>=0",
+  "alpha_domain":"0<alpha<1",
+  "model_or_input_fixture_changed":false,
+  "empirical_inputs_supplied":false,
+  "scope":"Only this conditional clause is superseded. All preregistered fixture inputs, source definitions, non-adoption and missing empirical inputs remain unchanged."
+}

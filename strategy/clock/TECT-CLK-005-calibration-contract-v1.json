@@ -1,0 +1,47 @@
+{
+  "schema":"tect/clock-projection-contract/1.0",
+  "id":"TECT-CLK-005-PROJECTION",
+  "status":"AUDIT_DEFINITION_ONLY_NOT_EMPIRICAL_ADOPTION",
+  "model_changed":false,
+  "old_comparison_changed":false,
+  "new_comparison_adopted":false,
+  "empirical_fit_performed":false,
+  "definitions":{
+    "data":"y is the sampled first-response fractional Rb/Cs readout. u=Delta U_used/c^2 is the dimensionless owner annual template, v=Delta U_bare/c^2 the model template. All sampled vectors must use the same declared epochs, time scale and binning.",
+    "design":"W=W^T>0 and Z has full column rank; [Z,u] has full column rank. Z contains exactly the declared nuisance regressors, not new fitted physics. These are fixed-design identities; random estimated weights or selection require a conditional or uniform error argument.",
+    "projector":"P=I-Z*(Z^T*W*Z)^(-1)*Z^T*W",
+    "influence":"ell^T=u^T*W*P/(u^T*W*P*u)",
+    "coefficient":"b_hat=ell^T*y; ell^T*u=1, ell^T*Z=0",
+    "calibration":"gamma_eff=ell^T*v; if v=gamma*u+Z*c, then gamma_eff=gamma. Otherwise gamma_eff depends on the actual design and template discrepancy.",
+    "response":"If y=-K*qS*x*v+Z*a+r+epsilon at first response with x=d^2>=0, then b_hat=-K*qS*x*gamma_eff+ell^T*r+ell^T*epsilon. r includes stated response, finite-potential, time/orbit-template and residual calibration errors without double counting.",
+    "bias":"An error B*u changes b_hat by B and leaves the full fitted residual unchanged. An error in range(Z) changes neither b_hat nor the fitted residual. This is a non-implication witness, not evidence that a real annual systematic is present.",
+    "variance":"For deterministic ell and actual covariance Sigma, Var(b_hat)=ell^T*Sigma*ell. Residual Gaussianity or marginal standard deviations alone do not determine Sigma or calibrate nuisance bias.",
+    "pointwise_remainder":"If |r_i|<=rho_i on an admitted domain, |ell^T*r|<=sum_i |ell_i|*rho_i; this needs actual rho_i, not zeros by default.",
+    "two_body_only":"Under a separately justified Newtonian two-body calibration mu_used=G_star*(M_S+M_E)*(1+x*qS*qE), gamma=G_star*M_S/mu_used=M_S/[(M_S+M_E)*(1+x*qS*qE)] at matched coordinates. If the reported mu_used is already the source-only parameter with recoil removed, the mass-fraction factor is absent. Neither is an identification of a GR-fitted ephemeris or the clock owner's printed normalization.",
+    "time_scaling":"A common compatible linear coordinate scaling t'=F*t, r'=F*r, mu'=F*mu leaves mu/r invariant. Mixing GM and distance conventions does not. Actual clock time/ephemeris conversion remains source-owned; no physical time redefinition is made."
+  },
+  "coverage_contract":{
+    "kind":"NEEDED_NOT_SUPPLIED",
+    "common_measure":"Choose either uniform repeated-sampling coverage over an admitted physical/nuisance domain or an explicit coherent joint epistemic probability law; do not mix posterior quantiles with frequentist guarantees without calibration.",
+    "marginals":"P(theta_i notin C_i)<=alpha_i for every included observational/calibration/material/remainder component, under the chosen common interpretation.",
+    "joint":"P(all theta_i in C_i)>=1-sum(alpha_i) by union bound; no cross-probe independence needed. Within-probe laws and selection/calibration validity remain required.",
+    "moment_alternative":"If E[e_i]=0 and E[e_i^2]<=V_i are certified, Chebyshev gives P(|e_i|>=sqrt(V_i/alpha_i))<=alpha_i. Add a separately certified bias/remainder bound B_i. A quoted plug-in sigma is not automatically such a V_i.",
+    "provided_inputs":null
+  },
+  "test_only_inputs":{
+    "label":"SYNTHETIC EXACT ARITHMETIC FIXTURES, NOT OBSERVATIONS, PHYSICAL CARRIERS OR FITS",
+    "t":["-5","-3","-1","1","3","5"],
+    "u":["1","1","-1","-1","1","-1"],
+    "weights":["1","2","3","4","5","6"],
+    "gamma":"2/3",
+    "nuisance":["3","-2"],
+    "template_distortion":["0","1","0","0","0","0"],
+    "annual_bias":"5/7",
+    "remainder_caps":["1/10","1/10","1/10","1/10","1/10","1/10"],
+    "standardized_error_values":["-3","0","3"],
+    "standardized_error_probabilities":["1/18","8/9","1/18"],
+    "quoted_interval_multiple":"2",
+    "marginal_error_budgets":["1/40","1/40"]
+  },
+  "non_claims":"No actual estimator reconstruction, acquired covariance or bias certificate, model exclusion, TECT/Pre-A/A/B/spacetime/QFT/GR/continuum/mass-gap/TOE result. Conditional standard algebra exposes required inputs; it does not supply them."
+}

@@ -1,0 +1,64 @@
+{
+  "schema":"tect/clock-calibration-assessment/1.0",
+  "id":"TECT-CLK-005",
+  "classification":"auxiliary_support",
+  "empirical_admission":"HOLD_FOR_EVIDENCE",
+  "mainline_gate_changed":false,
+  "prereg_sha256":"6168fed09bdfd2e78f66fbe57ed1209af96751bf4aa1ba3c181518253caeef14",
+  "contract_sha256":"da8cfda072cae9768b79f0302617fdbae3e8aefa35652a3a1638ad9f4ecc28a6",
+  "moment_correction_sha256":"7e2f79e92ca35fc6c75d74d5c9c606ea692c6a6a09a0fb7034c11398642342d9",
+  "scope":"Unchanged CLK002 external EM-only massless unscreened static weak-field first-response benchmark in imported 3+1 metric spacetime and proper time. Rb87/Cs133 hyperfine and actual TiAlV/PtRh alloys retained. x=d^2>=0 is not fitted. Positive attractive calibration factors and a declared validity domain are required. No lattice, volume or continuum limit; no Markov-time reinterpretation.",
+  "model_changed":false,
+  "old_comparison_changed":false,
+  "new_comparison_adopted":false,
+  "empirical_fit_performed":false,
+  "sources":{
+    "DD2010":{"cache":"clk002/sources/damour-donoghue-2010v2.pdf","url":"https://arxiv.org/pdf/1007.2792v2","sha256":"4159cd5c6bbac301acd3bffd06e47e659709e3545a5b68302f34150a11a46e28","locator":"Eq2-8 and71-76","role":"FIXED_THEORY_REFERENCE","finding":"Pair potential supplies G_AB=G_star*(1+alpha_A*alpha_B); full electromagnetic mass sensitivities, not primed contrasts alone. It does not identify an operational solar estimator."},
+    "HEES2018":{"cache":"clk002/sources/hees-2018v3.pdf","url":"https://arxiv.org/pdf/1807.04512v3","sha256":"c12eb99188d55ad462f07ff38bcd487bf75b57d57fa32963655787f1d4bcbfd5","locator":"Eq1/2a/7-8/14-18/29-31/36-40","role":"FIXED_FIRST_RESPONSE_REFERENCE","finding":"Frozen source action and response baseline; no new finite-potential remainder certificate supplied."},
+    "GUENA2012":{"cache":"clk002/sources/guena-2012.pdf","url":"https://arxiv.org/pdf/1205.4235v2","sha256":"a3ef150ba19ccba39a00d6f39ef8ad3d078bf52a350316e6b7c0f2780091ab78","locator":"PDF2 uncertainty/weights; PDF3 Fig3 and Eq4","role":"SIGNED_ANNUAL_TEMPLATE_OWNER","finding":"Positive U=GM_sun/r, maximum at perihelion; annual cosine uses Jan3 2010, MJD55199 and approximate semiamplitude1.65e-10 in U/c^2. Monthly-scale bins and fixed/free phase, with/without slope fits are discussed. Printed constants do not name an ephemeris version, time scale, or a bare-to-operational calibration/error law."},
+    "SYRTE2015":{"cache":"clk004/sources/syrte-2015.pdf","url":"https://comptes-rendus.academie-sciences.fr/physique/item/10.1016/j.crhy.2015.03.010.pdf","sha256":"32bf25df99e0d387136ce0cf4083c942ac3180fe4c525920756d7183f06870d9","locator":"PDF6/printed466 section5 and Fig3","role":"OWNER_SOLAR_AGGREGATE_NOT_ERROR_CERTIFICATE","finding":"Reports updated solar coefficient (7.4+/-6.5)e-7. Plot bars are total1sigma, systematics dominated; this is not an independently supplied annual-projection covariance/coverage contract. Earlier sign convention is cross-reference context, not proof that the later estimator design is identical. Overlapping2012 data are not independent replicates."},
+    "GUENA2014":{"cache":"clk005/clock/guena-2014v1.pdf","url":"https://arxiv.org/pdf/1401.7976v1","sha256":"8edf2db977141a07add537cf27189b38173d5c3a1cb56832db61c008f3d74f70","locator":"PDF7 sectionIVD; PDF8 Fig7; PDF9 sectionVI/Fig8","role":"OWNER_CORRELATED_SYSTEMATICS_CONTEXT","finding":"Clock correction procedures and temporally correlated TypeB systematics are explicit. The warning against overinterpreting a small constant-fit standard error concerns that absolute-frequency fit, not a demonstration of harmful annual leakage. A constant nuisance can cancel; the actual annual error projection is required."},
+    "HEES2016":{"cache":"clk005/clock/hees-2016v2.pdf","url":"https://arxiv.org/pdf/1604.08514v2","sha256":"b933b90c1f93ca16bbdaa1f1bfb2125f190e6b5d957623f1f8003640ad88a5e3","locator":"PDF3-4, Eq9 and sinusoidal analysis","role":"POSTERIOR_POWER_CONTEXT_NOT_SOLAR_COVERAGE","finding":"Independent Gaussian measurement/flat-prior Bayesian power analysis at scanned frequencies is not the signed phase-fixed solar coefficient or its nuisance-uniform coverage. No oscillating-dark-matter model or posterior limit is imported."},
+    "BERNUS2023":{"cache":"clk005/bridge/bernus-2023v1.pdf","url":"https://arxiv.org/pdf/2301.01186v1","sha256":"61a9b84a8895a3c15c6ecfde837a6edbf2c30992bdfb563262809674fa0a3011","locator":"PDF11 sectionIII; PDF22 EqA29; PDF23 EqA33-A39","role":"EPHEMERIS_DEPENDENCY_NOT_CALIBRATION_IMPORT","finding":"Pair coupling and rescaled measurable masses are distinct. The source re-adjusts reference ephemeris parameters for each dilaton choice. EqA38 drops post-Newtonian and quadratic small-delta terms. Its fitted intervals do not supply exact-in-x calibration of the clock owner's normalization."},
+    "KLIONER2007":{"cache":"clk005/bridge/klioner-2007v3.pdf","url":"https://arxiv.org/pdf/astro-ph/0508292v3","sha256":"d2fd7dcc8fea014a51536079b2c300c5e13882f45bc9b4cff9b8728d249c3d29","locator":"Sections3.2-4, Eq7-9/23-25; PDF4","role":"COMPATIBLE_COORDINATE_SCALING","finding":"Matching linear scalings of coordinate time, distance and mass parameter preserve mu/r. An isolated time-scale multiplier on gamma is not justified. Actual time tags/phase remain owner inputs."},
+    "IAU2015B3":{"cache":"clk005/bridge/iau-2015-b3.pdf","url":"https://www.iau.org/common/Uploaded%20files/IAUGA2015-Resolution-B3-recommended-nominal-conversion.pdf","sha256":"21644e136a12fe301fc29398433a60dcf1e810b85b14934f8b8499956fd8e4a1","locator":"PDF2 recommendation1","role":"NOMINAL_CONVERSION_NOT_MEASUREMENT","finding":"Exact nominal conversion constants are not true solar properties with uncertainty. Exact nominal GM cannot replace model-bare GM or measured calibration."},
+    "PARK2021":{"cache":"clk005/bridge/park-2021-de440.pdf","url":"https://ssd.jpl.nasa.gov/doc/Park.2021.AJ.DE440.pdf","sha256":"96c3945deb12e0f0843c2bf0703d3542d950cf85ff903b1fe11a501634f68ee0","locator":"PDF2-3 section2.3; PDF5 section3.1/Table2","role":"EPHEMERIS_METHOD_EXAMPLE_NOT_OWNER_SUBSTITUTION","finding":"DE440 uses TDB integration, explicit UTC/TAI/TT/TDB handling, GR-constrained PPN dynamics and fitted solar/Earth mass parameters. It is not asserted to be the ephemeris of the2015 clock result."},
+    "MICRO2022":{"cache":"clk003/freefall-sources/microscope-results-2022-dlr.pdf","url":"https://elib.dlr.de/193667/2/Touboul_2022_Class._Quantum_Grav._39_204009.pdf","sha256":"eecb383e1b7899838f55407505cb46ef15a6e2895d3d9862878727538bc6f9dd","locator":"PDF4 Eq1-2; PDF11 Eq6; PDF17-19; PDF25 section5.7; PDF27-28 Eq14/17/19","role":"OWNER_ESTIMATOR_WITH_CONDITIONAL_UNCERTAINTY","finding":"delta_x=ac11*delta and eta=delta/mbar, so eta=delta_x/(ac11*mbar). Scale specification |ac11-1|<0.02 is not a probability law. Segment systematics use estimated-effect RSS; final budget is an inverse-statistical-variance weighted linear mean, not RSS across segments. Reported1sigma and Gaussian residual consistency are not a total model-uniform coverage certificate."},
+    "MICROANALYSIS2020":{"cache":"clk005/freefall/data-analysis-2020v1.pdf","url":"https://arxiv.org/pdf/2012.06484v1","sha256":"e97c0cf261ef7ee194e8a1352d522e4bfc8afc241ba36e31725712255715154f","locator":"PDF11-12 section3.5; PDF23-24 Table1; PDF26 AppendixB1; PDF30 EqB9","role":"CONDITIONAL_CALIBRATION_PROPAGATION","finding":"Normal noises and unbiased calibration estimators are assumptions. ac11 cannot be estimated in the stated scheme; a random-law construction is suggested but not pursued. EqB9 is a conditional variance estimate with neglected terms and estimated parameters. Instrumental quadratic effects are not CLK002 nonlinear-field remainder bounds; ad11 is not ac11."},
+    "MECM2016":{"cache":"clk005/freefall/mecm-2016v1.pdf","url":"https://arxiv.org/pdf/1608.08530v1","sha256":"5e34d0f8bc79cae51f498f34528a8b2f3c641b050aaa5863d98bdaf9c2019027","locator":"PDF8 sectionVE Eq27; PDF13-14 sectionVIG/TableI","role":"PLUG_IN_COVARIANCE_AND_SIMULATION_VALIDATION","finding":"Coefficient covariance uses an estimated covariance plug-in approximation. Simulations test specified configurations; they are not uniform coverage over the fixed model's unknown calibration/material/remainder domain."},
+    "GUM2008":{"cache":"clk005/metrology/JCGM-100-2008.pdf","url":"https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf","sha256":"41bbf068fbc0d7986c98691b2d1af6680cb3044f6a1a89b3560933ed9ef9626c","locator":"PDF35 sections5.2.5/6.2; PDF82 AnnexG1.1-1.3","role":"UNCERTAINTY_SEMANTICS_NOT_ERROR_DATA","finding":"Correlation and distribution assumptions matter. A standard uncertainty is not automatically an interval with a specified coverage probability; expanded uncertainty needs the factor, interpretation and limitations. Historical metrology guidance only, no claim of current compliance."},
+    "VIM_COVERAGE":{"cache":"clk005/metrology/vim-coverage.html","url":"https://jcgm.bipm.org/vim/en/2.37.html","sha256":"9641d8256117b4442ce8f1bdefefbee2f8bc6d278cdc4f2a1fcfad71fa8cde5d","locator":"Definition2.37 and linked2.36","role":"COVERAGE_INTERPRETATION","finding":"State the probability interpretation. A coherent epistemic law and uniform repeated-sampling coverage are distinct; neither may silently be substituted for the other."}
+  },
+  "findings":{
+    "source_sign":"GUENA2012 explicitly uses positive U=GM/r; no sign contradiction with the frozen negative scalar-response coefficient was found.",
+    "operational_calibration":"NOT_ESTABLISHED_BY_REVIEWED_SOURCES",
+    "guaranteed_total_error":"NOT_ESTABLISHED_BY_REVIEWED_SOURCES",
+    "fitted_GM_is_bare_GM":false,
+    "nominal_GM_is_measured_GM":false,
+    "quoted_sigma_is_coverage_certificate":false,
+    "missing_covariance_means_paper_invalid":false,
+    "all_raw_data_required":false,
+    "new_progress":"The missing input is estimator-projected calibration and total error, not a generic GM ratio or mandatory full raw-data archive. Sufficient influence/Gram statistics and certified projected error can be enough."
+  },
+  "calibration_bound":{
+    "conditional_statement":"If v=gamma*u+Z*c+r_v, H=u^T*W*P*u>0, then |gamma_eff-gamma|<=sqrt(r_v^T*W*P*r_v/H). This is weighted Cauchy-Schwarz on range(P), not an empirical bound.",
+    "weaker_exact_condition":"ell^T*(v-gamma*u)=0 also suffices for gamma_eff=gamma; pointwise proportionality is not necessary.",
+    "provided_residual_bound":null,
+    "provided_gamma_eff":null
+  },
+  "freefall_coverage_contract":{
+    "fitted_to_target":"eta=delta_x/(ac11*mbar); ac11*mbar must be kept as a positive calibrated nuisance factor, not silently set to one.",
+    "conditional_set":"If delta_hat_x=a*eta+bias+epsilon, a in [a_min,a_max] with a_min>0, |bias|<=B, and P(|epsilon|<=r_alpha)>=1-alpha, use {eta: exists a in [a_min,a_max], |delta_hat_x-a*eta|<=B+r_alpha}. Calibration intervals with their own failure probabilities join the common union-bound budget.",
+    "provided_total_error_bound":null,
+    "warning":"Do not assign B to the printed1.5e-15 systematic standard uncertainty or V to the square of2.3e-15 without the required justification. Ordinary conditional metrological inference is not refuted."
+  },
+  "remaining_input_contract":{
+    "priority":"One owner-auditable2015 signed annual estimator projection/calibration/error packet: actual u,Z,W or equivalent sufficient Gram/influence statistics; mask/binning/epoch/time/phase/normalization; fixed-model v(x) mapping or residualized template bound over a declared x domain; projected total error law or bias/moment bounds with explicit coverage interpretation.",
+    "other_still_open":"A solar packet alone does not discharge freefall scale and total projected error, full atomic/material sensitivities, higher-order/finite-response remainders or a common joint probability interpretation. These remain explicit inputs, not additional automatic research tasks.",
+    "sufficient_not_unique":"Raw measurements are one route, not a logical requirement if the owner supplies independently auditable sufficient statistics and certified error propagation.",
+    "provided":null
+  },
+  "next_question":"Does a newly supplied source-owned annual projection packet certify gamma_eff(x) and its total projected error over the frozen model's declared validity domain?",
+  "reentry":"New auditable packet or an exact source-audit correction, followed by a bounded review. No unchanged search replay, automatic successor proof, empirical fit or silent comparison adoption.",
+  "non_claims":"No observational detection/exclusion, real annual systematic counterexample, invalidation of the cited experiments, independent holdout, TECT microscopic admission, Pre-A, A/B, spacetime, QFT, GR, horizon, continuum, mass gap or TOE conclusion. Synthetic exact fixtures diagnose non-implications only."
+}
