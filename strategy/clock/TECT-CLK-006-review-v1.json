@@ -1,0 +1,63 @@
+{
+  "schema": "tect/clock-intake-review/1.0",
+  "id": "TECT-CLK-006-review-v1",
+  "date_utc": "2026-10-01",
+  "verdict": "PASS_WITH_OPERATIONAL_SCOPE_AFTER_REPAIRS",
+  "source_hashes": {
+    "strategy/clock/TECT-CLK-006-intake-policy-v1.json": "10fe23ebe0a44368fa916e6ca53d466002e6cd275b26fec4f11330aef81a4104",
+    "strategy/clock/TECT-CLK-006-intake-template-v1.json": "4ee2bf843bac5702903f5306011951746aa423497729c6a1df1854638f910731",
+    "verification/scripts/tect_clk006_intake.py": "809373063f184f7e2dcc9c65280f675928808bb71c453fd536f35a5f98730767",
+    "verification/tests/test_tect_clk006_intake.py": "aff4fc41fa126f058bba7efc4c5151621b2d46ea541faa5da3c0ccfbe3e46c68",
+    "strategy/clock/TECT-CLK-006-owner-request-v1.md": "e63f58ee769ccbd0346b81219ba3ddfead1bdb86a6038101a294c34712d418ca",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-10-01-tect-clk006/tooling.json": "1f5997b1f3cbe90192079129cdec5593382b3a5f405319ad9526dcdf36338f9a"
+  },
+  "primary": {
+    "command": "python -X utf8 verification/scripts/tect_clk006_intake.py --check",
+    "unit_tests": 9,
+    "executed_cases": 54,
+    "skipped_tests": [
+      "test_tect_clk006_intake.IntakeTests.test_symlink_rejection_if_host_permits"
+    ],
+    "fixture_role": "TEST_ONLY_NOT_OBSERVATIONS",
+    "result": "PASS"
+  },
+  "independent": [
+    {
+      "reviewer": "clock_alternative_bridge",
+      "scope": "Archival request, owner/researcher separation, unchanged model/HOLD, no publication inference; separate read-only reviewer in same session, not external peer review.",
+      "result": "PASS_WITH_SCOPE",
+      "request_hash": "e63f58ee769ccbd0346b81219ba3ddfead1bdb86a6038101a294c34712d418ca",
+      "finding": "No raw-data demand or new coverage/theory certification demand. Unknown researcher_mapping cannot authorize reentry; declarations never authenticate permission."
+    },
+    {
+      "reviewer": "earth_clock_discovery",
+      "scope": "Read-only independent adversarial inputs and final code inspection; shared implementation, not independent empirical replication or second validator implementation.",
+      "result": "PASS_AFTER_REPAIRS",
+      "final_script_hash": "809373063f184f7e2dcc9c65280f675928808bb71c453fd536f35a5f98730767",
+      "finding": "Caught uncaught ValueError on a 5000-digit integer and host-dependent replay. Fixed and replayed. Type/path mutations retained HOLD. Unresolved declared locators intentionally remain NOT_EVALUATED; no remaining blocker in quiescent-directory manifest scope."
+    }
+  ],
+  "repairs": [
+    {
+      "objection": "Oversized integer escaped JSON error handling",
+      "disposition": "UPHELD_FIXED",
+      "reproducible_case": "oversized_integer",
+      "change": "Catch JSON ValueError without disabling Python's integer-conversion guard."
+    },
+    {
+      "objection": "Replay failed merely when another host permitted actual symlink creation",
+      "disposition": "UPHELD_FIXED",
+      "change": "Normalize only optional actual-symlink case and its permitted skip; retain deterministic required cases and source hashes."
+    }
+  ],
+  "limits": [
+    "Actual symlink creation skipped with WinError1314; mock reparse guard passed, actual filesystem capability not empirically covered.",
+    "No attachment payload, content locator, identity, permission, novelty, coverage law or theoretical calibration is validated.",
+    "No Lean execution or proof claimed; no new theorem, result/card or PDF checkpoint.",
+    "No request sent, no owner reply received, no sources acquired, no fitting or automatic successor."
+  ],
+  "scientific_status": "HOLD_FOR_EVIDENCE",
+  "mainline_gate_changed": false,
+  "direction_control": "DCTRL-000047 PARK_OR_BLOCK unchanged",
+  "classification": "auxiliary_support"
+}

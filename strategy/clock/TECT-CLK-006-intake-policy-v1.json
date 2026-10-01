@@ -1,0 +1,90 @@
+{
+  "schema": "tect/clock-intake-policy/1.0",
+  "id": "TECT-CLK-006",
+  "date_utc": "2026-10-01",
+  "purpose": "Operational request and manifest intake only; not a scientific reentry or another CLK005 absence audit.",
+  "authority": "Operator requested a new goal and its execution. DCTRL-000047 scientific PARK_OR_BLOCK remains unchanged.",
+  "protected_sources": {
+    "strategy/clock/TECT-CLK-002-prereg-v1.json": "eed93e6aa01b4bacc780bba0a24f53ccf7c6b7f6daab394ae20e54afa270c92f",
+    "strategy/clock/TECT-CLK-005-assessment-v1.json": "8a44a8f5148ebba6a3c4f5ef3b9a498f0b95e5452e1452ed43b24c313df346e3",
+    "strategy/clock/TECT-CLK-005-calibration-contract-v1.json": "da8cfda072cae9768b79f0302617fdbae3e8aefa35652a3a1638ad9f4ecc28a6",
+    "strategy/clock/TECT-CLK-005-moment-correction-v1.json": "7e2f79e92ca35fc6c75d74d5c9c606ea692c6a6a09a0fb7034c11398642342d9"
+  },
+  "target": {
+    "publication_doi": "10.1016/j.crhy.2015.03.010",
+    "result_locator": "Section 5 solar annual Rb87/Cs133 coefficient",
+    "data_role": "RETROSPECTIVE",
+    "comparison_status": "PROPOSAL_NOT_ADOPTED",
+    "model_status": "CLK002_UNCHANGED",
+    "time_status": "CLK002_PHYSICAL_TIME_UNCHANGED_NATIVE_EPOCHS_SEPARATE"
+  },
+  "owner_fields": [
+    "analysis_quantity",
+    "sample_time_support",
+    "potential_template",
+    "masks_and_binning",
+    "estimator_implementation",
+    "nuisance_design",
+    "weights_and_covariance",
+    "published_coefficient",
+    "uncertainty_construction",
+    "coverage_interpretation",
+    "data_dependence"
+  ],
+  "entry_states": [
+    "provided",
+    "unknown",
+    "not_retained",
+    "not_applicable_with_reason"
+  ],
+  "representations": [
+    "estimator_recipe",
+    "epoch_aligned_influence",
+    "projection_functional",
+    "published_coefficient_only"
+  ],
+  "reuse_values": [
+    "review_only",
+    "publicly_redistributable",
+    "unknown"
+  ],
+  "attachment_roles": [
+    "owner_record",
+    "analysis_support"
+  ],
+  "reference_syntax": "attachment_id#declared locator. Byte integrity is checked; locator resolution, semantic support, owner identity and permission authenticity are NOT checked.",
+  "statuses": {
+    "missing": "MISSING",
+    "incomplete": "PARTIAL",
+    "complete": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+    "invalid": "REJECTED"
+  },
+  "invariants": {
+    "scientific_status": "HOLD_FOR_EVIDENCE",
+    "empirical_use_authorized": false,
+    "scientific_reentry_authorized": false,
+    "mainline_gate_changed": false,
+    "publication_authorized": false
+  },
+  "limits": {
+    "manifest_bytes": 2097152,
+    "attachment_bytes": 67108864,
+    "attachments": 64,
+    "string_characters": 4096
+  },
+  "limit_scope": "Tooling resource limits only, not scientific cutoffs. Larger or other-format submissions need explicit intake review, not scientific rejection.",
+  "researcher_obligations": [
+    "Actual v(x), coordinate matching, gamma_eff(x), coupling-domain validity and non-duplicated theory remainders remain researcher obligations.",
+    "An influence row requires epoch/bin alignment; a bare Gram matrix does not calibrate arbitrary new templates.",
+    "Freefall normalization/error, full atomic/material sensitivities and joint coverage interpretation remain open.",
+    "No retrospective observation receives prospective holdout credit."
+  ],
+  "acceptance": "One unsent owner request, one fillable manifest, a local-only closed-schema/hash checker, synthetic adversarial tests, independent review and release-gated integration.",
+  "boundaries": [
+    "No web search, owner contact, new source acquisition, empirical fit, model change, new theorem, physical promotion or automated successor.",
+    "All packet completeness labels concern manifest fields only, not numerical payload, coverage, authenticity or scientific sufficiency.",
+    "The validator never executes, downloads, unpacks, publishes or modifies attachments.",
+    "Actual correspondence and restricted data stay local; receipt does not grant redistribution."
+  ],
+  "exit": "Tooling complete is distinct from empirical admission. Reenter science only after substantive new evidence and a bounded authorized review."
+}

@@ -1,0 +1,346 @@
+{
+  "schema": "tect/clock-intake-tooling-run/1.0",
+  "fixture_role": "TEST_ONLY_NOT_OBSERVATIONS",
+  "source_hashes": {
+    "strategy/clock/TECT-CLK-006-intake-policy-v1.json": "10fe23ebe0a44368fa916e6ca53d466002e6cd275b26fec4f11330aef81a4104",
+    "strategy/clock/TECT-CLK-006-intake-template-v1.json": "4ee2bf843bac5702903f5306011951746aa423497729c6a1df1854638f910731",
+    "verification/scripts/tect_clk006_intake.py": "809373063f184f7e2dcc9c65280f675928808bb71c453fd536f35a5f98730767",
+    "verification/tests/test_tect_clk006_intake.py": "aff4fc41fa126f058bba7efc4c5151621b2d46ea541faa5da3c0ccfbe3e46c68"
+  },
+  "success": true,
+  "unit_tests": 9,
+  "skipped_tests": [
+    "test_tect_clk006_intake.IntakeTests.test_symlink_rejection_if_host_permits"
+  ],
+  "cases": [
+    {
+      "case": "absent_packet",
+      "expected": "MISSING",
+      "actual": "MISSING",
+      "science_hold": true
+    },
+    {
+      "case": "array_root",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "authority_substitution",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "bad_hash",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "bad_refs_type",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "bad_timestamp",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "blank_template",
+      "expected": "PARTIAL",
+      "actual": "PARTIAL",
+      "science_hold": true
+    },
+    {
+      "case": "bool_as_string",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "case_alias_path",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "complete_fields_not_evidence",
+      "expected": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+      "actual": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+      "science_hold": true
+    },
+    {
+      "case": "dangling_ref",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "duplicate_id",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "duplicate_json_keys",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "empty_locator",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "false_holdout",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "invalid_entry_state",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "invalid_hash_syntax",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "invalid_utf8",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "missing_attachment",
+      "expected": "PARTIAL",
+      "actual": "PARTIAL",
+      "science_hold": true
+    },
+    {
+      "case": "missing_ref",
+      "expected": "PARTIAL",
+      "actual": "PARTIAL",
+      "science_hold": true
+    },
+    {
+      "case": "missing_summary",
+      "expected": "PARTIAL",
+      "actual": "PARTIAL",
+      "science_hold": true
+    },
+    {
+      "case": "mock_reparse_rejection",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "nested_unknown",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "non_utc",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "nonfinite_json",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "not_applicable_no_bypass",
+      "expected": "PARTIAL",
+      "actual": "PARTIAL",
+      "science_hold": true
+    },
+    {
+      "case": "not_retained",
+      "expected": "PARTIAL",
+      "actual": "PARTIAL",
+      "science_hold": true
+    },
+    {
+      "case": "oversized_integer",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:../fixture.txt",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:./fixture.txt",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path://server/share",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:/fixture.txt",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:C:/fixture.txt",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:C:fixture.txt",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:NUL.txt",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:fixture.txt ",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:fixture.txt.",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:fixture.txt:stream",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:sub//fixture.txt",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "path:sub\\fixture.txt",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "representation:epoch_aligned_influence",
+      "expected": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+      "actual": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+      "science_hold": true
+    },
+    {
+      "case": "representation:estimator_recipe",
+      "expected": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+      "actual": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+      "science_hold": true
+    },
+    {
+      "case": "representation:projection_functional",
+      "expected": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+      "actual": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+      "science_hold": true
+    },
+    {
+      "case": "representation:published_coefficient_only",
+      "expected": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+      "actual": "MANIFEST_COMPLETE_PENDING_CONTENT_REVIEW",
+      "science_hold": true
+    },
+    {
+      "case": "unexpected_attachment_field",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "unknown_entry",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "unknown_provider",
+      "expected": "PARTIAL",
+      "actual": "PARTIAL",
+      "science_hold": true
+    },
+    {
+      "case": "unknown_reuse",
+      "expected": "PARTIAL",
+      "actual": "PARTIAL",
+      "science_hold": true
+    },
+    {
+      "case": "unknown_role",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "unknown_top",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "unsupported_representation",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "wrong_doi",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "wrong_model",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    },
+    {
+      "case": "wrong_time",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "science_hold": true
+    }
+  ],
+  "boundary": "Manifest syntax and byte checks only; no numerical payload, locator, ownership, permission, novelty or scientific validation. Real symlink test may be skipped by host privilege; mock reparse guard is separate.",
+  "scientific_status": "HOLD_FOR_EVIDENCE",
+  "empirical_use_authorized": false,
+  "mainline_gate_changed": false,
+  "Lean": "Not applicable to archival availability or provenance; not run."
+}
