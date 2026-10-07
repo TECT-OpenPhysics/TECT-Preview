@@ -1,0 +1,26 @@
+{
+  "schema":"tect/clock-orbit-review/1.0",
+  "id":"TECT-CLK-008-REVIEW",
+  "review_kind":"Separately prompted in-session read-only reviewers; not external peer review",
+  "roles":["clk008_galileo_sources: acquired source bytes and product interpretation", "clk008_theory_map: independent action/phase/orbit normalization", "clk008_hostile: independent SymPy/Fraction calculations and actual code/certificate inspection"],
+  "checks":[
+    {"topic":"sign and normalization", "result":"PASS_CONDITIONAL", "detail":"Positive potential, scalar sign, full mass charges, orbit-calibrated denominator and mean-acceleration eta preserved."},
+    {"topic":"absolute atomic sensitivity", "result":"MISSING_INPUT", "detail":"Hydrogen proper-frequency sensitivity remains symbolic; Rb/Cs contrast or an exact integer is not substituted."},
+    {"topic":"units and time", "result":"PASS_SCOPED", "detail":"Dimensionless U/c^2 and v^2/c^2; dN=nu*d_tau with metric proper time. No Markov-time conversion or SP3 velocity conversion."},
+    {"topic":"limit and weak-field scope", "result":"CONDITIONAL_ONLY", "detail":"First-response algebra is checked; physical remainders are not bounded by this audit. No regulator, volume or continuum limit."},
+    {"topic":"hardcode masking", "result":"PASS_TEST_ONLY", "detail":"Symbolic derivation and separate exact Fraction fixture compute outputs; rational fixture values are explicitly test inputs, not observations."},
+    {"topic":"hostile mathematical controls", "result":"PASS", "detail":"Bare-GM, reversed sign and wrong denominator yield nonzero null residuals; negative inferred d^2 can satisfy the null and must fail physical admission separately."},
+    {"topic":"boundary cases", "result":"PASS_LIMITED", "detail":"Primary tests zero coupling, equal charges and blind response. Independent tautological zero checks add no coverage. Denominator and positive-domain conditions remain explicit."},
+    {"topic":"mission-processing response", "result":"HOLD_FOR_EVIDENCE", "detail":"Published phenomenological anomaly sensitivity does not establish the fixed-model clock-plus-force response through the actual estimator."},
+    {"topic":"source product selection", "result":"PASS_BOUNDED", "detail":"Actual pinned repro3 bytes, headers and counts; E18 eligible PHM interval versus excluded E14 RAFS interval; original final mask still absent."},
+    {"topic":"error sufficiency", "result":"CORRECTED_WORDING", "detail":"Full covariance is not logically mandatory. A validated projected-error summary may suffice; it is not established by the acquired packet."},
+    {"topic":"constant ground term", "result":"CLARIFIED", "detail":"constant_ground_only is a legacy fixture label, not an iff theorem; nonconstant sampled contributions can also project out."},
+    {"topic":"Lean path portability", "result":"REPAIRED_SEPARATELY", "detail":"Original path-dependent receipt remains unchanged. New portable wrapper normalizes only exact source-path prefixes and retains compiler warnings and all scientific assumptions."}
+  ],
+  "lean_scope":"Five parameterized real-field identities only; not atomic/EFT reduction, Maxwell optics, actual pipeline, observed error coverage or physical identification.",
+  "empirical_fit":false,
+  "new_result_card":false,
+  "mainline_gate_changed":false,
+  "external_review_invited":true,
+  "non_claims":"No experimental replication, empirical exclusion/detection, physical Pre-A, Sector-A/B, spacetime, QFT, gravity, horizon, continuum, mass gap or TOE conclusion."
+}

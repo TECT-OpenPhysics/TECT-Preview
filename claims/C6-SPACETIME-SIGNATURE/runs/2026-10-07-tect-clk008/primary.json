@@ -1,0 +1,31 @@
+{
+  "check_count": 13,
+  "checks": {
+    "constant_ground_phase_is_linear": true,
+    "coupling_sign": true,
+    "equal_test_charges": true,
+    "ground_sensitivity_remainder": true,
+    "identical_clock_gravity": true,
+    "joint_relation": true,
+    "orbit_clock_blind_direction": true,
+    "orbit_normalized_alpha": true,
+    "phase_first_order": true,
+    "residual_error_expansion": true,
+    "test_body_swap": true,
+    "variable_ground_not_automatically_removed": true,
+    "zero_coupling": true
+  },
+  "derived": {
+    "alpha_orbit": "d**2*qE*(K_H - qO)/(d**2*qE*qO + 1)",
+    "eta": "2*d**2*qE*(qA - qB)/(d**2*qA*qE + d**2*qB*qE + 2)",
+    "phase_first_order": "-K_H*U*d**2*qE - U - V/2"
+  },
+  "domain": "Nonzero D_O and D_F for algebra; positive individual force factors, photon kinetic coefficient and weak-field validity for physical use.",
+  "empirical_fit": false,
+  "not_encoded": "Actual Galileo processing response, link/orbit covariance, absolute H sensitivity, composition and total finite-field errors.",
+  "physical_promotion": false,
+  "prereg_sha256": "a53797b3b5b3390d3942926530f07427972f9cd1728c0f2182442c283633a57d",
+  "schema": "tect/clk008-symbolic/1.0",
+  "script_sha256": "5843500a4844acc3ceb887f0392adf7a43571228f89ba2c94e96454e777441bc",
+  "status": "PASS_CONDITIONAL_ALGEBRA"
+}

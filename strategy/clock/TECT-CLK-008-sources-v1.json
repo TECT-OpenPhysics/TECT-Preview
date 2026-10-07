@@ -1,0 +1,20 @@
+{
+  "schema": "tect/clock-source-receipt/1.0",
+  "id": "TECT-CLK-008",
+  "acquired_utc_date": "2026-10-07",
+  "cache_policy": "Original bytes cached locally only. Full source documents and mission files are not redistributed by this checkpoint. Retrieval and hashes do not certify physical applicability or reuse rights.",
+  "sources": {
+    "DELVA2018": {"filename":"delva2018.pdf","url":"https://arxiv.org/pdf/1812.03711v1","sha256":"1ded2da1c4127ce0be27bd1891a7afaf65ca62739602c03bf8961f4794f06bdd","locators":"PDF2-5, Eqs2-6, TablesI-II","role":"PRIMARY_ESTIMATOR_DEFINITION_GRAVITATIONAL_TEMPLATE"},
+    "HERRMANN2018": {"filename":"herrmann2018.pdf","url":"https://arxiv.org/pdf/1812.09161v1","sha256":"c76148cb25dc898e62403d2e3cedc25718fc7556f7abe59840822d28df08d410","locators":"PDF2-3, Eqs3-6, TableI","role":"PRIMARY_PROCESSING_CROSSCHECK_DIFFERENT_TEMPLATE"},
+    "HEES2015": {"filename":"hees2015.pdf","url":"https://arxiv.org/pdf/1512.05233v1","sha256":"3ebcbecc5799d2c10b4b82845c4d90e31a9e4d345e6a32a7072229e080c5addd","locators":"PDF12 Eqs79-81; PDF15 Eq92; PDF16-17 Eqs99-101","role":"ABSOLUTE_ATOMIC_RESPONSE_AND_REDSHIFT_APPLICABILITY_NOT_SIGN_SUBSTITUTION"},
+    "R3CLK": {"filename":"esoc18990.clk","url":"ftp://gssc.esa.int/esa/great/repro3/esoc18990.clk","sha256":"320426940dac2b5a07de2fe26725213fc42a80a51c79d92d87517b64354ae8e1","locators":"Header and complete E18/E14 records for 2016-05-29","role":"ESTIMATED_CLOCK_PRODUCT_NOT_RAW_TELEMETRY"},
+    "R3SP3": {"filename":"esoc18990.sp3","url":"ftp://gssc.esa.int/esa/great/repro3/esoc18990.sp3","sha256":"419833b4a365cb38f0f7f6146ab9225684040174531880942b507dda9fce278a","locators":"Header, epoch and P/V records, EOF","role":"ESTIMATED_ORBIT_PRODUCT_NOT_JOINT_COVARIANCE"},
+    "R3SRP": {"filename":"esoc18990.srp","url":"ftp://gssc.esa.int/esa/great/repro3/esoc18990.srp","sha256":"38ec29612632880d6c68babf8a27154ea58a3500e330c16eee62a43c4387a866","locators":"FILE/REFERENCE, SRP/DESCRIPTION, SRP/SOLUTION; E201/E18 and E202/E14","role":"FORCE_PARAMETER_SUMMARY_NOT_FULL_NORMAL_MATRIX"},
+    "R3SLS": {"filename":"esoc18997.sls","url":"ftp://gssc.esa.int/esa/great/repro3/esoc18997.sls","sha256":"a31a58c2db007b90c9a293b33b893362ab285827fbee0c738a7811e6782af496","locators":"Report header and passage summaries","role":"SLR_PASSAGE_SUMMARY_NOT_SAMPLE_MATCHED_RESIDUAL_VECTOR"},
+    "UPCLINE": {"filename":"sat_linear_model.dat","url":"ftp://gssc.esa.int/esa/great/upc-clock-estimation/sat_linear_model.dat","sha256":"84b040a80c8fe9fca71d52dc5afb5205b210ce073aa5dd1f626158834eccd571","locators":"E14 row and six-column rows","role":"ALTERNATIVE_PRODUCT_DETRENDING_METADATA_NOT_APPLIED"},
+    "UPCTN": {"filename":"TN.Clocks_data_set_v0.0.pdf","url":"ftp://gssc.esa.int/esa/great/upc-clock-estimation/TN.Clocks_data_set_v0.0.pdf","sha256":"78a47bae82e509258ec25e01f16bddd9120adb8130811173950979f4737bb499","locators":"PDF2 distribution marking; PDF6 Tables1/4 and detrending rule; PDF8-9 reference-clock/reset limitations","role":"LOCAL_ONLY_ALTERNATIVE_PROCESSING_CAUTION","redistribution":"NOT_AUTHORIZED_BY_THIS_AUDIT; public FTP conflicts with document Confidential checkbox"}
+  },
+  "discovery_links": ["https://gssc.esa.int/news/projectgreat/", "https://gssc.esa.int/news/upc-clock-estimation-collection-is-now-available/"],
+  "sampling": "One complete repro3 day and its weekly SLS summary, not all one-week or all-paper data; UPC metadata only, no UPC clock series downloaded. Repro4 week2044 is a distinct later product and is not substituted for the original2015-2017 sample.",
+  "empirical_fit_performed": false
+}

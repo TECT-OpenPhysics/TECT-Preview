@@ -1,0 +1,69 @@
+{
+  "schema":"tect/clock-orbit-assessment/1.0",
+  "id":"TECT-CLK-008",
+  "date_utc":"2026-10-07",
+  "classification":"auxiliary_support",
+  "prereg_sha256":"a53797b3b5b3390d3942926530f07427972f9cd1728c0f2182442c283633a57d",
+  "source_manifest_sha256":"ab985ba8b027c77e87ee71f8959a556a9be8c1aa9437534296a94ab44fe309ab",
+  "model_changed":false,
+  "old_RbCs_contract_changed":false,
+  "physical_time_changed":false,
+  "solar_wait":"PAUSED_BY_OPERATOR_NOT_DISCHARGED",
+  "new_observation_map":"OPERATOR_AUTHORIZED_CONDITIONAL_INVESTIGATION",
+  "conditional_map":"CONSISTENT_WITH_DECLARED_FIRST_RESPONSE_AND_IDEAL_CALIBRATION",
+  "actual_public_product_acquired":true,
+  "actual_processing_transfer":"NOT_ESTABLISHED",
+  "empirical_admission":"HOLD_FOR_EVIDENCE",
+  "sufficiency_verdict":"ACQUIRED_PACKET_INSUFFICIENT_FOR_CONTROLLED_JOINT_TEST",
+  "scope":"Inserted3+1 static spherical weak-field EM-only massless unscreened scalar; proper-time atomic phase; no lattice, volume or continuum limit.",
+  "calibration_assumption":"mu_O=mu_star*(1+d^2*qE*qO) only for an ideal central test-body orbit, compatible coordinates and negligible recoil; not identified with the real product GM.",
+  "relations":{
+    "h":"d^2*qE",
+    "alpha_O":"(K_H-qO)*h/(1+qO*h)",
+    "eta":"DeltaQ*h/(1+qbar*h)",
+    "null":"[DeltaQ+(qO-qbar)*eta]*alpha_O-(K_H-qO)*eta=0",
+    "domain":"Nonzero denominators for algebra; individual positive force factors, nonnegative d^2, positive photon kinetic factor and justified weak-field domain for physical use.",
+    "sufficiency":"Null is necessary only, not a coupling-identification or admissibility certificate."
+  },
+  "provided_inputs":{
+    "public_clock_orbit_day":"2016-05-29 repro3",
+    "eligible_clock_interval":"E18 GSAT0201 PHM-B; final original mask not supplied",
+    "excluded_clock_interval":"E14 GSAT0202 RAFS on selected date",
+    "source_bytes":"Nine acquired files, cached only; hashes in source manifest",
+    "actual_clk002_pipeline_response":null,
+    "absolute_H_sensitivity_error":null,
+    "full_material_source_error":null,
+    "joint_coverage_certificate":null,
+    "total_finite_response_bound":null
+  },
+  "role_firewalls":{
+    "published_alpha_equals_alpha_O":false,
+    "Delva_alpha_equals_Herrmann_alpha":false,
+    "GR_subtraction_proves_circularity":false,
+    "same_Earth_eliminates_all_nuisances":false,
+    "one_value_CLK_supplies_covariance":false,
+    "SLR_passage_summary_is_sample_vector":false,
+    "UPCTN_redistribution_authorized":false,
+    "past_data_are_independent_holdout":false
+  },
+  "evidence_level":["ANALYTIC_CONDITIONAL","EXACT_SYMBOLIC","EXECUTED_TEST_ONLY","SOURCE_BYTE_AND_STRUCTURE_AUDIT","LEAN_PARAMETERIZED_ALGEBRA"],
+  "runs":{
+    "primary.json":"5682b7271f75696f805dc1aeed2a21132d29bd5217c2121f6aba251c86c3919f",
+    "independent.json":"d3e23abbb77d9b390303739e23e9fa86ae7095849e97f65b4ea067d3fde719e1",
+    "lean.json":"b29a2cc04a4c57b1c0bc6edcbd3055ff823b5056dec94206d673a4e67665f93c",
+    "lean-portable.json":"f476873a12f367bda660c1041b93ffb7f04b1119c821ae57e8222bb5e7300085",
+    "sources.json":"56d53c4772bdb1e8e44cd92d549130e0e9dc1713836c941306e94540135c4be3"
+  },
+  "receipt_clarifications":{
+    "lean_replay":"Use lean-portable.json and tect_clk008_lean_portable.py for cross-checkout replay. Original receipt is preserved with its absolute-path diagnostics.",
+    "constant_ground_only":"Legacy independent flag denotes a sufficient constant-frequency fixture, not a necessity theorem or exhaustive nuisance-space classification.",
+    "error_alternatives":"Full joint covariance is not mandatory if a validated projected-error or sufficient-statistic packet supplies the needed coverage. Neither alternative is established here."
+  },
+  "one_next_question":"Does the actual GREAT configuration or validated estimator response supply the retained fixed-CLK002 clock-plus-orbit signal with GM calibration, ground reference, mask/nuisance projection and a projected-error envelope?",
+  "reentry":"New processing configuration, response certificate or an exact source-audit correction; not a replay of the solar-owner search or another arbitrary finite fit.",
+  "automatic_successor_budget":0,
+  "empirical_fit_performed":false,
+  "mainline_gate_changed":false,
+  "physical_promotion":false,
+  "non_claims":"No physical Pre-A, Sector-A/B, spacetime, QFT, gravity, horizon, continuum, mass gap or TOE derivation. No empirical detection, exclusion or novel gravity theorem."
+}
