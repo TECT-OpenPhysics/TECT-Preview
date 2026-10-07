@@ -1,0 +1,44 @@
+{
+  "schema": "tect/great-response-assessment/1.0",
+  "id": "TECT-CLK-009",
+  "date_utc": "2026-10-07",
+  "classification": "auxiliary_support",
+  "full_goal_completed": false,
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "mainline_gate_changed": false,
+  "physical_promotion": false,
+  "model_changed": false,
+  "physical_time_changed": false,
+  "empirical_fit_performed": false,
+  "external_message_sent": false,
+  "primary_estimator": "Delva2018 final gravitational-only GREAT estimate, retained from CLK008 source roles; do not identify with Herrmann2018 combined kinetic/gravitational alpha, UPC clock products or Finke2023 posterior",
+  "scope": "Fixed CLK002 externally inserted3+1 EM-only massless unscreened scalar, metric proper time, first static spherical weak-field response. Real force, clock and signal-path processing must all be accounted for at their justified scope; no lattice/volume/continuum limit.",
+  "completion_audit": {
+    "campaign_and_exact_inputs": "PARTIAL: published methods and products; final sample/product hashes, mask and historical run still unprovided",
+    "actual_combined_response": "MISSING: no executed historical pipeline or source-validated full CLK002 directional transfer",
+    "retained_response_value": null,
+    "justified_error_envelope": null,
+    "independent_response_reproduction": "NOT_RUN: independent checks here audit sources and scope, not the actual response",
+    "full_objective": "NOT_ACHIEVED"
+  },
+  "new_evidence": [
+    "NAPEOS equations6.40-6.41 retain global/orbit-to-epoch-clock cross-blocks; epochwise clocks alone do not establish orbit independence. The printed reduced RHS in6.42 omits a required cross-block transpose factor under its preceding definitions.",
+    "UPC2021 calls repro3 the penultimate ESOC GREAT solution and distinguishes repro4 and its own second-stage estimator. The exact mapping to the final Delva2018 sample remains to be confirmed, not presumed.",
+    "UPC2021 explicitly retains dependence on pre-estimated orbits/slow parameters and discusses radial orbit-clock correlation. Its fixed-orbit second stage does not remove the missing first-stage response.",
+    "Finke2023 provides postproduct GLS with residual-estimated AR1 covariance and selection rules. Its orbit sensitivity study is SRP-restricted and uses external clocks; it does not provide the combined scalar perturbation response.",
+    "Herrmann2018 does report phenomenological clock-data injection tests. Their existence corrects an overbroad absent-injection description, but the tests do not establish the fixed CLK002 force-plus-clock transfer.",
+    "Finke2023 printed140 revises magnetic systematic uncertainty within its own analysis. Neither the older nor revised published uncertainty is a guaranteed error bound for a different physical signal.",
+    "Finke2023 equations4.35-4.36 do not normalize an inverse-variance mean literally as printed. This is a printed-expression inconsistency; it is not evidence that the implemented experiment used the printed expression."
+  ],
+  "one_missing_input": "A campaign-identified, owner-auditable full CLK002 directional response through orbit/clock estimation AND the selected final estimator, with response error/coverage and declared parameter-domain/remainder control; alternatively the actual reproducible configuration/data needed to derive and independently validate it.",
+  "sufficient_delivery_alternatives": [
+    "Exact historical software/configuration plus input hashes, calibration/datum, priors/constraints, masks/weights, processing and systematic/error definitions enabling full replay and perturbation differentiation",
+    "Source-validated compressed directional response at the selected estimator, covering clock+force+link and calibration response, with a justified projected-error certificate and applicability domain"
+  ],
+  "separate_obligations": ["Absolute atomic and full material sensitivities", "Bare-versus-fitted GM calibration", "Multipoles, tides, propagation and finite-response error coverage", "Retrospective data have no independent prospective-holdout credit"],
+  "next_action": "Obtain operator sending authority/identity for the unsent archival enquiry, then obtain an owner reply or a substantively new public exact configuration. Do not run another unchanged absence search, surrogate fit or automatic successor theorem.",
+  "reentry": "New final-analysis product/configuration or validated full response/error packet, or an exact source-audit correction. Contact approval alone is operational, not scientific admission.",
+  "evidence_level": ["PRIMARY_SOURCE_APPLICABILITY_AUDIT", "BYTE_PROVENANCE_CHECK", "IN_SESSION_INDEPENDENT_AND_HOSTILE_REVIEW"],
+  "lean": "NOT_RUN: no new physical response theorem is established; previous parameterized algebra does not discharge this empirical input",
+  "non_claims": "No physical Pre-A, Sector-A/B, spacetime, QFT, gravity, horizon, continuum, mass gap or TOE derivation. No empirical detection/exclusion, no invalidation of GREAT, no claim that all public inputs are absent."
+}

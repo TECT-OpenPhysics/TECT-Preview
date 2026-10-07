@@ -1,0 +1,60 @@
+{
+  "actual_response_verified": false,
+  "evidence_level": "BYTE_PROVENANCE_ONLY",
+  "id": "TECT-CLK-009",
+  "repository": {
+    "documents": {
+      "strategy/clock/TECT-CLK-009-admission-v1.json": "fa37c6fac8ef564fb74754fa27cbee9cb42dddb540156cbd6094a68cbe751395",
+      "strategy/clock/TECT-CLK-009-assessment-v1.json": "8f4ebd1f036a787940fcb2beced73337b300b7a9811321e2ae9300635992dcf2",
+      "strategy/clock/TECT-CLK-009-checkpoint-v1.md": "a66dff93aee62183eaadc8bd6a14b47d8330a1a9e61a6368614c570859ff38c8",
+      "strategy/clock/TECT-CLK-009-owner-request-v1.md": "86c4d85b10a2d11817a4a630a36aae3081842016269e66d6446fe067c6755ff9",
+      "strategy/clock/TECT-CLK-009-sources-v1.json": "932e21aaf05d5d66ba7d95bc73698b3940e32e26657f5a79f0115a6d3b17eb65",
+      "verification/scripts/tect_clk009_sources.py": "4a00378b90a164f97c45c9f5882eb96874b84ad581c4d600dae47c13089e0873"
+    },
+    "protected_sources": {
+      "strategy/clock/TECT-CLK-002-prereg-v1.json": "eed93e6aa01b4bacc780bba0a24f53ccf7c6b7f6daab394ae20e54afa270c92f",
+      "strategy/clock/TECT-CLK-005-calibration-contract-v1.json": "da8cfda072cae9768b79f0302617fdbae3e8aefa35652a3a1638ad9f4ecc28a6",
+      "strategy/clock/TECT-CLK-008-assessment-v1.json": "c259dc1fad64c658592de9e5709c535c94210fc56acf6a9e2651e2cc7ba684e6"
+    },
+    "selftests": [
+      "exact_bytes_accepted",
+      "changed_bytes_rejected",
+      "html_instead_of_pdf_rejected",
+      "wrong_pin_rejected",
+      "path_escape_rejected",
+      "schema_mutation_rejected",
+      "id_mutation_rejected",
+      "evidence_level_mutation_rejected"
+    ],
+    "source_pins": {
+      "DELVA2018": "1ded2da1c4127ce0be27bd1891a7afaf65ca62739602c03bf8961f4794f06bdd",
+      "FINKE2023": "021d2ddfb2ffe822f4c2f70620960daefd27f73826e0940ae03214dbb01fe21e",
+      "HERRMANN2018": "c76148cb25dc898e62403d2e3cedc25718fc7556f7abe59840822d28df08d410",
+      "NAPEOS2009": "085b102bd95ece09ff43bdbfc30b59bbdc7b3477865d3464d1f19abfe39ecdd9",
+      "UPC2021": "5f07c6ea2a866e481938fb66f7bdda04639f5b6bf993c55450dba367f0c7154b"
+    }
+  },
+  "schema": "tect/source-provenance-run/1.0",
+  "source_bytes": {
+    "DELVA2018": {
+      "bytes": 671708,
+      "sha256": "1ded2da1c4127ce0be27bd1891a7afaf65ca62739602c03bf8961f4794f06bdd"
+    },
+    "FINKE2023": {
+      "bytes": 87427362,
+      "sha256": "021d2ddfb2ffe822f4c2f70620960daefd27f73826e0940ae03214dbb01fe21e"
+    },
+    "HERRMANN2018": {
+      "bytes": 291333,
+      "sha256": "c76148cb25dc898e62403d2e3cedc25718fc7556f7abe59840822d28df08d410"
+    },
+    "NAPEOS2009": {
+      "bytes": 814709,
+      "sha256": "085b102bd95ece09ff43bdbfc30b59bbdc7b3477865d3464d1f19abfe39ecdd9"
+    },
+    "UPC2021": {
+      "bytes": 5678227,
+      "sha256": "5f07c6ea2a866e481938fb66f7bdda04639f5b6bf993c55450dba367f0c7154b"
+    }
+  }
+}

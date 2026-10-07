@@ -1,0 +1,24 @@
+{
+  "schema":"tect/great-response-acquisition/1.0",
+  "id":"TECT-CLK-009",
+  "date_utc":"2026-10-07",
+  "base_commit":"690e8dc1f21f2d7e29af1a45b7e7eb56ca2717c4",
+  "authority":"The operator set an explicit persistent goal to obtain the actual GREAT processing configuration or a validated response and determine the retained fixed-CLK002 clock-plus-orbit signal with its error envelope.",
+  "timing":"Admission records source-discovery leads before any new response computation. It is not a claim that the preceding source search was preregistered.",
+  "full_objective":"Establish the actual retained fixed-CLK002 clock-plus-orbit response in the final GREAT estimate, with a justified error envelope on a declared domain. Source acquisition, generic estimator algebra, a clock-only invariance identity or a synthetic injection alone does not complete this objective.",
+  "protected_sources":{
+    "strategy/clock/TECT-CLK-002-prereg-v1.json":"eed93e6aa01b4bacc780bba0a24f53ccf7c6b7f6daab394ae20e54afa270c92f",
+    "strategy/clock/TECT-CLK-005-calibration-contract-v1.json":"da8cfda072cae9768b79f0302617fdbae3e8aefa35652a3a1638ad9f4ecc28a6",
+    "strategy/clock/TECT-CLK-008-assessment-v1.json":"c259dc1fad64c658592de9e5709c535c94210fc56acf6a9e2651e2cc7ba684e6"
+  },
+  "new_source_leads":[
+    {"id":"NAPEOS2009","url":"https://dgnl7.esoc.esa.int/attachments/32834429/1/NAPEOS_MathModels_Algorithms.pdf","sha256":"085b102bd95ece09ff43bdbfc30b59bbdc7b3477865d3464d1f19abfe39ecdd9","role":"Owner algorithm specification; exact GREAT campaign applicability not yet established"},
+    {"id":"SYRTE-EXEC","url":"https://nebula.esa.int/sites/default/files/neb_tec_study/1301/C4000115150ExS.pdf","sha256":"741ac9e496ccda169e67c661d844b34f93efbeb151b998b5bcea283c1bde32c6","role":"Owner executive summary, not assumed full processing configuration"}
+  ],
+  "scope":"Unchanged CLK002 external3+1 EM-only massless unscreened scalar, first weak-field response and metric proper time. Preserve the old Rb/Cs contract. Galileo phase, orbit-force, reference-clock and link response must be treated together at their justified scope. No lattice, volume or continuum limit.",
+  "acceptance":["Exact campaign and estimator selection, time/frame/units, baseline, mask, weights, nuisance and constraint roles identified with source provenance", "Retained full fixed-model response established by actual operator/configuration or a source-validated sufficient response", "Response uncertainty and finite-domain remainder or explicitly limited statistical coverage justified, not copied from a different anomaly template", "Independent and hostile applicability/reproduction checks pass; no unknown input is set to zero"],
+  "initial_work":"Three bounded source streams inspect public owner products, papers/supplements/theses and estimator mathematics. Follow substantive new primary-source leads; review before any empirical fit or expansion beyond the fixed model.",
+  "forbidden":["Replacing CLK002 by a clock-only phenomenological alpha", "Equating epochwise clock parameters with zero orbit-clock coupling", "Using a current generic analysis strategy as historical GREAT configuration", "Treating a finite synthetic injection as actual campaign validation", "Treating 1sigma as a deterministic total error bound", "Inventing material sensitivities or unknown nuisance settings", "External messages, paid access or access-control bypass without separate authorization"],
+  "completion_policy":"Keep the persistent goal active until all acceptance requirements hold. Record partial progress honestly. A repository checkpoint, source search or conditional theorem is not goal completion.",
+  "non_claims":"No physical Pre-A, Sector-A/B, spacetime, QFT, gravity, horizon, continuum, mass gap or TOE derivation; no empirical detection or exclusion without full admission."
+}

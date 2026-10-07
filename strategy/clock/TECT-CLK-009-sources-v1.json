@@ -1,0 +1,64 @@
+{
+  "schema": "tect/clock-source-receipt/1.0",
+  "id": "TECT-CLK-009",
+  "acquired_utc_date": "2026-10-07",
+  "cache_policy": "Source bytes remain in ignored local storage. This manifest does not redistribute PDFs or certify scientific applicability. Cache paths are relative to internal/clock.",
+  "sources": {
+    "NAPEOS2009": {
+      "cache_path": "clk009/sources/napeos2009.pdf",
+      "url": "https://navigation-office.esa.int/attachments/32834429/1/NAPEOS_MathModels_Algorithms.pdf",
+      "sha256": "085b102bd95ece09ff43bdbfc30b59bbdc7b3477865d3464d1f19abfe39ecdd9",
+      "locators": "Printed/PDF75-79, sections6.2.3-6.2.5, especially equations6.40-6.42; PDF132,143-144 for GNSS processing",
+      "role": "Owner algorithm specification, issue1.0 dated2009-11-05; not the historical GREAT run configuration",
+      "root_visual_review": [78, 79]
+    },
+    "FINKE2023": {
+      "cache_path": "clk009/sources/finke2023.pdf",
+      "url": "https://media-api.suub.uni-bremen.de/server/api/core/bitstreams/ba219627-a80c-41ae-b42a-0ac3b3a5025c/content",
+      "doi": "10.26092/elib/2299",
+      "sha256": "021d2ddfb2ffe822f4c2f70620960daefd27f73826e0940ae03214dbb01fe21e",
+      "locators": "Printed89,91 SRP-only sensitivity/external clocks; printed105-119 data/GLS/aggregation; printed140 systematic revision. PDF page=printed page+13",
+      "role": "Actual ZARM-related postproduct methods and revised error analysis; not a complete original2018 implementation or combined CLK002 response",
+      "root_visual_review": [130, 132, 153]
+    },
+    "UPC2021": {
+      "cache_path": "clk009/sources/upc2021.pdf",
+      "url": "https://upcommons.upc.edu/bitstreams/cda53bd8-501f-44d2-89c8-2c7f0bbdac6b/download",
+      "doi": "10.1002/navi.453",
+      "sha256": "5f07c6ea2a866e481938fb66f7bdda04639f5b6bf993c55450dba367f0c7154b",
+      "locators": "Printed817-818 and820, PDF3-4 and6, equations3-6",
+      "role": "Published alternative second-stage clock estimator and repro3/repro4 provenance; not an interchangeable GREAT final estimator",
+      "root_visual_review": [3, 4, 6]
+    },
+    "HERRMANN2018": {
+      "cache_path": "clk008/sources/herrmann2018.pdf",
+      "url": "https://arxiv.org/pdf/1812.09161v1",
+      "sha256": "c76148cb25dc898e62403d2e3cedc25718fc7556f7abe59840822d28df08d410",
+      "locators": "PDF3, paragraph after equation6 and subsequent radial orbit-error discussion",
+      "role": "Reports nonzero-alpha injection into clock data and synthetic drift/random-walk checks; no certified full CLK002 force-plus-clock injection"
+    },
+    "DELVA2018": {
+      "cache_path": "clk008/sources/delva2018.pdf",
+      "url": "https://arxiv.org/pdf/1812.03711v1",
+      "sha256": "1ded2da1c4127ce0be27bd1891a7afaf65ca62739602c03bf8961f4794f06bdd",
+      "locators": "PDF2-5, equations2-6 and TablesI-II; exact processing supplemental referenced in the article",
+      "role": "Primary target remains the published gravitational-only estimator; ZARM and UPC are source cross-checks, not pooled estimates"
+    }
+  },
+  "acquisition_boundaries": [
+    "The arXiv1812.03711v1 source archive contained the main TeX file and four figure PDFs, not an actual-run configuration or supplemental processing code.",
+    "An observed APS supplemental route did not deliver the supplement through available public retrieval; this is not proof that the supplement is nonexistent.",
+    "Current generic ESA analysis-strategy pages are not identified with the historical GREAT run.",
+    "Public GREAT listings supplied products, not an acquired full response certificate. No exhaustive claim about all public archives is made.",
+    "Executive summaries and the2019 proceedings were inspected as discovery context; their summaries are not additional independent datasets."
+  ],
+  "contact": {
+    "verified_on": "2026-10-07",
+    "official_page": "https://gssc.esa.int/contact/",
+    "official_form": "https://gssc.esa.int/contact/submit/",
+    "email": "gssc-helpdesk@cosmos.esa.int",
+    "status": "UNSENT; operator identity and explicit sending authority required",
+    "privacy": "No repository files, research packet, credentials or user identity were submitted. Public form has mandatory identity fields, consent and CAPTCHA; no fabricated affiliation."
+  },
+  "empirical_fit_performed": false
+}

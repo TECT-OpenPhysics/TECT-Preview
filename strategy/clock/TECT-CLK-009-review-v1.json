@@ -1,0 +1,19 @@
+{
+  "schema": "tect/clock-source-review/1.0",
+  "id": "TECT-CLK-009",
+  "date_utc": "2026-10-07",
+  "scope": "Source applicability, provenance and request/checkpoint accuracy. No reproduction of actual GREAT response or error envelope.",
+  "reviews": [
+    {"reviewer": "clk008_galileo_sources", "independence": "Separate read-only in-session source/contact stream", "finding": "Confirmed official helpdesk and public request route, no submission. Actual final campaign correspondence must be asked rather than assumed; no new full configuration acquired."},
+    {"reviewer": "clk008_theory_map", "independence": "Separate read-only in-session source/equation review", "finding": "Finke source limits, printed mean-normalization inconsistency and Herrmann clock-data injection scope agree with the checkpoint. Exact stdout symbolic elimination and single-observation/rescaling checks support the transcription caution, not actual experiment replication.", "clarification_applied": "Clock-data-only explicitly includes Herrmann's gravitational/Doppler template; it does not mean gravitational-only."},
+    {"reviewer": "clk008_hostile", "independence": "Separate read-only in-session source/code review and original-PDF replay", "finding": "No blocking overclaim, source substitution or contact/privacy defect in the reviewed checkpoint. Replayed source bytes and protected file checks; actual_response_verified=false.", "hardening_applied": "Receipt schema, task ID and provenance-only evidence level are now checked and each has an adversarial mutation self-test."}
+  ],
+  "final_script_sha256": "4a00378b90a164f97c45c9f5882eb96874b84ad581c4d600dae47c13089e0873",
+  "reproduction": "python -X utf8 verification/scripts/tect_clk009_sources.py --check --cache internal/clock",
+  "primary_disposition": "PASS_PROVENANCE_ONLY; original source hashes and immutable protected inputs verified",
+  "actual_combined_response": "NOT_VERIFIED",
+  "error_envelope": "NOT_ESTABLISHED",
+  "lean": "NOT_RUN; absence of actual response inputs is not resolved by parameterized algebra",
+  "external_review": "Not performed; external source/implementation review is invited after the pinned configuration or certificate is obtained.",
+  "non_claims": "No physical promotion, no numerical retained response, no detection/exclusion, no invalidation of GREAT and no completion of the persistent goal."
+}
