@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING](#ng-2026-10-14-pah-v2-rd001-displayed-freezing) | nontrivial original-time dynamics of fixed source-displayed readouts | R-575 proves uniform-on-finite-time Gibbs-L2 freezing for every fixed Lipschitz displayed readout at fixed carrier, while an invariant plaquette average retains positive variance; no whole-model or physical no-go |
 | [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](#ng-2026-09-14-pah-v2-sg001-fixed-time) | original-time semigroup convergence for the unchanged R-573 fixed character | R-574 gives original fine-Gibbs norm at least 1/5 at fixed time 1/10 beyond every cutoff threshold; no automatic weakened successor |
 | [NG-2026-09-13-PAH-V2-GD002-GIBBS-L2](#ng-2026-09-13-pah-v2-gd002-gibbs-l2) | full-cylinder original fine-Gibbs generator Cauchy under the adopted PAH-v2 comparison | R-573 gives one fixed invariant character with all-state defect at least seven beyond every cutoff threshold; state consistency and semigroup comparison remain separate |
 | [NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY](#ng-2026-09-12-pah-v2-gd001-sup-cauchy) | full-cylinder sup generator Cauchy under the adopted PAH-v2 comparison | R-572 gives a fixed epsilon=1 indicator with exact defect norm one at every cutoff pair; no Gibbs-L2 or physical no-go follows |
@@ -10914,6 +10915,38 @@ target, if any, should follow while preserving model and time? Reopen this
 negative result only for an exact source/domain/witness/floor-identity error.
 No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass gap
 or TOE claim follows; T-054's gate and C6 T1 are unchanged.
+
+### NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING -- displayed readout nontriviality
+
+**Branch / claim.** The separately preregistered diagnostic of whether
+fixed source-displayed bounded Lipschitz invariant readouts provide
+nontrivial dynamics on unchanged PAH-v2 original Markov time at the first
+local-state-cutoff stage. This does not replace the old CRT cylinder target.
+
+**Failure mode.** Exact total amplitude conservation bounds the full
+functional and all rates; every original signed PH/TR/LK/AP move shrinks
+in the displayed metric. Full finite contraction/Duhamel proves freezing.
+An independent reversible-state proof gives the explicit bound
+Lip(F)*sqrt(T H)*2^(-r). The fixed source plaquette average has Gibbs
+variance at least exp(-2 beta B)/(2p)>0, so static collapse is not the cause.
+Constants are cutoff-uniform at fixed geometry/epsilon/parameters, not
+uniform in subsequent physical or volume limits.
+
+**Evidence.** R-575 / EXP-001831, frozen preregistration, two analytic
+derivations, independent and hostile final-hash reviews, four replayable run
+JSONs, six parameterized Lean declarations and one synthesis PDF.
+strategy/pa-hyp/PAH-v2-RD-001-result-v1.1.json pins current source/evidence
+bytes; EXP-001832 records the governed-footer packaging correction only.
+Reproduce python -X utf8 verification/scripts/pah_v2_rd001_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages as one line.
+
+**Consequence.** The freezing proposition is PROVED; a nontrivial
+original-time displayed-readout limit at this fixed-carrier first stage
+is obstructed. No repaired CRT comparison, all-observable/all-model no-go,
+limiting process, T-054 gate/C6 tier change, physical Pre-A, spacetime,
+QFT, gravity, continuum, mass gap or TOE. Preserve all old sources and
+R-573/R-574. No automatic rate/time rescaling or successor. Reenter only
+for an exact proof/source error or separately authorized load-bearing input.
 
 ### NG-2026-09-14-PAH-V2-SG001-FIXED-TIME -- original-time semigroup comparison
 

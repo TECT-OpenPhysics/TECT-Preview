@@ -2,6 +2,27 @@
 
 **Tier**: T1 (TSv2) · **Lifecycle**: ACTIVE · **Last review**: 2026-06-09
 
+## Auxiliary readout checkpoint R-575 (2026-10-14)
+
+PAH-v2-RD-001 proves original-time freezing for every preregistered fixed
+bounded Lipschitz gauge/anchor-invariant displayed-field readout at each
+fixed admitted finite carrier and positive epsilon. The explicit bound is
+Lip(F)*sqrt(T H)*2^(-r); the average real elementary plaquette has original
+Gibbs variance at least exp(-2 beta B)/(2|P|)>0, with B and H derived in
+the synthesis. Thus the lack of limiting motion is not a constant-readout
+artifact. Primary, non-importing independent, hostile and six partial Lean
+checks pass; the all-index proof is analytic, not inferred from fixtures.
+
+Certificate: strategy/pa-hyp/PAH-v2-RD-001-result-v1.1.json; exploration
+EXP-001831; note notes/pah-readout-freezing-261014-v1.0.tex.txt.
+This is a scoped negative diagnostic for nontrivial displayed dynamics,
+not a repair of R-573/R-574 or a general model refutation. The full cylinder
+algebra, comparison, model, state and time are unchanged. C6 remains T1 OPEN,
+and T-054's active gate is unchanged. No physical Pre-A, spacetime, QFT,
+gravity, infinite-volume/continuum or TOE conclusion. No automatic successor;
+reentry requires an exact source/proof error or a separately authorized
+load-bearing model/physical-observable input.
+
 ## Statement
 
 $$

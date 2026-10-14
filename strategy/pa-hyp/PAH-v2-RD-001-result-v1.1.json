@@ -1,0 +1,121 @@
+{
+  "schema": "tect/pah-v2-rd001-result/1.1",
+  "result_id": "R-575",
+  "task_id": "T-054",
+  "exploration_id": "EXP-001831",
+  "date": "2026-10-14",
+  "version": "1.1.0",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "verdict": "PROVED",
+  "classification": "negative_result",
+  "verdict_scope": "Universal original-time freezing in the preregistered fixed-carrier displayed-readout scope, with a cutoff-uniform positive invariant plaquette variance. Negative against nontrivial displayed dynamics on this original time; not a general model no-go.",
+  "claim_bearing": true,
+  "host_claim_promoted": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "base_commit": "fe2307f4dff4dce07f60f26e10af838d25da9c63",
+  "question": "For every fixed admitted h,N, fixed parent-domain real parameters with epsilon>0, every fixed bounded Lipschitz gauge/anchor-invariant local displayed-field readout F, and every finite T, is sup_(0<=t<=T)||S_r(t)f_r-f_r||_(L2(pi_r)) -> 0 as r->infinity, with f_r=F(s_r,psi_r,U_r)?",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/owner-decisions/PreA-focus-no-contact-20261014.json": "82688f5860e94e243a455a33fed947e44c0319128e6e76df10fc829e8a1266d2",
+    "strategy/pa-hyp/PAH-v2-RD-001-prereg-v1.json": "86021a47783189e6e29f86cd24d14e0e1eaf8cfa2d943f6372099912a5571528",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2"
+  },
+  "evidence_hashes": {
+    "verification/scripts/pah_v2_rd001_hostile.py": "75bfd539f48ef13a57106e18014bb2176803d0b7886c3fccc4d07cab06615b8f",
+    "verification/scripts/pah_v2_rd001_independent.py": "6fd4e7c0c3c1b68381d18aa1adb7c6c56b49d0388e9ef2bb95ca7fe114c0a6eb",
+    "verification/scripts/pah_v2_rd001_lean.py": "4a7d64a48b26045dc7d112d4d089a18e1a955d6981c66985bcbc86dfbe348e7d",
+    "verification/scripts/pah_v2_rd001_primary.py": "56b85bfc995cd4207608de8df5c50a6a2192e144c65413344d6852b3ce396731",
+    "verification/scripts/pah_v2_rd001_verify.py": "af0bd857e23d54824d7cfbdd01911744f8f2b264fcc73ab3c9e02aa156e1165c",
+    "verification/lean/Tect/PahV2ReadoutFreezing.lean": "81eb71d260e76ff17439c074722df4f585f67f9f5924fe44cf8dd1baecea73e9",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-10-14-pah-v2-rd001/hostile.json": "9195547bd4040ab400774cf27d47319633eadf24b10a4a8511771dc47281cbbe",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-10-14-pah-v2-rd001/independent.json": "eae3cf68c4378a2edcbcaf23f1cd6d91dd973de45cd6c356bcd013412e7cd456",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-10-14-pah-v2-rd001/lean.json": "382d9bd36211a3352d233a4b4b669ad33c11a080aa0d46492b4f6486900d4abe",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-10-14-pah-v2-rd001/primary.json": "c84e13c32a15e2091de13f857d71b1d647b167cd55e3f37776c84e7cbe33e9c1",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-readout-freezing-261014-v1.0.pdf": "f20abefcc7f75080767a57b8259443cc9bdba731209898fd01b4d6b7cdc5d925",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-readout-freezing-261014-v1.0.tex.txt": "01b5a758af6d062328ec9e718a5193be830e34b8bc3c61b557fe009d9645e279",
+    "strategy/pa-hyp/PAH-v2-RD-001-review-v1.1.json": "651fd70edebbfb52f8926638a4e0cad3c58dc94995756382c854968cd1388520"
+  },
+  "exact_scope": {
+    "geometry": "Exactly the adopted finite open square G_(h,N), with its source anchors, stored orientations and all elementary faces; fix h,N before r. No new carrier.",
+    "parameters": "All original real parameters fixed across r, including 0<epsilon<=1, beta>0, nu>0, positive source couplings and finite possibly negative m2/lambda4. Fixed R0>0 and integers 1<=q0<=m0.",
+    "cutoffs": "K_r is product of the first r+1 primes; M_s=2^r, M_psi=m0*4^r, Rmax=R0*2^r, Q=q0*2^r. All hidden integer labels and all valid signed PH/TR/LK/AP roots retained.",
+    "state": "Original full tuple counting Gibbs pi_r=exp(-beta F_r)/Z_r; no conditional, quotient, fitted or replacement state.",
+    "dynamics": "Original full finite generator on C^(Omega_r), S_r(t)=exp(t L_r). Rates and mobility from the pinned parent; stationary initial-time convention and original external stochastic time.",
+    "displayed_metric": "d((s,psi,U),(s',psi',U'))=sum_v |s_v-s'_v|+sum_v |psi_v-psi'_v|+sum_e |U_e-U'_e|, using complex chord distance, not integer-label or discontinuous principal-angle distance.",
+    "readouts": "One fixed bounded complex-valued F on the displayed-field space, Lipschitz with an r-independent finite constant in the declared metric, invariant under gauge and source-preserving anchor automorphisms. Quantification is over every such fixed F, not uniform over unbounded Lipschitz constants.",
+    "sampling": "Direct evaluation on each Omega_r only. Not an assertion that these sampled f_r are the old fixed CRT cylinder or that an inter-cutoff common Hilbert space exists.",
+    "order": "Only r->infinity at each fixed h,N and epsilon. No h/N/epsilon/beta limit or interchange."
+  },
+  "proof": {
+    "amplitude": "sum_v |psi_v|=(Rmax/Mpsi)Q=A=R0*q0/m0, exactly on the full tuple state.",
+    "absolute_energy_bound": "b0=lambda_s(1-epsilon)^2/2+|m2|A^2/2+|lambda4|A^4/4+eta6*A^6/6+g*A^2/2; B=v*b0+kappa_s*e*(1-epsilon)^2/2+2*kappa_D*e*A^2/epsilon+2*kappa_g*p/epsilon.",
+    "rate_cap": "Original displayed c_a=m_a exp(-beta Delta F/2) <= exp(beta B); no added rate multiplier.",
+    "jump_sum": "D_r=[2v(1-epsilon)+4e R0/m0]2^(-r)+4*pi*(v*A+e)/K_r.",
+    "primary": "sup_(0<=t<=T)||S_r(t)f_r-f_r||_L2(pi_r) <= T*Lip(F)*exp(beta B)*D_r -> 0.",
+    "independent": "For each signed partial root, sum_x pi_r(x)c_a(x)<=1. E_r(f_r)<=Lip(F)^2 H*4^(-r). Finite weighted diagonalization gives error<=Lip(F)*sqrt(T H)*2^(-r).",
+    "H": "pi^2*(v*A^2+e)+4e*(R0/m0)^2+v*(1-epsilon)^2.",
+    "variance_witness": "W=p^(-1) sum_(b in P) Re U_b; bounded, gauge and anchor-automorphism invariant, Lip(W)<=2/p.",
+    "variance": "Original Gibbs Var(W)>=exp(-2 beta B)/(2p)>0 for all r. Uniform counting is a comparison measure, not a replacement state. Its variance is 1/p at K=2, 1/(2p) at K>=3; Fourier orthogonality, not adjacent-face independence.",
+    "common_limit": "NOT_CONSTRUCTED; direct sampled readouts are not CRT transported fixed cylinders."
+  },
+  "assumptions": [
+    "Exactly the pinned functional, full integer-counting space, signed roots and literal midpoint rates.",
+    "Fixed admitted h,N; all parent couplings fixed, 0<epsilon<=1, beta,nu>0, R0>0, integers 1<=q0<=m0.",
+    "Each F is fixed with an r-independent finite Lipschitz constant in the preregistered complex chord metric.",
+    "Finite matrix algebra and elementary character sums, with source hypotheses derived in the synthesis."
+  ],
+  "missing_assumptions": [],
+  "verification": {
+    "primary": "PASS: source/hash, exact symbolic bounds, all-family source-root controls and exact Fourier fixtures.",
+    "independent": "PASS: non-importing implementation; exact algebra/character controls and full original r=0 generator with floating finite uniformization. Analytic second proof separately reviewed.",
+    "hostile": "PASS: 36 exact controls and nine synthesis objections. Final note reviewed after first-cutoff inequality correction.",
+    "Lean": "PASS: six parameterized declarations, pinned Lean/mathlib 4.32.1. Full source/model/limit not formalized.",
+    "pdf": "PASS: one five-page synthesis, form and zero overfull boxes; all pages rendered and reviewed.",
+    "external_person": "NOT_PERFORMED; invited. In-session independent code/review is not external-person certification."
+  },
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED"
+  ],
+  "literature_applicability": {
+    "background": "Norris, Markov Chains, chapter 2 sections 2.1 and 2.10, primary author index https://www.statslab.cam.ac.uk/~jrn10/Markov/ and publisher chapter https://www.cambridge.org/core/books/abs/markov-chains/continuoustime-markov-chains-i/00C95FC76647CF9B2E6276DC8DA89707. Bounded search identifies finite Q-matrix/exponential background only; no inaccessible infinite-limit theorem is imported.",
+    "crosswalk": "Finite nonnegative off-diagonal generator, row sum zero and full finite domain: verify from pinned source and R-570. Derive the needed finite contraction and integral identity explicitly. R-511 radial-only fixed K/M_s result and R-573/R-574 CRT failures are comparison boundaries, not proofs of this target.",
+    "residual": "Exact source-specific cutoff-independent displayed-field/rate/jump estimates plus a cutoff-uniform invariant plaquette variance lower bound.",
+    "checks": [
+      "All signed labels, invalid endpoints, wrap-around and rate convention",
+      "Fixed Lipschitz metric/domain and original full Gibbs state",
+      "No uniform geometry/epsilon bound or order interchange"
+    ]
+  },
+  "research_value": "A model-specific elimination of the loophole that a smooth source-native observable class automatically supplies nontrivial original-time dynamics after CRT failure. Standard finite Markov/Dirichlet/character tools; no novel general theorem or physical interpretation asserted.",
+  "follow_on": {
+    "route": "PARK_OR_BLOCK",
+    "automatic_successor": false,
+    "scientific_attempt_budget": 0,
+    "next_single_question": "Is there an exact source/proof error in this freezing certificate, or a separately authorized model-level input with an explicit physically motivated time/observable law that evades its stated hypotheses?",
+    "reentry": "Exact source/bound/domain/Fourier error, or separately approved load-bearing physical/model input. No automatic time rescaling, rate fitting, state change, satellite search, or domain replacement."
+  },
+  "non_claims": [
+    "No replacement of full cylinder algebra, CRT comparison or R-573/R-574",
+    "No new functional, rate, state, time or physical projection",
+    "No Pre-A, Sector-A, physical time, spacetime, QFT, gravity, horizon, infinite-volume dynamics, continuum, mass gap or TOE",
+    "No empirical fit, satellite search or external contact"
+  ],
+  "reproduction": [
+    "python -X utf8 verification/scripts/pah_v2_rd001_verify.py --lean-cache E:/Dev/TECT/verification/lean/.lake/packages --elan-home C:/Users/NaEun/.elan"
+  ],
+  "packaging_exploration_id": "EXP-001832",
+  "supersedes": {
+    "path": "strategy/pa-hyp/PAH-v2-RD-001-result-v1.json",
+    "sha256": "4f7698d0cf2ed2cd318029b25450ad30c9e7948a88e9fe890f5be2ab3bb5abeb",
+    "reason": "Final release footer labels and corresponding note/PDF/review/master hashes. Earlier direction-pinned pre-release receipt is retained historically, not the current replay target. No source, equation, scope, verdict or research-attempt change."
+  }
+}

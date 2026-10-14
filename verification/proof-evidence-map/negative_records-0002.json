@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-09-pre-a-st8-q3lock-partial-quartic-counterterm-all-scale-closure",
+      "branch": "repair the missing distance-two quartic from EXP-000789 by adding only `O22^(2)` and call the quartic counterterm basis closed",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260809-exp-000790-phasewise-os-kms-ground-cusp-counter"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "boundary": "This does not refute an enlarged perturbative or nonperturbative continuum, another regulator, a symmetry-protected reduction, or a different microscopic parent. It closes only the partial-basis repair.",
+        "consequence": "Any one-loop-closed invariant quartic family containing the registered bare directions must admit all 19 directions unless a separate Ward identity or stronger symmetry is proved. The continuum route must also declare all four quadratic/kinetic distance matrices and the scalar term, then recheck coercivity, reflection positivity and order preservation.",
+        "evidence": "`EXP-000790`; two non-importing exact-arithmetic computations and their integrated verifier; Sections 11--13 of the EXP-000790 certificate.",
+        "exact_obstruction": "The 330 degree-four monomials split into 19 orbits under `Aut(Q3) x Z2`. In the orbit-sum basis, with `B(P,Q)=tr(P''Q'')`, the first bare contraction contains the new part `lambda^2[18 O211^(1,1;2)-6 O211^(1,2;1)+4 O22^(2)]`. Thus `O22^(2)` alone already misses two first-loop directions. Exact rational closure from the two bare vectors has basis-independent ranks `2,4,9,19,19`, so it reaches the complete 19-dimensional invariant quartic space. The full invariant quadratic matrix space is independently four-dimensional.",
+        "failure_mode": "Add only the Q3-distance-two invariant `O22^(2)` found in `EXP-000789` to the original `g,lambda` quartic span and declare the enlarged counterterm family closed under repeated local one-loop contractions.",
+        "registered": "2026-08-09."
+      },
+      "detail_title": "the distance-two witness alone does not close the quartic basis",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "exact `Aut(Q3) x Z2` Hessian-trace closure has ranks `2,4,9,19,19`; already at the first loop it also generates `18 O211^(1,1;2)-6 O211^(1,2;1)`. The minimum invariant one-loop-closed quartic space containing the bare directions is the full 19-dimensional orbit space",
+      "tag": "NG-2026-08-09-PRE-A-ST8-Q3LOCK-PARTIAL-QUARTIC-COUNTERTERM-ALL-SCALE-CLOSURE"
+    },
+    {
       "anchor": "ng-2026-08-09-pre-a-st8-q3lock-g-lambda-only-4d-one-loop-closure",
       "branch": "remove the ST8/Q3LOCK regulator in 3+1 dimensions while restricting quartic counterterms to the original `g,lambda` two-invariant span",
       "claim_ref_basis": {
@@ -2205,29 +2228,6 @@
       "kind": "no_go",
       "summary": "at the zero background the symmetric 64-atom law has `Xi(-A,V)=-Xi(A,V)`, hence `E Xi=0` for every tangent while the diagonal mean-square is strictly positive; the unshifted sextic Hessian also vanishes there",
       "tag": "NG-2026-07-31-A13-DIAGONAL-HEAT-SEXTIC-TO-MIXED-RESPONSE"
-    },
-    {
-      "anchor": "ng-2026-07-31-a13-diagonal-gram-to-mixed-conditional-response",
-      "branch": "infer the complete conditional response from diagonal sample-Gram derivatives",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Derive the owner-complete conditional response and its Hessian from the R-130 pointwise bounds on the diagonal sample Gram `C_f^* C_f`, without retaining the two-replica kernel `C_f^* C_f'`.",
-        "consequence": "Diagonal Gram regularity cannot determine the mixed conditional response. The production proof must retain the full replica Gram with trace, heat, forest, rational, Cartan, and paid owners before absolute values. This is an inference no-go, not a production counterexample.",
-        "evidence": "R-131 proof note, Section 5; primary exact rotation and replica audit; independent rational-matrix audit.",
-        "failure_mode": "On a two-point space take `C_+(t)` and `C_-(t)` to be rotations by `+t` and `-t`. Each diagonal Gram is exactly the identity for all `t`, so all of its derivatives vanish. However, the conditional mean is `cos(t) I`, and the squared norm of its action on a unit vector is `cos(t)^2`, whose second derivative at zero is `-2`. An independent rational rotation fixture with entries `4/5` and `3/5` gives the same information separation without trigonometric symbolic algebra."
-      },
-      "detail_title": "diagonal sample Grams do not determine the mixed conditional response",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "opposite rotations have constant diagonal Gram but conditional-mean-square curvature -2, so the mixed replica Gram is indispensable",
-      "tag": "NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE"
     }
   ],
   "kind": "negative_records",

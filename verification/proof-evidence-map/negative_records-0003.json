@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-31-a13-diagonal-gram-to-mixed-conditional-response",
+      "branch": "infer the complete conditional response from diagonal sample-Gram derivatives",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Derive the owner-complete conditional response and its Hessian from the R-130 pointwise bounds on the diagonal sample Gram `C_f^* C_f`, without retaining the two-replica kernel `C_f^* C_f'`.",
+        "consequence": "Diagonal Gram regularity cannot determine the mixed conditional response. The production proof must retain the full replica Gram with trace, heat, forest, rational, Cartan, and paid owners before absolute values. This is an inference no-go, not a production counterexample.",
+        "evidence": "R-131 proof note, Section 5; primary exact rotation and replica audit; independent rational-matrix audit.",
+        "failure_mode": "On a two-point space take `C_+(t)` and `C_-(t)` to be rotations by `+t` and `-t`. Each diagonal Gram is exactly the identity for all `t`, so all of its derivatives vanish. However, the conditional mean is `cos(t) I`, and the squared norm of its action on a unit vector is `cos(t)^2`, whose second derivative at zero is `-2`. An independent rational rotation fixture with entries `4/5` and `3/5` gives the same information separation without trigonometric symbolic algebra."
+      },
+      "detail_title": "diagonal sample Grams do not determine the mixed conditional response",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "opposite rotations have constant diagonal Gram but conditional-mean-square curvature -2, so the mixed replica Gram is indispensable",
+      "tag": "NG-2026-07-31-A13-DIAGONAL-GRAM-TO-MIXED-CONDITIONAL-RESPONSE"
+    },
+    {
       "anchor": "ng-2026-07-31-a13-covariance-envelope-rebate-erasure",
       "branch": "lower-bound the R-134 scalar surrogate `Forest_063-(sqrt(beta_op)A+alpha sqrt(c1)B_e)^2` by source and sextic budgets after replacing the exact conditional variance",
       "claim_ref_basis": {
@@ -2220,28 +2243,6 @@
       "kind": "no_go",
       "summary": "the variational infimum direction is wrong for this inference, and a same-range cancellation makes the separate conditional-low loss quartic while final charge is fixed and control cost is quadratic",
       "tag": "NG-2026-07-25-A13-REGULAR-GRAPH-PROGRESSIVE-REVISIT"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-rational-translated-wick-separation-and-heat-schur",
-      "branch": "A13 rational shifted-Hessian closure by Taylor-Gram positivity, endpoint-square-only Schur, or uniform heat-Gram inversion",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "The coefficient-dominant high--high-to-low rational packet must retain the endpoint square, Wick trace, backward-heat compensation, lower-chaos forest, and Cameron--Martin energy. Taylor-Gram positivity, endpoint-square-only absorption, and uniform heat-Gram inversion are invalid. This is a method no-go, not a counterexample to the spatial form bound: the local free derivative jet omits its Cameron--Martin cost and the complete stochastic packet.",
-        "evidence": "With the harmless positive production factor removed, let `f_e(x)=x-(5/9)x^3/(x^2+e)` and `B=f_e^2`. At `z=sqrt(e)` and `a=C sqrt(e)`, the exact quadratic Taylor polynomial is `B_T=e(169+208C-C^2)/324`. It equals `-10e/81` at `C=-1` and `C=209`; restoring the rational scale gives `-40c1 e/81`. Thus the exact translated-Wick normal form cannot assign a positive sign to its Taylor derivative square. On the normalized two-coordinate slice, take `z=(1,1)`, `a=(1,-1)`, and endpoint `(2,0)`. At zero floor, `B_1=[[64,0],[0,0]]/81`, `B_T=[[-1,5],[5,0]]/81`, and `L=[[65,-5],[-5,0]]/81`. At the production floor, `L_21=5(27e^2+40e-8)/[81(e+2)^3]<0`. Taking `G=e1`, `c=t e2`, and `Gamma=0` kills the endpoint square but leaves an affine term `t L_12`, unbounded below without derivative energy. Finally, isotropic heat variance `sigma^2` lifts the endpoint kernel by `4c1 sigma^2 [20/(9(4+e))]^2+O(sigma^4)`, while `L_21` stays nonzero. Direct inverse-Gram Schur therefore loses `O(sigma^(-2))` as the actual zero-heat endpoint is approached.",
-        "failure_mode": "Prove the R-085 coupled rational shifted-Hessian bound by declaring its quadratic Taylor Gram positive, absorbing its cross term only in the endpoint rational square, or inverting the heat-averaged Gram with a cutoff-uniform ellipticity constant."
-      },
-      "detail_title": "the translated-Wick rational packet cannot be separated by positivity or uniform heat inversion",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "the quadratic Taylor Gram is exactly negative on a production scalar ray, a two-coordinate endpoint kernel leaves a nonzero affine cross remainder, and heat lifts that kernel only by `O(sigma^2)`; the coefficient-dominant packet must retain its square, Wick trace, heat packet, and control energy",
-      "tag": "NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-SEPARATION-AND-HEAT-SCHUR"
     }
   ],
   "kind": "negative_records",

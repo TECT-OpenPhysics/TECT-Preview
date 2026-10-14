@@ -1,0 +1,40 @@
+{
+  "schema": "tect/pah-v2-rd001-review/1.0",
+  "date": "2026-10-14",
+  "note": "claims/C6-SPACETIME-SIGNATURE/notes/pah-readout-freezing-261014-v1.0.tex.txt",
+  "note_sha256": "8ee8f2144f5e482a68cca0006096c6bc7a7019bbe9a8efd542333bccfffd500c",
+  "prereg_sha256": "86021a47783189e6e29f86cd24d14e0e1eaf8cfa2d943f6372099912a5571528",
+  "reviews": [
+    {
+      "reviewer": "/root/rd001_independent",
+      "status": "ACCEPT_SCOPED",
+      "method": "Read-only full analytic audit and independently implemented finite generator. The per-label midpoint flux, inverse-domain Cauchy bound, directed half and finite spectral inequality give a second proof.",
+      "found_and_resolved": "Equation (16) final equality was only valid for r>=1; replaced by the correct all-r lower inequality. Final exact note hash re-read and accepted.",
+      "remaining_gap_within_scope": "None found; in-session review is not external-person certification."
+    },
+    {
+      "reviewer": "/root/clk008_hostile",
+      "status": "ACCEPT_SCOPED",
+      "method": "Read-only source/note audit of amplitude conservation, root multiplicities, rate/density factors, signed partial bijections, exact Fourier orthogonality, centering and scope.",
+      "found_and_resolved": "Independently confirmed the r=0 equation (16) correction and final note hash.",
+      "remaining_gap_within_scope": "None found; seven concrete objections reviewed, with physical and CRT promotion prohibited."
+    }
+  ],
+  "objections": [
+    {"issue": "Diverging Rmax destroys a full-state amplitude bound", "status": "DISMISSED", "resolution": "The exact total occupation fixes sum |psi| = R0 q0/m0."},
+    {"issue": "TR factor two or duplicate signed K=2 roots omitted", "status": "DISMISSED", "resolution": "All signed labels retained; TR has two increments of delta."},
+    {"issue": "Invalid endpoints prevent the per-label flux bound", "status": "DISMISSED", "resolution": "Inverse root gives a partial bijection; domain and image masses are each at most one."},
+    {"issue": "Negative polynomial coefficients or lost half", "status": "DISMISSED", "resolution": "Absolute B, exp(beta B) cap, exp(-2 beta B) density and directed one-half are distinct."},
+    {"issue": "Adjacent-face independence or zero Gibbs mean assumed", "status": "DISMISSED", "resolution": "Distinguishing-edge Fourier orthogonality and infimum over centers suffice."},
+    {"issue": "First-cutoff variance equality", "status": "VALID_WITH_MITIGATION", "resolution": "Final equality changed to >=; K=2 has variance 1/p, not 1/(2p)."},
+    {"issue": "Mainline or physical promotion from freezing", "status": "UPHELD", "resolution": "No common limiting state/process, CRT repair, volume-uniform estimate or physical conclusion."}
+  ],
+  "pdf_review": {
+    "pages": 5,
+    "form_check": "PASS",
+    "overfull_hboxes": 0,
+    "render": "All five pages rendered with Poppler and inspected; legible formulas, no clipping or overlaps.",
+    "boundary": "Layout validation only, not mathematical certification."
+  },
+  "external_review": "Not performed; invited."
+}

@@ -1,0 +1,294 @@
+% Title: Original-time freezing of source-displayed PAH-v2 readouts
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-10-14; this version issued 2026-10-14
+% Status: Scoped readout theorem; no host tier or physical promotion
+% Revision history: v1.0 (2026-10-14) one bounded-attempt synthesis.
+
+\section*{1. Purpose and scope}
+Fix any admitted finite open square $G_{h,N}$, with the original anchors,
+orientations and elementary faces. Write $v=|V|$, $e=|E|$, $p=|P|>0$.
+These are combinatorial counts, not physical dimensions or volume. Fix all
+parent real parameters, including $0<\epsilon\leq1$, $\beta,\nu>0$;
+the signed mass and quartic coefficients may be negative. Fix $R_0>0$
+and integers $1\leq q_0\leq m_0$. Only $r$ tends to infinity:
+\[
+ K_r=\prod_{i=1}^{r+1}p_i,\quad M_s=2^r,\quad
+ M_\psi=m_0 4^r,\quad R_{\max}=R_0 2^r,\quad Q=q_0 2^r.       \tag{1}
+\]
+The operator-approved preregistration is
+\begin{verbatim}
+strategy/pa-hyp/PAH-v2-RD-001-prereg-v1.json
+86021a47783189e6e29f86cd24d14e0e1eaf8cfa2d943f6372099912a5571528
+\end{verbatim}
+Its source pins incorporate the literal PAH-v1 functional and generator,
+PAH-v2-r2 tuple counting and signed partial roots, and the adopted Morton/CRT
+schedule. Every hidden label, valid incidence, duplicate $K=2$ channel and
+original Gibbs weight is retained. The displayed generator is
+\[
+ (L_r f)(x)=\sum_{a:\,ax\text{ valid}}c_a(x)[f(ax)-f(x)],\quad
+ c_a(x)=m_a(x)e^{-\beta(\mathcal F_r(ax)-\mathcal F_r(x))/2}.   \tag{2}
+\]
+No extra prefactor is added to this displayed formula. A separately
+instantiated rate multiplier would have to be carried into the constants,
+not silently normalized to one. The domain is all $\mathbb C^{\Omega_r}$,
+$S_r(t)=e^{tL_r}$, and $\pi_r=Z_r^{-1}e^{-\beta\mathcal F_r}$ is the original
+full counting state. Time is the original external Markov time, not proper,
+quantum or Lorentzian time.
+
+Use the displayed metric
+\[
+ d(z,z')=\sum_V|s-s'|+\sum_V|\psi-\psi'|+\sum_E|U-U'|.       \tag{3}
+\]
+Fix any bounded complex readout $F$ with Lipschitz constant $\ell_F<\infty$
+independent of $r$, invariant under gauge and source-preserving anchored
+cell automorphisms, and put $f_r(x)=F(s(x),\psi(x),U(x))$.
+This is direct sampling, not the fixed CRT cylinder of R-574. The old
+cylinder algebra and comparison remain untouched; their failed target is
+not repaired by restricting it to these functions.
+
+\paragraph{Target.} For every such fixed $F$ and every finite $T\geq0$,
+\[
+ \sup_{0\leq t\leq T}\|S_r(t)f_r-f_r\|_{L^2(\pi_r)}\longrightarrow0. \tag{4}
+\]
+Separately, the fixed invariant readout
+$W=p^{-1}\sum_{b\in P}\operatorname{Re}U_b$, already motivated by the source
+plaquette term, has a strictly positive cutoff-uniform Gibbs variance.
+Neither statement constructs a common limiting state, Hilbert space or
+infinite-volume process.
+
+\section*{2. Full-state bounds and the primary proof}
+The exact charge constraint, not a tail truncation, gives
+\[
+ \sum_V|\psi_v|=(R_{\max}/M_\psi)Q=A:=R_0q_0/m_0,
+ \quad \epsilon\leq s_v\leq1,\quad |U_e|=1.                 \tag{5}
+\]
+Thus $|\psi_v|\leq A$ even though $R_{\max}\to\infty$.
+For $J_e=2/(s_v+s_w)$ and the face average $J_b$, both are at most
+$1/\epsilon$. Taking absolute values term by term in the pinned functional
+gives $|\mathcal F_r|\leq B$, where
+\begin{align*}
+ b_0={}&\tfrac12\lambda_s(1-\epsilon)^2+\tfrac12|m^2|A^2
+       +\tfrac14|\lambda_4|A^4+\tfrac16\eta_6 A^6+\tfrac12gA^2,\\
+ B={}&v b_0+\tfrac12\kappa_s e(1-\epsilon)^2
+             +2\kappa_D e A^2/\epsilon+2\kappa_g p/\epsilon.  \tag{6}
+\end{align*}
+Indeed, $|\psi_w-U_e\psi_v|\leq2A$ and
+$0\leq1-\operatorname{Re}U_b\leq2$. All original mobilities lie in $(0,1]$;
+even aperture moves use two admissible endpoints. Therefore
+\[
+ c_a(x)\leq C:=e^{\beta B}.                                 \tag{7}
+\]
+This bound includes negative allowed $m^2,\lambda_4$ and every full state.
+It need not be uniform as geometry grows or $\epsilon\downarrow0$.
+
+Set $\delta_r=(R_0/m_0)2^{-r}$, $a_r=(1-\epsilon)2^{-r}$ and
+$k_r=2\sin(\pi/K_r)\leq2\pi/K_r$. The four signed families have the following
+upper bounds in (3):
+\[
+\begin{array}{c|c|c}
+ \text{family}&\text{number of labels}&d(z(ax),z(x))\\ \hline
+ \mathrm{PH}&2v&A k_r\\
+ \mathrm{TR}&2e&2\delta_r\\
+ \mathrm{LK}&2e&k_r\\
+ \mathrm{AP}&2v&a_r
+\end{array}                                                \tag{8}
+\]
+For TR the occupation changes but both phase coordinates remain fixed;
+the two complex increments each have magnitude $\delta_r$. For PH/LK use
+chord distance across modular wrap. Invalid roots are absent, so counting
+all labels is an upper bound, not an endpoint modification.
+Equations (2), (7), (8) yield
+\begin{align*}
+ \|L_r f_r\|_\infty&\leq \ell_F C D_r,\\
+ D_r&=[2v(1-\epsilon)+4eR_0/m_0]2^{-r}
+                         +4\pi(vA+e)/K_r.                 \tag{9}
+\end{align*}
+
+For completeness the finite semigroup step requires no invariant smooth
+subspace. Let $q\geq\max_x\sum_{y\ne x}L_r(x,y)$, taking $q>0$.
+Then $P=I+L_r/q$ is stochastic and
+$S_r(t)=e^{-qt}\sum_{n\geq0}(qt)^nP^n/n!$ is a sup-norm contraction on the
+full finite space. Differentiate the matrix exponential to obtain
+\[
+ S_r(t)f_r-f_r=\int_0^t S_r(u)L_r f_r\,du,
+ \qquad
+ \sup_{t\leq T}\|S_r(t)f_r-f_r\|_{L^2(\pi_r)}
+       \leq T\ell_F C D_r.                                \tag{10}
+\]
+Normalized $\pi_r$ gives the last norm comparison. Since
+$K_r\geq2^{r+1}$, $D_r\to0$ geometrically. This proves (4) for every fixed
+$F$, not uniformly over unbounded Lipschitz constants. It neither identifies
+$S_r(t)f_r$ as a sampled Lipschitz function nor compares different $r$ spaces.
+
+\section*{3. Independent reversible-state derivation}
+An independent derivation avoids the pointwise rate cap. Each fixed signed
+root is a partial bijection with inverse root. The original midpoint rate
+and symmetric mobility give exactly
+\[
+ \pi_r(x)c_a(x)=m_a(x)\sqrt{\pi_r(x)\pi_r(ax)},\qquad
+ \sum_{x:\,ax\text{ valid}}\pi_r(x)c_a(x)\leq1.              \tag{11}
+\]
+The inequality follows from Cauchy--Schwarz on the valid domain and its
+injective image, each of probability mass at most one, and $m_a\leq1$.
+It remains true for omitted endpoints and distinct labels with the same map.
+Pairing inverse incidences gives the exact full Gibbs Dirichlet form
+\[
+ \mathcal E_r(f)=\langle f,-L_rf\rangle_{\pi_r}
+       =\tfrac12\sum_{x,a\text{ valid}}\pi_r(x)c_a(x)|f(ax)-f(x)|^2.
+                                                               \tag{12}
+\]
+Thus (8), (11) imply
+\[
+ \mathcal E_r(f_r)\leq\ell_F^2
+ [vA^2k_r^2+4e\delta_r^2+ek_r^2+va_r^2]
+ \leq\ell_F^2 H4^{-r},                                    \tag{13}
+\]
+where $H=\pi^2(vA^2+e)+4e(R_0/m_0)^2+v(1-\epsilon)^2$.
+The finite matrix $-L_r$ is self-adjoint nonnegative in $L^2(\pi_r)$ by
+(12). Diagonalize this finite matrix; for each eigenvalue $\lambda\geq0$,
+$(1-e^{-t\lambda})^2\leq t\lambda$. For $x=t\lambda\leq1$ use
+$1-e^{-x}\leq x$, and for $x\geq1$ use $1-e^{-x}\leq1$.
+Summing the squared spectral coefficients proves independently
+\[
+ \sup_{t\leq T}\|S_r(t)f_r-f_r\|_{L^2(\pi_r)}
+       \leq \ell_F\sqrt{TH}\,2^{-r}.                       \tag{14}
+\]
+This is finite linear algebra at each cutoff, not an infinite-dimensional
+spectral theorem. Neither irreducibility nor a spectral gap is assumed.
+
+\section*{4. Positive variance: not a constant-observable artifact}
+The source face readout $W$ is bounded and real. Closed holonomies are gauge
+invariant; real parts are unchanged by orientation reversal, and averaging
+over all elementary faces is invariant under every actual source automorphism.
+Telescoping products of unit links give
+$|W(U)-W(U')|\leq(2/p)\sum_e|U_e-U'_e|$, since each edge lies in at most two
+faces. In particular $W$ is one fixed admissible Lipschitz readout.
+
+Let $\gamma_r$ be normalized uniform counting on the full tuple space,
+used only as a comparison measure. The fixed-$Q$ constraint acts on
+occupations only; link coordinates under $\gamma_r$ are independent uniform
+$\mathbb Z_{K_r}$. For every elementary face its signed link character has
+zero mean. Distinct elementary faces possess an edge in their symmetric
+difference with coefficient $1$ or $-1$, so the character averages in both
+$U_bU_c$ and $U_b\overline{U_c}$ vanish. This proves zero covariance; it
+does not assert independence of adjacent face variables. Also
+$\mathbb E_{\gamma_r}(\operatorname{Re}U_b)^2=1/2$ for $K_r\geq3$.
+Consequently
+\[
+ \mathbb E_{\gamma_r}W=0,\qquad
+ \operatorname{Var}_{\gamma_r}(W)=1/(2p)\quad(r\geq1).       \tag{15}
+\]
+At $K_0=2$ the variance is $1/p$, so the lower bound below remains safe.
+From (6), without assuming $\mathcal F_r\geq0$,
+$d\pi_r/d\gamma_r=e^{-\beta\mathcal F_r}/\mathbb E_{\gamma_r}
+e^{-\beta\mathcal F_r}\geq e^{-2\beta B}$. Minimization over the centering
+constant, not a false claim that the Gibbs mean is zero, now gives
+\[
+ \operatorname{Var}_{\pi_r}(W)
+ =\inf_{a\in\mathbb R}\mathbb E_{\pi_r}(W-a)^2
+ \geq e^{-2\beta B}\inf_a\mathbb E_{\gamma_r}(W-a)^2
+ \geq\frac{e^{-2\beta B}}{2p}>0.                           \tag{16}
+\]
+Equations (14) and (16) distinguish vanishing dynamics from vanishing static
+variance. The lower bound is not claimed uniform in $h,N,\epsilon,\beta$.
+
+\section*{5. Applicability and verification boundary}
+Norris, \emph{Markov Chains}, chapter 2, sections 2.1 and 2.10, is primary
+background for finite Q-matrices and exponentials (author's Cambridge index
+and publisher chapter are located in the preregistration). No inaccessible
+theorem is imported: the contraction and integral identity are derived above.
+The only additional standard tool in the independent proof is diagonalization
+of a finite Hermitian matrix. Its hypotheses follow explicitly from (11)--(12).
+The new model-specific work is (5)--(9), (11)--(16), not a novelty claim about
+finite Markov theory.
+
+R-570's source finite domain, inverse labels, balance and symmetry conclusions
+apply to exactly the pinned v2 revision; (11)--(12) also rederive the needed
+balance bridge. R-511 instead fixes $K=2,M_s=1$ and removes only the radial
+mesh, so it does not supply this all-cutoff theorem. R-573/R-574 remain
+negative controls: their fixed CRT character has cutoff-dependent displayed
+frequency and is not a single fixed readout with a uniform Lipschitz constant.
+No source-owner, common-core or physical-sector assumption is discharged by
+changing that distinction.
+
+Primary symbolic/source-root tests, a non-importing independent full finite
+generator corroboration, and hostile controls have separate scripts and run
+JSONs. Finite tests check implementations, not the quantifiers proved here.
+The integrated reproduction command is
+\begin{verbatim}
+python -X utf8 verification/scripts/pah_v2_rd001_verify.py
+\end{verbatim}
+The pinned Lean entrypoint checks only the parameterized finite-sum,
+centering and positive-variance bridges listed in its run receipt.
+Full source geometry, functional estimates, Fourier orthogonality, finite
+semigroup identities and the analytic limit are not fully Lean-encoded.
+Independent implementations/review are in-session, not external-person
+certification; external adversarial review is invited.
+
+\section*{6. Devil's-advocate review}
+\begin{enumerate}
+\item \textbf{Unbounded amplitudes invalidate the cap. DISMISSED within scope:}
+(5) follows from the full fixed-$Q_r$ constraint; no discarded tail or
+replacement state. Different charge scaling requires new analysis.
+\item \textbf{Negative quadratic/quartic terms. DISMISSED:} their absolute
+coefficients occur in (6); neither energy positivity nor convexity is used.
+\item \textbf{Missing sign or half factor. DISMISSED:} the rate cap is
+$e^{\beta B}$, density floor $e^{-2\beta B}$, and (12) has exactly one half
+for directed incidences. Mutation controls test these distinctions.
+\item \textbf{Principal-angle wrap and duplicate roots. DISMISSED:} (3) is
+complex chord distance; both $K=2$ signed labels remain. Invalid endpoints
+are omitted, not clipped or reflected.
+\item \textbf{A constant readout fakes freezing. DISMISSED:} the fixed
+source-native $W$ has the uniform positive variance (16). Per-$r$ positivity
+alone was not used.
+\item \textbf{Adjacent-face independence is not justified. VALID WITH MITIGATION:}
+(15) uses only explicit character orthogonality on a distinguishing edge.
+The Gibbs mean is never set to zero.
+\item \textbf{The smooth class need not be semigroup invariant. DISMISSED:}
+(10) and (14) use the full finite semigroup. Only its initial test vector
+has the stipulated Lipschitz property.
+\item \textbf{This repairs R-574 or proves physical time. UPHELD as a
+prohibition:} it does neither. The diagnostic is separate direct sampling;
+no common limit state, volume-uniform estimate or physical identity follows.
+\item \textbf{Added rate scale hidden as one. DISMISSED for (2):} the proof
+uses the displayed literal generator. Any separately instantiated multiplier
+must appear in its cap and form bound; none is added or fit here.
+\end{enumerate}
+
+\section*{7. Result footer}
+\par\noindent
+Result ID: R-575; PAH-v2-RD-001; exploration EXP-001831.
+\par\noindent
+Precise statement: Equations (10), (14) prove original-time displayed-readout
+freezing; (16) gives a cutoff-uniform positive invariant plaquette variance.
+\par\noindent
+Scope: Every fixed admitted finite open square, fixed positive epsilon and
+parent parameters; every fixed preregistered Lipschitz invariant readout;
+the local-state cutoff alone tends to infinity.
+\par\noindent
+Dependencies: Pinned v1 functional/rates, v2-r2 full tuple/signed roots,
+adopted cutoff schedule; finite matrix algebra and explicit character sums.
+\par\noindent
+Evidence grade: ANALYTIC, EXACT, EXECUTED; six partial Lean bridges only.
+\par\noindent
+Reproduction command: Assemble the following command on one line.
+\begin{verbatim}
+python -X utf8 verification/scripts/pah_v2_rd001_verify.py
+  --lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+  --elan-home C:/Users/NaEun/.elan
+\end{verbatim}
+\par\noindent
+Expected output: Primary, independent, hostile, partial Lean and integrated
+PASS; the preregistered freezing proposition is PROVED.
+\par\noindent
+Falsification gate: An exact source/charge/root/rate, finite contraction,
+Dirichlet, Fourier or variance-domination error invalidates the proof.
+\par\noindent
+Tier before / after: C6 remains T1 OPEN; the T-054 active gate is unchanged.
+\par\noindent
+No-overclaim statement: No CRT repair, common limiting state/process,
+physical Pre-A, spacetime, QFT, gravity, horizon, continuum, mass gap or TOE.
+\par\noindent
+Next required action: Stop automatic successors; reopen only for an exact
+source/proof error or separately approved load-bearing model/physical input.
+No automatic rate/time rescaling, state change, satellite search or enquiry.

@@ -1,0 +1,47 @@
+{
+  "schema": "tect/pah-v2-readout-diagnostic/1.0",
+  "id": "PAH-v2-RD-001",
+  "date_utc": "2026-10-14",
+  "authority": "The operator explicitly approved setting the proposed bounded goal and executing verification. This admits a separate source-displayed readout diagnostic, not a revised PAH model or replacement cylinder algebra.",
+  "base_commit": "fe2307f4dff4dce07f60f26e10af838d25da9c63",
+  "task_id": "T-054",
+  "active_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "attempt_budget": 1,
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/owner-decisions/PreA-focus-no-contact-20261014.json": "82688f5860e94e243a455a33fed947e44c0319128e6e76df10fc829e8a1266d2"
+  },
+  "question": "For every fixed admitted h,N, fixed parent-domain real parameters with epsilon>0, every fixed bounded Lipschitz gauge/anchor-invariant local displayed-field readout F, and every finite T, is sup_(0<=t<=T)||S_r(t)f_r-f_r||_(L2(pi_r)) -> 0 as r->infinity, with f_r=F(s_r,psi_r,U_r)?",
+  "fixed_scope": {
+    "geometry": "Exactly the adopted finite open square G_(h,N), with its source anchors, stored orientations and all elementary faces; fix h,N before r. No new carrier.",
+    "parameters": "All original real parameters fixed across r, including 0<epsilon<=1, beta>0, nu>0, positive source couplings and finite possibly negative m2/lambda4. Fixed R0>0 and integers 1<=q0<=m0.",
+    "cutoffs": "K_r is product of the first r+1 primes; M_s=2^r, M_psi=m0*4^r, Rmax=R0*2^r, Q=q0*2^r. All hidden integer labels and all valid signed PH/TR/LK/AP roots retained.",
+    "state": "Original full tuple counting Gibbs pi_r=exp(-beta F_r)/Z_r; no conditional, quotient, fitted or replacement state.",
+    "dynamics": "Original full finite generator on C^(Omega_r), S_r(t)=exp(t L_r). Rates and mobility from the pinned parent; stationary initial-time convention and original external stochastic time.",
+    "displayed_metric": "d((s,psi,U),(s',psi',U'))=sum_v |s_v-s'_v|+sum_v |psi_v-psi'_v|+sum_e |U_e-U'_e|, using complex chord distance, not integer-label or discontinuous principal-angle distance.",
+    "readouts": "One fixed bounded complex-valued F on the displayed-field space, Lipschitz with an r-independent finite constant in the declared metric, invariant under gauge and source-preserving anchor automorphisms. Quantification is over every such fixed F, not uniform over unbounded Lipschitz constants.",
+    "sampling": "Direct evaluation on each Omega_r only. Not an assertion that these sampled f_r are the old fixed CRT cylinder or that an inter-cutoff common Hilbert space exists.",
+    "order": "Only r->infinity at each fixed h,N and epsilon. No h/N/epsilon/beta limit or interchange."
+  },
+  "separate_nontriviality": {
+    "readout": "F_star=|P|^(-1) sum_(p in P) Re product_(e in boundary p) U_e^(orientation sign), using every elementary plaquette. This is derived from the existing plaquette term and is gauge/anchor-automorphism invariant.",
+    "target": "Derive an explicit r-independent positive lower bound for Var_(pi_r)(F_star,r) for all sufficiently large r, hence liminf_r Var>0. Per-cutoff positivity alone does not suffice."
+  },
+  "acceptance": {
+    "PROVED": "Exact all-root, all-state analytic bounds with cutoff-independent constants imply the displayed universal freezing statement; separately prove the stated positive-variance bound. Primary, non-importing independent and hostile checks must pass; record feasible Lean scope honestly.",
+    "DISPROVED": "One exact fixed admitted readout/parameter tuple with a nonvanishing finite-time defect along an unbounded r sequence, preserving all declared data.",
+    "HOLD_FOR_EVIDENCE": "One unresolved rate/jump/variance/semigroup inequality, with exact missing hypothesis and reentry condition. No automatic retries or weakened successor."
+  },
+  "literature_first": {
+    "background": "Norris, Markov Chains, chapter 2 sections 2.1 and 2.10, primary author index https://www.statslab.cam.ac.uk/~jrn10/Markov/ and publisher chapter https://www.cambridge.org/core/books/abs/markov-chains/continuoustime-markov-chains-i/00C95FC76647CF9B2E6276DC8DA89707. Bounded search identifies finite Q-matrix/exponential background only; no inaccessible infinite-limit theorem is imported.",
+    "crosswalk": "Finite nonnegative off-diagonal generator, row sum zero and full finite domain: verify from pinned source and R-570. Derive the needed finite contraction and integral identity explicitly. R-511 radial-only fixed K/M_s result and R-573/R-574 CRT failures are comparison boundaries, not proofs of this target.",
+    "residual": "Exact source-specific cutoff-independent displayed-field/rate/jump estimates plus a cutoff-uniform invariant plaquette variance lower bound.",
+    "checks": ["All signed labels, invalid endpoints, wrap-around and rate convention", "Fixed Lipschitz metric/domain and original full Gibbs state", "No uniform geometry/epsilon bound or order interchange"]
+  },
+  "non_claims": ["No replacement of full cylinder algebra, CRT comparison or R-573/R-574", "No new functional, rate, state, time or physical projection", "No Pre-A, Sector-A, physical time, spacetime, QFT, gravity, horizon, infinite-volume dynamics, continuum, mass gap or TOE", "No empirical fit, satellite search or external contact"],
+  "follow_on": "One bounded proof attempt and one synthesis checkpoint only; no automatic successor or model repair."
+}

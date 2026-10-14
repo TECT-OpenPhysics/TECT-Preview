@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-575](#r-575) | PAH-v2 original-time displayed-readout freezing | At each fixed admitted finite carrier and parameters, every fixed Lipschitz source-displayed invariant readout freezes with explicit O(2^-r) Gibbs-L2 bound while the real plaquette average retains uniformly positive variance. Two analytic proofs, primary/independent/hostile and six partial Lean checks. Scoped negative diagnostic, no CRT repair or mainline/physical promotion. |
 | [R-574](#r-574) | PAH-v2 fixed-time original-Gibbs semigroup counterexample | The unchanged R-573 fixed character has norm at least 1/5 at original time 1/10 for adjacent pairs beyond every cutoff threshold. Full-generator time-error proof, independent maximum principle, hostile and partial Lean checks. SG-001 DISPROVED; no automatic successor or physical promotion. |
 | [R-573](#r-573) | PAH-v2 original fine-Gibbs generator counterexample | One fixed invariant plaquette character has all-state defect at least seven at adjacent pairs beyond every cutoff threshold, hence original fine-Gibbs L2 norm at least seven. Exact original-rate remainder and constructive CRT prime tail; independent, hostile and partial Lean checks. GD-002 DISPROVED only; no common-state, semigroup, T-054 gate or physical conclusion. |
 | [R-572](#r-572) | PAH-v2 full-cylinder sup generator counterexample | At the admitted epsilon=1 boundary, one fixed f0=1_{j_O=0} has exact defect 1_{2^s-2^(s-r)<=j_O<2^s-1} and full-state sup norm one for every s>r>=0. Analytic all-index proof, independent full-root row action, hostile audit and five partial Lean declarations. DISPROVED for GD-001 only; no Gibbs-L2, T-054 gate or physical conclusion. |
@@ -19365,6 +19366,48 @@ The exploration ledger entry is EXP-001655 and the changelog event is
 `20260908-r-535-pah-omc-020-k-d-term-level-coverage-ledge`.  Reopen only
 when a versioned source-authorized packet or an exact PAH-specific
 contradiction changes one required field.
+
+<a id="r-575"></a>
+### R-575 -- PAH-v2 original-time displayed-readout freezing
+
+At the exact preregistered fixed carrier, positive epsilon and parent
+parameters, the approved cutoff schedule fixes
+sum |psi|=A=R0*q0/m0 on the entire tuple space. The source functional has
+an r-independent absolute bound B, hence all literal midpoint rates are
+at most exp(beta B). Original PH/TR/LK/AP step sizes give a vanishing
+all-state generator bound and finite full-semigroup Duhamel bound.
+Independently, each signed root has Gibbs expected rate at most one by
+its partial-bijection midpoint flux. The exact directed Dirichlet form and
+finite Hermitian diagonalization yield
+sup_(0<=t<=T)||S_r(t)f_r-f_r||_L2(pi_r) <= Lip(F)*sqrt(T H)*2^(-r),
+where H=pi^2(v*A^2+e)+4e*(R0/m0)^2+v*(1-epsilon)^2.
+
+The fixed average real elementary plaquette W is gauge/anchor invariant
+and Lipschitz. Uniform-link character orthogonality and Gibbs density
+domination give Var_pi_r(W)>=exp(-2 beta B)/(2p)>0 for every r. No
+adjacent-face independence or zero Gibbs mean is assumed. Uniform
+counting is only a comparison measure; the original state is retained.
+
+RD-001 is PROVED within this scope and classified negative_result against
+nontrivial displayed dynamics on the fixed original Markov time. This is
+direct sampling, not the fixed CRT cylinder of R-573/R-574. No old
+comparison repair, common limiting state/process, geometry-uniform estimate,
+T-054 gate/C6 tier change, physical Pre-A, spacetime, QFT, gravity, continuum,
+mass gap or TOE follows.
+
+Certificate: strategy/pa-hyp/PAH-v2-RD-001-result-v1.1.json.
+EXP-001832 records footer/hash packaging correction only, with the original
+direction-pinned v1 receipt retained historically and no extra proof attempt.
+Exploration: EXP-001831. One five-page synthesis:
+claims/C6-SPACETIME-SIGNATURE/notes/pah-readout-freezing-261014-v1.0.tex.txt.
+Primary exact bounds/root controls, non-importing independent full r=0
+generator corroboration, 36 exact hostile controls and six partial Lean
+declarations pass. Both independent analytic reviews accepted the final
+source hash; in-session review is not external-person certification.
+Reproduce python -X utf8 verification/scripts/pah_v2_rd001_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages as one line.
+Stop automatic successors. Reentry needs an exact source/proof error or
+separately authorized load-bearing model/physical-observable evidence.
 
 <a id="r-574"></a>
 ### R-574 -- PAH-v2 fixed-time original-Gibbs semigroup counterexample
