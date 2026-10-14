@@ -1,0 +1,45 @@
+{
+  "schema": "tect/pah-time-contract-review/1.0",
+  "id": "PAH-TIME-001-REVIEW-v1",
+  "date_utc": "2026-10-14",
+  "assessment_path": "strategy/pa-hyp/PAH-TIME-001-assessment-v1.json",
+  "assessment_sha256": "d9e2aef9014c985cf6144968c3ddbec524456ca6851ec2e1705c8f6e131e98a7",
+  "script_path": "verification/scripts/pah_time001_audit.py",
+  "script_sha256": "bee7d37e32edea090d99a841472ce591fae0adc732cb6ad60379cb0be24ebeb1",
+  "prereg_sha256": "c280d09caaa82a7d504be4b004bcc42f090de6ca52a1929bf8eb1f43f30ee50a",
+  "reviews": [
+    {
+      "role": "independent",
+      "reviewer": "/root/rd001_independent",
+      "verdict": "ACCEPT_SCOPED_AUDIT",
+      "method": "Read-only full source/assessment/checker review and exact final hash checks.",
+      "findings": [
+        "Common external time and declared local clocks correctly retained.",
+        "Missing physical clock-readout identification is not a missing mathematical generator.",
+        "Right-inverse image preservation is not full path/refinement preservation.",
+        "R-573/R-574/R-575 and original full cylinder are preserved."
+      ],
+      "repair": "Changed an overbroad label-dependence falsifier to arbitrary coordinate labelling instead of declared gauge-invariant anchor-covariant rules. Final wording accepted. Optimization guard independently source-reviewed.",
+      "boundary": "Not an external-person certification, new theorem, random-time freezing or physical identification."
+    },
+    {
+      "role": "hostile",
+      "reviewer": "/root/clk008_hostile",
+      "verdict": "ACCEPT_SCOPED_AUDIT",
+      "method": "Read-only semantic attack, eight source-pin checks, five in-memory mutation controls, and actual optimized-mode rejection replay.",
+      "findings": [
+        "No one-transition/one-tick identification follows from the distinct family mobilities and energy factor.",
+        "Path-dependent clock sampling does not inherit deterministic semigroup estimates or stationarity automatically.",
+        "The freezing upper bound does not derive a clock multiplier.",
+        "The single missing map specifies causal sampling, units, symmetry, refinement meaning and a falsifier without adopting a map."
+      ],
+      "repair": "Found assert-disabled Python false PASS. Added explicit non-__debug__ RuntimeError before audit reads/writes; -B -O --check exits 1 as required. Final guarded script hash accepted.",
+      "boundary": "Checker acceptance is provenance/admission-firewall scope only, not machine proof of semantic completeness."
+    }
+  ],
+  "non_claims": [
+    "No new dynamics, finite calculation, theorem, empirical identification or model adoption.",
+    "In-session agent reviewers are not external independent persons."
+  ],
+  "Lean": "NOT_RUN: no new formal proposition claimed; physical identification cannot be discharged by metadata or prior partial Lean checks."
+}

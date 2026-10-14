@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1114 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1115 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-10-14 | `20261014-c6-pah-time-001-pin-the-missing-operational-clo` — [C6 PAH-TIME-001: pin the missing operational clock-readout law] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-pah-time-001-pin-the-missing-operational-clo) |
 | 2026-10-14 | `20261014-r-575-final-governed-footer-and-replay-receipt` — [R-575: final governed-footer and replay-receipt correction] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-r-575-final-governed-footer-and-replay-receipt) |
 | 2026-10-14 | `20261014-c6-r-575-original-time-pah-v2-displayed-readout` — [C6 / R-575: original-time PAH-v2 displayed readouts freeze with positive variance] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-r-575-original-time-pah-v2-displayed-readout) |
 | 2026-10-14 | `20261014-c6-decline-great-contact-and-restore-pre-a-assu` — [C6: decline GREAT contact and restore Pre-A assumption-resolution priority] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-decline-great-contact-and-restore-pre-a-assu) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-09 | `20260909-c6-r-512-through-r-568-fixed-proof-checkpoint-i` — [C6 R-512 through R-568 fixed proof checkpoint integration provenance] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260909-c6-r-512-through-r-568-fixed-proof-checkpoint-i) |
 | 2026-09-09 | `20260909-r-568-pah-omc-029-fixed-generator-markov-unique` — [[R-568 PAH-OMC-029 fixed-generator Markov uniqueness] - 2026-09-09] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260909-r-568-pah-omc-029-fixed-generator-markov-unique) |
 | 2026-09-09 | `20260909-r-567-pah-omc-028-nonlinear-closure-proof-repai` — [R-567 PAH-OMC-028 nonlinear closure proof repair] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260909-r-567-pah-omc-028-nonlinear-closure-proof-repai) |
-| 2026-09-08 | `20260908-pah-omc-026-cut-set-packet-crosswalk-2026-09-08` — [PAH-OMC-026 cut-set packet crosswalk] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-pah-omc-026-cut-set-packet-crosswalk-2026-09-08) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1069–1114 | 46 | [001069-001118.md](pages/001069-001118.md) |
+| 1069–1115 | 47 | [001069-001118.md](pages/001069-001118.md) |
 | 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |

@@ -1,0 +1,40 @@
+{
+  "assessment_verdict": "HOLD_FOR_EVIDENCE",
+  "audit_hashes": {
+    "strategy/pa-hyp/PAH-TIME-001-assessment-v1.json": "d9e2aef9014c985cf6144968c3ddbec524456ca6851ec2e1705c8f6e131e98a7",
+    "strategy/pa-hyp/PAH-TIME-001-prereg-v1.json": "c280d09caaa82a7d504be4b004bcc42f090de6ca52a1929bf8eb1f43f30ee50a",
+    "strategy/pa-hyp/PAH-TIME-001-review-v1.json": "29d73937da634d10bca45772543e2c25b559d55a6cec7329c08f93916d94914e",
+    "verification/scripts/pah_time001_audit.py": "bee7d37e32edea090d99a841472ce591fae0adc732cb6ad60379cb0be24ebeb1"
+  },
+  "mutation_controls": [
+    "reject_claim_bearing",
+    "reject_active_gate_change",
+    "reject_physical_promotion",
+    "reject_new_result_id",
+    "reject_verdict"
+  ],
+  "non_claims": "No new analytic/Lean proof, dynamics calculation, empirical evidence, physical clock or mainline promotion. String/hash checks do not establish semantic completeness.",
+  "schema": "tect/pah-time-provenance-replay/1.0",
+  "source_checks": [
+    "declared_external_and_local_clock",
+    "no_proper_time_identification",
+    "v2_inherits_clock",
+    "fixed_W",
+    "r_only_scope",
+    "no_common_limit",
+    "preserved_R573_R574",
+    "reviewed_assessment_hash",
+    "zero_successor_budget"
+  ],
+  "source_hashes": {
+    "strategy/owner-decisions/PreA-focus-no-contact-20261014.json": "82688f5860e94e243a455a33fed947e44c0319128e6e76df10fc829e8a1266d2",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-GD-002-result-v1.1.json": "fa79748f985cd6a6d9daaaa470308b5c86f5feca48dac7f4a34896e33c89ab26",
+    "strategy/pa-hyp/PAH-v2-RD-001-result-v1.1.json": "c760f71260e27f8ff9cbbe4a83ac7e98abf1a4df86c8bc73456f42d15bec8b4c",
+    "strategy/pa-hyp/PAH-v2-SG-001-result-v1.json": "5a7521c657ff2d528596fca0cad4c5be8f7530653203a0c9023768402bf77928",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7"
+  },
+  "status": "PASS_PROVENANCE_AND_SCOPE_ONLY"
+}

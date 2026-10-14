@@ -1,0 +1,178 @@
+{
+  "schema": "tect/pah-time-contract-assessment/1.0",
+  "id": "PAH-TIME-001-ASSESSMENT-v1",
+  "issued_on": "2026-10-14",
+  "preregistration": {
+    "path": "strategy/pa-hyp/PAH-TIME-001-prereg-v1.json",
+    "sha256": "c280d09caaa82a7d504be4b004bcc42f090de6ca52a1929bf8eb1f43f30ee50a"
+  },
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-GD-002-result-v1.1.json": "fa79748f985cd6a6d9daaaa470308b5c86f5feca48dac7f4a34896e33c89ab26",
+    "strategy/pa-hyp/PAH-v2-SG-001-result-v1.json": "5a7521c657ff2d528596fca0cad4c5be8f7530653203a0c9023768402bf77928",
+    "strategy/pa-hyp/PAH-v2-RD-001-result-v1.1.json": "c760f71260e27f8ff9cbbe4a83ac7e98abf1a4df86c8bc73456f42d15bec8b4c",
+    "strategy/owner-decisions/PreA-focus-no-contact-20261014.json": "82688f5860e94e243a455a33fed947e44c0319128e6e76df10fc829e8a1266d2"
+  },
+  "task_id": "T-054",
+  "active_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "new_result_id": null,
+  "question": "Does the preserved PAH-v2 already supply an independently justified microscopic-transition/time-unit/W/refinement meaning contract?",
+  "answer": "The mathematical dynamics already has a common external Markov time and declared local path clocks. It does not identify an operational observation clock for W or establish its physical meaning across refinement. This is a missing connection law, not an inconsistency of the finite definitions and not a new all-model no-go.",
+  "fixed_scope": "The R-575 finite G_(h,N), fixed positive epsilon and parent parameters, full tuple counting Gibbs pi_r, original signed roots and rates, full finite domain, original external Markov time, r-first ordering. W is the existing directly sampled average real plaquette holonomy. No lattice/volume/aperture/time limit is newly taken.",
+  "source_crosswalk": [
+    {
+      "id": "functional_and_rates",
+      "locator": "strategy/pa-hyp/PAH-001-v1.json#dynamics",
+      "status": "PRESENT_INSERTED_DEFINITIONS",
+      "content": "L f=sum_a c_a(x)[f(ax)-f(x)], c_a=m_a exp(-beta Delta F/2). PH uses s_v^nu; LK/TR use (s_v s_w)^(nu/2); AP uses before/after geometric mean. The energy factor and all signed labels remain. Static F or Gibbs fitting does not derive these choices."
+    },
+    {
+      "id": "counting_events",
+      "locator": "strategy/pa-hyp/PAH-001-v2-r2.json#root_partial_maps",
+      "status": "PRESENT_DEFINITIONS",
+      "content": "A microscopic event changes the specified integer coordinates. Hidden phase labels at zero radius and aperture labels at epsilon=1 remain distinct; two signed K=2 labels may have the same endpoint. One labelled incidence is not by definition one equal physical tick."
+    },
+    {
+      "id": "external_time",
+      "locator": "strategy/pa-hyp/PAH-001-v1.json#finite_regulator/time_boundary_condition",
+      "status": "PRESENT_MODEL_INTERNAL",
+      "content": "A single common t>=0 already indexes the finite stationary initial-value Markov law X_0~pi. There is no terminal conditioning. Do not report that the model lacks mathematical time."
+    },
+    {
+      "id": "local_time",
+      "locator": "strategy/pa-hyp/PAH-001-v1.json#dynamics/time",
+      "status": "PRESENT_INSERTED_CLOCK_RULE",
+      "content": "d tau_v=s_v^nu dt, hence tau_v(t)=integral_0^t s_v(X_u)^nu du after choosing zero origin. The family is gauge invariant and relabels covariantly with vertices. Its definition neither selects a single observation clock for global W nor identifies proper time or seconds."
+    },
+    {
+      "id": "W",
+      "locator": "strategy/pa-hyp/PAH-v2-RD-001-result-v1.1.json#proof/variance_witness",
+      "status": "PRESENT_SOURCE_NATIVE_READOUT",
+      "content": "W=|P|^(-1) sum_p Re U_p is dimensionless and invariant, with normalization unchanged. It is the unweighted average, not the J_p(s)-weighted plaquette energy. PH/TR/AP leave u and thus instantaneous W unchanged; LK can change W. Other families can still change subsequent LK rates. No scalar Markov closure for W alone is inferred."
+    },
+    {
+      "id": "units",
+      "locator": "strategy/pa-hyp/PAH-001-v1.json#dynamics/dynamics_selection_boundary",
+      "status": "PHYSICAL_CALIBRATION_NOT_SUPPLIED",
+      "content": "The rate formula defines inverse units of the chosen external t and beta F is dimensionless. No correspondence to a named operational clock or physical unit is supplied by these definitions. Naming a unit does not derive a microscopic kinetic law."
+    },
+    {
+      "id": "refinement",
+      "locator": "strategy/pa-hyp/PAH-v2-morton-crt-draft.json#state_maps",
+      "status": "COMPARISON_DEFINED_PHYSICAL_MEANING_NOT_IDENTIFIED",
+      "content": "r is local-state resolution, h lattice-label refinement, N combinatorial exhaustion. a_h is not an identified physical length. The cutoff right inverse preserves displayed fields on its image only; the actual full-state p uses floor(j/2) and CRT phase transport, not small-angle rounding. No path/clock preservation or Gibbs projectivity follows from pJ=id."
+    }
+  ],
+  "boundary_checks": [
+    {
+      "id": "unchanged_time",
+      "status": "INHERITED_APPLIES",
+      "reason": "R-575 already supplies fixed finite-time freezing of W and positive Gibbs variance in exactly this scope. No replay or new proof of it is claimed here. Both can hold simultaneously."
+    },
+    {
+      "id": "fixed_unit_conversion",
+      "status": "NOT_A_REPAIR",
+      "reason": "For any fixed positive conversion k, a finite observation interval maps to a finite interval in t. R-575 remains applicable at that horizon. No k is selected or applied."
+    },
+    {
+      "id": "local_clock_bounds",
+      "status": "ELEMENTARY_SCOPE_CHECK",
+      "reason": "At fixed epsilon>0, epsilon^nu<=s_v^nu<=1. The declared integral therefore obeys epsilon^nu*t<=tau_v(t)<=t. This is only a finite-clock bound, not a random-time extension of the R-575 semigroup theorem. No epsilon->0 or joint limit is taken."
+    },
+    {
+      "id": "random_clock",
+      "status": "DIFFERENT_ESTIMAND_NOT_EXECUTED",
+      "reason": "Sampling original paths at inverse local clock times is not the same as evaluating S_r at a deterministic argument. A time-changed generator/stationary-state claim would require its own derivation and authorization. Original pi stationarity cannot silently be reused; no time-change implementation or new state is adopted."
+    },
+    {
+      "id": "epsilon_one",
+      "status": "SOURCE_LIMIT_CASE",
+      "reason": "At epsilon=1 every local tau_v equals t. R-573/R-574 include this case, and R-575 includes it in its separate displayed-readout scope. The existing local rule cannot be called a repair of those records."
+    },
+    {
+      "id": "upper_bound",
+      "status": "NO_SCALE_SELECTION",
+      "reason": "The R-575 decay upper bound does not yield an exact relaxation time or a matching lower kinetic bound. It cannot select 4^r, K_r^2, or any other clock/rate multiplier. None is proposed or run."
+    },
+    {
+      "id": "W_as_clock",
+      "status": "NOT_IDENTIFIED",
+      "reason": "Source gauge invariance, bounded nonconstant values and positive static variance do not supply a monotone calibrated clock or a physical detector response. W remains the stipulated readout, not a newly defined clock."
+    }
+  ],
+  "preserved_results": [
+    {
+      "result": "R-573",
+      "role": "Negative control: original fine-Gibbs full CRT-cylinder generator comparison fails on its fixed character; not a theorem about directly sampled W.",
+      "path": "strategy/pa-hyp/PAH-v2-GD-002-result-v1.1.json"
+    },
+    {
+      "result": "R-574",
+      "role": "Negative control: original-time semigroup comparison fails on the same fixed CRT character; not repaired by choosing W.",
+      "path": "strategy/pa-hyp/PAH-v2-SG-001-result-v1.json"
+    },
+    {
+      "result": "R-575",
+      "role": "Applicable scoped boundary: directly sampled fixed Lipschitz readouts including W freeze in original time at fixed carrier/epsilon, with positive static W variance.",
+      "path": "strategy/pa-hyp/PAH-v2-RD-001-result-v1.1.json"
+    }
+  ],
+  "missing_law": {
+    "id": "PAH-COMMON-OPERATIONAL-CLOCK-W",
+    "question": "What independently justified operational clock functional assigns an observation duration to the existing microscopic path, so that the same W readout and the meaning of refinement are specified without post-hoc rate fitting?",
+    "interface_only": "tau_obs(t)=C_r[X_[0,t];R_clock], with C_r[0]=0 and a declared inverse t_r on its stated range; sample only the fixed W_r(X_(t_r(tau))). R_clock denotes an explicit operational reference, not a supplied object.",
+    "status": "NOT_SUPPLIED_OR_ADOPTED",
+    "minimal_evidence": [
+      "Exact nonanticipating clock functional, domain, positivity/invertibility or alternative causal sampling rule, and units. It must say whether it uses external t, one declared tau_v, or a specified synchronization; no unnoticed arbitrary vertex choice.",
+      "Gauge/anchor rule, operational meaning/calibration of the fixed dimensionless W, and meaning of a fixed duration as r changes. Preserve the full cylinder comparison and explicitly retain its failures.",
+      "For any changed time sampling, state the original path law/initial distribution and one preregistered two-time estimand, for example E_pi[W_r(X_(t_r(tau_1))) W_r(X_(t_r(tau_2)))]; do not assume Gibbs stationarity in the new clock. This expression is a required input interface, not an evaluated observation.",
+      "An independent microscopic or operational justification fixed before fitting W's freezing/decay, with uncertainty, a falsifier, and declared treatment of each R-575 hypothesis. If it changes model/time/state/comparison, seek separate versioned approval before testing."
+    ],
+    "why_one_law": "These are the type, units, covariance, source and falsifier fields of one clock-readout identification map, not a menu of further proof tasks.",
+    "falsifier": "Reject a proposed identification if it contradicts its source clock, depends on arbitrary coordinate labelling instead of a declared gauge-invariant and anchor-covariant rule, changes the admitted path law covertly, infers its rate scale from the desired W decay, claims original-time nontriviality against R-575, or calls the failed CRT transport repaired without new evidence.",
+    "reentry": "One explicit independently motivated packet filling this map, or an exact error in the pinned source/crosswalk. A label change, larger finite table, a bare time multiplier, an unchanged owner search or another static fit is not reentry."
+  },
+  "literature_applicability": {
+    "method": "Bounded internal definition and issued-result applicability audit; no new external theorem or legacy result imported.",
+    "assumptions": "Same source bytes, R-575 carrier/parameters/readout/time/order SATISFIED. Physical clock/detector/refinement identification NOT_SUPPLIED. R-573/R-574 apply only as their own CRT-scope negative controls.",
+    "independent_disposition": "Separate in-session independent source review and hostile review; final hash-bound receipts required.",
+    "adversarial_axes": [
+      "Rate and time direction/convention",
+      "Full tuple/domain versus displayed readout",
+      "Fixed epsilon and ordered cutoff scope"
+    ],
+    "residual": "No new theorem needed for this admission decision; stop with the precise missing connection law."
+  },
+  "verification_boundary": {
+    "primary": "Reproducible source/hash/pointer and frozen-boundary check, not a mathematical proof oracle.",
+    "independent": "See separate hash-bound review receipt.",
+    "hostile": "See separate hash-bound review receipt.",
+    "Lean": "NOT_RUN: no new formal theorem, model identity or claimed physical law. Prior R-575 partial Lean scope is unchanged, not imported as a physical-time proof.",
+    "numerical_runs": "NONE: no finite carrier computation, rate fit or dynamics experiment.",
+    "external_person": "NOT_PERFORMED; in-session agent review is not external-person certification."
+  },
+  "research_value": "Reusable admission boundary: the missing object is not a generator or all mathematical clocks, but the operational meaning/transport of an already declared clock and invariant readout. Standard definition/units/symmetry audit, not a new general theorem. Prevents both repeated owner absence hunts and an automatic kinetic rescaling fix.",
+  "follow_on": {
+    "route": "PARK_OR_BLOCK",
+    "automatic_successor": false,
+    "attempts_remaining": 0,
+    "next_single_action": "Accept only the named new clock-readout identification packet for a separately bounded review; do not autonomously start another proof or adopt a new model."
+  },
+  "non_claims": [
+    "No new result/card, theorem, no-go or tier transition; T-054 and C6 stay unchanged.",
+    "No physical time, Pre-A, Sector-A, spacetime, QFT, gravity, horizon, continuum, mass gap or TOE.",
+    "No new model, state, rate, time, projection, observable algebra or comparison; no proposed multiplier is adopted.",
+    "No empirical score, external enquiry or general claim that such a clock cannot exist."
+  ],
+  "reproduction": [
+    "python -X utf8 verification/scripts/pah_time001_audit.py --check"
+  ]
+}
