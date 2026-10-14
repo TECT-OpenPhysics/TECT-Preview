@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1111 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1112 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-10-14 | `20261014-c6-decline-great-contact-and-restore-pre-a-assu` — [C6: decline GREAT contact and restore Pre-A assumption-resolution priority] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-decline-great-contact-and-restore-pre-a-assu) |
 | 2026-10-07 | `20261007-tect-clk-009-great-processing-provenance-and-fu` — [TECT-CLK-009 GREAT processing provenance and full-response evidence contract] - 2026-10-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261007-tect-clk-009-great-processing-provenance-and-fu) |
 | 2026-10-07 | `20261007-tect-clk-008-galileo-observable-map-and-actual` — [TECT-CLK-008 Galileo observable map and actual-product admission] - 2026-10-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261007-tect-clk-008-galileo-observable-map-and-actual) |
 | 2026-10-01 | `20261001-tect-clk-006-archival-request-and-manifest-only` — [TECT-CLK-006: archival request and manifest-only intake readiness; scientific hold unchanged] - 2026-10-01 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261001-tect-clk-006-archival-request-and-manifest-only) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-08 | `20260908-pah-omc-026-cut-set-packet-crosswalk-2026-09-08` — [PAH-OMC-026 cut-set packet crosswalk] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-pah-omc-026-cut-set-packet-crosswalk-2026-09-08) |
 | 2026-09-08 | `20260908-pah-omc-025-route-independent-owner-cut-set-202` — [PAH-OMC-025 route-independent owner cut-set] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-pah-omc-025-route-independent-owner-cut-set-202) |
 | 2026-09-08 | `20260908-r-564-pah-omc-024-anchored-n-persistence-2026-0` — [R-564 PAH-OMC-024 anchored-n persistence] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-564-pah-omc-024-anchored-n-persistence-2026-0) |
-| 2026-09-08 | `20260908-r-563-pah-omc-020-diagonal-locality-obstruction` — [R-563 PAH-OMC-020 diagonal locality obstruction] - 2026-09-08 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260908-r-563-pah-omc-020-diagonal-locality-obstruction) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1069–1111 | 43 | [001069-001118.md](pages/001069-001118.md) |
+| 1069–1112 | 44 | [001069-001118.md](pages/001069-001118.md) |
 | 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |
 | 919–968 | 50 | [000919-000968.md](pages/000919-000968.md) |
