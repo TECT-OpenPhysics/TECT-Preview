@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-576](#r-576) | PAH-v2 maximal-path freezing in declared local clocks | At fixed admitted finite geometry and positive epsilon, the original-path squared maximal W displacement across all declared inverse local clocks is bounded by (4*pi/(p*K_r))^2[Lambda S+(Lambda S)^2], hence vanishes. Independent stopped-count proof, 16 hostile controls and five partial Lean bridges. Scoped negative diagnostic only; no physical-clock or mainline promotion. |
 | [R-575](#r-575) | PAH-v2 original-time displayed-readout freezing | At each fixed admitted finite carrier and parameters, every fixed Lipschitz source-displayed invariant readout freezes with explicit O(2^-r) Gibbs-L2 bound while the real plaquette average retains uniformly positive variance. Two analytic proofs, primary/independent/hostile and six partial Lean checks. Scoped negative diagnostic, no CRT repair or mainline/physical promotion. |
 | [R-574](#r-574) | PAH-v2 fixed-time original-Gibbs semigroup counterexample | The unchanged R-573 fixed character has norm at least 1/5 at original time 1/10 for adjacent pairs beyond every cutoff threshold. Full-generator time-error proof, independent maximum principle, hostile and partial Lean checks. SG-001 DISPROVED; no automatic successor or physical promotion. |
 | [R-573](#r-573) | PAH-v2 original fine-Gibbs generator counterexample | One fixed invariant plaquette character has all-state defect at least seven at adjacent pairs beyond every cutoff threshold, hence original fine-Gibbs L2 norm at least seven. Exact original-rate remainder and constructive CRT prime tail; independent, hostile and partial Lean checks. GD-002 DISPROVED only; no common-state, semigroup, T-054 gate or physical conclusion. |
@@ -19366,6 +19367,45 @@ The exploration ledger entry is EXP-001655 and the changelog event is
 `20260908-r-535-pah-omc-020-k-d-term-level-coverage-ledge`.  Reopen only
 when a versioned source-authorized packet or an exact PAH-specific
 contradiction changes one required field.
+
+<a id="r-576"></a>
+### R-576 -- PAH-v2 maximal-path freezing in declared local clocks
+
+For the original full tuple-counting Gibbs initial law and signed-root
+PAH-v2 path, define tau_v(t)=integral_0^t s_v(X_u)^nu du and its causal
+inverse sigma_v. At each fixed finite admitted square and positive epsilon,
+all inverse samples with local time at most T lie in the deterministic
+original-time interval [0,S], S=T/epsilon^nu. LK alone changes instantaneous
+W; each signed move has |Delta W|<=d_r=4*pi/(p*K_r). Retaining every root
+and both LK signs, per-label Poisson proposals with rate exp(beta B)
+represent the original generator exactly. Thus
+E_pi[max_v sup_(u<=T)|W(X_sigma_v(u))-W(X_0)|^2]
+<=d_r^2[Lambda S+(Lambda S)^2]->0, Lambda=2e exp(beta B).
+
+An independent finite stopped-count proof gives the same second moment;
+the stationary per-label midpoint flux gives a separate weaker total-
+variation bound. No random argument is substituted into R-575's semigroup
+statement, and no stationarity in the sampled clock is assumed. Only r
+tends to infinity, with fixed h,N,epsilon and parameters. Source bytes,
+R-573/R-574 CRT failures, R-575 initial variance and full cylinder stay intact.
+
+Certificate: strategy/pa-hyp/PAH-TIME-002-result-v1.json; EXP-001834.
+One four-page synthesis at
+claims/C6-SPACETIME-SIGNATURE/notes/pah-local-clock-freezing-261014-v1.0.tex.txt.
+Primary symbolic, non-importing independent incidence/count, 16 hostile
+controls and five partial Lean bridges pass; two in-session reviewers
+accept the final analytic note. This is standard finite probability used
+for a new model-specific clock obstruction, not a novel general theorem.
+Reproduce python -X utf8 verification/scripts/pah_time002_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages as one line.
+
+TIME-002 PROVED, classification negative_result; C6 stays T1 and T-054's
+gate does not change. PAH-COMMON-OPERATIONAL-CLOCK-W remains missing.
+No all-clock/all-model no-go, global calibrated clock, common limiting
+state/process, physical Pre-A, QFT, gravity, continuum, mass gap or TOE.
+No automatic successor or time acceleration; independent external review
+is invited. Reentry requires an exact error or a separately admitted,
+independently motivated clock/readout identification packet.
 
 <a id="r-575"></a>
 ### R-575 -- PAH-v2 original-time displayed-readout freezing

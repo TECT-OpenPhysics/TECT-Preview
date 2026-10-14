@@ -1,0 +1,49 @@
+{
+  "schema": "tect/pah-local-clock-diagnostic/1.0",
+  "id": "PAH-TIME-002",
+  "date_utc": "2026-10-14",
+  "base_commit": "98c8ab21b70341701f1b1083dc311d48fbf6fb03",
+  "task_id": "T-054",
+  "active_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "authority": "The operator explicitly requests setting and executing the next appropriate goal. One original-path sampling diagnostic of the already declared local clocks is admitted, not a new clock law, physical identification, state, time or model adoption.",
+  "attempt_budget": 1,
+  "question": "For fixed finite admitted G_(h,N), positive epsilon and all parent parameters, does E_pi_r[max_v sup_(0<=tau<=T)|W_r(X_(sigma_v(tau)))-W_r(X_0)|^2] tend to zero as r tends to infinity, where sigma_v is the inverse of the source clock tau_v(t)=integral_0^t s_v(X_u)^nu du?",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "strategy/pa-hyp/PAH-v2-RD-001-result-v1.1.json": "c760f71260e27f8ff9cbbe4a83ac7e98abf1a4df86c8bc73456f42d15bec8b4c",
+    "strategy/pa-hyp/PAH-TIME-001-assessment-v1.json": "d9e2aef9014c985cf6144968c3ddbec524456ca6851ec2e1705c8f6e131e98a7",
+    "strategy/owner-decisions/PreA-focus-no-contact-20261014.json": "82688f5860e94e243a455a33fed947e44c0319128e6e76df10fc829e8a1266d2"
+  },
+  "fixed_scope": {
+    "geometry": "Exactly R-575 admitted finite open square G_(h,N), all elementary faces, stored orientations and O,C anchors. e=|E|, p=|P|>0. No new carrier or boundary.",
+    "model": "Original full integer counting PAH-v2, every signed PH/TR/LK/AP incidence and duplicate K=2 label, functional, mobility exponent and midpoint rate. Full finite domain C^(Omega_r), no replacement of the full invariant cylinder algebra or CRT maps.",
+    "state_and_time": "Original X_0 distributed as full counting Gibbs pi_r, original external Markov path X_t. Existing local clocks start at zero. No terminal conditioning, changed-clock stationarity, new generator or physical time interpretation.",
+    "readout": "W_r=p^(-1) sum_(b in P) Re U_b, the fixed dimensionless unweighted plaquette average used by R-575. Direct sampling, not a repair of CRT transport.",
+    "regulator": "K_r=product of first r+1 primes, M_s=2^r, M_psi=m0*4^r, Rmax=R0*2^r, Q=q0*2^r. All parent real parameters, epsilon>0, h,N,R0 and 1<=q0<=m0 fixed.",
+    "limit": "Only r tends to infinity. No h,N,epsilon,beta,observation-time limit, interchange, physical dimension or volume identification."
+  },
+  "new_evidence_target": "A maximal ORIGINAL-path estimate, followed by deterministic containment of every inverse local clock in [0,T/epsilon^nu]. A random argument may not be inserted into R-575's deterministic semigroup conclusion.",
+  "acceptance": {
+    "PROVED": "Exact all-state labelled-rate/jump estimate, a derived pathwise second-moment bound, inverse-clock containment, independent and hostile verification; explicitly bounded Lean scope.",
+    "DISPROVED": "One fixed admissible parameter/readout tuple with a strictly positive limsup for the exact preregistered maximal expectation.",
+    "HOLD_FOR_EVIDENCE": "One named unproved estimate or exact missing definition, no weakened target or automatic repetition."
+  },
+  "literature_applicability": {
+    "primary": "Ward Whitt, Continuous-Time Markov Chains, December 19, 2006, section 3.4, equations 3.24-3.28 and Theorem 3.4, pp.14-15; https://www.columbia.edu/~ww2040/4106S11/CTMCchapter121906.pdf; accessed 2026-10-14.",
+    "crosswalk": "Finite source state and nonnegative finite rates SATISFIED by R-570. Per-label rate cap uniform in r SATISFIED only at fixed geometry and positive epsilon by R-575. Exact labelled uniformization is derived in the synthesis. No infinite-state theorem or irreducible equilibrium conclusion is imported.",
+    "internal": "R-575 supplies only its full-state absolute energy/rate cap, signed root semantics, and static W variance. TIME001 explicitly left random-clock path sampling unproved. R-573/R-574 remain separate CRT failures.",
+    "residual": "Pathwise W variation and its maximal moment under the original path law, simultaneously for all already declared local clocks.",
+    "adversarial_axes": ["Both LK signs and Poisson second-moment linear term", "Full-state path versus a W-only chain or time-changed Gibbs state", "Fixed epsilon and geometry before r; no physical identification"]
+  },
+  "non_claims": [
+    "No new model, rate, time rescaling, physical projection, state, carrier or observation fitting.",
+    "No physical operational-clock packet is supplied or adopted; PAH-COMMON-OPERATIONAL-CLOCK-W remains missing.",
+    "No common limiting process/state, full-cylinder comparison repair, infinite-volume or continuum theorem.",
+    "No Pre-A, Sector-A, spacetime, QFT, gravity, horizon, mass gap or TOE promotion."
+  ],
+  "follow_on": "One proof attempt and one synthesis checkpoint. No automatic successor. A failure or obstruction of this clock class is not an all-model no-go."
+}

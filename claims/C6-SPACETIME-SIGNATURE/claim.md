@@ -2,6 +2,33 @@
 
 **Tier**: T1 (TSv2) · **Lifecycle**: ACTIVE · **Last review**: 2026-06-09
 
+## Auxiliary declared-clock checkpoint R-576 (2026-10-14)
+
+PAH-TIME-002 proves that the same unweighted plaquette average W freezes
+even when sampled at inverses of every declared local clock
+tau_v(t)=integral_0^t s_v(X_u)^nu du, simultaneously over source vertices
+and a fixed finite local-clock interval. At fixed admitted finite geometry,
+positive epsilon and parent parameters, the maximal squared displacement
+has expectation at most d_r^2[Lambda S+(Lambda S)^2], where
+d_r=4*pi/(p*K_r), Lambda=2*e*exp(beta B), and S=T/epsilon^nu.
+The full original path law, initial counting Gibbs state and every signed
+root remain. Poisson proposal domination and an independent stopped-count
+derivation supply the all-cutoff proof, not finite-table extrapolation.
+
+Certificate: strategy/pa-hyp/PAH-TIME-002-result-v1.json; EXP-001834;
+note notes/pah-local-clock-freezing-261014-v1.0.tex.txt.
+Primary, independent, 16 hostile controls and five partial Lean bridges
+pass; separate in-session analytic reviewers accept the final note.
+Reproduce `python -X utf8 verification/scripts/pah_time002_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages` as one line.
+This closes only the previously unproved random-path sampling diagnostic.
+The operational W-clock identification remains missing; C6 stays T1 OPEN,
+and the T-054 gate is unchanged. No CRT repair, changed-clock stationary
+state, physical Pre-A, spacetime, QFT, gravity or continuum result follows.
+Stop automatic successors; reopen for an exact error or a separately
+admitted independently motivated clock/readout packet. External review
+is invited.
+
 ## Auxiliary readout checkpoint R-575 (2026-10-14)
 
 PAH-v2-RD-001 proves original-time freezing for every preregistered fixed

@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-10-14-PAH-TIME002-DECLARED-CLOCK-FREEZING](#ng-2026-10-14-pah-time002-declared-clock-freezing) | use declared local clocks alone to restore W motion | R-576 proves maximal original-path W freezing simultaneously in all source local clocks at fixed positive epsilon and geometry; no arbitrary random-semigroup substitution, physical clock or all-model no-go |
 | [NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING](#ng-2026-10-14-pah-v2-rd001-displayed-freezing) | nontrivial original-time dynamics of fixed source-displayed readouts | R-575 proves uniform-on-finite-time Gibbs-L2 freezing for every fixed Lipschitz displayed readout at fixed carrier, while an invariant plaquette average retains positive variance; no whole-model or physical no-go |
 | [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](#ng-2026-09-14-pah-v2-sg001-fixed-time) | original-time semigroup convergence for the unchanged R-573 fixed character | R-574 gives original fine-Gibbs norm at least 1/5 at fixed time 1/10 beyond every cutoff threshold; no automatic weakened successor |
 | [NG-2026-09-13-PAH-V2-GD002-GIBBS-L2](#ng-2026-09-13-pah-v2-gd002-gibbs-l2) | full-cylinder original fine-Gibbs generator Cauchy under the adopted PAH-v2 comparison | R-573 gives one fixed invariant character with all-state defect at least seven beyond every cutoff threshold; state consistency and semigroup comparison remain separate |
@@ -10915,6 +10916,36 @@ target, if any, should follow while preserving model and time? Reopen this
 negative result only for an exact source/domain/witness/floor-identity error.
 No physical Pre-A, spacetime, QFT, gravity, continuum, Yang-Mills, mass gap
 or TOE claim follows; T-054's gate and C6 T1 are unchanged.
+
+### NG-2026-10-14-PAH-TIME002-DECLARED-CLOCK-FREEZING -- existing local-clock escape
+
+**Branch / claim.** Use the already-declared local accumulation
+d tau_v=s_v^nu dt alone to avoid W freezing at the original ordered first
+cutoff stage, without a new time/rate/state law or a physical clock input.
+
+**Failure mode.** At each fixed positive epsilon, every inverse local time
+up to T belongs to [0,T/epsilon^nu] in original external time. A labelled
+proposal realization of the exact full generator and the LK jump bound
+give E_pi[max_v sup_(u<=T)|W(X_sigma_v(u))-W(X0)|^2]
+<= (4*pi/(p*K_r))^2[Lambda S+(Lambda S)^2]->0.
+All roots and duplicate signs remain; no W-only chain, local-clock Gibbs
+stationarity or deterministic-semigroup random substitution is assumed.
+
+**Evidence.** R-576 / EXP-001834; source-pinned preregistration, two
+independent moment derivations and a weaker stationary-flux crosscheck,
+16 hostile controls, five partial Lean bridges and one four-page rendered
+synthesis. Certificate strategy/pa-hyp/PAH-TIME-002-result-v1.json.
+Reproduce python -X utf8 verification/scripts/pah_time002_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages as one line.
+Separate in-session review is not external-person certification.
+
+**Consequence.** The maximal-freezing proposition is PROVED; the declared
+clock-only escape is closed within this fixed-scope model diagnostic.
+Physical operational clock identification remains missing. No all-clock
+or all-model no-go, epsilon/volume-uniform estimate, relaxation scale,
+CRT repair, T-054/C6 promotion, physical Pre-A, spacetime, QFT, gravity,
+continuum or TOE. No automatic successor; reenter for an exact error or
+a separately admitted independently motivated clock/readout packet.
 
 ### NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING -- displayed readout nontriviality
 

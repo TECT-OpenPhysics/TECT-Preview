@@ -5,13 +5,14 @@
 
 Authorities: `negative-results/registry.md`.
 
-**392 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 316 · retraction: 5
+**393 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 317 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
 | [`NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING`](registry.md#ng-2026-10-14-pah-v2-rd001-displayed-freezing) | no_go | nontrivial original-time dynamics of fixed source-displayed readouts |
+| [`NG-2026-10-14-PAH-TIME002-DECLARED-CLOCK-FREEZING`](registry.md#ng-2026-10-14-pah-time002-declared-clock-freezing) | no_go | use declared local clocks alone to restore W motion |
 | [`NG-2026-09-14-PAH-V2-SG001-FIXED-TIME`](registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time) | no_go | original-time semigroup convergence for the unchanged R-573 fixed character |
 | [`NG-2026-09-13-PAH-V2-GD002-GIBBS-L2`](registry.md#ng-2026-09-13-pah-v2-gd002-gibbs-l2) | no_go | full-cylinder original fine-Gibbs generator Cauchy under the adopted PAH-v2 comparison |
 | [`NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY`](registry.md#ng-2026-09-12-pah-v2-gd001-sup-cauchy) | no_go | full-cylinder sup generator Cauchy under the adopted PAH-v2 comparison |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER`](registry.md#ng-2026-08-14-pre-a-t055-reading-h-scalar-constants-automatic-pinned-p1-energy-intertwiner) | no_go | infer an ordering-preserving Reading-H-to-pinned-P1 energy identity from shared printed scalar couplings or one constant amplitude normalization |
 | [`NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING`](registry.md#ng-2026-08-14-pre-a-t055-reading-h-bcc-110-on-shell-automatic-side16-torus-embedding) | no_go | treat the registered Reading-H BCC `{110}` shell as an automatic exact on-shell support-preserving embedding in the side-16 pinned P1 torus |
 | [`NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION`](registry.md#ng-2026-08-14-pre-a-t055-isotropic-gaussian-covariance-automatic-nonzero-bcc-mean-field-extraction) | no_go | deterministically and translation-equivariantly extract a nonzero BCC mean field from the stationary isotropic Gaussian-Hartree covariance alone |
-| [`NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN`](registry.md#ng-2026-08-14-pre-a-t055-common-counterterm-basis-unfixed-finite-parts-automatic-empty-reference-sign) | no_go | infer a scheme-independent candidate/reference sign from a common counterterm basis whose nonconstant finite parts remain free |
 
 Search without loading the full registry:
 

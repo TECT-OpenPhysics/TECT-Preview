@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**400 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**401 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-576`](../RESULTS-LEDGER.md#r-576) | PAH-v2 maximal-path freezing in declared local clocks | See authority |
 | [`R-575`](../RESULTS-LEDGER.md#r-575) | PAH-v2 original-time displayed-readout freezing | See authority |
 | [`R-574`](../RESULTS-LEDGER.md#r-574) | PAH-v2 fixed-time original-Gibbs semigroup counterexample | See authority |
 | [`R-573`](../RESULTS-LEDGER.md#r-573) | PAH-v2 original fine-Gibbs generator counterexample | See authority |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-554`](../RESULTS-LEDGER.md#r-554) | PAH-OMC-020 fresh current-byte owner-search snapshot v1.4 | See authority |
 | [`R-553`](../RESULTS-LEDGER.md#r-553) | PAH-OMC-020 positive-time separation from source multiplicity | See authority |
 | [`R-552`](../RESULTS-LEDGER.md#r-552) | PAH-OMC-020 finite semigroup well-posedness under source root multiplicity | See authority |
-| [`R-551`](../RESULTS-LEDGER.md#r-551) | PAH-OMC-020 exact finite second-order semigroup defect | See authority |
 
 Search without loading the full ledger:
 

@@ -1,0 +1,249 @@
+% Title: PAH-v2 plaquette paths freeze in every declared local clock
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-10-14; this version issued 2026-10-14
+% Status: Scoped negative diagnostic; no mainline or physical promotion
+% Revision history: v1.0 (2026-10-14) one bounded-attempt synthesis.
+
+\section*{1. Purpose and scope}
+This note resolves the random-path sampling question left open by
+PAH-TIME-001. It does not supply that audit's missing operational clock law.
+Fix exactly the admitted finite open square $G_{h,N}$, all its elementary
+faces, stored edge orientations and source anchors. Put $v=|V|$, $e=|E|$,
+$p=|P|>0$. These are combinatorial counts, not physical dimensions or volume.
+All parent parameters are fixed, including $0<\epsilon\leq1$ and
+$\beta,\nu>0$, $R_0>0$, and integers $1\leq q_0\leq m_0$. Only $r$ varies:
+\[
+ K_r=\prod_{i=1}^{r+1}p_i,\quad M_s=2^r,\quad M_\psi=m_0 4^r,
+ \quad R_{\max}=R_0 2^r,\quad Q=q_0 2^r.                 \tag{1}
+\]
+Every integer counting coordinate and signed PH/TR/LK/AP incidence is
+retained. In particular hidden labels at zero radius or $\epsilon=1$,
+and the two $K=2$ labels with equal endpoints, are not identified.
+The unchanged finite generator, full domain and initial state are
+\[
+\begin{aligned}
+ L_rf(x)&=\sum_{a:\,ax\text{ valid}}c_a(x)[f(ax)-f(x)],\quad
+ c_a(x)=m_a(x)e^{-\beta(F_r(ax)-F_r(x))/2},\\
+ D(L_r)&=\mathbb C^{\Omega_r},\qquad X_0\sim\pi_r=Z_r^{-1}e^{-\beta F_r}.
+\end{aligned}                                                \tag{2}
+\]
+$X_t$ is the original right-continuous finite Markov path on $t\geq0$,
+with no terminal conditioning. No altered dynamics is adopted. The readout
+and the already declared local path clocks, with zero origin, are
+\[
+ W_r(x)=p^{-1}\sum_{b\in P}\operatorname{Re}U_b(x),\qquad
+ \tau_v(t)=\int_0^t s_v(X_u)^\nu\,du.                       \tag{3}
+\]
+$W$ is dimensionless, unweighted and gauge/anchor invariant. The clocks
+are gauge neutral and covariant with vertex relabelling. No preferred
+vertex or synchronized physical clock is selected. Write $\sigma_v$ for
+the inverse of $\tau_v$; its existence is proved below.
+
+\paragraph{Preregistered target.} For every fixed finite $T\geq0$, prove
+\[
+ E_r(T):=\mathbb E_{\pi_r}\left[
+ \max_{v\in V}\sup_{0\leq u\leq T}
+ |W_r(X_{\sigma_v(u)})-W_r(X_0)|^2\right]\longrightarrow0. \tag{4}
+\]
+This is an original-path random sampling diagnostic, not substitution of
+a random time into $e^{tL_r}W$. No common state/path space across $r$,
+CRT repair or limiting process is asserted. The preregistration is
+\begin{verbatim}
+strategy/pa-hyp/PAH-TIME-002-prereg-v1.json
+a4d3700b323f4b52664cc01680749f4e359c0854bc96f9bf77527a50a827ba10
+\end{verbatim}
+
+\section*{2. Source cap and exact labelled path realization}
+Use only the fixed-scope full-state estimate of R-575, equations (5)--(7):
+$\sum_v|\psi_v|=A=R_0q_0/m_0$, $|F_r(x)|\leq B$, and
+\[
+\begin{split}
+ b_0={}&\lambda_s(1-\epsilon)^2/2+|m^2|A^2/2
+       +|\lambda_4|A^4/4+\eta_6 A^6/6+gA^2/2,\\
+ B={}&vb_0+\kappa_s e(1-\epsilon)^2/2
+                 +2\kappa_D eA^2/\epsilon+2\kappa_g p/\epsilon,\qquad
+ C=e^{\beta B}.
+\end{split}                                                 \tag{5}
+\]
+The parameter domains and normalization are identical. These bounds follow
+on every full tuple from $|\psi_w-U_e\psi_v|\leq2A$, $J_e,J_b\leq1/\epsilon$,
+and $0\leq1-\operatorname{Re}U_b\leq2$. Every mobility is at most one;
+hence $c_a(x)\leq C$, including signed mass/quartic coefficients. $C$ is
+independent of $r$, not of geometry, $\epsilon$ or the other parameters.
+
+There are $M=4(v+e)$ potential labels. Give each label an independent
+Poisson proposal stream of rate $C$, with independent uniform acceptance
+marks. At a proposal, apply its root with probability $c_a(x)/C$ if valid;
+otherwise stay. Rejected proposals are auxiliary bookkeeping, not new source
+events. Invalid roots have acceptance zero and are never evaluated outside
+$\Omega_r$. The infinitesimal generator of the resulting state path is
+exactly (2). Equivalently its one-proposal kernel $P$ satisfies
+\[
+ P f(x)-f(x)=M^{-1}\sum_{a\text{ valid}}(c_a(x)/C)[f(ax)-f(x)],
+ \qquad MC(P-I)=L_r.                                        \tag{6}
+\]
+The proposal sum is finite on compact intervals almost surely. Conditional
+on its count, the kernel is $P$, so the transition matrices are
+$e^{-MCt}\sum_{n\geq0}(MCt)^nP^n/n!=e^{tL_r}$.
+Independent future proposal increments give the finite Markov path law
+with the stipulated initial distribution. Thus this construction represents
+the original chain; it does not change rates or time. Duplicate labels
+contribute their separate rates, as required by the source.
+
+Let $N^{\rm prop}_{\rm LK}(S)$ count all LK proposals in $[0,S]$.
+It is Poisson with mean $\Lambda S$, where $\Lambda=2eC$, because there are
+exactly $2e$ independent signed LK proposal streams. The accepted LK events
+need not be Poisson: their intensities depend on the full state.
+
+\section*{3. Maximal path estimate and all local clocks}
+PH, TR and AP leave $u_e$, hence instantaneous $W$, unchanged. They still
+affect subsequent LK rates; (5)--(6) do not discard them. A single LK move
+touches at most two elementary faces, so telescoping their unit holonomies
+gives, with modular chord distance,
+\[
+ |\Delta_aW_r|\leq\frac2p|e^{2\pi i/K_r}-1|
+       =\frac4p\sin(\pi/K_r)\leq d_r:=\frac{4\pi}{pK_r}.
+                                                               \tag{7}
+\]
+This counts boundary edges safely and retains both signs at $K=2$.
+Telescoping along each original path implies
+\[
+ \sup_{0\leq t\leq S}|W_r(X_t)-W_r(X_0)|
+       \leq d_r N^{\rm prop}_{\rm LK}(S).                    \tag{8}
+\]
+For $N\sim\operatorname{Poisson}(z)$ the generating function is
+$\mathbb E q^N=e^{z(q-1)}$. Differentiating at $q=1$ yields
+$\mathbb EN=z$, $\mathbb EN(N-1)=z^2$, and $\mathbb EN^2=z+z^2$.
+Thus (8) has a square-integrable envelope.
+
+Since $\epsilon^\nu\leq s_v(X_t)^\nu\leq1$, each clock in (3) is continuous,
+strictly increasing and onto $[0,\infty)$, with
+\[
+ \epsilon^\nu t\leq\tau_v(t)\leq t,\qquad
+ u\leq\sigma_v(u)\leq u/\epsilon^\nu.                       \tag{9}
+\]
+The inverse is causal: $\{\sigma_v(u)\leq t\}=\{\tau_v(t)\geq u\}$.
+No stochastic time-change or stationarity theorem is required. For
+$S=T/\epsilon^\nu$ every sampled time in (4), for every vertex, lies in the
+same $[0,S]$. Consequently, without a vertex union factor,
+\[
+ E_r(T)\leq d_r^2\{\Lambda S+(\Lambda S)^2\}
+       =\left(\frac{4\pi}{pK_r}\right)^2
+          \left\{2eCS+(2eCS)^2\right\}\longrightarrow0.       \tag{10}
+\]
+All paths are piecewise constant with finitely many proposals on $[0,S]$;
+the finite-vertex maxima and time suprema above are measurable. They are
+bounded by (8) and also by $2$ in absolute displacement. The limit in (10)
+uses $K_r\geq2^{r+1}\to\infty$ and fixed $C,e,p,S$. It is a second-moment
+bound of order $K_r^{-2}$, not a derived relaxation time or its lower bound.
+
+\section*{4. Independent checks of the analytic step}
+An independent derivation avoids Poisson independence. Count accepted
+labelled LK incidences by $N_t$; their predictable intensity obeys
+$\lambda_r(X_t)\leq\Lambda$. Stop at the $m$th LK incidence and freeze the
+augmented finite state/count chain. Its generator on $n$ and $n^2$ is,
+respectively, $1_{n<m}\lambda_r(x)$ and
+$1_{n<m}(2n+1)\lambda_r(x)$. Integrating the finite matrix exponential gives
+\[
+ \mathbb EN^{(m)}_t\leq\Lambda t,\qquad
+ \mathbb E(N^{(m)}_t)^2
+ \leq\int_0^t\Lambda(2\mathbb EN^{(m)}_s+1)\,ds
+ \leq\Lambda t+\Lambda^2t^2.                                \tag{11}
+\]
+The full rate cap $MC$ gives nonexplosion. Monotone convergence as
+$m\to\infty$ and pathwise telescoping give (10) again. No new physical
+carrier is introduced: the finite stopped count is a proof device only.
+
+A second, weaker check uses original external-time stationarity and the
+per-label midpoint flux bound from R-575 equation (11):
+$\sum_x\pi_r(x)c_a(x)\leq1$. For LK it follows by Cauchy--Schwarz on the
+bijective labelled root from $\pi_r c_a=m_a\sqrt{\pi_r(x)\pi_r(ax)}$.
+Expected total variation on $[0,S]$ is at most $2ed_rS$. Because $W\in[-1,1]$,
+the squared maximum displacement is at most twice that variation. Hence
+\[
+ E_r(T)\leq4ed_rS\longrightarrow0.                         \tag{12}
+\]
+Stationarity is used here only at deterministic original times before
+the pathwise interval containment, never in the sampled clock. The
+positive initial Gibbs variance of $W$ in R-575 remains separate; (10)
+is not a constant-readout artifact, nor a new stationary local-clock law.
+
+\section*{5. Applicability and verification boundary}
+Ward Whitt, \emph{Continuous-Time Markov Chains}, December 19, 2006,
+section 3.4, equations (3.24)--(3.28) and Theorem 3.4, pp.~14--15, is the
+primary reference for finite uniformization. The source URL and access
+date are in the preregistration. Finite state, nonnegative rates, bounded
+total rate and identical initial distribution hold here; (6) derives the
+labelled specialization. No infinite-state or ergodic conclusion is imported.
+
+R-570's finite full-domain result and R-575's cap apply to identical
+functional/state/root/schedule bytes. R-575's deterministic semigroup
+bound alone does not prove (4); (8)--(9) are the new bridge. The old
+R-573/R-574 CRT-cylinder counterexamples remain unchanged. TIME001's
+operational-clock identification remains missing.
+
+Primary exact source/symbolic controls, non-importing independent
+incidence/count controls, and 16 hostile algebra/metadata controls have
+separate run JSONs. The width-four, $K=6$ hostile readout fixture uses the
+admitted schedule; no new dynamics table or carrier is studied. The bound
+for arbitrary $r$ is proved above, not inferred from fixtures.
+Five parameterized Lean declarations check moment algebra, squared
+domination, inverse horizon, an integrable expectation inequality and
+limit domination. The actual CTMC, Poisson moments, source estimates,
+clock inverse construction and $K_r$ divergence are not fully encoded.
+Reviewers are separate in-session agents, not external-person referees.
+External adversarial replay is invited.
+
+\section*{6. Devil's-advocate review}
+\begin{enumerate}
+\item \textbf{Only one sign counted. DISMISSED:} $2e$ LK labels are retained,
+including duplicate $K=2$ endpoints. There is no rate division by multiplicity.
+\item \textbf{One affected face assumed. DISMISSED:} the factor two in (7)
+is necessary. On admitted width four, $K=6$, a shared-link fixture has
+displacement $2/9$ and chord one; the false bound $1/9$ fails.
+\item \textbf{Poisson variance omitted. DISMISSED:} the moment is $z+z^2$,
+not $z^2$. Accepted events are not assumed to be Poisson.
+\item \textbf{Other roots were removed. DISMISSED:} every signed root is
+present in (6); they may change future LK rates. Only their instantaneous
+$W$ increments vanish.
+\item \textbf{Random time inserted into a semigroup. DISMISSED:} (8) controls
+entire original paths; (9) is deterministic interval containment on each path.
+\item \textbf{A new Gibbs state is needed. UPHELD for a changed-clock
+stationarity claim:} none is made. The initial law stays $\pi_r$; (10)
+actually requires no stationary initial law.
+\item \textbf{An arbitrary vertex defines a physical clock. DISMISSED:}
+(4) ranges over every vertex covariantly; it chooses no global observation clock.
+\item \textbf{Small aperture or infinite volume evades the constants.
+UPHELD as a scope limit:} $S$ and $B$ need not be uniform in those limits.
+Neither a joint limit nor a kinetic acceleration is authorized or tested.
+\item \textbf{Source or physical meaning repaired. UPHELD as a prohibition:}
+no CRT repair, common limit, operational calibration or physical identity
+follows. This is a model-specific obstruction using standard finite tools.
+\end{enumerate}
+
+\section*{7. Result footer}
+\begin{verbatim}
+Result ID: R-576; PAH-TIME-002; exploration EXP-001834.
+Precise statement: Equation (10) proves the preregistered maximal
+original-path W freezing simultaneously in every declared local clock.
+Scope: Fixed admitted finite square and parameters, epsilon>0;
+original full counting Gibbs initial law and external-time path;
+only the approved local-state cutoff r tends to infinity.
+Dependencies: Frozen parent functional/rates, v2-r2 labelled roots,
+adopted schedule, R-575 cap; finite labelled probability construction.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, INHERITED cap.
+Reproduction command: python -X utf8
+  verification/scripts/pah_time002_verify.py
+  --lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+  --elan-home C:/Users/NaEun/.elan
+Expected output: primary, independent, hostile, partial Lean,
+and integrated PASS. Assemble the command above on one line.
+Falsification gate: exact source/cap/root/path/clock or moment error.
+Tier before / after: C6 T1 OPEN -> T1 OPEN; T-054 gate unchanged.
+No-overclaim statement: no physical Pre-A, spacetime, QFT, gravity,
+horizon, continuum, mass gap or TOE; no operational-clock admission.
+Next required action: finish checkpoint, then park. Reopen only for
+an exact error or a separately admitted, independently motivated
+operational clock/readout packet outside this fixed-scope obstruction.
+No automatic proof chain, rate fitting, external enquiry or rescaling.
+\end{verbatim}
