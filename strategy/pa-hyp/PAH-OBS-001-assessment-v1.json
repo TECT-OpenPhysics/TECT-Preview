@@ -1,0 +1,163 @@
+{
+  "schema": "tect/pah-observation-assessment/1.0",
+  "id": "PAH-OBS-001-ASSESSMENT-v1",
+  "date": "2026-10-14",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "active_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "admission": {
+    "path": "strategy/pa-hyp/PAH-OBS-001-admission-v1.json",
+    "sha256": "4d78a307c35cdad33d03341ecd4ca9956de2535d85417d1a32e0085f524f5715"
+  },
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "new_result_id": null,
+  "question": "Does the selected atomic closed-loop measurement source instantiate a causal physical clock-W instrument for unchanged PAH-v2?",
+  "finding": "No complete bridge is supplied by the inspected source pair. The atomic protocol is not an identified PAH probe. Missing physical input is represented once as a joint instrument, not as multiple new proof chains. This is a bounded applicability audit, not a universal absence claim or a new PAH no-go.",
+  "source_facts": {
+    "DAS_II": "Equations (1)-(2) describe adiabatic dark-state holonomy on control parameters; the final paragraph separates traversal rate from the geometric path.",
+    "DAS_III": "A four-state Schroedinger interaction and characteristic Rabi frequency supply apparatus dynamics and units. The stated closed bare phases sum to an integer multiple of 2*pi.",
+    "DAS_VIII": "Equation (20) and following text reconstruct matrix entries using complex bare-state amplitudes in forward/reverse protocols.",
+    "DAS_IX": "Equations (27)-(29) propose atomic couplings with RWA, detuning, frequency, intensity and phase restrictions. They are not a PAH calibration dataset.",
+    "exclusions": "No non-Abelian mixed-density-matrix or loop-order theorem from this source is imported; no full-paper correctness certification is asserted."
+  },
+  "source_crosswalk": [
+    {
+      "id": "probe_U_coupling",
+      "status": "MISSING",
+      "source": "DAS III,IX; PAH-v1 /microscopic_degrees_of_freedom/probe, /horizon_collapse_tests/probe_rates",
+      "assessment": "PAH's neutral kappa0*s_v^nu tagged walk has no declared coherent U-sensitive amplitude coupling. A material Hamiltonian driving laser-controlled parameters does not identify the PAH link field.",
+      "naive_import": "DOES-NOT-APPLY"
+    },
+    {
+      "id": "exact_W_reconstruction",
+      "status": "CONDITIONAL_NOT_ADMITTED",
+      "source": "DAS VIII; R-575 /proof/variance_witness",
+      "assessment": "Complex synthetic loop data are not the unweighted mean of scalar PAH face holonomies. A reference-arm conditional reconstruction is written only in the separate unadopted proposal. Equal averaging and per-face calibration must be preserved.",
+      "naive_import": "DOES-NOT-APPLY"
+    },
+    {
+      "id": "independent_time_and_synchronization",
+      "status": "MISSING",
+      "source": "DAS II-III; PAH-v1 /dynamics/time",
+      "assessment": "An external clock and Rabi scale define apparatus time, not t_r from seconds to PAH time. No synchronized global W acquisition, clock covariance or independent kinetic calibration is supplied.",
+      "naive_import": "DOES-NOT-APPLY"
+    },
+    {
+      "id": "exposure_and_backaction",
+      "status": "MISSING",
+      "source": "DAS II,VIII-IX; PAH-v1 /finite_regulator/time_boundary_condition",
+      "assessment": "The experiment has finite exposure and controlled quantum evolution. No original-Gibbs background marginal or quantified disturbance/quasistatic error is supplied. Posterior conditioning and physical disturbance must be separated.",
+      "naive_import": "NOT-YET-ASSESSED"
+    },
+    {
+      "id": "refinement_identity",
+      "status": "MISSING",
+      "source": "PAH-v2-morton-crt-draft /geometry/nominal_lattice_label and /state_maps/comparison_only_warning",
+      "assessment": "No mapping keeps the physical apparatus, equal-face region, duration and error law fixed across PAH r. A hardware encoding of sampled configurations is not an identification of natural microscopic variables.",
+      "naive_import": "NOT-YET-ASSESSED"
+    },
+    {
+      "id": "calibration_uncertainty",
+      "status": "MISSING",
+      "source": "DAS IX; proposal /calibration_and_holdout",
+      "assessment": "No PAH response calibration, complete covariance or controlled exposure/nonadiabatic/dynamic-phase bound is supplied. Source feasibility is not measured calibration.",
+      "naive_import": "NOT-YET-ASSESSED"
+    },
+    {
+      "id": "holdout",
+      "status": "MISSING",
+      "source": "proposal /calibration_and_holdout",
+      "assessment": "No independent unused PAH outcomes, frozen scorer or predicted distribution are present. No retrospective example or engineered match receives empirical credit.",
+      "naive_import": "NOT-YET-ASSESSED"
+    }
+  ],
+  "hypothesis_checks": [
+    {
+      "axis": "convention",
+      "finding": "Keep scalar Re U, stored orientation and equal-face mean. Do not replace with U(2) trace, its modulus or J_p(s)-weighted energy."
+    },
+    {
+      "axis": "domain",
+      "finding": "DAS dark-state quantum amplitude space is not PAH full integer counting state; no map or probe coupling identifies them."
+    },
+    {
+      "axis": "limits",
+      "finding": "Adiabatic control traversal is not PAH cutoff refinement or a physical time conversion; R-576 only has fixed h,N,epsilon>0 and r->infinity."
+    },
+    {
+      "axis": "bare_phase_shortcut",
+      "finding": "Equating the source's closed four bare control phases directly to every PAH face link would restrict their product to one. General PAH face configurations are not so restricted. This is a mismatch of that naive shortcut, not an impossibility theorem for an indirect instrument."
+    }
+  ],
+  "distinct_judgments": {
+    "measurement_bridge": "NOT_ADMITTED",
+    "static_W_readability": "UNRESOLVED_NOT_REFUTED",
+    "dynamic_nontriviality": "NOT_ESTABLISHED; R-575/R-576 remain in their original scopes",
+    "physical_theory_promotion": "NONE"
+  },
+  "missing_input": {
+    "id": "PAH-COMMON-OPERATIONAL-CLOCK-W",
+    "name": "One source-justified causal joint PAH-probe-clock instrument J_r",
+    "status": "NOT_SUPPLIED_OR_ADOPTED",
+    "minimum": "A physical interaction and reference-sensitive response to the actual U field, with independently justified laboratory-time sampling, original-law/disturbance and exposure treatment, and refinement/calibration/uncertainty/holdout fields. A name, abstract response kernel or standard clock is insufficient."
+  },
+  "unadopted_proposal": "strategy/pa-hyp/PAH-OBS-001-instrument-proposal-v0.1.json",
+  "evidence_level": "SOURCE_APPLICABILITY_AND_UNADOPTED_INTERFACE_ONLY; no new L1 theorem or L3/L4 admission",
+  "devils_advocate": [
+    {
+      "objection": "A standard clock already solves time.",
+      "disposition": "UPHELD against admission: apparatus calibration does not identify stochastic PAH time."
+    },
+    {
+      "objection": "Gauge-invariant W is automatically measurable.",
+      "disposition": "UPHELD against admission: a physically implemented instrument remains missing."
+    },
+    {
+      "objection": "The conditional Bernoulli formula proves the connection.",
+      "disposition": "UPHELD: formula is explicitly a new unadopted measurement hypothesis, not evidence."
+    },
+    {
+      "objection": "The source contains a suitable probe already.",
+      "disposition": "UPHELD against this reuse: the PAH neutral walk is not the atomic coherent probe."
+    },
+    {
+      "objection": "A frozen W makes all physical readout impossible.",
+      "disposition": "DISMISSED: static readability and time-dependent signal are distinct; no global no-go follows."
+    },
+    {
+      "objection": "Only pointwise phase sampling is needed.",
+      "disposition": "UPHELD: finite exposure and asynchronous sampling require separate controlled response."
+    },
+    {
+      "objection": "The instrument algebra checks prove a PAH theorem.",
+      "disposition": "DISMISSED: checks only validate the explicit conditional interface and metadata; physical completeness is reviewed separately."
+    }
+  ],
+  "verification": {
+    "primary": "Reproducible source/hash and conditional-instrument algebra controls; no dynamics simulation.",
+    "independent": "Separate in-session source/definition and final-hash review required.",
+    "hostile": "Separate in-session semantic and final-code review required.",
+    "Lean": "NOT_RUN: no new PAH theorem; formalizing a Bernoulli identity would not establish the missing physical instrument.",
+    "PDF": "NO_NEW_NOTE: no scientific gate closes; one compact structured checkpoint uses existing fresh notes.",
+    "external_person": "NOT_PERFORMED; in-session review is not external-person certification."
+  },
+  "research_value": "One concrete apparatus-source crosswalk replaces an abstract missing-map label with a testable unadopted instrument interface and an explicit finite-exposure boundary. It supplies neither the coupling nor mainline advancement. Standard interferometric measurement logic is reused; no novelty priority is claimed.",
+  "follow_on": {
+    "route": "PARK_OR_BLOCK",
+    "attempts_remaining": 0,
+    "automatic_successor": false,
+    "next_single_action": "Receive a physically justified J_r packet or separately authorize development of the named unadopted extension; no further unchanged source hunt.",
+    "reentry": "New source/interaction evidence that fills the one instrument object, or an exact error in this crosswalk. Additional clock variants, programmed simulations, posterior scale fitting or another data search do not qualify."
+  },
+  "non_claims": [
+    "No changed PAH-v2 model, functional, rates, state, time, observable, comparison, limit order or physical projection",
+    "No empirical success, new no-go, mainline gate closure, Pre-A, physical time, spacetime, QFT, GR, continuum, mass gap or TOE"
+  ],
+  "reproduction": "python -X utf8 verification/scripts/pah_obs001_audit.py --check"
+}

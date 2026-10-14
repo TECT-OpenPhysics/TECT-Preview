@@ -1,0 +1,67 @@
+{
+  "schema": "tect/pah-instrument-proposal/0.1",
+  "id": "PAH-OBS-001-INSTRUMENT-PROPOSAL-v0.1",
+  "status": "UNADOPTED_HYPOTHESIS_ONLY",
+  "adopted": false,
+  "parent_model_changed": false,
+  "purpose": "Expose the smallest phase-sensitive measurement law that would have to be physically justified; not an implemented experiment, PAH consequence or complete new microscopic model.",
+  "parent": "strategy/pa-hyp/PAH-001-v2-r2.json",
+  "parent_sha256": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+  "missing_object": "PAH-COMMON-OPERATIONAL-CLOCK-W",
+  "hypothesis": "An independently motivated causal physical instrument J_r couples a phase-coherent reference and probe to the existing PAH link field, gives an original-law-preserving marginal (or a separately authorized controlled disturbance treatment), and synchronizes its outcomes to a calibrated laboratory clock through a justified map t_r. No such J_r is supplied or adopted.",
+  "logical_interface": {
+    "phase_gate": "For a fixed configuration x and face p, the proposed target is C_p(x)=|0><0| + U_p(x)|1><1| on reference/path arms. This is an abstract desired response, NOT a derived physical Hamiltonian.",
+    "readout_definition": "For output Y in {-1,+1}, phase theta, independently known b_p and 0<V_p<=1 with |b_p|+V_p<=1: E[Y|x,p,theta]=b_p+V_p Re(exp(i theta) U_p(x)). Equivalently P(Y=+1|x)=(1+b_p+V_p Re(exp(i theta)U_p(x)))/2.",
+    "calibrated_reconstruction": "At theta=0, p^(-1) sum_faces (E[Y|x,face,0]-b_face)/V_face = W(x). A sample mean is an estimator, not an exact single-shot value. Face weights remain equal AFTER individual calibration.",
+    "reference_requirement": "A reference arm or equivalent phase reference is essential; scalar multiplication of a single isolated amplitude leaves its population unchanged.",
+    "scope": "This conditional readout kernel only illustrates what a physical instrument must realize. It does not give probe-U dynamics, t_r, noninvasiveness, source identification or a temporal prediction."
+  },
+  "unfilled_inputs": {
+    "physical_probe_coupling": null,
+    "calibrated_time_map": null,
+    "exposure_response_and_error": null,
+    "joint_path_instrument_law": null,
+    "fixed_apparatus_refinement_map": null,
+    "independent_calibration_covariance": null,
+    "sealed_holdout": null
+  },
+  "timing_and_backaction": {
+    "lab_time": "One traceable laboratory reference timestamps both settings and detections; offsets and synchronization covariance across all face measurements must be fixed. No vertex clock is chosen.",
+    "external_time_map": "t_r(tau) must be causal, justified independently of W decay and pinned before scoring. Not supplied; no rate multiplier or new time law is chosen.",
+    "finite_exposure": "A real interferometer acts over an interval. Its time-ordered probe evolution must imply the displayed instantaneous kernel with a justified error, or its exact exposure functional must be declared without changing the target silently.",
+    "original_law": "The joint instrument marginal on background trajectories must agree with the original PAH path law in the declared norm or supply a controlled error compatible with the target. A changed physical law requires separate approval. Outcome-conditioned posterior updating is not itself physical backaction.",
+    "synchronization": "Sequential face or phase measurements at different times/configurations do not automatically reconstruct instantaneous global W or its two-time correlation.",
+    "no_stationarity_shortcut": "Original Gibbs stationarity cannot be assumed after conditioning, time sampling or coupling."
+  },
+  "refinement": {
+    "scope": "Existing fixed finite carrier and r-first limits only; no new h,N,epsilon,volume or continuum limit.",
+    "requirements": "Identify the same apparatus, region, duration and equal-face averaging as r changes, including error and calibration transport. Integer labels or CRT maps alone supply no physical transport.",
+    "emulator_firewall": "Programming probe control phases from a computed PAH trajectory is an encoded simulator. It tests that encoding, not the presence of PAH variables in nature."
+  },
+  "calibration_and_holdout": {
+    "status": "DESIGN_ONLY_NOT_DATA",
+    "calibration": "Before any PAH-dependent signal: determine reference phase, per-face b,V, clock offsets, exposure and nuisance covariance using independent standards/settings. No numerical calibration values chosen here.",
+    "uncertainty": "Use a joint covariance and controlled nonadiabatic, finite-exposure, disturbance, synchronization and drift remainders. No independence or bounded error is presumed.",
+    "holdout": "Only after a physical instrument and calibration are admitted: freeze settings, scorer, model predictions, uncertainty, original ensemble and unused outcome acquisition. Public source examples are retrospective design, not holdout.",
+    "two_time_target": "A future separately admitted test may target E_pi[W_r(X_(t_r(tau1))) W_r(X_(t_r(tau2)))], after deriving the relation to the actual instrument outcomes. This is an unevaluated interface, not an available prediction.",
+    "static_vs_dynamic": "Static sensitivity can be admitted without nonzero time variation. Shot noise and device drift do not constitute W dynamics; R-575/R-576 stay as applicable controls."
+  },
+  "approval_boundary": {
+    "allowed_now": "Source comparison, this unadopted target contract, and algebra/metadata controls only.",
+    "requires_separate_authorization": "Selecting a physical probe interaction, adding a Hamiltonian/coupling/rate/time/state law, changing the background marginal or regulator interpretation, implementing or scoring that new version.",
+    "not_authorized": "Silently adopting the displayed kernel or an H_int proportional to W as a PAH-derived law.",
+    "falsifiers": [
+      "The response does not depend on the original U but only on externally programmed phases.",
+      "Response weights yield energy-weighted or contrast-weighted loop averages rather than W.",
+      "Time or sensitivity is selected to undo R-576 or after holdout disclosure.",
+      "Coupling/exposure changes the background law beyond the declared controlled treatment.",
+      "The same apparatus/refinement comparison or calibrated phase reference cannot be specified."
+    ],
+    "next_single_question": "Can a source-supported physical J_r filling this interface be supplied without redefining the original PAH model, or explicitly proposed and separately authorized as an extension?"
+  },
+  "non_claims": [
+    "No implemented coupling, operational PAH time, experimental data, empirical exclusion or physical identification",
+    "No new theorem/no-go, dynamics, Pre-A, spacetime, QFT, GR, continuum, mass gap or TOE",
+    "No automatic successor"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "tect/pah-observation-review/1.0",
+  "id": "PAH-OBS-001-REVIEW-v1",
+  "date": "2026-10-14",
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OBS-001-admission-v1.json": "4d78a307c35cdad33d03341ecd4ca9956de2535d85417d1a32e0085f524f5715",
+    "strategy/pa-hyp/PAH-OBS-001-assessment-v1.json": "22e2eb419294feb3ecce0bc7a0ea076b052f796f903bbaeb16c82abfafcfafa5",
+    "strategy/pa-hyp/PAH-OBS-001-instrument-proposal-v0.1.json": "4d0c09133b2ac7bbe14b56ecac07b2b363103a99fce6b7e55e42c3e8be2f4ddb",
+    "verification/scripts/pah_obs001_audit.py": "b0d4dd8869cec94f389566eac7012f1e4a58ccc4bf27f7cdfa7e1dc4abbd4897"
+  },
+  "external_pdf_sha256": "39e8aac483a69fb367439515afaa7881748c44b41490ad91697e35cb7d96169f",
+  "reviews": [
+    {
+      "role": "independent",
+      "reviewer": "in-session agent obs001_independent",
+      "verdict": "ACCEPT_SCOPED_AUDIT",
+      "method": "Independently read primary source and exact PAH locators, checked hashes, and rederived conditional Bernoulli expectation/reconstruction without treating it as a realized instrument.",
+      "findings": [
+        "Parameter-space holonomy is not PAH relational face holonomy; no source identification or physical clock map follows.",
+        "Verified |b|+V<=1, E[Y]=2Pplus-1 and calibration before equal-face averaging.",
+        "Exposure, synchronization, original marginal, refinement, covariance and holdout are explicit requirements, not claimed available."
+      ],
+      "execution": "--selftest --source-cache PASS; optimized Python rejected with RuntimeError and exit 1."
+    },
+    {
+      "role": "hostile",
+      "reviewer": "in-session agent obs001_hostile",
+      "verdict": "ACCEPT_SCOPED_AUDIT",
+      "method": "Adversarial source/applicability and code review of sign, factor, units, phase reference, per-face normalization, zero visibility, model mutation and empirical leakage.",
+      "findings": [
+        "No new clock, coupling or state adopted; source paper is not experimental PAH evidence.",
+        "Static W readability is unresolved, not refuted by freezing. Device noise is not W motion.",
+        "Finite-exposure and joint-law/backaction obligations prevent instantaneous-kernel and passive-probe shortcuts."
+      ],
+      "execution": "--selftest --source-cache PASS; -B -O --selftest failed as required."
+    }
+  ],
+  "coverage_boundary": "Executable checks cover only hash/scope and elementary conditional instrument algebra. Physical applicability is an in-session source audit, not an external-person certification or a theorem. Neither reviewer implements, calibrates or proves existence of J_r.",
+  "Lean": "NOT_RUN: missing physical law cannot be filled by formalizing conditional algebra.",
+  "external_review_invitation": "External review is invited of the actual source crosswalk and unadopted instrument proposal. No external message was sent."
+}

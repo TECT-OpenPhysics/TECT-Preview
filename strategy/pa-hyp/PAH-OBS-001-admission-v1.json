@@ -1,0 +1,65 @@
+{
+  "schema": "tect/pah-observation-admission/1.0",
+  "id": "PAH-OBS-001-ADMISSION-v1",
+  "date": "2026-10-14",
+  "task_id": "T-054",
+  "base_commit": "875e057a36d5e41ce9a3a9ca984080f1018a7681",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "attempt_budget": 1,
+  "previous_goal_turn": "PROGRESS: read-only source screening selected one primary atomic loop protocol and exposed the parameter-space versus PAH-link distinction; no research verdict or model was issued.",
+  "question": "Can one physical atomic closed-loop phase readout provide a source-justified causal observation law for the exact PAH-v2 W with independently calibrated time, disturbance, refinement identity and uncertainty?",
+  "scope": "Fixed PAH-v2-r2 full counting Gibbs law, signed rates and original external Markov time; W is the unweighted real plaquette average; R-575/R-576 fixed finite h,N and epsilon>0 remain. No new parameter/limit/volume/time order or carrier.",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-RD-001-result-v1.1.json": "c760f71260e27f8ff9cbbe4a83ac7e98abf1a4df86c8bc73456f42d15bec8b4c",
+    "strategy/pa-hyp/PAH-TIME-001-assessment-v1.json": "d9e2aef9014c985cf6144968c3ddbec524456ca6851ec2e1705c8f6e131e98a7",
+    "strategy/pa-hyp/PAH-TIME-002-result-v1.json": "f9928e8897aef7129cabd3b47efc732f34612ca59c49d68541c2a8ec785f6f0e",
+    "strategy/clock/TECT-CLK-001-assessment-v1.1.json": "f70a0f8408c76fb32bf96df604952e168ebf2130fed9242bb9797a92ccc296d8",
+    "strategy/clock/TECT-CLK-002-assessment-v1.json": "55304051bc0033700e34236cbc8f7a07623313db1f177b6d58e4573d19491290"
+  },
+  "external_source": {
+    "id": "DAS-2018-v1",
+    "title": "Measurement and Significance of Wilson Loops in Synthetic Gauges Fields",
+    "author": "Kunal K. Das",
+    "version": "arXiv:1805.08248v1 (2018-05-21)",
+    "doi": "10.1103/PhysRevA.97.053620",
+    "url": "https://arxiv.org/pdf/1805.08248v1",
+    "html": "https://arxiv.org/html/1805.08248v1",
+    "sha256": "39e8aac483a69fb367439515afaa7881748c44b41490ad91697e35cb7d96169f",
+    "locators": [
+      "II, equations (1)-(2) and final paragraph",
+      "III, interaction Hamiltonian and characteristic Rabi frequency units",
+      "VIII, equation (20), forward/reverse complex-amplitude reconstruction",
+      "IX, equations (27)-(29), RWA, closed-frequency and Rabi constraints"
+    ],
+    "role": "MEASUREMENT_METHOD_COMPARATOR_ONLY; not a PAH theorem, observed dataset or a licensed physical identification",
+    "retrieved_on": "2026-10-14",
+    "historical_note": "Initial source selection/read occurred during the preceding goal-setting turn. This is admission before the detailed crosswalk and contract tests, not a claim of blind preregistration."
+  },
+  "required_fields": [
+    "probe_U_coupling",
+    "exact_W_reconstruction",
+    "independent_time_and_synchronization",
+    "exposure_and_backaction",
+    "refinement_identity",
+    "calibration_uncertainty",
+    "holdout"
+  ],
+  "decision_rules": {
+    "ADMISSIBLE_FOR_TEST": "Every field is supported by an exact justified source or an explicitly admitted hypothesis; measurement admission is separate from kinetic nontriviality and physical theory promotion.",
+    "INCOMPATIBLE": "A contradiction for the entire specified interface, not merely failure of one naive identification, is established.",
+    "HOLD_FOR_EVIDENCE": "A load-bearing physical instrument field is absent. Record one joint missing object and, if useful, a separately versioned unadopted minimal hypothesis."
+  },
+  "budget": "One source-specific audit with independent and hostile review. No broader search, new finite dynamics run, new clock, rate fit, satellite data search or external contact.",
+  "non_claims": [
+    "No new Pre-A, physical time, spacetime, QFT, GR, continuum, mass gap or TOE conclusion",
+    "No new dynamics, state, comparison map, physical projection or source adoption",
+    "No clock calibration inferred from W freezing; no relaxation scale selected",
+    "No paper or experiment is classified as supplying PAH physics merely because both use Wilson loops"
+  ]
+}
