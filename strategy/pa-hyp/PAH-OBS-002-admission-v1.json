@@ -1,0 +1,60 @@
+{
+  "schema": "tect/pah-observation-admission/1.0",
+  "id": "PAH-OBS-002-ADMISSION-v1",
+  "date": "2026-10-14",
+  "task_id": "T-054",
+  "base_commit": "59902f91950a7f072a45f10a65408cbcbefaa1e5",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "attempt_budget": 1,
+  "authorization": {
+    "source": "Direct operator message in this task, 2026-10-14",
+    "meaning": "Review OBS-001 interface v0.1 as a separately hypothetical extension while preserving PAH-v2. Justify clock-W from actual interaction; do not assume coupling or time law to pass.",
+    "not_authorized": "Physical identification, parent mutation, fitted time/rates, empirical success or automatic successor"
+  },
+  "question": "Can the selected actual Raman-assisted atom-light interaction justify the PAH-v2 probe-U link and a synchronized clock-W instrument without inserting those links as assumptions?",
+  "scope": "Original full counting PAH-v2 Gibbs law, PH/TR/LK/AP rates, external Markov time, unweighted real plaquette W, fixed finite h,N and epsilon>0, original r-first order. Comparator: noninteracting atoms in a driven two-dimensional optical lattice. These carriers/states/times are NOT identified.",
+  "source_pins": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-RD-001-result-v1.1.json": "c760f71260e27f8ff9cbbe4a83ac7e98abf1a4df86c8bc73456f42d15bec8b4c",
+    "strategy/pa-hyp/PAH-TIME-002-result-v1.json": "f9928e8897aef7129cabd3b47efc732f34612ca59c49d68541c2a8ec785f6f0e",
+    "strategy/pa-hyp/PAH-OBS-001-instrument-proposal-v0.1.json": "4d0c09133b2ac7bbe14b56ecac07b2b363103a99fce6b7e55e42c3e8be2f4ddb",
+    "strategy/pa-hyp/PAH-OBS-001-assessment-v1.json": "22e2eb419294feb3ecce0bc7a0ea076b052f796f903bbaeb16c82abfafcfafa5"
+  },
+  "external_source": {
+    "id": "MIYAKE-2013-v3",
+    "title": "Realizing the Harper Hamiltonian with Laser-Assisted Tunneling in Optical Lattices",
+    "version": "arXiv:1308.1431v3, 2013-08-12",
+    "url": "https://arxiv.org/pdf/1308.1431v3",
+    "html": "https://arxiv.org/html/1308.1431v3",
+    "sha256": "ed58d49714b06a2784b5b9fc1c1bcfbd4d575b8e59024c09b4929beab74f01bd",
+    "retrieved_on": "2026-10-14",
+    "bytes": 734430,
+    "role": "ACTUAL_INTERACTION_COMPARATOR_ONLY; not PAH identity or PAH data",
+    "locators": "Original PDF main equations (1)-(5); supplement (6),(17)-(30), pages 6-8. HTML equation numbers differ after the unnumbered rotating-frame equation.",
+    "version_boundary": "v2 was screened but is not load-bearing; all final equations follow v3 and are independently rederived where used. HTML generated date is not the submission date."
+  },
+  "required_fields": [
+    "interaction_to_link",
+    "link_to_PAH",
+    "loop_readout",
+    "lab_time_to_Markov",
+    "finite_exposure_and_backaction",
+    "refinement_and_error",
+    "calibration_and_holdout"
+  ],
+  "decision_rules": {
+    "ADMISSIBLE_FOR_TEST": "All load-bearing source-to-PAH links, time relation and controlled errors justified independently; user permission to investigate is not evidence.",
+    "INCOMPATIBLE": "Explicit contradiction of the full declared extension, not a failed source import or a single naive mapping.",
+    "HOLD_FOR_EVIDENCE": "A physical identification/joint-law field remains missing after the bounded derivation. Preserve conditional algebra without calling it physical evidence."
+  },
+  "budget": "One actual-interaction channel, independent and hostile review, source/definition and symbolic controls only. No PAH trajectory simulation, clock variant, broad source hunt, satellite data, external contact or new empirical fitting.",
+  "timing": "Admission follows read-only source screening and precedes executable controls and final disposition. Not blind preregistration.",
+  "non_claims": [
+    "No adoption of an extra Hamiltonian, coupling, time, state, regulator, physical projection or comparison map",
+    "No new Pre-A, spacetime, QFT, GR, continuum, mass gap, TOE or empirical claim"
+  ]
+}

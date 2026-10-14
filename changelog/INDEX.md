@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1118 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1119 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-10-14 | `20261014-c6-pah-obs-002-actual-raman-interaction-and-sep` — [C6 PAH-OBS-002: actual Raman interaction and separate-extension review] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261014-c6-pah-obs-002-actual-raman-interaction-and-sep) |
 | 2026-10-14 | `20261014-c6-pah-obs-001-atomic-loop-measurement-crosswal` — [C6 PAH-OBS-001: atomic loop measurement crosswalk and unadopted instrument contract] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-pah-obs-001-atomic-loop-measurement-crosswal) |
 | 2026-10-14 | `20261014-c6-r-576-pah-v2-maximal-path-freezing-in-declar` — [C6 R-576: PAH-v2 maximal-path freezing in declared local clocks] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-r-576-pah-v2-maximal-path-freezing-in-declar) |
 | 2026-10-14 | `20261014-c6-pah-time-001-align-strict-continuity-checkpo` — [C6 PAH-TIME-001: align strict continuity checkpoint counts] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-pah-time-001-align-strict-continuity-checkpo) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-12 | `20260912-r-572-pah-v2-gd-001-exact-full-cylinder-sup-cou` — [R-572 PAH-v2 GD-001 exact full-cylinder sup counterexample] - 2026-09-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260912-r-572-pah-v2-gd-001-exact-full-cylinder-sup-cou) |
 | 2026-09-12 | `20260912-r-571-pah-v2-owner-adopted-full-comparison-defi` — [R-571 PAH-v2 owner-adopted full comparison-definition admission] - 2026-09-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260912-r-571-pah-v2-owner-adopted-full-comparison-defi) |
 | 2026-09-11 | `20260911-r-570-pah-v2-labelled-finite-operator-consisten` — [R-570 PAH-v2 labelled finite operator consistency] - 2026-09-11 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260911-r-570-pah-v2-labelled-finite-operator-consisten) |
-| 2026-09-09 | `20260909-r-569-pah-omc-030-finite-strip-to-minimal-marko` — [R-569 PAH-OMC-030 finite-strip to minimal Markov bridge] - 2026-09-09 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260909-r-569-pah-omc-030-finite-strip-to-minimal-marko) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
+| 1119–1119 | 1 | [001119-001168.md](pages/001119-001168.md) |
 | 1069–1118 | 50 | [001069-001118.md](pages/001069-001118.md) |
 | 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |

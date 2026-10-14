@@ -1,0 +1,137 @@
+{
+  "schema": "tect/pah-observation-assessment/1.0",
+  "id": "PAH-OBS-002-ASSESSMENT-v1",
+  "date": "2026-10-14",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "active_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "admission": {
+    "path": "strategy/pa-hyp/PAH-OBS-002-admission-v1.json",
+    "sha256": "51d906a1f9a14ca02b7137174ddcdb2d5a9f57db3f39d5db6ff89d19ad71ad26"
+  },
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "auxiliary_support",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "new_result_id": null,
+  "question": "Does an actual laser-assisted atom-light interaction realize the separately reviewed clock-W interface for unchanged PAH-v2, without imposing a model identity or a time conversion?",
+  "finding": "The physical comparator derives a laser-controlled Peierls link and laboratory evolution. It does not couple to a declared PAH degree of freedom or generate the original PAH stochastic law. Permission to review the extension supplies neither link. No global incompatibility or physical realization is established.",
+  "source_crosswalk": [
+    {
+      "id": "interaction_to_link",
+      "status": "SOURCE_CONDITIONAL",
+      "locator": "Miyake v3 PDF p6 eq6; p7 eq17-24; p8 eq25-31; main eq2",
+      "assessment": "Driven atom-light interaction leads, after the stated band projection, rotating transformation and period average, to position-dependent complex hopping. This is the source apparatus, not an adopted PAH Hamiltonian."
+    },
+    {
+      "id": "link_to_PAH",
+      "status": "MISSING",
+      "locator": "PAH-v2-r2 /integer_counting_space/display; Miyake main eq2",
+      "assessment": "PAH U_e is a counting-state coordinate. The optical link is fixed by laser momentum, phase and lattice position. No physical carrier, state map or feedback-independent causal dependence of the latter on the former is supplied."
+    },
+    {
+      "id": "loop_readout",
+      "status": "CONDITIONAL_NOT_ADMITTED",
+      "locator": "Miyake main eq2-3; OBS001 interface /logical_interface",
+      "assessment": "The oriented square link product is a physical flux phase. Main experimental readout is cloud expansion, not the approved calibrated equal-face W estimator. Reference-arm control, pulse selection and per-face response are additional requirements."
+    },
+    {
+      "id": "lab_time_to_Markov",
+      "status": "MISSING",
+      "locator": "Miyake main resonance/calibration and diffusion paragraphs; PAH-v1 /dynamics",
+      "assessment": "Seconds and H/hbar define laboratory propagation, not original Gibbs jump hazards. The physical background must realize the original state-process generator q(x,y), summing every valid PH/TR/LK/AP root with its multiplicity, and its independently calibrated absolute scale. Separate physical resolution of duplicate root labels is not required for W(X_t). This realization is absent."
+    },
+    {
+      "id": "finite_exposure_and_backaction",
+      "status": "MISSING",
+      "locator": "Miyake PDF p8 before eq25; extension /conditional_error",
+      "assessment": "A rotating-frame identity is not an exact period-averaged propagator identity. No PAH field-motion, micromotion/band, disturbance or synchronization error budget is supplied."
+    },
+    {
+      "id": "refinement_and_error",
+      "status": "MISSING",
+      "locator": "PAH-v2-r2 /finite_scope; OBS001 /refinement",
+      "assessment": "A 2D optical lattice with dimensional spacing is not the PAH relational carrier or its cutoff family. Same region, apparatus, duration and errors across r are unassigned."
+    },
+    {
+      "id": "calibration_and_holdout",
+      "status": "MISSING",
+      "locator": "Miyake main p3; extension /unfilled_inputs",
+      "assessment": "Published apparatus calibration and diffusion interpretation are not PAH calibration, a complete covariance envelope or unused PAH outcomes."
+    }
+  ],
+  "interaction_derivation": {
+    "units": "Write A for the source's energy-valued Omega, and tau for laboratory seconds; A/hbar is an angular-frequency scale. This prevents confusing energy K, K/h in Hz and a CTMC hazard. No numerical physical constant is fitted.",
+    "actual_input": "H_lab=p^2/(2m)+V_latt(r)-(Delta/a)x+A sin(delta_k.r-k_x a/2-omega tau). Resonance: hbar omega=Delta. Main source scope: noninteracting 2D single-band regime, bandwidth below Delta below bandgap.",
+    "rotating_step": "For theta=omega tau-phi_mn and C=A Phi_x0 Phi_y0, Lambda_mn=m omega tau-C cos(theta+k_x a/2)/(hbar omega). The onsite term -m Delta-C sin(theta+k_x a/2)+hbar d_tau Lambda cancels at resonance in H'=U^dagger H U-i hbar U^dagger dot U.",
+    "harmonic_step": "Let z=exp(i theta), so exp(-i omega tau)=exp(-i phi_mn)/z. Multiplying [Phi_x1(z+z^-1)/2-Phi'_x1(z-z^-1)/(2i)] by z^-1 sum_r J_r(Gamma_x)z^r leaves only r=0,2 in the constant harmonic. Thus kappa_x=A Phi_y0[Phi_x1(J0+J2)+i Phi'_x1(J0-J2)]/2 and the link coefficient is kappa_x exp(-i phi_mn). The y coefficient is -J_y J0(Gamma_y).",
+    "scope_of_exactness": "Algebra after the displayed projected input is exact; band reduction and replacing time-ordered propagation by the period average are not certified exact. No finite-exposure norm remainder is supplied here.",
+    "source_notation_audit": "Original PDF equation numbers control. Eq24 prints Gamma_x in the y series although eq22 and eq26 use Gamma_y; the y average is independently obtained from eq22, not by silently repairing eq24. Eq27 reuses K ambiguously with the phase included; define kappa_x phase-free and multiply exp(-i phi) exactly once. The main eq2 overall minus and supplement signed coefficients are not mixed.",
+    "loop": "For nonzero spatially uniform kappa_x and y coefficient, their constant phases cancel on a square. The oriented +x,+y,-x,-y product is exp(-i phi_mn)exp(+i phi_m,n+1)=exp(+i delta_k_y a). Reverse traversal conjugates it. This is not an arbitrary PAH face configuration."
+  },
+  "comparison_diagnostics": {
+    "causal_test": "Hold all apparatus controls and preparation fixed. In the inspected source Hamiltonian there is no PAH x or u_e input, so changing an unconnected PAH label cannot change its output law. Programming phi from a sampled PAH path creates an encoder, not an independent physical identification. This is source-conditioned non-entailment, not a universal impossibility theorem.",
+    "short_time": "A coherent two-site link has transfer probability sin^2(|kappa|tau/hbar), initial derivative zero. A nonzero CTMC off-diagonal rate c under t=a tau has derivative ac>0. A direct identification of coherent hopping with PAH jumps fails this diagnostic. A singular dissipative/coarse-grained limit is not excluded; its reservoir, full rates and errors would be new physical inputs.",
+    "time_ordering": "Noncommuting Hamiltonians at different times obstruct replacing the ordered propagator by exp(-i H_average tau/hbar). A Pauli commutator control diagnoses the shortcut only, not the exact apparatus's error.",
+    "static_vs_dynamic": "A static optical flux is measurable in principle but not thereby identified with PAH W. Original path/rate identification is required for the synchronized dynamical claim, not every purely static sensitivity claim. Those rate obligations apply to the physical background marginal, not to the quantum probe's own dynamics. No R-575/R-576 escape, restored W kinetics or static-readout no-go is inferred."
+  },
+  "missing_input": {
+    "id": "PAH-COMMON-OPERATIONAL-CLOCK-W",
+    "name": "One source-justified physical PAH-variable-and-rate realization with its probe instrument",
+    "status": "NOT_SUPPLIED",
+    "equation": "For an independently specified physical state process Z_tau and map iota_r, iota_r(Z_tau) must realize the original PAH path law X_(t_r(tau)); the same physical interaction must give the prescribed U-sensitive W response with controlled instrument error.",
+    "minimum": "Physical U carrier and causal probe dependence, physical realization of the original background rates/clock calibration, and compatible state/exposure/refinement errors. Independently justified driven or open-system realizations are allowed; replaying sampled PAH controls is not physical identification. A reservoir is one possible mechanism, not a universal requirement. The equation is an admission target, not an asserted premise."
+  },
+  "extension": "strategy/pa-hyp/PAH-OBS-002-extension-review-v0.2.json",
+  "evidence_level": "SOURCE_APPLICABILITY_AND_CONDITIONAL_ALGEBRA_ONLY; no new PAH theorem or L3/L4 admission",
+  "devils_advocate": [
+    {
+      "objection": "Complex optical links already are PAH U.",
+      "disposition": "UPHELD against admission: common gauge notation does not identify carriers or laws."
+    },
+    {
+      "objection": "The measured tunneling frequency calibrates PAH time.",
+      "disposition": "UPHELD against admission: Hamiltonian energy scales and fitted diffusion do not derive the original jump process."
+    },
+    {
+      "objection": "The exact rotating transformation makes averaged evolution exact.",
+      "disposition": "UPHELD: micromotion and time ordering remain."
+    },
+    {
+      "objection": "A reference-arm formula establishes a real W instrument.",
+      "disposition": "UPHELD: pulse/control realizability and backaction are not supplied."
+    },
+    {
+      "objection": "The short-time mismatch disproves every extension.",
+      "disposition": "DISMISSED: it excludes only direct coherent-to-CTMC equality; open-system limits are not tested."
+    },
+    {
+      "objection": "A conditional Duhamel bound supplies a guaranteed experimental error.",
+      "disposition": "UPHELD against admission: none of the required residual norms is bounded by supplied data."
+    }
+  ],
+  "verification": {
+    "primary": "Hash/scope and exact algebra controls; no new PAH finite-carrier dynamics.",
+    "independent": "Separate source derivation and final-artifact review required.",
+    "hostile": "Separate causal, unit, sign, time-ordering and final-code review required.",
+    "Lean": "NOT_RUN: no new PAH theorem; cannot discharge absent physical identification or an unknown norm remainder.",
+    "PDF": "No new proof-note: this is an applicability checkpoint, not a scientific gate closure.",
+    "external_review": "No external contact. In-session reviewers are not external-person certification."
+  },
+  "follow_on": {
+    "route": "PARK_OR_BLOCK",
+    "attempts_remaining": 0,
+    "automatic_successor": false,
+    "next_single_action": "Obtain the named source-justified physical realization packet; do not repeat the same review on unchanged sources.",
+    "reentry": "An actual physical U-carrier interaction and independently justified original-rate realization, or a precise error in the present source comparison. More synthetic flux examples, local clocks or fitted rates do not qualify."
+  },
+  "research_value": "The missing interface is reduced to a physical variable-and-rate realization, with an explicit source-supported phase mechanism and tests rejecting encoded emulation and coherent-rate confusion. Standard laser-assisted tunneling, gauge covariance and open-system distinctions are reused; no novelty priority or mainline advance is claimed.",
+  "non_claims": [
+    "No altered PAH-v2 parent, rates, Gibbs state, Markov time, W, physical projection, regulator or ordered limits",
+    "No adopted coupling, physical time calibration, actual PAH instrument, empirical success, general no-go, Pre-A, spacetime, QFT, GR, continuum, mass gap or TOE"
+  ],
+  "reproduction": "python -X utf8 verification/scripts/pah_obs002_audit.py --check"
+}

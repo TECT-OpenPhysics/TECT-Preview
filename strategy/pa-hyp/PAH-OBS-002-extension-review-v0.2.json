@@ -1,0 +1,58 @@
+{
+  "schema": "tect/pah-instrument-extension-review/0.2",
+  "id": "PAH-OBS-002-EXTENSION-REVIEW-v0.2",
+  "status": "REVIEWED_NOT_ADMITTED",
+  "adopted": false,
+  "parent_model_changed": false,
+  "authorization": "Operator approved separate hypothetical-extension review only. No physical identification follows from this approval.",
+  "parent": "strategy/pa-hyp/PAH-001-v2-r2.json",
+  "parent_sha256": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+  "predecessor": {
+    "path": "strategy/pa-hyp/PAH-OBS-001-instrument-proposal-v0.1.json",
+    "sha256": "4d0c09133b2ac7bbe14b56ecac07b2b363103a99fce6b7e55e42c3e8be2f4ddb",
+    "disposition": "Preserved byte for byte; no retroactive physical admission."
+  },
+  "source_realized": "Raman atom-light coupling produces optical Peierls phases and laboratory propagation within its approximation regime. This belongs to the source apparatus only.",
+  "proposed_identification": {
+    "status": "NOT_JUSTIFIED",
+    "target": "A physical map from original PAH coordinates into source matter/field degrees of freedom, with probe dependence on actual U and the original stochastic path law at independently calibrated laboratory time.",
+    "not_a_definition": "Do not set exp(-i phi_e)=U_e by fiat, replace Markov time by hbar/K, or program controls from PAH samples and call it a natural coupling."
+  },
+  "conditional_interface": {
+    "Hamiltonian": "If a physical interaction independently yields H_X(tau)=-sum_(e=(v,w)) [J_e(tau) U_e(X_(t_r(tau)))|w><v|+conj(J_e(tau) U_e(X_(t_r(tau))))|v><w|], one has a gauge-compatible probe candidate. Complex J_e are allowed with the ENTIRE coefficient conjugated in the reverse term; assume bounded integrable pulse controls on the finite interval and hbar>0. This IF is the missing physics, not an adopted term.",
+    "gauge": "For time-independent g_v phases, U_e -> g_w U_e conjugate(g_v); H[g.U]=D_g H[U]D_g^dagger with fixed J_e. Time-dependent transformations need an additional connection term and are not used. Gauge covariance is a necessary consistency test, not sufficient physical justification.",
+    "readout": "OBS001's calibrated reference-arm response remains conditional. Nonzero link hopping alone does not implement its closed-path pulses or simultaneous equal-face W estimator.",
+    "clock": "For the synchronized dynamic claim, realize the original state-process generator q(x,y)=sum_(valid r:rx=y)c_r(x) in the physical BACKGROUND marginal, preserving every original root contribution/multiplicity and not just detailed-balance ratios. Distinct physical labels for duplicate roots are not required for W(X_t). The quantum probe need not itself be a CTMC. Independently justified drives or open-system mechanisms are allowed; no specific reservoir is presumed. A state/process map and a justified t_r are needed; no scalar time factor selected. Purely static sensitivity has a distinct, weaker obligation.",
+    "causal_discriminator": "Keep apparatus settings fixed and independently vary a physically identified gauge-invariant background quantity with different U_p. Require an exclusion/control argument for any direct intervention effect on detectors, fields, controls, preparation or shared noise, with independent calibration and sham controls. A gauge relabelling is not this intervention, and U inferred from the same Y is not an independent witness. No such physical intervention is supplied: this is a design criterion, not an executable PAH experiment."
+  },
+  "conditional_error": {
+    "scope": "Finite-dimensional single-probe projected lattice, fixed pulse schedule and unique undirected edges without self-loops; illustrative bound only, not the original PAH dynamics or physical apparatus in all bands.",
+    "definition": "eta_link=(1/hbar) integral sum_e |J_e(tau)| |U_e(X_(t_r(tau)))-U_e(X_(t0))| d tau. Each Hermitian edge difference has norm |J_e| |delta U_e|.",
+    "derivation": "Duhamel's identity between the time-ordered propagators with moving and frozen links gives ||V_X-V_0||<=eta_link. For any density state and bounded observable O, the expectation difference is <=2||O|| eta_link. Both propagators use the same pulse schedule, so this does not replace it by an average.",
+    "other_errors": "An additional known Hamiltonian residual R gives eta_R=(1/hbar) integral ||R||d tau and the same expectation bound after state-space identification. Band leakage requires a justified embedding/leakage bound; Markov marginal disturbance and clock errors are separate and not covered by this norm alone.",
+    "not_guaranteed": "No actual J_e-U realization, t_r, residual norm, disturbance, covariance or usable numerical error envelope is supplied. A formula with unknown terms is not a guaranteed error bound."
+  },
+  "unfilled_inputs": {
+    "physical_PAH_carrier": null,
+    "probe_background_interaction": null,
+    "original_rate_realization": null,
+    "independent_time_map": null,
+    "finite_exposure_residuals": null,
+    "background_disturbance": null,
+    "refinement_identity": null,
+    "calibration_covariance": null,
+    "sealed_holdout": null
+  },
+  "acceptance": "Only an independently justified physical realization filling these fields can be admitted for the dynamic test; proposed equations alone cannot. Independently controlled drives are allowed, but PAH sample playback is not physical identification.",
+  "falsifiers": [
+    "Response depends only on externally programmed laser phases rather than the actual background.",
+    "Only Gibbs ratios agree while the physical rates or absolute scale do not.",
+    "The readout measures a contrast-weighted or energy-weighted sum instead of equal-face W.",
+    "The source approximation, leakage or disturbance error cannot meet the frozen accuracy target.",
+    "Time/rates are selected after viewing W dynamics or holdout data."
+  ],
+  "non_claims": [
+    "No new physical model adoption, actual measurement, Pre-A, spacetime, QFT, GR, continuum, mass gap or TOE.",
+    "The comparator failure is not a global impossibility theorem. No automatic successor."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "tect/pah-observation-review/1.0",
+  "id": "PAH-OBS-002-REVIEW-v1",
+  "date": "2026-10-14",
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-OBS-002-admission-v1.json": "51d906a1f9a14ca02b7137174ddcdb2d5a9f57db3f39d5db6ff89d19ad71ad26",
+    "strategy/pa-hyp/PAH-OBS-002-assessment-v1.json": "8c4984925f87173cd2c8c96552e3bd53185cb1635cec21dc8f39c5ad95061803",
+    "strategy/pa-hyp/PAH-OBS-002-extension-review-v0.2.json": "a054c44ecbf2e5bdf6f189690341c3d3374b55106e6fa7afb90f1c831f5eb8a2",
+    "verification/scripts/pah_obs002_audit.py": "af94c37204c89d5ab50ab413f00bfe3b53fc399d1c2b23c650efe3e3a0f91908"
+  },
+  "external_pdf_sha256": "ed58d49714b06a2784b5b9fc1c1bcfbd4d575b8e59024c09b4929beab74f01bd",
+  "reviews": [
+    {
+      "role": "independent",
+      "reviewer": "in-session agent obs002_physical_source",
+      "verdict": "ACCEPT_SCOPED_AUDIT",
+      "method": "Primary v3 PDF and source definitions read independently; rederived rotating cancellation, constant harmonics, loop orientation, units and background/probe distinction; reviewed final hashes and code.",
+      "corrections": [
+        "Specified full complex-control conjugation and bounded pulse/hbar domain.",
+        "Allowed independently justified driven/open-system realization, not only undriven systems.",
+        "Corrected y-control coverage to derive the actual y phase argument, not merely select harmonic zero."
+      ],
+      "execution": "Final --selftest --source-cache PASS (11 algebra, 17 metadata); -O rejected exit 1. Source PDF hash verified."
+    },
+    {
+      "role": "hostile",
+      "reviewer": "in-session agent obs002_hostile",
+      "verdict": "ACCEPT_SCOPED_AUDIT",
+      "method": "Independently checked v3 PDF bytes and rendered equations; adversarial sign/factor/domain/time-ordering, causal exclusion, conditional-error, overclaim and final-code audit.",
+      "corrections": [
+        "Separated original background state-process rates from quantum probe dynamics and preserved all root multiplicities without demanding physical labels.",
+        "Required exclusion of direct intervention effects, independent background witness and sham controls.",
+        "Separated static sensitivity from full dynamical-path/clock admission.",
+        "Flagged source Gamma/phase notation inconsistencies; no silent correction or physical import."
+      ],
+      "execution": "Final -B --selftest --source-cache PASS (11 algebra, 17 metadata); -O rejected exit 1."
+    }
+  ],
+  "coverage_boundary": "Checks certify only the stated source crosswalk, conditional identities and metadata scope. Neither reviewer supplies or experimentally validates a physical PAH carrier, original background dynamics, clock map, error budget or holdout. The short-time diagnostic is not a universal no-go.",
+  "Lean": "NOT_RUN; no new PAH theorem and no missing physical premise is formalized as an axiom.",
+  "PDF": "Source PDF pages 7-8 visually checked; no new synthesis PDF because no scientific gate closes.",
+  "external_review_invitation": "External review is invited of the pinned interaction crosswalk, causal exclusions and conditional finite-exposure bounds. No external message was sent."
+}
