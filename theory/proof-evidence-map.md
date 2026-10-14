@@ -61,7 +61,7 @@ flowchart LR
 | Reusable result records | 400 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 392 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
 | Proof explorations | 1833 | Route decisions: advanced 1340, failed 263, inconclusive 166, parked 64; non-tier-bearing |
-| Accepted chronological events | 1115 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Accepted chronological events | 1116 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 97 | 19 live; 78 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
 | Proof evidence inventory | 427 lineage notes / 408 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 3124 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
@@ -28001,7 +28001,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (31 notes; 2378 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING](../negative-results/registry.md#ng-2026-10-14-pah-v2-rd001-displayed-freezing), [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](../negative-results/registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time), +135 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +884 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [C6 PAH-TIME-001: pin the missing operational clock-readout law] - 2026-10-14 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (31 notes; 2378 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING](../negative-results/registry.md#ng-2026-10-14-pah-v2-rd001-displayed-freezing), [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](../negative-results/registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time), +135 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +884 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [C6 PAH-TIME-001: align strict continuity checkpoint counts] - 2026-10-14 | - |
 
 ### Sector D
 
@@ -28853,6 +28853,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-10-14 | [C6 PAH-TIME-001: align strict continuity checkpoint counts] - 2026-10-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-10-14 | [C6 PAH-TIME-001: pin the missing operational clock-readout law] - 2026-10-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-10-14 | [R-575: final governed-footer and replay-receipt correction] - 2026-10-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-10-14 | [C6 / R-575: original-time PAH-v2 displayed readouts freeze with positive variance] - 2026-10-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING](../negative-results/registry.md#ng-2026-10-14-pah-v2-rd001-displayed-freezing) |
@@ -28872,7 +28873,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-09-14 | [R-574 PAH-v2 SG-001 fixed-time semigroup counterexample] - 2026-09-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](../negative-results/registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time) |
 | 2026-09-13 | [R-573 PAH-v2 GD-002 original fine-Gibbs generator counterexample] - 2026-09-13 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-12 | [R-572 PAH-v2 GD-001 exact full-cylinder sup counterexample] - 2026-09-12 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-09-12-PAH-V2-GD001-SUP-CAUCHY](../negative-results/registry.md#ng-2026-09-12-pah-v2-gd001-sup-cauchy) |
-| 2026-09-12 | [R-571 PAH-v2 owner-adopted full comparison-definition admission] - 2026-09-12 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 
