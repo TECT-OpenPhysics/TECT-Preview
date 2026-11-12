@@ -1,0 +1,27 @@
+{
+  "title": "A6/A7 seven-page review manuscript and sealed extracted verification package",
+  "claim_ids": ["A6-CLASSII-K-COMPOSITE-DEFINITION", "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"],
+  "task_id": "T-098",
+  "gate_ids": [],
+  "question": "Does the corrected A6/A7 manuscript have an actually rendered and inspected PDF and a portable external-review distribution with executed extracted checks?",
+  "method": [
+    "Compile the revised standalone TeX with Tectonic0.17.0, render every PDF page with Poppler and visually inspect all seven pages.",
+    "Run text/geometry and unresolved-reference checks and record source/PDF hashes in separate QA and internal visual receipts.",
+    "Seal every review file by size and SHA-256, preserve explicit NOT_PERFORMED external-review status, and reject unsafe paths and false scientific/review scope mutations.",
+    "Actually extract the ZIP into a new directory and execute both the standalone package verifier and exact/finite audit against the retained report."
+  ],
+  "finding": "The seven-page revised manuscript passes internal all-page visual and text/geometry review. The new review distribution inventories39 files; actual extracted package verification rejects9 false-scope/path mutations, and the standalone algebra audit passes80 checks and rejects13 finite hostile mutations. The complete random-coefficient energy proof remains the core analytic target. The review handoff, blank review form, unsent cover letter, primary-source crosswalk and original input snapshot are included.",
+  "verdict": "advanced",
+  "decision_reason": "The source/PDF and delivered extraction now provide concrete review materials rather than a plan alone. This supports a fixed release checkpoint while preserving the distinction between internal audit, package readiness and actual independent review.",
+  "boundary": "Actual external mathematics and specialist novelty reviews are NOT_PERFORMED. No journal/reviewer transmission, interacting Gibbs measure, A13 closure, physical vacuum, floor removal, new claim tier or novelty priority is asserted. Canonical integration and verified remote push must be established by their own receipts; the current mainline integration owner is active.",
+  "next_action": "Pass repository release and current-note PDF gates, create a lane-local watcher commit and submit that fixed checkpoint to the active integration controller. Recheck the live remote after authorized promotion/push. Keep the full goal open wherever external review or operational acceptance remains unverified.",
+  "evidence_refs": [
+    "publish/papers/a6-a7-canonical-composites/manuscript.pdf#all-seven-pages",
+    "publish/papers/a6-a7-canonical-composites/verification/runs/render-review.json#pages_reviewed",
+    "publish/papers/a6-a7-canonical-composites/verification/runs/pdf-qa.json#pages",
+    "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/runs/2026-11-12-a6-a7-paper/package-build.json#extracted_checks",
+    "publish/submission-packages/a6-a7/gaussian-composites-v010-r1/MANIFEST.json#files"
+  ],
+  "related": [{"id": "EXP-001838", "relation": "continues"}],
+  "formal_refs": {"results": [], "negatives": [], "events": []}
+}

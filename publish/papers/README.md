@@ -55,5 +55,15 @@ cited claim set (rule M2); no paper may cite a claim above its registered tier
   source and `q3lock-v0138-r1` review distribution remain immutable history;
   their PDF-deferral notices do not describe this submission-preparation edition.
 
+- `a6-a7-canonical-composites/` — Internal-review edition0.1.0, canonical
+  derivative currents and covariance-normal random-coefficient energy under
+  the fixed three-component fourth-order Gaussian reference. Includes full
+  current/energy proofs, explicit local compensation and escape boundaries,
+  deterministic-background bound, primary-literature crosswalk, exact finite
+  and hostile audits, seven-page rendered manuscript and external-review forms.
+  The review distribution is `publish/submission-packages/a6-a7/gaussian-composites-v010-r2/`
+  and its adjacent ZIP; archive integrity and extracted checks are separate
+  from external mathematical/novelty review, which is NOT PERFORMED.
+
 First target: Packet A — "Reading-H vacuum selection in a corrected
 Brazovskii-TECT model" (10-20 pages).

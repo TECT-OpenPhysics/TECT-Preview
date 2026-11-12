@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1120 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1122 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-11-12 | `20261112-a6-a7-fail-closed-on-pdf-qa-status-and-seal-rev` — [A6 A7: fail closed on PDF QA status and seal review distribution r2] - 2026-11-12 | A6-CLASSII-K-COMPOSITE-DEFINITION, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | [bounded page](pages/001119-001168.md#20261112-a6-a7-fail-closed-on-pdf-qa-status-and-seal-rev) |
+| 2026-11-12 | `20261112-a6-a7-canonical-composite-paper-internal-proof` — [A6 A7: canonical composite paper, internal proof audit and sealed review package] - 2026-11-12 | A6-CLASSII-K-COMPOSITE-DEFINITION, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | [bounded page](pages/001119-001168.md#20261112-a6-a7-canonical-composite-paper-internal-proof) |
 | 2026-11-12 | `20261112-c6-r-577-exact-displayed-state-markov-insuffici` — [C6 R-577: exact displayed-state Markov insufficiency under original Gibbs dynamics] - 2026-11-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261112-c6-r-577-exact-displayed-state-markov-insuffici) |
 | 2026-10-14 | `20261014-c6-pah-obs-002-actual-raman-interaction-and-sep` — [C6 PAH-OBS-002: actual Raman interaction and separate-extension review] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261014-c6-pah-obs-002-actual-raman-interaction-and-sep) |
 | 2026-10-14 | `20261014-c6-pah-obs-001-atomic-loop-measurement-crosswal` — [C6 PAH-OBS-001: atomic loop measurement crosswalk and unadopted instrument contract] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-pah-obs-001-atomic-loop-measurement-crosswal) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-14 | `20260914-c6-r-569-through-r-574-fixed-follow-up-proof-in` — [C6 R-569 through R-574 fixed follow-up proof integration provenance] - 2026-09-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260914-c6-r-569-through-r-574-fixed-follow-up-proof-in) |
 | 2026-09-14 | `20260914-r-574-pah-v2-sg-001-fixed-time-semigroup-counte` — [R-574 PAH-v2 SG-001 fixed-time semigroup counterexample] - 2026-09-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260914-r-574-pah-v2-sg-001-fixed-time-semigroup-counte) |
 | 2026-09-13 | `20260913-r-573-pah-v2-gd-002-original-fine-gibbs-generat` — [R-573 PAH-v2 GD-002 original fine-Gibbs generator counterexample] - 2026-09-13 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260913-r-573-pah-v2-gd-002-original-fine-gibbs-generat) |
-| 2026-09-12 | `20260912-r-572-pah-v2-gd-001-exact-full-cylinder-sup-cou` — [R-572 PAH-v2 GD-001 exact full-cylinder sup counterexample] - 2026-09-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260912-r-572-pah-v2-gd-001-exact-full-cylinder-sup-cou) |
-| 2026-09-12 | `20260912-r-571-pah-v2-owner-adopted-full-comparison-defi` — [R-571 PAH-v2 owner-adopted full comparison-definition admission] - 2026-09-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260912-r-571-pah-v2-owner-adopted-full-comparison-defi) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1119–1120 | 2 | [001119-001168.md](pages/001119-001168.md) |
+| 1119–1122 | 4 | [001119-001168.md](pages/001119-001168.md) |
 | 1069–1118 | 50 | [001069-001118.md](pages/001069-001118.md) |
 | 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |

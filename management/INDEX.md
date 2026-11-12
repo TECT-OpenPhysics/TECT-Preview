@@ -24,6 +24,7 @@ Authorities: `claims/*/status.json`, `todo/todo.json`, `ROADMAP.md`, `RESULTS-LE
 | `T-090` | in_progress | C6-SPACETIME-SIGNATURE | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | PAH-OMC-023 owner-authorized successor admission gate |
 | `T-091` | in_progress | C6-SPACETIME-SIGNATURE | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | PAH-OMC-024 anchored-n persistence audit for the R-552 root-multiplicity gap |
 | `T-094` | in_progress | C6-SPACETIME-SIGNATURE | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | PAH-OMC-027 source-authorized dynamic form-route packet admission |
+| `T-098` | in_progress | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | — | A6/A7 independent paper: dependency audit, canonical composites, stability boundaries and review package |
 | `T-032` | blocked | A1-PRODUCTION-KERNEL-MANIFEST | — | Operator-independent certification and main-proof-line decision for the canonical N-001 scalar-slice manifest before any T5 package |
 | `T-048` | blocked | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE | A11: prove the true-increment stabilised relative log-Laplace bound |
 

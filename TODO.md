@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 78
+Counts: In progress 13 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 78
 
 ## In progress
 
@@ -44,6 +44,9 @@ Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibi
 - **T-094** PAH-OMC-027 source-authorized dynamic form-route packet admission  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
   - Next-stage goal: preserve PAH-OMC-020 HOLD_FOR_EVIDENCE and admit only one source-authorized hash-pinned packet that simultaneously supplies U_n, C_n, G_n/D_n, terminal-square convention, anchored-n uniform control, and the R-537 compact-time semigroup bridge on unchanged PAH-001/R-512. Start with one source-delta and parent-hash re-entry check; if no new owner hash exists, do not repeat finite or abstract audits and keep the route parked. If a new packet appears, run primary, non-importing independent, hostile, and Lean admission checks. Do not change functions, rates, state, time, carrier, regulator, or limit order; no physical Pre-A, QFT, gravity, continuum, Yang-Mills, mass-gap, or TOE claim.
   - _updated 2026-09-08_
+- **T-098** A6/A7 independent paper: dependency audit, canonical composites, stability boundaries and review package  _(owner: Codex; claim: A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE)_
+  - User-authorized paper goal. Fixed production Gaussian and positive floor; no interacting Gibbs measure, A13 closure or physical vacuum. Complete content audit before final PDF and delivery package.
+  - _updated 2026-11-12_
 
 ## Blocked
 
