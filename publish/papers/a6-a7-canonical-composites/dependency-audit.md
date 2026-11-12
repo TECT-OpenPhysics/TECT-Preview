@@ -16,6 +16,7 @@ No claim of exhaustive literature coverage or first priority is made.
 | Chandra--Hairer, arXiv:1612.08138v5, Theorems2.33--2.34 pp.24--25 | UNASSESSED: no complete rule/type/homogeneity/cumulant/regularity-structure crosswalk is constructed for this direct rational coefficient. | Background only; NOT-YET-ASSESSED for black-box BPHZ use. No conclusion is imported. The work is cited as a preprint, not with an unverified journal assignment. |
 | Coppini--Ruszel--Schuricht, arXiv:2507.05131, Theorem2.4 pp.9--10 and Proposition3.1 p.16 | FAILED as direct import: analytic Wick-functional correlations and distinct-point scaling limits are not the present L2(H^{-1-kappa}) limit with ordinary rational value coefficient. A Taylor series of 1/(rho+eps) about zero has finite radius and cannot be integrated globally without a separate argument. | Comparator. Exact finite Gaussian IBP is used instead of a formal global coefficient expansion. |
 | Cipriani--Hazra--Rapoport--Ruszel, J. Stat. Phys.190:171 (2023), Theorem2, DOI10.1007/s10955-023-03187-3 | FAILED as direct import: order-two DGFF covariance, rescaling to white noise and local C^alpha target differ from the order-four fixed-Gaussian composite here. | Comparator; prevents a claim of introducing centered gradient squares. |
+| Xu, Commun. Math. Stat.6 (2018),509--532, DOI10.1007/s40304-018-0162-9; arXiv:1810.03850v1, printed Assumptions1.2--1.3 p.4, Theorem1.4 p.5, Example1.6 p.6 | SATISFIED: stationary Gaussian setting and polynomial-growth smoothness. FAILED as direct full-target import: scalar positive singular value covariance with alpha>0, amplitude rescaling and chaos projection, versus the fixed torus's continuous vector value field and conditional derivative square with matrix coefficient. The admitted spectral class also differs from its mollifier setting. | DOES-NOT-APPLY as a direct theorem import; comparator only. Nonpolynomial nonlinearities are already included in Xu, so nonpolynomiality alone is not the contribution. No priority inference follows. |
 | Bruned--Gabriel--Hairer--Zambotti, arXiv:1902.02884, Theorem1.2 | FAILED as direct import: one spatial dimension and a dynamical geometric SPDE, rather than this static three-dimensional Gaussian reference. | Comparator for nonlinear derivative products. |
 
 Primary links: https://doi.org/10.1017/fmp.2015.2;
@@ -24,7 +25,8 @@ https://arxiv.org/pdf/2206.06865v2;
 https://arxiv.org/pdf/1612.08138v5;
 https://arxiv.org/pdf/2507.05131;
 https://doi.org/10.1007/s10955-023-03187-3;
-https://arxiv.org/pdf/1902.02884.
+https://arxiv.org/pdf/1902.02884;
+https://arxiv.org/pdf/1810.03850v1.
 
 ## Internal applicability and exact identity
 
@@ -71,3 +73,15 @@ combined with sharp Pauli-dependent local compensation boundaries. The
 standard commutator, Wick identity and determinant mechanism are not claimed
 as new. This supports continuing a specialist-paper candidate; specialist
 novelty review may still reclassify it as a technical application note.
+
+
+## Supplementary audit, review edition 0.1.1
+
+The Xu comparator was identified while preparing actual external review.
+Its Theorem1.4 proves convergence of rescaled scalar nonlinear functionals
+with lower chaos removed to a Wick power. Example1.6 includes suitable
+C^{1+} polynomial-growth nonlinearities. Our claim is therefore not to have
+introduced nonpolynomial Gaussian functions. It retains the mixed rational
+value/derivative composite without amplitude rescaling and proves its
+conditional-centering convergence directly. No theorem statement or model
+coefficient is changed by this clarification.

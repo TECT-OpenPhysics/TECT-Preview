@@ -1,6 +1,6 @@
 # Internal proof audit and correction record
 
-Date: 2026-11-12. Audit covers content draft0.1.0 in the fixed Gaussian scope.
+Date: 2026-11-12. Audit covers content draft0.1.0 and review edition0.1.1 in the fixed Gaussian scope.
 Current review: read-only independent AI reconstruction. Energy review:
 read-only independent AI reconstruction. Literature review: primary-source
 crosswalk. These are not human external mathematical or novelty reviews.
@@ -34,6 +34,13 @@ crosswalk. These are not human external mathematical or novelty reviews.
    was not verified. Primary-source metadata now replaces both.
 9. VALID, repaired before compilation: two TeX escape defects in the initial
    symbol and determinant displays were identified and corrected.
+10. VALID, clarified in edition0.1.1: Xu Theorem1.4 already treats suitable
+    nonpolynomial Gaussian functionals. The new exact assumption crosswalk
+    distinguishes its scalar singular covariance, amplitude scaling and
+    chaos projection from the printed mixed conditional composite. The
+    manuscript makes no novelty claim based on nonpolynomiality alone.
+    A separate internal read-only diff/source audit found no change to the
+    model, full random coefficient, proof statements or quantifiers.
 
 The current, energy covariance identity, strong Bessel-kernel proof, sharp
 lower/upper slopes and homogeneous escape survived the separate reviews.
@@ -64,6 +71,10 @@ rows remain ingredient diagnostics, not all-mode proofs. The original
 The revised TeX was compiled with Tectonic0.17.0; all seven PDF pages were
 rendered with Poppler and visually inspected. Hash-linked text/geometry and
 visual receipts, plus the actual PNG pages, are retained under verification/.
+The v011-suffixed receipts and rendered-v011/ pages describe the current
+edition; unsuffixed receipts describe0.1.0. A bibliography-only orphan page
+in the intermediate revision was removed by compacting references to nine
+point text, without removing a citation or modifying a theorem.
 No unresolved reference markers or clipped text were found. Specialist novelty and independent human
 mathematical review remain NOT PERFORMED. If either identifies a gap, the
 correction must be versioned and tested before the handoff is sealed.

@@ -1,0 +1,35 @@
+{
+  "actual_transmission": "NOT_PERFORMED",
+  "archive_bytes": 3780120,
+  "archive_sha256": "c0e083416c5b1181aa4684204ca229aee188d522dffc828b08296e5ea15045c9",
+  "external_mathematical_review": "NOT_PERFORMED",
+  "extracted_checks": [
+    {
+      "command": [
+        "verify-package.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "PACKAGE SELF-TEST: PASS 9 scope/path mutations rejected\nPACKAGE INTEGRITY: PASS 50 files; external review NOT PERFORMED\n"
+    },
+    {
+      "command": [
+        "verification/verify.py",
+        "--self-test",
+        "--check",
+        "verification/runs/algebra.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "A6/A7 PAPER AUDIT: PASS 80 checks; 13 hostile mutations rejected\n"
+    }
+  ],
+  "files_verified": 50,
+  "manifest_sha256": "7191d4a8f38f157cd3b05c9a26618e3320dcbbf9121b8374daf8bb20402fd8bf",
+  "pdf_pages": 7,
+  "schema": "tect/a6-a7-package-build/1.0",
+  "specialist_novelty_review": "NOT_PERFORMED",
+  "status": "PASS",
+  "version": "0.1.1-r1"
+}

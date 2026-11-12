@@ -15,7 +15,7 @@
 \newcommand{\la}[1]{\langle #1\rangle}
 \title{Canonical Derivative Currents and Covariance-Normal Energy\protect\\for a Three-Component Fourth-Order Gaussian Field}
 \author{Jusang Lee}
-\date{Content-review draft 0.1.0 --- 12 November 2026}
+\date{Internal-review edition 0.1.1 --- 12 November 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -67,6 +67,14 @@ The geometric stochastic heat equation \cite{BGHZ} also treats nonlinear
 derivative composites, in a different dynamical and spatial setting.
 These comparisons rule out a claim to have introduced a general method
 for field-dependent derivative squares.
+
+Xu \cite{Xu} proves convergence of rescaled nonlinear Gaussian functionals
+to Wick powers under two-sided scalar covariance bounds; those results already
+accommodate nonpolynomial nonlinearities. Our object instead retains an
+ordinary rational matrix coefficient of a continuous value field and
+conditionally centers a quadratic derivative factor, without amplitude
+rescaling, on a fixed torus. We prove this mixed composite limit directly
+and make no claim to introduce nonpolynomial Gaussian functionals.
 
 \section{Fixed model and conventions}
 Let $L=16$, $V=L^3$, $k_n=2\pi n/L$, and write
@@ -484,6 +492,8 @@ integrity and code execution. Author declarations, venue choice and actual
 transmission require the author's decisions.
 
 \begin{thebibliography}{9}
+\footnotesize
+\setlength{\itemsep}{2pt}
 \bibitem{GIP} M. Gubinelli, P. Imkeller and N. Perkowski,
 \emph{Paracontrolled distributions and singular PDEs}, Forum Math. Pi
 3 (2015), e6, 75 pp. \url{https://doi.org/10.1017/fmp.2015.2}.
@@ -505,5 +515,9 @@ J. Stat. Phys. 190 (2023), 171.
 \bibitem{BGHZ} Y. Bruned, F. Gabriel, M. Hairer and L. Zambotti,
 \emph{Geometric stochastic heat equations},
 \url{https://arxiv.org/abs/1902.02884}.
+\bibitem{Xu} W. Xu,
+\emph{Sharp Convergence of Nonlinear Functionals of a Class of Gaussian Random Fields},
+Commun. Math. Stat. 6 (2018), 509--532.
+\url{https://doi.org/10.1007/s40304-018-0162-9}.
 \end{thebibliography}
 \end{document}

@@ -2,7 +2,7 @@
 
 Candidate: Canonical Derivative Currents and Covariance-Normal Energy for a
 Three-Component Fourth-Order Gaussian Field. Author: Jusang Lee.
-Status: internal-review edition0.1.0; seven-page PDF rendered and inspected.
+Status: internal-review edition0.1.1; seven-page PDF rendered and inspected.
 Begin with START-HERE.md and verify the archive's extracted commands.
 External mathematical and specialist novelty reviews: NOT PERFORMED.
 
@@ -22,8 +22,12 @@ the sharp slope extrema including the inactive-third-component escape;
 the exact real/complex normalization; and the deterministic/background
 operator domains and constants. Assess novelty relative to the named primary
 comparators and identify any more direct earlier theorem.
+In particular, compare Xu Theorem1.4 against the unrescaled mixed
+value/derivative target, rather than treating nonpolynomiality as new.
 
 Use independent-review-form.md. A blank form is not a review receipt.
 Contacting or transmitting to a reviewer is not recorded by this package.
+external-review-plan.md gives candidate-specific scopes and conflict checks;
+review-request-drafts.md contains local unsent invitations.
 Delivery readiness requires the adjacent build report to pass and the extracted
 standalone commands to pass. Mathematical acceptance remains a reviewer decision.

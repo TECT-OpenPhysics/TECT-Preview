@@ -30,11 +30,11 @@ def main():
     extracted=args.extracted.resolve()
     if any(p.exists() for p in (dest,archive,extracted,args.report)):
         raise ValueError('New output paths required; issued distributions are immutable')
-    qa=json.loads((PAPER/'verification/runs/pdf-qa.json').read_text(encoding='utf-8'))
+    qa=json.loads((PAPER/'verification/runs/pdf-qa-v011.json').read_text(encoding='utf-8'))
     validate_pdf_qa(qa)
     live_qa=runpy.run_path(str(PAPER/'verification/pdf_qa.py'))['build']()
     if qa!=live_qa: raise ValueError('PDF QA differs from fresh text/geometry audit')
-    review=json.loads((PAPER/'verification/runs/render-review.json').read_text(encoding='utf-8'))
+    review=json.loads((PAPER/'verification/runs/render-review-v011.json').read_text(encoding='utf-8'))
     pdf_sha=hashlib.sha256((PAPER/'manuscript.pdf').read_bytes()).hexdigest()
     tex_sha=hashlib.sha256((PAPER/'manuscript.tex').read_bytes()).hexdigest()
     if qa['pdf_sha256']!=pdf_sha or qa['tex_sha256']!=tex_sha:
@@ -52,7 +52,7 @@ def main():
     verify=runpy.run_path(str(PAPER/'verification/verify_package.py'))
     files={p.relative_to(dest).as_posix():{'bytes':p.stat().st_size,
            'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(dest.rglob('*')) if p.is_file()}
-    manifest={'schema':'tect/a6-a7-review-package/1.0','version':'0.1.0-r2',
+    manifest={'schema':'tect/a6-a7-review-package/1.0','version':'0.1.1-r1',
         'source_checkpoint':json.loads((PAPER/'sources/provenance.json').read_text())['source_checkpoint'],
         'scope':verify['SCOPE'],'files':files}
     with (dest/'MANIFEST.json').open('x',encoding='utf-8',newline='\n') as stream:
@@ -73,7 +73,7 @@ def main():
         run=subprocess.run(command,cwd=extracted,capture_output=True,text=True,encoding='utf-8')
         runs.append({'command':command[1:],'exit_code':run.returncode,'stdout':run.stdout,'stderr':run.stderr})
         if run.returncode: raise ValueError(run.stdout+run.stderr)
-    result={'schema':'tect/a6-a7-package-build/1.0','status':'PASS','version':'0.1.0-r2',
+    result={'schema':'tect/a6-a7-package-build/1.0','status':'PASS','version':'0.1.1-r1',
         'files_verified':len(files),'pdf_pages':qa['page_count'],'archive_bytes':archive.stat().st_size,
         'archive_sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),
         'manifest_sha256':hashlib.sha256((dest/'MANIFEST.json').read_bytes()).hexdigest(),

@@ -9,6 +9,9 @@ External mathematical and specialist novelty reviews are NOT PERFORMED.
 The package is prepared for such a review; no signature or acceptance is implied.
 Use external-review-handoff.md and the blank independent-review-form.md.
 The venue-neutral cover-letter.md is unsent.
+external-review-plan.md identifies potential specialist readers and the
+evidence required for actual review. review-request-drafts.md contains unsent
+targeted invitations; transmission requires explicit author direction.
 
 After extracting the ZIP into a new directory, with Python3.10+ and NumPy:
 
@@ -27,8 +30,10 @@ The legacy-replay command is optional full-repository work. Its retained
 results are supplied, but its code explicitly requires the wider historical
 source registry. It is not the extracted standalone command above.
 
-verification/rendered contains all seven PNG pages actually inspected.
-The PDF text/geometry and visual-review receipts are under verification/runs.
+verification/rendered-v011 contains all seven current PNG pages actually
+inspected. Current text/geometry and visual receipts are pdf-qa-v011.json and
+render-review-v011.json under verification/runs. The older rendered/ pages
+and unsuffixed receipts describe immutable edition0.1.0, not this revision.
 The original input snapshot is hash-pinned; it is not a claim that the older
 historical solver residual equals the standalone reference functional.
 
