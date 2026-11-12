@@ -156,3 +156,33 @@ full invariant domain/hidden labels and fixed-observable all-tail quantifiers
 are explicitly challenged in section 6. The result is a scoped negative
 for GD-002, not a physical promotion, alternate-domain no-go or semigroup
 verdict; state consistency and nontriviality are recorded separately.
+
+## 2026-11-12: PAH-STATE-001 / R-577 display-state sufficiency
+
+Target: exact Markov sufficiency of the original displayed fields on one
+admitted PAH-v2 finite square, including the original stationary Gibbs law.
+Primary source: Tian and Kannan, Stochastic Analysis and Applications 24
+(2006), 685-702, DOI 10.1080/07362990600632045, Definition 2.9 and Theorems
+2.10-2.11 at p. 689; author-hosted PDF
+https://people.nmsu.edu/jtian/publications/2006-3.pdf, accessed 2026-11-12.
+Bounded search used finite CTMC strong lumpability and stationary reversible
+projection terms. The relevant PDF page was inspected directly.
+
+Finite space, fixed partition and homogeneous finite generator: SATISFIED.
+Constant generator action on fibres: FAILED by the exact source witness.
+Disposition: APPLIES to the standard criterion, whose necessary implication
+is also derived directly. No external limit or physical theorem is imported.
+Stationary Gibbs support and detailed balance are independently rechecked;
+the stationary compression identity is proved in the synthesis. This is
+standard theory, with a new model-specific counterexample, not world-first
+lumpability mathematics. Older EXP-001362 spatial free-vertex restrictions
+are reference-only, not the same projection. R-570 finite consistency and
+R-575/R-576 cutoff freezing keep their original scopes.
+
+Exact source hashes, unchanged functional/reference/normalization, finite
+parameters and no-limit scope are in the preregistration and result card.
+Independent and hostile in-session analytic/code checks accepted the note.
+Sign/half/multiplicity, gauge/domain redundancy, stationary-versus-all-start
+distinction, and limit nonuniformity were challenged explicitly. Four Lean
+declarations cover only abstract algebra bridges. No external-person review
+or physical carrier/clock/Pre-A/QFT/gravity claim is made.

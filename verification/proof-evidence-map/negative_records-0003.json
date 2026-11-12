@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-31-a13-elliptic-gaussian-d4-floor-uniformity",
+      "branch": "use a uniformly elliptic six-real terminal Gaussian to obtain a density-floor-uniform L2 fourth rational quotient jet",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Add a uniformly nondegenerate six-real Gaussian terminal innovation and use negative moments to restore a density-floor-uniform `L2` bound for the fourth derivative of the normalized production quotient.",
+        "consequence": "Uniform six-real ellipticity does give sharp negative moments below order six and therefore floor-uniform pointwise `D2` and `D3` quotient jets. It does not give a floor-uniform `L2` fourth jet. This rejects only the elliptic-Gaussian fourth-jet repair; the fractional exponent window remains live under the separate joint spatial hypotheses, as do complete signed cancellations and other non-`D4` architectures.",
+        "evidence": "R-134 proof note, Sections 6--8; primary exact fourth-jet and radial-exponent checks; independent series-coefficient and logarithmic-growth checks; R-092 normalized quotient identity.",
+        "failure_mode": "Take the embedded production Pauli generator `S_3=diag(1,1,-1,-1,0,0)` and the plane `x=(r,0,y,0,0,0)`. At zero floor the first quotient component is `F_1=r(r^2-y^2)/(r^2+y^2)`, so `partial_y^4 F_1(r,0)=48/r^3`. At positive floor the exact derivative is `24 r(e+2r^2)/(e+r^2)^3`; for `r>=sqrt(e)` its product with `r^3` is at least nine. Joint continuity in the scale ratio `e/r^2` and the angular variable supplies one fixed open cone and a uniform lower bound `c r^-3`. The squared six-dimensional Gaussian integral on that cone therefore contains `c^2 integral_(sqrt(e))^1 r^5 r^-6 dr`, which grows like `log(1/e)`."
+      },
+      "detail_title": "six-real ellipticity is critical at the fourth rational jet",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "for the embedded Pauli generator S3=diag(1,1,-1,-1,0,0), the positive-floor axis derivative is 24r(e+2r^2)/(e+r^2)^3 and is at least 9/r^3 for r>=sqrt(e); continuity supplies a fixed open cone, so the squared six-dimensional Gaussian integral diverges logarithmically",
+      "tag": "NG-2026-07-31-A13-ELLIPTIC-GAUSSIAN-D4-FLOOR-UNIFORMITY"
+    },
+    {
       "anchor": "ng-2026-07-31-a13-diagonal-heat-sextic-to-mixed-response",
       "branch": "promote a globally coercive diagonal heat-Gram plus terminal-sextic comparison to the square-of-conditional-mean physical response",
       "claim_ref_basis": {
@@ -2222,28 +2245,6 @@
       "kind": "no_go",
       "summary": "the deterministic current has real relative-gap decay, but its ledger is critical at every root; the fixed-coefficient triangular injection norm is `H^(1/2)`-critical and an explicit uniformly `H^(1/2-delta)` sequence diverges linearly",
       "tag": "NG-2026-07-25-A13-ROOTWISE-DETERMINISTIC-FAR-AND-HALF-DERIVATIVE"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-root-orthogonality-one-use",
-      "branch": "R-084/A13 one-use closure from complete probability-root orthogonality or unweighted Gaussian Poincare alone",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "Root-first diagonalisation and the conditional OU identity are valid reductions, but neither root orthogonality nor unweighted Poincare contains the spatial input-scale decay needed for one-use. The next theorem must use production spatial paracomposition, the far projection, or another weighted signed cancellation. This abstract finite-tree model is not a counterexample to production controlled Cartan CFAR or the complete paid packet.",
-        "evidence": "On independent standard roots `xi_1,...,xi_N`, fix a unit vector `e` and set `Delta_k=u_k sum_(r=k)^N xi_r e` and `G_j=sum_(k<=j)Delta_k`. Then `d_jG_j=(sum_(k<=j)u_k)xi_j e`, so the root-diagonal output energy is exactly `||L_Nu||_2^2` for the lower-triangular cumulative matrix `L_N`. With `u=e_1`, input energy is one and output energy is `N`. For normalized equal inputs the output is `(N+1)(2N+1)/6`, hence `51/2` at `N=8`. The exact sharp norm is `||L_N||_op^2=[4 sin^2(pi/(4N+2))]^-1`, approximately `29.365297894371945` at `N=8`. Exact enumeration and an independent inverse- tridiagonal spectral calculation reproduce these values.",
-        "failure_mode": "Infer the controlled Cartan one-use estimate solely from orthogonality of the complete probability-root martingale differences, or apply an unweighted Gaussian Poincare/Ornstein--Uhlenbeck estimate before recovering the production spatial weights."
-      },
-      "detail_title": "R-084 root orthogonality alone does not spend a cumulative control once",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "an exact cumulative finite-tree model has unit input energy but output energy `N`, and its sharp cumulative-matrix norm grows like `N^2`; production spatial paracomposition or another weighted cancellation is indispensable",
-      "tag": "NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE"
     }
   ],
   "kind": "negative_records",

@@ -76,6 +76,7 @@ Tier profile: T6x4 T5x1 T1x1
 | NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING | displayed readout nontriviality | Exact total amplitude conservation bounds the full |
 | NG-2026-09-14-PAH-V2-SG001-FIXED-TIME | original-time semigroup comparison | Full finite Markov contraction and the exact Duhamel |
 | NG-2026-09-13-PAH-V2-GD002-GIBBS-L2 | original fine-Gibbs generator Cauchy | One fixed gauge/anchor-invariant plaquette character at |
+| NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV | exact displayed-state closure | At the pinned admitted instance, four states have identical |
 
 ---
 

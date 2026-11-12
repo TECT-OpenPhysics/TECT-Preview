@@ -1,6 +1,27 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-11-12-pah-state001-display-markov",
+      "branch": "exact displayed-only memoryless realization of PAH-v2",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20261112-c6-r-577-exact-displayed-state-markov-insuffici"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "branch_claim": "PAH-STATE-001 on the unchanged adopted finite square, tuple counting, functional, all signed roots, original Gibbs state and time.",
+        "consequence": "DISPROVED only for exact displayed-only Markov closure in the stated finite scope. Full counting dynamics remains valid; no minimal hidden-coordinate set, physical no-go, uniform bound or limit assertion. A physical implementation must address latent information or memory rather than silently erasing the labels. No actual physical packet supplied here; OBS-002 remains parked. Reentry needs a precise error or independently justified original-law/time-compatible physical packet, not extra finite tables, clock variants or generic source hunts. C6/T-054 unchanged.",
+        "evidence": "R-577 / EXP-001837; exact result and source hashes in `strategy/pa-hyp/PAH-STATE-001-result-v1.json`, one four-page synthesis, primary/non-importing independent/hostile runs and four partial Lean bridges. Reproduce `python -X utf8 verification/scripts/pah_state001_verify.py --lean-cache E:/Dev/TECT/verification/lean/.lake/packages` as one line.",
+        "failure_mode": "At the pinned admitted instance, four states have identical displayed fields but L|psi_O|^2 takes 2exp(1/2) and 2exp(-1/2). Their Gibbs conditional variance is positive. Reversible compression gives <f,(C_(2t)-C_t^2)f>=||(I-P)exp(tL)f||^2 with positive leading coefficient. The actual stationary displayed process is therefore not a time-homogeneous Markov chain. Gauge quotient does not remove this witness."
+      },
+      "detail_title": "exact displayed-state closure",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "R-577 same-fibre invariant generator mismatch and original-Gibbs stationary compression defect; full counting CTMC preserved, no physical or uniform-limit no-go",
+      "tag": "NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV"
+    },
+    {
       "anchor": "ng-2026-10-14-pah-v2-rd001-displayed-freezing",
       "branch": "nontrivial original-time dynamics of fixed source-displayed readouts",
       "claim_ref_basis": {
@@ -1984,26 +2005,6 @@
       "kind": "no_go",
       "summary": "even after a hypothetical edge-chain reduction the absolute strip majorant contains `exp(C/epsilon)` at nonzero real time, so `int_0^1 epsilon^(s-1)exp(C/epsilon)d epsilon` diverges for every finite `s`. Oscillatory/unitary resummation and modular routes remain open",
       "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ABSOLUTE-HEAT-STRIP-REAL-TIME-CONTINUATION"
-    },
-    {
-      "anchor": "ng-2026-08-09-pre-a-st8-q3lock-uniform-full-finite-volume-spectral-gap",
-      "branch": "retain a positive volume-uniform full finite-volume spectral gap in the fixed-spacing Q3LOCK ground-order regime",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260809-exp-000789-closes-fixed-lattice-ground-equal-ti"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "consequence": "The full symmetric finite-volume gap is not uniformly positive. This is only an upper bound and is compatible with exponentially small tunnelling. It does not refute a positive excitation gap within either pure broken infinite-volume GNS sector, a continuum mass gap, or a gap outside the stated fixed-spacing/order/limit scope.",
-        "evidence": "EXP-000789 applies the inverse Falk--Bruch inequality to the EXP-000782 nonzero-momentum Duhamel infrared bound. If \\[ A_0={8c\\chi\\theta_Q^2\\over\\hbar^2}>J_3^2, \\qquad \\theta_Q={-r\\over3(g+\\lambda)}, \\] then, with `S_L=sum_y Q_y`, `V=L^3`, and the unique even ground vector `Omega_L`, \\[ \\liminf_{L\\to\\infty}{\\langle\\Omega_L,S_L^2\\Omega_L\\rangle\\over V^2} \\ge\\rho_*:=\\theta_Q-{\\hbar J_3\\over2\\sqrt{2\\chi c}}>0. \\] The normalized odd trial `S_L Omega_L/||S_L Omega_L||` and the exact identity `[S_L,[H_L,S_L]]=V hbar^2/chi` give \\[ \\Delta_L^{\\rm full}\\le\\Delta_L^{\\rm odd} \\le {\\hbar^2\\over2\\chi V m_L^2}, \\qquad \\limsup_L V\\Delta_L^{\\rm full}\\le{\\hbar^2\\over2\\chi\\rho_*}. \\] Primary `85/85` and independent `80/80` executable assertions recompute the Falk--Bruch normalization, `J3`, the threshold and the parity quotient.",
-        "failure_mode": "Retain a positive lower bound on the full finite-volume spectral gap, uniform along the dyadic periodic thermodynamic sequence, in the fixed-spacing positive-`lambda` Q3LOCK ground-order regime."
-      },
-      "detail_title": "fixed-lattice ground order forces the full finite-volume gap to close",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "inverse Falk--Bruch and the infrared bound give `liminf <S_L^2>/V^2>=rho_*>0`, while the odd trial `S_L Omega_L` gives `Delta_L^full<=hbar^2/(2 chi V m_L^2)`; the full gap closes at least as `O(1/V)`. This does not refute a positive broken-sector GNS gap or physical mass gap",
-      "tag": "NG-2026-08-09-PRE-A-ST8-Q3LOCK-UNIFORM-FULL-FINITE-VOLUME-SPECTRAL-GAP"
     }
   ],
   "kind": "negative_records",

@@ -1,0 +1,38 @@
+{
+  "schema": "tect/pah-state001-review/1.0",
+  "date": "2026-11-12",
+  "artifact_hashes": {
+    "strategy/pa-hyp/PAH-STATE-001-prereg-v1.json": "5d88addeb96c8cc4a95164a0f92da227b0baf53275be7081c4ea78f18f7a2943",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-display-state-261112-v1.0.tex.txt": "c995854e2d03085f508b27e79cd05f0d533a5acb8cffd029d7929a7c90de3f69",
+    "claims/C6-SPACETIME-SIGNATURE/notes/pah-display-state-261112-v1.0.pdf": "0f514600b9e428d26d302509577ce25895d47648635b43a9ef75a5fb99b1b06f",
+    "verification/scripts/pah_state001_primary.py": "ab99b0b4ec5af7e323c2c49c26ed93b8ae775680447e5991a3883ec132f92fa6",
+    "verification/scripts/pah_state001_independent.py": "085a1a89317f6b6ebb42b016285858bcc8ad2b6666a0068d553531072a17e2e2",
+    "verification/scripts/pah_state001_hostile.py": "da39a640d762a4421ed341397ef3fba9ba4e47469df5489a150688dedd753358",
+    "verification/scripts/pah_state001_lean.py": "f6b560bbb6f4d15945782e565c18673830020afb9b4a01148e6813424185e7db",
+    "verification/scripts/pah_state001_verify.py": "8f7fa47192a0a83870de15bb75dea8fc59b76b0863a87936e0f54e72b62453ed",
+    "verification/lean/Tect/PahDisplayClosure.lean": "c0d56325e971da3b2a05298e5ae775001d37fbb3495a88d06986c4cb49771e10",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-12-pah-state001/primary.json": "1813730da830763c691925402228680528c5d83ac3aecff08cd0d9ccb2ed0ac3",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-12-pah-state001/independent.json": "650fd75d2014d74b8d4deccdc717e8597f0ab8d7a2d7443aead7e278538041a0",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-12-pah-state001/hostile.json": "5e4c0557c7ed26e61c30d9642e28f2c08fe1634b4310b0f8f882d2527ab0c486",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-12-pah-state001/lean.json": "1ee4f95f19f79a9519710324da36b46aa08f1d1d1b30cc78e08192b0894ee5bc"
+  },
+  "reviews": [
+    {
+      "role": "independent",
+      "reviewer": "in-session agent state_closure_review",
+      "verdict": "ACCEPT_FINAL_BYTES",
+      "method": "Separate source read, Fraction-based implementation with no PAH implementation imports, finite reversibility and stationary compression proof rederived; final note bytes re-read.",
+      "execution": "PASS 40960-state fibre check, 96 directed balance incidences and 64 gauge checks; optimized Python rejected. No independent Lean execution claimed."
+    },
+    {
+      "role": "hostile",
+      "reviewer": "in-session agent next_gate_hostile",
+      "verdict": "ACCEPT_FINAL_BYTES",
+      "method": "Exact energy/root/sign/gauge/anchor/state/semigroup and scope audit; preliminary wrong-carrier sketch rejected before preregistration; full-functional AP controls added.",
+      "execution": "Primary, independent and hostile runners PASS; eight semantic corruptions detected and four optimized-Python paths rejected; fresh pinned Lean four partial declarations PASS."
+    }
+  ],
+  "coverage_boundary": "In-session review is not external-person certification. Finite source witness and analytic compression only; no physical input or uniform limit.",
+  "pdf": "One four-page synthesis, FORM-CHECK PASS, zero overfull boxes, every rendered page inspected; no clipped math or overlap.",
+  "external_review": "External independent review of source fidelity and stationary compression is invited. No external enquiry sent."
+}

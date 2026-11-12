@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-577](#r-577) | PAH-v2 displayed-state Markov sufficiency obstruction | Same-display counting states give distinct invariant generator values at one admitted finite square. Positive original-Gibbs conditional variance and reversible compression also obstruct stationary displayed semigroup closure. Full counting CTMC preserved; no mainline or physical promotion. |
 | [R-576](#r-576) | PAH-v2 maximal-path freezing in declared local clocks | At fixed admitted finite geometry and positive epsilon, the original-path squared maximal W displacement across all declared inverse local clocks is bounded by (4*pi/(p*K_r))^2[Lambda S+(Lambda S)^2], hence vanishes. Independent stopped-count proof, 16 hostile controls and five partial Lean bridges. Scoped negative diagnostic only; no physical-clock or mainline promotion. |
 | [R-575](#r-575) | PAH-v2 original-time displayed-readout freezing | At each fixed admitted finite carrier and parameters, every fixed Lipschitz source-displayed invariant readout freezes with explicit O(2^-r) Gibbs-L2 bound while the real plaquette average retains uniformly positive variance. Two analytic proofs, primary/independent/hostile and six partial Lean checks. Scoped negative diagnostic, no CRT repair or mainline/physical promotion. |
 | [R-574](#r-574) | PAH-v2 fixed-time original-Gibbs semigroup counterexample | The unchanged R-573 fixed character has norm at least 1/5 at original time 1/10 for adjacent pairs beyond every cutoff threshold. Full-generator time-error proof, independent maximum principle, hostile and partial Lean checks. SG-001 DISPROVED; no automatic successor or physical promotion. |
@@ -19367,6 +19368,35 @@ The exploration ledger entry is EXP-001655 and the changelog event is
 `20260908-r-535-pah-omc-020-k-d-term-level-coverage-ledge`.  Reopen only
 when a versioned source-authorized packet or an exact PAH-specific
 contradiction changes one required field.
+
+<a id="r-577"></a>
+### R-577 -- PAH-v2 displayed-state Markov sufficiency obstruction
+
+At the unchanged adopted r=h=N=0 square and the pinned parameter instance,
+the full counting states n=(a,0,0,b), a,b in Z2, ell=(0,1,1,0), j=1,u=0
+have identical displayed (s,psi,U). The original full generator gives
+L|psi_O|^2=2exp(1/2) or 2exp(-1/2), depending on the hidden zero-amplitude
+phase a. Exact displayed-state factorization is impossible. The four-state
+original-Gibbs fibre is positive-mass and conditionally uniform; its
+conditional variance is (exp(1/2)-exp(-1/2))^2. Self-adjoint finite dynamics
+give the positive small-time defect of P exp(tL) P from the semigroup law.
+Thus even the original stationary displayed process is not time-homogeneous
+Markov. Conditional expectation is diagnostic, not a replacement process.
+
+Certificate: `strategy/pa-hyp/PAH-STATE-001-result-v1.json`; EXP-001837.
+Synthesis: `claims/C6-SPACETIME-SIGNATURE/notes/pah-display-state-261112-v1.0.tex.txt`.
+Primary, non-importing independent, hostile and four partial Lean checks
+pass. Independent and hostile in-session analytic reviews accepted the
+source/gauge/stationarity crosswalk. Standard finite lumpability mathematics,
+model-specific scoped negative; no novel general theorem claimed.
+
+Reproduce `python -X utf8 verification/scripts/pah_state001_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages` as one line.
+Classification: negative_result; C6 T1 and T-054 gate unchanged. No full-model
+refutation, minimal hidden-state set, physical identity, clock law, uniform
+limit or Pre-A/QFT/gravity conclusion. Reopen only for a precise error or
+a physical latent-state/memory packet with original-law/time compatibility.
+No automatic successor; external independent review is invited.
 
 <a id="r-576"></a>
 ### R-576 -- PAH-v2 maximal-path freezing in declared local clocks

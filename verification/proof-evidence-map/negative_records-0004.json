@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-25-a13-root-orthogonality-one-use",
+      "branch": "R-084/A13 one-use closure from complete probability-root orthogonality or unweighted Gaussian Poincare alone",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "consequence": "Root-first diagonalisation and the conditional OU identity are valid reductions, but neither root orthogonality nor unweighted Poincare contains the spatial input-scale decay needed for one-use. The next theorem must use production spatial paracomposition, the far projection, or another weighted signed cancellation. This abstract finite-tree model is not a counterexample to production controlled Cartan CFAR or the complete paid packet.",
+        "evidence": "On independent standard roots `xi_1,...,xi_N`, fix a unit vector `e` and set `Delta_k=u_k sum_(r=k)^N xi_r e` and `G_j=sum_(k<=j)Delta_k`. Then `d_jG_j=(sum_(k<=j)u_k)xi_j e`, so the root-diagonal output energy is exactly `||L_Nu||_2^2` for the lower-triangular cumulative matrix `L_N`. With `u=e_1`, input energy is one and output energy is `N`. For normalized equal inputs the output is `(N+1)(2N+1)/6`, hence `51/2` at `N=8`. The exact sharp norm is `||L_N||_op^2=[4 sin^2(pi/(4N+2))]^-1`, approximately `29.365297894371945` at `N=8`. Exact enumeration and an independent inverse- tridiagonal spectral calculation reproduce these values.",
+        "failure_mode": "Infer the controlled Cartan one-use estimate solely from orthogonality of the complete probability-root martingale differences, or apply an unweighted Gaussian Poincare/Ornstein--Uhlenbeck estimate before recovering the production spatial weights."
+      },
+      "detail_title": "R-084 root orthogonality alone does not spend a cumulative control once",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "an exact cumulative finite-tree model has unit input energy but output energy `N`, and its sharp cumulative-matrix norm grows like `N^2`; production spatial paracomposition or another weighted cancellation is indispensable",
+      "tag": "NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE"
+    },
+    {
       "anchor": "ng-2026-07-25-a13-regular-graph-progressive-revisit",
       "branch": "A13 inference from regular one-shot graph recovery to all progressive/revisit controls",
       "claim_ref_basis": {

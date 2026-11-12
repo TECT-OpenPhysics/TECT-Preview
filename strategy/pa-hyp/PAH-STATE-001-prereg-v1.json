@@ -1,0 +1,43 @@
+{
+  "schema": "tect/pah-state-sufficiency/1.0",
+  "id": "PAH-STATE-001",
+  "date": "2026-11-12",
+  "base_commit": "756dedd4fe2418b357dfa733835d270cef2e3b80",
+  "authorization": "Operator requested selection and execution of one valuable next unit, then release-gated commit and push. This authorizes this bounded model-internal diagnostic, not a new physical hypothesis or reopening OBS-002 without evidence.",
+  "question": "Is the source display D(x)=(s,psi,U) a Markov-sufficient state for the unchanged finite PAH-v2 law, both for arbitrary starts and for the original stationary Gibbs law?",
+  "source_hashes": {
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/pa-hyp/PAH-v2-morton-crt-draft.json": "5020922e7c69569fe040ceac7084a81297570e2b6c982c3c9a466e7b8bbb05a7",
+    "strategy/pa-hyp/PAH-v2-morton-crt-contract-v1.json": "7b58978a2bead7e011196f4712323a3cc7ef17bd0285e3dfbbabb6698221a152",
+    "strategy/pa-hyp/PAH-v2-finite-result-v1.json": "9595fbb674443962c2790e4c0737eece6cb086ed9ba9d47783e7777907c678e7",
+    "codes/foundations/pah_v2_root_enumerator.py": "37044e1e7bc274985823d095a21cd6759dbe9e4c5be303b69464d02846291cc2",
+    "strategy/pa-hyp/PAH-OBS-002-assessment-v1.json": "8c4984925f87173cd2c8c96552e3bd53185cb1635cec21dc8f39c5ad95061803"
+  },
+  "inputs": {
+    "r": 0, "h": 0, "N": 0, "m0": 2, "q0": 2, "R0": 2,
+    "epsilon": "1/2", "beta": 1, "nu": 1,
+    "lambda_s": 1, "eta_6": 1, "kappa_s": 1,
+    "kappa_D": 1, "kappa_g": 1, "g": 1, "m2": 0, "lambda_4": 0,
+    "j": [1,1,1,1], "ell": [0,1,1,0], "u": [0,0,0,0],
+    "phase_pair": [[0,0,0,0],[1,0,0,0]]
+  },
+  "geometry": "Exactly G_(0,0) of the adopted contract: width 2, Morton vertices (0,0),(1,0),(0,1),(1,1), original four oriented edges and single face; O={0}, C={1}. No new carrier.",
+  "observable": "f(x)=|psi_O(x)|^2. Gauge invariant and invariant under the actual anchor-preserving cell group. The full invariant algebra is preserved; f is a witness, not a selected replacement domain.",
+  "tests": [
+    "Derive cutoffs from schedule, both displays, every valid original signed root, full F and Lf; compare states in one display fibre.",
+    "Use finite detailed balance and full-support original Gibbs weights to test whether stationary displayed transition operators obey the semigroup identity.",
+    "Independent root/energy implementation and analytic review, hostile sign/multiplicity/gauge/stationarity controls, feasible partial Lean kernel checks."
+  ],
+  "literature": {
+    "source": "Tian and Kannan, Lumpability and Commutativity of Markov Processes, Stochastic Analysis and Applications 24 (2006), 685-702, DOI 10.1080/07362990600632045",
+    "url": "https://people.nmsu.edu/jtian/publications/2006-3.pdf",
+    "locator": "Definition 2.9 and Theorems 2.10-2.11, p. 689",
+    "crosswalk": "Finite state, fixed time-homogeneous generator and a fixed partition are SATISFIED. Fibre-constant total rates are the TEST TARGET, not assumed. Standard generator criterion is rederived directly; no external uniform/physical theorem imported.",
+    "legacy": "PAH free-vertex lumpability (EXP-001362) concerns a different spatial restriction, not this same-carrier display map. R-570 supplies finite reversibility only; inverse-labelled balance is independently rechecked. R-575/R-576 retained as separate cutoff/time boundaries. No novelty claim for general lumpability theory."
+  },
+  "scope": "One exact admitted finite regulator; full counting Gibbs normalization and original external stochastic time. No cutoff, lattice, volume, beta, aperture or observation-time limit. Conditional expectation is a proof diagnostic only, not an adopted projection, state or generator.",
+  "success_or_failure": "PROVED if full display-state closure is established in the declared scope; DISPROVED if one exact invariant witness violates closure, with stationary-law implications separately proved; otherwise HOLD_FOR_EVIDENCE.",
+  "budget": "One bounded analytic attempt and its verification/publication checkpoint; no automatic successor.",
+  "non_claims": ["No physical carrier, instrument, clock law or OBS-002 reentry", "No full-model inconsistency or all-parameter/all-cutoff no-go", "No Pre-A, Sector-A, QFT, spacetime, gravity, continuum, mass gap or TOE promotion"]
+}

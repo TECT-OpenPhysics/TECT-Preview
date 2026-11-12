@@ -1,0 +1,197 @@
+% Title: Hidden counting phases obstruct exact displayed-state Markov closure
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-11-12; this version issued 2026-11-12
+% Status: scoped finite negative result R-577; no host tier action
+% Revision history: v1.0 (2026-11-12) one bounded state-sufficiency checkpoint.
+
+\section*{1. Purpose and scope}
+PAH-STATE-001 asks whether the source display
+$d(x)=(s,\psi,U)$ is a sufficient state for an exact time-homogeneous
+Markov description of the unchanged PAH-v2 counting process. We disprove
+this at one already-admitted finite instance, including its original
+stationary Gibbs law. We do not reject the full counting process.
+The preregistration, source locators and hashes are in
+\url{strategy/pa-hyp/PAH-STATE-001-prereg-v1.json}; its SHA-256 is
+\begin{verbatim}
+5d88addeb96c8cc4a95164a0f92da227b0baf53275be7081c4ea78f18f7a2943
+\end{verbatim}
+The original functional is PAH-001-v1, incorporated unchanged by
+PAH-001-v2-r2. Counting tuples, all signed PH/TR/LK/AP roots,
+$P_{\rm cand}$, mobility, Gibbs normalization and external stochastic time
+are unchanged. Conditional expectation below is a diagnostic in the
+original probability space, not a new dynamics or physical projection.
+
+\paragraph{Literature and prior scope.}
+Tian and Kannan, \emph{Lumpability and Commutativity of Markov Processes},
+Stochastic Analysis and Applications 24 (2006), 685--702,
+DOI 10.1080/07362990600632045, Definition 2.9 and Theorems 2.10--2.11,
+p.~689, give the finite generator criterion. Finite state, fixed partition
+and homogeneous generator hypotheses hold here; the fibre-rate condition
+is tested, not assumed. We rederive the necessary identity below and the
+stationary compression argument directly. This is standard finite Markov
+theory applied to a model-specific state defect, not a new general theorem.
+The older free-vertex restriction (EXP-001362) forgets spatial sites;
+this test forgets only coincident-value labels on the same carrier.
+R-570 is used only for the existing finite model, with detailed balance
+rechecked. R-575 and R-576 concern cutoff freezing and stay intact.
+
+\section*{2. Exact admitted witness}
+Use the adopted Morton square $G_{0,0}$, width $2$, vertices
+$0=(0,0),1=(1,0),2=(0,1),3=(1,1)$, edges
+$01,02,13,23$, and the one closed square face. The anchors are
+$O=\{0\}$ and $C=\{1\}$; no field is clamped. This is the original open
+boundary. Set $r=h=N=0$ and $m_0=q_0=R_0=2$. The source schedule gives
+$K=2,M_s=1,M_\psi=2,Q=2,R_{\max}=2$.
+Take $\epsilon=1/2$, $\beta=\nu=1$, all positive functional couplings
+equal to $1$, and $m^2=\lambda_4=0$. These are admissible witness inputs,
+not a fit or a new source law. Every parameter is fixed; no limit is taken.
+
+Consider the four counting states
+\[
+ j=(1,1,1,1),\quad \ell=(0,1,1,0),\quad
+ n=(a,0,0,b),\quad u=(0,0,0,0),\qquad a,b\in\{0,1\}.
+\]
+They have identical display $s_v=1$, $\psi=(0,1,1,0)$, $U_e=1$.
+This is the whole exact-display fibre: positive amplitudes fix $n_1,n_2$,
+zero amplitudes leave $n_0,n_3$ free, and $\epsilon<1$ fixes every $j$.
+Use $f=|\psi_O|^2=\ell_0^2$, a gauge- and anchor-invariant member of
+the existing full finite algebra. It is not a replacement observable domain.
+
+Each initial energy is $F=4/3+2=10/3$: the first term is onsite and
+the second is the covariant gradient contribution. PH, LK and AP leave
+$f$ unchanged. Of the four valid TR roots, only $1\to0$ and $2\to0$
+change $f$; each increases it by one. Their mobility is one. TR retains
+all phase labels, including $a$ at the initially empty vertex. The two
+target energies are therefore
+\[
+ F_{\rm target}=\begin{cases}4/3+1=7/3,&a=0,\\
+                              4/3+3=13/3,&a=1.\end{cases}
+\]
+Consequently the original midpoint rate gives, exactly,
+\[
+ (Lf)(x_{0b})=2e^{1/2},\qquad
+ (Lf)(x_{1b})=2e^{-1/2}.                         \tag{1}
+\]
+Each initial state has PH:8, TR:4, LK:8, AP:4 valid labelled incidences.
+K=2 duplicate signs are retained. No invalid root or root multiplicity is
+silently changed. As full-functional regression controls, the AP-minus
+energy increments at empty $O$ and occupied $C$ are $17/24$ and $1/3$;
+their mobility is $1/\sqrt2$, but their $f$ increments are zero.
+
+If a generator $\bar L$ on displays satisfied
+$L(\bar f\circ d)=(\bar L\bar f)\circ d$ for every displayed observable,
+its right side would be constant on a display fibre. Equation (1)
+contradicts this. The universal displayed-state closure route is therefore
+false at this admitted instance. This is not an all-regulator assertion.
+
+\section*{3. Original stationary Gibbs law does not remove the defect}
+Let $\pi(x)=Z^{-1}e^{-F(x)}$ on the complete finite counting space.
+For each valid signed incidence, inverse validity and symmetric mobility
+give
+\[
+ \pi(x)c_r(x)=Z^{-1}m_r(x)e^{-[F(x)+F(rx)]/2}
+             =\pi(rx)c_{r^{-1}}(rx).
+\]
+Summation preserves all duplicate labels. Hence $L=L^*$ in $L^2(\pi)$,
+$S_t=e^{tL}=S_t^*$, and $\pi$ has full support. Let
+$P=\mathbb E_\pi[\,\cdot\mid d]$, the orthogonal projection onto display
+functions, solely for this proof. Under the unchanged stationary path law,
+the displayed two-time conditional transitions are
+$C_t=PS_tP$ on $\operatorname{ran}P$. An autonomous stationary Markov
+description would require $C_{2t}=C_t^2$.
+
+Finite matrix calculus and orthogonality instead yield the exact identity
+\[
+ C_{2t}-C_t^2=PS_t(I-P)S_tP,\qquad
+ \langle f,(C_{2t}-C_t^2)f\rangle_\pi
+       =\|(I-P)S_tf\|_\pi^2.                    \tag{2}
+\]
+All four fibre states have equal Gibbs weight. From (1),
+\[
+ \operatorname{Var}_\pi(Lf\mid d=d(x_{00}))
+     =(e^{1/2}-e^{-1/2})^2>0.
+\]
+Their total mass is $4e^{-10/3}/Z>0$, so
+\[
+ \|(I-P)Lf\|_\pi^2\ge
+ \frac{4e^{-10/3}}{Z}(e^{1/2}-e^{-1/2})^2>0.     \tag{3}
+\]
+Since $Pf=f$ and the finite matrix exponential is analytic,
+$(I-P)S_tf=t(I-P)Lf+O(t^2)$ in the fixed finite norm. Equations (2)--(3)
+give a positive Chapman--Kolmogorov defect for all sufficiently small
+$t>0$. Thus the actual stationary displayed process is not a
+time-homogeneous Markov chain. Merely averaging instantaneous rates over
+the Gibbs fibre cannot reproduce its finite-time law.
+There is no quantitative cutoff-uniform lower bound in (3), no change of
+initial state, and no interchange of time or regulator limits.
+
+\paragraph{Gauge quotient.}
+This is not a gauge artefact. Preserving all displayed $U=1$ on the
+connected square forces a constant gauge label, and the two occupied
+phases then force that label to zero. The four hidden states are not
+identified by this stabilizer. The gauge orbit has 16 exact-display
+representatives, each with the same four-state conditional split because
+$F$ and $Lf$ are invariant. The conditional variance therefore persists
+also on the gauge-orbit display fibre. The two adjacent marked anchors
+make the cell automorphism group trivial. This additional observation
+does not assert that every arbitrary further quotient is non-Markov.
+
+\section*{4. Verification and Devil's-advocate review}
+The primary script derives the regulator, source-root rows, full energies,
+balance, gauge action and fibre variance. A non-importing independent
+Fraction-based evaluator identifies the fibre by checking all 40,960
+counting states; this enumeration checks a finite definition, not a limit.
+Independent analytic and hostile in-session reviews check (2)--(3).
+The hostile runner tests semantic corruptions and optimized-Python rejection.
+Four pinned Lean declarations check the abstract nonfactorization
+implication, positive exponential gap, variance algebra and positive-mass
+contribution. Lean does not encode the source functional, conditional
+expectation or full semigroup argument. See the hash-bound review and run
+JSONs for executed dispositions. No external-person certification is claimed.
+
+\begin{itemize}
+\item \textbf{Sign and factor (DISMISSED).} Lower target energy gives the
+larger rate; the exponent is $-\Delta F/2$. Both contributing TR roots
+remain, as do zero-increment PH/LK/AP roots.
+\item \textbf{Gauge and hidden-label redundancy (DISMISSED).} The witness
+is $|\psi_O|^2$, not a gauge phase. The exact display stabilizer and
+invariant rate calculation exclude a gauge-copy explanation.
+\item \textbf{Only artificial starts fail (DISMISSED).} The finite positive
+Gibbs fibre and reversible compression identity prove the stationary
+defect, without replacing the state by a conditional model.
+\item \textbf{Wrong carrier (VALID, corrected before preregistration).}
+A preliminary 3-by-3 sketch was rejected: the adopted widths are powers
+of two. All issued calculations use the actual $G_{0,0}$ and its anchors.
+\item \textbf{Limits and physical interpretation (UPHELD boundary).}
+The fibre mass need not stay bounded below in any limit. Neither this
+result nor formal verification identifies hidden labels with nature.
+\end{itemize}
+Independent external review of the exact source crosswalk and stationary
+compression proof is invited. Reproduce the complete checkpoint with
+\begin{verbatim}
+python -X utf8 verification/scripts/pah_state001_verify.py
+  --lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+\end{verbatim}
+Run these two displayed lines as one command.
+
+\section*{5. Consequence and Result footer}
+An exact memoryless realization of the full source model cannot use just
+these displayed fields as its state. A future physical packet must address
+latent state information or non-Markov memory and justify its interactions;
+this theorem neither supplies such a packet nor identifies a minimal
+additional state. OBS-002 remains parked. R-570, R-575 and R-576 are
+preserved. No model, state, rate, clock, comparison map or limit is repaired.
+No automatic successor is authorized by this result.
+\begin{verbatim}
+Result ID: R-577 (C6-SPACETIME-SIGNATURE)
+Precise statement: Exact displayed-state Markov closure fails.
+Scope: One fixed admitted PAH-v2 finite instance, original Gibbs.
+Dependencies: Frozen PAH-v1/v2 definitions; finite reversibility.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, INHERITED.
+Reproduction command: python verification/scripts/pah_state001_verify.py
+Expected output: PASS exact witness and partial Lean checks.
+Falsification gate: A wrong source/root/fibre or compression identity.
+Tier before / after: C6 T1 / T1; no mainline gate change.
+No-overclaim statement: No physical Pre-A, QFT, gravity or limit.
+Next required action: Park; require physical latent-state/memory evidence.
+\end{verbatim}

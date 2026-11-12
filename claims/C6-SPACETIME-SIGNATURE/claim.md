@@ -232,3 +232,20 @@ T-054 gate closure, v1 repair, refinement, continuum or physical signature claim
 External adversarial review of the source-domain and symmetry crosswalk is invited.
 
 Identify the fluctuation modes whose dispersion fixes the effective signature; relate the BCC reciprocal lattice to the emergent light-cone.
+
+### 2026-11-12: displayed-state sufficiency obstruction (R-577)
+
+PAH-STATE-001 is DISPROVED at one existing admitted finite instance:
+two full counting states with identical (s,psi,U) give L|psi_O|^2 equal
+to 2exp(1/2) and 2exp(-1/2). Their positive-mass Gibbs fibre has positive
+conditional generator variance. Finite reversible compression then violates
+the semigroup identity for the original stationary displayed transitions.
+The exact source, proof, primary/independent/hostile runs and four partial
+Lean declarations are in the [result card](../../strategy/pa-hyp/PAH-STATE-001-result-v1.json)
+and `notes/pah-display-state-261112-v1.0.tex.txt`.
+This rules out an exact displayed-only memoryless implementation in the
+stated scope; it neither rejects the full counting model nor establishes a
+minimal hidden-state set. No C6/T-054 gate, physical carrier, clock law,
+Pre-A, QFT, gravity or limit promotion. OBS-002 remains parked; reentry
+requires an exact error or a physical carrier/memory packet with the
+original-background/time compatibility. No automatic follow-on research.

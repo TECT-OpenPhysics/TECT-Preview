@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV](#ng-2026-11-12-pah-state001-display-markov) | exact displayed-only memoryless realization of PAH-v2 | R-577 same-fibre invariant generator mismatch and original-Gibbs stationary compression defect; full counting CTMC preserved, no physical or uniform-limit no-go |
 | [NG-2026-10-14-PAH-TIME002-DECLARED-CLOCK-FREEZING](#ng-2026-10-14-pah-time002-declared-clock-freezing) | use declared local clocks alone to restore W motion | R-576 proves maximal original-path W freezing simultaneously in all source local clocks at fixed positive epsilon and geometry; no arbitrary random-semigroup substitution, physical clock or all-model no-go |
 | [NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING](#ng-2026-10-14-pah-v2-rd001-displayed-freezing) | nontrivial original-time dynamics of fixed source-displayed readouts | R-575 proves uniform-on-finite-time Gibbs-L2 freezing for every fixed Lipschitz displayed readout at fixed carrier, while an invariant plaquette average retains positive variance; no whole-model or physical no-go |
 | [NG-2026-09-14-PAH-V2-SG001-FIXED-TIME](#ng-2026-09-14-pah-v2-sg001-fixed-time) | original-time semigroup convergence for the unchanged R-573 fixed character | R-574 gives original fine-Gibbs norm at least 1/5 at fixed time 1/10 beyond every cutoff threshold; no automatic weakened successor |
@@ -11045,3 +11046,30 @@ prime-tail error. Next separate question: does the same fixed character also
 obstruct original-time semigroup comparison? No new target is executed here.
 No T-054/C6 gate promotion, alternate-domain universal no-go, continuum,
 physical Pre-A, Sector-A, spacetime, QFT, gravity, Yang-Mills, mass gap or TOE.
+
+### NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV -- exact displayed-state closure
+
+**Branch / claim.** PAH-STATE-001 on the unchanged adopted finite square,
+tuple counting, functional, all signed roots, original Gibbs state and time.
+
+**Failure mode.** At the pinned admitted instance, four states have identical
+displayed fields but L|psi_O|^2 takes 2exp(1/2) and 2exp(-1/2). Their Gibbs
+conditional variance is positive. Reversible compression gives
+<f,(C_(2t)-C_t^2)f>=||(I-P)exp(tL)f||^2 with positive leading coefficient.
+The actual stationary displayed process is therefore not a time-homogeneous
+Markov chain. Gauge quotient does not remove this witness.
+
+**Evidence.** R-577 / EXP-001837; exact result and source hashes in
+`strategy/pa-hyp/PAH-STATE-001-result-v1.json`, one four-page synthesis,
+primary/non-importing independent/hostile runs and four partial Lean bridges.
+Reproduce `python -X utf8 verification/scripts/pah_state001_verify.py
+--lean-cache E:/Dev/TECT/verification/lean/.lake/packages` as one line.
+
+**Consequence.** DISPROVED only for exact displayed-only Markov closure in
+the stated finite scope. Full counting dynamics remains valid; no minimal
+hidden-coordinate set, physical no-go, uniform bound or limit assertion.
+A physical implementation must address latent information or memory rather
+than silently erasing the labels. No actual physical packet supplied here;
+OBS-002 remains parked. Reentry needs a precise error or independently
+justified original-law/time-compatible physical packet, not extra finite
+tables, clock variants or generic source hunts. C6/T-054 unchanged.
