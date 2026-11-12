@@ -3,6 +3,9 @@
 Review status: NOT PERFORMED. No candidate has been contacted, agreed to
 review, endorsed the manuscript or supplied a signed response.
 Official profiles were checked on 2026-11-12. Availability is unknown.
+Operator clarification on that date: actual external review is deferred and
+not required to finish this paper-package task. The following plan is retained
+for optional future use; it authorizes no contact or automatic successor.
 
 ## Candidate expertise and official sources
 
@@ -42,5 +45,5 @@ as an assumed batch.
    internal; no reviewer form is completed on a person's behalf.
 
 An actual message requires explicit author direction to transmit it. Until
-then the invitations are local drafts and the full goal's actual external
-review requirement remains open.
+then the invitations remain local drafts. Actual review remains unperformed,
+while paper-package completion follows the operator's clarified scope.

@@ -2,7 +2,7 @@
 
 Goal owner: task 019fa909-8f53-7923-8928-879358abc5f3; task ledger T-098.
 Source checkpoint: 924d069708066e5c4c40e93fff9c4ce001e4b0f8.
-Version 0.1.1; first content checkpoint and revision 2026-11-12.
+Version 0.1.2; first content checkpoint and revisions 2026-11-12.
 The scientific source checkpoint above remains fixed. Initial review edition
 0.1.0 was integrated and pushed as 8f912661dff45d78d03dc6568e11f23bebb63319.
 
@@ -17,6 +17,17 @@ reviewed on every page, and a sealed external-review handoff package.
 The final checkpoint must be committed, integrated by the current controller,
 pushed normally, and verified against the live remote branch head.
 
+## Operator clarification, 2026-11-12
+
+The operator explicitly requests package completion while actual external
+reviews remain unperformed, after internal repair/re-review until no further
+actionable findings. Actual human mathematical/novelty review is deferred
+future work, not a prerequisite for completing T-098 or this package goal.
+Both review fields stay NOT_PERFORMED; no person is contacted and no signature
+or scientific acceptance is simulated. The internal stop rule is two consecutive
+final clean passes after the last repair, plus executed PDF/extraction/release
+gates. This bounded standard is not an absolute-perfection guarantee.
+
 ## Acceptance matrix
 
 | Requirement | Authority / test | Current disposition |
@@ -28,9 +39,10 @@ pushed normally, and verified against the live remote branch head.
 | Prior-art and dependency audit | dependency-audit.md; exact primary-source locators | Bounded audit includes Xu Assumptions1.2--1.3, Theorem1.4 and Example1.6; nonpolynomiality alone is not new |
 | Independent finite routes and hostile mutations | verification/verify.py; fresh legacy replay; saved run JSON | Executed; analytic scope separated |
 | Final content lock | proof-audit.md plus source/version hashes | Revised TeX internally reviewed and hash-pinned |
-| Final PDF and every-page render review | PDF QA record tied to final TeX/PDF hashes | Seven pages rendered and visually reviewed; PASS |
+| Final PDF and every-page render review | PDF QA record tied to final TeX/PDF hashes | Eight final pages rendered and visually reviewed; PASS |
 | External review materials and sealed archive | handoff, cover letter, review form, targeted review plan/drafts, manifest, extraction check | Materials complete; edition-specific archive/extraction result in adjacent build report |
-| Actual external mathematical / specialist review | signed response from an identified independent reviewer | NOT PERFORMED; never inferred from AI audit |
+| Actual external mathematical / specialist review | Reviewer's own response if obtained later | NOT PERFORMED; explicitly deferred by operator, not a package-completion prerequisite |
+| Repeated internal repair/re-review | self-review-v012.md and frozen runs | Final clean-pass dispositions recorded separately from human acceptance |
 | Commit, integration, normal push, remote equality | watcher/controller/remote receipts | Initial edition verified at 8f912661; revised edition requires its own final receipts |
 
 ## Ordered work
@@ -56,8 +68,9 @@ the literature, reframe as an explicit model application or technical note.
 
 The paper's core remains the random-coefficient energy theorem. Passing only
 finite checks or only the deterministic-background lemma is not completion.
-External review status and review readiness are separate fields. Any final
-completion audit must account explicitly for both.
+External review status and review readiness are separate fields. Completion
+uses the operator clarification above without relabelling an unperformed
+review as PASS.
 
 ## Revision 0.1.1
 
@@ -68,3 +81,12 @@ PDF is recorded by pdf-qa-v011.json and render-review-v011.json. Old issued
 0.1.0 distributions and review receipts remain unchanged. Candidate readers
 and unsent invitations are in external-review-plan.md and review-request-drafts.md.
 No actual external review or transmission is counted as complete.
+
+## Revision 0.1.2
+
+The original random-coefficient target is retained. The revision makes J and
+centered-family definitions, PSD/kernel wording, derivative growth, the
+homogeneous local polynomial/witness, and noncommuting-background form-order
+and isometry explicit. Dense tensor/stability checks and PNG-bound visual
+and disjoint-output gates repair the internal findings. Earlier distributions
+are unchanged; self-review-v012.md records findings and final dispositions.

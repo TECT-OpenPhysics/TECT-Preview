@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 13 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 79
+Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 80
 
 ## In progress
 
@@ -44,9 +44,6 @@ Counts: In progress 13 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibi
 - **T-094** PAH-OMC-027 source-authorized dynamic form-route packet admission  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
   - Next-stage goal: preserve PAH-OMC-020 HOLD_FOR_EVIDENCE and admit only one source-authorized hash-pinned packet that simultaneously supplies U_n, C_n, G_n/D_n, terminal-square convention, anchored-n uniform control, and the R-537 compact-time semigroup bridge on unchanged PAH-001/R-512. Start with one source-delta and parent-hash re-entry check; if no new owner hash exists, do not repeat finite or abstract audits and keep the route parked. If a new packet appears, run primary, non-importing independent, hostile, and Lean admission checks. Do not change functions, rates, state, time, carrier, regulator, or limit order; no physical Pre-A, QFT, gravity, continuum, Yang-Mills, mass-gap, or TOE claim.
   - _updated 2026-09-08_
-- **T-098** A6/A7 independent paper: dependency audit, canonical composites, stability boundaries and review package  _(owner: Codex; claim: A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE)_
-  - User-authorized paper goal. Fixed production Gaussian and positive floor; no interacting Gibbs measure, A13 closure or physical vacuum. Complete content audit before final PDF and delivery package.
-  - _updated 2026-11-12_
 
 ## Blocked
 
@@ -298,6 +295,9 @@ Counts: In progress 13 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibi
 - **T-097** PAH-OMC-030 finite-strip dynamics to unique Markov extension  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
   - One bounded temporal convergence attempt under frozen R-514, R-510, R-511 and R-568. Prove or refute lim_n sup_[0,T] of the original finite-strip Q_n correlations against T_min while preserving terminal-square boundary and j-before-anchored-n order. Require source/domain compatibility, common-Hilbert realization, actual boundary and amplitude-tail estimates, independent and hostile checks and Lean scope. End PROVED, DISPROVED or HOLD_FOR_EVIDENCE; no model/rate/state/time/carrier/limit change and no physical Pre-A, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE claim.
   - _updated 2026-09-09_
+- **T-098** A6/A7 independent paper: dependency audit, canonical composites, stability boundaries and review package  _(owner: Codex; claim: A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE)_
+  - Package edition0.1.2 completed after recorded internal repairs and two final clean passes. Operator explicitly defers actual external mathematics/novelty review, which remains NOT_PERFORMED. PDF8 pages and extracted65-file package verified; no claim-tier or physical promotion. Final release/integration/normal-push receipts remain required for offsite closure; no automatic successor.
+  - _updated 2026-11-12_
 - **T-099** TECT-PHY-001 bounded physical candidate intake and operational recovery  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
   - EXP-001841: bounded three-source intake and one independently reviewed reference complete; no cosmological candidate admitted. User clarified TECT phase-transformation starting point. TECT-PHASE-MICRO-OWNER names the missing physical input; seven ideas recorded with bounded retrieval in SESSION.md. DCTRL-000074 PARK_OR_BLOCK, no automatic successor or T-054 gate change. Next phase-input scoping uses IDEA-001/002/006.
   - _updated 2026-11-12_

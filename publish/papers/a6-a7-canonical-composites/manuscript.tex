@@ -15,7 +15,7 @@
 \newcommand{\la}[1]{\langle #1\rangle}
 \title{Canonical Derivative Currents and Covariance-Normal Energy\protect\\for a Three-Component Fourth-Order Gaussian Field}
 \author{Jusang Lee}
-\date{Internal-review edition 0.1.1 --- 12 November 2026}
+\date{Internally audited edition 0.1.2 --- 12 November 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -109,7 +109,7 @@ All $S_A$ are real symmetric. Fix $\eps=10^{-12}$ and set
 \end{equation}
 The one-form $v_A\cdot dX=dm_A-q_A\,d\rho=(\rho+\eps)dq_A$
 is smooth with polynomially growing derivatives at this fixed floor.
-Define the positive coefficient matrix
+Define the positive semidefinite coefficient matrix
 \begin{equation}\label{eq:B}
  B(X)=\sum_{A=1}^3\{a p_Ap_A^T+b(p_Av_A^T+v_Ap_A^T)+c v_Av_A^T\}.
 \end{equation}
@@ -117,6 +117,8 @@ Here $a=0.2(0.3)^2/d$, $b=0.1(0.3)(0.25)/d$,
 $c=0.15(0.25)^2/d$, and $d=2^2+10^{-12}$.
 Thus $a,c>0$ and $ac-b^2>0$. Rounded values of $a,b,c$ are
 $0.0045,0.001875,0.00234375$; calculations retain $d$ exactly.
+The matrix need not be positive definite: the common-phase direction
+$i\Psi$ is in its kernel, and it vanishes on a pure third-component field.
 
 An admitted approximation has one real even scalar multiplier $R_N(n)$
 on every real component, with $\sup_{N,n}|R_N(n)|<\infty$,
@@ -230,7 +232,18 @@ for the particular diagonal-leading covariance \eqref{eq:cov}.
 
 \section{Covariance-normal energy}
 Put $Y_{N,i}=\partial_iX_N$ and
-$\Gamma_{N,i}=\E[Y_{N,i}Y_{N,i}^T]$. The exact density is
+$\Gamma_{N,i}=\E[Y_{N,i}Y_{N,i}^T]$. Define the smooth-cutoff currents
+\[
+ J_{A,i,N}=p_A(X_N)\cdot Y_{N,i}=\partial_i m_A(X_N),\qquad
+ K_{A,i,N}=v_A(X_N)\cdot Y_{N,i}.
+\]
+Here $J^2_N,JK_N,K^2_N$ mean respectively
+$\sum_{A,i}J_{A,i,N}^2$, $\sum_{A,i}J_{A,i,N}K_{A,i,N}$ and
+$\sum_{A,i}K_{A,i,N}^2$. Thus
+$e_N=(a/2)J^2_N+bJK_N+(c/2)K^2_N$; separate centering below means
+subtracting the conditional expectation of each such smooth-cutoff family
+given $X_N(x)$, not multiplying limiting distributions.
+The exact density is
 \begin{equation}\label{eq:energy}
  e_N=\tfrac12\sum_iY_{N,i}^TB(X_N)Y_{N,i},\quad
  C_N(X)=\tfrac12\sum_i\tr[B(X)\Gamma_{N,i}],\quad E_N=e_N-C_N(X_N).
@@ -251,7 +264,8 @@ $\E[XY^T]=\E[\widetilde X\widetilde Y^T]=0$.
 Write $P_{a\beta}=\E[Y_a\widetilde X_\beta]$,
 $R_{c\alpha}=\E[\widetilde Y_cX_\alpha]$,
 $Q_{ac}=\E[Y_a\widetilde Y_c]$ and let $\Gamma,\widetilde\Gamma$
-be the two $Y$ covariances. For smooth polynomial-growth coefficients,
+be the two $Y$ covariances. Suppose the smooth coefficients $A,D$ and all
+their derivatives through order two have polynomial growth. Then
 the expectation of
 $A_{ab}(X)(Y_aY_b-\Gamma_{ab})D_{cd}(\widetilde X)
 (\widetilde Y_c\widetilde Y_d-\widetilde\Gamma_{cd})$ equals
@@ -388,14 +402,19 @@ failure of a positive uniform proportional bound for $hs-W_\eps$.
 \end{proof}
 
 \begin{proposition}[Subcritical homogeneous instability]\label{prop:instability}
-Let $t\to\infty$, $m<h$ and $\gamma=1.62$. A leading subtraction
-$-tW_\eps$ and compensation $tms$, together with the local sextic
-$\gamma\rho^3/6$ and fixed lower-order production terms, admit homogeneous
-fields whose energy density is at most $-c_m t^{3/2}+O(t)$ for some $c_m>0$.
+Let $t\to\infty$, $m<h$ and $\gamma=1.62$. Let $G_{\rm lo}$ be independent
+of $t$, with $|G_{\rm lo}(u)|\le C(1+|u|^4)$.
+The homogeneous energy density
+$\gamma\rho^3/6+G_{\rm lo}(u)-tW_\eps(u)+tms(u)$
+is at most $-c_m t^{3/2}+O(t)$ along suitable fields, for some $c_m>0$.
+The fixed production instance is
+$G_{\rm lo}(u)=\tfrac12u^\dagger(rI_3+M)u+(\lambda/4)\rho^2$,
+with $\lambda=-0.43$ and $\rho=|u|^2$.
 \end{proposition}
 \begin{proof}
 Choose a fixed $x\in(0,1)$ small enough that
-$A_x=(h-m)x-(6b+3c)x^2>0$ and take $s=x\rho$.
+$A_x=(h-m)x-(6b+3c)x^2>0$ and take the constant field
+$u=(\sqrt{x\rho},0,\sqrt{(1-x)\rho})$, so $s=x\rho$.
 At large $\rho$, $W_\eps-ms=A_x\rho+O(1)$.
 All derivative currents vanish for this homogeneous field. The local
 energy is $\gamma\rho^3/6-tA_x\rho+O(\rho^2+t)$.
@@ -441,6 +460,10 @@ and $1+t^2\ge(1+t)^2/2$, give
 ${\cal A}(k)\ge c_0(1+|k|^2)^2I$.
 Quadratic-form order gives
 $0\le T_{b,N}\le M_R^2\|b\|_\infty C^{1/2}(-\Delta)C^{1/2}$.
+Indeed $b\le\|b\|_\infty I$ first gives a bound by
+$\|b\|_\infty R_N C^{1/2}(-\Delta)C^{1/2}R_N$.
+Only the translation-invariant middle operator must commute with $R_N$;
+no commutation between $b(x)$ and $R_N$ is assumed.
 Eigenvalue comparison bounds the squared Hilbert--Schmidt norm by
 $6M_R^4\|b\|_\infty^2c_0^{-2}\sum_{n\ne0}|k_n|^{-4}$.
 Counting the $24j^2+2$ integer points on the shell $|n|_\infty=j$
@@ -448,6 +471,9 @@ gives $\sum_{n\ne0}|n|^{-4}\le24\zeta(2)+2\zeta(4)
 =4\pi^2+\pi^4/45$.
 The limiting operator is Hilbert--Schmidt, and strong convergence of bounded
 multipliers implies its cutoff conjugations converge in that norm.
+The common Gaussian coupling and Wick pairing give
+$\E|Q_{b,N}-Q_{b,M}|^2=\tfrac12\|T_{b,N}-T_{b,M}\|_{\rm HS}^2$,
+which proves the asserted $L^2$ convergence.
 Gaussian diagonalization yields
 \[
  \log\E e^{-pQ_{b,N}}=\tfrac12\sum_j
@@ -485,7 +511,7 @@ stronger scope assertions. It also records the slow-cutoff negative control
 and the critical third-component escape. Numerical checks are reproducibility
 and falsification aids; they are not substitutes for the analytic limits.
 
-This version is undergoing internal content review. Independent human
+This version has undergone internal content review. Independent human
 mathematical review and specialist novelty review have not been performed.
 The external-review handoff records their disposition separately from file
 integrity and code execution. Author declarations, venue choice and actual

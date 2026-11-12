@@ -2,9 +2,11 @@
 
 Candidate: Canonical Derivative Currents and Covariance-Normal Energy for a
 Three-Component Fourth-Order Gaussian Field. Author: Jusang Lee.
-Status: internal-review edition0.1.1; seven-page PDF rendered and inspected.
+Status: internally audited edition0.1.2; eight-page PDF rendered and inspected.
 Begin with START-HERE.md and verify the archive's extracted commands.
 External mathematical and specialist novelty reviews: NOT PERFORMED.
+The operator explicitly defers those reviews from this package-completion
+scope. This handoff is available for later use, not an active contact request.
 
 Requested expertise: Gaussian distribution-valued fields, paracontrolled
 calculus or stochastic composites, and constructive-field stability bounds.

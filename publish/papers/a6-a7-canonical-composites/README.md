@@ -1,6 +1,6 @@
 # Canonical derivative currents and covariance-normal energy
 
-Internal-review edition 0.1.1, 12 November 2026. Start with manuscript.pdf and
+Internally audited edition 0.1.2, 12 November 2026. Start with manuscript.pdf and
 PLAN.md. This is the third independent paper candidate following the A2 and
 Q3LOCK packages; it uses the A6/A7 Gaussian composite authorities rather than
 the later Pre-A dynamics program.
@@ -23,9 +23,14 @@ requests without claiming that any candidate has agreed or been contacted.
 
 External mathematical and specialist novelty reviews are NOT PERFORMED.
 This draft has not been submitted or transmitted to a journal or reviewer.
-The seven-page PDF has passed all-page render review. START-HERE.md describes
+The eight-page PDF has passed all-page render review. START-HERE.md describes
 portable verification; archive/extracted-check results are recorded by the
 adjacent distribution build report. The current delivery is
-gaussian-composites-v011-r1 under publish/submission-packages/a6-a7/.
+gaussian-composites-v012-r1 under publish/submission-packages/a6-a7/.
 Canonical integration and remote backup remain edition-specific acceptance
 gates; the initial 0.1.0 checkpoint was verified at 8f912661.
+
+The operator explicitly defers actual external review rather than blocking
+completion of this paper-package task. self-review-v012.md records the
+internal repairs and final clean passes. This is not scientific acceptance,
+priority certification or an absolute-perfection guarantee.

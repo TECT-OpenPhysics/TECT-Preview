@@ -1,0 +1,54 @@
+{
+  "actual_transmission": "NOT_PERFORMED",
+  "archive_bytes": 5692078,
+  "archive_sha256": "c9044f4f2b5a72a108806e8375135f9356906ae6347e8f950927c7e2ef3a4128",
+  "external_mathematical_review": "NOT_PERFORMED",
+  "extracted_checks": [
+    {
+      "command": [
+        "verify-package.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "PACKAGE SELF-TEST: PASS 14 scope/path mutations rejected\nPACKAGE INTEGRITY: PASS 65 files; external review NOT PERFORMED\n"
+    },
+    {
+      "command": [
+        "verification/verify.py",
+        "--self-test",
+        "--check",
+        "verification/runs/algebra.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "A6/A7 PAPER AUDIT: PASS 80 checks; 13 hostile mutations rejected\n"
+    },
+    {
+      "command": [
+        "verification/strengthened_audit.py",
+        "--check",
+        "verification/runs/strengthened-v012.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "STRENGTHENED AUDIT: PASS 59 checks; 14 hostile mutations rejected\n"
+    },
+    {
+      "command": [
+        "verification/package_gates.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "PACKAGE VISUAL GATES: PASS 35 hostile mutations rejected\n"
+    }
+  ],
+  "files_verified": 65,
+  "manifest_sha256": "1e149268cf6586779958b8692b0e1b4738309430d55c528f0e43bd62552f826e",
+  "pdf_pages": 8,
+  "schema": "tect/a6-a7-package-build/1.0",
+  "specialist_novelty_review": "NOT_PERFORMED",
+  "status": "PASS",
+  "version": "0.1.2-r1"
+}

@@ -1,6 +1,6 @@
 # Internal proof audit and correction record
 
-Date: 2026-11-12. Audit covers content draft0.1.0 and review edition0.1.1 in the fixed Gaussian scope.
+Date: 2026-11-12. Audit covers editions0.1.0--0.1.2 in the fixed Gaussian scope.
 Current review: read-only independent AI reconstruction. Energy review:
 read-only independent AI reconstruction. Literature review: primary-source
 crosswalk. These are not human external mathematical or novelty reviews.
@@ -66,12 +66,12 @@ A7 primary29, independent17, aggregate74. All pass. Legacy area and variance
 rows remain ingredient diagnostics, not all-mode proofs. The original
 2026-07-20 reports are retained byte-for-byte by the replay wrapper.
 
-## Open review and release items
+## Historical edition0.1.1 review and release items
 
 The revised TeX was compiled with Tectonic0.17.0; all seven PDF pages were
 rendered with Poppler and visually inspected. Hash-linked text/geometry and
 visual receipts, plus the actual PNG pages, are retained under verification/.
-The v011-suffixed receipts and rendered-v011/ pages describe the current
+The v011-suffixed receipts and rendered-v011/ pages describe that historical
 edition; unsuffixed receipts describe0.1.0. A bibliography-only orphan page
 in the intermediate revision was removed by compacting references to nine
 point text, without removing a citation or modifying a theorem.
@@ -80,3 +80,48 @@ mathematical review remain NOT PERFORMED. If either identifies a gap, the
 correction must be versioned and tested before the handoff is sealed.
 No interacting Gibbs, A13 closure, physical-vacuum or floor-removal result
 can be inferred from this internal audit.
+
+## Edition0.1.2 repair and adversarial review
+
+The operator defers actual external review from this package-completion
+task, while requiring repeated internal repair/re-review. The independent
+AI review assignments, findings and final dispositions are in self-review-v012.md.
+They do not constitute a human external report or an absolute-perfection claim.
+
+- VALID-with-mitigation: B is PSD, not necessarily positive definite; its
+  common-phase null direction and pure-third-component zero are now explicit.
+- VALID-with-mitigation: J and the three centered energy families were not
+  explicitly defined. The smooth-cutoff definitions and conditional centering
+  are printed; no product of limiting rough currents is presumed.
+- VALID-with-mitigation: the finite IBP lemma now requires polynomial growth
+  of A,D and their derivatives through order two, not merely the functions.
+- VALID-with-mitigation: G_lo, its t-independent quartic growth, the exact
+  pinned lambda/gamma production instance and mixed homogeneous witness are
+  explicit. The O(t) error is not an unrecorded physical assumption.
+- VALID-with-mitigation: the determinant proof now shows the noncommuting
+  background order argument and the common-coupling half-HS variance identity.
+- VALID-with-mitigation: scalar IBP cases alone do not distinguish tensor
+  index transposes. The new dense exact fixture compares independent Wick
+  enumeration with the full tensor formula and rejects those transposes.
+- VALID-with-mitigation: visual receipts previously admitted inconsistent
+  schema/defect/provenance fields and unbound PNGs; schema1.1 binds all pages.
+- VALID-with-mitigation: nested output paths could invalidate the delivery
+  inventory. Pure disjoint-path admission, copied-identity checks and final
+  destination/extraction rechecks now precede the PASS report write.
+
+Sign/factor: full tensor families, real-complex covariance, the quadratic
+variance half factor and determinant quarter factor have separate tests.
+Domain/units: fixed side/floor, real bundle dimension, deterministic b and
+production homogeneous polynomial are distinct. Convergence: all-mode
+limits remain analytic; finite spectral/large-t fixtures are diagnostics.
+Hardcode masking: coefficients, c0, gamma/lambda and multiplicities are read
+or computed from the frozen model; rational fixture values are labelled INPUT.
+Limit cases: p=0, B=0 on the third component, the phase kernel, signed cutoffs,
+and subcritical escape are exercised. Specialist review remains welcome but
+unperformed and is not simulated to complete this author-requested package.
+
+New executable evidence: strengthened-v012.json records59 checks and14
+hostile mutations; package-gates-v012.json records35 visual/output mutations.
+The package verifier independently rejects14 scope/path mutations. Current
+PDF QA and visual identities are the v012-suffixed receipts for eight pages;
+the preceding layout discussion is retained historical edition0.1.1 context.

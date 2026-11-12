@@ -1,0 +1,92 @@
+# A6/A7 independent paper plan and acceptance contract
+
+Goal owner: task 019fa909-8f53-7923-8928-879358abc5f3; task ledger T-098.
+Source checkpoint: 924d069708066e5c4c40e93fff9c4ce001e4b0f8.
+Version 0.1.2; first content checkpoint and revisions 2026-11-12.
+The scientific source checkpoint above remains fixed. Initial review edition
+0.1.0 was integrated and pushed as 8f912661dff45d78d03dc6568e11f23bebb63319.
+
+## Intended deliverable
+
+A standalone mathematical-physics manuscript constructing the canonical
+derivative current and the covariance-normal energy for the pinned Gaussian
+model, proving their common-regulator convergence, and specifying explicit
+stability bounds and obstructions. It includes the full written proofs,
+source/hypothesis audit, finite reproducibility and hostile checks, a PDF
+reviewed on every page, and a sealed external-review handoff package.
+The final checkpoint must be committed, integrated by the current controller,
+pushed normally, and verified against the live remote branch head.
+
+## Operator clarification, 2026-11-12
+
+The operator explicitly requests package completion while actual external
+reviews remain unperformed, after internal repair/re-review until no further
+actionable findings. Actual human mathematical/novelty review is deferred
+future work, not a prerequisite for completing T-098 or this package goal.
+Both review fields stay NOT_PERFORMED; no person is contacted and no signature
+or scientific acceptance is simulated. The internal stop rule is two consecutive
+final clean passes after the last repair, plus executed PDF/extraction/release
+gates. This bounded standard is not an absolute-perfection guarantee.
+
+## Acceptance matrix
+
+| Requirement | Authority / test | Current disposition |
+|---|---|---|
+| Fixed Gaussian reference, six-real factor, density floor, regulator quantifiers | manuscript section 2; sources/provenance.json; finite audit | Draft and exact checks available |
+| Canonical nonlinear current | full reconstruction and second-level argument in section 3 | Internally reviewed; revised quantifiers |
+| Rational coefficient energy convergence | finite tensor IBP plus strong weighted kernel convergence in section 4 | Internally reviewed |
+| Explicit stability bounds | sharp lower/upper slopes, subcritical escape, critical noncoercivity, deterministic-background estimate | Internally reviewed; finite checks available |
+| Prior-art and dependency audit | dependency-audit.md; exact primary-source locators | Bounded audit includes Xu Assumptions1.2--1.3, Theorem1.4 and Example1.6; nonpolynomiality alone is not new |
+| Independent finite routes and hostile mutations | verification/verify.py; fresh legacy replay; saved run JSON | Executed; analytic scope separated |
+| Final content lock | proof-audit.md plus source/version hashes | Revised TeX internally reviewed and hash-pinned |
+| Final PDF and every-page render review | PDF QA record tied to final TeX/PDF hashes | Eight final pages rendered and visually reviewed; PASS |
+| External review materials and sealed archive | handoff, cover letter, review form, targeted review plan/drafts, manifest, extraction check | Materials complete; edition-specific archive/extraction result in adjacent build report |
+| Actual external mathematical / specialist review | Reviewer's own response if obtained later | NOT PERFORMED; explicitly deferred by operator, not a package-completion prerequisite |
+| Repeated internal repair/re-review | self-review-v012.md and frozen runs | Final clean-pass dispositions recorded separately from human acceptance |
+| Commit, integration, normal push, remote equality | watcher/controller/remote receipts | Initial edition verified at 8f912661; revised edition requires its own final receipts |
+
+## Ordered work
+
+1. Audit the legacy proof and primary comparators before writing the claims.
+2. Write the complete proof for the same Gaussian reference and scope.
+3. Reproduce exact conventions and connection families; try hostile variants.
+4. Apply separate internal reviews of the current, energy and bibliography.
+5. Freeze content, compile, render every page, correct layout and recheck.
+6. Package the reviewed PDF, TeX, frozen input snapshot, audits and handoff.
+7. Extract into a new directory and run the portable verification command.
+8. Regenerate repository readers, release/PDF-check, commit and submit a fixed
+   lane checkpoint to the integration owner. Verify the resulting remote head.
+
+## Scope and redesign
+
+No interacting Gibbs measure, A13 closure, physical vacuum, floor removal,
+thermodynamic limit or novelty priority is asserted. If a load-bearing proof
+gap appears, record it in the exploration ledger and redesign the statement
+without relabelling a frozen-background result as the original random-coefficient
+target. If specialist review finds the contribution already available in
+the literature, reframe as an explicit model application or technical note.
+
+The paper's core remains the random-coefficient energy theorem. Passing only
+finite checks or only the deterministic-background lemma is not completion.
+External review status and review readiness are separate fields. Completion
+uses the operator clarification above without relabelling an unperformed
+review as PASS.
+
+## Revision 0.1.1
+
+The added Xu comparison narrows novelty language without changing the fixed
+model, full random coefficient, theorem statements or proof quantifiers.
+The bibliography is compacted without dropping a source. The final seven-page
+PDF is recorded by pdf-qa-v011.json and render-review-v011.json. Old issued
+0.1.0 distributions and review receipts remain unchanged. Candidate readers
+and unsent invitations are in external-review-plan.md and review-request-drafts.md.
+No actual external review or transmission is counted as complete.
+
+## Revision 0.1.2
+
+The original random-coefficient target is retained. The revision makes J and
+centered-family definitions, PSD/kernel wording, derivative growth, the
+homogeneous local polynomial/witness, and noncommuting-background form-order
+and isometry explicit. Dense tensor/stability checks and PNG-bound visual
+and disjoint-output gates repair the internal findings. Earlier distributions
+are unchanged; self-review-v012.md records findings and final dispositions.

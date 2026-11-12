@@ -1,0 +1,549 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\T}{\mathbb T}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\la}[1]{\langle #1\rangle}
+\title{Canonical Derivative Currents and Covariance-Normal Energy\protect\\for a Three-Component Fourth-Order Gaussian Field}
+\author{Jusang Lee}
+\date{Internally audited edition 0.1.2 --- 12 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study three complex Gaussian fields on a fixed three-dimensional torus,
+with a positive matrix-valued fourth-order covariance and a fixed positive
+density floor. We construct a rational one-form derivative current by a
+common spectral approximation and construct its quadratic energy by exact
+conditional covariance subtraction. The current converges in every finite
+probability moment with spatial regularity below $-1/2$; the centered energy
+converges in $L^2(\Omega;H^{-1-\kappa})$ for each $\kappa>0$.
+An explicit finite Gaussian integration-by-parts identity reduces the energy
+covariance to three connection families and treats the rational coefficient
+without a Taylor or Hermite truncation. For embedded Pauli generators we
+derive the exact leading contraction, sharp pointwise compensation slopes,
+a subcritical homogeneous instability, and a noncoercive critical boundary.
+A determinant estimate supplies a separate bound for deterministic positive
+backgrounds. The construction uses a fixed Gaussian reference; construction
+of a self-interacting Gibbs measure is outside the conclusions.
+\end{abstract}
+
+\section{Introduction and position relative to previous work}
+Derivative composites at the regularity considered here require more than
+classical multiplication. Paracontrolled calculus supplies the commutator
+and paralinearization tools for the first composite \cite{GIP}. Gaussian
+contraction and integration by parts supply the second. These mechanisms
+are established mathematics; our contribution is their explicit combination
+for the fixed rational current below, a regulator comparison for its
+conditionally centered energy, and the exact model-dependent stability
+boundaries. The Gaussian rough-path constructions of \cite{FV} are useful
+comparators, but a one-parameter rough-path theorem is not used to identify
+this three-dimensional distribution with a pathwise stochastic integral.
+We use the term canonical spectral current throughout.
+
+The analytic BPHZ theorem \cite{CH} is a general stochastic convergence
+framework. Its hypotheses are not substituted for the direct estimates
+given here. In particular our coefficient is kept as an ordinary smooth
+function of the value field, rather than expanded into a globally convergent
+power series, and no interacting measure theorem is imported. The fixed
+reference, regulator class, and positive floor are part of every assertion.
+The companion dependency audit identifies standard inputs and the remaining
+model-specific propositions. Bounded literature searches do not certify
+priority or replace specialist novelty review.
+
+Related Gaussian gradient-square and analytic Wick-functional results
+\cite{CRS,CHRR} concern different covariance orders, rescalings or
+correlation limits. They do not directly supply the cross-cutoff Sobolev
+convergence for the ordinary rational matrix coefficient in this paper.
+The geometric stochastic heat equation \cite{BGHZ} also treats nonlinear
+derivative composites, in a different dynamical and spatial setting.
+These comparisons rule out a claim to have introduced a general method
+for field-dependent derivative squares.
+
+Xu \cite{Xu} proves convergence of rescaled nonlinear Gaussian functionals
+to Wick powers under two-sided scalar covariance bounds; those results already
+accommodate nonpolynomial nonlinearities. Our object instead retains an
+ordinary rational matrix coefficient of a continuous value field and
+conditionally centers a quadratic derivative factor, without amplitude
+rescaling, on a fixed torus. We prove this mixed composite limit directly
+and make no claim to introduce nonpolynomial Gaussian functionals.
+
+\section{Fixed model and conventions}
+Let $L=16$, $V=L^3$, $k_n=2\pi n/L$, and write
+$\Psi(x)=\sum_{n\in\mathbb Z^3}\widehat\Psi(n)e^{ik_n\cdot x}$.
+The field is a centered stationary proper complex Gaussian with
+\begin{equation}\label{eq:cov}
+ \E[\widehat\Psi(n)\widehat\Psi(m)^\dagger]
+ =\frac{2}{V}{\cal A}(k_n)^{-1}\mathbf1_{n=m},\qquad
+ \E[\widehat\Psi(n)\widehat\Psi(m)^T]=0,
+\end{equation}
+where
+\begin{align}
+ \mathcal A(k)&=(r+Z|k|^2+Y|k|^4)I_3+M,\label{eq:symbol}\\
+ M&=\operatorname{diag}(0,0.03,0.07)
+       +0.15(I_3-\bm1\bm1^T/3),\nonumber\\
+ (r,Z,Y)&=(0.4740336473,-0.9252754126,1).\nonumber
+\end{align}
+These decimals are exact model inputs. Since $M\ge0$ and
+$r-Z^2/(4Y)>0$, the symbol is positive. It is comparable to
+$(1+|k|^2)^2I_3$. Realification means
+$X=(\operatorname{Re}\Psi,\operatorname{Im}\Psi)\in\R^6$;
+using $e_n(x)=V^{-1/2}e^{ik_n\cdot x}$, its orthonormal-mode covariance is $\operatorname{realify}({\cal A}^{-1})$.
+The factor two in \eqref{eq:cov} is therefore essential.
+
+Let $T_1,T_2,T_3$ be the Pauli matrices embedded in the first two coordinates
+of $\C^3$ and let
+$S_A=\left(\begin{smallmatrix}\Re T_A&-\Im T_A\\\Im T_A&\Re T_A\end{smallmatrix}\right)$.
+All $S_A$ are real symmetric. Fix $\eps=10^{-12}$ and set
+\begin{equation}\label{eq:oneform}
+ \rho=|X|^2,\quad m_A=X^TS_AX,\quad q_A=\frac{m_A}{\rho+\eps},
+ \quad p_A=2S_AX,\quad v_A=2(S_A-q_AI)X.
+\end{equation}
+The one-form $v_A\cdot dX=dm_A-q_A\,d\rho=(\rho+\eps)dq_A$
+is smooth with polynomially growing derivatives at this fixed floor.
+Define the positive semidefinite coefficient matrix
+\begin{equation}\label{eq:B}
+ B(X)=\sum_{A=1}^3\{a p_Ap_A^T+b(p_Av_A^T+v_Ap_A^T)+c v_Av_A^T\}.
+\end{equation}
+Here $a=0.2(0.3)^2/d$, $b=0.1(0.3)(0.25)/d$,
+$c=0.15(0.25)^2/d$, and $d=2^2+10^{-12}$.
+Thus $a,c>0$ and $ac-b^2>0$. Rounded values of $a,b,c$ are
+$0.0045,0.001875,0.00234375$; calculations retain $d$ exactly.
+The matrix need not be positive definite: the common-phase direction
+$i\Psi$ is in its kernel, and it vanishes on a pure third-component field.
+
+An admitted approximation has one real even scalar multiplier $R_N(n)$
+on every real component, with $\sup_{N,n}|R_N(n)|<\infty$,
+$R_N(n)\to1$ for each $n$, and finite support or sufficient rapid decay
+to make $X_N=R_NX$ smooth. All nonlinear products are actual products
+of these smooth fields, with exact Fourier convolution. This includes
+sharp cubes, sharp balls and scaled smooth cutoffs. No approximation rate
+is imposed on a general admitted sequence.
+
+\section{Canonical spectral derivative current}
+Fix an even smooth dyadic partition, use $f\prec g$ for its low--high
+paraproduct and $f\circ g$ for its comparable-frequency remainder.
+Write $\mathcal C^\alpha=B^\alpha_{\infty,\infty}$.
+
+\begin{lemma}[Dyadic reconstruction]\label{lem:reconstruct}
+Let $1/3<\alpha<1/2$, $x_N:\T_L^3\to\R^d$ with $d=6$ here, and
+$f:\R^d\to(\R^d)^*$. Fiber indices below range from $1$ to $d$.
+Suppose smooth approximations $x_N$ converge in
+$\mathcal C^\alpha$ and their resonances
+$x_N^b\circ\partial_i x_N^a$ converge in $\mathcal C^{2\alpha-1}$.
+For every smooth one-form $f$ with polynomially growing derivatives,
+$f_a(x_N)\partial_i x_N^a$ has a limit in $\mathcal C^{\alpha-1}$.
+The reconstruction is locally continuous in these enhanced inputs, with
+polynomial bounds on bounded $x$-ranges for the one-forms \eqref{eq:oneform}.
+\end{lemma}
+\begin{proof}
+The standard dyadic estimates are
+$\|u\prec v\|_\beta\lesssim\|u\|_\infty\|v\|_\beta$ and
+$\|u\circ v\|_{\beta+\gamma}\lesssim\|u\|_\beta\|v\|_\gamma$
+when $\beta+\gamma>0$. Also
+$\|u\prec v\|_{\beta+\gamma}\lesssim\|u\|_\beta\|v\|_\gamma$
+for $\beta<0$. Taylor expansion on each low-frequency block yields
+$f_a(x)=\partial_bf_a(x)\prec x^b+R_a(x)$, with
+$R_a(x)\in\mathcal C^{2\alpha}$. The problematic resonance becomes
+\begin{align*}
+ f_a(x)\circ\partial_i x^a
+ ={}&\partial_b f_a(x)(x^b\circ\partial_i x^a)\\
+ &+\mathcal C(\partial_bf_a(x),x^b,\partial_i x^a)
+       +R_a(x)\circ\partial_i x^a,
+\end{align*}
+where $\mathcal C(u,v,w)=(u\prec v)\circ w-u(v\circ w)$.
+Subtracting $u$ at the high-frequency spatial scale in each block gives a
+factor $2^{-j\alpha}$; the remaining two blocks cost
+$2^{-j\alpha}2^{-j(\alpha-1)}$. Summation of comparable blocks and their
+lower output frequencies gives the commutator in
+$\mathcal C^{3\alpha-1}$ when $2\alpha-1<0<3\alpha-1$.
+This is the commutator estimate of \cite[Lemma 2.4]{GIP}; its block proof
+also gives continuity for differences. The Taylor remainder times
+$\partial_i x$ has the same positive regularity. Multiplication of
+$\partial_bf_a(x)\in\mathcal C^\alpha$ with the supplied resonance is
+allowed since $3\alpha-1>0$. The other paraproducts have regularity at
+least $\alpha-1$. Localization to a bounded range of $x$ proves the
+claim for polynomially growing derivatives; the fixed rational denominator
+makes the localized constants polynomial in that range.
+\end{proof}
+
+\begin{theorem}[Canonical current]\label{thm:current}
+For every finite $p\ge1$ and $\kappa>0$,
+$K_{A,i,N}=v_A(X_N)\cdot\partial_iX_N$ converges in
+$L^p(\Omega;\mathcal C^{-1/2-\kappa})$. All admitted approximations
+give the same limit. There is an almost surely convergent extracted
+subsequence. No local divergent current subtraction is required.
+\end{theorem}
+\begin{proof}
+Write $C^{\rm val}$ for the value-covariance kernel.
+The covariance bound $|\widehat C^{\rm val}(n)|\lesssim\la n^{-4}$ gives
+$\E|\Delta_j X(x)|^2\lesssim2^{-j}$.
+Gaussian moments, Bernstein's inequality with a sufficiently large finite
+spatial integrability exponent, and summation give convergence of $X_N$
+in every finite probability moment in $\mathcal C^\alpha$, $\alpha<1/2$.
+Low modes converge by the multiplier assumption and the high dyadic blocks
+are uniformly summable in each slightly weaker norm.
+
+The resonance $\mathbb X_{i,N}^{ba}=X_N^b\circ\partial_iX_N^a$ has zero
+expectation by evenness. Wick pairing and the resonant frequency support give
+\begin{equation}\label{eq:resvariance}
+ \E|\widehat{\mathbb X}_{i,N}^{ba}(n)|^2
+ \lesssim\sum_{u+v=n,\ |u|\asymp|v|}
+       \la u^{-4}\la v^{-2}\lesssim\la n^{-3}.
+\end{equation}
+For bounded $|u|\lesssim|n|$ there are $O(\la n^3)$ comparable terms;
+the remaining sum is bounded by $\sum_{|u|\gtrsim|n|}\la u^{-6}$.
+For each output mode, dominated convergence gives the Cauchy property
+for two arbitrary admitted multiplier sequences coupled to the same field.
+Second-chaos moment bounds and the same dyadic argument give convergence
+in $L^p(\Omega;\mathcal C^{-\eta})$ for every $\eta>0$.
+Choose $\alpha\in(1/3,1/2)$ and $\eta<1-2\alpha$.
+Lemma~\ref{lem:reconstruct}, polynomial moment localization and a slightly
+larger probability exponent yield the result. Choose $\alpha$ sufficiently
+close to $1/2$ for the desired $\kappa$. A summable-probability subsequence
+follows from convergence in $L^p$. Evenness gives
+$\E[X_N^a\partial_iX_N^b]=0$ at every cutoff.
+\end{proof}
+
+\begin{remark}[Quantifiers and approximation rates]
+The multiplier assumptions alone give no universal rate in $N$.
+Multiplying a sharp cutoff by $1-1/\log(N+2)$ preserves them but creates
+a slow error in fixed low modes. Quantitative tail estimates for normalized
+standard cutoffs cannot be extended to this general class. Almost sure
+convergence above is for an extracted subsequence; a full prescribed dyadic
+sequence requires an additional summable error estimate.
+\end{remark}
+
+The one-form is not generally exact:
+$d(v_A\cdot dX)=(\rho+\eps)^{-1}d\rho\wedge dm_A$.
+For $m=x^2-y^2$ it equals $-8xy(x^2+y^2+\eps)^{-1}dx\wedge dy$.
+Thus a deterministic chain rule alone does not construct this current.
+The declared common regulator class is sufficient for the result. Auxiliary
+correlated-field anomaly examples do not establish necessity of that class
+for the particular diagonal-leading covariance \eqref{eq:cov}.
+
+\section{Covariance-normal energy}
+Put $Y_{N,i}=\partial_iX_N$ and
+$\Gamma_{N,i}=\E[Y_{N,i}Y_{N,i}^T]$. Define the smooth-cutoff currents
+\[
+ J_{A,i,N}=p_A(X_N)\cdot Y_{N,i}=\partial_i m_A(X_N),\qquad
+ K_{A,i,N}=v_A(X_N)\cdot Y_{N,i}.
+\]
+Here $J^2_N,JK_N,K^2_N$ mean respectively
+$\sum_{A,i}J_{A,i,N}^2$, $\sum_{A,i}J_{A,i,N}K_{A,i,N}$ and
+$\sum_{A,i}K_{A,i,N}^2$. Thus
+$e_N=(a/2)J^2_N+bJK_N+(c/2)K^2_N$; separate centering below means
+subtracting the conditional expectation of each such smooth-cutoff family
+given $X_N(x)$, not multiplying limiting distributions.
+The exact density is
+\begin{equation}\label{eq:energy}
+ e_N=\tfrac12\sum_iY_{N,i}^TB(X_N)Y_{N,i},\quad
+ C_N(X)=\tfrac12\sum_i\tr[B(X)\Gamma_{N,i}],\quad E_N=e_N-C_N(X_N).
+\end{equation}
+Independence of the jointly Gaussian vectors $X_N(x)$ and $Y_{N,i}(x)$
+implies $C_N(X)=\E[e_N(x)\mid X_N(x)=X]$. In complex notation
+\begin{equation}\label{eq:complexct}
+ C_N(\Psi)=\sum_{i,A}\{aU_A^\dagger D_{N,i}U_A
+ +2b\Re(U_A^\dagger D_{N,i}V_A)+cV_A^\dagger D_{N,i}V_A\},
+\end{equation}
+where $U_A=T_A\Psi$, $V_A=(T_A-q_AI)\Psi$,
+$D_{N,i}=\E[\partial_i\Psi_N\partial_i\Psi_N^\dagger]$, and
+$\Gamma_{N,i}=\tfrac12\operatorname{realify}(D_{N,i})$.
+
+\begin{lemma}[Finite Gaussian identity]\label{lem:ibp}
+Let $(X,Y,\widetilde X,\widetilde Y)$ be jointly centered Gaussian, with
+$\E[XY^T]=\E[\widetilde X\widetilde Y^T]=0$.
+Write $P_{a\beta}=\E[Y_a\widetilde X_\beta]$,
+$R_{c\alpha}=\E[\widetilde Y_cX_\alpha]$,
+$Q_{ac}=\E[Y_a\widetilde Y_c]$ and let $\Gamma,\widetilde\Gamma$
+be the two $Y$ covariances. Suppose the smooth coefficients $A,D$ and all
+their derivatives through order two have polynomial growth. Then
+the expectation of
+$A_{ab}(X)(Y_aY_b-\Gamma_{ab})D_{cd}(\widetilde X)
+(\widetilde Y_c\widetilde Y_d-\widetilde\Gamma_{cd})$ equals
+\begin{align}\label{eq:ibp}
+ &(Q_{ac}Q_{bd}+Q_{ad}Q_{bc})\E[A_{ab}D_{cd}]\nonumber\\
+ &+\{P_{a\beta}(Q_{bc}R_{d\alpha}+Q_{bd}R_{c\alpha})
+       +P_{b\beta}(Q_{ac}R_{d\alpha}+Q_{ad}R_{c\alpha})\}
+       \E[\partial_\alpha A_{ab}\partial_\beta D_{cd}]\nonumber\\
+ &+P_{a\beta}P_{b\gamma}R_{c\alpha}R_{d\delta}
+       \E[\partial_{\alpha\delta}A_{ab}\partial_{\beta\gamma}D_{cd}].
+\end{align}
+Repeated indices are summed; coefficients on the right are evaluated at
+$X$ and $\widetilde X$, respectively.
+\end{lemma}
+\begin{proof}
+Apply $\E[Z_jF(Z)]=\sum_l\operatorname{Cov}(Z_j,Z_l)\E[\partial_lF(Z)]$
+to the four displayed derivative variables. Centering cancels same-vertex
+$Y$ pairs and the mixed same-vertex covariances are zero. Each remaining
+leg pairs with an opposite $Y$ or differentiates the opposite coefficient.
+There are two pairings with two $Q$ bridges, four choices with one $Q$ and
+one $P$ and $R$, and one coefficient-derivative term with two $P$ and $R$.
+These are exactly \eqref{eq:ibp}. Polynomial growth justifies Gaussian
+integration by parts by smooth truncation. The identity differentiates
+either coefficient at most twice.
+\end{proof}
+
+\begin{theorem}[Energy convergence]\label{thm:energy}
+For every $\kappa>0$, $E_N$ converges in
+$L^2(\Omega;H^{-1-\kappa}(\T_L^3))$, independently of the admitted
+multiplier sequence. The separately centered $J^2,JK,K^2$ converge jointly
+in that space. Also $\int E_N\,dx$ converges in $L^2(\Omega)$ with mean zero.
+\end{theorem}
+\begin{proof}
+Use common underlying Fourier modes for all approximations. Cross-cutoff
+value covariances have Fourier coefficients bounded by $C\la n^{-4}$;
+one-derivative and two-derivative cross-covariances $P,R,Q$ are bounded by
+$C\la n^{-3}$ and $C\la n^{-2}$. Value covariances converge uniformly
+in space since $\sum_n\la n^{-4}<\infty$ in dimension three.
+Expectations of products of coefficient derivatives through order two
+therefore converge uniformly: localize the jointly Gaussian values to a
+fixed ball, use continuity in the finite covariance matrix there, and remove
+the localization by polynomial moment bounds uniform in the cutoffs.
+
+Let $a_t(n)=\la n^{-t}$ and let $G_s$ be the periodic positive Bessel kernel
+with Fourier coefficients $\la n^{-2s}$, $s>1$.
+Its heat-kernel representation proves positivity. Splitting convolution
+sums into the smaller-than-half-output region and dyadic complementary
+annuli gives
+\begin{equation}\label{eq:conv}
+ a_2*a_2\lesssim a_1,\qquad
+ a_3*a_3*a_3*a_3\lesssim_\eta a_{3-\eta}\quad(\eta>0).
+\end{equation}
+Indeed convolution with the dimension-critical $a_3$ adds at most a
+logarithm; three such logarithms are bounded by $C_\eta\la n^\eta$.
+The first estimate follows directly from the two regions
+$|u|\le|n|/2$ and $|n-u|\le|n|/2$ and the remaining annuli.
+
+Expand $\int G_s|Q_{NM}|^2$ in Fourier series and bound each summand
+absolutely by $C\la n^{-2s}(a_2*a_2)(n)$.
+This majorant is summable exactly for $s>1$. Dominated convergence on the
+double sum proves strong convergence of $Q_{NM}$ in $L^2(G_s\,dx)$ as
+both cutoffs tend to infinity, not just a uniform norm bound.
+The fourfold version and the second estimate of \eqref{eq:conv} prove strong
+convergence of $P_{NM},R_{NM}$ in $L^4(G_s\,dx)$.
+Consequently $Q^2$, $QPR$ and $P^2R^2$ converge strongly in $L^1(G_s\,dx)$,
+the middle assertion following by Holder's inequality.
+
+Apply Lemma~\ref{lem:ibp} with $A,D$ equal to the coefficient matrices in
+\eqref{eq:B}. The preceding strong convergence and uniform coefficient
+convergence make each cross-cutoff energy covariance converge against $G_s$.
+Stationarity and Fourier duality identify its integral, up to the fixed
+normalization $V$, with the squared $H^{-s}$ probability norm.
+Polarization of the four covariances for $E_N-E_M$ proves the Cauchy
+property. The same argument works for each summand of $B$ and for two
+different regulator sequences. Pairing with the constant function gives
+the integrated assertion. Conditional centering proves zero mean.
+\end{proof}
+
+The argument excludes $H^{-1}$; it does not prove that this endpoint fails
+for the full rational coefficient. Centering is exact for each regulator;
+subtracting only the leading divergent term is a different prescription.
+
+\section{Explicit contraction and stability boundaries}
+For sharp cubes $|n|_\infty\le N$, let
+\begin{equation}\label{eq:delta}
+ \delta=\frac{I_\square}{6\pi^2YL},\qquad
+ I_\square=24\int_0^1\!\int_0^1\frac{du\,dv}{1+u^2+v^2}.
+\end{equation}
+Riemann summation of the homogeneous leading symbol gives
+$D_{N,i}/N\to\delta I_3$; lower-order symbol corrections are summable
+after differentiation. To justify the Riemann sum near zero, remove a
+fixed small cube there, apply ordinary summation elsewhere, and bound
+its contribution by $C\eta$ uniformly after rescaling.
+The face formula for $I_\square$ follows from
+$\operatorname{div}(u/|u|^2)=|u|^{-2}$ and the divergence theorem.
+Numerically $\delta\simeq0.01619898645075695$.
+
+Set $s=|\Psi_1|^2+|\Psi_2|^2$ and $\rho=|\Psi|^2$.
+The Pauli identities $\sum_A m_A^2=s^2$,
+$\sum_A\|T_A\Psi\|^2=3s$ imply
+\begin{equation}\label{eq:W}
+ \frac{C_N(\Psi)}{N}\longrightarrow\delta W_\eps(\Psi),\qquad
+ W_\eps=hs-\frac{6bs^2}{\rho+\eps}
+             -\frac{3cs^2(\rho+2\eps)}{(\rho+\eps)^2},
+ \quad h=9(a+2b+c).
+\end{equation}
+The $s^2$ terms follow by expanding
+$\sum_A\Re(U_A^\dagger V_A)=3s-s^2/(\rho+\eps)$ and
+$\sum_A\|V_A\|^2=3s-s^2(\rho+2\eps)/(\rho+\eps)^2$.
+
+\begin{proposition}[Sharp pointwise slopes]\label{prop:slopes}
+For the positive production coefficients, put $\ell=9a+12b+6c$.
+For all fields,
+\begin{equation}\label{eq:slopes}
+ \ell s\le W_\eps\le hs,\qquad
+ \inf_{\Psi:s(\Psi)>0}W_\eps/s=\ell,\quad
+ \sup_{\Psi:s(\Psi)>0}W_\eps/s=h.
+\end{equation}
+The upper bound $ms\ge W_\eps$ holds for every field if and only if $m\ge h$.
+At $m=h$ the nonnegative residual has no positive lower bound proportional
+to $s$, even when $s$ is fixed and nonzero.
+\end{proposition}
+\begin{proof}
+The upper residual is the sum of the last two nonnegative terms in
+\eqref{eq:W}. For the lower bound write
+\begin{align*}
+ W_\eps-\ell s={}&6bs\left(1-\frac{s}{\rho+\eps}\right)\\
+ &+3cs\left(1-\frac{s(\rho+2\eps)}{(\rho+\eps)^2}\right)\ge0,
+\end{align*}
+since $0\le s\le\rho$ and $\rho(\rho+2\eps)\le(\rho+\eps)^2$.
+Taking $\rho=s\to\infty$ proves sharpness of $\ell$.
+Taking fixed $s>0$ and $\rho\to\infty$ proves sharpness of $h$ and the
+failure of a positive uniform proportional bound for $hs-W_\eps$.
+\end{proof}
+
+\begin{proposition}[Subcritical homogeneous instability]\label{prop:instability}
+Let $t\to\infty$, $m<h$ and $\gamma=1.62$. Let $G_{\rm lo}$ be independent
+of $t$, with $|G_{\rm lo}(u)|\le C(1+|u|^4)$.
+The homogeneous energy density
+$\gamma\rho^3/6+G_{\rm lo}(u)-tW_\eps(u)+tms(u)$
+is at most $-c_m t^{3/2}+O(t)$ along suitable fields, for some $c_m>0$.
+The fixed production instance is
+$G_{\rm lo}(u)=\tfrac12u^\dagger(rI_3+M)u+(\lambda/4)\rho^2$,
+with $\lambda=-0.43$ and $\rho=|u|^2$.
+\end{proposition}
+\begin{proof}
+Choose a fixed $x\in(0,1)$ small enough that
+$A_x=(h-m)x-(6b+3c)x^2>0$ and take the constant field
+$u=(\sqrt{x\rho},0,\sqrt{(1-x)\rho})$, so $s=x\rho$.
+At large $\rho$, $W_\eps-ms=A_x\rho+O(1)$.
+All derivative currents vanish for this homogeneous field. The local
+energy is $\gamma\rho^3/6-tA_x\rho+O(\rho^2+t)$.
+Choose $\rho=(2tA_x/\gamma)^{1/2}$. The leading value is
+$-2^{3/2}(tA_x)^{3/2}/(3\sqrt\gamma)$, and the error is $O(t)$.
+\end{proof}
+
+Thus the minimal leading compensation slope for a family energy
+$\tfrac12\Delta\mu_Ns$ is $\Delta\mu_N/N\to2h\delta$
+when only leading pointwise cancellation is considered. We make no claim
+that a remainder merely denoted $O(1)$ repairs the exact finite-cutoff
+counterterm uniformly in all field directions. The threshold is a local
+compensation statement, not a full-field coercivity theorem.
+
+\section{A deterministic-background exponential bound}
+This separate result gives a useful positive stability estimate. Let $b(x)$
+be a deterministic bounded positive semidefinite $18\times18$ matrix on the
+bundle of all six-real spatial derivatives. Write $\|b\|_\infty$ for its
+essential supremum operator norm. Let $C$ be the Gaussian covariance operator
+and $L_b=\nabla^*b\nabla$ in quadratic-form sense. Set
+$T_b=C^{1/2}L_bC^{1/2}$, $C_N^{\rm op}=R_NCR_N$ and
+$T_{b,N}=R_NT_bR_N$ for the same common multiplier.
+The centered quadratic form is $Q_{b,N}=\tfrac12(\la{X_N,L_bX_N}
+-\tr(C_N^{\rm op}L_b))$.
+
+\begin{proposition}[Explicit frozen-background bound]\label{prop:det}
+Let $M_R=\sup|R_N|$ and
+$c_0=(r+Y-\sqrt{(r-Y)^2+Z^2})/4>0$.
+For every $p\ge0$ the forms converge in $L^2(\Omega)$ and
+\begin{align}\label{eq:det}
+ 0\le\log\E e^{-pQ_{b,N}}
+ &\le\frac{p^2}{4}\|T_{b,N}\|_{\mathrm{HS}}^2\nonumber\\
+ &\le\frac{3p^2M_R^4\|b\|_\infty^2}{2c_0^2}
+       \left(\frac{L}{2\pi}\right)^4
+       \left(4\pi^2+\frac{\pi^4}{45}\right).
+\end{align}
+The partition factors converge to $\det_2(I+pT_b)^{-1/2}$.
+\end{proposition}
+\begin{proof}
+The smallest eigenvalue of
+$\left(\begin{smallmatrix}r&Z/2\\Z/2&Y\end{smallmatrix}\right)$,
+and $1+t^2\ge(1+t)^2/2$, give
+${\cal A}(k)\ge c_0(1+|k|^2)^2I$.
+Quadratic-form order gives
+$0\le T_{b,N}\le M_R^2\|b\|_\infty C^{1/2}(-\Delta)C^{1/2}$.
+Indeed $b\le\|b\|_\infty I$ first gives a bound by
+$\|b\|_\infty R_N C^{1/2}(-\Delta)C^{1/2}R_N$.
+Only the translation-invariant middle operator must commute with $R_N$;
+no commutation between $b(x)$ and $R_N$ is assumed.
+Eigenvalue comparison bounds the squared Hilbert--Schmidt norm by
+$6M_R^4\|b\|_\infty^2c_0^{-2}\sum_{n\ne0}|k_n|^{-4}$.
+Counting the $24j^2+2$ integer points on the shell $|n|_\infty=j$
+gives $\sum_{n\ne0}|n|^{-4}\le24\zeta(2)+2\zeta(4)
+=4\pi^2+\pi^4/45$.
+The limiting operator is Hilbert--Schmidt, and strong convergence of bounded
+multipliers implies its cutoff conjugations converge in that norm.
+The common Gaussian coupling and Wick pairing give
+$\E|Q_{b,N}-Q_{b,M}|^2=\tfrac12\|T_{b,N}-T_{b,M}\|_{\rm HS}^2$,
+which proves the asserted $L^2$ convergence.
+Gaussian diagonalization yields
+\[
+ \log\E e^{-pQ_{b,N}}=\tfrac12\sum_j
+       [p\lambda_{j,N}-\log(1+p\lambda_{j,N})].
+\]
+Use $0\le x-\log(1+x)\le x^2/2$ for $x\ge0$ and Hilbert--Schmidt
+convergence. For completeness, along a positive operator segment the
+trace derivative of $F_p(T)=\tfrac12\tr[pT-\log(I+pT)]$ is bounded by
+$\tfrac{p^2}{2}\|T\|_{\rm HS}$ in the Hilbert--Schmidt dual norm.
+Integration along the segment gives continuity in that norm and the
+claimed regularized determinant limit.
+\end{proof}
+
+For a deterministic bounded $u$, one can take $b=I_3\otimes B(u)$, since
+$\|B(u)\|\le(12a+48|b|+48c)|u|^2$.
+Replacing $u$ by the random field in this proof would change the Gaussian
+diagonalization step and is not justified.
+
+\section{Scope, reproducibility and outstanding review}
+The statements are about composites under \eqref{eq:cov}, at fixed $L$ and
+fixed $\eps$. The exact phase field $\Psi(x)=e^{ik\cdot x}u$, with
+$k\in(2\pi/L)\mathbb Z^3$, has
+$J_A=K_A=0$ while $W_\eps(u)>0$ when $s>0$.
+Consequently the conditional contraction is not a deterministic rate
+function for the bare field law. Likewise $L^2$ convergence of the integrated
+centered energy does not imply uniform integrability of its exponential.
+The self-coupled negative-exponential estimate, an interacting Gibbs limit,
+the A13 constructive program and a physical vacuum are not conclusions.
+
+The verification package separates exact algebra and finite Gaussian moment
+checks from the analytic proofs above. It retains original source hashes,
+tests the real/complex covariance factor, tests all three integration-by-parts
+families with nonconstant coefficients, and rejects altered coefficients and
+stronger scope assertions. It also records the slow-cutoff negative control
+and the critical third-component escape. Numerical checks are reproducibility
+and falsification aids; they are not substitutes for the analytic limits.
+
+This version has undergone internal content review. Independent human
+mathematical review and specialist novelty review have not been performed.
+The external-review handoff records their disposition separately from file
+integrity and code execution. Author declarations, venue choice and actual
+transmission require the author's decisions.
+
+\begin{thebibliography}{9}
+\footnotesize
+\setlength{\itemsep}{2pt}
+\bibitem{GIP} M. Gubinelli, P. Imkeller and N. Perkowski,
+\emph{Paracontrolled distributions and singular PDEs}, Forum Math. Pi
+3 (2015), e6, 75 pp. \url{https://doi.org/10.1017/fmp.2015.2}.
+\bibitem{FV} P. Friz and N. Victoir,
+\emph{Differential equations driven by Gaussian signals}, Ann. Inst. H.
+Poincare Probab. Statist. 46 (2010), 369--413.
+\url{https://doi.org/10.1214/09-AIHP202}.
+\bibitem{CH} A. Chandra and M. Hairer,
+\emph{An analytic BPHZ theorem for regularity structures}, preprint,
+arXiv:1612.08138 (2016), revised version v5 (22 January 2018).
+\url{https://arxiv.org/abs/1612.08138v5}.
+\bibitem{CRS} F. Coppini, W. Ruszel and D. Schuricht,
+\emph{Wick theorem for analytic functions of Gaussian fields}, preprint,
+arXiv:2507.05131. \url{https://arxiv.org/abs/2507.05131}.
+\bibitem{CHRR} A. Cipriani, R. S. Hazra, A. Rapoport and W. Ruszel,
+\emph{Properties of the Gradient Squared of the Discrete Gaussian Free Field},
+J. Stat. Phys. 190 (2023), 171.
+\url{https://doi.org/10.1007/s10955-023-03187-3}.
+\bibitem{BGHZ} Y. Bruned, F. Gabriel, M. Hairer and L. Zambotti,
+\emph{Geometric stochastic heat equations},
+\url{https://arxiv.org/abs/1902.02884}.
+\bibitem{Xu} W. Xu,
+\emph{Sharp Convergence of Nonlinear Functionals of a Class of Gaussian Random Fields},
+Commun. Math. Stat. 6 (2018), 509--532.
+\url{https://doi.org/10.1007/s40304-018-0162-9}.
+\end{thebibliography}
+\end{document}

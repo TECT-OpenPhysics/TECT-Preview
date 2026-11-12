@@ -23,6 +23,8 @@ def safe_name(name):
 def contract(manifest):
     if manifest.get('schema')!='tect/a6-a7-review-package/1.0' or manifest.get('scope')!=SCOPE:
         raise ValueError('Declared scientific or external-review scope changed')
+    if any(type(manifest['scope'][key]) is not type(value) for key,value in SCOPE.items()):
+        raise ValueError('Declared scope types changed')
     if not manifest.get('files'): raise ValueError('Empty inventory')
     for name in manifest['files']: safe_name(name)
 
@@ -48,7 +50,9 @@ def self_test():
     base={'schema':'tect/a6-a7-review-package/1.0','scope':SCOPE,'files':{'fixture.txt':{}}}
     contract(base); rejected=0
     for key,value in (('physical_vacuum',True),('interacting_Gibbs_measure',True),
-                      ('A13_closure',True),('external_mathematical_review','PASS')):
+                      ('A13_closure',True),('external_mathematical_review','PASS'),
+                      ('specialist_novelty_review','PASS'),('actual_submission','PASS'),
+                      ('gaussian_reference',1),('fixed_volume',16.0),('physical_vacuum',0)):
         changed=copy.deepcopy(base);changed['scope'][key]=value
         try: contract(changed)
         except ValueError: rejected+=1
