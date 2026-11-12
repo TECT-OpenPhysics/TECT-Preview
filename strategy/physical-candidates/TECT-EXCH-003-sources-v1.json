@@ -1,0 +1,45 @@
+{
+  "schema":"tect/source-crosswalk/1.0",
+  "id":"TECT-EXCH-003-SOURCES-v1",
+  "date":"2026-11-12",
+  "search_budget":"Two primary sources, atom-molecule conversion experiment plus explicit pair-Hamiltonian/state derivation. Not an exhaustive survey or novelty claim.",
+  "sources":[
+    {
+      "id":"EXCH003-SYASSEN-2007-v2",
+      "title":"Atom-molecule Rabi oscillations in a Mott insulator",
+      "url":"https://arxiv.org/pdf/0704.2155v2",
+      "sha256":"5e8c0e60949f2e52a00c62f3809bb17c20ecd89a02f7ef65b8f01645d21d8773",
+      "bytes":222695,
+      "locators":"PDFp1 Eq1; PDFp2 Fig1 and Eqs2-3; complete first two pages read/rendered by root, independently inspected by source agent.",
+      "actual_state":"87Rb, deep 3D lattice, negligible tunneling; two atoms per central Mott site; magnetic-field steps followed by a fixed-field hold.",
+      "actual_readout":"Entrance-channel atom count by absorption imaging after release; molecules invisible to this imaging transition. Phase is not directly imaged.",
+      "actual_law":"Coherent pair/molecule mixing with a located matrix element; measured damping attributed to molecular loss, plus explicit control and readout operations.",
+      "applicability":"APPLIES as physical interaction/preparation/population-readout template only.",
+      "failed_full_crosswalk":"DOES_NOT_APPLY as full EXCH realization: two-level lattice carrier, losses and control differ; no full three-component P1 terms, units, cutoff or state/instrument identity."
+    },
+    {
+      "id":"EXCH003-HEINZEN-2000-v1",
+      "title":"Superchemistry: dynamics of coupled atomic and molecular Bose-Einstein condensates",
+      "url":"https://arxiv.org/pdf/cond-mat/0110565v1",
+      "sha256":"a2dfeaec8758fe7fe2a1021e6aafd6a872192c2f6593752173df1fc602e67639",
+      "bytes":419151,
+      "locators":"PDFp1 Eqs1-2; PDFp2 factorization paragraph, Eqs3-4 and Eq7; complete first two pages read/rendered by root and independently inspected.",
+      "actual_state":"Atomic/molecular quantum fields; mean-field equations explicitly assume replacement by means and factorization in a rotating frame.",
+      "actual_law":"Pair-conversion cubic vertex with kinetic, trap and scattering terms; Raman drives and loss terms are explicit, not deleted here.",
+      "applicability":"APPLIES-CONDITIONALLY to interaction-level mean-field mechanism, not its state approximation for EXCH.",
+      "failed_full_crosswalk":"DOES_NOT_APPLY as full P1/time/carrier identification; no controlled error connecting physical pair correlator to EXCH classical products."
+    }
+  ],
+  "crosswalk":[
+    {"field":"weighted pair-conversion symmetry and phase-sensitive population response","status":"SATISFIED_AT_MECHANISM_LEVEL_ONLY"},
+    {"field":"same full three-component P1 Hamiltonian and declared Fourier domain","status":"FAILED_FOR_THESE_SOURCES"},
+    {"field":"native prepared physical state mapped to all retained classical coordinates","status":"MISSING"},
+    {"field":"pair coherence expectation versus product of charged first means","status":"NOT_IDENTICAL_WITHOUT_CONTROLLED_STATE_APPROXIMATION"},
+    {"field":"independent action, amplitude, length, energy and clock normalization","status":"MISSING"},
+    {"field":"calibrated detector for populations and invariant pair quadratures, covariance and backaction","status":"MISSING_FOR_EXCH"},
+    {"field":"interaction energy, control work and loss error budget","status":"MISSING_FOR_EXCH"},
+    {"field":"unused preparation/intervention/holdout test of the same full mapping","status":"MISSING"}
+  ],
+  "overall":"HOLD_FOR_EVIDENCE_NOT_A_PHYSICAL_NO_GO",
+  "non_claims":"Sources establish their own scoped mechanisms, not EXCH, PAH, PreA, physical clock, spacetime, QFT, gravity or continuum. No experimental data fitting or externally sent inquiry."
+}

@@ -1,0 +1,154 @@
+{
+  "status": "PASS_INDEPENDENT_SCOPED_ALGEBRA",
+  "checks": [
+    {
+      "name": "pin:claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "pass": true
+    },
+    {
+      "name": "pin:codes/foundations/n001_variational_backend.py",
+      "pass": true
+    },
+    {
+      "name": "pin:claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json",
+      "pass": true
+    },
+    {
+      "name": "pin:strategy/pa-hyp/PAH-001-v1.json",
+      "pass": true
+    },
+    {
+      "name": "pin:strategy/pa-hyp/PAH-001-v2-r2.json",
+      "pass": true
+    },
+    {
+      "name": "pin:strategy/physical-candidates/TECT-CREATIVE-001-design-v0.1.json",
+      "pass": true
+    },
+    {
+      "name": "sector_density_agrees",
+      "pass": true
+    },
+    {
+      "name": "positive_admissible_density",
+      "pass": true
+    },
+    {
+      "name": "strictly_mixed_initial_points",
+      "pass": true
+    },
+    {
+      "name": "same_fixed_charge",
+      "pass": true
+    },
+    {
+      "name": "real_PB_psi_factor_sign",
+      "pass": true
+    },
+    {
+      "name": "real_PB_chi_factor_sign",
+      "pass": true
+    },
+    {
+      "name": "weighted_charge_PB",
+      "pass": true
+    },
+    {
+      "name": "orthonormal_volume_factor",
+      "pass": true
+    },
+    {
+      "name": "pinned_shell_inactive",
+      "pass": true
+    },
+    {
+      "name": "equal_full_constant_state_energy",
+      "pass": true
+    },
+    {
+      "name": "equal_component_populations",
+      "pass": true
+    },
+    {
+      "name": "opposite_nonzero_currents",
+      "pass": true
+    },
+    {
+      "name": "reference_pair_preserves_total_number",
+      "pass": true
+    },
+    {
+      "name": "reference_fixed_number_1",
+      "pass": true
+    },
+    {
+      "name": "reference_zero_charged_means_1",
+      "pass": true
+    },
+    {
+      "name": "reference_nonzero_pair_1",
+      "pass": true
+    },
+    {
+      "name": "reference_fixed_number_-1",
+      "pass": true
+    },
+    {
+      "name": "reference_zero_charged_means_-1",
+      "pass": true
+    },
+    {
+      "name": "reference_nonzero_pair_-1",
+      "pass": true
+    },
+    {
+      "name": "reference_equal_populations",
+      "pass": true
+    }
+  ],
+  "check_count": 26,
+  "source_hashes": {
+    "strategy/physical-candidates/TECT-EXCH-001-contract-v1.json": "d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e",
+    "strategy/physical-candidates/TECT-EXCH-002-result-v1.json": "212f5e4d55613c83e856158ca485798afffd9b20301acc4b8533ac90d98e7ef5",
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+  },
+  "script_hash": "1ce4c44ad53a71b5745ed62098be92a9bdd8e807ee1c2e9bc5726784ba452092",
+  "derived": {
+    "V": "4096",
+    "Q": "11008/27",
+    "q": "43/432",
+    "r": "43/432",
+    "p": "16727/93312"
+  },
+  "counterexample": [
+    {
+      "H": "64097432265312986951/286978140000000000",
+      "Npsi": "535264/729",
+      "Nchi": "29584/729",
+      "Z": "-1438522*I/19683",
+      "J": "-719261/78732"
+    },
+    {
+      "H": "64097432265312986951/286978140000000000",
+      "Npsi": "535264/729",
+      "Nchi": "29584/729",
+      "Z": "1438522*I/19683",
+      "J": "719261/78732"
+    }
+  ],
+  "reference_fock": [
+    {
+      "Na": "1",
+      "Nb": "1/2",
+      "pair": "-sqrt(2)*I/2"
+    },
+    {
+      "Na": "1",
+      "Nb": "1/2",
+      "pair": "sqrt(2)*I/2"
+    }
+  ],
+  "scope": "Each fixed finite K>=1, initial full-regulator points only; not an invariant-mode reduction.",
+  "negative_scope": "No universal population-only law for all full Dirac preparations; special ensembles not excluded.",
+  "non_claims": "Fock reference only; no EXCH quantization, physical state, condensate, clock, relaxation or PreA."
+}

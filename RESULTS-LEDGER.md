@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-580](#r-580) | Conserved exchange diagnostics and phase-blind closure obstruction | Same full energy/charge/populations can have opposite exchange currents in unchanged EXCH. A universal population-only law fails; physical state/readout mapping remains HOLD. |
 | [R-579](#r-579) | Fixed-charge mixed minima and reservoir instability | All constrained minima are mixed and their complete set is Lyapunov stable at one fixed nonzero charge. The declared reservoir relative orbit is genuinely unstable; outside full-state ground attraction is excluded. No physical or limit promotion. |
 | [R-578](#r-578) | Hypothetical exchange parent and shifted coexistence | Complete finite-regulator conserved-transfer flow; conditional variational first-order onset with shift below 0.004793. Exact old coexistence not inherited; no physical or limit promotion. |
 | [R-577](#r-577) | PAH-v2 displayed-state Markov sufficiency obstruction | Same-display counting states give distinct invariant generator values at one admitted finite square. Positive original-Gibbs conditional variance and reversible compression also obstruct stationary displayed semigroup closure. Full counting CTMC preserved; no mainline or physical promotion. |
@@ -20692,6 +20693,25 @@ not overall superiority; density coupling is rejected for no norm transfer.
 Conditional finite-sector theorem; host C6 T1 and T054 unchanged. Standard
 energy/manifold methods and model-specific spectral/selection certificates,
 not novelty priority. No unique morphology, physical time or relaxation.
+
+### R-580 -- conserved exchange diagnostics and the physical state boundary
+
+For unchanged EXCH, each fixed finite K>=1 at Q=11008/27 has the exact
+phase-sensitive norm-charge current J=2epsilon ImZ. Two admissible initial
+points have equal full H/Q/component populations and opposite J. Hence no
+one autonomous population-only law or projected Markov transition law can
+reproduce all full Dirac preparations. Restricted states, memory and
+controlled approximations are not excluded; an augmented hierarchy is open.
+
+Proof: `claims/C6-SPACETIME-SIGNATURE/notes/exchange-observable-state-261112-v1.0.tex.txt`;
+card `strategy/physical-candidates/TECT-EXCH-003-result-v1.json`.
+Primary17, independent26, hostile analytic/code/source audit and five partial
+Lean lemmas. Number-conserving Fock algebra is reference only, not EXCH
+quantization. Two physical primary sources supply mechanism/readout
+crosswalks but not full P1/state/clock/instrument correspondence. Physical
+bridge HOLD_FOR_EVIDENCE, not a no-go against physical realization.
+Reusable diagnostic/negative boundary, standard Poisson and state algebra;
+no novelty priority or external publication claim. Host C6 T1/T054 unchanged.
 
 ## Notes on status
 

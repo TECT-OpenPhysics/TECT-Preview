@@ -278,3 +278,22 @@ reservoir has a limited initial-response structural advantage, not established
 overall superiority; density-only coupling fails the transfer filter.
 P1/PAH/EXCH001 are unchanged. C6/T054 stay open; no physical time,
 relaxation, Pre-A, continuum or automatic successor is asserted.
+
+### 2026-11-12: conserved exchange observables and physical state boundary (R-580)
+
+The same fixed-Q full EXCH regulator admits the exact norm-charge current
+J=2epsilon Im integral(conj(chi) sum Psi_a^2). Two full initial states with
+identical energy, total charge and populations have opposite J, excluding
+one phase-blind population law for every full Dirac preparation. Adding
+pair quadratures determines this instantaneous current, not a closed hierarchy.
+Energy accounting retains interaction energy; norm charge is not physical
+energy or condensate particle count. See the
+[result card](../../strategy/physical-candidates/TECT-EXCH-003-result-v1.json)
+and `notes/exchange-observable-state-261112-v1.0.tex.txt`.
+
+Two primary atom-molecule sources provide interaction/preparation/readout
+references, not full P1 identity. A fixed-number Fock reference shows why
+charged first means cannot automatically replace invariant pair coherence;
+it is not EXCH quantization. Overall physical bridge HOLD_FOR_EVIDENCE.
+P1/PAH/EXCH, C6 T1 and the T054 gate are unchanged. No damping, added time,
+physical PreA, spacetime, QFT, gravity, continuum or automatic successor.

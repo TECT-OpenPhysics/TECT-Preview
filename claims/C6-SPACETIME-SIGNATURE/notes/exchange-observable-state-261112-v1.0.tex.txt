@@ -1,0 +1,185 @@
+% Title: Conserved exchange, pair coherence and the physical state boundary
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-11-12; this version issued 2026-11-12
+% Status: R-580; exact finite diagnostics, physical bridge HOLD_FOR_EVIDENCE
+
+\section{Purpose and scope}
+This checkpoint preserves P1, PAH and EXCH001/002 byte for byte. Its single
+question is whether an actual preparation--interaction--measurement packet
+identifies the unchanged exchange law. The overall physical answer is
+\texttt{HOLD\_FOR\_EVIDENCE}, not an algebra-only replacement PASS.
+IDEA006/007/008 were retrieved before scoping; the new input is two located
+primary physical sources. Their mechanism is not full P1 identity.
+
+Keep the side-16 periodic three-torus, $V=4096$, every separately fixed finite
+$K\ge1$, $\Psi\in V_K^3$, $\chi\in V_{2K}$, exact integrals and orthogonal
+variational projections. Keep the old Hamiltonian and single nonzero sector:
+\[
+ H=F_{\rm P1}+H_\chi+H_{\rm int},\quad
+ H_\chi=\int(|\chi|^2/2+|\chi|^4/4),\quad
+ H_{\rm int}=-\epsilon\Re Z,\quad\epsilon=1/16,
+\]
+\[
+ Z=\int\bar\chi\,S,\quad S=\sum_{a=1}^3\Psi_a^2,\quad
+ Q=N_\psi/2+N_\chi=\bar Q=11008/27,\quad
+ N_\psi=\int|\Psi|^2,\quad N_\chi=\int|\chi|^2.
+\]
+Time is the original dimensionless $\tau$, with
+$\{z,\bar z\}=-2i$ in orthonormal Fourier coordinates, not an operational
+clock. No quantum state, Gibbs preparation, dissipation, limiting process,
+reservoir reset or new two-mode dynamics is installed.
+
+\section{Exact diagnostics and the energy ledger}
+The conversion part of the actual equations is
+\[
+ \dot\Psi_{\rm int}=2i\epsilon P_K(\chi\bar\Psi),\qquad
+ \dot\chi_{\rm int}=i\epsilon S.
+\]
+Here $S\in V_{2K}$, and orthogonality removes $P_K$ in the integrated norm
+pairing. Every pinned P1 term is invariant under the global phase of $\Psi$:
+quadratic, density, locking and Class-II currents included. Its contribution
+to the integrated $N_\psi$ derivative is therefore zero. The reservoir
+self-energy contributes no $N_\chi$ derivative. Consequently
+\[
+ \dot N_\psi=4\epsilon\Im Z,\qquad
+ \dot N_\chi=-2\epsilon\Im Z,\qquad
+ J:=\dot Q_\psi=2\epsilon\Im Z=-\dot N_\chi,\qquad \dot Q=0.
+\]
+Both quadratures of $Z$ are weighted-global-$U(1)$ invariant. Use them
+globally, not $\arg Z$, which fails at $Z=0$. For $Z\ne0$,
+$J=2\epsilon|Z|\sin(\arg Z)$. The norm fraction $x=Q_\psi/\bar Q$
+satisfies $\dot x=J/\bar Q$. It is not yet a measured condensate fraction.
+
+Autonomous Hamiltonian evolution conserves $H$. Its energy ledger is
+\[
+ \dot F_{\rm P1}+\dot H_\chi+\dot H_{\rm int}=0.
+\]
+Population exchange is a norm-charge current, not itself an energy current.
+In particular $\dot F_{\rm P1}=-\dot H_\chi$ requires a separate argument
+that $\dot H_{\rm int}=0$; none is assumed. The primary script checks the
+Poisson factors and three-term bookkeeping symbolically; its generic
+invariant polynomial test is explicitly not a substitute P1 functional.
+
+\section{A phase-blind state does not determine its own drift}
+Let $q=\bar Q/V=43/432$, $r=q$, and $p=2(q-r^2)>0$. The two legal full-field
+initial points are constant fields
+\[
+ \Psi_\pm=\sqrt p\,e_1,\qquad \chi_\pm=\pm ir.
+\]
+They have exactly the same $Q$, $N_\psi$, $N_\chi$, $F_{\rm P1}$ and
+$H_\chi$, while $\Re Z_\pm=0$, so their full energies are equal. But
+\[
+ Z_\pm=\mp iVrp,\qquad J_\pm=\mp2\epsilon Vrp\ne0.
+\]
+Thus populations, even augmented by $H,Q,\Re Z,|Z|$, do not define a
+universal autonomous drift reproducing all full preparations. A single
+population Markov transition law reproducing all projected full Dirac
+preparations is likewise impossible: the same projected initial point
+would have two different small-time evolutions. This is an exact initial
+generator contradiction in the unchanged full regulator. The lock can later
+rotate $e_1$; no invariant one-mode subspace is needed or claimed.
+
+This does not exclude a physically justified restricted preparation,
+memory-dependent dynamics or an error-controlled approximation. Adding
+$(\Re Z,\Im Z)$ determines the instantaneous population current, but does
+not prove closure of that larger observable hierarchy.
+
+\section{Primary sources and the missing state map}
+Syassen et al., PRL 99, 033201 (2007), versioned
+\url{https://arxiv.org/pdf/0704.2155v2}, PDF pages 1--2, give a located
+atom-pair/molecule matrix element (Eq.~1), two-atoms-per-site preparation,
+fixed-field hold and absorption-imaged entrance-channel population
+(Fig.~1, Eqs.~2--3). Molecules are invisible to that imaging transition.
+The source includes field jumps, release/readout and molecular loss;
+the pair quadrature is not directly imaged. It supplies a physical
+preparation/readout reference, not the closed EXCH law.
+
+Heinzen et al., PRL 84, 5029 (2000), versioned
+\url{https://arxiv.org/pdf/cond-mat/0110565v1}, PDF pages 1--2,
+give a pair-conversion operator Hamiltonian (Eq.~2). The passage preceding
+Eqs.~3--4 explicitly assumes mean replacement and factorization, in a
+rotating frame; Eq.~7 includes Raman losses. That is a conditional
+mean-field mechanism, not a proved EXCH state identification.
+
+An elementary reference-only Fock check isolates the issue. For
+$|A\rangle=|2,0\rangle$, $|M\rangle=|0,1\rangle$ and
+$|u_\pm\rangle=(|A\rangle\pm i|M\rangle)/\sqrt2$,
+\[
+ \langle N_a\rangle=1,\quad\langle N_b\rangle=1/2,\quad
+ \langle a\rangle=\langle b\rangle=0,\quad
+ \langle b^\dagger a^2\rangle=\mp i/\sqrt2.
+\]
+The last operator preserves $N_a+2N_b$ although each charged first mean
+vanishes. Thus the physical pair correlator is not generally the product
+$\langle b\rangle^*\langle a\rangle^2$. These are exact matrix elements
+on the physical total-number-two sector, computed with a sufficient finite
+Fock extension, not an assertion of canonical commutators at truncation
+edges. This is not quantization of EXCH, a new EXCH preparation or a no-go
+against every classical representation. It identifies the state-approximation
+input that may not be hidden behind the shared cubic monomial.
+
+Both source PDFs were hash-checked, read and visually reviewed by the root;
+their source crosswalk was independently inspected by separate reviewers.
+Their exact hashes, locators and SATISFIED/FAILED/MISSING rows are in
+\texttt{TECT-EXCH-003-sources-v1.json}. Neither supplies P1's complete
+three-component fourth-order spatial symbol, internal lock, sextic and
+Class-II terms with the declared domain, coefficients and units.
+
+The single re-entry input is one source-owned, calibrated
+\emph{preparation--Hamiltonian--instrument packet}: native carrier/state map;
+full-law identity or controlled residual on a declared finite time/domain;
+population and invariant pair-coherence preparation; independent action,
+length, amplitude, energy and time normalization; actual detector response,
+covariance and backaction; interaction-energy/control/loss accounting; and
+an unused intervention testing the same mapping. No observational fit or
+ad hoc Gibbs state fills these fields here. Literature shows mechanisms,
+not that such a full EXCH packet is impossible.
+
+\section{Devil's-advocate review}
+\begin{enumerate}
+\item Wrong sign, factor two or volume: DISMISSED by independent real
+canonical coordinates with conversion coefficient $\epsilon/\sqrt V$
+for constant orthonormal Fourier modes.
+\item Charge called energy: UPHELD boundary; the interaction-energy
+derivative remains in the three-term ledger. Units are not calibrated.
+\item Constant fields secretly define a replacement two-mode law:
+DISMISSED; only full-flow initial derivatives enter the contradiction.
+\item Phase loss repaired by a selected ensemble: UPHELD prohibition;
+no physical ensemble or finite closed hierarchy is assumed.
+\item Quantum counts identified with classical first means: UPHELD
+against that import; the fixed-number reference explicitly falsifies
+unconditional first-mean factorization, not all classical state maps.
+\item Measured Rabi exchange certifies full P1 or physical time:
+UPHELD boundary; source kinetic/carrier/loss/control and state assumptions
+do not match the full pinned law. No damping term is borrowed.
+\item Finite checks certify a limit: UPHELD prohibition. There is no
+quadrature convergence claim, time sweep, cutoff or volume limit here.
+\end{enumerate}
+Independent and hostile AI reviewers inspected the analytic boundaries and
+code; these are not external human referees. External review is invited.
+Five actually compiled Lean lemmas cover parameterized real algebra and
+failure of value-only factorization, not full P1 calculus or a physical map.
+The result is a scoped negative diagnostic and evidence contract, not novel
+quantum many-body mathematics or an empirical validation of TECT.
+
+\section{Result footer}
+\begin{verbatim}
+Result ID: R-580 / C6-SPACETIME-SIGNATURE
+Precise statement: Phase-sensitive norm-charge exchange is exact;
+  phase-blind universal population closure fails. Physical bridge HOLD.
+Scope: Same EXCH finite K>=1, side16 T3, Q=11008/27, time tau.
+Dependencies: Frozen EXCH001/002, P1 phase symmetry; two sources
+  as mechanism references only, not full physical premises.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, CONDITIONAL, INHERITED.
+Reproduction command:
+  python -X utf8 verification/scripts/exch003_verify.py
+Expected output: PASS_SCOPED_AUDIT_PHYSICAL_HOLD.
+Falsification gate: Incorrect bracket/projection/full-state witness,
+  reference matrix elements or source/state applicability invalidates
+  the corresponding conclusion. No claim of exhaustive source absence.
+Tier before / after: C6 T1 OPEN / T1 OPEN; T054 gate unchanged.
+No-overclaim statement: No physical count/clock, relaxation, closed
+  augmented dynamics, PreA, spacetime, QFT, gravity, continuum or TOE.
+Next required action: One calibrated full-law/state/instrument packet
+  or precise error. No repeat source analogy or automatic successor.
+\end{verbatim}

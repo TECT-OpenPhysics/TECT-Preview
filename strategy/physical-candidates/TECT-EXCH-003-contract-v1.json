@@ -1,0 +1,46 @@
+{
+  "schema": "tect/exchange-observable-contract/1.0",
+  "id": "TECT-EXCH-003-v1",
+  "date": "2026-11-12",
+  "base_commit": "0a40bb1d257de0a832d760c6466e87ad5ad2d495",
+  "task_id": "T-104",
+  "authorization": "Operator explicitly requests a single energy-compatible physical-observable/state bridge audit, ideas first, unchanged P1/PAH/EXCH, independent/hostile review and normal commit/push.",
+  "question": "Do existing physical preparation, measurement and interaction sources realize the unchanged EXCH law and its charge-transfer observables, without hidden reservoir phase, damping or time substitution?",
+  "ideas": ["IDEA-006", "IDEA-007", "IDEA-008"],
+  "source_hashes": {
+    "strategy/physical-candidates/TECT-EXCH-001-contract-v1.json": "d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e",
+    "strategy/physical-candidates/TECT-EXCH-002-contract-v1.json": "5dad4605d24d338d0ff4a8c169607595d7c59f247c15a4388185fceee31d75cc",
+    "strategy/physical-candidates/TECT-EXCH-002-result-v1.json": "212f5e4d55613c83e856158ca485798afffd9b20301acc4b8533ac90d98e7ef5"
+  },
+  "scope": {
+    "model": "Unchanged EXCH001 full projected Hamiltonian, epsilon=1/16; no modified component, counterterm, new carrier, extra damping or proposed time law.",
+    "space_regulator": "Original side16 periodic T3; each fixed finite K>=1, Psi cutoffK and chi cutoff2K, exact variational Fourier projections, no aliasing.",
+    "sector": "Same fixed Qbar=11008/27 as EXCH002; Qtotal=Npsi/2+Nchi. Not a physical number/energy calibration.",
+    "time": "Original dimensionless Hamiltonian tau with {z,bar z}=-2i, never PAH Markov/proper/quantum time.",
+    "state": "Existing full deterministic initial-state class. Two constant admissible initial points may test a universal observable-closure claim, but do not replace the full dynamics by a two-mode law or select a physical preparation.",
+    "limits": "No time, volume, cutoff, thermal or continuum limit and no equilibration hypothesis."
+  },
+  "preregistered_observables": {
+    "Npsi": "integral sum |Psi_a|^2",
+    "Nchi": "integral |chi|^2",
+    "conversion_quadrature": "Z=integral conjugate(chi)*sum Psi_a^2; Re Z and Im Z, not arg Z where Z=0",
+    "fraction": "x=(Npsi/2)/Qtotal, well-defined only on Qtotal>0",
+    "current": "J=d(Npsi/2)/d tau, derived from the unchanged Hamiltonian rather than fitted to a population curve"
+  },
+  "tests": [
+    "Derive weighted transfer, energy conservation and global-phase invariance with the actual bracket/projections; distinguish norm charge, energy and physical particle number.",
+    "Before an autonomous population law is accepted, test same H/Q/populations and opposite conversion quadrature using constant initial data with conjugate reservoir phases. No assumption that their later trajectories remain two-mode.",
+    "Inspect at most two primary physical sources for interaction, actual preparation and actual population/phase readout; record structural match separately from full carrier/Hamiltonian/time/units/state correspondence.",
+    "If a source supplies only an analogous cubic vertex or an open/controlled laboratory law, leave the full physical bridge HOLD_FOR_EVIDENCE and pin one concrete missing measurement/preparation/dynamics packet.",
+    "Independent and hostile checks, partial Lean algebra if useful, one gate-level synthesis note only; no physical promotion on internal algebra PASS."
+  ],
+  "physical_pass_requires": [
+    "Located physical carrier and full-law crosswalk, including the P1 spatial/internal/nonlinear terms and regulator/domain scope",
+    "Operationally prepared state and the reservoir coherence/phase information it actually preserves",
+    "Measurement operator/response and calibration for both norm charges and the invariant conversion quadrature",
+    "Energy, amplitude, symplectic and time-unit map with controlled approximation errors, not a fitted clock or omitted environment",
+    "Independent falsification of the same mapping on a preparation/readout not used to tune it"
+  ],
+  "budget": {"source_slots": 2, "models_changed": 0, "parameter_sweeps": 0, "dynamics_simulations": 0, "synthesis_notes": 1, "automatic_successor": false},
+  "non_claims": "No condensate particle count from a classical norm by renaming; no full-state relaxation, Markov projection, inferred thermodynamic state, physical clock, physical PreA, spacetime, QFT, gravity, continuum or TOE."
+}

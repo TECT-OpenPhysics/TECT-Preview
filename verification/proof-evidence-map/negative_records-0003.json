@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-31-a13-law-free-mixed-response-floor-uniformity",
+      "branch": "infer a floor-uniform mixed current--trace response from complete six-row algebra without using the actual conditional law",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Derive a floor-uniform lower Hessian bound for the recombined mixed current--trace response from the exact six-row Fierz cancellation, with no quantitative hypothesis on the conditional law.",
+        "consequence": "A production proof must use the actual conditional Gaussian or Gibbs law, a small-ball/cross-replica estimate, or another signed owner cancellation. The fixture is not a production counterexample. R-132's standard-Gaussian scalar ray instead has a floor-uniform source--sextic margin above `3/4`, so law-specific score transfer remains viable.",
+        "evidence": "R-132 proof note, Section 7; primary exact SymPy factorization and limit; independent second-order dual-number differentiation.",
+        "failure_mode": "Put `e=delta^2`, `u=s e_1`, `V=e_1`, and `f_delta(s)=s-(5/9)s^3/(s^2+delta^2)`. Give `s` the conditional law `{delta,1}/2`, translate both atoms by the same control parameter, and use the matching trace covariance. The linear-row Hessian is zero. The exact rational-row Hessian is `-5 c1 (delta-1)^2 p(delta)/(324 delta (1+delta^2)^4)`, where `p(delta)=7delta^7+188delta^6+61delta^5+100delta^4+57delta^3+ 40delta^2+3delta+8`. It is negative for `0<delta<1` and equals `-10 c1/(81delta)+O(1)` as the floor vanishes."
+      },
+      "detail_title": "complete six-row algebra alone is not floor-uniform over arbitrary conditional laws",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "on the exact rational active ray with floor `delta^2` and conditional law `{delta,1}/2`, the recombined Hessian is negative and equals `-10 c1/(81 delta)+O(1)`; the standard-Gaussian score-transfer ray remains uniformly controlled, so production-law structure is the necessary next input",
+      "tag": "NG-2026-07-31-A13-LAW-FREE-MIXED-RESPONSE-FLOOR-UNIFORMITY"
+    },
+    {
       "anchor": "ng-2026-07-31-a13-gamma-four-sixth-amplitude-route",
       "branch": "derive a complete rational gamma-four shell ledger from the joint Pauli--Fierz coefficient algebra and the existing sixth-amplitude or extracted `Z^6` budget",
       "claim_ref_basis": {
@@ -2225,28 +2248,6 @@
       "kind": "no_go",
       "summary": "covariance union removes overlap multiplicity exactly, but for source blocks `(1/sqrt(2),1/sqrt(2))` and triangular control `(0,f(xi_1))` the polar-minimal representative is `(f/2,f/2)`, whose first coordinate anticipates `xi_1`",
       "tag": "NG-2026-07-25-A13-TERMINAL-POLAR-CAUSAL-PROMOTION"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-target-heat-root-shell-gap",
-      "branch": "A13 far gain from target heat projection or canonical weighted CM control alone",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "No far-root decay may be attributed to target heat or the CM identity alone. The R-080 far square completion remains valid and reduces the production problem to the localized predictable base-current tail `S_C`. A production paracomposition/current-tail theorem or signed cancellation is still admissible. This is not a counterexample to the complete packet, one-use, or Nelson.",
-        "evidence": "The heat semigroup acts on the six-real target value of the frame. For the exact model `H(u)=u^3`, target heat gives `P_sigma H(u)=u^3+3 sigma u`; composing with `u(x)=r cos(Nx)` preserves the nonzero `3N` harmonic. Independently, take a centered strict-past root `phi(xi_j)` and the admissible later one-shot control `h_k=phi(xi_j)e_k`, `a_k=K_k h_k`. Then `d_j a_k=a_k` and the normalized order-minus-two multiplier gives `2^(4k) E||d_j a_k||_2^2=1` for every gap `k-j`; derivative feedback likewise saturates its canonical weight. Both executable routes reproduce the fixtures.",
-        "failure_mode": "Use the R-079 predictable base-current heat projection, or the spatially weighted Cameron--Martin square function by itself, to infer an extra positive factor `2^(-theta(k-j))` between a probability root `j` and a later spatial control shell `k`."
-      },
-      "detail_title": "target heat and canonical CM weights do not create a far gap",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "target heat acts in the six-real value variable rather than physical space, while strict-past later-shell controls saturate the canonical weights independently of the probability-root/spatial-shell gap",
-      "tag": "NG-2026-07-25-A13-TARGET-HEAT-ROOT-SHELL-GAP"
     }
   ],
   "kind": "negative_records",

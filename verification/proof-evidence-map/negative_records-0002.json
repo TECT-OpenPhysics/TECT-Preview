@@ -1,6 +1,26 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-10-pre-a-st8-q3lock-basic-resolvent-cubic-force-unweighted-core",
+      "branch": "use ordinary basic resolvents as a cutoff-uniform unweighted generator core for the exact quartic force",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260810-pre-a-round1-and-weighted-energy-truth-first-ch"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "consequence": "The standard unweighted basic-resolvent generator estimate does not close the common dynamics. This does not rule out finite-time resolvent-algebra invariance by another argument, a smaller analytic core, or an energy-damped graph norm. The registered repair is precisely the higher- moment energy-damped thermodynamic Cauchy gate.",
+        "evidence": "On Schwartz space the resolvent identity is `[W4(Q),R_z]=-i hbar R_z(D_aW4)(Q)R_z`. Put `L=a.P+b.Q`, choose normalized `xi in C_c^infty` with configuration support in `B_r0`, and let the Weyl unitary `U_s` send `Q` to `Q+s a` and `P` to `P-s b`. It preserves `L`. The inputs `psi_s=U_s(L-z)xi` and `phi_s=U_s(L-conj(z))xi` have norms independent of `s`, while exact resolvent cancellation gives `<phi_s,R_z(D_aW4)(Q)R_z psi_s>=4s^3W4(a)+O(s^2)`, with `W4(a)>0`. Thus the exact sandwich has no bounded extension. If `V_R=W4` on `B_R`, the same identity holds for `0<=s<=(R-r0)/|a|`; choosing `s=(R-r0)/(2|a|)` proves `||R_z(D_aV_R)(Q)R_z||>=c_(xi,z,a)R^3` for all sufficiently large `R`.",
+        "failure_mode": "Treat the ordinary basic resolvents `R_z=(a.P+b.Q-z)^(-1)`, with nonzero `a` and `Im(z)!=0`, as an unweighted generator core on which the exact quartic commutator or expanding-ball cutoff commutators remain uniformly bounded."
+      },
+      "detail_title": "the ordinary basic-resolvent core is not uniformly polynomial-force bounded",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "for nonreal `z`, fixed-norm Weyl-displaced compact-support test vectors turn the exact sandwich into `4s^3W4(a)+O(s^2)`. It has no bounded extension, and cutoffs agreeing on expanding balls have an explicit `Omega(R^3)` norm lower bound; an energy-damped core or another invariance proof remains open",
+      "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE"
+    },
+    {
       "anchor": "ng-2026-08-10-pre-a-st8-q3lock-asymmetric-mixture-zero-source-periodic-limit",
       "branch": "identify an asymmetric convex mixture of the ordered path laws with a zero-source periodic finite-volume limit",
       "claim_ref_basis": {
@@ -2196,29 +2216,6 @@
       "kind": "no_go",
       "summary": "the common-phase-horizontal fixture `u=(1,0)`, `chi=1`, `v=(i,0)`, `w=-i` has `a=s=h=0` but weighted tangent norm two, so only the radial coefficient pair plus wedge channel is controlled",
       "tag": "NG-2026-07-31-A13-NATURAL-PHASE-HORIZONTAL-XI-METRIC-IDENTIFICATION"
-    },
-    {
-      "anchor": "ng-2026-07-31-a13-law-free-mixed-response-floor-uniformity",
-      "branch": "infer a floor-uniform mixed current--trace response from complete six-row algebra without using the actual conditional law",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Derive a floor-uniform lower Hessian bound for the recombined mixed current--trace response from the exact six-row Fierz cancellation, with no quantitative hypothesis on the conditional law.",
-        "consequence": "A production proof must use the actual conditional Gaussian or Gibbs law, a small-ball/cross-replica estimate, or another signed owner cancellation. The fixture is not a production counterexample. R-132's standard-Gaussian scalar ray instead has a floor-uniform source--sextic margin above `3/4`, so law-specific score transfer remains viable.",
-        "evidence": "R-132 proof note, Section 7; primary exact SymPy factorization and limit; independent second-order dual-number differentiation.",
-        "failure_mode": "Put `e=delta^2`, `u=s e_1`, `V=e_1`, and `f_delta(s)=s-(5/9)s^3/(s^2+delta^2)`. Give `s` the conditional law `{delta,1}/2`, translate both atoms by the same control parameter, and use the matching trace covariance. The linear-row Hessian is zero. The exact rational-row Hessian is `-5 c1 (delta-1)^2 p(delta)/(324 delta (1+delta^2)^4)`, where `p(delta)=7delta^7+188delta^6+61delta^5+100delta^4+57delta^3+ 40delta^2+3delta+8`. It is negative for `0<delta<1` and equals `-10 c1/(81delta)+O(1)` as the floor vanishes."
-      },
-      "detail_title": "complete six-row algebra alone is not floor-uniform over arbitrary conditional laws",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "on the exact rational active ray with floor `delta^2` and conditional law `{delta,1}/2`, the recombined Hessian is negative and equals `-10 c1/(81 delta)+O(1)`; the standard-Gaussian score-transfer ray remains uniformly controlled, so production-law structure is the necessary next input",
-      "tag": "NG-2026-07-31-A13-LAW-FREE-MIXED-RESPONSE-FLOOR-UNIFORMITY"
     }
   ],
   "kind": "negative_records",

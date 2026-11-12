@@ -230,3 +230,35 @@ set from individual-orbit stability and full-state from coarse-observable
 relaxation. Six Lean lemmas cover partial algebra only. ALT001 is a separate
 same-condition structural comparison: no tensor stability superiority,
 full P1 U3 symmetry or all-time response dominance is imported.
+
+## 2026-11-12 -- EXCH003 physical state and observable crosswalk
+
+Target: one calibrated physical preparation/law/instrument packet for unchanged
+EXCH, not merely a shared cubic interaction. Internal EXCH001/002 hashes,
+full P1 identity, dimension, Fourier domain, pairing, charge and tau are
+preserved. R578 supplies phase symmetry/complete finite flow, R579 supplies
+the unchanged single nonzero sector and its no-attraction boundary only.
+
+Primary source manifest: `strategy/physical-candidates/TECT-EXCH-003-sources-v1.json`.
+Syassen0704.2155v2 p1Eq1/p2Fig1/Eqs2-3: APPLIES as a genuine pair-conversion,
+Mott preparation and absorption-imaged population template. FAILED as full
+P1 identity; fixed-hold controls, losses and detector differ. Heinzen
+cond-mat/0110565v1 p1Eqs1-2/p2Eqs3-4,7: APPLIES-CONDITIONALLY as an explicit
+mean-field mechanism; factorization/rotating frame/drive/loss are named,
+not imported as exact EXCH state or time. Root read/rendered complete first
+two pages; source and hostile reviewers independently inspected locators.
+
+Residual exact diagnostic: same full H/Q/populations and opposite invariant
+pair current disprove universal phase-blind population closure for all full
+Dirac preparations. Reference Fock matrix elements disprove unconditional
+charged-first-mean factorization, not every classical representation. No
+standalone quantum construction, new source owner, numerical phase sweep or
+limit theorem is imported. Primary17/independent26 and five partial Lean
+lemmas support the finite diagnostic, with separate hostile source audit.
+
+Sign/factor/orthonormal-volume and full constant-energy checks PASS. Native
+state, full-law error control, count/action/clock normalization, actual pair
+instrument/covariance/backaction and unused intervention remain MISSING.
+No observed oscillation is counted as an EXCH prediction. Physical result
+HOLD_FOR_EVIDENCE; re-entry needs the single calibrated packet or precise
+error. Bounded source search does not prove global absence or novelty.

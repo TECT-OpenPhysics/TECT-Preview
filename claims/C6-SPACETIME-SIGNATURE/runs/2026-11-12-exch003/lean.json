@@ -1,0 +1,49 @@
+{
+  "schema": "tect/exch003-lean/1.0",
+  "status": "PASS_PARTIAL_READOUT_ALGEBRA",
+  "script_version": "1.0.0",
+  "script_sha256": "b279c89ba5cea75b6c64bd7f1f119a129e5c6886377a702548b8e90c9196a61d",
+  "source_sha256": "177eec268c554ac44e43d885a4280436786fb260ee734d267d2a9e9cc7af29d9",
+  "declarations": [
+    "weighted_transfer",
+    "same_sector_witness",
+    "opposite_nonzero_current",
+    "no_value_only_drift",
+    "energy_with_interaction"
+  ],
+  "toolchain": {
+    "lakefile": "verification/lean/lakefile.toml",
+    "lakefile_sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+    "lockfile": "verification/lean/lake-manifest.json",
+    "lockfile_sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+    "mathlib_input_revision": "v4.32.1",
+    "mathlib_revision": "520045ab14e26149ee970e2e617ca04b09bde5d6",
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "toolchain_file": "verification/lean/lean-toolchain",
+    "toolchain_sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+  },
+  "package_revisions": {
+    "mathlib": "520045ab14e26149ee970e2e617ca04b09bde5d6",
+    "plausible": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "importGraph": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+    "proofwidgets": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+    "aesop": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+    "Qq": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+    "batteries": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+    "Cli": "88679d088c9720c27ebdf2ba4dafe17341747f94"
+  },
+  "compiler_version": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "equivalent_lake_command": "cd verification/lean; lake env lean Tect/ExchangeReadout.lean",
+  "scope": "Five parameterized algebra and function-factorization lemmas only.",
+  "not_encoded": "Full P1/projection calculus, physical quantum state, instrument, source crosswalk and physical time remain outside Lean.",
+  "environment": {
+    "python": "3.12.9",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "non_claims": "No physical realization, closed projected dynamics, relaxation, continuum, PreA or gravity.",
+  "compiler_harness_sha256": "76035cd98d8bba5907776c509b7b0c9afc72e68c5c84bc588611832c6dfecf32"
+}

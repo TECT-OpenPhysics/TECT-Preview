@@ -9,7 +9,7 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  35 proof units  ·  tier span T1
+## (all notes)/  ·  36 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -17,6 +17,7 @@
 | `comparison-contract-admission` | v1.0 | T1 | Full finite comparison-definition admission | Analytic, exact checks, partial Lean | Specify one full-label generator-defect target |
 | `crt-gibbs-defect` | v1.0 | T1* | The fixed character (3) has fine-Gibbs defect norm at least | ANALYTIC, EXACT, EXECUTED; partial parameteri… | Does the same fixed character obstruct original-time |
 | `crt-semigroup-defect` | v1.0 | T1 | Equation (8) refutes SG-001 at unchanged time $1/10$, | ANALYTIC, EXACT, EXECUTED, INHERITED; partial… | Park this comparison route. Reenter only on an exact |
+| `exchange-observable-state` | v1.0 | T1* | Phase-sensitive norm-charge exchange is exact; phase-blind universal population closure fails. Physical bridge HOLD. | ANALYTIC, EXACT, EXECUTED, CONDITIONAL, INHER… | One calibrated full-law/state/instrument packet or precise error. No repeat source analog… |
 | `fixed-charge-sector` | v1.0 | T1* | fixed-Q mixed minimum set is stable; | ANALYTIC, EXACT, EXECUTED, CONDITIONAL. | a physical state/observable packet |
 | `internal-exchange` | v1.0 | T1* | complete regulated charge-transfer flow; | ANALYTIC, EXACT, EXECUTED, CONDITIONAL. | physical input, or a precise |
 | `labelled-finite-dynamics` | v1.0 | T1 | Five finite operator identities for pinned v2. | ANALYTIC, EXACT, EXECUTED; partial Lean. | Separate fixed comparison-map admission. |

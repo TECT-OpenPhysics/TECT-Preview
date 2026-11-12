@@ -1,0 +1,69 @@
+{
+  "schema":"tect/exchange-observable-result/1.0",
+  "id":"TECT-EXCH-003-RESULT-v1",
+  "result_id":"R-580",
+  "task_id":"T-104",
+  "date":"2026-11-12",
+  "overall_verdict":"HOLD_FOR_EVIDENCE_NOT_A_PHYSICAL_NO_GO",
+  "classification":"negative_result",
+  "classification_scope":"Exact universal population-closure negative; model diagnostics auxiliary. Physical bridge remains HOLD, not a physical impossibility theorem.",
+  "active_gate_change":false,
+  "physical_promotion":false,
+  "new_physical_state_adopted":false,
+  "host_tier":"C6 T1 OPEN unchanged; T054 gate unchanged",
+  "source_hashes":{
+    "strategy/physical-candidates/TECT-EXCH-003-contract-v1.json":"1e61385a312f0973343b898e474a1c53e2f49cc3af26127d7f9e293444c363e5"
+  },
+  "evidence_hashes":{
+    "strategy/physical-candidates/TECT-EXCH-003-sources-v1.json":"5c25e0eb607208675c01c128b64baab934c84d89ec423c2cab390a11452fa2e7",
+    "verification/scripts/exch003_primary.py":"70cf405dbd2fd119f35aeaff8fb4d76ccdacb0c2dc6a3e2873a6b0eff8889d96",
+    "verification/scripts/exch003_independent.py":"1ce4c44ad53a71b5745ed62098be92a9bdd8e807ee1c2e9bc5726784ba452092",
+    "verification/scripts/exch003_lean.py":"b279c89ba5cea75b6c64bd7f1f119a129e5c6886377a702548b8e90c9196a61d",
+    "verification/scripts/exch003_verify.py":"f719dde32d030481bdd01f0b5dba18bed73a300b5e9b86c36683b9fb09901ab9",
+    "verification/lean/Tect/ExchangeReadout.lean":"177eec268c554ac44e43d885a4280436786fb260ee734d267d2a9e9cc7af29d9",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-12-exch003/hostile-review.json":"745276532cbd1bae176ed01f06a9616613170df61159b00801ec7bc0cf92d059",
+    "claims/C6-SPACETIME-SIGNATURE/notes/exchange-observable-state-261112-v1.0.tex.txt":"7fcd0db1e1a3675bffacdb2b7c52bf2956377d15b30985f3fadae789ece0adbd",
+    "claims/C6-SPACETIME-SIGNATURE/notes/exchange-observable-state-261112-v1.0.pdf":"d211b5ec2715ce2e627dd249b85ccc4fd7ef7fb41b70daa510f0a0131427bacc"
+  },
+  "statement":"Unchanged EXCH has exact invariant pair-quadrature charge-current diagnostics. Same full energy, total charge and populations can have opposite currents, excluding one universal phase-blind population law for all full initial Dirac preparations. Located physical sources establish pair conversion/readout mechanisms, not the full P1 physical state/law/time/instrument identity.",
+  "verdicts":{
+    "energy_compatible_charge_current":"PROVED_EXACT_FIXED_FINITE_REGULATOR",
+    "universal_population_closure":"DISPROVED_FOR_ALL_FULL_DIRAC_PREPARATIONS",
+    "augmented_observable_closure":"NOT_ESTABLISHED",
+    "physical_interaction_reference":"LOCATED_PRIMARY_MECHANISM_AND_READOUT_ONLY",
+    "physical_classical_state_identification":"HOLD_FOR_CONTROLLED_PAIR_CORRELATOR_MAP",
+    "physical_time_and_full_law":"HOLD_FOR_EVIDENCE"
+  },
+  "observables":{
+    "norm_charge":"Qpsi=Npsi/2; reservoir weighted contribution=Nchi; Q=Qpsi+Nchi",
+    "coherence":"Z=integral conjugate(chi)*sum Psi_a^2; use ReZ and ImZ, not globally defined argZ",
+    "charge_current":"J=dotQpsi=2epsilon ImZ=-dotNchi; dotNpsi=4epsilon ImZ",
+    "norm_fraction":"x=Qpsi/Qbar, dotx=J/Qbar; not a measured condensate fraction",
+    "energy_ledger":"dotF_P1+dotHchi+dotHint=0, with Hint=-epsilon ReZ; norm-charge current is not a calibrated energy current"
+  },
+  "counterexample":{
+    "scope":"Every fixed K>=1, full original Fourier flow initial derivatives, no invariant-mode reduction.",
+    "definition":"q=Qbar/V=43/432, r=q, p=2(q-r^2)>0; constant Psi=sqrt(p)e1 and chi=+ir or -ir.",
+    "equality":"Same full H, Q=11008/27, Npsi, Nchi, ReZ=0 and |Z|.",
+    "difference":"Zplus=-iVrp, Zminus=+iVrp, Jplus=-2epsilon Vrp=-Jminus nonzero.",
+    "boundary":"Does not reject restricted preparations, memory-dependent reductions, all stochastic approximations or an error-controlled finite-window law."
+  },
+  "physical_source_crosswalk":"strategy/physical-candidates/TECT-EXCH-003-sources-v1.json",
+  "reference_state_boundary":"In (|2,0> plus/minus i|0,1>)/sqrt2, charged first means vanish but invariant <b_dagger a^2> is nonzero and phase sensitive. This is faithful reference-only Fock algebra, not EXCH quantization or a no-go for every classical state representation.",
+  "missing_input_contract":{
+    "id":"EXCH-PHYSICAL-PAIR-STATE-INSTRUMENT-PACKET-v1",
+    "status":"UNFILLED_NOT_AN_ADOPTED_EXTENSION",
+    "carrier_and_law":"Source-owned native carrier and all three Psi/chi coordinate meanings; full pinned P1 identity or explicit controlled residual on a stated state/domain/time window.",
+    "prepared_state":"Independently specified population and invariant pair-coherence state law, including any mean-field approximation and quantified error; not an outcome-selected phase mixture.",
+    "normalization":"Independent length/amplitude/action/energy/clock calibration for bracket -2i; no renamed physical count or retrospectively fitted tau.",
+    "instrument":"Actual population and pair-quadrature response, exposure, covariance, calibration, backaction and higher-order errors.",
+    "energy":"Interaction energy plus control work/environment/loss accounting, or a justified bound making their omission controlled.",
+    "validation":"One unused preparation/intervention for the same frozen mapping. No fit or claimed prediction performed here."
+  },
+  "verification":"Primary17, independent26, hostile analytic/code/source review, five actually compiled partial Lean lemmas, one three-page rendered synthesis. Independent AI reviews are not external human refereeing.",
+  "reproduction":"python -X utf8 verification/scripts/exch003_verify.py --lean-cache E:/Dev/TECT/verification/lean/.lake/packages",
+  "falsifier":"Wrong canonical/projection factor, constant full-P1 energy, faithful Fock matrix element, universal-Dirac quantifier or source/state crosswalk invalidates the dependent assertion. Source search is bounded, not exhaustive.",
+  "next_question":"Can one native preparation and instrument provide the gauge-invariant pair-coherence state map with a controlled full-EXCH residual and independent clock/count calibration?",
+  "reentry":"An actual completed packet or a precise error. Do not repeat population-only closure, Rabi analogy, source-owner search or automatic weakened successors without changed input.",
+  "non_claims":"No P1/PAH/EXCH change, damping, time-law addition, quantum adoption, spontaneous classical seed, condensate count, equilibration, closed augmented hierarchy, physical PreA, spacetime, QFT, gravity, continuum, mass gap or TOE."
+}

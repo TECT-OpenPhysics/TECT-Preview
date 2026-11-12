@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-11-12-EXCH003-POPULATION-ONLY-CLOSURE](#ng-2026-11-12-exch003-population-only-closure) | one population-only law reproducing all full EXCH Dirac preparations | Same full H/Q/populations, opposite invariant pair currents. Restricted states, memory and controlled approximations are not excluded. |
 | [NG-2026-11-12-EXCH002-FULL-STATE-GROUND-ATTRACTION](#ng-2026-11-12-exch002-full-state-ground-attraction) | outside full-state relaxation to fixed-sector minima under unchanged closed EXCH001 | Conserved energy above the minimum excludes convergence in full-state distance. This does not exclude coarse-observable relaxation or transient structure. |
 | [NG-2026-11-12-EXCH001-EXACT-R158-INHERITANCE](#ng-2026-11-12-exch001-exact-r158-inheritance) | exact old R158 coexistence under the new parent | Reservoir variation lowers old shell energy at mu_t. Only exact inheritance fails; controlled shifted coexistence retained in R578. |
 | [NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV](#ng-2026-11-12-pah-state001-display-markov) | exact displayed-only memoryless realization of PAH-v2 | R-577 same-fibre invariant generator mismatch and original-Gibbs stationary compression defect; full counting CTMC preserved, no physical or uniform-limit no-go |
@@ -11113,3 +11114,24 @@ checks, independent/hostile energy proof and partial Lean conservation lemma.
 No no-go for coarse observables, different state preparations, transient
 structure, physical equilibration or all theories. No new damping/time law
 is added; C6/T054 and all original source models remain unchanged.
+
+### NG-2026-11-12-EXCH003-POPULATION-ONLY-CLOSURE -- hidden pair phase
+
+**Branch / claim.** One autonomous population-only deterministic or Markov
+law reproduces the projections of every full EXCH initial Dirac preparation.
+
+**Failure mode.** At the original nonzero sector, constant Psi=sqrt(p)e1
+and chi=+ir or -ir, q=Qbar/V, r=q, p=2(q-r^2), have identical full energy,
+charge and component populations, ReZ=0 and |Z|. Their initial currents
+J=2epsilon ImZ are opposite and nonzero. A common projected initial state
+cannot have both evolutions under one transition law. Full-flow initial
+derivatives suffice; no invariant one-mode reduction is asserted.
+
+**Evidence.** R580 result/synthesis and exact primary/independent runs;
+separate hostile check and partial Lean value-factorization lemma.
+
+**Consequence.** Universal phase-blind closure is rejected only in this
+scope. Restricted physical preparations, memory-dependent laws and
+error-controlled approximations are open. No physical impossibility,
+augmented-hierarchy closure, PAH inference, damping or new clock follows.
+Physical state/law/instrument bridge HOLD; C6/T054 unchanged.

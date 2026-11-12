@@ -22,6 +22,23 @@
       "tag": "NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV"
     },
     {
+      "anchor": "ng-2026-11-12-exch003-population-only-closure",
+      "branch": "one population-only law reproducing all full EXCH Dirac preparations",
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "detail": {
+        "branch_claim": "One autonomous population-only deterministic or Markov law reproduces the projections of every full EXCH initial Dirac preparation.",
+        "consequence": "Universal phase-blind closure is rejected only in this scope. Restricted physical preparations, memory-dependent laws and error-controlled approximations are open. No physical impossibility, augmented-hierarchy closure, PAH inference, damping or new clock follows. Physical state/law/instrument bridge HOLD; C6/T054 unchanged.",
+        "evidence": "R580 result/synthesis and exact primary/independent runs; separate hostile check and partial Lean value-factorization lemma.",
+        "failure_mode": "At the original nonzero sector, constant Psi=sqrt(p)e1 and chi=+ir or -ir, q=Qbar/V, r=q, p=2(q-r^2), have identical full energy, charge and component populations, ReZ=0 and |Z|. Their initial currents J=2epsilon ImZ are opposite and nonzero. A common projected initial state cannot have both evolutions under one transition law. Full-flow initial derivatives suffice; no invariant one-mode reduction is asserted."
+      },
+      "detail_title": "hidden pair phase",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "Same full H/Q/populations, opposite invariant pair currents. Restricted states, memory and controlled approximations are not excluded.",
+      "tag": "NG-2026-11-12-EXCH003-POPULATION-ONLY-CLOSURE"
+    },
+    {
       "anchor": "ng-2026-11-12-exch002-full-state-ground-attraction",
       "branch": "outside full-state relaxation to fixed-sector minima under unchanged closed EXCH001",
       "claim_ref_basis": {
@@ -1989,26 +2006,6 @@
       "kind": "no_go",
       "summary": "the momentum-gauge-conjugate Hamiltonians `p^2/(2chi)+V(q)` and `(p-a)^2/(2chi)+V(q)` have identical bounded q-cylinder traces but send `q` to `p/chi` and `(p-a)/chi`. Require an independent kinetic/CCR anchor",
       "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONFIGURATION-CYLINDER-CANONICAL-MOMENTUM-GENERATOR"
-    },
-    {
-      "anchor": "ng-2026-08-10-pre-a-st8-q3lock-basic-resolvent-cubic-force-unweighted-core",
-      "branch": "use ordinary basic resolvents as a cutoff-uniform unweighted generator core for the exact quartic force",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260810-pre-a-round1-and-weighted-energy-truth-first-ch"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "consequence": "The standard unweighted basic-resolvent generator estimate does not close the common dynamics. This does not rule out finite-time resolvent-algebra invariance by another argument, a smaller analytic core, or an energy-damped graph norm. The registered repair is precisely the higher- moment energy-damped thermodynamic Cauchy gate.",
-        "evidence": "On Schwartz space the resolvent identity is `[W4(Q),R_z]=-i hbar R_z(D_aW4)(Q)R_z`. Put `L=a.P+b.Q`, choose normalized `xi in C_c^infty` with configuration support in `B_r0`, and let the Weyl unitary `U_s` send `Q` to `Q+s a` and `P` to `P-s b`. It preserves `L`. The inputs `psi_s=U_s(L-z)xi` and `phi_s=U_s(L-conj(z))xi` have norms independent of `s`, while exact resolvent cancellation gives `<phi_s,R_z(D_aW4)(Q)R_z psi_s>=4s^3W4(a)+O(s^2)`, with `W4(a)>0`. Thus the exact sandwich has no bounded extension. If `V_R=W4` on `B_R`, the same identity holds for `0<=s<=(R-r0)/|a|`; choosing `s=(R-r0)/(2|a|)` proves `||R_z(D_aV_R)(Q)R_z||>=c_(xi,z,a)R^3` for all sufficiently large `R`.",
-        "failure_mode": "Treat the ordinary basic resolvents `R_z=(a.P+b.Q-z)^(-1)`, with nonzero `a` and `Im(z)!=0`, as an unweighted generator core on which the exact quartic commutator or expanding-ball cutoff commutators remain uniformly bounded."
-      },
-      "detail_title": "the ordinary basic-resolvent core is not uniformly polynomial-force bounded",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "for nonreal `z`, fixed-norm Weyl-displaced compact-support test vectors turn the exact sandwich into `4s^3W4(a)+O(s^2)`. It has no bounded extension, and cutoffs agreeing on expanding balls have an explicit `Omega(R^3)` norm lower bound; an energy-damped core or another invariance proof remains open",
-      "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-BASIC-RESOLVENT-CUBIC-FORCE-UNWEIGHTED-CORE"
     }
   ],
   "kind": "negative_records",

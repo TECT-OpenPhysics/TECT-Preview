@@ -5,13 +5,14 @@
 
 Authorities: `negative-results/registry.md`.
 
-**396 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 320 · retraction: 5
+**397 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 321 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
 | [`NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV`](registry.md#ng-2026-11-12-pah-state001-display-markov) | no_go | exact displayed-only memoryless realization of PAH-v2 |
+| [`NG-2026-11-12-EXCH003-POPULATION-ONLY-CLOSURE`](registry.md#ng-2026-11-12-exch003-population-only-closure) | no_go | one population-only law reproducing all full EXCH Dirac preparations |
 | [`NG-2026-11-12-EXCH002-FULL-STATE-GROUND-ATTRACTION`](registry.md#ng-2026-11-12-exch002-full-state-ground-attraction) | no_go | outside full-state relaxation to fixed-sector minima under unchanged closed EXCH001 |
 | [`NG-2026-11-12-EXCH001-EXACT-R158-INHERITANCE`](registry.md#ng-2026-11-12-exch001-exact-r158-inheritance) | no_go | exact old R158 coexistence under the new parent |
 | [`NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING`](registry.md#ng-2026-10-14-pah-v2-rd001-displayed-freezing) | no_go | nontrivial original-time dynamics of fixed source-displayed readouts |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION`](registry.md#ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction) | no_go | use centered global total-energy contexts as a volume-uniform local transfer |
 | [`NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION`](registry.md#ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization) | no_go | use a local quartic A^(-3/4) operator factorization for the cutoff bond-tail times force |
 | [`NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE`](registry.md#ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance) | no_go | require a positive-strip L1 Weyl-Fourier coefficient carrier to remain invariant under the exact quartic onsite subflow |
-| [`NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION`](registry.md#ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration) | no_go | infer a finite exhaustive realization list from truncated-octahedron face combinatorics alone |
 
 Search without loading the full registry:
 
