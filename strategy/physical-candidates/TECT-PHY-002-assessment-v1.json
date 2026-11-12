@@ -1,0 +1,68 @@
+{
+  "schema": "tect/physical-candidate-assessment/1.0",
+  "id": "TECT-PHY-002-ASSESSMENT-v1",
+  "date": "2026-11-12",
+  "task_id": "T-100",
+  "classification": "auxiliary_support",
+  "verdict": "BOUNDED_REVIEW_COMPLETE; DIRECT_P1_CANDIDATE_NOT_ACQUIRED",
+  "active_gate_change": false,
+  "claim_bearing": false,
+  "new_result_id": null,
+  "physical_promotion": false,
+  "admission_sha256": "82b7aa4a53d0ef300dfef11536ad018f1934d2034d1983a454202e5eb8880b96",
+  "link_contract_sha256": "1b848a35dc2e4c1102b246c3afc71929fb52cc4cd320ac9794e820efaf4ba683",
+  "reuse_matrix": "strategy/physical-candidates/TECT-PHY-002-reuse-v1.json",
+  "sources": [
+    {
+      "id": "ORITI-SINDONI-WILSONEWING-1602.05881v2",
+      "url": "https://arxiv.org/pdf/1602.05881v2",
+      "sha256": "94cc52828b0f69ec2950ca71fd44192ab9c1af6aff74e2290c8f9b7927b275c8",
+      "version_date": "2016-10-24",
+      "role": "PRIORITIZED_FRAMEWORK_REVIEW_ONLY",
+      "locators": "Sec.II; Eqs.35,39-42,58,64,66,73; pp24-25,32-37",
+      "physical_inputs": "Bosonic SU(2)^4 group-field quanta, tetrahedral geometric data, EPRL action family and massless scalar. Simple isotropic coherent-state approximation; scalar phi is a relational variable.",
+      "phase_boundary": "Condensate ansatz is used; a controlled noncondensed-to-condensed selection mechanism is not established in this source audit. Geometry/dimensional choices and scalar clock are inputs, not proved emergence from nothing.",
+      "first_failed_role": "F1 direct theorem inheritance absent; F4 fixed amplitude-number-as-phase-charge identification fails on the preregistered local effective phase space.",
+      "retained_role": "One sharply delimited relational-condensate framework lead. It has actual equations and observables, unlike a verbal analogy; it is not an acquired parameter-fixed TECT physical model."
+    },
+    {
+      "id": "KONOPKA-MARKOPOULOU-SEVERINI-0801.0861v2",
+      "url": "https://arxiv.org/pdf/0801.0861v2",
+      "sha256": "123b9fe59bbe0067b8d39c0d307e70057b717de0a4d7dd910400d76d19e69977",
+      "version_date": "2008-05-23",
+      "role": "GRAPH_PHASE_REFERENCE_ONLY",
+      "locators": "Eqs.3-10 pp4-5;17 p7;20-24 p8;27-28 p10;29-31 p11; Table I p22; Sec.VI p23",
+      "physical_inputs": "Fixed finite vertex graph Hilbert space, edge variables, valence/cycle Hamiltonian and graph-changing interactions.",
+      "phase_boundary": "Stationary phase comparison omits move terms; time is external in both regimes. Cooling interpretation and phase-transition control remain unresolved; no infinite-N conclusion.",
+      "first_failed_role": "F1 direct P1 map absent; F3 time-origin role ineligible. Fixed vertex number is not conserved edge occupation or P1 charge.",
+      "retained_role": "Partial graph/locality comparator only; no second deep test."
+    }
+  ],
+  "link_finding": {
+    "statement": "The proposed state-independent equality N_j/2=c*Q_j fails on the displayed local effective phase space; this is a reusable applicability boundary, not a universal model no-go.",
+    "phase_space_derivation": "From Eq64, Q=x*y'-y*x'. At sigma=a and velocities i*b,2*i*b, the same N=a^2 gives Q=a*b,2*a*b. For a,b>0, equations a^2/2=c*a*b and a^2/2=2*c*a*b are inconsistent. A unitful constant cannot remove the state dependence.",
+    "reduced_diagnostic": "For sigma=a*(cosh(m*phi)+i*sinh(m*phi)), the equality diagnostic of Eq66 has zero residual; N=a^2*cosh(2*m*phi), Q=a^2*m. Thus (N/2)''(0)=2*a^2*m^2>0 while Q is constant. The printed source equation is approximate.",
+    "why_not_physical_counterexample": "No all-Schwinger-Dyson solution or global normalized Fock state is constructed. The witness is not square-integrable over all phi; cutting it off would change the equation. No interaction-error or mesoscopic-validity bound is supplied.",
+    "why_not_R158_refutation": "R158 is a static constrained ensemble, not a conservation theorem for A2 gradient time. Different derivative-sensitive maps or justified physical-state restrictions remain outside this test.",
+    "scope": "One nonzero isotropic spin mode, local relational-variable Cauchy data, no cutoff/volume/continuum limit. The external candidate carrier is not the fixed spatial T^3 complex three-vector P1 carrier."
+  },
+  "reviews": {
+    "primary": "Root read located source equations, hash-pinned the test before computation, and visually inspected PDF pp33 and35.",
+    "independent": "phy002_internal_constraints independently checked real components and source/local-state boundaries without reading primary code; phy002_reuse_matrix independently repeated algebra and audited applicability.",
+    "graph_source": "phy002_graph_source separately read the single versioned Graphity paper and computed its PDF hash. No unrelated literature expansion.",
+    "human_external_review": false,
+    "hostile": [
+      {"objection": "Same Q notation proves a conserved TECT charge.", "disposition": "UPHELD against import: normalization and state dependence fail; R158 conservation was never established."},
+      {"objection": "Approximate Eq66 is the exact interacting microscopic dynamics.", "disposition": "UPHELD boundary: residual was dropped only for a diagnostic equality; interaction conservation and error control are not established."},
+      {"objection": "The hyperbolic solution is a globally physical coherent state.", "disposition": "UPHELD boundary: global phi integrability and all microscopic equations are not supplied."},
+      {"objection": "This excludes every derivative-dependent map or restricted physical domain.", "disposition": "UPHELD against that overclaim: only the frozen constant norm identification is excluded."},
+      {"objection": "GFT supplies time/geometry emergence because Graphity assumes time.", "disposition": "UPHELD against promotion: GFT also has geometric and scalar-clock inputs, approximation and parameter-family choices."},
+      {"objection": "Existing high-tier Sector-A results select this external model.", "disposition": "UPHELD against promotion: no exact inheritance map. Methods and constraints remain useful without supplying the conclusion."}
+    ],
+    "lean": "NOT_RUN: no existing Lean theorem imported. Symbolic local identities checked twice; source/model correspondence remains outside such algebra checks."
+  },
+  "research_value": "Standard condensate/graph frameworks are not new discoveries. The useful contribution is a proof-aware selection matrix and a cheap falsification of a tempting TECT charge identification before expensive phase/continuum calculations. It is auxiliary progress, not a mainline gate closure.",
+  "next_question": "Within this same versioned GFT source, can a noncondensed-to-condensed state-selection or instability criterion be derived from specified microscopic kernels without assuming the condensate ansatz or fitting a kernel?",
+  "reentry": "Only a separately authorized bounded audit of a located state-selection criterion with its actual coefficients/domain, or a substantively new source-owned packet. If the frozen source supplies only an ansatz and unspecified kernel family, record that exact insufficiency and park. No repeat of the N-to-Q test, new ODE tables, kernel fitting or automatic candidate expansion.",
+  "non_claims": "No adopted new model, direct inherited theorem, exact microscopic counterexample, physical Pre-A, spacetime, QFT, GR, continuum, mass gap, TOE, black-hole timelessness or outside-universe equivalence. No change to PAH/P1 or T-054 gate."
+}

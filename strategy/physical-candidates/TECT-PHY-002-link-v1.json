@@ -1,0 +1,47 @@
+{
+  "schema": "tect/physical-candidate-link-contract/1.0",
+  "id": "TECT-PHY-002-LINK-v1",
+  "date": "2026-11-12",
+  "admission_sha256": "82b7aa4a53d0ef300dfef11536ad018f1934d2034d1983a454202e5eb8880b96",
+  "status": "PREREGISTERED_DIAGNOSTIC_NOT_MODEL_ADOPTION",
+  "selected_family": "RELATIONAL_CONDENSATE",
+  "selection_reason": "Among two predeclared leads this source exposes a condensate amplitude, relational variable and distinct number, volume and charge observables. It therefore permits a cheap explicit test of the proposed R-158 quantity link. Graphity remains a graph-phase reference with external time and no P1 map.",
+  "source": {
+    "id": "ORITI-SINDONI-WILSONEWING-1602.05881v2",
+    "url": "https://arxiv.org/pdf/1602.05881v2",
+    "version_date": "2016-10-24",
+    "sha256": "94cc52828b0f69ec2950ca71fd44192ab9c1af6aff74e2290c8f9b7927b275c8",
+    "cache_file": "gft-v2.pdf",
+    "locators": "Sec. II SU(2)^4 quantum tetrahedra; Eqs.35,39-42; Eq.58 p32; Eq.64 p33; Eq.66 p35; Eq.73 p37; approximation boundaries pp34-36",
+    "source_equations": {
+      "58": "A_j sigma_j'' - B_j sigma_j + w_j conjugate(sigma_j)^4 = 0",
+      "64": "Q_j = -i/2 * (conjugate(sigma_j)*sigma_j' - sigma_j*conjugate(sigma_j'))",
+      "66": "sigma_j'' - m_j^2 sigma_j approximately 0; m_j^2=B_j/A_j",
+      "73": "V(phi)=sum_j V_j*abs(sigma_j(phi))^2"
+    }
+  },
+  "tect_input": {
+    "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json",
+    "sha256": "82ecf0e8e4e4b3d99cb67fad1655e03d85c63921f9e02deb83bd8ad0a74138e5",
+    "quantity": "Q_P1=||Psi||_L2(T^3;C^3)^2/2",
+    "scope": "Conditional static ensemble at fixed side-16 torus; no derived physical reservoir or conservation law. Its Q is not asserted conserved under A2 gradient flow."
+  },
+  "question": "Can the obvious amplitude-norm assignment inherit a conserved physical charge from this source, without an additional state/observable map?",
+  "attempted_link": "After an otherwise unspecified constant mode-volume normalization, identify N_j/2=abs(sigma_j)^2/2 with c*Q_j, where c is fixed, nonzero and may carry units but cannot depend on phase, state or relational time. This is an explicitly proposed test, NOT a source-authorized P1 embedding.",
+  "frozen_inputs": {
+    "observable": "N_j=abs(sigma_j)^2 at a fixed relational phi, not the integral over all phi in Eq.40",
+    "domain": "One nonzero isotropic spin mode of the displayed effective ODE; local smooth Cauchy data, not a claimed normalizable exact solution of all microscopic Schwinger-Dyson equations",
+    "phase_space_test": "At phi=0 compare sigma=a with sigma'=i*b and sigma'=2*i*b, a,b>0. Same amplitude and volume, different charge. No arbitrary restriction on these velocities is supplied by the displayed second-order equation.",
+    "reduced_equation_test": "For the diagnostic equality obtained by dropping the residual in source Eq.66, use sigma=a*(cosh(m*phi)+i*sinh(m*phi)), a,m>0. Exact statements are only about this reduced equation; the source prints an approximation sign.",
+    "parameters": "a and b retain amplitude/relational-derivative units; m has inverse-phi units. No value is fitted and phi is not proper, laboratory, Lorentzian or Markov time.",
+    "limits": "No large-volume, spin, lattice, cutoff or time limit. No uniform approximation-error bound claimed."
+  },
+  "verification": {
+    "primary": "Exact symbolic differentiation of the frozen witness and phase-space values, plus source/hash checks.",
+    "independent": "Separate reviewer checks source scope, real-component formula Q=x*y'-y*x', local Cauchy data and units without relying on the primary result.",
+    "hostile": "Attempt sign/factor, number/charge, approximation/exactness, derivative-dependent-map and physical-state overclaims.",
+    "lean": "Not required for this source-applicability diagnostic; no existing Lean theorem is imported."
+  },
+  "decision_boundary": "Failure excludes only the fixed norm-as-conserved-charge identification in the displayed effective phase space. It does not disprove GFT, all maps into P1, a physical theory, or the source paper. An explicit different map or justified restricted physical state space requires a separate authorized contract.",
+  "non_claims": "No adopted TECT model, exact microscopic solution, geometrogenesis transition, physical Pre-A, spacetime, QFT, gravity, continuum, mass gap or TOE. No inherited R-158 transition or A2/A13 dynamics."
+}

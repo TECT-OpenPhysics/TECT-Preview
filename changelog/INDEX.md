@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1125 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1126 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-11-12 | `20261112-c6-a2-tect-phy-002-proof-aware-candidate-filter` — [C6/A2: TECT-PHY-002 proof-aware candidate filter and charge-link boundary] - 2026-11-12 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE, F3-INFLATION-CMB | [bounded page](pages/001119-001168.md#20261112-c6-a2-tect-phy-002-proof-aware-candidate-filter) |
 | 2026-11-12 | `20261112-a6-a7-self-repaired-v0-1-2-package-with-externa` — [A6 A7: self-repaired v0.1.2 package with external review explicitly deferred] - 2026-11-12 | A6-CLASSII-K-COMPOSITE-DEFINITION, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | [bounded page](pages/001119-001168.md#20261112-a6-a7-self-repaired-v0-1-2-package-with-externa) |
 | 2026-11-12 | `20261112-c6-tect-phy-001-bounded-source-intake-phase-sta` — [C6 TECT-PHY-001: bounded source intake, phase-start clarification and durable idea retrieval] - 2026-11-12 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE, F3-INFLATION-CMB | [bounded page](pages/001119-001168.md#20261112-c6-tect-phy-001-bounded-source-intake-phase-sta) |
 | 2026-11-12 | `20261112-a6-a7-xu-comparison-and-targeted-review-edition` — [A6 A7: Xu comparison and targeted-review edition 0.1.1] - 2026-11-12 | A6-CLASSII-K-COMPOSITE-DEFINITION, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | [bounded page](pages/001119-001168.md#20261112-a6-a7-xu-comparison-and-targeted-review-edition) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-28 | `20260928-c6-clk-002-portable-lean-replay-correction-with` — [C6 CLK-002 portable Lean replay correction without evidence rewrite] - 2026-09-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260928-c6-clk-002-portable-lean-replay-correction-with) |
 | 2026-09-28 | `20260928-c6-tect-clk-002-conditional-joint-clock-and-fre` — [C6 TECT-CLK-002 conditional joint clock and free-fall response] - 2026-09-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260928-c6-tect-clk-002-conditional-joint-clock-and-fre) |
 | 2026-09-14 | `20260914-tect-clk-001-v1-1-metadata-correction-and-mainl` — [TECT-CLK-001 v1.1 metadata correction and mainline-managed integration] - 2026-09-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260914-tect-clk-001-v1-1-metadata-correction-and-mainl) |
-| 2026-09-14 | `20260914-tect-clk-001-clock-observable-admission-boundar` — [TECT-CLK-001 clock-observable admission boundary] - 2026-09-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260914-tect-clk-001-clock-observable-admission-boundar) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1119–1125 | 7 | [001119-001168.md](pages/001119-001168.md) |
+| 1119–1126 | 8 | [001119-001168.md](pages/001119-001168.md) |
 | 1069–1118 | 50 | [001069-001118.md](pages/001069-001118.md) |
 | 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |

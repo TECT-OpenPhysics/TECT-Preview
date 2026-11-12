@@ -1,0 +1,109 @@
+{
+  "schema": "tect/proof-reuse-matrix/1.0",
+  "id": "TECT-PHY-002-REUSE-v1",
+  "base_commit": "e106547c4fead412643258d3d2762667301e5255",
+  "rule": "Theorem conclusions transfer only with an explicit matching carrier, functional, state, domain, normalization, regulator and time/limit map. METHOD_REUSE supplies a strategy, not an inherited conclusion. A failed import does not refute the external framework.",
+  "rows": [
+    {
+      "authority": "R-577 / PAH-STATE-001",
+      "path": "strategy/pa-hyp/PAH-STATE-001-result-v1.json",
+      "sha256": "19b10936de6c67bea1086c4adec95faee71627a282eb17d0a2a1909ecffc21f8",
+      "scope": "One admitted finite original PAH-v2 counting law: displayed (s,psi,U) is not a memoryless sufficient state, including under original stationary Gibbs initialization. The full counting model is not refuted.",
+      "candidate_use": "EXACT_INTERNAL_FILTER_ONLY: no silent deletion of hidden counting coordinates or replacement by a fitted memoryless display law. METHOD_REUSE: explicitly test state sufficiency for any new candidate."
+    },
+    {
+      "authority": "PAH-OBS-002",
+      "path": "strategy/pa-hyp/PAH-OBS-002-assessment-v1.json",
+      "sha256": "8c4984925f87173cd2c8c96552e3bd53185cb1635cec21dc8f39c5ad95061803",
+      "scope": "Actual atom-light comparison does not supply PAH carrier/state identity or original stochastic-law/time realization. Physical loop readout and uniform errors remain unadmitted.",
+      "candidate_use": "REFERENCE_ONLY boundary: shared gauge notation, an external readout or laboratory seconds do not establish PAH dynamics. No laboratory repeat in PHY-002."
+    },
+    {
+      "authority": "R-157",
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/pinned_functional_unique_zero_global_minimizer_manifest.json",
+      "sha256": "ef50a9b704f5d9cd421844f8c7aa9691aad91ffb636f078dcb402c9f0979ca19",
+      "scope": "Fixed side-16 T^3, H2 complex three-vector, eta_shell=0, pinned P1. Unique zero critical/global minimum and decay for canonical L2 gradient flow.",
+      "candidate_use": "EXACT_INTERNAL_FILTER_ONLY: reject a nonzero vacuum claim for unchanged neutral P1; not a no-go for another theory."
+    },
+    {
+      "authority": "R-158",
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json",
+      "sha256": "82ecf0e8e4e4b3d99cb67fad1655e03d85c63921f9e02deb83bd8ad0a74138e5",
+      "scope": "Same fixed torus and static functional; Q=||Psi||^2/2, constrained or F-mu*Q ensemble. Conditional coexistence, no physical charge, reservoir or chemical-potential derivation; plane-wave density uniform.",
+      "candidate_use": "METHOD_REUSE_ONLY for GFT/Graphity until an actual functional/state/observable map is derived. A source quantity called Q is insufficient."
+    },
+    {
+      "authority": "A1",
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "scope": "Standalone F_ref with six-real L2 gradient convention. Historical F_decl/R_exec mismatch remains separate.",
+      "candidate_use": "METHOD_REUSE: variational derivative, symbol and normalization audit; no historical solver or new micro-action identity."
+    },
+    {
+      "authority": "A2",
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/status.json",
+      "sha256": "bdc6fdf00145eec8290d110a81cd54512a237da62418f18819c2f291bc0702fd",
+      "scope": "H2 complex three-vector on fixed torus; deterministic L2 gradient flow, fixed floors and functional.",
+      "candidate_use": "METHOD_REUSE: coercivity and PDE estimates. No direct quantum, Hamiltonian, Markov or relational-time inheritance."
+    },
+    {
+      "authority": "A3",
+      "path": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/status.json",
+      "sha256": "5f156750c2b73a40c12334973514a6d8926907d37430249bf4f63c3d2942078c",
+      "scope": "Same A2 flow; exact nonlinear Galerkin projection, bounded H2 initial data and positive-time window. Not volume/floor removal.",
+      "candidate_use": "METHOD_REUSE: residual/energy comparison, not a GFT or graph continuum limit."
+    },
+    {
+      "authority": "A4",
+      "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/status.json",
+      "sha256": "1a1747ccb2193e3ca832dd6ecb36079ed2c8ff1b53ac5fb93e56e49281e193f2",
+      "scope": "Separate real scalar, positive-mass q4 Gaussian, stabilized scalar potential, fixed-torus static Gibbs law.",
+      "candidate_use": "METHOD_REUSE: Gaussian density and correlation control; no full-vector measure or time evolution."
+    },
+    {
+      "authority": "A5",
+      "path": "claims/A5-SECTOR-A-SYNTHESIS/status.json",
+      "sha256": "706c262e2e8f33e604f87087a828495a55f19f082bbaa17e0217073b233302a7",
+      "scope": "Conditional synthesis keeps full-vector deterministic and positive-mass scalar static branches distinct, with distinct parameters.",
+      "candidate_use": "REFERENCE_ONLY: dependency contract, not proof these branches share one physical dynamics."
+    },
+    {
+      "authority": "A6",
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/status.json",
+      "sha256": "bfffc38c638ba27c51e8eb0f9b02e66179a4d953e94e8a9e7b0e50b84826365f",
+      "scope": "Fixed-floor production Gaussian field, bounded real-even scalar Fourier regulators, canonical current/composite.",
+      "candidate_use": "METHOD_REUSE: composite construction only; no interacting Gibbs or new candidate covariance."
+    },
+    {
+      "authority": "A7",
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/status.json",
+      "sha256": "d6d5b341cb0ff18137618395234999b07d55bcdcf6d86c3b86f4d68fc4752288",
+      "scope": "Same Gaussian/floor setting and conditional derivative-covariance subtraction; L2 random-distribution convergence.",
+      "candidate_use": "METHOD_REUSE: renormalized composite audit. Signed composite convergence is not positive interacting Gibbs construction."
+    },
+    {
+      "authority": "A13",
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "be613720df9008ea6d1db718fcb3e6e61e4db5b07b943b0a5974ee00285e3527",
+      "scope": "Conditional root/filtration/Gaussian-current supplier; heat maps, raw-current intertwiner and one-use ledger still need production owner.",
+      "candidate_use": "METHOD_REUSE: owner/common-core checks. Neither GFT nor A2 gradient flow fills the missing stochastic owner."
+    },
+    {
+      "authority": "B1/B2",
+      "scope": "Reading-H Gaussian-Hartree comparison with fixed reference, finite parts, normalization, certified region and restricted competitors.",
+      "candidate_use": "REFERENCE_ONLY for these candidates. No comparison with a new physical empty state or microscopic phase is imported."
+    },
+    {
+      "authority": "C6/F3",
+      "scope": "Spacetime signature and primordial spectrum remain open, T1. No completed physical emergence theorem to inherit.",
+      "candidate_use": "REFERENCE_ONLY: target questions and non-claims. Not premises."
+    }
+  ],
+  "counterexample_boundaries": [
+    "Preserve PAH-v1/v2 carriers, rates, counting coordinates, original states and time; no new clock fitting or observable selection to evade their failures.",
+    "PA-M5 screened-shell static structure is not a Lorentz/gauge completion. Finite isolated-node design does not supply a physical state or time law.",
+    "R-192 owner slots are not supplied by a theorem about a different time evolution."
+  ],
+  "finding": "Neither of the two external families has a demonstrated EXACT_REUSE map. GFT is a conditional relational-condensate review lead, not an adopted P1-compatible physical model. Existing exact proofs remain useful as admissibility constraints and methods.",
+  "review": "Independent read-only canonical audit by phy002_reuse_matrix and phy002_internal_constraints; current cards over stale prose. No existing theorem re-proved in this checkpoint."
+}

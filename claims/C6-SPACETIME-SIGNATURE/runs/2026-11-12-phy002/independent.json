@@ -1,0 +1,31 @@
+{
+  "checker": "TECT-PHY-002-independent-real-component-diagnostic",
+  "status": "PASS",
+  "script_sha256": "07c0608f63477392cb44f654e27aa75c9e54517bff8097be3efebb2332f6e93c",
+  "engine": {
+    "name": "sympy",
+    "version": "1.14.0"
+  },
+  "expressions": {
+    "Q_real": "-dx*y + dy*x",
+    "initial_N_both": "a**2",
+    "initial_Q": [
+      "a*b",
+      "2*a*b"
+    ],
+    "reduced_residual": "0",
+    "N": "a**2*cosh(2*m*phi)",
+    "Q": "a**2*m",
+    "d_half_N": "a**2*m*sinh(2*m*phi)"
+  },
+  "scope": "Local effective Cauchy data and the diagnostic equality sigma''-m^2*sigma=0 only; source Eq.66 is approximate.",
+  "interpretation": "Identical positive amplitude norms with charges ab and 2ab exclude a fixed nonzero state-independent N/2=cQ assignment on the declared local phase space.",
+  "non_claims": [
+    "No exact interacting or microscopic solution.",
+    "No globally normalizable Fock-state assertion.",
+    "No exclusion of derivative-dependent maps or justified restrictions.",
+    "No source error bound or physical-time identification.",
+    "No adopted TECT model, physical Pre-A, spacetime, QFT or gravity.",
+    "No automatic follow-up research authorization."
+  ]
+}

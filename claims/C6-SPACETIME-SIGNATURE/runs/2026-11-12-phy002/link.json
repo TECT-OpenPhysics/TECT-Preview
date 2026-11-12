@@ -1,0 +1,48 @@
+{
+  "schema": "tect/phy002-link-run/1.0",
+  "status": "PASS_SCOPED_DIAGNOSTIC",
+  "claim_bearing": false,
+  "active_gate_change": false,
+  "new_result_id": null,
+  "contract_sha256": "1b848a35dc2e4c1102b246c3afc71929fb52cc4cd320ac9794e820efaf4ba683",
+  "script_sha256": "71a43a0d666d425fae604ae2c5799ace429bc60bd3e24783036ec8a71be7e684",
+  "source_sha256": "94cc52828b0f69ec2950ca71fd44192ab9c1af6aff74e2290c8f9b7927b275c8",
+  "source_bytes_verified_this_run": true,
+  "sympy_version": "1.14.0",
+  "checks": {
+    "reduced_equality_residual_zero": true,
+    "number_formula": true,
+    "charge_formula": true,
+    "real_component_convention": true,
+    "charge_constant_in_reduced_law": true,
+    "half_norm_derivative": true,
+    "half_norm_not_constant_locally": true,
+    "same_amplitude_two_velocities": true,
+    "distinct_charges_at_same_amplitude": true,
+    "first_initial_charge": true,
+    "second_initial_charge": true
+  },
+  "rejected_mutations": {
+    "reversed_charge_sign": true,
+    "missing_half_in_charge": true,
+    "number_mistaken_for_constant_charge": true,
+    "stationary_point_mistaken_for_constant_function": true,
+    "same_number_forces_same_charge": true,
+    "oscillatory_wrong_sign_law": true
+  },
+  "derived": {
+    "sigma": "a*(I*sinh(m*phi) + cosh(m*phi))",
+    "residual": "0",
+    "number": "a**2*cosh(2*m*phi)",
+    "charge": "a**2*m",
+    "half_norm_derivative": "a**2*m*sinh(2*m*phi)",
+    "half_norm_second_derivative_at_zero": "2*a**2*m**2",
+    "initial_charges": [
+      "a*b",
+      "2*a*b"
+    ]
+  },
+  "scope": "One fixed spin, local effective Cauchy data; exact algebra of Eq64 and the equality diagnostic for approximate Eq66. Not all microscopic equations, an exact global coherent state or an error estimate for nonzero interactions.",
+  "finding": "A fixed nonzero normalization cannot identify amplitude number/2 with the relational phase charge on this effective phase space. The reduced-law example also separates changing number from constant phase charge.",
+  "non_claims": "No universal map no-go, physical-state counterexample, inherited R158 result, physical Pre-A, spacetime, gravity, QFT, continuum or TOE. No Lean proof."
+}
