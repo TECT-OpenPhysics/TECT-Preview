@@ -5,13 +5,14 @@
 
 Authorities: `negative-results/registry.md`.
 
-**394 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 318 · retraction: 5
+**395 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 319 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
 | [`NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV`](registry.md#ng-2026-11-12-pah-state001-display-markov) | no_go | exact displayed-only memoryless realization of PAH-v2 |
+| [`NG-2026-11-12-EXCH001-EXACT-R158-INHERITANCE`](registry.md#ng-2026-11-12-exch001-exact-r158-inheritance) | no_go | exact old R158 coexistence under the new parent |
 | [`NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING`](registry.md#ng-2026-10-14-pah-v2-rd001-displayed-freezing) | no_go | nontrivial original-time dynamics of fixed source-displayed readouts |
 | [`NG-2026-10-14-PAH-TIME002-DECLARED-CLOCK-FREEZING`](registry.md#ng-2026-10-14-pah-time002-declared-clock-freezing) | no_go | use declared local clocks alone to restore W motion |
 | [`NG-2026-09-14-PAH-V2-SG001-FIXED-TIME`](registry.md#ng-2026-09-14-pah-v2-sg001-fixed-time) | no_go | original-time semigroup convergence for the unchanged R-573 fixed character |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE`](registry.md#ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance) | no_go | require a positive-strip L1 Weyl-Fourier coefficient carrier to remain invariant under the exact quartic onsite subflow |
 | [`NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION`](registry.md#ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration) | no_go | infer a finite exhaustive realization list from truncated-octahedron face combinatorics alone |
 | [`NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER`](registry.md#ng-2026-08-14-pre-a-t055-reading-h-scalar-constants-automatic-pinned-p1-energy-intertwiner) | no_go | infer an ordering-preserving Reading-H-to-pinned-P1 energy identity from shared printed scalar couplings or one constant amplitude normalization |
-| [`NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING`](registry.md#ng-2026-08-14-pre-a-t055-reading-h-bcc-110-on-shell-automatic-side16-torus-embedding) | no_go | treat the registered Reading-H BCC `{110}` shell as an automatic exact on-shell support-preserving embedding in the side-16 pinned P1 torus |
 
 Search without loading the full registry:
 

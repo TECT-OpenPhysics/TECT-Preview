@@ -9,7 +9,7 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  33 proof units  ·  tier span T1
+## (all notes)/  ·  34 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -17,6 +17,7 @@
 | `comparison-contract-admission` | v1.0 | T1 | Full finite comparison-definition admission | Analytic, exact checks, partial Lean | Specify one full-label generator-defect target |
 | `crt-gibbs-defect` | v1.0 | T1* | The fixed character (3) has fine-Gibbs defect norm at least | ANALYTIC, EXACT, EXECUTED; partial parameteri… | Does the same fixed character obstruct original-time |
 | `crt-semigroup-defect` | v1.0 | T1 | Equation (8) refutes SG-001 at unchanged time $1/10$, | ANALYTIC, EXACT, EXECUTED, INHERITED; partial… | Park this comparison route. Reenter only on an exact |
+| `internal-exchange` | v1.0 | T1* | complete regulated charge-transfer flow; | ANALYTIC, EXACT, EXECUTED, CONDITIONAL. | physical input, or a precise |
 | `labelled-finite-dynamics` | v1.0 | T1 | Five finite operator identities for pinned v2. | ANALYTIC, EXACT, EXECUTED; partial Lean. | Separate fixed comparison-map admission. |
 | `pah-display-state` | v1.0 | T1 | Exact displayed-state Markov closure fails. | ANALYTIC, EXACT, EXECUTED, INHERITED. | Park; require physical latent-state/memory evidence. |
 | `pah-local-clock-freezing` | v1.0 | T1* | Equation (10) proves the preregistered maximal | ANALYTIC, EXACT, EXECUTED, INHERITED cap. | finish checkpoint, then park. Reopen only for |

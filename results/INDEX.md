@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**402 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**403 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-578`](../RESULTS-LEDGER.md#r-578) | hypothetical internal-exchange parent | See authority |
 | [`R-577`](../RESULTS-LEDGER.md#r-577) | PAH-v2 displayed-state Markov sufficiency obstruction | See authority |
 | [`R-576`](../RESULTS-LEDGER.md#r-576) | PAH-v2 maximal-path freezing in declared local clocks | See authority |
 | [`R-575`](../RESULTS-LEDGER.md#r-575) | PAH-v2 original-time displayed-readout freezing | See authority |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-556`](../RESULTS-LEDGER.md#r-556) | PAH-OMC-020 minimal ordered-convergence dependency audit | See authority |
 | [`R-555`](../RESULTS-LEDGER.md#r-555) | PAH-OMC-020 exact ordered-epsilon bridge | See authority |
 | [`R-554`](../RESULTS-LEDGER.md#r-554) | PAH-OMC-020 fresh current-byte owner-search snapshot v1.4 | See authority |
-| [`R-553`](../RESULTS-LEDGER.md#r-553) | PAH-OMC-020 positive-time separation from source multiplicity | See authority |
 
 Search without loading the full ledger:
 

@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 81
+Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 82
 
 ## In progress
 
@@ -303,4 +303,6 @@ Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibi
   - _updated 2026-11-12_
 - **T-100** TECT-PHY-002 proof-compatible phase-microphysics candidate filtering  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
   - Explicit operator re-entry: existing proof/negative crosswalk first, then cheap source-definition/background filters, at most two deliberate candidate families and one exact physical-quantity link. No original model changes or automatic successor. strategy/physical-candidates/TECT-PHY-002-admission-v1.json
+  - _updated 2026-11-12_
+- **T-101** TECT-EXCH-001 fixed internal-conversion parent and R158 compatibility  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
   - _updated 2026-11-12_

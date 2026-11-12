@@ -1,0 +1,61 @@
+{
+  "schema": "tect/exchange-parent-result/1.0",
+  "id": "TECT-EXCH-001-RESULT-v1",
+  "result_id": "R-578",
+  "task_id": "T-101",
+  "date": "2026-11-12",
+  "classification": "auxiliary_support",
+  "claim_bearing": true,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "host_tier": "C6 T1 OPEN unchanged",
+  "result_scope_tier": "CONDITIONAL_FINITE_REGULATOR_THEOREM",
+  "verdicts": {
+    "total_charge_and_complete_flow": "PROVED_EACH_FINITE_K",
+    "genuine_component_transfer": "PROVED_FOR_ADMISSIBLE_NONEQUILIBRIUM_DATA",
+    "exact_R158_inheritance": "DISPROVED",
+    "controlled_shifted_variational_coexistence": "PROVED_CONDITIONAL_FINITE_K",
+    "physical_realization": "NOT_ESTABLISHED"
+  },
+  "statement": "For every fixed finite K>=1 the separate frozen parent has complete Hamiltonian flow conserving Qpsi+2Qchi and actual component transfer. Conditional on pinned R158, finite-volume variational coexistence occurs at mu_c(K) strictly between mu_t-2827/589824 and mu_t, with a positive K-dependent charge jump. The old coexistence point/minimizer are not inherited.",
+  "source_hashes": {
+    "strategy/physical-candidates/TECT-EXCH-001-contract-v1.json": "d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e"
+  },
+  "evidence_hashes": {
+    "verification/scripts/exch001_primary.py": "0100d3d78825990cc4ac40d5f4ea062997e3a79f48e1d2bedc4108aedc4d483b",
+    "verification/scripts/exch001_independent.py": "eedb276df10bdddb75ded7b8c336e3d573196f2884f8691670fab2a6e31f65cb",
+    "verification/scripts/exch001_lean.py": "dd2154991b1bd70c34ef0f250575ecbe19bc322a19b4da7a8502095d3c5351f0",
+    "verification/scripts/exch001_verify.py": "e4c2f89a2a075b0fb9aafa025c5ebb85c636bad5f63e92504fadc5fac5f40a50",
+    "verification/lean/Tect/ExchangeParent.lean": "53eed805dd274dbf10422e4ee5c7d4df0e5d0cae4ce325324b52e9b160529529",
+    "claims/C6-SPACETIME-SIGNATURE/notes/internal-exchange-261112-v1.0.tex.txt": "5dbdb69615cbe46b78dab1eb0db39da5346c997af5ecefad7286e284edae515f",
+    "claims/C6-SPACETIME-SIGNATURE/notes/internal-exchange-261112-v1.0.pdf": "cba4f109ccaa01cb1140333d5c3dfe2bd08c6d2bac436caf0107416cf7a7bf7e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-12-exch001/hostile-review.json": "2b4de55073ab1824a7af1cb234afc63965f800f7260cd82737440e7217c8ee9c"
+  },
+  "scope": "Fixed periodic side16 3D torus, exact Fourier Psi K / chi2K, new classical canonical parameter and inserted omega=u=1, epsilon=1/16. Weighted global U1, not local gauge invariance. No regulator/volume/thermal limit or Gibbs state.",
+  "assumptions": [
+    "Pinned R158 identity and positive remainders",
+    "Positive floors, exact projection",
+    "Inserted reservoir, bracket and coefficients",
+    "Finite-K compactness and explicit local charge exclusion"
+  ],
+  "missing_physical_inputs": [
+    "Physical carrier/reservoir and prepared state",
+    "Operational clock/normalization",
+    "Equilibration or phase-selection mechanism",
+    "Uniform jump, limit and observable map"
+  ],
+  "literature_applicability": "R158 applies conditionally to the unchanged P1 component only. Standard Hamiltonian/compactness methods with a model-specific construction and bound; no novelty priority or PAH/GFT import.",
+  "verification": {
+    "command": "python -X utf8 verification/scripts/exch001_verify.py --lean-cache E:/Dev/TECT/verification/lean/.lake/packages",
+    "primary": "19 exact checks",
+    "independent": "14 non-importing checks and analytic review",
+    "hostile": "Separate review; corrected threshold to infimum of negative-minimum set",
+    "lean": "Six compiled parameterized algebra lemmas; ODE/compactness not formalized",
+    "legacy": "R158 primary35/35 and independent24/24 PASS; full deterministic PDF rebuild FAIL, original PDFs restored unchanged",
+    "pdf": "Four final pages rendered and visually inspected; no clipping, overlap or overfull boxes; footer together"
+  },
+  "falsifier": "A defect in symmetry/projection, positivity, doubled shell, equicoercivity or local charge exclusion invalidates its dependent conclusion. No post-hoc repair.",
+  "next_question": "Which independently justified physical carrier/state/time packet realizes this law and charge, beyond a successful variational family?",
+  "reentry": "Actual physical input or precise mathematical objection; no automatic model replacement, fitted control or successor chain.",
+  "non_claims": "No P1/PAH modification, exact old coexistence inheritance, Gibbs relaxation, dynamical phase crossing, creation from exact zero, predicted mu, physical PreA, spacetime, QFT, gravity, continuum, mass gap or TOE. C6/T054 unchanged."
+}

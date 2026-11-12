@@ -1,0 +1,10 @@
+{
+  "status": "LEGACY_FULL_REPLAY_FAIL_PDF_REBUILD",
+  "command": "python -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
+  "finding": "The old full verifier rebuilt source PDFs using the current engine and failed its byte-identity/size expectations, including nested R157. This is not recorded as a full legacy verifier PASS.",
+  "r158_expected_pdf_sha256": "236e8ae25d6a1ab465a06eebaac85c0e6c2c581749a0cb0ca6d743c7fbebc6a2",
+  "r158_rebuilt_pdf_sha256": "81ea81555a34c3b140b8d3bc2c7c731a0f66a4919635bfd10dd7871ef3d3c7c4",
+  "repair": "Restored only the two PDFs changed by this attempt from the clean canonical checkout; verified exact hashes. No research source or expected hash changed.",
+  "fallback": "Run original R158 primary and independent exact certificates with output under ignored internal/, without its historical deterministic-PDF rebuild. New theorem remains explicitly conditional on R158's pinned identity, with its own algebra/analytic audit.",
+  "non_claims": "No complete historical PDF determinism repair or full R157 integration PASS is claimed. No mathematical hypothesis is discharged by this environmental failure."
+}

@@ -1,0 +1,201 @@
+% Title: Internal exchange and controlled variational coexistence
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-11-12; this version issued 2026-11-12
+% Status: R-578; conditional finite-regulator model theorem, not physical emergence
+
+\section{Purpose and scope}
+This is one newly hypothesized parent, not a repair of P1 or PAH.
+The immutable contract is TECT-EXCH-001-v1, SHA-256
+\texttt{d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e}.
+We prove genuine component exchange and a controlled shifted finite-volume
+variational coexistence. We separately reject exact inheritance of the old
+R-158 coexistence point. The host C6 remains T1 OPEN and T-054 unchanged.
+
+On the original periodic torus of side 16 and volume $V=4096$, fix any
+finite integer $K\ge1$. The three-component $\Psi$ has Fourier indices
+$|n_i|\le K$; the scalar $\chi$ has $|n_i|\le2K$. Use exact integrals,
+orthonormal Fourier coordinates and orthogonal variational projections, not
+collocation products. All original P1 coefficients and positive floors remain.
+The new dimensionless inputs are $\omega=u=1$, $\varepsilon=1/16$.
+Writing $\rho=|\Psi|^2$ and $S=\sum_a\Psi_a^2$, set
+\[
+ H=F_{\rm P1}[\Psi]+\int\left(\frac{|\chi|^2}{2}
+       +\frac{|\chi|^4}{4}-\varepsilon\Re(\bar\chi S)\right),
+ \quad Q=Q_\Psi+2Q_\chi,
+ \quad Q_\Psi=\frac12\int\rho,\quad Q_\chi=\frac12\int|\chi|^2.
+\]
+The real canonical bracket is $\{z,\bar z\}=-2i$ in each coordinate;
+$\dot z=-2i\partial_{\bar z}H$ uses a new parameter $\tau$.
+It is not A2 gradient time, PAH Markov time or an observed clock.
+No Gibbs law or quantum state is assumed. Static states mean all minimizers
+of $\Omega_\mu=H-\mu Q$. Here $\mu$ is a multiplier, not a fitted forcing
+history or a predicted cosmological control.
+
+\section{Inherited input and exact dynamics}
+The conditional R-158 identity, restricted to this Fourier subspace, is
+\[
+ F_{\rm P1}=\mu_tQ_\Psi+
+ \tfrac12\langle\Psi,(L-\lambda_0)\Psi\rangle+F_{\rm II}
+ +\frac\gamma6\int\rho(\rho-\rho_*)^2.
+\]
+All displayed remainders are nonnegative. Its source provides
+$\gamma=81/50$, $\rho_*=43/216$, $g=\lambda_0-\mu_t=1849/86400$
+and $1/4<\mu_t<1/3$. These are inherited P1 inputs, not new physical constants.
+The real unit lowest internal eigenvector $v_*$ and shell
+$k=(2\pi/16)(1,1,1)$ give $\Psi_*=\sqrt{\rho_*}v_*e^{ikx}$.
+Then $S_*=\rho_*e^{2ikx}$ and $F_{\rm II}[\Psi_*]=0$.
+
+Global phase invariance of the unchanged P1 term follows from its quadratic,
+density and bilinear-current definitions; it is not local gauge invariance.
+The full parent has the weighted symmetry
+$(\Psi,\chi)\mapsto(e^{i\theta}\Psi,e^{2i\theta}\chi)$.
+Direct real-coordinate differentiation yields
+\[
+ \dot Q_\Psi=2\varepsilon I,\qquad \dot Q_\chi=-\varepsilon I,
+ \qquad I=\Im\int\bar\chi S,\qquad \dot Q=0.
+\]
+Orthogonal Fourier projection preserves these integrated identities. For
+constant $\Psi=(1,0,0)$ and $\chi=-i$, $\dot Q_\Psi/V=2\varepsilon\ne0$.
+The weights are essential: the unweighted sum is not conserved.
+At fixed finite $K$, positive floors make the Hamiltonian vector field smooth.
+Each level of the positive quadratic $Q$ is compact, so local ODE solutions
+cannot escape in finite positive or negative time. They extend to a complete
+finite-dimensional Hamiltonian flow. This is no infinite-dimensional flow theorem.
+
+\section{Exact old coexistence is not inherited}
+At $(\Psi_*,0)$ the $\chi$ derivative is nonzero. Its doubled shell is
+admitted by the preregistered cutoff. At $\mu_t$ take
+$\chi=c e^{2ikx}$ with $c=\varepsilon\rho_*$. The change per volume is
+\[
+ \frac{\Omega_{\mu_t}(\Psi_*,\chi)}V
+ =-(1/2+\mu_t)c^2+c^4/4<0,
+ \qquad 0<c<1.
+\]
+But $\Omega_{\mu_t}(0,0)=0$. Thus the old coexistence value and embedded
+nonzero minimizer do not survive unchanged. This neither refutes R-158
+on its own functional nor rules out a shifted transition of this parent.
+
+\section{Controlled shifted coexistence}
+For $\mu\le\mu_t$, $a=1/2-\mu\ge a_0=1/6$.
+Pointwise $|S|\le\rho$ and square completion give
+\[
+ a|\chi|^2-\varepsilon\Re(\bar\chi S)
+ \ge-\frac{\varepsilon^2|S|^2}{4a}
+ \ge-\frac{\varepsilon^2\rho^2}{4a_0}.
+\]
+Put $A=\gamma/6$, $b=\varepsilon^2/(4a_0)$ and
+\[
+ D=2b\rho_*+\frac{b^2}{2A}
+   =\frac{2827}{1179648},\qquad \mu_-=\mu_t-2D>0.
+\]
+For $\delta=\mu_t-\mu$, the density bracket has the exact form
+\[
+ \frac\delta2+A(\rho-\rho_*)^2-b\rho
+ =A\left(\rho-\rho_*-\frac b{2A}\right)^2+\frac{\delta-D}{2}.
+\]
+Hence at $\mu_-$, $\Omega\ge DQ_\Psi$, and if $\Psi=0$ the remaining
+$a|\chi|^2+|\chi|^4/4$ is strictly positive unless $\chi=0$.
+Zero is the unique minimizer at $\mu_-$ and below. The preceding legal trial
+has negative energy at $\mu_t$.
+
+\paragraph{Compactness, not a finite table.}
+Minimizers exist uniformly over the compact $\mu$ interval at each fixed $K$.
+Indeed $F_{\rm P1}\ge\lambda_0Q_\Psi+(\lambda/4)\int\rho^2
++(\gamma/6)\int\rho^3$, and
+$-\varepsilon|\chi|\rho\ge-\varepsilon(|\chi|^2+\rho^2)/2$.
+Since $a_0-\varepsilon/2>0$, the sextic $\Psi$ and quartic $\chi$ terms
+dominate the remaining lower-degree polynomials. This is equicoercivity
+in the finite Fourier coordinate space, so sublevel sets are compact.
+
+\paragraph{Explicit exclusion of a continuous collapse to zero.}
+Let $M_\Psi=(2K+1)^3$, $M_\chi=(4K+1)^3$ and
+\[
+ c_0=\min(g,a_0),\quad A_K=2\varepsilon\sqrt{M_\chi/V},
+ \quad B_K=|\lambda|M_\Psi/V,
+ \quad \eta_K=\min\left\{\left(\frac{c_0}{4A_K}\right)^2,
+                         \frac{c_0}{4B_K}\right\}>0.
+\]
+The exact Fourier bounds $\|f\|_\infty\le\sqrt{M/V}\|f\|_2$,
+$\|\Psi\|_2^2\le2Q$ and $\|\chi\|_2^2\le Q$ imply
+\[
+ \Omega_\mu\ge c_0Q-A_KQ^{3/2}-B_KQ^2
+       \ge\tfrac12c_0Q>0\quad(0<Q\le\eta_K).
+\]
+Here nonnegative sextic, reservoir quartic and Class-II terms were dropped,
+not replaced. Thus a sequence of negative-energy minimizers cannot collapse
+to zero, uniformly in $\mu$ on this interval, at this fixed $K$.
+
+\paragraph{Threshold and jump.}
+Let $m_K(\mu)=\min\Omega_\mu\le0$. Equicoercivity and continuity imply
+continuity of $m_K$; it is nonincreasing since $Q\ge0$.
+The small-charge exclusion and compactness also show a neighborhood above
+$\mu_-$ still has no nonzero minimizer of nonpositive energy: otherwise
+compact minimizers would converge to a nonzero zero-energy state at $\mu_-$.
+Define $\mu_c(K)=\inf\{\mu\in[\mu_-,\mu_t]:m_K(\mu)<0\}$.
+It lies strictly between $\mu_-$ and $\mu_t$.
+Approach it from above with minimizing states. A compact subsequence converges
+to a minimizer $z_c\ne0$, with $Q(z_c)\ge\eta_K$, and $m_K(\mu_c)=0$.
+Zero and $z_c$ coexist, and $\Psi_c\ne0$ because pure reservoir states have
+strictly positive energy here. Below $\mu_c$ any nonzero zero-energy minimizer would
+give negative energy at a slightly larger multiplier below $\mu_c$, a
+contradiction. Above $\mu_c$, the trial $z_c$ gives
+$m_K(\mu)\le-(\mu-\mu_c)Q(z_c)<0$.
+This is a finite-regulator variational first-order onset, with
+\[
+ 0<\mu_t-\mu_c(K)<2D=\frac{2827}{589824}<0.004793.
+\]
+The window is common to finite $K$, but $\eta_K$ depends on $K$.
+No uniform jump, cutoff limit, thermodynamic transition or continuum dynamics
+has been obtained.
+
+\section{Devil's-advocate review and verification}
+\begin{enumerate}
+\item \textbf{Half factors and conserved quantity.} Dismissed within the
+declared convention by independent real Hamilton equations and a nonzero
+constant-mode witness. Density-only coupling is a negative control with no transfer.
+\item \textbf{A frozen reservoir hides the obstruction.} Upheld against
+exact inheritance. The old shell fails under a legal reservoir variation;
+no external coherent reservoir or fitted $\mu(\tau)$ was used.
+\item \textbf{A sign change alone proves first order.} Upheld unless compactness
+and exclusion of small-charge minimizers are supplied. Both are proved above.
+\item \textbf{Exchange must occur in the equilibrium minimizer.} Upheld against
+that interpretation. Generic nonequilibrium states exchange; static phases
+need not carry net exchange. No trajectory crossing, relaxation, seed
+generation or Gibbs equilibration is proved. Exact $\Psi=0$ remains invariant.
+\item \textbf{Finite statements supply physical time or a limit.} Upheld
+against promotion. $K$-dependent $\eta_K$, fixed spatial carrier and new
+canonical time remain explicit. The pairing need not have local gauge or
+full internal unitary invariance.
+\end{enumerate}
+Primary and non-importing independent exact checks reproduce the rational
+window and exchange. Hostile review checked the alternative charge-norm
+exclusion estimate and the full reservoir variation. Six parameterized Lean
+lemmas cover cancellation, square completions and a negative trial, not the
+ODE, compactness or physical correspondence. External adversarial review of
+those analytic steps is invited.
+The original R-158 primary and independent certificates reran with 35 and
+24 checks. Its old full verifier failed historical PDF byte determinism under
+the current engine; both changed PDFs were restored byte for byte. The old
+full verifier is not reported PASS and expected source hashes were not changed.
+
+\clearpage
+\section{Result footer}
+\begin{verbatim}
+Result ID: R-578 (host C6-SPACETIME-SIGNATURE)
+Precise statement: complete regulated charge-transfer flow;
+controlled shifted variational first-order coexistence.
+Exact old R-158 coexistence inheritance is rejected.
+Scope: fixed T^3, each fixed finite K, new parent.
+Dependencies: pinned P1/R158 identity and positivity;
+inserted parent parameters and canonical bracket.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, CONDITIONAL.
+Tier before / after: C6 T1 / T1; T-054 unchanged.
+No-overclaim statement: no physical owner/time, Pre-A,
+spacetime, QFT, gravity, continuum, mass gap or TOE.
+Next required action: physical input, or a precise
+error in the theorem; no automatic successor.
+Reproduction command: python -X utf8
+verification/scripts/exch001_verify.py
+Expected output: PASS_SCOPED_PACKAGE and partial Lean.
+Falsification gate: wrong symmetry, bounds or compactness.
+\end{verbatim}

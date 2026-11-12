@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-578](#r-578) | Hypothetical exchange parent and shifted coexistence | Complete finite-regulator conserved-transfer flow; conditional variational first-order onset with shift below 0.004793. Exact old coexistence not inherited; no physical or limit promotion. |
 | [R-577](#r-577) | PAH-v2 displayed-state Markov sufficiency obstruction | Same-display counting states give distinct invariant generator values at one admitted finite square. Positive original-Gibbs conditional variance and reversible compression also obstruct stationary displayed semigroup closure. Full counting CTMC preserved; no mainline or physical promotion. |
 | [R-576](#r-576) | PAH-v2 maximal-path freezing in declared local clocks | At fixed admitted finite geometry and positive epsilon, the original-path squared maximal W displacement across all declared inverse local clocks is bounded by (4*pi/(p*K_r))^2[Lambda S+(Lambda S)^2], hence vanishes. Independent stopped-count proof, 16 hostile controls and five partial Lean bridges. Scoped negative diagnostic only; no physical-clock or mainline promotion. |
 | [R-575](#r-575) | PAH-v2 original-time displayed-readout freezing | At each fixed admitted finite carrier and parameters, every fixed Lipschitz source-displayed invariant readout freezes with explicit O(2^-r) Gibbs-L2 bound while the real plaquette average retains uniformly positive variance. Two analytic proofs, primary/independent/hostile and six partial Lean checks. Scoped negative diagnostic, no CRT repair or mainline/physical promotion. |
@@ -20653,6 +20654,24 @@ are under
 Reopen only when one source-authorized packet completes a route with the
 declared compact-time/anchored-n quantifiers, or an exact PAH-specific target
 correlation contradiction is supplied.
+
+### R-578 -- hypothetical internal-exchange parent
+
+For every fixed finite Fourier K>=1, the separately fixed EXCH001 parent
+has complete Hamiltonian flow, conserves Qpsi+2Qchi and permits actual
+component transfer. Conditional on R158, finite-volume zero/nonzero
+variational minimizers coexist at mu_c(K) strictly between mu_t-2827/589824
+and mu_t, with positive K-dependent charge separation. A legal reservoir
+variation rejects exact old coexistence inheritance, not R158 itself.
+
+Proof and evidence: `strategy/physical-candidates/TECT-EXCH-001-result-v1.json`
+and `claims/C6-SPACETIME-SIGNATURE/notes/internal-exchange-261112-v1.0.tex.txt`.
+Primary19/independent14 exact checks, independent/hostile analytic review and
+six partial Lean bridges. Tier: conditional finite-regulator model theorem;
+host C6 T1 and T054 unchanged. Standard Hamiltonian/compactness methods,
+model-specific construction/bound; no originality priority, physical owner,
+relaxation, predicted mu, uniform jump, continuum or physical Pre-A.
+Editorial target: model-consistency checkpoint, not a physical theory paper.
 
 ## Notes on status
 

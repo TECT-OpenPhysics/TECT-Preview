@@ -1,0 +1,46 @@
+{
+  "schema": "tect/hypothetical-exchange-contract/1.0",
+  "id": "TECT-EXCH-001-v1",
+  "date": "2026-11-12",
+  "base_commit": "7715664d3f9898ee3723ab7eb3221ccd59221635",
+  "status": "ADMITTED_NEW_HYPOTHETICAL_MODEL_NOT_PHYSICAL_OWNER",
+  "authorization": "Operator explicitly authorizes fixing a separate minimum internal-exchange hypothesis, preserving P1/PAH, and checking actual transfer and R158 phase compatibility with independent/hostile review and commit/push.",
+  "ideas": ["IDEA-008", "IDEA-006"],
+  "source_hashes": {
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "codes/foundations/n001_variational_backend.py": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+    "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json": "82ecf0e8e4e4b3d99cb67fad1655e03d85c63921f9e02deb83bd8ad0a74138e5",
+    "strategy/pa-hyp/PAH-001-v1.json": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "strategy/pa-hyp/PAH-001-v2-r2.json": "2e1f5f21796a224f80141572dd9dd6451dd2cbba86233998ea992aa2bff6e36a",
+    "strategy/physical-candidates/TECT-CREATIVE-001-design-v0.1.json": "20fc293e61aa031ab44b678f21443aa1e2da56132079aa9adba15fa36dceb665"
+  },
+  "scope": {
+    "space": "Original side-16 periodic T^3; dimension three and spatial metric are inputs.",
+    "regulator": "For every fixed finite integer K>=1: exact Fourier trigonometric Psi in C^3 with |n_i|<=K; chi in C with |n_i|<=2K. Exact integrals and orthogonal variational projections, no collocation aliasing. The factor two admits the doubled R158 shell in chi BEFORE testing.",
+    "measure_and_pairing": "Lebesgue d^3x, original real L2 pairing; orthonormal Fourier coordinates. No Gibbs law, stochastic process, quantum state or physical projection is supplied.",
+    "state": "Arbitrary deterministic finite initial coordinates for dynamics. For statics use ALL global minimizers of H-mu*Qtotal on that same regulated phase space; no coherence phase or seed chosen to fit outcomes.",
+    "time": "New dimensionless canonical Hamiltonian parameter tau, {z,conjugate(z)}=-2i per orthonormal complex coordinate. Not A2 gradient, PAH Markov, proper or Lorentzian time.",
+    "units": "All new parameters and variables are nondimensional research inputs using the pinned P1 functional units, not fitted physical constants.",
+    "limits": "No K, volume, continuum, thermal or long-time limit. A bound uniform in finite K alone does not construct a limit."
+  },
+  "model": {
+    "unchanged_component": "F_P1[Psi] exactly as R158; no coefficient, floor, reference or finite-part change.",
+    "inserted_parameters": {"omega": "1", "u": "1", "epsilon": "1/16"},
+    "hamiltonian": "H_K=F_P1[Psi]+integral(omega*|chi|^2/2+u*|chi|^4/4-epsilon*Re(conjugate(chi)*S)); S=sum_(a=1)^3 Psi_a^2.",
+    "charge": "Qpsi=integral |Psi|^2/2; Qchi=integral |chi|^2/2; Qtotal=Qpsi+2*Qchi.",
+    "dynamics": "dot z=-2i*dH/d(conjugate z); equivalent real canonical Hamilton equations for every Fourier coefficient. One law for all initial conditions, no external source/mu(t)/reservoir reset.",
+    "symmetry": "Intended weighted GLOBAL U(1): Psi -> exp(i theta)Psi, chi -> exp(2i theta)chi. No local gauge invariance or full U(3) is asserted.",
+    "chemical_potential_role": "mu is solely the Lagrange multiplier conjugate to total charge for comparing equilibria, NOT an imposed time history, a prediction, or a derived cosmological parameter. No equilibration or reservoir tracing is assumed."
+  },
+  "preregistered_tests": [
+    "Derive exact total-charge conservation and nonzero component exchange at an admissible initial state; prove the finite-dimensional flow is complete on each nonnegative total-charge level.",
+    "Test exact inheritance of original R158 mu_t, shell minimizer and coexistence: include reservoir variations, not just a frozen coherent chi Hessian.",
+    "If exact inheritance fails, without changing any coefficient, test whether the SAME parent nevertheless has a shifted finite-volume variational first-order coexistence with an explicit bound on the shift. This secondary criterion is declared now, not introduced after a failed result.",
+    "Use R158 nonnegative decomposition and |S|<=rho to bound the reservoir correction for a=omega/2-mu>0 by -epsilon^2*rho^2/(4a). Assess compactness and nonzero charge jump separately; no numerical phase sweep.",
+    "Run independent real-component and hostile convention/domain/state/limit audits, and partial parameterized Lean algebra where available."
+  ],
+  "pass_fail_meaning": "EXACT_INHERITANCE and CONTROLLED_SHIFTED_COMPATIBILITY are distinct verdicts. Actual exchange does not prove either. A shifted finite-regulator variational transition, if proved, is not thermodynamic criticality or a physical realization of R158.",
+  "falsifiers": "A charge-sign/factor failure, no actual exchange, unbounded regulated flow, invalid reservoir comparison, loss of all controlled coexistence, or a missing compactness/jump argument blocks the corresponding proposition. No coefficient fitting, new term, phase averaging, selected observable or time change is allowed.",
+  "budget": {"parent_models": 1, "phase_sweeps": 0, "independent_reviews": 1, "hostile_reviews": 1, "gate_synthesis_notes": 1, "automatic_successor": false},
+  "non_claims": "New hypothetical classical finite-regulator parent only. No original P1/PAH modification, physical reservoir or clock, Gibbs relaxation, quantum condensate, physical Pre-A, spacetime, QFT, GR, continuum, mass gap or TOE. No A13 owner or T054 gate closure."
+}

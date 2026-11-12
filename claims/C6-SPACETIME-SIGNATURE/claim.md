@@ -249,3 +249,16 @@ minimal hidden-state set. No C6/T-054 gate, physical carrier, clock law,
 Pre-A, QFT, gravity or limit promotion. OBS-002 remains parked; reentry
 requires an exact error or a physical carrier/memory packet with the
 original-background/time compatibility. No automatic follow-on research.
+
+### 2026-11-12: separate internal-exchange parent (R-578)
+
+The new TECT-EXCH-001 hypothesis preserves P1 and PAH. At every fixed finite
+Fourier regulator its complete Hamiltonian flow conserves a weighted total
+charge and permits actual transfer. Conditional on R158, finite-volume
+variational first-order coexistence persists with shift less than 0.004793;
+exact old coexistence data are not inherited. See the
+[result card](../../strategy/physical-candidates/TECT-EXCH-001-result-v1.json)
+and `notes/internal-exchange-261112-v1.0.tex.txt`.
+The charge jump depends on the regulator. No physical reservoir/time,
+equilibration, phase-crossing trajectory, uniform limit or Pre-A conclusion.
+C6 T1 and T054 unchanged. No automatic successor or fitted repair.

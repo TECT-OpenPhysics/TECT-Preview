@@ -186,3 +186,20 @@ Sign/half/multiplicity, gauge/domain redundancy, stationary-versus-all-start
 distinction, and limit nonuniformity were challenged explicitly. Four Lean
 declarations cover only abstract algebra bridges. No external-person review
 or physical carrier/clock/Pre-A/QFT/gravity claim is made.
+
+## 2026-11-12: TECT-EXCH-001 / R-578
+
+Primary internal source: R158 charge-ensemble manifest/decomposition and A1
+production manifest, pinned in the EXCH001 contract. APPLIES-CONDITIONALLY
+only to unchanged P1 on the same torus, pairing, floors and exact regulator.
+The full parent, old minimizer and old coexistence multiplier do NOT match
+and are not inherited. No PAH/GFT/Reading-H conclusion is imported.
+The new reservoir, bracket and coefficients are explicit hypotheses.
+Standard Hamiltonian continuation, square completion and finite-dimensional
+compactness are supplied in the synthesis; no novelty priority is asserted.
+Independent/hostile reviews checked signs, factors, projection, total-charge
+multiplier and K-dependent jump; the threshold wording was corrected to an
+infimum. Six Lean lemmas do not encode ODE/compactness. R158 primary35/35
+and independent24/24 passed; its old full deterministic-PDF rebuild failed
+under the current engine. Original PDFs and expected hashes were restored
+unchanged. No full legacy verifier PASS or physical/limit promotion.

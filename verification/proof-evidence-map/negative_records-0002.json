@@ -1,6 +1,26 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-10-pre-a-st8-q3lock-absolute-heat-strip-real-time-continuation",
+      "branch": "continue the prescribed-word heat estimate termwise in absolute value to the real-time boundary and integrate it against a finite Balakrishnan energy power",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260810-exp-000796-r-167-v1-1-weighted-cubic-graph-and"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "consequence": "Absolute heat/strip continuation cannot prove the desired real-time boundary estimate at any finite graph power. The actual boundary value is not proved divergent. Unitary/oscillatory first-passage resummation, or a modular-energy tail theorem, remains admissible.",
+        "evidence": "The exact prescribed-word denominator sums to a Mittag--Leffler bound. At complex time its activity is proportional to `|zeta|/sqrt(epsilon)`, so the spatially tilted chain majorant contains `exp[P^2 kappa0^2 exp(2rho)|zeta|^2/epsilon]`, with `P=11`. For `t!=0`, every finite energy power contains the divergent integral `int_0^1 epsilon^(s-1)exp(C/epsilon)d epsilon`.",
+        "failure_mode": "After reducing to edge chains, analytically continue the positive heat estimate termwise in absolute value to `zeta=epsilon+it/hbar`, then use a finite Balakrishnan energy power to reach the real-time boundary."
+      },
+      "detail_title": "the absolute strip majorant is nonintegrable at real time",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "even after a hypothetical edge-chain reduction the absolute strip majorant contains `exp(C/epsilon)` at nonzero real time, so `int_0^1 epsilon^(s-1)exp(C/epsilon)d epsilon` diverges for every finite `s`. Oscillatory/unitary resummation and modular routes remain open",
+      "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ABSOLUTE-HEAT-STRIP-REAL-TIME-CONTINUATION"
+    },
+    {
       "anchor": "ng-2026-08-09-pre-a-st8-q3lock-uniform-full-finite-volume-spectral-gap",
       "branch": "retain a positive volume-uniform full finite-volume spectral gap in the fixed-spacing Q3LOCK ground-order regime",
       "claim_ref_basis": {
@@ -2202,29 +2222,6 @@
       "kind": "no_go",
       "summary": "the exact joint rational boundary layer has fourth-order sharp-Fourier surrogate proportional to `b^7 e^(-3/2)`, while the once-owned sextic is proportional to `b^6`; gamma four requires a seventh amplitude moment in this route",
       "tag": "NG-2026-07-31-A13-GAMMA-FOUR-SIXTH-AMPLITUDE-ROUTE"
-    },
-    {
-      "anchor": "ng-2026-07-31-a13-fixed-heat-uniform-transversality",
-      "branch": "obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Repair the pure-singlet degeneration of the Xi Gram by convolving once with an arbitrary fixed heat law having finite doublet second moment, and infer a state-uniform positive transverse gap.",
-        "consequence": "Fixed heat alone cannot provide the global transverse gap. State- or scale-adapted heat and a coupled source-sextic-response theorem are not refuted; the once-owned sextic has aligned ray Hessian `(9/2)T^4`.",
-        "evidence": "R-131 proof note, Section 9; exact SymPy asymptotic and domination identity; independent 64-atom covariance audit and collapsed four-value response evaluation.",
-        "failure_mode": "At background `(u,chi)=(0,T)` with aligned singlet tangent, the heat-sample contribution is `4 c1 alpha^2 R^2 Re(T+X)^2/(R+|T+X|^2+e)^2`, where `R=|U|^2`. It tends to zero pointwise as `T` grows and is dominated by `c1 alpha^2 R`; dominated convergence therefore makes its fixed-law average vanish. A 64-atom six-real-coordinate product Rademacher heat has identity covariance and is positive at each finite amplitude but decays like `T^(-2)` with the exact scaled limit recorded by R-131. Its constant doublet radius reduces the executed response average to four distinct singlet values, each occurring with multiplicity sixteen."
-      },
-      "detail_title": "one fixed heat law does not uniformly fill the Xi singlet degeneration",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open",
-      "tag": "NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY"
     }
   ],
   "kind": "negative_records",

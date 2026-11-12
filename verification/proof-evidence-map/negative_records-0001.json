@@ -22,6 +22,29 @@
       "tag": "NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV"
     },
     {
+      "anchor": "ng-2026-11-12-exch001-exact-r158-inheritance",
+      "branch": "exact old R158 coexistence under the new parent",
+      "claim_ref_basis": {
+        "A2-FULL-PRODUCTION-WELLPOSED": "explicit_negative_event:20261112-c6-r578-fixed-internal-exchange-and-controlled",
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20261112-c6-r578-fixed-internal-exchange-and-controlled"
+      },
+      "claim_refs": [
+        "A2-FULL-PRODUCTION-WELLPOSED",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "branch_claim": "Inherit R158's exact multiplier and embedded shell minimizer after adding the fixed EXCH001 reservoir/pair interaction.",
+        "consequence": "Only exact inheritance is rejected. R158 on its original functional and PAH remain unchanged; the same new parent admits a bounded shifted finite-regulator variational coexistence. No universal no-go, physical vacuum, state selection or regulator-limit claim.",
+        "evidence": "R578, EXCH001 frozen contract/result, one synthesis and primary/independent/hostile/partial Lean checks. Reproduce with `python -X utf8 verification/scripts/exch001_verify.py` in the canonical repo.",
+        "failure_mode": "At the old shell and zero reservoir the reservoir gradient is nonzero. The legal doubled-shell chi with amplitude epsilon*rho_star has grand-potential density -(1/2+mu_t)c^2+c^4/4<0 at old mu_t, whereas the origin has value zero. Exact old coexistence therefore fails."
+      },
+      "detail_title": "exact old coexistence",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "Reservoir variation lowers old shell energy at mu_t. Only exact inheritance fails; controlled shifted coexistence retained in R578.",
+      "tag": "NG-2026-11-12-EXCH001-EXACT-R158-INHERITANCE"
+    },
+    {
       "anchor": "ng-2026-10-14-pah-v2-rd001-displayed-freezing",
       "branch": "nontrivial original-time dynamics of fixed source-displayed readouts",
       "claim_ref_basis": {
@@ -1985,26 +2008,6 @@
       "kind": "no_go",
       "summary": "every finite zero-source periodic law is parity invariant, while parity exchanges the distinct ordered laws; the mixture is invariant only at weight `1/2`. The symmetric case still needs phase exhaustiveness or direct convergence",
       "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ASYMMETRIC-MIXTURE-ZERO-SOURCE-PERIODIC-LIMIT"
-    },
-    {
-      "anchor": "ng-2026-08-10-pre-a-st8-q3lock-absolute-heat-strip-real-time-continuation",
-      "branch": "continue the prescribed-word heat estimate termwise in absolute value to the real-time boundary and integrate it against a finite Balakrishnan energy power",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260810-exp-000796-r-167-v1-1-weighted-cubic-graph-and"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "consequence": "Absolute heat/strip continuation cannot prove the desired real-time boundary estimate at any finite graph power. The actual boundary value is not proved divergent. Unitary/oscillatory first-passage resummation, or a modular-energy tail theorem, remains admissible.",
-        "evidence": "The exact prescribed-word denominator sums to a Mittag--Leffler bound. At complex time its activity is proportional to `|zeta|/sqrt(epsilon)`, so the spatially tilted chain majorant contains `exp[P^2 kappa0^2 exp(2rho)|zeta|^2/epsilon]`, with `P=11`. For `t!=0`, every finite energy power contains the divergent integral `int_0^1 epsilon^(s-1)exp(C/epsilon)d epsilon`.",
-        "failure_mode": "After reducing to edge chains, analytically continue the positive heat estimate termwise in absolute value to `zeta=epsilon+it/hbar`, then use a finite Balakrishnan energy power to reach the real-time boundary."
-      },
-      "detail_title": "the absolute strip majorant is nonintegrable at real time",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "even after a hypothetical edge-chain reduction the absolute strip majorant contains `exp(C/epsilon)` at nonzero real time, so `int_0^1 epsilon^(s-1)exp(C/epsilon)d epsilon` diverges for every finite `s`. Oscillatory/unitary resummation and modular routes remain open",
-      "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-ABSOLUTE-HEAT-STRIP-REAL-TIME-CONTINUATION"
     }
   ],
   "kind": "negative_records",

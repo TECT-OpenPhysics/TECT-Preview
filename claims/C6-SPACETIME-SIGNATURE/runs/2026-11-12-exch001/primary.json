@@ -1,0 +1,48 @@
+{
+  "schema": "tect/exch001-primary/1.0",
+  "status": "PASS_EXACT_ALGEBRA",
+  "contract_sha256": "d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e",
+  "script_sha256": "0100d3d78825990cc4ac40d5f4ea062997e3a79f48e1d2bedc4108aedc4d483b",
+  "checks": {
+    "rho_from_upstream": true,
+    "gap_from_upstream": true,
+    "source_mu_bracket": true,
+    "positive_parameters": true,
+    "shift_interval_positive": true,
+    "transfer_sign_factor": true,
+    "reservoir_transfer": true,
+    "weighted_total_conservation": true,
+    "nonzero_transfer_witness": true,
+    "wrong_unweighted_charge_rejected": true,
+    "reservoir_square_identity": true,
+    "phase_square_identity": true,
+    "low_mu_positive_remainder": true,
+    "old_coexistence_trial_identity": true,
+    "old_coexistence_strictly_lower": true,
+    "old_chi_derivative_nonzero": true,
+    "pairing_domination": true,
+    "quadrature_split": true,
+    "zero_seed_invariant_transfer": true
+  },
+  "derived": {
+    "rho_star": "43/216",
+    "gamma": "81/50",
+    "gap": "1849/86400",
+    "a0": "1/6",
+    "b": "3/512",
+    "D": "2827/1179648",
+    "max_transition_shift": "2827/589824",
+    "transfer_witness_per_volume": "1/8",
+    "trial_reservoir_amplitude": "43/3456",
+    "mu_c_lower_bound": "23573047877549102961233435161702835611223/90000000000000000000000000000000000000000",
+    "mu_c_upper_bound": "2667157093816319773470381684633648401247/10000000000000000000000000000000000000000"
+  },
+  "analytic_obligations": "Finite-K smooth complete flow, equicoercivity, compact minimizers and local exclusion/jump are proved in the note, not by symbolic PASS.",
+  "verdicts": {
+    "total_charge": "CONSERVED",
+    "component_exchange": "NONZERO_POSSIBLE",
+    "exact_R158_inheritance": "DISPROVED",
+    "controlled_shifted_coexistence": "SEE_ANALYTIC_PROOF"
+  },
+  "scope": "Fixed volume, every separately fixed finite Fourier K>=1, new Hamiltonian parameter. No Gibbs relaxation, physical state/time or regulator limit."
+}

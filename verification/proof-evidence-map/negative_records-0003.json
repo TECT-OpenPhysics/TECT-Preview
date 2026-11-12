@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-31-a13-fixed-heat-uniform-transversality",
+      "branch": "obtain a state-uniform Xi gap by adding any one fixed finite-moment heat law",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Repair the pure-singlet degeneration of the Xi Gram by convolving once with an arbitrary fixed heat law having finite doublet second moment, and infer a state-uniform positive transverse gap.",
+        "consequence": "Fixed heat alone cannot provide the global transverse gap. State- or scale-adapted heat and a coupled source-sextic-response theorem are not refuted; the once-owned sextic has aligned ray Hessian `(9/2)T^4`.",
+        "evidence": "R-131 proof note, Section 9; exact SymPy asymptotic and domination identity; independent 64-atom covariance audit and collapsed four-value response evaluation.",
+        "failure_mode": "At background `(u,chi)=(0,T)` with aligned singlet tangent, the heat-sample contribution is `4 c1 alpha^2 R^2 Re(T+X)^2/(R+|T+X|^2+e)^2`, where `R=|U|^2`. It tends to zero pointwise as `T` grows and is dominated by `c1 alpha^2 R`; dominated convergence therefore makes its fixed-law average vanish. A 64-atom six-real-coordinate product Rademacher heat has identity covariance and is positive at each finite amplitude but decays like `T^(-2)` with the exact scaled limit recorded by R-131. Its constant doublet radius reduces the executed response average to four distinct singlet values, each occurring with multiplicity sixteen."
+      },
+      "detail_title": "one fixed heat law does not uniformly fill the Xi singlet degeneration",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "dominated convergence makes the heat-averaged singlet-ray response vanish at large amplitude, although a state- or scale-adapted complement remains open",
+      "tag": "NG-2026-07-31-A13-FIXED-HEAT-UNIFORM-TRANSVERSALITY"
+    },
+    {
       "anchor": "ng-2026-07-31-a13-elliptic-gaussian-d4-floor-uniformity",
       "branch": "use a uniformly elliptic six-real terminal Gaussian to obtain a density-floor-uniform L2 fourth rational quotient jet",
       "claim_ref_basis": {
@@ -2223,28 +2246,6 @@
       "kind": "no_go",
       "summary": "an anisotropic two-component production ray has geometric ratio `(1-epsilon)/(1+epsilon)->1`; R-092 replaces scalar-uniform decay by a normalized-lift whole-product fractional estimate and closes only regular one-shot `H_C`",
       "tag": "NG-2026-07-25-A13-SCALAR-SUPEREXPONENTIAL-VECTOR-UNIFORMITY"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-rootwise-deterministic-far-and-half-derivative",
-      "branch": "A13 FAR closure by summing deterministic spatial tails rootwise or using only `H^(1/2-)` coefficient regularity",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "The deterministic relative-gap theorem and exact production polynomial/Cartan split remain valid advances. FAR requires a martingale-root- resolved paracomposition/Carleson estimate, or an equivalent signed square-- trace--forest cancellation, retaining derivative injection, value innovation, and heat compensator together. This is not a counterexample to the complete packet, one-use, or Nelson.",
-        "evidence": "R-081 proves for every `0<s<1` the genuine relative-gap estimate `||Pi_(>=N Lambda)[(P_Sigma F_A)(z)^T Dz]||_2^2 <= C_(e,s)N^(-2s)||z||_(H2)||z||_6^3`. Its one-root budget is exactly `N^(-2s)X^(1/2)Y^(1/2)`, so a rootwise application repeats the same global critical payment. Independently, predictable fixed-coefficient Gaussian injection is bounded by `sum_m sum_(j<=m-C)2^j||Pi_m f_j||_2^2`. The sequence `||Pi_m f^(J)||_2^2=2^(-m)` is uniformly bounded in every `H^(1/2-delta)`, while the triangular norm grows as `2^(-C)J`. Primary and independent Fourier audits reproduce both ledgers.",
-        "failure_mode": "Close R-080's localized base-current tail by applying an ordinary deterministic spatial tail estimate separately at every probability root, or by combining fixed-coefficient injection with only the natural `H^(1/2-delta)` regularity of the production coefficient."
-      },
-      "detail_title": "deterministic FAR decay does not supply the martingale-root sum",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "the deterministic current has real relative-gap decay, but its ledger is critical at every root; the fixed-coefficient triangular injection norm is `H^(1/2)`-critical and an explicit uniformly `H^(1/2-delta)` sequence diverges linearly",
-      "tag": "NG-2026-07-25-A13-ROOTWISE-DETERMINISTIC-FAR-AND-HALF-DERIVATIVE"
     }
   ],
   "kind": "negative_records",

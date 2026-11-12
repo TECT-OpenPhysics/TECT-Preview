@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-11-12-EXCH001-EXACT-R158-INHERITANCE](#ng-2026-11-12-exch001-exact-r158-inheritance) | exact old R158 coexistence under the new parent | Reservoir variation lowers old shell energy at mu_t. Only exact inheritance fails; controlled shifted coexistence retained in R578. |
 | [NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV](#ng-2026-11-12-pah-state001-display-markov) | exact displayed-only memoryless realization of PAH-v2 | R-577 same-fibre invariant generator mismatch and original-Gibbs stationary compression defect; full counting CTMC preserved, no physical or uniform-limit no-go |
 | [NG-2026-10-14-PAH-TIME002-DECLARED-CLOCK-FREEZING](#ng-2026-10-14-pah-time002-declared-clock-freezing) | use declared local clocks alone to restore W motion | R-576 proves maximal original-path W freezing simultaneously in all source local clocks at fixed positive epsilon and geometry; no arbitrary random-semigroup substitution, physical clock or all-model no-go |
 | [NG-2026-10-14-PAH-V2-RD001-DISPLAYED-FREEZING](#ng-2026-10-14-pah-v2-rd001-displayed-freezing) | nontrivial original-time dynamics of fixed source-displayed readouts | R-575 proves uniform-on-finite-time Gibbs-L2 freezing for every fixed Lipschitz displayed readout at fixed carrier, while an invariant plaquette average retains positive variance; no whole-model or physical no-go |
@@ -11073,3 +11074,22 @@ than silently erasing the labels. No actual physical packet supplied here;
 OBS-002 remains parked. Reentry needs a precise error or independently
 justified original-law/time-compatible physical packet, not extra finite
 tables, clock variants or generic source hunts. C6/T-054 unchanged.
+
+### NG-2026-11-12-EXCH001-EXACT-R158-INHERITANCE -- exact old coexistence
+
+**Branch / claim.** Inherit R158's exact multiplier and embedded shell
+minimizer after adding the fixed EXCH001 reservoir/pair interaction.
+
+**Failure mode.** At the old shell and zero reservoir the reservoir gradient
+is nonzero. The legal doubled-shell chi with amplitude epsilon*rho_star
+has grand-potential density -(1/2+mu_t)c^2+c^4/4<0 at old mu_t, whereas
+the origin has value zero. Exact old coexistence therefore fails.
+
+**Evidence.** R578, EXCH001 frozen contract/result, one synthesis and
+primary/independent/hostile/partial Lean checks. Reproduce with
+`python -X utf8 verification/scripts/exch001_verify.py` in the canonical repo.
+
+**Consequence.** Only exact inheritance is rejected. R158 on its original
+functional and PAH remain unchanged; the same new parent admits a bounded
+shifted finite-regulator variational coexistence. No universal no-go,
+physical vacuum, state selection or regulator-limit claim.
