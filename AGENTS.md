@@ -191,6 +191,15 @@ State multi-turn needs upfront. Label prototype code as prototype. If a proof
 does not close, write the partial result at its honest tier and register the
 obstruction as a named gate — never claim closure that does not hold.
 
+**Discussion-idea recall (2026-11-12 operator directive):** preserve substantive
+discussion ideas in `strategy/research-idea-bank-v1.json`, keeping hypotheses
+separate from evidence. Before a new proof/candidate or a named-blocker review,
+retrieve at most three relevant ideas and record their input delta, proposed
+test, use/defer decision and revisit condition in the existing exploration
+ledger at a logical checkpoint. Follow the bounded retrieval instructions in
+`SESSION.md`; do not use recall to authorize an automatic successor, change a
+model, or bypass source admission or direction-control.
+
 ## 6. Code discipline (binding from 2026-06-07)
 
 Full policy: `governance/CODE-DISCIPLINE.md`. Every script under `codes/` and

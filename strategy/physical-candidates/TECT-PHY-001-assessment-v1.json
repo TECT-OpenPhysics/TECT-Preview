@@ -1,0 +1,106 @@
+{
+  "schema": "tect/physical-candidate-assessment/1.0",
+  "id": "TECT-PHY-001-ASSESSMENT-v1",
+  "date": "2026-11-12",
+  "task_id": "T-099",
+  "admission_sha256": "2abfa877a121dd3ed2d0c8aca04590e9c735e55869b501eeb2dbea9743f2842d",
+  "classification": "auxiliary_support",
+  "verdict": "BOUNDED_INTAKE_COMPLETE; COSMOLOGICAL_CANDIDATE_NOT_ADMITTED",
+  "active_gate_change": false,
+  "claim_bearing": false,
+  "new_result_id": null,
+  "physical_promotion": false,
+  "operator_clarification": "The starting point must be constrained by TECT's phase-transformation viewpoint, not arbitrary external model shopping. Laboratory gauge models are reference-only. Preserve discussion ideas and retrieve them at blockage or new-proof reviews.",
+  "sources": [
+    {
+      "id": "SCHWEIZER-1901.07103v2",
+      "url": "https://arxiv.org/pdf/1901.07103v2",
+      "sha256": "9ded7f2fcf45e39431a659e4e29760ead0281a561ee737b5211fea2f6cf96d9d",
+      "cache_file": "schweizer-v2.pdf",
+      "version_date": "2019-11-28",
+      "role": "SELECTED_REFERENCE_ONLY",
+      "locators": "Main Eq.3 p3; Eqs.4-5 pp3-4; Figs.3-4 pp4-5; p6; SI S.1 p10 and S.16 p14",
+      "finding": "Explicit finite matter-link coupling, laboratory time and measured density responses. Simplest of the three for a minimal interaction audit, not unique or globally optimal. No emergent geometry, closed plaquette W or PAH identity."
+    },
+    {
+      "id": "GOERG-1812.05895v2",
+      "url": "https://arxiv.org/pdf/1812.05895v2",
+      "sha256": "f52dce83c8847323a0c952614f427e23f9b9b0932d0a74e18a8d10690e699a57",
+      "cache_file": "gorg-v2.pdf",
+      "version_date": "2020-03-02",
+      "role": "ALTERNATIVE_NOT_EXPANDED",
+      "locators": "Eq.1; Methods M1-M8 p8; readout pp9-10; SI II.3 S35-S40",
+      "finding": "Occupation-dependent phase and phase readout are a coupling ingredient. Full Z_N construction requires additional driving/hopping conditions; not an already realized full gauge model."
+    },
+    {
+      "id": "YANG-2003.08945v2",
+      "url": "https://arxiv.org/pdf/2003.08945v2",
+      "sha256": "cbc9b0bface1ecb7f1eb046cb6eda30fd49a1388d65a440231dc6b10a362a9ee",
+      "cache_file": "yang-v2.pdf",
+      "version_date": "2020-08-30",
+      "role": "ALTERNATIVE_NOT_EXPANDED",
+      "locators": "Eqs.1-3,9-10; Methods 2,5,6,8; Fig.4",
+      "finding": "Stronger many-body gauge-constraint comparator, with perturbative encoding, higher-order leakage and phase conventions needing their own audit. No second deep attempt."
+    }
+  ],
+  "selected_reference": {
+    "authority": "SCHWEIZER main Eq.3 ONLY",
+    "scope": "Source-declared isolated two-site model with one a and one f particle, not the entire experimental law.",
+    "hamiltonian": "H(tau)=-J(a2^dag a1+f2^dag f1+h.c.)+U sum_j n_j^a n_j^f+Delta_f n1^f+A cos(omega tau+phi)(n1^a+n1^f)",
+    "basis": [
+      "a1 f1",
+      "a1 f2",
+      "a2 f1",
+      "a2 f2"
+    ],
+    "field": "tau_z=n2^f-n1^f; tau_x=f1^dag f2+h.c.; dynamical operators, not prerecorded scalar flux.",
+    "readout": "Q1=exp(i*pi*n1^a), tau_z; site/state-resolved density averages over an array.",
+    "time": "Laboratory seconds; energy-valued J,U,Delta_f,A; angular frequency omega; i*hbar*d_tau V(tau,s)=H(tau)V(tau,s). Driven two-parameter propagation is not an autonomous group or time emergence.",
+    "limits": "Fixed double well. No thermodynamic, continuum, lattice-removal or cosmological limit.",
+    "source_boundaries": [
+      "S.1 additionally assumes Delta_f=U; Eq.3 keeps Delta_f independent. The experiment does not make them exactly equal.",
+      "Eq.4 is lowest-order Floquet dynamics. The source states it is Z2 symmetric for general chi; J0(chi0)=J2(chi0) removes density dependence, not all symmetry.",
+      "PDF pp3 and14 visually inspected: S.16 prints drive diagonal (1,1,1,0), versus (2,1,1,0) from Eq.3 in the source basis, plus tilt-prose discrepancy. No silent repair or reconciled experimental formula claimed.",
+      "Finite-frequency, extended-Hubbard and preparation/inhomogeneity effects remain; direct experimental G_j measurement absent.",
+      "Published standard deviations and calibrated curves are not guaranteed uniform error bounds. Raw data/code on request; no contact or replication here."
+    ]
+  },
+  "reviews": {
+    "primary": "Root source reading, downloaded PDF hashes and visual pp3/14 check.",
+    "independent": "phy001_sources separately read Schweizer/Goerg; phy001_third_source separately read Yang and then hostile-reviewed the selected reference.",
+    "external_person": false,
+    "hostile": [
+      {
+        "objection": "A physical link automatically is PAH U or generated space.",
+        "disposition": "UPHELD against promotion; state/law/time/geometry identification missing."
+      },
+      {
+        "objection": "A single trace proves irreducible backreaction.",
+        "disposition": "UPHELD; compare multiple preparations under one fixed law, not per-state waveform fitting."
+      },
+      {
+        "objection": "Effective symmetry and calibrated agreement give exact physical admission.",
+        "disposition": "UPHELD; source corrections, instrument error and independent prediction remain."
+      },
+      {
+        "objection": "Laboratory candidate selection answers the cosmological starting-point question.",
+        "disposition": "UPHELD; reference-only after operator clarification."
+      }
+    ]
+  },
+  "remaining_input": {
+    "id": "TECT-PHASE-MICRO-OWNER",
+    "status": "NOT_SUPPLIED",
+    "question": "What microscopic physical law supplies a phase-control quantity and invariant phase discriminator without already inserting the spacetime it is meant to explain?",
+    "minimum": [
+      "Versioned microscopic carrier, symmetry, state law; label new hypotheses explicitly.",
+      "For an R-158-based route, physical Q conservation or a justified reservoir/chemical potential, not fitted mu(t).",
+      "Invariant phase diagnostic: nonzero amplitude/common phase winding alone is not generated spatial geometry.",
+      "Distinguish structural ordering, update parameter, operational clock and Lorentzian proper time.",
+      "A rejecting test and observational target, not retrospective fitting."
+    ]
+  },
+  "verification_scope": "Provenance and scope only; no new model simulation, experimental replication, theorem or Lean proof. R-157/R-158 referenced at their recorded scope, not re-proved.",
+  "next_action": "Retrieve IDEA-001/002/006 before one phase-input scoping review; no automatic comparator proof or new model adoption.",
+  "non_claims": "No physical Pre-A, spacetime, gravity, QFT, continuum, mass gap, TOE, black-hole identity, outside-universe identity, exhaustive existence or nonexistence theorem."
+}

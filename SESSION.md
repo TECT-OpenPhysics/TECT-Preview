@@ -36,6 +36,19 @@ research state lives in the cowork app; it all lives in tracked files here.
 
 ## 2. Every session (the resume ritual)
 
+### Discussion-idea retrieval (added 2026-11-12)
+
+Before scoping a new proof/candidate, or when a named blocker triggers a
+direction review, consult `strategy/research-idea-bank-v1.json`. Retrieve at
+most three relevant idea IDs and record their relevance, changed input, minimal
+test, disposition and revisit condition in the existing exploration ledger at
+the next logical checkpoint. Preserve substantive new discussion ideas in the idea bank
+with their assumptions and failure boundaries. If none applies, say why;
+do not manufacture another attempt. An idea is not evidence, an adopted model,
+or authority to change a source, rate, state, time or gate. This lookup is a
+memory aid, not a replacement for claim-first governance, direction-control,
+source admission, independent review or release checks.
+
 1. **Readiness check** — confirm the copy is intact and all ledgers are in sync:
 
    ```bash

@@ -5,14 +5,14 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**11065 artefacts** · **49 live claim cards** ·
+**11071 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
 
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
-| Claim cards (registry layer) (`claim-card`) | 604 | 5,215,183 |
+| Claim cards (registry layer) (`claim-card`) | 604 | 5,215,218 |
 | Working proof notes (on claim cards) (`proof-note`) | 1020 | 110,114,565 |
 | Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,747,022 |
 | Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
@@ -20,15 +20,15 @@ for historical verifiers and no longer grows.
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 3360 | 333,479,881 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 3362 | 333,482,294 |
 | Domain codes (`code`) | 1914 | 29,287,735 |
-| Verification harness (`verification`) | 1122 | 25,833,414 |
+| Verification harness (`verification`) | 1123 | 25,852,234 |
 | Papers (publication layer) (`paper`) | 109 | 5,293,113 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,625,426 |
+| Registries and ledgers (`registry`) | 42 | 1,625,511 |
 | Governance policies (`policy`) | 25 | 238,146 |
-| Root documents (`root-doc`) | 14 | 2,428,404 |
-| Other tracked files (`other`) | 2235 | 59,821,263 |
+| Root documents (`root-doc`) | 14 | 2,430,458 |
+| Other tracked files (`other`) | 2238 | 59,862,485 |
 
 ## Use
 

@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 13 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 78
+Counts: In progress 13 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 79
 
 ## In progress
 
@@ -298,3 +298,6 @@ Counts: In progress 13 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibi
 - **T-097** PAH-OMC-030 finite-strip dynamics to unique Markov extension  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
   - One bounded temporal convergence attempt under frozen R-514, R-510, R-511 and R-568. Prove or refute lim_n sup_[0,T] of the original finite-strip Q_n correlations against T_min while preserving terminal-square boundary and j-before-anchored-n order. Require source/domain compatibility, common-Hilbert realization, actual boundary and amplitude-tail estimates, independent and hostile checks and Lean scope. End PROVED, DISPROVED or HOLD_FOR_EVIDENCE; no model/rate/state/time/carrier/limit change and no physical Pre-A, QFT, gravity, continuum, Yang-Mills, mass-gap or TOE claim.
   - _updated 2026-09-09_
+- **T-099** TECT-PHY-001 bounded physical candidate intake and operational recovery  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
+  - EXP-001841: bounded three-source intake and one independently reviewed reference complete; no cosmological candidate admitted. User clarified TECT phase-transformation starting point. TECT-PHASE-MICRO-OWNER names the missing physical input; seven ideas recorded with bounded retrieval in SESSION.md. DCTRL-000074 PARK_OR_BLOCK, no automatic successor or T-054 gate change. Next phase-input scoping uses IDEA-001/002/006.
+  - _updated 2026-11-12_
