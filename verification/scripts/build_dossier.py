@@ -24,8 +24,9 @@ Changelog:
         mathematical D2/D4/B4 tokens no longer create cross-sector links.
   1.0.3 (2026-08-10) parse both colon- and period-style detail labels and use
         word-safe ellipses in compact table cells.
+  1.0.4 (2026-11-12) explicit UTF-8/LF and whitespace-clean paragraph breaks.
 """
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 
 import argparse, json, os, re, sys, tempfile
 from pathlib import Path
@@ -40,7 +41,7 @@ TIER_ORDER = ["T7", "T6", "T5", "T4", "T3", "T2", "T1", "T0"]
 def atomic_write(path: Path, text: str):
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(dir=str(path.parent)); os.close(fd)
-    Path(tmp).write_text(text, encoding="utf-8")
+    Path(tmp).write_text(text, encoding="utf-8", newline="\n")
     os.replace(tmp, str(path))
 
 
@@ -203,7 +204,7 @@ def render_sector(s, claims, preds, negs):
     # aggregate gates/hypotheses
     allhyp = sorted({h for _, c in claims for h in c.get("hypotheses", [])})
     allg = sorted({g for _, c in claims for g in c.get("open_gates", [])})
-    L += ["", f"**Open named hypotheses (sector union):** {', '.join(allhyp) or '—'}  ",
+    L += ["", f"**Open named hypotheses (sector union):** {', '.join(allhyp) or '—'}", "",
           f"**Open gates (sector union):** {', '.join(allg) or '—'}", ""]
     # predictions
     L += ["## Predictions", ""]

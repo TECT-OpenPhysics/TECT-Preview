@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-579](#r-579) | Fixed-charge mixed minima and reservoir instability | All constrained minima are mixed and their complete set is Lyapunov stable at one fixed nonzero charge. The declared reservoir relative orbit is genuinely unstable; outside full-state ground attraction is excluded. No physical or limit promotion. |
 | [R-578](#r-578) | Hypothetical exchange parent and shifted coexistence | Complete finite-regulator conserved-transfer flow; conditional variational first-order onset with shift below 0.004793. Exact old coexistence not inherited; no physical or limit promotion. |
 | [R-577](#r-577) | PAH-v2 displayed-state Markov sufficiency obstruction | Same-display counting states give distinct invariant generator values at one admitted finite square. Positive original-Gibbs conditional variance and reversible compression also obstruct stationary displayed semigroup closure. Full counting CTMC preserved; no mainline or physical promotion. |
 | [R-576](#r-576) | PAH-v2 maximal-path freezing in declared local clocks | At fixed admitted finite geometry and positive epsilon, the original-path squared maximal W displacement across all declared inverse local clocks is bounded by (4*pi/(p*K_r))^2[Lambda S+(Lambda S)^2], hence vanishes. Independent stopped-count proof, 16 hostile controls and five partial Lean bridges. Scoped negative diagnostic only; no physical-clock or mainline promotion. |
@@ -20672,6 +20673,25 @@ host C6 T1 and T054 unchanged. Standard Hamiltonian/compactness methods,
 model-specific construction/bound; no originality priority, physical owner,
 relaxation, predicted mu, uniform jump, continuum or physical Pre-A.
 Editorial target: model-consistency checkpoint, not a physical theory paper.
+
+### R-579 -- fixed-charge selection and actual stability
+
+At Q=11008/27 in unchanged EXCH001, every constrained global minimizer is
+mixed. The full compact minimum set is nonlinearly set-Lyapunov stable.
+The preregistered constant reservoir relative orbit is a constrained saddle
+and linearly/nonlinearly orbitally unstable via an actual transverse growing
+mode. Conservation forbids outside full-state convergence to the minimum set.
+All statements are for each fixed finite K, not a continuum/physical result.
+
+Proof: `claims/C6-SPACETIME-SIGNATURE/notes/fixed-charge-sector-261112-v1.0.tex.txt`;
+card `strategy/physical-candidates/TECT-EXCH-002-result-v1.json`. Primary16,
+independent25, alternative23 exact checks, hostile review and six partial
+Lean lemmas. Teschl9.4 source crosswalk explicit; no full stability formalization.
+Separate tensor candidate has an initial-response structural advantage,
+not overall superiority; density coupling is rejected for no norm transfer.
+Conditional finite-sector theorem; host C6 T1 and T054 unchanged. Standard
+energy/manifold methods and model-specific spectral/selection certificates,
+not novelty priority. No unique morphology, physical time or relaxation.
 
 ## Notes on status
 

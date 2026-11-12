@@ -1,0 +1,28 @@
+{
+  "schema": "tect/bounded-alternative-admission/1.0",
+  "id": "TECT-ALT-001-v1",
+  "date": "2026-11-12",
+  "task_id": "T-103",
+  "status": "SEPARATE_HYPOTHESIS_INTAKE_NOT_BASELINE_REPAIR",
+  "authorization": "Operator explicitly requests additional better-model exploration under the same conditions, independently of the preserved EXCH001 parent.",
+  "same_conditions": "Original P1, side16 periodic torus, fixed Qbar=11008/27, exact finite Fourier K/2K, weighted charge, -2i canonical bracket, same dimensionless coefficients omega=u=1, epsilon=1/16 and no physical-time claim. Preserve full state and declared degrees of freedom.",
+  "better_means": "An explicit improvement on a named criterion under the same tests, with costs reported. No weighted score, global superiority claim or retuning to pass.",
+  "filter_order": ["actual charge transfer", "symmetry and cancellation/blind states", "state/domain and extra degrees of freedom", "boundedness and fixed-sector comparison", "same-state actual stability", "physical interpretation"],
+  "candidate_slots": [
+    {
+      "id": "ALT-TENSOR-v0.1",
+      "hypothesis": "Replace scalar chi only in this separate model by a complex symmetric 3x3 tensor C, U1 weight2, exact cutoff2K. Use the six-dimensional Frobenius-orthonormal basis, not duplicate off-diagonal counting. Qtotal=Qpsi+integral ||C||F^2; H=F_P1+integral(||C||F^2/2+||C||F^4/4-epsilon*Re trace(C_dagger*Psi*Psi^T)). Same canonical bracket per orthonormal coefficient.",
+      "prospective_improvement": "The full pair tensor may remove internal cancellation states of scalar sum_a Psi_a^2, without adding a fixed preferred pairing tensor. Check exchange/reservoir-rule U(3) covariance only; original P1 still explicitly fixes internal structure.",
+      "cost": "Six rather than one complex reservoir coordinates per mode; extra degeneracies/domain obligations. No instantaneous tensor elimination or hidden-state deletion.",
+      "falsifier": "If transfer/covariance requires a different measure/bracket, or any claimed advantage is only a selected orientation or fitted state, reject that advantage. Do not claim stability or physical improvement without its own same-sector test."
+    },
+    {
+      "id": "ALT-DENSITY-v0.1",
+      "hypothesis": "A separate scalar-reservoir density coupling eta*|chi|^2*|Psi|^2, with the same bracket/charge and eta=1/16 as an explicit new input.",
+      "prospective_improvement": "Avoids a preferred pair orientation, but genuine component transfer is mandatory.",
+      "falsifier": "Reject immediately if separate phase symmetries force both component charges to be constant. No further phase/stability simulation in that case."
+    }
+  ],
+  "budget": {"candidate_slots": 2, "deep_reviews": 1, "retunings": 0, "phase_sweeps": 0, "automatic_successor": false},
+  "non_claims": "No original P1/PAH/EXCH001 change; no overall better physical model, empirical validity, PreA, QFT, gravity, continuum or TOE. Passing one structural criterion is not physical adoption."
+}

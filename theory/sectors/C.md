@@ -19,7 +19,8 @@ Tier profile: T6x4 T5x1 T1x1
 | [`C5-NEWTON-G`](../../claims/C5-NEWTON-G/claim.md) | T6 | H-LEGACY-CHAIN | GAP-3, PRED-G-FREEZE | Newton-constant relation (T6/T7-SPLIT management) |
 | [`C6-SPACETIME-SIGNATURE`](../../claims/C6-SPACETIME-SIGNATURE/INDEX.md) | T1 | — | C6-BCC-PREMISE-BLOCKED | Emergent 3+1 dimensionality and Lorentzian signature |
 
-**Open named hypotheses (sector union):** H-LEGACY-CHAIN, H-SUPPRESSION  
+**Open named hypotheses (sector union):** H-LEGACY-CHAIN, H-SUPPRESSION
+
 **Open gates (sector union):** C6-BCC-PREMISE-BLOCKED, GAP-3, H-SUPPRESSION-DISCHARGE, PRED-G-FREEZE, SCHEME-2LOOP
 
 ## Predictions
@@ -77,6 +78,7 @@ Tier profile: T6x4 T5x1 T1x1
 | NG-2026-09-14-PAH-V2-SG001-FIXED-TIME | original-time semigroup comparison | Full finite Markov contraction and the exact Duhamel |
 | NG-2026-09-13-PAH-V2-GD002-GIBBS-L2 | original fine-Gibbs generator Cauchy | One fixed gauge/anchor-invariant plaquette character at |
 | NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV | exact displayed-state closure | At the pinned admitted instance, four states have identical |
+| NG-2026-11-12-EXCH002-FULL-STATE-GROUND-ATTRACTION | no outside attraction | The fixed finite sector is compact. An outside initial |
 
 ---
 

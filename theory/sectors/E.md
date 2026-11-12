@@ -19,7 +19,8 @@ Tier profile: T4x1 T2x1 T1x4
 | [`E5-CKM-MIXING`](../../claims/E5-CKM-MIXING/claim.md) | T1 | — | GAP-3 | Quark flavour mixing (CKM matrix) |
 | [`E6-PMNS-NEUTRINO`](../../claims/E6-PMNS-NEUTRINO/claim.md) | T1 | — | GAP-3 | Neutrino masses and lepton mixing (PMNS) |
 
-**Open named hypotheses (sector union):** —  
+**Open named hypotheses (sector union):** —
+
 **Open gates (sector union):** GAP-3
 
 ## Predictions

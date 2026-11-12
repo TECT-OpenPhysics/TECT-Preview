@@ -203,3 +203,30 @@ infimum. Six Lean lemmas do not encode ODE/compactness. R158 primary35/35
 and independent24/24 passed; its old full deterministic-PDF rebuild failed
 under the current engine. Original PDFs and expected hashes were restored
 unchanged. No full legacy verifier PASS or physical/limit promotion.
+
+## 2026-11-12: fixed-sector EXCH002 / R579 and separate ALT001
+
+Pinned R158 fixed-charge minimization APPLIES-CONDITIONALLY at Qstar only
+to the pure-Psi boundary. Its arbitrary-amplitude plane/current identity,
+not its minimizing theorem, evaluates the same-Q mixed trial below rho_star.
+R578's complete finite-K conserved flow applies unchanged; only the fixed
+charge sector is newly selected. All source/reference/time/regulator fields
+are preserved in EXCH002's hash-pinned admission.
+
+External primary source: Teschl, ODE and Dynamical Systems, author AMS
+preliminary PDF, section9.2 Theorem9.4 printedp259/PDFp270 at
+https://www.mat.univie.ac.at/~gerald/ftp/book-ode/ode.pdf.
+SHA256362433156525216abf596c17ce843204510e96d57afa4284a37c7aa5a9ffc36e.
+The root and hostile reviewer read the complete relevant page; it includes
+center directions. APPLIES: finite-K C-infinity field, co-rotating fixed
+point, positive transverse eigenvalue. Backward convergence and conservation
+put its unstable manifold in the same Q sector. Hyperbolic-only theorems
+are NOT imported. No infinite-dimensional/physical conclusion is inherited.
+Compact-sector energy gaps prove minimum-set stability and no outside
+full-state attraction directly. Standard methods, not originality claims.
+
+Independent/hostile checks separated Hessian sign from actual BdG growth,
+set from individual-orbit stability and full-state from coarse-observable
+relaxation. Six Lean lemmas cover partial algebra only. ALT001 is a separate
+same-condition structural comparison: no tensor stability superiority,
+full P1 U3 symmetry or all-time response dominance is imported.

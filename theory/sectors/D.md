@@ -19,7 +19,8 @@ Tier profile: T6x2 T5x1 T3x1 T1x2
 | [`D5-GENERATIONS`](../../claims/D5-GENERATIONS/claim.md) | T1 | — | — | Three fermion generations from the defect-bundle topology |
 | [`D6-GUT-BREAKING`](../../claims/D6-GUT-BREAKING/claim.md) | T1 | — | — | SO(10) to Standard-Model symmetry-breaking cascade |
 
-**Open named hypotheses (sector union):** H-CP2-BUNDLE-DATA, H-LEGACY-CHAIN  
+**Open named hypotheses (sector union):** H-CP2-BUNDLE-DATA, H-LEGACY-CHAIN
+
 **Open gates (sector union):** CP-UNITARITY
 
 ## Predictions

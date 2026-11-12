@@ -1,0 +1,30 @@
+{
+  "schema": "tect/bounded-alternative-assessment/1.0",
+  "id": "TECT-ALT-001-ASSESSMENT-v1",
+  "date": "2026-11-12",
+  "task_id": "T-103",
+  "classification": "auxiliary_support",
+  "claim_bearing": false,
+  "new_result_id": null,
+  "related_result": "R-579",
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "source_hashes": {"strategy/physical-candidates/TECT-ALT-001-contract-v1.json":"75e8a1e70a27a9880bdcc17a74f812dbeb95a2be4f6cb4ef9f51c98ff3cfe060"},
+  "same_conditions": "Same original P1, finite Fourier regulator, Qbar11008/27, canonical time/bracket, positive reservoir coefficients and epsilon1/16. Full new reservoir state retained; baseline not edited.",
+  "density_candidate": "REJECTED_NO_COMPONENT_TRANSFER",
+  "tensor_candidate": "RETAINED_STRUCTURAL_ADVANTAGE_ONLY",
+  "overall_superiority": "NOT_ESTABLISHED",
+  "structural_findings": [
+    "Frobenius-orthonormal Sym3(C) pair source has squared norm rho^2; it has no nonzero internal null source, unlike scalar Psi^T Psi.",
+    "Added interaction/reservoir rule is covariant under Psi->U Psi,C->U C U^T; this is NOT full P1 U3 symmetry.",
+    "At the SAME Qbar and identical initial P1 energy, Psi=sqrt(43/432)*(1,i,0), reservoir0, both first reservoir-charge derivatives vanish. Tensor second derivative1849/2916>0, scalar0.",
+    "This is an instantaneous source/response distinction. The scalar cancellation can change later under P1; all-time transfer dominance is unproved.",
+    "The density candidate conserves both individual norm charges, so is rejected before further calculations."
+  ],
+  "tradeoffs": "Six complex reservoir coordinates instead of one, extra degeneracy and state-selection obligations. No superior stability, ground-state selection, cost/benefit score, physical source or limiting behavior established.",
+  "hostile_boundaries": "C=chi I is not charge preserving. Rank-one real alignment matches interaction and charge only; full P1 span invariance is not supplied. No conditional averaging, state deletion, retuning or baseline rescue.",
+  "verification": "23 exact structural/Poisson/control checks in alt001_structural.py, independently derived by alt001_screen; reviewed alongside the main synthesis. General covariance and full-law initial-response crosswalk are analytic, not inferred just from one unitary control.",
+  "next_question": "Does an explicitly matched tensor reservoir state improve actual fixed-sector stability without favorable orientation selection?",
+  "reentry": "Separate admission of a same-state stability comparison only; no repeated cancellation demonstration, new candidate enumeration or automatic successor.",
+  "non_claims": "No adopted better physical model, empirical validation, full P1 symmetry, physical time, PreA, QFT, gravity, continuum or TOE."
+}

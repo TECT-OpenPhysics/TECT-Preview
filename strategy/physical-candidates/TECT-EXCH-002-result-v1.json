@@ -1,0 +1,79 @@
+{
+  "schema": "tect/fixed-sector-result/1.0",
+  "id": "TECT-EXCH-002-RESULT-v1",
+  "result_id": "R-579",
+  "task_id": "T-102",
+  "date": "2026-11-12",
+  "classification": "auxiliary_support",
+  "claim_bearing": true,
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "host_tier": "C6 T1 OPEN unchanged",
+  "result_scope_tier": "CONDITIONAL_FINITE_SECTOR_THEOREM",
+  "source_hashes": {
+    "strategy/physical-candidates/TECT-EXCH-002-contract-v1.json": "5dad4605d24d338d0ff4a8c169607595d7c59f247c15a4388185fceee31d75cc",
+    "strategy/physical-candidates/TECT-ALT-001-contract-v1.json": "75e8a1e70a27a9880bdcc17a74f812dbeb95a2be4f6cb4ef9f51c98ff3cfe060"
+  },
+  "evidence_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-12-exch002/hostile-review.json": "d424ddda36d90eb262ed32d056ef4a3a4a798e999d12cedcb649a9862d913fb0",
+    "verification/scripts/alt001_structural.py": "4f9377acffb9f65c45245237ff0a874e441816f016607663f3f36d54a2f92bb1",
+    "verification/scripts/exch002_primary.py": "2111d3b1add4bd69f19efa75aa9ba4cd3793940aabc0abc06ceeff85f1ef7307",
+    "strategy/physical-candidates/TECT-ALT-001-assessment-v1.json": "a460325b2af06313b28412d573e88eb52cc5407283b8af675ffa97ae6501e89d",
+    "verification/scripts/exch002_lean.py": "6cf5dc0250adc002628b6cd26f606c9a6e14d5706f9d2f5d15519647afbe839c",
+    "verification/lean/Tect/FixedSector.lean": "b706b60d14f49a9379b46d5988049a2b300ab19f216e220c39587cdcc6e66fee",
+    "verification/scripts/exch002_verify.py": "409cdae6432066d787cd11911dbff07db7320ec1c7aec599d8def65c28563a27",
+    "claims/C6-SPACETIME-SIGNATURE/notes/fixed-charge-sector-261112-v1.0.pdf": "b217774867a13fe4e09395e35136a3fa767d4f0f429359cdffb73d0c36050c47",
+    "verification/scripts/exch002_independent.py": "abc2999b7d474e7175b8e1d7b32feae2487ff150b8e6ef449f904a3540856cd4",
+    "claims/C6-SPACETIME-SIGNATURE/notes/fixed-charge-sector-261112-v1.0.tex.txt": "777875584aa0435d7eda2c27f2de942cbaf98e4fdb92ca2f5f8cb17ca691b4b2"
+  },
+  "external_source": {
+    "url": "https://www.mat.univie.ac.at/~gerald/ftp/book-ode/ode.pdf",
+    "sha256": "362433156525216abf596c17ce843204510e96d57afa4284a37c7aa5a9ffc36e",
+    "locator": "Theorem9.4, section9.2, printedp259/PDFp270",
+    "applicability": "APPLIES: smooth finite-dimensional co-rotating vector field, equilibrium, positive transverse eigenvalue. Local unstable manifold valid with center directions; conservation yields exact fixedQ."
+  },
+  "statement": "At Qbar=11008/27, every global constrained minimizer of unchanged EXCH001 has both components nonzero; the full minimum set is nonlinearly set-Lyapunov stable. The declared constant reservoir relative orbit is a constrained energetic saddle and nonlinearly orbitally unstable through an independently certified positive transverse Hamiltonian mode. No outside full-state trajectory converges to the minimum set.",
+  "verdicts": {
+    "mixed_global_selection": "PROVED_CONDITIONAL_EACH_FINITE_K",
+    "mixed_minimum_set_stability": "PROVED_SET_LYAPUNOV_NOT_INDIVIDUAL_ORBIT",
+    "constant_reservoir_stability": "DISPROVED_LINEAR_AND_NONLINEAR_ORBITAL",
+    "full_state_ground_attraction": "DISPROVED_OUTSIDE_MINIMUM_SET",
+    "individual_morphology_uniqueness": "NOT_ESTABLISHED",
+    "physical_realization": "NOT_ESTABLISHED"
+  },
+  "scope": "One fixed nonzero Q sector, side16 periodic T3, each separately fixed finite K>=1, same canonical parameter and bracket, full state and exact projections. No parameter/time sweep, regulator/volume limit or Gibbs preparation.",
+  "assumptions": [
+    "Unchanged pinned P1/R158 and EXCH001 sources/floors",
+    "Full finite constrained sector and exact plane evaluation at arbitrary amplitude",
+    "Teschl9.4 finite-dimensional local unstable manifold crosswalk; independently verified spectral sign"
+  ],
+  "key_bounds": {
+    "Qbar": "11008/27",
+    "q": "43/432",
+    "muR": "475/864",
+    "energy_order": "min_sector H < best_pure_order < best_reservoir_only",
+    "growth_squared_lower": "18701/29160000 > 0",
+    "negative_control": "The lowest R158 downhill shell has elliptic BdG block; growing branch uses n²1 high internal mode."
+  },
+  "verification": {
+    "command": "python -X utf8 verification/scripts/exch002_verify.py --lean-cache E:/Dev/TECT/verification/lean/.lake/packages",
+    "primary": "16 exact checks",
+    "independent": "25 non-importing checks and independent proof",
+    "alternative": "23 independently derived structural/Poisson/covariance controls",
+    "hostile": "Separate read-only final analytic/code audit; projector provenance repaired",
+    "lean": "Six actually compiled parameterized algebra lemmas, no full ODE/stability formalization",
+    "pdf": "One final four-page synthesis rendered and visually inspected; no overfull, clipping or overlap",
+    "legacy": "No historical full PDF-rebuild verifier rerun; original P1/PAH/EXCH001 source bytes preserved"
+  },
+  "alternative_disposition": "Density candidate rejected for no component charge transfer. Tensor retained for structural/initial-response gain only, at six complex coordinates instead of one. Overall superiority and improved stability NOT_ESTABLISHED.",
+  "missing_inputs": [
+    "Physical state/clock/carrier and observable map",
+    "Uniqueness or stability of individual mixed phases",
+    "Cutoff-uniform stability or continuum dynamics",
+    "A physically justified relaxation/coarse-observable mechanism, not added to the preserved model"
+  ],
+  "falsifier": "Wrong fixedQ charge, pure-class lower bound, admissible plane amplitude, source projector, rotating generator sign, unstable-manifold crosswalk or compact-sector energy argument invalidates its dependent claim.",
+  "next_question": "Which physically justified state/observable contract supplies meaningful coarse dynamics without claiming forbidden full-state ground attraction?",
+  "reentry": "New physical/observable input or precise mathematical objection. Separate matched-state stability admission needed before ranking tensor overall better; no automatic repair, new damping, time change or candidate expansion.",
+  "non_claims": "No P1/PAH/EXCH001 change, exact-zero spontaneous generation, full-state equilibration, individual morphology selection, physical time, PreA, spacetime, QFT, gravity, continuum, mass gap or TOE. C6/T054 unchanged."
+}

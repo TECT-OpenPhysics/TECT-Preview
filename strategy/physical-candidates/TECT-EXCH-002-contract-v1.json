@@ -1,0 +1,32 @@
+{
+  "schema": "tect/fixed-sector-admission/1.0",
+  "id": "TECT-EXCH-002-v1",
+  "date": "2026-11-12",
+  "task_id": "T-102",
+  "base_commit": "c2afbc598517049135ee50097b5275a983b880ef",
+  "authorization": "Operator explicitly requests the next fixed-nonzero-total-sector selection/stability test, preserving P1, PAH and EXCH001, plus a separate bounded alternative-model intake.",
+  "ideas": ["IDEA-008", "IDEA-006"],
+  "source_hashes": {
+    "strategy/physical-candidates/TECT-EXCH-001-contract-v1.json": "d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e",
+    "strategy/physical-candidates/TECT-EXCH-001-result-v1.json": "e932c9a837af12538109490358042f113447d4ed1efa838aebab2f6d7ff8c7cf",
+    "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json": "82ecf0e8e4e4b3d99cb67fad1655e03d85c63921f9e02deb83bd8ad0a74138e5"
+  },
+  "unchanged_model": "EXCH001-v1 Hamiltonian, omega=u=1, epsilon=1/16, weighted total Q=Qpsi+2Qchi, canonical bracket -2i, side16 T3, exact Psi cutoff K and chi cutoff2K for each fixed finite K>=1. No new term, retuning or time rescaling.",
+  "sector": {
+    "total_charge": "Qbar=R158 Q_star=11008/27=V*rho_star/2; V=4096. Exactly ONE fixed value, not a sweep.",
+    "rationale": "Reuses the already distinguished R158 nonzero charge as an explicit research input, not an observed physical value or fitted instability target.",
+    "state_space": "All finite Fourier states with Q=Qbar. No state weights, Gibbs law, projection or observable selection.",
+    "comparison": "Minimum over ALL reservoir-only states Psi=0; minimum over ALL pure-order states chi=0; full constrained global minimizer set, with no assumed morphology.",
+    "reservoir_reference": "Representative constant chi=sqrt(Qbar/V), Psi=0. Include its exact rotating relative orbit, not a frozen externally driven reservoir.",
+    "mixed_trial": "Only if needed, use the already admitted R158 shell Psi=sqrt(rho_star-2r^2)*v_* exp(ikx) and chi=r exp(2ikx), preserving this same Q exactly. Fix the derived trial amplitude r=epsilon*rho_star before calculation."
+  },
+  "stability_definitions": [
+    "Variational: constrained energy ordering and constrained tangent Hessian; global selection means full minimum-set comparison, not a trial ranking alone.",
+    "Dynamical reservoir test: derive actual co-rotating finite-K Hamiltonian linearization and test its real growth exponents; energetic saddle alone is NOT dynamical instability.",
+    "Mixed state dynamics: attempt set-Lyapunov stability of ALL constrained global minimizers using conserved H,Q and compact sector. Do not claim individual-orbit stability, uniqueness or asymptotic relaxation.",
+    "Selection by time evolution is separate: energy conservation and invariant zero sector must be checked before any claim of convergence to a mixed minimum."
+  ],
+  "proof_budget": {"fixed_parent": 1, "fixed_charge_values": 1, "parameter_or_time_sweeps": 0, "independent_review": 1, "hostile_review": 1, "synthesis_pdf": 1},
+  "admissible_verdict": "PROVED_SCOPED, DISPROVED_SCOPED or HOLD_FOR_EVIDENCE separately for each requested proposition; no automatic model repair or successor.",
+  "non_claims": "No physical state preparation, actual clock, equilibrium relaxation, fixed-K-to-continuum or thermodynamic limit, PreA, spacetime, QFT, gravity or TOE. No physical owner or C6/T054 gate closure."
+}

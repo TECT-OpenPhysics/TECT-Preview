@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-11-12-EXCH002-FULL-STATE-GROUND-ATTRACTION](#ng-2026-11-12-exch002-full-state-ground-attraction) | outside full-state relaxation to fixed-sector minima under unchanged closed EXCH001 | Conserved energy above the minimum excludes convergence in full-state distance. This does not exclude coarse-observable relaxation or transient structure. |
 | [NG-2026-11-12-EXCH001-EXACT-R158-INHERITANCE](#ng-2026-11-12-exch001-exact-r158-inheritance) | exact old R158 coexistence under the new parent | Reservoir variation lowers old shell energy at mu_t. Only exact inheritance fails; controlled shifted coexistence retained in R578. |
 | [NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV](#ng-2026-11-12-pah-state001-display-markov) | exact displayed-only memoryless realization of PAH-v2 | R-577 same-fibre invariant generator mismatch and original-Gibbs stationary compression defect; full counting CTMC preserved, no physical or uniform-limit no-go |
 | [NG-2026-10-14-PAH-TIME002-DECLARED-CLOCK-FREEZING](#ng-2026-10-14-pah-time002-declared-clock-freezing) | use declared local clocks alone to restore W motion | R-576 proves maximal original-path W freezing simultaneously in all source local clocks at fixed positive epsilon and geometry; no arbitrary random-semigroup substitution, physical clock or all-model no-go |
@@ -11093,3 +11094,22 @@ primary/independent/hostile/partial Lean checks. Reproduce with
 functional and PAH remain unchanged; the same new parent admits a bounded
 shifted finite-regulator variational coexistence. No universal no-go,
 physical vacuum, state selection or regulator-limit claim.
+
+### NG-2026-11-12-EXCH002-FULL-STATE-GROUND-ATTRACTION -- no outside attraction
+
+**Branch / claim.** Unchanged closed EXCH001 dynamics at fixed Q=11008/27
+relaxes from outside the full global minimum set to that set.
+
+**Failure mode.** The fixed finite sector is compact. An outside initial
+state has conserved energy strictly above minH. Distance to the compact
+minimum set tending to zero would force H to tend to minH, a contradiction.
+The unstable reservoir manifold has the larger reservoir energy; instability
+is not relaxation to the mixed ground set.
+
+**Evidence.** R579 fixed-sector result and synthesis, primary/independent
+checks, independent/hostile energy proof and partial Lean conservation lemma.
+
+**Consequence.** Full-state attraction is rejected in this model/scope only.
+No no-go for coarse observables, different state preparations, transient
+structure, physical equilibration or all theories. No new damping/time law
+is added; C6/T054 and all original source models remain unchanged.

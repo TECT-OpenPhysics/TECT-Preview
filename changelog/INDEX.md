@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1128 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1130 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-11-12 | `20261112-verification-emit-generated-dossiers-as-explici` — [Verification: emit generated dossiers as explicit UTF8 LF] - 2026-11-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261112-verification-emit-generated-dossiers-as-explici) |
+| 2026-11-12 | `20261112-c6-r579-fixed-charge-selection-and-actual-stabi` — [C6 R579: fixed-charge selection and actual stability; bounded alternatives] - 2026-11-12 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261112-c6-r579-fixed-charge-selection-and-actual-stabi) |
 | 2026-11-12 | `20261112-c6-r578-fixed-internal-exchange-and-controlled` — [C6 R578: fixed internal exchange and controlled shifted variational coexistence] - 2026-11-12 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261112-c6-r578-fixed-internal-exchange-and-controlled) |
 | 2026-11-12 | `20261112-c6-a2-preserve-operator-requested-creative-cand` — [C6/A2: preserve operator-requested creative candidate sketches] - 2026-11-12 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261112-c6-a2-preserve-operator-requested-creative-cand) |
 | 2026-11-12 | `20261112-c6-a2-tect-phy-002-proof-aware-candidate-filter` — [C6/A2: TECT-PHY-002 proof-aware candidate filter and charge-link boundary] - 2026-11-12 | A2-FULL-PRODUCTION-WELLPOSED, C6-SPACETIME-SIGNATURE, F3-INFLATION-CMB | [bounded page](pages/001119-001168.md#20261112-c6-a2-tect-phy-002-proof-aware-candidate-filter) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-29 | `20260929-tect-clk-005-estimator-aware-potential-calibrat` — [TECT-CLK-005: estimator-aware potential calibration and error feasibility] - 2026-09-29 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260929-tect-clk-005-estimator-aware-potential-calibrat) |
 | 2026-09-28 | `20260928-c6-clk-004-active-source-discovery-and-calibrat` — [C6 CLK-004 active source discovery and calibrated comparison audit] - 2026-09-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260928-c6-clk-004-active-source-discovery-and-calibrat) |
 | 2026-09-28 | `20260928-publication-reader-regression-repairs-without-r` — [Publication reader regression repairs without research-source changes] - 2026-09-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260928-publication-reader-regression-repairs-without-r) |
-| 2026-09-28 | `20260928-c6-clk-003-source-intake-and-strict-continuity` — [C6 CLK-003 source intake and strict continuity publication recovery] - 2026-09-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260928-c6-clk-003-source-intake-and-strict-continuity) |
-| 2026-09-28 | `20260928-c6-clk-002-portable-lean-replay-correction-with` — [C6 CLK-002 portable Lean replay correction without evidence rewrite] - 2026-09-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20260928-c6-clk-002-portable-lean-replay-correction-with) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1119–1128 | 10 | [001119-001168.md](pages/001119-001168.md) |
+| 1119–1130 | 12 | [001119-001168.md](pages/001119-001168.md) |
 | 1069–1118 | 50 | [001069-001118.md](pages/001069-001118.md) |
 | 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |

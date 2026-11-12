@@ -16,7 +16,8 @@ Tier profile: T4x1 T1x2
 | [`F2-BARYOGENESIS`](../../claims/F2-BARYOGENESIS/claim.md) | T1 | — | GAP-4 | Matter-antimatter asymmetry (baryogenesis) |
 | [`F3-INFLATION-CMB`](../../claims/F3-INFLATION-CMB/claim.md) | T1 | — | GAP-4 | Primordial cosmology and CMB constraints |
 
-**Open named hypotheses (sector union):** —  
+**Open named hypotheses (sector union):** —
+
 **Open gates (sector union):** GAP-4
 
 ## Predictions

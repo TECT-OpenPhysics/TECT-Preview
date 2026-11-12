@@ -262,3 +262,19 @@ and `notes/internal-exchange-261112-v1.0.tex.txt`.
 The charge jump depends on the regulator. No physical reservoir/time,
 equilibration, phase-crossing trajectory, uniform limit or Pre-A conclusion.
 C6 T1 and T054 unchanged. No automatic successor or fitted repair.
+
+### 2026-11-12: fixed-charge selection and actual stability (R-579)
+
+On Q=11008/27 in the unchanged EXCH001 parent, every constrained global
+minimum is mixed. The complete minimum set is nonlinearly set-Lyapunov
+stable; no unique morphology or individually stable orbit is established.
+The declared constant reservoir relative orbit is energetically a saddle
+and genuinely linearly/nonlinearly orbitally unstable. The growing mode
+is certified from the actual rotating generator, not from energy curvature.
+Conserved energy forbids outside full-state convergence to the minimum set.
+See the [result card](../../strategy/physical-candidates/TECT-EXCH-002-result-v1.json)
+and `notes/fixed-charge-sector-261112-v1.0.tex.txt`. A separate tensor
+reservoir has a limited initial-response structural advantage, not established
+overall superiority; density-only coupling fails the transfer filter.
+P1/PAH/EXCH001 are unchanged. C6/T054 stay open; no physical time,
+relaxation, Pre-A, continuum or automatic successor is asserted.

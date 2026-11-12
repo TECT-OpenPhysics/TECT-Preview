@@ -20,7 +20,8 @@ Tier profile: T7x3 T5x1 T4x1 T1x1 T0x1
 | [`B4-MASS-GAP`](../../claims/B4-MASS-GAP/INDEX.md) | T1 | — | — | BCC ground-state uniqueness within the single-mode constraint cone |
 | [`B5-BEYOND-LAYER-BOUND`](../../claims/B5-BEYOND-LAYER-BOUND/INDEX.md) | T7 | A1-KERNEL-CONV | — | Pattern-generic Gershgorin reduction of the beyond-layer bound |
 
-**Open named hypotheses (sector union):** A1-KERNEL-CONV  
+**Open named hypotheses (sector union):** A1-KERNEL-CONV
+
 **Open gates (sector union):** —
 
 ## Predictions
