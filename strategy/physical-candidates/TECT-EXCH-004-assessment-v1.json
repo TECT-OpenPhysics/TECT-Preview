@@ -1,0 +1,54 @@
+{
+  "schema":"tect/pair-readout-assessment/1.0",
+  "id":"TECT-EXCH-004-ASSESSMENT-v1",
+  "date":"2026-11-13",
+  "task_id":"T-105",
+  "contract":"strategy/physical-candidates/TECT-EXCH-004-contract-v1.json",
+  "contract_sha256":"4117b174f9b8abafbee4947053a4c6f5579f994851a27d1bf0e316050cb59daf",
+  "overall_verdict":"HOLD_FOR_EVIDENCE",
+  "classification":"auxiliary_support",
+  "mainline_progress":false,
+  "claim_bearing":false,
+  "new_result_id":null,
+  "new_negative_id":null,
+  "active_gate_change":false,
+  "physical_promotion":false,
+  "new_state_or_model_adopted":false,
+  "protocol_scope":"One published Donley85Rb pulse protocol, not a new EXCH carrier. Source-native continuum/remnant/bound components and post-pulse detector chain retained as obligations.",
+  "primary_locators":[
+    {"source":"EXCH004-DONLEY-v2","pages":"PDFp1-5","locators":"p2 Fig2/methods and detector thresholds; p3 Fig4 and curve-fit paragraph; p3-4 incomplete pulse-coupling interpretation; p4 Fig6 and pulse2-falltime sensitivity; p5 conversion/detection limitations.","disposition":"APPLIES to actual phase-sensitive preparation/recombination/readout, NOT sufficient for independently calibrated pre-readout pair-quadrature tomography."},
+    {"source":"EXCH004-GORAL-v2","pages":"PDFp1-2 and5-6","locators":"p2 continuum/two-level warning; p5 Eq2 native pair Hamiltonian; p6 Eqs3-12 pulse propagator factorization, bound-plus-continuum amplitudes and composite fringe phase.","disposition":"APPLIES-CONDITIONALLY as a native-channel measurement-functional reference; its two-body analogue is not the actual calibrated destructive-imaging instrument or full P1."}
+  ],
+  "published_inputs":{
+    "role":"SOURCE_REPORTED_INPUTS_NOT_FITTED_BY_THIS_AUDIT",
+    "pulse2_fall_us":["11","159"],
+    "burst_remnant_lag_deg":[{"reported_value":"155","reported_uncertainty":"4"},{"reported_value":"68","reported_uncertainty":"7"}],
+    "initial_number_noise":"about3percent shot-to-shot, not an exact source-prepared fixed-N state",
+    "missing_fraction_examples":"8(3)percent for Fig6,39(4)percent for Fig4,56(3)percent for longer pulses; these do not calibrate the undetected-channel instrument",
+    "uncertainty_policy":"Preserve reported uncertainties as source values; do not invent their joint covariance, coverage, deterministic bounds or independent-Gaussian interpretation."
+  },
+  "measurement_crosswalk":[
+    {"requirement":"Actual preparation/control/detection protocol","status":"LOCATED","evidence":"Donleyp1-3; destructive imaging follows field ramp, expansion hold and free flight, separates remnant/burst and misses some channels."},
+    {"requirement":"Native pre-readout pair observable and normalization","status":"PARTIAL","evidence":"Theory locates bound/continuum interference amplitudes. Their exact relation to a normalized single-mode b_dagger*a^2 across the actual prepared many-body state is not supplied as an instrument calibration."},
+    {"requirement":"Independent analyzer effects relative to current-generating coupling","status":"MISSING","evidence":"TheoryEqs3-12 contain both pulse amplitudes and continuum phase. Experiment reports phase-sensitive recombination, not independently calibrated complex analyzer effects."},
+    {"requirement":"Same pre-readout preparation across analyzer settings","status":"NOT_ESTABLISHED_FOR_TOMOGRAPHY","evidence":"Changing evolution time changes the state. Pulse2 variants demonstrate sensitivity, but do not provide a role-frozen calibrated-effect/state data table."},
+    {"requirement":"Normalization and undetected-channel treatment","status":"MISSING_FOR_INVERSE_MAP","evidence":"Shot noise, absent atoms, detector thresholds and image decomposition are present; no justification for postselecting survivors into a closed two-channel state."},
+    {"requirement":"Joint calibration/shot-noise covariance, higher-order errors and finite-time domain","status":"MISSING_FOR_TARGET_RECONSTRUCTION","evidence":"Published fitted uncertainties and theoretical regime qualifications are not a complete error-certified instrument packet."},
+    {"requirement":"Unused-for-fitting setting predicted with error and then compared","status":"NOT_EXECUTED_MISSING_INPUT","evidence":"159us case reserved retrospectively without fitting. Its reported lag is already known and is not a blind/prospective holdout. No calibrated prediction or residual is manufactured."}
+  ],
+  "conditional_diagnostic":{
+    "scope":"Standard linear inverse-problem and two-channel matrix controls only, not a native Donley reduction or new physical model.",
+    "criterion":"For calibrated effects y=A*r and target a^T*r on an admissible difference space, identify the target iff ker(A) is annihilated by a^T. On the full Bloch ball this is equivalent to a^T in rowspace(A). Append genuinely known population rows. Full tomography is not mandatory.",
+    "orientation":"Hold native coupling g fixed. The physical flux is proportional to Im(g*C); simultaneous C/g basis rephasing is coordinates, not a current obstruction. An unknown analyzer phase relative to fixed g can obstruct inference.",
+    "error":"If A^T*beta=a, target=beta^T*y and variance=beta^T*Sigma*beta. Holdout residual includes train/holdout cross-covariance; calibration and higher-order remainder bounds remain additional inputs. Covariance alone is not a guaranteed error interval.",
+    "boundary":"A conditional algebra failure cannot prove that the actual native protocol is impossible; a hypothetical ideal-y measurement cannot certify that it exists in this experiment."
+  },
+  "single_missing_input":{
+    "id":"EXCH004-PHASE-REFERENCED-ANALYZER-AND-OUTCOME-PACKET",
+    "status":"NOT_SUPPLIED_BY_THE_TWO_ADMITTED_SOURCES",
+    "content":"Source-native effects for the complete pulse2/expansion/release/detector chain, tied to the current-coupling phase and a specified preparation; continuum/loss/population contamination, joint calibration/covariance and higher-order error bounds; separate unused-for-fitting outcome counts in a valid finite-time window.",
+    "reentry":"An actual packet with changed source/evidence hash or a precise source/math error. No equivalent Rabi analogy, phase fitting of the same curve, uncontrolled two-channel truncation or automatic successor."
+  },
+  "verification":"Primary and independently derived exact algebra/provenance checks plus separate hostile source/inference review. One gate-level synthesis. No new Lean theorem: source/instrument insufficiency is not a missing algebra lemma; existing EXCH Lean sources remain unchanged.",
+  "non_claims":"No empirical holdout success, source-native impossibility, exact fixed-number preparation, EXCH quantization, full P1 identity, damping or time-law change, new model/state, PreA, spacetime, QFT, gravity, continuum or TOE."
+}

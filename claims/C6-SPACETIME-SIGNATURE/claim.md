@@ -297,3 +297,21 @@ charged first means cannot automatically replace invariant pair coherence;
 it is not EXCH quantization. Overall physical bridge HOLD_FOR_EVIDENCE.
 P1/PAH/EXCH, C6 T1 and the T054 gate are unchanged. No damping, added time,
 physical PreA, spacetime, QFT, gravity, continuum or automatic successor.
+
+### 2026-11-13: independent pair-readout audit (TECT-EXCH-004)
+
+One actual Donley85Rb two-pulse protocol was checked against exactly two
+versioned primary sources. Phase-sensitive recombination is located, but
+independent pre-readout quadrature reconstruction and an error-controlled
+unused response are not established. The single missing input is the
+phase-referenced native analyzer-and-outcome packet, including preparation,
+complete detection effects, continuum/loss contamination and joint errors.
+See the [assessment](../../strategy/physical-candidates/TECT-EXCH-004-assessment-v1.json)
+and `notes/pair-readout-audit-261113-v1.0.tex.txt`.
+
+Fifteen primary and fourteen independent checks cover standard conditional
+inverse-problem algebra and provenance, not a physical PASS. The reserved
+published response is retrospective/not fitted/not validated; no numerical
+prediction is invented. No ideal pulse or two-channel model is installed.
+Overall HOLD_FOR_EVIDENCE, no new R/negative ID, C6 T1/T054 unchanged.
+No source-native impossibility, P1 identity, quantization or automatic successor.

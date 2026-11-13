@@ -1,0 +1,50 @@
+{
+  "schema":"tect/pair-readout-contract/1.0",
+  "id":"TECT-EXCH-004-v1",
+  "date":"2026-11-13",
+  "base_commit":"a995d9d4315a06ff16917735c05363a7ef1a15b6",
+  "task_id":"T-105",
+  "authorization":"Operator-set active goal: one actual protocol, at most two primary sources, independent pair-coherence identification and unused-response validation without modifying P1/PAH/EXCH.",
+  "ideas":["IDEA-006","IDEA-008","IDEA-011"],
+  "preserved_hashes":{
+    "strategy/physical-candidates/TECT-EXCH-001-contract-v1.json":"d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e",
+    "strategy/physical-candidates/TECT-EXCH-003-result-v1.json":"ecd712ab2d9ffa93a7144756ba31e0d3fd32061ab8f9873dba180ffdf5a6f106"
+  },
+  "question":"Does the actual prepared state and calibrated readout independently identify the pair quadrature controlling exchange and predict a response setting not used for fitting, with controlled uncertainty?",
+  "protocol":"Donley85Rb two magnetic pulses separated by a fixed-field evolution interval; pulse2 followed by field ramp, expansion, release and destructive absorption imaging. Source actual state/control/detector, not an ideal pi/2 two-mode replacement.",
+  "sources":[
+    {"id":"EXCH004-DONLEY-v2","url":"https://arxiv.org/pdf/cond-mat/0204436v2","cache_file":"donley-v2.pdf","sha256":"ce7a62c7e61a5b9edd3cabb9336772a8491dcf0cdbe2f02f9fd6eb86bf4afe2e","bytes":204463,"role":"ACTUAL_EXPERIMENT_PROTOCOL"},
+    {"id":"EXCH004-GORAL-v2","url":"https://arxiv.org/pdf/cond-mat/0407627v2","cache_file":"goral-v2.pdf","sha256":"474aa7e089cbe25b2675c4837e4ba546d23fe00156892692d2aaa20fb6f695c6","bytes":629477,"role":"NATIVE_MULTICHANNEL_MEASUREMENT_FUNCTIONAL_REFERENCE"}
+  ],
+  "scope":{
+    "TECT":"P1/PAH/EXCH sources preserved. EXCH fixed side16 periodic T3, Q11008/27, each fixed K>=1 and original Hamiltonian tau remain reference-only for this measurement audit.",
+    "physical":"One native85Rb protocol with actual shot-number noise, trapped inhomogeneous gas, bound/continuum/remnant channels and laboratory time. Not mapped to the full three-Psi/chi EXCH state by assertion.",
+    "target":"Invariant pair correlation C relative to a fixed current-generating coupling g; physical flux depends on Im(g*C). ImC alone requires an independently anchored convention for g.",
+    "measurement":"All calibrated analyzer endpoint probabilities may be used. Population-time differentiation or fitting the same unknown phase cannot define the independent target.",
+    "limits":"Only source-declared finite experimental intervals. No thermodynamic, continuum, cutoff or long-time limit; no fitted tau conversion."
+  },
+  "required_before_physical_reconstruction":[
+    "Source-native pair observable/normalization and preparation class, including initial number variation",
+    "Complete pulse2-to-detector instrument effects anchored relative to the conversion coupling, with continuum/population nuisance and survival normalization handled",
+    "Calibration, joint shot-noise covariance, phase/error bounds, loss, backaction/control work and valid finite time window",
+    "A frozen unused-for-fitting setting with separately supplied outcome counts and uncertainty"
+  ],
+  "role_freeze":{
+    "timing":"Exact source versions and roles fixed before reference-verifier execution; source passages and published outcomes were already inspected during intake. No physical parameter fitting or source-data prediction has run.",
+    "base_case":{"pulse2_fall_us":"11","role":"SOURCE_SENSITIVITY_REFERENCE_NOT_INDEPENDENT_CALIBRATION"},
+    "reserved_case":{"pulse2_fall_us":"159","role":"RETROSPECTIVE_UNUSED_FOR_FITTING_ONLY_NOT_BLIND_OR_PROSPECTIVE"},
+    "policy":"Do not estimate an analyzer phase from either published response and call it independent quadrature calibration. If the instrument/error packet is absent, report NOT_EXECUTED and HOLD, not an invented numerical prediction."
+  },
+  "diagnostic_plan":[
+    "Use source full-channel effect E=U2_dagger M U2 including post-pulse detection operations, rather than replace the native protocol with a qubit.",
+    "Check target-functional identifiability by annihilation of the measurement nullspace, including known population constraints; full tomography is not required if the one target is identifiable.",
+    "Use two-channel matrices only as labelled conditional algebra/oracle controls. Keep current coupling fixed in unknown-analyzer-phase witnesses; joint state/coupling basis rephasing is not a physical obstruction.",
+    "Propagate covariance symbolically only under independent effect/noise assumptions; do not fill missing experimental error matrices with zero.",
+    "Independent and hostile source/code checks; exactly one PASS/DISPROVED/HOLD decision, no automatic successor."
+  ],
+  "pass":"Source-native independent target reconstruction and an unused-for-fitting response verified within an actual justified joint error bound, all required inputs filled.",
+  "disproved":"An exact contradiction for the specified native instrument/state class, not a conditional qubit ambiguity or lack of published data.",
+  "hold":"One missing calibrated source-native analyzer-and-outcome packet prevents reconstruction or validation; preserve the residual question, not another equivalent finite calculation.",
+  "budget":{"protocols":1,"primary_sources":2,"physical_fits":0,"dynamics_changes":0,"synthesis_notes":1,"automatic_successor":false},
+  "non_claims":"No new model, EXCH quantization, ideal-pulse insertion, damping/time law, physical clock, full P1 identity, PreA, spacetime, QFT, gravity, continuum, mass gap or TOE."
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS_CONDITIONAL_REFERENCE_READOUT_ALGEBRA",
+  "checks": {
+    "positive_normalized_reference_states": true,
+    "same_populations": true,
+    "same_xz_calibration": true,
+    "opposite_pair_quadrature": true,
+    "same_real_pair_energy": true,
+    "different_known_y_holdout": true,
+    "xz_target_not_identified": true,
+    "one_calibrated_y_axis_suffices": true,
+    "reference_current_factor": true,
+    "unknown_analyzer_orientation_0": true,
+    "unknown_analyzer_orientation_1": true,
+    "unknown_analyzer_orientation_2": true,
+    "unknown_analyzer_orientation_3": true,
+    "correlated_difference_variance": true
+  },
+  "check_count": 14,
+  "script_sha256": "e710b830c1dd3e73d48576e24b6e834964716ef8018c8f1af585e1a294727776",
+  "witness": {
+    "same_readouts": "population, real pair energy, x/z effects",
+    "different_target": "ImC = minus/plus 1/sqrt(2), fixed native g",
+    "different_known_holdout": "reference calibrated y-effect probability1 versus0, NOT experimental data"
+  },
+  "scope": "Calibrated two-channel reference effects only, not native continuum dynamics.",
+  "physical_verdict": "NOT_ESTABLISHED_BY_THIS_ALGEBRA",
+  "missing": "Native instrument effects and their joint errors/covariance.",
+  "non_claims": "No EXCH quantization, source-native no-go, calibrated instrument, empirical holdout, P1 identity or physical time."
+}

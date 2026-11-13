@@ -1,0 +1,184 @@
+% Title: Independent pair-coherence readout and the native analyzer boundary
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-11-13; this version issued 2026-11-13
+% Status: EXCH004 audit; physical HOLD_FOR_EVIDENCE, no new result ID
+
+\section{Purpose and scope}
+The exact question is whether one actual preparation and instrument
+independently identify the pair quadrature controlling exchange and predict
+an unused-for-fitting response with controlled uncertainty. Preserve all
+P1, PAH and EXCH sources, states and time laws. EXCH's finite-$K$ side-16
+torus and $Q=11008/27$ remain their own mathematical scope; they are not
+identified with the native trapped gas. No damping or new model is added.
+IDEA006/008/011 were retrieved first. This audit uses exactly two primary
+sources and one Donley magnetic-pulse protocol. The verdict is
+\texttt{HOLD\_FOR\_EVIDENCE}, not a physical impossibility theorem. There is
+no new R or negative-result ID and no C6/T054 promotion.
+
+The preregistered contract, fixed before verifier execution and any
+physical fitting, has SHA-256
+\begin{verbatim}
+4117b174f9b8abafbee4947053a4c6f5579f994851a27d1bf0e316050cb59daf
+\end{verbatim}
+Its published outcomes were already seen during source intake: the reserved
+setting is retrospective and unused for fitting, never blind or prospective.
+
+\section{What the two actual sources provide}
+Donley et al., \url{https://arxiv.org/pdf/cond-mat/0204436v2}, PDF pp.~1--5,
+provide the native $^{85}$Rb preparation, two field pulses, hold and
+destructive atom imaging. The readout also includes a field ramp, expansion
+and release. Remnant and burst atoms are separated in images; other channels
+are not detected. Population-time curves are fitted, rather than used as
+independently calibrated pre-readout pair tomography. Changing pulse2's
+fall time changes the measured relative phase. This establishes real
+phase-sensitive recombination, not its independent inverse calibration.
+
+Goral, Kohler and Burnett,
+\url{https://arxiv.org/pdf/cond-mat/0407627v2}, PDF pp.~2,5--6, Eqs.~2--12,
+provide a native-channel functional with
+\[
+ U=U_{\#2}U_{\rm evolve}U_{\#1},\qquad T_{2B}=D_{2B}+A_{2B}.
+\]
+The fringe phase includes both pulses and the quasi-continuum contribution.
+The two-body return probability is explicitly an analogue of remnant
+fraction, not the calibrated destructive-imaging instrument. The source
+warns that a two-level mean-field description omits relevant continuum
+physics. Neither an ideal $\pi/2$ pulse nor the two-body analogue is
+substituted for the actual prepared many-body gas.
+
+Both PDFs were hash-checked and relevant pages read/rendered by root,
+with independent source review. Exact pins/locators are in the contract
+and assessment. This bounded search does not prove global absence.
+
+\section{The independent-readout test}
+For a native instrument setting $j$, the complete calibrated effect would
+be $E_j=\mathcal I_j^*(M_j)$, including pulse2 and all later detection
+operations. In a closed unitary description this reduces to
+$U_{\#2}^\dagger M_jU_{\#2}$ only if $M_j$ already includes the full
+post-pulse chain. Endpoint populations after independently calibrated
+analyzers can legitimately reveal coherence; population differentiation
+or refitting the same unknown state/analyzer phase is not independent.
+Changing the evolution time generally changes the state and is not
+tomography of a single frozen pre-readout preparation.
+
+For clarity, the following standard finite-dimensional algebra is a
+\emph{conditional diagnostic}, not a model of the native continuum. On the
+reference basis $|A\rangle=|2,0\rangle$, $|M\rangle=|0,1\rangle$,
+\[
+ \rho=(I+r\cdot\sigma)/2,\quad B=b^\dagger a^2=\sqrt2|M\rangle\langle A|,
+ \quad C=\operatorname{tr}(\rho B)=(r_x-ir_y)/\sqrt2.
+\]
+With $H_{\rm pair}=gB+\bar gB^\dagger$, the reference number flux is
+$\dot N_a=-4\Im(gC)/\hbar$. Thus $\Im C$ alone is a current quadrature
+only after anchoring the phase convention of $g$. A joint basis rephase
+of $C$ and $g$ is a coordinate change, not a physical-current ambiguity.
+No identification with EXCH coefficients or physical time is imported.
+
+If calibrated effects give $m_j=e_{0j}+e_j\cdot r$, write $y=Ar$ for
+$y=m-e_0$. A target $t=a^Tr$ is identifiable exactly when
+\[
+ \ker A\subseteq\ker a^T\quad\Longleftrightarrow\quad
+ a^T\in\operatorname{rowspan}A.
+\]
+Sufficiency follows from $A^T\beta=a$. Necessity follows by two small
+opposite perturbations along a null direction in the state's relative
+interior. Known population constraints must be included in the admissible
+difference space. Full tomography is not necessary: a calibrated pure-$y$
+effect can suffice for the minimum target. Conversely, equal populations
+and calibrated $x,z$ effects do not distinguish $(I\pm\sigma_y)/2$,
+whose pair quadratures and a calibrated $y$ response differ.
+For a nonconvex preparation class use its actual admissible differences,
+not an unjustified linear enlargement. Unit rows in the primary rank
+controls denote centered/rescaled Pauli expectations, not raw probability
+effect vectors; the independent calculation uses actual projector effects.
+
+For an analyzer with unknown orientation relative to fixed $g$,
+\[
+ m_\phi=\tfrac12[1+r_x\cos(\phi+\delta)+r_y\sin(\phi+\delta)].
+\]
+Rotating $r_\perp$ by $\alpha$ and replacing $\delta$ by
+$\delta+\alpha$ leaves all nominal-setting probabilities unchanged while
+the fixed-$g$ current can change. This diagnoses missing relative analyzer
+calibration, not impossibility of calibration or of the native experiment.
+
+\section{Errors and the reserved response}
+If $A^T\beta=a$, then $\hat t=\beta^Ty$ and
+$\operatorname{Var}\hat t=\beta^T\Sigma\beta$. For a known holdout row
+$e_h=A^T\beta_h$,
+\[
+ \operatorname{Var}(m_h-\hat m_h)=\Sigma_{hh}
+ +\beta_h^T\Sigma_{\rm train}\beta_h
+ -2\beta_h^T\Sigma_{{\rm train},h}.
+\]
+Neither covariance diagonality nor independence is assumed. Independently
+justified calibration is not presumed statistically uncorrelated. It has
+additional joint sensitivity and higher-order remainder terms. Under
+independently justified effect bounds
+$|\Delta e_{0j}|+\|\Delta e_j\|\le\eta_j$, a fixed linear estimator
+has an error contribution bounded by $\sum_j|\beta_j|\eta_j$ on the
+Bloch ball. This is not a measured native bound. Covariance alone is not
+a guaranteed interval without a declared coverage rule or tail bound.
+
+Loss outcomes and raw normalizations must be retained. Renormalizing by
+postselected survival generally makes the signal nonlinear in the initial
+state and invalidates a linear-effect rank test unless separately justified.
+The actual source has shot-number variation, undetected channels and
+state/readout contamination. These cannot be replaced by an exact fixed-$N$
+preparation or a zero leakage/error assumption.
+
+The published pulse2 fall-time settings 11 and 159 microseconds are frozen
+as a base sensitivity case and a reserved retrospective case. Their
+published phase fits are not independent analyzer calibration. The 159
+setting has not been fitted here, but its outcome was already inspected;
+it receives no prospective credit. No phase prediction, holdout residual,
+confidence interval or empirical PASS is computed without the missing
+instrument/error/outcome packet. This is NOT\_EXECUTED, not a failed
+numerical prediction.
+
+\section{Devil's-advocate review}
+The single missing input is a source-native, phase-referenced
+\emph{analyzer-and-outcome packet}: full-chain effects on a specified
+pre-readout state class, anchored to the conversion coupling, with
+continuum/population/loss contamination, joint covariance and higher-order
+errors, valid finite time range and separate role-frozen outcome counts.
+The reviewed sources do not supply this input. The physical gate is HOLD.
+No existing TECT proposition is refuted by lack of this experimental packet.
+
+\begin{enumerate}
+\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}
+\item Fringe phase is directly $\Im C$: UPHELD against that import;
+both pulse phases and continuum enter the actual signal.
+\item Any endpoint population readout is circular: DISMISSED;
+independently calibrated analyzers provide valid tomography.
+\item Two-level reference matrices describe the native gas: UPHELD
+prohibition; they are standard diagnostic controls only.
+\item A convention rephase proves opposite physical current: DISMISSED;
+the ambiguity test holds current coupling fixed and varies analyzer/state.
+\item Diagonal covariance or loss renormalization is harmless:
+UPHELD against it; full joint errors and survival normalization matter.
+\item Published pulse variants are untouched holdout data: UPHELD
+against prospective credit; roles are retrospective and no fitting occurs.
+\item An algebra/Lean PASS supplies missing calibration: UPHELD
+prohibition. No new theorem is promoted; no new Lean proof is needed for
+an absent physical datum. Existing Lean sources remain unchanged.
+\end{enumerate}
+Primary and independent operator/algebra checks are separately reproducible.
+AI source/hostile review is not human refereeing; external review is invited.
+Standard inverse-problem mathematics is reused, with no new R/no-go ID.
+
+\section{Result footer}
+\begin{verbatim}
+Result ID: C6-SPACETIME-SIGNATURE / EXCH004 audit; no new R.
+Precise statement: Physical readout/validation HOLD; one missing packet.
+Scope: One native protocol/two sources; reference algebra conditional.
+Dependencies: EXCH003/R580 boundary and source crosswalk.
+Evidence grade: INHERITED, ANALYTIC, EXACT, EXECUTED, CONDITIONAL.
+Reproduction command:
+  python -B -X utf8 verification/scripts/exch004_verify.py
+Expected output: PASS_AUDIT_COMPLETE_PHYSICAL_HOLD.
+Falsification gate: New calibrated packet or exact source/math error.
+Tier before / after: C6 T1 OPEN / T1 OPEN; T054 unchanged.
+No-overclaim statement: No empirical PASS, native impossibility,
+  quantization, physical clock, PreA, QFT, gravity or continuum.
+Next required action: One phase-referenced native packet; no auto-chain.
+\end{verbatim}

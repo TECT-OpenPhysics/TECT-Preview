@@ -262,3 +262,34 @@ instrument/covariance/backaction and unused intervention remain MISSING.
 No observed oscillation is counted as an EXCH prediction. Physical result
 HOLD_FOR_EVIDENCE; re-entry needs the single calibrated packet or precise
 error. Bounded source search does not prove global absence or novelty.
+
+## 2026-11-13 -- EXCH004 independent native pair-readout audit
+
+Target: independently infer the current-relevant pair quadrature on one
+prepared physical state and test an unused response with calibrated errors.
+Exact versions/pins: `strategy/physical-candidates/TECT-EXCH-004-contract-v1.json`.
+Donley0204436v2 PDFp1-5 APPLIES to actual preparation/recombination/detection,
+but NOT to an independently calibrated pre-readout pair inverse map.
+Goral/Kohler/Burnett0407627v2 PDFp2,5-6 Eqs2-12 APPLIES-CONDITIONALLY to
+the multichannel functional. Its two-body return analogue and composite
+pulse/continuum phase are NOT a calibrated many-body detection instrument.
+
+Root hash-checked both PDFs and read/rendered complete relevant pages;
+separate source/hostile reviewers independently checked exact locators.
+P1/PAH/EXCH original state, regulator, reference, normalization and time
+remain unchanged. No native carrier/P1 identity or limit is imported.
+R580 supplies only the prior population-closure/state-correlation boundary.
+
+Standard effect-row/nullspace algebra is reused as a conditional diagnostic,
+not a new theorem or source-native two-level replacement. Fifteen primary
+and fourteen independent checks retain fixed current-coupling phase,
+admissible differences, full covariance and nonlinear survival normalization.
+Physical state/effect calibration, nuisance/leakage bounds, joint errors
+and a role-frozen unused outcome remain MISSING. The159us source case was
+seen before role assignment and receives no blind/prospective validation.
+
+Overall source-scoped HOLD, no physical no-go and no new R/negative ID.
+Re-entry requires one changed-hash source-native analyzer-and-outcome packet
+or exact source/math error; no extra analogy, model/damping/time repair,
+fitted phase or automatic successor. Existing Lean sources unchanged;
+an algebra proof cannot manufacture the missing measurement calibration.

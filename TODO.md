@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 85
+Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 86
 
 ## In progress
 
@@ -313,3 +313,6 @@ Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibi
 - **T-104** TECT-EXCH-003 energy-compatible observable and physical-state crosswalk  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
   - Operator-admitted bounded state/readout audit. Preserve P1/PAH/EXCH; no damping, new time or automatic successor.
   - _updated 2026-11-12_
+- **T-105** TECT-EXCH-004 independent pair-coherence readout and unused-response audit  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
+  - One actual Donley two-pulse protocol, two versioned primary sources, no model/time change; require independently calibrated analyzer and heldout response.
+  - _updated 2026-11-13_
