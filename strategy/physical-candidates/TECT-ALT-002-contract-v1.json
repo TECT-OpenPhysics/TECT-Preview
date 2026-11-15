@@ -1,0 +1,28 @@
+{
+  "schema": "tect/matched-reservoir-linear-contract/1.0",
+  "id": "TECT-ALT-002-v1", "date": "2026-11-15", "task_id": "T-108",
+  "base_commit": "74c3482175867bfff652abfa47bb492e83f77f3e",
+  "authorization": "Operator requests selecting and executing one most suitable next goal. Separate bounded actual-linear-stability comparison reserved by ALT001/IDEA010, not re-entry of parked EXCH005/006.",
+  "source_hashes": {
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "codes/foundations/n001_variational_backend.py": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+    "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json": "82ecf0e8e4e4b3d99cb67fad1655e03d85c63921f9e02deb83bd8ad0a74138e5",
+    "strategy/physical-candidates/TECT-EXCH-001-contract-v1.json": "d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e",
+    "strategy/physical-candidates/TECT-ALT-001-contract-v1.json": "75e8a1e70a27a9880bdcc17a74f812dbeb95a2be4f6cb4ef9f51c98ff3cfe060",
+    "strategy/physical-candidates/TECT-ALT-001-assessment-v1.json": "a460325b2af06313b28412d573e88eb52cc5407283b8af675ffa97ae6501e89d",
+    "strategy/physical-candidates/TECT-EXCH-002-result-v1.json": "212f5e4d55613c83e856158ca485798afffd9b20301acc4b8533ac90d98e7ef5"
+  },
+  "scope": "Original P1 proposed reference functional, side16 periodic T3, each fixed finite Fourier K>=1 for Psi and 2K for chi/C, exact integrals/projections and positive floors. Original nondimensional canonical tau, bracket -2i per orthonormal complex coefficient, real L2/Frobenius norms. Fixed Qbar from R158, q=Qbar/V, omega=u=1 and epsilon=1/16 read from EXCH001. No parameter sweep, model/time change or limit.",
+  "comparison_class": "Psi=0, scalar chi0=sqrt(q), tensor C_j=sqrt(q)*v_j*v_j^T for ALL THREE increasing-eigenvalue real orthonormal eigenvectors of original M=diag(m)+klock(I-z0z0^T/|z0|²). Identical Q and reservoir energy, not C=chi I. The rank-one projector is sign-independent; every source-native alignment is reported, no favorable selection. Reservoir-block statements also test every constant symmetric C0 with normF²=q.",
+  "tests": [
+    "Derive the actual weighted co-rotating full linearized order and reservoir generators, including all nonzero reservoir Fourier perturbations and fixed-Q tangent/global-phase quotient.",
+    "Classify order exponential growth for all allowed lattice modes in each of the three alignments; exact root/pi intervals and a monotone high-mode tail, not finite tables as exhaustion.",
+    "Distinguish real exponential growth, spectral ellipticity, bounded full linear flow and nonlinear orbital stability. Test reservoir Jordan/neutral blocks rather than delete them.",
+    "If possible prove a cutoff-independent finite-time L2 linear bound for the low alignment, but do not call it nonlinear dynamics or a regulator-limit construction."
+  ],
+  "literature": "Teschl author's official ODE book, section3.1, equations3.5-3.7 and nilpotent exponential, printedp60/63 PDFp70/73 inspected. Matrix-exponential terminology/reference only; all needed 2x2 identities and solution bounds proved directly. No nonlinear instability theorem or general Jordan decomposition imported. R579 source-specific co-rotating block APPLIES after full model crosswalk, not as automatic tensor theorem.",
+  "budget": {"attempts": 1, "native_alignments": 3, "new_models": 0, "phase_sweeps": 0, "synthesis_notes": 1, "automatic_successor": false},
+  "ideas": ["IDEA-010", "IDEA-008", "IDEA-006"],
+  "falsifiers": "Wrong charge/energy matching, real-gradient factor, Frobenius coordinate count, discarded reservoir tangent, unproved lattice exhaustion or favorable orientation assumption invalidates the dependent assertion.",
+  "non_claims": "No overall tensor superiority, physical preparation selection, full-P1 U3 symmetry, nonlinear stability/instability inferred from spectrum, mixed-phase stability, new physical carrier or clock, actual continuum dynamics, PreA, spacetime, QFT, gravity, mass gap or TOE. T054/C6 and EXCH005/006 evidence holds unchanged."
+}

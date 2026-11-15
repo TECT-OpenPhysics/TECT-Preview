@@ -9,7 +9,7 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  39 proof units  ·  tier span T1
+## (all notes)/  ·  40 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -22,6 +22,7 @@
 | `fixed-charge-sector` | v1.0 | T1* | fixed-Q mixed minimum set is stable; | ANALYTIC, EXACT, EXECUTED, CONDITIONAL. | a physical state/observable packet |
 | `internal-exchange` | v1.0 | T1* | complete regulated charge-transfer flow; | ANALYTIC, EXACT, EXECUTED, CONDITIONAL. | physical input, or a precise |
 | `labelled-finite-dynamics` | v1.0 | T1 | Five finite operator identities for pinned v2. | ANALYTIC, EXACT, EXECUTED; partial Lean. | Separate fixed comparison-map admission. |
+| `matched-reservoir-linear` | v1.0 | T1* | native order spectra classified; | ANALYTIC, EXACT, EXECUTED, CONDITIONAL. | new justified state/law input or exact error; |
 | `pah-display-state` | v1.0 | T1 | Exact displayed-state Markov closure fails. | ANALYTIC, EXACT, EXECUTED, INHERITED. | Park; require physical latent-state/memory evidence. |
 | `pah-local-clock-freezing` | v1.0 | T1* | Equation (10) proves the preregistered maximal | ANALYTIC, EXACT, EXECUTED, INHERITED cap. | finish checkpoint, then park. Reopen only for |
 | `pah-omc015-cutoff` | v1.0 | T1 | Ordered squared limits are (0,0,1,1). | ANALYTIC, EXACT, EXECUTED; Lean cross-check | Separate owner contract for a new law |

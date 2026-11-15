@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 88
+Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 89
 
 ## In progress
 
@@ -321,4 +321,7 @@ Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibi
   - _updated 2026-11-15_
 - **T-107** TECT-EXCH-006 exact augmented-observable closure test  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE)_
   - One operator-requested bounded full-state exact test; no analyzer-lane reopening or model/time change.
+  - _updated 2026-11-15_
+- **T-108** TECT-ALT-002 matched reservoir full linear stability  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE)_
+  - Separate bounded comparison of all three source-spectral rank-one orientations; no physical or nonlinear stability promotion.
   - _updated 2026-11-15_

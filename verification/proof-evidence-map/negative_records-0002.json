@@ -1,6 +1,26 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-10-pre-a-st8-q3lock-convexity-only-weighted-commutator-sign",
+      "branch": "use quartic convexity in the `0<=lambda<=2g` subregime alone to obtain the energy/KMS-weighted commutator sign needed for spatial Cauchy",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260810-exp-000794-r-167-exact-second-weighted-energy-m"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "consequence": "Preserve the convex-subregime monotonicity lemma and its unweighted Hilbert--Schmidt scope, but do not promote it to an energy/KMS- weighted Lieb--Robinson sign. Additional cancellation, product-level, or state-specific structure is required; common dynamics remains open.",
+        "evidence": "The edge Hessian calculation does prove `D^2W4(q)[xi,xi]>=3(g-lambda/2) sum_a q_a^2 xi_a^2`. Nevertheless, already for the scalar convex quartic take `q=diag(0,1,2)`, `D=-ones(3)`, `C=[q,D]`, `F=[q^3,D]`, and `X=(C^T F+F^T C)/2`. Exact arithmetic gives `X=[[17,11,-4],[11,8,5],[-4,5,23]]`, `tr X=48`, but `v^T X v=-1` at `v=(-2,2,-1)`. Therefore the faithful density `(vv^T+epsilon I)/(9+3epsilon)` has negative expectation for `0<epsilon<1/48`.",
+        "failure_mode": "Use the exact convexity of the Q3LOCK quartic for `0<=lambda<=2g` by itself to infer the operator- or state-weighted commutator positivity needed for the first/double commutator spatial decay."
+      },
+      "detail_title": "convexity does not localize through a general energy weight",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "convexity gives a valid unweighted Hilbert--Schmidt monotonicity sign, but an exact 3x3 scalar-quartic commutator matrix has trace `48` and expectation `-1` on `(-2,2,-1)`. A faithful noncommuting weight can therefore reverse the sign; retain the convexity lemma without promoting it to weighted LR closure",
+      "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CONVEXITY-ONLY-WEIGHTED-COMMUTATOR-SIGN"
+    },
+    {
       "anchor": "ng-2026-08-10-pre-a-st8-q3lock-configuration-cylinder-canonical-momentum-generator",
       "branch": "infer a canonical momentum or polynomial CCR generator from bounded Euclidean configuration-cylinder data alone",
       "claim_ref_basis": {
@@ -2190,29 +2210,6 @@
       "kind": "no_go",
       "summary": "the post-heat atom is already retained-field measurable and has zero future residual; raw currents `X_0=0` and `X_1=Y` have the same post-heat conditional mean zero but future variances zero and one",
       "tag": "NG-2026-07-31-A13-POSTHEAT-MEAN-ONLY-FUTURE-VARIANCE-RECOVERY"
-    },
-    {
-      "anchor": "ng-2026-07-31-a13-pointwise-ellipticity-spatial-fractional-transfer",
-      "branch": "infer a spatial fractional whole-product estimate from a pointwise six-real covariance lower bound alone",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Use only a pointwise conditional covariance lower bound `Gamma(x)>=lambda I_6` for a terminal Gaussian field to infer a uniform spatial `W^(sigma,p)` coefficient estimate and hence the R-092 whole-product bound.",
-        "consequence": "The six-real negative-moment theorem controls inverse denominators only. A spatial fractional conclusion additionally requires owner-uniform joint value-gradient moments, regression/increment estimates, and the Fubini/Jensen conditions appearing in the R-092 right side. This is not a counterexample to the production terminal field if those additional data are proved.",
-        "evidence": "R-134 proof note, Section 8; primary symbolic covariance and fractional-growth check; non-importing independent frequency-growth check; R-092 whole-product right side and R-104 terminal-scope audit.",
-        "failure_mode": "On the torus let `G_a,H_a`, `1<=a<=6`, be independent standard Gaussians and set `zeta_N^a(x)=G_a cos(Nx)+H_a sin(Nx)`. At every point the six components are independent with covariance exactly `I_6`, uniformly in `N`. In contrast, translation or Fourier scaling gives a positive fractional seminorm of order `N^sigma` for every `sigma>0`. The value-gradient and derivative moments therefore grow although pointwise anti-concentration is unchanged."
-      },
-      "detail_title": "pointwise anti-concentration does not control spatial oscillation",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "zeta_N^a(x)=G_a cos(Nx)+H_a sin(Nx) has covariance I_6 at every point while every positive spatial fractional norm grows like N^sigma; joint value-gradient and spatial moment data are separate hypotheses",
-      "tag": "NG-2026-07-31-A13-POINTWISE-ELLIPTICITY-SPATIAL-FRACTIONAL-TRANSFER"
     }
   ],
   "kind": "negative_records",

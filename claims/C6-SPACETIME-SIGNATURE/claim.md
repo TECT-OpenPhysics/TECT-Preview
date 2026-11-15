@@ -349,3 +349,21 @@ not a new general theorem. No restricted-preparation, memory or approximate
 law is ruled out. Pair measurement still supplies instantaneous current,
 not closed future drift. C6 T1/T054 and EXCH005 physical HOLD unchanged;
 no automatic observable hierarchy, new model/time or physical promotion.
+
+### 2026-11-15: matched full reservoir linear comparison (ALT002 / R-582)
+
+All three original-M rank-one tensor alignments are compared at exactly the
+same reservoir charge and energy as the scalar reference. Low alignment has
+no exponential order mode on any lattice momentum; middle/high and scalar
+do. This is not full linear stability: every constant reservoir orientation
+retains a zero-mean fixed-Q tangent Jordan shear surviving global-phase
+quotient. Low full linear finite-time norm is bounded by 4+2q|tau| uniformly
+in separately finite cutoffs, but not uniformly in time.
+
+See [R-582](../../strategy/physical-candidates/TECT-ALT-002-result-v1.json)
+and `notes/matched-reservoir-linear-261115-v1.0.tex.txt`.
+Standard spectral/Jordan/weighted-energy methods give a source-specific
+auxiliary result, not overall tensor superiority, selected physical state,
+nonlinear stability/instability, full dynamics common core or limit.
+C6 T1/T054 and EXCH005/006 holds unchanged. No model, time, damping or new
+spatial term is added; no automatic successor.

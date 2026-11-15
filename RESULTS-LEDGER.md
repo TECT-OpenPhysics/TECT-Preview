@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-582](#r-582) | Matched tensor reservoir linear classification and shear | All three source-native rank-one order spectra classified; low removes exponential order growth but every constant reservoir retains full tangent Jordan shear. Low full linear finite-time bound is cutoff independent, not nonlinear/physical/limit closure. |
 | [R-581](#r-581) | Pair-coherence-augmented state nonclosure | Same full H/Q/populations/complex pair coherence have different actual drift in unchanged EXCH. The named universal exact autonomous closure fails; no physical or mainline promotion. |
 | [R-580](#r-580) | Conserved exchange diagnostics and phase-blind closure obstruction | Same full energy/charge/populations can have opposite exchange currents in unchanged EXCH. A universal population-only law fails; physical state/readout mapping remains HOLD. |
 | [R-579](#r-579) | Fixed-charge mixed minima and reservoir instability | All constrained minima are mixed and their complete set is Lyapunov stable at one fixed nonzero charge. The declared reservoir relative orbit is genuinely unstable; outside full-state ground attraction is excluded. No physical or limit promotion. |
@@ -20732,6 +20733,26 @@ scoped negative. Standard chain-rule/Poisson methods; model-specific boundary,
 not novelty priority or a new physical theorem. Restricted preparation,
 memory, other observable sets and controlled approximation remain open.
 No automatic hierarchy expansion; C6 T1/T054 and EXCH005 physical HOLD unchanged.
+
+### R-582 -- matched reservoir order spectrum versus full linear evolution
+
+At original Qbar and each fixed finite K>=1, scalar and all three source-M
+rank-one tensor references have identical reservoir charge/energy. The low
+tensor order channel has no exponential mode at any lattice momentum;
+middle/high alignments and scalar have one at n=(1,0,0). Every constant tensor
+orientation/rank, and scalar, retains a zero-mean fixed-Q tangent reservoir
+Jordan shear surviving the global-phase quotient. Full linear flow is not
+uniformly bounded in time. For low alignment, its full L2/Frobenius flow
+nevertheless satisfies norm <=4+2q|tau| independently of separately finite K.
+
+Proof: `claims/C6-SPACETIME-SIGNATURE/notes/matched-reservoir-linear-261115-v1.0.tex.txt`;
+card `strategy/physical-candidates/TECT-ALT-002-result-v1.json`.
+Exact primary/independent all-lattice certificates, independent/hostile review
+and six partial Lean algebra lemmas. Standard spectral/Jordan/weighted-energy
+methods, source-specific comparison, not general novelty priority.
+No favorable orientation selection, full-P1 U3 symmetry, nonlinear stability
+or instability, mixed-state result, continuum/common-core dynamics or physical
+promotion. C6 T1/T054 and EXCH005/006 holds remain unchanged.
 
 ## Notes on status
 

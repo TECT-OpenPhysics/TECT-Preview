@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR](#ng-2026-11-15-alt002-bounded-linear-reservoir) | uniformly-in-time bounded full linear flow around a constant tensor reservoir | A nonzero zero-mean fixed-Q tangent Jordan shear survives every constant orientation and global-phase quotient. No nonlinear instability follows; scalar has the same shear. |
 | [NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE](#ng-2026-11-15-exch006-augmented-closure) | exact autonomous drift of the named population/coherence vector for all full EXCH initial points | Same full H/Q/populations/complex coherence but unequal coherence drift and opposite current acceleration. Restricted states, memory and controlled errors remain open. |
 | [NG-2026-11-12-EXCH003-POPULATION-ONLY-CLOSURE](#ng-2026-11-12-exch003-population-only-closure) | one population-only law reproducing all full EXCH Dirac preparations | Same full H/Q/populations, opposite invariant pair currents. Restricted states, memory and controlled approximations are not excluded. |
 | [NG-2026-11-12-EXCH002-FULL-STATE-GROUND-ATTRACTION](#ng-2026-11-12-exch002-full-state-ground-attraction) | outside full-state relaxation to fixed-sector minima under unchanged closed EXCH001 | Conserved energy above the minimum excludes convergence in full-state distance. This does not exclude coarse-observable relaxation or transient structure. |
@@ -11136,6 +11137,29 @@ scope. Restricted physical preparations, memory-dependent laws and
 error-controlled approximations are open. No physical impossibility,
 augmented-hierarchy closure, PAH inference, damping or new clock follows.
 Physical state/law/instrument bridge HOLD; C6/T054 unchanged.
+
+### NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR -- full tangent shear
+
+**Branch / claim.** Replacing the scalar with the unchanged ALT001 tensor
+reservoir makes full co-rotating linear evolution around a constant
+reservoir uniformly bounded for all canonical times in the matched sector.
+
+**Failure mode.** For every constant symmetric C0 with normF²=q, pointwise
+reservoir linearization is Ddot=-2i Re<C0,D>F C0. The retained zero-mean
+D0=C0 cos(kx) belongs to an explicit exact fixed-Q curve and evolves as
+(1-2iq*tau)D0. Its norm grows as sqrt(1+4q²*tau²), orthogonally to the
+constant global-phase tangent. No orientation or local-phase deletion removes
+this declared full-state direction. Scalar has the same Jordan shear.
+
+**Evidence.** R582 / ALT002 source crosswalk, full real reservoir Hessian,
+exact primary/independent certificates, hostile review and partial Lean.
+
+**Consequence.** Uniform-in-time bounded linear flow is rejected for this
+constant-reservoir class only. Low source alignment can remove exponential
+order modes and has cutoff-independent finite-time bound 4+2q|tau|.
+Neither imaginary spectrum nor Jordan growth proves nonlinear orbital
+stability/instability. No new model/time, physical selection, common-core,
+continuum, PreA, QFT or gravity; C6/T054 and parked holds unchanged.
 
 ### NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE -- coherence is not a closed state
 

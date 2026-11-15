@@ -339,3 +339,32 @@ fields vanish for derivative terms; no invariant reduced subspace assumed.
 Limit: every separately fixed K only, no limit theorem. Residual R581 is the
 explicit same-full-readout/different-drift witness, not a general new lumping
 theorem or physical conclusion. EXCH005 packet remains unfilled.
+
+## 2026-11-15: ALT002 matched full linear dynamics
+
+Target: classify all three source-eigenaligned rank-one order spectra and
+full fixed-Q tangent linear flow at matched reservoir charge/energy. Pinned
+P1 proposed reference/EXCH001/ALT001/R579 are SATISFIED for their exact fields,
+coefficients, floors, cutoffs, bracket/time, fixed torus and Qbar only.
+R579 scalar block APPLIES after rederiving the tensor full Hessian; initial
+ALT001 cancellation/response does not imply stability. Full-P1 U3 symmetry
+is FAILED as an import and never used; a real M eigenbasis is a coordinate
+change, not a model symmetry. Exact rank-one charge match replaces the
+invalid C=chi I shortcut.
+
+Primary source consulted: Teschl official author's ODE PDF at
+https://www.mat.univie.ac.at/~gerald/ftp/book-ode/ode.pdf, section3.1,
+equations3.5-3.7 and nilpotent series, printedp60/63 (PDFp70/73).
+Relevant complete pages inspected; reference-only matrix exponential.
+All required block identities/solutions are derived directly, so no
+nonlinear instability theorem or unassessed general Jordan theorem is imported.
+
+Independent real Poisson/Hessian and tighter Sturm/pi/convex certificates
+falsify sign/factor and finite-sampling errors; a monotone tail covers every
+remaining lattice mode. Convention guard: r=sqrt(q), six orthonormal complex
+tensor coordinates, pointwise Frobenius contraction. Domain guard: zero-mean
+reservoir perturbation lies in an exact fixed-Q curve and survives GLOBAL
+phase quotient; no undeclared local gauge. Limit guard: cutoff-independent
+finite-time LINEAR bound is not full nonlinear/common-core/limit dynamics.
+Residual R582 is source-specific native order classification plus universal
+constant-reservoir shear. No physical selection or mainline promotion.

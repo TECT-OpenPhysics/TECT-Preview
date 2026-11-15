@@ -1,0 +1,28 @@
+{
+  "schema": "tect/matched-reservoir-linear-result/1.0",
+  "id": "TECT-ALT-002-RESULT-v1", "result_id": "R-582", "task_id": "T-108", "date": "2026-11-15",
+  "overall_verdict": "PROVED_SCOPED_LINEAR_CLASSIFICATION", "classification": "auxiliary_support",
+  "claim_bearing": true, "active_gate_change": false, "physical_promotion": false, "new_state_or_model_adopted": false,
+  "contract": "strategy/physical-candidates/TECT-ALT-002-contract-v1.json",
+  "contract_sha256": "9ded4fd4a2e29c759bc4ea4925edb58b197546c91871c0344e2b69209d3d98ca",
+  "scope": "Original side16 periodic T3, Qbar=11008/27, each separately fixed finite exact Fourier K/2K, original bracket/time, all order and six-complex tensor reservoir perturbations, real L2/Frobenius norm. Same scalar/tensor reservoir charge and energy at Psi=0. Full P1 proposed reference, floors and source parameters preserved.",
+  "statement": "All three source-eigenaligned rank-one tensor references classified: low has no exponentially growing order modes at any lattice momentum, middle/high have a positive exponent at n=(1,0,0). Every constant tensor reservoir of the same norm, and the scalar reference, has a zero-mean tangent Jordan shear, so full linear evolution is not uniformly bounded in time even modulo the global phase. The low tensor full linear flow nevertheless has cutoff-independent finite-time bound 4+2q|tau|.",
+  "verdicts": {
+    "low_order_channel": "NO_EXPONENTIAL_GROWTH_ALL_LATTICE_MODES_AND_PROPAGATOR_NORM_AT_MOST_4",
+    "middle_high_order_channels": "ACTUAL_POSITIVE_EXPONENT_AT_M1_EVERY_K_GE1",
+    "full_tensor_linear_flow": "UNBOUNDED_IN_TIME_BY_RESERVOIR_JORDAN_SHEAR_ALL_CONSTANT_ORIENTATIONS",
+    "low_full_finite_time_bound": "NORM_AT_MOST_4_PLUS_2Q_ABS_TAU_UNIFORM_IN_SEPARATELY_FINITE_K",
+    "nonlinear_orbital_stability": "NOT_ESTABLISHED",
+    "overall_superiority_or_physical_selection": "NOT_ESTABLISHED"
+  },
+  "evidence_grade": ["ANALYTIC", "EXACT", "EXECUTED", "CONDITIONAL"],
+  "proof": "claims/C6-SPACETIME-SIGNATURE/notes/matched-reservoir-linear-261115-v1.0.tex.txt",
+  "negative_id": "NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR",
+  "reproduction": "python -B -X utf8 verification/scripts/alt002_verify.py --lean-cache E:/Dev/TECT/verification/lean/.lake/packages",
+  "lean_scope": "Six parameterized paired-square, conserved-metric, Jordan composition/norm and ratio algebra lemmas. Full P1 linearization, source root/pi/lattice certificates, Fourier tangent and analytic operator norms remain outside Lean.",
+  "falsifier": "Wrong matching r=sqrt(q), weighted rotation, pointwise versus integrated contraction, Frobenius count, P1 Hessian, source root/pi intervals, monotone tail, fixed-charge tangent or phase quotient invalidates its dependent assertion.",
+  "research_value": "A full-state dynamical comparison beyond ALT001 initial cancellation. Standard linear Hamiltonian/spectral/Jordan methods; source-specific all-lattice classification and a finite-time uniform linear estimate, not a novel general stability theorem or mainline/physical advance.",
+  "next_question": "What independently justified state-selection or reservoir spatial-coherence input would select a usable reference without deleting actual tangent modes or changing the preserved model?",
+  "reentry": "New source-justified state/law input or a precise error; no orientation fitting, extra gradient/damping, nonlinear inference, new candidates or automatic successor.",
+  "non_claims": "No lowest-orientation physical adoption, full-P1 U3 symmetry, overall tensor superiority, nonlinear stability or instability, mixed-phase stability, common-core/limit dynamics, PreA, spacetime, QFT, gravity, mass gap or TOE. C6 T1/T054 and EXCH005/006 holds unchanged."
+}

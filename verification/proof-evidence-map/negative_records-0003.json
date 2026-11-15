@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-31-a13-pointwise-ellipticity-spatial-fractional-transfer",
+      "branch": "infer a spatial fractional whole-product estimate from a pointwise six-real covariance lower bound alone",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Use only a pointwise conditional covariance lower bound `Gamma(x)>=lambda I_6` for a terminal Gaussian field to infer a uniform spatial `W^(sigma,p)` coefficient estimate and hence the R-092 whole-product bound.",
+        "consequence": "The six-real negative-moment theorem controls inverse denominators only. A spatial fractional conclusion additionally requires owner-uniform joint value-gradient moments, regression/increment estimates, and the Fubini/Jensen conditions appearing in the R-092 right side. This is not a counterexample to the production terminal field if those additional data are proved.",
+        "evidence": "R-134 proof note, Section 8; primary symbolic covariance and fractional-growth check; non-importing independent frequency-growth check; R-092 whole-product right side and R-104 terminal-scope audit.",
+        "failure_mode": "On the torus let `G_a,H_a`, `1<=a<=6`, be independent standard Gaussians and set `zeta_N^a(x)=G_a cos(Nx)+H_a sin(Nx)`. At every point the six components are independent with covariance exactly `I_6`, uniformly in `N`. In contrast, translation or Fourier scaling gives a positive fractional seminorm of order `N^sigma` for every `sigma>0`. The value-gradient and derivative moments therefore grow although pointwise anti-concentration is unchanged."
+      },
+      "detail_title": "pointwise anti-concentration does not control spatial oscillation",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "zeta_N^a(x)=G_a cos(Nx)+H_a sin(Nx) has covariance I_6 at every point while every positive spatial fractional norm grows like N^sigma; joint value-gradient and spatial moment data are separate hypotheses",
+      "tag": "NG-2026-07-31-A13-POINTWISE-ELLIPTICITY-SPATIAL-FRACTIONAL-TRANSFER"
+    },
+    {
       "anchor": "ng-2026-07-31-a13-natural-phase-horizontal-xi-metric-identification",
       "branch": "identify the Xi coefficient seminorm with the full tangent norm after quotienting only the common phase",
       "claim_ref_basis": {
@@ -2227,28 +2250,6 @@
       "kind": "audit",
       "summary": "its two zero-slack entries were historical coarse bounds: accepted R-074/R-075 and R-076 estimates replace them by `X^(1/2)Y^(1/3)` with slack `1/6` and `X^(2/5)Y^(8/15)` with slack `1/15`; the complete shifted expectation-inside reconstruction remains open",
       "tag": "AUDIT-2026-07-27-A13-R093-BG-CRITICAL-ROW-SCOPE"
-    },
-    {
-      "anchor": "audit-2026-07-27-a13-r092-augmented-production-covariance",
-      "branch": "R-092 augmented perspective one-reveal frontier",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "Preserve the full augmented perspective sum and treat its weighted covariance as signed. This sharpens the existing perspective boundary but is not a torus/control/paid `H_N` counterexample. The surviving route is coefficient-unconditioned root-local paid absorption.",
-        "evidence": "With `A=B+2R`, `m=A^-1 Bz`, `Theta=B-BA^-1B`, and the exact terminal Doob energy retained, direct completion gives `D_R=E[z^T Bz]-E[B]:Gamma-q_B^T(E[A])^-1q_B-|E[Theta^(1/2)z]|^2`. For a centered symmetric reveal and even coefficient this is exactly `E[B(g):(g tensor g-Gamma)]`, independent of `R`. The exact positive-branch inverse of the R-091 four-row production scalar coefficient produces a bounded smooth even Gaussian reveal with strictly negative covariance. The rational audit value is `-1236 e/(21125 P)`, or `-618 e/(21125 P)` after the outer half.",
-        "failure_mode": "R-092's coefficient-conditioned moment-matched one-reveal positivity could be read as evidence that the complete augmented perspective density has a production sign after a suitable fixed derivative payment."
-      },
-      "detail_title": "the complete sign is a weighted covariance",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "audit",
-      "summary": "the complete unconditional density equals a weighted coefficient/quadratic covariance after both positive squares are retained; a bounded smooth even reveal built from the exact four-row production coefficient makes it strictly negative for every fixed payment, without constituting a paid torus counterexample",
-      "tag": "AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE"
     }
   ],
   "kind": "negative_records",
