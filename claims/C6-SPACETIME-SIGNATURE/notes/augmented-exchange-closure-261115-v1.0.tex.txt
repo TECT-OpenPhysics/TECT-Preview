@@ -1,0 +1,166 @@
+% Title: Pair-coherence-augmented exchange readout does not close
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-11-15; this version issued 2026-11-15
+% Status: R-581; exact finite-model negative, physical bridge unfilled
+
+\section{Purpose and scope}
+Preserve P1, PAH and EXCH001 exactly. EXCH006 asks whether the single
+observable vector
+\[
+ O=(H,Q,N_\psi,N_\chi,\Re Z,\Im Z),\quad
+ Q=N_\psi/2+N_\chi,\quad
+ Z=\int\bar\chi\,\Psi^T\Psi
+\]
+has one autonomous deterministic drift for \emph{every} full initial point
+on the original sector $Q=\bar Q=11008/27$. R580 rejects population-only
+closure but explicitly leaves this augmented question open. EXCH004 concerns
+instrument identifiability, not this dynamical factorization. The EXCH005
+native-analyzer lane remains parked. No new physical input is supplied here.
+
+The domain is the side-16 periodic three-torus, $V=4096$, at each separately
+fixed finite $K\ge1$. Keep all three complex order components with Fourier
+cutoff $K$, the scalar reservoir cutoff $2K$, exact integrals and orthogonal
+projections, original positive floors, and orthonormal-coordinate bracket
+$\{z,\bar z\}=-2i$. Time is the unchanged dimensionless canonical parameter
+$\tau$, not a measured clock. No volume, regulator or long-time limit is taken.
+The frozen contract is \texttt{TECT-EXCH-006-v1}, SHA-256
+\begin{verbatim}
+adbc069cf08df9c17d862c2bbe0f4ff45aafafab1465c1d6bad87e76b3be994e
+\end{verbatim}
+Its exact-byte source crosswalk pins the original P1 manifest/backend,
+R158, EXCH001 and the earlier result and intake records. P1 here means the
+manifest's \emph{proposed reference functional} implemented by the standalone
+backend, not the known mismatched historical executable residual.
+
+\paragraph{Literature and residual proposition.}
+Exact lumping is established mathematics. The author-hosted abstract of
+Toth et al., SIAM J. Appl. Math.\ 57(6), 1531--1556 (1997),
+DOI \texttt{10.1137/s0036139995293294}, was read for its definition only.
+No theorem from its uninspected full text, linear-lumping criterion or
+reaction-network hypothesis is imported. The necessary chain-rule statement
+is proved here: if $\dot O(x)=b(O(x))$ for all full states, then
+$O(x)=O(y)$ implies $\dot O(x)=\dot O(y)$. Only the source-specific witness
+below is residual work; no general novelty or priority is asserted.
+
+\section{Same full readout at two admissible points}
+Set, before testing,
+\[
+ q=\bar Q/V=43/432,\quad r=q,\quad a^2=q-r^2>0,
+ \qquad
+ \Psi_A=a(1,i,0)^T,\quad\Psi_B=a(i,1,0)^T,\quad\chi_A=\chi_B=r.
+\]
+These constant initial fields are admitted by every declared cutoff.
+Both have $\rho=|\Psi|^2=2a^2$, identical individual component populations,
+$S=\Psi^T\Psi=0$, $Z=0$, and $Q=V(a^2+r^2)=\bar Q$.
+They are not in the same weighted global phase orbit: nonzero common
+$\chi=r$ permits only an order-field sign change, which does not exchange them.
+
+Write the pinned real symmetric constant-field matrix as
+\[
+ L_0=r_{\rm P1}I+\operatorname{diag}(m_1,m_2,m_3)
+ +k_{\rm lock}\left(I-\frac{z_0z_0^T}{z_0^Tz_0}\right).
+\]
+The actual input has $z_0=(1,1,1)$ and $(m_1,m_2,m_3)=(0,3/100,7/100)$.
+The two states have equal Hermitian quadratic energy: the moduli agree and
+the off-diagonal cross products have zero real part. The density terms,
+reservoir self-energy and zero interaction energy also agree.
+
+This is equality for the \emph{full} functional, not an energy ansatz.
+All spatial derivatives vanish, so the quadratic derivative terms and their
+first variations vanish. The shell coefficient is the pinned zero input.
+For Class-II, each $J_A=\nabla m_A$ and
+$K_A=J_A-m_A\nabla\rho/(\rho+\delta)$ is zero. The first variation of
+their quadratic energy is zero: every differentiated current or coefficient
+is multiplied by a zero current. The positive floors ensure smoothness;
+they are neither removed nor approximated. Exact Fourier projections fix
+the remaining constant full gradients. Thus the local calculation below
+is the actual full vector field at these initial points. It does not require
+a theorem that a selected subspace is invariant.
+
+\section{Different actual coherence drifts}
+The full initial equations, in the original real-gradient convention, are
+\[
+ \dot\Psi=-i(L_0\Psi+\lambda\rho\Psi+\gamma\rho^2\Psi)
+                   +2i\epsilon r\bar\Psi,\qquad\epsilon=1/16.
+\]
+Although $\dot\chi$ need not vanish, its contribution to
+$\dot Z=\int\dot{\bar\chi}S+2\bar\chi\Psi^T\dot\Psi$ vanishes because
+$S=0$. Hence
+\[
+ \dot Z=Vr\left(-2i\Psi^TL_0\Psi+4i\epsilon r\rho\right).
+\]
+The isotropic local terms multiply $S=0$. Direct transpose multiplication
+gives
+\[
+ \Psi_A^TL_0\Psi_A=a^2(L_{11}-L_{22}+2iL_{12}),\qquad
+ \Psi_B^TL_0\Psi_B=a^2(-L_{11}+L_{22}+2iL_{12}).
+\]
+Here the equal first two pinned lock entries matter: $L_{11}-L_{22}=-3/100$.
+No full-P1 internal $U(3)$ symmetry is assumed. Therefore
+\[
+ \dot{\Im Z}_A-\dot{\Im Z}_B
+ =-4Vra^2(L_{11}-L_{22})=\frac{719261}{164025}>0.
+\]
+The instantaneous norm-charge current is still exactly
+$J=\dot N_\psi/2=2\epsilon\Im Z$. Both initial currents are zero, but
+\[
+ \dot J_A=\frac{1705367831}{3401222400}>0,\qquad
+ \dot J_B=-\frac{158956681}{3401222400}<0,\qquad
+ \dot J_A-\dot J_B=\frac{719261}{1312200}>0.
+\]
+Both share even the three component energy-ledger values. Equality of
+$H,Q,N_\psi,N_\chi,\Re Z,\Im Z$ therefore cannot determine their drift.
+The proposed universal exact autonomous closure is \textbf{DISPROVED}.
+This does not contradict the exact instantaneous current identity.
+
+\section{Devil's-advocate and proof strength}
+\begin{enumerate}
+\item \textbf{Wrong volume or factor two (DISMISSED by two formulations).}
+Constant physical amplitudes have bracket $-2i/V$, while $H=Vh$.
+The complex canonical and independently derived real canonical calculations
+agree on energies, all readouts and both drifts. The current is
+$\dot N_\psi/2$, not $\dot N_\psi$ or an energy current.
+\item \textbf{Deleted full-P1 terms (DISMISSED within this witness).}
+Their energies and full first variations vanish for the reasons above;
+no collocation grid, shell approximation or invariant mode truncation is used.
+\item \textbf{Internal relabelling is a symmetry (UPHELD against it).}
+The pinned unequal masses break it. Same populations do not determine the
+transpose moment. The test preserves actual lock entries and does not
+replace the historical mismatch by a favored convention.
+\item \textbf{One witness rules out every reduced theory (UPHELD boundary).}
+Only the named vector and all-initial-state exact autonomous quantifier fail.
+Restricted preparations, memory, controlled approximations and other finite
+observable sets are not ruled out; no automatic enlargement is admitted.
+\item \textbf{A measuring device has become unnecessary (UPHELD against it).}
+Pair measurement remains useful for determining instantaneous current;
+actual calibration remains an independent physical obligation. It is not
+sufficient by itself for future drift. The physical packet is still missing.
+\end{enumerate}
+Primary and non-importing independent symbolic scripts accompany the proof.
+Fresh compilation reuses the existing parameterized Lean value-factorization
+lemma and its companion algebra; the full P1 first-variation crosswalk and
+this concrete state pair are not fully encoded in Lean. Independent and
+hostile AI review is not external human refereeing. External attack of the
+functional-gradient and observable-factorization crosswalk is invited.
+
+\section{Result footer and next evidence}
+\begin{verbatim}
+Result ID: R-581; T-107 / EXCH006
+Precise statement: O has no universal exact autonomous drift.
+Scope: unchanged EXCH001, Qbar11008/27, every fixed finite K>=1.
+Dependencies: pinned P1/R158, EXCH001, R580 current identity.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, CONDITIONAL.
+Reproduction command: python -B -X utf8
+  verification/scripts/exch006_verify.py
+  --lean-cache E:/Dev/TECT/verification/lean/.lake/packages
+Expected output: PASS_EXACT_AUGMENTED_NONCLOSURE; reused Lean.
+Falsification gate: unequal readouts, wrong gradient or zero defect.
+Tier before / after: C6 T1/T1; T054 active gate unchanged.
+No-overclaim statement: no physical PreA, QFT, gravity or limit.
+Next required action: justify a preparation/internal-state contract
+and a controlled drift residual; no automatic observable hierarchy.
+\end{verbatim}
+This is a model-specific state-sufficiency negative using standard
+Hamiltonian algebra and a standard factorization obstruction. It improves
+the boundary of what future tomography could establish, not physical
+realization, cosmos origin, a common-core theorem or a uniform estimate.

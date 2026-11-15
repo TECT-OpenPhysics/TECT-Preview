@@ -80,6 +80,7 @@ Tier profile: T6x4 T5x1 T1x1
 | NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV | exact displayed-state closure | At the pinned admitted instance, four states have identical |
 | NG-2026-11-12-EXCH002-FULL-STATE-GROUND-ATTRACTION | no outside attraction | The fixed finite sector is compact. An outside initial |
 | NG-2026-11-12-EXCH003-POPULATION-ONLY-CLOSURE | hidden pair phase | At the original nonzero sector, constant Psi=sqrt(p)e1 |
+| NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE | coherence is not a closed state | At constant PsiA=a(1,i,0), PsiB=a(i,1,0), chi=r, with |
 
 ---
 

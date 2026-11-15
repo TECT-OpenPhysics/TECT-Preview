@@ -1,0 +1,30 @@
+{
+  "schema": "tect/augmented-exchange-closure-contract/1.0",
+  "id": "TECT-EXCH-006-v1",
+  "date": "2026-11-15",
+  "task_id": "T-107",
+  "base_commit": "38dd62f4f84298a5f499982c3f64f2b5558bc998",
+  "authorization": "Operator requests selecting and executing the most suitable next goal. Separate bounded assumption-resolution test, not reopening EXCH005 analyzer intake.",
+  "source_hashes": {
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "codes/foundations/n001_variational_backend.py": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+    "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json": "82ecf0e8e4e4b3d99cb67fad1655e03d85c63921f9e02deb83bd8ad0a74138e5",
+    "strategy/physical-candidates/TECT-EXCH-001-contract-v1.json": "d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e",
+    "strategy/physical-candidates/TECT-EXCH-003-result-v1.json": "ecd712ab2d9ffa93a7144756ba31e0d3fd32061ab8f9873dba180ffdf5a6f106",
+    "strategy/physical-candidates/TECT-EXCH-005-assessment-v1.json": "e76c2dfe55248d6f99f90fe284aa2cd4f8e2a3af722d118205fd3594c121376f"
+  },
+  "question": "Does O=(H,Q,Npsi,Nchi,ReZ,ImZ) admit one exact autonomous deterministic drift for every full original initial state on Q=Qbar?",
+  "scope": "Unchanged EXCH001 on original side16 periodic three-torus, each separately fixed finite Fourier K>=1 for Psi and 2K for chi, exact projection/integrals, real L2 pairing, orthonormal-coordinate bracket -2i, original dimensionless canonical tau. Qbar is read from R158. No volume/cutoff/time limit or physical clock.",
+  "preregistered_witness": "q=Qbar/V, r=q, a^2=q-r^2; PsiA=a(1,i,0), PsiB=a(i,1,0), chiA=chiB=r. Test positive amplitudes, equality of full observables and inequality of full-vector-field initial ImZ derivatives. Do not assume an invariant reduced subspace.",
+  "observables": "Npsi=int |Psi|^2; Nchi=int |chi|^2; Q=Npsi/2+Nchi; Z=int conjugate(chi)*sum Psi_a^2; J=2epsilon ImZ. H includes interaction. Norm current is not an energy current.",
+  "pass_fail": "PROVED only with exact full-state factorization; DISPROVED if two admissible same-O states have unequal derivative of any O component; otherwise HOLD_FOR_EVIDENCE. A first-derivative witness suffices and no time integration is needed.",
+  "literature_crosswalk": {
+    "internal": "R580 explicitly leaves augmented closure unproved. EXCH004 is instrument identifiability, not vector-field factorization. Reuse exact original source definitions only.",
+    "external_reference": "Toth et al., SIAM J Appl Math57(6),1531-1556, DOI10.1137/s0036139995293294; author-hosted abstract https://collaborate.princeton.edu/en/publications/the-effect-of-lumping-and-expanding-on-kinetic-differential-equat/ read for definition of lumping only. No inaccessible theorem imported.",
+    "proof": "Self-contained chain-rule necessity: if dO/dtau=b(O), equal O implies equal dO/dtau. No reaction-network, linear-lumping or invariant-Jacobian hypothesis imported.",
+    "residual": "Construct the exact source-specific augmented-observable witness and full-functional first-variation crosswalk. No novelty priority claim."
+  },
+  "ideas": ["IDEA-006", "IDEA-008", "IDEA-011"],
+  "budget": {"attempts": 1, "new_models": 0, "new_observables": 0, "source_surveys": 0, "synthesis_notes": 1, "automatic_successor": false},
+  "non_claims": "No new state law, projection, fitting, averaging, damping, clock, model or physical adoption. No impossibility for all finite closures, restricted preparations, memory or controlled approximations. Analyzer calibration remains useful and EXCH005 HOLD remains unchanged. No PreA, spacetime, QFT, gravity, continuum, mass gap or TOE."
+}

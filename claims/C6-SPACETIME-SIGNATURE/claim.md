@@ -331,3 +331,21 @@ fail-closed eligibility logic only; independent source and hostile wording
 reviews remain distinct. No new R/negative ID, C6/T054 change, model/time
 change, physical conclusion or automatic successor. Re-entry needs changed
 native analyzer evidence, not another equivalent source survey.
+
+### 2026-11-15: exact augmented-state nonclosure (TECT-EXCH-006 / R-581)
+
+The stronger named vector (H,Q,Npsi,Nchi,ReZ,ImZ) is not an exact autonomous
+state for every full original EXCH initial preparation. Two constant fields
+in the same original charge sector have equal full readouts and component
+energies but unequal coherence drift and opposite current accelerations.
+The full first-variation argument preserves the P1 proposed reference,
+all derivative terms/floors, projections, bracket and time. This is not
+an instrument-identifiability calculation or a physical-source retry.
+
+See [R-581](../../strategy/physical-candidates/TECT-EXCH-006-result-v1.json)
+and `notes/augmented-exchange-closure-261115-v1.0.tex.txt`.
+Standard chain-rule/Poisson methods give a source-specific exact negative,
+not a new general theorem. No restricted-preparation, memory or approximate
+law is ruled out. Pair measurement still supplies instantaneous current,
+not closed future drift. C6 T1/T054 and EXCH005 physical HOLD unchanged;
+no automatic observable hierarchy, new model/time or physical promotion.

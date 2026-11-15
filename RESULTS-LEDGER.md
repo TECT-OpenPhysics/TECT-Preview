@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-581](#r-581) | Pair-coherence-augmented state nonclosure | Same full H/Q/populations/complex pair coherence have different actual drift in unchanged EXCH. The named universal exact autonomous closure fails; no physical or mainline promotion. |
 | [R-580](#r-580) | Conserved exchange diagnostics and phase-blind closure obstruction | Same full energy/charge/populations can have opposite exchange currents in unchanged EXCH. A universal population-only law fails; physical state/readout mapping remains HOLD. |
 | [R-579](#r-579) | Fixed-charge mixed minima and reservoir instability | All constrained minima are mixed and their complete set is Lyapunov stable at one fixed nonzero charge. The declared reservoir relative orbit is genuinely unstable; outside full-state ground attraction is excluded. No physical or limit promotion. |
 | [R-578](#r-578) | Hypothetical exchange parent and shifted coexistence | Complete finite-regulator conserved-transfer flow; conditional variational first-order onset with shift below 0.004793. Exact old coexistence not inherited; no physical or limit promotion. |
@@ -20712,6 +20713,25 @@ crosswalks but not full P1/state/clock/instrument correspondence. Physical
 bridge HOLD_FOR_EVIDENCE, not a no-go against physical realization.
 Reusable diagnostic/negative boundary, standard Poisson and state algebra;
 no novelty priority or external publication claim. Host C6 T1/T054 unchanged.
+
+### R-581 -- pair-coherence-augmented exchange state is not autonomous
+
+For unchanged EXCH001, each separately fixed finite K>=1 at Q=11008/27,
+the vector (H,Q,Npsi,Nchi,ReZ,ImZ) has no single exact autonomous deterministic
+drift for all full initial points. Constant PsiA=a(1,i,0), PsiB=a(i,1,0),
+chi=r, with q=Qbar/V, r=q and a^2=q-r^2, have the same full vector, individual
+populations and energy ledger but different ImZ drifts and opposite current
+accelerations. Full first variations/projections, not an assumed reduced
+invariant subspace, justify the calculation.
+
+Proof: `claims/C6-SPACETIME-SIGNATURE/notes/augmented-exchange-closure-261115-v1.0.tex.txt`;
+card `strategy/physical-candidates/TECT-EXCH-006-result-v1.json`.
+Primary complex and independent real canonical checks, independent/hostile
+review and fresh reuse of existing partial Lean factorization support the
+scoped negative. Standard chain-rule/Poisson methods; model-specific boundary,
+not novelty priority or a new physical theorem. Restricted preparation,
+memory, other observable sets and controlled approximation remain open.
+No automatic hierarchy expansion; C6 T1/T054 and EXCH005 physical HOLD unchanged.
 
 ## Notes on status
 

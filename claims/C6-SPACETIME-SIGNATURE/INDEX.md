@@ -9,11 +9,12 @@
 
 **Falsifier.** A consistency requirement of the low-energy theory forcing a dimension $\neq 3+1$ or a Euclidean/degenerate signature in the IR.
 
-## (all notes)/  ·  38 proof units  ·  tier span T1
+## (all notes)/  ·  39 proof units  ·  tier span T1
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `aperture-cutoff-defect` | v1.0 | T1 | Equations (4)--(5) on the allowed $\epsilon=1$ | ANALYTIC, EXACT, EXECUTED; partial parameteri… | Before any replacement convergence target, ask |
+| `augmented-exchange-closure` | v1.0 | T1* | O has no universal exact autonomous drift. | ANALYTIC, EXACT, EXECUTED, CONDITIONAL. | justify a preparation/internal-state contract |
 | `comparison-contract-admission` | v1.0 | T1 | Full finite comparison-definition admission | Analytic, exact checks, partial Lean | Specify one full-label generator-defect target |
 | `crt-gibbs-defect` | v1.0 | T1* | The fixed character (3) has fine-Gibbs defect norm at least | ANALYTIC, EXACT, EXECUTED; partial parameteri… | Does the same fixed character obstruct original-time |
 | `crt-semigroup-defect` | v1.0 | T1 | Equation (8) refutes SG-001 at unchanged time $1/10$, | ANALYTIC, EXACT, EXECUTED, INHERITED; partial… | Park this comparison route. Reenter only on an exact |

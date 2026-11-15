@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**405 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**406 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-581`](../RESULTS-LEDGER.md#r-581) | pair-coherence-augmented exchange state is not autonomous | See authority |
 | [`R-580`](../RESULTS-LEDGER.md#r-580) | conserved exchange diagnostics and the physical state boundary | See authority |
 | [`R-579`](../RESULTS-LEDGER.md#r-579) | fixed-charge selection and actual stability | See authority |
 | [`R-578`](../RESULTS-LEDGER.md#r-578) | hypothetical internal-exchange parent | See authority |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-559`](../RESULTS-LEDGER.md#r-559) | PAH-OMC-022 source-level stationary-semigroup well-posedness boundary | See authority |
 | [`R-558`](../RESULTS-LEDGER.md#r-558) | PAH-OMC-021 composite owner-packet transfer audit | See authority |
 | [`R-557`](../RESULTS-LEDGER.md#r-557) | PAH-OMC-020 owner-packet sufficiency bridge | See authority |
-| [`R-556`](../RESULTS-LEDGER.md#r-556) | PAH-OMC-020 minimal ordered-convergence dependency audit | See authority |
 
 Search without loading the full ledger:
 

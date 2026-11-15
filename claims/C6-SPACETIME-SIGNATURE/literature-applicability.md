@@ -311,3 +311,31 @@ Limit guard: source laboratory finite windows supply no EXCH time or limit.
 No mathematical theorem is imported. Software tests cover hashes and
 eligibility flags; source and hostile reviews are separate AI reviews.
 The physical packet remains missing and no new R/negative ID is issued.
+
+## 2026-11-15: EXCH006 augmented dynamical factorization
+
+Exact target: one autonomous drift for (H,Q,Npsi,Nchi,ReZ,ImZ) on all full
+original EXCH states at Qbar, each fixed finite K>=1. R580 APPLIES for the
+current identity and original definitions, but explicitly does not supply
+augmented closure. EXCH004 APPLIES only to conditional instrument inverse
+algebra, not dynamical state sufficiency; EXCH005 remains parked.
+
+Toth et al., SIAM J Appl Math57(6),1531-1556(1997), DOI10.1137/s0036139995293294,
+author-hosted abstract at https://collaborate.princeton.edu/en/publications/the-effect-of-lumping-and-expanding-on-kinetic-differential-equat/
+was read for exact-lumping terminology only. The full theorem is
+NOT-YET-ASSESSED and not imported. Self-contained chain-rule necessity is
+sufficient; no linear lumping or reaction-network assumptions are used.
+
+SATISFIED crosswalk: exact manifest/backend bytes, proposed reference P1,
+three components, side16 torus, exact Fourier K/2K and orthogonal projection,
+positive floors, full energy reference, canonical tau/bracket and original
+Qbar. Reproduction: two non-importing complex/real canonical formulations
+and independent/hostile proof review. The existing Lean factorization lemma
+is freshly recompiled, not claimed to formalize the full P1 witness.
+
+Convention: V cancels between constant-amplitude bracket and H=Vh; norm
+current is not energy. Domain: full first variations at constant initial
+fields vanish for derivative terms; no invariant reduced subspace assumed.
+Limit: every separately fixed K only, no limit theorem. Residual R581 is the
+explicit same-full-readout/different-drift witness, not a general new lumping
+theorem or physical conclusion. EXCH005 packet remains unfilled.

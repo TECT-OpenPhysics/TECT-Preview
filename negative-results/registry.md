@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE](#ng-2026-11-15-exch006-augmented-closure) | exact autonomous drift of the named population/coherence vector for all full EXCH initial points | Same full H/Q/populations/complex coherence but unequal coherence drift and opposite current acceleration. Restricted states, memory and controlled errors remain open. |
 | [NG-2026-11-12-EXCH003-POPULATION-ONLY-CLOSURE](#ng-2026-11-12-exch003-population-only-closure) | one population-only law reproducing all full EXCH Dirac preparations | Same full H/Q/populations, opposite invariant pair currents. Restricted states, memory and controlled approximations are not excluded. |
 | [NG-2026-11-12-EXCH002-FULL-STATE-GROUND-ATTRACTION](#ng-2026-11-12-exch002-full-state-ground-attraction) | outside full-state relaxation to fixed-sector minima under unchanged closed EXCH001 | Conserved energy above the minimum excludes convergence in full-state distance. This does not exclude coarse-observable relaxation or transient structure. |
 | [NG-2026-11-12-EXCH001-EXACT-R158-INHERITANCE](#ng-2026-11-12-exch001-exact-r158-inheritance) | exact old R158 coexistence under the new parent | Reservoir variation lowers old shell energy at mu_t. Only exact inheritance fails; controlled shifted coexistence retained in R578. |
@@ -11135,3 +11136,26 @@ scope. Restricted physical preparations, memory-dependent laws and
 error-controlled approximations are open. No physical impossibility,
 augmented-hierarchy closure, PAH inference, damping or new clock follows.
 Physical state/law/instrument bridge HOLD; C6/T054 unchanged.
+
+### NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE -- coherence is not a closed state
+
+**Branch / claim.** A single exact autonomous deterministic law for
+(H,Q,Npsi,Nchi,ReZ,ImZ) reproduces all full original EXCH initial states on
+Qbar11008/27, at each fixed finite Fourier cutoff K>=1.
+
+**Failure mode.** At constant PsiA=a(1,i,0), PsiB=a(i,1,0), chi=r, with
+q=Qbar/V, r=q and a^2=q-r^2, all named values and the component energy ledger
+agree. Pinned internal mass splitting makes the actual ImZ derivatives
+different, with initially zero current but opposite current accelerations.
+The full first-variation argument retains all positive floors and exact
+projections; no favored invariant subspace or U3 symmetry is assumed.
+
+**Evidence.** R581 / EXCH006 result and synthesis, primary complex and
+non-importing independent real-canonical exact checks, separate hostile
+review and fresh compilation of the existing parameterized Lean obstruction.
+
+**Consequence.** Only the named all-initial-state exact autonomous closure is
+rejected. Other finite sets, independently justified restricted preparations,
+memory and controlled errors are not ruled out. Measuring pair coherence
+still supplies instantaneous current, not its closed evolution. No physical
+packet, new model/time, PreA, QFT, gravity or limit; EXCH005 HOLD and C6/T054 unchanged.
