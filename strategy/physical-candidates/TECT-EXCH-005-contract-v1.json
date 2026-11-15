@@ -1,0 +1,45 @@
+{
+  "schema": "tect/native-analyzer-intake/1.0",
+  "id": "TECT-EXCH-005-v1",
+  "date": "2026-11-15",
+  "task_id": "T-106",
+  "base_commit": "2f80392f537bf0fc174ccc0a387d773c9b947fe1",
+  "authorization": "Operator requests the most suitable next single goal and execution. Goal-tool scope fixed before detailed root PDF review; this file is a retrospective source-intake freeze, not a prospective experimental preregistration.",
+  "question": "Does a new native atom-pair to molecule protocol supply independently phase-referenced analyzer information on the same pre-readout state, sufficient to admit EXCH004's measurement packet?",
+  "preserved_hashes": {
+    "strategy/physical-candidates/TECT-EXCH-001-contract-v1.json": "d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e",
+    "strategy/physical-candidates/TECT-EXCH-003-result-v1.json": "ecd712ab2d9ffa93a7144756ba31e0d3fd32061ab8f9873dba180ffdf5a6f106",
+    "strategy/physical-candidates/TECT-EXCH-004-contract-v1.json": "4117b174f9b8abafbee4947053a4c6f5579f994851a27d1bf0e316050cb59daf",
+    "strategy/physical-candidates/TECT-EXCH-004-assessment-v1.json": "fd1c4909cfa3ab31e6684c65c36bf842643e807cdde5039bc46e191673062ad7"
+  },
+  "ideas": ["IDEA-006", "IDEA-008", "IDEA-011"],
+  "new_input": "Single-pair optical-tweezer preparation and a native Raman or spin-motion association protocol, rather than the already-audited Donley gas. Better preparation is a reason to inspect, not proof of analyzer calibration.",
+  "budget": {"protocols_max": 2, "primary_documents_max": 4, "detailed_reconstructions_max": 1, "physical_fits": 0, "new_models": 0, "synthesis_notes_max": 1, "automatic_successor": false},
+  "protocol_slots": [
+    {"id": "YU-NACS", "source": "EXCH005-YU-v1", "native_target": "A normalized native pair coherence associated with m_dagger*a_Na*a_Cs, not b_dagger*a^2 or the full EXCH pair sum."},
+    {"id": "HE-RBRB", "source": "EXCH005-HE-2020", "native_target": "Heteronuclear rubidium spin-motion association; full operator and instrument remain unassessed without the full paper."}
+  ],
+  "sources": [
+    {"id": "EXCH005-YU-v1", "url": "https://arxiv.org/pdf/2012.09043v1", "cache_file": "yu-v1.pdf", "sha256": "fb9da825f9137638dc2b991b50324f518e3a29b2a1ea5e664e5cf63e35e38740", "bytes": 862240, "pages": 13, "access": "FULL_PRIMARY_PDF", "role": "NEW_NATIVE_PROTOCOL_REFERENCE_ONLY"},
+    {"id": "EXCH005-HE-2020", "url": "https://www.science.org/doi/10.1126/science.aba7468", "doi": "10.1126/science.aba7468", "sha256": null, "access": "FULL_TEXT_HTTP_403", "metadata": "https://pubmed.ncbi.nlm.nih.gov/32972992/", "role": "DISCOVERY_ONLY_NOT_A_FULL_TEXT_PREMISE"}
+  ],
+  "cheap_first_filters": [
+    "Actual pair-to-molecule conversion, not molecular rotational or motional Ramsey or an unrelated qubit",
+    "Same pre-readout state with distinct analyzer setting, or an independently justified state-change map",
+    "Analyzer phase relative to current-generating coupling independently justified, not merely coherent light or a fitted Rabi curve",
+    "Full detector, normalization, leakage/loss and control/backaction instrument",
+    "Joint uncertainty or independently justified conservative joint bounds, plus separately role-frozen unused outcomes"
+  ],
+  "scope": {
+    "TECT": "All original P1/PAH/EXCH definitions and time laws preserved. EXCH's side16 periodic T3, each fixed K>=1, Q11008/27 and Hamiltonian tau are reference-only, not identified with laboratory atoms.",
+    "native": "Source-declared finite optical-trap preparation and laboratory time. No exact fixed pure preparation is inferred from postselection or cooling.",
+    "normalization": "Heteronuclear pair operator and count convention must be source-justified; do not import homonuclear sqrt(2) or factor-of-two current coefficients.",
+    "limits": "No new regulator, volume, continuum, infinite-time or cosmological limit. No numerical response fitting, phase reconstruction or new finite carrier."
+  },
+  "decision_rule": {
+    "PASS": "One actual complete phase-referenced packet admits target reconstruction and independently error-controlled unused-response validation.",
+    "DISPROVED": "An exact contradiction in an admitted native state/instrument contract, not absent data or inaccessible full text.",
+    "HOLD_FOR_EVIDENCE": "No complete packet established in the bounded intake. Distinguish source-scoped missing calibration from unassessed inaccessible evidence."
+  },
+  "non_claims": "No full P1/EXCH physical identity, new state/model/time, ideal analyzer, mean-field factorization, damping, empirical holdout, native impossibility, PreA, spacetime, QFT, gravity, continuum or TOE."
+}

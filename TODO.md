@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 86
+Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 87
 
 ## In progress
 
@@ -316,3 +316,6 @@ Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibi
 - **T-105** TECT-EXCH-004 independent pair-coherence readout and unused-response audit  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
   - One actual Donley two-pulse protocol, two versioned primary sources, no model/time change; require independently calibrated analyzer and heldout response.
   - _updated 2026-11-13_
+- **T-106** TECT-EXCH-005 bounded native pair analyzer eligibility  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
+  - One operator-authorized attempt; maximum two new native conversion protocols and four primary documents; no new model or automatic successor.
+  - _updated 2026-11-15_

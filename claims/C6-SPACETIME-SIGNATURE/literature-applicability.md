@@ -293,3 +293,21 @@ Re-entry requires one changed-hash source-native analyzer-and-outcome packet
 or exact source/math error; no extra analogy, model/damping/time repair,
 fitted phase or automatic successor. Existing Lean sources unchanged;
 an algebra proof cannot manufacture the missing measurement calibration.
+
+## 2026-11-15: EXCH005 native-analyzer eligibility
+
+Exact target: a phase-referenced native pair analyzer on the same pre-readout
+preparation, before any numerical reconstruction. Yu arXiv2012.09043v1
+(hash and page locators in the EXCH005 contract/assessment) is APPLIES as a
+new heteronuclear preparation/conversion reference, NOT-YET-ASSESSED as a
+complete independently calibrated instrument. He Science DOIaba7468 remains
+NOT-YET-ASSESSED because the full primary article could not be retrieved;
+an indexed abstract is discovery only. No unavailable article is rejected.
+
+Convention guard: heteronuclear pair normalization cannot inherit identical-
+boson sqrt(2) or EXCH current factors. Domain guard: actual preparation,
+loss and all detection operations cannot be replaced by an ideal qubit.
+Limit guard: source laboratory finite windows supply no EXCH time or limit.
+No mathematical theorem is imported. Software tests cover hashes and
+eligibility flags; source and hostile reviews are separate AI reviews.
+The physical packet remains missing and no new R/negative ID is issued.

@@ -315,3 +315,19 @@ published response is retrospective/not fitted/not validated; no numerical
 prediction is invented. No ideal pulse or two-channel model is installed.
 Overall HOLD_FOR_EVIDENCE, no new R/negative ID, C6 T1/T054 unchanged.
 No source-native impossibility, P1 identity, quantization or automatic successor.
+
+### 2026-11-15: bounded native-analyzer intake (TECT-EXCH-005)
+
+Two new protocol slots were screened in cheap-first order. The pinned Yu
+NaCs source provides selected-pair Raman conversion, but the independent
+same-state analyzer packet is not established. The He source's full text
+was inaccessible and remains unassessed, not scientifically rejected.
+See the [assessment](../../strategy/physical-candidates/TECT-EXCH-005-assessment-v1.json)
+and `notes/pair-protocol-intake-261115-v1.0.tex.txt`.
+
+Overall physical HOLD_FOR_EVIDENCE. No target reconstruction, unused-response
+validation or new theorem was executed. The verifier checks provenance and
+fail-closed eligibility logic only; independent source and hostile wording
+reviews remain distinct. No new R/negative ID, C6/T054 change, model/time
+change, physical conclusion or automatic successor. Re-entry needs changed
+native analyzer evidence, not another equivalent source survey.
