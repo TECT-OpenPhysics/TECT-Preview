@@ -1,0 +1,30 @@
+{
+  "question": "Does one of the two reviewed experiments independently prepare both R-581 states and read the same order population under the same post-preparation dynamics?",
+  "initial_review": "2026-11-18",
+  "methods_rechecked_and_recorded": "2026-11-19",
+  "classification": "Literature-only applicability audit; no new theorem, experimental result or direction-control admission.",
+  "disposition": "HOLD_FOR_EVIDENCE",
+  "authority_sha256": {
+    "strategy/physical-candidates/TECT-EXCH-001-contract-v1.json": "d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e",
+    "strategy/physical-candidates/TECT-EXCH-006-contract-v1.json": "adbc069cf08df9c17d862c2bbe0f4ff45aafafab1465c1d6bad87e76b3be994e",
+    "strategy/physical-candidates/TECT-EXCH-006-result-v1.json": "6cfe483d08777813f82076e09f7e3857be5a870a47db5289929990ce98793f68",
+    "claims/C6-SPACETIME-SIGNATURE/notes/augmented-exchange-closure-261115-v1.0.tex.txt": "f6a8410073b25049d1b340c7165097d48fa63987ddbbf8bc749bd5e12c8956c9"
+  },
+  "model": "Original finite side-16 periodic three-torus, fixed Fourier K/2K for each K>=1, canonical dimensionless tau. At q=Qbar/V=43/432, r=q, a^2=q-r^2, Psi_A=a(1,i,0), Psi_B=a(i,1,0), chi_A=chi_B=r. Same H,Q, populations and Z=0, opposite initial curvature of Npsi under the pinned law. Npsi is the integral of the sum of squared order-component magnitudes, not a single spin fraction, energy current or conserved constituent count. This is the existing R-581 witness only.",
+  "sources": [
+    {
+      "source": "Blasing et al., Phys. Rev. Lett. 121, 073202 (2018), DOI 10.1103/PhysRevLett.121.073202",
+      "locator": "https://arxiv.org/html/1807.11608v3 ; Fig. 1, Eqs. (1)-(3), apparatus description before Eq. (2)",
+      "native_procedure": "Raman dressing prepares an atomic spin-momentum superposition. Pair paths couple to one excited molecular level; spin-resolved absorption imaging counts remaining atoms after photoassociation.",
+      "unmet": "The common molecular level is a reaction output, not a documented nonzero reservoir coherently prepared in both initial samples. Spontaneous-emission-dominated atom loss has no calibrated mapping here to the reversible EXCH order population. This does not rule out a basis correspondence of pair amplitudes."
+    },
+    {
+      "source": "Chang et al., Nature Physics 1, 111-116 (2005), DOI 10.1038/nphys153",
+      "locator": "https://chapmanlabs.gatech.edu/papers/Chapman_NatPhys_01_111.pdf ; published pp. 111-115, Figs. 1 and 3b, Methods",
+      "native_procedure": "Microwave preparation and imposed phase shifts control a spin-1 condensate. Separated spin populations are imaged. The native process redistributes atom pairs between spin components.",
+      "unmet": "Figure 3b fits the unknown initial spinor phase in the trajectory reconstruction. A controlled phase shift is not independent certification of both starting phases relative to a common nonzero reservoir. Spin redistribution is not a calibrated change in total Npsi."
+    }
+  ],
+  "decision": "Neither protocol establishes both preparation and readout in one apparatus. Do not combine them. No data extraction, fitting, held-out window selection or experimental sign test was performed. This documentary HOLD does not alter R-581's DISPROVED verdict on universal exact reduced drift.",
+  "reentry": "One independently documented native preparation/readout packet (or an identifiable error in this crosswalk): certify both preparation classes up to the common weighted phase, shared reservoir and coupling orientation, unchanged subsequent law within error, and a common calibrated Npsi readout. Only then freeze an unused finite window before testing signs, including preparation-induced initial slope, timing, loss/detector error and higher-order remainder. No claim of experimental impossibility, unique TECT evidence, Pre-A, spacetime, QFT, gravity or a limit."
+}
