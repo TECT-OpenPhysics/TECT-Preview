@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 89
+Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 90
 
 ## In progress
 
@@ -325,3 +325,6 @@ Counts: In progress 12 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibi
 - **T-108** TECT-ALT-002 matched reservoir full linear stability  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE)_
   - Separate bounded comparison of all three source-spectral rank-one orientations; no physical or nonlinear stability promotion.
   - _updated 2026-11-15_
+- **T-109** TECT-EXCH-007 uniform persistence of both charge shares below the pure-order energy  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE)_
+  - One operator-authorized auxiliary theorem on EXCH-001. Fixed charge, volume, canonical time and all finite K; no change to T-054.
+  - _updated 2026-11-20_

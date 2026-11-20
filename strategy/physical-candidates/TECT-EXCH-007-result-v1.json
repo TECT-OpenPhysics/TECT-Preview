@@ -1,0 +1,33 @@
+{
+  "id": "TECT-EXCH-007-RESULT-v1",
+  "result_id": "R-583",
+  "task_id": "T-109",
+  "date": "2026-11-20",
+  "classification": "auxiliary_support",
+  "overall_verdict": "PROVED_IN_FIXED_HYPOTHETICAL_MODEL",
+  "active_gate_change": false,
+  "physical_promotion": false,
+  "statement": "For every finite K>=1 and every original EXCH-001 trajectory from Q=Qbar and (E_P-H)/V>=delta>0, x(1-x)>=delta^2/(2 epsilon^2 (rho_star+1/4) q^2) at every canonical time, where x=Qpsi/Qbar and 1-x=2Qchi/Qbar. The positive floor is independent of K and time. At delta=1/10000 these sublevels are nonempty for every K and the floor is 20155392/70059765625.",
+  "scope": "Conditional pinned R-158 P1, one periodic 3-torus of side 16, exact Fourier K/2K, full complex fields, original positive floors and canonical Hamiltonian bracket/time. Qbar=11008/27 and E_P=mu_t Qbar on that sector. Applies to all sublevel states, not just minimizers.",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED",
+    "CONDITIONAL"
+  ],
+  "evidence_sha256": {
+    "strategy/physical-candidates/TECT-EXCH-007-contract-v1.json": "57fe857d9b09633c21b77d04a8da1574144e00da73e8b10086248e01765d0806",
+    "strategy/physical-candidates/TECT-EXCH-007-source-erratum.json": "7aeaf88447974295b3279481ea82d8161515ff93fe33b6a74f7a0ecd3b757cd0",
+    "verification/scripts/exch007_verify.py": "2350b60247128b1b5765b4f80fae0f3376e7348bfca07225ae251988181650e2",
+    "verification/lean/Tect/UniformMixing.lean": "524f5536796b280200d3779178ba76cb1ba03e5a10d34985acce989c31f7ab64",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-20-exch007.json": "145707cd5f18d165ff5f7f3f68c00b0002ed064242f4bc5a80cda7e82c6ce594",
+    "claims/C6-SPACETIME-SIGNATURE/notes/mixed-charge-floor-261120-v1.0.tex.txt": "83815da28419e662b3a627ed5eb2b5aca116f3dd1915eea0a7d7cf0c4ae40545",
+    "claims/C6-SPACETIME-SIGNATURE/notes/mixed-charge-floor-261120-v1.0.pdf": "a26898514c020362b36827a9915debe8a00898c82f9634d3f6b29be453da344e"
+  },
+  "verification": "Two independent derivations (moment envelope before absorption, pointwise absorption before integration); 17 executed rational/symbolic checks; six compiled Lean scalar lemmas; hostile review and three-page render review. No external referee.",
+  "reproduce": "python -B -X utf8 verification/scripts/exch007_verify.py --lean-cache E:/Dev/TECT/verification/lean/.lake/packages",
+  "missing_inputs": "No spatial/time compactness or convergence; no native physical preparation, state or clock. No global spatial lower bound for either density.",
+  "falsifier": "Wrong volume or factor-two charge weighting, invalid moment absorption, loss of exact nonempty sublevel at some K, or an in-scope state sequence tending to a pure charge share.",
+  "reentry": "A specific mathematical error or a separately justified new scientific input. No optically matched sign test, next theorem or limit study is authorized by this result.",
+  "non_claims": "No rate of exchange, equilibration, phase selection, Lyapunov control of individual orbits, continuum dynamics, Pre-A, spacetime, QFT, gravity or mass gap. C6 T1 and T-054 unchanged."
+}

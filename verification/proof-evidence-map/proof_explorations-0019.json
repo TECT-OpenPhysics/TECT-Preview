@@ -4138,6 +4138,54 @@
       "task_id": "T-054",
       "title": "R-581 versus one symmetric optical exchange model: reflection separates the ideal predictions only",
       "verdict": "parked"
+    },
+    {
+      "boundary": "Fixed torus, charge, hypothetical law and dimensionless time. No pointwise positivity, exchange rate, approach to equilibrium, convergence of flows, space/time compactness, physical state, continuum or Pre-A conclusion. R-581 experiment and T-054 unchanged.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This controls all states on a conserved sublevel by an explicit cutoff-independent constant, rather than qualitative non-purity of each finite-cutoff minimizer. Auxiliary mathematical support only.",
+      "evidence_refs": [
+        "strategy/physical-candidates/TECT-EXCH-007-result-v1.json#statement",
+        "strategy/physical-candidates/TECT-EXCH-007-source-erratum.json#reason",
+        "claims/C6-SPACETIME-SIGNATURE/notes/mixed-charge-floor-261120-v1.0.tex.txt#Energy estimate and persistence",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-20-exch007.json#exact",
+        "verification/lean/Tect/UniformMixing.lean#charge_product",
+        "strategy/research-idea-bank-v1.json#IDEA-008"
+      ],
+      "finding": "PROVED IN SCOPE: the product of integrated order and reservoir charge fractions is at least delta^2/(2 epsilon^2 (rho_star+1/4) q^2), uniformly in finite K and canonical time. At delta=1/10000 the R-579 trial makes the sublevel nonempty for each K and the exact lower bound is 20155392/70059765625.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-583"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001855",
+      "method": [
+        "Use IDEA-008 for charge transfer bookkeeping only; the new input is the authorized nonempty energy sublevel, not an experiment or physical reservoir. Preserve P1 and EXCH-001; no extra term or change of time.",
+        "Combine the full R-158 remainder with the exact interaction, absorb against the positive sextic and reservoir mass, then use charge and energy conservation. Independently absorb pointwise before integration. R-579 shell and doubled mode certify nonempty sublevels for the designated gap.",
+        "Check source and volume normalizations, independent bare plane energy, excluded endpoints, insufficient Young coefficient, and partial Lean algebra. Independent hostile review compared all six effective pins with parent Git bytes and replayed the saved run. An admission transcription typo was detected before calculations and corrected against the original contract by an explicit erratum."
+      ],
+      "next_action": "Archive the scoped result. Revisit only on a precise error or separately admitted new input; no automatic physical or mathematical successor.",
+      "provenance": "contemporaneous",
+      "question": "At fixed R-579 total charge and volume, does a uniform fraction persist in both components over all original states with a positive energy gap below the pure-order floor, all finite cutoffs and all canonical times?",
+      "recorded_at": "2026-11-20T07:57:55Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001846",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-11-20",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-109",
+      "title": "Low energy forces persistent occupation of both original EXCH charge components",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

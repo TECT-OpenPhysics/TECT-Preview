@@ -58,13 +58,13 @@ flowchart LR
 |---|---:|---|
 | Status cards | 49 | 48 active; 1 refuted |
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
-| Reusable result records | 407 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
+| Reusable result records | 408 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 399 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1854 | Route decisions: advanced 1347, failed 266, inconclusive 175, parked 66; non-tier-bearing |
-| Accepted chronological events | 1135 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
-| Tasks | 108 | 19 live; 89 completed |
+| Proof explorations | 1855 | Route decisions: advanced 1348, failed 266, inconclusive 175, parked 66; non-tier-bearing |
+| Accepted chronological events | 1136 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Tasks | 109 | 19 live; 90 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 436 lineage notes / 417 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 3193 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 437 lineage notes / 418 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 3194 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -76,7 +76,7 @@ These are visible migration or metadata debts, not silently dropped records.
 | Historical/superseded notes without sibling PDF | 19 | Paths remain in machine inventory; current-note PDF enforcement is unchanged |
 | Grandfathered notes with incomplete standard footer | 118 | Kept visible; notes first issued on/after 2026-07-24 fail the map gate if any mandatory footer label is absent |
 | Claim cards listing a gate whose registered status begins `CLOSED` | 0 | Exposed as reconciliation debt; the map does not silently flip claim cards |
-| Claim-unbound reusable results / negative records | 147 / 17 | Ambiguous family references stay unbound; no claim edge is invented |
+| Claim-unbound reusable results / negative records | 148 / 17 | Ambiguous family references stay unbound; no claim edge is invented |
 | Completed-task references to retired gate identifiers | 5 | Preserved as `historical_gate_reference` nodes anchored to `todo/todo.json`, never mislinked to the current gate registry |
 | Changelog tokens that are not current claim-card IDs | 480 | Preserved in event metadata but never promoted to claim edges; many are historical proof-unit IDs from the legacy extractor |
 | Changelog negative tags absent from the indexed registry | 4 | Preserved as historical event text, rendered without a false registry anchor, and excluded from negative graph edges |
@@ -28273,6 +28273,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** -
 - **Located evidence:** [`strategy/physical-candidates/R581-optical-comparator.json`](../strategy/physical-candidates/R581-optical-comparator.json) (conditional_test); [`strategy/physical-candidates/R581-optical-comparator.json`](../strategy/physical-candidates/R581-optical-comparator.json) (cross_model_admission); [`verification/scripts/check_r581_optical_comparator.py`](../verification/scripts/check_r581_optical_comparator.py) (run); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-11-20-r581-optical-check.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-11-20-r581-optical-check.json) (checks); [`strategy/research-idea-bank-v1.json`](../strategy/research-idea-bank-v1.json) (IDEA-011)
 
+<a id="exp-001855"></a>
+#### EXP-001855 — Low energy forces persistent occupation of both original EXCH charge components
+
+- **Review metadata:** reviewed 2026-11-20; recorded 2026-11-20T07:57:55Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-109`.
+- **Question:** At fixed R-579 total charge and volume, does a uniform fraction persist in both components over all original states with a positive energy gap below the pure-order floor, all finite cutoffs and all canonical times?
+- **Finite checks:** (1) Use IDEA-008 for charge transfer bookkeeping only; the new input is the authorized nonempty energy sublevel, not an experiment or physical reservoir. Preserve P1 and EXCH-001; no extra term or change of time. (2) Combine the full R-158 remainder with the exact interaction, absorb against the positive sextic and reservoir mass, then use charge and energy conservation. Independently absorb pointwise before integration. R-579 shell and doubled mode certify nonempty sublevels for the designated gap. (3) Check source and volume normalizations, independent bare plane energy, excluded endpoints, insufficient Young coefficient, and partial Lean algebra. Independent hostile review compared all six effective pins with parent Git bytes and replayed the saved run. An admission transcription typo was detected before calculations and corrected against the original contract by an explicit erratum.
+- **Finding:** PROVED IN SCOPE: the product of integrated order and reservoir charge fractions is at least delta^2/(2 epsilon^2 (rho_star+1/4) q^2), uniformly in finite K and canonical time. At delta=1/10000 the R-579 trial makes the sublevel nonempty for each K and the exact lower bound is 20155392/70059765625.
+- **Decision reason:** This controls all states on a conserved sublevel by an explicit cutoff-independent constant, rather than qualitative non-purity of each finite-cutoff minimizer. Auxiliary mathematical support only.
+- **Boundary:** Fixed torus, charge, hypothetical law and dimensionless time. No pointwise positivity, exchange rate, approach to equilibrium, convergence of flows, space/time compactness, physical state, continuum or Pre-A conclusion. R-581 experiment and T-054 unchanged.
+- **Next / revisit condition:** Archive the scoped result. Revisit only on a precise error or separately admitted new input; no automatic physical or mathematical successor.
+- **Related explorations:** continues [EXP-001846](#exp-001846)
+- **Formal authorities:** [R-583](../RESULTS-LEDGER.md#r-583)
+- **Located evidence:** [`strategy/physical-candidates/TECT-EXCH-007-result-v1.json`](../strategy/physical-candidates/TECT-EXCH-007-result-v1.json) (statement); [`strategy/physical-candidates/TECT-EXCH-007-source-erratum.json`](../strategy/physical-candidates/TECT-EXCH-007-source-erratum.json) (reason); [`claims/C6-SPACETIME-SIGNATURE/notes/mixed-charge-floor-261120-v1.0.tex.txt`](../claims/C6-SPACETIME-SIGNATURE/notes/mixed-charge-floor-261120-v1.0.tex.txt) (Energy estimate and persistence); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-11-20-exch007.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-11-20-exch007.json) (exact); [`verification/lean/Tect/UniformMixing.lean`](../verification/lean/Tect/UniformMixing.lean) (charge_product); [`strategy/research-idea-bank-v1.json`](../strategy/research-idea-bank-v1.json) (IDEA-008)
+
 
 ## Claim evidence matrix
 
@@ -28327,7 +28342,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (40 notes; 2431 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE](../negative-results/registry.md#ng-2026-11-15-exch006-augmented-closure), [NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR](../negative-results/registry.md#ng-2026-11-15-alt002-bounded-linear-reservoir), +141 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +901 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [C6 R582: matched reservoir spectra, universal shear and finite-time linear bound]... | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (41 notes; 2432 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE](../negative-results/registry.md#ng-2026-11-15-exch006-augmented-closure), [NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR](../negative-results/registry.md#ng-2026-11-15-alt002-bounded-linear-reservoir), +141 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +902 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze) | [R-583: uniform low-energy charge shares in the original finite EXCH] - 2026-11-20 | - |
 
 ### Sector D
 
@@ -28366,6 +28381,7 @@ entries are no-go lemmas, partial reductions, or conditional consolidations.
 
 | Result | Host claim(s) / same-event route history | Core verified content | Honest boundary |
 |---|---|---|---|
+| [R-583](../RESULTS-LEDGER.md#r-583) Uniform low-energy charge fractions | - | For the original finite EXCH-001 below the pure-order energy, both integrated charge shares have a positive cutoff- and time-independent floor at fixed volume and charge. | See the detailed result record. |
 | [R-582](../RESULTS-LEDGER.md#r-582) Matched tensor reservoir linear classification and shear | -; same event: [NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR](../negative-results/registry.md#ng-2026-11-15-alt002-bounded-linear-reservoir) | All three source-native rank-one order spectra classified; low removes exponential order growth but every constant reservoir retains full tangent Jordan shear. Low full linear finite-time bound is cutoff independent, not nonlinear/physical/limit closure. | See the detailed result record. |
 | [R-581](../RESULTS-LEDGER.md#r-581) Pair-coherence-augmented state nonclosure | -; same event: [NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE](../negative-results/registry.md#ng-2026-11-15-exch006-augmented-closure) | Same full H/Q/populations/complex pair coherence have different actual drift in unchanged EXCH. The named universal exact autonomous closure fails; no physical or mainline promotion. | See the detailed result record. |
 | [R-580](../RESULTS-LEDGER.md#r-580) Conserved exchange diagnostics and phase-blind closure obstruction | - | Same full energy/charge/populations can have opposite exchange currents in unchanged EXCH. A universal population-only law fails; physical state/readout mapping remains HOLD. | See the detailed result record. |
@@ -29193,6 +29209,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-11-20 | [R-583: uniform low-energy charge shares in the original finite EXCH] - 2026-11-20 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-11-15 | [C6 R582: matched reservoir spectra, universal shear and finite-time linear bound] - 2026-11-15 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR](../negative-results/registry.md#ng-2026-11-15-alt002-bounded-linear-reservoir) |
 | 2026-11-15 | [C6 R581: exact augmented exchange observable nonclosure] - 2026-11-15 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE](../negative-results/registry.md#ng-2026-11-15-exch006-augmented-closure) |
 | 2026-11-15 | [C6 EXCH005: bounded new native analyzer intake and evidence hold] - 2026-11-15 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -29212,7 +29229,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-10-14 | [C6 PAH-OBS-002: actual Raman interaction and separate-extension review] - 2026-10-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-10-14 | [C6 PAH-OBS-001: atomic loop measurement crosswalk and unadopted instrument contract] - 2026-10-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-10-14 | [C6 R-576: PAH-v2 maximal-path freezing in declared local clocks] - 2026-10-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-10-14-PAH-TIME002-DECLARED-CLOCK-FREEZING](../negative-results/registry.md#ng-2026-10-14-pah-time002-declared-clock-freezing) |
-| 2026-10-14 | [C6 PAH-TIME-001: align strict continuity checkpoint counts] - 2026-10-14 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 

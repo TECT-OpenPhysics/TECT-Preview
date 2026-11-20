@@ -1,0 +1,61 @@
+{
+  "scope": "R-583; fixed-volume integrated charge fractions only",
+  "contract_sha256": "57fe857d9b09633c21b77d04a8da1574144e00da73e8b10086248e01765d0806",
+  "verifier_sha256": "2350b60247128b1b5765b4f80fae0f3376e7348bfca07225ae251988181650e2",
+  "lean_source_sha256": "524f5536796b280200d3779178ba76cb1ba03e5a10d34985acce989c31f7ab64",
+  "exact": {
+    "q": "43/432",
+    "volume": "4096",
+    "rho_star": "43/216",
+    "c": "27/100",
+    "d": "97/216",
+    "delta": "1/10000",
+    "trial_gap_upper": "-18277891107531797/157767900923764408320",
+    "residual_lower": "1127/6912",
+    "product_floor": "20155392/70059765625"
+  },
+  "checks": {
+    "charge_and_density": true,
+    "positive_input_and_mu_window": true,
+    "pinned_Lean_coefficients": true,
+    "trial_positive_and_fixed_charge": true,
+    "strict_nonempty_gap_in_trial": true,
+    "direct_plane_expression": true,
+    "spectral_shell_and_doubled_mode_admitted": true,
+    "pointwise_exact_square": true,
+    "Young_exact_square": true,
+    "positive_reservoir_remainder": true,
+    "weighted_product_identity": true,
+    "independent_charge_normalization": true,
+    "nontrivial_and_feasible": true,
+    "pure_ends_excluded": true,
+    "reject_missing_factor_two": true,
+    "reject_insufficient_Young_coefficient": true,
+    "trial_energy_satisfies_fraction_bound": true
+  },
+  "lean": {
+    "source_sha256": "524f5536796b280200d3779178ba76cb1ba03e5a10d34985acce989c31f7ab64",
+    "compiler_version": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)",
+    "package_revisions": {
+      "mathlib": "520045ab14e26149ee970e2e617ca04b09bde5d6",
+      "plausible": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+      "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "importGraph": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+      "proofwidgets": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+      "aesop": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+      "Qq": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+      "batteries": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+      "Cli": "88679d088c9720c27ebdf2ba4dafe17341747f94"
+    },
+    "declarations": [
+      "moment_envelope",
+      "young_pinned",
+      "remainder_positive",
+      "gap_absorbed",
+      "charge_product",
+      "pair_moment_split"
+    ],
+    "exit_code": 0
+  },
+  "not_formalized": "Spatial integrals/Cauchy-Schwarz, source Hamiltonian decomposition, admissibility of the original shell and ODE conservation/completeness are analytic, not Lean results."
+}

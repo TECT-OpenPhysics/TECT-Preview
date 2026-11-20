@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1135 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1136 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-11-20 | `20261120-r-583-uniform-low-energy-charge-shares-in-the-o` — [R-583: uniform low-energy charge shares in the original finite EXCH] - 2026-11-20 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261120-r-583-uniform-low-energy-charge-shares-in-the-o) |
 | 2026-11-15 | `20261115-c6-r582-matched-reservoir-spectra-universal-she` — [C6 R582: matched reservoir spectra, universal shear and finite-time linear bound] - 2026-11-15 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261115-c6-r582-matched-reservoir-spectra-universal-she) |
 | 2026-11-15 | `20261115-c6-r581-exact-augmented-exchange-observable-non` — [C6 R581: exact augmented exchange observable nonclosure] - 2026-11-15 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261115-c6-r581-exact-augmented-exchange-observable-non) |
 | 2026-11-15 | `20261115-c6-exch005-bounded-new-native-analyzer-intake-a` — [C6 EXCH005: bounded new native analyzer intake and evidence hold] - 2026-11-15 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261115-c6-exch005-bounded-new-native-analyzer-intake-a) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-10-14 | `20261014-r-575-final-governed-footer-and-replay-receipt` — [R-575: final governed-footer and replay-receipt correction] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-r-575-final-governed-footer-and-replay-receipt) |
 | 2026-10-14 | `20261014-c6-r-575-original-time-pah-v2-displayed-readout` — [C6 / R-575: original-time PAH-v2 displayed readouts freeze with positive variance] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-r-575-original-time-pah-v2-displayed-readout) |
 | 2026-10-14 | `20261014-c6-decline-great-contact-and-restore-pre-a-assu` — [C6: decline GREAT contact and restore Pre-A assumption-resolution priority] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-decline-great-contact-and-restore-pre-a-assu) |
-| 2026-10-07 | `20261007-tect-clk-009-great-processing-provenance-and-fu` — [TECT-CLK-009 GREAT processing provenance and full-response evidence contract] - 2026-10-07 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261007-tect-clk-009-great-processing-provenance-and-fu) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1119–1135 | 17 | [001119-001168.md](pages/001119-001168.md) |
+| 1119–1136 | 18 | [001119-001168.md](pages/001119-001168.md) |
 | 1069–1118 | 50 | [001069-001118.md](pages/001069-001118.md) |
 | 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |

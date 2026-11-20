@@ -367,3 +367,14 @@ auxiliary result, not overall tensor superiority, selected physical state,
 nonlinear stability/instability, full dynamics common core or limit.
 C6 T1/T054 and EXCH005/006 holds unchanged. No model, time, damping or new
 spatial term is added; no automatic successor.
+
+### R-583: persistence of both integrated charge shares at low energy
+
+For the same scalar EXCH-001 and R-579 fixed charge, all states below the
+pure-order floor by a fixed positive gap per volume keep each charge share
+bounded away from zero, independently of the finite Fourier cutoff and time.
+R-579 supplies a nonempty test at every cutoff. This strengthens integrated
+occupation control, not distance to an orbit or construction of a limit flow.
+See the [scoped certificate](../../strategy/physical-candidates/TECT-EXCH-007-result-v1.json)
+and [proof](notes/mixed-charge-floor-261120-v1.0.tex.txt). C6 T1 and T-054
+are unchanged; no physical preparation, current or cosmological selection.

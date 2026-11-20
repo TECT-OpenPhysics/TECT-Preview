@@ -1,0 +1,137 @@
+% Title: A uniform lower bound on both charge shares below the pure-order energy
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-11-20; this version issued 2026-11-20
+% Status: R-583; conditional auxiliary estimate, not physical state selection
+
+\section{Purpose and scope}
+R-579 excludes a pure global minimum at each fixed cutoff. It does not
+exclude a sequence of increasingly pure minima as the cutoff increases.
+Here one lower bound applies to an entire conserved energy sublevel, not
+just its equilibria. No distance to a ground-state orbit is estimated.
+
+Use the unchanged EXCH-001 Hamiltonian on the side-16 periodic three-torus,
+volume $V=16^3$, with exact orthogonal Fourier projections at $K$ for the
+three complex order components and $2K$ for the complex reservoir.
+All integers $K\ge1$ are allowed separately. Denote normalized spatial
+averages by $\langle f\rangle=V^{-1}\int f$. Write
+\[
+ \rho=\Psi^\dagger\Psi,\quad S=\Psi^T\Psi,\quad
+ m=\langle\rho\rangle,\quad n=\langle|\chi|^2\rangle,\quad
+ q=m/2+n=\bar Q/V=43/432,\quad x=m/(2q).
+\]
+The reservoir share is $1-x=n/q=2Q_\chi/\bar Q$, not $Q_\chi/\bar Q$.
+The pure-order energy is $E_P=\mu_t\bar Q$ by R-579 on this sector.
+Suppose $H\le E_P-V\delta$ with $\delta>0$.
+Define $s=\rho_*=43/216$, $c=\gamma/6=27/100$, $d=s+1/4$ and
+$\epsilon=1/16$. Then on every original trajectory from this sublevel,
+\[
+ \boxed{\displaystyle x(\tau)(1-x(\tau))\ \ge\
+ b_\delta=\frac{\delta^2}{2\epsilon^2d q^2}\quad(\tau\in\mathbb R).}
+\]
+At $\delta=1/10000$ the sublevel is nonempty for every $K$, and
+$b_\delta=20155392/70059765625$. Each share is at least $b_\delta$
+because $0\le x\le1$. This is a sufficient bound, not an optimal one.
+
+\paragraph{What is being excluded.}
+In particular there is no sequence of states, one in each of arbitrarily
+many such finite cutoffs at the same positive gap, for which one entire
+component carries a vanishing charge fraction. Spatial zeros of the
+density, loss of spatial coherence, or stationarity are not excluded.
+
+\clearpage
+\section{Energy estimate and persistence}
+The pinned R-158 decomposition (1.3) gives
+$F_{\rm P1}\ge\mu_t V m/2+c V R$ with
+$R=\langle\rho(\rho-s)^2\rangle$. Its spectral and Class-II remainders
+are nonnegative; the inequality holds off shell as well as on a plane.
+In EXCH-001 the other energy terms per volume are
+$n/2+\langle|\chi|^4\rangle/4-\epsilon\Re\langle\bar\chi S\rangle$.
+Set $T=\langle\rho^2\rangle$. The complex triangle inequality gives
+$|S|\le\rho$. Subtract $\mu_t q$, keep the direction of the energy
+inequality, and apply Cauchy--Schwarz in normalized measure:
+\[
+ \delta+cR+(1/2-\mu_t)n
+ \le \epsilon\Re\langle\bar\chi S\rangle
+ \le \epsilon\sqrt{n T}.
+\]
+Only the nonnegative reservoir quartic was discarded in this step.
+Since $d+(\rho-s)^2-\rho=(\rho-s-1/2)^2$, we have
+$T\le dm+R$. Split the square root; then
+\[
+ \epsilon\sqrt{nT}\le\epsilon\sqrt{dmn}+
+ cR+\frac{\epsilon^2}{4c}n .
+\]
+The coefficient left on $n$ is strictly larger than $1127/6912>0$:
+use $\mu_t<1/3$ and $\epsilon^2/(4c)=25/6912$.
+Consequently $\delta\le\epsilon\sqrt{dmn}$. Squaring and substituting
+$mn=2q^2 x(1-x)$ proves the assertion on the sublevel. R-578 gives
+complete finite-dimensional Hamiltonian flow in the original canonical
+time and conservation of both $H$ and $Q$. This extends the same bound
+to all $\tau$, without orbit approximation or an interchange of limits.
+
+\section{Independent derivation and a nonempty test}
+Alternatively, take square roots in $\rho\le d+(\rho-s)^2$ and
+multiply by $\epsilon|\chi|\sqrt{\rho}$. Pointwise Young absorption gives
+\[
+ \epsilon|\chi|\rho\le
+ \epsilon\sqrt d\,|\chi|\sqrt\rho+
+ c\rho(\rho-s)^2+\frac{\epsilon^2}{4c}|\chi|^2.
+\]
+Integrate first and then apply Cauchy--Schwarz only to the remaining
+$\langle|\chi|\sqrt\rho\rangle$. This recovers the same bound without
+estimating a cutoff-dependent sup norm or postulating a bound on $T$.
+
+For nonvacuity use the original R-579 plane and its doubled reservoir
+mode, with $r=\epsilon s$ and $p=s-2r^2>0$. Their charge density is
+$p/2+r^2=q$ at all $K\ge1$. Their energy per volume relative to $E_P/V$
+is $(1/2-\mu_t)r^2+r^4/4+c p(p-s)^2-\epsilon r p$.
+Replacing $\mu_t$ by its smaller bound $1/4$ gives
+$-18277891107531797/157767900923764408320<-1/10000$.
+The verifier independently subtracts the two full plane energies using
+the bare quartic and sextic coefficients. This trial witnesses the
+sublevel only: the bound does not restrict other states to that ansatz.
+
+\clearpage
+\section{Devil's-advocate review and verification}
+\begin{itemize}
+\item Could ultraviolet concentration make one fraction vanish?
+The pointwise square and normalized Cauchy--Schwarz hold at arbitrary
+amplitude; no grid inverse inequality or finite-dimensional compactness
+constant appears. A vanishing integrated fraction contradicts the product
+floor at fixed $\delta$.
+\item Could an energy gap be lost by a factor of $V$ or two? The hypothesis
+uses a gap per volume. The charge is $V(m/2+n)$; using either $Q_\chi$
+instead of $2Q_\chi$, or replacing $V\delta$ by $\delta$, is incorrect.
+\item Could the result assert persistent charge flow or spontaneous
+relaxation? It bounds occupations, not their derivatives. Both may be
+stationary. At $\delta=0$ the positive floor disappears; only the designated
+positive gap is asserted nonempty here.
+\item Could this produce a continuum solution? No compactness in space
+or time, convergence of trajectories, volume estimate, physical clock
+or state preparation follows. The torus and hypothetical parent are inputs.
+\end{itemize}
+Two analytic derivations, exact rational/symbolic checks and a separate
+hostile review cover the normalization, cancellation, trial and scope.
+Six partial Lean lemmas check the moment envelope, scalar split, Young
+coefficient, positive remainder, absorption and final normalization;
+the function-space inequalities, nonvacuity and inherited dynamics are
+not formalized. No external refereeing or experimental test is claimed.
+
+\section{Result footer}
+\begin{verbatim}
+Result ID: R-583 (C6-SPACETIME-SIGNATURE); EXCH-007.
+Precise statement: uniform product floor on a low-energy sublevel.
+Scope: fixed volume and Qbar, every finite K>=1, all original times.
+Dependencies: R-158 (conditional P1), R-578, R-579.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, CONDITIONAL.
+Reproduction command: python -B -X utf8
+  verification/scripts/exch007_verify.py --lean-cache
+  E:/Dev/TECT/verification/lean/.lake/packages
+Expected output: EXCH007: PASS; product floor as above.
+Falsification gate: source/weight/gap/absorption error or
+  a sequence in the stated sublevel with vanishing fraction.
+Tier before / after: C6 T1 / T1; T-054 unchanged.
+No-overclaim statement: no continuum, equilibrium selection,
+  physical reservoir, Pre-A, spacetime, QFT or gravity.
+Next required action: no automatic successor.
+\end{verbatim}

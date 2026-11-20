@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-583](#r-583) | Uniform low-energy charge fractions | For the original finite EXCH-001 below the pure-order energy, both integrated charge shares have a positive cutoff- and time-independent floor at fixed volume and charge. |
 | [R-582](#r-582) | Matched tensor reservoir linear classification and shear | All three source-native rank-one order spectra classified; low removes exponential order growth but every constant reservoir retains full tangent Jordan shear. Low full linear finite-time bound is cutoff independent, not nonlinear/physical/limit closure. |
 | [R-581](#r-581) | Pair-coherence-augmented state nonclosure | Same full H/Q/populations/complex pair coherence have different actual drift in unchanged EXCH. The named universal exact autonomous closure fails; no physical or mainline promotion. |
 | [R-580](#r-580) | Conserved exchange diagnostics and phase-blind closure obstruction | Same full energy/charge/populations can have opposite exchange currents in unchanged EXCH. A universal population-only law fails; physical state/readout mapping remains HOLD. |
@@ -20753,6 +20754,18 @@ methods, source-specific comparison, not general novelty priority.
 No favorable orientation selection, full-P1 U3 symmetry, nonlinear stability
 or instability, mixed-state result, continuum/common-core dynamics or physical
 promotion. C6 T1/T054 and EXCH005/006 holds remain unchanged.
+
+### R-583 -- uniform low-energy charge fractions
+
+On the original scalar EXCH-001 with R-579 fixed volume and total charge,
+let delta be a positive gap per volume below the pure-order floor. In the
+whole invariant sublevel, x=Qpsi/Qbar obeys x(1-x) >=
+delta^2/(2 epsilon^2 (rho_star+1/4) q^2) for every finite K>=1 and every
+canonical time. At delta=1/10000, R-579's trial shows nonemptiness at every K.
+Proof: [synthesis](claims/C6-SPACETIME-SIGNATURE/notes/mixed-charge-floor-261120-v1.0.tex.txt)
+and [certificate](strategy/physical-candidates/TECT-EXCH-007-result-v1.json).
+Two analytic derivations, exact run and partial Lean checks. No continuum
+flow, pointwise positivity, ongoing current or physical state selection.
 
 ## Notes on status
 
