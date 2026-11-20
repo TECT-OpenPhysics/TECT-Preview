@@ -1,0 +1,31 @@
+{
+  "scope": "One theory-only comparator for the R-581 initial total-order-population curvature sign pair; not a fit or a substitute experiment.",
+  "budget": "One published model, one reflection, no parameter or comparator search after selection. Fixed before comparator outcome analysis: two transverse signal modes, unchanged common pump, total signal occupation, symmetric law including its drive and loss.",
+  "base": "a3ee11546cfa0e395450e8386e3dbb79b04bade0",
+  "authority_sha256": {
+    "strategy/physical-candidates/TECT-EXCH-006-result-v1.json": "6cfe483d08777813f82076e09f7e3857be5a870a47db5289929990ce98793f68",
+    "strategy/physical-candidates/R581-preparation-readout-intake.json": "8d4ecbbce8cb565f9b51ecefe6c28dbb70ec221896fd0b62f1517ccfeecf16b2"
+  },
+  "reference": {
+    "citation": "Navarrete-Benlloch, Romanelli, Roldan and de Valcarcel; Phys. Rev. A 81, 043829 (2010); arXiv:0904.0049v2, pp. 3-4.",
+    "url": "https://arxiv.org/pdf/0904.0049v2",
+    "sha256": "20894696233d7315b81f84dd47a945fb2397e458e0a728eb57f00e13c2f83566",
+    "locators": "Eqs. (6)-(7): mode basis; (9)-(12): real drive phase, pair interaction, equal signal decay, quantum noise; (13): optical units; (15)-(16) and Sec. III before (17): native classical optics. Do not impose stationarity or eliminate the pump."
+  },
+  "conditional_test": {
+    "assignment": "Optical classical amplitude test inputs are the two HG patterns (a,ia) and (ia,a), with the same pump p; not a source-certified experimental preparation. Use Eq. (7) at angle zero: u=(x-iy)/sqrt(2), v=(x+iy)/sqrt(2). The two LG patterns are (sqrt(2)a,0) and (0,i sqrt(2)a). No response, splitting, time or scale fitted.",
+    "law": "In native dimensionless optical time, b=(kappa*(sigma-p-u*v), -u+p*conj(v), -v+p*conj(u)) in coordinates (p,u,v). Positive signal and pump decay and drive remain. Eq. (13) scales pump and signal fields differently.",
+    "proof": "The HG reflection exchanges x,y; in LG variables S(p,u,v)=(p,-iv,iu). Direct substitution gives b(Sz)=S b(z), S squared is identity, and the signal intensity I=abs(u)^2+abs(v)^2 satisfies I(Sz)=I(z). Local uniqueness for the smooth real polynomial ODE gives identical intensities throughout any common existence interval. Opposite initial intensity curvatures are excluded for exactly reflected preparations in this comparator. No global existence or quantum trajectory assumption is needed.",
+    "robustness": "Equality is independent of common pump and of the original symmetric-model parameters. It survives a common positive linear count or time unit conversion. This does not bound unequal losses, mode splitting, unmatched preparations, state-dependent readout or clock distortions in actual apparatus.",
+    "meaning": "A conditional theoretical distinction from this specific symmetric conventional model, not from all conventional exchange. The pinned R-581 witness itself uses unequal diagonal internal coefficients; an observation could reveal broken reflection symmetry without identifying its microscopic origin."
+  },
+  "cross_model_admission": {
+    "preparation": "No independent assignment of the EXCH internal components and their phases to these optical spatial modes and pump. The EXCH third component vanishes initially only; no two-mode invariant truncation is used. Equal optical first moments would not fix a quantum density operator.",
+    "observable": "Native optical sum of intracavity signal intensities (proportional to a classical photon number) is defined. Its normalization and physical correspondence to the integral Npsi, and the detector response, are not supplied. The source's homodyne squeezing is not a measurement of that sum.",
+    "reservoir_and_time": "The driven lossy optical pump is not an identification of the closed EXCH charge reservoir. Optical gamma_s*t is not a calibrated EXCH canonical time. No drive or loss removed, time refit, noise-as-EXCH replacement or independent clock inferred.",
+    "verdict": "HOLD_FOR_EVIDENCE on a common physical sign comparison. The conditional reflection test is auxiliary support only. No measured sign, separation margin in a real device, holdout, new TECT result, Pre-A, spacetime, QFT, gravity, continuum or mass-gap conclusion.",
+    "reentry": "Only a prospectively fixed independent correspondence for prepared states, pump and count/time calibration with a bound on reflection-breaking and readout errors, or a precise equation or convention error. No automatic second comparator."
+  },
+  "reproduction": "python -B -X utf8 verification/scripts/check_r581_optical_comparator.py [--source-pdf PATH_TO_0904.0049v2.pdf]; symbolic ideal-model identities only. The mathematical EXCH sign is reused, not recomputed.",
+  "run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-20-r581-optical-check.json"
+}
