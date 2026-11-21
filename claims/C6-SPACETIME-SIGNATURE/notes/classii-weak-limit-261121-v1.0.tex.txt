@@ -1,0 +1,157 @@
+% Title: Defect-free Class-II variation in the fixed-volume EXCH weak limit
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-11-21; this version issued 2026-11-21
+% Status: R-585; auxiliary subsequential Hamiltonian weak-equation result
+
+\section{Purpose and scope}
+Keep the full original EXCH-001 Hamiltonian, the side-16 periodic
+three-torus, the dimensionless canonical time $\tau$, and exact
+rectangular Fourier projections $P_K,P_{2K}$. For one common
+$(\Psi_0,\chi_0)\in H^2(\mathbb T^3;\mathbb C^3)
+\times L^\infty(\mathbb T^3;\mathbb C)$ take initial data
+$(P_K\Psi_0,P_{2K}\chi_0)$ as in R-584, with no normalization after
+projection. Use Lebesgue measure for energy and its real $L^2$
+pairing. Equivalently divide both by the same fixed volume.
+
+For every finite $T>0$, every sequence $K\to\infty$ has a subsequence
+on $I=[-T,T]$ such that $\Psi_K\to\Psi$ in $C(I;H^{15/8})$ and
+$\chi_K\to\chi$ in $C(I;L^4)$. In that subsequence, the exact
+projected Class-II variation satisfies
+\[
+ P_K R_{\rm II}(\Psi_K)\longrightarrow R_{\rm II}(\Psi)
+                      \quad\text{strongly in } C(I;H^{-1}).
+\]
+There is no additional Class-II term in the weak equation. The pair
+satisfies both original equations in distributions, has the common
+initial data, and preserves the original total charge. This is
+subsequence identification, not a unique limiting evolution.
+
+\section{Exact variational input and time control}
+Use the manifest's \emph{proposed reference functional}, not its
+declared comparison energy or nonvariational executed residual.
+Realify $\Psi$ as $z\in\mathbb R^6$ and its Hermitian generators as
+real symmetric matrices $A_A$. For $d_\rho,d_M>0$ the pinned floors,
+let $q_A=z^TA_Az/(|z|^2+d_\rho)$, $p_A=2A_Az$ and
+$s_A=2(A_A-q_AI)z$. The density is
+\[
+ \tfrac12\sum_j(\partial_j z)^TB(z)\partial_j z,\qquad
+ B=\sum_A\{a p_Ap_A^T+b(p_As_A^T+s_Ap_A^T)+c s_As_A^T\},
+\]
+where $(a,b,c)=(c_{JJ}\alpha_X^2,c_{JK}\alpha_X\beta_X,
+c_{KK}\beta_X^2)/(M_X^2+d_M)$. This is A2 v2.0
+Eqs.\ (4.1)--(4.3) as a \emph{static} identity; no A2 gradient-flow
+theorem is used. In particular the mixed term is retained.
+For a real test $h$ the exact first variation is
+\[
+ \langle R_{\rm II}(z),h\rangle
+ =\sum_j\int (B(z)\partial_jz)\cdot\partial_jh
+   +\tfrac12(\partial_jz)^T DB(z)[h]\,\partial_jz .
+\]
+The $\tfrac12 DB$ term includes differentiation through the density
+denominator; neither it nor either floor is dropped.
+
+\clearpage
+\section{Strong coefficients from the Hamiltonian equation}
+R-584 gives the cutoff-independent bounds on $\Psi_K$ in $H^2$
+and on $\chi_K$ in $L^4$ from the R-158 static identity and
+R-578 finite conservation. R-584 also gives relative compactness
+of the reservoirs in $C(I;L^4)$ on this exact preparation.
+The real canonical equations, written in complex notation, are
+\[
+ i\dot\Psi_K=P_K\bigl(R_{\rm P1}(\Psi_K)-2\epsilon\chi_K\bar\Psi_K\bigr),
+ \qquad
+ i\dot\chi_K=P_{2K}\bigl((\omega+u|\chi_K|^2)\chi_K
+                            -\epsilon\Psi_K^T\Psi_K\bigr).
+\]
+Here $R_{\rm P1}$ is the real gradient, so there is no extra factor
+of two from the Wirtinger convention. The $-2\epsilon$ in the
+order equation is the variation of the quadratic pair source.
+
+The fourth-order linear term maps $H^2$ to $H^{-2}$. The potential
+gradient and the exchange term are bounded in $L^2$ using the
+uniform $H^2\hookrightarrow L^\infty$ bound and finite volume.
+For the Class-II term the variation above is uniformly bounded
+in $H^{-1}$: on the bounded amplitude ball $B,DB$ are bounded,
+$\nabla z_K$ is bounded in $L^2\cap L^4$, and the two factors are
+paired with $\nabla h$ and $h$ in $L^2$. Orthogonal Fourier
+projections contract $H^{-2}$ and commute with multiplication by
+the constant $i$. Hence $\|\dot\Psi_K\|_{H^{-2}}\le C$,
+without any estimate for $\dot\Psi_K$ in $L^2$.
+
+For $-2<s<2$ interpolation bounds the $H^s$ time increment by
+$C|\tau-\sigma|^{(2-s)/4}$, since the $H^{-2}$ increment is
+$O(|\tau-\sigma|)$ and the $H^2$ increment is uniformly bounded.
+The spatial $H^2$ ball is relatively compact in $H^s$ on the fixed
+torus. Arzela--Ascoli at $s=15/8$ and then R-584 give the two
+strong convergences on the same subsequence. The limit has bounded
+$H^2$ norm at each time by weak lower semicontinuity.
+
+Indeed $s>7/4$ gives both $C(I;L^\infty)$ convergence of $z_K$
+and $C(I;L^4)$ convergence of its gradients. On the common
+amplitude ball, $B,DB$ are Lipschitz, so the flux and the
+quadratic-gradient coefficient of $h$ in the first variation
+converge strongly in $C(I;L^2)$. For the latter use
+$\|a_K b_K-ab\|_2\le\|a_K-a\|_4\|b_K\|_4+
+\|a\|_4\|b_K-b\|_4$. Pairing with the unit $H^1$ test ball proves
+strong $C(I;H^{-1})$ convergence of $R_{\rm II}$ itself.
+Returning $P_K$ does not change the limit: it contracts $H^{-1}$
+and converges uniformly to the identity on the compact range
+$\{R_{\rm II}(\Psi(\tau)):\tau\in I\}$ by a finite-net argument.
+
+\clearpage
+\section{Devil's-advocate checks and weak equations}
+With trigonometric spatial tests the projections on the tests
+are eventually identities. The order linear term can be moved
+onto those tests (or passed weakly in $H^{-2}$). The local terms
+pass by the strong convergence of both fields. In particular the
+reservoir cubic is continuous from $L^4$ to $L^{4/3}$:
+the difference is bounded by a constant times the squared
+$L^4$ norms times the $L^4$ difference. Density of trigonometric
+tests then gives the full coupled distributional identities,
+using smooth compactly time-supported tests. Strong continuity
+and the original initial projections give the initial traces.
+Strong $C(I;L^2)$ convergence of both fields transfers the exact
+conserved charge $Q=\|\Psi\|_2^2/2+\|\chi\|_2^2$ in the Lebesgue
+normalization. This does not require projected charges to be
+identical at different $K$.
+
+\begin{itemize}
+\item The main Class-II proof uses the real matrix form. A separate
+derivation differentiates the two original currents
+$J_A=\nabla m_A$ and $K_A=J_A-q_A\nabla\rho$ by the quotient rule,
+then passes each pairing by strong gradient convergence.
+\item These are the pinned positive-floor and zero shell-bias
+sources. The proof neither removes floors nor uses the finite-grid
+proxy or borrows smoothing from the parabolic A2 time law.
+\item Strong convergence below $H^2$ is enough for the first-order
+products, but not for strong convergence of $\Delta\Psi_K$. In
+particular no full energy equality is inferred from the weak
+equation. No uniqueness, full-sequence convergence or group law
+is inferred from having identified all subsequential equations.
+\item The reservoir cubic uses R-584's strong compactness, not
+just an $L^4$ bound. Unbounded $L^4$ initial reservoirs are not
+covered, and the different-preparation EXCH-008 result is unchanged.
+\end{itemize}
+The exact audit checks source hashes, gradient, cross term, floor
+derivatives, Hamiltonian factors and interpolation exponents.
+The independent convergence and hostile scope checks are analytic,
+not a numerical approximation or a new Lean formalization.
+
+\section{Result footer}
+\begin{verbatim}
+Result ID: R-585 (C6-SPACETIME-SIGNATURE); EXCH-010.
+Precise statement: defect-free original projected Class-II
+  variation and coupled subsequential distributional equations.
+Scope: R-584 common data, exact K/2K, fixed volume, finite time.
+Dependencies: R-158 static identity, R-578, R-584, A2 static form.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, CONDITIONAL.
+Reproduction command: python -B -X utf8
+  verification/scripts/exch010_verify.py
+Expected output: EXCH010: PASS (exact source and identity checks).
+Falsification gate: a missing original variation term, bad
+  interpolation/product estimate or defect in the declared scope.
+Tier before / after: C6 T1 / T1; T-054 unchanged.
+No-overclaim statement: no uniqueness, full energy equality,
+  infinite volume, Pre-A, QFT or gravity.
+Next required action: only a separately admitted uniqueness test.
+\end{verbatim}

@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**409 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**410 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-585`](../RESULTS-LEDGER.md#r-585) | original Class-II variation in the EXCH weak limit | See authority |
 | [`R-584`](../RESULTS-LEDGER.md#r-584) | common-data finite-window reservoir tails | See authority |
 | [`R-583`](../RESULTS-LEDGER.md#r-583) | uniform low-energy charge fractions | See authority |
 | [`R-582`](../RESULTS-LEDGER.md#r-582) | matched reservoir order spectrum versus full linear evolution | See authority |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-563`](../RESULTS-LEDGER.md#r-563) | PAH-OMC-020 diagonal obstruction to fixed-volume all-power locality | See authority |
 | [`R-562`](../RESULTS-LEDGER.md#r-562) | PAH-OMC-020 universal finite-cylinder locality envelope | See authority |
 | [`R-561`](../RESULTS-LEDGER.md#r-561) | PAH-OMC-020 fixed-power local generator-intertwining bridge | See authority |
-| [`R-560`](../RESULTS-LEDGER.md#r-560) | PAH-OMC-023 canonical owner-admission replay boundary | See authority |
 
 Search without loading the full ledger:
 

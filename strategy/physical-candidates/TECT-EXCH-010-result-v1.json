@@ -1,0 +1,24 @@
+{
+  "id": "TECT-EXCH-010-RESULT-v1",
+  "result_id": "R-585",
+  "date": "2026-11-21",
+  "classification": "auxiliary_support",
+  "overall_verdict": "PROVED_DEFECT_FREE_SUBSEQUENTIAL_WEAK_EQUATION",
+  "statement": "For each finite I=[-T,T] and every K sequence tending to infinity, the R-584 common preparation admits a joint subsequence with Psi_K -> Psi in C(I;H^{15/8}) and chi_K -> chi in C(I;L4). The original P_K R_II(Psi_K) -> R_II(Psi) strongly in C(I;H^{-1}), with no added Class-II term. The joint limit satisfies both original canonical equations in distributions with the original initial data and total charge.",
+  "scope": "Unchanged EXCH-001/R-578 Hamiltonian, static R-158 and A2 reference form, side-16 periodic T^3 (V=4096), fixed positive floors and zero shell bias, ideal exact rectangular K/2K projections, dimensionless original canonical time and finite I, common H2 order and bounded reservoir data without rescaling. Use Lebesgue real L2 pairing or divide both pairing and energy by V. Remove only the Fourier cutoff.",
+  "method": "H2 energy bound plus H^{-2} time derivative from the Hamiltonian equation yields compact C_t H^{15/8}, not H2 strong convergence. R-584 gives simultaneous C_t L4 reservoir compactness. The exact first variation has a gradient flux and a DB quadratic-gradient coefficient. Both converge in C_t L2, giving C_t H^{-1} variation convergence; the orthogonal projection is uniformly consistent on the limit range. Test the linear fourth-order term weakly.",
+  "source_locator": "Pinned A1 manifest proposed_reference_functional, n001_variational_backend.py energy_tensor generator and Class-II formulas, A2 v2.0 Eqs. (4.1)-(4.3) static realification only, original EXCH-001/R-578 and R-584. Exact SHA-256 in the run. The nonvariational executed residual and parabolic A2 time law are excluded.",
+  "evidence_sha256": {
+    "claims/C6-SPACETIME-SIGNATURE/notes/classii-weak-limit-261121-v1.0.tex.txt": "3c6919102f666d1d1f436f9500c6728166685a5afff0c81dc06ee2b463e3bdc1",
+    "claims/C6-SPACETIME-SIGNATURE/notes/classii-weak-limit-261121-v1.0.pdf": "8737af4012dbf70c35fbb631a358e1c442765753c6401beaf6989a7f49dbc826",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-21-exch010.json": "0a3403cf8fab7c69e26746243ff876cb75ce5637c76a08bc78bdaaa678b0b714",
+    "verification/scripts/exch010_verify.py": "634915a80cd142cbf2769efd1523a9fa28d09bffb5aed873253e284ebe8df2da"
+  },
+  "evidence_grade": ["ANALYTIC", "EXACT", "EXECUTED", "CONDITIONAL"],
+  "verification": "Primary real matrix-form proof and 19 executed exact checks; independent complex-current quotient-rule derivation and compactness review; separate hostile audits of source, measure, sign, projection, dual norms, simultaneous reservoir convergence and the energy/uniqueness boundary. Three PDF pages individually rendered and inspected, no overfull hboxes. No new Lean theorem or external referee.",
+  "reproduce": "python -B -X utf8 verification/scripts/exch010_verify.py",
+  "exploration_id": "EXP-001858",
+  "falsifier": "Original variation mismatch, incorrect time/dual estimate or Sobolev exponents, projection inconsistency, or a nonzero Class-II distributional defect for an admitted subsequential limit.",
+  "non_claims": "No uniqueness, strong H2 or full-sequence convergence, energy equality, infinite volume, unbounded L4 common data, actual physical clock, Pre-A, QFT, or gravity. C6 T1 and T-054 unchanged.",
+  "reentry": "Only a separate uniqueness or stability target on this exact energy class: determine whether the original fourth-order skew part and Class-II difference admit a closed two-solution estimate without extra smoothness. Do not infer it from compactness."
+}

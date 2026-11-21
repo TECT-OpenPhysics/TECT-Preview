@@ -4283,6 +4283,55 @@
       "task_id": "T-054",
       "title": "EXCH-009: original finite-window reservoir tail tightness for a common bounded preparation",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "Auxiliary fixed-volume subsequential weak equations only. No strong highest derivatives, exact energy equality, uniqueness, single limiting flow or physical promotion. No unbounded L4 initial extension. C6 T1 and T-054 unchanged.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The time increment estimate and fixed-volume compactness yield strong enough first derivatives without requiring strong H2 convergence or extrapolating R-584 alone.",
+      "evidence_refs": [
+        "strategy/physical-candidates/TECT-EXCH-010-result-v1.json#statement",
+        "claims/C6-SPACETIME-SIGNATURE/notes/classii-weak-limit-261121-v1.0.tex.txt#Strong coefficients from the Hamiltonian equation",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-21-exch010.json#checks",
+        "strategy/research-idea-bank-v1.json#IDEA-008"
+      ],
+      "finding": "PROVED in the fixed-volume finite-window R-584 preparation: no Class-II defect and both original weak equations along common subsequences; the common initial traces and exact original total charge pass. No uniqueness adjudication.",
+      "formal_refs": {
+        "events": [
+          "20261121-r-585-original-class-ii-variation-in-the-exch-w"
+        ],
+        "negatives": [],
+        "results": [
+          "R-585"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001858",
+      "method": [
+        "Keep R-584 initial pair, K/2K, finite volume, all positive floors and actual reference Hamiltonian. Recall IDEA-008 for original weighted charge only; do not infer physical pairing, preparation or time from a weak PDE limit.",
+        "Use the R-584 H2/L4 bounds and derive the order time derivative H^-2 bound from the actual finite Hamilton equation; Fourier/Sobolev interpolation and compactness give simultaneous strong C_t H^{15/8} and C_t L4 subsequential convergence.",
+        "Write the flux and coefficient derivative of the exact Class-II energy in real coordinates. Strong C_t L4 convergence of gradients and uniform coefficient convergence identify its projected first variation in C_t H^-1. Test the fourth-order linear piece weakly. R-584 strong reservoir convergence passes the cubic and both exchange terms.",
+        "Independent quotient-rule current proof, hostile Fourier projection/normalization/gradient audit, source hashing and 19 exact checks. No parabolic smoothing imported. No new Lean theorem. One three-page PDF rendered and inspected."
+      ],
+      "next_action": "No automatic successor. A separately admitted test can target a two-solution stability inequality for the original quasilinear Hamiltonian in the exact energy class, distinguishing uniqueness from subsequential existence.",
+      "provenance": "contemporaneous",
+      "question": "At fixed volume and finite canonical time, does the exact original Class-II derivative pass to a joint weak limit of the R-584 projected preparations, with no extra term and no uniqueness inference?",
+      "recorded_at": "2026-11-21T01:42:37Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001857",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-11-21",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "EXCH-010: original Class-II variation passes without a defect on the R-584 preparation",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

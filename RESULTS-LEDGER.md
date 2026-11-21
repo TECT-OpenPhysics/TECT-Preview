@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-585](#r-585) | Original Class-II variation in the EXCH weak limit | For R-584 common projected data, a common subsequence gives the original Class-II variation in C(time; H^{-1}) and the coupled weak equations without a defect. No uniqueness or energy equality. |
 | [R-584](#r-584) | Common-data finite-window reservoir tails | Under the original K/2K projections of one H2 order and bounded reservoir datum, original EXCH reservoirs have uniformly vanishing L2 Fourier tails on each finite canonical time window. Fixed volume, no full coupled or physical limit. |
 | [R-583](#r-583) | Uniform low-energy charge fractions | For the original finite EXCH-001 below the pure-order energy, both integrated charge shares have a positive cutoff- and time-independent floor at fixed volume and charge. |
 | [R-582](#r-582) | Matched tensor reservoir linear classification and shear | All three source-native rank-one order spectra classified; low removes exponential order growth but every constant reservoir retains full tangent Jordan shear. Low full linear finite-time bound is cutoff independent, not nonlinear/physical/limit closure. |
@@ -20781,6 +20782,20 @@ and [certificate](strategy/physical-candidates/TECT-EXCH-009-result-v1.json).
 Independent analytic and hostile checks and an exact replay. No
 unbounded L4 initial-data theorem, full coupled flow, volume limit or
 physical promotion. EXCH-008, C6 T1 and T-054 are unchanged.
+
+### R-585 -- original Class-II variation in the EXCH weak limit
+
+Keep the R-584 data, fixed torus, original finite Hamiltonians, and
+K/2K projections. Each growing cutoff sequence has a joint subsequence
+on each fixed finite canonical time window. The exact projected Class-II
+variation converges strongly in C(time; H^{-1}) to the unchanged
+variation, with no defect. The coupled equations hold distributionally
+with the common data and exact total charge. Proof:
+[synthesis](claims/C6-SPACETIME-SIGNATURE/notes/classii-weak-limit-261121-v1.0.tex.txt)
+and [certificate](strategy/physical-candidates/TECT-EXCH-010-result-v1.json).
+Independent and hostile review and a pinned exact replay. No uniqueness,
+full-sequence convergence, full energy equality or physical/volume
+promotion. C6 T1 and T-054 remain unchanged.
 
 ## Notes on status
 

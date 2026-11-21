@@ -392,3 +392,17 @@ See the [result card](../../strategy/physical-candidates/TECT-EXCH-009-result-v1
 and [proof](notes/common-data-reservoir-tails-261121-v1.0.tex.txt).
 Unbounded L4 data and the full coupled limit remain open. No physical
 promotion; C6 stays T1 and the active T-054 gate is unchanged.
+
+### R-585: defect-free Class-II variation on R-584 preparations
+
+For the same common data and unchanged original Hamiltonian and
+K/2K projections, each growing cutoff sequence admits a finite-window
+subsequence strongly convergent in C(time; H^{15/8} x L4).
+The original projected Class-II variation converges strongly in
+C(time; H^{-1}) without an additional term. Both canonical equations
+hold in distributions, with the original initial traces and total
+charge. See the [result card](../../strategy/physical-candidates/TECT-EXCH-010-result-v1.json)
+and [proof](notes/classii-weak-limit-261121-v1.0.tex.txt). This identifies
+subsequential equations only; uniqueness, whole-sequence convergence,
+energy equality and physical promotion are not inferred. C6 and T-054
+are unchanged.
