@@ -1,0 +1,196 @@
+% Title: Common-data reservoir tails for the original finite exchange flow
+% Claim: C6-SPACETIME-SIGNATURE
+% Version: v1.0 -- first issued 2026-11-21; this version issued 2026-11-21
+% Status: R-584; auxiliary fixed-volume compactness estimate
+
+\section{Purpose and scope}
+On the original side-16 periodic three-torus use the unchanged full
+EXCH-001 Hamiltonian, exact rectangular projections $P_K,P_{2K}$,
+and its dimensionless canonical time $\tau$. Let the common initial
+order and reservoir fields be $\Psi_0\in H^2(\mathbb T^3;\mathbb C^3)$
+and $\chi_0\in L^\infty(\mathbb T^3;\mathbb C)$. For every integer
+$K\ge1$, use exactly $(P_K\Psi_0,P_{2K}\chi_0)$, without a rescaling,
+and denote the original trajectory by $(\Psi_K,\chi_K)$. Then
+\[
+ \lim_{R\to\infty}\sup_{K\ge1}\sup_{|\tau|\le T}
+ \|(1-P_R)\chi_K(\tau)\|_2=0\qquad(0<T<\infty).
+\]
+In fact the reservoirs form a relatively compact family in
+$C([-T,T];L^4)$, with normalized measure throughout. No tightness
+assumption along the finite trajectories is used. The class includes
+all common finite Fourier data, in particular the unmodified low-energy
+R-579 plane. For general data the projected charges are bounded but
+need not equal one another; no exact-sector renormalization is made.
+
+Write $\rho=|\Psi|^2$, $S=\Psi^T\Psi$, and let
+$b(\Psi)=\langle\Psi,(L-\lambda_0)\Psi\rangle$ denote the normalized
+real spectral form in R-158; $\lambda_0$ is its spectral bottom
+before subtraction. The R-158 identity has nonnegative Class-II
+energy and sextic remainder $c\langle\rho(\rho-\rho_*)^2\rangle$
+with $c=\gamma/6$. Since $|S|\le\rho$,
+\[
+ \epsilon|\chi|\rho\le \tfrac14|\chi|^2+\epsilon^2\rho^2,\qquad
+ c\rho(\rho-\rho_*)^2-\epsilon^2\rho^2\ge-D\rho,\quad
+ D=\epsilon^2\rho_*+\frac{\epsilon^4}{4c}.
+\]
+Thus $H/V\ge \frac12b(\Psi)+(\mu_t/2-D)\|\Psi\|_2^2
++\frac14\|\chi\|_2^2+\frac14\|\chi\|_4^4$ for the pinned
+$\omega=u=1$. Completing the square in
+$Y|k|^4+Z|k|^2+r$ gives
+$b(\Psi)\ge(Y/2)\|\Delta\Psi\|_2^2-C\|\Psi\|_2^2$.
+R-578 conserves $H$ and $Q/V=\|\Psi\|_2^2/2+\|\chi\|_2^2$
+and supplies the complete finite flow.
+The separate static $H^2$ continuity of P1 follows from the R-158
+formula: the derivative terms of Class II are quadratic in first
+derivatives with smooth coefficient matrices on bounded amplitudes
+and strictly positive denominator floors. Thus convergence in $H^2$
+implies convergence of these terms using $H^2\hookrightarrow L^\infty$.
+
+\clearpage
+\section{Uniform forcing and a bounded comparison field}
+Here is an elementary projection justification at the only non-Hilbert
+exponent needed. For a real trigonometric polynomial $a$ on the circle,
+let $h$ be its conjugate polynomial (multiplier $-i\,\mathrm{sgn}(n)$).
+Then $a+ih$ has no negative frequencies. Taking the real part of
+the mean of its fourth power and using Jensen,
+\[
+ \langle a^4-6a^2 h^2+h^4\rangle=\langle a\rangle^4
+ \le \langle a^4\rangle,\qquad
+ \|h\|_4^4\le 6\|a\|_4^2\|h\|_4^2 .
+\]
+Split into real and imaginary parts for complex data. By modulation
+and differences of half-line projections this bounds interval
+projections uniformly on $L^4$; apply each one-dimensional projection
+in turn by Fubini for boxes. Polynomial density then gives strong $L^4$
+convergence of $P_N$. No $L^\infty$ sharp-projection bound is used.
+Together with $H^2$ projection convergence for $\Psi_0$, this gives
+uniform initial $H,Q$. The preceding coercivity argument gives
+\[
+ \sup_{K,\tau}\bigl(\|\Psi_K(\tau)\|_{H^2}+\|\chi_K(\tau)\|_4\bigr)<\infty.
+\]
+In particular $G_K=\epsilon S_K$ is uniformly bounded in $H^2$
+and $L^\infty$ by the $H^2$ algebra on the fixed torus.
+
+Put $Jz=-iz$ and $f(z)=\omega z+u|z|^2z$.
+The exact first variation gives
+$\dot\chi_K=JP_{2K}(f(\chi_K)-G_K)$.
+Define a comparison field $w_K$ by the \emph{pointwise} equation
+$\dot w_K=J(f(w_K)-G_K)$, $w_K(0)=\chi_0$, for the same $G_K$.
+This is not substituted into the model. The radial terms rotate only,
+so $|w_K(\tau,x)|\le|\chi_0(x)|+\int_{\min(0,\tau)}^{\max(0,\tau)}
+ |G_K(v,x)|\,dv$. Thus $w_K,\dot w_K$ are uniformly bounded in
+$L^\infty$ on each finite window; the pointwise solutions exist there.
+
+For spatial translations $\theta_h$, the forcing satisfies
+$\sup_{K,\tau}\|\theta_h G_K-G_K\|_4\to0$ by the uniform $L^\infty$
+and $H^1$ bounds (interpolate $L^2$ and $L^\infty$).
+On the bounded range of $w_K$, $f$ is pointwise Lipschitz.
+Subtract the translated pointwise ODEs and use Gronwall;
+the resulting $L^4$ modulus comes from the preceding forcing modulus
+and $\|\theta_h\chi_0-\chi_0\|_4\to0$. It is uniform in $K$
+and $|\tau|\le T$. The fields $f(w_K)-G_K$ have the same
+uniform translation property.
+
+\clearpage
+\section{Projected consistency and relative-energy comparison}
+Let $A_N$ be the tensor product of the one-dimensional Fejer averages
+through degree $N$, and $W_K=A_{2K}w_K$.
+Positive normalized kernels give $\|W_K\|_\infty\le\|w_K\|_\infty$
+and the same inequality for their time derivatives. The range
+of $A_N$ is in $P_N$, and the uniform translation moduli imply
+uniform $L^4$ approximation by $A_N$ (integrate the translation
+modulus against the approximate identity). In particular
+\[
+\begin{split}
+ e_K&=\dot W_K-JP_{2K}(f(W_K)-G_K)\\
+ &=JP_{2K}\big[(A_{2K}-I)(f(w_K)-G_K)+f(w_K)-f(W_K)\big],
+ \qquad \sup_{|\tau|\le T}\|e_K\|_4\longrightarrow0 .
+\end{split}
+\]
+The residual estimate uses uniform $L^4$ boundedness of $P_{2K}$
+and local Lipschitz continuity on the bounded \emph{comparison} range,
+not on a hypothesized bounded range for $\chi_K$.
+
+Use real Euclidean pairing and potential $U(z)=\omega|z|^2/2+
+u|z|^4/4$, gradient $f$. With $d=\chi_K-W_K$, let $\mathcal B_K$
+be the spatial mean of $U(W_K+d)-U(W_K)-f(W_K)\cdot d$.
+The quartic Taylor remainder is
+$2|W_K|^2|d|^2+(2W_K\cdot d+|d|^2)^2\ge |d|^4/3$;
+the inequality is a square completion using
+$(W_K\cdot d)^2\le |W_K|^2|d|^2$. Consequently
+\[
+ \mathcal B_K\ge \tfrac{\omega}{2}\|d\|_2^2
+                      +\tfrac{u}{12}\|d\|_4^4 .
+\]
+Differentiating in the original finite carrier and pairing there,
+the term $\langle f(\chi_K)-f(W_K),JP_{2K}[f(\chi_K)-f(W_K)]\rangle$
+is exactly zero by orthogonality and skewness. Therefore
+\[
+ \dot{\mathcal B}_K =
+ \langle f(\chi_K)-f(W_K)-Df(W_K)d,\dot W_K\rangle
+ -\langle f(\chi_K)-f(W_K),e_K\rangle .
+\]
+The first term is bounded in absolute value by
+$C_T\langle |d|^2+|d|^3\rangle\le C'_T\mathcal B_K$.
+The second is bounded by $C_T\|e_K\|_4$ since the original
+$\chi_K$ are uniformly $L^4$ and the comparison field is bounded.
+$P_{2K}\chi_0-A_{2K}\chi_0\to0$ in $L^4$, so
+$\mathcal B_K(0)\to0$. Two-sided Gronwall on the finite window gives
+$\sup_{|\tau|\le T}\mathcal B_K(\tau)\to0$, hence
+$\sup_{|\tau|\le T}\|\chi_K-w_K\|_4\to0$.
+
+\clearpage
+\section{Devil's-advocate review and compactness}
+The comparison states are uniformly approximable in $L^4$ by
+fixed finite-degree Fejer polynomials by the translation estimate.
+Their time derivatives are uniformly $L^\infty$ on the window.
+Arzela--Ascoli gives relative compactness of $w_K$ in $C_\tau L^4$.
+The vanishing $C_\tau L^4$ discrepancy transfers this to $\chi_K$:
+bounded $K$ give finitely many trajectories, and unbounded $K$ can
+be taken to infinity on a subsequence. Alternatively use the uniform
+auxiliary translation modulus to bound $L^2$ tails, then bound the
+high-$K$ difference and take $R$ above all the remaining finite carriers.
+
+\paragraph{Adversarial review.}
+\begin{itemize}
+\item Pointwise amplitude estimates would be false as a derivation
+  for the projected nonlinear flow; the pointwise equation is only a
+  comparison. The skew cancellation is in the exact original carrier.
+\item Charged Fourier projections need not conserve the charge of
+  the common initial field at time zero. Only a uniform initial bound
+  and the actual conservation in each carrier are used.
+\item EXCH-008 has persistent high-frequency mass at time zero and
+  is not such a common projected preparation. The failure of recovery
+  on the whole R-583 sublevel is not reversed.
+\item A general unbounded $L^4$ initial field is not covered:
+  the comparison Lipschitz and $\dot W_K$ bounds depend on its
+  essential supremum. Truncating amplitudes and sending the truncation
+  to infinity is not justified by these constants.
+\end{itemize}
+Two independent routes check bounded data: the moving Fejer
+comparison above and first smoothing the common datum at fixed
+degree, projecting the resulting $H^2$ comparison, then removing
+the smoothing with a relative-energy constant controlled by the
+common essential supremum. Read-only hostile review also rejects
+an $L^2$-Lipschitz shortcut using only the reservoir $L^4$ energy.
+The runnable audit checks the core identities, signs and hashes;
+it is not a formalization of the functional-analytic proof.
+
+\section{Result footer}
+\begin{verbatim}
+Result ID: R-584 (C6-SPACETIME-SIGNATURE); EXCH-009.
+Precise statement: uniform reservoir L2 Fourier tails on each
+  finite canonical time window for common H2 x Linfty data.
+Scope: fixed periodic volume, original K/2K projections and law.
+Dependencies: original EXCH-001, R-578 and static R-158.
+Evidence grade: ANALYTIC, EXACT, EXECUTED, CONDITIONAL.
+Reproduction command: python -B -X utf8
+  verification/scripts/exch009_verify.py
+Expected output: EXCH009: PASS (exact identity checks).
+Falsification gate: projection, skewness, coercivity, or
+  approximation error; or a stated preparation with escaping tails.
+Tier before / after: C6 T1 / T1; T-054 unchanged.
+No-overclaim statement: no unbounded L4 result, full coupled
+  limiting flow, infinite volume, physical Pre-A, QFT or gravity.
+Next required action: only an admitted coupled limit identification.
+\end{verbatim}

@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-11-21-EXCH008-WEAK-INITIAL-DRIFT](#ng-2026-11-21-exch008-weak-initial-drift) | uniform initial low-mode drift recovery from fixed Fourier prefixes and H, Q on the R-583 sublevel | Exact matched-sublevel families yield opposite invariant low-mode occupation derivatives. A weak limit with charge defect does not determine the phase-sensitive cubic drift. No finite-time no-go. |
 | [NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR](#ng-2026-11-15-alt002-bounded-linear-reservoir) | uniformly-in-time bounded full linear flow around a constant tensor reservoir | A nonzero zero-mean fixed-Q tangent Jordan shear survives every constant orientation and global-phase quotient. No nonlinear instability follows; scalar has the same shear. |
 | [NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE](#ng-2026-11-15-exch006-augmented-closure) | exact autonomous drift of the named population/coherence vector for all full EXCH initial points | Same full H/Q/populations/complex coherence but unequal coherence drift and opposite current acceleration. Restricted states, memory and controlled errors remain open. |
 | [NG-2026-11-12-EXCH003-POPULATION-ONLY-CLOSURE](#ng-2026-11-12-exch003-population-only-closure) | one population-only law reproducing all full EXCH Dirac preparations | Same full H/Q/populations, opposite invariant pair currents. Restricted states, memory and controlled approximations are not excluded. |
@@ -11183,3 +11184,31 @@ rejected. Other finite sets, independently justified restricted preparations,
 memory and controlled errors are not ruled out. Measuring pair coherence
 still supplies instantaneous current, not its closed evolution. No physical
 packet, new model/time, PreA, QFT, gravity or limit; EXCH005 HOLD and C6/T054 unchanged.
+
+### NG-2026-11-21-EXCH008-WEAK-INITIAL-DRIFT -- unresolved high modes change low occupation drift
+
+**Branch / claim.** Recover the initial derivative of the invariant reservoir
+occupation at mode 2k uniformly on the entire original R-583 fixed-charge
+sublevel from fixed Fourier prefixes and the conserved scalar values H and Q.
+
+**Failure mode.** Two admissible reservoir envelopes differ by the sign of
+the imaginary coefficient at twice an escaping frequency. Exact charge
+weighting and quartic spatial averaging give identical H, Q and component
+populations; the fixed low modes agree eventually. Both initial states lie
+strictly below the original gap threshold. The retained cubic interaction
+sees the resonance M+M-2M=0 with opposite phases, giving opposite nonzero
+derivatives of the same U(1)-invariant low-mode occupation.
+
+**Evidence.** [Analytic witness](../strategy/physical-candidates/TECT-EXCH-008-witness-v1.json),
+[exact run](../claims/C6-SPACETIME-SIGNATURE/runs/2026-11-21-exch008.json)
+and [replay](../verification/scripts/exch008_verify.py). Independent sparse
+three-dimensional convolution and hostile sign, projection, domain and
+quantifier review.
+
+**Consequence.** No finite-prefix prediction error uniformly tending to
+zero on the full sublevel for this instantaneous derivative, even if H and
+Q are also supplied. The common ambient weak limit loses charge, so this is
+not a discontinuity at an admitted point in the original fixed sector.
+Fixed-positive-time convergence, time-integrated drift and well-prepared
+families with tight tails are not ruled out. R-583, EXCH-001, C6 and T-054
+remain unchanged. No physical, continuum, Pre-A, QFT or gravity conclusion.

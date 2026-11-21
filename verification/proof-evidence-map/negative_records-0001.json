@@ -1,6 +1,27 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-11-21-exch008-weak-initial-drift",
+      "branch": "uniform initial low-mode drift recovery from fixed Fourier prefixes and H, Q on the R-583 sublevel",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "structured_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "branch_claim": "Recover the initial derivative of the invariant reservoir occupation at mode 2k uniformly on the entire original R-583 fixed-charge sublevel from fixed Fourier prefixes and the conserved scalar values H and Q.",
+        "consequence": "No finite-prefix prediction error uniformly tending to zero on the full sublevel for this instantaneous derivative, even if H and Q are also supplied. The common ambient weak limit loses charge, so this is not a discontinuity at an admitted point in the original fixed sector. Fixed-positive-time convergence, time-integrated drift and well-prepared families with tight tails are not ruled out. R-583, EXCH-001, C6 and T-054 remain unchanged. No physical, continuum, Pre-A, QFT or gravity conclusion.",
+        "evidence": "[Analytic witness](../strategy/physical-candidates/TECT-EXCH-008-witness-v1.json), [exact run](../claims/C6-SPACETIME-SIGNATURE/runs/2026-11-21-exch008.json) and [replay](../verification/scripts/exch008_verify.py). Independent sparse three-dimensional convolution and hostile sign, projection, domain and quantifier review.",
+        "failure_mode": "Two admissible reservoir envelopes differ by the sign of the imaginary coefficient at twice an escaping frequency. Exact charge weighting and quartic spatial averaging give identical H, Q and component populations; the fixed low modes agree eventually. Both initial states lie strictly below the original gap threshold. The retained cubic interaction sees the resonance M+M-2M=0 with opposite phases, giving opposite nonzero derivatives of the same U(1)-invariant low-mode occupation."
+      },
+      "detail_title": "unresolved high modes change low occupation drift",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "Exact matched-sublevel families yield opposite invariant low-mode occupation derivatives. A weak limit with charge defect does not determine the phase-sensitive cubic drift. No finite-time no-go.",
+      "tag": "NG-2026-11-21-EXCH008-WEAK-INITIAL-DRIFT"
+    },
+    {
       "anchor": "ng-2026-11-15-exch006-augmented-closure",
       "branch": "exact autonomous drift of the named population/coherence vector for all full EXCH initial points",
       "claim_ref_basis": {
@@ -1988,26 +2009,6 @@
       "kind": "no_go",
       "summary": "for `W_a=exp(-ia p_0/hbar)` and `t_a=tau/a^2`, the full Q3 onsite flow gives `||[p_0,alpha_(t_a)(W_a)]K^(-1/2)||>=(g+3lambda)tau a-B_tau`; Leibniz growth of `W_b^n` is only linear with slope `L(W_b)/b`, yielding a contradiction. Retain non-Leibniz analytic/Frechet, symmetric or state-weighted, and direct projected routes",
       "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY"
-    },
-    {
-      "anchor": "ng-2026-08-10-pre-a-st8-q3lock-coordinate-cutoff-half-modular-strip-absolute-closure",
-      "branch": "obtain fixed-beta uniform half-modular-strip multipliers from the bounded coordinate-cutoff bond and a connected absolute expansion",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "consequence": "The absolute half-strip proof route is closed, not the projected equilibrium route. Direct `D,delta D` estimates or a nonabsolute resummation remain possible.",
-        "evidence": "For `Q_L(q)=eta(|q|/L)q`, the kinetic commutator `[p^2,Q_L]=-i hbar(p.DQ_L+DQ_L.p)` is unbounded, so boundedness of the bond does not supply norm-`C1` stability. Even after assuming a separate analytic repair, the degree-`z` connected expansion has radius parameter `r=2zJ_L|Im t|/hbar`; the half strip requires `z beta J_L<1`. Since the bond norm is `J_L=Theta(cL^2)`, no fixed positive beta survives `L->infinity` by this method.",
-        "failure_mode": "Infer fixed-beta, cutoff-uniform half-modular-strip multiplier bounds from bounded coordinate-cutoff bonds and a connected absolute Taylor expansion."
-      },
-      "detail_title": "bounded coordinate bonds do not give a uniform half modular strip",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "`[p^2,Q_L]` is unbounded, so the cutoff is not automatically norm-`C1`; even after an analytic repair the absolute expansion requires `z beta J_L<1`, while `J_L=Theta(cL^2)`. Retain direct projected `D,delta D` estimates or a nonabsolute resummation",
-      "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-COORDINATE-CUTOFF-HALF-MODULAR-STRIP-ABSOLUTE-CLOSURE"
     }
   ],
   "kind": "negative_records",

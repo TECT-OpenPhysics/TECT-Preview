@@ -5,12 +5,13 @@
 
 Authorities: `negative-results/registry.md`.
 
-**399 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 323 · retraction: 5
+**400 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 324 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-11-21-EXCH008-WEAK-INITIAL-DRIFT`](registry.md#ng-2026-11-21-exch008-weak-initial-drift) | no_go | uniform initial low-mode drift recovery from fixed Fourier prefixes and H, Q on the R-583 sublevel |
 | [`NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE`](registry.md#ng-2026-11-15-exch006-augmented-closure) | no_go | exact autonomous drift of the named population/coherence vector for all full EXCH initial points |
 | [`NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR`](registry.md#ng-2026-11-15-alt002-bounded-linear-reservoir) | no_go | uniformly-in-time bounded full linear flow around a constant tensor reservoir |
 | [`NG-2026-11-12-PAH-STATE001-DISPLAY-MARKOV`](registry.md#ng-2026-11-12-pah-state001-display-markov) | no_go | exact displayed-only memoryless realization of PAH-v2 |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining) | no_go | use the natural forgetful pullback after adding a freely varying adjacent fine vertex as an exact PAH generator refinement morphism |
 | [`NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining) | no_go | use positive scalar beta or kappa_s transport to repair the natural free-vertex forgetful pullback |
 | [`NG-2026-09-02-PAH-OMC-002-CONDITIONAL-GIBBS-PROJECTED-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-002-conditional-gibbs-projected-intertwining) | no_go | use the exact PAH-OMC-002 Gibbs fibre average as a projected generator intertwiner on the fine-only-vertex map |
-| [`NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION`](registry.md#ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction) | no_go | use centered global total-energy contexts as a volume-uniform local transfer |
 
 Search without loading the full registry:
 

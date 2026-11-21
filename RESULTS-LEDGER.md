@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-584](#r-584) | Common-data finite-window reservoir tails | Under the original K/2K projections of one H2 order and bounded reservoir datum, original EXCH reservoirs have uniformly vanishing L2 Fourier tails on each finite canonical time window. Fixed volume, no full coupled or physical limit. |
 | [R-583](#r-583) | Uniform low-energy charge fractions | For the original finite EXCH-001 below the pure-order energy, both integrated charge shares have a positive cutoff- and time-independent floor at fixed volume and charge. |
 | [R-582](#r-582) | Matched tensor reservoir linear classification and shear | All three source-native rank-one order spectra classified; low removes exponential order growth but every constant reservoir retains full tangent Jordan shear. Low full linear finite-time bound is cutoff independent, not nonlinear/physical/limit closure. |
 | [R-581](#r-581) | Pair-coherence-augmented state nonclosure | Same full H/Q/populations/complex pair coherence have different actual drift in unchanged EXCH. The named universal exact autonomous closure fails; no physical or mainline promotion. |
@@ -20766,6 +20767,20 @@ Proof: [synthesis](claims/C6-SPACETIME-SIGNATURE/notes/mixed-charge-floor-261120
 and [certificate](strategy/physical-candidates/TECT-EXCH-007-result-v1.json).
 Two analytic derivations, exact run and partial Lean checks. No continuum
 flow, pointwise positivity, ongoing current or physical state selection.
+
+### R-584 -- common-data finite-window reservoir tails
+
+For one common H2 order field and bounded reservoir field, initialize
+the unchanged EXCH-001 Hamiltonian with its original K/2K projections.
+On each fixed finite canonical time window the reservoir L2 Fourier
+tails vanish uniformly in K. Reservoir trajectories are relatively
+compact in C(time; L4). The projected relative-energy estimate derives
+this, without an assumed spatial tail bound on the original flow.
+Proof: [synthesis](claims/C6-SPACETIME-SIGNATURE/notes/common-data-reservoir-tails-261121-v1.0.tex.txt)
+and [certificate](strategy/physical-candidates/TECT-EXCH-009-result-v1.json).
+Independent analytic and hostile checks and an exact replay. No
+unbounded L4 initial-data theorem, full coupled flow, volume limit or
+physical promotion. EXCH-008, C6 T1 and T-054 are unchanged.
 
 ## Notes on status
 

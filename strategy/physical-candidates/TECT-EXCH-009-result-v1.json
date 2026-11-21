@@ -1,0 +1,24 @@
+{
+  "id": "TECT-EXCH-009-RESULT-v1",
+  "result_id": "R-584",
+  "date": "2026-11-21",
+  "classification": "auxiliary_support",
+  "overall_verdict": "PROVED_FOR_COMMON_H2_ORDER_AND_BOUNDED_RESERVOIR_DATA",
+  "statement": "For common Psi0 in H2(T^3; C^3) and chi0 in L-infinity(T^3; C), initialize the original finite system at (P_K Psi0, P_2K chi0). For every finite T>0, lim_{R->infinity} sup_{K>=1, |tau|<=T} ||(I-P_R)chi_K(tau)||_2=0. In fact the reservoirs are relatively compact in C([-T,T]; L4).",
+  "scope": "Conditional pinned R-158 static P1 and R-578 finite dynamics, original nondimensional canonical time, same side-16 periodic T^3, geometric volume 4096, spatially normalized norms, and exact rectangular projection K/2K. No projection renormalization, fixed-Q rescaling, or changed Hamiltonian. Arbitrary common bounded reservoir includes non-smooth and finite Fourier preparations. General projected charges are bounded but need not be identical.",
+  "method": "Conservation with P1 spectral coercivity gives uniform H2 order and L4 reservoir bounds. The pointwise auxiliary field uses the exact finite forcing at each K. A bounded Fejer approximation in the original carrier has vanishing L4 residual. Positive relative energy and skewness of the exact projected equation control the comparison in C_t L4 without an L-infinity bound on the true reservoir. Translation and temporal bounds give compactness.",
+  "evidence_sha256": {
+    "claims/C6-SPACETIME-SIGNATURE/notes/common-data-reservoir-tails-261121-v1.0.tex.txt": "de8df39972ba3d1a9f2e836bf1cde88f726a83fb04ada10820b72fb189414cdb",
+    "claims/C6-SPACETIME-SIGNATURE/notes/common-data-reservoir-tails-261121-v1.0.pdf": "11674cb86eb567eaf129387b7a821f9bd5c0cdc2063b6585512c79d8b5744e18",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-21-exch009.json": "07f702e5bcedbc480bf0c1526279258b957a9b1b3635580427ec852390f982f4",
+    "verification/scripts/exch009_verify.py": "6c8e90a7164eabc30d793e3ef29ef7751e986d285582c583630e9049f70c8a7a"
+  },
+  "evidence_grade": ["ANALYTIC", "EXACT", "EXECUTED", "CONDITIONAL"],
+  "verification": "Source identities and 17 exact algebraic checks; separate read-only bounded-data proof using fixed smooth approximation, H2 comparison, and limsup in K before desmoothing; independent H2 bootstrap on the regular subclass; hostile L4-only/projection audit; four PDF pages individually rendered and reviewed, zero overfull hboxes. No new Lean theorem or external referee.",
+  "reproduce": "python -B -X utf8 verification/scripts/exch009_verify.py",
+  "exploration_id": "EXP-001857",
+  "falsifier": "An incorrect source/charge/symbol/relative-energy factor, failure of the skew projected cancellation or consistency, or escaping tails on an actual common preparation in the stated class. EXCH-008 uses differently prepared sequences and is not such a falsifier.",
+  "missing_inputs": "For unbounded L4 initial reservoir data the proof lacks relative-energy stability independent of amplitude truncation; neither conclusion nor counterexample is supplied there. Full order equation limit and uniqueness are not established.",
+  "non_claims": "No all-time uniform-in-T estimate, entire-sublevel tail propagation, full coupled cutoff-removal theorem, volume limit, physical state/clock, Pre-A, QFT or gravity result. T-054 and C6 T1 unchanged.",
+  "reentry": "One separately authorized fixed-volume coupled-limit test: identify the unaltered P1 order first variation (especially Class-II terms) along the bounded-preparation compactness subsequences, before making any full-flow or uniqueness claim."
+}

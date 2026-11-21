@@ -4186,6 +4186,103 @@
       "task_id": "T-109",
       "title": "Low energy forces persistent occupation of both original EXCH charge components",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "Only failure of uniform initial drift recovery on the whole original sublevel. The common weak limit is outside the fixed charge sphere. R-583 holds for both families. No conclusion about fixed-positive-time, physical, continuum, well-prepared, or augmented-state dynamics. T-054 and C6 unchanged.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The unpenalized reservoir tails inject the phase-sensitive cubic Fourier product through M+M-2M=0. A standard nonlinear weak-defect phenomenon, explicitly resolved here for the pinned finite EXCH energy and charge, not a new general compactness theorem.",
+      "evidence_refs": [
+        "strategy/physical-candidates/TECT-EXCH-008-witness-v1.json#construction",
+        "verification/scripts/exch008_verify.py#replay",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-21-exch008.json#exact",
+        "strategy/research-idea-bank-v1.json#IDEA-008",
+        "strategy/research-idea-bank-v1.json#IDEA-011"
+      ],
+      "finding": "Exact scoped counterexample. Both families are in the same strict R-583 sublevel with exactly equal H and Q, same fixed Fourier prefixes eventually and same ambient weak limit. The low-mode initial occupation drift is opposite with nonzero fixed magnitude. Every finite-prefix predictor with H and Q has at least that worst-case error.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-11-21-EXCH008-WEAK-INITIAL-DRIFT"
+        ],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001856",
+      "method": [
+        "Keep the original EXCH law, fixed charge, period, normalization and cutoff sequence. Recall IDEA-008 for weighted charge and IDEA-011 for the distinction between population and phase-sensitive information. No experiment, new carrier, time scaling or model change.",
+        "Insert two resonant admissible high Fourier modes into the R-579 witness with conjugate relative phases and check the full low-energy inequality, exact Q and exact equality of H. Then take the retained cubic coefficient by exact convolution and independently check with three-dimensional Fourier indices.",
+        "Hostile checks: global U(1) invariant observable, original canonical factor, exact projection without alias, nonzero finite prefix error floor, loss of charge in the ambient weak limit and no claim about finite-time flow. No new Lean results."
+      ],
+      "next_action": "Do not continue with energy and charge alone. Revisit only on an independently justified preparation class and an actual short-time propagation estimate for the phase-sensitive cubic residual, or a precise error in this witness.",
+      "provenance": "contemporaneous",
+      "question": "Do the original R-583 sublevel, all fixed Fourier coefficient limits and the same numerical H and Q determine the initial drift of the fixed invariant reservoir mode occupation?",
+      "recorded_at": "2026-11-21T01:06:33Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001855",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-11-21",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "EXCH-008: weak Fourier data and conserved scalars do not determine one low-mode initial drift",
+      "verdict": "failed"
+    },
+    {
+      "boundary": "Auxiliary fixed-volume result only. No uniformly unbounded time window, fixed-charge renormalization, whole-sublevel tail estimate, full coupled limiting law or uniqueness, or physical Pre-A/QFT/gravity. EXCH-008 remains valid, C6 T1 and T-054 unchanged.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The convex reservoir energy controls the actual Galerkin comparison without an L-infinity assumption on the projected reservoir. The strong comparison derived for the common preparation does not hold by energy and charge alone on the whole low-energy sublevel.",
+      "evidence_refs": [
+        "strategy/physical-candidates/TECT-EXCH-009-result-v1.json#statement",
+        "claims/C6-SPACETIME-SIGNATURE/notes/common-data-reservoir-tails-261121-v1.0.tex.txt#Projected consistency and relative-energy comparison",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-21-exch009.json#checks",
+        "strategy/research-idea-bank-v1.json#IDEA-008",
+        "strategy/research-idea-bank-v1.json#IDEA-011"
+      ],
+      "finding": "PROVED for common H2 x L-infinity data in the fixed original torus. Uniform L2 Fourier tails are a consequence, not a premise. Reservoir trajectories are relatively compact in C([-T,T]; L4). General unbounded L4 common data remain undecided.",
+      "formal_refs": {
+        "events": [
+          "20261121-r-584-reservoir-tail-control-for-common-exch-da"
+        ],
+        "negatives": [],
+        "results": [
+          "R-584"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001857",
+      "method": [
+        "Changed premise relative to EXCH-008: project one cutoff-independent initial pair without rescaling charge. Recall IDEA-008 for weighted charge and IDEA-011 only to distinguish a mathematical preparation from a calibrated physical preparation. No new physical conjecture or alteration of EXCH.",
+        "Absorb the conversion interaction using the unchanged R-158 nonnegative remainders and positive order symbol. Derive forcing H2 bound from H and Q conservation. Use the same forcing for a bounded pointwise comparison; use a positive Fourier average only on the comparison and obtain a vanishing L4 residual in the original sharp carrier.",
+        "Differentiate reservoir relative energy: orthogonal projection and skewness kill the nonlinear difference pairing. Conclude strong C_t L4 approximation of the true reservoir by comparison paths and deduce tail tightness from the propagated translation modulus.",
+        "Independent reviews use fixed-degree smoothing and projected H2 comparison before desmoothing, and separately verify the H2 bootstrap route. Hostile review rejects the L4-only Lipschitz argument and transfer of the pointwise amplitude bound to the true projected flow. 17 exact checks, four-page final PDF inspection, no new Lean theorem."
+      ],
+      "next_action": "After this combined checkpoint, no automatic scientific successor. On separate admission identify the unchanged P1 first variation, especially Class-II derivative terms, along finite-time subsequences of the same preparation before any full limiting-flow claim.",
+      "provenance": "contemporaneous",
+      "question": "For one common H2 order field and bounded reservoir field, do the unaltered K/2K projected trajectories have uniformly vanishing L2 reservoir Fourier tails on every fixed finite canonical time window?",
+      "recorded_at": "2026-11-21T01:23:39Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001856",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-11-21",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "EXCH-009: original finite-window reservoir tail tightness for a common bounded preparation",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

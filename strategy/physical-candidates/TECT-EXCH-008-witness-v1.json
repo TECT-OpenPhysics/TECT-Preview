@@ -1,0 +1,30 @@
+{
+  "id": "TECT-EXCH-008-v1",
+  "date": "2026-11-21",
+  "parent_commit": "58cbb5c44e91ed8b05458042ae89e5698351d545",
+  "source_sha256": {
+    "strategy/physical-candidates/TECT-EXCH-001-contract-v1.json": "d07cb738d40d9b97a3a2341ada94ac13167e4410edd4ece39fb6ba02504f073e",
+    "strategy/physical-candidates/TECT-EXCH-002-result-v1.json": "212f5e4d55613c83e856158ca485798afffd9b20301acc4b8533ac90d98e7ef5",
+    "strategy/physical-candidates/TECT-EXCH-007-contract-v1.json": "57fe857d9b09633c21b77d04a8da1574144e00da73e8b10086248e01765d0806",
+    "strategy/physical-candidates/TECT-EXCH-007-result-v1.json": "ed7a60d99cbfb0689b0daaeebb4c774131247a9d14de2b5a3f1785e04ee0b2d7",
+    "claims/C6-SPACETIME-SIGNATURE/notes/fixed-charge-sector-261112-v1.0.tex.txt": "777875584aa0435d7eda2c27f2de942cbaf98e4fdb92ca2f5f8cb17ca691b4b2",
+    "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json": "82ecf0e8e4e4b3d99cb67fad1655e03d85c63921f9e02deb83bd8ad0a74138e5",
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+  },
+  "question": "Does a finite Fourier prefix plus exact H and Q uniformly determine the initial drift of one fixed invariant low-mode occupation on the entire R-583 nonempty sublevel, as the original cutoff is increased?",
+  "scope": "Unchanged full EXCH-001 on periodic side-16 T^3, original nondimensional Hamiltonian, Fourier cutoffs K/2K and canonical time, Q=11008/27, and (E_P-H)/V >= 1/10000 with E_P=mu_t Q. Only the initial drift on the ambient weak L2 closure is tested.",
+  "witness_input": {"order_shell_index": [1, 1, 1], "relative_high_amplitude": "1/4"},
+  "construction": [
+    "Let e_j denote the volume-normalized character of integer index j (pointwise modulus one), k the R-579 shell, and v_star its real unit internal eigenvector. For N>=1 write M=(N,0,0), K=N+1, r=epsilon*rho_star, b=r/4, n=r^2+2*b^2, p=rho_star-2*n. Set Psi=sqrt(p)*v_star*e_k and chi_sigma=e_(2k)*(r+b*e_M+sigma*i*b*e_(2M)), sigma=+1 or -1. Every term belongs to the original carrier. The injection of integer multiples of M into Z^3 ensures no aliasing.",
+    "Both signs have Q/V=p/2+n and Re average(conj(chi)*Psi^T Psi)=r*p. The quartic average is r^4+8*r^2*b^2+6*b^4 by the squared norm of the Fourier coefficients of (r+b*z+sigma*i*b*z^2)^2. The cross term in its z^2 coefficient is purely imaginary before taking the real part.",
+    "The R-158 shell remainder gives (H-E_P)/V=(omega/2-mu_t)*n+u*average(|chi|^4)/4+(gamma/6)*p*(p-rho_star)^2-epsilon*r*p. At mu_t=1/4 this is an upper bound, checked strictly below the R-583 gap using exact fractions. H and Q are individually identical, independent of sign and N.",
+    "Set C=average(e_(-2k)*chi), f=|C|^2, invariant under global U(1). The original canonical bracket yields dot C=-i*(omega*r+u*(r^3+4*r*b^2-sigma*i*b^3)-epsilon*p). Orthogonal projection cannot change this retained coefficient. The sign-sensitive term is the cubic resonance M+M-2M=0, not aliasing. Thus dot f=-sigma*2*u*r*b^3.",
+    "For any fixed Fourier prefix, choose N large enough to remove both high reservoir indices from it. The common prefix and the exact scalar labels H,Q coincide but the initial drifts differ, so any predictor of the named drift from that prefix and these labels has worst-case absolute error at least 2*u*r*b^3, independently of prefix size. Uniform L2 bounds and Fourier density give the same ambient weak L2 limit. Its reservoir norm loses density 2*b^2, so it is not itself in the original fixed-Q sector."
+  ],
+  "classification": "NEGATIVE_RESULT_ON_AUXILIARY_ROUTE",
+  "verification": "Primary infinite-index character argument plus exact symbolic Laurent convolution and rational energy certificate. Independent read-only 3D sparse Fourier check and separate hostile review of cutoff, global phase, norm loss, scalar labels and initial-time boundary. No new Lean formalization.",
+  "reproduce": "python -B -X utf8 verification/scripts/exch008_verify.py",
+  "background_only": "J. M. Ball, A version of the fundamental theorem for Young measures (1989), pp. 1-2 of the author copy: a standard explanation of nonlinear weak defects. No Young-measure theorem is needed for or imported into this explicit finite Fourier argument.",
+  "non_claims": "No contradiction of R-583, no fixed-time trajectory or time-averaged counterexample, no discontinuity at a state within the original fixed-Q sphere, no rejection of well-prepared convergence or of a theory that retains extra correlation information. No physical state, Pre-A, continuum dynamics, QFT, gravity or change to T-054.",
+  "reentry": "Only with an independently justified preparation class: determine whether the unchanged dynamics propagates enough strong reservoir convergence, or controls this phase-sensitive cubic residual directly, on a fixed finite time window. Do not merely impose a tail cutoff or generalize this initial derivative to a trajectory result."
+}

@@ -378,3 +378,17 @@ occupation control, not distance to an orbit or construction of a limit flow.
 See the [scoped certificate](../../strategy/physical-candidates/TECT-EXCH-007-result-v1.json)
 and [proof](notes/mixed-charge-floor-261120-v1.0.tex.txt). C6 T1 and T-054
 are unchanged; no physical preparation, current or cosmological selection.
+
+### R-584: common-data finite-window reservoir tails
+
+In unchanged EXCH-001 at fixed periodic volume, take one common H2
+order field and one common essentially bounded reservoir field and
+use the original K/2K projections. The reservoir high-mode L2 tail
+vanishes uniformly in K and on each finite canonical time window.
+The proof derives this from coercivity and a bounded comparison
+with a vanishing projected residual; it does not assume trajectory
+tail tightness. The whole-sublevel EXCH-008 obstruction remains.
+See the [result card](../../strategy/physical-candidates/TECT-EXCH-009-result-v1.json)
+and [proof](notes/common-data-reservoir-tails-261121-v1.0.tex.txt).
+Unbounded L4 data and the full coupled limit remain open. No physical
+promotion; C6 stays T1 and the active T-054 gate is unchanged.

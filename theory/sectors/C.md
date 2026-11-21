@@ -82,6 +82,7 @@ Tier profile: T6x4 T5x1 T1x1
 | NG-2026-11-12-EXCH003-POPULATION-ONLY-CLOSURE | hidden pair phase | At the original nonzero sector, constant Psi=sqrt(p)e1 |
 | NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR | full tangent shear | For every constant symmetric C0 with normF²=q, pointwise |
 | NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE | coherence is not a closed state | At constant PsiA=a(1,i,0), PsiB=a(i,1,0), chi=r, with |
+| NG-2026-11-21-EXCH008-WEAK-INITIAL-DRIFT | unresolved high modes change low occupation drift | Two admissible reservoir envelopes differ by the sign of |
 
 ---
 

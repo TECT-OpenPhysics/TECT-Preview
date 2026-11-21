@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**408 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**409 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-584`](../RESULTS-LEDGER.md#r-584) | common-data finite-window reservoir tails | See authority |
 | [`R-583`](../RESULTS-LEDGER.md#r-583) | uniform low-energy charge fractions | See authority |
 | [`R-582`](../RESULTS-LEDGER.md#r-582) | matched reservoir order spectrum versus full linear evolution | See authority |
 | [`R-581`](../RESULTS-LEDGER.md#r-581) | pair-coherence-augmented exchange state is not autonomous | See authority |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-562`](../RESULTS-LEDGER.md#r-562) | PAH-OMC-020 universal finite-cylinder locality envelope | See authority |
 | [`R-561`](../RESULTS-LEDGER.md#r-561) | PAH-OMC-020 fixed-power local generator-intertwining bridge | See authority |
 | [`R-560`](../RESULTS-LEDGER.md#r-560) | PAH-OMC-023 canonical owner-admission replay boundary | See authority |
-| [`R-559`](../RESULTS-LEDGER.md#r-559) | PAH-OMC-022 source-level stationary-semigroup well-posedness boundary | See authority |
 
 Search without loading the full ledger:
 
