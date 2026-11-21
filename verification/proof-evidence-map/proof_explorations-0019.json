@@ -4332,6 +4332,55 @@
       "task_id": "T-054",
       "title": "EXCH-010: original Class-II variation passes without a defect on the R-584 preparation",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "No model change, extra solution assumption, all-method no-go, uniqueness refutation, R-585 contradiction, physical claim or T-054 transition. No synthesis PDF or Lean theorem for the scoped route audit.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "Two named frequently used estimates fail for the original coefficients; neither failure establishes nonuniqueness. A combined positive difference-energy or time-integrated cancellation estimate is missing.",
+      "evidence_refs": [
+        "strategy/physical-candidates/TECT-EXCH-011-uniqueness-audit-v1.json#order_difference_test",
+        "strategy/physical-candidates/TECT-EXCH-011-uniqueness-audit-v1.json#modified_energy_attempt",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-11-21-exch011.json#checks",
+        "strategy/research-idea-bank-v1.json#IDEA-008"
+      ],
+      "finding": "HOLD_FOR_EVIDENCE on same-data uniqueness. Bare instantaneous L2 and H^r (r<=0) stability fails on bounded R-585 families; the selected coefficient-time term also fails a standalone L2 form bound. Reservoir difference control closes. No same-data witness.",
+      "formal_refs": {
+        "events": [
+          "20261121-exch-011-class-ii-uniqueness-estimate-audit-202"
+        ],
+        "negatives": [
+          "NG-2026-11-21-EXCH011-BARE-DIFFERENCE-STABILITY"
+        ],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001859",
+      "method": [
+        "Preserve R-585, use IDEA-008 solely for original charge bookkeeping, and derive the bounded weak reservoir and its L2 difference estimate from the pointwise canonical equation, not from a Galerkin amplitude bound.",
+        "Use translation-matched smooth admissible preparations of equal initial H and Q as a test of a uniform bare inequality. Identify the weak quadratic time derivative via Fourier testing and calculate the signed exact Class-II variation. Different test preparations do not count as a same-data counterexample.",
+        "A frozen principal correction cancels the slope. A localized smooth H2-bounded witness rejects estimating the coefficient-time part of one natural variable correction separately. No claim about commutator cancellation or spacetime methods.",
+        "Separate independent quotient-rule and matrix checks, hostile equal-charge and weak-domain review, and 17 exact checks. Onodera v1 Theorem 1.1 is reference-only and does not transfer from the structured 1D high-regularity setting."
+      ],
+      "next_action": "Reopen only for a source-compatible combined commutator and coefficient-time cancellation estimate at the original 3D H2 regularity, a time-integrated equivalent, or an exact same-data counterexample. Do not repeat the two failed standalone tests.",
+      "provenance": "contemporaneous",
+      "question": "Does the unchanged R-585 fixed-volume finite-window energy class support a closed same-initial-data two-solution stability estimate without extra regularity?",
+      "recorded_at": "2026-11-21T01:59:32Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001858",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-11-21",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "EXCH-011: R-585 uniqueness hold with exact Class-II stability-estimate obstructions",
+      "verdict": "parked"
     }
   ],
   "kind": "proof_explorations",

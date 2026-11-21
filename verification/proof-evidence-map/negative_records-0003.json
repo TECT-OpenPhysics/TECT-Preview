@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-31-a13-predictable-score-finite-energy-transfer",
+      "branch": "extend affine Gaussian score transfer to all finite-energy predictable controls using triangularity or determinant one",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Transfer both physical control derivatives to Gaussian scores on every smooth finite predictable chart, then bound the resulting score by the declared source-energy and terminal-moment coordinates using only strict triangularity or `det(I+D h)=1`.",
+        "consequence": "The affine score identity remains valid and useful on genuine conditional Gaussian mean-shift blocks. The finite-energy production successor must instead prove a blockwise/direct fixed-law signed score--forest estimate, or add and justify inverse-Jacobian/Malliavin regularity. This strengthens the R-128 control-versus-Malliavin firewall and is not a counterexample to the physical fixed-law Hessian.",
+        "evidence": "R-133 proof note, Sections 6--7; exact polynomial connection fixture in two independent executables; direct deterministic quadrature of the bounded-tanh family.",
+        "failure_mode": "The exact predictable score is `delta^2(sym(a tensor b))-delta(d)`, where `a=(I+D h)^(-1)u`, `b=(I+D h)^(-1)v`, and `d=(I+D h)^(-1)D2h[a,b]`. For independent standard Gaussians take the bounded smooth strict-triangular feedback `h_N=(0,a tanh(N xi_1))`, `0<a<1`. Its source amplitude and every fixed terminal polynomial moment are uniformly bounded, while `(I+D h_N)^(-1)e_1=(1,-aN sech^2(N xi_1))` and `E||(I+D h_N)^(-1)e_1||^2 >= 1+2a^2 phi(1) sech^4(1) N`."
+      },
+      "detail_title": "affine Gaussian scores do not extend from triangularity and finite energy alone",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "the bounded smooth strict-triangular family `h_N=(0,a tanh(N xi_1))` has uniformly bounded source amplitude and terminal moments while `E||J_hN^-1 e_1||^2` grows at least linearly in `N`",
+      "tag": "NG-2026-07-31-A13-PREDICTABLE-SCORE-FINITE-ENERGY-TRANSFER"
+    },
+    {
       "anchor": "ng-2026-07-31-a13-postheat-mean-only-future-variance-recovery",
       "branch": "recover the R-125 future variance by future-centring the literal post-heat R-088 atom, or from that atom's conditional mean alone",
       "claim_ref_basis": {
@@ -2229,28 +2252,6 @@
       "kind": "audit",
       "summary": "deprecated short alias created when the first R-093 changelog event omitted the `A13` namespace; it resolves only to the canonical `AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE` authority and adds no mathematical result",
       "tag": "AUDIT-2026-07-27-R092-AUGMENTED-PRODUCTION-COVARIANCE"
-    },
-    {
-      "anchor": "audit-2026-07-27-a13-r093-root-factor-square-allocation",
-      "branch": "R-093 root-local `2^(j-4k)` prototype and partial R-079 square completions",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "The complete centered secant remains form-subcritical by a different weighted-Hardy argument, but it is not the complete `H_N` packet. Any successor must prove a once-only R-079/R-086 embedding and retain the reduced positive square, covariance trace, backward heat, low term, paid subtraction, and complete R-063 forest.",
-        "evidence": "R-094 Theorem 3.1 retains the positive quadratic square and bounds only its covariance trace, giving `2^(j-4k)`. The exact Hermite fixture instead gives the mixed density `-2 gamma epsilon t+4 gamma epsilon^2 t^2`, whose paid minimum is strictly negative and whose linear scale is `2^(j-2k)`. R-094 Theorem 6.1 expands the R-079 future block with a parameter `0<theta<1`: only `theta/2` of the derivative-feedback square pays the value--heat control prefix, while `(1-theta)/2` remains in the coupled R-079 coefficient/derivative block. Conditional on the missing once-only embedding, the conservative R-086 successor retains that reduced endpoint square alongside `T_G^>`. The primary and independent R-094 executables reproduce the dyadic sums, Hermite moments, and partial-square identity.",
-        "failure_mode": "The R-093 scaling diagnostic `2^(j-4k)` was promoted to the complete future Gram secant, or a positive feedback square used in the centered coefficient estimate was reused to complete the derivative-feedback channel."
-      },
-      "detail_title": "the strong factor and the positive square have narrower ownership",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "audit",
-      "summary": "the strong factor belongs only to the positive quadratic Gram-curvature atom; the full mixed secant starts at `2^(j-2k)`, and every partial completion must reserve the unused feedback-square fraction for the coupled `T_G^>`/Jensen packet",
-      "tag": "AUDIT-2026-07-27-A13-R093-ROOT-FACTOR-SQUARE-ALLOCATION"
     }
   ],
   "kind": "negative_records",

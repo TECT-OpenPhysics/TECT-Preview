@@ -1,6 +1,26 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-10-pre-a-st8-q3lock-critical-one-sided-energy-damped-leibniz-onsite-stability",
+      "branch": "close the critical onsite step with one fixed Weyl-containing C-star-Leibniz seminorm that dominates a one-sided `p`-commutator",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260810-advance-r-167-to-v1-3-and-reject-the-fixed-crit"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "consequence": "The literal critical two-one-sided seminorm and every fixed C-star-Leibniz enlargement with the stated domination fail. This does not reject non-Leibniz analytic or Frechet scales, symmetric or state-weighted topologies with a separate energy-tail theorem, direct projected `D,delta D` locality, or existence of the full dynamics.",
+        "evidence": "For the full one-site eight-component Q3LOCK onsite Hamiltonian, put `K=h-inf(spec h)+1`, `W_a=exp(-ia p_0/hbar)` and `t_a=tau/a^2`. The exact Q3 force has leading axis coefficient `G=g+3lambda`. Quartic coercivity and the exact Heisenberg equations give `||[p_0,alpha_(t_a)(W_a)]K^(-1/2)||>=G tau a-B_tau`, where `B_tau` is finite and independent of `a`. On the other hand, the Leibniz rule gives `L(W_b^n)<=nL(W_b)`. Taking `a=nb` and fixed `tau>L(W_b)/(c_p G b)` makes the lower linear slope exceed the proposed upper slope while `t_a->0`. Exact independent fixtures give `G=51/35` and Q3 backward jets `51a^3/35,0,-32112a^5/8575`; the scalar jets are `a^3,0,-3a^5,0,27a^7`.",
+        "failure_mode": "Close the exact quartic onsite step with one fixed star-symmetric C-star-Leibniz seminorm on a Weyl-containing local algebra, finite on a nonzero momentum Weyl `W_b`, dominating either one-sided critical `p_0` commutator, and growing by at most `1+C|t|` under the onsite flow."
+      },
+      "detail_title": "the fixed one-sided-dominating critical Leibniz route fails",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "for `W_a=exp(-ia p_0/hbar)` and `t_a=tau/a^2`, the full Q3 onsite flow gives `||[p_0,alpha_(t_a)(W_a)]K^(-1/2)||>=(g+3lambda)tau a-B_tau`; Leibniz growth of `W_b^n` is only linear with slope `L(W_b)/b`, yielding a contradiction. Retain non-Leibniz analytic/Frechet, symmetric or state-weighted, and direct projected routes",
+      "tag": "NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY"
+    },
+    {
       "anchor": "ng-2026-08-10-pre-a-st8-q3lock-coordinate-cutoff-half-modular-strip-absolute-closure",
       "branch": "obtain fixed-beta uniform half-modular-strip multipliers from the bounded coordinate-cutoff bond and a connected absolute expansion",
       "claim_ref_basis": {
@@ -2184,29 +2204,6 @@
       "kind": "no_go",
       "summary": "a representation-preserving split may give the last block covariance `epsilon I_6` with unchanged total covariance `I_6`; more generally the physical tail covariance tends to zero as the last cut approaches one, so no positive refinement-uniform eigenvalue floor survives",
       "tag": "NG-2026-07-31-A13-REFINEMENT-UNIFORM-LAST-BLOCK-ELLIPTICITY"
-    },
-    {
-      "anchor": "ng-2026-07-31-a13-predictable-score-finite-energy-transfer",
-      "branch": "extend affine Gaussian score transfer to all finite-energy predictable controls using triangularity or determinant one",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Transfer both physical control derivatives to Gaussian scores on every smooth finite predictable chart, then bound the resulting score by the declared source-energy and terminal-moment coordinates using only strict triangularity or `det(I+D h)=1`.",
-        "consequence": "The affine score identity remains valid and useful on genuine conditional Gaussian mean-shift blocks. The finite-energy production successor must instead prove a blockwise/direct fixed-law signed score--forest estimate, or add and justify inverse-Jacobian/Malliavin regularity. This strengthens the R-128 control-versus-Malliavin firewall and is not a counterexample to the physical fixed-law Hessian.",
-        "evidence": "R-133 proof note, Sections 6--7; exact polynomial connection fixture in two independent executables; direct deterministic quadrature of the bounded-tanh family.",
-        "failure_mode": "The exact predictable score is `delta^2(sym(a tensor b))-delta(d)`, where `a=(I+D h)^(-1)u`, `b=(I+D h)^(-1)v`, and `d=(I+D h)^(-1)D2h[a,b]`. For independent standard Gaussians take the bounded smooth strict-triangular feedback `h_N=(0,a tanh(N xi_1))`, `0<a<1`. Its source amplitude and every fixed terminal polynomial moment are uniformly bounded, while `(I+D h_N)^(-1)e_1=(1,-aN sech^2(N xi_1))` and `E||(I+D h_N)^(-1)e_1||^2 >= 1+2a^2 phi(1) sech^4(1) N`."
-      },
-      "detail_title": "affine Gaussian scores do not extend from triangularity and finite energy alone",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "the bounded smooth strict-triangular family `h_N=(0,a tanh(N xi_1))` has uniformly bounded source amplitude and terminal moments while `E||J_hN^-1 e_1||^2` grows at least linearly in `N`",
-      "tag": "NG-2026-07-31-A13-PREDICTABLE-SCORE-FINITE-ENERGY-TRANSFER"
     }
   ],
   "kind": "negative_records",

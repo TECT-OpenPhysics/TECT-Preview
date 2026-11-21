@@ -5,12 +5,13 @@
 
 Authorities: `negative-results/registry.md`.
 
-**400 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 324 · retraction: 5
+**401 registered records** · audit: 65 · fired_falsifier: 6 · no_go: 325 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-11-21-EXCH011-BARE-DIFFERENCE-STABILITY`](registry.md#ng-2026-11-21-exch011-bare-difference-stability) | no_go | uniform bare instantaneous energy bounds on R-585 pairs; separately bounding one correction's time term |
 | [`NG-2026-11-21-EXCH008-WEAK-INITIAL-DRIFT`](registry.md#ng-2026-11-21-exch008-weak-initial-drift) | no_go | uniform initial low-mode drift recovery from fixed Fourier prefixes and H, Q on the R-583 sublevel |
 | [`NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE`](registry.md#ng-2026-11-15-exch006-augmented-closure) | no_go | exact autonomous drift of the named population/coherence vector for all full EXCH initial points |
 | [`NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR`](registry.md#ng-2026-11-15-alt002-bounded-linear-reservoir) | no_go | uniformly-in-time bounded full linear flow around a constant tensor reservoir |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-09-04-PAH-OMC-009-RMAX-INTERACTION-ENVELOPE-DIVERGENCE`](registry.md#ng-2026-09-04-pah-omc-009-rmax-interaction-envelope-divergence) | no_go | require a cutoff-independent PAH-001 root-rate interaction envelope along R_max->infinity |
 | [`NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining) | no_go | use the natural forgetful pullback after adding a freely varying adjacent fine vertex as an exact PAH generator refinement morphism |
 | [`NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining) | no_go | use positive scalar beta or kappa_s transport to repair the natural free-vertex forgetful pullback |
-| [`NG-2026-09-02-PAH-OMC-002-CONDITIONAL-GIBBS-PROJECTED-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-002-conditional-gibbs-projected-intertwining) | no_go | use the exact PAH-OMC-002 Gibbs fibre average as a projected generator intertwiner on the fine-only-vertex map |
 
 Search without loading the full registry:
 

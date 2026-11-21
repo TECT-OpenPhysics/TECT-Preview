@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-11-21-EXCH011-BARE-DIFFERENCE-STABILITY](#ng-2026-11-21-exch011-bare-difference-stability) | uniform bare instantaneous energy bounds on R-585 pairs; separately bounding one correction's time term | Same initial H and Q but distinct preparations violate the bare slope estimate; a localized coefficient-time form also diverges. Same-data uniqueness remains open. |
 | [NG-2026-11-21-EXCH008-WEAK-INITIAL-DRIFT](#ng-2026-11-21-exch008-weak-initial-drift) | uniform initial low-mode drift recovery from fixed Fourier prefixes and H, Q on the R-583 sublevel | Exact matched-sublevel families yield opposite invariant low-mode occupation derivatives. A weak limit with charge defect does not determine the phase-sensitive cubic drift. No finite-time no-go. |
 | [NG-2026-11-15-ALT002-BOUNDED-LINEAR-RESERVOIR](#ng-2026-11-15-alt002-bounded-linear-reservoir) | uniformly-in-time bounded full linear flow around a constant tensor reservoir | A nonzero zero-mean fixed-Q tangent Jordan shear survives every constant orientation and global-phase quotient. No nonlinear instability follows; scalar has the same shear. |
 | [NG-2026-11-15-EXCH006-AUGMENTED-CLOSURE](#ng-2026-11-15-exch006-augmented-closure) | exact autonomous drift of the named population/coherence vector for all full EXCH initial points | Same full H/Q/populations/complex coherence but unequal coherence drift and opposite current acceleration. Restricted states, memory and controlled errors remain open. |
@@ -11212,3 +11213,28 @@ not a discontinuity at an admitted point in the original fixed sector.
 Fixed-positive-time convergence, time-integrated drift and well-prepared
 families with tight tails are not ruled out. R-583, EXCH-001, C6 and T-054
 remain unchanged. No physical, continuum, Pre-A, QFT or gravity conclusion.
+
+### NG-2026-11-21-EXCH011-BARE-DIFFERENCE-STABILITY -- two stability routes fail
+
+**Branch / claim.** Close a uniform bare instantaneous difference norm
+inequality on bounded R-585 solution families, or bound the isolated
+coefficient-time derivative of the specified symmetric order-minus-two
+difference correction by the unmodified L2 norm squared.
+
+**Failure mode.** Translation-matched order preparations have equal
+initial charge and energy and converge strongly to the same H2 datum.
+Their initial differences still excite a signed Class-II radial/phase
+pairing, causing unbounded positive bare slope-to-norm quotients. A
+separate localized coefficient-time test gives an unbounded quadratic
+form on H2-bounded smooth backgrounds. These are failures of the two
+named estimates, not a claim about combined corrections.
+
+**Evidence.** [Audit and analytic witnesses](../strategy/physical-candidates/TECT-EXCH-011-uniqueness-audit-v1.json),
+[exact run](../claims/C6-SPACETIME-SIGNATURE/runs/2026-11-21-exch011.json)
+and [replay](../verification/scripts/exch011_verify.py).
+
+**Consequence.** HOLD_FOR_EVIDENCE on the unchanged same-data
+uniqueness question. The reservoir difference law is controlled;
+a coupled Class-II remainder or time-integrated cancellation estimate
+is missing. No same-data counterexample, all-method no-go, R-585
+contradiction or physical/T-054 promotion.

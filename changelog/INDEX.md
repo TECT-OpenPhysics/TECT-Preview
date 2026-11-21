@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**1138 accepted events** · latest 25 shown below · machine locator: `index.json`
+**1139 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-11-21 | `20261121-exch-011-class-ii-uniqueness-estimate-audit-202` — [EXCH-011: Class-II uniqueness estimate audit] - 2026-11-21 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261121-exch-011-class-ii-uniqueness-estimate-audit-202) |
 | 2026-11-21 | `20261121-r-585-original-class-ii-variation-in-the-exch-w` — [R-585: original Class-II variation in the EXCH weak limit] - 2026-11-21 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261121-r-585-original-class-ii-variation-in-the-exch-w) |
 | 2026-11-21 | `20261121-r-584-reservoir-tail-control-for-common-exch-da` — [R-584: reservoir tail control for common EXCH data] - 2026-11-21 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261121-r-584-reservoir-tail-control-for-common-exch-da) |
 | 2026-11-20 | `20261120-r-583-uniform-low-energy-charge-shares-in-the-o` — [R-583: uniform low-energy charge shares in the original finite EXCH] - 2026-11-20 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001119-001168.md#20261120-r-583-uniform-low-energy-charge-shares-in-the-o) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-10-14 | `20261014-c6-r-576-pah-v2-maximal-path-freezing-in-declar` — [C6 R-576: PAH-v2 maximal-path freezing in declared local clocks] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-r-576-pah-v2-maximal-path-freezing-in-declar) |
 | 2026-10-14 | `20261014-c6-pah-time-001-align-strict-continuity-checkpo` — [C6 PAH-TIME-001: align strict continuity checkpoint counts] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-pah-time-001-align-strict-continuity-checkpo) |
 | 2026-10-14 | `20261014-c6-pah-time-001-pin-the-missing-operational-clo` — [C6 PAH-TIME-001: pin the missing operational clock-readout law] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-c6-pah-time-001-pin-the-missing-operational-clo) |
-| 2026-10-14 | `20261014-r-575-final-governed-footer-and-replay-receipt` — [R-575: final governed-footer and replay-receipt correction] - 2026-10-14 | C6-SPACETIME-SIGNATURE | [bounded page](pages/001069-001118.md#20261014-r-575-final-governed-footer-and-replay-receipt) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 1119–1138 | 20 | [001119-001168.md](pages/001119-001168.md) |
+| 1119–1139 | 21 | [001119-001168.md](pages/001119-001168.md) |
 | 1069–1118 | 50 | [001069-001118.md](pages/001069-001118.md) |
 | 1019–1068 | 50 | [001019-001068.md](pages/001019-001068.md) |
 | 969–1018 | 50 | [000969-001018.md](pages/000969-001018.md) |
